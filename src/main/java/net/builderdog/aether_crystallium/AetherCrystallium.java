@@ -27,8 +27,9 @@ public class AetherCrystallium {
     public AetherCrystallium() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModItems.register(modEventBus);
-        ModBlocks.register(modEventBus);
+        ModItems.ITEMS.register(modEventBus);
+        ModBlocks.BLOCKS.register(modEventBus);
+        ModFoliagePlacerTypes.FOLIAGE_PLACERS.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
