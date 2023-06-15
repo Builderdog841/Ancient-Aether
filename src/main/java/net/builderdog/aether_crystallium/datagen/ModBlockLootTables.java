@@ -43,6 +43,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf((ModBlocks.PURPLE_AETHER_CACTUS_FLOWER.get()));
         dropSelf((ModBlocks.QUICKSOIL_BRICK_STAIRS.get()));
         dropSelf((ModBlocks.QUICKSOIL_BRICK_SLAB.get()));
+        dropSelf((ModBlocks.QUICKSOIL_BRICK_WALL.get()));
 
         add(ModBlocks.CRYSTAL_GOLD_ORE.get(),
                 (block) -> createOreDrop(ModBlocks.CRYSTAL_GOLD_ORE.get(), ModItems.RAW_CRYSTAL_GOLD.get()));

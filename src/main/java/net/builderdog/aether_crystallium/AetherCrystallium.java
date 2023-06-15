@@ -70,6 +70,7 @@ public class AetherCrystallium {
             event.accept(ModBlocks.QUICKSOIL_BRICKS);
             event.accept(ModBlocks.QUICKSOIL_BRICK_STAIRS);
             event.accept(ModBlocks.QUICKSOIL_BRICK_SLAB);
+            event.accept(ModBlocks.QUICKSOIL_BRICK_WALL);
             event.accept(ModItems.CRYSTAL_GOLD_INGOT);
             event.accept(ModItems.RAW_CRYSTAL_GOLD);
             event.accept(ModItems.CRYSTAL_GOLD_NUGGET);

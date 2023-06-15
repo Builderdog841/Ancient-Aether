@@ -7,11 +7,12 @@
     }
   },
   "pattern": [
+    "###",
     "###"
   ],
   "result": {
     "count": 6,
-    "item": "aether_crystallium:quicksoil_brick_slab"
+    "item": "aether_crystallium:quicksoil_brick_wall"
   },
   "show_notification": true
 }

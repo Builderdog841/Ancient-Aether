@@ -121,6 +121,7 @@ public class ModBlocks {
     public static final RegistryObject<ButtonBlock> FROSTPINE_BUTTON = registerBlock("frostpine_button", () -> new ButtonBlock(Block.Properties.copy(Blocks.OAK_BUTTON), ModWoodTypes.FROSTPINE_BLOCK_SET, 30, true));
     public static final RegistryObject<PressurePlateBlock> FROSTPINE_PRESSURE_PLATE = registerBlock("frostpine_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.copy(Blocks.OAK_PRESSURE_PLATE), ModWoodTypes.FROSTPINE_BLOCK_SET));
 
+    public static final RegistryObject<WallBlock> QUICKSOIL_BRICK_WALL = registerBlock("quicksoil_brick_wall", () -> new WallBlock(Block.Properties.copy(ModBlocks.QUICKSOIL_BRICKS.get())));
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

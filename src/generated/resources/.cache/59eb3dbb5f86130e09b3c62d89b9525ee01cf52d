@@ -1,4 +1,4 @@
-// 1.19.4	2023-06-15T18:01:17.0501786	Loot Tables
+// 1.19.4	2023-06-15T20:51:04.6538562	Loot Tables
 8d4da245e70842af9a85a541667dddcad453e510 data/aether_crystallium/loot_tables/blocks/aether_cactus.json
 e7531127ed6a83df6a1eba4c65f3625b7a75b0ba data/aether_crystallium/loot_tables/blocks/blighted_sentry_stone.json
 04c8001ae06805b1092cd191115fd634dbcf869a data/aether_crystallium/loot_tables/blocks/crystal_gold_block.json
@@ -21,6 +21,7 @@ b4bd293f6b57f8760cd84854f144d2b2ec8f0a98 data/aether_crystallium/loot_tables/blo
 c5313d10ebc24de3bf28eabfe6b1e1d08f9278e2 data/aether_crystallium/loot_tables/blocks/quicksoil_bricks.json
 0fe1e642cd1d5634404f8ade95eeb0c7bea2f7e9 data/aether_crystallium/loot_tables/blocks/quicksoil_brick_slab.json
 c4325a91ce31dbae7b919af6f0e145286a6b9fe9 data/aether_crystallium/loot_tables/blocks/quicksoil_brick_stairs.json
+027d12d025437ec2ea71cb52067a76e2fdb85b80 data/aether_crystallium/loot_tables/blocks/quicksoil_brick_wall.json
 e56b71cfa54d663443b61984af57d75076f020cd data/aether_crystallium/loot_tables/blocks/raw_crystal_gold_block.json
 5cbead578140ae78b43347b44ab912589bfdae20 data/aether_crystallium/loot_tables/blocks/stripped_frostpine_log.json
 b9adbd792b758b265ed55216e934681e1735000c data/aether_crystallium/loot_tables/blocks/stripped_frostpine_wood.json
