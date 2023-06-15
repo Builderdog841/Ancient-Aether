@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "raw_crystal_gold",
+  "ingredients": [
+    {
+      "item": "aether_crystallium:frostpine_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "aether_crystallium:frostpine_button"
+  }
+}

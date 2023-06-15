@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#aether:is_aether",
+  "features": "aether_crystallium:aether_crystal_gold_ore_placed",
+  "step": "underground_ores"
+}

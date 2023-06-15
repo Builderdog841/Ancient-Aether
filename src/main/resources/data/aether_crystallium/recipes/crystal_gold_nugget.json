@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "crystal_gold_nugget",
+  "ingredients": [
+    {
+      "item": "aether_crystallium:crystal_gold_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "aether_crystallium:crystal_gold_nugget"
+  }
+}

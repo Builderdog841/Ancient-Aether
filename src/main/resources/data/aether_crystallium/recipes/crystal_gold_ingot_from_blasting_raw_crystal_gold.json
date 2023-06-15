@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "experience": 2,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "aether_crystallium:raw_crystal_gold"
+  },
+  "result": "aether_crystallium:crystal_gold_ingot",

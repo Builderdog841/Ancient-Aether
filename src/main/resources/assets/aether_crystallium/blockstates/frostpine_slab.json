@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "aether_crystallium:block/frostpine_slab"
+    },
+    "type=double": {
+      "model": "aether_crystallium:block/frostpine_planks"
+    },
+    "type=top": {
+      "model": "aether_crystallium:block/frostpine_slab_top"
+    }
+  }
+}

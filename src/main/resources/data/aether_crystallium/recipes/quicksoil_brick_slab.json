@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "aether_crystallium:quicksoil_bricks"
+    }
+  },
+  "pattern": [
+    "#",
+    "##",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "item": "aether_crystallium:quicksoil_brick_slab"
+  },
+  "show_notification": true
+}

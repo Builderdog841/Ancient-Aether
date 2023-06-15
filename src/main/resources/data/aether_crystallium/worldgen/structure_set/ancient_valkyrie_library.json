@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "aether_crystallium:ancient_valkyrie_library",
+      "weight": 5
+    }
+  ],
+  "placement": {
+    "salt": 168128697,
+    "spacing": 15,
+    "separation": 10,
+    "type": "minecraft:random_spread"
+  }
+}

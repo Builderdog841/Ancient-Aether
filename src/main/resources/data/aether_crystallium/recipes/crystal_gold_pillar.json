@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "aether_crystallium:crystal_gold_ingot"
+    },
+    "result": {
+      "item": "aether:pillar",
+      "count": 2
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "aether_crystallium:block/quicksoil_brick_slab"
+    },
+    "type=double": {
+      "model": "aether_crystallium:block/quicksoil_bricks"
+    },
+    "type=top": {
+      "model": "aether_crystallium:block/quicksoil_brick_slab_top"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "experience": 4,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "aether_crystallium:crystal_gold_ore"
+  },
+  "result": "aether_crystallium:crystal_gold_ingot"
+}

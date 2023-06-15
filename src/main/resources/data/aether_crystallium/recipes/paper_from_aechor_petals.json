@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "aether:aechor_petal"
+    },
+    "1": {
+      "item": "aether:aechor_petal"
+    },
+    "2": {
+      "item": "aether:aechor_petal"
+    }
+  },
+  "result": {
+    "item": "minecraft:paper",
+    "count": 3
+  }
+}

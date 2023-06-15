@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_bottom_right",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "aether_crystallium:block/frostpine_door_bottom",
+    "top": "aether_crystallium:block/frostpine_door_top"
+  }
+}

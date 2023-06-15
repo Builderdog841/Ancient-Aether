@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "raw_crystal_gold",
+  "ingredients": [
+    {
+      "item": "aether_crystallium:raw_crystal_gold_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "aether_crystallium:raw_crystal_gold"
+  }
+}

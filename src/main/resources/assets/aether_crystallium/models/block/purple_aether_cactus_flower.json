@@ -1,0 +1,8 @@
+{
+  "parent": "aether_crystallium:custom/cactus_flower",
+  "textures": {
+    "all": "aether_crystallium:block/purple_aether_cactus_flower",
+    "particle": "aether_crystallium:block/purple_aether_cactus_flower",
+    "0": "aether_crystallium:block/purple_aether_cactus_flower"
+  }
+}

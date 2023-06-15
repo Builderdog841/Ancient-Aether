@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "aether_crystallium:frostpine_log",
+    "aether_crystallium:frostpine_wood",
+    "aether_crystallium:stripped_frostpine_log",
+    "aether_crystallium:stripped_frostpine_wood",
+    "aether_crystallium:frostpine_planks",
+    "aether_crystallium:frostpine_door",
+    "aether_crystallium:frostpine_trapdoor",
+    "aether_crystallium:frostpine_stairs",
+    "aether_crystallium:frostpine_slab",
+    "aether_crystallium:frostpine_button",
+    "aether_crystallium:frostpine_pressure_plate",
+    "aether_crystallium:frostpine_fence",
+    "aether_crystallium:frostpine_fence_gate"
+  ]
+}

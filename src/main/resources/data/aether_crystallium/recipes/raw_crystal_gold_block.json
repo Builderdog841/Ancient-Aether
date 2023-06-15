@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "aether_crystallium:raw_crystal_gold"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+    "result": {
+      "item": "aether_crystallium:raw_crystal_gold_block",
+      "count": 1
+    },
+  "show_notification": true
+  }
