@@ -34,6 +34,9 @@
 
   "creatvemodetab.aether_crystallium_tab": "Aether Crystallium",
 
+  "biome.aether_crystallium.frostpines": "Frostpines",
+  "biome.aether_crystallium.quicksoil_desert": "Quicksoil Desert",
+
   "lore.block.aether_crystallium.quicksoil_bricks": "A building block that is created by combining Holystone and Quicksoil that is exactly as slippery as Quicksoil.",
   "lore.block.aether_crystallium.quicksoil_brick_slab": "Crafted from Quicksoil Bricks. Slabs are half blocks, versatile for decoration and smooth slopes. Try adding some to a building's roofing! They also have the same properties as Quicksoil!",
   "lore.block.aether_crystallium.quicksoil_brick_stairs": "Crafted from Quicksoil Bricks. Stairs are useful for adding verticality to builds and are often used for decoration too! They also have the same properties as Quicksoil!",
