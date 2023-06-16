@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
-  "biomes": "#aether:is_aether",
+  "biomes": "aether_crystallium:frostpines",
   "features": "aether_crystallium:frostpine_placed",
   "step": "vegetal_decoration"
 }
