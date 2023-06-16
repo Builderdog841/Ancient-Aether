@@ -16,6 +16,9 @@
   "features": [
     [
       "minecraft:freeze_top_layer"
+    ],
+    [
+      "minecraft:pile_snow"
     ]
   ]
 }
