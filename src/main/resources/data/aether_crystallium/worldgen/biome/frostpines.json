@@ -15,10 +15,40 @@
   "carvers": {},
   "features": [
     [
-      "minecraft:freeze_top_layer"
+      "aether:quicksoil_shelf"
     ],
     [
-      "minecraft:pile_snow"
+      "aether:water_lake"
+    ],
+    [],
+    [],
+    [],
+    [],
+    [
+      "aether:aether_dirt_ore",
+      "aether:icestone_ore",
+      "aether:ambrosium_ore",
+      "aether:zanite_ore",
+      "aether:gravitite_ore",
+      "aether:lower_gravitite_ore"
+    ],
+    [],
+    [
+      "aether:water_spring"
+    ],
+    [
+      "aether:holiday_tree",
+      "aether:grass_patch",
+      "aether:tall_grass_patch",
+      "aether:white_flower_patch",
+      "aether:purple_flower_patch",
+      "aether:berry_bush_patch"
+    ],
+    [
+      "aether:crystal_island",
+      "aether:cold_aercloud",
+      "aether:blue_aercloud",
+      "aether:golden_aercloud"
     ]
   ]
 }
