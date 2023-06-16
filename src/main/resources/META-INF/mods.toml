@@ -56,7 +56,7 @@ versionRange="[45,)" #mandatory
 ordering="NONE"
 side="BOTH"
 
-[[dependencies.aether_crystallium]] #optional
+[[dependencies.aether_crystallium]]
 modId="aether"
 mandatory=true
 versionRange="[0,)"
