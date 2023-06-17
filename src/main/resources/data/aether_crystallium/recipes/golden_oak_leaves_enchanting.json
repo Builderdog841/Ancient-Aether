@@ -1,0 +1,10 @@
+{
+  "type": "aether:enchanting",
+  "category": "enchanting_blocks",
+  "cookingtime": 500,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "aether:skyroot_leaves"
+  },
+  "result": "aether:golden_oak_leaves"
+}
