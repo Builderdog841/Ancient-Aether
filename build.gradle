@@ -1,8 +1,23 @@
-plugins {
-    id 'eclipse'
-    id 'maven-publish'
-    id 'net.minecraftforge.gradle' version '5.1.+'
+buildscript {
+    repositories {
+        maven {
+            name 'Gradle'
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath group: 'io.github.0ffz', name: 'gpr-for-gradle', version: '1.+', changing: true
+    }
 }
+
+    plugins {
+        id 'eclipse'
+        id 'maven-publish'
+        id 'net.minecraftforge.gradle' version '5.1.+'
+
+    }
+
+apply plugin: 'io.github.0ffz.github-packages'
 
 version = '0.0.4'
 group = 'net.builderdog.aether_crystallium' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
@@ -116,20 +131,17 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-    // Put repositories for dependencies here
-    // ForgeGradle automatically adds the Forge maven and Maven Central for you
-
-    // If you have mod jar dependencies in ./libs, you can declare them as a repository like so:
-    // flatDir {
-    //     dir 'libs'
-    // }
+    maven githubPackage.invoke("The-Aether-Team/The-Aether")
 }
+
 
 dependencies {
     // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft', it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.19.4-45.1.0'
+    compileOnly "com.aetherteam.aether:aether:1.19.4-1.0.0-beta.4-forge"
+    runtimeOnly fg.deobf("com.aetherteam.aether:aether:1.19.4-1.0.0-beta.4-forge")
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // implementation fg.deobf("com.tterrag.registrate:Registrate:MC${mc_version}-${registrate_version}") // Adds registrate as a dependency
@@ -179,3 +191,5 @@ publishing {
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
 }
+
+

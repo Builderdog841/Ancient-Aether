@@ -1,5 +1,6 @@
 package net.builderdog.aether_crystallium;
 
+import com.aetherteam.aether.item.AetherItems;
 import com.mojang.logging.LogUtils;
 import net.builderdog.aether_crystallium.block.ModBlocks;
 import net.builderdog.aether_crystallium.item.ModCreativeModeTabs;
@@ -61,6 +62,8 @@ public class AetherCrystallium {
             event.accept(ModBlocks.FROSTPINE_LEAVES);
             event.accept(ModBlocks.FROSTPINE_SAPLING);
             event.accept(ModBlocks.AETHER_CACTUS);
+            event.accept(ModBlocks.SMALL_AETHER_CACTUS);
+            event.accept(ModBlocks.MOONLIT_TULIP);
             event.accept(ModBlocks.PURPLE_AETHER_CACTUS_FLOWER);
             event.accept(ModBlocks.CRYSTAL_GOLD_ORE);
             event.accept(ModBlocks.RAW_CRYSTAL_GOLD_BLOCK);

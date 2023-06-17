@@ -6,6 +6,7 @@ import net.builderdog.aether_crystallium.worldgen.tree.FrostPineTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
@@ -47,6 +48,8 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.CACTUS).sound(SoundType.WOOL)
                     .strength(0.5f, 6f)));
 
+    public static final RegistryObject<Block> MOONLIT_TULIP = registerBlock("moonlit_tulip", () -> new FlowerBlock(() -> MobEffects.SLOW_FALLING, 4, Block.Properties.copy(Blocks.DANDELION)));
+    public static final RegistryObject<Block> SMALL_AETHER_CACTUS = registerBlock("small_aether_cactus", () -> new FlowerBlock(() -> MobEffects.SLOW_FALLING, 4, Block.Properties.copy(Blocks.DANDELION)));
     public static final RegistryObject<Block> QUICKSOIL_BRICKS =  registerBlock("quicksoil_bricks",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(0.5F).friction(1.1F).requiresCorrectToolForDrops()));
