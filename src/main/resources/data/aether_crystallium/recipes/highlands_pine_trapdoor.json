@@ -4,7 +4,7 @@
   "group": "wooden_trapdoors",
   "key": {
     "#": {
-      "item": "aether_crystallium:frostpine_planks"
+      "item": "aether_crystallium:highlands_pine"
     }
   },
   "pattern": [
@@ -13,7 +13,7 @@
   ],
   "result": {
     "count": 2,
-    "item": "aether_crystallium:frostpine_trapdoor"
+    "item": "aether_crystallium:highlands_pine_trapdoor"
   },
   "show_notification": true
 }

@@ -1,20 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
-  "group": "wooden_slab",
+  "group": "wooden_pressure_plate",
   "key": {
     "#": {
-      "item": "aether_crystallium:frostpine_planks"
+      "item": "aether_crystallium:highlands_pine_planks"
     }
   },
   "pattern": [
-    "##",
-    "##",
     "##"
   ],
   "result": {
-    "count": 3,
-    "item": "aether_crystallium:frostpine_door"
+    "count": 1,
+    "item": "aether_crystallium:highlands_pine_pressure_plate"
   },
   "show_notification": true
 }

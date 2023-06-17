@@ -1,18 +1,20 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
-  "group": "wooden_slab",
+  "group": "wooden_stairs",
   "key": {
     "#": {
-      "item": "aether_crystallium:frostpine_planks"
+      "item": "aether_crystallium:highlands_pine_planks"
     }
   },
   "pattern": [
+    "#  ",
+    "## ",
     "###"
   ],
   "result": {
-    "count": 6,
-    "item": "aether_crystallium:frostpine_slab"
+    "count": 4,
+    "item": "aether_crystallium:highlands_pine_stairs"
   },
   "show_notification": true
 }
