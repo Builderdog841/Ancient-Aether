@@ -46,7 +46,7 @@ public class ModSurfaceRules {
                 NoiseGeneratorSettings moddedNoiseGeneratorSettings = new NoiseGeneratorSettings(noiseGeneratorSettings.noiseSettings(),
                         noiseGeneratorSettings.defaultBlock(), noiseGeneratorSettings.defaultFluid(), noiseGeneratorSettings.noiseRouter(),
                         SurfaceRules.sequence(surfaceRules.toArray(SurfaceRules.RuleSource[]::new)), noiseGeneratorSettings.spawnTarget(),
-                        noiseGeneratorSettings.seaLevel(), noiseGeneratorSettings.disableMobGeneration(),
+                       noiseGeneratorSettings.seaLevel(), noiseGeneratorSettings.disableMobGeneration(),
                         noiseGeneratorSettings.aquifersEnabled(), noiseGeneratorSettings.oreVeinsEnabled(),
                         noiseGeneratorSettings.useLegacyRandomSource());
                 noiseGenerator.settings = new Holder.Direct<>(moddedNoiseGeneratorSettings);

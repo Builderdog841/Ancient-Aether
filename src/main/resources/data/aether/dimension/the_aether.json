@@ -186,7 +186,7 @@
           }
         },
         {
-          "biome": "aether:skyroot_meadow",
+          "biome": "aether_crystallium:quicksoil_desert",
           "parameters": {
             "continentalness": [
               -1.0,
