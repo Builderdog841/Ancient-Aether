@@ -36,7 +36,7 @@
           }
         },
         {
-          "biome": "aether_crystallium:frostpines",
+          "biome": "aether_crystallium:highlands_taiga",
           "parameters": {
             "continentalness": [
               -1.0,

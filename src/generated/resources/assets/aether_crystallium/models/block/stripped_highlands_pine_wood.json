@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "aether_crystallium:block/stripped_highlands_pine_log",
+    "side": "aether_crystallium:block/stripped_highlands_pine_log"
+  }
+}

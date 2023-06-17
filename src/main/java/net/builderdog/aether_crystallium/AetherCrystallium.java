@@ -46,21 +46,21 @@ public class AetherCrystallium {
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if(event.getTab() == ModCreativeModeTabs.AETHER_CRYSTALLIUM_TAB)  {
-            event.accept(ModBlocks.FROSTPINE_LOG);
-            event.accept(ModBlocks.FROSTPINE_WOOD);
-            event.accept(ModBlocks.STRIPPED_FROSTPINE_LOG);
-            event.accept(ModBlocks.STRIPPED_FROSTPINE_WOOD);
-            event.accept(ModBlocks.FROSTPINE_PLANKS);
-            event.accept(ModBlocks.FROSTPINE_STAIRS);
-            event.accept(ModBlocks.FROSTPINE_SLAB);
-            event.accept(ModBlocks.FROSTPINE_FENCE);
-            event.accept(ModBlocks.FROSTPINE_FENCE_GATE);
-            event.accept(ModBlocks.FROSTPINE_DOOR);
-            event.accept(ModBlocks.FROSTPINE_TRAPDOOR);
-            event.accept(ModBlocks.FROSTPINE_PRESSURE_PLATE);
-            event.accept(ModBlocks.FROSTPINE_BUTTON);
-            event.accept(ModBlocks.FROSTPINE_LEAVES);
-            event.accept(ModBlocks.FROSTPINE_SAPLING);
+            event.accept(ModBlocks.HIGHLANDS_PINE_LOG);
+            event.accept(ModBlocks.HIGHLANDS_PINE_WOOD);
+            event.accept(ModBlocks.STRIPPED_HIGHLANDS_PINE_LOG);
+            event.accept(ModBlocks.STRIPPED_HIGHLANDS_PINE_WOOD);
+            event.accept(ModBlocks.HIGHLANDS_PINE_PLANKS);
+            event.accept(ModBlocks.HIGHLANDS_PINE_STAIRS);
+            event.accept(ModBlocks.HIGHLANDS_PINE_SLAB);
+            event.accept(ModBlocks.HIGHLANDS_PINE_FENCE);
+            event.accept(ModBlocks.HIGHLANDS_PINE_FENCE_GATE);
+            event.accept(ModBlocks.HIGHLANDS_PINE_DOOR);
+            event.accept(ModBlocks.HIGHLANDS_PINE_TRAPDOOR);
+            event.accept(ModBlocks.HIGHLANDS_PINE_PRESSURE_PLATE);
+            event.accept(ModBlocks.HIGHLANDS_PINE_BUTTON);
+            event.accept(ModBlocks.HIGHLANDS_PINE_LEAVES);
+            event.accept(ModBlocks.HIGHLANDS_PINE_SAPLING);
             event.accept(ModBlocks.AETHER_CACTUS);
             event.accept(ModBlocks.SMALL_AETHER_CACTUS);
             event.accept(ModBlocks.MOONLIT_TULIP);

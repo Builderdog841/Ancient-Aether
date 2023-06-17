@@ -24,22 +24,22 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.ENCHANTED_SENTRY_STONE);
         blockWithItem(ModBlocks.BLIGHTED_SENTRY_STONE);
         blockWithItem(ModBlocks.QUICKSOIL_BRICKS);
-        blockWithItem(ModBlocks.FROSTPINE_PLANKS);
-        blockWithItem(ModBlocks.FROSTPINE_LEAVES);
+        blockWithItem(ModBlocks.HIGHLANDS_PINE_PLANKS);
+        blockWithItem(ModBlocks.HIGHLANDS_PINE_LEAVES);
 
-        logBlock(((RotatedPillarBlock) ModBlocks.FROSTPINE_LOG.get()));
-        axisBlock((RotatedPillarBlock) ModBlocks.FROSTPINE_WOOD.get(), blockTexture(ModBlocks.FROSTPINE_LOG.get()), blockTexture(ModBlocks.FROSTPINE_LOG.get()));
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_FROSTPINE_LOG.get(),new ResourceLocation(AetherCrystallium.MOD_ID,"block/stripped_frostpine_log"),
-                new ResourceLocation(AetherCrystallium.MOD_ID,"block/stripped_frostpine_log_top"));
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_FROSTPINE_WOOD.get(),new ResourceLocation(AetherCrystallium.MOD_ID,"block/stripped_frostpine_log"),
-                new ResourceLocation(AetherCrystallium.MOD_ID,"block/stripped_frostpine_log"));
+        logBlock(((RotatedPillarBlock) ModBlocks.HIGHLANDS_PINE_LOG.get()));
+        axisBlock((RotatedPillarBlock) ModBlocks.HIGHLANDS_PINE_WOOD.get(), blockTexture(ModBlocks.HIGHLANDS_PINE_LOG.get()), blockTexture(ModBlocks.HIGHLANDS_PINE_LOG.get()));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_HIGHLANDS_PINE_LOG.get(),new ResourceLocation(AetherCrystallium.MOD_ID,"block/stripped_highlands_pine_log"),
+                new ResourceLocation(AetherCrystallium.MOD_ID,"block/stripped_highlands_pine_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_HIGHLANDS_PINE_WOOD.get(),new ResourceLocation(AetherCrystallium.MOD_ID,"block/stripped_highlands_pine_log"),
+                new ResourceLocation(AetherCrystallium.MOD_ID,"block/stripped_highlands_pine_log"));
 
-        simpleBlockItem(ModBlocks.FROSTPINE_LOG.get(), models().withExistingParent("aether_crystallium:frostpine_log","minecraft:block/cube_column"));
-        simpleBlockItem(ModBlocks.FROSTPINE_WOOD.get(), models().withExistingParent("aether_crystallium:frostpine_wood","minecraft:block/cube_column"));
-        simpleBlockItem(ModBlocks.STRIPPED_FROSTPINE_LOG.get(), models().withExistingParent("aether_crystallium:stripped_frostpine_log","minecraft:block/cube_column"));
-        simpleBlockItem(ModBlocks.STRIPPED_FROSTPINE_WOOD.get(), models().withExistingParent("aether_crystallium:stripped_frostpine_wood","minecraft:block/cube_column"));
+        simpleBlockItem(ModBlocks.HIGHLANDS_PINE_LOG.get(), models().withExistingParent("aether_crystallium:highlands_pine_log","minecraft:block/cube_column"));
+        simpleBlockItem(ModBlocks.HIGHLANDS_PINE_WOOD.get(), models().withExistingParent("aether_crystallium:highlands_pine_wood","minecraft:block/cube_column"));
+        simpleBlockItem(ModBlocks.STRIPPED_HIGHLANDS_PINE_LOG.get(), models().withExistingParent("aether_crystallium:stripped_highlands_pine_log","minecraft:block/cube_column"));
+        simpleBlockItem(ModBlocks.STRIPPED_HIGHLANDS_PINE_WOOD.get(), models().withExistingParent("aether_crystallium:stripped_highlands_pine_wood","minecraft:block/cube_column"));
 
-        saplingBlock(ModBlocks.FROSTPINE_SAPLING);
+        saplingBlock(ModBlocks.HIGHLANDS_PINE_SAPLING);
 
     }
 

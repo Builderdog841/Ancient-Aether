@@ -25,20 +25,20 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf((ModBlocks.ENCHANTED_SENTRY_STONE.get()));
         dropSelf((ModBlocks.BLIGHTED_SENTRY_STONE.get()));
         dropSelf((ModBlocks.QUICKSOIL_BRICKS.get()));
-        dropSelf((ModBlocks.FROSTPINE_LOG.get()));
-        dropSelf((ModBlocks.FROSTPINE_WOOD.get()));
-        dropSelf((ModBlocks.STRIPPED_FROSTPINE_LOG.get()));
-        dropSelf((ModBlocks.STRIPPED_FROSTPINE_WOOD.get()));
-        dropSelf((ModBlocks.FROSTPINE_PLANKS.get()));
-        dropSelf((ModBlocks.FROSTPINE_SAPLING.get()));
-        dropSelf((ModBlocks.FROSTPINE_STAIRS.get()));
-        dropSelf((ModBlocks.FROSTPINE_SLAB.get()));
-        dropSelf((ModBlocks.FROSTPINE_FENCE.get()));
-        dropSelf((ModBlocks.FROSTPINE_FENCE_GATE.get()));
-        dropSelf((ModBlocks.FROSTPINE_DOOR.get()));
-        dropSelf((ModBlocks.FROSTPINE_TRAPDOOR.get()));
-        dropSelf((ModBlocks.FROSTPINE_BUTTON.get()));
-        dropSelf((ModBlocks.FROSTPINE_PRESSURE_PLATE.get()));
+        dropSelf((ModBlocks.HIGHLANDS_PINE_LOG.get()));
+        dropSelf((ModBlocks.HIGHLANDS_PINE_WOOD.get()));
+        dropSelf((ModBlocks.STRIPPED_HIGHLANDS_PINE_LOG.get()));
+        dropSelf((ModBlocks.STRIPPED_HIGHLANDS_PINE_WOOD.get()));
+        dropSelf((ModBlocks.HIGHLANDS_PINE_PLANKS.get()));
+        dropSelf((ModBlocks.HIGHLANDS_PINE_SAPLING.get()));
+        dropSelf((ModBlocks.HIGHLANDS_PINE_STAIRS.get()));
+        dropSelf((ModBlocks.HIGHLANDS_PINE_SLAB.get()));
+        dropSelf((ModBlocks.HIGHLANDS_PINE_FENCE.get()));
+        dropSelf((ModBlocks.HIGHLANDS_PINE_FENCE_GATE.get()));
+        dropSelf((ModBlocks.HIGHLANDS_PINE_DOOR.get()));
+        dropSelf((ModBlocks.HIGHLANDS_PINE_TRAPDOOR.get()));
+        dropSelf((ModBlocks.HIGHLANDS_PINE_BUTTON.get()));
+        dropSelf((ModBlocks.HIGHLANDS_PINE_PRESSURE_PLATE.get()));
         dropSelf((ModBlocks.AETHER_CACTUS.get()));
         dropSelf((ModBlocks.PURPLE_AETHER_CACTUS_FLOWER.get()));
         dropSelf((ModBlocks.QUICKSOIL_BRICK_STAIRS.get()));
@@ -50,8 +50,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         add(ModBlocks.CRYSTAL_GOLD_ORE.get(),
                 (block) -> createOreDrop(ModBlocks.CRYSTAL_GOLD_ORE.get(), ModItems.RAW_CRYSTAL_GOLD.get()));
 
-        add(ModBlocks.FROSTPINE_LEAVES.get(),
-                (block) -> createLeavesDrops(block, ModBlocks.FROSTPINE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        add(ModBlocks.HIGHLANDS_PINE_LEAVES.get(),
+                (block) -> createLeavesDrops(block, ModBlocks.HIGHLANDS_PINE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     @Override
