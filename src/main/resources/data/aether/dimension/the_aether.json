@@ -66,6 +66,36 @@
           }
         },
         {
+        "biome": "aether_crystallium:quicksoil_desert",
+        "parameters": {
+          "continentalness": [
+            -1.0,
+            1.0
+          ],
+          "depth": [
+            -1.0,
+            1.0
+          ],
+          "erosion": [
+            -1.0,
+            1.0
+          ],
+          "humidity": [
+            -0.6,
+            -0.1
+          ],
+          "offset": 0.0,
+          "temperature": [
+            -0.6,
+            0.0
+          ],
+          "weirdness": [
+            -1.0,
+            1.0
+          ]
+        }
+        },
+        {
           "biome": "aether:skyroot_grove",
           "parameters": {
             "continentalness": [
@@ -186,7 +216,7 @@
           }
         },
         {
-          "biome": "aether_crystallium:quicksoil_desert",
+          "biome": "aether:skyroot_meadow",
           "parameters": {
             "continentalness": [
               -1.0,

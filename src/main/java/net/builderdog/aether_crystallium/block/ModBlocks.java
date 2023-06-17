@@ -1,5 +1,6 @@
 package net.builderdog.aether_crystallium.block;
 
+import com.aetherteam.aether.block.AetherBlocks;
 import net.builderdog.aether_crystallium.AetherCrystallium;
 import net.builderdog.aether_crystallium.item.ModItems;
 import net.builderdog.aether_crystallium.worldgen.tree.HighlandsPineTreeGrower;
@@ -29,7 +30,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> CRYSTAL_GOLD_BLOCK =  registerBlock("crystal_gold_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(1f).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> PURPLE_AETHER_CACTUS_FLOWER =  registerBlock("purple_aether_cactus_flower",
+    public static final RegistryObject<Block> CACTUS_FLOWER =  registerBlock("cactus_flower",
             () -> new Block(BlockBehaviour.Properties.of(Material.PLANT)
                     .instabreak()));
     public static final RegistryObject<Block> CRYSTAL_GOLD_ORE =  registerBlock("crystal_gold_ore",
@@ -49,7 +50,13 @@ public class ModBlocks {
                     .strength(0.5f, 6f)));
 
     public static final RegistryObject<Block> MOONLIT_TULIP = registerBlock("moonlit_tulip", () -> new FlowerBlock(() -> MobEffects.SLOW_FALLING, 4, Block.Properties.copy(Blocks.DANDELION)));
-    public static final RegistryObject<Block> SMALL_AETHER_CACTUS = registerBlock("small_aether_cactus", () -> new FlowerBlock(() -> MobEffects.SLOW_FALLING, 4, Block.Properties.copy(Blocks.DANDELION)));
+    public static final RegistryObject<Block> SMALL_AETHER_CACTUS = registerBlock("small_aether_cactus",
+            () -> new DeadBushBlock(BlockBehaviour.Properties.copy(Blocks.DEAD_BUSH)) {
+                @Override
+                public boolean mayPlaceOn(BlockState groundState, BlockGetter worldIn, BlockPos pos) {
+                    return groundState.is(AetherBlocks.QUICKSOIL.get());
+                }
+            });
     public static final RegistryObject<Block> QUICKSOIL_BRICKS =  registerBlock("quicksoil_bricks",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(0.5F).friction(1.1F).requiresCorrectToolForDrops()));

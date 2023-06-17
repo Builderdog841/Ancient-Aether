@@ -1,0 +1,7 @@
+{
+  "parent": "aether_crystallium:block/template_cactus_flower",
+  "render_type": "minecraft:cutout_mipped",
+  "textures": {
+    "0": "aether_crystallium:block/cactus_flower"
+  }
+}

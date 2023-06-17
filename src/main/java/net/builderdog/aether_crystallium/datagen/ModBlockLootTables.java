@@ -40,7 +40,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf((ModBlocks.HIGHLANDS_PINE_BUTTON.get()));
         dropSelf((ModBlocks.HIGHLANDS_PINE_PRESSURE_PLATE.get()));
         dropSelf((ModBlocks.AETHER_CACTUS.get()));
-        dropSelf((ModBlocks.PURPLE_AETHER_CACTUS_FLOWER.get()));
+        dropSelf((ModBlocks.CACTUS_FLOWER.get()));
         dropSelf((ModBlocks.QUICKSOIL_BRICK_STAIRS.get()));
         dropSelf((ModBlocks.QUICKSOIL_BRICK_SLAB.get()));
         dropSelf((ModBlocks.QUICKSOIL_BRICK_WALL.get()));
