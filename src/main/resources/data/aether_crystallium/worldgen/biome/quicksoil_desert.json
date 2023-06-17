@@ -13,5 +13,34 @@
   "spawners": {},
   "spawn_costs": {},
   "carvers": {},
-  "features": []
+  "features": [
+[
+  "aether:water_lake"
+],
+[],
+[],
+[],
+[],
+[
+"aether:aether_dirt_ore",
+"aether:icestone_ore",
+"aether:ambrosium_ore",
+"aether:zanite_ore",
+"aether:gravitite_ore",
+"aether:lower_gravitite_ore"
+],
+[],
+[
+"aether:water_spring"
+],
+[
+"aether:grass_patch"
+],
+[
+"aether:cold_aercloud",
+"aether:blue_aercloud",
+"aether:golden_aercloud"
+]
+]
 }
+
