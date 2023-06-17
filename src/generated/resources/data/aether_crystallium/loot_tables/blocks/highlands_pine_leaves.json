@@ -37,7 +37,7 @@
                   ]
                 }
               ],
-              "name": "aether_crystallium:frostpine_leaves"
+              "name": "aether_crystallium:highlands_pine_leaves"
             },
             {
               "type": "minecraft:item",
@@ -56,7 +56,7 @@
                   "enchantment": "minecraft:fortune"
                 }
               ],
-              "name": "aether_crystallium:frostpine_sapling"
+              "name": "aether_crystallium:highlands_pine_sapling"
             }
           ]
         }
@@ -126,7 +126,7 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "aether:skyroot_stick"
+          "name": "minecraft:stick"
         }
       ],
       "rolls": 1.0

@@ -1,5 +1,5 @@
-// 1.19.4	2023-06-15T20:51:04.6548566	Registries
+// 1.19.4	2023-06-17T15:44:02.3072637	Registries
 06291de7d8c5614ca1ef623099c214f831501dbc data/aether_crystallium/worldgen/configured_feature/aether_crystal_gold_ore.json
-c368f7b1008512d18d9abbfb7e2a200c828d5eab data/aether_crystallium/worldgen/configured_feature/frostpine.json
+f2dedffb76ea9ecba0121b143c20174573ddecf0 data/aether_crystallium/worldgen/configured_feature/highlands_pine.json
 7ced2da4903b0f5891ddd5a86c198f81eb86f8b2 data/aether_crystallium/worldgen/placed_feature/aether_crystal_gold_ore_placed.json
-656d2796387e4c826ce9f51175b67362c736e4e0 data/aether_crystallium/worldgen/placed_feature/frostpine_placed.json
+c8ddecd11dbc5b9eb439bf022cc0ee4b731816e3 data/aether_crystallium/worldgen/placed_feature/highlands_pine_placed.json

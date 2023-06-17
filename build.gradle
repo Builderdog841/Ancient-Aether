@@ -41,21 +41,20 @@ println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty '
 minecraft {
     mappings channel: 'official', version: '1.19.4'
 
+    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+
     runs {
         client {
             workingDirectory project.file('run')
 
             property 'forge.logging.markers', 'REGISTRIES'
-
             property 'forge.logging.console.level', 'debug'
-
             property 'forge.enabledGameTestNamespaces', 'aether_crystallium'
-
-            property "mixin.env.remapRefMap", "true"
-            property "mixin.env.refMapRemappingFile", "${buildDir}/createSrgtoMcp/output.srg"
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
             mods {
-                aether_crystallium {
+                examplmod {
                     source sourceSets.main
                 }
             }
@@ -65,35 +64,28 @@ minecraft {
             workingDirectory project.file('run')
 
             property 'forge.logging.markers', 'REGISTRIES'
-
             property 'forge.logging.console.level', 'debug'
-
             property 'forge.enabledGameTestNamespaces', 'aether_crystallium'
-
-            property "mixin.env.remapRefMap", "true"
-            property "mixin.env.refMapRemappingFile", "${buildDir}/createSrgtoMcp/output.srg"
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
             mods {
-                aether_crystallium {
+                examplemod {
                     source sourceSets.main
                 }
             }
         }
-
         gameTestServer {
             workingDirectory project.file('run')
 
             property 'forge.logging.markers', 'REGISTRIES'
-
             property 'forge.logging.console.level', 'debug'
-
             property 'forge.enabledGameTestNamespaces', 'aether_crystallium'
-
-            property "mixin.env.remapRefMap", "true"
-            property "mixin.env.refMapRemappingFile", "${buildDir}/createSrgtoMcp/output.srg"
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
             mods {
-                aether_crystallium {
+                examplemod {
                     source sourceSets.main
                 }
             }
@@ -104,15 +96,17 @@ minecraft {
 
             property 'forge.logging.markers', 'REGISTRIES'
 
+            property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
-
             property "mixin.env.remapRefMap", "true"
-            property "mixin.env.refMapRemappingFile", "${buildDir}/createSrgtoMcp/output.srg"
+            property "mixin.env.refMapRemappingFile", "${projectDir}/build/createSrgToMcp/output.srg"
 
             args '--mod', 'aether_crystallium', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
+            environment 'target', 'fmluserdevdata'
+
             mods {
-                aether_crystallium {
+                examplemod {
                     source sourceSets.main
                 }
             }
@@ -133,6 +127,7 @@ repositories {
 }
 
 dependencies {
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
     minecraft 'net.minecraftforge:forge:1.19.4-45.1.0'
     compileOnly "com.aetherteam.aether:aether:1.19.4-1.0.0-beta.4-forge"
@@ -146,7 +141,7 @@ jar {
         attributes([
                 "Specification-Title"     : "aether_crystallium",
                 "Specification-Vendor"    : "aether_crystalliumsareus",
-                "Specification-Version"   : "1", // We are version 1 of ourselves
+                "Specification-Version"   : "1",
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "aether_crystalliumsareus",
