@@ -1,0 +1,17 @@
+{
+  "name": "aether_crystallium:flowery_giant_aether_cactus/start_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+
+      "weight": 200,
+      "element": {
+
+        "location": "aether_crystallium:flowery_giant_aether_cactus",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
