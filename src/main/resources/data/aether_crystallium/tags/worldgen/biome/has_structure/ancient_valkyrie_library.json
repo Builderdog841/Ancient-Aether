@@ -1,10 +1,10 @@
 {
-  "replace": true,
+  "replace": false,
   "values": [
     "aether:skyroot_forest",
-    "aether:skyroot_woods",
-    "aether:skyroot_grove",
+    "aether:skyroot_woodland",
     "aether:skyroot_meadow",
-    "aether_crystallium:highlands_pine_taiga"
+    "aether:skyroot_grove",
+    "aether_crystallium:highlands_taiga"
   ]
 }
