@@ -30,7 +30,7 @@ public class ModPlacedFeatures {
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3,0.1f,2), ModBlocks.HIGHLANDS_PINE_SAPLING.get()));
 
         register(context, AETHER_CRYSTAL_GOLD_ORE_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.AETHER_CRYSTAL_GOLD_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(16, //veins per chunk
+                ModPlacedFeatureBuilder.commonOrePlacement(16, //veins per chunk
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(128))));
 
     }

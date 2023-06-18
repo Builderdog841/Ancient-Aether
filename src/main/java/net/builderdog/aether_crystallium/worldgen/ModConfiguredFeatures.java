@@ -5,26 +5,27 @@ import net.builderdog.aether_crystallium.block.ModBlocks;
 import net.builderdog.aether_crystallium.worldgen.foliageplacer.HighlandsPineFoliagePlacer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
+import net.minecraftforge.registries.RegistryObject;
 
 import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHLANDS_PINE_KEY = registerKey("highlands_pine");
-
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MOONLIT_TULIP_PATCH_KEY = registerKey("moonlit_tulip_patch");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_AETHER_CACTUS_PATCH_KEY = registerKey("small_aether_cactus_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_CRYSTAL_GOLD_ORE_KEY = registerKey("aether_crystal_gold_ore");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
