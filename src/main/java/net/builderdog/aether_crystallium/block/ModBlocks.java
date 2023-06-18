@@ -36,6 +36,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> CRYSTAL_GOLD_ORE =  registerBlock("crystal_gold_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(1f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> QUICKSTONE =  registerBlock("quickstone",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(0.5f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> RAW_CRYSTAL_GOLD_BLOCK =  registerBlock("raw_crystal_gold_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(1f).requiresCorrectToolForDrops()));

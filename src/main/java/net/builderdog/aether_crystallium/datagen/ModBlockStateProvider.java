@@ -22,6 +22,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.RAW_CRYSTAL_GOLD_BLOCK);
         blockWithItem(ModBlocks.CRYSTAL_GOLD_ORE);
         blockWithItem(ModBlocks.ENCHANTED_SENTRY_STONE);
+        blockWithItem(ModBlocks.QUICKSTONE);
         blockWithItem(ModBlocks.BLIGHTED_SENTRY_STONE);
         blockWithItem(ModBlocks.QUICKSOIL_BRICKS);
         blockWithItem(ModBlocks.HIGHLANDS_PINE_PLANKS);

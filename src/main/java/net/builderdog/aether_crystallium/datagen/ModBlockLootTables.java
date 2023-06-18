@@ -25,6 +25,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf((ModBlocks.ENCHANTED_SENTRY_STONE.get()));
         dropSelf((ModBlocks.BLIGHTED_SENTRY_STONE.get()));
         dropSelf((ModBlocks.QUICKSOIL_BRICKS.get()));
+        dropSelf((ModBlocks.QUICKSTONE.get()));
         dropSelf((ModBlocks.HIGHLANDS_PINE_LOG.get()));
         dropSelf((ModBlocks.HIGHLANDS_PINE_WOOD.get()));
         dropSelf((ModBlocks.STRIPPED_HIGHLANDS_PINE_LOG.get()));
