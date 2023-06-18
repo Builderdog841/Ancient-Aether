@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "red_dye",
+  "ingredients": [
+    {
+      "item": "aether_crystallium:cactus_flower"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "minecraft:red_dye"
+  }
+}

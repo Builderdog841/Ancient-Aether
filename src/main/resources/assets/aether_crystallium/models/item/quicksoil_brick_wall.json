@@ -1,8 +1,6 @@
 {
   "parent": "minecraft:block/wall_inventory",
   "textures": {
-    "bottom": "aether_crystallium:block/quicksoil_bricks",
-    "side": "aether_crystallium:block/quicksoil_bricks",
-    "top": "aether_crystallium:block/quicksoil_bricks"
+    "wall": "aether_crystallium:block/quicksoil_bricks"
   }
 }
