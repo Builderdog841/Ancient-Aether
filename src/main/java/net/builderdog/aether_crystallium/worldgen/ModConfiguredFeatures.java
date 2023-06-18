@@ -1,5 +1,6 @@
 package net.builderdog.aether_crystallium.worldgen;
 
+import com.aetherteam.aether.data.resources.builders.AetherConfiguredFeatureBuilders;
 import net.builderdog.aether_crystallium.AetherCrystallium;
 import net.builderdog.aether_crystallium.block.ModBlocks;
 import net.builderdog.aether_crystallium.worldgen.foliageplacer.HighlandsPineFoliagePlacer;
@@ -9,12 +10,15 @@ import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.random.SimpleWeightedRandomList;
 import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
@@ -42,8 +46,15 @@ public class ModConfiguredFeatures {
                         new TwoLayersFeatureSize(1, 0, 2)).build());
 
         register(context, AETHER_CRYSTAL_GOLD_ORE_KEY, Feature.ORE, new OreConfiguration(aetherCrystalGoldOre, 12, 0f));
-    }
 
+        register(context, MOONLIT_TULIP_PATCH_KEY, Feature.FLOWER,
+                AetherConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
+                        .add(ModBlocks.MOONLIT_TULIP.get().defaultBlockState(), 3)), 64));
+
+        register(context, SMALL_AETHER_CACTUS_PATCH_KEY, Feature.FLOWER,
+                AetherConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
+                        .add(ModBlocks.SMALL_AETHER_CACTUS.get().defaultBlockState(), 3)), 64));
+    }
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
         return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(AetherCrystallium.MOD_ID, name));
 

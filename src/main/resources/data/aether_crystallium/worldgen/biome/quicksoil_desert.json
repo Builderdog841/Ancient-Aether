@@ -36,7 +36,8 @@
 "aether:water_spring"
 ],
 [
-"aether:grass_patch"
+  "aether:grass_patch",
+  "aether_crystallium:small_aether_cactus_patch"
 ],
 [
 "aether:cold_aercloud",
