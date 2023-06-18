@@ -32,7 +32,7 @@ public class ModBlocks {
                     .strength(1f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> CACTUS_FLOWER =  registerBlock("cactus_flower",
             () -> new Block(BlockBehaviour.Properties.of(Material.PLANT)
-                    .instabreak()));
+                    .instabreak().noOcclusion()));
     public static final RegistryObject<Block> CRYSTAL_GOLD_ORE =  registerBlock("crystal_gold_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(1f).requiresCorrectToolForDrops()));
