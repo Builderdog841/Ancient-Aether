@@ -1,7 +1,8 @@
-// 1.19.4	2023-06-18T20:28:00.41844	Loot Tables
+// 1.19.4	2023-06-19T17:05:49.7078661	Loot Tables
 8d4da245e70842af9a85a541667dddcad453e510 data/aether_crystallium/loot_tables/blocks/aether_cactus.json
 e7531127ed6a83df6a1eba4c65f3625b7a75b0ba data/aether_crystallium/loot_tables/blocks/blighted_sentry_stone.json
 d66b36e2a0e8d30ee71947ba8efccf818d9f64a5 data/aether_crystallium/loot_tables/blocks/cactus_flower.json
+e7a78f7b10cbb8630d9dda8b385a9826e798bcf7 data/aether_crystallium/loot_tables/blocks/cracked_slider.json
 04c8001ae06805b1092cd191115fd634dbcf869a data/aether_crystallium/loot_tables/blocks/crystal_gold_block.json
 6a903289ecef851490ec8ef6d1fbc9fcfcda87b1 data/aether_crystallium/loot_tables/blocks/crystal_gold_ore.json
 29471c0f355465e2839575610444aa4bce813352 data/aether_crystallium/loot_tables/blocks/enchanted_sentry_stone.json
