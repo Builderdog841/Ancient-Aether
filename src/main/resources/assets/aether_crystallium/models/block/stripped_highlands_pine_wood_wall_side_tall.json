@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_side_tall",
+  "textures": {
+    "wall": "aether_crystallium:block/stripped_highlands_pine_log"
+  }
+}

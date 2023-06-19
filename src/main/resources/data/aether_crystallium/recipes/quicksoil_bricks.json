@@ -1,16 +1,21 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "minecraft:crafting_shaped",
   "category": "building",
-  "ingredients": [
-    {
-      "item": "aether:holystone"
-    },
-    {
+  "key": {
+    "1": {
       "item": "aether:quicksoil"
+    },
+    "2": {
+      "item": "aether_crystallium:quickstone"
     }
+  },
+  "pattern": [
+    "12",
+    "21"
   ],
   "result": {
-    "item": "aether_crystallium:quicksoil_bricks",
-    "count": 2
-  }
+    "count": 4,
+    "item": "aether_crystallium:quicksoil_bricks"
+  },
+  "show_notification": true
 }

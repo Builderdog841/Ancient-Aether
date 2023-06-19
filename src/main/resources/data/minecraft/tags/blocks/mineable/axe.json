@@ -1,18 +1,22 @@
 {
   "replace": false,
   "values": [
-    "aether_crystallium:frostpine_log",
-    "aether_crystallium:frostpine_wood",
-    "aether_crystallium:stripped_frostpine_log",
-    "aether_crystallium:stripped_frostpine_wood",
-    "aether_crystallium:frostpine_planks",
-    "aether_crystallium:frostpine_door",
-    "aether_crystallium:frostpine_trapdoor",
-    "aether_crystallium:frostpine_stairs",
-    "aether_crystallium:frostpine_slab",
-    "aether_crystallium:frostpine_button",
-    "aether_crystallium:frostpine_pressure_plate",
-    "aether_crystallium:frostpine_fence",
-    "aether_crystallium:frostpine_fence_gate"
+    "aether_crystallium:highlands_pine_log",
+    "aether_crystallium:highlands_pine_wood",
+    "aether_crystallium:stripped_highlands_pine_log",
+    "aether_crystallium:highlands_pine_frostpine_wood",
+    "aether_crystallium:highlands_pine_log_wall",
+    "aether_crystallium:highlands_pine_wood_wall",
+    "aether_crystallium:stripped_highlands_pine_log_wall",
+    "aether_crystallium:highlands_pine_frostpine_wood_wall",
+    "aether_crystallium:highlands_pine_planks",
+    "aether_crystallium:highlands_pine_door",
+    "aether_crystallium:highlands_pine_trapdoor",
+    "aether_crystallium:highlands_pine_stairs",
+    "aether_crystallium:highlands_pine_slab",
+    "aether_crystallium:highlands_pine_button",
+    "aether_crystallium:highlands_pine_pressure_plate",
+    "aether_crystallium:highlands_pine_fence",
+    "aether_crystallium:highlands_pine_fence_gate"
   ]
 }

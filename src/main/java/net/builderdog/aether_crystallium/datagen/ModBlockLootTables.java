@@ -29,6 +29,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf((ModBlocks.HIGHLANDS_PINE_WOOD.get()));
         dropSelf((ModBlocks.STRIPPED_HIGHLANDS_PINE_LOG.get()));
         dropSelf((ModBlocks.STRIPPED_HIGHLANDS_PINE_WOOD.get()));
+        dropSelf((ModBlocks.HIGHLANDS_PINE_LOG_WALL.get()));
+        dropSelf((ModBlocks.HIGHLANDS_PINE_WOOD_WALL.get()));
+        dropSelf((ModBlocks.STRIPPED_HIGHLANDS_PINE_LOG_WALL.get()));
+        dropSelf((ModBlocks.STRIPPED_HIGHLANDS_PINE_WOOD_WALL.get()));
         dropSelf((ModBlocks.HIGHLANDS_PINE_PLANKS.get()));
         dropSelf((ModBlocks.HIGHLANDS_PINE_SAPLING.get()));
         dropSelf((ModBlocks.HIGHLANDS_PINE_STAIRS.get()));

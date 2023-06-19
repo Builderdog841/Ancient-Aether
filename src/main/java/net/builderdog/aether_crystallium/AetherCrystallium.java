@@ -50,6 +50,8 @@ public class AetherCrystallium {
             event.accept(ModBlocks.HIGHLANDS_PINE_WOOD);
             event.accept(ModBlocks.STRIPPED_HIGHLANDS_PINE_LOG);
             event.accept(ModBlocks.STRIPPED_HIGHLANDS_PINE_WOOD);
+            event.accept(ModBlocks.HIGHLANDS_PINE_WOOD_WALL);
+            event.accept(ModBlocks.STRIPPED_HIGHLANDS_PINE_WOOD_WALL);
             event.accept(ModBlocks.HIGHLANDS_PINE_PLANKS);
             event.accept(ModBlocks.HIGHLANDS_PINE_STAIRS);
             event.accept(ModBlocks.HIGHLANDS_PINE_SLAB);
