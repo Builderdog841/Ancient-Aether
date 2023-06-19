@@ -75,12 +75,14 @@ public class AetherCrystallium {
             event.accept(ModBlocks.QUICKSOIL_BRICK_STAIRS);
             event.accept(ModBlocks.QUICKSOIL_BRICK_SLAB);
             event.accept(ModBlocks.QUICKSOIL_BRICK_WALL);
+            event.accept(ModBlocks.CRACKED_SLIDER);
             event.accept(ModItems.CRYSTAL_GOLD_INGOT);
             event.accept(ModItems.RAW_CRYSTAL_GOLD);
             event.accept(ModItems.CRYSTAL_GOLD_NUGGET);
             event.accept(ModItems.AECHOR_PETAL_ICE_CREAM_BUCKET);
         }
     }
+
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)

@@ -29,6 +29,7 @@
   "block.aether_crystallium.quicksoil_brick_wall": "Quicksoil Brick Wall",
   "block.aether_crystallium.moonlit_tulip": "Moonlit Tulip",
   "block.aether_crystallium.small_aether_cactus": "Small Aether Cactus",
+  "block.aether_crystallium.cracked_slider": "Cracked Slider",
 
   "item.aether_crystallium.crystal_gold_ingot": "Crystal Gold Ingot",
   "item.aether_crystallium.raw_crystal_gold": "Raw Crystal Gold",
@@ -41,6 +42,7 @@
   "biome.aether_crystallium.quicksoil_desert": "Quicksoil Desert",
 
   "lore.block.aether_crystallium.quicksoil_bricks": "A building block that is created by combining Holystone and Quicksoil that is exactly as slippery as Quicksoil.",
+  "lore.block.aether_crystallium.quickstone": "A block that generates in the Quicksoil Desert that makes the biome easier to traverse as it isn't slippery.",
   "lore.block.aether_crystallium.quicksoil_brick_slab": "Crafted from Quicksoil Bricks. Slabs are half blocks, versatile for decoration and smooth slopes. Try adding some to a building's roofing! They also have the same properties as Quicksoil!",
   "lore.block.aether_crystallium.quicksoil_brick_stairs": "Crafted from Quicksoil Bricks. Stairs are useful for adding verticality to builds and are often used for decoration too! They also have the same properties as Quicksoil!",
   "lore.block.aether_crystallium.quicksoil_brick_wall": "Crafted from Quicksoil Bricks. Can be used for decorative enclosures and defences. Great for keeping nasty intruders away! They also have the same properties as Quicksoil!",
@@ -68,6 +70,7 @@
   "lore.block.aether_crystallium.highlands_pine_slab": "Crafted from Highlands Pine Planks. Slabs are half blocks, versatile for decoration and smooth slopes. Try adding some to a building's roofing!",
   "lore.block.aether_crystallium.highlands_pine_stairs": "Crafted from Highlands Pine Planks. Stairs are useful for adding verticality to builds and are often used for decoration too!",
   "lore.block.aether_crystallium.highlands_pine_trapdoor": "Crafted from Highlands Pine Planks. A Trapdoor useful for covering entryways one block wide. Often used to add extra protection to staircases.",
+  "lore.block.aether_crystallium.cracked_slider": "A failed experiment of the Ancient Valkyries that can only be mined by Gravitite or better pickaxes.",
 
   "lore.item.aether_crystallium.aechor_ice_cream_bucket": "A sweat desert crafted by putting Aechor Petals, Sugar, Icestone and a Skyroot Bucket in a Crafting Table",
   "lore.item.aether_crystallium.raw_crystal_gold": "Crystal Gold in its rawest form. It can be smelted into Crystal Gold Ingots",

@@ -31,6 +31,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> MOONLIT_TULIP_PATCH_KEY = registerKey("moonlit_tulip_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_AETHER_CACTUS_PATCH_KEY = registerKey("small_aether_cactus_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_CRYSTAL_GOLD_ORE_KEY = registerKey("aether_crystal_gold_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> QUICKSTONE_ORE_KEY = registerKey("quickstone_ore");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest aetherIslandBlocks = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -46,6 +47,7 @@ public class ModConfiguredFeatures {
                         new TwoLayersFeatureSize(1, 0, 2)).build());
 
         register(context, AETHER_CRYSTAL_GOLD_ORE_KEY, Feature.ORE, new OreConfiguration(aetherCrystalGoldOre, 12, 0f));
+        register(context, QUICKSTONE_ORE_KEY, Feature.ORE, new OreConfiguration(aetherCrystalGoldOre, 32, 0f));
 
         register(context, MOONLIT_TULIP_PATCH_KEY, Feature.FLOWER,
                 AetherConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()

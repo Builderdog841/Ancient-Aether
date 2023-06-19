@@ -1,0 +1,8 @@
+{
+  "parent": "aether_crystallium:block/template_cracked_slider",
+  "render_type": "minecraft:cutout_mipped",
+  "textures": {
+    "2": "aether_crystallium:block/cracked_slider",
+    "particle": "aether:block/dungeon/carved_stone"
+  }
+}
