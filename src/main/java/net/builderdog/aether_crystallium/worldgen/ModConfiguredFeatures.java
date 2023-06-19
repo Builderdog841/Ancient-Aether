@@ -30,14 +30,17 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHLANDS_PINE_KEY = registerKey("highlands_pine");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MOONLIT_TULIP_PATCH_KEY = registerKey("moonlit_tulip_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_AETHER_CACTUS_PATCH_KEY = registerKey("small_aether_cactus_patch");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_CRYSTAL_GOLD_ORE_KEY = registerKey("aether_crystal_gold_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_QUARTZ_ORE_KEY = registerKey("aether_quartz_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> QUICKSTONE_ORE_KEY = registerKey("quickstone_ore");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest aetherIslandBlocks = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
 
-        List<OreConfiguration.TargetBlockState> aetherCrystalGoldOre = List.of(OreConfiguration.target(aetherIslandBlocks,
-                ModBlocks.CRYSTAL_GOLD_ORE.get().defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> aetherQuartzOre = List.of(OreConfiguration.target(aetherIslandBlocks,
+                ModBlocks.AETHER_QUARTZ_ORE.get().defaultBlockState()));
+
+        List<OreConfiguration.TargetBlockState> quickstoneOre = List.of(OreConfiguration.target(aetherIslandBlocks,
+                ModBlocks.AETHER_QUARTZ_ORE.get().defaultBlockState()));
 
         register(context, HIGHLANDS_PINE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                         BlockStateProvider.simple(ModBlocks.HIGHLANDS_PINE_LOG.get()),
@@ -46,8 +49,9 @@ public class ModConfiguredFeatures {
                         new HighlandsPineFoliagePlacer(ConstantInt.of(1), ConstantInt.ZERO, ConstantInt.of(1)),
                         new TwoLayersFeatureSize(1, 0, 2)).build());
 
-        register(context, AETHER_CRYSTAL_GOLD_ORE_KEY, Feature.ORE, new OreConfiguration(aetherCrystalGoldOre, 12, 0f));
-        register(context, QUICKSTONE_ORE_KEY, Feature.ORE, new OreConfiguration(aetherCrystalGoldOre, 32, 0f));
+        register(context, AETHER_QUARTZ_ORE_KEY, Feature.ORE, new OreConfiguration(aetherQuartzOre, 12, 0f));
+
+        register(context, QUICKSTONE_ORE_KEY, Feature.ORE, new OreConfiguration(quickstoneOre, 32, 0f));
 
         register(context, MOONLIT_TULIP_PATCH_KEY, Feature.FLOWER,
                 AetherConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()

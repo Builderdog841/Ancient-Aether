@@ -18,7 +18,7 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> HIGHLANDS_PINE_KEY = createKey("highlands_pine_placed");
-    public static final ResourceKey<PlacedFeature> AETHER_CRYSTAL_GOLD_ORE_PLACED = createKey("aether_crystal_gold_ore_placed");
+    public static final ResourceKey<PlacedFeature> AETHER_QUARTZ_ORE_PLACED = createKey("aether_quartz_ore_placed");
 
     public static final ResourceKey<PlacedFeature> QUICKSTONE_ORE_PLACED = createKey("quickstone_ore_placed");
     public static final ResourceKey<PlacedFeature> MOONLIT_TULIP_PATCH_KEY = createKey("moonlit_tulip_patch");
@@ -30,7 +30,7 @@ public class ModPlacedFeatures {
         register(context, HIGHLANDS_PINE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.HIGHLANDS_PINE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3,0.1f,2), ModBlocks.HIGHLANDS_PINE_SAPLING.get()));
 
-        register(context, AETHER_CRYSTAL_GOLD_ORE_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.AETHER_CRYSTAL_GOLD_ORE_KEY),
+        register(context, AETHER_QUARTZ_ORE_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.AETHER_QUARTZ_ORE_KEY),
                 ModPlacedFeatureBuilder.commonOrePlacement(16, //veins per chunk
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(128))));
 

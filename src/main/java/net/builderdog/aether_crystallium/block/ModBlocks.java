@@ -27,13 +27,10 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, AetherCrystallium.MOD_ID);
-    public static final RegistryObject<Block> CRYSTAL_GOLD_BLOCK =  registerBlock("crystal_gold_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(1f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> CACTUS_FLOWER =  registerBlock("cactus_flower",
             () -> new Block(BlockBehaviour.Properties.of(Material.PLANT)
                     .instabreak().noOcclusion()));
-    public static final RegistryObject<Block> CRYSTAL_GOLD_ORE =  registerBlock("crystal_gold_ore",
+    public static final RegistryObject<Block> AETHER_QUARTZ_ORE =  registerBlock("aether_quartz_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(1f).requiresCorrectToolForDrops()));
 
@@ -44,9 +41,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> QUICKSTONE =  registerBlock("quickstone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(0.5f).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> RAW_CRYSTAL_GOLD_BLOCK =  registerBlock("raw_crystal_gold_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(1f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> ENCHANTED_SENTRY_STONE =  registerBlock("enchanted_sentry_stone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
                     .strength(0.5f, 6f).lightLevel(s -> 11).requiresCorrectToolForDrops()));

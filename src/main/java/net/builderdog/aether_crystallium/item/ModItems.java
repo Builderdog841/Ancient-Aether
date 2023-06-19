@@ -13,13 +13,6 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
            DeferredRegister.create(ForgeRegistries.ITEMS, AetherCrystallium.MOD_ID) ;
 
-    public static final RegistryObject<Item> CRYSTAL_GOLD_INGOT = ITEMS.register("crystal_gold_ingot",
-            () -> new Item(new Item.Properties()));
-       public static final RegistryObject<Item> RAW_CRYSTAL_GOLD = ITEMS.register("raw_crystal_gold",
-               () -> new Item(new Item.Properties()));
-       public static final RegistryObject<Item> CRYSTAL_GOLD_NUGGET = ITEMS.register("crystal_gold_nugget",
-            () -> new Item(new Item.Properties()));
-
     public static final RegistryObject<Item> AECHOR_PETAL_ICE_CREAM_BUCKET = ITEMS.register("aechor_petal_ice_cream_bucket",
             () -> new Item(new Item.Properties().stacksTo(16).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(6).saturationMod(0.6f).build())));
 

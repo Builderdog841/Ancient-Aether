@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "pattern": [
-    " #",
-    "# "
+    "#",
+    "#"
   ],
   "key": {
     "#": {
-      "item": "aether_crystallium:crystal_gold_ingot"
+      "item": "aether:angelic_slab"
     },
     "result": {
-      "item": "minecraft:shears",
+      "item": "aether:pillar_top",
       "count": 1
     }
   }

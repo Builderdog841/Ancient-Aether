@@ -1,9 +1,9 @@
 {
-  "feature": "aether_crystallium:aether_crystal_gold_ore",
+  "feature": "aether_crystallium:aether_quartz_ore",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 20
+      "count": 16
     },
     {
       "type": "minecraft:in_square"

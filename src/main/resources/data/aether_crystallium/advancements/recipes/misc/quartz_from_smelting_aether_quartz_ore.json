@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_raw_crystal_gold": {
+    "has_aether_quartz_ore": {
       "conditions": {
         "items": [
           {
             "items": [
-              "aether_crystallium:raw_crystal_gold"
+              "minecraft:quartz"
             ]
           }
         ]
@@ -15,14 +15,14 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:crystal_gold_ingot_from_smelting_raw_crystal_gold"
+        "recipe": "aether_crystallium:quartz_from_smelting_aether_quartz_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_raw_crystal_gold",
+      "has_aether_quartz_ore",
       "has_the_recipe"
     ]
   ],

@@ -1,7 +1,5 @@
 {
-  "block.aether_crystallium.crystal_gold_block": "Block of Crystal Gold",
-  "block.aether_crystallium.crystal_gold_ore": "Crystal Gold Ore",
-  "block.aether_crystallium.raw_crystal_gold_block": "Block of Raw Crystal Gold",
+  "block.aether_crystallium.aether_quartz_ore": "Aether Quartz Ore",
   "block.aether_crystallium.quicksoil_bricks": "Quicksoil Bricks",
   "block.aether_crystallium.enchanted_sentry_stone": "Enchanted Sentry Stone",
   "block.aether_crystallium.blighted_sentry_stone": "Blighted Sentry Stone",
@@ -30,10 +28,6 @@
   "block.aether_crystallium.moonlit_tulip": "Moonlit Tulip",
   "block.aether_crystallium.small_aether_cactus": "Small Aether Cactus",
   "block.aether_crystallium.cracked_slider": "Cracked Slider",
-
-  "item.aether_crystallium.crystal_gold_ingot": "Crystal Gold Ingot",
-  "item.aether_crystallium.raw_crystal_gold": "Raw Crystal Gold",
-  "item.aether_crystallium.crystal_gold_nugget": "Raw Crystal Nugget",
   "item.aether_crystallium.aechor_petal_ice_cream_bucket": "Aechor Petal Ice Cream Bucket",
 
   "creatvemodetab.aether_crystallium_tab": "Aether Crystallium",
@@ -52,9 +46,6 @@
   "lore.block.aether_crystallium.moonlit_tulip": "A tulip that generates in the Highlands Taiga. It can either be crafted into Blue Dye or enchanted into Lapis Lazuli.",
   "lore.block.aether_crystallium.enchanted_sentry_stone": "The enchanted version of Sentry Stone, found in Ancient Valkyrie Libraries",
   "lore.block.aether_crystallium.blighted_sentry_stone": "The blighted version of Sentry Stone, found in Ancient Valkyrie Laboratories",
-  "lore.block.aether_crystallium.crystal_gold_ore": "A shiny ore found in the underground of the Aether. It is has various different uses.",
-  "lore.block.aether_crystallium.crystal_gold_block": "A very shiny block crafted from 9 Crystal Gold Ore Ingots.",
-  "lore.block.aether_crystallium.raw_crystal_gold_block": "A block compacted out of 9 pieces of Raw Crystal Gold.",
   "lore.block.aether_crystallium.highlands_pine_log": "The log of a tree found in a very cold region of the Aether, the Highlands Taiga. When put in a Crafting Table they will provide 4 Highlands Pine Planks.",
   "lore.block.aether_crystallium.stripped_highlands_pine_log": "A Highlands Pine Log that had its bark stripped away with an Axe. When put in a Crafting Table they will provide 4 Highlands Pine Planks.",
   "lore.block.aether_crystallium.highlands_pine_wood": "A building block crafted from Highlands Pine Logs. When put in a Crafting Table they will provide 4 Highlands Pine Planks.",
@@ -71,9 +62,5 @@
   "lore.block.aether_crystallium.highlands_pine_stairs": "Crafted from Highlands Pine Planks. Stairs are useful for adding verticality to builds and are often used for decoration too!",
   "lore.block.aether_crystallium.highlands_pine_trapdoor": "Crafted from Highlands Pine Planks. A Trapdoor useful for covering entryways one block wide. Often used to add extra protection to staircases.",
   "lore.block.aether_crystallium.cracked_slider": "A failed experiment of the Ancient Valkyries that can only be mined by Gravitite or better pickaxes.",
-
-  "lore.item.aether_crystallium.aechor_ice_cream_bucket": "A sweat desert crafted by putting Aechor Petals, Sugar, Icestone and a Skyroot Bucket in a Crafting Table",
-  "lore.item.aether_crystallium.raw_crystal_gold": "Crystal Gold in its rawest form. It can be smelted into Crystal Gold Ingots",
-  "lore.item.aether_crystallium.crystal_gold_ingot": "An Ingot smelted from Raw Crystal Gold. It is used for crafting building blocks and other things.",
-  "lore.item.aether_crystallium.crystal_gold_nugget": "A small nugget of a Crystal Gold used in various different crafting recipes."
+  "lore.item.aether_crystallium.aechor_ice_cream_bucket": "A sweat desert crafted by putting Aechor Petals, Sugar, Icestone and a Skyroot Bucket in a Crafting Table"
 }

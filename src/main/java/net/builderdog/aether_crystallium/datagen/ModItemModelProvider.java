@@ -18,9 +18,6 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        simpleItem(ModItems.CRYSTAL_GOLD_NUGGET);
-        simpleItem(ModItems.CRYSTAL_GOLD_INGOT);
-        simpleItem(ModItems.RAW_CRYSTAL_GOLD);
         simpleItem(ModItems.AECHOR_PETAL_ICE_CREAM_BUCKET);
     }
 

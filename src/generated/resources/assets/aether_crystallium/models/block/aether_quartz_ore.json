@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "aether_crystallium:block/raw_crystal_gold_block"
+    "all": "aether_crystallium:block/aether_quartz_ore"
   }
 }

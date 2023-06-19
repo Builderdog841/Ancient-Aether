@@ -1,9 +1,7 @@
 {
   "replace": false,
   "values": [
-    "aether_crystallium:crystal_gold_ore",
-    "aether_crystallium:crystal_gold_block",
-    "aether_crystallium:raw_crystal_gold_block",
+    "aether_crystallium:aether_quartz_ore",
     "aether_crystallium:enchanted_sentry_stone",
     "aether_crystallium:blighted_sentry_stone",
     "aether_crystallium:quicksoil_bricks",

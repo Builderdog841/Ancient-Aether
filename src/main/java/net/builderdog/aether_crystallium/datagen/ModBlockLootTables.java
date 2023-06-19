@@ -7,6 +7,7 @@ import net.minecraft.world.flag.FeatureFlag;
 import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
@@ -20,8 +21,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        dropSelf((ModBlocks.CRYSTAL_GOLD_BLOCK.get()));
-        dropSelf((ModBlocks.RAW_CRYSTAL_GOLD_BLOCK.get()));
         dropSelf((ModBlocks.ENCHANTED_SENTRY_STONE.get()));
         dropSelf((ModBlocks.BLIGHTED_SENTRY_STONE.get()));
         dropSelf((ModBlocks.QUICKSOIL_BRICKS.get()));
@@ -49,8 +48,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf((ModBlocks.SMALL_AETHER_CACTUS.get()));
         dropSelf((ModBlocks.CRACKED_SLIDER.get()));
 
-        add(ModBlocks.CRYSTAL_GOLD_ORE.get(),
-                (block) -> createOreDrop(ModBlocks.CRYSTAL_GOLD_ORE.get(), ModItems.RAW_CRYSTAL_GOLD.get()));
+        add(ModBlocks.AETHER_QUARTZ_ORE.get(),
+                (block) -> createOreDrop(ModBlocks.AETHER_QUARTZ_ORE.get(), Items.QUARTZ));
 
         add(ModBlocks.HIGHLANDS_PINE_LEAVES.get(),
                 (block) -> createLeavesDrops(block, ModBlocks.HIGHLANDS_PINE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));

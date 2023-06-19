@@ -65,9 +65,7 @@ public class AetherCrystallium {
             event.accept(ModBlocks.SMALL_AETHER_CACTUS);
             event.accept(ModBlocks.CACTUS_FLOWER);
             event.accept(ModBlocks.MOONLIT_TULIP);
-            event.accept(ModBlocks.CRYSTAL_GOLD_ORE);
-            event.accept(ModBlocks.RAW_CRYSTAL_GOLD_BLOCK);
-            event.accept(ModBlocks.CRYSTAL_GOLD_BLOCK);
+            event.accept(ModBlocks.AETHER_QUARTZ_ORE);
             event.accept(ModBlocks.ENCHANTED_SENTRY_STONE);
             event.accept(ModBlocks.BLIGHTED_SENTRY_STONE);
             event.accept(ModBlocks.QUICKSTONE);
@@ -76,9 +74,6 @@ public class AetherCrystallium {
             event.accept(ModBlocks.QUICKSOIL_BRICK_SLAB);
             event.accept(ModBlocks.QUICKSOIL_BRICK_WALL);
             event.accept(ModBlocks.CRACKED_SLIDER);
-            event.accept(ModItems.CRYSTAL_GOLD_INGOT);
-            event.accept(ModItems.RAW_CRYSTAL_GOLD);
-            event.accept(ModItems.CRYSTAL_GOLD_NUGGET);
             event.accept(ModItems.AECHOR_PETAL_ICE_CREAM_BUCKET);
         }
     }

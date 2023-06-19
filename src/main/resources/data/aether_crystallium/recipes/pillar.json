@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "pattern": [
     "#",
     "#"
   ],
   "key": {
     "#": {
-      "item": "aether_crystallium:crystal_gold_ingot"
+      "item": "aether:angelic_stone"
     },
     "result": {
       "item": "aether:pillar",
