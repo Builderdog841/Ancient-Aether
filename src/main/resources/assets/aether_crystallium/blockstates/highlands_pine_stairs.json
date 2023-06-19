@@ -200,7 +200,7 @@
       "y": 270
     },
     "facing=west,half=top,shape=straight": {
-      "model": "aether_crystallium:block/v_stairs",
+      "model": "aether_crystallium:block/highlands_pine_stairs",
       "uvlock": true,
       "x": 180,
       "y": 180

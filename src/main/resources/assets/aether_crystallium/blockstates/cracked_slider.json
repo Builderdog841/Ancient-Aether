@@ -1,7 +1,23 @@
 {
   "variants": {
-    "": {
-      "model": "aether_crystallium:block/cracked_slider"
+    "facing=east": {
+      "model": "aether_crystallium:block/cracked_slider",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=north": {
+      "model": "aether_crystallium:block/cracked_slider",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=west": {
+      "model": "aether_crystallium:block/cracked_slider",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=south": {
+      "model": "aether_crystallium:block/cracked_slider",
+      "uvlock": true
     }
   }
 }
