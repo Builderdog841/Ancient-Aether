@@ -1,17 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
+  "key": {
+    "#": {
+      "item": "aether:angelic_stone"
+    }
+  },
   "pattern": [
     "#",
     "#"
   ],
-  "key": {
-    "#": {
-      "item": "aether:angelic_stone"
-    },
-    "result": {
-      "item": "aether:pillar",
-      "count": 2
-    }
-  }
+  "result": {
+    "count": 2,
+    "item": "aether:pillar"
+  },
+  "show_notification": true
 }

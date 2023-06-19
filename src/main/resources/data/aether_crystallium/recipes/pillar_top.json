@@ -1,17 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
+  "key": {
+    "#": {
+      "item": "aether:angelic_slab"
+    }
+  },
   "pattern": [
     "#",
     "#"
   ],
-  "key": {
-    "#": {
-      "item": "aether:angelic_slab"
-    },
-    "result": {
-      "item": "aether:pillar_top",
-      "count": 1
-    }
-  }
+  "result": {
+    "count": 1,
+    "item": "aether:pillar_top"
+  },
+  "show_notification": true
 }
