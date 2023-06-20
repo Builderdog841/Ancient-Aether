@@ -36,7 +36,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> CRACKED_SLIDER =  registerBlock("cracked_slider",
             () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(5f).requiresCorrectToolForDrops().noOcclusion()));
+                    .strength(5f).requiresCorrectToolForDrops().noOcclusion()
+                    .lightLevel((state) -> state.getValue( RedstoneLampBlock.LIT ) == true ? 15 : 0)));
 
     public static final RegistryObject<Block> QUICKSTONE =  registerBlock("quickstone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
@@ -79,9 +80,21 @@ public class ModBlocks {
                     .strength(2f)));
     public static final RegistryObject<Block> HIGHLANDS_PINE_STAIRS =  registerBlock("highlands_pine_stairs",
             () -> new StairBlock(() -> HIGHLANDS_PINE_PLANKS.get().defaultBlockState(), (BlockBehaviour.Properties.copy(ModBlocks.HIGHLANDS_PINE_PLANKS.get()))));
-
-                public static final RegistryObject<Block> HIGHLANDS_PINE_SLAB = registerBlock("highlands_pine_slab",
-                        () -> new SlabBlock(Block.Properties.copy(ModBlocks.HIGHLANDS_PINE_PLANKS.get()).strength(2.0F, 3.0F)) {
+    public static final RegistryObject<Block> HIGHLANDS_PINE_SLAB = registerBlock("highlands_pine_slab",
+            () -> new SlabBlock(Block.Properties.copy(ModBlocks.HIGHLANDS_PINE_PLANKS.get())
+                    .strength(2.0F, 3.0F)));
+    public static final RegistryObject<FenceBlock> HIGHLANDS_PINE_FENCE = registerBlock("highlands_pine_fence",
+            () -> new FenceBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
+    public static final RegistryObject<FenceGateBlock> HIGHLANDS_PINE_FENCE_GATE = registerBlock("highlands_pine_fence_gate",
+            () -> new FenceGateBlock(Block.Properties.copy(Blocks.OAK_FENCE_GATE), ModWoodTypes.HIGHLANDS_PINE));
+    public static final RegistryObject<WallBlock> HIGHLANDS_PINE_LOG_WALL = registerBlock("highlands_pine_log_wall",
+            () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
+    public static final RegistryObject<WallBlock> HIGHLANDS_PINE_WOOD_WALL = registerBlock("highlands_pine_wood_wall",
+            () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
+    public static final RegistryObject<WallBlock> STRIPPED_HIGHLANDS_PINE_LOG_WALL = registerBlock("stripped_highlands_pine_log_wall",
+            () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
+    public static final RegistryObject<WallBlock> STRIPPED_HIGHLANDS_PINE_WOOD_WALL = registerBlock("stripped_highlands_pine_wood_wall",
+            () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)) {
 
 
                 @Override
@@ -120,25 +133,14 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> HIGHLANDS_PINE_SAPLING =  registerBlock("highlands_pine_sapling",
             () -> new SaplingBlock(new HighlandsPineTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-
     public static final RegistryObject<Block> QUICKSOIL_BRICK_STAIRS =  registerBlock("quicksoil_brick_stairs",
             () -> new StairBlock(() -> QUICKSOIL_BRICKS.get().defaultBlockState(), (BlockBehaviour.Properties.copy(ModBlocks.QUICKSOIL_BRICKS.get()))));
-
     public static final RegistryObject<Block> QUICKSOIL_BRICK_SLAB = registerBlock("quicksoil_brick_slab",
             () -> new SlabBlock(Block.Properties.copy(ModBlocks.QUICKSOIL_BRICKS.get()).strength(2.0F, 3.0F)));
-
-    public static final RegistryObject<FenceBlock> HIGHLANDS_PINE_FENCE = registerBlock("highlands_pine_fence", () -> new FenceBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
-
-    public static final RegistryObject<WallBlock> HIGHLANDS_PINE_LOG_WALL = registerBlock("highlands_pine_log_wall", () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<WallBlock> HIGHLANDS_PINE_WOOD_WALL = registerBlock("highlands_pine_wood_wall", () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<WallBlock> STRIPPED_HIGHLANDS_PINE_LOG_WALL = registerBlock("stripped_highlands_pine_log_wall", () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<WallBlock> STRIPPED_HIGHLANDS_PINE_WOOD_WALL = registerBlock("stripped_highlands_pine_wood_wall", () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<FenceGateBlock> HIGHLANDS_PINE_FENCE_GATE = registerBlock("highlands_pine_fence_gate", () -> new FenceGateBlock(Block.Properties.copy(Blocks.OAK_FENCE_GATE), ModWoodTypes.HIGHLANDS_PINE));
     public static final RegistryObject<DoorBlock> HIGHLANDS_PINE_DOOR = registerBlock("highlands_pine_door", () -> new DoorBlock(Block.Properties.copy(Blocks.OAK_DOOR), ModWoodTypes.HIGHLANDS_PINE_BLOCK_SET));
     public static final RegistryObject<TrapDoorBlock> HIGHLANDS_PINE_TRAPDOOR = registerBlock("highlands_pine_trapdoor", () -> new TrapDoorBlock(Block.Properties.copy(Blocks.OAK_TRAPDOOR), ModWoodTypes.HIGHLANDS_PINE_BLOCK_SET));
     public static final RegistryObject<ButtonBlock> HIGHLANDS_PINE_BUTTON = registerBlock("highlands_pine_button", () -> new ButtonBlock(Block.Properties.copy(Blocks.OAK_BUTTON), ModWoodTypes.HIGHLANDS_PINE_BLOCK_SET, 30, true));
     public static final RegistryObject<PressurePlateBlock> HIGHLANDS_PINE_PRESSURE_PLATE = registerBlock("highlands_pine_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.copy(Blocks.OAK_PRESSURE_PLATE), ModWoodTypes.HIGHLANDS_PINE_BLOCK_SET));
-
     public static final RegistryObject<WallBlock> QUICKSOIL_BRICK_WALL = registerBlock("quicksoil_brick_wall", () -> new WallBlock(Block.Properties.copy(ModBlocks.QUICKSOIL_BRICKS.get())));
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "aether_crystallium:highlands_pine_log",
+    "aether_crystallium:highlands_pine_wood",
+    "aether_crystallium:stripped_highlands_pine_log",
+    "aether_crystallium:stripped_highlands_pine_wood"
+  ]
+}
