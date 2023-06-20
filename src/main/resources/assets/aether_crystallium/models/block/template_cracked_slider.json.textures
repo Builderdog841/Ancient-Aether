@@ -1,0 +1,16 @@
+{
+  "mappings": {
+    "cracked_slider": {
+      "map": {
+        "2": "cracked_slider",
+      },
+      "name": "cracked_slider"
+    },
+    "activated_cracked_slider": {
+      "map": {
+        "2": "activated_cracked_slider",
+      },
+      "name": "activated_cracked_slider"
+    }
+  }
+}

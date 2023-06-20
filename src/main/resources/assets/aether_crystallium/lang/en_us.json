@@ -73,6 +73,6 @@
   "lore.block.aether_crystallium.highlands_pine_slab": "Crafted from Highlands Pine Planks. Slabs are half blocks, versatile for decoration and smooth slopes. Try adding some to a building's roofing!",
   "lore.block.aether_crystallium.highlands_pine_stairs": "Crafted from Highlands Pine Planks. Stairs are useful for adding verticality to builds and are often used for decoration too!",
   "lore.block.aether_crystallium.highlands_pine_trapdoor": "Crafted from Highlands Pine Planks. A Trapdoor useful for covering entryways one block wide. Often used to add extra protection to staircases.",
-  "lore.block.aether_crystallium.cracked_slider": "A failed experiment of the Ancient Valkyries that can only be mined by Gravitite or better pickaxes.",
+  "lore.block.aether_crystallium.cracked_slider": "A failed experiment of the Ancient Valkyries that can only be mined by Gravitite or better pickaxes. It also some Redstone functionality.",
   "lore.item.aether_crystallium.aechor_ice_cream_bucket": "A sweat desert crafted by putting Aechor Petals, Sugar, Icestone and a Skyroot Bucket in a Crafting Table"
 }

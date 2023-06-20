@@ -35,7 +35,7 @@ public class ModBlocks {
                     .strength(1f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> CRACKED_SLIDER =  registerBlock("cracked_slider",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+            () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(5f).requiresCorrectToolForDrops().noOcclusion()));
 
     public static final RegistryObject<Block> QUICKSTONE =  registerBlock("quickstone",
