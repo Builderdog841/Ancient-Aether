@@ -56,9 +56,11 @@ public class AetherCrystallium {
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if(event.getTab() == ModCreativeModeTabs.AETHER_CRYSTALLIUM_TAB)  {
             event.accept(ModBlocks.HIGHLANDS_PINE_LOG);
+            event.accept(ModBlocks.HIGHLANDS_PINE_LOG_WALL);
             event.accept(ModBlocks.HIGHLANDS_PINE_WOOD);
             event.accept(ModBlocks.HIGHLANDS_PINE_WOOD_WALL);
             event.accept(ModBlocks.STRIPPED_HIGHLANDS_PINE_LOG);
+            event.accept(ModBlocks.STRIPPED_HIGHLANDS_PINE_LOG_WALL);
             event.accept(ModBlocks.STRIPPED_HIGHLANDS_PINE_WOOD);
             event.accept(ModBlocks.STRIPPED_HIGHLANDS_PINE_WOOD_WALL);
             event.accept(ModBlocks.HIGHLANDS_PINE_PLANKS);
