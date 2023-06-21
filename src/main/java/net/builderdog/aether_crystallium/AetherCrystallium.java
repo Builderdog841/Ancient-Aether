@@ -3,6 +3,7 @@ package net.builderdog.aether_crystallium;
 import com.aetherteam.aether.item.AetherItems;
 import com.mojang.logging.LogUtils;
 import net.builderdog.aether_crystallium.block.ModBlocks;
+import net.builderdog.aether_crystallium.blockentity.ModBlockEntityTypes;
 import net.builderdog.aether_crystallium.item.ModCreativeModeTabs;
 import net.builderdog.aether_crystallium.item.ModItems;
 import net.builderdog.aether_crystallium.worldgen.foliageplacer.ModFoliagePlacerTypes;
@@ -31,6 +32,7 @@ public class AetherCrystallium {
         ModItems.ITEMS.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
         ModFoliagePlacerTypes.FOLIAGE_PLACERS.register(modEventBus);
+        ModBlockEntityTypes.BLOCK_ENTITY_TYPES.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -48,9 +50,9 @@ public class AetherCrystallium {
         if(event.getTab() == ModCreativeModeTabs.AETHER_CRYSTALLIUM_TAB)  {
             event.accept(ModBlocks.HIGHLANDS_PINE_LOG);
             event.accept(ModBlocks.HIGHLANDS_PINE_WOOD);
+            event.accept(ModBlocks.HIGHLANDS_PINE_WOOD_WALL);
             event.accept(ModBlocks.STRIPPED_HIGHLANDS_PINE_LOG);
             event.accept(ModBlocks.STRIPPED_HIGHLANDS_PINE_WOOD);
-            event.accept(ModBlocks.HIGHLANDS_PINE_WOOD_WALL);
             event.accept(ModBlocks.STRIPPED_HIGHLANDS_PINE_WOOD_WALL);
             event.accept(ModBlocks.HIGHLANDS_PINE_PLANKS);
             event.accept(ModBlocks.HIGHLANDS_PINE_STAIRS);
@@ -61,6 +63,7 @@ public class AetherCrystallium {
             event.accept(ModBlocks.HIGHLANDS_PINE_TRAPDOOR);
             event.accept(ModBlocks.HIGHLANDS_PINE_PRESSURE_PLATE);
             event.accept(ModBlocks.HIGHLANDS_PINE_BUTTON);
+            event.accept(ModBlocks.HIGHLANDS_PINE_SIGN);
             event.accept(ModBlocks.HIGHLANDS_PINE_LEAVES);
             event.accept(ModBlocks.HIGHLANDS_PINE_SAPLING);
             event.accept(ModBlocks.AETHER_CACTUS);
