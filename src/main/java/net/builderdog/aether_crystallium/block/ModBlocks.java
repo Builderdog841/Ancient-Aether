@@ -1,6 +1,7 @@
 package net.builderdog.aether_crystallium.block;
 
 import com.aetherteam.aether.block.AetherBlocks;
+import com.aetherteam.aether.mixin.mixins.common.accessor.FireBlockAccessor;
 import net.builderdog.aether_crystallium.AetherCrystallium;
 import net.builderdog.aether_crystallium.item.ModItems;
 import net.builderdog.aether_crystallium.worldgen.tree.HighlandsPineTreeGrower;
@@ -34,12 +35,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> AETHER_QUARTZ_ORE =  registerBlock("aether_quartz_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(1f).requiresCorrectToolForDrops()));
-
     public static final RegistryObject<Block> CRACKED_SLIDER =  registerBlock("cracked_slider",
             () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(5f).requiresCorrectToolForDrops().noOcclusion()
                     .lightLevel((state) -> state.getValue( RedstoneLampBlock.LIT ) == true ? 15 : 0)));
-
     public static final RegistryObject<Block> QUICKSTONE =  registerBlock("quickstone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(0.5f).requiresCorrectToolForDrops()));
@@ -99,45 +98,18 @@ public class ModBlocks {
     public static final RegistryObject<WallBlock> STRIPPED_HIGHLANDS_PINE_LOG_WALL = registerBlock("stripped_highlands_pine_log_wall",
             () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
     public static final RegistryObject<WallBlock> STRIPPED_HIGHLANDS_PINE_WOOD_WALL = registerBlock("stripped_highlands_pine_wood_wall",
-            () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)) {
-
-
-                @Override
-                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return true;
-                }
-
-                @Override
-                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return 5;
-                }
-
-                @Override
-                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return 20;
-                }
-            });
+            () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
     public static final RegistryObject<Block> HIGHLANDS_PINE_LEAVES =  registerBlock("highlands_pine_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
-                    .strength(0.2f).isSuffocating(ModBlocks::never).isViewBlocking(ModBlocks::never)){
-                @Override
-                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return true;
-                }
-
-                @Override
-                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return 30;
-                }
-
-                @Override
-                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return 60;
-                }
-            });
-
+                    .strength(0.2f).isSuffocating(ModBlocks::never).isViewBlocking(ModBlocks::never)));
     public static final RegistryObject<Block> HIGHLANDS_PINE_SAPLING =  registerBlock("highlands_pine_sapling",
             () -> new SaplingBlock(new HighlandsPineTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<FlowerPotBlock> POTTED_MOONLIT_TULIP = BLOCKS.register("potted_moonlit_tulip",
+            () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, MOONLIT_TULIP, Block.Properties.copy(Blocks.FLOWER_POT)));
+    public static final RegistryObject<FlowerPotBlock> POTTED_SMALL_AETHER_CACTUS = BLOCKS.register("potted_small_aether_cactus",
+            () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SMALL_AETHER_CACTUS, Block.Properties.copy(Blocks.FLOWER_POT)));
+    public static final RegistryObject<FlowerPotBlock> POTTED_HIGHLANDS_PINE_SAPLING = BLOCKS.register("potted_highlands_pine_sapling",
+            () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, HIGHLANDS_PINE_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<Block> QUICKSOIL_BRICK_STAIRS =  registerBlock("quicksoil_brick_stairs",
             () -> new StairBlock(() -> QUICKSOIL_BRICKS.get().defaultBlockState(), (BlockBehaviour.Properties.copy(ModBlocks.QUICKSOIL_BRICKS.get()))));
     public static final RegistryObject<Block> QUICKSOIL_BRICK_SLAB = registerBlock("quicksoil_brick_slab",
@@ -147,6 +119,28 @@ public class ModBlocks {
     public static final RegistryObject<ButtonBlock> HIGHLANDS_PINE_BUTTON = registerBlock("highlands_pine_button", () -> new ButtonBlock(Block.Properties.copy(Blocks.OAK_BUTTON), ModWoodTypes.HIGHLANDS_PINE_BLOCK_SET, 30, true));
     public static final RegistryObject<PressurePlateBlock> HIGHLANDS_PINE_PRESSURE_PLATE = registerBlock("highlands_pine_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.copy(Blocks.OAK_PRESSURE_PLATE), ModWoodTypes.HIGHLANDS_PINE_BLOCK_SET));
     public static final RegistryObject<WallBlock> QUICKSOIL_BRICK_WALL = registerBlock("quicksoil_brick_wall", () -> new WallBlock(Block.Properties.copy(ModBlocks.QUICKSOIL_BRICKS.get())));
+
+    public static void registerPots() {
+        FlowerPotBlock pot = (FlowerPotBlock) Blocks.FLOWER_POT;
+        pot.addPlant(ModBlocks.MOONLIT_TULIP.getId(), ModBlocks.POTTED_MOONLIT_TULIP);
+        pot.addPlant(ModBlocks.SMALL_AETHER_CACTUS.getId(), ModBlocks.POTTED_SMALL_AETHER_CACTUS);
+        pot.addPlant(ModBlocks.HIGHLANDS_PINE_SAPLING.getId(), ModBlocks.POTTED_HIGHLANDS_PINE_SAPLING);
+    }
+    public static void registerFlammability() {
+        FireBlockAccessor fireBlockAccessor = (FireBlockAccessor) Blocks.FIRE;
+        fireBlockAccessor.callSetFlammable(ModBlocks.HIGHLANDS_PINE_LEAVES.get(), 30, 60);
+        fireBlockAccessor.callSetFlammable(ModBlocks.HIGHLANDS_PINE_LOG.get(), 5, 5);
+        fireBlockAccessor.callSetFlammable(ModBlocks.STRIPPED_HIGHLANDS_PINE_LOG.get(), 5, 5);
+        fireBlockAccessor.callSetFlammable(ModBlocks.HIGHLANDS_PINE_WOOD.get(), 5, 5);
+        fireBlockAccessor.callSetFlammable(ModBlocks.STRIPPED_HIGHLANDS_PINE_WOOD.get(), 5, 5);
+        fireBlockAccessor.callSetFlammable(ModBlocks.HIGHLANDS_PINE_PLANKS.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(ModBlocks.MOONLIT_TULIP.get(), 60, 100);
+        fireBlockAccessor.callSetFlammable(ModBlocks.SMALL_AETHER_CACTUS.get(), 60, 100);
+        fireBlockAccessor.callSetFlammable(ModBlocks.HIGHLANDS_PINE_FENCE_GATE.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(ModBlocks.HIGHLANDS_PINE_FENCE.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(ModBlocks.HIGHLANDS_PINE_STAIRS.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(ModBlocks.HIGHLANDS_PINE_SLAB.get(), 5, 20);
+    }
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

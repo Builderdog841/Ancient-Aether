@@ -8,6 +8,8 @@ import net.builderdog.aether_crystallium.item.ModCreativeModeTabs;
 import net.builderdog.aether_crystallium.item.ModItems;
 import net.builderdog.aether_crystallium.worldgen.foliageplacer.ModFoliagePlacerTypes;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -39,11 +41,16 @@ public class AetherCrystallium {
         MinecraftForge.EVENT_BUS.register(this);
 
         modEventBus.addListener(this::addCreative) ;
-
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
 
+        event.enqueueWork(() -> {
+            ModBlocks.registerPots();
+            ModBlocks.registerFlammability();
+
+            this.registerComposting();
+        });
     }
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
@@ -83,7 +90,18 @@ public class AetherCrystallium {
         }
     }
 
+    private void registerComposting() {
+        this.addCompost(0.3F, ModBlocks.HIGHLANDS_PINE_LEAVES.get().asItem());
+        this.addCompost(0.3F, ModBlocks.HIGHLANDS_PINE_SAPLING.get());
+        this.addCompost(0.65F, ModBlocks.SMALL_AETHER_CACTUS.get());
+        this.addCompost(0.65F, ModBlocks.MOONLIT_TULIP.get());
+        this.addCompost(0.5F, ModBlocks.AETHER_CACTUS.get());
+        this.addCompost(0.85F, ModBlocks.CACTUS_FLOWER.get());
+    }
 
+    private void addCompost(float chance, ItemLike item) {
+        ComposterBlock.COMPOSTABLES.put(item.asItem(), chance);
+    }
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
