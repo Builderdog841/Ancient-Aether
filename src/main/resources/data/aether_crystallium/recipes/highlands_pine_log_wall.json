@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_trapdoors",
+  "key": {
+    "#": {
+      "item": "aether_crystallium:highlands_pine_log"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "item": "aether_crystallium:highlands_pine_log_wall"
+  },
+  "show_notification": true
+}
