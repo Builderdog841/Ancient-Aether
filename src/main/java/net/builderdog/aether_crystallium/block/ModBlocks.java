@@ -118,6 +118,9 @@ public class ModBlocks {
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SMALL_AETHER_CACTUS, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_HIGHLANDS_PINE_SAPLING = BLOCKS.register("potted_highlands_pine_sapling",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, HIGHLANDS_PINE_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
+
+    public static final RegistryObject<FlowerPotBlock> POTTED_SUNROOT_SAPLING = BLOCKS.register("potted_sunroot",
+            () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SUNROOT_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<Block> QUICKSOIL_BRICK_STAIRS =  registerBlock("quicksoil_brick_stairs",
             () -> new StairBlock(() -> QUICKSOIL_BRICKS.get().defaultBlockState(), (BlockBehaviour.Properties.copy(ModBlocks.QUICKSOIL_BRICKS.get()))));
     public static final RegistryObject<Block> QUICKSOIL_BRICK_SLAB = registerBlock("quicksoil_brick_slab",
@@ -133,6 +136,7 @@ public class ModBlocks {
         pot.addPlant(ModBlocks.MOONLIT_TULIP.getId(), ModBlocks.POTTED_MOONLIT_TULIP);
         pot.addPlant(ModBlocks.SMALL_AETHER_CACTUS.getId(), ModBlocks.POTTED_SMALL_AETHER_CACTUS);
         pot.addPlant(ModBlocks.HIGHLANDS_PINE_SAPLING.getId(), ModBlocks.POTTED_HIGHLANDS_PINE_SAPLING);
+        pot.addPlant(ModBlocks.SUNROOT_SAPLING.getId(), ModBlocks.POTTED_SUNROOT_SAPLING);
     }
     public static void registerFlammability() {
         FireBlockAccessor fireBlockAccessor = (FireBlockAccessor) Blocks.FIRE;
