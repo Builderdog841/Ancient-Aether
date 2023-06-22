@@ -1,5 +1,6 @@
 package net.builderdog.aether_crystallium.worldgen;
 
+import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.data.resources.builders.AetherConfiguredFeatureBuilders;
 import net.builderdog.aether_crystallium.AetherCrystallium;
 import net.builderdog.aether_crystallium.block.ModBlocks;
@@ -28,6 +29,7 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHLANDS_PINE_KEY = registerKey("highlands_pine");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SUNROOT_KEY = registerKey("sunroot_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MOONLIT_TULIP_PATCH_KEY = registerKey("moonlit_tulip_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_AETHER_CACTUS_PATCH_KEY = registerKey("small_aether_cactus_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_QUARTZ_ORE_KEY = registerKey("aether_quartz_ore");
@@ -48,6 +50,13 @@ public class ModConfiguredFeatures {
                         BlockStateProvider.simple(ModBlocks.HIGHLANDS_PINE_LEAVES.get()),
                         new HighlandsPineFoliagePlacer(ConstantInt.of(1), ConstantInt.ZERO, ConstantInt.of(1)),
                         new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, SUNROOT_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(AetherBlocks.SKYROOT_LOG.get()),
+                new StraightTrunkPlacer(5, 7, 3),
+                BlockStateProvider.simple(ModBlocks.SUNROOT_LEAVES.get()),
+                new HighlandsPineFoliagePlacer(ConstantInt.of(1), ConstantInt.ZERO, ConstantInt.of(1)),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
 
         register(context, AETHER_QUARTZ_ORE_KEY, Feature.ORE, new OreConfiguration(aetherQuartzOre, 12, 0f));
 

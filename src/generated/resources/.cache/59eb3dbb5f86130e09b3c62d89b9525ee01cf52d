@@ -1,4 +1,4 @@
-// 1.19.4	2023-06-22T19:18:39.2732495	Loot Tables
+// 1.19.4	2023-06-22T21:01:38.9292934	Loot Tables
 8d4da245e70842af9a85a541667dddcad453e510 data/aether_crystallium/loot_tables/blocks/aether_cactus.json
 2f9025f91bcf60f4f4011296c03e3ace3ba1bcea data/aether_crystallium/loot_tables/blocks/aether_quartz_ore.json
 e7531127ed6a83df6a1eba4c65f3625b7a75b0ba data/aether_crystallium/loot_tables/blocks/blighted_sentry_stone.json
@@ -35,4 +35,5 @@ c4325a91ce31dbae7b919af6f0e145286a6b9fe9 data/aether_crystallium/loot_tables/blo
 fd15811fcecf60f78380f5125b8f3787568b1aa9 data/aether_crystallium/loot_tables/blocks/stripped_highlands_pine_log_wall.json
 4c648b4ce8b71e58e329d431d02549579093e5af data/aether_crystallium/loot_tables/blocks/stripped_highlands_pine_wood.json
 55e024ab6f34b3e069c586d2bf94541a541c61fc data/aether_crystallium/loot_tables/blocks/stripped_highlands_pine_wood_wall.json
-4624bc89857fd054c1cb600602d668be9a41e6ea data/aether_crystallium/loot_tables/blocks/sunroot_leaves.json
+25ed9b965947dba2b10b0d8a04bc16a427af3e33 data/aether_crystallium/loot_tables/blocks/sunroot_leaves.json
+96cf2ea450c9f9e1c2a94aa6a98375c49842c534 data/aether_crystallium/loot_tables/blocks/sunroot_sapling.json

@@ -36,6 +36,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf((ModBlocks.STRIPPED_HIGHLANDS_PINE_WOOD_WALL.get()));
         dropSelf((ModBlocks.HIGHLANDS_PINE_PLANKS.get()));
         dropSelf((ModBlocks.HIGHLANDS_PINE_SAPLING.get()));
+        dropSelf((ModBlocks.SUNROOT_SAPLING.get()));
         dropSelf((ModBlocks.HIGHLANDS_PINE_STAIRS.get()));
         dropSelf((ModBlocks.HIGHLANDS_PINE_SLAB.get()));
         dropSelf((ModBlocks.HIGHLANDS_PINE_FENCE.get()));
@@ -64,7 +65,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 (block) -> createLeavesDrops(block, ModBlocks.HIGHLANDS_PINE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
         add(ModBlocks.SUNROOT_LEAVES.get(),
-                (block) -> createLeavesDrops(block, ModBlocks.HIGHLANDS_PINE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                (block) -> createLeavesDrops(block, ModBlocks.SUNROOT_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
     }
 
