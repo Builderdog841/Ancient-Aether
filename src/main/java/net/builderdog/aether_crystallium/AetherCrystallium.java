@@ -7,6 +7,7 @@ import net.builderdog.aether_crystallium.blockentity.ModBlockEntityTypes;
 import net.builderdog.aether_crystallium.item.ModCreativeModeTabs;
 import net.builderdog.aether_crystallium.item.ModItems;
 import net.builderdog.aether_crystallium.worldgen.foliageplacer.ModFoliagePlacerTypes;
+import net.builderdog.aether_crystallium.worldgen.trunkplacer.ModTrunkPlacerTypes;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.ComposterBlock;
@@ -34,6 +35,7 @@ public class AetherCrystallium {
         ModItems.ITEMS.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
         ModFoliagePlacerTypes.FOLIAGE_PLACERS.register(modEventBus);
+        ModTrunkPlacerTypes.TRUNK_PLACERS.register(modEventBus);
         ModBlockEntityTypes.BLOCK_ENTITY_TYPES.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
