@@ -25,6 +25,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.QUICKSOIL_BRICKS);
         blockWithItem(ModBlocks.HIGHLANDS_PINE_PLANKS);
         blockWithItem(ModBlocks.HIGHLANDS_PINE_LEAVES);
+        blockWithItem(ModBlocks.SUNROOT_LEAVES);
 
         logBlock(((RotatedPillarBlock) ModBlocks.HIGHLANDS_PINE_LOG.get()));
         axisBlock((RotatedPillarBlock) ModBlocks.HIGHLANDS_PINE_WOOD.get(), blockTexture(ModBlocks.HIGHLANDS_PINE_LOG.get()), blockTexture(ModBlocks.HIGHLANDS_PINE_LOG.get()));

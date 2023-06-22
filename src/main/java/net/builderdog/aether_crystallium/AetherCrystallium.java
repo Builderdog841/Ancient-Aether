@@ -75,6 +75,7 @@ public class AetherCrystallium {
             event.accept(ModBlocks.HIGHLANDS_PINE_SIGN);
             event.accept(ModBlocks.HIGHLANDS_PINE_LEAVES);
             event.accept(ModBlocks.HIGHLANDS_PINE_SAPLING);
+            event.accept(ModBlocks.SUNROOT_LEAVES);
             event.accept(ModBlocks.AETHER_CACTUS);
             event.accept(ModBlocks.SMALL_AETHER_CACTUS);
             event.accept(ModBlocks.CACTUS_FLOWER);
@@ -94,6 +95,7 @@ public class AetherCrystallium {
 
     private void registerComposting() {
         this.addCompost(0.3F, ModBlocks.HIGHLANDS_PINE_LEAVES.get().asItem());
+        this.addCompost(0.3F, ModBlocks.SUNROOT_LEAVES.get().asItem());
         this.addCompost(0.3F, ModBlocks.HIGHLANDS_PINE_SAPLING.get());
         this.addCompost(0.65F, ModBlocks.SMALL_AETHER_CACTUS.get());
         this.addCompost(0.65F, ModBlocks.MOONLIT_TULIP.get());
