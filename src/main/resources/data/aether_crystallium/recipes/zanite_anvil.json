@@ -3,14 +3,14 @@
   "category": "misc",
   "pattern": [
     "BBB",
-    " I ",
-    "III"
+    " Z ",
+    "ZZZ"
   ],
   "key": {
     "B": {
       "item": "aether:zanite_block"
     },
-    "I": {
+    "Z": {
       "item": "aether:zanite_gemstone"
     }
   },

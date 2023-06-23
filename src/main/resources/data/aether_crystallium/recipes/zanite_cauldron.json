@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_door",
+  "key": {
+    "#": {
+      "item": "aether:zanite_gemstone"
+    }
+  },
+  "pattern": [
+    "Z Z",
+    "Z Z",
+    "ZZZ"
+  ],
+  "result": {
+    "count": 1,
+    "item": "minecraft:cauldron"
+  },
+  "show_notification": true
+}

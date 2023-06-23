@@ -1,0 +1,10 @@
+{
+  "type": "aether:enchanting",
+  "category": "enchanting_blocks",
+  "cookingtime": 500,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "aether:golden_oak_sapling"
+  },
+  "result": "aether_crystallium:sunroot_sapling"
+}
