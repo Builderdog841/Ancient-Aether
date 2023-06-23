@@ -27,6 +27,31 @@ public abstract class AetherCacusFeature extends Feature<LargeCactusConfiguratio
             }
         }
     }
+    protected boolean checkSquare(WorldGenLevel level, int size, BlockPos pos) {
+
+        //Centers the Square
+        int offset = (int) ((size/2)+0.5);
+
+        for(int i = 0; i < size; i++) {
+            for (int y = 0; y < size; y++) {
+                if(!level.isEmptyBlock(pos.relative(Direction.Axis.X,  i-offset).relative(Direction.Axis.Z, y-offset))) return false;
+            }
+        }
+        return true;
+    }
+
+    protected boolean checkSquareFilled(WorldGenLevel level, int size, BlockPos pos) {
+
+        //Centers the Square
+        int offset = (int) ((size/2)+0.5);
+
+        for(int i = 0; i < size; i++) {
+            for (int y = 0; y < size; y++) {
+                if(level.isEmptyBlock(pos.relative(Direction.Axis.X,  i-offset).relative(Direction.Axis.Z, y-offset))) return false;
+            }
+        }
+        return true;
+    }
 
     //Places A Small 3x3 Circle
     protected void placeSmallCircle(WorldGenLevel level, BlockPos pos, BlockState state) {
@@ -36,13 +61,4 @@ public abstract class AetherCacusFeature extends Feature<LargeCactusConfiguratio
         this.setBlock(level, pos.east(), state); 
         this.setBlock(level, pos.south(), state);
     }
-
-
-    //protected boolean setBlock(WorldGenLevel level, BlockPos pos, BlockState state) {
-    //    if(level.isEmptyBlock(pos)) {
-    //        this.setBlock(level, pos, state);
-    //        return true;
-    //    }
-    //    else return false;
-    //}
 }

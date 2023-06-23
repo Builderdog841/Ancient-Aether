@@ -33,6 +33,10 @@ public class GiantCatusFeature extends AetherCacusFeature {
         int i ;
 
 
+        //Checks if position is Empty and Filled one block below
+        if(!CheckLargerCircle(level, pos)) return false;
+        if(!CheckLargerCircleFilled(level, pos.below())) return false;
+
 
         //Places the base 7x7 base circle of the Cactus. Has a random height between 2 and 3.
         for(i = 0; i < random.nextInt(2,4); i++) {
@@ -48,11 +52,10 @@ public class GiantCatusFeature extends AetherCacusFeature {
 
         this.placeSquare(level,3, pos.above(i), blockState);
 
-        //places top plant with a 50% chance
-        if(random.nextBoolean()) {
-            i++;
-            this.setBlock(level, pos.above(i), ModBlocks.CACTUS_FLOWER.get().defaultBlockState());
-        }
+        //Places Cactus Flower At top
+        i++;
+        this.setBlock(level, pos.above(i), ModBlocks.CACTUS_FLOWER.get().defaultBlockState());
+
 
         //Success
         return true;
@@ -98,6 +101,45 @@ public class GiantCatusFeature extends AetherCacusFeature {
         this.setBlock(level, pos.west(3).south(), state);
         this.setBlock(level, pos.west(3), state);
         this.setBlock(level, pos.west(3).north(), state);
+    }
+
+    //Checks If Area is empty in a 7x7 circle. Returns True if area is Empty
+    public boolean CheckLargerCircle(WorldGenLevel level, BlockPos pos) {
+        if(!this.checkSquare(level, 5, pos)) return false;
+
+        if(!level.isEmptyBlock(pos.north(3).east())) return false;
+        if(!level.isEmptyBlock(pos.north(3))) return false;
+        if(!level.isEmptyBlock(pos.north(3).west())) return false;
+        if(!level.isEmptyBlock(pos.south(3).east())) return false;
+        if(!level.isEmptyBlock(pos.south(3))) return false;
+        if(!level.isEmptyBlock(pos.south(3).west())) return false;
+        if(!level.isEmptyBlock(pos.east(3).south())) return false;
+        if(!level.isEmptyBlock(pos.east(3))) return false;
+        if(!level.isEmptyBlock(pos.east(3).north())) return false;
+        if(!level.isEmptyBlock(pos.west(3).south())) return false;
+        if(!level.isEmptyBlock(pos.west(3))) return false;
+        if(!level.isEmptyBlock(pos.west(3).north())) return false;
+        return true;
+    }
+
+    //Checks If Area is filled in a 7x7 circle. Returns True if area is Filled
+
+    public boolean CheckLargerCircleFilled(WorldGenLevel level, BlockPos pos) {
+        if(!this.checkSquareFilled(level, 5, pos)) return false;
+
+        if(level.isEmptyBlock(pos.north(3).east())) return false;
+        if(level.isEmptyBlock(pos.north(3))) return false;
+        if(level.isEmptyBlock(pos.north(3).west())) return false;
+        if(level.isEmptyBlock(pos.south(3).east())) return false;
+        if(level.isEmptyBlock(pos.south(3))) return false;
+        if(level.isEmptyBlock(pos.south(3).west())) return false;
+        if(level.isEmptyBlock(pos.east(3).south())) return false;
+        if(level.isEmptyBlock(pos.east(3))) return false;
+        if(level.isEmptyBlock(pos.east(3).north())) return false;
+        if(level.isEmptyBlock(pos.west(3).south())) return false;
+        if(level.isEmptyBlock(pos.west(3))) return false;
+        if(level.isEmptyBlock(pos.west(3).north())) return false;
+        return true;
     }
 
 }

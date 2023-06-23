@@ -39,9 +39,13 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_AETHER_CACTUS_PATCH_KEY = registerKey("small_aether_cactus_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_QUARTZ_ORE_KEY = registerKey("aether_quartz_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> QUICKSTONE_ORE_KEY = registerKey("quickstone_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LARGE_CACTUS_KEY = registerKey("large_cactus");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GIANT_CACTUS_KEY = registerKey("giant_cactus");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_CACTUS_PLACEMENT = registerKey("aether_cactus_placement");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest aetherIslandBlocks = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+        HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         List<OreConfiguration.TargetBlockState> aetherQuartzOre = List.of(OreConfiguration.target(aetherIslandBlocks,
                 ModBlocks.AETHER_QUARTZ_ORE.get().defaultBlockState()));

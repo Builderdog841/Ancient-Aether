@@ -33,6 +33,11 @@ public class LargeCatusFeature extends AetherCacusFeature {
 
         //Placement
 
+
+        //Checks if position is Empty and Filled one block below
+        if(!checkSquare(level, 3, pos)) return false;
+        if(!checkSquareFilled(level, 3,pos.below())) return false;
+
         //Current Height During Placement
         int i;
         //Places the base 3x3 cube of the Cactus.
@@ -43,11 +48,9 @@ public class LargeCatusFeature extends AetherCacusFeature {
         //places top 3x3 circle
         this.placeSmallCircle(level, pos.above(i), blockState);
 
-        //places top plant with a 50% chance
-        if (random.nextBoolean()) {
-            i++;
-            this.setBlock(level, pos.above(i), ModBlocks.CACTUS_FLOWER.get().defaultBlockState());
-        }
+        //Places Cactus Flower At top
+        i++;
+        this.setBlock(level, pos.above(i), ModBlocks.CACTUS_FLOWER.get().defaultBlockState());
 
         //Success
         return true;
