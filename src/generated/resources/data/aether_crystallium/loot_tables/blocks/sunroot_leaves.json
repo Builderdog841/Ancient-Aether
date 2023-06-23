@@ -126,7 +126,7 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "minecraft:stick"
+          "name": "aether:skyroot_sticks"
         }
       ],
       "rolls": 1.0
