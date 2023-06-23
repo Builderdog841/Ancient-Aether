@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "aether_crystallium:ancient_valkyrie_laboratory_enchanted_aether_grass_block",
+      "weight": 5
+    }
+  ],
+  "placement": {
+    "salt": 168122297,
+    "spacing": 20,
+    "separation": 15,
+    "type": "minecraft:random_spread"
+  }
+  }
