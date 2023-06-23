@@ -9,6 +9,7 @@ import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -35,6 +36,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf((ModBlocks.STRIPPED_HIGHLANDS_PINE_WOOD_WALL.get()));
         dropSelf((ModBlocks.HIGHLANDS_PINE_PLANKS.get()));
         dropSelf((ModBlocks.HIGHLANDS_PINE_SAPLING.get()));
+        dropSelf((ModBlocks.SUNROOT_SAPLING.get()));
         dropSelf((ModBlocks.HIGHLANDS_PINE_STAIRS.get()));
         dropSelf((ModBlocks.HIGHLANDS_PINE_SLAB.get()));
         dropSelf((ModBlocks.HIGHLANDS_PINE_FENCE.get()));
@@ -43,6 +45,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf((ModBlocks.HIGHLANDS_PINE_TRAPDOOR.get()));
         dropSelf((ModBlocks.HIGHLANDS_PINE_BUTTON.get()));
         dropSelf((ModBlocks.HIGHLANDS_PINE_PRESSURE_PLATE.get()));
+        dropSelf((ModBlocks.HIGHLANDS_PINE_SIGN.get()));
         dropSelf((ModBlocks.AETHER_CACTUS.get()));
         dropSelf((ModBlocks.CACTUS_FLOWER.get()));
         dropSelf((ModBlocks.QUICKSOIL_BRICK_STAIRS.get()));
@@ -51,12 +54,19 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf((ModBlocks.MOONLIT_TULIP.get()));
         dropSelf((ModBlocks.SMALL_AETHER_CACTUS.get()));
         dropSelf((ModBlocks.CRACKED_SLIDER.get()));
+        dropSelf((ModBlocks.POTTED_MOONLIT_TULIP.get()));
+        dropSelf((ModBlocks.POTTED_HIGHLANDS_PINE_SAPLING.get()));
+        dropSelf((ModBlocks.POTTED_SMALL_AETHER_CACTUS.get()));
 
         add(ModBlocks.AETHER_QUARTZ_ORE.get(),
                 (block) -> createOreDrop(ModBlocks.AETHER_QUARTZ_ORE.get(), Items.QUARTZ));
 
         add(ModBlocks.HIGHLANDS_PINE_LEAVES.get(),
                 (block) -> createLeavesDrops(block, ModBlocks.HIGHLANDS_PINE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
+        add(ModBlocks.SUNROOT_LEAVES.get(),
+                (block) -> createLeavesDrops(block, ModBlocks.SUNROOT_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
     }
 
     @Override

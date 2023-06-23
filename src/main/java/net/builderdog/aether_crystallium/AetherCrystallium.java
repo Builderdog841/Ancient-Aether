@@ -7,6 +7,7 @@ import net.builderdog.aether_crystallium.blockentity.ModBlockEntityTypes;
 import net.builderdog.aether_crystallium.item.ModCreativeModeTabs;
 import net.builderdog.aether_crystallium.item.ModItems;
 import net.builderdog.aether_crystallium.worldgen.foliageplacer.ModFoliagePlacerTypes;
+import net.builderdog.aether_crystallium.worldgen.trunkplacer.ModTrunkPlacerTypes;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.ComposterBlock;
@@ -34,6 +35,7 @@ public class AetherCrystallium {
         ModItems.ITEMS.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
         ModFoliagePlacerTypes.FOLIAGE_PLACERS.register(modEventBus);
+        ModTrunkPlacerTypes.TRUNK_PLACERS.register(modEventBus);
         ModBlockEntityTypes.BLOCK_ENTITY_TYPES.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
@@ -75,6 +77,8 @@ public class AetherCrystallium {
             event.accept(ModBlocks.HIGHLANDS_PINE_SIGN);
             event.accept(ModBlocks.HIGHLANDS_PINE_LEAVES);
             event.accept(ModBlocks.HIGHLANDS_PINE_SAPLING);
+            event.accept(ModBlocks.SUNROOT_LEAVES);
+            event.accept(ModBlocks.SUNROOT_SAPLING);
             event.accept(ModBlocks.AETHER_CACTUS);
             event.accept(ModBlocks.SMALL_AETHER_CACTUS);
             event.accept(ModBlocks.CACTUS_FLOWER);
@@ -94,6 +98,7 @@ public class AetherCrystallium {
 
     private void registerComposting() {
         this.addCompost(0.3F, ModBlocks.HIGHLANDS_PINE_LEAVES.get().asItem());
+        this.addCompost(0.3F, ModBlocks.SUNROOT_LEAVES.get().asItem());
         this.addCompost(0.3F, ModBlocks.HIGHLANDS_PINE_SAPLING.get());
         this.addCompost(0.65F, ModBlocks.SMALL_AETHER_CACTUS.get());
         this.addCompost(0.65F, ModBlocks.MOONLIT_TULIP.get());

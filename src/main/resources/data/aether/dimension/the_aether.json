@@ -147,6 +147,36 @@
             "offset": 0.0,
             "temperature": [
               0.4,
+              0.7
+            ],
+            "weirdness": [
+              -1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "biome": "aether_crystallium:enchanted_woods",
+          "parameters": {
+            "continentalness": [
+              -1.0,
+              1.0
+            ],
+            "depth": [
+              -1.0,
+              1.0
+            ],
+            "erosion": [
+              -1.0,
+              1.0
+            ],
+            "humidity": [
+              -0.1,
+              1.0
+            ],
+            "offset": 0.0,
+            "temperature": [
+              0.7,
               0.93
             ],
             "weirdness": [
@@ -156,7 +186,7 @@
           }
         },
         {
-          "biome": "aether:skyroot_meadow",
+          "biome": "aether:skyroot_grove",
           "parameters": {
             "continentalness": [
               -1.0,

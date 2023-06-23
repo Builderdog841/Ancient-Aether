@@ -10,6 +10,8 @@ public class ModBiomes {
     public static final ResourceKey<Biome> HIGHLANDS_PINE_TAIGA = createKey("highlands_pine_taiga");
     public static final ResourceKey<Biome> QUICKSOIL_DESERT = createKey("quicksoil_desert");
 
+    public static final ResourceKey<Biome> ENCHANTED_WOODS = createKey("enchanted_woods");
+
     private static ResourceKey<Biome> createKey(String name) {
         return ResourceKey.create(Registries.BIOME, new ResourceLocation(AetherCrystallium.MOD_ID, name));
     }
