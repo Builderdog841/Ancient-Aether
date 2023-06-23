@@ -57,6 +57,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf((ModBlocks.POTTED_MOONLIT_TULIP.get()));
         dropSelf((ModBlocks.POTTED_HIGHLANDS_PINE_SAPLING.get()));
         dropSelf((ModBlocks.POTTED_SMALL_AETHER_CACTUS.get()));
+        dropSelf((ModBlocks.POTTED_SUNROOT_SAPLING.get()));
 
         add(ModBlocks.AETHER_QUARTZ_ORE.get(),
                 (block) -> createOreDrop(ModBlocks.AETHER_QUARTZ_ORE.get(), Items.QUARTZ));

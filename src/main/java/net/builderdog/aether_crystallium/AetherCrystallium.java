@@ -75,7 +75,6 @@ public class AetherCrystallium {
             event.accept(ModBlocks.HIGHLANDS_PINE_TRAPDOOR);
             event.accept(ModBlocks.HIGHLANDS_PINE_PRESSURE_PLATE);
             event.accept(ModBlocks.HIGHLANDS_PINE_BUTTON);
-            event.accept(ModBlocks.HIGHLANDS_PINE_SIGN);
             event.accept(ModBlocks.HIGHLANDS_PINE_LEAVES);
             event.accept(ModBlocks.HIGHLANDS_PINE_SAPLING);
             event.accept(ModBlocks.SUNROOT_LEAVES);

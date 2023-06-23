@@ -40,6 +40,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(ModBlocks.STRIPPED_HIGHLANDS_PINE_WOOD.get(), models().withExistingParent("aether_crystallium:stripped_highlands_pine_wood","minecraft:block/cube_column"));
 
         saplingBlock(ModBlocks.HIGHLANDS_PINE_SAPLING);
+        saplingBlock(ModBlocks.SUNROOT_SAPLING);
 
     }
 
