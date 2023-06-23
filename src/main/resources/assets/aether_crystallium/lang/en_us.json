@@ -67,6 +67,8 @@
   "lore.block.aether_crystallium.highlands_pine_planks": "Frostpine Planks can be made into various tools, blocks and items. They are crafted from Highlands Pine Logs, and make a great building material.",
   "lore.block.aether_crystallium.highlands_pine_leaves": "These leaves generate with Highlands Pine Trees. They can drop Highlands Pine Saplings when decaying.",
   "lore.block.aether_crystallium.highlands_pine_sapling": "These small blue saplings will grow into Highlands Pine Trees. They can be grown faster with Bonemeal.",
+  "lore.block.aether_crystallium.highlands_pine_leaves": "These leaves generate with Sunroot Trees. They can drop Sunroot Saplings when decaying.",
+  "lore.block.aether_crystallium.highlands_pine_sapling": "These small white saplings will grow into huge Sunroot Trees. They can be grown faster with Bonemeal.",
   "lore.block.aether_crystallium.highlands_pine_button": "Crafted from Highlands Pine Planks, a button used to activate mechanisms and redstone.",
   "lore.block.aether_crystallium.highlands_pine_door": "Crafted from Highlands Pine Planks, an ornate door helpful for keeping an enclosed and safe space without worry of monsters wandering in.",
   "lore.block.aether_crystallium.highlands_pine_fence": "Crafted from Highlands Pine Planks and Sticks. Great for keeping your livestock safe from wandering predators!",
