@@ -4,17 +4,16 @@ import com.mojang.serialization.Codec;
 import net.builderdog.aether_crystallium.block.ModBlocks;
 import net.builderdog.aether_crystallium.worldgen.configurations.LargeCactusConfiguration;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import org.jetbrains.annotations.NotNull;
 
-public class LargeCatusFeature extends AetherCacusFeature {
+public class LargeCactusFeature extends AetherCactusFeature {
 
 
-    public LargeCatusFeature(Codec<LargeCactusConfiguration> codec) {
+    public LargeCactusFeature(Codec<LargeCactusConfiguration> codec) {
         super(codec);
     }
 

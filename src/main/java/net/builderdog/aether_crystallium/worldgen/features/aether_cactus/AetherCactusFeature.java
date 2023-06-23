@@ -8,10 +8,10 @@ import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 
-public abstract class AetherCacusFeature extends Feature<LargeCactusConfiguration> {
+public abstract class AetherCactusFeature extends Feature<LargeCactusConfiguration> {
 
 
-    public AetherCacusFeature(Codec<LargeCactusConfiguration> p_65786_) {
+    public AetherCactusFeature(Codec<LargeCactusConfiguration> p_65786_) {
         super(p_65786_);
     }
 

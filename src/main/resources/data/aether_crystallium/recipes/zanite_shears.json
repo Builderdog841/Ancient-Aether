@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "  #",
-    " # "
+    " Z",
+    "Z "
   ],
   "key": {
-    "#": {
+    "Z": {
       "item": "aether:zanite_gemstone"
     },
     "result": {
