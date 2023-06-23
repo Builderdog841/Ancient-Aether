@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": {
+      "feature": "aether_crystallium:giant_cactus",
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:would_survive",
+            "state": {
+              "Name": "aether_crystallium:small_aether_cactus"
+            }
+          }
+        }
+      ]
+    },
+    "features": [
+      {
+        "chance": 0.5,
+        "feature": {
+          "feature": "aether_crystallium:large_cactus",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:would_survive",
+                "state": {
+                  "Name": "aether_crystallium:small_aether_cactus"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
