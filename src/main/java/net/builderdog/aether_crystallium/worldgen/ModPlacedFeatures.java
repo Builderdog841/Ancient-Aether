@@ -1,5 +1,6 @@
 package net.builderdog.aether_crystallium.worldgen;
 
+import com.aetherteam.aether.world.placementmodifier.DungeonBlacklistFilter;
 import net.builderdog.aether_crystallium.AetherCrystallium;
 import net.builderdog.aether_crystallium.block.ModBlocks;
 import net.minecraft.core.Holder;
@@ -24,6 +25,7 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> QUICKSTONE_ORE_PLACED = createKey("quickstone_ore_placed");
     public static final ResourceKey<PlacedFeature> MOONLIT_TULIP_PATCH_KEY = createKey("moonlit_tulip_patch");
     public static final ResourceKey<PlacedFeature> SMALL_AETHER_CACTUS_PATCH_KEY = createKey("small_aether_cactus_patch");
+    public static final ResourceKey<PlacedFeature> AETHER_CACTUS_PATCH_KEY = createKey("aether_cactus_patch");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -45,6 +47,13 @@ public class ModPlacedFeatures {
         register(context, MOONLIT_TULIP_PATCH_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MOONLIT_TULIP_PATCH_KEY), RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
 
         register(context, SMALL_AETHER_CACTUS_PATCH_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SMALL_AETHER_CACTUS_PATCH_KEY), RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
+
+        register(context, AETHER_CACTUS_PATCH_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AETHER_CACTUS_PLACEMENT),
+                CountPlacement.of(2),
+                InSquarePlacement.spread(),
+                PlacementUtils.HEIGHTMAP,
+                BiomeFilter.biome(),
+                new DungeonBlacklistFilter());
     }
 
     private static ResourceKey<PlacedFeature> createKey(String name) {
