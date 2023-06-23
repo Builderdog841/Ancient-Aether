@@ -91,7 +91,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "aether_crystallium:crystal_gold_ingot",
+          "name": "minecraft:quartz",
           "weight": 3,
           "functions": [
             {
