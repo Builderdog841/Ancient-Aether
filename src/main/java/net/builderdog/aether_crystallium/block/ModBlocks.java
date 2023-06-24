@@ -32,13 +32,22 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, AetherCrystallium.MOD_ID);
     public static final RegistryObject<Block> CACTUS_FLOWER =  registerBlock("cactus_flower",
             () -> new Block(BlockBehaviour.Properties.of(Material.PLANT)
-                    .instabreak().noOcclusion()));
+                    .instabreak().noOcclusion().noCollission()));
     public static final RegistryObject<Block> AETHER_QUARTZ_ORE =  registerBlock("aether_quartz_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(1f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> HOLYSTONE_LANTERN =  registerBlock("holystone_lantern",
             () -> new LanternBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.LANTERN)
                     .strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 15)));
+    public static final RegistryObject<Block> SENTRY_LANTERN =  registerBlock("sentry_lantern",
+            () -> new LanternBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.LANTERN)
+                    .strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 12)));
+    public static final RegistryObject<Block> ANGELIC_LANTERN =  registerBlock("angelic_lantern",
+            () -> new LanternBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.LANTERN)
+                    .strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 12)));
+    public static final RegistryObject<Block> HELLFIRE_LANTERN =  registerBlock("hellfire_lantern",
+            () -> new LanternBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.LANTERN)
+                    .strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 12)));
     public static final RegistryObject<Block> CRACKED_SLIDER =  registerBlock("cracked_slider",
             () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(5f).requiresCorrectToolForDrops().noOcclusion()

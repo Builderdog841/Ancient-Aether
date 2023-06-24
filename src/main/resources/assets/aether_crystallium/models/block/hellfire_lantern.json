@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_lantern",
+  "render_type": "minecraft:cutout_mipped",
+  "textures": {
+    "lantern": "aether_crystallium:block/hellfire_lantern"
+  }
+}

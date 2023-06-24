@@ -37,6 +37,9 @@
   "block.aether_crystallium.small_aether_cactus": "Small Aether Cactus",
   "block.aether_crystallium.cracked_slider": "Cracked Slider",
   "block.aether_crystallium.holystone_lantern": "Holystone Lantern",
+  "block.aether_crystallium.sentry_lantern": "Sentry Lantern",
+  "block.aether_crystallium.angelic_lantern": "Angelic Lantern",
+  "block.aether_crystallium.hellfire_lantern": "Hellfire Lantern",
 
   "item.aether_crystallium.aechor_petal_ice_cream_bucket": "Aechor Petal Ice Cream Bucket",
 

@@ -92,6 +92,9 @@ public class AetherCrystallium {
             event.accept(ModBlocks.QUICKSOIL_BRICK_SLAB);
             event.accept(ModBlocks.QUICKSOIL_BRICK_WALL);
             event.accept(ModBlocks.HOLYSTONE_LANTERN);
+            event.accept(ModBlocks.SENTRY_LANTERN);
+            event.accept(ModBlocks.ANGELIC_LANTERN);
+            event.accept(ModBlocks.HELLFIRE_LANTERN);
             event.accept(ModBlocks.CRACKED_SLIDER);
             event.accept(ModItems.AECHOR_PETAL_ICE_CREAM_BUCKET);
         }

@@ -10,6 +10,9 @@
     "aether_crystallium:quicksoil_brick_slab",
     "aether_crystallium:quicksoil_brick_wall",
     "aether_crystallium:cracked_slider",
-    "aether_crystallium:holystone_lantern"
+    "aether_crystallium:holystone_lantern",
+    "aether_crystallium:sentry_lantern",
+    "aether_crystallium:angelic_lantern",
+    "aether_crystallium:hellfire_lantern"
   ]
 }

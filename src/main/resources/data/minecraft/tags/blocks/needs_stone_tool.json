@@ -2,6 +2,9 @@
   "replace": false,
   "values": [
     "aether_crystallium:enchanted_sentry_stone",
-    "aether_crystallium:blighted_sentry_stone"
+    "aether_crystallium:blighted_sentry_stone",
+    "aether_crystallium:sentry_lantern",
+    "aether_crystallium:angelic_lantern",
+    "aether_crystallium:hellfire_lantern"
   ]
 }
