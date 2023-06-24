@@ -31,7 +31,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'io.github.0ffz.github-packages'
 apply plugin: 'org.spongepowered.mixin'
 
-version = '0.0.8'
+version = '0.0.9'
 group = 'net.builderdog.aether_crystallium'
 archivesBaseName = 'aether_crystallium'
 
