@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "aether_crystallium:block/holystone_lantern"
+    },
+    "hanging=true": {
+      "model": "aether_crystallium:block/holystone_lantern_hanging"
+    }
+  }
+}

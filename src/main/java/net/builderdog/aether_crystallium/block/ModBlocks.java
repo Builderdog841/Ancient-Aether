@@ -36,6 +36,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> AETHER_QUARTZ_ORE =  registerBlock("aether_quartz_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> HOLYSTONE_LANTERN =  registerBlock("holystone_lantern",
+            () -> new LanternBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.LANTERN)
+                    .strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 15)));
     public static final RegistryObject<Block> CRACKED_SLIDER =  registerBlock("cracked_slider",
             () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(5f).requiresCorrectToolForDrops().noOcclusion()

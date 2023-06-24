@@ -1,4 +1,4 @@
-// 1.19.4	2023-06-23T15:54:50.8520621	Loot Tables
+// 1.19.4	2023-06-24T11:01:36.3020906	Loot Tables
 8d4da245e70842af9a85a541667dddcad453e510 data/aether_crystallium/loot_tables/blocks/aether_cactus.json
 2f9025f91bcf60f4f4011296c03e3ace3ba1bcea data/aether_crystallium/loot_tables/blocks/aether_quartz_ore.json
 e7531127ed6a83df6a1eba4c65f3625b7a75b0ba data/aether_crystallium/loot_tables/blocks/blighted_sentry_stone.json
@@ -21,6 +21,7 @@ c2bb63aff53dc55c720b0f9a5b258f882408190c data/aether_crystallium/loot_tables/blo
 60ef27abafeaeea65b745f2fd93cc85cbce364cf data/aether_crystallium/loot_tables/blocks/highlands_pine_trapdoor.json
 164e04e1623a2e5eebea417d378c7ca84c84eb95 data/aether_crystallium/loot_tables/blocks/highlands_pine_wood.json
 d8b9498f1ddd5a5b8d63a8dda73f29090ea8f592 data/aether_crystallium/loot_tables/blocks/highlands_pine_wood_wall.json
+0501453f10e8deed9ea1ec06182350f55eac467f data/aether_crystallium/loot_tables/blocks/holystone_lantern.json
 93a37d3952b3c411e5913fc17241feb3e3d327e9 data/aether_crystallium/loot_tables/blocks/moonlit_tulip.json
 2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/aether_crystallium/loot_tables/blocks/potted_highlands_pine_sapling.json
 2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/aether_crystallium/loot_tables/blocks/potted_moonlit_tulip.json

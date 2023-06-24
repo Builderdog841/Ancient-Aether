@@ -1,9 +1,8 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
-  "group": "wooden_door",
   "key": {
-    "#": {
+    "Z": {
       "item": "aether:zanite_gemstone"
     }
   },

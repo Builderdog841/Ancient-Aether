@@ -8,6 +8,5 @@
     "south": "aether_crystallium:block/aether_cactus",
     "west": "aether_crystallium:block/aether_cactus",
     "particle": "aether_crystallium:block/aether_cactus"
-  },
-  "render_type": "solid"
+  }
 }

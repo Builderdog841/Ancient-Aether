@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "H": {
+      "item": "aether:holystone"
+    },
+    "A": {
+      "item": "aether:ambrosium_torch"
+    },
+     "S": {
+       "tag": "aether:skyroot_stick"
+      }
+      },
+  "pattern": [
+    "HHH",
+    "SAS",
+    "HHH"
+  ],
+  "result": {
+    "item": "aether_crystallium:holystone_lantern"
+  },
+  "show_notification": true
+}
