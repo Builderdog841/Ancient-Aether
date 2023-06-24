@@ -3,13 +3,13 @@
   "category": "building",
   "key": {
     "B": {
-      "item": "aether:holystone"
+      "item": "aether:carved_stone"
     },
     "A": {
       "item": "aether:ambrosium_torch"
     },
      "S": {
-       "tag": "aether:skyroot_stick"
+       "item": "aether:sentry_stone"
       }
       },
   "pattern": [
@@ -18,7 +18,7 @@
     "BBB"
   ],
   "result": {
-    "item": "aether_crystallium:holystone_lantern"
+    "item": "aether_crystallium:sentry_lantern"
   },
   "show_notification": true
 }

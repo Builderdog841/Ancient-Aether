@@ -3,13 +3,13 @@
   "category": "building",
   "key": {
     "B": {
-      "item": "aether:holystone"
+      "item": "aether:angelic_stone"
     },
     "A": {
       "item": "aether:ambrosium_torch"
     },
      "S": {
-       "tag": "aether:skyroot_stick"
+       "item": "aether:light_angelic_stone"
       }
       },
   "pattern": [
@@ -18,7 +18,7 @@
     "BBB"
   ],
   "result": {
-    "item": "aether_crystallium:holystone_lantern"
+    "item": "aether_crystallium:angelic_lantern"
   },
   "show_notification": true
 }
