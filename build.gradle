@@ -134,8 +134,9 @@ dependencies {
     runtimeOnly fg.deobf("com.aetherteam.aether:aether:1.19.4-1.0.0-beta.4-forge")
     runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.19.4-5.1.5.3")
     compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.19.4-5.1.5.3:api")
-}
 
+    implementation fg.deobf("blank:AeroBlender-forge-1.19.4-1.0:1.19.4-1.0")
+}
 jar {
     manifest {
         attributes([
