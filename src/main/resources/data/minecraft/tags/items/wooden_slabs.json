@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "aether_crystallium:highlands_pine_slab"
+    "aether_crystallium:highlands_pine_slab",
+    "aether_crystallium:sunroot_slab"
   ]
 }

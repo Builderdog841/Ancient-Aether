@@ -5,6 +5,10 @@
     "aether_crystallium:highlands_pine_log_wall",
     "aether_crystallium:highlands_pine_wood_wall",
     "aether_crystallium:stripped_highlands_pine_log_wall",
-    "aether_crystallium:stripped_highlands_pine_wood_wall"
+    "aether_crystallium:stripped_highlands_pine_wood_wall",
+    "aether_crystallium:sunroot_log_wall",
+    "aether_crystallium:sunroot_wood_wall",
+    "aether_crystallium:stripped_sunroot_log_wall",
+    "aether_crystallium:stripped_sunroot_wood_wall"
   ]
 }

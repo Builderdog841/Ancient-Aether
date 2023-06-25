@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "aether_crystallium:highlands_pine_sign"
+    "aether_crystallium:highlands_pine_sign",
+    "aether_crystallium:sunroot_sign"
   ]
 }

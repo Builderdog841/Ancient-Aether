@@ -222,12 +222,21 @@ public class ModBlocks {
         fireBlockAccessor.callSetFlammable(ModBlocks.HIGHLANDS_PINE_WOOD.get(), 5, 5);
         fireBlockAccessor.callSetFlammable(ModBlocks.STRIPPED_HIGHLANDS_PINE_WOOD.get(), 5, 5);
         fireBlockAccessor.callSetFlammable(ModBlocks.HIGHLANDS_PINE_PLANKS.get(), 5, 20);
-        fireBlockAccessor.callSetFlammable(ModBlocks.MOONLIT_TULIP.get(), 60, 100);
-        fireBlockAccessor.callSetFlammable(ModBlocks.SMALL_AETHER_CACTUS.get(), 60, 100);
         fireBlockAccessor.callSetFlammable(ModBlocks.HIGHLANDS_PINE_FENCE_GATE.get(), 5, 20);
         fireBlockAccessor.callSetFlammable(ModBlocks.HIGHLANDS_PINE_FENCE.get(), 5, 20);
         fireBlockAccessor.callSetFlammable(ModBlocks.HIGHLANDS_PINE_STAIRS.get(), 5, 20);
         fireBlockAccessor.callSetFlammable(ModBlocks.HIGHLANDS_PINE_SLAB.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(ModBlocks.SUNROOT_LOG.get(), 5, 5);
+        fireBlockAccessor.callSetFlammable(ModBlocks.STRIPPED_SUNROOT_LOG.get(), 5, 5);
+        fireBlockAccessor.callSetFlammable(ModBlocks.SUNROOT_WOOD.get(), 5, 5);
+        fireBlockAccessor.callSetFlammable(ModBlocks.STRIPPED_SUNROOT_WOOD.get(), 5, 5);
+        fireBlockAccessor.callSetFlammable(ModBlocks.SUNROOT_PLANKS.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(ModBlocks.SUNROOT_FENCE_GATE.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(ModBlocks.SUNROOT_FENCE.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(ModBlocks.SUNROOT_STAIRS.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(ModBlocks.SUNROOT_SLAB.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(ModBlocks.MOONLIT_TULIP.get(), 60, 100);
+        fireBlockAccessor.callSetFlammable(ModBlocks.SMALL_AETHER_CACTUS.get(), 60, 100);
     }
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
