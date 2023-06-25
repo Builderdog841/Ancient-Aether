@@ -28,6 +28,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf((ModBlocks.QUICKSTONE.get()));
         dropSelf((ModBlocks.HIGHLANDS_PINE_LOG.get()));
         dropSelf((ModBlocks.HIGHLANDS_PINE_WOOD.get()));
+        dropSelf((ModBlocks.SUNROOT_LOG.get()));
+        dropSelf((ModBlocks.SUNROOT_WOOD.get()));
+        dropSelf((ModBlocks.STRIPPED_SUNROOT_LOG.get()));
+        dropSelf((ModBlocks.STRIPPED_SUNROOT_WOOD.get()));
         dropSelf((ModBlocks.STRIPPED_HIGHLANDS_PINE_LOG.get()));
         dropSelf((ModBlocks.STRIPPED_HIGHLANDS_PINE_WOOD.get()));
         dropSelf((ModBlocks.HIGHLANDS_PINE_LOG_WALL.get()));
@@ -35,6 +39,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf((ModBlocks.STRIPPED_HIGHLANDS_PINE_LOG_WALL.get()));
         dropSelf((ModBlocks.STRIPPED_HIGHLANDS_PINE_WOOD_WALL.get()));
         dropSelf((ModBlocks.HIGHLANDS_PINE_PLANKS.get()));
+        dropSelf((ModBlocks.SUNROOT_PLANKS.get()));
         dropSelf((ModBlocks.HIGHLANDS_PINE_SAPLING.get()));
         dropSelf((ModBlocks.SUNROOT_SAPLING.get()));
         dropSelf((ModBlocks.HIGHLANDS_PINE_STAIRS.get()));

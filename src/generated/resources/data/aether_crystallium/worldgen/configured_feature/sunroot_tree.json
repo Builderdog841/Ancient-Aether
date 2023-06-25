@@ -42,7 +42,7 @@
     "trunk_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "aether:skyroot_log",
+        "Name": "aether_crystallium:sunroot_log",
         "Properties": {
           "axis": "y",
           "double_drops": "true"

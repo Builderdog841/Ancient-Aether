@@ -4,6 +4,10 @@
     "aether_crystallium:highlands_pine_log",
     "aether_crystallium:highlands_pine_wood",
     "aether_crystallium:stripped_highlands_pine_log",
-    "aether_crystallium:stripped_highlands_pine_wood"
+    "aether_crystallium:stripped_highlands_pine_wood",
+    "aether_crystallium:sunroot_log",
+    "aether_crystallium:sunroot_wood",
+    "aether_crystallium:stripped_sunroot_log",
+    "aether_crystallium:stripped_sunroot_wood"
   ]
 }

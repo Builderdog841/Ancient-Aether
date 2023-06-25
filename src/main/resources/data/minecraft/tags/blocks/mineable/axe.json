@@ -17,6 +17,12 @@
     "aether_crystallium:highlands_pine_button",
     "aether_crystallium:highlands_pine_pressure_plate",
     "aether_crystallium:highlands_pine_fence",
-    "aether_crystallium:highlands_pine_fence_gate"
+    "aether_crystallium:highlands_pine_fence_gate",
+    "aether_crystallium:highlands_sign",
+    "aether_crystallium:sunroot_log",
+    "aether_crystallium:sunroot_wood",
+    "aether_crystallium:stripped_sunroot_log",
+    "aether_crystallium:stripped_sunroot_wood",
+    "aether_crystallium:sunroot_planks"
   ]
 }

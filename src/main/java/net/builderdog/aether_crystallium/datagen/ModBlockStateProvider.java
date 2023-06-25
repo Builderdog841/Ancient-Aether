@@ -24,6 +24,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.BLIGHTED_SENTRY_STONE);
         blockWithItem(ModBlocks.QUICKSOIL_BRICKS);
         blockWithItem(ModBlocks.HIGHLANDS_PINE_PLANKS);
+        blockWithItem(ModBlocks.SUNROOT_PLANKS);
         blockWithItem(ModBlocks.HIGHLANDS_PINE_LEAVES);
         blockWithItem(ModBlocks.SUNROOT_LEAVES);
 
@@ -38,6 +39,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(ModBlocks.HIGHLANDS_PINE_WOOD.get(), models().withExistingParent("aether_crystallium:highlands_pine_wood","minecraft:block/cube_column"));
         simpleBlockItem(ModBlocks.STRIPPED_HIGHLANDS_PINE_LOG.get(), models().withExistingParent("aether_crystallium:stripped_highlands_pine_log","minecraft:block/cube_column"));
         simpleBlockItem(ModBlocks.STRIPPED_HIGHLANDS_PINE_WOOD.get(), models().withExistingParent("aether_crystallium:stripped_highlands_pine_wood","minecraft:block/cube_column"));
+
+        logBlock(((RotatedPillarBlock) ModBlocks.SUNROOT_LOG.get()));
+        axisBlock((RotatedPillarBlock) ModBlocks.SUNROOT_WOOD.get(), blockTexture(ModBlocks.SUNROOT_LOG.get()), blockTexture(ModBlocks.SUNROOT_LOG.get()));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_SUNROOT_LOG.get(),new ResourceLocation(AetherCrystallium.MOD_ID,"block/sunroot_log"),
+                new ResourceLocation(AetherCrystallium.MOD_ID,"block/sunroot_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_SUNROOT_WOOD.get(),new ResourceLocation(AetherCrystallium.MOD_ID,"block/sunroot_log"),
+                new ResourceLocation(AetherCrystallium.MOD_ID,"block/sunroot_log"));
+
+        simpleBlockItem(ModBlocks.SUNROOT_LOG.get(), models().withExistingParent("aether_crystallium:sunroot_log","minecraft:block/cube_column"));
+        simpleBlockItem(ModBlocks.SUNROOT_WOOD.get(), models().withExistingParent("aether_crystallium:sunroot_wood","minecraft:block/cube_column"));
 
         saplingBlock(ModBlocks.HIGHLANDS_PINE_SAPLING);
         saplingBlock(ModBlocks.SUNROOT_SAPLING);
