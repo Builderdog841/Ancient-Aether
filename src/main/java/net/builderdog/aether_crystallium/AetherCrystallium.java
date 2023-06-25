@@ -39,6 +39,8 @@ public class AetherCrystallium {
         ModTrunkPlacerTypes.TRUNK_PLACERS.register(modEventBus);
         ModBlockEntityTypes.BLOCK_ENTITY_TYPES.register(modEventBus);
         ModFeatures.FEATURES.register(modEventBus);
+        ModBlocks.registerWoodTypes();
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -77,10 +79,23 @@ public class AetherCrystallium {
             event.accept(ModBlocks.HIGHLANDS_PINE_BUTTON);
             event.accept(ModBlocks.HIGHLANDS_PINE_SIGN);
             event.accept(ModBlocks.SUNROOT_LOG);
+            event.accept(ModBlocks.SUNROOT_LOG_WALL);
             event.accept(ModBlocks.SUNROOT_WOOD);
+            event.accept(ModBlocks.SUNROOT_WOOD_WALL);
             event.accept(ModBlocks.STRIPPED_SUNROOT_LOG);
+            event.accept(ModBlocks.STRIPPED_SUNROOT_LOG_WALL);
             event.accept(ModBlocks.STRIPPED_SUNROOT_WOOD);
+            event.accept(ModBlocks.STRIPPED_SUNROOT_WOOD_WALL);
             event.accept(ModBlocks.SUNROOT_PLANKS);
+            event.accept(ModBlocks.SUNROOT_STAIRS);
+            event.accept(ModBlocks.SUNROOT_SLAB);
+            event.accept(ModBlocks.SUNROOT_FENCE);
+            event.accept(ModBlocks.SUNROOT_FENCE_GATE);
+            event.accept(ModBlocks.SUNROOT_DOOR);
+            event.accept(ModBlocks.SUNROOT_TRAPDOOR);
+            event.accept(ModBlocks.SUNROOT_PRESSURE_PLATE);
+            event.accept(ModBlocks.SUNROOT_BUTTON);
+            event.accept(ModBlocks.SUNROOT_SIGN);
             event.accept(ModBlocks.HIGHLANDS_PINE_LEAVES);
             event.accept(ModBlocks.SUNROOT_LEAVES);
             event.accept(ModBlocks.HIGHLANDS_PINE_SAPLING);

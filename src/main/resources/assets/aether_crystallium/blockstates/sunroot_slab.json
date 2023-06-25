@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "aether_crystallium:block/sunroot_slab"
+    },
+    "type=double": {
+      "model": "aether_crystallium:block/sunroot_planks"
+    },
+    "type=top": {
+      "model": "aether_crystallium:block/sunroot_slab_top"
+    }
+  }
+}

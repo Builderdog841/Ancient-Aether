@@ -129,13 +129,13 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
                     .strength(2f)));
     public static final RegistryObject<Block> SUNROOT_STAIRS =  registerBlock("sunroot_stairs",
-            () -> new StairBlock(() -> HIGHLANDS_PINE_PLANKS.get().defaultBlockState(), (BlockBehaviour.Properties.copy(ModBlocks.HIGHLANDS_PINE_PLANKS.get()))));
+            () -> new StairBlock(() -> SUNROOT_PLANKS.get().defaultBlockState(), (BlockBehaviour.Properties.copy(ModBlocks.SUNROOT_PLANKS.get()))));
     public static final RegistryObject<Block> SUNROOT_SLAB = registerBlock("sunroot_slab",
             () -> new SlabBlock(Block.Properties.copy(ModBlocks.SUNROOT_PLANKS.get())
                     .strength(2.0F, 3.0F)));
     public static final RegistryObject<FenceBlock> SUNROOT_FENCE = registerBlock("sunroot_fence",
             () -> new FenceBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<FenceGateBlock> SUNROOT_FENCE_GATE = registerBlock("highlands_pine_fence_gate",
+    public static final RegistryObject<FenceGateBlock> SUNROOT_FENCE_GATE = registerBlock("sunroot_fence_gate",
             () -> new FenceGateBlock(Block.Properties.copy(Blocks.OAK_FENCE_GATE), ModWoodTypes.SUNROOT));
     public static final RegistryObject<WallBlock> SUNROOT_LOG_WALL = registerBlock("sunroot_log_wall",
             () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
@@ -145,6 +145,18 @@ public class ModBlocks {
             () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
     public static final RegistryObject<WallBlock> STRIPPED_SUNROOT_WOOD_WALL = registerBlock("stripped_sunroot_wood_wall",
             () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
+    public static final RegistryObject<DoorBlock> SUNROOT_DOOR = registerBlock("sunroot_door",
+            () -> new DoorBlock(Block.Properties.copy(Blocks.OAK_DOOR), ModWoodTypes.SUNROOT_BLOCK_SET));
+    public static final RegistryObject<TrapDoorBlock> SUNROOT_TRAPDOOR = registerBlock("sunroot_trapdoor",
+            () -> new TrapDoorBlock(Block.Properties.copy(Blocks.OAK_TRAPDOOR), ModWoodTypes.SUNROOT_BLOCK_SET));
+    public static final RegistryObject<ButtonBlock> SUNROOT_BUTTON = registerBlock("sunroot_button",
+            () -> new ButtonBlock(Block.Properties.copy(Blocks.OAK_BUTTON), ModWoodTypes.SUNROOT_BLOCK_SET, 30, true));
+    public static final RegistryObject<PressurePlateBlock> SUNROOT_PRESSURE_PLATE = registerBlock("sunroot_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.copy(Blocks.OAK_PRESSURE_PLATE), ModWoodTypes.SUNROOT_BLOCK_SET));
+    public static final RegistryObject<StandingSignBlock> SUNROOT_SIGN = registerBlock("sunroot_sign",
+            () -> new HighlandsPineSignBlock(Block.Properties.of(Material.WOOD, MaterialColor.SAND).noCollission().strength(1.0F).sound(SoundType.WOOD), ModWoodTypes.SUNROOT));
+    public static final RegistryObject<WallSignBlock> SUNROOT_WALL_SIGN = registerBlock("sunroot_wall_sign",
+            () -> new HighlandsPineWallSignBlock(Block.Properties.of(Material.WOOD, MaterialColor.SAND).noCollission().strength(1.0F).sound(SoundType.WOOD).lootFrom(SUNROOT_SIGN), ModWoodTypes.SUNROOT));
     public static final RegistryObject<Block> SUNROOT_LEAVES =  registerBlock("sunroot_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
                     .strength(0.2f).isSuffocating(ModBlocks::never).isViewBlocking(ModBlocks::never)));
