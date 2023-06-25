@@ -81,8 +81,8 @@ public class AetherCrystallium {
             event.accept(ModBlocks.STRIPPED_SUNROOT_LOG);
             event.accept(ModBlocks.STRIPPED_SUNROOT_WOOD);
             event.accept(ModBlocks.SUNROOT_PLANKS);
-            event.accept(ModBlocks.SUNROOT_LEAVES);
             event.accept(ModBlocks.HIGHLANDS_PINE_LEAVES);
+            event.accept(ModBlocks.SUNROOT_LEAVES);
             event.accept(ModBlocks.HIGHLANDS_PINE_SAPLING);
             event.accept(ModBlocks.SUNROOT_SAPLING);
             event.accept(ModBlocks.AETHER_CACTUS);

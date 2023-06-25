@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_column",
   "textures": {
-    "end": "aether_crystallium:block/sunroot_log",
-    "side": "aether_crystallium:block/sunroot_log"
+    "end": "aether_crystallium:block/stripped_sunroot_log",
+    "side": "aether_crystallium:block/stripped_sunroot_log"
   }
 }

@@ -7,4 +7,6 @@ import net.minecraft.world.level.block.state.properties.WoodType;
 public class ModWoodTypes {
     public static final BlockSetType HIGHLANDS_PINE_BLOCK_SET = new BlockSetType(AetherCrystallium.MOD_ID + "highlands_pine");
     public static final WoodType HIGHLANDS_PINE = new WoodType(AetherCrystallium.MOD_ID + "highlands_pine", HIGHLANDS_PINE_BLOCK_SET);
+    public static final BlockSetType SUNROOT_BLOCK_SET = new BlockSetType(AetherCrystallium.MOD_ID + "sunroot_pine");
+    public static final WoodType SUNROOT = new WoodType(AetherCrystallium.MOD_ID + "sunroot_pine", SUNROOT_BLOCK_SET);
 }

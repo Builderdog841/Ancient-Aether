@@ -42,13 +42,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         logBlock(((RotatedPillarBlock) ModBlocks.SUNROOT_LOG.get()));
         axisBlock((RotatedPillarBlock) ModBlocks.SUNROOT_WOOD.get(), blockTexture(ModBlocks.SUNROOT_LOG.get()), blockTexture(ModBlocks.SUNROOT_LOG.get()));
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_SUNROOT_LOG.get(),new ResourceLocation(AetherCrystallium.MOD_ID,"block/sunroot_log"),
-                new ResourceLocation(AetherCrystallium.MOD_ID,"block/sunroot_log_top"));
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_SUNROOT_WOOD.get(),new ResourceLocation(AetherCrystallium.MOD_ID,"block/sunroot_log"),
-                new ResourceLocation(AetherCrystallium.MOD_ID,"block/sunroot_log"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_SUNROOT_LOG.get(),new ResourceLocation(AetherCrystallium.MOD_ID,"block/stripped_sunroot_log"),
+                new ResourceLocation(AetherCrystallium.MOD_ID,"block/stripped_sunroot_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_SUNROOT_WOOD.get(),new ResourceLocation(AetherCrystallium.MOD_ID,"block/stripped_sunroot_log"),
+                new ResourceLocation(AetherCrystallium.MOD_ID,"block/stripped_sunroot_log"));
 
         simpleBlockItem(ModBlocks.SUNROOT_LOG.get(), models().withExistingParent("aether_crystallium:sunroot_log","minecraft:block/cube_column"));
         simpleBlockItem(ModBlocks.SUNROOT_WOOD.get(), models().withExistingParent("aether_crystallium:sunroot_wood","minecraft:block/cube_column"));
+        simpleBlockItem(ModBlocks.STRIPPED_SUNROOT_LOG.get(), models().withExistingParent("aether_crystallium:stripped_sunroot_log","minecraft:block/cube_column"));
+        simpleBlockItem(ModBlocks.STRIPPED_SUNROOT_WOOD.get(), models().withExistingParent("aether_crystallium:stripped_sunroot_wood","minecraft:block/cube_column"));
 
         saplingBlock(ModBlocks.HIGHLANDS_PINE_SAPLING);
         saplingBlock(ModBlocks.SUNROOT_SAPLING);
