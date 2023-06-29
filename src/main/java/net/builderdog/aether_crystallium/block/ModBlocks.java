@@ -103,9 +103,9 @@ public class ModBlocks {
     public static final RegistryObject<PressurePlateBlock> HIGHLANDS_PINE_PRESSURE_PLATE = registerBlock("highlands_pine_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.copy(Blocks.OAK_PRESSURE_PLATE), ModWoodTypes.HIGHLANDS_PINE_BLOCK_SET));
     public static final RegistryObject<StandingSignBlock> HIGHLANDS_PINE_SIGN = registerBlock("highlands_pine_sign",
-            () -> new HighlandsPineSignBlock(Block.Properties.of(Material.WOOD, MaterialColor.SAND).noCollission().strength(1.0F).sound(SoundType.WOOD), ModWoodTypes.HIGHLANDS_PINE));
+            () -> new ModSignBlock(Block.Properties.of(Material.WOOD, MaterialColor.SAND).noCollission().strength(1.0F).sound(SoundType.WOOD), ModWoodTypes.HIGHLANDS_PINE));
     public static final RegistryObject<WallSignBlock> HIGHLANDS_PINE_WALL_SIGN = registerBlock("highlands_pine_wall_sign",
-            () -> new HighlandsPineWallSignBlock(Block.Properties.of(Material.WOOD, MaterialColor.SAND).noCollission().strength(1.0F).sound(SoundType.WOOD).lootFrom(HIGHLANDS_PINE_SIGN), ModWoodTypes.HIGHLANDS_PINE));
+            () -> new ModWallSignBlock(Block.Properties.of(Material.WOOD, MaterialColor.SAND).noCollission().strength(1.0F).sound(SoundType.WOOD).lootFrom(HIGHLANDS_PINE_SIGN), ModWoodTypes.HIGHLANDS_PINE));
     public static final RegistryObject<Block> HIGHLANDS_PINE_LEAVES =  registerBlock("highlands_pine_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
                     .strength(0.2f).isSuffocating(ModBlocks::never).isViewBlocking(ModBlocks::never)));
@@ -154,9 +154,9 @@ public class ModBlocks {
     public static final RegistryObject<PressurePlateBlock> SUNROOT_PRESSURE_PLATE = registerBlock("sunroot_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.copy(Blocks.OAK_PRESSURE_PLATE), ModWoodTypes.SUNROOT_BLOCK_SET));
     public static final RegistryObject<StandingSignBlock> SUNROOT_SIGN = registerBlock("sunroot_sign",
-            () -> new HighlandsPineSignBlock(Block.Properties.of(Material.WOOD, MaterialColor.SAND).noCollission().strength(1.0F).sound(SoundType.WOOD), ModWoodTypes.SUNROOT));
+            () -> new ModSignBlock(Block.Properties.of(Material.WOOD, MaterialColor.SAND).noCollission().strength(1.0F).sound(SoundType.WOOD), ModWoodTypes.SUNROOT));
     public static final RegistryObject<WallSignBlock> SUNROOT_WALL_SIGN = registerBlock("sunroot_wall_sign",
-            () -> new HighlandsPineWallSignBlock(Block.Properties.of(Material.WOOD, MaterialColor.SAND).noCollission().strength(1.0F).sound(SoundType.WOOD).lootFrom(SUNROOT_SIGN), ModWoodTypes.SUNROOT));
+            () -> new ModWallSignBlock(Block.Properties.of(Material.WOOD, MaterialColor.SAND).noCollission().strength(1.0F).sound(SoundType.WOOD).lootFrom(SUNROOT_SIGN), ModWoodTypes.SUNROOT));
     public static final RegistryObject<Block> SUNROOT_LEAVES =  registerBlock("sunroot_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
                     .strength(0.2f).isSuffocating(ModBlocks::never).isViewBlocking(ModBlocks::never)));
@@ -250,6 +250,7 @@ public class ModBlocks {
     }
     public static void registerWoodTypes() {
         WoodType.register(ModWoodTypes.HIGHLANDS_PINE);
+        WoodType.register(ModWoodTypes.SUNROOT);
     }
     private static boolean never(BlockState p_test_1_, BlockGetter p_test_2_, BlockPos p_test_3_) {
         return false;
