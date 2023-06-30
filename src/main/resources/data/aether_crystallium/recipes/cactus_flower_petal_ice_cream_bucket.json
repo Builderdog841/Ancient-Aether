@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "aether:icestone"
+    },
+    {
+      "item": "aether_crystallium:cactus_flower_petal"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "aether:skyroot_bucket"
+    }
+  ],
+  "result": "aether_crystallium:aechor_petal_ice_cream_bucket"
+}
