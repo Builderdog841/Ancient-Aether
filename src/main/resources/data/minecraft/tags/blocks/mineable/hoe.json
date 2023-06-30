@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "aether_crystallium:highlands_pine_leaves"
+    "aether_crystallium:highlands_pine_leaves",
+    "aether_crystallium:sunroot_pine_leaves",
+    "aether_crystallium:aether_cactus",
+    "aether_crystallium:stripped_aether_cactus"
   ]
 }

@@ -103,6 +103,7 @@ public class AetherCrystallium {
             event.accept(ModBlocks.HIGHLANDS_PINE_SAPLING);
             event.accept(ModBlocks.SUNROOT_SAPLING);
             event.accept(ModBlocks.AETHER_CACTUS);
+            event.accept(ModBlocks.STRIPPED_AETHER_CACTUS);
             event.accept(ModBlocks.SMALL_AETHER_CACTUS);
             event.accept(ModBlocks.CACTUS_FLOWER);
             event.accept(ModBlocks.MOONLIT_TULIP);

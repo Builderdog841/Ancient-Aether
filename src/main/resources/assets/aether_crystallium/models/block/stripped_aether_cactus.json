@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "aether_crystallium:block/aether_cactus_bottom",
+    "up": "aether_crystallium:block/stripped_aether_cactus_top",
+    "north": "aether_crystallium:block/stripped_aether_cactus",
+    "east": "aether_crystallium:block/stripped_aether_cactus",
+    "south": "aether_crystallium:block/stripped_aether_cactus",
+    "west": "aether_crystallium:block/stripped_aether_cactus",
+    "particle": "aether_crystallium:block/stripped_aether_cactus"
+  }
+}
