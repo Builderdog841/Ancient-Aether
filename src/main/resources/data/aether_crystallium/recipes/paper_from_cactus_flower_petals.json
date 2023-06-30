@@ -6,7 +6,7 @@
   ],
   "key": {
     "#": {
-      "tag": "aether_crystallium:flower_petal"
+      "item": "aether_crystallium:cactus_flower_petal"
     },
     "result": {
       "item": "minecraft:paper",

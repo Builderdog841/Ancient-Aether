@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "aether_crystallium:cactus_flower_petal"
+    },
+    "B": {
+      "item": "aether:skyroot_poison_bucket"
+    }
+  },
+  "pattern": [
+    "PPP",
+    "PBP",
+    "PPP"
+  ],
+  "result": {
+    "count": 8,
+    "item": "aether:aechor_petal"
+  },
+  "show_notification": true
+}
