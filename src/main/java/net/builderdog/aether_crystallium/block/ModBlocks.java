@@ -47,7 +47,7 @@ public class ModBlocks {
 
     //FLOWERS
     public static final RegistryObject<Block> AETHER_CACTUS =  registerBlock("aether_cactus",
-            () -> new Block(BlockBehaviour.Properties.of(Material.CACTUS).sound(SoundType.WOOL)
+            () -> new AetherCactusBlock(BlockBehaviour.Properties.of(Material.CACTUS).sound(SoundType.WOOL)
                     .strength(0.5f, 6f)));
     public static final RegistryObject<Block> MOONLIT_TULIP = registerBlock("moonlit_tulip",
             () -> new FlowerBlock(() -> MobEffects.SLOW_FALLING, 4, Block.Properties.copy(Blocks.DANDELION)));
