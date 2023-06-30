@@ -130,9 +130,11 @@ public class AetherCrystallium {
         this.addCompost(0.3F, ModBlocks.HIGHLANDS_PINE_LEAVES.get().asItem());
         this.addCompost(0.3F, ModBlocks.SUNROOT_LEAVES.get().asItem());
         this.addCompost(0.3F, ModBlocks.HIGHLANDS_PINE_SAPLING.get());
+        this.addCompost(0.3F, ModBlocks.SUNROOT_SAPLING.get());
         this.addCompost(0.65F, ModBlocks.SMALL_AETHER_CACTUS.get());
         this.addCompost(0.65F, ModBlocks.MOONLIT_TULIP.get());
         this.addCompost(0.5F, ModBlocks.AETHER_CACTUS.get());
+        this.addCompost(0.5F, ModBlocks.STRIPPED_AETHER_CACTUS.get());
         this.addCompost(0.85F, ModBlocks.CACTUS_FLOWER.get());
     }
 
