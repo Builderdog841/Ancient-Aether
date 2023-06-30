@@ -117,6 +117,7 @@ public class AetherCrystallium {
             event.accept(ModBlocks.ANGELIC_LANTERN);
             event.accept(ModBlocks.HELLFIRE_LANTERN);
             event.accept(ModBlocks.CRACKED_SLIDER);
+            event.accept(ModItems.CACTUS_FLOWER_PETAL);
             event.accept(ModItems.AECHOR_PETAL_ICE_CREAM_BUCKET);
         }
     }

@@ -19,6 +19,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(ModItems.AECHOR_PETAL_ICE_CREAM_BUCKET);
+        simpleItem(ModItems.CACTUS_FLOWER_PETAL);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
