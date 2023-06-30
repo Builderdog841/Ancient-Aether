@@ -15,6 +15,4 @@ public class ModFeatures {
     public static RegistryObject<Feature<LargeCactusConfiguration>> LARGE_CACTUS = FEATURES.register("large_cactus", () -> new LargeCactusFeature(LargeCactusConfiguration.CODEC));
 
     public static RegistryObject<Feature<LargeCactusConfiguration>> GIANT_CACTUS = FEATURES.register("giant_cactus", () -> new GiantCactusFeature(LargeCactusConfiguration.CODEC));
-
-
 }
