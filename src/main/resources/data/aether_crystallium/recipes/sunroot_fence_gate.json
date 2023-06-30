@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "fence_gate",
+  "key": {
+    "/": {
+      "tag": "aether:skyroot_stick"
+    },
+    "M": {
+      "item": "aether_crystallium:sunroot_planks"
+    }
+  },
+  "pattern": [
+    "/M/",
+    "/M/"
+  ],
+  "result": {
+    "count": 1,
+    "item": "aether_crystallium:sunroot_fence_gate"
+  },
+  "show_notification": true
+}

@@ -1,19 +1,20 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
-  "group": "wooden_trapdoors",
+  "group": "wooden_stairs",
   "key": {
     "#": {
-      "item": "aether_crystallium:highlands_pine_planks"
+      "item": "aether_crystallium:sunroot_planks"
     }
   },
   "pattern": [
-    "###",
+    "#  ",
+    "## ",
     "###"
   ],
   "result": {
-    "count": 2,
-    "item": "aether_crystallium:highlands_pine_trapdoor"
+    "count": 4,
+    "item": "aether_crystallium:sunroot_stairs"
   },
   "show_notification": true
 }
