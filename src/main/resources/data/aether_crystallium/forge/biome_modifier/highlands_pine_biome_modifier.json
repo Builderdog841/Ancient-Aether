@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "aether_crystallium:highlands_taiga",
-  "features": "aether_crystallium:highlands_pine_placed",
-  "step": "vegetal_decoration"
-}
