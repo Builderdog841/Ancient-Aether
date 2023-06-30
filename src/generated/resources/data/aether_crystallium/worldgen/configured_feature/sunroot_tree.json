@@ -1,7 +1,25 @@
 {
   "type": "minecraft:tree",
   "config": {
-    "decorators": [],
+    "decorators": [
+      {
+        "type": "aether_crystallium:trunk_decorator",
+        "provider": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "aether_crystallium:sunroot_log_wall",
+            "Properties": {
+              "east": "none",
+              "north": "none",
+              "south": "none",
+              "up": "true",
+              "waterlogged": "false",
+              "west": "none"
+            }
+          }
+        }
+      }
+    ],
     "dirt_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {

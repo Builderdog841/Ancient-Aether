@@ -8,6 +8,7 @@ import net.builderdog.aether_crystallium.item.ModCreativeModeTabs;
 import net.builderdog.aether_crystallium.item.ModItems;
 import net.builderdog.aether_crystallium.worldgen.features.ModFeatures;
 import net.builderdog.aether_crystallium.worldgen.foliageplacer.ModFoliagePlacerTypes;
+import net.builderdog.aether_crystallium.worldgen.tree_decorator.ModTreeDecoratorTypes;
 import net.builderdog.aether_crystallium.worldgen.trunkplacer.ModTrunkPlacerTypes;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.ItemLike;
@@ -39,6 +40,7 @@ public class AetherCrystallium {
         ModTrunkPlacerTypes.TRUNK_PLACERS.register(modEventBus);
         ModBlockEntityTypes.BLOCK_ENTITY_TYPES.register(modEventBus);
         ModFeatures.FEATURES.register(modEventBus);
+        ModTreeDecoratorTypes.TREE_DECORATORS.register(modEventBus);
         ModBlocks.registerWoodTypes();
 
         modEventBus.addListener(this::commonSetup);
