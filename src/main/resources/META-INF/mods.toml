@@ -29,7 +29,7 @@ displayName="Aether Crystallium" #mandatory
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="examplemod.png" #optional
 # A text field displayed in the mod UI
-credits="Credit goes to Tuneful Turnip for making the Cactus Gen. Credit also goes to Zepalesque and all the other people that helped and gave me feedback on the Aether Project Discord Server."
+credits="Credit goes to Tuneful Turnip for making the Cactus Gen. Credit also goes to Zepalesque and all the other people that helped and gave me feedback on the Aether Project Discord Server. Also thanks to Unroman for the Ukranian Translation"
 # A text field displayed in the mod UI
 authors="Builderdog" #optional
 # Display Test controls the display for your mod in the server connection screen
