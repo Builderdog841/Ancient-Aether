@@ -6,7 +6,8 @@ import net.builderdog.aether_crystallium.AetherCrystallium;
 import net.builderdog.aether_crystallium.block.ModBlocks;
 import net.builderdog.aether_crystallium.worldgen.configurations.LargeCactusConfiguration;
 import net.builderdog.aether_crystallium.worldgen.features.ModFeatures;
-import net.builderdog.aether_crystallium.worldgen.foliageplacer.HighlandsPineFoliagePlacer;
+import net.builderdog.aether_crystallium.worldgen.foliageplacer.CrystalliumHookedFoliagePlacer;
+import net.builderdog.aether_crystallium.worldgen.foliageplacer.CrystalliumPineFoliagePlacer;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -59,14 +60,14 @@ public class ModConfiguredFeatures {
                         BlockStateProvider.simple(ModBlocks.HIGHLANDS_PINE_LOG.get()),
                         new StraightTrunkPlacer(5, 7, 3),
                         BlockStateProvider.simple(ModBlocks.HIGHLANDS_PINE_LEAVES.get()),
-                        new HighlandsPineFoliagePlacer(ConstantInt.of(1), ConstantInt.ZERO, ConstantInt.of(1)),
+                        new CrystalliumPineFoliagePlacer(ConstantInt.of(1), ConstantInt.ZERO, ConstantInt.of(1)),
                         new TwoLayersFeatureSize(1, 0, 2)).build());
 
         register(context, SUNROOT_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(AetherBlocks.SKYROOT_LOG.get()),
                 new StraightTrunkPlacer(5, 7, 3),
                 BlockStateProvider.simple(ModBlocks.SUNROOT_LEAVES.get()),
-                new HighlandsPineFoliagePlacer(ConstantInt.of(1), ConstantInt.ZERO, ConstantInt.of(1)),
+                new CrystalliumHookedFoliagePlacer(ConstantInt.of(1), ConstantInt.ZERO, ConstantInt.of(1)),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
 
         register(context, AETHER_QUARTZ_ORE_KEY, Feature.ORE, new OreConfiguration(aetherQuartzOre, 12, 0f));

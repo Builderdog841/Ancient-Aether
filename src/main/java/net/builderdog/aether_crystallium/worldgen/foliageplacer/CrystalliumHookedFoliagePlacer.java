@@ -2,7 +2,6 @@ package net.builderdog.aether_crystallium.worldgen.foliageplacer;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.builderdog.aether_crystallium.worldgen.foliageplacer.ModFoliagePlacerTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.valueproviders.IntProvider;
@@ -11,26 +10,26 @@ import net.minecraft.world.level.levelgen.feature.configurations.TreeConfigurati
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerType;
 
-public class SunrootFoliagePlacer extends FoliagePlacer {
+public class CrystalliumHookedFoliagePlacer extends FoliagePlacer {
 
     //This code was written by the Aether Team and not by me
-    public static final Codec<SunrootFoliagePlacer> CODEC = RecordCodecBuilder.create((codec) -> foliagePlacerParts(codec)
+    public static final Codec<CrystalliumHookedFoliagePlacer> CODEC = RecordCodecBuilder.create((codec) -> foliagePlacerParts(codec)
             .and(IntProvider.codec(0, 24).fieldOf("trunk_height").forGetter((placer) -> placer.trunkHeight))
-            .apply(codec, SunrootFoliagePlacer::new));
+            .apply(codec, CrystalliumHookedFoliagePlacer::new));
     private final IntProvider trunkHeight;
 
-    public SunrootFoliagePlacer(IntProvider radius, IntProvider offset, IntProvider height) {
+    public CrystalliumHookedFoliagePlacer(IntProvider radius, IntProvider offset, IntProvider height) {
         super(radius, offset);
         this.trunkHeight = height;
     }
 
     @Override
     protected FoliagePlacerType<?> type() {
-        return ModFoliagePlacerTypes.SUNROOT_FOLIAGE_PLACER.get();
+        return ModFoliagePlacerTypes.CRYSTALLIUM_HOOKED_FOLIAGE_PLACER.get();
     }
 
     @Override
-    protected void createFoliage(LevelSimulatedReader level, FoliagePlacer.FoliageSetter setter, RandomSource random, TreeConfiguration configuration, int maxTreeHeight, FoliagePlacer.FoliageAttachment attachment, int foliageHeight, int foliageRadius, int offset) {
+    protected void createFoliage(LevelSimulatedReader level, FoliageSetter setter, RandomSource random, TreeConfiguration configuration, int maxTreeHeight, FoliageAttachment attachment, int foliageHeight, int foliageRadius, int offset) {
         BlockPos blockpos = attachment.pos();
         this.placeLeavesRow(level, setter, random, configuration, blockpos, attachment.radiusOffset(), 0, attachment.doubleTrunk());
     }

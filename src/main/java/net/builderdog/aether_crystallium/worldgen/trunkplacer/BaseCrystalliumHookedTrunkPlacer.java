@@ -17,10 +17,10 @@ import java.util.List;
 import java.util.function.BiConsumer;
 import java.util.function.Function;
 
-public abstract class BaseSunrootTrunkPlacer extends TrunkPlacer {
+public abstract class BaseCrystalliumHookedTrunkPlacer extends TrunkPlacer {
 
     //This code was written by the Aether Team and not by me
-    public BaseSunrootTrunkPlacer(int height, int heightRandA, int heightRandB) {
+    public BaseCrystalliumHookedTrunkPlacer(int height, int heightRandA, int heightRandB) {
         super(height, heightRandA, heightRandB);
     }
 

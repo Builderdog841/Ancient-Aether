@@ -15,18 +15,18 @@ import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacerType;
 import java.util.List;
 import java.util.function.BiConsumer;
 
-public class SunrootTrunkPlacer extends BaseSunrootTrunkPlacer {
+public class CrystalliumHookedTrunkPlacer extends BaseCrystalliumHookedTrunkPlacer {
 
     //This code was written by the Aether Team and not by me
-    public static final Codec<SunrootTrunkPlacer> CODEC = RecordCodecBuilder.create((codec) -> trunkPlacerParts(codec).apply(codec, SunrootTrunkPlacer::new));
+    public static final Codec<CrystalliumHookedTrunkPlacer> CODEC = RecordCodecBuilder.create((codec) -> trunkPlacerParts(codec).apply(codec, CrystalliumHookedTrunkPlacer::new));
 
-    public SunrootTrunkPlacer(int height, int heightRandA, int heightRandB) {
+    public CrystalliumHookedTrunkPlacer(int height, int heightRandA, int heightRandB) {
         super(height, heightRandA, heightRandB);
     }
 
     @Override
     protected TrunkPlacerType<?> type() {
-        return ModTrunkPlacerTypes.SUNROOT_TRUNK_PLACER.get();
+        return ModTrunkPlacerTypes.CRYSTALLIUM_HOOKED_TRUNK_PLACER.get();
     }
 
     @Override

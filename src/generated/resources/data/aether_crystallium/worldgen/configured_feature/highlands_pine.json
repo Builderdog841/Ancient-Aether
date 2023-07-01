@@ -9,7 +9,7 @@
       }
     },
     "foliage_placer": {
-      "type": "aether_crystallium:highlands_pine_foliage_placer",
+      "type": "aether_crystallium:crystallium_pine_foliage_placer",
       "offset": 1,
       "radius": 2,
       "trunk_height": 2

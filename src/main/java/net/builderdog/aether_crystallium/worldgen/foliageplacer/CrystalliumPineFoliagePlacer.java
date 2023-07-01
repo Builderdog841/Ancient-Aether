@@ -10,22 +10,22 @@ import net.minecraft.world.level.levelgen.feature.configurations.TreeConfigurati
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerType;
 
-public class HighlandsPineFoliagePlacer extends FoliagePlacer {
+public class CrystalliumPineFoliagePlacer extends FoliagePlacer {
 
     //This code was written by the Aether Team and not by me
-    public static final Codec<HighlandsPineFoliagePlacer> CODEC = RecordCodecBuilder.create((codec) -> foliagePlacerParts(codec)
+    public static final Codec<CrystalliumPineFoliagePlacer> CODEC = RecordCodecBuilder.create((codec) -> foliagePlacerParts(codec)
             .and(IntProvider.codec(0, 24).fieldOf("trunk_height").forGetter((placer) -> placer.trunkHeight))
-            .apply(codec, HighlandsPineFoliagePlacer::new));
+            .apply(codec, CrystalliumPineFoliagePlacer::new));
     private final IntProvider trunkHeight;
 
-    public HighlandsPineFoliagePlacer(IntProvider radius, IntProvider offset, IntProvider height) {
+    public CrystalliumPineFoliagePlacer(IntProvider radius, IntProvider offset, IntProvider height) {
         super(radius, offset);
         this.trunkHeight = height;
     }
 
     @Override
     protected FoliagePlacerType<?> type() {
-        return ModFoliagePlacerTypes.HIGHLANDS_PINE_FOLIAGE_PLACER.get();
+        return ModFoliagePlacerTypes.CRYSTALLIUM_PINE_FOLIAGE_PLACER.get();
     }
 
     @Override
