@@ -4,7 +4,7 @@
   "group": "wooden_trapdoors",
   "key": {
     "#": {
-      "item": "aether_crystallium:sunroot_planks"
+      "item": "aether_crystallium:stripped_sunroot_wood"
     }
   },
   "pattern": [
@@ -12,8 +12,8 @@
     "###"
   ],
   "result": {
-    "count": 2,
-    "item": "aether_crystallium:sunroot_trapdoor"
+    "count": 6,
+    "item": "aether_crystallium:stripped_sunroot_wood_wall"
   },
   "show_notification": true
 }
