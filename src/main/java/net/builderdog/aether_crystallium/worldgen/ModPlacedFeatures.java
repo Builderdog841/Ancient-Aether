@@ -24,6 +24,7 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> AETHER_QUARTZ_ORE_PLACED = createKey("aether_quartz_ore_placed");
     public static final ResourceKey<PlacedFeature> QUICKSTONE_ORE_PLACED = createKey("quickstone_ore_placed");
     public static final ResourceKey<PlacedFeature> MOONLIT_TULIP_PATCH_KEY = createKey("moonlit_tulip_patch");
+    public static final ResourceKey<PlacedFeature> ENCHANTED_BLOSSOM_PATCH_KEY = createKey("enchanted_blossom_patch");
     public static final ResourceKey<PlacedFeature> SMALL_AETHER_CACTUS_PATCH_KEY = createKey("small_aether_cactus_patch");
     public static final ResourceKey<PlacedFeature> AETHER_CACTUS_PATCH_KEY = createKey("aether_cactus_patch");
 
@@ -45,6 +46,8 @@ public class ModPlacedFeatures {
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(128))));
 
         register(context, MOONLIT_TULIP_PATCH_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MOONLIT_TULIP_PATCH_KEY), RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
+
+        register(context, ENCHANTED_BLOSSOM_PATCH_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ENCHANTED_BLOSSOM_PATCH_KEY), RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
 
         register(context, SMALL_AETHER_CACTUS_PATCH_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SMALL_AETHER_CACTUS_PATCH_KEY), RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
 

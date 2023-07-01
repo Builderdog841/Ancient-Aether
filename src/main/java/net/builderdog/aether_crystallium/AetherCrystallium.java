@@ -107,6 +107,7 @@ public class AetherCrystallium {
             event.accept(ModBlocks.SUNROOT_SAPLING);
             event.accept(ModBlocks.SMALL_AETHER_CACTUS);
             event.accept(ModBlocks.MOONLIT_TULIP);
+            event.accept(ModBlocks.ENCHANTED_BLOSSOM);
             event.accept(ModBlocks.AETHER_QUARTZ_ORE);
             event.accept(ModBlocks.ENCHANTED_SENTRY_STONE);
             event.accept(ModBlocks.BLIGHTED_SENTRY_STONE);
@@ -133,6 +134,7 @@ public class AetherCrystallium {
         this.addCompost(0.3F, ModBlocks.SUNROOT_SAPLING.get());
         this.addCompost(0.65F, ModBlocks.SMALL_AETHER_CACTUS.get());
         this.addCompost(0.65F, ModBlocks.MOONLIT_TULIP.get());
+        this.addCompost(0.65F, ModBlocks.ENCHANTED_BLOSSOM.get());
         this.addCompost(0.5F, ModBlocks.AETHER_CACTUS.get());
         this.addCompost(0.5F, ModBlocks.STRIPPED_AETHER_CACTUS.get());
         this.addCompost(0.85F, ModBlocks.CACTUS_FLOWER.get());

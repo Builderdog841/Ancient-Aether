@@ -1,0 +1,10 @@
+{
+  "type": "aether:enchanting",
+  "category": "enchanting_misc",
+  "cookingtime": 250,
+  "experience": 0.5,
+  "ingredient": {
+    "item": "aether_crystallium:enchanted_blossom"
+  },
+  "result": "minecraft:glowstone_dust"
+}

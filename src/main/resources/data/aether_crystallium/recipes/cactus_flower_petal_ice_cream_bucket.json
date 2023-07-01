@@ -15,5 +15,8 @@
       "item": "aether:skyroot_bucket"
     }
   ],
-  "result": "aether_crystallium:aechor_petal_ice_cream_bucket"
+  "result": {
+    "count": 1,
+    "item": "aether_crystallium:cactus_flower_petal_ice_cream_bucket"
+  }
 }

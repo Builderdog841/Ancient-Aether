@@ -53,7 +53,9 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.CACTUS).sound(SoundType.WOOL)
                     .strength(0.5f, 6f)));
     public static final RegistryObject<Block> MOONLIT_TULIP = registerBlock("moonlit_tulip",
-            () -> new FlowerBlock(() -> MobEffects.SLOW_FALLING, 4, Block.Properties.copy(Blocks.DANDELION)));
+            () -> new FlowerBlock(() -> MobEffects.WATER_BREATHING, 4, Block.Properties.copy(Blocks.DANDELION)));
+    public static final RegistryObject<Block> ENCHANTED_BLOSSOM = registerBlock("enchanted_blossom",
+            () -> new FlowerBlock(() -> MobEffects.GLOWING, 4, Block.Properties.copy(Blocks.DANDELION)));
     public static final RegistryObject<Block> CACTUS_FLOWER =  registerBlock("cactus_flower",
             () -> new Block(BlockBehaviour.Properties.of(Material.PLANT)
                     .instabreak().noOcclusion().noCollission()));
@@ -183,6 +185,8 @@ public class ModBlocks {
     //POTTED PLANTS
     public static final RegistryObject<FlowerPotBlock> POTTED_MOONLIT_TULIP = BLOCKS.register("potted_moonlit_tulip",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, MOONLIT_TULIP, Block.Properties.copy(Blocks.FLOWER_POT)));
+    public static final RegistryObject<FlowerPotBlock> POTTED_ENCHANTED_BLOSSOM = BLOCKS.register("potted_enchanted_blossom",
+            () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ENCHANTED_BLOSSOM, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_SMALL_AETHER_CACTUS = BLOCKS.register("potted_small_aether_cactus",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SMALL_AETHER_CACTUS, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_HIGHLANDS_PINE_SAPLING = BLOCKS.register("potted_highlands_pine_sapling",
@@ -212,6 +216,7 @@ public class ModBlocks {
     public static void registerPots() {
         FlowerPotBlock pot = (FlowerPotBlock) Blocks.FLOWER_POT;
         pot.addPlant(ModBlocks.MOONLIT_TULIP.getId(), ModBlocks.POTTED_MOONLIT_TULIP);
+        pot.addPlant(ModBlocks.ENCHANTED_BLOSSOM.getId(), ModBlocks.POTTED_ENCHANTED_BLOSSOM);
         pot.addPlant(ModBlocks.SMALL_AETHER_CACTUS.getId(), ModBlocks.POTTED_SMALL_AETHER_CACTUS);
         pot.addPlant(ModBlocks.HIGHLANDS_PINE_SAPLING.getId(), ModBlocks.POTTED_HIGHLANDS_PINE_SAPLING);
         pot.addPlant(ModBlocks.SUNROOT_SAPLING.getId(), ModBlocks.POTTED_SUNROOT_SAPLING);

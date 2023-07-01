@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "blue_dye",
+  "ingredients": [
+    {
+      "item": "aether_crystallium:enchanted_blossom"
+    }
+  ],
+  "result": {
+    "item": "minecraft:orange_dye",
+    "count": 1
+  }
+}

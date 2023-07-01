@@ -37,6 +37,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHLANDS_PINE_KEY = registerKey("highlands_pine");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SUNROOT_KEY = registerKey("sunroot_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MOONLIT_TULIP_PATCH_KEY = registerKey("moonlit_tulip_patch");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ENCHANTED_BLOSSOM_PATCH_KEY = registerKey("enchanted_blossom_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_AETHER_CACTUS_PATCH_KEY = registerKey("small_aether_cactus_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_QUARTZ_ORE_KEY = registerKey("aether_quartz_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> QUICKSTONE_ORE_KEY = registerKey("quickstone_ore");
@@ -75,6 +76,10 @@ public class ModConfiguredFeatures {
         register(context, MOONLIT_TULIP_PATCH_KEY, Feature.FLOWER,
                 AetherConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
                         .add(ModBlocks.MOONLIT_TULIP.get().defaultBlockState(), 3)), 64));
+
+        register(context, ENCHANTED_BLOSSOM_PATCH_KEY, Feature.FLOWER,
+                AetherConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
+                        .add(ModBlocks.ENCHANTED_BLOSSOM.get().defaultBlockState(), 3)), 64));
 
         register(context, SMALL_AETHER_CACTUS_PATCH_KEY, Feature.FLOWER,
                 AetherConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
