@@ -1,5 +1,7 @@
 package net.builderdog.aether_crystallium.block;
 
+import com.aetherteam.aether.block.AetherBlockStateProperties;
+import com.aetherteam.aether.block.natural.AetherLogBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.AxeItem;
@@ -10,9 +12,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.ToolAction;
 import org.jetbrains.annotations.Nullable;
 
-public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
+public class ModFlammableRotatedPillarBlock extends AetherLogBlock {
     public ModFlammableRotatedPillarBlock(Properties properties) {
         super(properties);
+        this.registerDefaultState(this.defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, false));
     }
 
     @Override

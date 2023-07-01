@@ -3,6 +3,7 @@ package net.builderdog.aether_crystallium.block;
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.block.natural.AetherDoubleDropBlock;
 import com.aetherteam.aether.block.natural.AetherDoubleDropsLeaves;
+import com.aetherteam.aether.block.natural.AetherLogBlock;
 import com.aetherteam.aether.mixin.mixins.common.accessor.FireBlockAccessor;
 import net.builderdog.aether_crystallium.AetherCrystallium;
 import net.builderdog.aether_crystallium.item.ModItems;
