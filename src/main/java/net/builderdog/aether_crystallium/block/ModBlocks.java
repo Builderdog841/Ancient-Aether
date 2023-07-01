@@ -2,6 +2,7 @@ package net.builderdog.aether_crystallium.block;
 
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.block.natural.AetherDoubleDropBlock;
+import com.aetherteam.aether.block.natural.AetherDoubleDropsLeaves;
 import com.aetherteam.aether.mixin.mixins.common.accessor.FireBlockAccessor;
 import net.builderdog.aether_crystallium.AetherCrystallium;
 import net.builderdog.aether_crystallium.item.ModItems;
@@ -113,7 +114,7 @@ public class ModBlocks {
     public static final RegistryObject<WallSignBlock> HIGHLANDS_PINE_WALL_SIGN = registerBlock("highlands_pine_wall_sign",
             () -> new ModWallSignBlock(Block.Properties.of(Material.WOOD, MaterialColor.SAND).noCollission().strength(1.0F).sound(SoundType.WOOD).lootFrom(HIGHLANDS_PINE_SIGN), ModWoodTypes.HIGHLANDS_PINE));
     public static final RegistryObject<Block> HIGHLANDS_PINE_LEAVES =  registerBlock("highlands_pine_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
+            () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
                     .strength(0.2f).isSuffocating(ModBlocks::never).isViewBlocking(ModBlocks::never)));
     public static final RegistryObject<Block> HIGHLANDS_PINE_SAPLING =  registerBlock("highlands_pine_sapling",
             () -> new SaplingBlock(new HighlandsPineTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
@@ -164,7 +165,7 @@ public class ModBlocks {
     public static final RegistryObject<WallSignBlock> SUNROOT_WALL_SIGN = registerBlock("sunroot_wall_sign",
             () -> new ModWallSignBlock(Block.Properties.of(Material.WOOD, MaterialColor.SAND).noCollission().strength(1.0F).sound(SoundType.WOOD).lootFrom(SUNROOT_SIGN), ModWoodTypes.SUNROOT));
     public static final RegistryObject<Block> SUNROOT_LEAVES =  registerBlock("sunroot_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
+            () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
                     .strength(0.2f).isSuffocating(ModBlocks::never).isViewBlocking(ModBlocks::never)));
     public static final RegistryObject<Block> SUNROOT_SAPLING =  registerBlock("sunroot_sapling",
             () -> new SaplingBlock(new SunrootTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
@@ -197,7 +198,7 @@ public class ModBlocks {
 
     //QUICKSOIL BRICKS
     public static final RegistryObject<Block> QUICKSTONE =  registerBlock("quickstone",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+            () -> new AetherDoubleDropBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(0.5f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> QUICKSOIL_BRICKS =  registerBlock("quicksoil_bricks",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)

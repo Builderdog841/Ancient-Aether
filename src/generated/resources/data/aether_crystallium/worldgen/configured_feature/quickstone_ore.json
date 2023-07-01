@@ -6,7 +6,10 @@
     "targets": [
       {
         "state": {
-          "Name": "aether_crystallium:quickstone"
+          "Name": "aether_crystallium:quickstone",
+          "Properties": {
+            "double_drops": "true"
+          }
         },
         "target": {
           "predicate_type": "minecraft:block_match",
