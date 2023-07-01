@@ -1,6 +1,7 @@
 package net.builderdog.aether_crystallium.block;
 
 import com.aetherteam.aether.block.AetherBlocks;
+import com.aetherteam.aether.block.natural.AetherDoubleDropBlock;
 import com.aetherteam.aether.mixin.mixins.common.accessor.FireBlockAccessor;
 import net.builderdog.aether_crystallium.AetherCrystallium;
 import net.builderdog.aether_crystallium.item.ModItems;
@@ -34,7 +35,7 @@ public class ModBlocks {
 
     //ORES
     public static final RegistryObject<Block> AETHER_QUARTZ_ORE =  registerBlock("aether_quartz_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+            () -> new AetherDoubleDropBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(1f).requiresCorrectToolForDrops()));
 
     //SENTRY STONE VARIANTS
@@ -47,7 +48,7 @@ public class ModBlocks {
 
     //FOLIAGE
     public static final RegistryObject<Block> AETHER_CACTUS =  registerBlock("aether_cactus",
-            () -> new AetherCactusBlock(BlockBehaviour.Properties.of(Material.CACTUS).sound(SoundType.WOOL)
+            () -> new AetherDoubleDropBlock(BlockBehaviour.Properties.of(Material.CACTUS).sound(SoundType.WOOL)
                     .strength(0.5f, 6f)));
     public static final RegistryObject<Block> STRIPPED_AETHER_CACTUS =  registerBlock("stripped_aether_cactus",
             () -> new Block(BlockBehaviour.Properties.of(Material.CACTUS).sound(SoundType.WOOL)
@@ -58,7 +59,7 @@ public class ModBlocks {
             () -> new FlowerBlock(() -> MobEffects.GLOWING, 4, Block.Properties.copy(Blocks.DANDELION)));
     public static final RegistryObject<Block> CACTUS_FLOWER =  registerBlock("cactus_flower",
             () -> new Block(BlockBehaviour.Properties.of(Material.PLANT)
-                    .instabreak().noOcclusion().noCollission()));
+                    .instabreak().noOcclusion().noCollission().sound(SoundType.SPORE_BLOSSOM)));
     public static final RegistryObject<Block> SMALL_AETHER_CACTUS = registerBlock("small_aether_cactus",
             () -> new DeadBushBlock(BlockBehaviour.Properties.copy(Blocks.DEAD_BUSH)) {
                 @Override

@@ -6,7 +6,10 @@
     "targets": [
       {
         "state": {
-          "Name": "aether_crystallium:aether_quartz_ore"
+          "Name": "aether_crystallium:aether_quartz_ore",
+          "Properties": {
+            "double_drops": "true"
+          }
         },
         "target": {
           "predicate_type": "minecraft:tag_match",
