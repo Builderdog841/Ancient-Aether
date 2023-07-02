@@ -65,7 +65,7 @@ public class AetherCrystallium {
         });
 
         event.enqueueWork(() -> {
-            Regions.register(new ModRegion(new ResourceLocation(MOD_ID, "<aether_crystallium>"), 4));
+            Regions.register(new ModRegion(new ResourceLocation(MOD_ID, "aether_crystallium"), 4));
 
             SurfaceRuleManager.addSurfaceRules(AetherRuleCategory.THE_AETHER, MODID, ModSurfaceData.makeRules());
         });
