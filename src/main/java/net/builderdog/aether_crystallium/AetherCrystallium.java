@@ -27,9 +27,6 @@ import org.slf4j.Logger;
 import teamrazor.aeroblender.aether.AetherRuleCategory;
 import terrablender.api.Regions;
 import terrablender.api.SurfaceRuleManager;
-import teamrazor.aeroblender.aether.AetherRuleCategory;
-
-import static com.aetherteam.aether.Aether.MODID;
 
 @Mod(AetherCrystallium.MOD_ID)
 public class AetherCrystallium {
@@ -67,7 +64,7 @@ public class AetherCrystallium {
         event.enqueueWork(() -> {
             Regions.register(new ModRegion(new ResourceLocation(MOD_ID, "aether_crystallium"), 4));
 
-            SurfaceRuleManager.addSurfaceRules(AetherRuleCategory.THE_AETHER, MODID, ModSurfaceData.makeRules());
+            SurfaceRuleManager.addSurfaceRules(AetherRuleCategory.THE_AETHER, MOD_ID, ModSurfaceData.makeRules());
         });
     }
 

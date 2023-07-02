@@ -18,7 +18,7 @@ public class ModSurfaceData {
                         SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(AetherBlocks.QUICKSOIL.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)))),
 
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.QUICKSOIL_DESERT),
-                        SurfaceRules.ifTrue(SurfaceRules.stoneDepthCheck(0, true, 0, CaveSurface.FLOOR), SurfaceRules.state(AetherBlocks.QUICKSOIL.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true))))
-        );
+                SurfaceRules.ifTrue(SurfaceRules.stoneDepthCheck(0, true, 0, CaveSurface.FLOOR), SurfaceRules.state(AetherBlocks.QUICKSOIL.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true))))
+    );
     }
 }
