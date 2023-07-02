@@ -1,10 +1,9 @@
 package net.builderdog.aether_crystallium.datagen;
 
 import net.builderdog.aether_crystallium.AetherCrystallium;
-import net.builderdog.aether_crystallium.worldgen.ModConfiguredFeatures;
-import net.builderdog.aether_crystallium.worldgen.ModPlacedFeatures;
+import net.builderdog.aether_crystallium.world.ModConfiguredFeatures;
+import net.builderdog.aether_crystallium.world.ModPlacedFeatures;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.Registry;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;

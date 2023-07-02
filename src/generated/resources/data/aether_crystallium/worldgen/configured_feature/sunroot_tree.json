@@ -1,25 +1,7 @@
 {
   "type": "minecraft:tree",
   "config": {
-    "decorators": [
-      {
-        "type": "aether_crystallium:trunk_decorator",
-        "provider": {
-          "type": "minecraft:simple_state_provider",
-          "state": {
-            "Name": "aether_crystallium:sunroot_log_wall",
-            "Properties": {
-              "east": "none",
-              "north": "none",
-              "south": "none",
-              "up": "true",
-              "waterlogged": "false",
-              "west": "none"
-            }
-          }
-        }
-      }
-    ],
+    "decorators": [],
     "dirt_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
@@ -28,43 +10,43 @@
     },
     "foliage_placer": {
       "type": "aether_crystallium:crystallium_hooked_foliage_placer",
-      "offset": 1,
-      "radius": 2,
-      "trunk_height": 2
+      "offset": 0,
+      "radius": 1,
+      "trunk_height": 1
     },
     "foliage_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
         "Name": "aether_crystallium:sunroot_leaves",
         "Properties": {
-          "double_drops": "true",
           "distance": "7",
+          "double_drops": "false",
           "persistent": "false",
           "waterlogged": "false"
         }
       }
     },
     "force_dirt": false,
-    "ignore_vines": true,
+    "ignore_vines": false,
     "minimum_size": {
       "type": "minecraft:two_layers_feature_size",
-      "limit": 2,
-      "lower_size": 1,
-      "upper_size": 4
+      "limit": 1,
+      "lower_size": 0,
+      "upper_size": 2
     },
     "trunk_placer": {
-      "type": "aether_crystallium:crystallium_hooked_trunk_placer",
-      "base_height": 8,
-      "height_rand_a": 14,
-      "height_rand_b": 14
+      "type": "minecraft:straight_trunk_placer",
+      "base_height": 5,
+      "height_rand_a": 7,
+      "height_rand_b": 3
     },
     "trunk_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "aether_crystallium:sunroot_log",
+        "Name": "aether:skyroot_log",
         "Properties": {
           "axis": "y",
-          "double_drops": "true"
+          "double_drops": "false"
         }
       }
     }

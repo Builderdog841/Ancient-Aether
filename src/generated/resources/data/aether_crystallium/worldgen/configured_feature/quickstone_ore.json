@@ -6,14 +6,14 @@
     "targets": [
       {
         "state": {
-          "Name": "aether_crystallium:quickstone",
+          "Name": "aether_crystallium:aether_quartz_ore",
           "Properties": {
-            "double_drops": "true"
+            "double_drops": "false"
           }
         },
         "target": {
-          "predicate_type": "minecraft:block_match",
-          "block": "aether:quicksoil"
+          "predicate_type": "minecraft:tag_match",
+          "tag": "minecraft:stone_ore_replaceables"
         }
       }
     ]

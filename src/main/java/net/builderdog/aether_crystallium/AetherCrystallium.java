@@ -1,16 +1,14 @@
 package net.builderdog.aether_crystallium;
 
-import com.aetherteam.aether.item.AetherItems;
 import com.mojang.logging.LogUtils;
 import net.builderdog.aether_crystallium.block.ModBlocks;
 import net.builderdog.aether_crystallium.blockentity.ModBlockEntityTypes;
 import net.builderdog.aether_crystallium.item.ModCreativeModeTabs;
 import net.builderdog.aether_crystallium.item.ModItems;
-import net.builderdog.aether_crystallium.worldgen.features.ModFeatures;
-import net.builderdog.aether_crystallium.worldgen.foliageplacer.ModFoliagePlacerTypes;
-import net.builderdog.aether_crystallium.worldgen.tree_decorator.ModTreeDecoratorTypes;
-import net.builderdog.aether_crystallium.worldgen.trunkplacer.ModTrunkPlacerTypes;
-import net.minecraft.world.item.CreativeModeTabs;
+import net.builderdog.aether_crystallium.world.features.ModFeatures;
+import net.builderdog.aether_crystallium.world.foliageplacer.ModFoliagePlacerTypes;
+import net.builderdog.aether_crystallium.world.tree_decorator.ModTreeDecoratorTypes;
+import net.builderdog.aether_crystallium.world.trunkplacer.ModTrunkPlacerTypes;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
@@ -23,8 +21,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
-
-import static net.builderdog.aether_crystallium.worldgen.foliageplacer.ModFoliagePlacerTypes.*;
 
 @Mod(AetherCrystallium.MOD_ID)
 public class AetherCrystallium {

@@ -4,7 +4,10 @@
     "blockstate": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "aether_crystallium:aether_cactus"
+        "Name": "aether_crystallium:aether_cactus",
+        "Properties": {
+          "double_drops": "false"
+        }
       }
     }
   }
