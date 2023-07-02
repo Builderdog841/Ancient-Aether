@@ -2,8 +2,20 @@
   "feature": "aether_crystallium:enchanted_blossom_patch",
   "placement": [
     {
-      "type": "minecraft:rarity_filter",
-      "chance": 40
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:weighted_list",
+        "distribution": [
+          {
+            "data": 1,
+            "weight": 4
+          },
+          {
+            "data": 1,
+            "weight": 1
+          }
+        ]
+      }
     },
     {
       "type": "minecraft:in_square"

@@ -166,6 +166,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> SUNROOT_SAPLING =  registerBlock("sunroot_sapling",
             () -> new SaplingBlock(new SunrootTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
+    //FIELDSPROUT
+
+    public static final RegistryObject<Block> PINK_FIELDSPROUT_LEAVES =  registerBlock("pink_fieldsprout_leaves",
+            () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
+                    .strength(0.2f).isSuffocating(ModBlocks::never).isViewBlocking(ModBlocks::never)));
+
     //LANTERNS
     public static final RegistryObject<Block> HOLYSTONE_LANTERN =  registerBlock("holystone_lantern",
             () -> new LanternBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.LANTERN)

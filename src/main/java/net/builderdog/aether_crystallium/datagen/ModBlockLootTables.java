@@ -93,6 +93,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         add(ModBlocks.SUNROOT_LEAVES.get(),
                 (block) -> createLeavesDrops(block, ModBlocks.SUNROOT_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
+        add(ModBlocks.PINK_FIELDSPROUT_LEAVES.get(),
+                (block) -> createLeavesDrops(block, ModBlocks.SUNROOT_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     @Override
