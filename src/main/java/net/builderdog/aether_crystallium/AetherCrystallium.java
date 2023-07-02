@@ -5,10 +5,13 @@ import net.builderdog.aether_crystallium.block.ModBlocks;
 import net.builderdog.aether_crystallium.blockentity.ModBlockEntityTypes;
 import net.builderdog.aether_crystallium.item.ModCreativeModeTabs;
 import net.builderdog.aether_crystallium.item.ModItems;
+import net.builderdog.aether_crystallium.world.biomes.ModRegion;
+import net.builderdog.aether_crystallium.world.biomes.ModSurfaceData;
 import net.builderdog.aether_crystallium.world.features.ModFeatures;
 import net.builderdog.aether_crystallium.world.foliageplacer.ModFoliagePlacerTypes;
 import net.builderdog.aether_crystallium.world.tree_decorator.ModTreeDecoratorTypes;
 import net.builderdog.aether_crystallium.world.trunkplacer.ModTrunkPlacerTypes;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
@@ -21,6 +24,12 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import teamrazor.aeroblender.aether.AetherRuleCategory;
+import terrablender.api.Regions;
+import terrablender.api.SurfaceRuleManager;
+import teamrazor.aeroblender.aether.AetherRuleCategory;
+
+import static com.aetherteam.aether.Aether.MODID;
 
 @Mod(AetherCrystallium.MOD_ID)
 public class AetherCrystallium {
@@ -53,6 +62,12 @@ public class AetherCrystallium {
             ModBlocks.registerFlammability();
 
             this.registerComposting();
+        });
+
+        event.enqueueWork(() -> {
+            Regions.register(new ModRegion(new ResourceLocation(MOD_ID, "<aether_crystallium>"), 4));
+
+            SurfaceRuleManager.addSurfaceRules(AetherRuleCategory.THE_AETHER, MODID, ModSurfaceData.makeRules());
         });
     }
 
