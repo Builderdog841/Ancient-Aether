@@ -2,6 +2,6 @@
   "parent": "minecraft:block/cross",
   "render_type": "minecraft:cutout",
   "textures": {
-    "cross": "aether_crystallium:block/enchanted_blossom"
+    "cross": "aether_crystallium:block/edelweiss"
   }
 }

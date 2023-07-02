@@ -20,7 +20,7 @@
     },
     "features": [
       {
-        "chance": 0.07,
+        "chance": 0.08,
         "feature": {
           "feature": "aether_crystallium:sunroot_tree",
           "placement": [
@@ -40,5 +40,27 @@
         }
       }
     ]
-  }
+  },
+  "features": [
+    {
+      "chance": 0.04,
+      "feature": {
+        "feature": "aether:skyroot_tree",
+        "placement": [
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:would_survive",
+              "state": {
+                "Name": "aether:skyroot_sapling",
+                "Properties": {
+                  "stage": "0"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }
