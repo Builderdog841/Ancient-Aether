@@ -45,44 +45,25 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf((ModBlocks.HIGHLANDS_PINE_BUTTON.get()));
         dropSelf((ModBlocks.HIGHLANDS_PINE_PRESSURE_PLATE.get()));
         dropSelf((ModBlocks.HIGHLANDS_PINE_SIGN.get()));
-        dropSelf((ModBlocks.SUNROOT_LOG.get()));
-        dropSelf((ModBlocks.SUNROOT_WOOD.get()));
-        dropSelf((ModBlocks.STRIPPED_SUNROOT_LOG.get()));
-        dropSelf((ModBlocks.STRIPPED_SUNROOT_WOOD.get()));
-        dropSelf((ModBlocks.SUNROOT_LOG_WALL.get()));
-        dropSelf((ModBlocks.SUNROOT_WOOD_WALL.get()));
-        dropSelf((ModBlocks.STRIPPED_SUNROOT_LOG_WALL.get()));
-        dropSelf((ModBlocks.STRIPPED_SUNROOT_WOOD_WALL.get()));
-        dropSelf((ModBlocks.SUNROOT_PLANKS.get()));
-        dropSelf((ModBlocks.SUNROOT_SAPLING.get()));
-        dropSelf((ModBlocks.SUNROOT_STAIRS.get()));
-        dropSelf((ModBlocks.SUNROOT_SLAB.get()));
-        dropSelf((ModBlocks.SUNROOT_FENCE.get()));
-        dropSelf((ModBlocks.SUNROOT_FENCE_GATE.get()));
-        dropSelf((ModBlocks.SUNROOT_DOOR.get()));
-        dropSelf((ModBlocks.SUNROOT_TRAPDOOR.get()));
-        dropSelf((ModBlocks.SUNROOT_BUTTON.get()));
-        dropSelf((ModBlocks.SUNROOT_PRESSURE_PLATE.get()));
-        dropSelf((ModBlocks.SUNROOT_SIGN.get()));
-        dropSelf((ModBlocks.FIELDSPROUT_LOG.get()));
-        dropSelf((ModBlocks.FIELDSPROUT_WOOD.get()));
-        dropSelf((ModBlocks.STRIPPED_FIELDSPROUT_LOG.get()));
-        dropSelf((ModBlocks.STRIPPED_FIELDSPROUT_WOOD.get()));
-        dropSelf((ModBlocks.FIELDSPROUT_LOG_WALL.get()));
-        dropSelf((ModBlocks.FIELDSPROUT_WOOD_WALL.get()));
-        dropSelf((ModBlocks.STRIPPED_FIELDSPROUT_LOG_WALL.get()));
-        dropSelf((ModBlocks.STRIPPED_FIELDSPROUT_WOOD_WALL.get()));
-        dropSelf((ModBlocks.FIELDSPROUT_PLANKS.get()));
-        dropSelf((ModBlocks.GREEN_FIELDSPROUT_LEAVES.get()));
-        dropSelf((ModBlocks.FIELDSPROUT_STAIRS.get()));
-        dropSelf((ModBlocks.FIELDSPROUT_SLAB.get()));
-        dropSelf((ModBlocks.FIELDSPROUT_FENCE.get()));
-        dropSelf((ModBlocks.FIELDSPROUT_FENCE_GATE.get()));
-        dropSelf((ModBlocks.FIELDSPROUT_DOOR.get()));
-        dropSelf((ModBlocks.FIELDSPROUT_TRAPDOOR.get()));
-        dropSelf((ModBlocks.FIELDSPROUT_BUTTON.get()));
-        dropSelf((ModBlocks.FIELDSPROUT_PRESSURE_PLATE.get()));
-        dropSelf((ModBlocks.FIELDSPROUT_SIGN.get()));
+        dropSelf((ModBlocks.SAKURA_LOG.get()));
+        dropSelf((ModBlocks.SAKURA_WOOD.get()));
+        dropSelf((ModBlocks.STRIPPED_SAKURA_LOG.get()));
+        dropSelf((ModBlocks.STRIPPED_SAKURA_WOOD.get()));
+        dropSelf((ModBlocks.SAKURA_LOG_WALL.get()));
+        dropSelf((ModBlocks.SAKURA_WOOD_WALL.get()));
+        dropSelf((ModBlocks.STRIPPED_SAKURA_LOG_WALL.get()));
+        dropSelf((ModBlocks.STRIPPED_SAKURA_WOOD_WALL.get()));
+        dropSelf((ModBlocks.SAKURA_PLANKS.get()));
+        dropSelf((ModBlocks.SAKURA_SAPLING.get()));
+        dropSelf((ModBlocks.SAKURA_STAIRS.get()));
+        dropSelf((ModBlocks.SAKURA_SLAB.get()));
+        dropSelf((ModBlocks.SAKURA_FENCE.get()));
+        dropSelf((ModBlocks.SAKURA_FENCE_GATE.get()));
+        dropSelf((ModBlocks.SAKURA_DOOR.get()));
+        dropSelf((ModBlocks.SAKURA_TRAPDOOR.get()));
+        dropSelf((ModBlocks.SAKURA_BUTTON.get()));
+        dropSelf((ModBlocks.SAKURA_PRESSURE_PLATE.get()));
+        dropSelf((ModBlocks.SAKURA_SIGN.get()));
         dropSelf((ModBlocks.AETHER_CACTUS.get()));
         dropSelf((ModBlocks.STRIPPED_AETHER_CACTUS.get()));
         dropSelf((ModBlocks.CACTUS_FLOWER.get()));
@@ -90,14 +71,14 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf((ModBlocks.QUICKSOIL_BRICK_SLAB.get()));
         dropSelf((ModBlocks.QUICKSOIL_BRICK_WALL.get()));
         dropSelf((ModBlocks.MOONLIT_TULIP.get()));
-        dropSelf((ModBlocks.ENCHANTED_BLOSSOM.get()));
+        dropSelf((ModBlocks.EDELWEISS.get()));
         dropSelf((ModBlocks.SMALL_AETHER_CACTUS.get()));
         dropSelf((ModBlocks.CRACKED_SLIDER.get()));
         dropSelf((ModBlocks.POTTED_MOONLIT_TULIP.get()));
-        dropSelf((ModBlocks.POTTED_ENCHANTED_BLOSSOM.get()));
+        dropSelf((ModBlocks.POTTED_EDELWEISS.get()));
         dropSelf((ModBlocks.POTTED_HIGHLANDS_PINE_SAPLING.get()));
         dropSelf((ModBlocks.POTTED_SMALL_AETHER_CACTUS.get()));
-        dropSelf((ModBlocks.POTTED_SUNROOT_SAPLING.get()));
+        dropSelf((ModBlocks.POTTED_SAKURA_SAPLING.get()));
         dropSelf((ModBlocks.HOLYSTONE_LANTERN.get()));
         dropSelf((ModBlocks.SENTRY_LANTERN.get()));
         dropSelf((ModBlocks.ANGELIC_LANTERN.get()));
@@ -109,11 +90,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         add(ModBlocks.HIGHLANDS_PINE_LEAVES.get(),
                 (block) -> createLeavesDrops(block, ModBlocks.HIGHLANDS_PINE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
-        add(ModBlocks.SUNROOT_LEAVES.get(),
-                (block) -> createLeavesDrops(block, ModBlocks.SUNROOT_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        add(ModBlocks.SAKURA_LEAVES.get(),
+                (block) -> createLeavesDrops(block, ModBlocks.SAKURA_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
-        add(ModBlocks.PINK_FIELDSPROUT_LEAVES.get(),
-                (block) -> createLeavesDrops(block, ModBlocks.SUNROOT_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     @Override

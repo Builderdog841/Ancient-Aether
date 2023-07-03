@@ -37,9 +37,9 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHLANDS_PINE_KEY = registerKey("highlands_pine");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SUNROOT_KEY = registerKey("sunroot_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_KEY = registerKey("sakura_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MOONLIT_TULIP_PATCH_KEY = registerKey("moonlit_tulip_patch");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> ENCHANTED_BLOSSOM_PATCH_KEY = registerKey("enchanted_blossom_patch");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> EDELWEISS_PATCH_KEY = registerKey("edelweiss_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_AETHER_CACTUS_PATCH_KEY = registerKey("small_aether_cactus_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_QUARTZ_ORE_KEY = registerKey("aether_quartz_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> QUICKSTONE_ORE_KEY = registerKey("quickstone_ore");
@@ -64,10 +64,10 @@ public class ModConfiguredFeatures {
                         new CrystalliumPineFoliagePlacer(ConstantInt.of(1), ConstantInt.ZERO, ConstantInt.of(1)),
                         new TwoLayersFeatureSize(1, 0, 2)).build());
 
-        register(context, SUNROOT_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(AetherBlocks.SKYROOT_LOG.get()),
+        register(context, SAKURA_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.SAKURA_LOG.get()),
                 new StraightTrunkPlacer(5, 7, 3),
-                BlockStateProvider.simple(ModBlocks.SUNROOT_LEAVES.get()),
+                BlockStateProvider.simple(ModBlocks.SAKURA_LEAVES.get()),
                 new CrystalliumHookedFoliagePlacer(ConstantInt.of(1), ConstantInt.ZERO, ConstantInt.of(1)),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
 
@@ -79,9 +79,9 @@ public class ModConfiguredFeatures {
                 AetherConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
                         .add(ModBlocks.MOONLIT_TULIP.get().defaultBlockState(), 3)), 64));
 
-        register(context, ENCHANTED_BLOSSOM_PATCH_KEY, Feature.FLOWER,
+        register(context, EDELWEISS_PATCH_KEY, Feature.FLOWER,
                 AetherConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
-                        .add(ModBlocks.ENCHANTED_BLOSSOM.get().defaultBlockState(), 3)), 64));
+                        .add(ModBlocks.EDELWEISS.get().defaultBlockState(), 3)), 64));
 
         register(context, SMALL_AETHER_CACTUS_PATCH_KEY, Feature.FLOWER,
                 AetherConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()

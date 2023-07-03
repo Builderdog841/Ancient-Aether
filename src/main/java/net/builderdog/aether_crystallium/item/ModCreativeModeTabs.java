@@ -17,6 +17,6 @@ public class ModCreativeModeTabs {
     public static void registerCreativeModeTabs(CreativeModeTabEvent.Register event) {
         AETHER_CRYSTALLIUM_TAB = event.registerCreativeModeTab(new ResourceLocation(AetherCrystallium.MOD_ID, "aether_crystallium_tab"),
                 builder -> builder.icon(() -> new ItemStack(ModItems.AECHOR_PETAL_ICE_CREAM_BUCKET.get()))
-                        .title(Component.translatable("creatvemodetab.aether_crystallium_tab")));
+                        .title(Component.translatable("creatvemodetab.ancient_aether_tab")));
     }
 }

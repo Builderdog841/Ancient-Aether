@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "aether_crystallium:sakura_log",
+    "aether_crystallium:sakura_wood",
+    "aether_crystallium:stripped_sakura_log",
+    "aether_crystallium:stripped_sakura_wood",
+    "aether_crystallium:sakura_log_wall",
+    "aether_crystallium:sakura_wood_wall",
+    "aether_crystallium:stripped_sakura_log_wall",
+    "aether_crystallium:stripped_sakura_wood_wall"
+  ]
+}

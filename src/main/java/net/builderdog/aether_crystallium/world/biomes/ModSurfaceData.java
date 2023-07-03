@@ -11,9 +11,6 @@ public class ModSurfaceData {
     {
         return SurfaceRules.sequence(
 
-                //SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.ENCHANTED_WOODS), SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR,
-                       // SurfaceRules.state(AetherBlocks.ENCHANTED_AETHER_GRASS_BLOCK.get().defaultBlockState()))),
-
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.QUICKSOIL_DESERT),
                         SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(AetherBlocks.QUICKSOIL.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)))),
 

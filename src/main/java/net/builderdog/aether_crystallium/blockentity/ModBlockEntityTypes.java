@@ -14,7 +14,7 @@ public class ModBlockEntityTypes {
 
     public static final RegistryObject<BlockEntityType<ModSignBlockEntity>> SIGN = BLOCK_ENTITY_TYPES.register("sign", () -> BlockEntityType.Builder.of(ModSignBlockEntity::new,
             ModBlocks.HIGHLANDS_PINE_SIGN.get(), ModBlocks.HIGHLANDS_PINE_WALL_SIGN.get(),
-            ModBlocks.SUNROOT_SIGN.get(), ModBlocks.SUNROOT_WALL_SIGN.get()
+            ModBlocks.SAKURA_SIGN.get(), ModBlocks.SAKURA_WALL_SIGN.get()
             ).build(null));
 
 }

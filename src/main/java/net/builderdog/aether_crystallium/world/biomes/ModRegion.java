@@ -23,29 +23,23 @@ public class ModRegion extends Region {
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper) {
         Climate.Parameter fullRange = Climate.Parameter.span(-1.0F, 1.0F);
 
-        //ENCHANTED WOODS
+        //SAKURA JUNGLE
         Climate.Parameter temps1 = Climate.Parameter.span(-0.15F, 0.05F);
 
         //QUICKSOIL DESERT
         Climate.Parameter temps2 = Climate.Parameter.span(0.3F, 0.8F);
 
-        //HIGHLANDS TAIGA
+        //FROSTY HIGHLANDS
         Climate.Parameter temps3 = Climate.Parameter.span(-0.7F, -0.2F);
-
-        //HIGHFIELDS
-        Climate.Parameter temps4 = Climate.Parameter.span(0.05F, 0.2F);
 
 
         this.addBiome(mapper, new Climate.ParameterPoint(temps1, Climate.Parameter.span(-0.15F, 0.05F), fullRange, fullRange, fullRange, fullRange, 0),
-                ModBiomes.ENCHANTED_WOODS);
+                ModBiomes.SAKURA_JUNGLE);
 
         this.addBiome(mapper, new Climate.ParameterPoint(temps2, Climate.Parameter.span(0.3F, 0.8F), fullRange, fullRange, fullRange, fullRange, 0),
                 ModBiomes.QUICKSOIL_DESERT);
 
         this.addBiome(mapper, new Climate.ParameterPoint(temps3, Climate.Parameter.span(-0.7F, -0.2F), fullRange, fullRange, fullRange, fullRange, 0),
-                ModBiomes.HIGHLANDS_TAIGA);
-
-        this.addBiome(mapper, new Climate.ParameterPoint(temps4, Climate.Parameter.span(0.05F, 0.2F), fullRange, fullRange, fullRange, fullRange, 0),
-                ModBiomes.HIGHFIELDS);
+                ModBiomes.FROSTY_HIGHLANDS);
     }
 }

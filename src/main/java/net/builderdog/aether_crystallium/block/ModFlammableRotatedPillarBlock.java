@@ -27,11 +27,11 @@ public class ModFlammableRotatedPillarBlock extends AetherLogBlock {
             if(state.is(ModBlocks.HIGHLANDS_PINE_WOOD.get())) {
                 return  ModBlocks.STRIPPED_HIGHLANDS_PINE_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
-            if(state.is(ModBlocks.SUNROOT_LOG.get())) {
-                return  ModBlocks.STRIPPED_SUNROOT_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            if(state.is(ModBlocks.SAKURA_LOG.get())) {
+                return  ModBlocks.STRIPPED_SAKURA_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
-            if(state.is(ModBlocks.SUNROOT_WOOD.get())) {
-                return  ModBlocks.STRIPPED_SUNROOT_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            if(state.is(ModBlocks.SAKURA_WOOD.get())) {
+                return  ModBlocks.STRIPPED_SAKURA_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
         }
         return super.getToolModifiedState(state, context, toolAction, simulate);

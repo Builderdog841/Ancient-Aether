@@ -19,8 +19,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().stacksTo(16).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(7).saturationMod(0.6f).build())));
     public static final RegistryObject<Item> CACTUS_FLOWER_PETAL = ITEMS.register("cactus_flower_petal",
             () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
-    public static final RegistryObject<Item> AMBER_BALL = ITEMS.register("amber_ball",
-            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

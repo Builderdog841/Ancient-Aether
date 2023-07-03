@@ -7,7 +7,7 @@ import com.aetherteam.aether.mixin.mixins.common.accessor.FireBlockAccessor;
 import net.builderdog.aether_crystallium.AetherCrystallium;
 import net.builderdog.aether_crystallium.item.ModItems;
 import net.builderdog.aether_crystallium.world.tree.HighlandsPineTreeGrower;
-import net.builderdog.aether_crystallium.world.tree.SunrootTreeGrower;
+import net.builderdog.aether_crystallium.world.tree.SakuraTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
@@ -44,15 +44,9 @@ public class ModBlocks {
                     .strength(0.5f, 6f).lightLevel(s -> 11).requiresCorrectToolForDrops()));
 
     //FOLIAGE
-    public static final RegistryObject<Block> AETHER_CACTUS =  registerBlock("aether_cactus",
-            () -> new AetherDoubleDropBlock(BlockBehaviour.Properties.of(Material.CACTUS).sound(SoundType.WOOL)
-                    .strength(0.5f, 6f)));
-    public static final RegistryObject<Block> STRIPPED_AETHER_CACTUS =  registerBlock("stripped_aether_cactus",
-            () -> new Block(BlockBehaviour.Properties.of(Material.CACTUS).sound(SoundType.WOOL)
-                    .strength(0.5f, 6f)));
     public static final RegistryObject<Block> MOONLIT_TULIP = registerBlock("moonlit_tulip",
             () -> new FlowerBlock(() -> MobEffects.WATER_BREATHING, 4, Block.Properties.copy(Blocks.DANDELION)));
-    public static final RegistryObject<Block> ENCHANTED_BLOSSOM = registerBlock("enchanted_blossom",
+    public static final RegistryObject<Block> EDELWEISS = registerBlock("edelweiss",
             () -> new FlowerBlock(() -> MobEffects.GLOWING, 4, Block.Properties.copy(Blocks.DANDELION)));
     public static final RegistryObject<Block> CACTUS_FLOWER =  registerBlock("cactus_flower",
             () -> new Block(BlockBehaviour.Properties.of(Material.PLANT)
@@ -115,113 +109,65 @@ public class ModBlocks {
     public static final RegistryObject<Block> HIGHLANDS_PINE_SAPLING =  registerBlock("highlands_pine_sapling",
             () -> new SaplingBlock(new HighlandsPineTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
-    //SUNROOT WOOD TYPE
-    public static final RegistryObject<Block> SUNROOT_LOG =  registerBlock("sunroot_log",
+    //SAKURA WOOD TYPE
+    public static final RegistryObject<Block> SAKURA_LOG =  registerBlock("sakura_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)
                     .strength(2f)));
-    public static final RegistryObject<Block> SUNROOT_WOOD =  registerBlock("sunroot_wood",
+    public static final RegistryObject<Block> SAKURA_WOOD =  registerBlock("sakura_wood",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)
                     .strength(2f)));
-    public static final RegistryObject<Block> STRIPPED_SUNROOT_LOG =  registerBlock("stripped_sunroot_log",
+    public static final RegistryObject<Block> STRIPPED_SAKURA_LOG =  registerBlock("stripped_sakura_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)
                     .strength(2f)));
-    public static final RegistryObject<Block> STRIPPED_SUNROOT_WOOD =  registerBlock("stripped_sunroot_wood",
+    public static final RegistryObject<Block> STRIPPED_SAKURA_WOOD =  registerBlock("stripped_sakura_wood",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)
                     .strength(2f)));
-    public static final RegistryObject<Block> SUNROOT_PLANKS =  registerBlock("sunroot_planks",
+    public static final RegistryObject<Block> SAKURA_PLANKS =  registerBlock("sakura_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
                     .strength(2f)));
-    public static final RegistryObject<Block> SUNROOT_STAIRS =  registerBlock("sunroot_stairs",
-            () -> new StairBlock(() -> SUNROOT_PLANKS.get().defaultBlockState(), (BlockBehaviour.Properties.copy(ModBlocks.SUNROOT_PLANKS.get()))));
-    public static final RegistryObject<Block> SUNROOT_SLAB = registerBlock("sunroot_slab",
-            () -> new SlabBlock(Block.Properties.copy(ModBlocks.SUNROOT_PLANKS.get())
+    public static final RegistryObject<Block> SAKURA_STAIRS =  registerBlock("sakura_stairs",
+            () -> new StairBlock(() -> SAKURA_PLANKS.get().defaultBlockState(), (BlockBehaviour.Properties.copy(ModBlocks.SAKURA_PLANKS.get()))));
+    public static final RegistryObject<Block> SAKURA_SLAB = registerBlock("sakura_slab",
+            () -> new SlabBlock(Block.Properties.copy(ModBlocks.SAKURA_PLANKS.get())
                     .strength(2.0F, 3.0F)));
-    public static final RegistryObject<FenceBlock> SUNROOT_FENCE = registerBlock("sunroot_fence",
+    public static final RegistryObject<FenceBlock> SAKURA_FENCE = registerBlock("sakura_fence",
             () -> new FenceBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<FenceGateBlock> SUNROOT_FENCE_GATE = registerBlock("sunroot_fence_gate",
-            () -> new FenceGateBlock(Block.Properties.copy(Blocks.OAK_FENCE_GATE), ModWoodTypes.SUNROOT));
-    public static final RegistryObject<WallBlock> SUNROOT_LOG_WALL = registerBlock("sunroot_log_wall",
+    public static final RegistryObject<FenceGateBlock> SAKURA_FENCE_GATE = registerBlock("sakura_fence_gate",
+            () -> new FenceGateBlock(Block.Properties.copy(Blocks.OAK_FENCE_GATE), ModWoodTypes.SAKURA));
+    public static final RegistryObject<WallBlock> SAKURA_LOG_WALL = registerBlock("sakura_log_wall",
             () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<WallBlock> SUNROOT_WOOD_WALL = registerBlock("sunroot_wood_wall",
+    public static final RegistryObject<WallBlock> SAKURA_WOOD_WALL = registerBlock("sakura_wood_wall",
             () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<WallBlock> STRIPPED_SUNROOT_LOG_WALL = registerBlock("stripped_sunroot_log_wall",
+    public static final RegistryObject<WallBlock> STRIPPED_SAKURA_LOG_WALL = registerBlock("stripped_sakura_log_wall",
             () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<WallBlock> STRIPPED_SUNROOT_WOOD_WALL = registerBlock("stripped_sunroot_wood_wall",
+    public static final RegistryObject<WallBlock> STRIPPED_SAKURA_WOOD_WALL = registerBlock("stripped_sakura_wood_wall",
             () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<DoorBlock> SUNROOT_DOOR = registerBlock("sunroot_door",
-            () -> new DoorBlock(Block.Properties.copy(Blocks.OAK_DOOR), ModWoodTypes.SUNROOT_BLOCK_SET));
-    public static final RegistryObject<TrapDoorBlock> SUNROOT_TRAPDOOR = registerBlock("sunroot_trapdoor",
-            () -> new TrapDoorBlock(Block.Properties.copy(Blocks.OAK_TRAPDOOR), ModWoodTypes.SUNROOT_BLOCK_SET));
-    public static final RegistryObject<ButtonBlock> SUNROOT_BUTTON = registerBlock("sunroot_button",
-            () -> new ButtonBlock(Block.Properties.copy(Blocks.OAK_BUTTON), ModWoodTypes.SUNROOT_BLOCK_SET, 30, true));
-    public static final RegistryObject<PressurePlateBlock> SUNROOT_PRESSURE_PLATE = registerBlock("sunroot_pressure_plate",
-            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.copy(Blocks.OAK_PRESSURE_PLATE), ModWoodTypes.SUNROOT_BLOCK_SET));
-    public static final RegistryObject<StandingSignBlock> SUNROOT_SIGN = registerBlock("sunroot_sign",
-            () -> new ModSignBlock(Block.Properties.of(Material.WOOD, MaterialColor.SAND).noCollission().strength(1.0F).sound(SoundType.WOOD), ModWoodTypes.SUNROOT));
-    public static final RegistryObject<WallSignBlock> SUNROOT_WALL_SIGN = registerBlock("sunroot_wall_sign",
-            () -> new ModWallSignBlock(Block.Properties.of(Material.WOOD, MaterialColor.SAND).noCollission().strength(1.0F).sound(SoundType.WOOD).lootFrom(SUNROOT_SIGN), ModWoodTypes.SUNROOT));
-    public static final RegistryObject<Block> SUNROOT_LEAVES =  registerBlock("sunroot_leaves",
+    public static final RegistryObject<DoorBlock> SAKURA_DOOR = registerBlock("sakura_door",
+            () -> new DoorBlock(Block.Properties.copy(Blocks.OAK_DOOR), ModWoodTypes.SAKURA_BLOCK_SET));
+    public static final RegistryObject<TrapDoorBlock> SAKURA_TRAPDOOR = registerBlock("sakura_trapdoor",
+            () -> new TrapDoorBlock(Block.Properties.copy(Blocks.OAK_TRAPDOOR), ModWoodTypes.SAKURA_BLOCK_SET));
+    public static final RegistryObject<ButtonBlock> SAKURA_BUTTON = registerBlock("sakura_button",
+            () -> new ButtonBlock(Block.Properties.copy(Blocks.OAK_BUTTON), ModWoodTypes.SAKURA_BLOCK_SET, 30, true));
+    public static final RegistryObject<PressurePlateBlock> SAKURA_PRESSURE_PLATE = registerBlock("sakura_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.copy(Blocks.OAK_PRESSURE_PLATE), ModWoodTypes.SAKURA_BLOCK_SET));
+    public static final RegistryObject<StandingSignBlock> SAKURA_SIGN = registerBlock("sakura_sign",
+            () -> new ModSignBlock(Block.Properties.of(Material.WOOD, MaterialColor.SAND).noCollission().strength(1.0F).sound(SoundType.WOOD), ModWoodTypes.SAKURA));
+    public static final RegistryObject<WallSignBlock> SAKURA_WALL_SIGN = registerBlock("sakura_wall_sign",
+            () -> new ModWallSignBlock(Block.Properties.of(Material.WOOD, MaterialColor.SAND).noCollission().strength(1.0F).sound(SoundType.WOOD).lootFrom(SAKURA_SIGN), ModWoodTypes.SAKURA));
+    public static final RegistryObject<Block> SAKURA_LEAVES =  registerBlock("sakura_leaves",
             () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
                     .strength(0.2f).isSuffocating(ModBlocks::never).isViewBlocking(ModBlocks::never)));
-    public static final RegistryObject<Block> SUNROOT_SAPLING =  registerBlock("sunroot_sapling",
-            () -> new SaplingBlock(new SunrootTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> SAKURA_SAPLING =  registerBlock("sakura_sapling",
+            () -> new SaplingBlock(new SakuraTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
-    //FIELDSPROUT
+    //CACTUS WOOD TYPE
 
-    public static final RegistryObject<Block> FIELDSPROUT_LOG =  registerBlock("fieldsprout_log",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)
-                    .strength(2f)));
-    public static final RegistryObject<Block> FIELDSPROUT_WOOD =  registerBlock("fieldsprout_wood",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)
-                    .strength(2f)));
-    public static final RegistryObject<Block> STRIPPED_FIELDSPROUT_LOG =  registerBlock("stripped_fieldsprout_log",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)
-                    .strength(2f)));
-    public static final RegistryObject<Block> STRIPPED_FIELDSPROUT_WOOD =  registerBlock("stripped_fieldsprout_wood",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)
-                    .strength(2f)));
-    public static final RegistryObject<Block> FIELDSPROUT_PLANKS =  registerBlock("fieldsproutplanks",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f)));
-    public static final RegistryObject<Block> FIELDSPROUT_STAIRS =  registerBlock("fieldsprout_stairs",
-            () -> new StairBlock(() -> SUNROOT_PLANKS.get().defaultBlockState(), (BlockBehaviour.Properties.copy(ModBlocks.SUNROOT_PLANKS.get()))));
-    public static final RegistryObject<Block> FIELDSPROUT_SLAB = registerBlock("fieldsprout_slab",
-            () -> new SlabBlock(Block.Properties.copy(ModBlocks.SUNROOT_PLANKS.get())
-                    .strength(2.0F, 3.0F)));
-    public static final RegistryObject<FenceBlock> FIELDSPROUT_FENCE = registerBlock("fieldsprout_fence",
-            () -> new FenceBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<FenceGateBlock> FIELDSPROUT_FENCE_GATE = registerBlock("fieldsprout_fence_gate",
-            () -> new FenceGateBlock(Block.Properties.copy(Blocks.OAK_FENCE_GATE), ModWoodTypes.SUNROOT));
-    public static final RegistryObject<WallBlock> FIELDSPROUT_LOG_WALL = registerBlock("fieldsprout_log_wall",
-            () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<WallBlock> FIELDSPROUT_WOOD_WALL = registerBlock("fieldsprout_wood_wall",
-            () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<WallBlock> STRIPPED_FIELDSPROUT_LOG_WALL = registerBlock("stripped_fieldsprout_log_wall",
-            () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<WallBlock> STRIPPED_FIELDSPROUT_WOOD_WALL = registerBlock("stripped_fieldsprout_wood_wall",
-            () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<DoorBlock> FIELDSPROUT_DOOR = registerBlock("fieldsprout_door",
-            () -> new DoorBlock(Block.Properties.copy(Blocks.OAK_DOOR), ModWoodTypes.SUNROOT_BLOCK_SET));
-    public static final RegistryObject<TrapDoorBlock> FIELDSPROUT_TRAPDOOR = registerBlock("fieldsprout_trapdoor",
-            () -> new TrapDoorBlock(Block.Properties.copy(Blocks.OAK_TRAPDOOR), ModWoodTypes.SUNROOT_BLOCK_SET));
-    public static final RegistryObject<ButtonBlock> FIELDSPROUT_BUTTON = registerBlock("fieldsprout_button",
-            () -> new ButtonBlock(Block.Properties.copy(Blocks.OAK_BUTTON), ModWoodTypes.SUNROOT_BLOCK_SET, 30, true));
-    public static final RegistryObject<PressurePlateBlock> FIELDSPROUT_PRESSURE_PLATE = registerBlock("fieldsprout_pressure_plate",
-            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.copy(Blocks.OAK_PRESSURE_PLATE), ModWoodTypes.SUNROOT_BLOCK_SET));
-    public static final RegistryObject<StandingSignBlock> FIELDSPROUT_SIGN = registerBlock("fieldsprout_sign",
-            () -> new ModSignBlock(Block.Properties.of(Material.WOOD, MaterialColor.SAND).noCollission().strength(1.0F).sound(SoundType.WOOD), ModWoodTypes.SUNROOT));
-    public static final RegistryObject<WallSignBlock> FIELDSPROUT_WALL_SIGN = registerBlock("fieldsprout_wall_sign",
-            () -> new ModWallSignBlock(Block.Properties.of(Material.WOOD, MaterialColor.SAND).noCollission().strength(1.0F).sound(SoundType.WOOD).lootFrom(SUNROOT_SIGN), ModWoodTypes.SUNROOT));
-    public static final RegistryObject<Block> GREEN_FIELDSPROUT_LEAVES =  registerBlock("green_fieldsprout_leaves",
-            () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
-                    .strength(0.2f).isSuffocating(ModBlocks::never).isViewBlocking(ModBlocks::never)));
-    public static final RegistryObject<Block> GREEN_FIELDSPROUT_SAPLING =  registerBlock("green_fieldsprout_sapling",
-            () -> new SaplingBlock(new SunrootTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-    public static final RegistryObject<Block> PINK_FIELDSPROUT_LEAVES =  registerBlock("pink_fieldsprout_leaves",
-            () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
-                    .strength(0.2f).isSuffocating(ModBlocks::never).isViewBlocking(ModBlocks::never)));
-    public static final RegistryObject<Block> PINK_FIELDSPROUT_SAPLING =  registerBlock("pink_fieldsprout_sapling",
-            () -> new SaplingBlock(new SunrootTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> AETHER_CACTUS =  registerBlock("aether_cactus",
+            () -> new AetherDoubleDropBlock(BlockBehaviour.Properties.of(Material.CACTUS).sound(SoundType.WOOL)
+                    .strength(0.5f, 6f)));
+    public static final RegistryObject<Block> STRIPPED_AETHER_CACTUS =  registerBlock("stripped_aether_cactus",
+            () -> new Block(BlockBehaviour.Properties.of(Material.CACTUS).sound(SoundType.WOOL)
+                    .strength(0.5f, 6f)));
 
     //LANTERNS
     public static final RegistryObject<Block> HOLYSTONE_LANTERN =  registerBlock("holystone_lantern",
@@ -240,14 +186,14 @@ public class ModBlocks {
     //POTTED PLANTS
     public static final RegistryObject<FlowerPotBlock> POTTED_MOONLIT_TULIP = BLOCKS.register("potted_moonlit_tulip",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, MOONLIT_TULIP, Block.Properties.copy(Blocks.FLOWER_POT)));
-    public static final RegistryObject<FlowerPotBlock> POTTED_ENCHANTED_BLOSSOM = BLOCKS.register("potted_enchanted_blossom",
-            () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ENCHANTED_BLOSSOM, Block.Properties.copy(Blocks.FLOWER_POT)));
+    public static final RegistryObject<FlowerPotBlock> POTTED_EDELWEISS = BLOCKS.register("potted_edelweiss",
+            () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, EDELWEISS, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_SMALL_AETHER_CACTUS = BLOCKS.register("potted_small_aether_cactus",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SMALL_AETHER_CACTUS, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_HIGHLANDS_PINE_SAPLING = BLOCKS.register("potted_highlands_pine_sapling",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, HIGHLANDS_PINE_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
-    public static final RegistryObject<FlowerPotBlock> POTTED_SUNROOT_SAPLING = BLOCKS.register("potted_sunroot_sapling",
-            () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SUNROOT_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
+    public static final RegistryObject<FlowerPotBlock> POTTED_SAKURA_SAPLING = BLOCKS.register("potted_sunroot_sapling",
+            () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SAKURA_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
 
     //QUICKSOIL BRICKS
     public static final RegistryObject<Block> QUICKSTONE =  registerBlock("quickstone",
@@ -271,15 +217,15 @@ public class ModBlocks {
     public static void registerPots() {
         FlowerPotBlock pot = (FlowerPotBlock) Blocks.FLOWER_POT;
         pot.addPlant(ModBlocks.MOONLIT_TULIP.getId(), ModBlocks.POTTED_MOONLIT_TULIP);
-        pot.addPlant(ModBlocks.ENCHANTED_BLOSSOM.getId(), ModBlocks.POTTED_ENCHANTED_BLOSSOM);
+        pot.addPlant(ModBlocks.EDELWEISS.getId(), ModBlocks.POTTED_EDELWEISS);
         pot.addPlant(ModBlocks.SMALL_AETHER_CACTUS.getId(), ModBlocks.POTTED_SMALL_AETHER_CACTUS);
         pot.addPlant(ModBlocks.HIGHLANDS_PINE_SAPLING.getId(), ModBlocks.POTTED_HIGHLANDS_PINE_SAPLING);
-        pot.addPlant(ModBlocks.SUNROOT_SAPLING.getId(), ModBlocks.POTTED_SUNROOT_SAPLING);
+        pot.addPlant(ModBlocks.SAKURA_SAPLING.getId(), ModBlocks.POTTED_SAKURA_SAPLING);
     }
     public static void registerFlammability() {
         FireBlockAccessor fireBlockAccessor = (FireBlockAccessor) Blocks.FIRE;
         fireBlockAccessor.callSetFlammable(ModBlocks.HIGHLANDS_PINE_LEAVES.get(), 30, 60);
-        fireBlockAccessor.callSetFlammable(ModBlocks.SUNROOT_LEAVES.get(), 30, 60);
+        fireBlockAccessor.callSetFlammable(ModBlocks.SAKURA_LEAVES.get(), 30, 60);
         fireBlockAccessor.callSetFlammable(ModBlocks.HIGHLANDS_PINE_LOG.get(), 5, 5);
         fireBlockAccessor.callSetFlammable(ModBlocks.STRIPPED_HIGHLANDS_PINE_LOG.get(), 5, 5);
         fireBlockAccessor.callSetFlammable(ModBlocks.HIGHLANDS_PINE_WOOD.get(), 5, 5);
@@ -289,15 +235,15 @@ public class ModBlocks {
         fireBlockAccessor.callSetFlammable(ModBlocks.HIGHLANDS_PINE_FENCE.get(), 5, 20);
         fireBlockAccessor.callSetFlammable(ModBlocks.HIGHLANDS_PINE_STAIRS.get(), 5, 20);
         fireBlockAccessor.callSetFlammable(ModBlocks.HIGHLANDS_PINE_SLAB.get(), 5, 20);
-        fireBlockAccessor.callSetFlammable(ModBlocks.SUNROOT_LOG.get(), 5, 5);
-        fireBlockAccessor.callSetFlammable(ModBlocks.STRIPPED_SUNROOT_LOG.get(), 5, 5);
-        fireBlockAccessor.callSetFlammable(ModBlocks.SUNROOT_WOOD.get(), 5, 5);
-        fireBlockAccessor.callSetFlammable(ModBlocks.STRIPPED_SUNROOT_WOOD.get(), 5, 5);
-        fireBlockAccessor.callSetFlammable(ModBlocks.SUNROOT_PLANKS.get(), 5, 20);
-        fireBlockAccessor.callSetFlammable(ModBlocks.SUNROOT_FENCE_GATE.get(), 5, 20);
-        fireBlockAccessor.callSetFlammable(ModBlocks.SUNROOT_FENCE.get(), 5, 20);
-        fireBlockAccessor.callSetFlammable(ModBlocks.SUNROOT_STAIRS.get(), 5, 20);
-        fireBlockAccessor.callSetFlammable(ModBlocks.SUNROOT_SLAB.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(ModBlocks.SAKURA_LOG.get(), 5, 5);
+        fireBlockAccessor.callSetFlammable(ModBlocks.STRIPPED_SAKURA_LOG.get(), 5, 5);
+        fireBlockAccessor.callSetFlammable(ModBlocks.SAKURA_WOOD.get(), 5, 5);
+        fireBlockAccessor.callSetFlammable(ModBlocks.STRIPPED_SAKURA_WOOD.get(), 5, 5);
+        fireBlockAccessor.callSetFlammable(ModBlocks.SAKURA_PLANKS.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(ModBlocks.SAKURA_FENCE_GATE.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(ModBlocks.SAKURA_FENCE.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(ModBlocks.SAKURA_STAIRS.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(ModBlocks.SAKURA_SLAB.get(), 5, 20);
         fireBlockAccessor.callSetFlammable(ModBlocks.MOONLIT_TULIP.get(), 60, 100);
         fireBlockAccessor.callSetFlammable(ModBlocks.SMALL_AETHER_CACTUS.get(), 60, 100);
     }
@@ -313,7 +259,7 @@ public class ModBlocks {
     }
     public static void registerWoodTypes() {
         WoodType.register(ModWoodTypes.HIGHLANDS_PINE);
-        WoodType.register(ModWoodTypes.SUNROOT);
+        WoodType.register(ModWoodTypes.SAKURA);
     }
     private static boolean never(BlockState p_test_1_, BlockGetter p_test_2_, BlockPos p_test_3_) {
         return false;

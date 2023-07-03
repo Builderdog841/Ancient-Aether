@@ -1,7 +1,8 @@
 {
   "replace": false,
   "values": [
+    "aether_crystallium:quicksoil_brick_stairs",
     "aether_crystallium:highlands_pine_stairs",
-    "aether_crystallium:sunroot_stairs"
+    "aether_crystallium:sakura_stairs"
   ]
 }

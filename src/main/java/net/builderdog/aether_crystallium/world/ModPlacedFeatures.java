@@ -19,12 +19,11 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> HIGHLANDS_PINE_KEY = createKey("highlands_pine_placed");
-
-    public static final ResourceKey<PlacedFeature> SUNROOT_KEY = createKey("sunroot_tree_placed");
+    public static final ResourceKey<PlacedFeature> SAKURA_KEY = createKey("sakura_tree_placed");
     public static final ResourceKey<PlacedFeature> AETHER_QUARTZ_ORE_PLACED = createKey("aether_quartz_ore_placed");
     public static final ResourceKey<PlacedFeature> QUICKSTONE_ORE_PLACED = createKey("quickstone_ore_placed");
     public static final ResourceKey<PlacedFeature> MOONLIT_TULIP_PATCH_KEY = createKey("moonlit_tulip_patch");
-    public static final ResourceKey<PlacedFeature> ENCHANTED_BLOSSOM_PATCH_KEY = createKey("enchanted_blossom_patch");
+    public static final ResourceKey<PlacedFeature> EDELWEISS_PATCH_KEY = createKey("edelweiss_patch");
     public static final ResourceKey<PlacedFeature> SMALL_AETHER_CACTUS_PATCH_KEY = createKey("small_aether_cactus_patch");
     public static final ResourceKey<PlacedFeature> AETHER_CACTUS_PATCH_KEY = createKey("aether_cactus_patch");
 
@@ -34,8 +33,8 @@ public class ModPlacedFeatures {
         register(context, HIGHLANDS_PINE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.HIGHLANDS_PINE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3,0.1f,2), ModBlocks.HIGHLANDS_PINE_SAPLING.get()));
 
-        register(context, SUNROOT_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SUNROOT_KEY),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3,0.1f,2), ModBlocks.SUNROOT_SAPLING.get()));
+        register(context, SAKURA_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SAKURA_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3,0.1f,2), ModBlocks.SAKURA_SAPLING.get()));
 
         register(context, AETHER_QUARTZ_ORE_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.AETHER_QUARTZ_ORE_KEY),
                 ModPlacedFeatureBuilder.commonOrePlacement(16, //veins per chunk
@@ -47,7 +46,7 @@ public class ModPlacedFeatures {
 
         register(context, MOONLIT_TULIP_PATCH_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MOONLIT_TULIP_PATCH_KEY), RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
 
-        register(context, ENCHANTED_BLOSSOM_PATCH_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ENCHANTED_BLOSSOM_PATCH_KEY), RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
+        register(context, EDELWEISS_PATCH_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.EDELWEISS_PATCH_KEY), RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
 
         register(context, SMALL_AETHER_CACTUS_PATCH_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SMALL_AETHER_CACTUS_PATCH_KEY), RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
 

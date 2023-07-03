@@ -1,8 +1,0 @@
-{
-  "parent": "aether_crystallium:block/wooden_side_tall",
-  "textures": {
-    "particle": "aether_crystallium:block/sunroot_log",
-    "side": "aether_crystallium:block/sunroot_log",
-    "top": "aether_crystallium:block/sunroot_log_top"
-  }
-}
