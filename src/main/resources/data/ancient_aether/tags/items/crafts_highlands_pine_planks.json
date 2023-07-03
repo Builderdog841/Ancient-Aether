@@ -1,13 +1,13 @@
 {
   "replace": false,
   "values": [
-    "aether_crystallium:highlands_pine_log",
-    "aether_crystallium:highlands_pine_wood",
-    "aether_crystallium:stripped_highlands_pine_log",
-    "aether_crystallium:stripped_highlands_pine_wood",
-    "aether_crystallium:highlands_pine_log_wall",
-    "aether_crystallium:highlands_pine_wood_wall",
-    "aether_crystallium:stripped_highlands_pine_log_wall",
-    "aether_crystallium:stripped_highlands_pine_wood_wall"
+    "ancient_aether:highlands_pine_log",
+    "ancient_aether:highlands_pine_wood",
+    "ancient_aether:stripped_highlands_pine_log",
+    "ancient_aether:stripped_highlands_pine_wood",
+    "ancient_aether:highlands_pine_log_wall",
+    "ancient_aether:highlands_pine_wood_wall",
+    "ancient_aether:stripped_highlands_pine_log_wall",
+    "ancient_aether:stripped_highlands_pine_wood_wall"
   ]
 }

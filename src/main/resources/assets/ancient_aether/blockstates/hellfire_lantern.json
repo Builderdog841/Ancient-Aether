@@ -1,10 +1,10 @@
 {
   "variants": {
     "hanging=false": {
-      "model": "aether_crystallium:block/hellfire_lantern"
+      "model": "ancient_aether:block/hellfire_lantern"
     },
     "hanging=true": {
-      "model": "aether_crystallium:block/hellfire_lantern_hanging"
+      "model": "ancient_aether:block/hellfire_lantern_hanging"
     }
   }
 }

@@ -2,14 +2,14 @@
   "type": "minecraft:random_selector",
   "config": {
     "default": {
-      "feature": "aether_crystallium:giant_cactus",
+      "feature": "ancient_aether:giant_cactus",
       "placement": [
         {
           "type": "minecraft:block_predicate_filter",
           "predicate": {
             "type": "minecraft:would_survive",
             "state": {
-              "Name": "aether_crystallium:small_aether_cactus"
+              "Name": "ancient_aether:small_aether_cactus"
             }
           }
         }
@@ -19,14 +19,14 @@
       {
         "chance": 0.5,
         "feature": {
-          "feature": "aether_crystallium:large_cactus",
+          "feature": "ancient_aether:large_cactus",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",
               "predicate": {
                 "type": "minecraft:would_survive",
                 "state": {
-                  "Name": "aether_crystallium:small_aether_cactus"
+                  "Name": "ancient_aether:small_aether_cactus"
                 }
               }
             }

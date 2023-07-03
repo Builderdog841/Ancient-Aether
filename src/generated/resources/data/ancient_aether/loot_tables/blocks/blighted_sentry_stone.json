@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "aether_crystallium:blighted_sentry_stone"
+          "name": "ancient_aether:blighted_sentry_stone"
         }
       ],
       "rolls": 1.0

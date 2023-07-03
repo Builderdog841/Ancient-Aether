@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "aether_crystallium:quicksoil_bricks"
+      "item": "ancient_aether:quicksoil_bricks"
     }
   },
   "pattern": [
@@ -12,7 +12,7 @@
   ],
   "result": {
     "count": 6,
-    "item": "aether_crystallium:quicksoil_brick_wall"
+    "item": "ancient_aether:quicksoil_brick_wall"
   },
   "show_notification": true
 }

@@ -4,7 +4,7 @@
   "cookingtime": 250,
   "experience": 0.5,
   "ingredient": {
-    "item": "aether_crystallium:moonlit_tulip"
+    "item": "ancient_aether:moonlit_tulip"
   },
   "result": "minecraft:lapis_lazuli"
 }

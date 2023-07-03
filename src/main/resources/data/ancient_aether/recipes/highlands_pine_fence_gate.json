@@ -7,7 +7,7 @@
       "tag": "aether:skyroot_stick"
     },
     "M": {
-      "item": "aether_crystallium:highlands_pine_planks"
+      "item": "ancient_aether:highlands_pine_planks"
     }
   },
   "pattern": [
@@ -16,7 +16,7 @@
   ],
   "result": {
     "count": 1,
-    "item": "aether_crystallium:highlands_pine_fence_gate"
+    "item": "ancient_aether:highlands_pine_fence_gate"
   },
   "show_notification": true
 }

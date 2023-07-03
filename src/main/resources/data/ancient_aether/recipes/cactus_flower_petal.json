@@ -3,11 +3,11 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "aether_crystallium:cactus_flower"
+      "item": "ancient_aether:cactus_flower"
     }
   ],
   "result": {
-    "item": "aether_crystallium:cactus_flower_petal",
+    "item": "ancient_aether:cactus_flower_petal",
     "count": 3
   },
   "show_notification": true

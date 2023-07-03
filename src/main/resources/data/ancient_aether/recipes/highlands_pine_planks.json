@@ -4,11 +4,11 @@
   "group": "planks",
   "ingredients": [
     {
-      "tag": "aether_crystallium:crafts_highlands_pine_planks"
+      "tag": "ancient_aether:crafts_highlands_pine_planks"
     }
   ],
   "result": {
     "count": 4,
-    "item": "aether_crystallium:highlands_pine_planks"
+    "item": "ancient_aether:highlands_pine_planks"
   }
 }

@@ -4,7 +4,7 @@
   "cookingtime": 100,
   "experience": 0.1,
   "ingredient": {
-    "item": "aether_crystallium:aether_quartz_ore"
+    "item": "ancient_aether:aether_quartz_ore"
   },
   "result": "minecraft:quartz"
 }

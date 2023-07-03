@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "aether_crystallium:highlands_pine_sign",
-    "aether_crystallium:highlands_pine_wall_sign",
-    "aether_crystallium:sakura_sign",
-    "aether_crystallium:sakurae_wall_sign"
+    "ancient_aether:highlands_pine_sign",
+    "ancient_aether:highlands_pine_wall_sign",
+    "ancient_aether:sakura_sign",
+    "ancient_aether:sakura_wall_sign"
   ]
 }

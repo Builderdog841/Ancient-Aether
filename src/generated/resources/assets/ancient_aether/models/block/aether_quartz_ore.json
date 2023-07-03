@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ancient_aether:block/aether_quartz_ore"
+  }
+}

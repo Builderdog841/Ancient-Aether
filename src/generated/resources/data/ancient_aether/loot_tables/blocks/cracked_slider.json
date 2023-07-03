@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "aether_crystallium:cracked_slider"
+          "name": "ancient_aether:cracked_slider"
         }
       ],
       "rolls": 1.0

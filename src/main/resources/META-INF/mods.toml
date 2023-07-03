@@ -45,7 +45,7 @@ description='''
 An Add-On that aims to take the concepts of the cancelled Aether II Mutation Update and tries reimagine them.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.aether_crystallium]] #optional
+[[dependencies.ancient_aether]] #optional
 # the modid of the dependency
 modId="forge" #mandatory
 # Does this dependency have to exist - if not, ordering below must be specified
@@ -56,7 +56,7 @@ versionRange="[45,)" #mandatory
 ordering="NONE"
 side="BOTH"
 
-[[dependencies.aether_crystallium]]
+[[dependencies.ancient_aether]]
 modId="aether"
 mandatory=true
 versionRange="[0,)"

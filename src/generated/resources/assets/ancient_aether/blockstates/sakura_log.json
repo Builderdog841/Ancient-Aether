@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "ancient_aether:block/sakura_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "ancient_aether:block/sakura_log"
+    },
+    "axis=z": {
+      "model": "ancient_aether:block/sakura_log_horizontal",
+      "x": 90
+    }
+  }
+}

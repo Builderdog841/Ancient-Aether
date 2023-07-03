@@ -1,5 +1,5 @@
 {
-  "feature": "aether_crystallium:aether_quartz_ore",
+  "feature": "ancient_aether:aether_quartz_ore",
   "placement": [
     {
       "type": "minecraft:count",

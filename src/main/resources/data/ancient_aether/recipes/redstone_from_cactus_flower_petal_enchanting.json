@@ -4,7 +4,7 @@
   "cookingtime": 250,
   "experience": 0.5,
   "ingredient": {
-    "item": "aether_crystallium:cactus_flower_petal"
+    "item": "ancient_aether:cactus_flower_petal"
   },
   "result": "minecraft:redstone"
 }

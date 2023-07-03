@@ -1,5 +1,5 @@
 {
-  "name": "aether_crystallium:ancient_valkyrie_library/start_pool",
+  "name": "ancient_aether:ancient_valkyrie_library/start_pool",
   "fallback": "minecraft:empty",
   "elements": [
     {
@@ -7,7 +7,7 @@
       "weight": 5,
       "element": {
 
-        "location": "aether_crystallium:ancient_valkyrie_library",
+        "location": "ancient_aether:ancient_valkyrie_library",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"

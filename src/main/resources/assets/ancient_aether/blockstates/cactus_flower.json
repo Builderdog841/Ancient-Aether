@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "aether_crystallium:block/cactus_flower"
+      "model": "ancient_aether:block/cactus_flower"
     }
   }
 }

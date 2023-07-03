@@ -37,7 +37,7 @@
                   ]
                 }
               ],
-              "name": "aether_crystallium:sakura_leaves"
+              "name": "ancient_aether:sakura_leaves"
             },
             {
               "type": "minecraft:item",
@@ -56,7 +56,7 @@
                   "enchantment": "minecraft:fortune"
                 }
               ],
-              "name": "aether_crystallium:sakura_sapling"
+              "name": "ancient_aether:sakura_sapling"
             }
           ]
         }

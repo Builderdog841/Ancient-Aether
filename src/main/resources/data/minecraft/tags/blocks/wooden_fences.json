@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "aether_crystallium:highlands_pine_fence",
-    "aether_crystallium:sakura_fence"
+    "ancient_aether:highlands_pine_fence",
+    "ancient_aether:sakura_fence"
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "feature": "aether_crystallium:highlands_pine",
+  "feature": "ancient_aether:highlands_pine",
   "placement": [
     {
       "type": "minecraft:count",
@@ -36,7 +36,7 @@
       "predicate": {
         "type": "minecraft:would_survive",
         "state": {
-          "Name": "aether_crystallium:highlands_pine_sapling",
+          "Name": "ancient_aether:highlands_pine_sapling",
           "Properties": {
             "stage": "0"
           }

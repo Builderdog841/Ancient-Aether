@@ -4,7 +4,7 @@
   "group": "red_dye",
   "ingredients": [
     {
-      "item": "aether_crystallium:cactus_flower_petal"
+      "item": "ancient_aether:cactus_flower_petal"
     }
   ],
   "result": {

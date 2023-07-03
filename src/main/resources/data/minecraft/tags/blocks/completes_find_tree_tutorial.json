@@ -1,13 +1,13 @@
 {
   "replace": false,
   "values": [
-    "aether_crystallium:highlands_pine_log",
-    "aether_crystallium:highlands_pine_wood",
-    "aether_crystallium:stripped_highlands_pine_log",
-    "aether_crystallium:stripped_highlands_pine_wood",
-    "aether_crystallium:sakura_log",
-    "aether_crystallium:sakura_wood",
-    "aether_crystallium:stripped_sakura_log",
-    "aether_crystallium:stripped_sakura_wood"
+    "ancient_aether:highlands_pine_log",
+    "ancient_aether:highlands_pine_wood",
+    "ancient_aether:stripped_highlands_pine_log",
+    "ancient_aether:stripped_highlands_pine_wood",
+    "ancient_aether:sakura_log",
+    "ancient_aether:sakura_wood",
+    "ancient_aether:stripped_sakura_log",
+    "ancient_aether:stripped_sakura_wood"
   ]
 }

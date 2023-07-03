@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "aether_crystallium:hellfire_lantern"
+          "name": "ancient_aether:hellfire_lantern"
         }
       ],
       "rolls": 1.0

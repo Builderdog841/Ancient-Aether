@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "aether_crystallium:block/edelweiss"
+      "model": "ancient_aether:block/edelweiss"
     }
   }
 }

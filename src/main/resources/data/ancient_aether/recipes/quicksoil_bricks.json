@@ -6,7 +6,7 @@
       "item": "aether:quicksoil"
     },
     "2": {
-      "item": "aether_crystallium:quickstone"
+      "item": "ancient_aether:quickstone"
     }
   },
   "pattern": [
@@ -15,7 +15,7 @@
   ],
   "result": {
     "count": 4,
-    "item": "aether_crystallium:quicksoil_bricks"
+    "item": "ancient_aether:quicksoil_bricks"
   },
   "show_notification": true
 }

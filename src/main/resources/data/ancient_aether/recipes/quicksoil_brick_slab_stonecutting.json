@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "count": 2,
   "ingredient": {
-    "item": "aether_crystallium:quicksoil_bricks"
+    "item": "ancient_aether:quicksoil_bricks"
   },
-  "result": "aether_crystallium:quicksoil_brick_slab"
+  "result": "ancient_aether:quicksoil_brick_slab"
 }

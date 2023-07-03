@@ -1,7 +1,8 @@
 {
   "replace": false,
   "values": [
-    "aether_crystallium:highlands_pine_slab",
-    "aether_crystallium:sakura_slab"
+    "ancient_aether:quicksoil_brick_slab",
+    "ancient_aether:highlands_pine_slab",
+    "ancient_aether:sakura_slab"
   ]
 }

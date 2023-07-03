@@ -40,13 +40,13 @@
       "aether:water_spring"
     ],
     [
-      "aether_crystallium:frosty_highlands_trees",
+      "ancient_aether:frosty_highlands_trees",
       "aether:holiday_tree",
-      "aether_crystallium:icestone_boulder",
+      "ancient_aether:icestone_boulder",
       "aether:grass_patch",
       "aether:tall_grass_patch",
-      "aether_crystallium:moonlit_tulip_patch",
-      "aether_crystallium:edelweiss_patch",
+      "ancient_aether:moonlit_tulip_patch",
+      "ancient_aether:edelweiss_patch",
       "aether:white_flower_patch",
       "aether:purple_flower_patch",
       "aether:berry_bush_patch"

@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "aether_crystallium:sakura_trapdoor"
+          "name": "ancient_aether:sakura_trapdoor"
         }
       ],
       "rolls": 1.0

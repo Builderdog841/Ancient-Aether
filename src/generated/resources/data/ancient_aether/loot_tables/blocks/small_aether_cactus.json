@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "aether_crystallium:small_aether_cactus"
+          "name": "ancient_aether:small_aether_cactus"
         }
       ],
       "rolls": 1.0

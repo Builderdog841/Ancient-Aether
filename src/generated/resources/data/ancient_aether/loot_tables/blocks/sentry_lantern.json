@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "aether_crystallium:sentry_lantern"
+          "name": "ancient_aether:sentry_lantern"
         }
       ],
       "rolls": 1.0

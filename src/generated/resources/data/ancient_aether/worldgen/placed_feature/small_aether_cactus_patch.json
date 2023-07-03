@@ -1,21 +1,9 @@
 {
-  "feature": "aether_crystallium:small_aether_cactus_patch",
+  "feature": "ancient_aether:small_aether_cactus_patch",
   "placement": [
     {
-      "type": "minecraft:count",
-      "count": {
-        "type": "minecraft:weighted_list",
-        "distribution": [
-          {
-            "data": 1,
-            "weight": 9
-          },
-          {
-            "data": 2,
-            "weight": 1
-          }
-        ]
-      }
+      "type": "minecraft:rarity_filter",
+      "chance": 32
     },
     {
       "type": "minecraft:in_square"

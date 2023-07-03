@@ -4,7 +4,7 @@
   "group": "wooden_door",
   "key": {
     "#": {
-      "item": "aether_crystallium:highlands_pine_planks"
+      "item": "ancient_aether:highlands_pine_planks"
     }
   },
   "pattern": [
@@ -14,7 +14,7 @@
   ],
   "result": {
     "count": 3,
-    "item": "aether_crystallium:highlands_pine_door"
+    "item": "ancient_aether:highlands_pine_door"
   },
   "show_notification": true
 }

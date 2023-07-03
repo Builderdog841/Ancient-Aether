@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "aether_crystallium:holystone_lantern"
+          "name": "ancient_aether:holystone_lantern"
         }
       ],
       "rolls": 1.0

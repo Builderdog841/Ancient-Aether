@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "aether_crystallium:quartz_from_smelting_aether_quartz_ore"
+        "recipe": "ancient_aether:quartz_from_smelting_aether_quartz_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:crystal_gold_ingot_from_smelting_raw_crystal_gold"
+      "ancient_aether:quartz_from_smelting_aether_quartz_or"
     ]
   }
 }

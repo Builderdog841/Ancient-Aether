@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "aether_crystallium:edelweiss"
+          "name": "ancient_aether:edelweiss"
         }
       ],
       "rolls": 1.0

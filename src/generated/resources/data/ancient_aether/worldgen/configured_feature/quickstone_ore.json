@@ -6,7 +6,7 @@
     "targets": [
       {
         "state": {
-          "Name": "aether_crystallium:aether_quartz_ore",
+          "Name": "ancient_aether:aether_quartz_ore",
           "Properties": {
             "double_drops": "false"
           }

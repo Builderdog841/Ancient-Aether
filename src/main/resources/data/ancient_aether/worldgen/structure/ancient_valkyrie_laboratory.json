@@ -1,11 +1,10 @@
 {
   "type": "minecraft:jigsaw",
-
-  "start_pool": "aether_crystallium:ancient_valkyrie_laboratory/start_pool",
+  "start_pool": "ancient_aether:ancient_valkyrie_laboratory/start_pool",
   "size": 2,
   "adapt_noise": false,
   "max_distance_from_center": 80,
-  "biomes": "#aether_crystallium:has_structure/ancient_valkyrie_laboratory",
+  "biomes": "#ancient_aether:has_structure/ancient_valkyrie_laboratory",
   "step": "surface_structures",
   "start_height": {
     "absolute": -12,

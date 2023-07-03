@@ -1,5 +1,5 @@
 {
-  "feature": "aether_crystallium:sakura_tree",
+  "feature": "ancient_aether:sakura_tree",
   "placement": [
     {
       "type": "minecraft:count",
@@ -36,7 +36,7 @@
       "predicate": {
         "type": "minecraft:would_survive",
         "state": {
-          "Name": "aether_crystallium:sakura_sapling",
+          "Name": "ancient_aether:sakura_sapling",
           "Properties": {
             "stage": "0"
           }

@@ -163,7 +163,7 @@ public class AncientAetherBlocks {
     //CACTUS WOOD TYPE
 
     public static final RegistryObject<Block> AETHER_CACTUS =  registerBlock("aether_cactus",
-            () -> new AetherDoubleDropBlock(BlockBehaviour.Properties.of(Material.CACTUS).sound(SoundType.WOOL)
+            () -> new AetherCactusBlock(BlockBehaviour.Properties.of(Material.CACTUS).sound(SoundType.WOOL)
                     .strength(0.5f, 6f)));
     public static final RegistryObject<Block> STRIPPED_AETHER_CACTUS =  registerBlock("stripped_aether_cactus",
             () -> new Block(BlockBehaviour.Properties.of(Material.CACTUS).sound(SoundType.WOOL)

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "ancient_aether:item/cactus_flower_petal_ice_cream_bucket"
+  }
+}
