@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.block;
 
+import com.aetherteam.aether.block.natural.AetherDoubleDropBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.AxeItem;
@@ -11,7 +12,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.ToolAction;
 import org.jetbrains.annotations.Nullable;
 
-public class AetherCactusBlock extends Block {
+public class AetherCactusBlock extends AetherDoubleDropBlock {
 
     public AetherCactusBlock(Properties p_54800_) {
         super(p_54800_);
