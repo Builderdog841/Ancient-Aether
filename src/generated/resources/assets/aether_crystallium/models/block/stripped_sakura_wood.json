@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "aether_crystallium:block/stripped_sakura_log",
-    "side": "aether_crystallium:block/stripped_sakura_log"
-  }
-}

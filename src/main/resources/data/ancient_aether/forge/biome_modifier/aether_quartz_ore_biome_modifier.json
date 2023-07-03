@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#aether:is_aether",
+  "features": "ancient_aether:aether_quartz_ore_placed",
+  "step": "underground_ores"
+}

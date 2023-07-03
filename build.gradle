@@ -32,8 +32,8 @@ apply plugin: 'io.github.0ffz.github-packages'
 apply plugin: 'org.spongepowered.mixin'
 
 version = '0.1.0'
-group = 'net.builderdog.aether_crystallium'
-archivesBaseName = 'aether_crystallium'
+group = 'net.builderdog.ancient_aether'
+archivesBaseName = 'ancient_aether'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
@@ -49,7 +49,7 @@ minecraft {
 
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
-            property 'forge.enabledGameTestNamespaces', 'aether_crystallium'
+            property 'forge.enabledGameTestNamespaces', 'ancient_aether'
             property 'mixin.env.remapRefMap', 'true'
             property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
@@ -65,7 +65,7 @@ minecraft {
 
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
-            property 'forge.enabledGameTestNamespaces', 'aether_crystallium'
+            property 'forge.enabledGameTestNamespaces', 'ancient_aether'
             property 'mixin.env.remapRefMap', 'true'
             property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
@@ -80,7 +80,7 @@ minecraft {
 
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
-            property 'forge.enabledGameTestNamespaces', 'aether_crystallium'
+            property 'forge.enabledGameTestNamespaces', 'ancient_aether'
             property 'mixin.env.remapRefMap', 'true'
             property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
@@ -153,12 +153,12 @@ dependencies {
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "aether_crystallium",
-                "Specification-Vendor"    : "aether_crystalliumsareus",
+                "Specification-Title"     : "ancient_aether",
+                "Specification-Vendor"    : "ancient_aethersareus",
                 "Specification-Version"   : "1",
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
-                "Implementation-Vendor"   : "aether_crystalliumsareus",
+                "Implementation-Vendor"   : "ancient_aethersareus",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
