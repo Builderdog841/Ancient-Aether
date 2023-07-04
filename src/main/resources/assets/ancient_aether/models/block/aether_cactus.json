@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "aether_crystallium:block/aether_cactus_bottom",
-    "up": "aether_crystallium:block/aether_cactus_top",
-    "north": "aether_crystallium:block/aether_cactus",
-    "east": "aether_crystallium:block/aether_cactus",
-    "south": "aether_crystallium:block/aether_cactus",
-    "west": "aether_crystallium:block/aether_cactus",
-    "particle": "aether_crystallium:block/aether_cactus"
+    "down": "ancient_aether:block/aether_cactus_bottom",
+    "up": "ancient_aether:block/aether_cactus_top",
+    "north": "ancient_aether:block/aether_cactus",
+    "east": "ancient_aether:block/aether_cactus",
+    "south": "ancient_aether:block/aether_cactus",
+    "west": "ancient_aether:block/aether_cactus",
+    "particle": "ancient_aether:block/aether_cactus"
   }
 }

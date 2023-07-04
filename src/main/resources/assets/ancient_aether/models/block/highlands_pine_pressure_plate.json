@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/pressure_plate_up",
   "textures": {
-    "texture": "aether_crystallium:block/highlands_pine_planks"
+    "texture": "ancient_aether:block/highlands_pine_planks"
   }
 }

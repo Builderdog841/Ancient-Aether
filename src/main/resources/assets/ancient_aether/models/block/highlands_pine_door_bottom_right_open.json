@@ -2,7 +2,7 @@
   "parent": "minecraft:block/door_bottom_right_open",
   "render_type": "minecraft:cutout",
   "textures": {
-    "bottom": "aether_crystallium:block/highlands_pine_door_bottom",
-    "top": "aether_crystallium:block/highlands_pine_door_top"
+    "bottom": "ancient_aether:block/highlands_pine_door_bottom",
+    "top": "ancient_aether:block/highlands_pine_door_top"
   }
 }

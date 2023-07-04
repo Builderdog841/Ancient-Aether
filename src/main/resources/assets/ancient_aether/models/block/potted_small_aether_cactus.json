@@ -2,6 +2,6 @@
   "parent": "minecraft:block/flower_pot_cross",
   "render_type": "minecraft:cutout",
   "textures": {
-    "plant": "aether_crystallium:block/small_aether_cactus"
+    "plant": "ancient_aether:block/small_aether_cactus"
   }
 }

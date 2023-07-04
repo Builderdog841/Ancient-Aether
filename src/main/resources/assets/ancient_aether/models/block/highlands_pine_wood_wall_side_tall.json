@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_wall_side_tall",
   "textures": {
-    "wall": "aether_crystallium:block/highlands_pine_log"
+    "wall": "ancient_aether:block/highlands_pine_log"
   }
 }

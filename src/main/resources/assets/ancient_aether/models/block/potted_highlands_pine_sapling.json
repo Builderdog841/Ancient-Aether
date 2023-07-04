@@ -2,6 +2,6 @@
   "parent": "minecraft:block/flower_pot_cross",
   "render_type": "minecraft:cutout",
   "textures": {
-    "plant": "aether_crystallium:block/highlands_pine_sapling"
+    "plant": "ancient_aether:block/highlands_pine_sapling"
   }
 }

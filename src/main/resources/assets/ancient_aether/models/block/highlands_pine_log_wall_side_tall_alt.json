@@ -1,8 +1,8 @@
 {
-  "parent": "aether_crystallium:block/wooden_side_tall_alt",
+  "parent": "ancient_aether:block/wooden_side_tall_alt",
   "textures": {
-    "particle": "aether_crystallium:block/highlands_pine_log",
-    "side": "aether_crystallium:block/highlands_pine_log",
-    "top": "aether_crystallium:block/highlands_pine_log_top"
+    "particle": "ancient_aether:block/highlands_pine_log",
+    "side": "ancient_aether:block/highlands_pine_log",
+    "top": "ancient_aether:block/highlands_pine_log_top"
   }
 }

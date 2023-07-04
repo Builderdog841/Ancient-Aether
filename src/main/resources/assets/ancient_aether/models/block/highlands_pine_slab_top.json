@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/slab_top",
   "textures": {
-    "bottom": "aether_crystallium:block/highlands_pine_planks",
-    "side": "aether_crystallium:block/highlands_pine_planks",
-    "top": "aether_crystallium:block/highlands_pine_planks"
+    "bottom": "ancient_aether:block/highlands_pine_planks",
+    "side": "ancient_aether:block/highlands_pine_planks",
+    "top": "ancient_aether:block/highlands_pine_planks"
   }
 }
