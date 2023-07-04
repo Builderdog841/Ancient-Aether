@@ -1,6 +1,7 @@
 package net.builderdog.ancient_aether.block;
 
 import com.aetherteam.aether.block.AetherBlocks;
+import com.aetherteam.aether.block.construction.QuicksoilGlassBlock;
 import com.aetherteam.aether.block.natural.AetherDoubleDropBlock;
 import com.aetherteam.aether.block.natural.AetherDoubleDropsLeaves;
 import com.aetherteam.aether.mixin.mixins.common.accessor.FireBlockAccessor;
@@ -200,13 +201,14 @@ public class AncientAetherBlocks {
             () -> new AetherDoubleDropBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(0.5f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> QUICKSOIL_BRICKS =  registerBlock("quicksoil_bricks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+            () -> new QuicksoilGlassBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(0.5F).friction(1.1F).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> QUICKSOIL_BRICK_STAIRS =  registerBlock("quicksoil_brick_stairs",
             () -> new StairBlock(() -> QUICKSOIL_BRICKS.get().defaultBlockState(), (BlockBehaviour.Properties.copy(AncientAetherBlocks.QUICKSOIL_BRICKS.get()))));
     public static final RegistryObject<Block> QUICKSOIL_BRICK_SLAB = registerBlock("quicksoil_brick_slab",
-            () -> new SlabBlock(Block.Properties.copy(AncientAetherBlocks.QUICKSOIL_BRICKS.get()).strength(2.0F, 3.0F)));
-    public static final RegistryObject<WallBlock> QUICKSOIL_BRICK_WALL = registerBlock("quicksoil_brick_wall", () -> new WallBlock(Block.Properties.copy(AncientAetherBlocks.QUICKSOIL_BRICKS.get())));
+            () -> new QuicksoilBrickSlabBlock(Block.Properties.copy(AncientAetherBlocks.QUICKSOIL_BRICKS.get()).strength(2.0F, 3.0F)));
+    public static final RegistryObject<WallBlock> QUICKSOIL_BRICK_WALL = registerBlock("quicksoil_brick_wall",
+            () -> new QuicksoilBrickWallBlock(Block.Properties.copy(AncientAetherBlocks.QUICKSOIL_BRICKS.get())));
 
     //MISC
     public static final RegistryObject<Block> CRACKED_SLIDER =  registerBlock("cracked_slider",
