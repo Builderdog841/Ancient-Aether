@@ -24,22 +24,22 @@ public class AncientAetherRegion extends Region {
         Climate.Parameter fullRange = Climate.Parameter.span(-1.0F, 1.0F);
 
         //SAKURA JUNGLE
-        Climate.Parameter temps1 = Climate.Parameter.span(-0.15F, 0.05F);
+        Climate.Parameter temps1 = Climate.Parameter.span(0.6F, 1F);
 
         //QUICKSOIL DESERT
-        Climate.Parameter temps2 = Climate.Parameter.span(0.3F, 0.8F);
+        Climate.Parameter temps2 = Climate.Parameter.span(0.2F, 0.5F);
 
         //FROSTY HIGHLANDS
-        Climate.Parameter temps3 = Climate.Parameter.span(-0.7F, -0.2F);
+        Climate.Parameter temps3 = Climate.Parameter.span(-0.8F, -0.4F);
 
 
-        this.addBiome(mapper, new Climate.ParameterPoint(temps1, Climate.Parameter.span(-0.15F, 0.05F), fullRange, fullRange, fullRange, fullRange, 0),
+        this.addBiome(mapper, new Climate.ParameterPoint(temps1, Climate.Parameter.span(0.6F, 1F), fullRange, fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.SAKURA_JUNGLE);
 
-        this.addBiome(mapper, new Climate.ParameterPoint(temps2, Climate.Parameter.span(0.3F, 0.8F), fullRange, fullRange, fullRange, fullRange, 0),
+        this.addBiome(mapper, new Climate.ParameterPoint(temps2, Climate.Parameter.span(0.2F, 0.5F), fullRange, fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.QUICKSOIL_DESERT);
 
-        this.addBiome(mapper, new Climate.ParameterPoint(temps3, Climate.Parameter.span(-0.7F, -0.2F), fullRange, fullRange, fullRange, fullRange, 0),
+        this.addBiome(mapper, new Climate.ParameterPoint(temps3, Climate.Parameter.span(-0.8F, -0.4F), fullRange, fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.FROSTY_HIGHLANDS);
     }
 }
