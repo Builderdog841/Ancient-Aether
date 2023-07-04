@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "aether_crystallium:item/holystone_lantern"
+    "layer0": "ancient_aether:item/holystone_lantern"
   }
 }

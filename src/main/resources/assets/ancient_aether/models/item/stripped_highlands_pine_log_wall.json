@@ -97,7 +97,7 @@
     }
   ],
   "textures": {
-    "side": "aether_crystallium:block/stripped_highlands_pine_log",
-    "top": "aether_crystallium:block/stripped_highlands_pine_log_top"
+    "side": "ancient_aether:block/stripped_highlands_pine_log",
+    "top": "ancient_aether:block/stripped_highlands_pine_log_top"
   }
 }

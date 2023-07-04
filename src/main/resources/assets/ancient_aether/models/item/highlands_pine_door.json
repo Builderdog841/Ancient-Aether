@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "aether_crystallium:item/highlands_pine_door"
+    "layer0": "ancient_aether:item/highlands_pine_door"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/wall_inventory",
   "textures": {
-    "wall": "aether_crystallium:block/quicksoil_bricks"
+    "wall": "ancient_aether:block/quicksoil_bricks"
   }
 }
