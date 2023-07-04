@@ -1,13 +1,13 @@
 {
   "variants": {
     "type=bottom": {
-      "model": "aether_crystallium:block/highlands_pine_slab"
+      "model": "ancient_aether:block/highlands_pine_slab"
     },
     "type=double": {
-      "model": "aether_crystallium:block/highlands_pine_planks"
+      "model": "ancient_aether:block/highlands_pine_planks"
     },
     "type=top": {
-      "model": "aether_crystallium:block/highlands_pine_slab_top"
+      "model": "ancient_aether:block/highlands_pine_slab_top"
     }
   }
 }

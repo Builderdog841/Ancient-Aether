@@ -1,10 +1,10 @@
 {
   "variants": {
     "hanging=false": {
-      "model": "aether_crystallium:block/holystone_lantern"
+      "model": "ancient_aether:block/holystone_lantern"
     },
     "hanging=true": {
-      "model": "aether_crystallium:block/holystone_lantern_hanging"
+      "model": "ancient_aether:block/holystone_lantern_hanging"
     }
   }
 }

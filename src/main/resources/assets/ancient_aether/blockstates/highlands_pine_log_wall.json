@@ -2,7 +2,7 @@
   "multipart": [
     {
       "apply": {
-        "model": "aether_crystallium:block/highlands_pine_log_wall_post_short"
+        "model": "ancient_aether:block/highlands_pine_log_wall_post_short"
       },
       "when": {
         "AND": [
@@ -16,7 +16,7 @@
     },
     {
       "apply": {
-        "model": "aether_crystallium:block/highlands_pine_log_wall_post_tall"
+        "model": "ancient_aether:block/highlands_pine_log_wall_post_tall"
       },
       "when": {
         "AND": [
@@ -30,7 +30,7 @@
     },
     {
       "apply": {
-        "model": "aether_crystallium:block/highlands_pine_log_wall_post_short",
+        "model": "ancient_aether:block/highlands_pine_log_wall_post_short",
         "y": 90
       },
       "when": {
@@ -47,7 +47,7 @@
     },
     {
       "apply": {
-        "model": "aether_crystallium:block/highlands_pine_log_wall_post_tall",
+        "model": "ancient_aether:block/highlands_pine_log_wall_post_tall",
         "y": 90
       },
       "when": {
@@ -64,7 +64,7 @@
     },
     {
       "apply": {
-        "model": "aether_crystallium:block/highlands_pine_log_wall_side",
+        "model": "ancient_aether:block/highlands_pine_log_wall_side",
         "y": 90
       },
       "when": {
@@ -74,7 +74,7 @@
     },
     {
       "apply": {
-        "model": "aether_crystallium:block/highlands_pine_log_wall_side_tall",
+        "model": "ancient_aether:block/highlands_pine_log_wall_side_tall",
         "y": 90
       },
       "when": {
@@ -84,7 +84,7 @@
     },
     {
       "apply": {
-        "model": "aether_crystallium:block/highlands_pine_log_wall_side"
+        "model": "ancient_aether:block/highlands_pine_log_wall_side"
       },
       "when": {
         "north": "low",
@@ -93,7 +93,7 @@
     },
     {
       "apply": {
-        "model": "aether_crystallium:block/highlands_pine_log_wall_side_tall"
+        "model": "ancient_aether:block/highlands_pine_log_wall_side_tall"
       },
       "when": {
         "north": "tall",
@@ -102,7 +102,7 @@
     },
     {
       "apply": {
-        "model": "aether_crystallium:block/highlands_pine_log_wall_side_alt",
+        "model": "ancient_aether:block/highlands_pine_log_wall_side_alt",
         "y": 180
       },
       "when": {
@@ -112,7 +112,7 @@
     },
     {
       "apply": {
-        "model": "aether_crystallium:block/highlands_pine_log_wall_side_tall_alt",
+        "model": "ancient_aether:block/highlands_pine_log_wall_side_tall_alt",
         "y": 180
       },
       "when": {
@@ -122,7 +122,7 @@
     },
     {
       "apply": {
-        "model": "aether_crystallium:block/highlands_pine_log_wall_side_alt",
+        "model": "ancient_aether:block/highlands_pine_log_wall_side_alt",
         "y": 270
       },
       "when": {
@@ -132,7 +132,7 @@
     },
     {
       "apply": {
-        "model": "aether_crystallium:block/highlands_pine_log_wall_side_tall_alt",
+        "model": "ancient_aether:block/highlands_pine_log_wall_side_tall_alt",
         "y": 270
       },
       "when": {
@@ -142,7 +142,7 @@
     },
     {
       "apply": {
-        "model": "aether_crystallium:block/highlands_pine_log_wall_post"
+        "model": "ancient_aether:block/highlands_pine_log_wall_post"
       },
       "when": {
         "up": "true"
@@ -150,7 +150,7 @@
     },
     {
       "apply": {
-        "model": "aether_crystallium:block/highlands_pine_log_wall_side_short",
+        "model": "ancient_aether:block/highlands_pine_log_wall_side_short",
         "y": 90
       },
       "when": {
@@ -160,7 +160,7 @@
     },
     {
       "apply": {
-        "model": "aether_crystallium:block/highlands_pine_log_wall_side_tall_short",
+        "model": "ancient_aether:block/highlands_pine_log_wall_side_tall_short",
         "y": 90
       },
       "when": {
@@ -170,7 +170,7 @@
     },
     {
       "apply": {
-        "model": "aether_crystallium:block/highlands_pine_log_wall_side_short"
+        "model": "ancient_aether:block/highlands_pine_log_wall_side_short"
       },
       "when": {
         "north": "low",
@@ -179,7 +179,7 @@
     },
     {
       "apply": {
-        "model": "aether_crystallium:block/highlands_pine_log_wall_side_tall_short"
+        "model": "ancient_aether:block/highlands_pine_log_wall_side_tall_short"
       },
       "when": {
         "north": "tall",
@@ -188,7 +188,7 @@
     },
     {
       "apply": {
-        "model": "aether_crystallium:block/highlands_pine_log_wall_side_alt_short",
+        "model": "ancient_aether:block/highlands_pine_log_wall_side_alt_short",
         "y": 180
       },
       "when": {
@@ -198,7 +198,7 @@
     },
     {
       "apply": {
-        "model": "aether_crystallium:block/highlands_pine_log_wall_side_tall_alt_short",
+        "model": "ancient_aether:block/highlands_pine_log_wall_side_tall_alt_short",
         "y": 180
       },
       "when": {
@@ -208,7 +208,7 @@
     },
     {
       "apply": {
-        "model": "aether_crystallium:block/highlands_pine_log_wall_side_alt_short",
+        "model": "ancient_aether:block/highlands_pine_log_wall_side_alt_short",
         "y": 270
       },
       "when": {
@@ -218,7 +218,7 @@
     },
     {
       "apply": {
-        "model": "aether_crystallium:block/highlands_pine_log_wall_side_tall_alt_short",
+        "model": "ancient_aether:block/highlands_pine_log_wall_side_tall_alt_short",
         "y": 270
       },
       "when": {

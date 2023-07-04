@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "aether_crystallium:block/potted_moonlit_tulip"
+      "model": "ancient_aether:block/potted_moonlit_tulip"
     }
   }
 }
