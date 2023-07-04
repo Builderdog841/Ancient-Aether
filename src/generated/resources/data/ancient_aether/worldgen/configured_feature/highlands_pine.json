@@ -20,7 +20,7 @@
         "Name": "ancient_aether:highlands_pine_leaves",
         "Properties": {
           "distance": "7",
-          "double_drops": "true",
+          "double_drops": "false",
           "persistent": "false",
           "waterlogged": "false"
         }
@@ -30,14 +30,14 @@
     "ignore_vines": true,
     "minimum_size": {
       "type": "minecraft:two_layers_feature_size",
-      "limit": 1,
+      "limit": 2,
       "lower_size": 0,
-      "upper_size": 1
+      "upper_size": 2
     },
     "trunk_placer": {
       "type": "minecraft:straight_trunk_placer",
-      "base_height": 4,
-      "height_rand_a": 2,
+      "base_height": 5,
+      "height_rand_a": 5,
       "height_rand_b": 0
     },
     "trunk_provider": {
@@ -46,7 +46,7 @@
         "Name": "ancient_aether:highlands_pine_log",
         "Properties": {
           "axis": "y",
-          "double_drops": "true"
+          "double_drops": "false"
         }
       }
     }

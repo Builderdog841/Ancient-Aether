@@ -4,7 +4,10 @@
     "blockstate": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "ancient_aether:aether_cactus"
+        "Name": "ancient_aether:aether_cactus",
+        "Properties": {
+          "double_drops": "true"
+        }
       }
     }
   }

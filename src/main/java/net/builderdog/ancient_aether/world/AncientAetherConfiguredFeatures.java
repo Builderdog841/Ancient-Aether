@@ -7,6 +7,8 @@ import net.builderdog.ancient_aether.world.configurations.LargeCactusConfigurati
 import net.builderdog.ancient_aether.world.features.AncientAetherFeatures;
 import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherHookedFoliagePlacer;
 import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherPineFoliagePlacer;
+import net.builderdog.ancient_aether.world.tree_decorator.TrunkDecorator;
+import net.builderdog.ancient_aether.world.trunkplacer.AncientAetherHookedTrunkPlacer;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -56,19 +58,23 @@ public class AncientAetherConfiguredFeatures {
         List<OreConfiguration.TargetBlockState> quickstoneOre = List.of(OreConfiguration.target(aetherIslandBlocks,
                 AncientAetherBlocks.AETHER_QUARTZ_ORE.get().defaultBlockState()));
 
-        register(context, HIGHLANDS_PINE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+        register(context, HIGHLANDS_PINE_KEY, Feature.TREE,
+                new TreeConfiguration.TreeConfigurationBuilder(
                         BlockStateProvider.simple(AncientAetherBlocks.HIGHLANDS_PINE_LOG.get()),
-                        new StraightTrunkPlacer(5, 7, 3),
+                        new StraightTrunkPlacer(5, 5, 0),
                         BlockStateProvider.simple(AncientAetherBlocks.HIGHLANDS_PINE_LEAVES.get()),
-                        new AncientAetherPineFoliagePlacer(ConstantInt.of(1), ConstantInt.ZERO, ConstantInt.of(1)),
-                        new TwoLayersFeatureSize(1, 0, 2)).build());
+                        new AncientAetherPineFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
+                        new TwoLayersFeatureSize(2, 0, 2)
+                ).ignoreVines().build());
 
-        register(context, SAKURA_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LOG.get()),
-                new StraightTrunkPlacer(5, 7, 3),
-                BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LEAVES.get()),
-                new AncientAetherHookedFoliagePlacer(ConstantInt.of(1), ConstantInt.ZERO, ConstantInt.of(1)),
-                new TwoLayersFeatureSize(1, 0, 2)).build());
+        register(context, SAKURA_KEY, Feature.TREE,
+                new TreeConfiguration.TreeConfigurationBuilder(
+                        BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LOG.get()),
+                        new AncientAetherHookedTrunkPlacer(8, 14, 14),
+                        BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LEAVES.get()),
+                        new AncientAetherHookedFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
+                        new TwoLayersFeatureSize(2, 1, 4)
+                ).decorators(List.of(new TrunkDecorator(BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LOG_WALL.get())))).ignoreVines().build());
 
         register(context, AETHER_QUARTZ_ORE_KEY, Feature.ORE, new OreConfiguration(aetherQuartzOre, 12, 0f));
 

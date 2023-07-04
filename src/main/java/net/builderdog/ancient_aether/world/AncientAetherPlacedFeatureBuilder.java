@@ -1,5 +1,12 @@
 package net.builderdog.ancient_aether.world;
 
+import com.aetherteam.aether.world.placementmodifier.DungeonBlacklistFilter;
+import com.aetherteam.aether.world.placementmodifier.ImprovedLayerPlacementModifier;
+import com.google.common.collect.ImmutableList;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.placement.*;
 
 import java.util.List;
@@ -19,5 +26,19 @@ public class AncientAetherPlacedFeatureBuilder {
 
     private static List<PlacementModifier> VegetationPlacement(PlacementModifier count, PlacementModifier heightRange) {
         return List.of(count, InSquarePlacement.spread(), heightRange, BiomeFilter.biome());
+    }
+
+    public static List<PlacementModifier> treePlacement(PlacementModifier count, Block filter) {
+        return treePlacementBase(count, filter).build();
+    }
+
+    private static ImmutableList.Builder<PlacementModifier> treePlacementBase(PlacementModifier count, Block filter) {
+        return ImmutableList.<PlacementModifier>builder()
+                .add(count)
+                .add(SurfaceWaterDepthFilter.forMaxDepth(0))
+                .add(ImprovedLayerPlacementModifier.of(Heightmap.Types.OCEAN_FLOOR, UniformInt.of(0, 1), 4))
+                .add(BiomeFilter.biome())
+                .add(new DungeonBlacklistFilter())
+                .add(PlacementUtils.filteredByBlockSurvival(filter));
     }
 }
