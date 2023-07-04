@@ -3,6 +3,6 @@
   "textures": {
     "particle": "ancient_aether:block/sakura_log",
     "side": "ancient_aether:block/sakura_log",
-    "top": "ancient_aether:block/sakuralog_top"
+    "top": "ancient_aether:block/sakura_log_top"
   }
 }
