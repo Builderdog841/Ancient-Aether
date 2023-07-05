@@ -3,6 +3,6 @@
   "render_type": "minecraft:cutout",
   "textures": {
     "bottom": "ancient_aether:block/sakura_door_bottom",
-    "top": "ancient_aether:block/sakurae_door_top"
+    "top": "ancient_aether:block/sakura_door_top"
   }
 }
