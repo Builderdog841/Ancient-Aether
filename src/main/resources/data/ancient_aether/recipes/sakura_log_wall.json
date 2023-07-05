@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_trapdoors",
+  "key": {
+    "#": {
+      "item": "ancient_aether:sakura_log"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "item": "ancient_aether:sakura_log_wall"
+  },
+  "show_notification": true
+}
