@@ -60,6 +60,7 @@
   "block.ancient_aether.sentry_lantern": "Sentry Lantern",
   "block.ancient_aether.angelic_lantern": "Angelic Lantern",
   "block.ancient_aether.hellfire_lantern": "Hellfire Lantern",
+  "block.ancient_aether.gale_lantern": "Gale Lantern",
 
   "item.ancient_aether.aechor_petal_ice_cream_bucket": "Aechor Petal Ice Cream Bucket",
   "item.ancient_aether.cactus_flower_petal_ice_cream_bucket": "Cactus Flower Petal Ice Cream Bucket",
@@ -75,6 +76,7 @@
   "lore.block.ancient_aether.sentry_lantern": "A decoration block that is crafted from Carved Stone, Sentry Stone and an Ambrosium Torch. This Lantern also works in the Aether.",
   "lore.block.ancient_aether.angelic_lantern": "A decoration block that is crafted from Angelic Stone, Light Angelic Stone and an Ambrosium Torch. This Lantern also works in the Aether.",
   "lore.block.ancient_aether.hellfire_lantern": "A decoration block that is crafted from Hellfire Stone, Light Hellfire Stone and an Ambrosium Torch. This Lantern also works in the Aether.",
+  "lore.block.ancient_aether.gale_lantern": "A decoration block that is crafted from Gale Stone, Light Gale Stone and an Ambrosium Torch. This Lantern also works in the Aether.",
   "lore.block.ancient_aether.aether_quartz_ore": "An ore that is a source of Quartz in the Aether.",
   "lore.block.ancient_aether.quicksoil_bricks": "A building block that is created by combining Quickstone and Quicksoil that is exactly as slippery as Quicksoil.",
   "lore.block.ancient_aether.quickstone": "A block that generates in the Quicksoil Desert that makes the biome easier to traverse as it isn't slippery. It can also be used to craft Quicksoil Bricks.",

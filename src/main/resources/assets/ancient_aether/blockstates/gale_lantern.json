@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "ancient_aether:block/gale_lantern"
+    },
+    "hanging=true": {
+      "model": "ancient_aether:block/gale_lantern_hanging"
+    }
+  }
+}

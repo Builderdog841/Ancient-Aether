@@ -185,6 +185,9 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> HELLFIRE_LANTERN =  registerBlock("hellfire_lantern",
             () -> new LanternBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.LANTERN)
                     .strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 12)));
+    public static final RegistryObject<Block> GALE_LANTERN =  registerBlock("gale_lantern",
+            () -> new LanternBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.LANTERN)
+                    .strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 12)));
 
     //POTTED PLANTS
     public static final RegistryObject<FlowerPotBlock> POTTED_MOONLIT_TULIP = BLOCKS.register("potted_moonlit_tulip",
