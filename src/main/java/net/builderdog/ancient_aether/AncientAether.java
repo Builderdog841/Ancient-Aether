@@ -124,6 +124,7 @@ public class AncientAether {
             event.accept(AncientAetherBlocks.QUICKSOIL_BRICK_STAIRS);
             event.accept(AncientAetherBlocks.QUICKSOIL_BRICK_SLAB);
             event.accept(AncientAetherBlocks.QUICKSOIL_BRICK_WALL);
+            event.accept(AncientAetherBlocks.CHISELED_HOLYSTONE_BRICKS);
             event.accept(AncientAetherBlocks.HOLYSTONE_LANTERN);
             event.accept(AncientAetherBlocks.SENTRY_LANTERN);
             event.accept(AncientAetherBlocks.ANGELIC_LANTERN);

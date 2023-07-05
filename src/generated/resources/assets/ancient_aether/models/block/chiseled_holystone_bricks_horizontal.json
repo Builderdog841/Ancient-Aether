@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "ancient_aether:block/chiseled_holystone_bricks_top",
+    "side": "ancient_aether:block/chiseled_holystone_bricks"
+  }
+}

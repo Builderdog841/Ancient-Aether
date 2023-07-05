@@ -34,10 +34,10 @@ public class AncientAetherBlockStateProvider extends BlockStateProvider {
         axisBlock((RotatedPillarBlock) AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_WOOD.get(),new ResourceLocation(AncientAether.MOD_ID,"block/stripped_highlands_pine_log"),
                 new ResourceLocation(AncientAether.MOD_ID,"block/stripped_highlands_pine_log"));
 
-        simpleBlockItem(AncientAetherBlocks.HIGHLANDS_PINE_LOG.get(), models().withExistingParent("aether_crystallium:highlands_pine_log","minecraft:block/cube_column"));
-        simpleBlockItem(AncientAetherBlocks.HIGHLANDS_PINE_WOOD.get(), models().withExistingParent("aether_crystallium:highlands_pine_wood","minecraft:block/cube_column"));
-        simpleBlockItem(AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_LOG.get(), models().withExistingParent("aether_crystallium:stripped_highlands_pine_log","minecraft:block/cube_column"));
-        simpleBlockItem(AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_WOOD.get(), models().withExistingParent("aether_crystallium:stripped_highlands_pine_wood","minecraft:block/cube_column"));
+        simpleBlockItem(AncientAetherBlocks.HIGHLANDS_PINE_LOG.get(), models().withExistingParent("ancient_aether:highlands_pine_log","minecraft:block/cube_column"));
+        simpleBlockItem(AncientAetherBlocks.HIGHLANDS_PINE_WOOD.get(), models().withExistingParent("ancient_aether:highlands_pine_wood","minecraft:block/cube_column"));
+        simpleBlockItem(AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_LOG.get(), models().withExistingParent("ancient_aether:stripped_highlands_pine_log","minecraft:block/cube_column"));
+        simpleBlockItem(AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_WOOD.get(), models().withExistingParent("ancient_aether:stripped_highlands_pine_wood","minecraft:block/cube_column"));
 
         logBlock(((RotatedPillarBlock) AncientAetherBlocks.SAKURA_LOG.get()));
         axisBlock((RotatedPillarBlock) AncientAetherBlocks.SAKURA_WOOD.get(), blockTexture(AncientAetherBlocks.SAKURA_LOG.get()), blockTexture(AncientAetherBlocks.SAKURA_LOG.get()));
@@ -46,10 +46,14 @@ public class AncientAetherBlockStateProvider extends BlockStateProvider {
         axisBlock((RotatedPillarBlock) AncientAetherBlocks.STRIPPED_SAKURA_WOOD.get(),new ResourceLocation(AncientAether.MOD_ID,"block/stripped_sakura_log"),
                 new ResourceLocation(AncientAether.MOD_ID,"block/stripped_sakura_log"));
 
-        simpleBlockItem(AncientAetherBlocks.SAKURA_LOG.get(), models().withExistingParent("aether_crystallium:sakura_log","minecraft:block/cube_column"));
-        simpleBlockItem(AncientAetherBlocks.SAKURA_WOOD.get(), models().withExistingParent("aether_crystallium:sakura_wood","minecraft:block/cube_column"));
-        simpleBlockItem(AncientAetherBlocks.STRIPPED_SAKURA_LOG.get(), models().withExistingParent("aether_crystallium:stripped_sakura_log","minecraft:block/cube_column"));
-        simpleBlockItem(AncientAetherBlocks.STRIPPED_SAKURA_WOOD.get(), models().withExistingParent("aether_crystallium:stripped_sakura_wood","minecraft:block/cube_column"));
+        simpleBlockItem(AncientAetherBlocks.SAKURA_LOG.get(), models().withExistingParent("ancient_aether:sakura_log","minecraft:block/cube_column"));
+        simpleBlockItem(AncientAetherBlocks.SAKURA_WOOD.get(), models().withExistingParent("ancient_aether:sakura_wood","minecraft:block/cube_column"));
+        simpleBlockItem(AncientAetherBlocks.STRIPPED_SAKURA_LOG.get(), models().withExistingParent("ancient_aether:stripped_sakura_log","minecraft:block/cube_column"));
+        simpleBlockItem(AncientAetherBlocks.STRIPPED_SAKURA_WOOD.get(), models().withExistingParent("ancient_aether:stripped_sakura_wood","minecraft:block/cube_column"));
+
+        logBlock(((RotatedPillarBlock) AncientAetherBlocks.CHISELED_HOLYSTONE_BRICKS.get()));
+
+        simpleBlockItem(AncientAetherBlocks.CHISELED_HOLYSTONE_BRICKS.get(), models().withExistingParent("ancient_aether:chiseled_holystone_bricks","minecraft:block/cube_column"));
 
         saplingBlock(AncientAetherBlocks.HIGHLANDS_PINE_SAPLING);
         saplingBlock(AncientAetherBlocks.SAKURA_SAPLING);

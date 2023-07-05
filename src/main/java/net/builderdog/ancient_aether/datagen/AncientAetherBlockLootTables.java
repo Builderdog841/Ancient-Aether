@@ -20,6 +20,7 @@ public class AncientAetherBlockLootTables extends BlockLootSubProvider {
         dropSelf((AncientAetherBlocks.BLIGHTED_SENTRY_STONE.get()));
         dropSelf((AncientAetherBlocks.QUICKSOIL_BRICKS.get()));
         dropSelf((AncientAetherBlocks.QUICKSTONE.get()));
+        dropSelf((AncientAetherBlocks.CHISELED_HOLYSTONE_BRICKS.get()));
         dropSelf((AncientAetherBlocks.HIGHLANDS_PINE_LOG.get()));
         dropSelf((AncientAetherBlocks.HIGHLANDS_PINE_WOOD.get()));
         dropSelf((AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_LOG.get()));

@@ -215,6 +215,10 @@ public class AncientAetherBlocks {
     public static final RegistryObject<WallBlock> QUICKSOIL_BRICK_WALL = registerBlock("quicksoil_brick_wall",
             () -> new QuicksoilBrickWallBlock(Block.Properties.copy(AncientAetherBlocks.QUICKSOIL_BRICKS.get())));
 
+    //CHISELED BLOCKS
+    public static final RegistryObject<RotatedPillarBlock> CHISELED_HOLYSTONE_BRICKS = registerBlock("chiseled_holystone_bricks",
+            () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.HOLYSTONE_BRICKS.get())));
+
     //MISC
     public static final RegistryObject<Block> CRACKED_SLIDER =  registerBlock("cracked_slider",
             () -> new CrackedSliderBlock(BlockBehaviour.Properties.of(Material.STONE)

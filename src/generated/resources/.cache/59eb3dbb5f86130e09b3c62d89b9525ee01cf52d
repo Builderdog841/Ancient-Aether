@@ -1,9 +1,10 @@
-// 1.19.4	2023-07-05T19:39:32.3031828	Loot Tables
+// 1.19.4	2023-07-05T21:54:00.9732494	Loot Tables
 10ca809def9ea31dc65cf557978f4b84deb78ca1 data/ancient_aether/loot_tables/blocks/aether_cactus.json
 bc9a05ea424f19ae389da06a8a55b2d8562efc17 data/ancient_aether/loot_tables/blocks/aether_quartz_ore.json
 5fb03435913f6569ddb87fd8b1328d449bf5cb2f data/ancient_aether/loot_tables/blocks/angelic_lantern.json
 4d51b78c80ddce43cea960ef0a53cb7582b58cd7 data/ancient_aether/loot_tables/blocks/blighted_sentry_stone.json
 d28d76e1dff708fb84d4102c8800a8a523380776 data/ancient_aether/loot_tables/blocks/cactus_flower.json
+3d5bcb813a3baf121c9fff8ebedef6790ded1b05 data/ancient_aether/loot_tables/blocks/chiseled_holystone_bricks.json
 d9d0160ab670582551667d6ae903eace32a40a30 data/ancient_aether/loot_tables/blocks/cracked_slider.json
 a3824bae6067e28aa5a9679dbe4e47753fda3b2c data/ancient_aether/loot_tables/blocks/edelweiss.json
 31714f0a3f19ed691efc5dd21b09aa0e2e015e53 data/ancient_aether/loot_tables/blocks/enchanted_sentry_stone.json
