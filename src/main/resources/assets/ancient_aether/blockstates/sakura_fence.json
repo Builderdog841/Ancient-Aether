@@ -36,7 +36,7 @@
     },
     {
       "apply": {
-        "model": "ancient_aether:block/sakurafence_side",
+        "model": "ancient_aether:block/sakura_fence_side",
         "uvlock": true,
         "y": 90
       },
