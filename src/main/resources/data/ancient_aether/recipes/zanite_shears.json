@@ -8,10 +8,11 @@
   "key": {
     "Z": {
       "item": "aether:zanite_gemstone"
+    }
     },
     "result": {
       "item": "minecraft:shears",
       "count": 1
-    }
+    },
+  "show_notification": true
   }
-}
