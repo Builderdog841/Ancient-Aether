@@ -44,13 +44,13 @@ public class AncientAetherBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
                     .strength(0.5f, 6f).lightLevel(s -> 11).requiresCorrectToolForDrops()));
 
-    //FOLIAGE
+    //PLANTS
     public static final RegistryObject<Block> MOONLIT_TULIP = registerBlock("moonlit_tulip",
             () -> new FlowerBlock(() -> MobEffects.WATER_BREATHING, 4, Block.Properties.copy(Blocks.DANDELION)));
     public static final RegistryObject<Block> EDELWEISS = registerBlock("edelweiss",
             () -> new FlowerBlock(() -> MobEffects.GLOWING, 4, Block.Properties.copy(Blocks.DANDELION)));
     public static final RegistryObject<Block> CACTUS_FLOWER =  registerBlock("cactus_flower",
-            () -> new Block(BlockBehaviour.Properties.of(Material.PLANT)
+            () -> new CactusFlowerBlock(BlockBehaviour.Properties.of(Material.PLANT)
                     .instabreak().noOcclusion().noCollission().sound(SoundType.SPORE_BLOSSOM)));
     public static final RegistryObject<Block> SMALL_AETHER_CACTUS = registerBlock("small_aether_cactus",
             () -> new DeadBushBlock(BlockBehaviour.Properties.copy(Blocks.DEAD_BUSH)) {
@@ -212,7 +212,7 @@ public class AncientAetherBlocks {
 
     //MISC
     public static final RegistryObject<Block> CRACKED_SLIDER =  registerBlock("cracked_slider",
-            () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.STONE)
+            () -> new CrackedSliderBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(5f).requiresCorrectToolForDrops().noOcclusion()
                     .lightLevel((state) -> state.getValue( RedstoneLampBlock.LIT ) == true ? 15 : 0)));
 
