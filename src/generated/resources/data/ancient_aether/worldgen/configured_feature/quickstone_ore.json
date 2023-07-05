@@ -8,12 +8,12 @@
         "state": {
           "Name": "ancient_aether:quickstone",
           "Properties": {
-            "double_drops": "true"
+            "double_drops": "false"
           }
         },
         "target": {
-          "predicate_type": "minecraft:block_match",
-          "block": "aether:quicksoil"
+          "predicate_type": "minecraft:tag_match",
+          "tag": "aether:holystone"
         }
       }
     ]

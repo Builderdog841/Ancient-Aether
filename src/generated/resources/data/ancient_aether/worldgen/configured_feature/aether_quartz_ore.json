@@ -8,7 +8,7 @@
         "state": {
           "Name": "ancient_aether:aether_quartz_ore",
           "Properties": {
-            "double_drops": "true"
+            "double_drops": "false"
           }
         },
         "target": {

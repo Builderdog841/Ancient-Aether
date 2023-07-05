@@ -77,6 +77,7 @@ public class AncientAetherBlockLootTables extends BlockLootSubProvider {
         dropSelf((AncientAetherBlocks.SENTRY_LANTERN.get()));
         dropSelf((AncientAetherBlocks.ANGELIC_LANTERN.get()));
         dropSelf((AncientAetherBlocks.HELLFIRE_LANTERN.get()));
+        dropSelf((AncientAetherBlocks.GALE_LANTERN.get()));
 
         add(AncientAetherBlocks.AETHER_QUARTZ_ORE.get(),
                 (block) -> createOreDrop(AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), Items.QUARTZ));
