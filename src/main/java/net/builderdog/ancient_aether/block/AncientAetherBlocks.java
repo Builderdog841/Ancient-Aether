@@ -4,12 +4,14 @@ import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.block.construction.QuicksoilGlassBlock;
 import com.aetherteam.aether.block.natural.AetherDoubleDropBlock;
 import com.aetherteam.aether.block.natural.AetherDoubleDropsLeaves;
+import com.aetherteam.aether.block.natural.AetherDoubleDropsOreBlock;
 import com.aetherteam.aether.mixin.mixins.common.accessor.FireBlockAccessor;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.builderdog.ancient_aether.world.tree.HighlandsPineTreeGrower;
 import net.builderdog.ancient_aether.world.tree.SakuraTreeGrower;
 import net.builderdog.ancient_aether.AncientAether;
 import net.minecraft.core.BlockPos;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -32,9 +34,9 @@ public class AncientAetherBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, AncientAether.MOD_ID);
 
     //ORES
-    public static final RegistryObject<Block> AETHER_QUARTZ_ORE =  registerBlock("aether_quartz_ore",
-            () -> new AetherDoubleDropBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> AETHER_QUARTZ_ORE = registerBlock("aether_quartz_ore",
+            () -> new AetherDoubleDropsOreBlock(Block.Properties.of(Material.STONE, MaterialColor.QUARTZ)
+                    .strength(3.0F).requiresCorrectToolForDrops(), UniformInt.of(2, 5)));
 
     //SENTRY STONE VARIANTS
     public static final RegistryObject<Block> ENCHANTED_SENTRY_STONE =  registerBlock("enchanted_sentry_stone",
@@ -46,9 +48,9 @@ public class AncientAetherBlocks {
 
     //PLANTS
     public static final RegistryObject<Block> MOONLIT_TULIP = registerBlock("moonlit_tulip",
-            () -> new FlowerBlock(() -> MobEffects.WATER_BREATHING, 4, Block.Properties.copy(Blocks.DANDELION)));
-    public static final RegistryObject<Block> EDELWEISS = registerBlock("edelweiss",
             () -> new FlowerBlock(() -> MobEffects.GLOWING, 4, Block.Properties.copy(Blocks.DANDELION)));
+    public static final RegistryObject<Block> EDELWEISS = registerBlock("edelweiss",
+            () -> new FlowerBlock(() -> MobEffects.LUCK, 4, Block.Properties.copy(Blocks.DANDELION)));
     public static final RegistryObject<Block> CACTUS_FLOWER =  registerBlock("cactus_flower",
             () -> new CactusFlowerBlock(BlockBehaviour.Properties.of(Material.PLANT)
                     .instabreak().noOcclusion().noCollission().sound(SoundType.SPORE_BLOSSOM)));
