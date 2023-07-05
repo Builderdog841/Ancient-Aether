@@ -3,6 +3,6 @@
   "render_type": "minecraft:cutout",
   "textures": {
     "bottom": "ancient_aether:block/highlands_pine_door_bottom",
-    "top": "ancient_aetherblock/highlands_pine_door_top"
+    "top": "ancient_aether:block/highlands_pine_door_top"
   }
 }

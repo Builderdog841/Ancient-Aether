@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_side",
+  "textures": {
+    "wall": "ancient_aether:block/stripped_sakura_log"
+  }
+}
