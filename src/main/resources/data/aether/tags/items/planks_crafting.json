@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "aether_crystallium:highlands_pine_planks",
-    "aether_crystallium:sakura_planks"
+    "ancient_aether:highlands_pine_planks",
+    "ancient_aether:sakura_planks"
   ]
 }
