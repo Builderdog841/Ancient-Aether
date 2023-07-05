@@ -6,9 +6,9 @@
     "targets": [
       {
         "state": {
-          "Name": "ancient_aether:aether_quartz_ore",
+          "Name": "ancient_aether:quickstone",
           "Properties": {
-            "double_drops": "false"
+            "double_drops": "true"
           }
         },
         "target": {

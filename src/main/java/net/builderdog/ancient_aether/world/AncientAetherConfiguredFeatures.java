@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.world;
 
+import com.aetherteam.aether.AetherTags;
 import com.aetherteam.aether.data.resources.builders.AetherConfiguredFeatureBuilders;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
@@ -49,14 +50,14 @@ public class AncientAetherConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_CACTUS_PLACEMENT = registerKey("aether_cactus_placement");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
-        RuleTest aetherIslandBlocks = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest holystone = new TagMatchTest(AetherTags.Blocks.HOLYSTONE);
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
-        List<OreConfiguration.TargetBlockState> aetherQuartzOre = List.of(OreConfiguration.target(aetherIslandBlocks,
+        List<OreConfiguration.TargetBlockState> aetherQuartzOre = List.of(OreConfiguration.target(holystone,
                 AncientAetherBlocks.AETHER_QUARTZ_ORE.get().defaultBlockState()));
 
-        List<OreConfiguration.TargetBlockState> quickstoneOre = List.of(OreConfiguration.target(aetherIslandBlocks,
-                AncientAetherBlocks.AETHER_QUARTZ_ORE.get().defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> quickstoneOre = List.of(OreConfiguration.target(holystone,
+                AncientAetherBlocks.QUICKSTONE.get().defaultBlockState()));
 
         register(context, HIGHLANDS_PINE_KEY, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(

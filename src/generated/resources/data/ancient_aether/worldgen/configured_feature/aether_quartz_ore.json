@@ -8,12 +8,12 @@
         "state": {
           "Name": "ancient_aether:aether_quartz_ore",
           "Properties": {
-            "double_drops": "false"
+            "double_drops": "true"
           }
         },
         "target": {
           "predicate_type": "minecraft:tag_match",
-          "tag": "minecraft:stone_ore_replaceables"
+          "tag": "aether:holystone"
         }
       }
     ]
