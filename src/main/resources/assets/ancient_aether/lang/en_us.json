@@ -67,8 +67,8 @@
   "block.ancient_aether.hellfire_stone_mosaic": "Hellfire Stone Mosaic",
   "block.ancient_aether.gale_stone_mosaic": "Gale Stone Mosaic",
 
-  "item.ancient_aether.aechor_petal_ice_cream_bucket": "Aechor Petal Ice Cream Bucket",
-  "item.ancient_aether.cactus_flower_petal_ice_cream_bucket": "Cactus Flower Petal Ice Cream Bucket",
+  "item.ancient_aether.aechor_ice_cream_bucket": "Aechor Ice Cream Bucket",
+  "item.ancient_aether.cactus_flower_ice_cream_bucket": "Cactus Flower Ice Cream Bucket",
   "item.ancient_aether.cactus_flower_petal": "Cactus Flower Petal",
 
   "creatvemodetab.ancient_aether_tab": "Ancient Aether",
@@ -141,7 +141,7 @@
   "lore.block.ancient_aether.sakura_trapdoor": "Crafted from Sakura Planks. A Trapdoor useful for covering entryways one block wide. Often used to add extra protection to staircases.",
   "lore.block.ancient_aether.cracked_slider": "A failed experiment of the Ancient Valkyries that can only be mined by Gravitite or better pickaxes. It also some Redstone functionality.",
 
-  "lore.item.ancient_aether.aechor_petal_ice_cream_bucket": "A sweat desert crafted by putting Aechor Petals, Sugar, Icestone and a Skyroot Bucket in a Crafting Table",
-  "lore.item.ancient_aether.cactus_flower_petal_ice_cream_bucket": "A sweat desert crafted by putting Cactus Petals Petals, Sugar, Icestone and a Skyroot Bucket in a Crafting Table",
+  "lore.item.ancient_aether.aechor_ice_cream_bucket": "A sweat desert crafted by putting Aechor Petals, Sugar, Icestone and a Skyroot Bucket in a Crafting Table",
+  "lore.item.ancient_aether.cactus_flower_ice_cream_bucket": "A sweat desert crafted by putting Cactus Petals Petals, Sugar, Icestone and a Skyroot Bucket in a Crafting Table",
   "lore.item.ancient_aether.cactus_flower_petal": "Crafted from Cactus Flowers or by converting Aechor Petals using a Remedy Bucket, this item can be enchanted into Redstone Dust."
 }

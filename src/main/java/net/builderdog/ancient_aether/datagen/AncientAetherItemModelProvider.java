@@ -17,8 +17,8 @@ public class AncientAetherItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        simpleItem(AncientAetherItems.AECHOR_PETAL_ICE_CREAM_BUCKET);
-        simpleItem(AncientAetherItems.CACTUS_FLOWER_PETAL_ICE_CREAM_BUCKET);
+        simpleItem(AncientAetherItems.AECHOR_ICE_CREAM_BUCKET);
+        simpleItem(AncientAetherItems.CACTUS_FLOWER_ICE_CREAM_BUCKET);
         simpleItem(AncientAetherItems.CACTUS_FLOWER_PETAL);
     }
 
