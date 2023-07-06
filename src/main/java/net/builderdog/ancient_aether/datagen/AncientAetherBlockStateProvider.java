@@ -51,17 +51,17 @@ public class AncientAetherBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(AncientAetherBlocks.STRIPPED_SAKURA_LOG.get(), models().withExistingParent("ancient_aether:stripped_sakura_log","minecraft:block/cube_column"));
         simpleBlockItem(AncientAetherBlocks.STRIPPED_SAKURA_WOOD.get(), models().withExistingParent("ancient_aether:stripped_sakura_wood","minecraft:block/cube_column"));
 
-        logBlock(((RotatedPillarBlock) AncientAetherBlocks.CHISELED_HOLYSTONE_BRICKS.get()));
-        logBlock(((RotatedPillarBlock) AncientAetherBlocks.CHISELED_CARVED_STONE.get()));
-        logBlock(((RotatedPillarBlock) AncientAetherBlocks.CHISELED_ANGELIC_STONE.get()));
-        logBlock(((RotatedPillarBlock) AncientAetherBlocks.CHISELED_HELLFIRE_STONE.get()));
-        logBlock(((RotatedPillarBlock) AncientAetherBlocks.CHISELED_GALE_STONE.get()));
+        logBlock(((RotatedPillarBlock) AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get()));
+        logBlock(((RotatedPillarBlock) AncientAetherBlocks.CARVED_STONE_MOSAIC.get()));
+        logBlock(((RotatedPillarBlock) AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get()));
+        logBlock(((RotatedPillarBlock) AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get()));
+        logBlock(((RotatedPillarBlock) AncientAetherBlocks.GALE_STONE_MOSAIC.get()));
 
-        simpleBlockItem(AncientAetherBlocks.CHISELED_HOLYSTONE_BRICKS.get(), models().withExistingParent("ancient_aether:chiseled_holystone_bricks","minecraft:block/cube_column"));
-        simpleBlockItem(AncientAetherBlocks.CHISELED_CARVED_STONE.get(), models().withExistingParent("ancient_aether:chiseled_carved_stone","minecraft:block/cube_column"));
-        simpleBlockItem(AncientAetherBlocks.CHISELED_ANGELIC_STONE.get(), models().withExistingParent("ancient_aether:chiseled_angelic_stone","minecraft:block/cube_column"));
-        simpleBlockItem(AncientAetherBlocks.CHISELED_HELLFIRE_STONE.get(), models().withExistingParent("ancient_aether:chiseled_hellfire_stone","minecraft:block/cube_column"));
-        simpleBlockItem(AncientAetherBlocks.CHISELED_GALE_STONE.get(), models().withExistingParent("ancient_aether:chiseled_gale_stone","minecraft:block/cube_column"));
+        simpleBlockItem(AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get(), models().withExistingParent("ancient_aether:holystone_brick_mosaic","minecraft:block/cube_column"));
+        simpleBlockItem(AncientAetherBlocks.CARVED_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:carved_stone_mosaic","minecraft:block/cube_column"));
+        simpleBlockItem(AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:angelic_stone_mosaic","minecraft:block/cube_column"));
+        simpleBlockItem(AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:hellfire_stone_mosaic","minecraft:block/cube_column"));
+        simpleBlockItem(AncientAetherBlocks.GALE_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:gale_stone_mosaic","minecraft:block/cube_column"));
 
 
         saplingBlock(AncientAetherBlocks.HIGHLANDS_PINE_SAPLING);

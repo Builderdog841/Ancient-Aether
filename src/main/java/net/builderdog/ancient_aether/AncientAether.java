@@ -122,11 +122,11 @@ public class AncientAether {
             event.accept(AncientAetherBlocks.QUICKSOIL_BRICK_STAIRS);
             event.accept(AncientAetherBlocks.QUICKSOIL_BRICK_SLAB);
             event.accept(AncientAetherBlocks.QUICKSOIL_BRICK_WALL);
-            event.accept(AncientAetherBlocks.CHISELED_HOLYSTONE_BRICKS);
-            event.accept(AncientAetherBlocks.CHISELED_CARVED_STONE);
-            event.accept(AncientAetherBlocks.CHISELED_ANGELIC_STONE);
-            event.accept(AncientAetherBlocks.CHISELED_HELLFIRE_STONE);
-            event.accept(AncientAetherBlocks.CHISELED_GALE_STONE);
+            event.accept(AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC);
+            event.accept(AncientAetherBlocks.CARVED_STONE_MOSAIC);
+            event.accept(AncientAetherBlocks.ANGELIC_STONE_MOSAIC);
+            event.accept(AncientAetherBlocks.HELLFIRE_STONE_MOSAIC);
+            event.accept(AncientAetherBlocks.GALE_STONE_MOSAIC);
             event.accept(AncientAetherBlocks.ENCHANTED_SENTRY_STONE);
             event.accept(AncientAetherBlocks.BLIGHTED_SENTRY_STONE);
             event.accept(AncientAetherBlocks.HOLYSTONE_LANTERN);

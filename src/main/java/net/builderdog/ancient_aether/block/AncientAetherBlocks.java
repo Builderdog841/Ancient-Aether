@@ -215,16 +215,16 @@ public class AncientAetherBlocks {
     public static final RegistryObject<WallBlock> QUICKSOIL_BRICK_WALL = registerBlock("quicksoil_brick_wall",
             () -> new QuicksoilBrickWallBlock(Block.Properties.copy(AncientAetherBlocks.QUICKSOIL_BRICKS.get())));
 
-    //CHISELED BLOCKS
-    public static final RegistryObject<RotatedPillarBlock> CHISELED_HOLYSTONE_BRICKS = registerBlock("chiseled_holystone_bricks",
+    //MOSAIC BLOCKS
+    public static final RegistryObject<RotatedPillarBlock> HOLYSTONE_BRICK_MOSAIC = registerBlock("holystone_brick_mosaic",
             () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.HOLYSTONE_BRICKS.get())));
-    public static final RegistryObject<RotatedPillarBlock> CHISELED_CARVED_STONE = registerBlock("chiseled_carved_stone",
+    public static final RegistryObject<RotatedPillarBlock> CARVED_STONE_MOSAIC = registerBlock("carved_stone_mosaic",
             () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.CARVED_STONE.get())));
-    public static final RegistryObject<RotatedPillarBlock> CHISELED_ANGELIC_STONE = registerBlock("chiseled_angelic_stone",
+    public static final RegistryObject<RotatedPillarBlock> ANGELIC_STONE_MOSAIC = registerBlock("angelic_stone_mosaic",
             () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.ANGELIC_STONE.get())));
-    public static final RegistryObject<RotatedPillarBlock> CHISELED_HELLFIRE_STONE = registerBlock("chiseled_hellfire_stone",
+    public static final RegistryObject<RotatedPillarBlock> HELLFIRE_STONE_MOSAIC = registerBlock("hellfire_stone_mosaic",
             () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.HELLFIRE_STONE.get())));
-    public static final RegistryObject<RotatedPillarBlock> CHISELED_GALE_STONE = registerBlock("chiseled_gale_stone",
+    public static final RegistryObject<RotatedPillarBlock> GALE_STONE_MOSAIC = registerBlock("gale_stone_mosaic",
             () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.CARVED_STONE.get())));
 
     //MISC
