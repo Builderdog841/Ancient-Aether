@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "count": 1,
   "ingredient": {
-    "item": "ancient_aether:blighted_sentry_stone"
+    "item": "ancient_aether:enchanted_sentry_stone"
   },
-  "result": "ancient_aether:enchanted_sentry_stone"
+  "result": "ancient_aether:blighted_sentry_stone"
 }
