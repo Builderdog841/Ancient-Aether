@@ -117,8 +117,6 @@ public class AncientAether {
             event.accept(AncientAetherBlocks.MOONLIT_TULIP);
             event.accept(AncientAetherBlocks.EDELWEISS);
             event.accept(AncientAetherBlocks.AETHER_QUARTZ_ORE);
-            event.accept(AncientAetherBlocks.ENCHANTED_SENTRY_STONE);
-            event.accept(AncientAetherBlocks.BLIGHTED_SENTRY_STONE);
             event.accept(AncientAetherBlocks.QUICKSTONE);
             event.accept(AncientAetherBlocks.QUICKSOIL_BRICKS);
             event.accept(AncientAetherBlocks.QUICKSOIL_BRICK_STAIRS);
@@ -129,6 +127,8 @@ public class AncientAether {
             event.accept(AncientAetherBlocks.CHISELED_ANGELIC_STONE);
             event.accept(AncientAetherBlocks.CHISELED_HELLFIRE_STONE);
             event.accept(AncientAetherBlocks.CHISELED_GALE_STONE);
+            event.accept(AncientAetherBlocks.ENCHANTED_SENTRY_STONE);
+            event.accept(AncientAetherBlocks.BLIGHTED_SENTRY_STONE);
             event.accept(AncientAetherBlocks.HOLYSTONE_LANTERN);
             event.accept(AncientAetherBlocks.SENTRY_LANTERN);
             event.accept(AncientAetherBlocks.ANGELIC_LANTERN);
