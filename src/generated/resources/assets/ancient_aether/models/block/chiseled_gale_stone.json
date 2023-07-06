@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "ancient_aether:block/chiseled_gale_stone_top",
+    "side": "ancient_aether:block/chiseled_gale_stone"
+  }
+}

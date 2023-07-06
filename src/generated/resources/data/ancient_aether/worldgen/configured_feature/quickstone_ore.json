@@ -12,8 +12,8 @@
           }
         },
         "target": {
-          "predicate_type": "minecraft:tag_match",
-          "tag": "aether:holystone"
+          "block": "aether:quicksoil",
+          "predicate_type": "minecraft:block_match"
         }
       }
     ]

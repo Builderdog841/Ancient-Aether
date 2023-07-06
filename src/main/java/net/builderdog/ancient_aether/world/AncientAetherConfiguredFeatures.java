@@ -1,6 +1,7 @@
 package net.builderdog.ancient_aether.world;
 
 import com.aetherteam.aether.AetherTags;
+import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.data.resources.builders.AetherConfiguredFeatureBuilders;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
@@ -32,6 +33,7 @@ import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvi
 import net.minecraft.world.level.levelgen.feature.stateproviders.SimpleStateProvider;
 import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
+import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
@@ -51,12 +53,13 @@ public class AncientAetherConfiguredFeatures {
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest holystone = new TagMatchTest(AetherTags.Blocks.HOLYSTONE);
+        RuleTest quicksoil = new BlockMatchTest(AetherBlocks.QUICKSOIL.get());
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         List<OreConfiguration.TargetBlockState> aetherQuartzOre = List.of(OreConfiguration.target(holystone,
                 AncientAetherBlocks.AETHER_QUARTZ_ORE.get().defaultBlockState()));
 
-        List<OreConfiguration.TargetBlockState> quickstoneOre = List.of(OreConfiguration.target(holystone,
+        List<OreConfiguration.TargetBlockState> quickstoneOre = List.of(OreConfiguration.target(quicksoil,
                 AncientAetherBlocks.QUICKSTONE.get().defaultBlockState()));
 
         register(context, HIGHLANDS_PINE_KEY, Feature.TREE,
