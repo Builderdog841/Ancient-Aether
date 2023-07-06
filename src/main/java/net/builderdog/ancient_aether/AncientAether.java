@@ -3,6 +3,8 @@ package net.builderdog.ancient_aether;
 import com.mojang.logging.LogUtils;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
+import net.builderdog.ancient_aether.entity.AncientAetherEntities;
+import net.builderdog.ancient_aether.entity.client.HighlandsBuffaloRenderer;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.builderdog.ancient_aether.item.AncientCreativeModeTabs;
 import net.builderdog.ancient_aether.world.biomes.AncientAetherRegion;
@@ -11,6 +13,7 @@ import net.builderdog.ancient_aether.world.features.AncientAetherFeatures;
 import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherFoliagePlacerTypes;
 import net.builderdog.ancient_aether.world.tree_decorator.AncientAetherTreeDecoratorTypes;
 import net.builderdog.ancient_aether.world.trunkplacer.AncientAetherTrunkPlacerTypes;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.ComposterBlock;
@@ -44,6 +47,7 @@ public class AncientAether {
         AncientAetherFeatures.FEATURES.register(modEventBus);
         AncientAetherTreeDecoratorTypes.TREE_DECORATORS.register(modEventBus);
         AncientAetherBlocks.registerWoodTypes();
+        AncientAetherEntities.ENTITY_TYPES.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -162,6 +166,7 @@ public class AncientAether {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(AncientAetherEntities.HIGHLANDS_BUFFALO.get(), HighlandsBuffaloRenderer::new);
         }
     }
 }
