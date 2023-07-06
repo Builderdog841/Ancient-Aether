@@ -62,6 +62,10 @@
   "block.ancient_aether.hellfire_lantern": "Hellfire Lantern",
   "block.ancient_aether.gale_lantern": "Gale Lantern",
   "block.ancient_aether.chiseled_holystone_bricks": "Chiseled Holystone Bricks",
+  "block.ancient_aether.chiseled_carved_stone": "Chiseled Carved Stone",
+  "block.ancient_aether.chiseled_angelic_stone": "Chiseled Angelic Stone",
+  "block.ancient_aether.chiseled_hellfire_stone": "Chiseled Hellfire Stone",
+  "block.ancient_aether.chiseled_gale_stone": "Chiseled Gale Stone",
 
   "item.ancient_aether.aechor_petal_ice_cream_bucket": "Aechor Petal Ice Cream Bucket",
   "item.ancient_aether.cactus_flower_petal_ice_cream_bucket": "Cactus Flower Petal Ice Cream Bucket",

@@ -15,6 +15,10 @@
     "ancient_aether:angelic_lantern",
     "ancient_aether:hellfire_lantern",
     "ancient_aether:gale_lantern",
-    "ancient_aether:chiseled_holystone_bricks"
+    "ancient_aether:chiseled_holystone_bricks",
+    "ancient_aether:chiseled_carved_stone",
+    "ancient_aether:chiseled_angelic_stone",
+    "ancient_aether:chiseled_hellfire_stone",
+    "ancient_aether:chiseled_gale_stone"
   ]
 }

@@ -218,6 +218,14 @@ public class AncientAetherBlocks {
     //CHISELED BLOCKS
     public static final RegistryObject<RotatedPillarBlock> CHISELED_HOLYSTONE_BRICKS = registerBlock("chiseled_holystone_bricks",
             () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.HOLYSTONE_BRICKS.get())));
+    public static final RegistryObject<RotatedPillarBlock> CHISELED_CARVED_STONE = registerBlock("chiseled_carved_stone",
+            () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.CARVED_STONE.get())));
+    public static final RegistryObject<RotatedPillarBlock> CHISELED_ANGELIC_STONE = registerBlock("chiseled_angelic_stone",
+            () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.ANGELIC_STONE.get())));
+    public static final RegistryObject<RotatedPillarBlock> CHISELED_HELLFIRE_STONE = registerBlock("chiseled_hellfire_stone",
+            () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.HELLFIRE_STONE.get())));
+    public static final RegistryObject<RotatedPillarBlock> CHISELED_GALE_STONE = registerBlock("chiseled_gale_stone",
+            () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.CARVED_STONE.get())));
 
     //MISC
     public static final RegistryObject<Block> CRACKED_SLIDER =  registerBlock("cracked_slider",

@@ -52,8 +52,11 @@ public class AncientAetherBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(AncientAetherBlocks.STRIPPED_SAKURA_WOOD.get(), models().withExistingParent("ancient_aether:stripped_sakura_wood","minecraft:block/cube_column"));
 
         logBlock(((RotatedPillarBlock) AncientAetherBlocks.CHISELED_HOLYSTONE_BRICKS.get()));
+        logBlock(((RotatedPillarBlock) AncientAetherBlocks.CHISELED_ANGELIC_STONE.get()));
 
         simpleBlockItem(AncientAetherBlocks.CHISELED_HOLYSTONE_BRICKS.get(), models().withExistingParent("ancient_aether:chiseled_holystone_bricks","minecraft:block/cube_column"));
+        simpleBlockItem(AncientAetherBlocks.CHISELED_ANGELIC_STONE.get(), models().withExistingParent("ancient_aether:chiseled_angelic_stone","minecraft:block/cube_column"));
+
 
         saplingBlock(AncientAetherBlocks.HIGHLANDS_PINE_SAPLING);
         saplingBlock(AncientAetherBlocks.SAKURA_SAPLING);

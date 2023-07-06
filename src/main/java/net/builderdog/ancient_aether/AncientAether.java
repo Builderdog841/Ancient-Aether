@@ -125,6 +125,10 @@ public class AncientAether {
             event.accept(AncientAetherBlocks.QUICKSOIL_BRICK_SLAB);
             event.accept(AncientAetherBlocks.QUICKSOIL_BRICK_WALL);
             event.accept(AncientAetherBlocks.CHISELED_HOLYSTONE_BRICKS);
+            event.accept(AncientAetherBlocks.CHISELED_CARVED_STONE);
+            event.accept(AncientAetherBlocks.CHISELED_ANGELIC_STONE);
+            event.accept(AncientAetherBlocks.CHISELED_HELLFIRE_STONE);
+            event.accept(AncientAetherBlocks.CHISELED_GALE_STONE);
             event.accept(AncientAetherBlocks.HOLYSTONE_LANTERN);
             event.accept(AncientAetherBlocks.SENTRY_LANTERN);
             event.accept(AncientAetherBlocks.ANGELIC_LANTERN);

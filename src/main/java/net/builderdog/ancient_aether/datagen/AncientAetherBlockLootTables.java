@@ -21,6 +21,10 @@ public class AncientAetherBlockLootTables extends BlockLootSubProvider {
         dropSelf((AncientAetherBlocks.QUICKSOIL_BRICKS.get()));
         dropSelf((AncientAetherBlocks.QUICKSTONE.get()));
         dropSelf((AncientAetherBlocks.CHISELED_HOLYSTONE_BRICKS.get()));
+        dropSelf((AncientAetherBlocks.CHISELED_CARVED_STONE.get()));
+        dropSelf((AncientAetherBlocks.CHISELED_ANGELIC_STONE.get()));
+        dropSelf((AncientAetherBlocks.CHISELED_HELLFIRE_STONE.get()));
+        dropSelf((AncientAetherBlocks.CHISELED_GALE_STONE.get()));
         dropSelf((AncientAetherBlocks.HIGHLANDS_PINE_LOG.get()));
         dropSelf((AncientAetherBlocks.HIGHLANDS_PINE_WOOD.get()));
         dropSelf((AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_LOG.get()));
