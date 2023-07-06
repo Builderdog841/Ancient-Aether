@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "aether:pillar"
+  },
+  "result": "ancient_aether:angelic_stone_mosaic"
+}
