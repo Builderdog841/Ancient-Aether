@@ -3,16 +3,15 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "aether:holystone_brick_slab"
+      "item": "aether:carved_stone_slab"
     }
   },
   "pattern": [
-    "#",
-    "#"
+    "##"
   ],
   "result": {
     "count": 2,
-    "item": "ancient_aether:chiseled_holystone_bricks"
+    "item": "ancient_aether:carved_stone_mosaic"
   },
   "show_notification": true
 }

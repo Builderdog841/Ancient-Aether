@@ -7,12 +7,11 @@
     }
   },
   "pattern": [
-    "#",
-    "#"
+    "##"
   ],
   "result": {
     "count": 2,
-    "item": "ancient_aether:hellfire_carved_stone"
+    "item": "ancient_aether:gale_stone_mosaic"
   },
   "show_notification": true
 }

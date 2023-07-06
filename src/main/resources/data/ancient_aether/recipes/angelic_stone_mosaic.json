@@ -3,16 +3,15 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "aether:hellfire_stone_slab"
+      "item": "aether:angelic_stone_slab"
     }
   },
   "pattern": [
-    "#",
-    "#"
+    "##"
   ],
   "result": {
     "count": 2,
-    "item": "ancient_aether:chiseled_hellfire_stone"
+    "item": "ancient_aether:angelic_stone_mosaic"
   },
   "show_notification": true
 }

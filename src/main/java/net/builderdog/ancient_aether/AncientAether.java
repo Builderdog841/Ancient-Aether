@@ -136,8 +136,8 @@ public class AncientAether {
             event.accept(AncientAetherBlocks.GALE_LANTERN);
             event.accept(AncientAetherBlocks.CRACKED_SLIDER);
             event.accept(AncientAetherItems.CACTUS_FLOWER_PETAL);
-            event.accept(AncientAetherItems.CACTUS_FLOWER_PETAL_ICE_CREAM_BUCKET);
-            event.accept(AncientAetherItems.AECHOR_PETAL_ICE_CREAM_BUCKET);
+            event.accept(AncientAetherItems.CACTUS_FLOWER_ICE_CREAM_BUCKET);
+            event.accept(AncientAetherItems.AECHOR_ICE_CREAM_BUCKET);
         }
     }
 
