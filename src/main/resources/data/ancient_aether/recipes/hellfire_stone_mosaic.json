@@ -3,14 +3,14 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "aether:hellfire_stone_slab"
+      "item": "aether:hellfire_slab"
     }
   },
   "pattern": [
     "##"
   ],
   "result": {
-    "count": 2,
+    "count": 1,
     "item": "ancient_aether:hellfire_stone_mosaic"
   },
   "show_notification": true

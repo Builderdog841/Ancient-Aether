@@ -3,14 +3,14 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "aether:angelic_stone_slab"
+      "item": "aether:angelic_slab"
     }
   },
   "pattern": [
     "##"
   ],
   "result": {
-    "count": 2,
+    "count": 1,
     "item": "ancient_aether:angelic_stone_mosaic"
   },
   "show_notification": true
