@@ -65,7 +65,7 @@ public class HighlandsBuffaloEntity extends Animal implements GeoEntity {
             return PlayState.CONTINUE;
         }
 
-        tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.highlands_buffalo.walk", Animation.LoopType.LOOP));
+        tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.highlands_buffalo.idle", Animation.LoopType.LOOP));
         return PlayState.CONTINUE;
     }
 
