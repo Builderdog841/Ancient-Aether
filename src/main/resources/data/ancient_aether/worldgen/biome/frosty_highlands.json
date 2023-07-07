@@ -169,7 +169,7 @@
         "type": "ancient_aether:highlands_buffalo",
         "maxCount": 5,
         "minCount": 2,
-        "weight": 12
+        "weight": 15
       },
       {
         "type": "aether:aerbunny",

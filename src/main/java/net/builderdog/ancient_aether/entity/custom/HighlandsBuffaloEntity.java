@@ -15,6 +15,7 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
@@ -41,6 +42,11 @@ public class HighlandsBuffaloEntity extends AetherAnimal implements GeoEntity {
                 .add(Attributes.ATTACK_SPEED, 1.0f)
                 .add(Attributes.MOVEMENT_SPEED, 0.2f).build();
     }
+    @Override
+    public boolean isFood(ItemStack stack) {
+        return stack.is(AetherTags.Items.FLYING_COW_TEMPTATION_ITEMS);
+    }
+
 
     @Override
     protected void registerGoals() {
@@ -53,7 +59,6 @@ public class HighlandsBuffaloEntity extends AetherAnimal implements GeoEntity {
         this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 6.0F));
         this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
     }
-
     @Nullable
     @Override
     protected SoundEvent getAmbientSound() {
