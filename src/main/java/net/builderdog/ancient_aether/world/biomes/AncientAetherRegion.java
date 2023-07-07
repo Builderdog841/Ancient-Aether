@@ -29,7 +29,7 @@ public class AncientAetherRegion extends Region {
         //QUICKSOIL DESERT
         Climate.Parameter temps2 = Climate.Parameter.span(0.5F, 1F);
 
-        //FROSTY HIGHLANDS
+        //HIGHLAND TAIGA
         Climate.Parameter temps3 = Climate.Parameter.span(-1F, 0F);
 
 
@@ -40,6 +40,6 @@ public class AncientAetherRegion extends Region {
                 AncientAetherBiomes.QUICKSOIL_DESERT);
 
         this.addBiome(mapper, new Climate.ParameterPoint(temps3, Climate.Parameter.span(-0.45F, -0.1F), fullRange, fullRange, fullRange, fullRange, 0),
-                AncientAetherBiomes.FROSTY_HIGHLANDS);
+                AncientAetherBiomes.HIGHLAND_TAIGA);
     }
 }

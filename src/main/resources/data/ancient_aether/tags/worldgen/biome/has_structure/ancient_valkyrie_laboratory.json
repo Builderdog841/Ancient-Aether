@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "ancient_aether:frosty_highlands"
+    "ancient_aether:highland_taiga",
+    "ancient_aether:sakura_jungle"
   ]
 }
