@@ -17,7 +17,7 @@ public class AncientAetherEntities {
     public static final RegistryObject<EntityType<HighlandsBuffaloEntity>> HIGHLANDS_BUFFALO =
             ENTITY_TYPES.register("highlands_buffalo",
                     () -> EntityType.Builder.of(HighlandsBuffaloEntity::new, MobCategory.CREATURE)
-                            .sized(1.5f, 1.75f)
+                            .sized(1.5f, 1.75f).clientTrackingRange(10)
                             .build(new ResourceLocation(AncientAether.MOD_ID, "highlands_buffalo").toString()));
 
     public static void register(IEventBus eventBus) {
