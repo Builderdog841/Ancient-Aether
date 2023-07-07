@@ -42,7 +42,7 @@ authors="Builderdog" #optional
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-An Add-On that aims to take the concepts of the cancelled Aether II Mutation Update and tries reimagine them.
+Ancient Aether is an Aether Add-On that adds new Ancient Valkyrie Structures aswell as unique biomes. There are also a ton of new Quality of Life things like Aether Quartz Ore, Aether Lanterns and Quicksoil Bricks. A lot more content is planned like a new Boss with a new progression system using the new Ancient Valkyrie Structures. This mod requires: Gecko Lib, Terrablender and Aeroblender. It is compatible with every other Aether Add-On.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.ancient_aether]] #optional
