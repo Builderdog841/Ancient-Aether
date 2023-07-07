@@ -67,6 +67,9 @@
   "block.ancient_aether.hellfire_stone_mosaic": "Hellfire Stone Mosaic",
   "block.ancient_aether.gale_stone_mosaic": "Gale Stone Mosaic",
 
+  "item.ancient_aether.raw_buffalo_ribs": "Raw Buffalo Ribs",
+  "item.ancient_aether.cooked_buffalo_ribs": "Cooked Buffalo Ribs",
+  "item.ancient_aether.buffalo_rib": "Buffalo Rib",
   "item.ancient_aether.aechor_ice_cream_bucket": "Aechor Ice Cream Bucket",
   "item.ancient_aether.cactus_flower_ice_cream_bucket": "Cactus Flower Ice Cream Bucket",
   "item.ancient_aether.cactus_flower_petal": "Cactus Flower Petal",

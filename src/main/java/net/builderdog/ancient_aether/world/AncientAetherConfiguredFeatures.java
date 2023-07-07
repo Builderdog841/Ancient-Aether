@@ -69,7 +69,7 @@ public class AncientAetherConfiguredFeatures {
                         BlockStateProvider.simple(AncientAetherBlocks.HIGHLANDS_PINE_LEAVES.get()),
                         new AncientAetherPineFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
                         new TwoLayersFeatureSize(2, 0, 2)
-                ).ignoreVines().build());
+                ).build());
 
         register(context, SAKURA_KEY, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
@@ -78,7 +78,7 @@ public class AncientAetherConfiguredFeatures {
                         BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LEAVES.get()),
                         new AncientAetherHookedFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
                         new TwoLayersFeatureSize(2, 1, 4)
-                ).decorators(List.of(new TrunkDecorator(BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LOG_WALL.get())))).ignoreVines().build());
+                ).decorators(List.of(new TrunkDecorator(BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LOG_WALL.get())))).build());
 
         register(context, AETHER_QUARTZ_ORE_KEY, Feature.ORE, new OreConfiguration(aetherQuartzOre, 12, 0f));
 
