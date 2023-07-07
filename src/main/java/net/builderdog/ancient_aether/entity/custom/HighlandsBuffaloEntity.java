@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.entity.custom;
 
+import com.aetherteam.aether.entity.passive.AetherAnimal;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.AgeableMob;
@@ -25,10 +26,10 @@ import software.bernie.geckolib.core.animatable.instance.SingletonAnimatableInst
 import software.bernie.geckolib.core.animation.*;
 import software.bernie.geckolib.core.object.PlayState;
 
-public class HighlandsBuffaloEntity extends Animal implements GeoEntity {
+public class HighlandsBuffaloEntity extends AetherAnimal implements GeoEntity {
     private AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
 
-    public HighlandsBuffaloEntity(EntityType<? extends Animal> entityType, Level level) {
+    public HighlandsBuffaloEntity(EntityType<? extends AetherAnimal> entityType, Level level) {
         super(entityType, level);
     }
 
