@@ -10,9 +10,11 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -50,8 +52,15 @@ public class HighlandsBuffaloEntity extends AetherAnimal implements GeoEntity {
 
     @Override
     protected void registerGoals() {
+        super.registerGoals();
+        this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
+            @Override
+            protected double getAttackReachSqr(LivingEntity entity) {
+                return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
+            }
+        });
         this.goalSelector.addGoal(0, new FloatGoal(this));
-        this.goalSelector.addGoal(1, new PanicGoal(this, 2.0));
+        this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
         this.goalSelector.addGoal(2, new BreedGoal(this, 1.0));
         this.goalSelector.addGoal(3, new TemptGoal(this, 1.25, Ingredient.of(AetherTags.Items.FLYING_COW_TEMPTATION_ITEMS), false));
         this.goalSelector.addGoal(4, new FollowParentGoal(this, 1.25));
@@ -97,7 +106,6 @@ public class HighlandsBuffaloEntity extends AetherAnimal implements GeoEntity {
             tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.highlands_buffalo.walk", Animation.LoopType.LOOP));
             return PlayState.CONTINUE;
         }
-
         tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.highlands_buffalo.idle", Animation.LoopType.LOOP));
         return PlayState.CONTINUE;
     }
