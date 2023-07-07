@@ -147,5 +147,8 @@
 
   "lore.item.ancient_aether.aechor_ice_cream_bucket": "A sweat dessert crafted by putting Aechor Petals, Sugar, Icestone and a Skyroot Bucket in a Crafting Table",
   "lore.item.ancient_aether.cactus_flower_ice_cream_bucket": "A sweat dessert crafted by putting Cactus Petals Petals, Sugar, Icestone and a Skyroot Bucket in a Crafting Table",
-  "lore.item.ancient_aether.cactus_flower_petal": "Crafted from Cactus Flowers or by converting Aechor Petals using a Remedy Bucket, this item can be enchanted into Redstone Dust."
+  "lore.item.ancient_aether.cactus_flower_petal": "Crafted from Cactus Flowers or by converting Aechor Petals using a Remedy Bucket, this item can be enchanted into Redstone Dust.",
+  "lore.item.ancient_aether.raw_buffalo_ribs": "Dropped by the tough Highlands Buffalos, these ribs can be cooked into Cooked Buffalo Ribs which are a good food source.",
+  "lore.item.ancient_aether.cooked_buffalo_ribs": "A good food source made by cooking Raw Buffalo Ribs. They can also be crafted into 4 singular Buffalo Ribs which give more Hunger Points but less Saturation.",
+  "lore.item.ancient_aether.buffalo_rib": "Singular Buffalo Ribs can be eaten faster and give more Hunger Points but less Saturation than an entire Buffalo Rib Cage."
 }

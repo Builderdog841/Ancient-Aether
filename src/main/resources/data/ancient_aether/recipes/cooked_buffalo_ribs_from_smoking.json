@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smoking",
+  "category": "misc",
+  "experience": 2,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "ancient_aether:raw_buffalo_ribs"
+  },
+  "result": "ancient_aether:cooked_buffalo_ribs"
+}
