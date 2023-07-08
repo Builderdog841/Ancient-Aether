@@ -51,9 +51,6 @@ public class AncientAetherBlocks {
             () -> new FlowerBlock(() -> MobEffects.GLOWING, 4, Block.Properties.copy(Blocks.DANDELION)));
     public static final RegistryObject<Block> EDELWEISS = registerBlock("edelweiss",
             () -> new FlowerBlock(() -> MobEffects.LUCK, 4, Block.Properties.copy(Blocks.DANDELION)));
-    public static final RegistryObject<Block> CACTUS_FLOWER =  registerBlock("cactus_flower",
-            () -> new CactusFlowerBlock(BlockBehaviour.Properties.of(Material.PLANT)
-                    .instabreak().noOcclusion().noCollission().sound(SoundType.SPORE_BLOSSOM)));
     public static final RegistryObject<Block> SMALL_AETHER_CACTUS = registerBlock("small_aether_cactus",
             () -> new DeadBushBlock(BlockBehaviour.Properties.copy(Blocks.DEAD_BUSH)) {
                 @Override
@@ -61,6 +58,16 @@ public class AncientAetherBlocks {
                     return groundState.is(AetherBlocks.QUICKSOIL.get());
                 }
             });
+    //CACTUS FLOWERS
+
+    public static final RegistryObject<Block> CACTUS_FLOWER =  registerBlock("cactus_flower",
+            () -> new CactusFlowerBlock(BlockBehaviour.Properties.of(Material.PLANT)
+                    .instabreak().noOcclusion().noCollission().sound(SoundType.SPORE_BLOSSOM)));
+
+    public static final RegistryObject<Block> GOLDEN_CACTUS_FLOWER =  registerBlock("golden_cactus_flower",
+            () -> new CactusFlowerBlock(BlockBehaviour.Properties.of(Material.PLANT)
+                    .instabreak().noOcclusion().noCollission().sound(SoundType.SPORE_BLOSSOM)));
+
     //HIGHLANDS PINE WOOD TYPE
     public static final RegistryObject<Block> HIGHLANDS_PINE_LOG =  registerBlock("highlands_pine_log",
             () -> new AncientAetherLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)

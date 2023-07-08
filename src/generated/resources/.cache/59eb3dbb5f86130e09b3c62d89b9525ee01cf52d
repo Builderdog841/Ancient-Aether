@@ -1,4 +1,4 @@
-// 1.19.4	2023-07-06T12:11:38.0736302	Loot Tables
+// 1.19.4	2023-07-08T09:28:00.3092074	Loot Tables
 10ca809def9ea31dc65cf557978f4b84deb78ca1 data/ancient_aether/loot_tables/blocks/aether_cactus.json
 bc9a05ea424f19ae389da06a8a55b2d8562efc17 data/ancient_aether/loot_tables/blocks/aether_quartz_ore.json
 5fb03435913f6569ddb87fd8b1328d449bf5cb2f data/ancient_aether/loot_tables/blocks/angelic_lantern.json
@@ -11,6 +11,7 @@ a3824bae6067e28aa5a9679dbe4e47753fda3b2c data/ancient_aether/loot_tables/blocks/
 31714f0a3f19ed691efc5dd21b09aa0e2e015e53 data/ancient_aether/loot_tables/blocks/enchanted_sentry_stone.json
 609e1379f42e0923c58e286be0384bb48a41be27 data/ancient_aether/loot_tables/blocks/gale_lantern.json
 0d197c01f2d8b883c52b56f2925bfc217d77697e data/ancient_aether/loot_tables/blocks/gale_stone_mosaic.json
+447f08829ce513a30a0a82490266dd031947ee43 data/ancient_aether/loot_tables/blocks/golden_cactus_flower.json
 ee45cc02419ce77f69804251a9e86c822a914eff data/ancient_aether/loot_tables/blocks/hellfire_lantern.json
 948ec55fb4699561b715d8cee90952ec5a7d14d4 data/ancient_aether/loot_tables/blocks/hellfire_stone_mosaic.json
 e14838e887c8ae22b8f14bca3e158ab4322f6203 data/ancient_aether/loot_tables/blocks/highlands_pine_button.json

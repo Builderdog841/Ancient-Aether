@@ -66,6 +66,7 @@ public class AncientAetherBlockLootTables extends BlockLootSubProvider {
         dropSelf((AncientAetherBlocks.AETHER_CACTUS.get()));
         dropSelf((AncientAetherBlocks.STRIPPED_AETHER_CACTUS.get()));
         dropSelf((AncientAetherBlocks.CACTUS_FLOWER.get()));
+        dropSelf((AncientAetherBlocks.GOLDEN_CACTUS_FLOWER.get()));
         dropSelf((AncientAetherBlocks.QUICKSOIL_BRICK_STAIRS.get()));
         dropSelf((AncientAetherBlocks.QUICKSOIL_BRICK_SLAB.get()));
         dropSelf((AncientAetherBlocks.QUICKSOIL_BRICK_WALL.get()));

@@ -1,0 +1,10 @@
+{
+  "type": "aether:enchanting",
+  "category": "enchanting_misc",
+  "cookingtime": 250,
+  "experience": 1,
+  "ingredient": {
+    "item": "ancient_aether:cactus_flower"
+  },
+  "result": "ancient_aether:golden_cactus_flower"
+}

@@ -113,6 +113,7 @@ public class AncientAether {
             event.accept(AncientAetherBlocks.AETHER_CACTUS);
             event.accept(AncientAetherBlocks.STRIPPED_AETHER_CACTUS);
             event.accept(AncientAetherBlocks.CACTUS_FLOWER);
+            event.accept(AncientAetherBlocks.GOLDEN_CACTUS_FLOWER);
             event.accept(AncientAetherBlocks.HIGHLANDS_PINE_LEAVES);
             event.accept(AncientAetherBlocks.SAKURA_LEAVES);
             event.accept(AncientAetherBlocks.HIGHLANDS_PINE_SAPLING);
