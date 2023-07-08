@@ -1,6 +1,7 @@
 package net.builderdog.ancient_aether.item;
 
 import net.builderdog.ancient_aether.AncientAether;
+import net.builderdog.ancient_aether.entity.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
@@ -32,6 +33,13 @@ public class AncientAetherItems {
             () -> new Item(new Item.Properties().rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(6).saturationMod(1.2f).build())));
     public static final RegistryObject<Item> BUFFALO_RIB = ITEMS.register("buffalo_rib",
             () -> new BuffaloRib(new Item.Properties().rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(2).saturationMod(0.25f).build())));
+
+    //BOATS
+    public static final RegistryObject<Item> HIGHLANDS_PINE_BOAT = ITEMS.register("highlands_pine_boat", () -> new AncientAetherBoatItem(false, new Item.Properties().stacksTo(1), AncientAetherBoatEntity.Type.HIGHLANDS_PINE));
+    public static final RegistryObject<Item> HIGHLANDS_PINE_CHEST_BOAT = ITEMS.register("highlands_pine_chest_boat", () -> new AncientAetherBoatItem(true, new Item.Properties().stacksTo(1),  AncientAetherBoatEntity.Type.HIGHLANDS_PINE));
+    public static final RegistryObject<Item> SAKURA_BOAT = ITEMS.register("sakura_boat", () -> new AncientAetherBoatItem(false, new Item.Properties().stacksTo(1), AncientAetherBoatEntity.Type.SAKURA));
+    public static final RegistryObject<Item> SAKURA_CHEST_BOAT = ITEMS.register("sakura_chest_boat", () -> new AncientAetherBoatItem(true, new Item.Properties().stacksTo(1), AncientAetherBoatEntity.Type.SAKURA));
+
 
     //SPAWN EGGS
     public static final RegistryObject<SpawnEggItem> HIGHLANDS_BUFFALO_SPAWN_EGG = ITEMS.register("highlands_buffalo_spawn_egg",
