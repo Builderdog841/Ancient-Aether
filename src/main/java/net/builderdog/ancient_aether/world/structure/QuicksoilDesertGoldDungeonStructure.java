@@ -2,8 +2,6 @@ package net.builderdog.ancient_aether.world.structure;
 
 import com.aetherteam.aether.Aether;
 import com.aetherteam.aether.AetherTags;
-import com.aetherteam.aether.block.AetherBlocks;
-import com.aetherteam.aether.data.resources.registries.AetherConfiguredFeatures;
 import com.aetherteam.aether.util.BlockLogicUtil;
 import com.aetherteam.aether.world.structurepiece.golddungeon.*;
 import com.mojang.serialization.Codec;
@@ -23,7 +21,6 @@ import net.minecraft.world.level.LevelHeightAccessor;
 import net.minecraft.world.level.StructureManager;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.chunk.ChunkGenerator;
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -209,7 +206,7 @@ public class QuicksoilDesertGoldDungeonStructure extends Structure {
                             PlacedFeature tree = PlacementUtils.inlinePlaced(level.registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE).getHolderOrThrow(AncientAetherConfiguredFeatures.GOLDEN_LARGE_CACTUS_KEY)).get();
                             tree.place(level, generator, random, mutable);
                         } else {
-                            Block flower = random.nextBoolean() ? AncientAetherBlocks.SMALL_AETHER_CACTUS.get() : Blocks.AIR;
+                            Block flower = random.nextBoolean() ? AncientAetherBlocks.SMALL_AETHER_CACTUS.get() : AncientAetherBlocks.SMALL_AETHER_CACTUS.get();
                             level.setBlock(mutable, flower.defaultBlockState(), 2);
                         }
                     }
