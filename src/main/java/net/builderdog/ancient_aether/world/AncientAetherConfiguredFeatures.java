@@ -43,6 +43,7 @@ import java.util.List;
 public class AncientAetherConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHLANDS_PINE_KEY = registerKey("highlands_pine");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_KEY = registerKey("sakura_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_SAKURA_KEY = registerKey("tall_sakura_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MOONLIT_TULIP_PATCH_KEY = registerKey("moonlit_tulip_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> EDELWEISS_PATCH_KEY = registerKey("edelweiss_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_AETHER_CACTUS_PATCH_KEY = registerKey("small_aether_cactus_patch");
@@ -81,6 +82,15 @@ public class AncientAetherConfiguredFeatures {
                         new AncientAetherHookedFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
                         new TwoLayersFeatureSize(2, 1, 4)
                 ).build());
+
+        register(context, TALL_SAKURA_KEY, Feature.TREE,
+                new TreeConfiguration.TreeConfigurationBuilder(
+                        BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LOG.get()),
+                        new AncientAetherHookedTrunkPlacer(8, 14, 14),
+                        BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LEAVES.get()),
+                        new AncientAetherHookedFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
+                        new TwoLayersFeatureSize(2, 1, 4)
+                ).decorators(List.of(new TrunkDecorator(BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LOG_WALL.get())))).build());
 
         register(context, AETHER_QUARTZ_ORE_KEY, Feature.ORE, new OreConfiguration(aetherQuartzOre, 12, 0f));
 
