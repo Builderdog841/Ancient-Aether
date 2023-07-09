@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ancient_aether:quicksoil_bricks",
+    "ancient_aether:quicksoil_brick_stairs",
+    "ancient_aether:quicksoil_brick_slab",
+    "ancient_aether:quicksoil_brick_wall"
+  ]
+}
