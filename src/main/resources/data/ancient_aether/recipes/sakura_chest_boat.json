@@ -6,7 +6,7 @@
       "item": "ancient_aether:sakura_boat"
     },
     {
-      "item": "minecraft:chest"
+      "tag": "forge:chests/wooden"
     }
   ],
   "result": {
