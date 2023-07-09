@@ -91,7 +91,7 @@ public class AncientAether {
             event.accept(AncientAetherBlocks.HIGHLANDS_PINE_TRAPDOOR);
             event.accept(AncientAetherBlocks.HIGHLANDS_PINE_PRESSURE_PLATE);
             event.accept(AncientAetherBlocks.HIGHLANDS_PINE_BUTTON);
-            event.accept(AncientAetherBlocks.HIGHLANDS_PINE_SIGN);
+            event.accept(AncientAetherItems.HIGHLANDS_PINE_SIGN);
             event.accept(AncientAetherItems.HIGHLANDS_PINE_BOAT);
             event.accept(AncientAetherItems.HIGHLANDS_PINE_CHEST_BOAT);
             event.accept(AncientAetherBlocks.SAKURA_LOG);
@@ -111,7 +111,7 @@ public class AncientAether {
             event.accept(AncientAetherBlocks.SAKURA_TRAPDOOR);
             event.accept(AncientAetherBlocks.SAKURA_PRESSURE_PLATE);
             event.accept(AncientAetherBlocks.SAKURA_BUTTON);
-            event.accept(AncientAetherBlocks.SAKURA_SIGN);
+            event.accept(AncientAetherItems.SAKURA_SIGN);
             event.accept(AncientAetherItems.SAKURA_BOAT);
             event.accept(AncientAetherItems.SAKURA_CHEST_BOAT);
             event.accept(AncientAetherBlocks.AETHER_CACTUS);
