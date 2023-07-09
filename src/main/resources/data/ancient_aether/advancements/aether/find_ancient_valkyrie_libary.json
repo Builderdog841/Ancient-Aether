@@ -33,9 +33,5 @@
       "translate": "advancement.ancient_aether.find_ancient_valkyrie_library"
     }
   },
-  "requirements": [
-    [
-      "ancient_aether:ancient_valkyrie_library"
-    ]
-  ]
+  "requirements": []
 }
