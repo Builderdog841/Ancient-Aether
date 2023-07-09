@@ -90,6 +90,13 @@
   "biome.ancient_aether.sakura_jungle": "Sakura Jungle",
   "biome.ancient_aether.quicksoil_desert": "Quicksoil Desert",
 
+  "advancement.ancient_aether.ancient_aether_exploration": "The Ancient Aether",
+  "advancement.ancient_aether.ancient_aether_exploration.desc": "Find all biomes added by the Ancient Aether Add-On",
+  "advancement.ancient_aether.cracked_slider": "Out of Order",
+  "advancement.ancient_aether.cracked_slider.desc": "Mine a Cracked Slider with a Gravitite Pickaxe",
+  "advancement.ancient_aether.ancient_valkyrie_library": "Bookworm",
+  "advancement.ancient_aether.ancient_valkyrie_library.desc": "Find an Ancient Valkyrie Library in a Quicksoil Desert",
+
   "lore.block.ancient_aether.holystone_brick_mosaic": "A fancy Holystone Brick variant that can be rotated in various different directions.",
   "lore.block.ancient_aether.sentry_stone_mosaic": "A fancy Carved Stone variant that can be rotated in various different directions.",
   "lore.block.ancient_aether.angelic_stone_mosaic": "A fancy Angelic Stone variant that can be rotated in various different directions.",

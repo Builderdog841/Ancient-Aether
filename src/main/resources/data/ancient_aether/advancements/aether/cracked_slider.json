@@ -1,0 +1,37 @@
+{
+  "parent": "aether:enchanted_gravitite",
+  "criteria": {
+    "lance_loot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ancient_aether:cracked_slider"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.ancient_aether.cracked_slider.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "ancient_aether:cracked_slider"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.ancient_aether.cracked_slider"
+    }
+  },
+  "requirements": [
+    [
+      "lance_loot"
+    ]
+  ]
+}
