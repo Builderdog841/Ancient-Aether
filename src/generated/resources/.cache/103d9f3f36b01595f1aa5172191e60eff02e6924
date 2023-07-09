@@ -1,8 +1,9 @@
-// 1.19.4	2023-07-09T15:45:38.3346626	Registries
+// 1.19.4	2023-07-09T17:09:43.7873493	Registries
 0b88670db0d6af8fb3bf59dced39e2f948634622 data/ancient_aether/worldgen/configured_feature/aether_cactus_placement.json
 6f5c72cab36161650319c515e75a6a304a6ade4d data/ancient_aether/worldgen/configured_feature/aether_quartz_ore.json
 d16d980d1dae7d8dbf4bb49ce685994b8031995b data/ancient_aether/worldgen/configured_feature/edelweiss_patch.json
 23c538e546351022eaf170d58affc5d6ebd7cb93 data/ancient_aether/worldgen/configured_feature/giant_cactus.json
+a92c8f39d10328566fae9c5f080165f8460d48e8 data/ancient_aether/worldgen/configured_feature/golden_large_cactus.json
 b7621a02dc7666b5918b8aa60310960601c3e804 data/ancient_aether/worldgen/configured_feature/highlands_pine.json
 d3e2d1759087a6108dc8bfabf064df793162455b data/ancient_aether/worldgen/configured_feature/large_cactus.json
 39a353aee1c79bfe52ab27126fbfff100fe3bb0b data/ancient_aether/worldgen/configured_feature/moonlit_tulip_patch.json

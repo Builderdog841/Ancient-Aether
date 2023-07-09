@@ -11,6 +11,7 @@ import net.builderdog.ancient_aether.world.biomes.AncientAetherRegion;
 import net.builderdog.ancient_aether.world.biomes.AncientAetherSurfaceData;
 import net.builderdog.ancient_aether.world.features.AncientAetherFeatures;
 import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherFoliagePlacerTypes;
+import net.builderdog.ancient_aether.world.structure.AncientAetherStructureTypes;
 import net.builderdog.ancient_aether.world.tree_decorator.AncientAetherTreeDecoratorTypes;
 import net.builderdog.ancient_aether.world.trunkplacer.AncientAetherTrunkPlacerTypes;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -45,6 +46,7 @@ public class AncientAether {
         AncientAetherTrunkPlacerTypes.TRUNK_PLACERS.register(modEventBus);
         AncientAetherBlockEntityTypes.BLOCK_ENTITY_TYPES.register(modEventBus);
         AncientAetherFeatures.FEATURES.register(modEventBus);
+        AncientAetherStructureTypes.STRUCTURE_TYPES.register(modEventBus);
         AncientAetherTreeDecoratorTypes.TREE_DECORATORS.register(modEventBus);
         AncientAetherBlocks.registerWoodTypes();
         AncientAetherEntities.ENTITY_TYPES.register(modEventBus);

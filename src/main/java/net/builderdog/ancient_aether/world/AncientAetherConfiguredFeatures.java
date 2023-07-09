@@ -48,6 +48,7 @@ public class AncientAetherConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_AETHER_CACTUS_PATCH_KEY = registerKey("small_aether_cactus_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_QUARTZ_ORE_KEY = registerKey("aether_quartz_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> QUICKSTONE_ORE_KEY = registerKey("quickstone_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GOLDEN_LARGE_CACTUS_KEY = registerKey("golden_large_cactus");
     public static final ResourceKey<ConfiguredFeature<?, ?>> LARGE_CACTUS_KEY = registerKey("large_cactus");
     public static final ResourceKey<ConfiguredFeature<?, ?>> GIANT_CACTUS_KEY = registerKey("giant_cactus");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_CACTUS_PLACEMENT = registerKey("aether_cactus_placement");
@@ -98,6 +99,10 @@ public class AncientAetherConfiguredFeatures {
                         .add(AncientAetherBlocks.SMALL_AETHER_CACTUS.get().defaultBlockState(), 3)), 64));
 
         register(context, LARGE_CACTUS_KEY, AncientAetherFeatures.LARGE_CACTUS.get(),
+                new LargeCactusConfiguration(
+                        SimpleStateProvider.simple(AncientAetherBlocks.AETHER_CACTUS.get())));
+
+        register(context, GOLDEN_LARGE_CACTUS_KEY, AncientAetherFeatures.GOLDEN_LARGE_CACTUS.get(),
                 new LargeCactusConfiguration(
                         SimpleStateProvider.simple(AncientAetherBlocks.AETHER_CACTUS.get())));
 

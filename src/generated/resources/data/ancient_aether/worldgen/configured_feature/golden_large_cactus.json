@@ -1,5 +1,5 @@
 {
-  "type": "ancient_aether:large_cactus",
+  "type": "ancient_aether:golden_large_cactus",
   "config": {
     "blockstate": {
       "type": "minecraft:simple_state_provider",
