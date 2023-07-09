@@ -143,7 +143,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<FenceGateBlock> SAKURA_FENCE_GATE = registerBlock("sakura_fence_gate",
             () -> new FenceGateBlock(Block.Properties.copy(Blocks.OAK_FENCE_GATE), AncientAetherWoodTypes.SAKURA));
     public static final RegistryObject<WallBlock> SAKURA_LOG_WALL = registerBlock("sakura_log_wall",
-            () -> new AncientAetherDoubleDropLogWallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
+            () -> new AncientAetherLogWallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
     public static final RegistryObject<WallBlock> SAKURA_WOOD_WALL = registerBlock("sakura_wood_wall",
             () -> new AncientAetherLogWallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
     public static final RegistryObject<WallBlock> STRIPPED_SAKURA_LOG_WALL = registerBlock("stripped_sakura_log_wall",

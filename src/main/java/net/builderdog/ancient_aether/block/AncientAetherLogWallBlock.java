@@ -1,22 +1,12 @@
 package net.builderdog.ancient_aether.block;
 
-import com.aetherteam.aether.block.AetherBlockStateProperties;
-import com.aetherteam.aether_genesis.mixin.mixins.common.accessor.WallBlockAccessor;
-import com.google.common.collect.ImmutableMap;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.common.ToolAction;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Map;
-
-import static net.minecraft.world.level.block.DirectionalBlock.FACING;
-import static net.minecraft.world.level.block.RotatedPillarBlock.AXIS;
 
 public class AncientAetherLogWallBlock extends WallBlock {
     public AncientAetherLogWallBlock(Properties properties) {
