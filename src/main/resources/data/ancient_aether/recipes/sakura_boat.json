@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_boats",
+  "key": {
+    "#": {
+      "item": "ancient_aether:sakura_planks"
+    }
+  },
+  "pattern": [
+    "# #",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "item": "ancient_aether:sakura_boat"
+  },
+  "show_notification": true
+}
