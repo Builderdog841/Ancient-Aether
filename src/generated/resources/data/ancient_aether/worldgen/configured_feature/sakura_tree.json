@@ -9,6 +9,7 @@
           "state": {
             "Name": "ancient_aether:sakura_log_wall",
             "Properties": {
+              "double_drops": "true",
               "east": "none",
               "north": "none",
               "south": "none",

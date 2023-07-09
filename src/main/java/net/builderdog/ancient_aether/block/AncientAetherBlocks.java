@@ -94,13 +94,13 @@ public class AncientAetherBlocks {
     public static final RegistryObject<FenceGateBlock> HIGHLANDS_PINE_FENCE_GATE = registerBlock("highlands_pine_fence_gate",
             () -> new FenceGateBlock(Block.Properties.copy(Blocks.OAK_FENCE_GATE), AncientAetherWoodTypes.HIGHLANDS_PINE));
     public static final RegistryObject<WallBlock> HIGHLANDS_PINE_LOG_WALL = registerBlock("highlands_pine_log_wall",
-            () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
+            () -> new AncientAetherLogWallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
     public static final RegistryObject<WallBlock> HIGHLANDS_PINE_WOOD_WALL = registerBlock("highlands_pine_wood_wall",
-            () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
+            () -> new AncientAetherLogWallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
     public static final RegistryObject<WallBlock> STRIPPED_HIGHLANDS_PINE_LOG_WALL = registerBlock("stripped_highlands_pine_log_wall",
-            () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
+            () -> new AncientAetherLogWallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
     public static final RegistryObject<WallBlock> STRIPPED_HIGHLANDS_PINE_WOOD_WALL = registerBlock("stripped_highlands_pine_wood_wall",
-            () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
+            () -> new AncientAetherLogWallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
     public static final RegistryObject<DoorBlock> HIGHLANDS_PINE_DOOR = registerBlock("highlands_pine_door",
             () -> new DoorBlock(Block.Properties.copy(Blocks.OAK_DOOR), AncientAetherWoodTypes.HIGHLANDS_PINE_BLOCK_SET));
     public static final RegistryObject<TrapDoorBlock> HIGHLANDS_PINE_TRAPDOOR = registerBlock("highlands_pine_trapdoor",
@@ -143,13 +143,13 @@ public class AncientAetherBlocks {
     public static final RegistryObject<FenceGateBlock> SAKURA_FENCE_GATE = registerBlock("sakura_fence_gate",
             () -> new FenceGateBlock(Block.Properties.copy(Blocks.OAK_FENCE_GATE), AncientAetherWoodTypes.SAKURA));
     public static final RegistryObject<WallBlock> SAKURA_LOG_WALL = registerBlock("sakura_log_wall",
-            () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
+            () -> new AncientAetherDoubleDropLogWallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
     public static final RegistryObject<WallBlock> SAKURA_WOOD_WALL = registerBlock("sakura_wood_wall",
-            () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
+            () -> new AncientAetherLogWallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
     public static final RegistryObject<WallBlock> STRIPPED_SAKURA_LOG_WALL = registerBlock("stripped_sakura_log_wall",
-            () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
+            () -> new AncientAetherLogWallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
     public static final RegistryObject<WallBlock> STRIPPED_SAKURA_WOOD_WALL = registerBlock("stripped_sakura_wood_wall",
-            () -> new WallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
+            () -> new AncientAetherLogWallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
     public static final RegistryObject<DoorBlock> SAKURA_DOOR = registerBlock("sakura_door",
             () -> new DoorBlock(Block.Properties.copy(Blocks.OAK_DOOR), AncientAetherWoodTypes.SAKURA_BLOCK_SET));
     public static final RegistryObject<TrapDoorBlock> SAKURA_TRAPDOOR = registerBlock("sakura_trapdoor",
