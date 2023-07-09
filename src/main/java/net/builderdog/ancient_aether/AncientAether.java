@@ -165,6 +165,7 @@ public class AncientAether {
         this.addCompost(0.5F, AncientAetherBlocks.AETHER_CACTUS.get());
         this.addCompost(0.5F, AncientAetherBlocks.STRIPPED_AETHER_CACTUS.get());
         this.addCompost(0.85F,AncientAetherBlocks.CACTUS_FLOWER.get());
+        this.addCompost(0.1F,AncientAetherBlocks.GOLDEN_CACTUS_FLOWER.get());
     }
 
     private void addCompost(float chance, ItemLike item) {
