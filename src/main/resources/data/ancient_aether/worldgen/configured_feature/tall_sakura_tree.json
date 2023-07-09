@@ -1,7 +1,26 @@
 {
   "type": "minecraft:tree",
   "config": {
-    "decorators": [],
+    "decorators": [
+      {
+        "type": "ancient_aether:trunk_decorator",
+        "provider": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "ancient_aether:sakura_log_wall",
+            "Properties": {
+              "double_drops": "true",
+              "east": "none",
+              "north": "none",
+              "south": "none",
+              "up": "true",
+              "waterlogged": "false",
+              "west": "none"
+            }
+          }
+        }
+      }
+    ],
     "dirt_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
@@ -35,25 +54,10 @@
       "upper_size": 4
     },
     "trunk_placer": {
-      "type": "ancient_aether:ancient_aether_skinny_hooked_trunk_placer",
+      "type": "ancient_aether:ancient_aether_hooked_trunk_placer",
       "base_height": 8,
-      "height_rand_a": 5,
-      "height_rand_b": 0,
-      "skinnyTrunkProvider": {
-        "type": "minecraft:simple_state_provider",
-        "state": {
-          "Name": "ancient_aether:sakura_log_wall",
-          "Properties": {
-            "double_drops": "false",
-            "east": "none",
-            "north": "none",
-            "south": "none",
-            "up": "true",
-            "waterlogged": "false",
-            "west": "none"
-          }
-        }
-      }
+      "height_rand_a": 14,
+      "height_rand_b": 14
     },
     "trunk_provider": {
       "type": "minecraft:simple_state_provider",
@@ -61,7 +65,7 @@
         "Name": "ancient_aether:sakura_log",
         "Properties": {
           "axis": "y",
-          "double_drops": "false"
+          "double_drops": "true"
         }
       }
     }

@@ -11,6 +11,7 @@ import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherHookedFoli
 import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherPineFoliagePlacer;
 import net.builderdog.ancient_aether.world.tree_decorator.TrunkDecorator;
 import net.builderdog.ancient_aether.world.trunkplacer.AncientAetherHookedTrunkPlacer;
+import net.builderdog.ancient_aether.world.trunkplacer.AncientAetherSkinnyHookedTrunkPlacer;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -69,16 +70,16 @@ public class AncientAetherConfiguredFeatures {
                         BlockStateProvider.simple(AncientAetherBlocks.HIGHLANDS_PINE_LEAVES.get()),
                         new AncientAetherPineFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
                         new TwoLayersFeatureSize(2, 0, 2)
-                ).build());
+                ).ignoreVines().build());
 
         register(context, SAKURA_KEY, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
                         BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LOG.get()),
-                        new AncientAetherHookedTrunkPlacer(8, 14, 14),
+                        new AncientAetherSkinnyHookedTrunkPlacer(8, 5, 0, BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LOG_WALL.get())),
                         BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LEAVES.get()),
                         new AncientAetherHookedFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
                         new TwoLayersFeatureSize(2, 1, 4)
-                ).decorators(List.of(new TrunkDecorator(BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LOG_WALL.get())))).build());
+                ).build());
 
         register(context, AETHER_QUARTZ_ORE_KEY, Feature.ORE, new OreConfiguration(aetherQuartzOre, 12, 0f));
 

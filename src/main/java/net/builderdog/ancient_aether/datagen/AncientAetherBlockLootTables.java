@@ -1,5 +1,7 @@
 package net.builderdog.ancient_aether.datagen;
 
+import com.aetherteam.aether.data.providers.AetherBlockLootSubProvider;
+import com.aetherteam.aether.mixin.mixins.common.accessor.BlockLootAccessor;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
@@ -9,7 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
 
-public class AncientAetherBlockLootTables extends BlockLootSubProvider {
+public class AncientAetherBlockLootTables extends AetherBlockLootSubProvider {
     public AncientAetherBlockLootTables() {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags());
     }
@@ -44,6 +46,7 @@ public class AncientAetherBlockLootTables extends BlockLootSubProvider {
         dropSelf((AncientAetherBlocks.HIGHLANDS_PINE_BUTTON.get()));
         dropSelf((AncientAetherBlocks.HIGHLANDS_PINE_PRESSURE_PLATE.get()));
         dropSelf((AncientAetherBlocks.HIGHLANDS_PINE_SIGN.get()));
+        dropSelf((AncientAetherBlocks.HIGHLANDS_PINE_WALL_SIGN.get()));
         dropSelf((AncientAetherBlocks.SAKURA_LOG.get()));
         dropSelf((AncientAetherBlocks.SAKURA_WOOD.get()));
         dropSelf((AncientAetherBlocks.STRIPPED_SAKURA_LOG.get()));
@@ -63,6 +66,7 @@ public class AncientAetherBlockLootTables extends BlockLootSubProvider {
         dropSelf((AncientAetherBlocks.SAKURA_BUTTON.get()));
         dropSelf((AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get()));
         dropSelf((AncientAetherBlocks.SAKURA_SIGN.get()));
+        dropSelf((AncientAetherBlocks.SAKURA_WALL_SIGN.get()));
         dropSelf((AncientAetherBlocks.AETHER_CACTUS.get()));
         dropSelf((AncientAetherBlocks.STRIPPED_AETHER_CACTUS.get()));
         dropSelf((AncientAetherBlocks.CACTUS_FLOWER.get()));
@@ -74,25 +78,25 @@ public class AncientAetherBlockLootTables extends BlockLootSubProvider {
         dropSelf((AncientAetherBlocks.EDELWEISS.get()));
         dropSelf((AncientAetherBlocks.SMALL_AETHER_CACTUS.get()));
         dropSelf((AncientAetherBlocks.CRACKED_SLIDER.get()));
-        dropSelf((AncientAetherBlocks.POTTED_MOONLIT_TULIP.get()));
-        dropSelf((AncientAetherBlocks.POTTED_EDELWEISS.get()));
-        dropSelf((AncientAetherBlocks.POTTED_HIGHLANDS_PINE_SAPLING.get()));
-        dropSelf((AncientAetherBlocks.POTTED_SMALL_AETHER_CACTUS.get()));
-        dropSelf((AncientAetherBlocks.POTTED_SAKURA_SAPLING.get()));
         dropSelf((AncientAetherBlocks.HOLYSTONE_LANTERN.get()));
         dropSelf((AncientAetherBlocks.SENTRY_LANTERN.get()));
         dropSelf((AncientAetherBlocks.ANGELIC_LANTERN.get()));
         dropSelf((AncientAetherBlocks.HELLFIRE_LANTERN.get()));
         dropSelf((AncientAetherBlocks.GALE_LANTERN.get()));
 
+        dropPottedContents(AncientAetherBlocks.POTTED_HIGHLANDS_PINE_SAPLING.get());
+        dropPottedContents(AncientAetherBlocks.POTTED_SAKURA_SAPLING.get());
+        dropPottedContents(AncientAetherBlocks.POTTED_MOONLIT_TULIP.get());
+        dropPottedContents(AncientAetherBlocks.POTTED_EDELWEISS.get());
+        dropPottedContents(AncientAetherBlocks.POTTED_SMALL_AETHER_CACTUS.get());
+
         add(AncientAetherBlocks.AETHER_QUARTZ_ORE.get(),
                 (block) -> createOreDrop(AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), Items.QUARTZ));
 
         add(AncientAetherBlocks.HIGHLANDS_PINE_LEAVES.get(),
-                (block) -> createLeavesDrops(block, AncientAetherBlocks.HIGHLANDS_PINE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
-
+                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.HIGHLANDS_PINE_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
         add(AncientAetherBlocks.SAKURA_LEAVES.get(),
-                (block) -> createLeavesDrops(block, AncientAetherBlocks.SAKURA_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.SAKURA_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
 
     }
 
