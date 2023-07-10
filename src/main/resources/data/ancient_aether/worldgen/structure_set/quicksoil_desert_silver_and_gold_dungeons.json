@@ -7,7 +7,7 @@
   },
   "structures": [
     {
-      "structure": "aether:silver_dungeon",
+      "structure": "ancient_aether:quicksoil_desert_silver_dungeon",
       "weight": 3
     },
     {

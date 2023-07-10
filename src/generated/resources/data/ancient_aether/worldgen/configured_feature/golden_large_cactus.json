@@ -6,7 +6,7 @@
       "state": {
         "Name": "ancient_aether:aether_cactus",
         "Properties": {
-          "double_drops": "false"
+          "double_drops": "true"
         }
       }
     }
