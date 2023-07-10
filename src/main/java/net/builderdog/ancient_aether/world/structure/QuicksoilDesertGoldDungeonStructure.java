@@ -2,12 +2,16 @@ package net.builderdog.ancient_aether.world.structure;
 
 import com.aetherteam.aether.Aether;
 import com.aetherteam.aether.AetherTags;
+import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.util.BlockLogicUtil;
 import com.aetherteam.aether.world.structurepiece.golddungeon.*;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.world.AncientAetherConfiguredFeatures;
+import net.builderdog.ancient_aether.world.structurepiece.qd_golddungeon.QDGoldIsland;
+import net.builderdog.ancient_aether.world.structurepiece.qd_golddungeon.QDGoldStub;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Vec3i;
@@ -68,7 +72,7 @@ public class QuicksoilDesertGoldDungeonStructure extends Structure {
         RandomSource random = context.random();
         StructureTemplateManager templateManager = context.structureTemplateManager();
 
-        GoldIsland island = new GoldIsland(
+        QDGoldIsland island = new QDGoldIsland(
                 templateManager,
                 "island",
                 elevatedPos
@@ -112,7 +116,7 @@ public class QuicksoilDesertGoldDungeonStructure extends Structure {
 
             BlockPos stubPos = center.offset(xOffset, yOffset, zOffset);
             stubPos = stubPos.offset(stubOffset);
-            GoldStub stub = new GoldStub(
+            QDGoldStub stub = new QDGoldStub(
                     templateManager,
                     "stub",
                     stubPos
@@ -153,7 +157,7 @@ public class QuicksoilDesertGoldDungeonStructure extends Structure {
     }
 
     private Vec3i getStubOffset(StructureTemplateManager templateManager) {
-        StructureTemplate template = templateManager.getOrCreate(new ResourceLocation(Aether.MODID, "gold_dungeon/stub"));
+        StructureTemplate template = templateManager.getOrCreate(new ResourceLocation(AncientAether.MOD_ID, "quicksoil_desert_gold_dungeon/stub"));
         Vec3i size = template.getSize();
         return new Vec3i(size.getX() / -2, size.getY() / -2, size.getZ() / -2);
     }
@@ -171,9 +175,9 @@ public class QuicksoilDesertGoldDungeonStructure extends Structure {
     @Override
     public void afterPlace(WorldGenLevel level, StructureManager structureManager, ChunkGenerator generator, RandomSource random, BoundingBox chunkBox, ChunkPos chunkPos, PiecesContainer pieces) {
         for (StructurePiece piece : pieces.pieces()) {
-            if (piece instanceof GoldIsland island) {
+            if (piece instanceof QDGoldIsland island) {
                 placeGoldenOaks(level, generator, random, island.getBoundingBox(), chunkBox, 48, 2, 1);
-            } else if (piece instanceof GoldStub stub) {
+            } else if (piece instanceof QDGoldStub stub) {
                 placeGoldenOaks(level, generator, random, stub.getBoundingBox(), chunkBox, 64, 1, 0);
             }
         }
@@ -224,7 +228,7 @@ public class QuicksoilDesertGoldDungeonStructure extends Structure {
         int y;
         for (y = maxY; y > minY; --y) {
             pos.setY(y);
-            if (level.getBlockState(pos).is(AetherTags.Blocks.AETHER_DIRT)) {
+            if (level.getBlockState(pos).is(AetherBlocks.QUICKSOIL.get())) {
                 pos.setY(++y);
                 return true;
             }
