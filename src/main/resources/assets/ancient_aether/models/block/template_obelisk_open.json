@@ -2,7 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "obelisk_open"
+		"0": "broken_enchanted_obelisk",
+		"particle": "broken_enchanted_obelisk"
 	},
 	"elements": [
 		{
@@ -26,20 +27,20 @@
 				"south": {"uv": [0.5, 2.5, 2.5, 5], "texture": "#0"},
 				"west": {"uv": [0.5, 2.5, 2.5, 5], "texture": "#0"},
 				"up": {"uv": [6, 3, 4, 1], "texture": "#0"},
-				"down": {"uv": [7, 8, 5, 10], "texture": "#missing"}
+				"down": {"uv": [7, 8, 5, 10], "texture": "#0"}
 			}
 		},
 		{
 			"from": [4, 16, 4],
 			"to": [12, 26, 12],
-			"rotation": {"angle": 45, "axis": "y", "origin": [8, 20, 8]},
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 20, 8]},
 			"faces": {
 				"north": {"uv": [0.5, 0, 2.5, 2.5], "texture": "#0"},
 				"east": {"uv": [0.5, 0, 2.5, 2.5], "texture": "#0"},
 				"south": {"uv": [0.5, 0, 2.5, 2.5], "texture": "#0"},
 				"west": {"uv": [0.5, 0, 2.5, 2.5], "texture": "#0"},
-				"up": {"uv": [6, 3, 4, 1], "texture": "#0"},
-				"down": {"uv": [6, 1, 4, 3], "texture": "#0"}
+				"up": {"uv": [6, 3, 4, 1], "rotation": 270, "texture": "#0"},
+				"down": {"uv": [6, 1, 4, 3], "rotation": 90, "texture": "#0"}
 			}
 		}
 	],
@@ -68,7 +69,8 @@
 		},
 		"gui": {
 			"rotation": [30, 225, 0],
-			"scale": [0.4, 0.4, 0.4]
+			"translation": [0, -2, 0],
+			"scale": [0.5, 0.5, 0.5]
 		},
 		"head": {
 			"rotation": [-90, 0, 0],
