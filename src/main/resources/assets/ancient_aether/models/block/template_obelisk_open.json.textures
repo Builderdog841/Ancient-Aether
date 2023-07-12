@@ -1,26 +1,26 @@
 {
   "mappings": {
-    "deactivated_enchanted_obelisk": {
+    "broken_enchanted_obelisk": {
       "map": {
-        "1": "deactivated_enchanted_obelisk",
+        "0": "broken_enchanted_obelisk",
       },
-      "name": "deactivated_enchanted_obelisk"
+      "name": "broken_enchanted_obelisk"
     },
     "deactivated_blighted_obelisk": {
       "map": {
-        "1": "deactivated_blighted_obelisk",
+        "0": "broken_blighted_obelisk",
       },
-      "name": "deactivated_blighted_obelisk"
+      "name": "broken_blighted_obelisk"
     }
         "enchanted_obelisk": {
           "map": {
-            "1": "enchanted_obelisk",
+            "0": "enchanted_obelisk",
           },
           "name": "enchanted_obelisk"
         },
         "blighted_obelisk": {
           "map": {
-            "1": "blighted_obelisk",
+            "0": "blighted_obelisk",
           },
           "name": "blighted_obelisk"
         }

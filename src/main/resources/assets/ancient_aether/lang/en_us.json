@@ -67,6 +67,10 @@
   "block.ancient_aether.angelic_stone_mosaic": "Angelic Stone Mosaic",
   "block.ancient_aether.hellfire_stone_mosaic": "Hellfire Stone Mosaic",
   "block.ancient_aether.gale_stone_mosaic": "Gale Stone Mosaic",
+  "block.ancient_aether.broken_enchanted_obelisk": "Broken Enchanted Obelisk",
+  "block.ancient_aether.enchanted_obelisk": "Enchanted Obelisk",
+  "block.ancient_aether.broken_blighted_obelisk": "Broken Blighted Obelisk",
+  "block.ancient_aether.blighted_obelisk": "Blighted Obelisk",
 
   "item.ancient_aether.raw_buffalo_ribs": "Raw Buffalo Ribs",
   "item.ancient_aether.cooked_buffalo_ribs": "Cooked Buffalo Ribs",

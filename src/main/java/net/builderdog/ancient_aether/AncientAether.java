@@ -147,8 +147,8 @@ public class AncientAether {
             event.accept(AncientAetherBlocks.GALE_LANTERN);
             event.accept(AncientAetherBlocks.ENCHANTED_SENTRY_STONE);
             event.accept(AncientAetherBlocks.BLIGHTED_SENTRY_STONE);
-            event.accept(AncientAetherBlocks.DEACTIVATED_ENCHANTED_OBELISK);
-            event.accept(AncientAetherBlocks.DEACTIVATED_BLIGHTED_OBELISK);
+            event.accept(AncientAetherBlocks.BROKEN_ENCHANTED_OBELISK);
+            event.accept(AncientAetherBlocks.BROKEN_BLIGHTED_OBELISK);
             event.accept(AncientAetherBlocks.ENCHANTED_OBELISK);
             event.accept(AncientAetherBlocks.BLIGHTED_OBELISK);
             event.accept(AncientAetherBlocks.CRACKED_SLIDER);
