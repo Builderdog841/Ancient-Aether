@@ -46,6 +46,20 @@ public class AncientAetherBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
                     .strength(0.5f, 6f).lightLevel(s -> 11).requiresCorrectToolForDrops()));
 
+    //OBELISKS
+    public static final RegistryObject<Block> DEACTIVATED_ENCHANTED_OBELISK =  registerBlock("deactivated_enchanted_obelisk",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
+                   .lightLevel(s -> 3).noLootTable().strength(-1.0F, 3600000.0F).noOcclusion()));
+    public static final RegistryObject<Block> ENCHANTED_OBELISK =  registerBlock("enchanted_obelisk",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
+                    .strength(0.5f, 6f).lightLevel(s -> 12).requiresCorrectToolForDrops().noOcclusion()));
+    public static final RegistryObject<Block> DEACTIVATED_BLIGHTED_OBELISK =  registerBlock("deactivated_blighted_obelisk",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
+                    .lightLevel(s -> 3).noLootTable().strength(-1.0F, 3600000.0F).noOcclusion()));
+    public static final RegistryObject<Block> BLIGHTED_OBELISK =  registerBlock("blighted_obelisk",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
+                    .strength(0.5f, 6f).lightLevel(s -> 12).requiresCorrectToolForDrops().noOcclusion()));
+
     //PLANTS
     public static final RegistryObject<Block> MOONLIT_TULIP = registerBlock("moonlit_tulip",
             () -> new FlowerBlock(() -> MobEffects.GLOWING, 4, Block.Properties.copy(Blocks.DANDELION)));
