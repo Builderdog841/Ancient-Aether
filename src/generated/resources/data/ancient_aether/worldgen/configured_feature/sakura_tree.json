@@ -20,7 +20,7 @@
         "Name": "ancient_aether:sakura_leaves",
         "Properties": {
           "distance": "7",
-          "double_drops": "true",
+          "double_drops": "false",
           "persistent": "false",
           "waterlogged": "false"
         }
@@ -44,7 +44,6 @@
         "state": {
           "Name": "ancient_aether:sakura_log_wall",
           "Properties": {
-            "double_drops": "true",
             "east": "none",
             "north": "none",
             "south": "none",
@@ -61,7 +60,7 @@
         "Name": "ancient_aether:sakura_log",
         "Properties": {
           "axis": "y",
-          "double_drops": "true"
+          "double_drops": "false"
         }
       }
     }
