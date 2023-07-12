@@ -152,6 +152,8 @@ public class AncientAether {
             event.accept(AncientAetherBlocks.ENCHANTED_OBELISK);
             event.accept(AncientAetherBlocks.BLIGHTED_OBELISK);
             event.accept(AncientAetherBlocks.CRACKED_SLIDER);
+            event.accept(AncientAetherItems.ENCHANTED_SENTRY_RUNE);
+            event.accept(AncientAetherItems.BLIGHTED_SENTRY_RUNE);
             event.accept(AncientAetherItems.CACTUS_FLOWER_PETAL);
             event.accept(AncientAetherItems.RAW_BUFFALO_RIBS);
             event.accept(AncientAetherItems.COOKED_BUFFALO_RIBS);

@@ -20,6 +20,12 @@ public class AncientAetherItems {
     public static final RegistryObject<Item> CACTUS_FLOWER_PETAL = ITEMS.register("cactus_flower_petal",
             () -> new Item(new Item.Properties().rarity(Rarity.COMMON)));
 
+    //MISC
+    public static final RegistryObject<Item> ENCHANTED_SENTRY_RUNE = ITEMS.register("enchanted_sentry_rune",
+            () -> new Item(new Item.Properties().rarity(Rarity.COMMON)));
+    public static final RegistryObject<Item> BLIGHTED_SENTRY_RUNE = ITEMS.register("blighted_sentry_rune",
+            () -> new Item(new Item.Properties().rarity(Rarity.COMMON)));
+
     //SIGNS
     public static final RegistryObject<Item> HIGHLANDS_PINE_SIGN = ITEMS.register("highlands_pine_sign", () -> new SignItem(new Item.Properties().stacksTo(16), AncientAetherBlocks.HIGHLANDS_PINE_SIGN.get(), AncientAetherBlocks.HIGHLANDS_PINE_WALL_SIGN.get()));
     public static final RegistryObject<Item> SAKURA_SIGN = ITEMS.register("sakura_sign", () -> new SignItem(new Item.Properties().stacksTo(16), AncientAetherBlocks.SAKURA_SIGN.get(), AncientAetherBlocks.SAKURA_WALL_SIGN.get()));
