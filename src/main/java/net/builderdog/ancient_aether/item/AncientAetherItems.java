@@ -22,9 +22,9 @@ public class AncientAetherItems {
 
     //MISC
     public static final RegistryObject<Item> ENCHANTED_SENTRY_RUNE = ITEMS.register("enchanted_sentry_rune",
-            () -> new Item(new Item.Properties().rarity(Rarity.COMMON)));
+            () -> new EnchantedSentryRuneItem(new Item.Properties().rarity(Rarity.COMMON)));
     public static final RegistryObject<Item> BLIGHTED_SENTRY_RUNE = ITEMS.register("blighted_sentry_rune",
-            () -> new Item(new Item.Properties().rarity(Rarity.COMMON)));
+            () -> new BlightedSentryRuneItem(new Item.Properties().rarity(Rarity.COMMON)));
 
     //SIGNS
     public static final RegistryObject<Item> HIGHLANDS_PINE_SIGN = ITEMS.register("highlands_pine_sign", () -> new SignItem(new Item.Properties().stacksTo(16), AncientAetherBlocks.HIGHLANDS_PINE_SIGN.get(), AncientAetherBlocks.HIGHLANDS_PINE_WALL_SIGN.get()));
