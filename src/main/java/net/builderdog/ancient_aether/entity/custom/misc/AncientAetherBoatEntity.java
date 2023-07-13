@@ -1,7 +1,8 @@
-package net.builderdog.ancient_aether.entity;
+package net.builderdog.ancient_aether.entity.custom.misc;
 
 import com.aetherteam.aether.entity.SkyrootBoatBehavior;
 import net.builderdog.ancient_aether.AncientAether;
+import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.Packet;

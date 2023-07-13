@@ -2,8 +2,10 @@ package net.builderdog.ancient_aether.entity;
 
 import com.aetherteam.aether.data.resources.AetherMobCategory;
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.entity.custom.HighlandsBuffaloEntity;
-import net.builderdog.ancient_aether.entity.custom.VeloxZephyr;
+import net.builderdog.ancient_aether.entity.custom.animals.HighlandsBuffaloEntity;
+import net.builderdog.ancient_aether.entity.custom.misc.AncientAetherBoatEntity;
+import net.builderdog.ancient_aether.entity.custom.misc.AncientAetherChestBoatEntity;
+import net.builderdog.ancient_aether.entity.custom.mobs.VeloxZephyr;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;

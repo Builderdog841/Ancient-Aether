@@ -4,7 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
-import net.builderdog.ancient_aether.entity.client.HighlandsBuffaloRenderer;
+import net.builderdog.ancient_aether.client.renderer.HighlandsBuffaloRenderer;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.builderdog.ancient_aether.item.AncientCreativeModeTabs;
 import net.builderdog.ancient_aether.world.biomes.AncientAetherRegion;

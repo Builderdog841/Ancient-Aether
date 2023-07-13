@@ -1,9 +1,11 @@
-package net.builderdog.ancient_aether.entity.client;
+package net.builderdog.ancient_aether.client.renderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.entity.AncientAetherModelLayers;
-import net.builderdog.ancient_aether.entity.custom.VeloxZephyr;
+import net.builderdog.ancient_aether.client.renderer.layers.VeloxZephyrTransparencyLayer;
+import net.builderdog.ancient_aether.client.renderer.layers.AncientAetherModelLayers;
+import net.builderdog.ancient_aether.client.renderer.model.VeloxZephyrModel;
+import net.builderdog.ancient_aether.entity.custom.mobs.VeloxZephyr;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;

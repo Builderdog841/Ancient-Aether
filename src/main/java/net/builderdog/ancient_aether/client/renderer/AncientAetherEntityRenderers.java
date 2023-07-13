@@ -1,14 +1,11 @@
 package net.builderdog.ancient_aether.client.renderer;
 
-import com.aetherteam.aether.client.renderer.AetherModelLayers;
-import com.aetherteam.aether.client.renderer.entity.model.ZephyrModel;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
-import net.builderdog.ancient_aether.entity.AncientAetherBoatEntity;
+import net.builderdog.ancient_aether.entity.custom.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
-import net.builderdog.ancient_aether.entity.AncientAetherModelLayers;
-import net.builderdog.ancient_aether.entity.client.VeloxZephyrModel;
-import net.builderdog.ancient_aether.entity.client.VeloxZephyrRenderer;
+import net.builderdog.ancient_aether.client.renderer.layers.AncientAetherModelLayers;
+import net.builderdog.ancient_aether.client.renderer.model.VeloxZephyrModel;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;

@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.entity.custom;
+package net.builderdog.ancient_aether.entity.custom.animals;
 
 import com.aetherteam.aether.AetherTags;
 import com.aetherteam.aether.client.AetherSoundEvents;

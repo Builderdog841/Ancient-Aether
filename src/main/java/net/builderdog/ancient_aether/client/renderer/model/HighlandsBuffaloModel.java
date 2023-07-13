@@ -1,7 +1,7 @@
-package net.builderdog.ancient_aether.entity.client;
+package net.builderdog.ancient_aether.client.renderer.model;
 
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.entity.custom.HighlandsBuffaloEntity;
+import net.builderdog.ancient_aether.entity.custom.animals.HighlandsBuffaloEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import software.bernie.geckolib.constant.DataTickets;

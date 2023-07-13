@@ -1,7 +1,6 @@
-package net.builderdog.ancient_aether.entity.custom;
+package net.builderdog.ancient_aether.entity.custom.mobs;
 
 import com.aetherteam.aether.client.AetherSoundEvents;
-import com.aetherteam.aether.entity.monster.Zephyr;
 import com.aetherteam.aether.entity.projectile.ZephyrSnowball;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.syncher.EntityDataAccessor;
