@@ -2,7 +2,7 @@ package net.builderdog.ancient_aether.entity;
 
 import com.aetherteam.aether.data.resources.AetherMobCategory;
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.entity.animals.HighlandsBuffaloEntity;
+import net.builderdog.ancient_aether.entity.animals.HighlandsBuffalo;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherChestBoatEntity;
 import net.builderdog.ancient_aether.entity.mobs.VeloxZephyr;
@@ -20,9 +20,9 @@ public class AncientAetherEntities {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
             DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, AncientAether.MOD_ID);
 
-    public static final RegistryObject<EntityType<HighlandsBuffaloEntity>> HIGHLANDS_BUFFALO =
+    public static final RegistryObject<EntityType<HighlandsBuffalo>> HIGHLANDS_BUFFALO =
             ENTITY_TYPES.register("highlands_buffalo",
-                    () -> EntityType.Builder.of(HighlandsBuffaloEntity::new, MobCategory.CREATURE)
+                    () -> EntityType.Builder.of(HighlandsBuffalo::new, MobCategory.CREATURE)
                             .sized(1.5f, 1.75f).clientTrackingRange(10)
                             .build(new ResourceLocation(AncientAether.MOD_ID, "highlands_buffalo").toString()));
 

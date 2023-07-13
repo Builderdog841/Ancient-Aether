@@ -10,7 +10,6 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.FlyingMob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -31,10 +30,10 @@ import software.bernie.geckolib.core.object.PlayState;
 
 import javax.annotation.Nonnull;
 
-public class HighlandsBuffaloEntity extends AetherAnimal implements GeoEntity {
+public class HighlandsBuffalo extends AetherAnimal implements GeoEntity {
     private AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
 
-    public HighlandsBuffaloEntity(EntityType<? extends AetherAnimal> entityType, Level level) {
+    public HighlandsBuffalo(EntityType<? extends AetherAnimal> entityType, Level level) {
         super(entityType, level);
     }
 
