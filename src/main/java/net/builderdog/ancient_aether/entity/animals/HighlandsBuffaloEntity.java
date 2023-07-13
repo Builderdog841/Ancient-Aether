@@ -10,6 +10,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.FlyingMob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -37,12 +38,13 @@ public class HighlandsBuffaloEntity extends AetherAnimal implements GeoEntity {
         super(entityType, level);
     }
 
-    public static AttributeSupplier setAttributes() {
+    @Nonnull
+    public static AttributeSupplier.Builder createMobAttributes() {
         return Animal.createMobAttributes()
                 .add(Attributes.MAX_HEALTH, 20D)
                 .add(Attributes.ATTACK_DAMAGE, 4.0f)
                 .add(Attributes.ATTACK_SPEED, 1.0f)
-                .add(Attributes.MOVEMENT_SPEED, 0.2f).build();
+                .add(Attributes.MOVEMENT_SPEED, 0.2f);
     }
     @Override
     public boolean isFood(ItemStack stack) {

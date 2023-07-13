@@ -19,12 +19,8 @@ public class AncientAetherEvents {
         event.register(AncientAetherEntities.VELOX_ZEPHYR.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, VeloxZephyr::checkVeloxZephyrSpawnRules, SpawnPlacementRegisterEvent.Operation.OR);
     }
     @SubscribeEvent
-    public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
-        event.put(AncientAetherEntities.HIGHLANDS_BUFFALO.get(), HighlandsBuffaloEntity.setAttributes());
-    }
-
-    @SubscribeEvent
     public static void registerEntityAttributes(EntityAttributeCreationEvent event) {
         event.put(AncientAetherEntities.VELOX_ZEPHYR.get(), VeloxZephyr.createMobAttributes().build());
+        event.put(AncientAetherEntities.HIGHLANDS_BUFFALO.get(), HighlandsBuffaloEntity.createMobAttributes().build());
     }
 }
