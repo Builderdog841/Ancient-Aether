@@ -52,6 +52,8 @@ public class AncientAetherItems {
     //SPAWN EGGS
     public static final RegistryObject<SpawnEggItem> HIGHLANDS_BUFFALO_SPAWN_EGG = ITEMS.register("highlands_buffalo_spawn_egg",
             () -> new ForgeSpawnEggItem(AncientAetherEntities.HIGHLANDS_BUFFALO, 0x4B6F89, 0x96C4D3, new Item.Properties()));
+    public static final RegistryObject<SpawnEggItem> VELOX_ZEPHYR_SPAWN_EGG = ITEMS.register("velox_zephyr_spawn_egg",
+            () -> new ForgeSpawnEggItem(AncientAetherEntities.VELOX_ZEPHYR, 0xFFF9D1, 0xBCB484, new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

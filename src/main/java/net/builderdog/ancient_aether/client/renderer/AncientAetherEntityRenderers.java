@@ -1,9 +1,14 @@
 package net.builderdog.ancient_aether.client.renderer;
 
+import com.aetherteam.aether.client.renderer.AetherModelLayers;
+import com.aetherteam.aether.client.renderer.entity.model.ZephyrModel;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.entity.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
+import net.builderdog.ancient_aether.entity.AncientAetherModelLayers;
+import net.builderdog.ancient_aether.entity.client.VeloxZephyrModel;
+import net.builderdog.ancient_aether.entity.client.VeloxZephyrRenderer;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
@@ -21,13 +26,15 @@ public class AncientAetherEntityRenderers {
         event.registerBlockEntityRenderer(AncientAetherBlockEntityTypes.SIGN.get(), SignRenderer::new);
         event.registerEntityRenderer(AncientAetherEntities.BOAT.get(), context -> new AncientAetherBoatRenderer<>(context, false));
         event.registerEntityRenderer(AncientAetherEntities.CHEST_BOAT.get(), context -> new AncientAetherBoatRenderer<>(context, true));
+        event.registerEntityRenderer(AncientAetherEntities.VELOX_ZEPHYR.get(), VeloxZephyrRenderer::new);
     }
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
         for (AncientAetherBoatEntity.Type type : AncientAetherBoatEntity.Type.values()) {
             event.registerLayerDefinition(new ModelLayerLocation(new ResourceLocation(AncientAether.MOD_ID, type.getModelLocation()), "main"), BoatModel::createBodyModel);
             event.registerLayerDefinition(new ModelLayerLocation(new ResourceLocation(AncientAether.MOD_ID, type.getChestModelLocation()), "main"), ChestBoatModel::createBodyModel);
+            event.registerLayerDefinition(AncientAetherModelLayers.VELOX_ZEPHYR, VeloxZephyrModel::createBodyLayer);
+            event.registerLayerDefinition(AncientAetherModelLayers.VELOX_ZEPHYR_TRANSPARENCY, VeloxZephyrModel::createBodyLayer);
         }
-
     }
 }
