@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "ancient_aether:cracked_slider"
+    "ancient_aether:cracked_slider",
+    "ancient_aether:enchanted_obelisk",
+    "ancient_aether:blighted_obelisk"
   ]
 }
