@@ -1,7 +1,6 @@
-package net.builderdog.ancient_aether.entity.custom.misc;
+package net.builderdog.ancient_aether.entity.misc;
 
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
-import net.builderdog.ancient_aether.entity.custom.misc.AncientAetherBoatEntity;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;

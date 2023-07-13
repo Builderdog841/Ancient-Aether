@@ -2,7 +2,7 @@ package net.builderdog.ancient_aether.item;
 
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
-import net.builderdog.ancient_aether.entity.custom.misc.AncientAetherBoatEntity;
+import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;

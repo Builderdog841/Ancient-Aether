@@ -2,7 +2,7 @@ package net.builderdog.ancient_aether.client.renderer;
 
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
-import net.builderdog.ancient_aether.entity.custom.misc.AncientAetherBoatEntity;
+import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.client.renderer.layers.AncientAetherModelLayers;
 import net.builderdog.ancient_aether.client.renderer.model.VeloxZephyrModel;

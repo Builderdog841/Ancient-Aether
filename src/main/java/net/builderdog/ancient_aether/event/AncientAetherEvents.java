@@ -2,8 +2,8 @@ package net.builderdog.ancient_aether.event;
 
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
-import net.builderdog.ancient_aether.entity.custom.animals.HighlandsBuffaloEntity;
-import net.builderdog.ancient_aether.entity.custom.mobs.VeloxZephyr;
+import net.builderdog.ancient_aether.entity.animals.HighlandsBuffaloEntity;
+import net.builderdog.ancient_aether.entity.mobs.VeloxZephyr;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;

@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.entity.custom.mobs;
+package net.builderdog.ancient_aether.entity.mobs;
 
 import com.aetherteam.aether.client.AetherSoundEvents;
 import com.aetherteam.aether.entity.projectile.ZephyrSnowball;

@@ -6,7 +6,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.datafixers.util.Pair;
 import com.mojang.math.Axis;
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.entity.custom.misc.AncientAetherBoatEntity;
+import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.model.ListModel;
