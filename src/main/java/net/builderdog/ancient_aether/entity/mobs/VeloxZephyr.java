@@ -2,6 +2,7 @@ package net.builderdog.ancient_aether.entity.mobs;
 
 import com.aetherteam.aether.client.AetherSoundEvents;
 import com.aetherteam.aether.entity.projectile.ZephyrSnowball;
+import net.builderdog.ancient_aether.entity.misc.VeloxZephyrSnowball;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -180,7 +181,7 @@ public class VeloxZephyr extends FlyingMob implements Enemy {
                     double accelY = target.getY(0.5) - (0.5 + this.parentEntity.getY(0.5));
                     double accelZ = target.getZ() - (this.parentEntity.getZ() + look.z * 4.0);
                     this.parentEntity.playSound(AetherSoundEvents.ENTITY_ZEPHYR_SHOOT.get(), 3.0F, (level.random.nextFloat() - level.random.nextFloat()) * 0.2F + 1.0F);
-                    ZephyrSnowball snowball = new ZephyrSnowball(level, this.parentEntity, accelX, accelY, accelZ);
+                    VeloxZephyrSnowball snowball = new VeloxZephyrSnowball(level, this.parentEntity, accelX, accelY, accelZ);
                     snowball.setPos(this.parentEntity.getX() + look.x * 4.0, this.parentEntity.getY(0.5) + 0.5, this.parentEntity.getZ() + look.z * 4.0);
                     level.addFreshEntity(snowball);
                     this.attackTimer = -40;

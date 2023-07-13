@@ -5,6 +5,7 @@ import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.entity.animals.HighlandsBuffalo;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherChestBoatEntity;
+import net.builderdog.ancient_aether.entity.misc.VeloxZephyrSnowball;
 import net.builderdog.ancient_aether.entity.mobs.VeloxZephyr;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -25,18 +26,27 @@ public class AncientAetherEntities {
                     () -> EntityType.Builder.of(HighlandsBuffalo::new, MobCategory.CREATURE)
                             .sized(1.5f, 1.75f).clientTrackingRange(10)
                             .build(new ResourceLocation(AncientAether.MOD_ID, "highlands_buffalo").toString()));
-
     public static final RegistryObject<EntityType<VeloxZephyr>> VELOX_ZEPHYR =
             ENTITY_TYPES.register("velox_zephyr",
                     () -> EntityType.Builder.of(VeloxZephyr::new, AetherMobCategory.AETHER_SKY_MONSTER)
                             .sized(4.5F, 3.5F).clientTrackingRange(10)
                             .build(new ResourceLocation(AncientAether.MOD_ID, "velox_zephyr").toString()));
+    public static final RegistryObject<EntityType<AncientAetherBoatEntity>> BOAT =
+            ENTITY_TYPES.register("boat",
+            () -> EntityType.Builder.<AncientAetherBoatEntity>of(AncientAetherBoatEntity::new, MobCategory.MISC)
+                    .sized(1.375F, 0.5625F).clientTrackingRange(10)
+                    .build("boat"));
+    public static final RegistryObject<EntityType<AncientAetherChestBoatEntity>> CHEST_BOAT =
+            ENTITY_TYPES.register("chest_boat",
+            () -> EntityType.Builder.<AncientAetherChestBoatEntity>of(AncientAetherChestBoatEntity::new, MobCategory.MISC)
+                    .sized(1.375F, 0.5625F).clientTrackingRange(10)
+                    .build("chest_boat"));
+    public static final RegistryObject<EntityType<VeloxZephyrSnowball>> VELOX_ZEPHYR_SNOWBALL =
+            ENTITY_TYPES.register("velox_zephyr_snowball",
+            () -> EntityType.Builder.<VeloxZephyrSnowball>of(VeloxZephyrSnowball::new, MobCategory.MISC)
+                    .sized(1.0F, 1.0F).clientTrackingRange(4).updateInterval(10)
+                    .build("velox_zephyr_snowball"));
 
-    public static final RegistryObject<EntityType<AncientAetherBoatEntity>> BOAT = ENTITY_TYPES.register("boat",
-            () -> EntityType.Builder.<AncientAetherBoatEntity>of(AncientAetherBoatEntity::new, MobCategory.MISC).sized(1.375F, 0.5625F).clientTrackingRange(10).build("boat"));
-
-    public static final RegistryObject<EntityType<AncientAetherChestBoatEntity>> CHEST_BOAT = ENTITY_TYPES.register("chest_boat",
-            () -> EntityType.Builder.<AncientAetherChestBoatEntity>of(AncientAetherChestBoatEntity::new, MobCategory.MISC).sized(1.375F, 0.5625F).clientTrackingRange(10).build("chest_boat"));
 
     @SubscribeEvent
     public static void registerEntityAttributes(EntityAttributeCreationEvent event) {
