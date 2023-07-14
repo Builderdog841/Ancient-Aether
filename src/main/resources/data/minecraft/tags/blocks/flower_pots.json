@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "ancient_aether:potted_highlands_pine_sapling",
+    "ancient_aether:potted_sakura_sapling",
+    "ancient_aether:potted_moonlit_tulip",
+    "ancient_aether:potted_edelweiss",
+    "ancient_aether:potted_small_aether_cactus"
+  ]
+}
