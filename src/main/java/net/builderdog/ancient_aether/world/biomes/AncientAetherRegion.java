@@ -7,6 +7,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Climate;
 import teamrazor.aeroblender.aether.AetherRegionType;
+import terrablender.api.ParameterUtils;
 import terrablender.api.Region;
 
 import java.util.function.Consumer;
@@ -23,19 +24,22 @@ public class AncientAetherRegion extends Region {
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper) {
         Climate.Parameter fullRange = Climate.Parameter.span(-1.0F, 1.0F);
 
-        //SAKURA JUNGLE AND HIGHLANDS TAIGA
-        Climate.Parameter temps1 = Climate.Parameter.span(-1F, 0F);
+        //SAKURA JUNGLE
+        Climate.Parameter temps1 = Climate.Parameter.span(-1F, -0.4F);
 
         //QUICKSOIL DESERT
-        Climate.Parameter temps2 = Climate.Parameter.span(0.4F, 1F);
+        Climate.Parameter temps2 = Climate.Parameter.span(0.1F, 0.7F);
 
-        this.addBiome(mapper, new Climate.ParameterPoint(temps1, Climate.Parameter.span(-1F, -0.45F), fullRange, fullRange, fullRange, fullRange, 0),
+        //HIGHLANDS TAIGA
+        Climate.Parameter temps3 = Climate.Parameter.span(-0.4F, -0.2F);
+
+        this.addBiome(mapper, new Climate.ParameterPoint(temps1, Climate.Parameter.span(-1F, -0.4F), fullRange, fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.SAKURA_JUNGLE);
 
-        this.addBiome(mapper, new Climate.ParameterPoint(temps2, Climate.Parameter.span(0.45F, 1F), fullRange, fullRange, fullRange, fullRange, 0),
+        this.addBiome(mapper, new Climate.ParameterPoint(temps2, Climate.Parameter.span(0.1F, 0.7F), fullRange, fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.QUICKSOIL_DESERT);
 
-        this.addBiome(mapper, new Climate.ParameterPoint(temps1, Climate.Parameter.span(-0.45F, -0.1F), fullRange, fullRange, fullRange, fullRange, 0),
+        this.addBiome(mapper, new Climate.ParameterPoint(temps3, Climate.Parameter.span(-0.4F, -0.2F), fullRange, fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.HIGHLAND_TAIGA);
     }
 }
