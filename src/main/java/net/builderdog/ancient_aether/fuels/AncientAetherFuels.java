@@ -15,5 +15,21 @@ public class AncientAetherFuels {
             event.setBurnTime(300);
         else if (itemstack.getItem() == AncientAetherBlocks.SAKURA_PLANKS.get().asItem())
             event.setBurnTime(300);
+        else if (itemstack.getItem() == AncientAetherBlocks.HIGHLANDS_PINE_LOG_WALL.get().asItem())
+            event.setBurnTime(300);
+        else if (itemstack.getItem() == AncientAetherBlocks.HIGHLANDS_PINE_WOOD_WALL.get().asItem())
+            event.setBurnTime(300);
+        else if (itemstack.getItem() == AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_LOG_WALL.get().asItem())
+            event.setBurnTime(300);
+        else if (itemstack.getItem() == AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_WOOD_WALL.get().asItem())
+            event.setBurnTime(300);
+        else if (itemstack.getItem() == AncientAetherBlocks.SAKURA_LOG_WALL.get().asItem())
+            event.setBurnTime(300);
+        else if (itemstack.getItem() == AncientAetherBlocks.SAKURA_WOOD_WALL.get().asItem())
+            event.setBurnTime(300);
+        else if (itemstack.getItem() == AncientAetherBlocks.STRIPPED_SAKURA_LOG_WALL.get().asItem())
+            event.setBurnTime(300);
+        else if (itemstack.getItem() == AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL.get().asItem())
+            event.setBurnTime(300);
     }
 }
