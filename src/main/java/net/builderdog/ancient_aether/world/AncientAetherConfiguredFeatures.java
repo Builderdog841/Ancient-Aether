@@ -49,6 +49,7 @@ public class AncientAetherConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_AETHER_CACTUS_PATCH_KEY = registerKey("small_aether_cactus_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_QUARTZ_ORE_KEY = registerKey("aether_quartz_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> QUICKSTONE_ORE_KEY = registerKey("quickstone_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AEROGEL_ORE_KEY = registerKey("aerogel_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> GOLDEN_LARGE_CACTUS_KEY = registerKey("golden_large_cactus");
     public static final ResourceKey<ConfiguredFeature<?, ?>> LARGE_CACTUS_KEY = registerKey("large_cactus");
     public static final ResourceKey<ConfiguredFeature<?, ?>> GIANT_CACTUS_KEY = registerKey("giant_cactus");
@@ -61,6 +62,9 @@ public class AncientAetherConfiguredFeatures {
 
         List<OreConfiguration.TargetBlockState> aetherQuartzOre = List.of(OreConfiguration.target(holystone,
                 AncientAetherBlocks.AETHER_QUARTZ_ORE.get().defaultBlockState()));
+
+        List<OreConfiguration.TargetBlockState> aerogelOre = List.of(OreConfiguration.target(holystone,
+                AetherBlocks.AEROGEL.get().defaultBlockState()));
 
         List<OreConfiguration.TargetBlockState> quickstoneOre = List.of(OreConfiguration.target(quicksoil,
                 AncientAetherBlocks.QUICKSTONE.get().defaultBlockState()));
@@ -94,7 +98,9 @@ public class AncientAetherConfiguredFeatures {
 
         register(context, AETHER_QUARTZ_ORE_KEY, Feature.ORE, new OreConfiguration(aetherQuartzOre, 12, 0f));
 
-        register(context, QUICKSTONE_ORE_KEY, Feature.ORE, new OreConfiguration(quickstoneOre, 32, 0f));
+        register(context, QUICKSTONE_ORE_KEY, Feature.ORE, new OreConfiguration(quickstoneOre, 64, 0f));
+
+        register(context, AEROGEL_ORE_KEY, Feature.ORE, new OreConfiguration(quickstoneOre, 64, 0f));
 
         register(context, MOONLIT_TULIP_PATCH_KEY, Feature.FLOWER,
                 AetherConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
