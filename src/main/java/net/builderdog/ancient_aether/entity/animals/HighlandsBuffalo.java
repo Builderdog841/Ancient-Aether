@@ -83,7 +83,7 @@ public class HighlandsBuffalo extends AetherAnimal implements GeoEntity {
     @Nullable
     @Override
     protected SoundEvent getDeathSound() {
-        return AetherSoundEvents.ENTITY_FLYING_COW_DEATH.get();
+        return AncientAetherSoundEvents.HIGHLANDS_BUFFALO_DEATH.get();
     }
     @Override
     protected float getSoundVolume() {

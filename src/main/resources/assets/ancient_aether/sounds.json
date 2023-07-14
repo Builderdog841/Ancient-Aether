@@ -16,5 +16,11 @@
       "ancient_aether:entity/highlands_buffalo/highlands_buffalo_hurt"
     ],
     "subtitle": "subtitles.ancient_aether.entity.highlands_buffalo.hurt"
+  },
+  "entity.highlands_buffalo.death": {
+    "sounds": [
+      "ancient_aether:entity/highlands_buffalo/highlands_buffalo_hurt"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.highlands_buffalo.death"
   }
 }

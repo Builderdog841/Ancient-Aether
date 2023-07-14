@@ -13,6 +13,7 @@ public class AncientAetherSoundEvents {
     public static final RegistryObject<SoundEvent> OBELISK_ACTIVATION = register("block.obelisk.obelisk_activation");
     public static final RegistryObject<SoundEvent> HIGHLANDS_BUFFALO_AMBIENT = register("entity.highlands_buffalo.ambient");
     public static final RegistryObject<SoundEvent> HIGHLANDS_BUFFALO_HURT = register("entity.highlands_buffalo.hurt");
+    public static final RegistryObject<SoundEvent> HIGHLANDS_BUFFALO_DEATH = register("entity.highlands_buffalo.death");
 
     private static RegistryObject<SoundEvent> register(String name) {
         return SOUNDS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(AncientAether.MOD_ID, name)));
