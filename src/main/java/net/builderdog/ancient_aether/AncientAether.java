@@ -3,6 +3,7 @@ package net.builderdog.ancient_aether;
 import com.mojang.logging.LogUtils;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
+import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.client.renderer.HighlandsBuffaloRenderer;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
@@ -52,6 +53,7 @@ public class AncientAether {
         AncientAetherTreeDecoratorTypes.TREE_DECORATORS.register(modEventBus);
         AncientAetherBlocks.registerWoodTypes();
         AncientAetherEntities.ENTITY_TYPES.register(modEventBus);
+        AncientAetherSoundEvents.SOUNDS.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

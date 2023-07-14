@@ -1,0 +1,8 @@
+{
+  "block.obelisk.obelisk_activation": {
+    "sounds": [
+      "ancient_aether:block/obelisk/obelisk_activation"
+    ],
+    "subtitle": "subtitles.ancient_aether.block.obelisk.obelisk_activation"
+  }
+}

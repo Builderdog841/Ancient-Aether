@@ -1,7 +1,7 @@
 package net.builderdog.ancient_aether.item;
 
-import com.aetherteam.aether_genesis.client.GenesisSoundEvents;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
+import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -32,7 +32,7 @@ public class BlightedSentryRuneItem extends Item {
                 player.awardStat(Stats.ITEM_USED.get(item.getItem()));
                 item.shrink(1);
             }
-            level.playSound(player, pos, GenesisSoundEvents.BLUE_AERCLOUD_BOUNCE.get(), SoundSource.BLOCKS, 0.8f,
+            level.playSound(player, pos, AncientAetherSoundEvents.OBELISK_ACTIVATION.get(), SoundSource.BLOCKS, 0.8f,
                     0.5f + (((float)(Math.pow(level.random.nextDouble(), 2.5))) * 0.5f));
             return InteractionResult.sidedSuccess(level.isClientSide);
         }
