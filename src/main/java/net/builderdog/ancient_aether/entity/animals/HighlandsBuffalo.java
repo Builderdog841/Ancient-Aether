@@ -4,6 +4,7 @@ import com.aetherteam.aether.AetherTags;
 import com.aetherteam.aether.client.AetherSoundEvents;
 import com.aetherteam.aether.entity.ai.goal.FallingRandomStrollGoal;
 import com.aetherteam.aether.entity.passive.AetherAnimal;
+import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
@@ -72,14 +73,12 @@ public class HighlandsBuffalo extends AetherAnimal implements GeoEntity {
     @Nullable
     @Override
     protected SoundEvent getAmbientSound() {
-        return AetherSoundEvents.ENTITY_FLYING_COW_AMBIENT.get();
+        return AncientAetherSoundEvents.HIGHLANDS_BUFFALO_AMBIENT.get();
     }
 
     @Nullable
     @Override
-    protected SoundEvent getHurtSound(@Nonnull DamageSource damageSource) {
-        return AetherSoundEvents.ENTITY_FLYING_COW_HURT.get();
-    }
+    protected SoundEvent getHurtSound(@Nonnull DamageSource damageSource) { return AncientAetherSoundEvents.HIGHLANDS_BUFFALO_HURT.get();}
 
     @Nullable
     @Override

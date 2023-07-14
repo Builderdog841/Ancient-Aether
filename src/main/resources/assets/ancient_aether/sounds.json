@@ -4,5 +4,17 @@
       "ancient_aether:block/obelisk/obelisk_activation"
     ],
     "subtitle": "subtitles.ancient_aether.block.obelisk.obelisk_activation"
+  },
+  "entity.highlands_buffalo.ambient": {
+    "sounds": [
+      "ancient_aether:entity/highlands_buffalo/highlands_buffalo_idle"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.highlands_buffalo.ambient"
+  },
+  "entity.highlands_buffalo.hurt": {
+    "sounds": [
+      "ancient_aether:entity/highlands_buffalo/highlands_buffalo_hurt"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.highlands_buffalo.hurt"
   }
 }
