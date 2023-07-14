@@ -68,6 +68,10 @@
     "ancient_aether:hellfire_lantern",
     "ancient_aether:gale_lantern",
     "ancient_aether:edelweiss",
-    "ancient_aether:moonlit_tulip"
+    "ancient_aether:moonlit_tulip",
+    "ancient_aether:enchanted_obelisk",
+    "ancient_aether:broken_enchanted_obelisk",
+    "ancient_aether:blighted_obelisk",
+    "ancient_aether:broken_blighted_obelisk"
   ]
 }
