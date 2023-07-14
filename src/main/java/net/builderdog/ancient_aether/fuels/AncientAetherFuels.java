@@ -12,8 +12,8 @@ public class AncientAetherFuels {
     public static void furnaceFuelBurnTimeEvent(FurnaceFuelBurnTimeEvent event) {
         ItemStack itemstack = event.getItemStack();
         if (itemstack.getItem() == AncientAetherBlocks.HIGHLANDS_PINE_PLANKS.get().asItem())
-            event.setBurnTime(240);
+            event.setBurnTime(300);
         else if (itemstack.getItem() == AncientAetherBlocks.SAKURA_PLANKS.get().asItem())
-            event.setBurnTime(240);
+            event.setBurnTime(300);
     }
 }
