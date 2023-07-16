@@ -28,7 +28,7 @@ public class GoldenLargeCactusFeature extends AetherCactusFeature {
         BlockState blockState = config.blockstate().getState(random, pos);
 
         //Random Number Between 2 and 3 (not 2 and 4)
-        int MaxHeight = random.nextInt(2, 4);
+        int MaxHeight = random.nextInt(3, 5);
 
         //Placement
 
@@ -40,7 +40,7 @@ public class GoldenLargeCactusFeature extends AetherCactusFeature {
         //Current Height During Placement
         int i;
         //Places the base 3x3 cube of the Cactus.
-        for (i = 0; i < MaxHeight; i++) {
+        for (i = -2; i < MaxHeight; i++) {
             this.placeSquare(level, 3, pos.above(i), blockState);
         }
 
