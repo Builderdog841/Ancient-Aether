@@ -29,6 +29,8 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
+import static com.aetherteam.aether.block.AetherBlocks.LOCKED_CARVED_STONE;
+
 public class AncientAetherBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, AncientAether.MOD_ID);
@@ -243,6 +245,15 @@ public class AncientAetherBlocks {
             () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.HELLFIRE_STONE.get())));
     public static final RegistryObject<RotatedPillarBlock> GALE_STONE_MOSAIC = registerBlock("gale_stone_mosaic",
             () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.CARVED_STONE.get())));
+
+    //LOCKED BLOCKS
+
+    public static final RegistryObject<Block> LOCKED_ENCHANTED_SENTRY_STONE = registerBlock("locked_enchanted_sentry_stone",
+            () -> new Block(Block.Properties.copy(LOCKED_CARVED_STONE.get()).lightLevel(s -> 11).noLootTable()));
+    public static final RegistryObject<Block> LOCKED_BLIGHTED_SENTRY_STONE = registerBlock("locked_blighted_sentry_stone",
+            () -> new Block(Block.Properties.copy(LOCKED_CARVED_STONE.get()).lightLevel(s -> 11).noLootTable()));
+    public static final RegistryObject<RotatedPillarBlock> LOCKED_CARVED_STONE_MOSAIC = registerBlock("locked_carved_stone_mosaic",
+            () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_CARVED_STONE.get()).noLootTable()));
 
     //MISC
     public static final RegistryObject<Block> CRACKED_SLIDER =  registerBlock("cracked_slider",

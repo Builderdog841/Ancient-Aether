@@ -13,7 +13,7 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "minecraft:structure_void"
+            "Name": "minecraft:air"
           }
         },
         {

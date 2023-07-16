@@ -154,6 +154,9 @@ public class AncientAether {
             event.accept(AncientAetherBlocks.ENCHANTED_OBELISK);
             event.accept(AncientAetherBlocks.BLIGHTED_OBELISK);
             event.accept(AncientAetherBlocks.CRACKED_SLIDER);
+            event.accept(AncientAetherBlocks.LOCKED_CARVED_STONE_MOSAIC);
+            event.accept(AncientAetherBlocks.LOCKED_ENCHANTED_SENTRY_STONE);
+            event.accept(AncientAetherBlocks.LOCKED_BLIGHTED_SENTRY_STONE);
             event.accept(AncientAetherItems.ENCHANTED_SENTRY_RUNE);
             event.accept(AncientAetherItems.BLIGHTED_SENTRY_RUNE);
             event.accept(AncientAetherItems.CACTUS_FLOWER_PETAL);
