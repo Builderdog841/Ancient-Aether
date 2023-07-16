@@ -1,5 +1,5 @@
 {
-  "name": "ancient_aether:ancient_valkyrie_laboratory/start_pool",
+  "name": "ancient_aether:sentry_laboratory/start_pool",
   "fallback": "minecraft:empty",
   "elements": [
     {
@@ -7,7 +7,7 @@
       "weight": 5,
       "element": {
 
-        "location": "ancient_aether:ancient_valkyrie_laboratory",
+        "location": "ancient_aether:sentry_laboratory",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
