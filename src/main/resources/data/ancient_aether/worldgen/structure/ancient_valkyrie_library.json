@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:jigsaw",
+  "type": "ancient_aether:ancient_structure",
   "start_pool": "ancient_aether:ancient_valkyrie_library/start_pool",
   "size": 2,
   "adapt_noise": false,
@@ -7,7 +7,7 @@
   "biomes": "#ancient_aether:has_structure/ancient_valkyrie_library",
   "step": "surface_structures",
   "start_height": {
-    "absolute": -12,
+    "absolute": -11,
     "max_inclusive": { "below_top": 128 },
     "min_inclusive": { "above_bottom": 32 }
   },
