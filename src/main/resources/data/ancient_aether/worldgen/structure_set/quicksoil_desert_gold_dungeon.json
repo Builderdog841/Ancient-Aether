@@ -1,15 +1,11 @@
 {
   "placement": {
     "type": "minecraft:random_spread",
-    "salt": 786867,
+    "salt": 4325806,
     "separation": 24,
     "spacing": 36
   },
   "structures": [
-    {
-      "structure": "ancient_aether:quicksoil_desert_silver_dungeon",
-      "weight": 3
-    },
     {
       "structure": "ancient_aether:quicksoil_desert_gold_dungeon",
       "weight": 1
