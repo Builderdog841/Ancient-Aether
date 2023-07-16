@@ -7,7 +7,7 @@
   "biomes": "#ancient_aether:has_structure/ancient_valkyrie_library",
   "step": "surface_structures",
   "start_height": {
-    "absolute": -11,
+    "absolute": -12,
     "max_inclusive": { "below_top": 128 },
     "min_inclusive": { "above_bottom": 32 }
   },
