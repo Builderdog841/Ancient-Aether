@@ -1,9 +1,13 @@
 {
   "placement": {
     "type": "minecraft:random_spread",
-    "salt": 4325806,
+    "salt": 1327809,
     "separation": 24,
     "spacing": 36
+  },
+  "exclusion_zone": {
+    "chunk_count": 15,
+    "other_set": "aether:silver_dungeon"
   },
   "structures": [
     {
