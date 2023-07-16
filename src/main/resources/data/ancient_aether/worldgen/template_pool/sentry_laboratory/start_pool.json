@@ -8,7 +8,7 @@
       "element": {
 
         "location": "ancient_aether:sentry_laboratory",
-        "processors": "minecraft:empty",
+        "processors": "ancient_aether:sentry_laboratory_randomizer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
