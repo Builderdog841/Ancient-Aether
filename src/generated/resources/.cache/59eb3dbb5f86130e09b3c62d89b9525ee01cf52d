@@ -1,4 +1,4 @@
-// 1.19.4	2023-07-17T14:28:20.7348038	Loot Tables
+// 1.19.4	2023-07-17T22:30:26.8334432	Loot Tables
 27a702c0f05d0fe6987e821f0e75296cc67ba435 data/ancient_aether/loot_tables/blocks/aether_cactus.json
 15236b68986e73bfc7bdc6ecba5c2035fa26673b data/ancient_aether/loot_tables/blocks/aether_quartz_ore.json
 5fb03435913f6569ddb87fd8b1328d449bf5cb2f data/ancient_aether/loot_tables/blocks/angelic_lantern.json
@@ -46,6 +46,7 @@ fd491cbd07c139f0cb02fb1d93c4a0b99762471e data/ancient_aether/loot_tables/blocks/
 996cd7fd6c5da309e934652ef7897858abfbc9e6 data/ancient_aether/loot_tables/blocks/quicksoil_brick_stairs.json
 5068296e37c5d59b99a9096c125a046a485a1219 data/ancient_aether/loot_tables/blocks/quicksoil_brick_wall.json
 e3ca5def612f408c62c24b4da410b709090ec781 data/ancient_aether/loot_tables/blocks/quickstone.json
+7141f40a2af3633662fa76cef78111bc70c0aef0 data/ancient_aether/loot_tables/blocks/sakura_blossoms.json
 031c75034776f69f2a365581680b05d68c5d625a data/ancient_aether/loot_tables/blocks/sakura_button.json
 d8ce764cfa5203d867097e3e7b4ef9f30987295d data/ancient_aether/loot_tables/blocks/sakura_door.json
 36bb3a84d26bedc362a56c46566b687c311b3d37 data/ancient_aether/loot_tables/blocks/sakura_fence.json

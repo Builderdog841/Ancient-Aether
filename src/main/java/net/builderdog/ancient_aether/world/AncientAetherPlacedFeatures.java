@@ -25,6 +25,7 @@ public class AncientAetherPlacedFeatures {
     public static final ResourceKey<PlacedFeature> AEROGEL_ORE_PLACED = createKey("aerogel_ore_placed");
     public static final ResourceKey<PlacedFeature> MOONLIT_TULIP_PATCH_KEY = createKey("moonlit_tulip_patch");
     public static final ResourceKey<PlacedFeature> EDELWEISS_PATCH_KEY = createKey("edelweiss_patch");
+    public static final ResourceKey<PlacedFeature> SAKURA_BLOSSOMS_PATCH_KEY = createKey("sakura_blossoms_patch");
     public static final ResourceKey<PlacedFeature> SMALL_AETHER_CACTUS_PATCH_KEY = createKey("small_aether_cactus_patch");
     public static final ResourceKey<PlacedFeature> AETHER_CACTUS_PATCH_KEY = createKey("aether_cactus_patch");
 
@@ -50,6 +51,8 @@ public class AncientAetherPlacedFeatures {
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(40))));
 
         register(context, MOONLIT_TULIP_PATCH_KEY, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.MOONLIT_TULIP_PATCH_KEY), RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
+
+        register(context, SAKURA_BLOSSOMS_PATCH_KEY, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.SAKURA_BLOSSOMS_PATCH_KEY), RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
 
         register(context, EDELWEISS_PATCH_KEY, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.EDELWEISS_PATCH_KEY), RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
 

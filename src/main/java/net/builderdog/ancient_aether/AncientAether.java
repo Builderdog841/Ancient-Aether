@@ -129,8 +129,9 @@ public class AncientAether {
             event.accept(AncientAetherBlocks.HIGHLANDS_PINE_SAPLING);
             event.accept(AncientAetherBlocks.SAKURA_SAPLING);
             event.accept(AncientAetherBlocks.SMALL_AETHER_CACTUS);
-            event.accept(AncientAetherBlocks.MOONLIT_TULIP);
             event.accept(AncientAetherBlocks.EDELWEISS);
+            event.accept(AncientAetherBlocks.MOONLIT_TULIP);
+            event.accept(AncientAetherBlocks.SAKURA_BLOSSOMS);
             event.accept(AncientAetherBlocks.AETHER_QUARTZ_ORE);
             event.accept(AncientAetherBlocks.QUICKSTONE);
             event.accept(AncientAetherBlocks.QUICKSOIL_BRICKS);
