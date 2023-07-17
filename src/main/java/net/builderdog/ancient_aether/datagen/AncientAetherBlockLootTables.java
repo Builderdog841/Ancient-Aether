@@ -5,6 +5,7 @@ import com.aetherteam.aether.mixin.mixins.common.accessor.BlockLootAccessor;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.RegistryObject;
@@ -21,13 +22,13 @@ public class AncientAetherBlockLootTables extends AetherBlockLootSubProvider {
         dropSelf((AncientAetherBlocks.ENCHANTED_SENTRY_STONE.get()));
         dropSelf((AncientAetherBlocks.BLIGHTED_SENTRY_STONE.get()));
         dropSelf((AncientAetherBlocks.QUICKSOIL_BRICKS.get()));
-        dropSelf((AncientAetherBlocks.QUICKSTONE.get()));
+        dropSelfDouble((AncientAetherBlocks.QUICKSTONE.get()));
         dropSelf((AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get()));
         dropSelf((AncientAetherBlocks.CARVED_STONE_MOSAIC.get()));
         dropSelf((AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get()));
         dropSelf((AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get()));
         dropSelf((AncientAetherBlocks.GALE_STONE_MOSAIC.get()));
-        dropSelf((AncientAetherBlocks.HIGHLANDS_PINE_LOG.get()));
+        dropSelfDouble((AncientAetherBlocks.HIGHLANDS_PINE_LOG.get()));
         dropSelf((AncientAetherBlocks.HIGHLANDS_PINE_WOOD.get()));
         dropSelf((AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_LOG.get()));
         dropSelf((AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_WOOD.get()));
@@ -47,7 +48,7 @@ public class AncientAetherBlockLootTables extends AetherBlockLootSubProvider {
         dropSelf((AncientAetherBlocks.HIGHLANDS_PINE_PRESSURE_PLATE.get()));
         dropSelf((AncientAetherBlocks.HIGHLANDS_PINE_SIGN.get()));
         dropSelf((AncientAetherBlocks.HIGHLANDS_PINE_WALL_SIGN.get()));
-        dropSelf((AncientAetherBlocks.SAKURA_LOG.get()));
+        dropSelfDouble((AncientAetherBlocks.SAKURA_LOG.get()));
         dropSelf((AncientAetherBlocks.SAKURA_WOOD.get()));
         dropSelf((AncientAetherBlocks.STRIPPED_SAKURA_LOG.get()));
         dropSelf((AncientAetherBlocks.STRIPPED_SAKURA_WOOD.get()));
@@ -67,7 +68,7 @@ public class AncientAetherBlockLootTables extends AetherBlockLootSubProvider {
         dropSelf((AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get()));
         dropSelf((AncientAetherBlocks.SAKURA_SIGN.get()));
         dropSelf((AncientAetherBlocks.SAKURA_WALL_SIGN.get()));
-        dropSelf((AncientAetherBlocks.AETHER_CACTUS.get()));
+        dropSelfDouble((AncientAetherBlocks.AETHER_CACTUS.get()));
         dropSelf((AncientAetherBlocks.STRIPPED_AETHER_CACTUS.get()));
         dropSelf((AncientAetherBlocks.CACTUS_FLOWER.get()));
         dropSelf((AncientAetherBlocks.GOLDEN_CACTUS_FLOWER.get()));
@@ -92,8 +93,7 @@ public class AncientAetherBlockLootTables extends AetherBlockLootSubProvider {
         dropPottedContents(AncientAetherBlocks.POTTED_EDELWEISS.get());
         dropPottedContents(AncientAetherBlocks.POTTED_SMALL_AETHER_CACTUS.get());
 
-        add(AncientAetherBlocks.AETHER_QUARTZ_ORE.get(),
-                (block) -> createOreDrop(AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), Items.QUARTZ));
+        dropDoubleWithFortune(AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), Items.QUARTZ);
 
         add(AncientAetherBlocks.HIGHLANDS_PINE_LEAVES.get(),
                 (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.HIGHLANDS_PINE_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
