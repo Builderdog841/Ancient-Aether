@@ -1,5 +1,5 @@
 {
-  "parent": "aether:enter_aether",
+  "parent": "ancient_aether:cracked_slider",
   "criteria": {
     "bastion": {
       "conditions": {
