@@ -1,7 +1,7 @@
 {
   "parent": "aether:enchanted_gravitite",
   "criteria": {
-    "lance_loot": {
+    "cracked_slider_loot": {
       "conditions": {
         "items": [
           {
@@ -31,7 +31,7 @@
   },
   "requirements": [
     [
-      "lance_loot"
+      "cracked_slider_loot"
     ]
   ]
 }

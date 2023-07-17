@@ -1,7 +1,7 @@
 {
-  "parent": "ancient_aether:cracked_slider",
+  "parent": "aether:enter_aether",
   "criteria": {
-    "bastion": {
+    "library": {
       "conditions": {
         "player": [
           {
@@ -33,5 +33,9 @@
       "translate": "advancement.ancient_aether.find_ancient_valkyrie_library"
     }
   },
-  "requirements": []
+  "requirements": [
+    [
+      "library"
+    ]
+  ]
 }
