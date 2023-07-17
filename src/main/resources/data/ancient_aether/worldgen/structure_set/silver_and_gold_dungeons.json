@@ -1,15 +1,19 @@
 {
   "placement": {
     "type": "minecraft:random_spread",
-    "salt": 1327809,
+    "salt": 4325806,
     "separation": 24,
     "spacing": 36
   },
-  "exclusion_zone": {
-    "chunk_count": 15,
-    "other_set": "aether:silver_dungeon"
-  },
   "structures": [
+    {
+      "structure": "aether:silver_dungeon",
+      "weight": 3
+    },
+    {
+      "structure": "aether:gold_dungeon",
+      "weight": 1
+    },
     {
       "structure": "ancient_aether:quicksoil_desert_gold_dungeon",
       "weight": 1
