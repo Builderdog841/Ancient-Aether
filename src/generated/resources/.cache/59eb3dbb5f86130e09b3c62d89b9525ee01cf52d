@@ -1,4 +1,4 @@
-// 1.19.4	2023-07-17T22:30:26.8334432	Loot Tables
+// 1.19.4	2023-07-18T09:28:19.6894695	Loot Tables
 27a702c0f05d0fe6987e821f0e75296cc67ba435 data/ancient_aether/loot_tables/blocks/aether_cactus.json
 15236b68986e73bfc7bdc6ecba5c2035fa26673b data/ancient_aether/loot_tables/blocks/aether_quartz_ore.json
 5fb03435913f6569ddb87fd8b1328d449bf5cb2f data/ancient_aether/loot_tables/blocks/angelic_lantern.json
@@ -39,6 +39,7 @@ e6ce13658cb5b7be9bceeb1c3477780508f48272 data/ancient_aether/loot_tables/blocks/
 f5492f65be2eb8c58f6e4e0015ace0684012922e data/ancient_aether/loot_tables/blocks/potted_edelweiss.json
 d319ee0b48913c0ba07bae08def87b7978e31823 data/ancient_aether/loot_tables/blocks/potted_highlands_pine_sapling.json
 7c085f49d4c67565666327e8789e77aa14bfd27b data/ancient_aether/loot_tables/blocks/potted_moonlit_tulip.json
+0f299df81f9a123a5a7986b553b64b40687e118e data/ancient_aether/loot_tables/blocks/potted_sakura_blossoms.json
 b36500e7b33b4f0659649d3ef19057b751db1499 data/ancient_aether/loot_tables/blocks/potted_sakura_sapling.json
 88859a3f4980796b1cbb374b0c7b3944b574ff23 data/ancient_aether/loot_tables/blocks/potted_small_aether_cactus.json
 fd491cbd07c139f0cb02fb1d93c4a0b99762471e data/ancient_aether/loot_tables/blocks/quicksoil_bricks.json
