@@ -88,6 +88,8 @@ public class AncientAetherBlockLootTables extends AetherBlockLootSubProvider {
         dropSelf((AncientAetherBlocks.ENCHANTED_OBELISK.get()));
         dropSelf((AncientAetherBlocks.BLIGHTED_OBELISK.get()));
 
+        dropOther(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get(), AncientAetherBlocks.SAKURA_BLOSSOMS.get());
+
         dropPottedContents(AncientAetherBlocks.POTTED_HIGHLANDS_PINE_SAPLING.get());
         dropPottedContents(AncientAetherBlocks.POTTED_SAKURA_SAPLING.get());
         dropPottedContents(AncientAetherBlocks.POTTED_MOONLIT_TULIP.get());

@@ -12,7 +12,13 @@
                 "data": {
                   "Name": "ancient_aether:sakura_blossoms"
                 },
-                "weight": 3
+                "weight": 12
+              },
+              {
+                "data": {
+                  "Name": "ancient_aether:trapped_sakura_blossoms"
+                },
+                "weight": 2
               }
             ]
           }
