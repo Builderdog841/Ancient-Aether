@@ -22,5 +22,17 @@
       "ancient_aether:entity/highlands_buffalo/highlands_buffalo_hurt"
     ],
     "subtitle": "subtitles.ancient_aether.entity.highlands_buffalo.death"
+  },
+  "entity.rootling.hurt": {
+    "sounds": [
+      "ancient_aether:entity/rootling/rootling_hurt"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.rootling.hurt"
+  },
+  "entity.rootling.death": {
+    "sounds": [
+      "ancient_aether:entity/rootling/rootling_hurt"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.rootling.death"
   }
 }

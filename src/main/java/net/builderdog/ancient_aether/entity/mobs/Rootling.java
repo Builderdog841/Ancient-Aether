@@ -36,7 +36,7 @@ public class Rootling extends Monster implements GeoEntity {
                 .add(Attributes.MAX_HEALTH, 16D)
                 .add(Attributes.ATTACK_DAMAGE, 2.0f)
                 .add(Attributes.ATTACK_SPEED, 1.2f)
-                .add(Attributes.MOVEMENT_SPEED, 0.4f);
+                .add(Attributes.MOVEMENT_SPEED, 0.3f);
     }
     @Override
     protected void registerGoals() {
@@ -57,18 +57,12 @@ public class Rootling extends Monster implements GeoEntity {
     }
     @Nullable
     @Override
-    protected SoundEvent getAmbientSound() {
-        return AncientAetherSoundEvents.HIGHLANDS_BUFFALO_AMBIENT.get();
-    }
-
-    @Nullable
-    @Override
-    protected SoundEvent getHurtSound(@Nonnull DamageSource damageSource) { return AncientAetherSoundEvents.HIGHLANDS_BUFFALO_HURT.get();}
+    protected SoundEvent getHurtSound(@Nonnull DamageSource damageSource) { return AncientAetherSoundEvents.ROOTLING_HURT.get();}
 
     @Nullable
     @Override
     protected SoundEvent getDeathSound() {
-        return AncientAetherSoundEvents.HIGHLANDS_BUFFALO_DEATH.get();
+        return AncientAetherSoundEvents.ROOTLING_DEATH.get();
     }
     @Override
     protected float getSoundVolume() {
