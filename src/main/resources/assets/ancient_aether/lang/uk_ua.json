@@ -63,10 +63,7 @@
   "item.ancient_aether.aechor_petal_ice_cream_bucket": "Відро морозива з пелюстками ехори",
   "item.ancient_aether.cactus_flower_petal_ice_cream_bucket": "Відро морозива з пелюстками кактусового квіту",
   "item.ancient_aether.cactus_flower_petal": "Пелюстка кактусового квіту",
-  "creatvemodetab.ancient_aether_tab": "Ancient Aether",
-  "biome.ancient_aether.frosty_highlands": "Морозні верхоземлі",
   "biome.ancient_aether.sakura_jungle": "Сакурові джунглі",
-  "biome.ancient_aether.quicksoil_desert": "Пустеля жвавоґрунту",
   "lore.block.ancient_aether.holystone_lantern": "Декоративний блок, що виготовляється зі священнокаменю, небесно-дерев'яних палиць та амброзієвого смолоскипа. Цей ліхтар працює в Етері.",
   "lore.block.ancient_aether.sentry_lantern": "Декоративний блок, що виготовляється зі звичайного та яскравого сторожового каменю й амброзієвого смолоскипа. Цей ліхтар працює в Етері.",
   "lore.block.ancient_aether.angelic_lantern": "Декоративний блок, що виготовляється зі звичайного та яскравого ангельського каменю й амброзієвого смолоскипа. Цей ліхтар працює в Етері.",
@@ -129,7 +126,7 @@
   "lore.block.ancient_aether.sakura_stairs": "Створені із сакурових дощок. Сходи можна ужити для вертикальності будівлі. Їх часто використовують для декорацій!",
   "lore.block.ancient_aether.sakura_trapdoor": "Створений із сакурових дощок. Люком можна закрити отвір в один блок. Його часто використовують для додаткового захисту сходів.",
   "lore.block.ancient_aether.cracked_slider": "Невдалий експеримент стародавніх валькірій, який можна добути гравітитовим або іншими кайлами. Взаємодіє з редстоуном.",
-  "lore.item.ancient_aether.aechor_petal_ice_cream_bucket": "Мармеладний десерт приготований поєднанням пелюсток ехори, цукру, льодокаменю та небесно-дерев'яного відра у верстаку",
-  "lore.item.ancient_aether.cactus_flower_petal_ice_cream_bucket": "Мармеладний десерт приготований поєднанням пелюсток кактусового квіту, цукру, льодокаменю та небесно-дерев'яного відра у верстаку",
+  "lore.item.ancient_aether.aechor_ice_cream_bucket": "Мармеладний десерт приготований поєднанням пелюсток ехори, цукру, льодокаменю та небесно-дерев'яного відра у верстаку",
+  "lore.item.ancient_aether.cactus_flower_ice_cream_bucket": "Мармеладний десерт приготований поєднанням пелюсток кактусового квіту, цукру, льодокаменю та небесно-дерев'яного відра у верстаку",
   "lore.item.ancient_aether.cactus_flower_petal": "Створена з квітів кактуса або конвертуванням пелюсток ехори, використовуючи відро отрути, цей предмет можна зачарувати в редстоуновий пил."
 }
