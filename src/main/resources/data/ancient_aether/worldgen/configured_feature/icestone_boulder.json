@@ -2,7 +2,15 @@
   "type": "minecraft:forest_rock",
   "config": {
     "state": {
-      "Name": "aether:icestone"
+      "Name": "aether:icestone",
+      "placement": [
+        {
+          "target": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "ancient_aether:icestone_boulder_can_spawn_on"
+          }
+        }
+      ]
     }
   }
 }

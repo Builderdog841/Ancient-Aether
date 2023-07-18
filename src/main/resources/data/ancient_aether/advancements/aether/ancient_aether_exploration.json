@@ -1,0 +1,82 @@
+{
+  "parent": "aether:black_moa",
+  "criteria": {
+    "ancient_aether:quicksoil_desert": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biome": "ancient_aether:quicksoil_desert"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
+    "ancient_aether:highland_taiga": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biome": "ancient_aether:highland_taiga"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
+    "ancient_aether:sakura_jungle": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biome": "ancient_aether:sakura_jungle"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.ancient_aether.ancient_aether_exploration.desc"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "ancient_aether:golden_cactus_flower"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.ancient_aether.ancient_aether_exploration"
+    }
+  },
+  "requirements": [
+    [
+      "ancient_aether:quicksoil_desert"
+    ],
+    [
+      "ancient_aether:highland_taiga"
+    ],
+    [
+      "ancient_aether:sakura_jungle"
+    ]
+  ],
+  "rewards": {
+    "experience": 500
+  }
+}

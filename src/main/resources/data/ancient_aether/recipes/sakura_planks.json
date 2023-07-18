@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "ancient_aether:crafts_sakura_planks"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "ancient_aether:sakura_planks"
+  }
+}

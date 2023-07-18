@@ -1,0 +1,23 @@
+{
+  "type": "ancient_aether:ancient_structure",
+  "start_pool": "ancient_aether:sentry_laboratory/start_pool",
+  "size": 2,
+  "adapt_noise": false,
+  "max_distance_from_center": 80,
+  "biomes": "#ancient_aether:has_structure/sentry_laboratory",
+  "terrain_adaptation": "bury",
+  "step": "surface_structures",
+  "start_height": {
+    "absolute": -22,
+    "max_inclusive": { "below_top": 128 },
+    "min_inclusive": { "above_bottom": 64 }
+  },
+  "project_start_to_heightmap": "WORLD_SURFACE_WG",
+  "use_expansion_hack": false,
+  "spawn_overrides": {
+    "creature": {
+      "bounding_box": "full",
+      "spawns": []
+    }
+  }
+}

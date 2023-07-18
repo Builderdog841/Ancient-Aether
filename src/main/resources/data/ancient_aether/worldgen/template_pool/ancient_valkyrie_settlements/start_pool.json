@@ -1,0 +1,17 @@
+{
+  "name": "ancient_aether:ancient_valkyrie_settlements/start_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+
+      "weight": 5,
+      "element": {
+
+        "location": "ancient_aether:ancient_valkyrie_settlements/settlement_center",
+        "processors": "ancient_aether:ancient_valkyrie_settlements_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

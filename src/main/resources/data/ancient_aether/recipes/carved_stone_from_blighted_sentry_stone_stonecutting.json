@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "ancient_aether:blighted_sentry_stone"
+  },
+  "result": "aether:carved_stone"
+}

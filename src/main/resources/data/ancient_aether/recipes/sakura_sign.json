@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "wooden_fence",
+  "key": {
+    "/": {
+      "tag": "aether:skyroot_stick"
+    },
+    "M": {
+      "item": "ancient_aether:sakura_planks"
+    }
+  },
+  "pattern": [
+    "MMM",
+    "MMM",
+    " / "
+  ],
+  "result": {
+    "count": 3,
+    "item": "ancient_aether:sakura_sign"
+  },
+  "show_notification": true
+}

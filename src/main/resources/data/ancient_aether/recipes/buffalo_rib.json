@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "ancient_aether:cooked_buffalo_ribs"
+    }
+  ],
+  "result": {
+    "item": "ancient_aether:buffalo_rib",
+    "count": 4
+  },
+  "show_notification": true
+}

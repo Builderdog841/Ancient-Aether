@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "ancient_aether:block/sakura_pressure_plate"
+    },
+    "powered=true": {
+      "model": "ancient_aether:block/sakura_pressure_plate_down"
+    }
+  }
+}

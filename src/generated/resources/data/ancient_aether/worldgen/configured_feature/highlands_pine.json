@@ -20,7 +20,7 @@
         "Name": "ancient_aether:highlands_pine_leaves",
         "Properties": {
           "distance": "7",
-          "double_drops": "false",
+          "double_drops": "true",
           "persistent": "false",
           "waterlogged": "false"
         }
@@ -46,7 +46,7 @@
         "Name": "ancient_aether:highlands_pine_log",
         "Properties": {
           "axis": "y",
-          "double_drops": "false"
+          "double_drops": "true"
         }
       }
     }

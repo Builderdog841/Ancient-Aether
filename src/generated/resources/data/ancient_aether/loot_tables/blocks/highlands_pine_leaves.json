@@ -1,5 +1,10 @@
 {
   "type": "minecraft:block",
+  "functions": [
+    {
+      "function": "aether:double_drops"
+    }
+  ],
   "pools": [
     {
       "bonus_rolls": 0.0,
@@ -16,9 +21,7 @@
                     {
                       "condition": "minecraft:match_tool",
                       "predicate": {
-                        "items": [
-                          "minecraft:shears"
-                        ]
+                        "tag": "forge:shears"
                       }
                     },
                     {
@@ -126,7 +129,7 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "minecraft:stick"
+          "name": "aether:skyroot_stick"
         }
       ],
       "rolls": 1.0

@@ -1,0 +1,41 @@
+{
+  "elements": [
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "ancient_aether:ancient_valkyrie_settlements/dead_end",
+        "processors": "ancient_aether:ancient_valkyrie_settlements_paths_randomizer",
+        "projection": "terrain_matching"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "ancient_aether:ancient_valkyrie_settlements/short_path",
+        "processors": "ancient_aether:ancient_valkyrie_settlements_paths_randomizer",
+        "projection": "terrain_matching"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "ancient_aether:ancient_valkyrie_settlements/medium_path",
+        "processors": "ancient_aether:ancient_valkyrie_settlements_paths_randomizer",
+        "projection": "terrain_matching"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "ancient_aether:ancient_valkyrie_settlements/long_path",
+        "processors": "ancient_aether:ancient_valkyrie_settlements_paths_randomizer",
+        "projection": "terrain_matching"
+      },
+      "weight": 2
+    }
+  ],
+  "fallback": "minecraft:empty"
+}

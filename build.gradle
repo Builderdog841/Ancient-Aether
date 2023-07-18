@@ -31,7 +31,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'io.github.0ffz.github-packages'
 apply plugin: 'org.spongepowered.mixin'
 
-version = '0.1.0'
+version = '0.3.0'
 group = 'net.builderdog.ancient_aether'
 archivesBaseName = 'ancient_aether'
 

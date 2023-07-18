@@ -1,0 +1,17 @@
+{
+  "name": "ancient_aether:sentry_laboratory/start_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+
+      "weight": 5,
+      "element": {
+
+        "location": "ancient_aether:sentry_laboratory",
+        "processors": "ancient_aether:sentry_laboratory_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
