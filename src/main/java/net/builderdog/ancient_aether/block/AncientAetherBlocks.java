@@ -7,6 +7,7 @@ import com.aetherteam.aether.block.natural.AetherDoubleDropBlock;
 import com.aetherteam.aether.block.natural.AetherDoubleDropsLeaves;
 import com.aetherteam.aether.block.natural.AetherDoubleDropsOreBlock;
 import com.aetherteam.aether.mixin.mixins.common.accessor.FireBlockAccessor;
+import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.builderdog.ancient_aether.world.tree.HighlandsPineTreeGrower;
@@ -76,7 +77,14 @@ public class AncientAetherBlocks {
             () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.DEAD_BUSH)) {
                 @Override
                 public boolean mayPlaceOn(BlockState groundState, BlockGetter worldIn, BlockPos pos) {
-                    return groundState.is(AetherBlocks.QUICKSOIL.get());
+                    return groundState.is(AncientAetherTags.Blocks.QUICKSOIL_DESERT_SURFACE_BLOCKS);
+                }
+            });
+    public static final RegistryObject<Block> SKYROOT_THORN_BUSH  = registerBlock("skyroot_thorn_bush",
+            () -> new DeadBushBlock(BlockBehaviour.Properties.copy(Blocks.DEAD_BUSH)) {
+                @Override
+                public boolean mayPlaceOn(BlockState groundState, BlockGetter worldIn, BlockPos pos) {
+                    return groundState.is(AncientAetherTags.Blocks.QUICKSOIL_DESERT_SURFACE_BLOCKS);
                 }
             });
     //CACTUS FLOWERS
