@@ -6,6 +6,7 @@ import net.builderdog.ancient_aether.entity.animals.HighlandsBuffalo;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherChestBoatEntity;
 import net.builderdog.ancient_aether.entity.misc.VeloxZephyrSnowball;
+import net.builderdog.ancient_aether.entity.mobs.Rootling;
 import net.builderdog.ancient_aether.entity.mobs.VeloxZephyr;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -26,6 +27,11 @@ public class AncientAetherEntities {
                     () -> EntityType.Builder.of(HighlandsBuffalo::new, MobCategory.CREATURE)
                             .sized(1.5f, 1.75f).clientTrackingRange(10)
                             .build(new ResourceLocation(AncientAether.MOD_ID, "highlands_buffalo").toString()));
+    public static final RegistryObject<EntityType<Rootling>> ROOTLING =
+            ENTITY_TYPES.register("rootling",
+                    () -> EntityType.Builder.of(Rootling::new, MobCategory.MONSTER)
+                            .sized(1f, 1f).clientTrackingRange(16)
+                            .build(new ResourceLocation(AncientAether.MOD_ID, "rootling").toString()));
     public static final RegistryObject<EntityType<VeloxZephyr>> VELOX_ZEPHYR =
             ENTITY_TYPES.register("velox_zephyr",
                     () -> EntityType.Builder.of(VeloxZephyr::new, AetherMobCategory.AETHER_SKY_MONSTER)

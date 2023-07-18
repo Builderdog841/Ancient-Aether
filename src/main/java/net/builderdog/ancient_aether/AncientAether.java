@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
+import net.builderdog.ancient_aether.client.renderer.RootlingRenderer;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.client.renderer.HighlandsBuffaloRenderer;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
@@ -194,6 +195,7 @@ public class AncientAether {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(AncientAetherEntities.HIGHLANDS_BUFFALO.get(), HighlandsBuffaloRenderer::new);
+            EntityRenderers.register(AncientAetherEntities.ROOTLING.get(), RootlingRenderer::new);
         }
     }
 }
