@@ -2,6 +2,7 @@ package net.builderdog.ancient_aether.block;
 
 import com.aetherteam.aether.client.AetherSoundEvents;
 import com.aetherteam.aether.event.dispatch.AetherEventDispatch;
+import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
@@ -60,7 +61,7 @@ public class TrappedFlowerBlock extends BushBlock {
                     spawnPos = spawnPos.relative(hitResult.getDirection());
                 }
                 this.spawnableEntityTypeSupplier.get().spawn(serverLevel, spawnPos, MobSpawnType.TRIGGERED);
-                serverLevel.playSound(null, blockPos, AetherSoundEvents.BLOCK_DUNGEON_TRAP_TRIGGER.get(), SoundSource.BLOCKS, 0.5F, level.getRandom().nextFloat() * 0.1F + 0.9F);
+                serverLevel.playSound(null, blockPos, AncientAetherSoundEvents.ROOTLING_EMERGES.get(), SoundSource.BLOCKS, 0.5F, level.getRandom().nextFloat() * 0.1F + 0.9F);
             }
         }
     }

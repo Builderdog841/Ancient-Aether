@@ -16,6 +16,7 @@ public class AncientAetherSoundEvents {
     public static final RegistryObject<SoundEvent> HIGHLANDS_BUFFALO_DEATH = register("entity.highlands_buffalo.death");
     public static final RegistryObject<SoundEvent> ROOTLING_HURT = register("entity.rootling.hurt");
     public static final RegistryObject<SoundEvent> ROOTLING_DEATH = register("entity.rootling.death");
+    public static final RegistryObject<SoundEvent> ROOTLING_EMERGES = register("block.rootling_trap.trigger");
 
     private static RegistryObject<SoundEvent> register(String name) {
         return SOUNDS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(AncientAether.MOD_ID, name)));
