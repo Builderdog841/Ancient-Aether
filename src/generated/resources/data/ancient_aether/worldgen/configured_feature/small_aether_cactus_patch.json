@@ -13,6 +13,12 @@
                   "Name": "ancient_aether:small_aether_cactus"
                 },
                 "weight": 3
+              },
+              {
+                "data": {
+                  "Name": "ancient_aether:skyroot_thorn_bush"
+                },
+                "weight": 1
               }
             ]
           }

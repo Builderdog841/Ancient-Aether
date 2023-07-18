@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.block;
 
+import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.world.tree.AetherCactusGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -37,5 +38,9 @@ public class SmallAetherCactusBlock extends BushBlock implements BonemealableBlo
 
     public void performBonemeal(ServerLevel p_220707_, RandomSource p_220708_, BlockPos p_220709_, BlockState p_220710_) {
         TREE_GROWER.growTree(p_220707_, p_220707_.getChunkSource().getGenerator(), p_220709_, p_220710_, p_220708_);
+    }
+
+    public boolean mayPlaceOn(BlockState groundState, BlockGetter worldIn, BlockPos pos) {
+        return groundState.is(AncientAetherTags.Blocks.QUICKSOIL_DESERT_SURFACE_BLOCKS);
     }
 }

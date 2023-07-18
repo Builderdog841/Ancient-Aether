@@ -74,21 +74,11 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> SAKURA_BLOSSOMS = registerBlock("sakura_blossoms",
             () -> new FlowerBlock(() -> MobEffects.HEALTH_BOOST, 4, Block.Properties.copy(Blocks.DANDELION)));
     public static final RegistryObject<Block> SMALL_AETHER_CACTUS = registerBlock("small_aether_cactus",
-            () -> new SmallAetherCactusBlock(BlockBehaviour.Properties.copy(Blocks.DEAD_BUSH)) {
-                @Override
-                public boolean mayPlaceOn(BlockState groundState, BlockGetter worldIn, BlockPos pos) {
-                    return groundState.is(AncientAetherTags.Blocks.QUICKSOIL_DESERT_SURFACE_BLOCKS);
-                }
-            });
+            () -> new SmallAetherCactusBlock(BlockBehaviour.Properties.copy(Blocks.DANDELION)));
     public static final RegistryObject<Block> SKYROOT_THORN_BUSH  = registerBlock("skyroot_thorn_bush",
-            () -> new DeadBushBlock(BlockBehaviour.Properties.copy(Blocks.DEAD_BUSH)) {
-                @Override
-                public boolean mayPlaceOn(BlockState groundState, BlockGetter worldIn, BlockPos pos) {
-                    return groundState.is(AncientAetherTags.Blocks.QUICKSOIL_DESERT_SURFACE_BLOCKS);
-                }
-            });
-    //CACTUS FLOWERS
+            () -> new SkyrootThornBushBlock(BlockBehaviour.Properties.copy(Blocks.DEAD_BUSH)));
 
+    //CACTUS FLOWERS
     public static final RegistryObject<Block> CACTUS_FLOWER =  registerBlock("cactus_flower",
             () -> new CactusFlowerBlock(BlockBehaviour.Properties.of(Material.PLANT)
                     .instabreak().noOcclusion().noCollission().sound(SoundType.SPORE_BLOSSOM)));
@@ -285,6 +275,7 @@ public class AncientAetherBlocks {
         pot.addPlant(AncientAetherBlocks.MOONLIT_TULIP.getId(), AncientAetherBlocks.POTTED_MOONLIT_TULIP);
         pot.addPlant(AncientAetherBlocks.EDELWEISS.getId(), AncientAetherBlocks.POTTED_EDELWEISS);
         pot.addPlant(AncientAetherBlocks.SAKURA_BLOSSOMS.getId(), AncientAetherBlocks.POTTED_SAKURA_BLOSSOMS);
+        pot.addPlant(AncientAetherBlocks.SKYROOT_THORN_BUSH.getId(), AncientAetherBlocks.POTTED_SKYROOT_THORN_BUSH);
         pot.addPlant(AncientAetherBlocks.SMALL_AETHER_CACTUS.getId(), AncientAetherBlocks.POTTED_SMALL_AETHER_CACTUS);
         pot.addPlant(AncientAetherBlocks.HIGHLANDS_PINE_SAPLING.getId(), AncientAetherBlocks.POTTED_HIGHLANDS_PINE_SAPLING);
         pot.addPlant(AncientAetherBlocks.SAKURA_SAPLING.getId(), AncientAetherBlocks.POTTED_SAKURA_SAPLING);
