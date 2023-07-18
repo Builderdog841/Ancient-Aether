@@ -1,4 +1,4 @@
-// 1.19.4	2023-07-13T16:41:41.8276138	Item Models: ancient_aether
+// 1.19.4	2023-07-18T11:23:13.1335406	Item Models: ancient_aether
 65913d6f85fe4bf5531b2d75b5693e56b2475ba3 assets/ancient_aether/models/item/aechor_ice_cream_bucket.json
 ebbb314be0e3b10376468fa80420375a40b93108 assets/ancient_aether/models/item/buffalo_rib.json
 ff6532566a208918def184647d5baca9968f4fa6 assets/ancient_aether/models/item/cactus_flower_ice_cream_bucket.json
@@ -6,4 +6,5 @@ b9806d2bb66c6ad96753e79636e0e8718a4241c7 assets/ancient_aether/models/item/cactu
 c3272ab19c230cf6ebff5ea420ce3ccbc1c229fc assets/ancient_aether/models/item/cooked_buffalo_ribs.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/highlands_buffalo_spawn_egg.json
 d44c5040dfb044f44b8ef6eeaa30a9160404bba7 assets/ancient_aether/models/item/raw_buffalo_ribs.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/rootling_spawn_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/velox_zephyr_spawn_egg.json

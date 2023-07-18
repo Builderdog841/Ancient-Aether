@@ -32,6 +32,7 @@ public class AncientAetherItemModelProvider extends ItemModelProvider {
 
         //SPAWN EGGS
         this.eggItem(AncientAetherItems.HIGHLANDS_BUFFALO_SPAWN_EGG.get());
+        this.eggItem(AncientAetherItems.ROOTLING_SPAWN_EGG.get());
         this.eggItem(AncientAetherItems.VELOX_ZEPHYR_SPAWN_EGG.get());
 
     }

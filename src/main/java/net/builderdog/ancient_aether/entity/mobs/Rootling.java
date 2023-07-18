@@ -34,9 +34,9 @@ public class Rootling extends Monster implements GeoEntity {
     public static AttributeSupplier.Builder createMobAttributes() {
         return Animal.createMobAttributes()
                 .add(Attributes.MAX_HEALTH, 20D)
-                .add(Attributes.ATTACK_DAMAGE, 4.0f)
+                .add(Attributes.ATTACK_DAMAGE, 2.0f)
                 .add(Attributes.ATTACK_SPEED, 1.0f)
-                .add(Attributes.MOVEMENT_SPEED, 0.2f);
+                .add(Attributes.MOVEMENT_SPEED, 0.4f);
     }
     @Override
     protected void registerGoals() {
