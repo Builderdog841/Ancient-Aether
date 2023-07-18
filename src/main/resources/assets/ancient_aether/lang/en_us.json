@@ -112,6 +112,7 @@
   "subtitles.ancient_aether.entity.highlands_buffalo.death": "Highlands Buffalo dies",
   "subtitles.ancient_aether.entity.rootling.hurt": "Rootling hurts",
   "subtitles.ancient_aether.entity.rootling.death": "Rootling dies",
+  "subtitles.ancient_aether.block.rootling_trap.trigger": "Rootling emerges",
 
   "advancement.ancient_aether.ancient_aether_exploration": "The Ancient Aether",
   "advancement.ancient_aether.ancient_aether_exploration.desc": "Find all biomes added by the Ancient Aether Add-On",
