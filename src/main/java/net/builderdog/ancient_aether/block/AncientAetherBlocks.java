@@ -2,10 +2,12 @@ package net.builderdog.ancient_aether.block;
 
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.block.construction.QuicksoilGlassBlock;
+import com.aetherteam.aether.block.dungeon.TrappedBlock;
 import com.aetherteam.aether.block.natural.AetherDoubleDropBlock;
 import com.aetherteam.aether.block.natural.AetherDoubleDropsLeaves;
 import com.aetherteam.aether.block.natural.AetherDoubleDropsOreBlock;
 import com.aetherteam.aether.mixin.mixins.common.accessor.FireBlockAccessor;
+import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.builderdog.ancient_aether.world.tree.HighlandsPineTreeGrower;
 import net.builderdog.ancient_aether.world.tree.SakuraTreeGrower;
@@ -30,6 +32,7 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.function.Supplier;
 
 import static com.aetherteam.aether.block.AetherBlocks.LOCKED_CARVED_STONE;
+import static net.minecraft.world.level.block.Blocks.AIR;
 
 public class AncientAetherBlocks {
     public static final DeferredRegister<Block> BLOCKS =
@@ -70,7 +73,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> SAKURA_BLOSSOMS = registerBlock("sakura_blossoms",
             () -> new FlowerBlock(() -> MobEffects.HEALTH_BOOST, 4, Block.Properties.copy(Blocks.DANDELION)));
     public static final RegistryObject<Block> SMALL_AETHER_CACTUS = registerBlock("small_aether_cactus",
-            () -> new DeadBushBlock(BlockBehaviour.Properties.copy(Blocks.DEAD_BUSH)) {
+            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.DEAD_BUSH)) {
                 @Override
                 public boolean mayPlaceOn(BlockState groundState, BlockGetter worldIn, BlockPos pos) {
                     return groundState.is(AetherBlocks.QUICKSOIL.get());
@@ -264,7 +267,9 @@ public class AncientAetherBlocks {
             () -> new CrackedSliderBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(5f).requiresCorrectToolForDrops().noOcclusion()
                     .lightLevel((state) -> state.getValue( RedstoneLampBlock.LIT ) == true ? 15 : 0)));
-
+    public static final RegistryObject<Block> TRAPPED_SAKURA_BLOSSOMS = registerBlock("trapped_sakura_blossoms",
+            () -> new TrappedFlowerBlock(AncientAetherEntities.ROOTLING::get,
+                    () -> AIR.defaultBlockState(), Block.Properties.copy(SAKURA_BLOSSOMS.get())));
     public static void registerPots() {
         FlowerPotBlock pot = (FlowerPotBlock) Blocks.FLOWER_POT;
         pot.addPlant(AncientAetherBlocks.MOONLIT_TULIP.getId(), AncientAetherBlocks.POTTED_MOONLIT_TULIP);

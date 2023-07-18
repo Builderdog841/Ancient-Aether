@@ -133,6 +133,7 @@ public class AncientAether {
             event.accept(AncientAetherBlocks.EDELWEISS);
             event.accept(AncientAetherBlocks.MOONLIT_TULIP);
             event.accept(AncientAetherBlocks.SAKURA_BLOSSOMS);
+            event.accept(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS);
             event.accept(AncientAetherBlocks.AETHER_QUARTZ_ORE);
             event.accept(AncientAetherBlocks.QUICKSTONE);
             event.accept(AncientAetherBlocks.QUICKSOIL_BRICKS);
