@@ -30,7 +30,7 @@ public class AncientAetherEntities {
     public static final RegistryObject<EntityType<Rootling>> ROOTLING =
             ENTITY_TYPES.register("rootling",
                     () -> EntityType.Builder.of(Rootling::new, MobCategory.MONSTER)
-                            .sized(0.8f, 0.8f).clientTrackingRange(16)
+                            .sized(0.7f, 0.7f).clientTrackingRange(16)
                             .build(new ResourceLocation(AncientAether.MOD_ID, "rootling").toString()));
     public static final RegistryObject<EntityType<VeloxZephyr>> VELOX_ZEPHYR =
             ENTITY_TYPES.register("velox_zephyr",
