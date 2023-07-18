@@ -18,7 +18,7 @@
                 "data": {
                   "Name": "ancient_aether:trapped_sakura_blossoms"
                 },
-                "weight": 2
+                "weight": 3
               }
             ]
           }
@@ -34,7 +34,7 @@
         }
       ]
     },
-    "tries": 64,
+    "tries": 32,
     "xz_spread": 7,
     "y_spread": 3
   }
