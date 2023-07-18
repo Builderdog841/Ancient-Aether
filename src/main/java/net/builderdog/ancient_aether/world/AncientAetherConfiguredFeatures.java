@@ -114,7 +114,7 @@ public class AncientAetherConfiguredFeatures {
         register(context, SAKURA_BLOSSOMS_PATCH_KEY, Feature.FLOWER,
                 AetherConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
                         .add(AncientAetherBlocks.SAKURA_BLOSSOMS.get().defaultBlockState(), 12)
-                        .add(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get().defaultBlockState(), 4))
+                        .add(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get().defaultBlockState(), 3))
                         , 64));
 
         register(context, SMALL_AETHER_CACTUS_PATCH_KEY, Feature.FLOWER,
