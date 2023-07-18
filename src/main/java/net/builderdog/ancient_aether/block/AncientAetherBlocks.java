@@ -74,7 +74,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> SAKURA_BLOSSOMS = registerBlock("sakura_blossoms",
             () -> new FlowerBlock(() -> MobEffects.HEALTH_BOOST, 4, Block.Properties.copy(Blocks.DANDELION)));
     public static final RegistryObject<Block> SMALL_AETHER_CACTUS = registerBlock("small_aether_cactus",
-            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.DEAD_BUSH)) {
+            () -> new SmallAetherCactusBlock(BlockBehaviour.Properties.copy(Blocks.DEAD_BUSH)) {
                 @Override
                 public boolean mayPlaceOn(BlockState groundState, BlockGetter worldIn, BlockPos pos) {
                     return groundState.is(AncientAetherTags.Blocks.QUICKSOIL_DESERT_SURFACE_BLOCKS);
@@ -230,6 +230,8 @@ public class AncientAetherBlocks {
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SAKURA_BLOSSOMS, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_SMALL_AETHER_CACTUS = BLOCKS.register("potted_small_aether_cactus",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SMALL_AETHER_CACTUS, Block.Properties.copy(Blocks.FLOWER_POT)));
+    public static final RegistryObject<FlowerPotBlock> POTTED_SKYROOT_THORN_BUSH = BLOCKS.register("potted_skyroot_thorn_bush",
+            () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SKYROOT_THORN_BUSH, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_HIGHLANDS_PINE_SAPLING = BLOCKS.register("potted_highlands_pine_sapling",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, HIGHLANDS_PINE_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_SAKURA_SAPLING = BLOCKS.register("potted_sakura_sapling",
