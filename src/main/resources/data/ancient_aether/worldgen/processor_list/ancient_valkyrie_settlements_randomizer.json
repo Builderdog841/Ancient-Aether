@@ -26,7 +26,10 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "aether:holystone"
+            "Name": "aether:holystone",
+            "Properties": {
+              "double_drops": "true"
+            }
           }
         },
         {
@@ -52,7 +55,10 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "aether:holystone"
+            "Name": "aether:holystone",
+            "Properties": {
+              "double_drops": "true"
+            }
           }
         },
         {

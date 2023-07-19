@@ -39,7 +39,23 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "aether:holystone"
+            "Name": "aether:holystone",
+            "Properties": {
+              "double_drops": "true"
+            }
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "ancient_aether:trapped_sakura_blossoms",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 0.05
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "minecraft:air"
           }
         }
       ]
