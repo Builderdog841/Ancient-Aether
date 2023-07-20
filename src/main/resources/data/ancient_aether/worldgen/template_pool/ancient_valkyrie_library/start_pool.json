@@ -7,8 +7,8 @@
       "weight": 5,
       "element": {
 
-        "location": "ancient_aether:ancient_valkyrie_library",
-        "processors": "minecraft:empty",
+        "location": "ancient_aether:ancient_valkyrie_library/entrance_temple",
+        "processors": "ancient_aether:ancient_valkyrie_library_randomizer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }

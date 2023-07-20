@@ -6,8 +6,9 @@
   "max_distance_from_center": 80,
   "biomes": "#ancient_aether:has_structure/ancient_valkyrie_library",
   "step": "surface_structures",
+  "terrain_adaptation": "beard_thin",
   "start_height": {
-    "absolute": -12,
+    "absolute": 1,
     "max_inclusive": { "below_top": 128 },
     "min_inclusive": { "above_bottom": 64 }
   },
