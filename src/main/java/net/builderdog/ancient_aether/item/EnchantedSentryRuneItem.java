@@ -37,12 +37,12 @@ public class EnchantedSentryRuneItem extends Item {
                     player.awardStat(Stats.ITEM_USED.get(item.getItem()));
                     item.shrink(1);
                 }
-                level.playSound(player, pos, AncientAetherSoundEvents.OBELISK_ACTIVATION.get(), SoundSource.BLOCKS, 0.8f,
-                        0.5f + (((float) (Math.pow(level.random.nextDouble(), 2.5))) * 0.5f));
             }
-                return InteractionResult.sidedSuccess(level.isClientSide);
-            } else {
-                return InteractionResult.PASS;
-            }
+            level.playSound(player, pos, AncientAetherSoundEvents.OBELISK_ACTIVATION.get(), SoundSource.BLOCKS, 0.8f,
+                    0.5f + (((float) (Math.pow(level.random.nextDouble(), 2.5))) * 0.5f));
+            return InteractionResult.sidedSuccess(level.isClientSide);
+        } else {
+            return InteractionResult.PASS;
         }
     }
+}
