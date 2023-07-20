@@ -3,6 +3,7 @@ package net.builderdog.ancient_aether.item;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -21,6 +22,7 @@ public class BlightedSentryRuneItem extends Item {
     public BlightedSentryRuneItem(Properties properties) {
         super(properties);
     }
+
     @Override
     public InteractionResult useOn(UseOnContext context) {
         Level level = context.getLevel();
@@ -37,12 +39,16 @@ public class BlightedSentryRuneItem extends Item {
                     player.awardStat(Stats.ITEM_USED.get(item.getItem()));
                     item.shrink(1);
                 }
+            } else {
+                if (player != null && !level.isClientSide) {
+                    player.displayClientMessage(Component.literal("§cYou haven't defeated the Valkyrie Queen yet"), true);
+                } else {
+                    level.playSound(player, pos, AncientAetherSoundEvents.OBELISK_ACTIVATION.get(), SoundSource.BLOCKS, 0.8f,
+                            0.5f + (((float) (Math.pow(level.random.nextDouble(), 2.5))) * 0.5f));
+                    return InteractionResult.sidedSuccess(level.isClientSide);
+                }
             }
-            level.playSound(player, pos, AncientAetherSoundEvents.OBELISK_ACTIVATION.get(), SoundSource.BLOCKS, 0.8f,
-                    0.5f + (((float) (Math.pow(level.random.nextDouble(), 2.5))) * 0.5f));
-            return InteractionResult.sidedSuccess(level.isClientSide);
-        } else {
-            return InteractionResult.PASS;
-        }
+        }else {}
+        return InteractionResult.PASS;
     }
 }
