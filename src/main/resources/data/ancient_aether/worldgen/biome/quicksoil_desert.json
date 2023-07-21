@@ -25,17 +25,18 @@
 [],
 [],
 [
-"aether:aether_dirt_ore",
-"aether:icestone_ore",
-"aether:ambrosium_ore",
-"aether:zanite_ore",
-"aether:gravitite_ore",
-"aether:lower_gravitite_ore",
-  "ancient_aether:aerogel_ore_placed"
+  "aether:aether_dirt_ore",
+  "aether:icestone_ore",
+  "aether:ambrosium_ore",
+  "aether:zanite_ore",
+  "aether:gravitite_ore",
+  "aether:lower_gravitite_ore",
+  "ancient_aether:aerogel_ore_placed",
+  "ancient_aether:quickstone_ore_placed"
 ],
 [],
 [
-"aether:water_spring"
+  "aether:water_spring"
 ],
 [
   "aether:grass_patch",
@@ -43,9 +44,9 @@
   "ancient_aether:aether_cactus_patch"
 ],
 [
-"aether:cold_aercloud",
-"aether:blue_aercloud",
-"aether:golden_aercloud"
+  "aether:cold_aercloud",
+  "aether:blue_aercloud",
+  "aether:golden_aercloud"
 ]
 ],
   "has_precipitation": false,

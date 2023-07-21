@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "ancient_aether:quicksoil_desert",
-  "features": "ancient_aether:quickstone_ore_placed",
-  "step": "underground_ores"
-}
