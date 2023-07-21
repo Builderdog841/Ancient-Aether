@@ -49,7 +49,7 @@ public class EnchantedSentryRuneItem extends Item {
                     player.awardStat(Stats.ITEM_USED.get(item.getItem()));
                     item.shrink(1);
                     for (int x1 = Mth.floor(x - 30); x1 <= Mth.ceil(x + 30); x1++) {
-                        for (int y1 = Mth.floor(y - 20); y1 <= Mth.ceil(y + 20); y1++) {
+                        for (int y1 = Mth.floor(y - 15); y1 <= Mth.ceil(y + 20); y1++) {
                             for (int z1 = Mth.floor(z - 30); z1 <= Mth.ceil(z + 30); z1++) {
                                 BlockPos checkedPos = new BlockPos(x1, y1, z1);
                                 BlockState checkedState = level.getBlockState(checkedPos);
