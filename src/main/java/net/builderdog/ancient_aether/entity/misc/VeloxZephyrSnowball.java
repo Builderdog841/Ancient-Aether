@@ -3,6 +3,7 @@ package net.builderdog.ancient_aether.entity.misc;
 import com.aetherteam.aether.client.particle.AetherParticleTypes;
 import com.aetherteam.aether.entity.AetherEntityTypes;
 
+import com.aetherteam.aether.entity.monster.PassiveWhirlwind;
 import com.aetherteam.aether.mixin.mixins.common.accessor.PlayerAccessor;
 import com.aetherteam.aether.network.AetherPacketHandler;
 import com.aetherteam.aether.network.packet.client.ZephyrSnowballHitPacket;
@@ -10,10 +11,10 @@ import com.aetherteam.aether.util.EquipmentUtil;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Fireball;
 import net.minecraft.world.entity.projectile.ItemSupplier;
@@ -23,6 +24,8 @@ import net.minecraft.world.item.Items;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 
@@ -87,27 +90,23 @@ public class VeloxZephyrSnowball extends Fireball implements ItemSupplier {
     }
 
     @Override
-    protected void onHit(@Nonnull HitResult result) {
-        super.onHit(result);
-        if (result.getType() == HitResult.Type.ENTITY) {
-            Entity entity = ((EntityHitResult) result).getEntity();
-            if (entity instanceof LivingEntity livingEntity && !EquipmentUtil.hasSentryBoots(livingEntity)) {
-                if (livingEntity instanceof Player player && player.isBlocking()) {
-                    PlayerAccessor playerAccessor = (PlayerAccessor) player;
-                    playerAccessor.callHurtCurrentlyUsedShield(3.0F);
-                } else {
-                    entity.setDeltaMovement(entity.getDeltaMovement().x, entity.getDeltaMovement().y + 0.5, entity.getDeltaMovement().z);
-                    entity.setDeltaMovement(entity.getDeltaMovement().x + (this.getDeltaMovement().x * 1.5F), entity.getDeltaMovement().y, entity.getDeltaMovement().z + (this.getDeltaMovement().z * 1.5F));
-                    if (livingEntity instanceof ServerPlayer player) {
-                        if (!this.level.isClientSide) {
-                            AetherPacketHandler.sendToPlayer(new ZephyrSnowballHitPacket(livingEntity.getId(), this.getDeltaMovement().x, this.getDeltaMovement().z), player);
-                        }
-                    }
-                }
+    public void onHitBlock(BlockHitResult blockHitResult) {
+        super.onHitBlock(blockHitResult);
+        LevelAccessor world = this.level;
+        double x = blockHitResult.getBlockPos().getX();
+        double y = blockHitResult.getBlockPos().getY();
+        double z = blockHitResult.getBlockPos().getZ();
+            if (world instanceof ServerLevel _level) {
+                Entity entityToSpawn = new PassiveWhirlwind(AetherEntityTypes.WHIRLWIND.get(), _level);
+                entityToSpawn.moveTo(x, y + 1, z, 0, 0);
+                entityToSpawn.setYBodyRot(0);
+                entityToSpawn.setYHeadRot(0);
+                entityToSpawn.setDeltaMovement(0, 0, 0);
+                if (entityToSpawn instanceof Mob _mobToSpawn)
+                    _mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+                _level.addFreshEntity(entityToSpawn);
             }
         }
-        this.discard();
-    }
 
     @Override
     protected boolean shouldBurn() {
