@@ -73,7 +73,7 @@ public class AncientAetherConfiguredFeatures {
         register(context, HIGHLANDS_PINE_KEY, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
                         BlockStateProvider.simple(AncientAetherBlocks.HIGHLANDS_PINE_LOG.get()),
-                        new StraightTrunkPlacer(5, 5, 0),
+                        new StraightTrunkPlacer(5, 10, 0),
                         BlockStateProvider.simple(AncientAetherBlocks.HIGHLANDS_PINE_LEAVES.get()),
                         new AncientAetherPineFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
                         new TwoLayersFeatureSize(2, 0, 2)
