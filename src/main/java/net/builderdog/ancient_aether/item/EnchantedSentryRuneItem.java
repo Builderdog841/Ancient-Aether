@@ -41,16 +41,13 @@ public class EnchantedSentryRuneItem extends Item {
             } else {
                 if (player != null && !level.isClientSide) {
                     player.displayClientMessage(Component.literal("§cYou haven't defeated the Valkyrie Queen yet"), true);
-                    level.playSound(player, pos, AncientAetherSoundEvents.OBELISK_ACTIVATION.get(), SoundSource.BLOCKS, 0.8f,
-                            0.5f + (((float) (Math.pow(level.random.nextDouble(), 2.5))) * 0.5f));
-                    return InteractionResult.sidedSuccess(level.isClientSide);
                 } else {
                     level.playSound(player, pos, AncientAetherSoundEvents.OBELISK_ACTIVATION.get(), SoundSource.BLOCKS, 0.8f,
                             0.5f + (((float) (Math.pow(level.random.nextDouble(), 2.5))) * 0.5f));
                     return InteractionResult.sidedSuccess(level.isClientSide);
                 }
             }
-        } else {}
+        }else {}
         return InteractionResult.PASS;
     }
 }
