@@ -15,19 +15,36 @@
       "trunk_height": 2
     },
     "foliage_provider": {
-      "type": "minecraft:simple_state_provider",
-      "state": {
-        "Name": "ancient_aether:sakura_leaves",
-        "Properties": {
-          "distance": "7",
-          "double_drops": "true",
-          "persistent": "false",
-          "waterlogged": "false"
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "aether_genesis:purple_crystal_leaves",
+            "Properties": {
+              "distance": "7",
+              "double_drops": "true",
+              "persistent": "false",
+              "waterlogged": "false"
+            }
+          },
+          "weight": 4
+        },
+        {
+          "data": {
+            "Name": "aether_genesis:purple_crystal_fruit_leaves",
+            "Properties": {
+              "distance": "7",
+              "double_drops": "true",
+              "persistent": "false",
+              "waterlogged": "false"
+            }
+          },
+          "weight": 1
         }
-      }
+      ]
     },
     "force_dirt": false,
-    "ignore_vines": false,
+    "ignore_vines": true,
     "minimum_size": {
       "type": "minecraft:two_layers_feature_size",
       "limit": 2,
@@ -42,8 +59,9 @@
       "skinnyTrunkProvider": {
         "type": "minecraft:simple_state_provider",
         "state": {
-          "Name": "ancient_aether:sakura_log_wall",
+          "Name": "aether_genesis:skyroot_log_wall",
           "Properties": {
+            "double_drops": "true",
             "east": "none",
             "north": "none",
             "south": "none",
@@ -57,7 +75,7 @@
     "trunk_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "ancient_aether:sakura_log",
+        "Name": "aether:skyroot_log",
         "Properties": {
           "axis": "y",
           "double_drops": "true"
