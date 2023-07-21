@@ -120,7 +120,9 @@
   "advancement.ancient_aether.cracked_slider": "Out of Order",
   "advancement.ancient_aether.cracked_slider.desc": "Mine a Cracked Slider with a Gravitite Pickaxe",
   "advancement.ancient_aether.find_ancient_valkyrie_library": "Bookworm",
-  "advancement.ancient_aether.find_ancient_valkyrie_library.desc": "Find an Ancient Valkyrie Library in a Quicksoil Desert",
+  "advancement.ancient_aether.find_ancient_valkyrie_library.desc": "Find an Ancient Valkyrie Library in the Quicksoil Desert",
+
+  "gui.ancient_aether.obelisk_valkyrie_queen": "You haven't defeated the Valkyrie Queen yet",
 
   "lore.block.ancient_aether.holystone_brick_mosaic": "A fancy Holystone Brick variant that can be rotated in various different directions.",
   "lore.block.ancient_aether.sentry_stone_mosaic": "A fancy Carved Stone variant that can be rotated in various different directions.",

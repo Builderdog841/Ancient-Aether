@@ -2,6 +2,7 @@ package net.builderdog.ancient_aether.item;
 
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -40,7 +41,7 @@ public class EnchantedSentryRuneItem extends Item {
                 }
             } else {
                 if (player != null && !level.isClientSide) {
-                    player.displayClientMessage(Component.literal("§cYou haven't defeated the Valkyrie Queen yet"), true);
+                    player.displayClientMessage(Component.translatable("gui.ancient_aether.obelisk_valkyrie_queen").withStyle(ChatFormatting.RED), true);
                 } else {
                     level.playSound(player, pos, AncientAetherSoundEvents.OBELISK_ACTIVATION.get(), SoundSource.BLOCKS, 0.8f,
                             0.5f + (((float) (Math.pow(level.random.nextDouble(), 2.5))) * 0.5f));
