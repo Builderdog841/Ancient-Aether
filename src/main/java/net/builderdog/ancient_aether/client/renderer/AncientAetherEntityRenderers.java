@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.client.renderer;
 
+import com.aetherteam.aether.client.renderer.entity.WhirlwindRenderer;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
@@ -25,6 +26,7 @@ public class AncientAetherEntityRenderers {
         event.registerEntityRenderer(AncientAetherEntities.BOAT.get(), context -> new AncientAetherBoatRenderer<>(context, false));
         event.registerEntityRenderer(AncientAetherEntities.CHEST_BOAT.get(), context -> new AncientAetherBoatRenderer<>(context, true));
         event.registerEntityRenderer(AncientAetherEntities.VELOX_ZEPHYR.get(), VeloxZephyrRenderer::new);
+        event.registerEntityRenderer(AncientAetherEntities.VELOX_WHIRLWIND.get(), VeloxWhirlwindRenderer::new);
         event.registerEntityRenderer(AncientAetherEntities.VELOX_ZEPHYR_SNOWBALL.get(), (context) -> new ThrownItemRenderer<>(context, 3.0F, true));
     }
     @SubscribeEvent

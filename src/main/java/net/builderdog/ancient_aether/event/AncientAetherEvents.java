@@ -22,6 +22,7 @@ public class AncientAetherEvents {
     @SubscribeEvent
     public static void registerEntityAttributes(EntityAttributeCreationEvent event) {
         event.put(AncientAetherEntities.VELOX_ZEPHYR.get(), VeloxZephyr.createMobAttributes().build());
+        event.put(AncientAetherEntities.VELOX_WHIRLWIND.get(), VeloxZephyr.createMobAttributes().build());
         event.put(AncientAetherEntities.HIGHLANDS_BUFFALO.get(), HighlandsBuffalo.createMobAttributes().build());
         event.put(AncientAetherEntities.ROOTLING.get(), Rootling.createMobAttributes().build());
     }

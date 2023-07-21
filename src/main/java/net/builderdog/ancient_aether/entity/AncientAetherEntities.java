@@ -7,6 +7,7 @@ import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherChestBoatEntity;
 import net.builderdog.ancient_aether.entity.misc.VeloxZephyrSnowball;
 import net.builderdog.ancient_aether.entity.mobs.Rootling;
+import net.builderdog.ancient_aether.entity.mobs.VeloxWhirlwind;
 import net.builderdog.ancient_aether.entity.mobs.VeloxZephyr;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -52,7 +53,11 @@ public class AncientAetherEntities {
             () -> EntityType.Builder.<VeloxZephyrSnowball>of(VeloxZephyrSnowball::new, MobCategory.MISC)
                     .sized(1.0F, 1.0F).clientTrackingRange(4).updateInterval(10)
                     .build("velox_zephyr_snowball"));
-
+    public static final RegistryObject<EntityType<VeloxWhirlwind>> VELOX_WHIRLWIND =
+            ENTITY_TYPES.register("velox_whirlwind",
+            () -> EntityType.Builder.of(VeloxWhirlwind::new, AetherMobCategory.AETHER_SURFACE_MONSTER)
+                    .fireImmune().sized(0.6F, 0.8F).clientTrackingRange(8)
+                    .build("velox_whirlwind"));
 
     @SubscribeEvent
     public static void registerEntityAttributes(EntityAttributeCreationEvent event) {

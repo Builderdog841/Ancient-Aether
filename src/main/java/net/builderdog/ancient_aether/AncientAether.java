@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
+import net.builderdog.ancient_aether.client.particle.AncientAetherParticleTypes;
 import net.builderdog.ancient_aether.client.renderer.RootlingRenderer;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.client.renderer.HighlandsBuffaloRenderer;
@@ -55,6 +56,7 @@ public class AncientAether {
         AncientAetherBlocks.registerWoodTypes();
         AncientAetherEntities.ENTITY_TYPES.register(modEventBus);
         AncientAetherSoundEvents.SOUNDS.register(modEventBus);
+        AncientAetherParticleTypes.PARTICLES.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
