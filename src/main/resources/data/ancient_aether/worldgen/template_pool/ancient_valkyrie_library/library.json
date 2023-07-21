@@ -1,5 +1,5 @@
 {
-  "name": "ancient_aether:ancient_valkyrie_library/start_pool",
+  "name": "ancient_aether:ancient_valkyrie_library/library",
   "fallback": "minecraft:empty",
   "elements": [
     {
