@@ -99,7 +99,7 @@
     ],
     "aether_surface_monster": [
       {
-        "type": "aether:whirlwind",
+        "type": "aether:velox_whirlwind",
         "maxCount": 1,
         "minCount": 1,
         "weight": 3
