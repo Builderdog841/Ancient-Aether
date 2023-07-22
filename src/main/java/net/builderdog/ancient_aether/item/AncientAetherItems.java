@@ -23,7 +23,7 @@ public class AncientAetherItems {
 
     //MISC
     public static final RegistryObject<Item> ENCHANTED_SENTRY_RUNE = ITEMS.register("enchanted_sentry_rune",
-            () -> new EnchantedSentryRuneItem(new Item.Properties().rarity(AetherItems.AETHER_LOOT)));
+            () -> new Item(new Item.Properties().rarity(AetherItems.AETHER_LOOT)));
     public static final RegistryObject<Item> BLIGHTED_SENTRY_RUNE = ITEMS.register("blighted_sentry_rune",
             () -> new BlightedSentryRuneItem(new Item.Properties().rarity(AetherItems.AETHER_LOOT)));
 
