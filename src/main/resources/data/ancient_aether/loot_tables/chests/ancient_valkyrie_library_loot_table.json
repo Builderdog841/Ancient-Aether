@@ -92,27 +92,13 @@
         {
           "type": "minecraft:item",
           "name": "aether:zanite_gemstone",
-          "weight": 2,
+          "weight": 3,
           "functions": [
             {
               "function": "set_count",
               "count": {
                 "min": 2,
                 "max": 4
-              }
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:quartz",
-          "weight": 3,
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 3,
-                "max": 6
               }
             }
           ]
