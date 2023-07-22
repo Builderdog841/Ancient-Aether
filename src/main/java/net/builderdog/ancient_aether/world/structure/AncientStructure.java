@@ -17,7 +17,7 @@ import net.minecraft.world.level.levelgen.structure.structures.EndCityStructure;
 
 import java.util.Optional;
 
-public class AncientStructure extends Structure {
+public class AncientStructure extends EndCityStructure {
 
     // A custom codec that changes the size limit for our code_structure_sky_fan.json's config to not be capped at 7.
     // With this, we can have a structure with a size limit up to 30 if we want to have extremely long branches of pieces in the structure.
@@ -111,7 +111,7 @@ public class AncientStructure extends Structure {
 
         // Turns the chunk coordinates into actual coordinates we can use. (Gets corner of that chunk)
         ChunkPos chunkPos = context.chunkPos();
-        BlockPos blockPos = new BlockPos(chunkPos.getMinBlockX(), startY, chunkPos.getMinBlockZ());
+        BlockPos blockPos = new BlockPos(chunkPos.getMiddleBlockX(), startY, chunkPos.getMiddleBlockZ());
 
         Optional<GenerationStub> structurePiecesGenerator =
                 JigsawPlacement.addPieces(
