@@ -2,6 +2,7 @@ package net.builderdog.ancient_aether.entity.monster;
 
 import com.aetherteam.aether.loot.AetherLoot;
 import net.builderdog.ancient_aether.client.particle.AncientAetherParticleTypes;
+import net.builderdog.ancient_aether.loot.AncientAetherLoot;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.DifficultyInstance;
@@ -52,7 +53,7 @@ public class VeloxWhirlwind extends AbstractVeloxWhirlwind {
 
     @Override
     public ResourceLocation getLootLocation() {
-        return AetherLoot.WHIRLWIND_JUNK;
+        return AncientAetherLoot.VELOX_WHIRLWIND_JUNK;
     }
 
     @Override
