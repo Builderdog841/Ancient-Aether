@@ -36,7 +36,6 @@ public class EnchantedSentryRuneItem extends Item {
         ItemStack item = context.getItemInHand();
         BlockState state = level.getBlockState(pos);
         Player player = context.getPlayer();
-        LevelAccessor world = context.getLevel();
         double x = context.getClickedPos().getX();
         double y = context.getClickedPos().getY();
         double z = context.getClickedPos().getZ();
@@ -44,7 +43,6 @@ public class EnchantedSentryRuneItem extends Item {
         if (state.getBlock() == AncientAetherBlocks.BROKEN_ENCHANTED_OBELISK.get()) {
             if (player instanceof ServerPlayer _plr0 && _plr0.level instanceof ServerLevel
                     && _plr0.getAdvancements().getOrStartProgress(_plr0.server.getAdvancements().getAdvancement(new ResourceLocation("aether:silver_dungeon"))).isDone()) {
-                if (player != null && !level.isClientSide) {
                     level.setBlockAndUpdate(pos, AncientAetherBlocks.ENCHANTED_OBELISK.get().defaultBlockState());
                     player.awardStat(Stats.ITEM_USED.get(item.getItem()));
                     item.shrink(1);
@@ -68,7 +66,6 @@ public class EnchantedSentryRuneItem extends Item {
                                 }
                             }
                         }
-                    }
                 }
                         } else {
                             if (player != null && !level.isClientSide) {
