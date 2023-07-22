@@ -63,7 +63,7 @@
       "charge": 0.4,
       "energy_budget": 0.1
     },
-    "aether:velox_whirlwind": {
+    "ancient_aether:velox_whirlwind": {
       "charge": 0.4,
       "energy_budget": 0.1
     },
@@ -99,7 +99,7 @@
     ],
     "aether_surface_monster": [
       {
-        "type": "aether:velox_whirlwind",
+        "type": "ancient_aether:velox_whirlwind",
         "maxCount": 1,
         "minCount": 1,
         "weight": 3
