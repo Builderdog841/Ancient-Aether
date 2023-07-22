@@ -7,7 +7,18 @@
       "weight": 5,
       "element": {
 
-        "location": "ancient_aether:ancient_valkyrie_library/entrance_temple",
+        "location": "ancient_aether:ancient_valkyrie_library/entrance_temple_1",
+        "processors": "ancient_aether:ancient_valkyrie_library_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 5,
+      "element": {
+
+        "location": "ancient_aether:ancient_valkyrie_library/entrance_temple_2",
         "processors": "ancient_aether:ancient_valkyrie_library_randomizer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
