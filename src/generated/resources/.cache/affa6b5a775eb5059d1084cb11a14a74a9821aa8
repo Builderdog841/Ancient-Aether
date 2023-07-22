@@ -1,4 +1,4 @@
-// 1.19.4	2023-07-16T19:01:39.751106	Block States: ancient_aether
+// 1.19.4	2023-07-22T09:47:24.8454473	Block States: ancient_aether
 85a87e8dba6cb4c75168f228811e9a26e6aaa0ed assets/ancient_aether/blockstates/aether_quartz_ore.json
 efbd005409bc1a102284948502f60d484a104eb7 assets/ancient_aether/blockstates/angelic_stone_mosaic.json
 bd59f114d3f5593493fdf857751d3207d0837778 assets/ancient_aether/blockstates/blighted_sentry_stone.json
@@ -72,7 +72,6 @@ e1eba6c687ccb2dc85844ff378353cca434278ac assets/ancient_aether/models/item/highl
 9c7931036e177ac133cd20378a33a07c1834a368 assets/ancient_aether/models/item/highlands_pine_planks.json
 c51b92c531f3d05d2645ed7dfa0aa08add3df266 assets/ancient_aether/models/item/highlands_pine_wood.json
 fd08df99e3b84842afe3d24035d1f1a01bd61926 assets/ancient_aether/models/item/holystone_brick_mosaic.json
-61277c9b6e3aec4272103003ebf9a28607428761 assets/ancient_aether/models/item/locked_carved_stone_mosaic.json
 5ae873f275999ca251a6974e0efaff9525c5420d assets/ancient_aether/models/item/quicksoil_bricks.json
 42cdb381c547dc81f8074fc7fe65f83fee908399 assets/ancient_aether/models/item/quickstone.json
 d7de87c625a27f6b0abfd1bc746bd563256355be assets/ancient_aether/models/item/sakura_leaves.json

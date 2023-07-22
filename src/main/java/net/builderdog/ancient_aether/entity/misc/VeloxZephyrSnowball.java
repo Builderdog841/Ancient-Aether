@@ -9,6 +9,7 @@ import com.aetherteam.aether.network.AetherPacketHandler;
 import com.aetherteam.aether.network.packet.client.ZephyrSnowballHitPacket;
 import com.aetherteam.aether.util.EquipmentUtil;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
+import net.builderdog.ancient_aether.entity.mobs.VeloxWhirlwind;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.server.level.ServerLevel;
@@ -97,7 +98,7 @@ public class VeloxZephyrSnowball extends Fireball implements ItemSupplier {
         double y = blockHitResult.getBlockPos().getY();
         double z = blockHitResult.getBlockPos().getZ();
             if (world instanceof ServerLevel _level) {
-                Entity entityToSpawn = new PassiveWhirlwind(AetherEntityTypes.WHIRLWIND.get(), _level);
+                Entity entityToSpawn = new VeloxWhirlwind(AncientAetherEntities.VELOX_WHIRLWIND.get(), _level);
                 entityToSpawn.moveTo(x, y + 1, z, 0, 0);
                 entityToSpawn.setYBodyRot(0);
                 entityToSpawn.setYHeadRot(0);

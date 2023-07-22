@@ -64,7 +64,6 @@ public class AncientAetherBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:angelic_stone_mosaic","minecraft:block/cube_column"));
         simpleBlockItem(AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:hellfire_stone_mosaic","minecraft:block/cube_column"));
         simpleBlockItem(AncientAetherBlocks.GALE_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:gale_stone_mosaic","minecraft:block/cube_column"));
-        simpleBlockItem(AncientAetherBlocks.LOCKED_CARVED_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:carved_stone_mosaic","minecraft:block/cube_column"));
 
         saplingBlock(AncientAetherBlocks.HIGHLANDS_PINE_SAPLING);
         saplingBlock(AncientAetherBlocks.SAKURA_SAPLING);

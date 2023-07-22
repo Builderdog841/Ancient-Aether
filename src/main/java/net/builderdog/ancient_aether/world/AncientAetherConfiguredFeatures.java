@@ -1,6 +1,7 @@
 package net.builderdog.ancient_aether.world;
 
 import com.aetherteam.aether.AetherTags;
+import com.aetherteam.aether.block.AetherBlockStateProperties;
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.data.resources.builders.AetherConfiguredFeatureBuilders;
 import net.builderdog.ancient_aether.AncientAether;
@@ -72,27 +73,27 @@ public class AncientAetherConfiguredFeatures {
 
         register(context, HIGHLANDS_PINE_KEY, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
-                        BlockStateProvider.simple(AncientAetherBlocks.HIGHLANDS_PINE_LOG.get()),
+                        BlockStateProvider.simple(AncientAetherBlocks.HIGHLANDS_PINE_LOG.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)),
                         new StraightTrunkPlacer(5, 10, 0),
-                        BlockStateProvider.simple(AncientAetherBlocks.HIGHLANDS_PINE_LEAVES.get()),
+                        BlockStateProvider.simple(AncientAetherBlocks.HIGHLANDS_PINE_LEAVES.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)),
                         new AncientAetherPineFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
                         new TwoLayersFeatureSize(2, 0, 2)
                 ).ignoreVines().build());
 
         register(context, SAKURA_KEY, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
-                        BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LOG.get()),
+                        BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LOG.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)),
                         new AncientAetherSkinnyHookedTrunkPlacer(8, 5, 0, BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LOG_WALL.get())),
-                        BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LEAVES.get()),
+                        BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LEAVES.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)),
                         new AncientAetherHookedFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
                         new TwoLayersFeatureSize(2, 1, 4)
                 ).build());
 
         register(context, TALL_SAKURA_KEY, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
-                        BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LOG.get()),
+                        BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LOG.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)),
                         new AncientAetherHookedTrunkPlacer(8, 14, 14),
-                        BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LEAVES.get()),
+                        BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LEAVES.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)),
                         new AncientAetherHookedFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
                         new TwoLayersFeatureSize(2, 1, 4)
                 ).decorators(List.of(new TrunkDecorator(BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LOG_WALL.get())))).build());

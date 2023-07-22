@@ -173,6 +173,7 @@ public class AncientAether {
             event.accept(AncientAetherItems.AECHOR_ICE_CREAM_BUCKET);
             event.accept(AncientAetherItems.HIGHLANDS_BUFFALO_SPAWN_EGG);
             event.accept(AncientAetherItems.ROOTLING_SPAWN_EGG);
+            event.accept(AncientAetherItems.VELOX_WHIRLWIND_SPAWN_EGG);
             event.accept(AncientAetherItems.VELOX_ZEPHYR_SPAWN_EGG);
         }
     }

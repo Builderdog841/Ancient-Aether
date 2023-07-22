@@ -55,6 +55,8 @@ public class AncientAetherItems {
             () -> new ForgeSpawnEggItem(AncientAetherEntities.HIGHLANDS_BUFFALO, 0x4B6F89, 0x96C4D3, new Item.Properties()));
     public static final RegistryObject<SpawnEggItem> ROOTLING_SPAWN_EGG = ITEMS.register("rootling_spawn_egg",
             () -> new ForgeSpawnEggItem(AncientAetherEntities.ROOTLING, 0x737558, 0x6FA871, new Item.Properties()));
+    public static final RegistryObject<SpawnEggItem> VELOX_WHIRLWIND_SPAWN_EGG = ITEMS.register("velox_whirlwind_spawn_egg",
+            () -> new ForgeSpawnEggItem(AncientAetherEntities.VELOX_WHIRLWIND, 0xBCB484, 0xFFF9D1, new Item.Properties()));
     public static final RegistryObject<SpawnEggItem> VELOX_ZEPHYR_SPAWN_EGG = ITEMS.register("velox_zephyr_spawn_egg",
             () -> new ForgeSpawnEggItem(AncientAetherEntities.VELOX_ZEPHYR, 0xFFF9D1, 0xBCB484, new Item.Properties()));
 

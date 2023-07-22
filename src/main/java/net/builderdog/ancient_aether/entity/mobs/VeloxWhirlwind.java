@@ -58,6 +58,6 @@ public class VeloxWhirlwind extends AbstractVeloxWhirlwind {
 
     @Override
     public int getDefaultColor() {
-        return 918552;
+        return 0xBCB484;
     }
 }
