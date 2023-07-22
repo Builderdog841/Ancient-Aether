@@ -77,8 +77,13 @@
       "state": {
         "Name": "aether_genesis:skyroot_log_wall",
         "Properties": {
-          "axis": "y",
-          "double_drops": "true"
+          "double_drops": "true",
+          "east": "none",
+          "north": "none",
+          "south": "none",
+          "up": "true",
+          "waterlogged": "false",
+          "west": "none"
         }
       }
     }
