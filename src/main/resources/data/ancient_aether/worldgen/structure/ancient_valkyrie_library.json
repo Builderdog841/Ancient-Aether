@@ -6,8 +6,9 @@
   "max_distance_from_center": 80,
   "biomes": "#ancient_aether:has_structure/ancient_valkyrie_library",
   "step": "surface_structures",
+  "terrain_adaptation": "bury",
   "start_height": {
-    "absolute": 1,
+    "absolute": -15,
     "max_inclusive": { "below_top": 128 },
     "min_inclusive": { "above_bottom": 64 }
   },
