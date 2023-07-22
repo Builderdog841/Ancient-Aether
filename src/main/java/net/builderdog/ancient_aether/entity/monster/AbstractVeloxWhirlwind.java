@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.entity.mobs;
+package net.builderdog.ancient_aether.entity.monster;
 
 import java.util.EnumSet;
 import java.util.List;

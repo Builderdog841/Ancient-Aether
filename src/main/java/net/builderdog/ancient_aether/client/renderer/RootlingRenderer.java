@@ -3,7 +3,7 @@ package net.builderdog.ancient_aether.client.renderer;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.client.renderer.model.RootlingModel;
-import net.builderdog.ancient_aether.entity.mobs.Rootling;
+import net.builderdog.ancient_aether.entity.monster.Rootling;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;

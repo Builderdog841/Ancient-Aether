@@ -1,6 +1,6 @@
 package net.builderdog.ancient_aether.client.particle;
 
-import net.builderdog.ancient_aether.entity.mobs.VeloxWhirlwind;
+import net.builderdog.ancient_aether.entity.monster.VeloxWhirlwind;
 import net.minecraft.client.particle.*;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.particles.SimpleParticleType;

@@ -3,7 +3,7 @@ package net.builderdog.ancient_aether.client.renderer.model;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 
-import net.builderdog.ancient_aether.entity.mobs.VeloxZephyr;
+import net.builderdog.ancient_aether.entity.monster.VeloxZephyr;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;

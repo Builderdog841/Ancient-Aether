@@ -1,22 +1,13 @@
 package net.builderdog.ancient_aether.entity.misc;
 
 import com.aetherteam.aether.client.particle.AetherParticleTypes;
-import com.aetherteam.aether.entity.AetherEntityTypes;
 
-import com.aetherteam.aether.entity.monster.PassiveWhirlwind;
-import com.aetherteam.aether.mixin.mixins.common.accessor.PlayerAccessor;
-import com.aetherteam.aether.network.AetherPacketHandler;
-import com.aetherteam.aether.network.packet.client.ZephyrSnowballHitPacket;
-import com.aetherteam.aether.util.EquipmentUtil;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
-import net.builderdog.ancient_aether.entity.mobs.VeloxWhirlwind;
+import net.builderdog.ancient_aether.entity.monster.VeloxWhirlwind;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.*;
-import net.minecraft.world.entity.monster.Zombie;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Fireball;
 import net.minecraft.world.entity.projectile.ItemSupplier;
 import net.minecraft.world.entity.projectile.ProjectileUtil;
@@ -27,7 +18,6 @@ import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 
 import net.minecraft.world.phys.Vec3;

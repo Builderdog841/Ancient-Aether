@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.entity.mobs;
+package net.builderdog.ancient_aether.entity.monster;
 
 import com.aetherteam.aether.entity.ai.goal.FallingRandomStrollGoal;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;

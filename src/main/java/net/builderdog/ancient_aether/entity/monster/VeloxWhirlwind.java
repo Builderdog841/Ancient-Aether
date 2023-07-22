@@ -1,6 +1,5 @@
-package net.builderdog.ancient_aether.entity.mobs;
+package net.builderdog.ancient_aether.entity.monster;
 
-import com.aetherteam.aether.client.particle.AetherParticleTypes;
 import com.aetherteam.aether.loot.AetherLoot;
 import net.builderdog.ancient_aether.client.particle.AncientAetherParticleTypes;
 import net.minecraft.nbt.CompoundTag;

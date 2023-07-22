@@ -1,7 +1,6 @@
 package net.builderdog.ancient_aether.client.particle;
 
-import com.aetherteam.aether.entity.monster.AbstractWhirlwind;
-import net.builderdog.ancient_aether.entity.mobs.AbstractVeloxWhirlwind;
+import net.builderdog.ancient_aether.entity.monster.AbstractVeloxWhirlwind;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.*;
 import net.minecraft.util.Mth;

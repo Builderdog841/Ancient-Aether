@@ -4,7 +4,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.client.renderer.model.VeloxZephyrModel;
-import net.builderdog.ancient_aether.entity.mobs.VeloxZephyr;
+import net.builderdog.ancient_aether.entity.monster.VeloxZephyr;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;

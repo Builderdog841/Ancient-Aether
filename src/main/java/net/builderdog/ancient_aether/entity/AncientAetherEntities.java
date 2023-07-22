@@ -6,9 +6,9 @@ import net.builderdog.ancient_aether.entity.animals.HighlandsBuffalo;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherChestBoatEntity;
 import net.builderdog.ancient_aether.entity.misc.VeloxZephyrSnowball;
-import net.builderdog.ancient_aether.entity.mobs.Rootling;
-import net.builderdog.ancient_aether.entity.mobs.VeloxWhirlwind;
-import net.builderdog.ancient_aether.entity.mobs.VeloxZephyr;
+import net.builderdog.ancient_aether.entity.monster.Rootling;
+import net.builderdog.ancient_aether.entity.monster.VeloxWhirlwind;
+import net.builderdog.ancient_aether.entity.monster.VeloxZephyr;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -23,11 +23,14 @@ public class AncientAetherEntities {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
             DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, AncientAether.MOD_ID);
 
+    // ANIMALS
     public static final RegistryObject<EntityType<HighlandsBuffalo>> HIGHLANDS_BUFFALO =
             ENTITY_TYPES.register("highlands_buffalo",
                     () -> EntityType.Builder.of(HighlandsBuffalo::new, MobCategory.CREATURE)
                             .sized(1.5f, 1.75f).clientTrackingRange(10)
                             .build(new ResourceLocation(AncientAether.MOD_ID, "highlands_buffalo").toString()));
+
+    // MONSTER
     public static final RegistryObject<EntityType<Rootling>> ROOTLING =
             ENTITY_TYPES.register("rootling",
                     () -> EntityType.Builder.of(Rootling::new, MobCategory.MONSTER)
@@ -38,6 +41,13 @@ public class AncientAetherEntities {
                     () -> EntityType.Builder.of(VeloxZephyr::new, AetherMobCategory.AETHER_SKY_MONSTER)
                             .sized(4.5F, 3.5F).clientTrackingRange(10)
                             .build(new ResourceLocation(AncientAether.MOD_ID, "velox_zephyr").toString()));
+    public static final RegistryObject<EntityType<VeloxWhirlwind>> VELOX_WHIRLWIND =
+            ENTITY_TYPES.register("velox_whirlwind",
+                    () -> EntityType.Builder.of(VeloxWhirlwind::new, AetherMobCategory.AETHER_SURFACE_MONSTER)
+                            .fireImmune().sized(0.6F, 0.8F).clientTrackingRange(8)
+                            .build("velox_whirlwind"));
+
+    // MISC
     public static final RegistryObject<EntityType<AncientAetherBoatEntity>> BOAT =
             ENTITY_TYPES.register("boat",
             () -> EntityType.Builder.<AncientAetherBoatEntity>of(AncientAetherBoatEntity::new, MobCategory.MISC)
@@ -53,11 +63,6 @@ public class AncientAetherEntities {
             () -> EntityType.Builder.<VeloxZephyrSnowball>of(VeloxZephyrSnowball::new, MobCategory.MISC)
                     .sized(1.0F, 1.0F).clientTrackingRange(4).updateInterval(10)
                     .build("velox_zephyr_snowball"));
-    public static final RegistryObject<EntityType<VeloxWhirlwind>> VELOX_WHIRLWIND =
-            ENTITY_TYPES.register("velox_whirlwind",
-            () -> EntityType.Builder.of(VeloxWhirlwind::new, AetherMobCategory.AETHER_SURFACE_MONSTER)
-                    .fireImmune().sized(0.6F, 0.8F).clientTrackingRange(8)
-                    .build("velox_whirlwind"));
 
     @SubscribeEvent
     public static void registerEntityAttributes(EntityAttributeCreationEvent event) {

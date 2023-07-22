@@ -5,7 +5,7 @@ import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.client.renderer.layers.VeloxZephyrTransparencyLayer;
 import net.builderdog.ancient_aether.client.renderer.layers.AncientAetherModelLayers;
 import net.builderdog.ancient_aether.client.renderer.model.VeloxZephyrModel;
-import net.builderdog.ancient_aether.entity.mobs.VeloxZephyr;
+import net.builderdog.ancient_aether.entity.monster.VeloxZephyr;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
