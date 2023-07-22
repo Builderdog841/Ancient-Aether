@@ -2,5 +2,5 @@
   "type": "forge:add_features",
   "biomes": "ancient_aether:sakura_jungle",
   "features": "aether_genesis:sakura_jungle_purple_crystal_trees",
-  "step": "vegetal_decoration"
+  "step": "underground_ores"
 }
