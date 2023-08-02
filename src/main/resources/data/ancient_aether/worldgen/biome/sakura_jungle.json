@@ -1,4 +1,10 @@
 {
+  "carvers": {
+    "air": [
+      "ancient_aether:aether_cave",
+      "ancient_aether:big_aether_cave"
+    ]
+  },
   "temperature": 0.2,
   "downfall": 1,
   "effects": {
@@ -15,7 +21,6 @@
       "sound": "aether:music.aether"
     }
   },
-  "carvers": {},
   "features": [
     [
       "aether:quicksoil_shelf"

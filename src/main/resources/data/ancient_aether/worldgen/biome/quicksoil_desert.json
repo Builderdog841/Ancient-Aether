@@ -1,4 +1,10 @@
 {
+  "carvers": {
+    "air": [
+      "ancient_aether:aether_cave",
+      "ancient_aether:big_aether_cave"
+    ]
+  },
   "temperature": 2,
   "downfall": 0,
   "effects": {
@@ -15,7 +21,6 @@
       "sound": "aether:music.aether"
     }
   },
-  "carvers": {},
   "features": [
 [
   "aether:water_lake"
