@@ -22,9 +22,7 @@
     }
   },
   "features": [
-[
-  "aether:water_lake"
-],
+[],
 [],
 [],
 [],
@@ -40,9 +38,7 @@
   "ancient_aether:quickstone_ore_placed"
 ],
 [],
-[
-  "aether:water_spring"
-],
+[],
 [
   "aether:grass_patch",
   "ancient_aether:small_aether_cactus_patch",
