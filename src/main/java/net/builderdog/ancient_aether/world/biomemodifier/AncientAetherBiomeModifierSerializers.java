@@ -8,14 +8,13 @@ import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries.Keys;
-import net.zepalesque.aether.world.biomemodifier.CarverModifier;
-import net.zepalesque.aether.world.biomemodifier.WaterColorBiomeModifier;
+import net.builderdog.ancient_aether.world.biomemodifier.CarverModifier;
 
 public class AncientAetherBiomeModifierSerializers {
 
     //Credit for this code goes to Zepalesque
     public static final DeferredRegister<Codec<? extends BiomeModifier>> BIOME_MODIFIER_SERIALIZERS;
-    static RegistryObject<Codec<net.zepalesque.aether.world.biomemodifier.CarverModifier>> CARVER_CODEC;
+    static RegistryObject<Codec<CarverModifier>> CARVER_CODEC;
 
     public AncientAetherBiomeModifierSerializers() {
     }
@@ -24,7 +23,7 @@ public class AncientAetherBiomeModifierSerializers {
         BIOME_MODIFIER_SERIALIZERS = DeferredRegister.create(Keys.BIOME_MODIFIER_SERIALIZERS, "ancient_aether");
         CARVER_CODEC = BIOME_MODIFIER_SERIALIZERS.register("add_carver", () -> {
             return RecordCodecBuilder.create((builder) -> {
-                return builder.group(Biome.LIST_CODEC.fieldOf("biomes").forGetter(net.zepalesque.aether.world.biomemodifier.CarverModifier::biomes), ConfiguredWorldCarver.CODEC.fieldOf("carver").forGetter(net.zepalesque.aether.world.biomemodifier.CarverModifier::carver)).apply(builder, CarverModifier::new);
+                return builder.group(Biome.LIST_CODEC.fieldOf("biomes").forGetter(CarverModifier::biomes), ConfiguredWorldCarver.CODEC.fieldOf("carver").forGetter(CarverModifier::carver)).apply(builder, CarverModifier::new);
             });
         });
     }
