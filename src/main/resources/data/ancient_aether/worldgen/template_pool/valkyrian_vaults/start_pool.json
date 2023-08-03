@@ -1,0 +1,17 @@
+{
+  "name": "ancient_aether:valkyrian_vaults/start_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+
+      "weight": 5,
+      "element": {
+
+        "location": "ancient_aether:valkyrian_vaults/vault_entrance",
+        "processors": "ancient_aether:valkyrian_vaults_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

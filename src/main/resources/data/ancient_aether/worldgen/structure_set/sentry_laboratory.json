@@ -6,13 +6,13 @@
     }
   ],
   "placement": {
-    "salt": 298122297,
+    "salt": 168128697,
     "spacing": 10,
     "separation": 5,
     "type": "minecraft:random_spread"
   },
   "exclusion_zone": {
-    "chunk_count": 5,
+    "chunk_count": 10,
     "other_set": "aether:bronze_dungeon"
   }
-  }
+}
