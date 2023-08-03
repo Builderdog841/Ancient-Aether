@@ -21,12 +21,12 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:redstone",
-          "weight": 6
+          "weight": 7
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:lapis_lazuli",
-          "weight": 6
+          "weight": 7
         },
         {
           "type": "minecraft:item",
@@ -56,12 +56,12 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:flint",
-          "weight": 12
+          "weight": 11
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:oak_log",
-          "weight": 16
+          "weight": 15
         },
         {
           "type": "minecraft:item",
