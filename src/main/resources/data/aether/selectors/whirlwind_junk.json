@@ -21,12 +21,12 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:redstone",
-          "weight": 5
+          "weight": 6
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:lapis_lazuli",
-          "weight": 5
+          "weight": 6
         },
         {
           "type": "minecraft:item",
@@ -66,7 +66,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:sand",
-          "weight": 19
+          "weight": 17
         }
       ],
       "rolls": 1.0
