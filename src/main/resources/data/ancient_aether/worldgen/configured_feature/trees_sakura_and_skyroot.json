@@ -22,7 +22,7 @@
       {
         "chance": 0.15,
         "feature": {
-          "feature": "aether:skyroot_tree",
+          "feature": "aether:trees_skyroot_and_golden_oak",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",
