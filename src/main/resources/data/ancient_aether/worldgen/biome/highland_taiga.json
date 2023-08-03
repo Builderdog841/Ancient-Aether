@@ -1,10 +1,5 @@
 {
-  "carvers": {
-    "air": [
-      "ancient_aether:aether_cave",
-      "ancient_aether:big_aether_cave"
-    ]
-  },
+  "carvers": {},
   "temperature": 0.2,
   "downfall": 1,
   "effects": {
