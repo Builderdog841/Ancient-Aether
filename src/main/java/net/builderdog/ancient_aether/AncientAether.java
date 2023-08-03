@@ -11,6 +11,7 @@ import net.builderdog.ancient_aether.client.renderer.HighlandsBuffaloRenderer;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.builderdog.ancient_aether.item.AncientCreativeModeTabs;
 //import net.builderdog.ancient_aether.world.biomemodifier.AncientAetherBiomeModifierSerializers;
+import net.builderdog.ancient_aether.world.biomemodifier.AncientAetherBiomeModifierSerializers;
 import net.builderdog.ancient_aether.world.biomes.AncientAetherRegion;
 import net.builderdog.ancient_aether.world.biomes.AncientAetherSurfaceData;
 //import net.builderdog.ancient_aether.world.carver.AncientAetherCarvers;
@@ -46,7 +47,7 @@ public class AncientAether {
     public AncientAether() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        //AncientAetherBiomeModifierSerializers.BIOME_MODIFIER_SERIALIZERS.register(modEventBus);
+        AncientAetherBiomeModifierSerializers.BIOME_MODIFIER_SERIALIZERS.register(modEventBus);
         AncientAetherItems.ITEMS.register(modEventBus);
         AncientAetherBlocks.BLOCKS.register(modEventBus);
         AncientAetherFoliagePlacerTypes.FOLIAGE_PLACERS.register(modEventBus);
@@ -189,6 +190,7 @@ public class AncientAether {
         this.addCompost(0.3F, AncientAetherBlocks.SAKURA_SAPLING.get());
         this.addCompost(0.65F,AncientAetherBlocks.SMALL_AETHER_CACTUS.get());
         this.addCompost(0.65F,AncientAetherBlocks.MOONLIT_TULIP.get());
+        this.addCompost(0.65F,AncientAetherBlocks.SAKURA_BLOSSOMS.get());
         this.addCompost(0.65F,AncientAetherBlocks.EDELWEISS.get());
         this.addCompost(0.5F, AncientAetherBlocks.AETHER_CACTUS.get());
         this.addCompost(0.5F, AncientAetherBlocks.STRIPPED_AETHER_CACTUS.get());
