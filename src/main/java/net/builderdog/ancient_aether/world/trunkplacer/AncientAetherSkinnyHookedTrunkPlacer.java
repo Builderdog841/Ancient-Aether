@@ -18,6 +18,9 @@ import java.util.List;
 import java.util.function.BiConsumer;
 
 public class AncientAetherSkinnyHookedTrunkPlacer extends BaseAncientAetherHookedTrunkPlacer {
+
+    //Credit for this code goes to the Aether Team
+
     public static final Codec<AncientAetherSkinnyHookedTrunkPlacer> CODEC = RecordCodecBuilder.create((codec) -> trunkPlacerParts(codec)
             .and(BlockStateProvider.CODEC.fieldOf("skinnyTrunkProvider").forGetter((placer) -> placer.skinnyTrunkProvider))
             .apply(codec, AncientAetherSkinnyHookedTrunkPlacer::new));

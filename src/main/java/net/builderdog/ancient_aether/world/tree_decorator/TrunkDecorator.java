@@ -14,7 +14,8 @@ import net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorTy
 
 public class TrunkDecorator extends TreeDecorator {
 
-    //This code was written by the Aether Team and not by me
+    //Credit for this code goes to the Aether Team
+
     public static final Codec<TrunkDecorator> CODEC = BlockStateProvider.CODEC.fieldOf("provider").xmap(TrunkDecorator::new, (p_69327_) -> {
         return p_69327_.provider;
     }).codec();

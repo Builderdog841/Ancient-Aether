@@ -19,7 +19,8 @@ import java.util.function.Function;
 
 public abstract class BaseAncientAetherHookedTrunkPlacer extends TrunkPlacer {
 
-    //This code was written by the Aether Team and not by me
+    //Credit for this code goes to the Aether Team
+
     public BaseAncientAetherHookedTrunkPlacer(int height, int heightRandA, int heightRandB) {
         super(height, heightRandA, heightRandB);
     }

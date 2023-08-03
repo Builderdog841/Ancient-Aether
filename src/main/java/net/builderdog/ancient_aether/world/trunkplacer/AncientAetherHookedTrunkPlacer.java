@@ -17,7 +17,8 @@ import java.util.function.BiConsumer;
 
 public class AncientAetherHookedTrunkPlacer extends BaseAncientAetherHookedTrunkPlacer {
 
-    //This code was written by the Aether Team and not by me
+    //Credit for this code goes to the Aether Team
+
     public static final Codec<AncientAetherHookedTrunkPlacer> CODEC = RecordCodecBuilder.create((codec) -> trunkPlacerParts(codec).apply(codec, AncientAetherHookedTrunkPlacer::new));
 
     public AncientAetherHookedTrunkPlacer(int height, int heightRandA, int heightRandB) {

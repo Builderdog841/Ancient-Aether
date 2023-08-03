@@ -8,7 +8,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class AncientAetherTreeDecoratorTypes {
 
-    //This code was written by the Aether Team and not by me
+    //Credit for this code goes to the Aether Team
     public static final DeferredRegister<TreeDecoratorType<?>> TREE_DECORATORS = DeferredRegister.create(ForgeRegistries.TREE_DECORATOR_TYPES, AncientAether.MOD_ID);
 
     public static final RegistryObject<TreeDecoratorType<TrunkDecorator>> TRUNK_DECORATOR = TREE_DECORATORS.register("trunk_decorator", () -> new TreeDecoratorType<>(TrunkDecorator.CODEC));
