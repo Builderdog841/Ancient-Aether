@@ -11,7 +11,6 @@ import net.builderdog.ancient_aether.client.renderer.HighlandsBuffaloRenderer;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.builderdog.ancient_aether.item.AncientCreativeModeTabs;
 //import net.builderdog.ancient_aether.world.biomemodifier.AncientAetherBiomeModifierSerializers;
-import net.builderdog.ancient_aether.world.biomemodifier.AncientAetherBiomeModifierSerializers;
 import net.builderdog.ancient_aether.world.biomes.AncientAetherRegion;
 import net.builderdog.ancient_aether.world.biomes.AncientAetherSurfaceData;
 //import net.builderdog.ancient_aether.world.carver.AncientAetherCarvers;
@@ -47,7 +46,7 @@ public class AncientAether {
     public AncientAether() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        AncientAetherBiomeModifierSerializers.BIOME_MODIFIER_SERIALIZERS.register(modEventBus);
+       // AncientAetherBiomeModifierSerializers.BIOME_MODIFIER_SERIALIZERS.register(modEventBus);
         AncientAetherItems.ITEMS.register(modEventBus);
         AncientAetherBlocks.BLOCKS.register(modEventBus);
         AncientAetherFoliagePlacerTypes.FOLIAGE_PLACERS.register(modEventBus);

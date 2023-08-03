@@ -10,29 +10,29 @@ import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ModifiableBiomeInfo;
 import net.minecraftforge.common.world.BiomeModifier.Phase;
 
-public record CarverModifier(HolderSet<Biome> biomes, Holder<ConfiguredWorldCarver<?>> carver) implements BiomeModifier {
+//public record CarverModifier(HolderSet<Biome> biomes, Holder<ConfiguredWorldCarver<?>> carver) implements BiomeModifier {
 
-    //Credit for this code goes to Zepalesque
-    public CarverModifier(HolderSet<Biome> biomes, Holder<ConfiguredWorldCarver<?>> carver) {
-        this.biomes = biomes;
-        this.carver = carver;
-    }
+  //  //Credit for this code goes to Zepalesque
+    //public CarverModifier(HolderSet<Biome> biomes, Holder<ConfiguredWorldCarver<?>> carver) {
+      //  this.biomes = biomes;
+       // this.carver = carver;
+   // }
 
-    public void modify(Holder<Biome> biome, BiomeModifier.Phase phase, ModifiableBiomeInfo.BiomeInfo.Builder builder) {
-        if (phase == Phase.AFTER_EVERYTHING && this.biomes.m_203333_(biome)) {
-            builder.getGenerationSettings().m_254863_(Carving.AIR, this.carver);
-        }
-    }
+   // public void modify(Holder<Biome> biome, BiomeModifier.Phase phase, ModifiableBiomeInfo.BiomeInfo.Builder builder) {
+       // if (phase == Phase.AFTER_EVERYTHING && this.biomes.m_203333_(biome)) {
+         //   builder.getGenerationSettings().m_254863_(Carving.AIR, this.carver);
+   //     }
+  //  }
 
-    public Codec<? extends BiomeModifier> codec() {
-        return null;
-    }
+   // public Codec<? extends BiomeModifier> codec() {
+   //     return null;
+  //  }
 
-   public HolderSet<Biome> biomes() {
-       return this.biomes;
-   }
+//   public HolderSet<Biome> biomes() {
+  //     return this.biomes;
+  // }
 
-    public Holder<ConfiguredWorldCarver<?>> carver() {
-        return this.carver;
-    }
-}
+   // public Holder<ConfiguredWorldCarver<?>> carver() {
+   //     return this.carver;
+  //  }
+//}
