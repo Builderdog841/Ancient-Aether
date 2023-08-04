@@ -98,7 +98,7 @@
     },
     "initial_density_without_jaggedness": {
       "type": "minecraft:add",
-      "argument1": 0.05,
+      "argument1": 0,
       "argument2": {
         "type": "minecraft:mul",
         "argument1": {
@@ -110,7 +110,7 @@
         },
         "argument2": {
           "type": "minecraft:add",
-          "argument1": -0.05,
+          "argument1": 0,
           "argument2": {
             "type": "minecraft:add",
             "argument1": -0.078125,
