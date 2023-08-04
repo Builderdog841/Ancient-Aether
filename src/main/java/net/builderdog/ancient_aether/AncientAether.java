@@ -173,8 +173,8 @@ public class AncientAether {
             event.accept(AncientAetherItems.RAW_BUFFALO_RIBS);
             event.accept(AncientAetherItems.COOKED_BUFFALO_RIBS);
             event.accept(AncientAetherItems.BUFFALO_RIB);
-            event.accept(AncientAetherItems.CACTUS_FLOWER_ICE_CREAM_BUCKET);
             event.accept(AncientAetherItems.AECHOR_ICE_CREAM_BUCKET);
+            event.accept(AncientAetherItems.CACTUS_FLOWER_ICE_CREAM_BUCKET);
             event.accept(AncientAetherItems.HIGHLANDS_BUFFALO_SPAWN_EGG);
             event.accept(AncientAetherItems.ROOTLING_SPAWN_EGG);
             event.accept(AncientAetherItems.VELOX_WHIRLWIND_SPAWN_EGG);
