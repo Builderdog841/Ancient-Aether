@@ -40,9 +40,9 @@
   "ancient_aether:aether_cactus_patch"
 ],
 [
+  "ancient_aether:bonus_green_aercloud",
   "aether:cold_aercloud",
-  "aether:blue_aercloud",
-  "aether:golden_aercloud"
+  "ancient_aether:bonus_golden_aercloud"
 ]
 ],
   "has_precipitation": false,

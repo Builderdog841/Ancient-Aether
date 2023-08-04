@@ -54,10 +54,10 @@
       "aether:berry_bush_patch"
     ],
     [
+      "ancient_aether:bonus_pink_aercloud",
+      "ancient_aether:bonus_purple_aercloud",
       "aether:crystal_island",
-      "aether:cold_aercloud",
-      "aether:blue_aercloud",
-      "aether:golden_aercloud"
+      "aether:cold_aercloud"
     ]
   ],
   "has_precipitation": false,
