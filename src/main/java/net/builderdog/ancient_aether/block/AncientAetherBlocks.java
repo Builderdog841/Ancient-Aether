@@ -229,7 +229,7 @@ public class AncientAetherBlocks {
 
     //QUICKSOIL BRICKS
     public static final RegistryObject<Block> QUICKSTONE =  registerBlock("quickstone",
-            () -> new AetherDoubleDropBlock(BlockBehaviour.Properties.of(Material.STONE)
+            () -> new AetherDoubleDropBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_YELLOW)
                     .strength(0.5f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> QUICKSOIL_BRICKS =  registerBlock("quicksoil_bricks",
             () -> new QuicksoilGlassBlock(BlockBehaviour.Properties.of(Material.STONE)
