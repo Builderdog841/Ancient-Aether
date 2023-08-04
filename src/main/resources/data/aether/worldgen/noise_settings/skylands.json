@@ -87,14 +87,14 @@
     "fluid_level_floodedness": {
       "type": "minecraft:noise",
       "noise": "minecraft:aquifer_fluid_level_floodedness",
-      "xz_scale": 0.5,
-      "y_scale": 0.6
+      "xz_scale": 0.3,
+      "y_scale": 0.1
     },
     "fluid_level_spread": {
       "type": "minecraft:noise",
       "noise": "minecraft:aquifer_fluid_level_spread",
       "xz_scale": 50.0,
-      "y_scale": 0.7142857142857143
+      "y_scale": 10
     },
     "initial_density_without_jaggedness": {
       "type": "minecraft:add",
@@ -103,8 +103,8 @@
         "type": "minecraft:mul",
         "argument1": {
           "type": "minecraft:y_clamped_gradient",
-          "from_y": 36,
-          "to_y": 64,
+          "from_y": 48,
+          "to_y": 56,
           "from_value": 0,
           "to_value": 1
         },
@@ -118,8 +118,8 @@
               "type": "minecraft:mul",
               "argument1": {
                 "type": "minecraft:y_clamped_gradient",
-                "from_y": 64,
-                "to_y": 72,
+                "from_y": 56,
+                "to_y": 64,
                 "from_value": 1,
                 "to_value": 0
               },
@@ -147,8 +147,8 @@
                       }
                     }
                   },
-                  "min": 64,
-                  "max": 72
+                  "min": 48,
+                  "max": 64
                 }
               }
             }
