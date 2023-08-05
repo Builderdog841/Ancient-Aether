@@ -16,7 +16,7 @@
   "legacy_random_source": false,
   "noise": {
     "height": 128,
-    "min_y": 0,
+    "min_y": 32,
     "size_horizontal": 2,
     "size_vertical": 1
   },
@@ -24,8 +24,8 @@
     "barrier": {
       "type": "minecraft:noise",
       "noise": "minecraft:aquifer_barrier",
-      "xz_scale": 1,
-      "y_scale": 1
+      "xz_scale": 0,
+      "y_scale": 0
     },
     "continents": 0.0,
     "depth": "aether:the_aether/depth",
@@ -47,9 +47,9 @@
                 "argument1": {
                   "type": "minecraft:y_clamped_gradient",
                   "from_value": 0.0,
-                  "from_y": 8,
+                  "from_y": 24,
                   "to_value": 1.0,
-                  "to_y": 40
+                  "to_y": 64
                 },
                 "argument2": {
                   "type": "minecraft:add",
@@ -62,9 +62,9 @@
                       "argument1": {
                         "type": "minecraft:y_clamped_gradient",
                         "from_value": 1.0,
-                        "from_y": 56,
+                        "from_y": 72,
                         "to_value": 0.0,
-                        "to_y": 128
+                        "to_y": 144
                       },
                       "argument2": {
                         "type": "minecraft:add",
@@ -87,9 +87,9 @@
     "fluid_level_floodedness": {
       "type": "minecraft:noise",
       "noise": "minecraft:aquifer_fluid_level_floodedness",
-      "xz_scale": 0.5,
+      "xz_scale": 0.6,
       //Higher values make aqufiers more common
-      "y_scale": 0.45
+      "y_scale": 0.6
       //Higher values make aqufiers smaller
     },
     "fluid_level_spread": {
@@ -107,9 +107,9 @@
         "argument1": {
           "type": "minecraft:y_clamped_gradient",
           "from_value": 0.0,
-          "from_y": 240,
+          "from_y": 32,
           "to_value": 1.0,
-          "to_y": 256
+          "to_y": 48
         },
         "argument2": {
           "type": "minecraft:add",
@@ -122,9 +122,9 @@
               "argument1": {
                 "type": "minecraft:y_clamped_gradient",
                 "from_value": 1.0,
-                "from_y": -64,
+                "from_y": 64,
                 "to_value": 0.0,
-                "to_y": -40
+                "to_y": 80
               },
               "argument2": {
                 "type": "minecraft:add",
@@ -142,7 +142,7 @@
                         "argument": {
                           "type": "minecraft:mul",
                           "argument1": "minecraft:overworld/depth",
-                          "argument2": {
+                            "argument2": {
                             "type": "minecraft:cache_2d",
                             "argument": "minecraft:overworld/factor"
                           }
@@ -150,8 +150,8 @@
                       }
                     }
                   },
-                  "max": 64.0,
-                  "min": -64.0
+                  "max": 32.0,
+                  "min": 80.0
                 }
               }
             }
