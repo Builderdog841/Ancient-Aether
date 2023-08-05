@@ -97,58 +97,51 @@
       "noise": "minecraft:aquifer_fluid_level_spread",
       "xz_scale": 1.3,
       //Higher values make aquifiers noisier
-      "y_scale": 1
+      "y_scale": 0.7142857142857143
     },
     "initial_density_without_jaggedness": {
       "type": "minecraft:add",
-      "argument1": 0.05,
-      //Seems to be not important
+      "argument1": 0.1171875,
       "argument2": {
         "type": "minecraft:mul",
         "argument1": {
           "type": "minecraft:y_clamped_gradient",
-          "from_y": 32,
-          "to_y": 40,
-          "from_value": 0,
-          "to_value": 1
+          "from_value": 0.0,
+          "from_y": 240,
+          "to_value": 1.0,
+          "to_y": 256
         },
         "argument2": {
           "type": "minecraft:add",
-          "argument1": -0.05,
-          //Seems to be not important
+          "argument1": -0.1171875,
           "argument2": {
             "type": "minecraft:add",
             "argument1": -0.078125,
-            //Seems to be not important
             "argument2": {
               "type": "minecraft:mul",
               "argument1": {
                 "type": "minecraft:y_clamped_gradient",
-                "from_y": 56,
-                "to_y": 64,
-                //Determinds the max height an aqufier can generate
-                "from_value": 1,
-                "to_value": 0
+                "from_value": 1.0,
+                "from_y": -64,
+                "to_value": 0.0,
+                "to_y": -40
               },
               "argument2": {
                 "type": "minecraft:add",
                 "argument1": 0.078125,
-                //Seems to be not important
                 "argument2": {
                   "type": "minecraft:clamp",
                   "input": {
                     "type": "minecraft:add",
                     "argument1": -0.703125,
-                    //Seems to be not important
                     "argument2": {
                       "type": "minecraft:mul",
-                      "argument1": 100,
-                      //Smaller values create lake towers
+                      "argument1": 4.0,
                       "argument2": {
                         "type": "minecraft:quarter_negative",
                         "argument": {
                           "type": "minecraft:mul",
-                          "argument1": "aether:the_aether/depth",
+                          "argument1": "minecraft:overworld/depth",
                           "argument2": {
                             "type": "minecraft:cache_2d",
                             "argument": "minecraft:overworld/factor"
@@ -157,8 +150,8 @@
                       }
                     }
                   },
-                  "min": 32,
-                  "max": 64
+                  "max": 64.0,
+                  "min": -64.0
                 }
               }
             }
