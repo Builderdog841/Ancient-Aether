@@ -2,11 +2,11 @@
   "structures": [
     {
       "structure": "ancient_aether:sentry_laboratory",
-      "weight": 3
+      "weight": 1
     },
     {
       "structure": "ancient_aether:ancient_valkyrie_library",
-      "weight": 2
+      "weight": 1
     },
     {
       "structure": "ancient_aether:valkyrian_vaults",
