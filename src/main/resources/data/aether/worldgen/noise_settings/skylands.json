@@ -96,7 +96,7 @@
       "noise": "minecraft:aquifer_fluid_level_spread",
       "xz_scale": 0.5,
       //Higher values make aquifiers noisier
-      "y_scale": 0.1
+      "y_scale": 1
     },
     "initial_density_without_jaggedness": {
       "type": "minecraft:add",
@@ -106,9 +106,9 @@
         "argument1": {
           "type": "minecraft:y_clamped_gradient",
           "from_value": 0.0,
-          "from_y": 72,
+          "from_y": 64,
           "to_value": 1.0,
-          "to_y": 76
+          "to_y": 68
         },
         "argument2": {
           "type": "minecraft:add",
@@ -121,9 +121,9 @@
               "argument1": {
                 "type": "minecraft:y_clamped_gradient",
                 "from_value": 1.0,
-                "from_y": 76,
+                "from_y": 68,
                 "to_value": 0.0,
-                "to_y": 80
+                "to_y": 72
               },
               "argument2": {
                 "type": "minecraft:add",
@@ -149,8 +149,8 @@
                       }
                     }
                   },
-                  "max": 72.0,
-                  "min": 80.0
+                  "max": 64.0,
+                  "min": 72.0
                 }
               }
             }
