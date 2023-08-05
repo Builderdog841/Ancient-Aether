@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "ancient_aether:ancient_valkyrie_settlements",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 99902913,
+    "spacing": 12,
+    "separation": 7,
+    "type": "minecraft:random_spread"
+  }
+}
