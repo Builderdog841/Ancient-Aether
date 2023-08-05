@@ -1,0 +1,7 @@
+{
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "block/sky_lily_pads",
+    "texture": "block/sky_lily_pads"
+  }
+}

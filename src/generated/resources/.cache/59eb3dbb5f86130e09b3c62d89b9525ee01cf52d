@@ -1,4 +1,4 @@
-// 1.19.4	2023-07-18T21:08:50.2837046	Loot Tables
+// 1.19.4	2023-08-05T18:29:48.5007029	Loot Tables
 27a702c0f05d0fe6987e821f0e75296cc67ba435 data/ancient_aether/loot_tables/blocks/aether_cactus.json
 15236b68986e73bfc7bdc6ecba5c2035fa26673b data/ancient_aether/loot_tables/blocks/aether_quartz_ore.json
 5fb03435913f6569ddb87fd8b1328d449bf5cb2f data/ancient_aether/loot_tables/blocks/angelic_lantern.json
@@ -68,6 +68,7 @@ c04fa719cd9058e99bd7f62bbd824fdff8189f80 data/ancient_aether/loot_tables/blocks/
 3ee932b4caf61041db2ada5b09d64df69ecc1bef data/ancient_aether/loot_tables/blocks/sakura_wood_wall.json
 530df30d147262f60fa9f153074551a203ca35bd data/ancient_aether/loot_tables/blocks/sentry_lantern.json
 1d4929d7d6176f60e5ea991a577527ed251ef375 data/ancient_aether/loot_tables/blocks/skyroot_thorn_bush.json
+1747dfab052996d836b2a19b86185524366bcc1c data/ancient_aether/loot_tables/blocks/sky_lily_pads.json
 b7ae90515a77559c8e40b5ea20b3f5aedf38d89b data/ancient_aether/loot_tables/blocks/small_aether_cactus.json
 9e1de06ff50e20ffc3a055cae42f5ff5dc28b183 data/ancient_aether/loot_tables/blocks/stripped_aether_cactus.json
 7a5800c56ef47bcca330a124ec2c2215c2caab19 data/ancient_aether/loot_tables/blocks/stripped_highlands_pine_log.json

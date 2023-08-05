@@ -60,7 +60,6 @@ public class AncientAether {
         AncientAetherEntities.ENTITY_TYPES.register(modEventBus);
         AncientAetherSoundEvents.SOUNDS.register(modEventBus);
         AncientAetherParticleTypes.PARTICLES.register(modEventBus);
-       // AncientAetherCarvers.CARVERS.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -141,6 +140,7 @@ public class AncientAether {
             event.accept(AncientAetherBlocks.MOONLIT_TULIP);
             event.accept(AncientAetherBlocks.SAKURA_BLOSSOMS);
             event.accept(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS);
+            event.accept(AncientAetherBlocks.SKY_LILY_PADS);
             event.accept(AncientAetherBlocks.AETHER_QUARTZ_ORE);
             event.accept(AncientAetherBlocks.QUICKSTONE);
             event.accept(AncientAetherBlocks.QUICKSOIL_BRICKS);
@@ -191,6 +191,7 @@ public class AncientAether {
         this.addCompost(0.65F,AncientAetherBlocks.MOONLIT_TULIP.get());
         this.addCompost(0.65F,AncientAetherBlocks.SAKURA_BLOSSOMS.get());
         this.addCompost(0.65F,AncientAetherBlocks.EDELWEISS.get());
+        this.addCompost(0.65F,AncientAetherBlocks.SKY_LILY_PADS.get());
         this.addCompost(0.5F, AncientAetherBlocks.AETHER_CACTUS.get());
         this.addCompost(0.5F, AncientAetherBlocks.STRIPPED_AETHER_CACTUS.get());
         this.addCompost(0.85F,AncientAetherBlocks.CACTUS_FLOWER.get());
