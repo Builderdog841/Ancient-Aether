@@ -13,21 +13,20 @@ import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraft.world.level.levelgen.structure.StructureType;
 import net.minecraft.world.level.levelgen.structure.pools.JigsawPlacement;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
-import net.minecraft.world.level.levelgen.structure.structures.EndCityStructure;
 
 import java.util.Optional;
 
-public class AncientStructure extends Structure {
+public class LegacyAncientStructure extends Structure {
 
-    public static final Codec<AncientStructure> CODEC = RecordCodecBuilder.<AncientStructure>mapCodec(instance ->
-            instance.group(AncientStructure.settingsCodec(instance),
+    public static final Codec<LegacyAncientStructure> CODEC = RecordCodecBuilder.<LegacyAncientStructure>mapCodec(instance ->
+            instance.group(LegacyAncientStructure.settingsCodec(instance),
                     StructureTemplatePool.CODEC.fieldOf("start_pool").forGetter(structure -> structure.startPool),
                     ResourceLocation.CODEC.optionalFieldOf("start_jigsaw_name").forGetter(structure -> structure.startJigsawName),
                     Codec.intRange(0, 30).fieldOf("size").forGetter(structure -> structure.size),
                     HeightProvider.CODEC.fieldOf("start_height").forGetter(structure -> structure.startHeight),
                     Heightmap.Types.CODEC.optionalFieldOf("project_start_to_heightmap").forGetter(structure -> structure.projectStartToHeightmap),
                     Codec.intRange(1, 128).fieldOf("max_distance_from_center").forGetter(structure -> structure.maxDistanceFromCenter)
-            ).apply(instance, AncientStructure::new)).codec();
+            ).apply(instance, LegacyAncientStructure::new)).codec();
     private final Holder<StructureTemplatePool> startPool;
     private final Optional<ResourceLocation> startJigsawName;
     private final int size;
@@ -35,13 +34,13 @@ public class AncientStructure extends Structure {
     private final Optional<Heightmap.Types> projectStartToHeightmap;
     private final int maxDistanceFromCenter;
 
-    public AncientStructure(StructureSettings config,
-                            Holder<StructureTemplatePool> startPool,
-                            Optional<ResourceLocation> startJigsawName,
-                            int size,
-                            HeightProvider startHeight,
-                            Optional<Heightmap.Types> projectStartToHeightmap,
-                            int maxDistanceFromCenter)
+    public LegacyAncientStructure(StructureSettings config,
+                                  Holder<StructureTemplatePool> startPool,
+                                  Optional<ResourceLocation> startJigsawName,
+                                  int size,
+                                  HeightProvider startHeight,
+                                  Optional<Heightmap.Types> projectStartToHeightmap,
+                                  int maxDistanceFromCenter)
     {
         super(config);
         this.startPool = startPool;
@@ -58,12 +57,12 @@ public class AncientStructure extends Structure {
                 chunkpos.getMiddleBlockZ(),
                 Heightmap.Types.WORLD_SURFACE_WG,
                 context.heightAccessor(),
-                context.randomState()) > 96;
+                context.randomState()) > 64;
     }
 
     @Override
     public Optional<GenerationStub> findGenerationPoint(GenerationContext context) {
-        if (!AncientStructure.extraSpawningChecks(context)) {
+        if (!LegacyAncientStructure.extraSpawningChecks(context)) {
             return Optional.empty();
         }
         int startY = this.startHeight.sample(context.random(), new WorldGenerationContext(context.chunkGenerator(), context.heightAccessor()));
@@ -86,6 +85,6 @@ public class AncientStructure extends Structure {
 
     @Override
     public StructureType<?> type() {
-        return AncientAetherStructureTypes.ANCIENT_STRUCTURE.get();
+        return AncientAetherStructureTypes.LEGACY_ANCIENT_STRUCTURE.get();
     }
 }
