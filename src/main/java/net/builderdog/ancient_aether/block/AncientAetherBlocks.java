@@ -75,8 +75,8 @@ public class AncientAetherBlocks {
             () -> new SmallAetherCactusBlock(BlockBehaviour.Properties.copy(Blocks.DANDELION)));
     public static final RegistryObject<Block> SKYROOT_THORN_BUSH  = registerBlock("skyroot_thorn_bush",
             () -> new SkyrootThornBushBlock(BlockBehaviour.Properties.copy(Blocks.DEAD_BUSH)));
-    public static final RegistryObject<Block> SKY_LILY_PADS =  registerBlock("sky_lily_pads",
-            () -> new WaterlilyBlock(BlockBehaviour.Properties.of(Material.PLANT).sound(SoundType.LILY_PAD).instabreak()));
+    public static final RegistryObject<Block> SKY_WATER_LILY = registerBlock("sky_water_lily",
+            () -> new WaterlilyBlock(BlockBehaviour.Properties.of(Material.PLANT).instabreak().sound(SoundType.LILY_PAD).noOcclusion()));
 
     //CACTUS FLOWERS
     public static final RegistryObject<Block> CACTUS_FLOWER =  registerBlock("cactus_flower",
