@@ -4,11 +4,11 @@
   "group": "red_dye",
   "ingredients": [
     {
-      "item": "ancient_aether:cactus_flower_petal"
+      "item": "ancient_aether:cactus_flower"
     }
   ],
   "result": {
     "item": "minecraft:red_dye",
-    "count": 1
+    "count": 3
   }
 }

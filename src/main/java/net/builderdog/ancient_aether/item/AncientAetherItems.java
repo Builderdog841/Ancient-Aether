@@ -22,10 +22,6 @@ public class AncientAetherItems {
 
     public static final Component ANCIENT_DUNGEON_TOOLTIP = Component.translatable("ancient_aether.dungeon.ancient_dungeon").withStyle(Style.EMPTY.withItalic(true).withColor(TextColor.parseColor("#CF61C5")));
 
-    //MATERIALS
-    public static final RegistryObject<Item> CACTUS_FLOWER_PETAL = ITEMS.register("cactus_flower_petal",
-            () -> new Item(new Item.Properties().rarity(Rarity.COMMON)));
-
     //MISC
     public static final RegistryObject<Item> ENCHANTED_SENTRY_RUNE = ITEMS.register("enchanted_sentry_rune",
             () -> new Item(new Item.Properties().rarity(AetherItems.AETHER_LOOT)));

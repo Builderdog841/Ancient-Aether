@@ -103,7 +103,6 @@ public class AncientAetherCreativeModeTabs {
                             output.accept(AncientAetherBlocks.LOCKED_BLIGHTED_SENTRY_STONE.get());
                             output.accept(AncientAetherItems.ENCHANTED_SENTRY_RUNE.get());
                             output.accept(AncientAetherItems.BLIGHTED_SENTRY_RUNE.get());
-                            output.accept(AncientAetherItems.CACTUS_FLOWER_PETAL.get());
                             output.accept(AncientAetherItems.RAW_BUFFALO_RIBS.get());
                             output.accept(AncientAetherItems.COOKED_BUFFALO_RIBS.get());
                             output.accept(AncientAetherItems.BUFFALO_RIB.get());

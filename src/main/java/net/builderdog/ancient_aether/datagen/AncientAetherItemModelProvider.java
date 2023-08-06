@@ -20,9 +20,6 @@ public class AncientAetherItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
 
-        //MATERIALS
-        this.simpleItem(AncientAetherItems.CACTUS_FLOWER_PETAL);
-
         //FOOD
         this.simpleItem(AncientAetherItems.AECHOR_ICE_CREAM_BUCKET);
         this.simpleItem(AncientAetherItems.CACTUS_FLOWER_ICE_CREAM_BUCKET);
