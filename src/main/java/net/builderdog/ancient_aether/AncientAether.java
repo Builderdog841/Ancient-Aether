@@ -18,22 +18,35 @@ import net.builderdog.ancient_aether.world.structure.AncientAetherStructureTypes
 import net.builderdog.ancient_aether.world.structurepiece.AncientAetherStructurePieceTypes;
 import net.builderdog.ancient_aether.world.tree_decorator.AncientAetherTreeDecoratorTypes;
 import net.builderdog.ancient_aether.world.trunkplacer.AncientAetherTrunkPlacerTypes;
+import net.minecraft.SharedConstants;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.packs.PackType;
+import net.minecraft.server.packs.metadata.pack.PackMetadataSection;
+import net.minecraft.server.packs.repository.Pack;
+import net.minecraft.server.packs.repository.PackSource;
+import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.AddPackFindersEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.resource.PathPackResources;
+import net.zepalesque.aether.ReduxPackSources;
 import org.slf4j.Logger;
 import teamrazor.aeroblender.aether.AetherRuleCategory;
 import terrablender.api.Regions;
 import terrablender.api.SurfaceRuleManager;
+
+import java.nio.file.Path;
 
 @Mod(AncientAether.MOD_ID)
 public class AncientAether {
@@ -59,6 +72,7 @@ public class AncientAether {
         AncientAetherParticleTypes.PARTICLES.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(this::packSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -79,6 +93,46 @@ public class AncientAether {
         });
     }
 
+    public void packSetup(AddPackFindersEvent event) {
+        this.setupOptionalPack(event, "ancient_aether_programmer_art", "Programmer Art", "Changes the textures to the classic art style");
+        this.setupDatapack(event, "ancient_aether_lakes", "Lakes", "Adds cool new lakes to the Aether ", PackSource.BUILT_IN);
+    }
+
+    private void setupOptionalPack(AddPackFindersEvent event, String path, String displayName, String desc) {
+        if (event.getPackType() == PackType.CLIENT_RESOURCES) {
+            Path resourcePath = ModList.get().getModFileById("ancient_aether").getFile().findResource(new String[]{"packs/" + path});
+            PathPackResources pack = new PathPackResources(ModList.get().getModFileById("ancient_aether").getFile().getFileName() + ":" + resourcePath, true, resourcePath);
+            PackMetadataSection metadata = new PackMetadataSection(Component.translatable(desc), SharedConstants.getCurrentVersion().getPackVersion(PackType.CLIENT_RESOURCES));
+            event.addRepositorySource((packConsumer) -> {
+                packConsumer.accept(Pack.create("builtin/" + path, Component.literal("Ancient Aether - " + displayName), false, (string) -> {
+                    return pack;
+                }, new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.SERVER_DATA), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()), PackType.CLIENT_RESOURCES, Pack.Position.TOP, false, PackSource.BUILT_IN));
+            });
+        }
+    }
+
+    private void setupBuiltinDatapack(AddPackFindersEvent event, String path, String displayName, String desc) {
+        this.setupDatapack(event, path, displayName, desc, PackSource.BUILT_IN);
+    }
+
+    private void setupFeatureDatapack(AddPackFindersEvent event, String path, String displayName, String desc) {
+        this.setupDatapack(event, path, displayName, desc, PackSource.FEATURE);
+    }
+
+    private void setupDatapack(AddPackFindersEvent event, String path, String displayName, String desc, PackSource source) {
+        if (event.getPackType() == PackType.SERVER_DATA) {
+            Path resourcePath = ModList.get().getModFileById("ancient_aether").getFile().findResource(new String[]{"packs/" + path});
+            PathPackResources pack = new PathPackResources(ModList.get().getModFileById("ancient_aether").getFile().getFileName() + ":" + resourcePath, true, resourcePath);
+            PackMetadataSection metadata = new PackMetadataSection(Component.translatable(desc), SharedConstants.getCurrentVersion().getPackVersion(PackType.SERVER_DATA));
+            event.addRepositorySource((packConsumer) -> {
+                packConsumer.accept(Pack.create("builtin/" + path, Component.literal("Ancient Aether - " + displayName), false, (string) -> {
+                    return pack;
+                }, new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.SERVER_DATA), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()), PackType.SERVER_DATA, Pack.Position.TOP, false, source));
+            });
+        }
+
+    }
+
     private void registerComposting() {
         this.addCompost(0.3F, AncientAetherBlocks.HIGHLANDS_PINE_LEAVES.get().asItem());
         this.addCompost(0.3F, AncientAetherBlocks.SAKURA_LEAVES.get().asItem());
@@ -88,7 +142,7 @@ public class AncientAether {
         this.addCompost(0.65F,AncientAetherBlocks.MOONLIT_TULIP.get());
         this.addCompost(0.65F,AncientAetherBlocks.SAKURA_BLOSSOMS.get());
         this.addCompost(0.65F,AncientAetherBlocks.EDELWEISS.get());
-        this.addCompost(0.65F,AncientAetherBlocks.MOONLIT_WATER_LILY.get());
+        this.addCompost(0.65F,AncientAetherBlocks.MOONLIT_WATERLILY.get());
         this.addCompost(0.5F, AncientAetherBlocks.AETHER_CACTUS.get());
         this.addCompost(0.5F, AncientAetherBlocks.STRIPPED_AETHER_CACTUS.get());
         this.addCompost(0.85F,AncientAetherBlocks.CACTUS_FLOWER.get());
