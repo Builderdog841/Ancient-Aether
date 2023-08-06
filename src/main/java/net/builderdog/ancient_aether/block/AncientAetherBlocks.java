@@ -78,7 +78,7 @@ public class AncientAetherBlocks {
             () -> new SmallAetherCactusBlock(BlockBehaviour.Properties.copy(Blocks.DANDELION)));
     public static final RegistryObject<Block> SKYROOT_THORN_BUSH = registerBlock("skyroot_thorn_bush",
             () -> new SkyrootThornBushBlock(BlockBehaviour.Properties.copy(Blocks.DEAD_BUSH)));
-    public static final RegistryObject<Block> MOONLIT_WATER_LILY = registerBlock("moonlit_water_lily",
+    public static final RegistryObject<Block> MOONLIT_WATERLILY = registerBlock("moonlit_waterlily",
             () -> new WaterlilyBlock(BlockBehaviour.Properties.copy(Blocks.LILY_PAD).lightLevel(s -> 10).noOcclusion()));
 
     //CACTUS FLOWERS
@@ -321,8 +321,8 @@ public class AncientAetherBlocks {
     private static <B extends Block> Supplier<BlockItem> registerBlockItem(final RegistryObject<B> blockRegistryObject) {
         return () -> {
             B block = Objects.requireNonNull(blockRegistryObject.get());
-            if (block == MOONLIT_WATER_LILY.get()) {
-                return new PlaceOnWaterBlockItem(MOONLIT_WATER_LILY.get(),new Item.Properties());
+            if (block == MOONLIT_WATERLILY.get()) {
+                return new PlaceOnWaterBlockItem(MOONLIT_WATERLILY.get(),new Item.Properties());
             }
             return new BlockItem(block, new Item.Properties());
         };
