@@ -16,7 +16,11 @@
       "type": "minecraft:biome"
     },
     {
-      "type": "aether:dungeon_blacklist_filter"
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": "#ancient_aether:icestone_boulder_can_spawn_on"
+      }
     }
   ]
 }
