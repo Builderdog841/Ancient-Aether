@@ -11,7 +11,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = AncientAether.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class AncientCreativeModeTabs {
+public class AncientAetherCreativeModeTabs {
     public static CreativeModeTab ANCIENT_AETHER_TAB;
 
     @SubscribeEvent
@@ -74,7 +74,7 @@ public class AncientCreativeModeTabs {
                             output.accept(AncientAetherBlocks.MOONLIT_TULIP.get());
                             output.accept(AncientAetherBlocks.SAKURA_BLOSSOMS.get());
                             output.accept(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get());
-                            output.accept(AncientAetherBlocks.MOONLIT_WATER_LILY.get());
+                            //output.accept(AncientAetherBlocks.MOONLIT_WATER_LILY.get());
                             output.accept(AncientAetherBlocks.AETHER_QUARTZ_ORE.get());
                             output.accept(AncientAetherBlocks.QUICKSTONE.get());
                             output.accept(AncientAetherBlocks.QUICKSOIL_BRICKS.get());
