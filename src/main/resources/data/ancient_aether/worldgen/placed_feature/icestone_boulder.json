@@ -19,7 +19,12 @@
       "type": "minecraft:block_predicate_filter",
       "predicate": {
         "type": "minecraft:matching_blocks",
-        "blocks": "#ancient_aether:icestone_boulder_can_spawn_on"
+        "blocks": "#ancient_aether:icestone_boulder_can_spawn_on",
+        "offset": [
+          0,
+          -1,
+          0
+        ]
       }
     }
   ]
