@@ -25,6 +25,8 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
+import static net.minecraft.world.level.block.RotatedPillarBlock.AXIS;
+
 public class BrokenEnchantedObeliskBlock extends Block {
     public BrokenEnchantedObeliskBlock(Properties properties) {
         super(properties);
@@ -48,9 +50,9 @@ public class BrokenEnchantedObeliskBlock extends Block {
                 ItemStack stack = player.getMainHandItem();
                 player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
             stack.shrink(1);
-                for (int x1 = Mth.floor(x - 30); x1 <= Mth.ceil(x + 30); x1++) {
-                    for (int y1 = Mth.floor(y - 20); y1 <= Mth.ceil(y + 20); y1++) {
-                        for (int z1 = Mth.floor(z - 30); z1 <= Mth.ceil(z + 30); z1++) {
+                for (int x1 = Mth.floor(x - 20); x1 <= Mth.ceil(x + 20); x1++) {
+                    for (int y1 = Mth.floor(y - 20); y1 <= Mth.ceil(y); y1++) {
+                        for (int z1 = Mth.floor(z - 20); z1 <= Mth.ceil(z + 20); z1++) {
                             BlockPos checkedPos = new BlockPos(x1, y1, z1);
                             BlockState checkedState = level.getBlockState(checkedPos);
 
@@ -58,7 +60,7 @@ public class BrokenEnchantedObeliskBlock extends Block {
                                 level.setBlockAndUpdate(checkedPos, AetherBlocks.CARVED_STONE.get().defaultBlockState());
                             }
                             if (checkedState.getBlock() == AncientAetherBlocks.LOCKED_CARVED_STONE_MOSAIC.get()) {
-                                level.setBlockAndUpdate(checkedPos, AncientAetherBlocks.CARVED_STONE_MOSAIC.get().defaultBlockState());
+                                level.setBlockAndUpdate(checkedPos, AncientAetherBlocks.CARVED_STONE_MOSAIC.get().defaultBlockState().setValue(AXIS, checkedState.getValue(AXIS)));
                             }
                             if (checkedState.getBlock() == AncientAetherBlocks.LOCKED_ENCHANTED_SENTRY_STONE.get()) {
                                 level.setBlockAndUpdate(checkedPos, AncientAetherBlocks.ENCHANTED_SENTRY_STONE.get().defaultBlockState());
