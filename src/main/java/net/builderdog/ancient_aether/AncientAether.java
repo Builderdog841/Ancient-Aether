@@ -64,8 +64,6 @@ public class AncientAether {
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
-
-        modEventBus.addListener(this::addCreative) ;
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -82,104 +80,6 @@ public class AncientAether {
 
             SurfaceRuleManager.addSurfaceRules(AetherRuleCategory.THE_AETHER, MOD_ID, AncientAetherSurfaceData.makeRules());
         });
-    }
-
-    private void addCreative(CreativeModeTabEvent.BuildContents event) {
-        if(event.getTab() == AncientCreativeModeTabs.ANCIENT_AETHER_TAB)  {
-            event.accept(AncientAetherBlocks.HIGHLANDS_PINE_LOG);
-            event.accept(AncientAetherBlocks.HIGHLANDS_PINE_LOG_WALL);
-            event.accept(AncientAetherBlocks.HIGHLANDS_PINE_WOOD);
-            event.accept(AncientAetherBlocks.HIGHLANDS_PINE_WOOD_WALL);
-            event.accept(AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_LOG);
-            event.accept(AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_LOG_WALL);
-            event.accept(AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_WOOD);
-            event.accept(AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_WOOD_WALL);
-            event.accept(AncientAetherBlocks.HIGHLANDS_PINE_PLANKS);
-            event.accept(AncientAetherBlocks.HIGHLANDS_PINE_STAIRS);
-            event.accept(AncientAetherBlocks.HIGHLANDS_PINE_SLAB);
-            event.accept(AncientAetherBlocks.HIGHLANDS_PINE_FENCE);
-            event.accept(AncientAetherBlocks.HIGHLANDS_PINE_FENCE_GATE);
-            event.accept(AncientAetherBlocks.HIGHLANDS_PINE_DOOR);
-            event.accept(AncientAetherBlocks.HIGHLANDS_PINE_TRAPDOOR);
-            event.accept(AncientAetherBlocks.HIGHLANDS_PINE_PRESSURE_PLATE);
-            event.accept(AncientAetherBlocks.HIGHLANDS_PINE_BUTTON);
-            event.accept(AncientAetherItems.HIGHLANDS_PINE_SIGN);
-            event.accept(AncientAetherItems.HIGHLANDS_PINE_BOAT);
-            event.accept(AncientAetherItems.HIGHLANDS_PINE_CHEST_BOAT);
-            event.accept(AncientAetherBlocks.SAKURA_LOG);
-            event.accept(AncientAetherBlocks.SAKURA_LOG_WALL);
-            event.accept(AncientAetherBlocks.SAKURA_WOOD);
-            event.accept(AncientAetherBlocks.SAKURA_WOOD_WALL);
-            event.accept(AncientAetherBlocks.STRIPPED_SAKURA_LOG);
-            event.accept(AncientAetherBlocks.STRIPPED_SAKURA_LOG_WALL);
-            event.accept(AncientAetherBlocks.STRIPPED_SAKURA_WOOD);
-            event.accept(AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL);
-            event.accept(AncientAetherBlocks.SAKURA_PLANKS);
-            event.accept(AncientAetherBlocks.SAKURA_STAIRS);
-            event.accept(AncientAetherBlocks.SAKURA_SLAB);
-            event.accept(AncientAetherBlocks.SAKURA_FENCE);
-            event.accept(AncientAetherBlocks.SAKURA_FENCE_GATE);
-            event.accept(AncientAetherBlocks.SAKURA_DOOR);
-            event.accept(AncientAetherBlocks.SAKURA_TRAPDOOR);
-            event.accept(AncientAetherBlocks.SAKURA_PRESSURE_PLATE);
-            event.accept(AncientAetherBlocks.SAKURA_BUTTON);
-            event.accept(AncientAetherItems.SAKURA_SIGN);
-            event.accept(AncientAetherItems.SAKURA_BOAT);
-            event.accept(AncientAetherItems.SAKURA_CHEST_BOAT);
-            event.accept(AncientAetherBlocks.AETHER_CACTUS);
-            event.accept(AncientAetherBlocks.STRIPPED_AETHER_CACTUS);
-            event.accept(AncientAetherBlocks.CACTUS_FLOWER);
-            event.accept(AncientAetherBlocks.GOLDEN_CACTUS_FLOWER);
-            event.accept(AncientAetherBlocks.HIGHLANDS_PINE_LEAVES);
-            event.accept(AncientAetherBlocks.SAKURA_LEAVES);
-            event.accept(AncientAetherBlocks.HIGHLANDS_PINE_SAPLING);
-            event.accept(AncientAetherBlocks.SAKURA_SAPLING);
-            event.accept(AncientAetherBlocks.SMALL_AETHER_CACTUS);
-            event.accept(AncientAetherBlocks.SKYROOT_THORN_BUSH);
-            event.accept(AncientAetherBlocks.EDELWEISS);
-            event.accept(AncientAetherBlocks.MOONLIT_TULIP);
-            event.accept(AncientAetherBlocks.SAKURA_BLOSSOMS);
-            event.accept(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS);
-            event.accept(AncientAetherBlocks.MOONLIT_WATER_LILY);
-            event.accept(AncientAetherBlocks.AETHER_QUARTZ_ORE);
-            event.accept(AncientAetherBlocks.QUICKSTONE);
-            event.accept(AncientAetherBlocks.QUICKSOIL_BRICKS);
-            event.accept(AncientAetherBlocks.QUICKSOIL_BRICK_STAIRS);
-            event.accept(AncientAetherBlocks.QUICKSOIL_BRICK_SLAB);
-            event.accept(AncientAetherBlocks.QUICKSOIL_BRICK_WALL);
-            event.accept(AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC);
-            event.accept(AncientAetherBlocks.CARVED_STONE_MOSAIC);
-            event.accept(AncientAetherBlocks.ANGELIC_STONE_MOSAIC);
-            event.accept(AncientAetherBlocks.HELLFIRE_STONE_MOSAIC);
-            event.accept(AncientAetherBlocks.GALE_STONE_MOSAIC);
-            event.accept(AncientAetherBlocks.HOLYSTONE_LANTERN);
-            event.accept(AncientAetherBlocks.SENTRY_LANTERN);
-            event.accept(AncientAetherBlocks.ANGELIC_LANTERN);
-            event.accept(AncientAetherBlocks.HELLFIRE_LANTERN);
-            event.accept(AncientAetherBlocks.GALE_LANTERN);
-            event.accept(AncientAetherBlocks.ENCHANTED_SENTRY_STONE);
-            event.accept(AncientAetherBlocks.BLIGHTED_SENTRY_STONE);
-            event.accept(AncientAetherBlocks.BROKEN_ENCHANTED_OBELISK);
-            event.accept(AncientAetherBlocks.BROKEN_BLIGHTED_OBELISK);
-            event.accept(AncientAetherBlocks.ENCHANTED_OBELISK);
-            event.accept(AncientAetherBlocks.BLIGHTED_OBELISK);
-            event.accept(AncientAetherBlocks.CRACKED_SLIDER);
-            event.accept(AncientAetherBlocks.LOCKED_CARVED_STONE_MOSAIC);
-            event.accept(AncientAetherBlocks.LOCKED_ENCHANTED_SENTRY_STONE);
-            event.accept(AncientAetherBlocks.LOCKED_BLIGHTED_SENTRY_STONE);
-            event.accept(AncientAetherItems.ENCHANTED_SENTRY_RUNE);
-            event.accept(AncientAetherItems.BLIGHTED_SENTRY_RUNE);
-            event.accept(AncientAetherItems.CACTUS_FLOWER_PETAL);
-            event.accept(AncientAetherItems.RAW_BUFFALO_RIBS);
-            event.accept(AncientAetherItems.COOKED_BUFFALO_RIBS);
-            event.accept(AncientAetherItems.BUFFALO_RIB);
-            event.accept(AncientAetherItems.AECHOR_ICE_CREAM_BUCKET);
-            event.accept(AncientAetherItems.CACTUS_FLOWER_ICE_CREAM_BUCKET);
-            event.accept(AncientAetherItems.HIGHLANDS_BUFFALO_SPAWN_EGG);
-            event.accept(AncientAetherItems.ROOTLING_SPAWN_EGG);
-            event.accept(AncientAetherItems.VELOX_WHIRLWIND_SPAWN_EGG);
-            event.accept(AncientAetherItems.VELOX_ZEPHYR_SPAWN_EGG);
-        }
     }
 
     private void registerComposting() {
