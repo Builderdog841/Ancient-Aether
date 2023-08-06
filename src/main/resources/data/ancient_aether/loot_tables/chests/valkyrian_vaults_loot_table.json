@@ -188,7 +188,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "aether:gravitite_pickaxe",
+          "name": "aether:gravitite_axe",
           "weight": 1,
           "functions": [
             {
