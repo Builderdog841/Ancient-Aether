@@ -94,6 +94,7 @@
   "item.ancient_aether.sakura_chest_boat": "Sakura Chest Boat",
   "item.ancient_aether.enchanted_sentry_rune": "Enchanted Sentry Rune",
   "item.ancient_aether.blighted_sentry_rune": "Blighted Sentry Rune",
+  "item.ancient_aether.ancient_dungeon_key": "Ancient Dungeon Key",
 
   "creatvemodetab.ancient_aether_tab": "Ancient Aether",
 
@@ -125,6 +126,8 @@
   "advancement.ancient_aether.find_ancient_valkyrie_library.desc": "Find an Ancient Valkyrie Library in the Quicksoil Desert",
 
   "gui.ancient_aether.obelisk_valkyrie_queen": "You haven't defeated the Valkyrie Queen yet",
+
+  "ancient_aether.dungeon.ancient_dungeon": "Ancient Dungeon",
 
   "lore.block.ancient_aether.holystone_brick_mosaic": "A fancy Holystone Brick variant that can be rotated in various different directions.",
   "lore.block.ancient_aether.sentry_stone_mosaic": "A fancy Carved Stone variant that can be rotated in various different directions.",

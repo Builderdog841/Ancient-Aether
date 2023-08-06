@@ -1,6 +1,7 @@
 package net.builderdog.ancient_aether.item;
 
 import com.aetherteam.aether.item.AetherItems;
+import com.aetherteam.aether.item.miscellaneous.DungeonKeyItem;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
@@ -8,6 +9,7 @@ import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.network.chat.TextColor;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
@@ -16,17 +18,21 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import static com.aetherteam.aether.item.AetherItems.AETHER_LOOT;
+
 public class AncientAetherItems {
     public static final DeferredRegister<Item> ITEMS =
            DeferredRegister.create(ForgeRegistries.ITEMS, AncientAether.MOD_ID) ;
 
-    public static final Component ANCIENT_DUNGEON_TOOLTIP = Component.translatable("ancient_aether.dungeon.ancient_dungeon").withStyle(Style.EMPTY.withItalic(true).withColor(TextColor.parseColor("#CF61C5")));
+    public static final Component ANCIENT_DUNGEON_TOOLTIP = Component.translatable("ancient_aether.dungeon.ancient_dungeon").withStyle(Style.EMPTY.withItalic(true).withColor(TextColor.parseColor("#3A466B")));
 
     //MISC
     public static final RegistryObject<Item> ENCHANTED_SENTRY_RUNE = ITEMS.register("enchanted_sentry_rune",
-            () -> new Item(new Item.Properties().rarity(AetherItems.AETHER_LOOT)));
+            () -> new Item(new Item.Properties().rarity(AETHER_LOOT)));
     public static final RegistryObject<Item> BLIGHTED_SENTRY_RUNE = ITEMS.register("blighted_sentry_rune",
-            () -> new Item(new Item.Properties().rarity(AetherItems.AETHER_LOOT)));
+            () -> new Item(new Item.Properties().rarity(AETHER_LOOT)));
+    public static final RegistryObject<Item> ANCIENT_DUNGEON_KEY = ITEMS.register("ancient_dungeon_key",
+            () -> new DungeonKeyItem(new ResourceLocation(AncientAether.MOD_ID, "ancient"), new Item.Properties().stacksTo(1).rarity(AETHER_LOOT).fireResistant()));
 
     //SIGNS
     public static final RegistryObject<Item> HIGHLANDS_PINE_SIGN = ITEMS.register("highlands_pine_sign", () -> new SignItem(new Item.Properties().stacksTo(16), AncientAetherBlocks.HIGHLANDS_PINE_SIGN.get(), AncientAetherBlocks.HIGHLANDS_PINE_WALL_SIGN.get()));
