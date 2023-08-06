@@ -45,8 +45,10 @@ public class BrokenBlightedObeliskBlock extends Block {
                 && _plr0.getAdvancements().getOrStartProgress(_plr0.server.getAdvancements().getAdvancement(new ResourceLocation("aether:silver_dungeon"))).isDone()) {
             if ((player instanceof ServerPlayer _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == AncientAetherItems.BLIGHTED_SENTRY_RUNE.get()) {
                 ItemStack stack = player.getMainHandItem();
-                player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
-            stack.shrink(1);
+                if (!(entity instanceof ServerPlayer _livEnt ? _livEnt.getAbilities().instabuild : false)) {
+                    player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
+                    stack.shrink(1);
+                }
                 for (int x1 = Mth.floor(x - 39); x1 <= Mth.ceil(x + 39); x1++) {
                     for (int y1 = Mth.floor(y - 25); y1 <= Mth.ceil(y + 10); y1++) {
                         for (int z1 = Mth.floor(z - 39); z1 <= Mth.ceil(z + 39); z1++) {
