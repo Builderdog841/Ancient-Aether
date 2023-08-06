@@ -34,9 +34,9 @@ public class AncientAetherItems {
 
     //FOOD
     public static final RegistryObject<Item> AECHOR_ICE_CREAM_BUCKET = ITEMS.register("aechor_ice_cream_bucket",
-            () -> new AncientAetherIceCreamBucket(new Item.Properties().stacksTo(16).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(6).saturationMod(0.8f).build())));
+            () -> new AncientAetherIceCreamBucket(new Item.Properties().stacksTo(16).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(5).saturationMod(0.7f).build())));
     public static final RegistryObject<Item> CACTUS_FLOWER_ICE_CREAM_BUCKET = ITEMS.register("cactus_flower_ice_cream_bucket",
-            () -> new AncientAetherIceCreamBucket(new Item.Properties().stacksTo(16).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(7).saturationMod(0.6f).build())));
+            () -> new AncientAetherIceCreamBucket(new Item.Properties().stacksTo(16).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(8).saturationMod(1f).build())));
     public static final RegistryObject<Item> RAW_BUFFALO_RIBS = ITEMS.register("raw_buffalo_ribs",
             () -> new Item(new Item.Properties().rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(2).saturationMod(0.2f).build())));
     public static final RegistryObject<Item> COOKED_BUFFALO_RIBS = ITEMS.register("cooked_buffalo_ribs",
