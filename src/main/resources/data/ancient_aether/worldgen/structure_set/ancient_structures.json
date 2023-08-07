@@ -20,7 +20,7 @@
     "type": "minecraft:random_spread"
   },
   "exclusion_zone": {
-    "chunk_count": 10,
+    "chunk_count": 15,
     "other_set": "aether:bronze_dungeon"
   }
 }
