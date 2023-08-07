@@ -91,7 +91,7 @@
         {
           "type": "minecraft:item",
           "name": "aether:zanite_sword",
-          "weight": 2,
+          "weight": 3,
           "functions": [
             {
               "function": "set_count",
@@ -105,7 +105,7 @@
         {
           "type": "minecraft:item",
           "name": "aether:zanite_axe",
-          "weight": 2,
+          "weight": 3,
           "functions": [
             {
               "function": "set_count",
@@ -119,7 +119,7 @@
         {
           "type": "minecraft:item",
           "name": "aether:zanite_pickaxe",
-          "weight": 2,
+          "weight": 3,
           "functions": [
             {
               "function": "set_count",
@@ -133,7 +133,7 @@
         {
           "type": "minecraft:item",
           "name": "aether:zanite_shovel",
-          "weight": 2,
+          "weight": 3,
           "functions": [
             {
               "function": "set_count",
@@ -147,7 +147,7 @@
         {
           "type": "minecraft:item",
           "name": "aether:zanite_hoe",
-          "weight": 2,
+          "weight": 3,
           "functions": [
             {
               "function": "set_count",
@@ -339,7 +339,7 @@
         {
           "type": "minecraft:item",
           "name": "aether:zanite_helmet",
-          "weight": 3,
+          "weight": 4,
           "functions": [
             {
               "function": "set_count",
@@ -381,6 +381,20 @@
         {
           "type": "minecraft:item",
           "name": "aether:zanite_boots",
+          "weight": 4,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_gloves",
           "weight": 3,
           "functions": [
             {
@@ -409,6 +423,20 @@
         {
           "type": "minecraft:item",
           "name": "aether:gravitite_boots",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:gravitite_gloves",
           "weight": 1,
           "functions": [
             {
