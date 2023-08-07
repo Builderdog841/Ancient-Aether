@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether;
 
+import com.aetherteam.aether.AetherConfig;
 import com.mojang.logging.LogUtils;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
@@ -40,6 +41,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.resource.PathPackResources;
+import net.zepalesque.aether.ReduxConfig;
+import net.zepalesque.aether.client.render.ReduxRenderers;
 import org.slf4j.Logger;
 import teamrazor.aeroblender.aether.AetherRuleCategory;
 import terrablender.api.Regions;
@@ -91,7 +94,6 @@ public class AncientAether {
             SurfaceRuleManager.addSurfaceRules(AetherRuleCategory.THE_AETHER, MOD_ID, AncientAetherSurfaceData.makeRules());
         });
     }
-
     public void packSetup(AddPackFindersEvent event) {
         this.setupOptionalPack(event, "ancient_aether_programmer_art", "Programmer Art", "Changes the textures to the classic art style");
         this.setupOptionalDatapack(event, "ancient_aether_lakes", "Lakes [WIP]", "Adds cool new lakes to the Aether");
