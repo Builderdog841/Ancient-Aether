@@ -43,11 +43,15 @@ public class AncientAetherRegion extends Region {
         Climate.Parameter tempHighland3 = Climate.Parameter.span(-0.8F, -0.6F); //Highland Taiga
 
         this.addBiome(mapper, new Climate.ParameterPoint(tempDefault2, Climate.Parameter.span(0.0F, 1.0F), fullRange, fullRange, fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_FOREST);
+                AetherBiomes.SKYROOT_MEADOW);
+        this.addBiome(mapper, new Climate.ParameterPoint(tempDefault3, Climate.Parameter.span(0.0F, 0.8F), fullRange, fullRange, fullRange, fullRange, 0),
+                AetherBiomes.SKYROOT_MEADOW);
+        this.addBiome(mapper, new Climate.ParameterPoint(tempDefault4, Climate.Parameter.span(-0.1F, 1.0F), fullRange, fullRange, fullRange, fullRange, 0),
+                AetherBiomes.SKYROOT_MEADOW);
         this.addBiome(mapper, new Climate.ParameterPoint(tempDefault5, Climate.Parameter.span(-0.3F, 1.0F), fullRange, fullRange, fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_FOREST);
+                AetherBiomes.SKYROOT_MEADOW);
         this.addBiome(mapper, new Climate.ParameterPoint(tempDefault5, Climate.Parameter.span(0.8F, 1.0F), fullRange, fullRange, fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_FOREST);
+                AetherBiomes.SKYROOT_MEADOW);
 
         this.addBiome(mapper, new Climate.ParameterPoint(tempHighland1, Climate.Parameter.span(-0.1F, 1F), fullRange, fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.HIGHLAND_TAIGA);
@@ -57,13 +61,13 @@ public class AncientAetherRegion extends Region {
                 AncientAetherBiomes.HIGHLAND_TAIGA);
 
         this.addBiome(mapper, new Climate.ParameterPoint(tempDefault1, fullRange, fullRange, fullRange, fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_MEADOW);
+                AetherBiomes.SKYROOT_FOREST);
         this.addBiome(mapper, new Climate.ParameterPoint(tempDefault4, Climate.Parameter.span(-1.0F, 0.0F), fullRange, fullRange, fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_MEADOW);
+                AetherBiomes.SKYROOT_FOREST);
         this.addBiome(mapper, new Climate.ParameterPoint(tempDefault3, Climate.Parameter.span(-1.0F, -0.6F), fullRange, fullRange, fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_MEADOW);
+                AetherBiomes.SKYROOT_FOREST);
         this.addBiome(mapper, new Climate.ParameterPoint(tempDefault6, Climate.Parameter.span(-1.0F, -0.1F), fullRange, fullRange, fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_MEADOW);
+                AetherBiomes.SKYROOT_FOREST);
 
         this.addBiome(mapper, new Climate.ParameterPoint(tempSakura1, Climate.Parameter.span(-1.0F, -0.6F), fullRange, fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.SPARSE_SAKURA_JUNGLE);
