@@ -41,8 +41,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.resource.PathPackResources;
-import net.zepalesque.aether.ReduxConfig;
-import net.zepalesque.aether.client.render.ReduxRenderers;
 import org.slf4j.Logger;
 import teamrazor.aeroblender.aether.AetherRuleCategory;
 import terrablender.api.Regions;
