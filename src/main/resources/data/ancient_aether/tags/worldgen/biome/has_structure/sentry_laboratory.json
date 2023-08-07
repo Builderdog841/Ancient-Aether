@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "ancient_aether:highland_taiga"
+    "ancient_aether:highland_taiga",
+    "ancient_aether:festive_highland_taiga",
+    "ancient_aether:frosty_highland"
   ]
 }

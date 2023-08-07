@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "ancient_aether:sakura_jungle"
+    "ancient_aether:sakura_jungle",
+    "ancient_aether:deep_sakura_jungle",
+    "ancient_aether:sparse_sakura_jungle"
   ]
 }
