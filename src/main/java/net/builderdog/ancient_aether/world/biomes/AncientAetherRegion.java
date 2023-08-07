@@ -39,6 +39,9 @@ public class AncientAetherRegion extends Region {
         this.addBiome(mapper, new Climate.ParameterPoint(temps2, Climate.Parameter.span(-1F, 0F), fullRange, fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.QUICKSOIL_DESERT);
 
+        this.addBiome(mapper, new Climate.ParameterPoint(temps2, Climate.Parameter.span(0F, 1F), fullRange, fullRange, fullRange, fullRange, 0),
+                AncientAetherBiomes.QUICKSOIL_DESERT);
+
         this.addBiome(mapper, new Climate.ParameterPoint(temps3, Climate.Parameter.span(0F, 1F), fullRange, fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.HIGHLAND_TAIGA);
     }
