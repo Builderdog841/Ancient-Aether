@@ -97,6 +97,9 @@ public class AncientAether {
         this.setupOptionalDatapack(event, "ancient_aether_lakes", "Lakes [WIP]", "Adds cool new lakes to the Aether");
         this.setupDatapack(event, "ancient_aether_water_color", "Watercolor", "Changes the Watercolor of the Aether", PackSource.BUILT_IN);
         //this.setupDatapack(event, "ancient_aether_lakes", "Lakes", "Adds cool new lakes to the Aether", PackSource.BUILT_IN);
+        if (aetherGenesisCompat()) {
+            this.setupMandatoryDataPack(event, "aether_genesis_compatibility", "Aether Genesis Compatibility", "Needed for Compatibility with Aether Genesis");
+        }
     }
 
     private void setupOptionalPack(AddPackFindersEvent event, String path, String displayName, String desc) {
@@ -105,11 +108,25 @@ public class AncientAether {
             PathPackResources pack = new PathPackResources(ModList.get().getModFileById("ancient_aether").getFile().getFileName() + ":" + resourcePath, true, resourcePath);
             PackMetadataSection metadata = new PackMetadataSection(Component.translatable(desc), SharedConstants.getCurrentVersion().getPackVersion(PackType.CLIENT_RESOURCES));
             event.addRepositorySource((packConsumer) -> {
-                packConsumer.accept(Pack.create("builtin/" + path, Component.literal("Ancient Aether - " + displayName), false, (string) -> {
+                packConsumer.accept(Pack.create("builtin/" + path, Component.literal("Ancient Aether: " + displayName), false, (string) -> {
                     return pack;
                 }, new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.SERVER_DATA), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()), PackType.CLIENT_RESOURCES, Pack.Position.TOP, false, PackSource.BUILT_IN));
             });
         }
+    }
+
+    private void setupMandatoryDataPack(AddPackFindersEvent event, String path, String displayName, String desc) {
+        if (event.getPackType() == PackType.SERVER_DATA) {
+            Path resourcePath = ModList.get().getModFileById("ancient_aether").getFile().findResource(new String[]{"packs/" + path});
+            PathPackResources pack = new PathPackResources(ModList.get().getModFileById("ancient_aether").getFile().getFileName() + ":" + resourcePath, true, resourcePath);
+            PackMetadataSection metadata = new PackMetadataSection(Component.translatable(desc), SharedConstants.getCurrentVersion().getPackVersion(PackType.SERVER_DATA));
+            event.addRepositorySource((packConsumer) -> {
+                packConsumer.accept(Pack.create("builtin/" + path, Component.literal("Ancient Aether: " + displayName), true, (string) -> {
+                    return pack;
+                }, new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.SERVER_DATA), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()), PackType.SERVER_DATA, Pack.Position.TOP, false, PackSource.BUILT_IN));
+            });
+        }
+
     }
 
     private void setupBuiltinDatapack(AddPackFindersEvent event, String path, String displayName, String desc) {
@@ -129,7 +146,7 @@ public class AncientAether {
             PathPackResources pack = new PathPackResources(ModList.get().getModFileById("ancient_aether").getFile().getFileName() + ":" + resourcePath, true, resourcePath);
             PackMetadataSection metadata = new PackMetadataSection(Component.translatable(desc), SharedConstants.getCurrentVersion().getPackVersion(PackType.SERVER_DATA));
             event.addRepositorySource((packConsumer) -> {
-                packConsumer.accept(Pack.create("builtin/" + path, Component.literal("Ancient Aether - " + displayName), false, (string) -> {
+                packConsumer.accept(Pack.create("builtin/" + path, Component.literal("Ancient Aether: " + displayName), false, (string) -> {
                     return pack;
                 }, new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.SERVER_DATA), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()), PackType.SERVER_DATA, Pack.Position.TOP, false, source));
             });
@@ -151,6 +168,18 @@ public class AncientAether {
         this.addCompost(0.5F, AncientAetherBlocks.STRIPPED_AETHER_CACTUS.get());
         this.addCompost(0.85F,AncientAetherBlocks.CACTUS_FLOWER.get());
         this.addCompost(1.0F,AncientAetherBlocks.GOLDEN_CACTUS_FLOWER.get());
+    }
+
+    public static boolean deepAetherCompat() {
+        return ModList.get().isLoaded("deep_aether");
+    }
+
+    public static boolean lostAetherCompat() {
+        return ModList.get().isLoaded("lost_aether_content");
+    }
+
+    public static boolean aetherGenesisCompat() {
+        return ModList.get().isLoaded("aether_genesis");
     }
 
     private void addCompost(float chance, ItemLike item) {
