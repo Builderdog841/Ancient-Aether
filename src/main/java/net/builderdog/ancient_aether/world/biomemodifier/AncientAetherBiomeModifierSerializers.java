@@ -8,12 +8,12 @@ import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries.Keys;
-import net.builderdog.ancient_aether.world.biomemodifier.CarverModifier;
 
 public class AncientAetherBiomeModifierSerializers {
 
     //Credit for this code goes to Zepalesque
     public static final DeferredRegister<Codec<? extends BiomeModifier>> BIOME_MODIFIER_SERIALIZERS;
+    static RegistryObject<Codec<WaterColorModifier>> WATER_COLOR_CODEC;
     static RegistryObject<Codec<CarverModifier>> CARVER_CODEC;
 
     public AncientAetherBiomeModifierSerializers() {
@@ -24,6 +24,11 @@ public class AncientAetherBiomeModifierSerializers {
         CARVER_CODEC = BIOME_MODIFIER_SERIALIZERS.register("add_carver", () -> {
             return RecordCodecBuilder.create((builder) -> {
                 return builder.group(Biome.LIST_CODEC.fieldOf("biomes").forGetter(CarverModifier::biomes), ConfiguredWorldCarver.CODEC.fieldOf("carver").forGetter(CarverModifier::carver)).apply(builder, CarverModifier::new);
+            });
+        });
+        WATER_COLOR_CODEC = BIOME_MODIFIER_SERIALIZERS.register("water_color", () -> {
+            return RecordCodecBuilder.create((builder) -> {
+                return builder.group(Biome.LIST_CODEC.fieldOf("biomes").forGetter(WaterColorModifier::biomes), Codec.INT.fieldOf("water_color").forGetter(WaterColorModifier::water), Codec.INT.fieldOf("water_fog_color").forGetter(WaterColorModifier::fog)).apply(builder, WaterColorModifier::new);
             });
         });
     }

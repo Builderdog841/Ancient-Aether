@@ -94,7 +94,9 @@ public class AncientAether {
 
     public void packSetup(AddPackFindersEvent event) {
         this.setupOptionalPack(event, "ancient_aether_programmer_art", "Programmer Art", "Changes the textures to the classic art style");
-        this.setupDatapack(event, "ancient_aether_lakes", "Lakes", "Adds cool new lakes to the Aether ", PackSource.BUILT_IN);
+        this.setupOptionalDatapack(event, "ancient_aether_lakes", "Lakes [WIP]", "Adds cool new lakes to the Aether");
+        this.setupDatapack(event, "ancient_aether_water_color", "Watercolor", "Changes the Watercolor of the Aether", PackSource.BUILT_IN);
+        //this.setupDatapack(event, "ancient_aether_lakes", "Lakes", "Adds cool new lakes to the Aether", PackSource.BUILT_IN);
     }
 
     private void setupOptionalPack(AddPackFindersEvent event, String path, String displayName, String desc) {
@@ -116,6 +118,9 @@ public class AncientAether {
 
     private void setupFeatureDatapack(AddPackFindersEvent event, String path, String displayName, String desc) {
         this.setupDatapack(event, path, displayName, desc, PackSource.FEATURE);
+    }
+    private void setupOptionalDatapack(AddPackFindersEvent event, String path, String displayName, String desc) {
+        this.setupDatapack(event, path, displayName, desc, AncientAetherPackSources.OPTIONAL_DATAPACK);
     }
 
     private void setupDatapack(AddPackFindersEvent event, String path, String displayName, String desc, PackSource source) {
