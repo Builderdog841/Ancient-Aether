@@ -32,6 +32,7 @@ public class AncientAetherRegion extends Region {
         Climate.Parameter tempDefault5 = Climate.Parameter.span(0.93F, 0.94F);
         Climate.Parameter tempDefault6 = Climate.Parameter.span(0.94F, 1.0F);
         Climate.Parameter tempDefault7 = Climate.Parameter.span(0.0F, 0.2F);
+        Climate.Parameter tempDefault8 = Climate.Parameter.span(-0.4F, -0.2F);
 
         Climate.Parameter tempDesert1 = Climate.Parameter.span(0.4F, 0.93F); //Quicksoil Desert and Quicksoil Dunes
         Climate.Parameter tempDesert2 = Climate.Parameter.span(0.3F, 0.8F); //Aerogel Caves
@@ -64,6 +65,8 @@ public class AncientAetherRegion extends Region {
         this.addBiome(mapper, new Climate.ParameterPoint(tempDefault4, Climate.Parameter.span(-1.0F, -0.1F), fullRange, fullRange, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_GROVE);
         this.addBiome(mapper, new Climate.ParameterPoint(tempDefault5, Climate.Parameter.span(-0.6F, -0.3F), fullRange, fullRange, fullRange, fullRange, 0),
+                AetherBiomes.SKYROOT_GROVE);
+        this.addBiome(mapper, new Climate.ParameterPoint(tempDefault8, Climate.Parameter.span(-1F, -0.3F), fullRange, fullRange, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_GROVE);
 
         this.addBiome(mapper, new Climate.ParameterPoint(tempDefault1, fullRange, fullRange, fullRange, fullRange, fullRange, 0),
