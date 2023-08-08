@@ -14,7 +14,7 @@ public class SkyrootThornBushBlock extends DeadBushBlock {
             super(properties);
         }
     public void entityInside(BlockState p_51148_, Level p_51149_, BlockPos p_51150_, Entity p_51151_) {
-        p_51151_.hurt(p_51149_.damageSources().sweetBerryBush(), 1.0F);
+        p_51151_.hurt(p_51149_.damageSources().cactus(), 1.0F);
     }
 
     public boolean mayPlaceOn(BlockState groundState, BlockGetter worldIn, BlockPos pos) {
