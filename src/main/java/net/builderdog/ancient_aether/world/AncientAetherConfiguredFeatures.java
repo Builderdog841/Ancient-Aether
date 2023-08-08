@@ -102,7 +102,7 @@ public class AncientAetherConfiguredFeatures {
 
         register(context, QUICKSTONE_ORE_KEY, Feature.ORE, new OreConfiguration(quickstoneOre, 64, 0f));
 
-        register(context, AEROGEL_ORE_KEY, Feature.ORE, new OreConfiguration(aerogelOre, 32, 0f));
+        register(context, AEROGEL_ORE_KEY, Feature.ORE, new OreConfiguration(aerogelOre, 64, 0f));
 
         register(context, MOONLIT_TULIP_PATCH_KEY, Feature.FLOWER,
                 AetherConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()

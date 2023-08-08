@@ -47,7 +47,7 @@ public class AncientAetherPlacedFeatures {
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(128))));
 
         register(context, AEROGEL_ORE_PLACED, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.AEROGEL_ORE_KEY),
-                AncientAetherPlacedFeatureBuilder.commonOrePlacement(6, //veins per chunk
+                AncientAetherPlacedFeatureBuilder.commonOrePlacement(8, //veins per chunk
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(128))));
 
         register(context, MOONLIT_TULIP_PATCH_KEY, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.MOONLIT_TULIP_PATCH_KEY), RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
