@@ -20,6 +20,7 @@ import net.builderdog.ancient_aether.world.structurepiece.AncientAetherStructure
 import net.builderdog.ancient_aether.world.tree_decorator.AncientAetherTreeDecoratorTypes;
 import net.builderdog.ancient_aether.world.trunkplacer.AncientAetherTrunkPlacerTypes;
 import net.minecraft.SharedConstants;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -47,6 +48,7 @@ import terrablender.api.Regions;
 import terrablender.api.SurfaceRuleManager;
 
 import java.nio.file.Path;
+import java.util.Iterator;
 
 @Mod(AncientAether.MOD_ID)
 public class AncientAether {
@@ -94,9 +96,8 @@ public class AncientAether {
     }
     public void packSetup(AddPackFindersEvent event) {
         this.setupOptionalPack(event, "ancient_aether_programmer_art", "Programmer Art", "Changes the textures to the classic art style");
-        this.setupOptionalDatapack(event, "ancient_aether_lakes", "Lakes [WIP]", "Adds cool new lakes to the Aether");
         this.setupDatapack(event, "ancient_aether_water_color", "Watercolor", "Changes the Watercolor of the Aether", PackSource.BUILT_IN);
-        //this.setupDatapack(event, "ancient_aether_lakes", "Lakes", "Adds cool new lakes to the Aether", PackSource.BUILT_IN);
+        this.setupDatapack(event, "ancient_aether_lakes", "Lakes", "Adds cool new lakes to the Aether", PackSource.BUILT_IN);
         if (aetherGenesisCompat()) {
             this.setupMandatoryDataPack(event, "aether_genesis_compatibility", "Aether Genesis Compatibility", "Needed for Compatibility with Aether Genesis");
         }
@@ -135,9 +136,6 @@ public class AncientAether {
 
     private void setupFeatureDatapack(AddPackFindersEvent event, String path, String displayName, String desc) {
         this.setupDatapack(event, path, displayName, desc, PackSource.FEATURE);
-    }
-    private void setupOptionalDatapack(AddPackFindersEvent event, String path, String displayName, String desc) {
-        this.setupDatapack(event, path, displayName, desc, AncientAetherPackSources.OPTIONAL_DATAPACK);
     }
 
     private void setupDatapack(AddPackFindersEvent event, String path, String displayName, String desc, PackSource source) {
