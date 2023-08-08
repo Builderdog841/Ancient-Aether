@@ -33,22 +33,6 @@
       },
       "trigger": "minecraft:location"
     },
-    "ancient_aether:gilded_quicksoil_desert": {
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "location": {
-                "biome": "ancient_aether:gilded_quicksoil_desert"
-              }
-            }
-          }
-        ]
-      },
-      "trigger": "minecraft:location"
-    },
     "ancient_aether:aerogel_caves": {
       "conditions": {
         "player": [
@@ -97,7 +81,7 @@
       },
       "trigger": "minecraft:location"
     },
-    "ancient_aether:frosty_highland": {
+    "ancient_aether:highland_clearing": {
       "conditions": {
         "player": [
           {
@@ -105,7 +89,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "biome": "ancient_aether:frosty_highland"
+                "biome": "ancient_aether:highland_clearing"
               }
             }
           }
