@@ -11,7 +11,7 @@ public class AncientAetherBiomes {
     //HIGHLAND TAIGA
     public static final ResourceKey<Biome> HIGHLAND_TAIGA = createKey("highland_taiga");
     public static final ResourceKey<Biome> FESTIVE_HIGHLAND_TAIGA = createKey("festive_highland_taiga");
-    public static final ResourceKey<Biome> FROSTY_HIGHLAND = createKey("frosty_highland");
+    public static final ResourceKey<Biome> HIGHLAND_CLEARING = createKey("highland_clearing");
     public static final ResourceKey<Biome> ICESTONE_CAVERNS = createKey("icestone_caverns");
 
     //QUICKSOIL DESERT
