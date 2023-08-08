@@ -74,7 +74,7 @@ public class AncientAetherCreativeModeTabs {
                             output.accept(AncientAetherBlocks.MOONLIT_TULIP.get());
                             output.accept(AncientAetherBlocks.SAKURA_BLOSSOMS.get());
                             output.accept(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get());
-                            //output.accept(AncientAetherBlocks.MOONLIT_WATERLILY.get());
+                            output.accept(AncientAetherBlocks.MOONLIT_WATERLILY.get());
                             output.accept(AncientAetherBlocks.AETHER_QUARTZ_ORE.get());
                             output.accept(AncientAetherBlocks.QUICKSTONE.get());
                             output.accept(AncientAetherBlocks.QUICKSOIL_BRICKS.get());

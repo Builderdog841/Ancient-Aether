@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "ancient_aether:item/moonlit_water_lily"
+    "layer0": "ancient_aether:item/moonlit_waterlily"
   }
 }

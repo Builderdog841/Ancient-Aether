@@ -77,7 +77,7 @@
   "block.ancient_aether.locked_carved_stone_mosaic": "Locked Carved Stone Mosaic",
   "block.ancient_aether.locked_enchanted_sentry_stone": "Locked Enchanted Sentry Stone",
   "block.ancient_aether.locked_blighted_sentry_stone": "Locked Blighted Sentry Stone",
-  "block.ancient_aether.moonlit_water_lily": "Moonlit Water Lily",
+  "block.ancient_aether.moonlit_waterlily": "Moonlit Water Lily",
 
   "item.ancient_aether.raw_buffalo_ribs": "Raw Buffalo Ribs",
   "item.ancient_aether.cooked_buffalo_ribs": "Cooked Buffalo Ribs",
@@ -202,7 +202,7 @@
   "lore.block.ancient_aether.broken_blighted_obelisk": "Found at the entrances of the Valkyrian Depths, this block can be unlocked by Blighted Sentry Runes.",
   "lore.block.ancient_aether.enchanted_obelisk": "A cool decoration block which can only be mined with a Gravitite Pickaxe or better.",
   "lore.block.ancient_aether.blighted_obelisk": "A cool decoration block which can only be mined with a Gravitite Pickaxe or better.",
-  "lore.block.ancient_aether.moonlit_lily_pad": "A new type of water lily generating in the lakes of the Sakura Jungle. They also glow in the darkness.",
+  "lore.block.ancient_aether.moonlit_waterlily": "A new type of waterlily generating in the lakes of the Sakura Jungle. They also glow in the darkness.",
 
   "lore.item.ancient_aether.aechor_ice_cream_bucket": "A sweat dessert crafted by putting Aechor Petals, Sugar, Icestone and a Skyroot Bucket in a Crafting Table",
   "lore.item.ancient_aether.cactus_flower_ice_cream_bucket": "A sweat dessert crafted by putting Cactus Petals Petals, Sugar, Icestone and a Skyroot Bucket in a Crafting Table",

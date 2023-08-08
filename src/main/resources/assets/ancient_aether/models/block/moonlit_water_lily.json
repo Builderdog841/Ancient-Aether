@@ -1,8 +1,0 @@
-{
-  "parent": "ancient_aether:block/template_moonlit_water_lily",
-  "render_type": "minecraft:cutout_mipped",
-  "textures": {
-    "0": "ancient_aether:block/moonlit_water_lily",
-    "particle": "ancient_aether:block/moonlit_water_lily"
-  }
-}
