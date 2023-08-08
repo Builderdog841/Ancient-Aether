@@ -43,11 +43,11 @@ public class AncientAetherRegion extends Region {
         Climate.Parameter tempSakura5 = Climate.Parameter.span(-0.25F, -0.2F); //Sparse Sakura Jungle
         Climate.Parameter tempSakura6 = Climate.Parameter.span(-0.15F, 0.15F); //Overgrown Caverns
 
-        Climate.Parameter tempHighland1 = Climate.Parameter.span(-0.5F, -0.3F); //Highland Taiga
+        Climate.Parameter tempHighland1 = Climate.Parameter.span(-0.5F, -0.4F); //Highland Taiga
         Climate.Parameter tempHighland2 = Climate.Parameter.span(-0.6F, -0.5F); //Festive Highland Taiga
         Climate.Parameter tempHighland3 = Climate.Parameter.span(-0.8F, -0.6F); //Highland Taiga
-        Climate.Parameter tempHighland4 = Climate.Parameter.span(-0.8F, -0.3F); //Highland Clearing
-        Climate.Parameter tempHighland5 = Climate.Parameter.span(-0.7F, -0.3F); //Icestone Caverns
+        Climate.Parameter tempHighland4 = Climate.Parameter.span(-0.8F, -0.4F); //Highland Clearing
+        Climate.Parameter tempHighland5 = Climate.Parameter.span(-0.7F, -0.5F); //Icestone Caverns
 
 
         this.addBiome(mapper, new Climate.ParameterPoint(tempDefault2, Climate.Parameter.span(0.0F, 1.0F), fullRange, fullRange, fullRange, fullRange, 0),

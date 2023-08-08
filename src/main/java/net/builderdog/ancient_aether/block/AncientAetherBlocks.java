@@ -40,12 +40,12 @@ public class AncientAetherBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, AncientAether.MOD_ID);
 
-    //ORES
+    //Ores
     public static final RegistryObject<Block> AETHER_QUARTZ_ORE = registerBlock("aether_quartz_ore",
             () -> new AetherDoubleDropsOreBlock(Block.Properties.of(Material.STONE, MaterialColor.QUARTZ)
                     .strength(3.0F).requiresCorrectToolForDrops(), UniformInt.of(2, 5)));
 
-    //SENTRY STONE VARIANTS
+    //Sentry Stones
     public static final RegistryObject<Block> ENCHANTED_SENTRY_STONE = registerBlock("enchanted_sentry_stone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
                     .strength(0.5f, 6f).lightLevel(s -> 11).requiresCorrectToolForDrops()));
@@ -53,7 +53,7 @@ public class AncientAetherBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
                     .strength(0.5f, 6f).lightLevel(s -> 11).requiresCorrectToolForDrops()));
 
-    //OBELISKS
+    //Obelisks
     public static final RegistryObject<Block> BROKEN_ENCHANTED_OBELISK = registerBlock("broken_enchanted_obelisk",
             () -> new BrokenEnchantedObeliskBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
                     .lightLevel(s -> 3).noLootTable().strength(-1.0F, 3600000.0F).noOcclusion()));
@@ -67,7 +67,7 @@ public class AncientAetherBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
                     .strength(5f).lightLevel(s -> 12).requiresCorrectToolForDrops().noOcclusion()));
 
-    //PLANTS
+    //Plants
     public static final RegistryObject<Block> MOONLIT_TULIP = registerBlock("moonlit_tulip",
             () -> new FlowerBlock(() -> MobEffects.GLOWING, 4, Block.Properties.copy(Blocks.DANDELION)));
     public static final RegistryObject<Block> EDELWEISS = registerBlock("edelweiss",
@@ -81,16 +81,15 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> MOONLIT_WATERLILY = registerBlock("moonlit_waterlily",
             () -> new WaterlilyBlock(BlockBehaviour.Properties.copy(Blocks.LILY_PAD).lightLevel(s -> 10).noOcclusion()));
 
-    //CACTUS FLOWERS
+    //Cactus Flowers
     public static final RegistryObject<Block> CACTUS_FLOWER = registerBlock("cactus_flower",
             () -> new CactusFlowerBlock(BlockBehaviour.Properties.of(Material.PLANT)
                     .instabreak().noOcclusion().noCollission().sound(SoundType.SPORE_BLOSSOM)));
-
     public static final RegistryObject<Block> GOLDEN_CACTUS_FLOWER = registerBlock("golden_cactus_flower",
             () -> new CactusFlowerBlock(BlockBehaviour.Properties.of(Material.PLANT)
                     .instabreak().noOcclusion().noCollission().sound(SoundType.SPORE_BLOSSOM)));
 
-    //HIGHLANDS PINE WOOD TYPE
+    //Highlands Pine Wood
     public static final RegistryObject<Block> HIGHLANDS_PINE_LOG = registerBlock("highlands_pine_log",
             () -> new AncientAetherLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)
                     .strength(2f)));
@@ -139,7 +138,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> HIGHLANDS_PINE_SAPLING = registerBlock("highlands_pine_sapling",
             () -> new SaplingBlock(new HighlandsPineTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
-    //SAKURA WOOD TYPE
+    //Sakura Wood
     public static final RegistryObject<Block> SAKURA_LOG = registerBlock("sakura_log",
             () -> new AncientAetherLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)
                     .strength(2f)));
@@ -188,7 +187,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> SAKURA_SAPLING = registerBlock("sakura_sapling",
             () -> new SaplingBlock(new SakuraTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
-    //CACTUS WOOD TYPE
+    //Aether Cactus Wood
     public static final RegistryObject<Block> AETHER_CACTUS = registerBlock("aether_cactus",
             () -> new AetherCactusBlock(BlockBehaviour.Properties.of(Material.CACTUS).sound(SoundType.WOOL)
                     .strength(0.5f, 6f)));
@@ -196,7 +195,7 @@ public class AncientAetherBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.CACTUS).sound(SoundType.WOOL)
                     .strength(0.5f, 6f)));
 
-    //LANTERNS
+    //Lanterns
     public static final RegistryObject<Block> HOLYSTONE_LANTERN = registerBlock("holystone_lantern",
             () -> new LanternBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.LANTERN)
                     .strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 15)));
@@ -213,7 +212,7 @@ public class AncientAetherBlocks {
             () -> new LanternBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.LANTERN)
                     .strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 12)));
 
-    //POTTED PLANTS
+    //Potted Plants
     public static final RegistryObject<FlowerPotBlock> POTTED_MOONLIT_TULIP = BLOCKS.register("potted_moonlit_tulip",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, MOONLIT_TULIP, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_EDELWEISS = BLOCKS.register("potted_edelweiss",
@@ -229,7 +228,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<FlowerPotBlock> POTTED_SAKURA_SAPLING = BLOCKS.register("potted_sakura_sapling",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SAKURA_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
 
-    //QUICKSOIL BRICKS
+    //Quicksoil Bricks
     public static final RegistryObject<Block> QUICKSTONE = registerBlock("quickstone",
             () -> new AetherDoubleDropBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_YELLOW)
                     .strength(0.5f).requiresCorrectToolForDrops()));
@@ -243,7 +242,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<WallBlock> QUICKSOIL_BRICK_WALL = registerBlock("quicksoil_brick_wall",
             () -> new QuicksoilBrickWallBlock(Block.Properties.copy(AncientAetherBlocks.QUICKSOIL_BRICKS.get())));
 
-    //MOSAIC BLOCKS
+    //Mosaic Blocks
     public static final RegistryObject<RotatedPillarBlock> HOLYSTONE_BRICK_MOSAIC = registerBlock("holystone_brick_mosaic",
             () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.HOLYSTONE_BRICKS.get())));
     public static final RegistryObject<RotatedPillarBlock> CARVED_STONE_MOSAIC = registerBlock("carved_stone_mosaic",
@@ -255,7 +254,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<RotatedPillarBlock> GALE_STONE_MOSAIC = registerBlock("gale_stone_mosaic",
             () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.CARVED_STONE.get())));
 
-    //LOCKED BLOCKS
+    //Locked Blocks
     public static final RegistryObject<Block> LOCKED_ENCHANTED_SENTRY_STONE = registerBlock("locked_enchanted_sentry_stone",
             () -> new Block(Block.Properties.copy(LOCKED_CARVED_STONE.get()).lightLevel(s -> 11).noLootTable()));
     public static final RegistryObject<Block> LOCKED_BLIGHTED_SENTRY_STONE = registerBlock("locked_blighted_sentry_stone",
@@ -263,7 +262,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<RotatedPillarBlock> LOCKED_CARVED_STONE_MOSAIC = registerBlock("locked_carved_stone_mosaic",
             () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_CARVED_STONE.get()).noLootTable()));
 
-    //REDSTONE BLOCKS
+    //Redstone Blocks
     public static final RegistryObject<Block> CRACKED_SLIDER = registerBlock("cracked_slider",
             () -> new CrackedSliderBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(5f).requiresCorrectToolForDrops().noOcclusion()
