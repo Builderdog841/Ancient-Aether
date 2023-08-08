@@ -89,7 +89,7 @@ public class AncientAether {
         });
 
         event.enqueueWork(() -> {
-            Regions.register(new AncientAetherRegion(new ResourceLocation(MOD_ID, "ancient_aether"), 5));
+            Regions.register(new AncientAetherRegion(new ResourceLocation(MOD_ID, "ancient_aether"), 10));
 
             SurfaceRuleManager.addSurfaceRules(AetherRuleCategory.THE_AETHER, MOD_ID, AncientAetherSurfaceData.makeRules());
         });
