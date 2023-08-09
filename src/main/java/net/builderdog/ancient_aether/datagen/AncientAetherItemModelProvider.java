@@ -19,18 +19,21 @@ public class AncientAetherItemModelProvider extends AetherItemModelProvider {
     @Override
     protected void registerModels() {
 
-        //FOOD
+        //Food
         this.simpleItem(AncientAetherItems.AECHOR_ICE_CREAM_BUCKET);
         this.simpleItem(AncientAetherItems.CACTUS_FLOWER_ICE_CREAM_BUCKET);
         this.simpleItem(AncientAetherItems.RAW_BUFFALO_RIBS);
         this.simpleItem(AncientAetherItems.COOKED_BUFFALO_RIBS);
         this.simpleItem(AncientAetherItems.BUFFALO_RIB);
 
-        //SPAWN EGGS
+        //Spawn Eggs
         this.eggItem(AncientAetherItems.HIGHLANDS_BUFFALO_SPAWN_EGG.get());
         this.eggItem(AncientAetherItems.ROOTLING_SPAWN_EGG.get());
         this.eggItem(AncientAetherItems.VELOX_ZEPHYR_SPAWN_EGG.get());
         this.eggItem(AncientAetherItems.VELOX_WHIRLWIND_SPAWN_EGG.get());
+
+        //Music Discs
+        this.simpleItem(AncientAetherItems.MUSIC_DISC_LABYRINTHS_VENGEANCE_BUILDERDOG_REMIX);
     }
 
     public String itemName(Item item) {

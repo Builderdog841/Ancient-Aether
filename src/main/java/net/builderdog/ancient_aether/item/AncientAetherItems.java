@@ -1,9 +1,10 @@
 package net.builderdog.ancient_aether.item;
 
-import com.aetherteam.aether.item.AetherItems;
+import com.aetherteam.aether.item.miscellaneous.AetherRecordItem;
 import com.aetherteam.aether.item.miscellaneous.DungeonKeyItem;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
+import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.minecraft.network.chat.Component;
@@ -67,6 +68,10 @@ public class AncientAetherItems {
     public static final RegistryObject<SpawnEggItem> VELOX_ZEPHYR_SPAWN_EGG = ITEMS.register("velox_zephyr_spawn_egg",
             () -> new ForgeSpawnEggItem(AncientAetherEntities.VELOX_ZEPHYR, 0xFFF9D1, 0xBCB484, new Item.Properties()));
 
+    //Music Discs
+
+    public static final RegistryObject<Item> MUSIC_DISC_LABYRINTHS_VENGEANCE_BUILDERDOG_REMIX  = ITEMS.register("music_disc_labyrinths_vengeance_builderdog_remix",
+            () -> new AetherRecordItem(5, AncientAetherSoundEvents.ITEM_MUSIC_DISC_LABYRINTHS_VENGEANCE_BUILDERDOG_REMIX, new Item.Properties().stacksTo(1).rarity(Rarity.RARE), 2400).addDungeonTooltip(ANCIENT_DUNGEON_TOOLTIP));
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

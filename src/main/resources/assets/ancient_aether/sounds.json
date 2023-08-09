@@ -45,5 +45,13 @@
       "aether:block/dungeon_trap/trigger6"
     ],
     "subtitle": "subtitles.ancient_aether.block.rootling_trap.trigger"
+  },
+  "item.music_disc.labyrinths_vengeance_builderdog_remix": {
+    "sounds": [
+      {
+        "name": "ancient_aether:item/records/labyrinths_vengeance_mono_builderdog_remix",
+        "stream": true
+      }
+    ]
   }
 }

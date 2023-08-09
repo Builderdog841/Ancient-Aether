@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "ancient_aether:item/music_disc_labyrinths_vengeance_builderdog_remix"
+  }
+}

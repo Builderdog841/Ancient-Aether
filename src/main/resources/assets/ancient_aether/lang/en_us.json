@@ -95,6 +95,9 @@
   "item.ancient_aether.enchanted_sentry_rune": "Enchanted Sentry Rune",
   "item.ancient_aether.blighted_sentry_rune": "Blighted Sentry Rune",
   "item.ancient_aether.ancient_dungeon_key": "Ancient Dungeon Key",
+  "item.ancient_aether.music_disc_labyrinths_vengeance_builderdog_remix": "Ancient Music Disc",
+
+  "item.ancient_aether.music_disc_labyrinths_vengeance_builderdog_remix.desc": "Emilie van Krieken - Labyrinth's Vengeance (Builderdog Remix)",
 
   "creatvemodetab.ancient_aether_tab": "Ancient Aether",
 
@@ -215,5 +218,6 @@
   "lore.item.ancient_aether.highlands_pine_boat": "While the Aether does not have many large bodies of water, a boat can occasionally be a useful tool for crossing large distances over ice!",
   "lore.item.ancient_aether.sakura_boat": "While the Aether does not have many large bodies of water, a boat can occasionally be a useful tool for crossing large distances over ice!",
   "lore.item.ancient_aether.highlands_pine_chest_boat": "A Highlands Pine Boat with a handy chest in the back. Helpful for transporting more items over long stretches of water, which are famously difficult to find in the Aether.",
-  "lore.item.ancient_aether.sakura_chest_boat": "A Sakura Boat with a handy chest in the back. Helpful for transporting more items over long stretches of water, which are famously difficult to find in the Aether."
+  "lore.item.ancient_aether.sakura_chest_boat": "A Sakura Boat with a handy chest in the back. Helpful for transporting more items over long stretches of water, which are famously difficult to find in the Aether.",
+  "lore.item.ancient_aether.music_disc_labyrinths_vengeance_builderdog_remix": "A music disc that play Labyrinth's Vengeance by Emile van Krieken remixed by Builderdog."
 }

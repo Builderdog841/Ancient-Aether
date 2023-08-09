@@ -109,6 +109,7 @@ public class AncientAetherCreativeModeTabs {
                             output.accept(AncientAetherItems.AECHOR_ICE_CREAM_BUCKET.get());
                             output.accept(AncientAetherItems.CACTUS_FLOWER_ICE_CREAM_BUCKET.get());
                             output.accept(AncientAetherItems.ANCIENT_DUNGEON_KEY.get());
+                            output.accept(AncientAetherItems.MUSIC_DISC_LABYRINTHS_VENGEANCE_BUILDERDOG_REMIX.get());
                             output.accept(AncientAetherItems.HIGHLANDS_BUFFALO_SPAWN_EGG.get());
                             output.accept(AncientAetherItems.ROOTLING_SPAWN_EGG.get());
                             output.accept(AncientAetherItems.VELOX_WHIRLWIND_SPAWN_EGG.get());
