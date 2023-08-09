@@ -15,7 +15,7 @@
               "data": {
                 "type": "minecraft:uniform",
                 "value": {
-                  "max_inclusive": 12,
+                  "max_inclusive": 4,
                   "min_inclusive": 1
                 }
               },
