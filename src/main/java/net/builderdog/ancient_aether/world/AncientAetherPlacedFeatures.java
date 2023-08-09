@@ -73,7 +73,7 @@ public class AncientAetherPlacedFeatures {
                 new DungeonBlacklistFilter());
 
         register(context, SKYROOT_THORN_BUSH_PATCH, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.SKYROOT_THORN_BUSH_PATCH),
-                CountPlacement.of(2),
+                CountPlacement.of(5),
                 InSquarePlacement.spread(),
                 PlacementUtils.HEIGHTMAP,
                 BiomeFilter.biome(),
