@@ -2,7 +2,7 @@
   "type": "minecraft:random_selector",
   "config": {
     "default": {
-      "feature": "ancient_aether:highlands_pine",
+      "feature": "ancient_aether:highlands_pine_tree",
       "placement": [
         {
           "type": "minecraft:block_predicate_filter",

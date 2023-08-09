@@ -42,19 +42,20 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 import java.util.List;
 
 public class AncientAetherConfiguredFeatures {
-    public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHLANDS_PINE_KEY = registerKey("highlands_pine");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_KEY = registerKey("sakura_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_SAKURA_KEY = registerKey("tall_sakura_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> MOONLIT_TULIP_PATCH_KEY = registerKey("moonlit_tulip_patch");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_BLOSSOMS_PATCH_KEY = registerKey("sakura_blossoms_patch");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> EDELWEISS_PATCH_KEY = registerKey("edelweiss_patch");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_AETHER_CACTUS_PATCH_KEY = registerKey("small_aether_cactus_patch");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_QUARTZ_ORE_KEY = registerKey("aether_quartz_ore");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> QUICKSTONE_ORE_KEY = registerKey("quickstone_ore");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> AEROGEL_ORE_KEY = registerKey("aerogel_ore");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> GOLDEN_LARGE_CACTUS_KEY = registerKey("golden_large_cactus");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> LARGE_CACTUS_KEY = registerKey("large_cactus");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> GIANT_CACTUS_KEY = registerKey("giant_cactus");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHLANDS_PINE_TREE = registerKey("highlands_pine_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_TREE = registerKey("sakura_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_SAKURA_TREE = registerKey("tall_sakura_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MOONLIT_TULIP_PATCH = registerKey("moonlit_tulip_patch");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_BLOSSOMS_PATCH = registerKey("sakura_blossoms_patch");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> EDELWEISS_PATCH = registerKey("edelweiss_patch");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_AETHER_CACTUS_PATCH = registerKey("small_aether_cactus_patch");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_THORN_BUSH_PATCH = registerKey("skyroot_thornbush_patch");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_QUARTZ_ORE = registerKey("aether_quartz_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> QUICKSTONE_BLOBS = registerKey("quickstone_blobs");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AEROGEL_BLOBS = registerKey("aerogel_blobs");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GOLDEN_LARGE_CACTUS = registerKey("golden_large_cactus");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LARGE_CACTUS = registerKey("large_cactus");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GIANT_CACTUS = registerKey("giant_cactus");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_CACTUS_PLACEMENT = registerKey("aether_cactus_placement");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
@@ -63,15 +64,15 @@ public class AncientAetherConfiguredFeatures {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         List<OreConfiguration.TargetBlockState> aetherQuartzOre = List.of(OreConfiguration.target(holystone,
-                AncientAetherBlocks.AETHER_QUARTZ_ORE.get().defaultBlockState()));
+                AncientAetherBlocks.AETHER_QUARTZ_ORE.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)));
 
         List<OreConfiguration.TargetBlockState> aerogelOre = List.of(OreConfiguration.target(holystone,
                 AetherBlocks.AEROGEL.get().defaultBlockState()));
 
         List<OreConfiguration.TargetBlockState> quickstoneOre = List.of(OreConfiguration.target(quicksoil,
-                AncientAetherBlocks.QUICKSTONE.get().defaultBlockState()));
+                AncientAetherBlocks.QUICKSTONE.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)));
 
-        register(context, HIGHLANDS_PINE_KEY, Feature.TREE,
+        register(context, HIGHLANDS_PINE_TREE, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
                         BlockStateProvider.simple(AncientAetherBlocks.HIGHLANDS_PINE_LOG.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)),
                         new StraightTrunkPlacer(5, 10, 0),
@@ -80,7 +81,7 @@ public class AncientAetherConfiguredFeatures {
                         new TwoLayersFeatureSize(2, 0, 2)
                 ).ignoreVines().build());
 
-        register(context, SAKURA_KEY, Feature.TREE,
+        register(context, SAKURA_TREE, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
                         BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LOG.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)),
                         new AncientAetherSkinnyHookedTrunkPlacer(8, 5, 0, BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LOG_WALL.get())),
@@ -89,7 +90,7 @@ public class AncientAetherConfiguredFeatures {
                         new TwoLayersFeatureSize(2, 1, 4)
                 ).build());
 
-        register(context, TALL_SAKURA_KEY, Feature.TREE,
+        register(context, TALL_SAKURA_TREE, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
                         BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LOG.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)),
                         new AncientAetherHookedTrunkPlacer(8, 14, 14),
@@ -98,48 +99,48 @@ public class AncientAetherConfiguredFeatures {
                         new TwoLayersFeatureSize(2, 1, 4)
                 ).decorators(List.of(new TrunkDecorator(BlockStateProvider.simple(AncientAetherBlocks.SAKURA_LOG_WALL.get())))).build());
 
-        register(context, AETHER_QUARTZ_ORE_KEY, Feature.ORE, new OreConfiguration(aetherQuartzOre, 12, 0f));
+        register(context, AETHER_QUARTZ_ORE, Feature.ORE, new OreConfiguration(aetherQuartzOre, 12, 0f));
 
-        register(context, QUICKSTONE_ORE_KEY, Feature.ORE, new OreConfiguration(quickstoneOre, 64, 0f));
+        register(context, QUICKSTONE_BLOBS, Feature.ORE, new OreConfiguration(quickstoneOre, 64, 0f));
 
-        register(context, AEROGEL_ORE_KEY, Feature.ORE, new OreConfiguration(aerogelOre, 64, 0f));
+        register(context, AEROGEL_BLOBS, Feature.ORE, new OreConfiguration(aerogelOre, 64, 0f));
 
-        register(context, MOONLIT_TULIP_PATCH_KEY, Feature.FLOWER,
+        register(context, MOONLIT_TULIP_PATCH, Feature.FLOWER,
                 AetherConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
                         .add(AncientAetherBlocks.MOONLIT_TULIP.get().defaultBlockState(), 3)), 64));
 
-        register(context, EDELWEISS_PATCH_KEY, Feature.FLOWER,
+        register(context, EDELWEISS_PATCH, Feature.FLOWER,
                 AetherConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
                         .add(AncientAetherBlocks.EDELWEISS.get().defaultBlockState(), 3)), 64));
 
-        register(context, SAKURA_BLOSSOMS_PATCH_KEY, Feature.FLOWER,
+        register(context, SAKURA_BLOSSOMS_PATCH, Feature.FLOWER,
                 AetherConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
                         .add(AncientAetherBlocks.SAKURA_BLOSSOMS.get().defaultBlockState(), 12)
-                        .add(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get().defaultBlockState(), 3))
-                        , 64));
+                        .add(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get().defaultBlockState(), 3)), 64));
 
-        register(context, SMALL_AETHER_CACTUS_PATCH_KEY, Feature.FLOWER,
+        register(context, SMALL_AETHER_CACTUS_PATCH, Feature.FLOWER,
                 AetherConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
-                        .add(AncientAetherBlocks.SMALL_AETHER_CACTUS.get().defaultBlockState(), 3)
-                        .add(AncientAetherBlocks.SKYROOT_THORN_BUSH.get().defaultBlockState(), 1))
-                        , 64));
+                        .add(AncientAetherBlocks.SMALL_AETHER_CACTUS.get().defaultBlockState(),3)), 64));
 
-        register(context, LARGE_CACTUS_KEY, AncientAetherFeatures.LARGE_CACTUS.get(),
+        register(context, SKYROOT_THORN_BUSH_PATCH, Feature.FLOWER,
+                AetherConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
+                        .add(AncientAetherBlocks.SKYROOT_THORN_BUSH.get().defaultBlockState(),1)), 64));
+
+        register(context, LARGE_CACTUS, AncientAetherFeatures.LARGE_CACTUS.get(),
                 new LargeCactusConfiguration(
                         SimpleStateProvider.simple(AncientAetherBlocks.AETHER_CACTUS.get())));
 
-        register(context, GOLDEN_LARGE_CACTUS_KEY, AncientAetherFeatures.GOLDEN_LARGE_CACTUS.get(),
+        register(context, GOLDEN_LARGE_CACTUS, AncientAetherFeatures.GOLDEN_LARGE_CACTUS.get(),
                 new LargeCactusConfiguration(
                         SimpleStateProvider.simple(AncientAetherBlocks.AETHER_CACTUS.get())));
 
-        register(context, GIANT_CACTUS_KEY, AncientAetherFeatures.GIANT_CACTUS.get(),
+        register(context, GIANT_CACTUS, AncientAetherFeatures.GIANT_CACTUS.get(),
                 new LargeCactusConfiguration(
                         SimpleStateProvider.simple(AncientAetherBlocks.AETHER_CACTUS.get())));
 
         register(context, AETHER_CACTUS_PLACEMENT, Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(
-                PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(LARGE_CACTUS_KEY), PlacementUtils.filteredByBlockSurvival(AncientAetherBlocks.SMALL_AETHER_CACTUS.get())), 0.50F)),
-                PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(GIANT_CACTUS_KEY), PlacementUtils.filteredByBlockSurvival(AncientAetherBlocks.SMALL_AETHER_CACTUS.get()))));
-
+                PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(LARGE_CACTUS), PlacementUtils.filteredByBlockSurvival(AncientAetherBlocks.SMALL_AETHER_CACTUS.get())), 0.50F)),
+                PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(GIANT_CACTUS), PlacementUtils.filteredByBlockSurvival(AncientAetherBlocks.SMALL_AETHER_CACTUS.get()))));
     }
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
         return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(AncientAether.MOD_ID, name));

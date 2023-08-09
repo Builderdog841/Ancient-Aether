@@ -11,6 +11,6 @@ public class HighlandsPineTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource p_222910_, boolean p_222911_) {
-        return AncientAetherConfiguredFeatures.HIGHLANDS_PINE_KEY;
+        return AncientAetherConfiguredFeatures.HIGHLANDS_PINE_TREE;
     }
 }

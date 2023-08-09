@@ -29,12 +29,13 @@
   "aether:zanite_ore",
   "aether:gravitite_ore",
   "aether:lower_gravitite_ore",
-  "ancient_aether:quickstone_ore_placed"
+  "ancient_aether:quickstone_blobs"
 ],
 [],
 [],
 [
-  "aether:grass_patch"
+  "aether:grass_patch",
+  "ancient_aether:skyroot_thorn_bush_patch"
 ],
 [
   "ancient_aether:bonus_green_aercloud",

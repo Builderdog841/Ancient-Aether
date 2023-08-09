@@ -209,7 +209,7 @@ public class QuicksoilDesertGoldDungeonStructure extends Structure {
                     mutable.set(x, maxY, z);
                     if (iterateColumn(level, mutable, minY, maxY)) {
                         if (featureType < treeWeight) {
-                            PlacedFeature tree = PlacementUtils.inlinePlaced(level.registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE).getHolderOrThrow(AncientAetherConfiguredFeatures.GOLDEN_LARGE_CACTUS_KEY)).get();
+                            PlacedFeature tree = PlacementUtils.inlinePlaced(level.registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE).getHolderOrThrow(AncientAetherConfiguredFeatures.GOLDEN_LARGE_CACTUS)).get();
                             tree.place(level, generator, random, mutable);
                         } else {
                             Block flower = random.nextBoolean() ? AncientAetherBlocks.SMALL_AETHER_CACTUS.get() : AncientAetherBlocks.SKYROOT_THORN_BUSH.get();

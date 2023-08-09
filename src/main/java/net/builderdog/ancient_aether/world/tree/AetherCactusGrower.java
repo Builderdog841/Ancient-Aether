@@ -12,9 +12,9 @@ public class AetherCactusGrower extends AbstractTreeGrower {
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource random, boolean largeHive) {
         if (random.nextInt(10) == 0) {
-            return AncientAetherConfiguredFeatures.GIANT_CACTUS_KEY;
+            return AncientAetherConfiguredFeatures.GIANT_CACTUS;
         } else {
-            return AncientAetherConfiguredFeatures.LARGE_CACTUS_KEY;
+            return AncientAetherConfiguredFeatures.LARGE_CACTUS;
         }
     }
 }
