@@ -110,8 +110,15 @@
   "entity.ancient_aether.chest_boat": "Boat with Chest",
 
   "biome.ancient_aether.highland_taiga": "Highland Taiga",
+  "biome.ancient_aether.festive_highland_taiga": "Festive Highland Taiga",
+  "biome.ancient_aether.highland_clearing": "Highland Clearing",
+  "biome.ancient_aether.icestone_caverns": "Icestone Caverns",
   "biome.ancient_aether.sakura_jungle": "Sakura Jungle",
+  "biome.ancient_aether.sparse_sakura_jungle": "Sparse Sakura Jungle",
+  "biome.ancient_aether.deep_sakura_jungle": "Deep Sakura Jungle",
+  "biome.ancient_aether.overgrown_caverns": "Overgrown Caverns",
   "biome.ancient_aether.quicksoil_desert": "Quicksoil Desert",
+  "biome.ancient_aether.aerogel_caves": "Aerogel Caves",
 
   "subtitles.ancient_aether.block.obelisk.obelisk_activation": "Obelisk activated",
   "subtitles.ancient_aether.entity.highlands_buffalo.hurt": "Highlands Buffalo hurts",
