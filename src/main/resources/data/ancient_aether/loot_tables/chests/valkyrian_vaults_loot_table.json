@@ -301,7 +301,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "aether:music_disc_aether_tune",
+          "name": "minecraft:music_disc_cat",
           "weight": 1,
           "functions": [
             {

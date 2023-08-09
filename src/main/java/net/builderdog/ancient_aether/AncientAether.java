@@ -20,7 +20,6 @@ import net.builderdog.ancient_aether.world.structurepiece.AncientAetherStructure
 import net.builderdog.ancient_aether.world.tree_decorator.AncientAetherTreeDecoratorTypes;
 import net.builderdog.ancient_aether.world.trunkplacer.AncientAetherTrunkPlacerTypes;
 import net.minecraft.SharedConstants;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -43,6 +42,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.resource.PathPackResources;
 import org.slf4j.Logger;
+import teamrazor.aeroblender.AeroBlenderConfig;
 import teamrazor.aeroblender.aether.AetherRuleCategory;
 import terrablender.api.Regions;
 import terrablender.api.SurfaceRuleManager;
@@ -74,6 +74,7 @@ public class AncientAether {
         AncientAetherParticleTypes.PARTICLES.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
+        //modEventBus.addListener(this::clientSetup);
         modEventBus.addListener(this::packSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -94,6 +95,12 @@ public class AncientAether {
             SurfaceRuleManager.addSurfaceRules(AetherRuleCategory.THE_AETHER, MOD_ID, AncientAetherSurfaceData.makeRules());
         });
     }
+
+    //private void clientSetup(FMLClientSetupEvent event) {
+     //   event.enqueueWork(() -> {
+     //       AeroBlenderConfig.CONFIG.vanillaAetherRegionWeight.
+     //   });
+    //}
     public void packSetup(AddPackFindersEvent event) {
         this.setupOptionalPack(event, "ancient_aether_programmer_art", "Programmer Art", "Changes the textures to the classic art style");
         this.setupDatapack(event, "ancient_aether_water_color", "Watercolor", "Changes the Watercolor of the Aether", PackSource.BUILT_IN);
