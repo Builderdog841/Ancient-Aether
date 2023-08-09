@@ -1,7 +1,7 @@
 {
-  "parent": "ancient_aether:aether/cracked_slider",
+  "parent": "aether:the_aether",
   "criteria": {
-    "library": {
+    "lab": {
       "conditions": {
         "player": [
           {
@@ -9,7 +9,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "ancient_aether:ancient_valkyrie_library"
+                "structure": "ancient_aether:sentry_laboratory"
               }
             }
           }
@@ -21,21 +21,21 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.ancient_aether.find_ancient_valkyrie_library.desc"
+      "translate": "advancement.ancient_aether.find_ancient_sentry_lab.desc"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "ancient_aether:enchanted_sentry_rune"
+      "item": "aether:mossy_holystone"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.ancient_aether.find_ancient_valkyrie_library"
+      "translate": "advancement.ancient_aether.find_sentry_lab"
     }
   },
   "requirements": [
     [
-      "library"
+      "lab"
     ]
   ]
 }

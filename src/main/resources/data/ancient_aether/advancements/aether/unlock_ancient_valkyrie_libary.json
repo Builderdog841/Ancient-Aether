@@ -1,0 +1,42 @@
+{
+  "parent": "ancient_aether:aether/find_sentry_lab",
+  "criteria": {
+    "unlock": {
+      "conditions": {
+        "item": {
+          "items": [
+            "ancient_aether:enchanted_sentry_rune"
+          ]
+        },
+        "location": {
+          "block": {
+            "blocks": [
+            "ancient_aether:broken_enchanted_obelisk"
+            ]
+          }
+        }
+      },
+      "trigger": "minecraft:item_used_on_block"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.ancient_aether.unlock_ancient_valkyrie_library.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "ancient_aether:enchanted_sentry_rune"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.ancient_aether.unlock_ancient_valkyrie_library"
+    }
+  },
+  "requirements": [
+    [
+      "unlock"
+    ]
+  ]
+}
