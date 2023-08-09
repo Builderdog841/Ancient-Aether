@@ -75,17 +75,17 @@ public class AncientAetherRegion extends Region {
         this.addBiome(mapper, new Climate.ParameterPoint(tempDefault6, Climate.Parameter.span(-0.1F, 0.8F), fullRange, fullRange, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_WOODLAND);
 
-        this.addBiome(mapper, new Climate.ParameterPoint(tempSakura1, Climate.Parameter.span(-1.0F, -0.6F), fullRange, fullRange, Climate.Parameter.span(-1F, 0.65F), fullRange, 0),
+        this.addBiome(mapper, new Climate.ParameterPoint(tempSakura1, Climate.Parameter.span(-1.0F, -0.5F), fullRange, fullRange, Climate.Parameter.span(-1F, 0.65F), fullRange, 0),
                 AncientAetherBiomes.SPARSE_SAKURA_JUNGLE);
-        this.addBiome(mapper, new Climate.ParameterPoint(tempSakura2, Climate.Parameter.span(-1.0F, -0.6F), fullRange, fullRange, Climate.Parameter.span(-1F, 0.65F), fullRange, 0),
+        this.addBiome(mapper, new Climate.ParameterPoint(tempSakura2, Climate.Parameter.span(-1.0F, -0.5F), fullRange, fullRange, Climate.Parameter.span(-1F, 0.65F), fullRange, 0),
                 AncientAetherBiomes.SAKURA_JUNGLE);
-        this.addBiome(mapper, new Climate.ParameterPoint(tempSakura3, Climate.Parameter.span(-1.0F, -0.6F), fullRange, fullRange, Climate.Parameter.span(-1F, 0.65F), fullRange, 0),
+        this.addBiome(mapper, new Climate.ParameterPoint(tempSakura3, Climate.Parameter.span(-1.0F, -0.5F), fullRange, fullRange, Climate.Parameter.span(-1F, 0.65F), fullRange, 0),
                 AncientAetherBiomes.DEEP_SAKURA_JUNGLE);
-        this.addBiome(mapper, new Climate.ParameterPoint(tempSakura4, Climate.Parameter.span(-1.0F, -0.6F), fullRange, fullRange, Climate.Parameter.span(-1F, 0.65F), fullRange, 0),
+        this.addBiome(mapper, new Climate.ParameterPoint(tempSakura4, Climate.Parameter.span(-1.0F, -0.5F), fullRange, fullRange, Climate.Parameter.span(-1F, 0.65F), fullRange, 0),
                 AncientAetherBiomes.SAKURA_JUNGLE);
-        this.addBiome(mapper, new Climate.ParameterPoint(tempSakura5, Climate.Parameter.span(-1.0F, -0.6F), fullRange, fullRange, Climate.Parameter.span(-1F, 0.65F), fullRange, 0),
+        this.addBiome(mapper, new Climate.ParameterPoint(tempSakura5, Climate.Parameter.span(-1.0F, -0.5F), fullRange, fullRange, Climate.Parameter.span(-1F, 0.65F), fullRange, 0),
                 AncientAetherBiomes.SPARSE_SAKURA_JUNGLE);
-        this.addBiome(mapper, new Climate.ParameterPoint(tempSakura6, Climate.Parameter.span(-1.0F, -0.6F), fullRange, fullRange, Climate.Parameter.span(0.65F, 1F), fullRange, 0),
+        this.addBiome(mapper, new Climate.ParameterPoint(tempSakura6, Climate.Parameter.span(-1.0F, -0.5F), fullRange, fullRange, Climate.Parameter.span(0.65F, 1F), fullRange, 0),
                 AncientAetherBiomes.OVERGROWN_CAVERNS);
 
         this.addBiome(mapper, new Climate.ParameterPoint(tempHighland1, Climate.Parameter.span(-0.5F, 1F), fullRange, fullRange, Climate.Parameter.span(-1F, 0F), fullRange, 0),
