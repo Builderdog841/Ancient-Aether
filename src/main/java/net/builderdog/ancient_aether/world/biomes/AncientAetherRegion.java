@@ -95,9 +95,9 @@ public class AncientAetherRegion extends Region {
         this.addBiome(mapper, new Climate.ParameterPoint(tempHighland1, Climate.Parameter.span(-0.5F, 1F), fullRange, fullRange, Climate.Parameter.span(0.5F, 1F), fullRange, 0),
                 AncientAetherBiomes.ICESTONE_CAVERNS);
 
-        this.addBiome(mapper, new Climate.ParameterPoint(tempDesert1, Climate.Parameter.span(0F, 1.0F), fullRange, fullRange, Climate.Parameter.span(-1F, 0.15F), fullRange, 0),
+        this.addBiome(mapper, new Climate.ParameterPoint(tempDesert1, Climate.Parameter.span(0F, 1.0F), fullRange, fullRange, Climate.Parameter.span(-1F, 0.1F), fullRange, 0),
                 AncientAetherBiomes.QUICKSOIL_DUNES);
-        this.addBiome(mapper, new Climate.ParameterPoint(tempDesert1, Climate.Parameter.span(0F, 1.0F), fullRange, fullRange, Climate.Parameter.span(0.15F, 0.75F), fullRange, 0),
+        this.addBiome(mapper, new Climate.ParameterPoint(tempDesert1, Climate.Parameter.span(0F, 1.0F), fullRange, fullRange, Climate.Parameter.span(0.1F, 0.75F), fullRange, 0),
                 AncientAetherBiomes.QUICKSOIL_DESERT);
         this.addBiome(mapper, new Climate.ParameterPoint(tempDesert2, Climate.Parameter.span(0F, 1.0F), fullRange, fullRange, Climate.Parameter.span(0.75F, 1F), fullRange, 0),
                 AncientAetherBiomes.AEROGEL_CAVES);
