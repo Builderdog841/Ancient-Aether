@@ -16,7 +16,6 @@ public class AncientAetherBiomes {
 
     //QUICKSOIL DESERT
     public static final ResourceKey<Biome> QUICKSOIL_DESERT = createKey("quicksoil_desert");
-    public static final ResourceKey<Biome> QUICKSOIL_DUNES = createKey("quicksoil_dunes");
     public static final ResourceKey<Biome> AEROGEL_CAVES = createKey("aerogel_caves");
 
     //SAKURA JUNGLE

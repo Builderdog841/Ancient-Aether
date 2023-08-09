@@ -124,7 +124,8 @@ public class AncientAetherConfiguredFeatures {
 
         register(context, SKYROOT_THORN_BUSH_PATCH, Feature.FLOWER,
                 AetherConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
-                        .add(AncientAetherBlocks.SKYROOT_THORN_BUSH.get().defaultBlockState(),1)), 64));
+                        .add(AncientAetherBlocks.SKYROOT_THORN_BUSH.get().defaultBlockState(),1)
+                        .add(AncientAetherBlocks.SMALL_AETHER_CACTUS.get().defaultBlockState(),2)), 64));
 
         register(context, LARGE_CACTUS, AncientAetherFeatures.LARGE_CACTUS.get(),
                 new LargeCactusConfiguration(
