@@ -1,6 +1,7 @@
 package net.builderdog.ancient_aether.datagen;
 
 import com.aetherteam.aether.block.AetherBlocks;
+import com.aetherteam.aether.data.providers.AetherBlockStateProvider;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.minecraft.data.PackOutput;
@@ -13,7 +14,7 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class AncientAetherBlockStateProvider extends BlockStateProvider {
+public class AncientAetherBlockStateProvider extends AetherBlockStateProvider {
     public AncientAetherBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, AncientAether.MOD_ID, exFileHelper);
     }
@@ -64,6 +65,20 @@ public class AncientAetherBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:angelic_stone_mosaic","minecraft:block/cube_column"));
         simpleBlockItem(AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:hellfire_stone_mosaic","minecraft:block/cube_column"));
         simpleBlockItem(AncientAetherBlocks.GALE_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:gale_stone_mosaic","minecraft:block/cube_column"));
+
+        fence(AncientAetherBlocks.HIGHLANDS_PINE_FENCE.get(), AncientAetherBlocks.HIGHLANDS_PINE_PLANKS.get(), "");
+        fenceGateBlock(AncientAetherBlocks.HIGHLANDS_PINE_FENCE_GATE.get(), AncientAetherBlocks.HIGHLANDS_PINE_PLANKS.get(), "");
+        doorBlock(AncientAetherBlocks.HIGHLANDS_PINE_DOOR.get(), texture(name(AncientAetherBlocks.HIGHLANDS_PINE_DOOR.get()), "", "_bottom"), texture(name(AncientAetherBlocks.HIGHLANDS_PINE_DOOR.get()), "", "_top"));
+        trapdoorBlock(AncientAetherBlocks.HIGHLANDS_PINE_TRAPDOOR.get(), texture(name(AncientAetherBlocks.HIGHLANDS_PINE_TRAPDOOR.get()), ""), false);
+        buttonBlock(AncientAetherBlocks.HIGHLANDS_PINE_BUTTON.get(), texture(name(AncientAetherBlocks.HIGHLANDS_PINE_PLANKS.get()), ""));
+        pressurePlateBlock(AncientAetherBlocks.HIGHLANDS_PINE_PRESSURE_PLATE.get(), texture(name(AncientAetherBlocks.HIGHLANDS_PINE_PLANKS.get()), ""));
+
+        fence(AncientAetherBlocks.SAKURA_FENCE.get(), AncientAetherBlocks.SAKURA_PLANKS.get(), "");
+        fenceGateBlock(AncientAetherBlocks.SAKURA_FENCE_GATE.get(), AncientAetherBlocks.SAKURA_PLANKS.get(), "");
+        doorBlock(AncientAetherBlocks.SAKURA_DOOR.get(), texture(name(AncientAetherBlocks.SAKURA_DOOR.get()), "", "_bottom"), texture(name(AncientAetherBlocks.SAKURA_DOOR.get()), "", "_top"));
+        trapdoorBlock(AncientAetherBlocks.SAKURA_TRAPDOOR.get(), texture(name(AncientAetherBlocks.SAKURA_TRAPDOOR.get()), ""), false);
+        buttonBlock(AncientAetherBlocks.SAKURA_BUTTON.get(), texture(name(AncientAetherBlocks.SAKURA_PLANKS.get()), ""));
+        pressurePlateBlock(AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get(), texture(name(AncientAetherBlocks.SAKURA_PLANKS.get()), ""));
 
         crossBlock(AncientAetherBlocks.HIGHLANDS_PINE_SAPLING);
         crossBlock(AncientAetherBlocks.SAKURA_SAPLING);

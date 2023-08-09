@@ -89,7 +89,7 @@
       "model": "ancient_aether:block/sakura_door_top_right_open"
     },
     "facing=west,half=lower,hinge=left,open=false": {
-      "model": "aether_crystallium:block/sakura_door_bottom_left",
+      "model": "ancient_aether:block/sakura_door_bottom_left",
       "y": 180
     },
     "facing=west,half=lower,hinge=left,open=true": {

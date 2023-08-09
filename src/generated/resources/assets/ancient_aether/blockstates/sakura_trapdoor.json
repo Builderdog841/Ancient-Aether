@@ -1,4 +1,4 @@
- {
+{
   "variants": {
     "facing=east,half=bottom,open=false": {
       "model": "ancient_aether:block/sakura_trapdoor_bottom"
