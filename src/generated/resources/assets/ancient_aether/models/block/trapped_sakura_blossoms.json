@@ -2,6 +2,6 @@
   "parent": "minecraft:block/cross",
   "render_type": "minecraft:cutout",
   "textures": {
-    "cross": "ancient_aether:block/sakura_blossoms"
+    "cross": "ancient_aether:block/trapped_sakura_blossoms"
   }
 }

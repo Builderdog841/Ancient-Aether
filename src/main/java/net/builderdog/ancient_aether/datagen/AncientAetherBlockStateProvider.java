@@ -65,8 +65,14 @@ public class AncientAetherBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:hellfire_stone_mosaic","minecraft:block/cube_column"));
         simpleBlockItem(AncientAetherBlocks.GALE_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:gale_stone_mosaic","minecraft:block/cube_column"));
 
-        saplingBlock(AncientAetherBlocks.HIGHLANDS_PINE_SAPLING);
-        saplingBlock(AncientAetherBlocks.SAKURA_SAPLING);
+        crossBlock(AncientAetherBlocks.HIGHLANDS_PINE_SAPLING);
+        crossBlock(AncientAetherBlocks.SAKURA_SAPLING);
+        crossBlock(AncientAetherBlocks.MOONLIT_TULIP);
+        crossBlock(AncientAetherBlocks.EDELWEISS);
+        crossBlock(AncientAetherBlocks.SKYROOT_THORN_BUSH);
+        crossBlock(AncientAetherBlocks.SAKURA_BLOSSOMS);
+        crossBlock(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS);
+        crossBlock(AncientAetherBlocks.SMALL_AETHER_CACTUS);
 
     }
 
@@ -74,7 +80,7 @@ public class AncientAetherBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
     }
 
-    private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
+    private void crossBlock(RegistryObject<Block> blockRegistryObject) {
         simpleBlock(blockRegistryObject.get(),
                 models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
