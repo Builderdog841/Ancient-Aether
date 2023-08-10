@@ -4,10 +4,32 @@
   "elements": [
     {
 
-      "weight": 5,
+      "weight": 3,
       "element": {
 
-        "location": "ancient_aether:ancient_valkyrie_settlements/settlement",
+        "location": "ancient_aether:ancient_valkyrie_settlements/small_settlement",
+        "processors": "ancient_aether:ancient_valkyrie_settlements_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 2,
+      "element": {
+
+        "location": "ancient_aether:ancient_valkyrie_settlements/medium_settlement",
+        "processors": "ancient_aether:ancient_valkyrie_settlements_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 1,
+      "element": {
+
+        "location": "ancient_aether:ancient_valkyrie_settlements/large_settlement",
         "processors": "ancient_aether:ancient_valkyrie_settlements_randomizer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
