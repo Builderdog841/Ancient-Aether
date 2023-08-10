@@ -31,6 +31,16 @@
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
+    },
+    {
+      "weight": 1,
+      "element": {
+
+        "location": "ancient_aether:valkyrian_vaults/vault_room_4",
+        "processors": "ancient_aether:valkyrian_vaults_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
     }
   ]
 }

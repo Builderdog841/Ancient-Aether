@@ -61,6 +61,26 @@
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
+    },
+    {
+      "weight": 2,
+      "element": {
+
+        "location": "ancient_aether:valkyrian_vaults/corridor_fountain_1",
+        "processors": "ancient_aether:valkyrian_vaults_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+
+        "location": "ancient_aether:valkyrian_vaults/corridor_fountain_2",
+        "processors": "ancient_aether:valkyrian_vaults_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
     }
   ]
 }

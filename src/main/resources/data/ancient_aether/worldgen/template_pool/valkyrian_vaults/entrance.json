@@ -1,5 +1,5 @@
 {
-  "name": "ancient_aether:valkyrian_vaults/start_pool",
+  "name": "ancient_aether:valkyrian_vaults/entrance",
   "fallback": "minecraft:empty",
   "elements": [
     {
