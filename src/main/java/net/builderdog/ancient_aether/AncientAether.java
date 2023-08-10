@@ -42,15 +42,11 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.resource.PathPackResources;
 import org.slf4j.Logger;
-import teamrazor.aeroblender.AeroBlenderConfig;
 import teamrazor.aeroblender.aether.AetherRuleCategory;
 import terrablender.api.Regions;
 import terrablender.api.SurfaceRuleManager;
 
 import java.nio.file.Path;
-import java.util.Iterator;
-
-import static teamrazor.aeroblender.AeroBlenderConfig.CONFIG;
 
 @Mod(AncientAether.MOD_ID)
 public class AncientAether {
@@ -92,16 +88,16 @@ public class AncientAether {
         });
 
         event.enqueueWork(() -> {
-            Regions.register(new AncientAetherRegion(new ResourceLocation(MOD_ID, "ancient_aether"), 10));
+            Regions.register(new AncientAetherRegion(new ResourceLocation(MOD_ID, "ancient_aether"), 50));
 
             SurfaceRuleManager.addSurfaceRules(AetherRuleCategory.THE_AETHER, MOD_ID, AncientAetherSurfaceData.makeRules());
         });
     }
 
-    //private void clientSetup(FMLClientSetupEvent event) {
-    //    event.enqueueWork(() -> {
-    //        AeroBlenderConfig.CONFIG.vanillaAetherRegionWeight
-    //    });
+   // private void clientSetup(FMLClientSetupEvent event) {
+      //  event.enqueueWork(() -> {
+       //     AeroblenderConfig.CONFIG.getSubConfig(“generator_settings”).
+     //   });
     //}
     public void packSetup(AddPackFindersEvent event) {
         this.setupOptionalPack(event, "ancient_aether_programmer_art", "Programmer Art", "Changes the textures to the classic art style");

@@ -17,22 +17,6 @@
       },
       "trigger": "minecraft:location"
     },
-    "ancient_aether:quicksoil_dunes": {
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "location": {
-                "biome": "ancient_aether:quicksoil_dunes"
-              }
-            }
-          }
-        ]
-      },
-      "trigger": "minecraft:location"
-    },
     "ancient_aether:aerogel_caves": {
       "conditions": {
         "player": [
@@ -196,9 +180,6 @@
   "requirements": [
     [
       "ancient_aether:quicksoil_desert"
-    ],
-    [
-      "ancient_aether:quicksoil_dunes"
     ],
     [
       "ancient_aether:aerogel_caves"
