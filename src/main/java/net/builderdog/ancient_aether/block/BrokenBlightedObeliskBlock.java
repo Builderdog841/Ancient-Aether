@@ -4,6 +4,8 @@ import com.aetherteam.aether.block.AetherBlocks;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.ChatFormatting;
+import net.minecraft.advancements.Advancement;
+import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -71,6 +73,14 @@ public class BrokenBlightedObeliskBlock extends Block {
                                 level.setBlockAndUpdate(checkedPos, AncientAetherBlocks.BLIGHTED_OBELISK.get().defaultBlockState());
                             }
                         }
+                    }
+                }
+                if (entity instanceof ServerPlayer _player) {
+                    Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("ancient_aether:aether/unlock_ancient_valkyrian_vaults"));
+                    AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+                    if (!_ap.isDone()) {
+                        for (String criteria : _ap.getRemainingCriteria())
+                            _player.getAdvancements().award(_adv, criteria);
                     }
                 }
             }

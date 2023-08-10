@@ -2,21 +2,7 @@
   "parent": "ancient_aether:aether/find_sentry_lab",
   "criteria": {
     "unlock": {
-      "conditions": {
-        "item": {
-          "items": [
-            "ancient_aether:enchanted_sentry_rune"
-          ]
-        },
-        "location": {
-          "block": {
-            "blocks": [
-            "ancient_aether:broken_enchanted_obelisk"
-            ]
-          }
-        }
-      },
-      "trigger": "minecraft:item_used_on_block"
+      "trigger": "minecraft:impossible"
     }
   },
   "display": {

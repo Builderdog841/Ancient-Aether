@@ -2,22 +2,8 @@
   "parent": "ancient_aether:aether/unlock_ancient_valkyrie_library",
   "criteria": {
     "unlock": {
-      "conditions": {
-        "item": {
-          "items": [
-            "ancient_aether:blighted_sentry_rune"
-          ]
-        },
-        "location": {
-          "block": {
-            "blocks": [
-              "ancient_aether:broken_blighted_obelisk"
-            ]
-          }
-        }
-      },
-      "trigger": "minecraft:item_used_on_block"
-    }
+      "trigger": "minecraft:impossible"
+  }
   },
   "display": {
     "announce_to_chat": true,
