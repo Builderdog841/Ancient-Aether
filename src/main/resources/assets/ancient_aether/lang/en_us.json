@@ -140,6 +140,8 @@
   "advancement.ancient_aether.unlock_ancient_valkyrie_library.desc": "Enter an Ancient Valkyrie Library by clicking on a Broken Enchanted Obelisk with an Enchanted Sentry Rune which can be found in a Sentry Laboratory",
   "advancement.ancient_aether.unlock_valkyrian_vaults": "In the Jungle, the mighty Jungle",
   "advancement.ancient_aether.unlock_valkyrian_vaults.desc": "Enter the Valkyrian Vaults by clicking on a Broken Blighted Obelisk with a Blighted Sentry Rune which can be found in an Ancient Valkyrie Library",
+  "advancement.ancient_aether.rootling_trap": "Surprise!",
+  "advancement.ancient_aether.rootling_trap.desc": "You fell right into the trap of a Rootling",
 
   "gui.ancient_aether.obelisk_valkyrie_queen": "You haven't defeated the Valkyrie Queen yet",
 

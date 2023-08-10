@@ -1,0 +1,28 @@
+{
+  "parent": "aether:the_aether",
+  "criteria": {
+    "unlock": {
+      "trigger": "minecraft:impossible"
+  }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.ancient_aether.rootling_trap.desc"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "ancient_aether:trapped_sakura_blossoms"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.ancient_aether.rootling_trap"
+    }
+  },
+  "requirements": [
+    [
+      "unlock"
+    ]
+  ]
+}
