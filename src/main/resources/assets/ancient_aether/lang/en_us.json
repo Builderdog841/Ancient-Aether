@@ -88,6 +88,7 @@
   "item.ancient_aether.rootling_spawn_egg": "Rootling Spawn Egg",
   "item.ancient_aether.velox_whirlwind_spawn_egg": "Velox Whirlwind Spawn Egg",
   "item.ancient_aether.velox_zephyr_spawn_egg": "Velox Zephyr Spawn Egg",
+  "item.ancient_aether.leaping_sentry_spawn_egg": "Leaping Sentry Spawn Egg",
   "item.ancient_aether.highlands_pine_boat": "Highlands Pine Boat",
   "item.ancient_aether.highlands_pine_chest_boat": "Highlands Pine Chest Boat",
   "item.ancient_aether.sakura_boat": "Sakura Boat",
@@ -102,6 +103,7 @@
   "creatvemodetab.ancient_aether_tab": "Ancient Aether",
 
   "entity.ancient_aether.highlands_buffalo": "Highlands Buffalo",
+  "entity.ancient_aether.leaping_sentry": "Leaping Sentry",
   "entity.ancient_aether.rootling": "Rootling",
   "entity.ancient_aether.velox_zephyr": "Velox Zephyr",
   "entity.ancient_aether.velox_whirlwind": "Velox Whirlwind",

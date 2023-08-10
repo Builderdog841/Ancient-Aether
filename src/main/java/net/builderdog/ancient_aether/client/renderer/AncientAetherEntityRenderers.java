@@ -1,6 +1,8 @@
 package net.builderdog.ancient_aether.client.renderer;
 
+import com.aetherteam.aether.client.renderer.entity.SentryRenderer;
 import com.aetherteam.aether.client.renderer.entity.WhirlwindRenderer;
+import com.aetherteam.aether.entity.AetherEntityTypes;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
@@ -28,6 +30,7 @@ public class AncientAetherEntityRenderers {
         event.registerEntityRenderer(AncientAetherEntities.VELOX_ZEPHYR.get(), VeloxZephyrRenderer::new);
         event.registerEntityRenderer(AncientAetherEntities.VELOX_WHIRLWIND.get(), VeloxWhirlwindRenderer::new);
         event.registerEntityRenderer(AncientAetherEntities.VELOX_ZEPHYR_SNOWBALL.get(), (context) -> new ThrownItemRenderer<>(context, 3.0F, true));
+        event.registerEntityRenderer(AncientAetherEntities.LEAPING_SENTRY.get(), LeapingSentryRenderer::new);
     }
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {

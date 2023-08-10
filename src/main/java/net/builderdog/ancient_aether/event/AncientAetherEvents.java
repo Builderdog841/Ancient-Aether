@@ -3,6 +3,7 @@ package net.builderdog.ancient_aether.event;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.entity.animals.HighlandsBuffalo;
+import net.builderdog.ancient_aether.entity.monster.LeapingSentry;
 import net.builderdog.ancient_aether.entity.monster.Rootling;
 import net.builderdog.ancient_aether.entity.monster.VeloxWhirlwind;
 import net.builderdog.ancient_aether.entity.monster.VeloxZephyr;
@@ -26,5 +27,6 @@ public class AncientAetherEvents {
         event.put(AncientAetherEntities.VELOX_WHIRLWIND.get(), VeloxWhirlwind.createMobAttributes().build());
         event.put(AncientAetherEntities.HIGHLANDS_BUFFALO.get(), HighlandsBuffalo.createMobAttributes().build());
         event.put(AncientAetherEntities.ROOTLING.get(), Rootling.createMobAttributes().build());
+        event.put(AncientAetherEntities.LEAPING_SENTRY.get(), LeapingSentry.createMobAttributes().build());
     }
 }

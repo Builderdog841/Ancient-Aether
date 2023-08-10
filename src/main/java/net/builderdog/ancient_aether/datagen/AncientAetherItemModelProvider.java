@@ -32,24 +32,25 @@ public class AncientAetherItemModelProvider extends AetherItemModelProvider {
         eggItem(AncientAetherItems.ROOTLING_SPAWN_EGG.get());
         eggItem(AncientAetherItems.VELOX_ZEPHYR_SPAWN_EGG.get());
         eggItem(AncientAetherItems.VELOX_WHIRLWIND_SPAWN_EGG.get());
+        eggItem(AncientAetherItems.LEAPING_SENTRY_SPAWN_EGG.get());
 
         //Music Discs
-        this.simpleItem(AncientAetherItems.MUSIC_DISC_LABYRINTHS_VENGEANCE_BUILDERDOG_REMIX);
+        simpleItem(AncientAetherItems.MUSIC_DISC_LABYRINTHS_VENGEANCE_BUILDERDOG_REMIX);
 
         //Blocks
-        this.itemFence(AncientAetherBlocks.HIGHLANDS_PINE_FENCE.get(), AncientAetherBlocks.HIGHLANDS_PINE_PLANKS.get(), "");
-        this.itemBlock(AncientAetherBlocks.HIGHLANDS_PINE_FENCE_GATE.get());
-        this.item(AncientAetherBlocks.HIGHLANDS_PINE_DOOR.get().asItem(), "");
-        this.itemBlock(AncientAetherBlocks.HIGHLANDS_PINE_TRAPDOOR.get(), "_bottom");
-        this.itemButton(AncientAetherBlocks.HIGHLANDS_PINE_BUTTON.get(), AncientAetherBlocks.HIGHLANDS_PINE_PLANKS.get(), "");
-        this.itemBlock(AncientAetherBlocks.HIGHLANDS_PINE_PRESSURE_PLATE.get());
+        itemFence(AncientAetherBlocks.HIGHLANDS_PINE_FENCE.get(), AncientAetherBlocks.HIGHLANDS_PINE_PLANKS.get(), "");
+        itemBlock(AncientAetherBlocks.HIGHLANDS_PINE_FENCE_GATE.get());
+        item(AncientAetherBlocks.HIGHLANDS_PINE_DOOR.get().asItem(), "");
+        itemBlock(AncientAetherBlocks.HIGHLANDS_PINE_TRAPDOOR.get(), "_bottom");
+        itemButton(AncientAetherBlocks.HIGHLANDS_PINE_BUTTON.get(), AncientAetherBlocks.HIGHLANDS_PINE_PLANKS.get(), "");
+        itemBlock(AncientAetherBlocks.HIGHLANDS_PINE_PRESSURE_PLATE.get());
 
-        this.itemFence(AncientAetherBlocks.SAKURA_FENCE.get(), AncientAetherBlocks.SAKURA_PLANKS.get(), "");
-        this.itemBlock(AncientAetherBlocks.SAKURA_FENCE_GATE.get());
-        this.item(AncientAetherBlocks.SAKURA_DOOR.get().asItem(), "");
-        this.itemBlock(AncientAetherBlocks.SAKURA_TRAPDOOR.get(), "_bottom");
-        this.itemButton(AncientAetherBlocks.SAKURA_BUTTON.get(), AncientAetherBlocks.SAKURA_PLANKS.get(), "");
-        this.itemBlock(AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get());
+        itemFence(AncientAetherBlocks.SAKURA_FENCE.get(), AncientAetherBlocks.SAKURA_PLANKS.get(), "");
+        itemBlock(AncientAetherBlocks.SAKURA_FENCE_GATE.get());
+        item(AncientAetherBlocks.SAKURA_DOOR.get().asItem(), "");
+        itemBlock(AncientAetherBlocks.SAKURA_TRAPDOOR.get(), "_bottom");
+        itemButton(AncientAetherBlocks.SAKURA_BUTTON.get(), AncientAetherBlocks.SAKURA_PLANKS.get(), "");
+        itemBlock(AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get());
     }
 
     public String itemName(Item item) {

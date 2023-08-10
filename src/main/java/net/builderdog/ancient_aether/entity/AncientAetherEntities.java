@@ -1,11 +1,13 @@
 package net.builderdog.ancient_aether.entity;
 
 import com.aetherteam.aether.data.resources.AetherMobCategory;
+import com.aetherteam.aether.entity.monster.dungeon.Sentry;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.entity.animals.HighlandsBuffalo;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherChestBoatEntity;
 import net.builderdog.ancient_aether.entity.misc.VeloxZephyrSnowball;
+import net.builderdog.ancient_aether.entity.monster.LeapingSentry;
 import net.builderdog.ancient_aether.entity.monster.Rootling;
 import net.builderdog.ancient_aether.entity.monster.VeloxWhirlwind;
 import net.builderdog.ancient_aether.entity.monster.VeloxZephyr;
@@ -46,6 +48,10 @@ public class AncientAetherEntities {
                     () -> EntityType.Builder.of(VeloxWhirlwind::new, AetherMobCategory.AETHER_SURFACE_MONSTER)
                             .fireImmune().sized(0.6F, 0.8F).clientTrackingRange(8)
                             .build("velox_whirlwind"));
+    public static final RegistryObject<EntityType<LeapingSentry>> LEAPING_SENTRY = ENTITY_TYPES.register("leaping_sentry",
+            () -> EntityType.Builder.of(LeapingSentry::new, MobCategory.MONSTER)
+                    .sized(2.0F, 2.0F).clientTrackingRange(10)
+                    .build("leaping_sentry"));
 
     // MISC
     public static final RegistryObject<EntityType<AncientAetherBoatEntity>> BOAT =

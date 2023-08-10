@@ -111,6 +111,7 @@ public class AncientAetherCreativeModeTabs {
                             output.accept(AncientAetherItems.ANCIENT_DUNGEON_KEY.get());
                             output.accept(AncientAetherItems.MUSIC_DISC_LABYRINTHS_VENGEANCE_BUILDERDOG_REMIX.get());
                             output.accept(AncientAetherItems.HIGHLANDS_BUFFALO_SPAWN_EGG.get());
+                            output.accept(AncientAetherItems.LEAPING_SENTRY_SPAWN_EGG.get());
                             output.accept(AncientAetherItems.ROOTLING_SPAWN_EGG.get());
                             output.accept(AncientAetherItems.VELOX_WHIRLWIND_SPAWN_EGG.get());
                             output.accept(AncientAetherItems.VELOX_ZEPHYR_SPAWN_EGG.get());

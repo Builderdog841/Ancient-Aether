@@ -26,9 +26,23 @@ versionRange="[0,)"
 ordering="AFTER"
 side="BOTH"
 
-[[dependencies.examplemod]]
-modId="minecraft"
+[[dependencies.ancient_aether]]
+modId="aeroblender"
 mandatory=true
-versionRange="[1.19.4,1.20)"
-ordering="NONE"
+versionRange="[0,)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.ancient_aether]]
+modId="terrablender"
+mandatory=true
+versionRange="[0,)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.ancient_aether]]
+modId="geckolib"
+mandatory=true
+versionRange="[0,)"
+ordering="AFTER"
 side="BOTH"

@@ -1,4 +1,4 @@
-// 1.19.4	2023-08-09T15:46:19.5548633	Item Models: ancient_aether
+// 1.19.4	2023-08-10T11:16:11.8837095	Item Models: ancient_aether
 65913d6f85fe4bf5531b2d75b5693e56b2475ba3 assets/ancient_aether/models/item/aechor_ice_cream_bucket.json
 ebbb314be0e3b10376468fa80420375a40b93108 assets/ancient_aether/models/item/buffalo_rib.json
 ff6532566a208918def184647d5baca9968f4fa6 assets/ancient_aether/models/item/cactus_flower_ice_cream_bucket.json
@@ -10,6 +10,7 @@ d685be21c20c1ef1adab462224a3938b8f6b5e3a assets/ancient_aether/models/item/highl
 127e678fadd1d642aea019c38c6bbb2943b5fb4a assets/ancient_aether/models/item/highlands_pine_fence_gate.json
 d7dfc5a63f6e51caf9aca2405089dcf8ff73ed5c assets/ancient_aether/models/item/highlands_pine_pressure_plate.json
 5170f19723f7a6401ea5894502f26fd4f2992f5a assets/ancient_aether/models/item/highlands_pine_trapdoor.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/leaping_sentry_spawn_egg.json
 65231b5ba5f9f0b8bc5e331f684ba7841dcfc875 assets/ancient_aether/models/item/music_disc_labyrinths_vengeance_builderdog_remix.json
 d44c5040dfb044f44b8ef6eeaa30a9160404bba7 assets/ancient_aether/models/item/raw_buffalo_ribs.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/rootling_spawn_egg.json
