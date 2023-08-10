@@ -20,13 +20,29 @@
           "input_predicate": {
             "block": "aether:mossy_holystone",
             "predicate_type": "minecraft:random_block_match",
-            "probability": 0.5
+            "probability": 0.3
           },
           "location_predicate": {
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
             "Name": "aether:holystone",
+            "Properties": {
+              "double_drops": "true"
+            }
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "aether:holystone",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 0.3
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "aether:mossy_holystone",
             "Properties": {
               "double_drops": "true"
             }

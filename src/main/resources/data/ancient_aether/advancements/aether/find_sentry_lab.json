@@ -21,7 +21,7 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.ancient_aether.find_ancient_sentry_lab.desc"
+      "translate": "advancement.ancient_aether.find_sentry_lab.desc"
     },
     "frame": "task",
     "hidden": false,
