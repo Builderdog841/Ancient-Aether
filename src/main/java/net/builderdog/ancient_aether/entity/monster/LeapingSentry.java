@@ -1,6 +1,5 @@
 package net.builderdog.ancient_aether.entity.monster;
 
-import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.client.AetherSoundEvents;
 import com.aetherteam.aether.network.AetherPacketHandler;
 import com.aetherteam.aether.network.packet.client.SentryExplosionParticlePacket;
@@ -18,6 +17,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -93,6 +93,14 @@ public class LeapingSentry extends Slime {
 			super.jumpFromGround();
 		}
 	}
+
+	@Override
+	public boolean hurt(DamageSource source, float amount) {
+		if (source.is(DamageTypes.FALL))
+			return false;
+		return super.hurt(source, amount);
+	}
+
 
 	@Override
 	public void push(@Nonnull Entity entity) {
