@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "ancient_aether:block/small_aether_cactus"
-  }
+  "parent": "ancient_aether:block/small_aether_cactus"
 }
