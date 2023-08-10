@@ -87,8 +87,6 @@ public class AncientAetherBlockStateProvider extends AetherBlockStateProvider {
         crossBlock(AncientAetherBlocks.SKYROOT_THORN_BUSH);
         crossBlock(AncientAetherBlocks.SAKURA_BLOSSOMS);
         crossBlock(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS);
-        crossBlock(AncientAetherBlocks.SMALL_AETHER_CACTUS);
-
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

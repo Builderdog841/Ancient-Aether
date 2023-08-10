@@ -96,7 +96,6 @@ public class AncientAetherBlockLootTables extends AetherBlockLootSubProvider {
         dropPottedContents(AncientAetherBlocks.POTTED_MOONLIT_TULIP.get());
         dropPottedContents(AncientAetherBlocks.POTTED_EDELWEISS.get());
         dropPottedContents(AncientAetherBlocks.POTTED_SAKURA_BLOSSOMS.get());
-        dropPottedContents(AncientAetherBlocks.POTTED_SMALL_AETHER_CACTUS.get());
         dropPottedContents(AncientAetherBlocks.POTTED_SKYROOT_THORN_BUSH.get());
 
         dropDoubleWithFortune(AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), Items.QUARTZ);

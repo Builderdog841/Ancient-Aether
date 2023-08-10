@@ -219,8 +219,6 @@ public class AncientAetherBlocks {
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, EDELWEISS, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_SAKURA_BLOSSOMS = BLOCKS.register("potted_sakura_blossoms",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SAKURA_BLOSSOMS, Block.Properties.copy(Blocks.FLOWER_POT)));
-    public static final RegistryObject<FlowerPotBlock> POTTED_SMALL_AETHER_CACTUS = BLOCKS.register("potted_small_aether_cactus",
-            () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SMALL_AETHER_CACTUS, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_SKYROOT_THORN_BUSH = BLOCKS.register("potted_skyroot_thorn_bush",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SKYROOT_THORN_BUSH, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_HIGHLANDS_PINE_SAPLING = BLOCKS.register("potted_highlands_pine_sapling",
@@ -277,7 +275,6 @@ public class AncientAetherBlocks {
         pot.addPlant(AncientAetherBlocks.EDELWEISS.getId(), AncientAetherBlocks.POTTED_EDELWEISS);
         pot.addPlant(AncientAetherBlocks.SAKURA_BLOSSOMS.getId(), AncientAetherBlocks.POTTED_SAKURA_BLOSSOMS);
         pot.addPlant(AncientAetherBlocks.SKYROOT_THORN_BUSH.getId(), AncientAetherBlocks.POTTED_SKYROOT_THORN_BUSH);
-        pot.addPlant(AncientAetherBlocks.SMALL_AETHER_CACTUS.getId(), AncientAetherBlocks.POTTED_SMALL_AETHER_CACTUS);
         pot.addPlant(AncientAetherBlocks.HIGHLANDS_PINE_SAPLING.getId(), AncientAetherBlocks.POTTED_HIGHLANDS_PINE_SAPLING);
         pot.addPlant(AncientAetherBlocks.SAKURA_SAPLING.getId(), AncientAetherBlocks.POTTED_SAKURA_SAPLING);
     }
