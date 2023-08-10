@@ -50,6 +50,8 @@ import terrablender.api.SurfaceRuleManager;
 import java.nio.file.Path;
 import java.util.Iterator;
 
+import static teamrazor.aeroblender.AeroBlenderConfig.CONFIG;
+
 @Mod(AncientAether.MOD_ID)
 public class AncientAether {
     public static final String MOD_ID = "ancient_aether";
@@ -97,9 +99,9 @@ public class AncientAether {
     }
 
     //private void clientSetup(FMLClientSetupEvent event) {
-     //   event.enqueueWork(() -> {
-     //       AeroBlenderConfig.CONFIG.vanillaAetherRegionWeight.
-     //   });
+    //    event.enqueueWork(() -> {
+    //        AeroBlenderConfig.CONFIG.vanillaAetherRegionWeight
+    //    });
     //}
     public void packSetup(AddPackFindersEvent event) {
         this.setupOptionalPack(event, "ancient_aether_programmer_art", "Programmer Art", "Changes the textures to the classic art style");
