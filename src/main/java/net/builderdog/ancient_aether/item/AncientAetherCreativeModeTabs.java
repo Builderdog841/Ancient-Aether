@@ -69,6 +69,7 @@ public class AncientAetherCreativeModeTabs {
                             output.accept(AncientAetherBlocks.HIGHLANDS_PINE_SAPLING.get());
                             output.accept(AncientAetherBlocks.SAKURA_SAPLING.get());
                             output.accept(AncientAetherBlocks.SMALL_AETHER_CACTUS.get());
+                            output.accept(AncientAetherBlocks.LARGE_AETHER_CACTUS.get());
                             output.accept(AncientAetherBlocks.SKYROOT_THORN_BUSH.get());
                             output.accept(AncientAetherBlocks.EDELWEISS.get());
                             output.accept(AncientAetherBlocks.MOONLIT_TULIP.get());

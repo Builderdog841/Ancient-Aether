@@ -75,7 +75,9 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> SAKURA_BLOSSOMS = registerBlock("sakura_blossoms",
             () -> new FlowerBlock(() -> MobEffects.HEALTH_BOOST, 4, Block.Properties.copy(Blocks.DANDELION)));
     public static final RegistryObject<Block> SMALL_AETHER_CACTUS = registerBlock("small_aether_cactus",
-            () -> new SmallAetherCactusBlock(BlockBehaviour.Properties.copy(Blocks.DANDELION)));
+            () -> new SmallAetherCactusBlock(BlockBehaviour.Properties.copy(Blocks.DANDELION).sound(SoundType.WOOL)));
+    public static final RegistryObject<Block> LARGE_AETHER_CACTUS = registerBlock("large_aether_cactus",
+            () -> new SmallAetherCactusBlock(BlockBehaviour.Properties.copy(Blocks.DANDELION).sound(SoundType.WOOL)));
     public static final RegistryObject<Block> SKYROOT_THORN_BUSH = registerBlock("skyroot_thorn_bush",
             () -> new SkyrootThornBushBlock(BlockBehaviour.Properties.copy(Blocks.DEAD_BUSH)));
     public static final RegistryObject<Block> MOONLIT_WATERLILY = registerBlock("moonlit_waterlily",

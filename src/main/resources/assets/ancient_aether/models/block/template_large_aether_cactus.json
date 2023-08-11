@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "Textures/small_aether_cacti_patch",
-		"particle": "Textures/small_aether_cacti_patch"
+		"0": "large_aether_cactus",
+		"particle": "large_aether_cactus"
 	},
 	"elements": [
 		{
