@@ -4,7 +4,7 @@
   "elements": [
     {
 
-      "weight": 3,
+      "weight": 1,
       "element": {
 
         "location": "ancient_aether:ancient_valkyrie_settlements/small_settlement",
@@ -15,7 +15,7 @@
     },
     {
 
-      "weight": 2,
+      "weight": 1,
       "element": {
 
         "location": "ancient_aether:ancient_valkyrie_settlements/medium_settlement",
