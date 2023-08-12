@@ -1,0 +1,61 @@
+package net.builderdog.ancient_aether.event;
+
+import net.builderdog.ancient_aether.AncientAether;
+import net.builderdog.ancient_aether.block.AncientAetherBlocks;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.*;
+
+@Mod.EventBusSubscriber(modid = AncientAether.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+public class AncientAetherMissingEntries {
+    @SubscribeEvent
+    public static void missingMappings(MissingMappingsEvent event) {
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("highlands_pine_planks")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("highlands_pine_button")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.HIGHSPROOT_BUTTON.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("highlands_pine_fence")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.HIGHSPROOT_FENCE.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("highlands_pine_fence_gate")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.HIGHSPROOT_FENCE_GATE.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("highlands_pine_leaves")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.HIGHSPROOT_LEAVES.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("highlands_pine_log")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.HIGHSPROOT_LOG.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("highlands_pine_pressure_plate")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.HIGHSPROOT_PRESSURE_PLATE.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("highlands_pine_sapling")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.HIGHSPROOT_SAPLING.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("highlands_pine_sign")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.HIGHSPROOT_SIGN.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("highlands_pine_slab")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.HIGHSPROOT_SLAB.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("highlands_pine_stairs")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.HIGHSPROOT_STAIRS.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("highlands_pine_trapdoor")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.HIGHSPROOT_TRAPDOOR.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("highlands_pine_door")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.HIGHSPROOT_DOOR.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("highlands_pine_log_wall")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.HIGHSPROOT_LOG_WALL.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("highlands_pine_wood_wall")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.HIGHSPROOT_WOOD_WALL.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("highlands_pine_wall_sign")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.HIGHSPROOT_WALL_SIGN.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("highlands_pine_wood")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.HIGHSPROOT_WOOD.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("potted_highlands_pine_sapling")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("stripped_highlands_pine_log")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("stripped_highlands_pine_wood")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("stripped_highlands_pine_log_wall")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG_WALL.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("stripped_highlands_pine_wood_wall")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD_WALL.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("potted_small_aether_cactus")).forEach(blockMapping -> blockMapping.remap(Blocks.FLOWER_POT));
+    }
+}
