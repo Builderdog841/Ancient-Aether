@@ -87,7 +87,7 @@ public class AncientAether {
         });
 
         event.enqueueWork(() -> {
-            Regions.register(new AncientAetherRegion(new ResourceLocation(MOD_ID, "ancient_aether"), 50));
+            Regions.register(new AncientAetherRegion(new ResourceLocation(MOD_ID, "ancient_aether"), 10));
 
             SurfaceRuleManager.addSurfaceRules(AetherRuleCategory.THE_AETHER, MOD_ID, AncientAetherSurfaceData.makeRules());
         });
@@ -96,6 +96,7 @@ public class AncientAether {
         this.setupOptionalPack(event, "ancient_aether_programmer_art", "Programmer Art", "Changes the textures to the classic art style");
         this.setupDatapack(event, "ancient_aether_water_color", "Watercolor", "Changes the Watercolor of the Aether", PackSource.BUILT_IN);
         this.setupDatapack(event, "ancient_aether_lakes", "Lakes", "Adds cool new lakes to the Aether", PackSource.BUILT_IN);
+        this.setupDatapack(event, "ancient_aether_default_biome_improvements", "Default Biome Improvements", "Adds more flowers and tree variation to the default Aether Biomes", PackSource.BUILT_IN);
         if (aetherGenesisCompat()) {
             this.setupMandatoryDataPack(event, "aether_genesis_compatibility", "Aether Genesis Compatibility", "Needed for Compatibility with Aether Genesis");
         }
