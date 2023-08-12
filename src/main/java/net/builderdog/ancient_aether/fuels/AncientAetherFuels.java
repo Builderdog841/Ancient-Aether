@@ -11,17 +11,17 @@ public class AncientAetherFuels {
     @SubscribeEvent
     public static void furnaceFuelBurnTimeEvent(FurnaceFuelBurnTimeEvent event) {
         ItemStack itemstack = event.getItemStack();
-        if (itemstack.getItem() == AncientAetherBlocks.HIGHLANDS_PINE_PLANKS.get().asItem())
+        if (itemstack.getItem() == AncientAetherBlocks.HIGHSPROOT_PLANKS.get().asItem())
             event.setBurnTime(300);
         else if (itemstack.getItem() == AncientAetherBlocks.SAKURA_PLANKS.get().asItem())
             event.setBurnTime(300);
-        else if (itemstack.getItem() == AncientAetherBlocks.HIGHLANDS_PINE_LOG_WALL.get().asItem())
+        else if (itemstack.getItem() == AncientAetherBlocks.HIGHSPROOT_LOG_WALL.get().asItem())
             event.setBurnTime(300);
-        else if (itemstack.getItem() == AncientAetherBlocks.HIGHLANDS_PINE_WOOD_WALL.get().asItem())
+        else if (itemstack.getItem() == AncientAetherBlocks.HIGHSPROOT_WOOD_WALL.get().asItem())
             event.setBurnTime(300);
-        else if (itemstack.getItem() == AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_LOG_WALL.get().asItem())
+        else if (itemstack.getItem() == AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG_WALL.get().asItem())
             event.setBurnTime(300);
-        else if (itemstack.getItem() == AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_WOOD_WALL.get().asItem())
+        else if (itemstack.getItem() == AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD_WALL.get().asItem())
             event.setBurnTime(300);
         else if (itemstack.getItem() == AncientAetherBlocks.SAKURA_LOG_WALL.get().asItem())
             event.setBurnTime(300);

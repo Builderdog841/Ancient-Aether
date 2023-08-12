@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/door_top_left_open",
-  "render_type": "minecraft:cutout",
-  "textures": {
-    "bottom": "ancient_aether:block/highlands_pine_door_bottom",
-    "top": "ancient_aether:block/highlands_pine_door_top"
-  }
-}

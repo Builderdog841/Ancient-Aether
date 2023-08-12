@@ -20,26 +20,26 @@ public class AncientAetherCreativeModeTabs {
                 builder -> builder.icon(() -> new ItemStack(AncientAetherItems.AECHOR_ICE_CREAM_BUCKET.get()))
                         .title(Component.translatable("creatvemodetab.ancient_aether_tab"))
                         .displayItems((features, output) -> {
-                            output.accept(AncientAetherBlocks.HIGHLANDS_PINE_LOG.get());
-                            output.accept(AncientAetherBlocks.HIGHLANDS_PINE_LOG_WALL.get());
-                            output.accept(AncientAetherBlocks.HIGHLANDS_PINE_WOOD.get());
-                            output.accept(AncientAetherBlocks.HIGHLANDS_PINE_WOOD_WALL.get());
-                            output.accept(AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_LOG.get());
-                            output.accept(AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_LOG_WALL.get());
-                            output.accept(AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_WOOD.get());
-                            output.accept(AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_WOOD_WALL.get());
-                            output.accept(AncientAetherBlocks.HIGHLANDS_PINE_PLANKS.get());
-                            output.accept(AncientAetherBlocks.HIGHLANDS_PINE_STAIRS.get());
-                            output.accept(AncientAetherBlocks.HIGHLANDS_PINE_SLAB.get());
-                            output.accept(AncientAetherBlocks.HIGHLANDS_PINE_FENCE.get());
-                            output.accept(AncientAetherBlocks.HIGHLANDS_PINE_FENCE_GATE.get());
-                            output.accept(AncientAetherBlocks.HIGHLANDS_PINE_DOOR.get());
-                            output.accept(AncientAetherBlocks.HIGHLANDS_PINE_TRAPDOOR.get());
-                            output.accept(AncientAetherBlocks.HIGHLANDS_PINE_PRESSURE_PLATE.get());
-                            output.accept(AncientAetherBlocks.HIGHLANDS_PINE_BUTTON.get());
-                            output.accept(AncientAetherItems.HIGHLANDS_PINE_SIGN.get());
-                            output.accept(AncientAetherItems.HIGHLANDS_PINE_BOAT.get());
-                            output.accept(AncientAetherItems.HIGHLANDS_PINE_CHEST_BOAT.get());
+                            output.accept(AncientAetherBlocks.HIGHSPROOT_LOG.get());
+                            output.accept(AncientAetherBlocks.HIGHSPROOT_LOG_WALL.get());
+                            output.accept(AncientAetherBlocks.HIGHSPROOT_WOOD.get());
+                            output.accept(AncientAetherBlocks.HIGHSPROOT_WOOD_WALL.get());
+                            output.accept(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get());
+                            output.accept(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG_WALL.get());
+                            output.accept(AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD.get());
+                            output.accept(AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD_WALL.get());
+                            output.accept(AncientAetherBlocks.HIGHSPROOT_PLANKS.get());
+                            output.accept(AncientAetherBlocks.HIGHSPROOT_STAIRS.get());
+                            output.accept(AncientAetherBlocks.HIGHSPROOT_SLAB.get());
+                            output.accept(AncientAetherBlocks.HIGHSPROOT_FENCE.get());
+                            output.accept(AncientAetherBlocks.HIGHSPROOT_FENCE_GATE.get());
+                            output.accept(AncientAetherBlocks.HIGHSPROOT_DOOR.get());
+                            output.accept(AncientAetherBlocks.HIGHSPROOT_TRAPDOOR.get());
+                            output.accept(AncientAetherBlocks.HIGHSPROOT_PRESSURE_PLATE.get());
+                            output.accept(AncientAetherBlocks.HIGHSPROOT_BUTTON.get());
+                            output.accept(AncientAetherItems.HIGHSPROOT_SIGN.get());
+                            output.accept(AncientAetherItems.HIGHSPROOT_BOAT.get());
+                            output.accept(AncientAetherItems.HIGHSPROOT_CHEST_BOAT.get());
                             output.accept(AncientAetherBlocks.SAKURA_LOG.get());
                             output.accept(AncientAetherBlocks.SAKURA_LOG_WALL.get());
                             output.accept(AncientAetherBlocks.SAKURA_WOOD.get());
@@ -64,9 +64,9 @@ public class AncientAetherCreativeModeTabs {
                             output.accept(AncientAetherBlocks.STRIPPED_AETHER_CACTUS.get());
                             output.accept(AncientAetherBlocks.CACTUS_FLOWER.get());
                             output.accept(AncientAetherBlocks.GOLDEN_CACTUS_FLOWER.get());
-                            output.accept(AncientAetherBlocks.HIGHLANDS_PINE_LEAVES.get());
+                            output.accept(AncientAetherBlocks.HIGHSPROOT_LEAVES.get());
                             output.accept(AncientAetherBlocks.SAKURA_LEAVES.get());
-                            output.accept(AncientAetherBlocks.HIGHLANDS_PINE_SAPLING.get());
+                            output.accept(AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
                             output.accept(AncientAetherBlocks.SAKURA_SAPLING.get());
                             output.accept(AncientAetherBlocks.SMALL_AETHER_CACTUS.get());
                             output.accept(AncientAetherBlocks.LARGE_AETHER_CACTUS.get());

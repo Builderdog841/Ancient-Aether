@@ -15,7 +15,7 @@ public class AncientAetherClientBusEvents {
     public static void clientSetup(FMLClientSetupEvent event) {
 
         event.enqueueWork(() -> {
-            Sheets.addWoodType(AncientAetherWoodTypes.HIGHLANDS_PINE);
+            Sheets.addWoodType(AncientAetherWoodTypes.HIGHSPROOT);
             Sheets.addWoodType(AncientAetherWoodTypes.SAKURA);
         });
     }

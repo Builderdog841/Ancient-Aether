@@ -2,6 +2,9 @@
   "replace": false,
   "values": [
     "ancient_aether:broken_enchanted_obelisk",
-    "ancient_aether:broken_blighted_obelisk"
+    "ancient_aether:broken_blighted_obelisk",
+    "ancient_aether:locked_carved_stone_mosaic",
+    "ancient_aether:locked_enchanted_sentry_stone",
+    "ancient_aether:locked_blighted_sentry_stone"
   ]
 }

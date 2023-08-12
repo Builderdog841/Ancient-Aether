@@ -1,10 +1,10 @@
 {
   "replace": false,
   "values": [
-    "ancient_aether:highlands_pine_log",
-    "ancient_aether:highlands_pine_wood",
-    "ancient_aether:stripped_highlands_pine_log",
-    "ancient_aether:stripped_highlands_pine_wood",
+    "ancient_aether:highsproot_log",
+    "ancient_aether:highsproot_wood",
+    "ancient_aether:stripped_highsproot_log",
+    "ancient_aether:stripped_highsproot_wood",
     "ancient_aether:sakura_log",
     "ancient_aether:sakura_wood",
     "ancient_aether:stripped_sakura_log",

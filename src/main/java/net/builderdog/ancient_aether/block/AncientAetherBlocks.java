@@ -8,7 +8,7 @@ import com.aetherteam.aether.block.natural.AetherDoubleDropsOreBlock;
 import com.aetherteam.aether.mixin.mixins.common.accessor.FireBlockAccessor;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
-import net.builderdog.ancient_aether.world.tree.HighlandsPineTreeGrower;
+import net.builderdog.ancient_aether.world.tree.HighsprootTreeGrower;
 import net.builderdog.ancient_aether.world.tree.SakuraTreeGrower;
 import net.builderdog.ancient_aether.AncientAether;
 import net.minecraft.core.BlockPos;
@@ -40,105 +40,54 @@ public class AncientAetherBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, AncientAether.MOD_ID);
 
-    //Ores
-    public static final RegistryObject<Block> AETHER_QUARTZ_ORE = registerBlock("aether_quartz_ore",
-            () -> new AetherDoubleDropsOreBlock(Block.Properties.of(Material.STONE, MaterialColor.QUARTZ)
-                    .strength(3.0F).requiresCorrectToolForDrops(), UniformInt.of(2, 5)));
-
-    //Sentry Stones
-    public static final RegistryObject<Block> ENCHANTED_SENTRY_STONE = registerBlock("enchanted_sentry_stone",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
-                    .strength(0.5f, 6f).lightLevel(s -> 11).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> BLIGHTED_SENTRY_STONE = registerBlock("blighted_sentry_stone",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
-                    .strength(0.5f, 6f).lightLevel(s -> 11).requiresCorrectToolForDrops()));
-
-    //Obelisks
-    public static final RegistryObject<Block> BROKEN_ENCHANTED_OBELISK = registerBlock("broken_enchanted_obelisk",
-            () -> new BrokenEnchantedObeliskBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
-                    .lightLevel(s -> 3).noLootTable().strength(-1.0F, 3600000.0F).noOcclusion()));
-    public static final RegistryObject<Block> ENCHANTED_OBELISK = registerBlock("enchanted_obelisk",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
-                    .strength(5f).lightLevel(s -> 12).requiresCorrectToolForDrops().noOcclusion()));
-    public static final RegistryObject<Block> BROKEN_BLIGHTED_OBELISK = registerBlock("broken_blighted_obelisk",
-            () -> new BrokenBlightedObeliskBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
-                    .lightLevel(s -> 3).noLootTable().strength(-1.0F, 3600000.0F).noOcclusion()));
-    public static final RegistryObject<Block> BLIGHTED_OBELISK = registerBlock("blighted_obelisk",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
-                    .strength(5f).lightLevel(s -> 12).requiresCorrectToolForDrops().noOcclusion()));
-
-    //Plants
-    public static final RegistryObject<Block> MOONLIT_TULIP = registerBlock("moonlit_tulip",
-            () -> new FlowerBlock(() -> MobEffects.GLOWING, 4, Block.Properties.copy(Blocks.DANDELION)));
-    public static final RegistryObject<Block> EDELWEISS = registerBlock("edelweiss",
-            () -> new FlowerBlock(() -> MobEffects.LUCK, 4, Block.Properties.copy(Blocks.DANDELION)));
-    public static final RegistryObject<Block> SAKURA_BLOSSOMS = registerBlock("sakura_blossoms",
-            () -> new FlowerBlock(() -> MobEffects.HEALTH_BOOST, 4, Block.Properties.copy(Blocks.DANDELION)));
-    public static final RegistryObject<Block> SMALL_AETHER_CACTUS = registerBlock("small_aether_cactus",
-            () -> new SmallAetherCactusBlock(BlockBehaviour.Properties.copy(Blocks.DANDELION).sound(SoundType.WOOL)));
-    public static final RegistryObject<Block> LARGE_AETHER_CACTUS = registerBlock("large_aether_cactus",
-            () -> new SmallAetherCactusBlock(BlockBehaviour.Properties.copy(Blocks.DANDELION).sound(SoundType.WOOL)));
-    public static final RegistryObject<Block> SKYROOT_THORN_BUSH = registerBlock("skyroot_thorn_bush",
-            () -> new SkyrootThornBushBlock(BlockBehaviour.Properties.copy(Blocks.DEAD_BUSH)));
-    public static final RegistryObject<Block> MOONLIT_WATERLILY = registerBlock("moonlit_waterlily",
-            () -> new WaterlilyBlock(BlockBehaviour.Properties.copy(Blocks.LILY_PAD).lightLevel(s -> 10).noOcclusion()));
-
-    //Cactus Flowers
-    public static final RegistryObject<Block> CACTUS_FLOWER = registerBlock("cactus_flower",
-            () -> new CactusFlowerBlock(BlockBehaviour.Properties.of(Material.PLANT)
-                    .instabreak().noOcclusion().noCollission().sound(SoundType.SPORE_BLOSSOM)));
-    public static final RegistryObject<Block> GOLDEN_CACTUS_FLOWER = registerBlock("golden_cactus_flower",
-            () -> new CactusFlowerBlock(BlockBehaviour.Properties.of(Material.PLANT)
-                    .instabreak().noOcclusion().noCollission().sound(SoundType.SPORE_BLOSSOM)));
-
-    //Highlands Pine Wood
-    public static final RegistryObject<Block> HIGHLANDS_PINE_LOG = registerBlock("highlands_pine_log",
+    //Highsprout Wood
+    public static final RegistryObject<Block> HIGHSPROOT_LOG = registerBlock("highsproot_log",
             () -> new AncientAetherLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)
                     .strength(2f)));
-    public static final RegistryObject<Block> HIGHLANDS_PINE_WOOD = registerBlock("highlands_pine_wood",
+    public static final RegistryObject<Block> HIGHSPROOT_WOOD = registerBlock("highsproot_wood",
             () -> new AncientAetherLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)
                     .strength(2f)));
-    public static final RegistryObject<Block> STRIPPED_HIGHLANDS_PINE_LOG = registerBlock("stripped_highlands_pine_log",
+    public static final RegistryObject<Block> STRIPPED_HIGHSPROOT_LOG = registerBlock("stripped_highsproot_log",
             () -> new AncientAetherLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)
                     .strength(2f)));
-    public static final RegistryObject<Block> STRIPPED_HIGHLANDS_PINE_WOOD = registerBlock("stripped_highlands_pine_wood",
+    public static final RegistryObject<Block> STRIPPED_HIGHSPROOT_WOOD = registerBlock("stripped_highsproot_wood",
             () -> new AncientAetherLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)
                     .strength(2f)));
-    public static final RegistryObject<Block> HIGHLANDS_PINE_PLANKS = registerBlock("highlands_pine_planks",
+    public static final RegistryObject<Block> HIGHSPROOT_PLANKS = registerBlock("highsproot_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
                     .strength(2f)));
-    public static final RegistryObject<Block> HIGHLANDS_PINE_STAIRS = registerBlock("highlands_pine_stairs",
-            () -> new StairBlock(() -> HIGHLANDS_PINE_PLANKS.get().defaultBlockState(), (BlockBehaviour.Properties.copy(AncientAetherBlocks.HIGHLANDS_PINE_PLANKS.get()))));
-    public static final RegistryObject<Block> HIGHLANDS_PINE_SLAB = registerBlock("highlands_pine_slab",
-            () -> new SlabBlock(Block.Properties.copy(AncientAetherBlocks.HIGHLANDS_PINE_PLANKS.get())
+    public static final RegistryObject<Block> HIGHSPROOT_STAIRS = registerBlock("highsproot_stairs",
+            () -> new StairBlock(() -> HIGHSPROOT_PLANKS.get().defaultBlockState(), (BlockBehaviour.Properties.copy(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()))));
+    public static final RegistryObject<Block> HIGHSPROOT_SLAB = registerBlock("highsproot_slab",
+            () -> new SlabBlock(Block.Properties.copy(AncientAetherBlocks.HIGHSPROOT_PLANKS.get())
                     .strength(2.0F, 3.0F)));
-    public static final RegistryObject<FenceBlock> HIGHLANDS_PINE_FENCE = registerBlock("highlands_pine_fence",
+    public static final RegistryObject<FenceBlock> HIGHSPROOT_FENCE = registerBlock("highsproot_fence",
             () -> new FenceBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<FenceGateBlock> HIGHLANDS_PINE_FENCE_GATE = registerBlock("highlands_pine_fence_gate",
-            () -> new FenceGateBlock(Block.Properties.copy(Blocks.OAK_FENCE_GATE), AncientAetherWoodTypes.HIGHLANDS_PINE));
-    public static final RegistryObject<WallBlock> HIGHLANDS_PINE_LOG_WALL = registerBlock("highlands_pine_log_wall",
+    public static final RegistryObject<FenceGateBlock> HIGHSPROOT_FENCE_GATE = registerBlock("highsproot_fence_gate",
+            () -> new FenceGateBlock(Block.Properties.copy(Blocks.OAK_FENCE_GATE), AncientAetherWoodTypes.HIGHSPROOT));
+    public static final RegistryObject<WallBlock> HIGHSPROOT_LOG_WALL = registerBlock("highsproot_log_wall",
             () -> new AncientAetherLogWallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<WallBlock> HIGHLANDS_PINE_WOOD_WALL = registerBlock("highlands_pine_wood_wall",
+    public static final RegistryObject<WallBlock> HIGHSPROOT_WOOD_WALL = registerBlock("highsproot_wood_wall",
             () -> new AncientAetherLogWallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<WallBlock> STRIPPED_HIGHLANDS_PINE_LOG_WALL = registerBlock("stripped_highlands_pine_log_wall",
+    public static final RegistryObject<WallBlock> STRIPPED_HIGHSPROOT_LOG_WALL = registerBlock("stripped_highsproot_log_wall",
             () -> new AncientAetherLogWallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<WallBlock> STRIPPED_HIGHLANDS_PINE_WOOD_WALL = registerBlock("stripped_highlands_pine_wood_wall",
+    public static final RegistryObject<WallBlock> STRIPPED_HIGHSPROOT_WOOD_WALL = registerBlock("stripped_highsproot_wood_wall",
             () -> new AncientAetherLogWallBlock(Block.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<DoorBlock> HIGHLANDS_PINE_DOOR = registerBlock("highlands_pine_door",
-            () -> new DoorBlock(Block.Properties.copy(Blocks.OAK_DOOR), AncientAetherWoodTypes.HIGHLANDS_PINE_BLOCK_SET));
-    public static final RegistryObject<TrapDoorBlock> HIGHLANDS_PINE_TRAPDOOR = registerBlock("highlands_pine_trapdoor",
-            () -> new TrapDoorBlock(Block.Properties.copy(Blocks.OAK_TRAPDOOR), AncientAetherWoodTypes.HIGHLANDS_PINE_BLOCK_SET));
-    public static final RegistryObject<ButtonBlock> HIGHLANDS_PINE_BUTTON = registerBlock("highlands_pine_button",
-            () -> new ButtonBlock(Block.Properties.copy(Blocks.OAK_BUTTON), AncientAetherWoodTypes.HIGHLANDS_PINE_BLOCK_SET, 30, true));
-    public static final RegistryObject<PressurePlateBlock> HIGHLANDS_PINE_PRESSURE_PLATE = registerBlock("highlands_pine_pressure_plate",
-            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.copy(Blocks.OAK_PRESSURE_PLATE), AncientAetherWoodTypes.HIGHLANDS_PINE_BLOCK_SET));
-    public static final RegistryObject<Block> HIGHLANDS_PINE_WALL_SIGN = BLOCKS.register("highlands_pine_wall_sign", () -> new AncientAetherWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), AncientAetherWoodTypes.HIGHLANDS_PINE));
-    public static final RegistryObject<Block> HIGHLANDS_PINE_SIGN = BLOCKS.register("highlands_pine_sign", () -> new AncientAetherSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), AncientAetherWoodTypes.HIGHLANDS_PINE));
-    public static final RegistryObject<Block> HIGHLANDS_PINE_LEAVES = registerBlock("highlands_pine_leaves",
+    public static final RegistryObject<DoorBlock> HIGHSPROOT_DOOR = registerBlock("highsproot_door",
+            () -> new DoorBlock(Block.Properties.copy(Blocks.OAK_DOOR), AncientAetherWoodTypes.HIGHSPROOT_BLOCK_SET));
+    public static final RegistryObject<TrapDoorBlock> HIGHSPROOT_TRAPDOOR = registerBlock("highsproot_trapdoor",
+            () -> new TrapDoorBlock(Block.Properties.copy(Blocks.OAK_TRAPDOOR), AncientAetherWoodTypes.HIGHSPROOT_BLOCK_SET));
+    public static final RegistryObject<ButtonBlock> HIGHSPROOT_BUTTON = registerBlock("highsproot_button",
+            () -> new ButtonBlock(Block.Properties.copy(Blocks.OAK_BUTTON), AncientAetherWoodTypes.HIGHSPROOT_BLOCK_SET, 30, true));
+    public static final RegistryObject<PressurePlateBlock> HIGHSPROOT_PRESSURE_PLATE = registerBlock("highsproot_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.copy(Blocks.OAK_PRESSURE_PLATE), AncientAetherWoodTypes.HIGHSPROOT_BLOCK_SET));
+    public static final RegistryObject<Block> HIGHSPROOT_WALL_SIGN = BLOCKS.register("highsproot_wall_sign", () -> new AncientAetherWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), AncientAetherWoodTypes.HIGHSPROOT));
+    public static final RegistryObject<Block> HIGHSPROOT_SIGN = BLOCKS.register("highsproot_sign", () -> new AncientAetherSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), AncientAetherWoodTypes.HIGHSPROOT));
+    public static final RegistryObject<Block> HIGHSPROOT_LEAVES = registerBlock("highsproot_leaves",
             () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
                     .strength(0.2f).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
-    public static final RegistryObject<Block> HIGHLANDS_PINE_SAPLING = registerBlock("highlands_pine_sapling",
-            () -> new SaplingBlock(new HighlandsPineTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> HIGHSPROOT_SAPLING = registerBlock("highsproot_sapling",
+            () -> new SaplingBlock(new HighsprootTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
     //Sakura Wood
     public static final RegistryObject<Block> SAKURA_LOG = registerBlock("sakura_log",
@@ -197,6 +146,57 @@ public class AncientAetherBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.CACTUS).sound(SoundType.WOOL)
                     .strength(0.5f, 6f)));
 
+    //Ores
+    public static final RegistryObject<Block> AETHER_QUARTZ_ORE = registerBlock("aether_quartz_ore",
+            () -> new AetherDoubleDropsOreBlock(Block.Properties.of(Material.STONE, MaterialColor.QUARTZ)
+                    .strength(3.0F).requiresCorrectToolForDrops(), UniformInt.of(2, 5)));
+
+    //Sentry Stones
+    public static final RegistryObject<Block> ENCHANTED_SENTRY_STONE = registerBlock("enchanted_sentry_stone",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
+                    .strength(0.5f, 6f).lightLevel(s -> 11).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> BLIGHTED_SENTRY_STONE = registerBlock("blighted_sentry_stone",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
+                    .strength(0.5f, 6f).lightLevel(s -> 11).requiresCorrectToolForDrops()));
+
+    //Obelisks
+    public static final RegistryObject<Block> BROKEN_ENCHANTED_OBELISK = registerBlock("broken_enchanted_obelisk",
+            () -> new BrokenEnchantedObeliskBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
+                    .lightLevel(s -> 3).noLootTable().strength(-1.0F, 3600000.0F).noOcclusion()));
+    public static final RegistryObject<Block> ENCHANTED_OBELISK = registerBlock("enchanted_obelisk",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
+                    .strength(5f).lightLevel(s -> 12).requiresCorrectToolForDrops().noOcclusion()));
+    public static final RegistryObject<Block> BROKEN_BLIGHTED_OBELISK = registerBlock("broken_blighted_obelisk",
+            () -> new BrokenBlightedObeliskBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
+                    .lightLevel(s -> 3).noLootTable().strength(-1.0F, 3600000.0F).noOcclusion()));
+    public static final RegistryObject<Block> BLIGHTED_OBELISK = registerBlock("blighted_obelisk",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
+                    .strength(5f).lightLevel(s -> 12).requiresCorrectToolForDrops().noOcclusion()));
+
+    //Plants
+    public static final RegistryObject<Block> MOONLIT_TULIP = registerBlock("moonlit_tulip",
+            () -> new FlowerBlock(() -> MobEffects.GLOWING, 4, Block.Properties.copy(Blocks.DANDELION)));
+    public static final RegistryObject<Block> EDELWEISS = registerBlock("edelweiss",
+            () -> new FlowerBlock(() -> MobEffects.LUCK, 4, Block.Properties.copy(Blocks.DANDELION)));
+    public static final RegistryObject<Block> SAKURA_BLOSSOMS = registerBlock("sakura_blossoms",
+            () -> new FlowerBlock(() -> MobEffects.HEALTH_BOOST, 4, Block.Properties.copy(Blocks.DANDELION)));
+    public static final RegistryObject<Block> SMALL_AETHER_CACTUS = registerBlock("small_aether_cactus",
+            () -> new SmallAetherCactusBlock(BlockBehaviour.Properties.copy(Blocks.DANDELION).sound(SoundType.WOOL)));
+    public static final RegistryObject<Block> LARGE_AETHER_CACTUS = registerBlock("large_aether_cactus",
+            () -> new SmallAetherCactusBlock(BlockBehaviour.Properties.copy(Blocks.DANDELION).sound(SoundType.WOOL)));
+    public static final RegistryObject<Block> SKYROOT_THORN_BUSH = registerBlock("skyroot_thorn_bush",
+            () -> new SkyrootThornBushBlock(BlockBehaviour.Properties.copy(Blocks.DEAD_BUSH)));
+    public static final RegistryObject<Block> MOONLIT_WATERLILY = registerBlock("moonlit_waterlily",
+            () -> new WaterlilyBlock(BlockBehaviour.Properties.copy(Blocks.LILY_PAD).lightLevel(s -> 10).noOcclusion()));
+
+    //Cactus Flowers
+    public static final RegistryObject<Block> CACTUS_FLOWER = registerBlock("cactus_flower",
+            () -> new CactusFlowerBlock(BlockBehaviour.Properties.of(Material.PLANT)
+                    .instabreak().noOcclusion().noCollission().sound(SoundType.SPORE_BLOSSOM)));
+    public static final RegistryObject<Block> GOLDEN_CACTUS_FLOWER = registerBlock("golden_cactus_flower",
+            () -> new CactusFlowerBlock(BlockBehaviour.Properties.of(Material.PLANT)
+                    .instabreak().noOcclusion().noCollission().sound(SoundType.SPORE_BLOSSOM)));
+
     //Lanterns
     public static final RegistryObject<Block> HOLYSTONE_LANTERN = registerBlock("holystone_lantern",
             () -> new LanternBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.LANTERN)
@@ -223,8 +223,8 @@ public class AncientAetherBlocks {
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SAKURA_BLOSSOMS, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_SKYROOT_THORN_BUSH = BLOCKS.register("potted_skyroot_thorn_bush",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SKYROOT_THORN_BUSH, Block.Properties.copy(Blocks.FLOWER_POT)));
-    public static final RegistryObject<FlowerPotBlock> POTTED_HIGHLANDS_PINE_SAPLING = BLOCKS.register("potted_highlands_pine_sapling",
-            () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, HIGHLANDS_PINE_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
+    public static final RegistryObject<FlowerPotBlock> POTTED_HIGHSPROOT_SAPLING = BLOCKS.register("potted_highsproot_sapling",
+            () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, HIGHSPROOT_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_SAKURA_SAPLING = BLOCKS.register("potted_sakura_sapling",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SAKURA_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
 
@@ -277,23 +277,23 @@ public class AncientAetherBlocks {
         pot.addPlant(AncientAetherBlocks.EDELWEISS.getId(), AncientAetherBlocks.POTTED_EDELWEISS);
         pot.addPlant(AncientAetherBlocks.SAKURA_BLOSSOMS.getId(), AncientAetherBlocks.POTTED_SAKURA_BLOSSOMS);
         pot.addPlant(AncientAetherBlocks.SKYROOT_THORN_BUSH.getId(), AncientAetherBlocks.POTTED_SKYROOT_THORN_BUSH);
-        pot.addPlant(AncientAetherBlocks.HIGHLANDS_PINE_SAPLING.getId(), AncientAetherBlocks.POTTED_HIGHLANDS_PINE_SAPLING);
+        pot.addPlant(AncientAetherBlocks.HIGHSPROOT_SAPLING.getId(), AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING);
         pot.addPlant(AncientAetherBlocks.SAKURA_SAPLING.getId(), AncientAetherBlocks.POTTED_SAKURA_SAPLING);
     }
 
     public static void registerFlammability() {
         FireBlockAccessor fireBlockAccessor = (FireBlockAccessor) Blocks.FIRE;
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHLANDS_PINE_LEAVES.get(), 30, 60);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_LEAVES.get(), 30, 60);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_LEAVES.get(), 30, 60);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHLANDS_PINE_LOG.get(), 5, 5);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_LOG.get(), 5, 5);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHLANDS_PINE_WOOD.get(), 5, 5);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_WOOD.get(), 5, 5);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHLANDS_PINE_PLANKS.get(), 5, 20);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHLANDS_PINE_FENCE_GATE.get(), 5, 20);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHLANDS_PINE_FENCE.get(), 5, 20);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHLANDS_PINE_STAIRS.get(), 5, 20);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHLANDS_PINE_SLAB.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_LOG.get(), 5, 5);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get(), 5, 5);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_WOOD.get(), 5, 5);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD.get(), 5, 5);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_FENCE_GATE.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_FENCE.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_STAIRS.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_SLAB.get(), 5, 20);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_LOG.get(), 5, 5);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.STRIPPED_SAKURA_LOG.get(), 5, 5);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_WOOD.get(), 5, 5);
@@ -326,7 +326,7 @@ public class AncientAetherBlocks {
         };
     }
     public static void registerWoodTypes() {
-        WoodType.register(AncientAetherWoodTypes.HIGHLANDS_PINE);
+        WoodType.register(AncientAetherWoodTypes.HIGHSPROOT);
         WoodType.register(AncientAetherWoodTypes.SAKURA);
     }
     private static boolean never(BlockState p_test_1_, BlockGetter p_test_2_, BlockPos p_test_3_) {

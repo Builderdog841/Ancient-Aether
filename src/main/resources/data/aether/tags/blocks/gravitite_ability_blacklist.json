@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "ancient_aether:highlands_pine_button",
-    "ancient_aether:highlands_pine_pressure_plate",
+    "ancient_aether:highsproot_button",
+    "ancient_aether:highsproot_pressure_plate",
     "ancient_aether:sakura_button",
     "ancient_aether:sakura_pressure_plate"
   ]

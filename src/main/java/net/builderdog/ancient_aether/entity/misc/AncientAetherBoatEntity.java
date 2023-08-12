@@ -73,7 +73,7 @@ public class AncientAetherBoatEntity extends Boat implements SkyrootBoatBehavior
     }
 
     public enum Type {
-        HIGHLANDS_PINE("highlands_pine", () -> AncientAetherItems.HIGHLANDS_PINE_BOAT.get(), () -> AncientAetherItems.HIGHLANDS_PINE_CHEST_BOAT.get()),
+        HIGHLANDS_PINE("highlands_pine", () -> AncientAetherItems.HIGHSPROOT_BOAT.get(), () -> AncientAetherItems.HIGHSPROOT_CHEST_BOAT.get()),
         SAKURA("sakura", () -> AncientAetherItems.SAKURA_BOAT.get(), () -> AncientAetherItems.SAKURA_CHEST_BOAT.get());
 
         private final String name;

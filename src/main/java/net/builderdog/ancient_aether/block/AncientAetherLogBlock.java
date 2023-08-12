@@ -17,11 +17,11 @@ public class AncientAetherLogBlock extends AetherLogBlock {
     @Override
     public @Nullable BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate) {
         if(context.getItemInHand().getItem() instanceof AxeItem) {
-            if(state.is(AncientAetherBlocks.HIGHLANDS_PINE_LOG.get())) {
-                return  AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            if(state.is(AncientAetherBlocks.HIGHSPROOT_LOG.get())) {
+                return  AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
-            if(state.is(AncientAetherBlocks.HIGHLANDS_PINE_WOOD.get())) {
-                return  AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            if(state.is(AncientAetherBlocks.HIGHSPROOT_WOOD.get())) {
+                return  AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
             if(state.is(AncientAetherBlocks.SAKURA_LOG.get())) {
                 return  AncientAetherBlocks.STRIPPED_SAKURA_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));

@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "ancient_aether:block/highlands_pine_log",
-    "side": "ancient_aether:block/highlands_pine_log"
-  }
-}

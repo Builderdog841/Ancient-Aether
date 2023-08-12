@@ -72,7 +72,6 @@ public class AncientAether {
         AncientAetherParticleTypes.PARTICLES.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
-        //modEventBus.addListener(this::clientSetup);
         modEventBus.addListener(this::packSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -93,12 +92,6 @@ public class AncientAether {
             SurfaceRuleManager.addSurfaceRules(AetherRuleCategory.THE_AETHER, MOD_ID, AncientAetherSurfaceData.makeRules());
         });
     }
-
-   // private void clientSetup(FMLClientSetupEvent event) {
-      //  event.enqueueWork(() -> {
-       //     AeroblenderConfig.CONFIG.getSubConfig(“generator_settings”).
-     //   });
-    //}
     public void packSetup(AddPackFindersEvent event) {
         this.setupOptionalPack(event, "ancient_aether_programmer_art", "Programmer Art", "Changes the textures to the classic art style");
         this.setupDatapack(event, "ancient_aether_water_color", "Watercolor", "Changes the Watercolor of the Aether", PackSource.BUILT_IN);
@@ -158,9 +151,9 @@ public class AncientAether {
     }
 
     private void registerComposting() {
-        this.addCompost(0.3F, AncientAetherBlocks.HIGHLANDS_PINE_LEAVES.get().asItem());
+        this.addCompost(0.3F, AncientAetherBlocks.HIGHSPROOT_LEAVES.get().asItem());
         this.addCompost(0.3F, AncientAetherBlocks.SAKURA_LEAVES.get().asItem());
-        this.addCompost(0.3F, AncientAetherBlocks.HIGHLANDS_PINE_SAPLING.get());
+        this.addCompost(0.3F, AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
         this.addCompost(0.3F, AncientAetherBlocks.SAKURA_SAPLING.get());
         this.addCompost(0.65F,AncientAetherBlocks.SMALL_AETHER_CACTUS.get());
         this.addCompost(0.65F,AncientAetherBlocks.MOONLIT_TULIP.get());

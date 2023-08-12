@@ -1,6 +1,5 @@
 package net.builderdog.ancient_aether.block;
 
-import com.aetherteam.aether.client.AetherSoundEvents;
 import com.aetherteam.aether.event.dispatch.AetherEventDispatch;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.minecraft.advancements.Advancement;

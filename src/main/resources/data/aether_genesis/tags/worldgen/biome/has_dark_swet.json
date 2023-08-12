@@ -5,8 +5,28 @@
       "required": false
     },
     {
+      "id": "ancient_aether:highland_clearing",
+      "required": false
+    },
+    {
+      "id": "ancient_aether:icestone_caverns",
+      "required": false
+    },
+    {
       "id": "ancient_aether:sakura_jungle",
       "required": false
-    }
+    },
+    {
+      "id": "ancient_aether:deep_sakura_jungle",
+      "required": false
+    },
+    {
+      "id": "ancient_aether:sparse_sakura_jungle",
+      "required": false
+    },
+    {
+      "id": "ancient_aether:overgrown_caves",
+      "required": false
+    },
   ]
 }

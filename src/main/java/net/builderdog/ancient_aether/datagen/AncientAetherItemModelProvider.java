@@ -38,12 +38,12 @@ public class AncientAetherItemModelProvider extends AetherItemModelProvider {
         simpleItem(AncientAetherItems.MUSIC_DISC_LABYRINTHS_VENGEANCE_BUILDERDOG_REMIX);
 
         //Blocks
-        itemFence(AncientAetherBlocks.HIGHLANDS_PINE_FENCE.get(), AncientAetherBlocks.HIGHLANDS_PINE_PLANKS.get(), "");
-        itemBlock(AncientAetherBlocks.HIGHLANDS_PINE_FENCE_GATE.get());
-        item(AncientAetherBlocks.HIGHLANDS_PINE_DOOR.get().asItem(), "");
-        itemBlock(AncientAetherBlocks.HIGHLANDS_PINE_TRAPDOOR.get(), "_bottom");
-        itemButton(AncientAetherBlocks.HIGHLANDS_PINE_BUTTON.get(), AncientAetherBlocks.HIGHLANDS_PINE_PLANKS.get(), "");
-        itemBlock(AncientAetherBlocks.HIGHLANDS_PINE_PRESSURE_PLATE.get());
+        itemFence(AncientAetherBlocks.HIGHSPROOT_FENCE.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), "");
+        itemBlock(AncientAetherBlocks.HIGHSPROOT_FENCE_GATE.get());
+        item(AncientAetherBlocks.HIGHSPROOT_DOOR.get().asItem(), "");
+        itemBlock(AncientAetherBlocks.HIGHSPROOT_TRAPDOOR.get(), "_bottom");
+        itemButton(AncientAetherBlocks.HIGHSPROOT_BUTTON.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), "");
+        itemBlock(AncientAetherBlocks.HIGHSPROOT_PRESSURE_PLATE.get());
 
         itemFence(AncientAetherBlocks.SAKURA_FENCE.get(), AncientAetherBlocks.SAKURA_PLANKS.get(), "");
         itemBlock(AncientAetherBlocks.SAKURA_FENCE_GATE.get());

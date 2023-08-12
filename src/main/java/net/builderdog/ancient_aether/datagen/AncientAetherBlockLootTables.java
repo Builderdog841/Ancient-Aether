@@ -28,26 +28,26 @@ public class AncientAetherBlockLootTables extends AetherBlockLootSubProvider {
         dropSelf(AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get());
         dropSelf(AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get());
         dropSelf(AncientAetherBlocks.GALE_STONE_MOSAIC.get());
-        dropSelfDouble(AncientAetherBlocks.HIGHLANDS_PINE_LOG.get());
-        dropSelf(AncientAetherBlocks.HIGHLANDS_PINE_WOOD.get());
-        dropSelf(AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_LOG.get());
-        dropSelf(AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_WOOD.get());
-        dropSelf(AncientAetherBlocks.HIGHLANDS_PINE_LOG_WALL.get());
-        dropSelf(AncientAetherBlocks.HIGHLANDS_PINE_WOOD_WALL.get());
-        dropSelf(AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_LOG_WALL.get());
-        dropSelf(AncientAetherBlocks.STRIPPED_HIGHLANDS_PINE_WOOD_WALL.get());
-        dropSelf(AncientAetherBlocks.HIGHLANDS_PINE_PLANKS.get());
-        dropSelf(AncientAetherBlocks.HIGHLANDS_PINE_SAPLING.get());
-        dropSelf(AncientAetherBlocks.HIGHLANDS_PINE_STAIRS.get());
-        dropSelf(AncientAetherBlocks.HIGHLANDS_PINE_SLAB.get());
-        dropSelf(AncientAetherBlocks.HIGHLANDS_PINE_FENCE.get());
-        dropSelf(AncientAetherBlocks.HIGHLANDS_PINE_FENCE_GATE.get());
-        dropSelf(AncientAetherBlocks.HIGHLANDS_PINE_DOOR.get());
-        dropSelf(AncientAetherBlocks.HIGHLANDS_PINE_TRAPDOOR.get());
-        dropSelf(AncientAetherBlocks.HIGHLANDS_PINE_BUTTON.get());
-        dropSelf(AncientAetherBlocks.HIGHLANDS_PINE_PRESSURE_PLATE.get());
-        dropSelf(AncientAetherBlocks.HIGHLANDS_PINE_SIGN.get());
-        dropSelf(AncientAetherBlocks.HIGHLANDS_PINE_WALL_SIGN.get());
+        dropSelfDouble(AncientAetherBlocks.HIGHSPROOT_LOG.get());
+        dropSelf(AncientAetherBlocks.HIGHSPROOT_WOOD.get());
+        dropSelf(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get());
+        dropSelf(AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD.get());
+        dropSelf(AncientAetherBlocks.HIGHSPROOT_LOG_WALL.get());
+        dropSelf(AncientAetherBlocks.HIGHSPROOT_WOOD_WALL.get());
+        dropSelf(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG_WALL.get());
+        dropSelf(AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD_WALL.get());
+        dropSelf(AncientAetherBlocks.HIGHSPROOT_PLANKS.get());
+        dropSelf(AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
+        dropSelf(AncientAetherBlocks.HIGHSPROOT_STAIRS.get());
+        dropSelf(AncientAetherBlocks.HIGHSPROOT_SLAB.get());
+        dropSelf(AncientAetherBlocks.HIGHSPROOT_FENCE.get());
+        dropSelf(AncientAetherBlocks.HIGHSPROOT_FENCE_GATE.get());
+        dropSelf(AncientAetherBlocks.HIGHSPROOT_DOOR.get());
+        dropSelf(AncientAetherBlocks.HIGHSPROOT_TRAPDOOR.get());
+        dropSelf(AncientAetherBlocks.HIGHSPROOT_BUTTON.get());
+        dropSelf(AncientAetherBlocks.HIGHSPROOT_PRESSURE_PLATE.get());
+        dropSelf(AncientAetherBlocks.HIGHSPROOT_SIGN.get());
+        dropSelf(AncientAetherBlocks.HIGHSPROOT_WALL_SIGN.get());
         dropSelfDouble(AncientAetherBlocks.SAKURA_LOG.get());
         dropSelf(AncientAetherBlocks.SAKURA_WOOD.get());
         dropSelf(AncientAetherBlocks.STRIPPED_SAKURA_LOG.get());
@@ -79,6 +79,7 @@ public class AncientAetherBlockLootTables extends AetherBlockLootSubProvider {
         dropSelf(AncientAetherBlocks.EDELWEISS.get());
         dropSelf(AncientAetherBlocks.SAKURA_BLOSSOMS.get());
         dropSelf(AncientAetherBlocks.SMALL_AETHER_CACTUS.get());
+        dropSelf(AncientAetherBlocks.LARGE_AETHER_CACTUS.get());
         dropSelf(AncientAetherBlocks.CRACKED_SLIDER.get());
         dropSelf(AncientAetherBlocks.HOLYSTONE_LANTERN.get());
         dropSelf(AncientAetherBlocks.SENTRY_LANTERN.get());
@@ -91,7 +92,7 @@ public class AncientAetherBlockLootTables extends AetherBlockLootSubProvider {
 
         dropOther(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get(), AncientAetherBlocks.SAKURA_BLOSSOMS.get());
 
-        dropPottedContents(AncientAetherBlocks.POTTED_HIGHLANDS_PINE_SAPLING.get());
+        dropPottedContents(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING.get());
         dropPottedContents(AncientAetherBlocks.POTTED_SAKURA_SAPLING.get());
         dropPottedContents(AncientAetherBlocks.POTTED_MOONLIT_TULIP.get());
         dropPottedContents(AncientAetherBlocks.POTTED_EDELWEISS.get());
@@ -102,8 +103,8 @@ public class AncientAetherBlockLootTables extends AetherBlockLootSubProvider {
 
         dropNone(AncientAetherBlocks.SKYROOT_THORN_BUSH.get());
 
-        add(AncientAetherBlocks.HIGHLANDS_PINE_LEAVES.get(),
-                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.HIGHLANDS_PINE_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
+        add(AncientAetherBlocks.HIGHSPROOT_LEAVES.get(),
+                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
         add(AncientAetherBlocks.SAKURA_LEAVES.get(),
                 (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.SAKURA_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
 
