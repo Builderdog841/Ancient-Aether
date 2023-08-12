@@ -1,5 +1,5 @@
 {
-  "aquifers_enabled": true,
+  "aquifers_enabled": false,
   "default_block": {
     "Name": "aether:holystone",
     "Properties": {
@@ -15,7 +15,7 @@
   "disable_mob_generation": false,
   "legacy_random_source": false,
   "noise": {
-    "height": 144,
+    "height": 256,
     "min_y": 32,
     "size_horizontal": 2,
     "size_vertical": 1
@@ -47,9 +47,9 @@
                 "argument1": {
                   "type": "minecraft:y_clamped_gradient",
                   "from_value": 0.0,
-                  "from_y": 24,
+                  "from_y": 16,
                   "to_value": 1.0,
-                  "to_y": 64
+                  "to_y": 88
                 },
                 "argument2": {
                   "type": "minecraft:add",
@@ -62,9 +62,9 @@
                       "argument1": {
                         "type": "minecraft:y_clamped_gradient",
                         "from_value": 1.0,
-                        "from_y": 72,
+                        "from_y": 96,
                         "to_value": 0.0,
-                        "to_y": 144
+                        "to_y": 256
                       },
                       "argument2": {
                         "type": "minecraft:add",
@@ -87,7 +87,7 @@
     "fluid_level_floodedness": {
       "type": "minecraft:noise",
       "noise": "minecraft:aquifer_fluid_level_floodedness",
-      "xz_scale": 0.3,
+      "xz_scale": 1,
       //Higher values make aqufiers more common and smaller
       "y_scale": 0.3
       //Higher values make aqufiers have larger borders
