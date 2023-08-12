@@ -47,8 +47,8 @@ public class AncientAetherConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHSPROOT_TREE = registerKey("highsproot_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_HIGHSPROOT_PINE_TREE = registerKey("small_highsproot_pine_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHSPROOT_PINE_TREE = registerKey("highsproot_pine_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_SKYROOT_PINE_TREE = registerKey("small_highsproot_pine_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_PINE_TREE = registerKey("highsproot_pine_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_SKYROOT_PINE_TREE = registerKey("small_skyroot_pine_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_PINE_TREE = registerKey("skyroot_pine_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_TREE = registerKey("sakura_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_SAKURA_TREE = registerKey("tall_sakura_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MOONLIT_TULIP_PATCH = registerKey("moonlit_tulip_patch");

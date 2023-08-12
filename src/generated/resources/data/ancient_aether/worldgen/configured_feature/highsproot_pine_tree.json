@@ -17,7 +17,7 @@
     "foliage_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "aether:skyroot_leaves",
+        "Name": "ancient_aether:highsproot_leaves",
         "Properties": {
           "distance": "7",
           "double_drops": "true",
@@ -43,7 +43,7 @@
     "trunk_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "aether:skyroot_log",
+        "Name": "ancient_aether:highsproot_log",
         "Properties": {
           "axis": "y",
           "double_drops": "true"
