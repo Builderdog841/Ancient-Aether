@@ -142,7 +142,7 @@
                         "argument": {
                           "type": "minecraft:mul",
                           "argument1": "minecraft:overworld/depth",
-                            "argument2": {
+                          "argument2": {
                             "type": "minecraft:cache_2d",
                             "argument": "minecraft:overworld/factor"
                           }
