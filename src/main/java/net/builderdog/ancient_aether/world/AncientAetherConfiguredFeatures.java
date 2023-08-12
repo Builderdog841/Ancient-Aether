@@ -3,6 +3,7 @@ package net.builderdog.ancient_aether.world;
 import com.aetherteam.aether.AetherTags;
 import com.aetherteam.aether.block.AetherBlockStateProperties;
 import com.aetherteam.aether.block.AetherBlocks;
+import com.aetherteam.aether.data.resources.AetherFeatureStates;
 import com.aetherteam.aether.data.resources.builders.AetherConfiguredFeatureBuilders;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
@@ -44,7 +45,10 @@ import java.util.List;
 public class AncientAetherConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHSPROOT_TREE = registerKey("highsproot_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_HIGHSPROOT_PINE_TREE = registerKey("small_highsproot_pine_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHSPROOT_PINE_TREE = registerKey("highsproot_pine_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_SKYROOT_PINE_TREE = registerKey("small_highsproot_pine_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_PINE_TREE = registerKey("highsproot_pine_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_TREE = registerKey("sakura_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_SAKURA_TREE = registerKey("tall_sakura_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MOONLIT_TULIP_PATCH = registerKey("moonlit_tulip_patch");
@@ -74,6 +78,24 @@ public class AncientAetherConfiguredFeatures {
         List<OreConfiguration.TargetBlockState> quickstoneOre = List.of(OreConfiguration.target(quicksoil,
                 AncientAetherBlocks.QUICKSTONE.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)));
 
+        register(context, HIGHSPROOT_TREE, Feature.TREE,
+                new TreeConfiguration.TreeConfigurationBuilder(
+                        BlockStateProvider.simple(AncientAetherBlocks.HIGHSPROOT_LOG.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)),
+                        new StraightTrunkPlacer(4, 2, 0),
+                        BlockStateProvider.simple(AncientAetherBlocks.HIGHSPROOT_LEAVES.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)),
+                        new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
+                        new TwoLayersFeatureSize(1, 0, 1)
+                ).ignoreVines().build());
+
+        register(context, SMALL_HIGHSPROOT_PINE_TREE, Feature.TREE,
+                new TreeConfiguration.TreeConfigurationBuilder(
+                        BlockStateProvider.simple(AncientAetherBlocks.HIGHSPROOT_LOG.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)),
+                        new StraightTrunkPlacer(5, 2, 0),
+                        BlockStateProvider.simple(AncientAetherBlocks.HIGHSPROOT_LEAVES.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)),
+                        new AncientAetherPineFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
+                        new TwoLayersFeatureSize(2, 0, 2)
+                ).ignoreVines().build());
+
         register(context, HIGHSPROOT_PINE_TREE, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
                         BlockStateProvider.simple(AncientAetherBlocks.HIGHSPROOT_LOG.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)),
@@ -83,13 +105,22 @@ public class AncientAetherConfiguredFeatures {
                         new TwoLayersFeatureSize(2, 0, 2)
                 ).ignoreVines().build());
 
-        register(context, HIGHSPROOT_TREE, Feature.TREE,
+        register(context, SMALL_SKYROOT_PINE_TREE, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
-                        BlockStateProvider.simple(AncientAetherBlocks.HIGHSPROOT_LOG.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)),
-                        new StraightTrunkPlacer(4, 2, 0),
-                        BlockStateProvider.simple(AncientAetherBlocks.HIGHSPROOT_LEAVES.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)),
-                        new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
-                        new TwoLayersFeatureSize(1, 0, 1)
+                        BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LOG),
+                        new StraightTrunkPlacer(5, 2, 0),
+                        BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LEAVES),
+                        new AncientAetherPineFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
+                        new TwoLayersFeatureSize(2, 0, 2)
+                ).ignoreVines().build());
+
+        register(context, SKYROOT_PINE_TREE, Feature.TREE,
+                new TreeConfiguration.TreeConfigurationBuilder(
+                        BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LOG),
+                        new StraightTrunkPlacer(5, 10, 0),
+                        BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LEAVES),
+                        new AncientAetherPineFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
+                        new TwoLayersFeatureSize(2, 0, 2)
                 ).ignoreVines().build());
 
         register(context, SAKURA_TREE, Feature.TREE,
