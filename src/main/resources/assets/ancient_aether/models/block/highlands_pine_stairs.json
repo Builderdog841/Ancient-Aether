@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "ancient_aether:block/highlands_pine_planks",
-    "side": "ancient_aether:block/highlands_pine_planks",
-    "top": "ancient_aether:block/highlands_pine_planks"
-  }
-}

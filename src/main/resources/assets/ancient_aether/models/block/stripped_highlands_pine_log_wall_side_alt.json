@@ -1,8 +1,0 @@
-{
-  "parent": "ancient_aether:block/wooden_side_alt",
-  "textures": {
-    "particle": "ancient_aether:block/stripped_highlands_pine_log",
-    "side": "ancient_aether:block/stripped_highlands_pine_log",
-    "top": "ancient_aether:block/stripped_highlands_pine_log_top"
-  }
-}

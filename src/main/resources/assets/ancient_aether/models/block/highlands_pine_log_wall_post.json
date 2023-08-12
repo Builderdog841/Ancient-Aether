@@ -1,8 +1,0 @@
-{
-  "parent": "ancient_aether:block/wooden_post_big",
-  "textures": {
-    "particle": "ancient_aether:block/highlands_pine_log",
-    "side": "ancient_aether:block/highlands_pine_log",
-    "top": "ancient_aether:block/highlands_pine_log_top"
-  }
-}
