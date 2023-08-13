@@ -52,7 +52,7 @@ public class AncientAetherRegion extends Region {
                 AetherBiomes.SKYROOT_MEADOW);
 
         this.addBiome(mapper, new Climate.ParameterPoint(temps3, Climate.Parameter.span(-1.0F, 0.0F), fullRange, fullRange, fullRange, fullRange, 0),
-                AncientAetherBiomes.SAKURA_JUNGLE);
+                AetherBiomes.SKYROOT_GROVE);
         this.addBiome(mapper, new Climate.ParameterPoint(temps3, Climate.Parameter.span(0.8F, 1.0F), fullRange, fullRange, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_GROVE);
         this.addBiome(mapper, new Climate.ParameterPoint(temps4, Climate.Parameter.span(-1.0F, -0.1F), fullRange, fullRange, fullRange, fullRange, 0),
