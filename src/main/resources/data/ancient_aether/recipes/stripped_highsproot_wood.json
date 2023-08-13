@@ -1,18 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
-  "group": "wooden_pressure_plate",
+  "group": "stripped_wood",
   "key": {
     "#": {
-      "item": "ancient_aether:highlands_pine_planks"
+      "item": "ancient_aether:stripped_highsproot_log"
     }
   },
   "pattern": [
+    "##",
     "##"
   ],
   "result": {
-    "count": 1,
-    "item": "ancient_aether:highlands_pine_pressure_plate"
+    "count": 3,
+    "item": "ancient_aether:stripped_highsproot_wood"
   },
   "show_notification": true
 }

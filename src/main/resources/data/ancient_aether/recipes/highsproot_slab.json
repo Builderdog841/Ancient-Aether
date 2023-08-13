@@ -1,19 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
-  "group": "wood",
+  "group": "wooden_slab",
   "key": {
     "#": {
-      "item": "ancient_aether:highlands_pine_log"
+      "item": "ancient_aether:highsproot_planks"
     }
   },
   "pattern": [
-    "##",
-    "##"
+    "###"
   ],
   "result": {
-    "count": 3,
-    "item": "ancient_aether:highlands_pine_wood"
+    "count": 6,
+    "item": "ancient_aether:highsproot_slab"
   },
   "show_notification": true
 }

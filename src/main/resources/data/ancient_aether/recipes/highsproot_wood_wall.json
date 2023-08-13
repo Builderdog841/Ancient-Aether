@@ -4,7 +4,7 @@
   "group": "wooden_trapdoors",
   "key": {
     "#": {
-      "item": "ancient_aether:highlands_pine_wood"
+      "item": "ancient_aether:highsproot_wood"
     }
   },
   "pattern": [
@@ -13,7 +13,7 @@
   ],
   "result": {
     "count": 6,
-    "item": "ancient_aether:highlands_pine_wood_wall"
+    "item": "ancient_aether:highsproot_wood_wall"
   },
   "show_notification": true
 }
