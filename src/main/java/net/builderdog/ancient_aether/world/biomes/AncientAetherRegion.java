@@ -32,7 +32,7 @@ public class AncientAetherRegion extends Region {
         Climate.Parameter temps6 = Climate.Parameter.span(0.94F, 1.0F);
 
         this.addBiome(mapper, new Climate.ParameterPoint(temps2, Climate.Parameter.span(0.0F, 1.0F), fullRange, fullRange, fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_FOREST);
+                AncientAetherBiomes.SKYROOT_PINE_FOREST);
         this.addBiome(mapper, new Climate.ParameterPoint(temps3, Climate.Parameter.span(0.0F, 0.8F), fullRange, fullRange, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_FOREST);
         this.addBiome(mapper, new Climate.ParameterPoint(temps4, Climate.Parameter.span(-0.1F, 1.0F), fullRange, fullRange, fullRange, fullRange, 0),
