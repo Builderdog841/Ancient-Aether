@@ -1,13 +1,6 @@
 {
-  "feature": "aether:crystal_island",
+  "feature": "ancient_aether:bonus_green_aercloud",
   "placement": [
-    {
-      "type": "minecraft:rarity_filter",
-      "chance": 50
-    },
-    {
-      "type": "minecraft:in_square"
-    },
     {
       "type": "minecraft:height_range",
       "height": {
@@ -16,9 +9,16 @@
           "absolute": 128
         },
         "min_inclusive": {
-          "absolute": 64
+          "absolute": 32
         }
       }
+    },
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 7
+    },
+    {
+      "type": "minecraft:in_square"
     },
     {
       "type": "minecraft:biome"
