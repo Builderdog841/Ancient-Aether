@@ -90,6 +90,7 @@
   "item.ancient_aether.velox_whirlwind_spawn_egg": "Velox Whirlwind Spawn Egg",
   "item.ancient_aether.velox_zephyr_spawn_egg": "Velox Zephyr Spawn Egg",
   "item.ancient_aether.leaping_sentry_spawn_egg": "Leaping Sentry Spawn Egg",
+  "item.ancient_aether.sakura_moa_egg": "Sakura Moa Egg",
   "item.ancient_aether.highsproot_boat": "Highsproot Boat",
   "item.ancient_aether.highsproot_chest_boat": "Highsproot Chest Boat",
   "item.ancient_aether.sakura_boat": "Sakura Boat",
@@ -235,5 +236,6 @@
   "lore.item.ancient_aether.sakura_boat": "While the Aether does not have many large bodies of water, a boat can occasionally be a useful tool for crossing large distances over ice!",
   "lore.item.ancient_aether.highsproot_chest_boat": "A Highsproot Boat with a handy chest in the back. Helpful for transporting more items over long stretches of water, which are famously difficult to find in the Aether.",
   "lore.item.ancient_aether.sakura_chest_boat": "A Sakura Boat with a handy chest in the back. Helpful for transporting more items over long stretches of water, which are famously difficult to find in the Aether.",
-  "lore.item.ancient_aether.music_disc_labyrinths_vengeance_builderdog_remix": "A music disc that play Labyrinth's Vengeance by Emile van Krieken remixed by Builderdog."
+  "lore.item.ancient_aether.music_disc_labyrinths_vengeance_builderdog_remix": "A music disc that play Labyrinth's Vengeance by Emile van Krieken remixed by Builderdog.",
+  "lore.item.ancient_aether.sakura_moa_egg": "An egg laid by a Sakura Moa which live in Sakura Jungles. Hatching this provides a Sakura Moa with 10 mid-air jumps. This Moa is an excellent choice for vertical travel but is slower than other Moas."
 }

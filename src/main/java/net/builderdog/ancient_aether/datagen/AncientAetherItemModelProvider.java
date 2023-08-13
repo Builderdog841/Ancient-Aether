@@ -27,6 +27,11 @@ public class AncientAetherItemModelProvider extends AetherItemModelProvider {
         simpleItem(AncientAetherItems.COOKED_BUFFALO_RIBS);
         simpleItem(AncientAetherItems.BUFFALO_RIB);
 
+        item(AncientAetherItems.HIGHSPROOT_BOAT.get(), "");
+        item(AncientAetherItems.HIGHSPROOT_CHEST_BOAT.get(), "");
+        item(AncientAetherItems.SAKURA_BOAT.get(), "");
+        item(AncientAetherItems.SAKURA_CHEST_BOAT.get(), "");
+
         //Spawn Eggs
         eggItem(AncientAetherItems.HIGHLANDS_BUFFALO_SPAWN_EGG.get());
         eggItem(AncientAetherItems.ROOTLING_SPAWN_EGG.get());
@@ -34,10 +39,14 @@ public class AncientAetherItemModelProvider extends AetherItemModelProvider {
         eggItem(AncientAetherItems.VELOX_WHIRLWIND_SPAWN_EGG.get());
         eggItem(AncientAetherItems.LEAPING_SENTRY_SPAWN_EGG.get());
 
+        moaEggItem(AncientAetherItems.SAKURA_MOA_EGG.get(), "");
+
         //Music Discs
         simpleItem(AncientAetherItems.MUSIC_DISC_LABYRINTHS_VENGEANCE_BUILDERDOG_REMIX);
 
         //Blocks
+        //itemBlock(AncientAetherBlocks.HIGHSPROOT_STAIRS.get());
+        //itemBlock(AncientAetherBlocks.HIGHSPROOT_SLAB.get());
         itemFence(AncientAetherBlocks.HIGHSPROOT_FENCE.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), "");
         itemBlock(AncientAetherBlocks.HIGHSPROOT_FENCE_GATE.get());
         item(AncientAetherBlocks.HIGHSPROOT_DOOR.get().asItem(), "");
@@ -45,12 +54,21 @@ public class AncientAetherItemModelProvider extends AetherItemModelProvider {
         itemButton(AncientAetherBlocks.HIGHSPROOT_BUTTON.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), "");
         itemBlock(AncientAetherBlocks.HIGHSPROOT_PRESSURE_PLATE.get());
 
+        itemBlock(AncientAetherBlocks.SAKURA_STAIRS.get());
+        itemBlock(AncientAetherBlocks.SAKURA_SLAB.get());
         itemFence(AncientAetherBlocks.SAKURA_FENCE.get(), AncientAetherBlocks.SAKURA_PLANKS.get(), "");
         itemBlock(AncientAetherBlocks.SAKURA_FENCE_GATE.get());
         item(AncientAetherBlocks.SAKURA_DOOR.get().asItem(), "");
         itemBlock(AncientAetherBlocks.SAKURA_TRAPDOOR.get(), "_bottom");
         itemButton(AncientAetherBlocks.SAKURA_BUTTON.get(), AncientAetherBlocks.SAKURA_PLANKS.get(), "");
         itemBlock(AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get());
+
+        itemBlockFlat(AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), "");
+        itemBlockFlat(AncientAetherBlocks.SAKURA_SAPLING.get(), "");
+        itemBlockFlat(AncientAetherBlocks.SAKURA_BLOSSOMS.get(), "");
+        itemBlockFlat(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get(), "");
+        itemBlockFlat(AncientAetherBlocks.EDELWEISS.get(), "");
+        itemBlockFlat(AncientAetherBlocks.MOONLIT_TULIP.get(), "");
     }
 
     public String itemName(Item item) {

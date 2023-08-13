@@ -1,7 +1,9 @@
 package net.builderdog.ancient_aether.item;
 
+import com.aetherteam.aether.api.AetherMoaTypes;
 import com.aetherteam.aether.item.miscellaneous.AetherRecordItem;
 import com.aetherteam.aether.item.miscellaneous.DungeonKeyItem;
+import com.aetherteam.aether.item.miscellaneous.MoaEggItem;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
@@ -69,6 +71,8 @@ public class AncientAetherItems {
             () -> new ForgeSpawnEggItem(AncientAetherEntities.VELOX_ZEPHYR, 0xFFF9D1, 0xBCB484, new Item.Properties()));
     public static final RegistryObject<SpawnEggItem> LEAPING_SENTRY_SPAWN_EGG = ITEMS.register("leaping_sentry_spawn_egg",
             () -> new ForgeSpawnEggItem(AncientAetherEntities.LEAPING_SENTRY, 0x808080, 0xF5D1F2, new Item.Properties()));
+    public static final RegistryObject<Item> SAKURA_MOA_EGG = ITEMS.register("sakura_moa_egg",
+            () -> new MoaEggItem(AetherMoaTypes.BLUE, 0xE69DA4, new Item.Properties()));
 
     //Music Discs
 

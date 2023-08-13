@@ -77,6 +77,8 @@ public class AncientAetherBlockStateProvider extends AetherBlockStateProvider {
         buttonBlock(AncientAetherBlocks.SAKURA_BUTTON.get(), texture(name(AncientAetherBlocks.SAKURA_PLANKS.get()), ""));
         pressurePlateBlock(AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get(), texture(name(AncientAetherBlocks.SAKURA_PLANKS.get()), ""));
 
+        wallBlock(AncientAetherBlocks.QUICKSOIL_BRICK_WALL.get(), AncientAetherBlocks.QUICKSOIL_BRICKS.get(), "");
+
         crossBlock(AncientAetherBlocks.HIGHSPROOT_SAPLING);
         crossBlock(AncientAetherBlocks.SAKURA_SAPLING);
         crossBlock(AncientAetherBlocks.MOONLIT_TULIP);
@@ -84,6 +86,12 @@ public class AncientAetherBlockStateProvider extends AetherBlockStateProvider {
         crossBlock(AncientAetherBlocks.SKYROOT_THORN_BUSH);
         crossBlock(AncientAetherBlocks.SAKURA_BLOSSOMS);
         crossBlock(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS);
+
+        pottedPlant(AncientAetherBlocks.POTTED_SAKURA_SAPLING.get(), AncientAetherBlocks.SAKURA_SAPLING.get(), "");
+        pottedPlant(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING.get(), AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), "");
+        pottedPlant(AncientAetherBlocks.POTTED_EDELWEISS.get(), AncientAetherBlocks.EDELWEISS.get(), "");
+        pottedPlant(AncientAetherBlocks.POTTED_SAKURA_BLOSSOMS.get(), AncientAetherBlocks.SAKURA_BLOSSOMS.get(), "");
+        pottedPlant(AncientAetherBlocks.POTTED_MOONLIT_TULIP.get(), AncientAetherBlocks.MOONLIT_TULIP.get(), "");
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
