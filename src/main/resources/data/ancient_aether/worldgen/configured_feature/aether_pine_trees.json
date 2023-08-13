@@ -58,26 +58,6 @@
             }
           ]
         }
-      },
-      {
-        "chance": 0.01,
-        "feature": {
-          "feature": "aether:golden_oak_tree",
-          "placement": [
-            {
-              "type": "minecraft:block_predicate_filter",
-              "predicate": {
-                "type": "minecraft:would_survive",
-                "state": {
-                  "Name": "aether:golden_oak_sapling",
-                  "Properties": {
-                    "stage": "0"
-                  }
-                }
-              }
-            }
-          ]
-        }
       }
     ]
   }
