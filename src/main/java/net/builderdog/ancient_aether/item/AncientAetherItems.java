@@ -70,9 +70,9 @@ public class AncientAetherItems {
     public static final RegistryObject<SpawnEggItem> VELOX_ZEPHYR_SPAWN_EGG = ITEMS.register("velox_zephyr_spawn_egg",
             () -> new ForgeSpawnEggItem(AncientAetherEntities.VELOX_ZEPHYR, 0xFFF9D1, 0xBCB484, new Item.Properties()));
     public static final RegistryObject<SpawnEggItem> LEAPING_SENTRY_SPAWN_EGG = ITEMS.register("leaping_sentry_spawn_egg",
-            () -> new ForgeSpawnEggItem(AncientAetherEntities.LEAPING_SENTRY, 0x808080, 0xF5D1F2, new Item.Properties()));
+            () -> new ForgeSpawnEggItem(AncientAetherEntities.LEAPING_SENTRY, 0x808080, 0xE072D7, new Item.Properties()));
     public static final RegistryObject<Item> SAKURA_MOA_EGG = ITEMS.register("sakura_moa_egg",
-            () -> new MoaEggItem(AetherMoaTypes.BLUE, 0xE69DA4, new Item.Properties()));
+            () -> new MoaEggItem(AetherMoaTypes.BLUE, 0xDDA6D4, new Item.Properties()));
 
     //Music Discs
 
