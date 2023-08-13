@@ -1,6 +1,5 @@
 package net.builderdog.ancient_aether;
 
-import com.aetherteam.aether.AetherConfig;
 import com.mojang.logging.LogUtils;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
@@ -97,9 +96,6 @@ public class AncientAether {
         this.setupDatapack(event, "ancient_aether_water_color", "Watercolor", "Changes the Watercolor of the Aether", PackSource.BUILT_IN);
         this.setupDatapack(event, "ancient_aether_new_worldgen", "New World Generation", "Adds larger islands, mountains and a lot more", PackSource.BUILT_IN);
         this.setupDatapack(event, "ancient_aether_default_biome_improvements", "Default Biome Improvements", "Adds more flowers and tree variation to the default Aether Biomes", PackSource.BUILT_IN);
-        if (aetherGenesisCompat()) {
-            this.setupMandatoryDataPack(event, "aether_genesis_compatibility", "Aether Genesis Compatibility", "Needed for Compatibility with Aether Genesis");
-        }
     }
 
     private void setupOptionalPack(AddPackFindersEvent event, String path, String displayName, String desc) {
@@ -167,22 +163,9 @@ public class AncientAether {
         this.addCompost(1.0F,AncientAetherBlocks.GOLDEN_CACTUS_FLOWER.get());
     }
 
-    public static boolean deepAetherCompat() {
-        return ModList.get().isLoaded("deep_aether");
-    }
-
-    public static boolean lostAetherCompat() {
-        return ModList.get().isLoaded("lost_aether_content");
-    }
-
-    public static boolean aetherGenesisCompat() {
-        return ModList.get().isLoaded("aether_genesis");
-    }
-
     private void addCompost(float chance, ItemLike item) {
         ComposterBlock.COMPOSTABLES.put(item.asItem(), chance);
     }
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent

@@ -8,20 +8,21 @@ import net.minecraft.world.level.biome.Biome;
 
 public class AncientAetherBiomes {
 
-    //HIGHLAND TAIGA
+    //Highland
     public static final ResourceKey<Biome> HIGHLAND_TAIGA = createKey("highland_taiga");
     public static final ResourceKey<Biome> FESTIVE_HIGHLAND_TAIGA = createKey("festive_highland_taiga");
-    public static final ResourceKey<Biome> HIGHLAND_CLEARING = createKey("highland_clearing");
+    public static final ResourceKey<Biome> HIGHLAND = createKey("highland");
+    public static final ResourceKey<Biome> SKYROOT_PINE_FOREST = createKey("skyroot_pine_forest");
 
-    //CAVE BIOMES
+    //Cave Biomes
     public static final ResourceKey<Biome> AEROGEL_CAVES = createKey("aerogel_caves");
-
-    //SAKURA JUNGLE
-    public static final ResourceKey<Biome> SAKURA_JUNGLE = createKey("sakura_jungle");
-    public static final ResourceKey<Biome> SPARSE_SAKURA_JUNGLE = createKey("sparse_sakura_jungle");
     public static final ResourceKey<Biome> OVERGROWN_CAVERNS = createKey("overgrown_caverns");
 
-    //WYNDCAPS
+    //Sakura Jungle
+    public static final ResourceKey<Biome> SAKURA_JUNGLE = createKey("sakura_jungle");
+    public static final ResourceKey<Biome> SPARSE_SAKURA_JUNGLE = createKey("sparse_sakura_jungle");
+
+    //On Life Support
     public static final ResourceKey<Biome> QUICKSOIL_DESERT = createKey("quicksoil_desert");
 
     private static ResourceKey<Biome> createKey(String name) {

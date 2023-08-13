@@ -182,7 +182,7 @@
             "if_true": {
               "type": "minecraft:biome",
               "biome_is": [
-                "ancient_aether:icestone_caverns"
+                "#ancient_aether:has_large_icestone_veins"
               ]
             },
             "then_run": {

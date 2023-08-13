@@ -47,7 +47,6 @@ public class AncientAetherConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHSPROOT_TREE = registerKey("highsproot_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_HIGHSPROOT_PINE_TREE = registerKey("small_highsproot_pine_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHSPROOT_PINE_TREE = registerKey("highsproot_pine_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_SKYROOT_PINE_TREE = registerKey("small_skyroot_pine_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_PINE_TREE = registerKey("skyroot_pine_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_TREE = registerKey("sakura_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_SAKURA_TREE = registerKey("tall_sakura_tree");
@@ -105,19 +104,10 @@ public class AncientAetherConfiguredFeatures {
                         new TwoLayersFeatureSize(2, 0, 2)
                 ).ignoreVines().build());
 
-        register(context, SMALL_SKYROOT_PINE_TREE, Feature.TREE,
-                new TreeConfiguration.TreeConfigurationBuilder(
-                        BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LOG),
-                        new StraightTrunkPlacer(5, 2, 0),
-                        BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LEAVES),
-                        new AncientAetherPineFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
-                        new TwoLayersFeatureSize(2, 0, 2)
-                ).ignoreVines().build());
-
         register(context, SKYROOT_PINE_TREE, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
                         BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LOG),
-                        new StraightTrunkPlacer(5, 10, 0),
+                        new StraightTrunkPlacer(5, 5, 0),
                         BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LEAVES),
                         new AncientAetherPineFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
                         new TwoLayersFeatureSize(2, 0, 2)

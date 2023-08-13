@@ -42,7 +42,7 @@
       {
         "chance": 0.3,
         "feature": {
-          "feature": "ancient_aether:small_skyroot_pine_tree",
+          "feature": "ancient_aether:skyroot_pine_tree",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",
