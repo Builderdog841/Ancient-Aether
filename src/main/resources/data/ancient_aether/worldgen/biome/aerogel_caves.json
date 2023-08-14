@@ -29,15 +29,12 @@
   "aether:zanite_ore",
   "aether:gravitite_ore",
   "aether:lower_gravitite_ore",
-  "ancient_aether:aerogel_blobs",
+  "ancient_aether:aerogel_blobs"
 ],
 [],
 [],
 [
-  "aether:grass_patch",
-  "ancient_aether:small_aether_cactus_patch",
-  "ancient_aether:skyroot_thorn_bush_patch",
-  "ancient_aether:aether_cactus_patch"
+  "aether:grass_patch"
 ],
 [
   "aether:crystal_island",
@@ -88,7 +85,7 @@
     ],
     "aether_sky_monster": [
       {
-        "type": "ancient_aether:velox_zephyr",
+        "type": "aether:zephyr",
         "maxCount": 1,
         "minCount": 1,
         "weight": 20
@@ -96,7 +93,7 @@
     ],
     "aether_surface_monster": [
       {
-        "type": "ancient_aether:velox_whirlwind",
+        "type": "aether:whirlwind",
         "maxCount": 1,
         "minCount": 1,
         "weight": 3
