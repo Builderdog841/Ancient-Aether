@@ -18,7 +18,7 @@ public class AncientAetherCreativeModeTabs {
     public static void registerCreativeModeTabs(CreativeModeTabEvent.Register event) {
         ANCIENT_AETHER_TAB = event.registerCreativeModeTab(new ResourceLocation(AncientAether.MOD_ID, "aether_crystallium_tab"),
                 builder -> builder.icon(() -> new ItemStack(AncientAetherItems.AECHOR_ICE_CREAM_BUCKET.get()))
-                        .title(Component.translatable("creatvemodetab.ancient_aether_tab"))
+                        .title(Component.translatable("creativemodetab.ancient_aether_tab"))
                         .displayItems((features, output) -> {
                             output.accept(AncientAetherBlocks.HIGHSPROOT_LOG.get());
                             output.accept(AncientAetherBlocks.HIGHSPROOT_LOG_WALL.get());

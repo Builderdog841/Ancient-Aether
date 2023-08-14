@@ -103,7 +103,7 @@
   "item.ancient_aether.music_disc_labyrinths_vengeance_builderdog_remix": "Ancient Music Disc",
   "item.ancient_aether.music_disc_labyrinths_vengeance_builderdog_remix.desc": "Emilie van Krieken - Labyrinth's Vengeance (Builderdog Remix)",
 
-  "creatvemodetab.ancient_aether_tab": "Ancient Aether",
+  "creativemodetab.ancient_aether_tab": "Ancient Aether",
 
   "entity.ancient_aether.highlands_buffalo": "Highlands Buffalo",
   "entity.ancient_aether.leaping_sentry": "Leaping Sentry",
@@ -116,13 +116,12 @@
 
   "biome.ancient_aether.highland_taiga": "Highland Taiga",
   "biome.ancient_aether.festive_highland_taiga": "Festive Highland Taiga",
-  "biome.ancient_aether.highland_clearing": "Highland Clearing",
-  "biome.ancient_aether.icestone_caverns": "Icestone Caverns",
+  "biome.ancient_aether.highland": "Highland",
+  "biome.ancient_aether.wyndcaps": "Wyndcaps",
   "biome.ancient_aether.sakura_jungle": "Sakura Jungle",
-  "biome.ancient_aether.sparse_sakura_jungle": "Sparse Sakura Jungle",
-  "biome.ancient_aether.deep_sakura_jungle": "Deep Sakura Jungle",
+  "biome.ancient_aether.skyroot_jungle": "Skyroot Jungle",
+  "biome.ancient_aether.skyroot_pine_forest": "Skyroot Pine Forest",
   "biome.ancient_aether.overgrown_caverns": "Overgrown Caverns",
-  "biome.ancient_aether.quicksoil_desert": "Quicksoil Desert",
   "biome.ancient_aether.aerogel_caves": "Aerogel Caves",
 
   "subtitles.ancient_aether.block.obelisk.obelisk_activation": "Obelisk activated",
