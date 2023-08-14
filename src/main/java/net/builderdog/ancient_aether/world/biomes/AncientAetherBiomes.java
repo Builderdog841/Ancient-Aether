@@ -9,9 +9,10 @@ import net.minecraft.world.level.biome.Biome;
 public class AncientAetherBiomes {
 
     //Highland
-    public static final ResourceKey<Biome> HIGHLAND_TAIGA = createKey("highland_taiga");
-    public static final ResourceKey<Biome> FESTIVE_HIGHLAND_TAIGA = createKey("festive_highland_taiga");
-    public static final ResourceKey<Biome> HIGHLAND = createKey("highland");
+    public static final ResourceKey<Biome> WYNDCAP_TAIGA = createKey("wyndcap_taiga");
+    public static final ResourceKey<Biome> FESTIVE_WYNDCAP_TAIGA = createKey("festive_wyndcap_taiga");
+    public static final ResourceKey<Biome> WYNDCAP_HIGHLAND = createKey("wyndcap_highland");
+    public static final ResourceKey<Biome> WYNDCAP_PEAKS = createKey("wyndcap_peaks");
     public static final ResourceKey<Biome> SKYROOT_PINE_FOREST = createKey("skyroot_pine_forest");
 
     //Cave Biomes
@@ -21,9 +22,6 @@ public class AncientAetherBiomes {
     //Sakura Jungle
     public static final ResourceKey<Biome> SAKURA_JUNGLE = createKey("sakura_jungle");
     public static final ResourceKey<Biome> SKYROOT_JUNGLE = createKey("skyroot_jungle");
-
-    //On Life Support
-    public static final ResourceKey<Biome> QUICKSOIL_DESERT = createKey("quicksoil_desert");
 
     private static ResourceKey<Biome> createKey(String name) {
         return ResourceKey.create(Registries.BIOME, new ResourceLocation(AncientAether.MOD_ID, name));
