@@ -20,9 +20,9 @@
     },
     "features": [
       {
-        "chance": 0.2,
+        "chance": 0.3,
         "feature": {
-          "feature": "aether:trees_skyroot_and_golden_oak",
+          "feature": "ancient_aether:aether_jungle_trees",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",
@@ -40,7 +40,7 @@
         }
       },
       {
-        "chance": 0.4,
+        "chance": 0.3,
         "feature": {
           "feature": "ancient_aether:tall_sakura_tree",
           "placement": [

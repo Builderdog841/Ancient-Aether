@@ -19,6 +19,7 @@
       "state": {
         "Name": "aether:skyroot_leaves",
         "Properties": {
+          "double_drops": "true",
           "distance": "7",
           "persistent": "false",
           "waterlogged": "false"
@@ -44,6 +45,7 @@
       "state": {
         "Name": "aether:skyroot_log",
         "Properties": {
+          "double_drops": "true",
           "axis": "y"
         }
       }

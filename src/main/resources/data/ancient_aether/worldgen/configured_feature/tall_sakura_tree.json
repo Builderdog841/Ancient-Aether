@@ -24,13 +24,14 @@
         "Name": "ancient_aether:sakura_leaves",
         "Properties": {
           "distance": "7",
+          "double_drops": "true",
           "persistent": "false",
           "waterlogged": "false"
         }
       }
     },
     "force_dirt": false,
-    "ignore_vines": false,
+    "ignore_vines": true,
     "minimum_size": {
       "type": "minecraft:two_layers_feature_size",
       "limit": 1,
@@ -67,15 +68,15 @@
       "branch_horizontal_length": {
         "type": "minecraft:uniform",
         "value": {
-          "max_inclusive": 5,
-          "min_inclusive": 3
+          "max_inclusive": 3,
+          "min_inclusive": 2
         }
       },
       "branch_start_offset_from_top": {
         "max_inclusive": -4,
         "min_inclusive": -6
       },
-      "height_rand_a": 12,
+      "height_rand_a": 10,
       "height_rand_b": 0
     },
     "trunk_provider": {
@@ -83,6 +84,7 @@
       "state": {
         "Name": "ancient_aether:sakura_log",
         "Properties": {
+          "double_drops": "true",
           "axis": "y"
         }
       }

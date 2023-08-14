@@ -20,7 +20,7 @@ public class AncientAetherBiomes {
 
     //Sakura Jungle
     public static final ResourceKey<Biome> SAKURA_JUNGLE = createKey("sakura_jungle");
-    public static final ResourceKey<Biome> SPARSE_SAKURA_JUNGLE = createKey("sparse_sakura_jungle");
+    public static final ResourceKey<Biome> SKYROOT_JUNGLE = createKey("skyroot_jungle");
 
     //On Life Support
     public static final ResourceKey<Biome> QUICKSOIL_DESERT = createKey("quicksoil_desert");

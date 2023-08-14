@@ -1,5 +1,5 @@
 {
-  "feature": "ancient_aether:trees_sakura_and_skyroot_sparse",
+  "feature": "ancient_aether:aether_jungle_trees",
   "placement": [
     {
       "type": "minecraft:count",
@@ -7,11 +7,11 @@
         "type": "minecraft:weighted_list",
         "distribution": [
           {
-            "data": 3,
-            "weight": 9
+            "data": 12,
+            "weight": 3
           },
           {
-            "data": 2,
+            "data": 16,
             "weight": 1
           }
         ]
@@ -19,7 +19,7 @@
     },
     {
       "type": "minecraft:surface_water_depth_filter",
-      "max_water_depth": 2
+      "max_water_depth": 0
     },
     {
       "type": "aether:improved_layer_placement",
