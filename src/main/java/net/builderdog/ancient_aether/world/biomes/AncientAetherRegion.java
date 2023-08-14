@@ -71,7 +71,7 @@ public class AncientAetherRegion extends Region {
                 AncientAetherBiomes.SKYROOT_PINE_FOREST);
         addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps2, Climate.Parameter.span(-1.0F, 0.2F), fullRange, fullRange, Climate.Parameter.span(-0.35F, 1.0F), fullRange, 0),
                 AncientAetherBiomes.WYNDCAP_TAIGA);
-        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps2, Climate.Parameter.span(0.3F, 1.0F), fullRange, fullRange, Climate.Parameter.span(-0.35F, 1.0F), fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps2, Climate.Parameter.span(0.2F, 1.0F), fullRange, fullRange, Climate.Parameter.span(-0.35F, 1.0F), fullRange, 0),
                 AncientAetherBiomes.FESTIVE_WYNDCAP_TAIGA);
         addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps4, Climate.Parameter.span(-1.0F, 1.0F), fullRange, fullRange, Climate.Parameter.span(-0.6F, -0.35F), fullRange, 0),
                 AncientAetherBiomes.WYNDCAP_HIGHLAND);
