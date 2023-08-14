@@ -42,7 +42,7 @@
       {
         "chance": 0.2,
         "feature": {
-          "feature": "ancient_aether:basic_aether_trees",
+          "feature": "ancient_aether:aether_basic_trees",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",
