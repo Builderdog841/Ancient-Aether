@@ -44,6 +44,9 @@ public class AncientAetherItemModelProvider extends AetherItemModelProvider {
         //Music Discs
         simpleItem(AncientAetherItems.MUSIC_DISC_LABYRINTHS_VENGEANCE_BUILDERDOG_REMIX);
 
+        //Dungeon Loot
+        handheldItem(AncientAetherItems.ANCIENT_SWORD.get(), "");
+
         //Blocks
         //itemBlock(AncientAetherBlocks.HIGHSPROOT_STAIRS.get());
         //itemBlock(AncientAetherBlocks.HIGHSPROOT_SLAB.get());
@@ -84,11 +87,6 @@ public class AncientAetherItemModelProvider extends AetherItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(AncientAether.MOD_ID,"item/" + item.getId().getPath()));
-    }
-    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
-        return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/handheld")).texture("layer0",
-                new ResourceLocation(AncientAether.MOD_ID, "item/" + item.getId().getPath()));
     }
         public void eggItem(Item item) {
             this.withExistingParent(this.itemName(item), this.mcLoc("item/template_spawn_egg"));
