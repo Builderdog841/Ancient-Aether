@@ -12,9 +12,9 @@ public class SakuraTreeGrower extends AbstractTreeGrower {
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource random, boolean largeHive) {
         if (random.nextInt(10) == 0) {
-            return AncientAetherConfiguredFeatures.TALL_SAKURA_TREE;
-        } else {
             return AncientAetherConfiguredFeatures.SAKURA_TREE;
+        } else {
+            return AncientAetherConfiguredFeatures.TALL_SAKURA_TREE;
         }
     }
 }

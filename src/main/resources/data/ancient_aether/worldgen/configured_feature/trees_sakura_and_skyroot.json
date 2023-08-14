@@ -20,7 +20,7 @@
     },
     "features": [
       {
-        "chance": 0.15,
+        "chance": 0.2,
         "feature": {
           "feature": "aether:trees_skyroot_and_golden_oak",
           "placement": [
@@ -40,7 +40,7 @@
         }
       },
       {
-        "chance": 0.2,
+        "chance": 0.4,
         "feature": {
           "feature": "ancient_aether:tall_sakura_tree",
           "placement": [
