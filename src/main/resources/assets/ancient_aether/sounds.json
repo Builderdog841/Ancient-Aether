@@ -5,37 +5,37 @@
     ],
     "subtitle": "subtitles.ancient_aether.block.obelisk.obelisk_activation"
   },
-  "entity.highlands_buffalo.ambient": {
+  "entity.highland_buffalo.ambient": {
     "sounds": [
-      "ancient_aether:entity/highlands_buffalo/highlands_buffalo_idle"
+      "ancient_aether:entity/highland_buffalo/highland_buffalo_idle"
     ],
-    "subtitle": "subtitles.ancient_aether.entity.highlands_buffalo.ambient"
+    "subtitle": "subtitles.ancient_aether.entity.highland_buffalo.ambient"
   },
-  "entity.highlands_buffalo.hurt": {
+  "entity.highland_buffalo.hurt": {
     "sounds": [
-      "ancient_aether:entity/highlands_buffalo/highlands_buffalo_hurt"
+      "ancient_aether:entity/highland_buffalo/highlands_buffalo_hurt"
     ],
-    "subtitle": "subtitles.ancient_aether.entity.highlands_buffalo.hurt"
+    "subtitle": "subtitles.ancient_aether.entity.highland_buffalo.hurt"
   },
-  "entity.highlands_buffalo.death": {
+  "entity.highland_buffalo.death": {
     "sounds": [
-      "ancient_aether:entity/highlands_buffalo/highlands_buffalo_hurt"
+      "ancient_aether:entity/highland_buffalo/highland_buffalo_hurt"
     ],
-    "subtitle": "subtitles.ancient_aether.entity.highlands_buffalo.death"
+    "subtitle": "subtitles.ancient_aether.entity.highland_buffalo.death"
   },
-  "entity.rootling.hurt": {
+  "entity.roothyrn.hurt": {
     "sounds": [
-      "ancient_aether:entity/rootling/rootling_hurt"
+      "ancient_aether:entity/rootling/roothyrn_hurt"
     ],
-    "subtitle": "subtitles.ancient_aether.entity.rootling.hurt"
+    "subtitle": "subtitles.ancient_aether.entity.roothyrn.hurt"
   },
-  "entity.rootling.death": {
+  "entity.roothyrn.death": {
     "sounds": [
-      "ancient_aether:entity/rootling/rootling_hurt"
+      "ancient_aether:entity/roothyrn/rootling_hurt"
     ],
-    "subtitle": "subtitles.ancient_aether.entity.rootling.death"
+    "subtitle": "subtitles.ancient_aether.entity.roothyrn.death"
   },
-  "block.rootling_trap.trigger": {
+  "block.roothyrn_trap.trigger": {
     "sounds": [
       "aether:block/dungeon_trap/trigger1",
       "aether:block/dungeon_trap/trigger2",
@@ -44,7 +44,7 @@
       "aether:block/dungeon_trap/trigger5",
       "aether:block/dungeon_trap/trigger6"
     ],
-    "subtitle": "subtitles.ancient_aether.block.rootling_trap.trigger"
+    "subtitle": "subtitles.ancient_aether.block.roothyrn_trap.trigger"
   },
   "item.music_disc.labyrinths_vengeance_builderdog_remix": {
     "sounds": [

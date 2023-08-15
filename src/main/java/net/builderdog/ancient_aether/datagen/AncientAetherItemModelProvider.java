@@ -22,21 +22,19 @@ public class AncientAetherItemModelProvider extends AetherItemModelProvider {
 
         //Food
         simpleItem(AncientAetherItems.AECHOR_ICE_CREAM_BUCKET);
-        simpleItem(AncientAetherItems.CACTUS_FLOWER_ICE_CREAM_BUCKET);
         simpleItem(AncientAetherItems.RAW_BUFFALO_RIBS);
         simpleItem(AncientAetherItems.COOKED_BUFFALO_RIBS);
         simpleItem(AncientAetherItems.BUFFALO_RIB);
 
+        //Boats
         item(AncientAetherItems.HIGHSPROOT_BOAT.get(), "");
         item(AncientAetherItems.HIGHSPROOT_CHEST_BOAT.get(), "");
         item(AncientAetherItems.SAKURA_BOAT.get(), "");
         item(AncientAetherItems.SAKURA_CHEST_BOAT.get(), "");
 
         //Spawn Eggs
-        eggItem(AncientAetherItems.HIGHLANDS_BUFFALO_SPAWN_EGG.get());
-        eggItem(AncientAetherItems.ROOTLING_SPAWN_EGG.get());
-        eggItem(AncientAetherItems.VELOX_ZEPHYR_SPAWN_EGG.get());
-        eggItem(AncientAetherItems.VELOX_WHIRLWIND_SPAWN_EGG.get());
+        eggItem(AncientAetherItems.HIGHLAND_BUFFALO_SPAWN_EGG.get());
+        eggItem(AncientAetherItems.ROOTHYRN_SPAWN_EGG.get());
         eggItem(AncientAetherItems.LEAPING_SENTRY_SPAWN_EGG.get());
 
         moaEggItem(AncientAetherItems.SAKURA_MOA_EGG.get(), "");
@@ -48,8 +46,8 @@ public class AncientAetherItemModelProvider extends AetherItemModelProvider {
         handheldItem(AncientAetherItems.ANCIENT_SWORD.get(), "");
 
         //Blocks
-        //itemBlock(AncientAetherBlocks.HIGHSPROOT_STAIRS.get());
-        //itemBlock(AncientAetherBlocks.HIGHSPROOT_SLAB.get());
+        itemBlock(AncientAetherBlocks.HIGHSPROOT_STAIRS.get());
+        itemBlock(AncientAetherBlocks.HIGHSPROOT_SLAB.get());
         itemFence(AncientAetherBlocks.HIGHSPROOT_FENCE.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), "");
         itemBlock(AncientAetherBlocks.HIGHSPROOT_FENCE_GATE.get());
         item(AncientAetherBlocks.HIGHSPROOT_DOOR.get().asItem(), "");
@@ -71,7 +69,7 @@ public class AncientAetherItemModelProvider extends AetherItemModelProvider {
         itemBlockFlat(AncientAetherBlocks.SAKURA_BLOSSOMS.get(), "");
         itemBlockFlat(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get(), "");
         itemBlockFlat(AncientAetherBlocks.EDELWEISS.get(), "");
-        itemBlockFlat(AncientAetherBlocks.MOONLIT_TULIP.get(), "");
+        itemBlockFlat(AncientAetherBlocks.HIGHLAND_TULIP.get(), "");
     }
 
     public String itemName(Item item) {
@@ -82,7 +80,6 @@ public class AncientAetherItemModelProvider extends AetherItemModelProvider {
             throw new IllegalStateException("Unknown item: " + item.toString());
         }
     }
-
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",

@@ -72,7 +72,7 @@ public class TrappedFlowerBlock extends BushBlock {
                     }
                 }
                 this.spawnableEntityTypeSupplier.get().spawn(serverLevel, spawnPos, MobSpawnType.TRIGGERED);
-                serverLevel.playSound(null, blockPos, AncientAetherSoundEvents.ROOTLING_EMERGES.get(), SoundSource.BLOCKS, 0.5F, level.getRandom().nextFloat() * 0.1F + 0.9F);
+                serverLevel.playSound(null, blockPos, AncientAetherSoundEvents.ROOTHYRN_EMERGES.get(), SoundSource.BLOCKS, 0.5F, level.getRandom().nextFloat() * 0.1F + 0.9F);
             }
         }
     }

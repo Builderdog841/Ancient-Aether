@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ancient_aether:block/highsproot_slab"
+    },
+    "type=double": {
+      "model": "ancient_aether:block/highsproot_planks"
+    },
+    "type=top": {
+      "model": "ancient_aether:block/highsproot_slab_top"
+    }
+  }
+}

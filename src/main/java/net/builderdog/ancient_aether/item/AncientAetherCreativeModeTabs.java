@@ -65,7 +65,7 @@ public class AncientAetherCreativeModeTabs {
                             output.accept(AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
                             output.accept(AncientAetherBlocks.SAKURA_SAPLING.get());
                             output.accept(AncientAetherBlocks.EDELWEISS.get());
-                            output.accept(AncientAetherBlocks.MOONLIT_TULIP.get());
+                            output.accept(AncientAetherBlocks.HIGHLAND_TULIP.get());
                             output.accept(AncientAetherBlocks.SAKURA_BLOSSOMS.get());
                             output.accept(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get());
                             output.accept(AncientAetherBlocks.MOONLIT_WATERLILY.get());
@@ -84,13 +84,13 @@ public class AncientAetherCreativeModeTabs {
                             output.accept(AncientAetherBlocks.ANGELIC_LANTERN.get());
                             output.accept(AncientAetherBlocks.HELLFIRE_LANTERN.get());
                             output.accept(AncientAetherBlocks.GALE_LANTERN.get());
-                            output.accept(AncientAetherBlocks.BLIGHTED_SENTRY_STONE.get());
-                            output.accept(AncientAetherBlocks.BROKEN_BLIGHTED_OBELISK.get());
-                            output.accept(AncientAetherBlocks.BLIGHTED_OBELISK.get());
+                            output.accept(AncientAetherBlocks.ANCIENT_SENTRY_STONE.get());
+                            output.accept(AncientAetherBlocks.BROKEN_SENTRY_OBELISK.get());
+                            output.accept(AncientAetherBlocks.SENTRY_OBELISK.get());
                             output.accept(AncientAetherBlocks.CRACKED_SLIDER.get());
                             output.accept(AncientAetherBlocks.LOCKED_CARVED_STONE_MOSAIC.get());
-                            output.accept(AncientAetherBlocks.LOCKED_BLIGHTED_SENTRY_STONE.get());
-                            output.accept(AncientAetherItems.BLIGHTED_SENTRY_RUNE.get());
+                            output.accept(AncientAetherBlocks.LOCKED_ANCIENT_SENTRY_STONE.get());
+                            output.accept(AncientAetherItems.ANCIENT_SENTRY_RUNE.get());
                             output.accept(AncientAetherItems.RAW_BUFFALO_RIBS.get());
                             output.accept(AncientAetherItems.COOKED_BUFFALO_RIBS.get());
                             output.accept(AncientAetherItems.BUFFALO_RIB.get());
@@ -99,9 +99,9 @@ public class AncientAetherCreativeModeTabs {
                             output.accept(AncientAetherItems.ANCIENT_SWORD.get());
                             output.accept(AncientAetherItems.MUSIC_DISC_LABYRINTHS_VENGEANCE_BUILDERDOG_REMIX.get());
                             output.accept(AncientAetherItems.SAKURA_MOA_EGG.get());
-                            output.accept(AncientAetherItems.HIGHLANDS_BUFFALO_SPAWN_EGG.get());
+                            output.accept(AncientAetherItems.HIGHLAND_BUFFALO_SPAWN_EGG.get());
                             output.accept(AncientAetherItems.LEAPING_SENTRY_SPAWN_EGG.get());
-                            output.accept(AncientAetherItems.ROOTLING_SPAWN_EGG.get());
+                            output.accept(AncientAetherItems.ROOTHYRN_SPAWN_EGG.get());
                         }));
     }
 }

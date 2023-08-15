@@ -4,19 +4,15 @@ import com.mojang.logging.LogUtils;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
-import net.builderdog.ancient_aether.client.particle.AncientAetherParticleTypes;
-import net.builderdog.ancient_aether.client.renderer.RootlingRenderer;
+import net.builderdog.ancient_aether.client.renderer.RoothyrnRenderer;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
-import net.builderdog.ancient_aether.client.renderer.HighlandsBuffaloRenderer;
+import net.builderdog.ancient_aether.client.renderer.HighlandBuffaloRenderer;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.builderdog.ancient_aether.world.biomemodifier.AncientAetherBiomeModifierSerializers;
 import net.builderdog.ancient_aether.world.biomes.AncientAetherRegion;
 import net.builderdog.ancient_aether.world.biomes.AncientAetherSurfaceData;
-import net.builderdog.ancient_aether.world.features.AncientAetherFeatures;
 import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherFoliagePlacerTypes;
 import net.builderdog.ancient_aether.world.structure.AncientAetherStructureTypes;
-import net.builderdog.ancient_aether.world.tree_decorator.AncientAetherTreeDecoratorTypes;
-import net.builderdog.ancient_aether.world.trunkplacer.AncientAetherTrunkPlacerTypes;
 import net.minecraft.SharedConstants;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.network.chat.Component;
@@ -58,15 +54,11 @@ public class AncientAether {
         AncientAetherItems.ITEMS.register(modEventBus);
         AncientAetherBlocks.BLOCKS.register(modEventBus);
         AncientAetherFoliagePlacerTypes.FOLIAGE_PLACERS.register(modEventBus);
-        AncientAetherTrunkPlacerTypes.TRUNK_PLACERS.register(modEventBus);
         AncientAetherBlockEntityTypes.BLOCK_ENTITY_TYPES.register(modEventBus);
-        AncientAetherFeatures.FEATURES.register(modEventBus);
         AncientAetherStructureTypes.STRUCTURE_TYPES.register(modEventBus);
-        AncientAetherTreeDecoratorTypes.TREE_DECORATORS.register(modEventBus);
         AncientAetherBlocks.registerWoodTypes();
         AncientAetherEntities.ENTITY_TYPES.register(modEventBus);
         AncientAetherSoundEvents.SOUNDS.register(modEventBus);
-        AncientAetherParticleTypes.PARTICLES.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::packSetup);
@@ -150,15 +142,10 @@ public class AncientAether {
         this.addCompost(0.3F, AncientAetherBlocks.SAKURA_LEAVES.get().asItem());
         this.addCompost(0.3F, AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
         this.addCompost(0.3F, AncientAetherBlocks.SAKURA_SAPLING.get());
-        this.addCompost(0.65F,AncientAetherBlocks.SMALL_AETHER_CACTUS.get());
-        this.addCompost(0.65F,AncientAetherBlocks.MOONLIT_TULIP.get());
+        this.addCompost(0.65F,AncientAetherBlocks.HIGHLAND_TULIP.get());
         this.addCompost(0.65F,AncientAetherBlocks.SAKURA_BLOSSOMS.get());
         this.addCompost(0.65F,AncientAetherBlocks.EDELWEISS.get());
         this.addCompost(0.65F,AncientAetherBlocks.MOONLIT_WATERLILY.get());
-        this.addCompost(0.5F, AncientAetherBlocks.AETHER_CACTUS.get());
-        this.addCompost(0.5F, AncientAetherBlocks.STRIPPED_AETHER_CACTUS.get());
-        this.addCompost(0.85F,AncientAetherBlocks.CACTUS_FLOWER.get());
-        this.addCompost(1.0F,AncientAetherBlocks.GOLDEN_CACTUS_FLOWER.get());
     }
 
     private void addCompost(float chance, ItemLike item) {
@@ -168,8 +155,8 @@ public class AncientAether {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            EntityRenderers.register(AncientAetherEntities.HIGHLANDS_BUFFALO.get(), HighlandsBuffaloRenderer::new);
-            EntityRenderers.register(AncientAetherEntities.ROOTLING.get(), RootlingRenderer::new);
+            EntityRenderers.register(AncientAetherEntities.HIGHLAND_BUFFALO.get(), HighlandBuffaloRenderer::new);
+            EntityRenderers.register(AncientAetherEntities.ROOTHYRN.get(), RoothyrnRenderer::new);
         }
     }
 }

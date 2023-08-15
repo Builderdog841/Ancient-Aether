@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.datagen;
 
+import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.data.providers.AetherBlockStateProvider;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
@@ -7,6 +8,8 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -18,9 +21,7 @@ public class AncientAetherBlockStateProvider extends AetherBlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(AncientAetherBlocks.AETHER_QUARTZ_ORE);
-        blockWithItem(AncientAetherBlocks.ENCHANTED_SENTRY_STONE);
-        blockWithItem(AncientAetherBlocks.BLIGHTED_SENTRY_STONE);
-        blockWithItem(AncientAetherBlocks.QUICKSTONE);
+        blockWithItem(AncientAetherBlocks.ANCIENT_SENTRY_STONE);
         blockWithItem(AncientAetherBlocks.QUICKSOIL_BRICKS);
         blockWithItem(AncientAetherBlocks.HIGHSPROOT_PLANKS);
         blockWithItem(AncientAetherBlocks.SAKURA_PLANKS);
@@ -63,6 +64,8 @@ public class AncientAetherBlockStateProvider extends AetherBlockStateProvider {
         simpleBlockItem(AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:hellfire_stone_mosaic","minecraft:block/cube_column"));
         simpleBlockItem(AncientAetherBlocks.GALE_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:gale_stone_mosaic","minecraft:block/cube_column"));
 
+        stairs((StairBlock) AncientAetherBlocks.HIGHSPROOT_STAIRS.get(), (Block)AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), "");
+        slab((SlabBlock) AncientAetherBlocks.HIGHSPROOT_SLAB.get(), (Block)AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), "");
         fence(AncientAetherBlocks.HIGHSPROOT_FENCE.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), "");
         fenceGateBlock(AncientAetherBlocks.HIGHSPROOT_FENCE_GATE.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), "");
         doorBlock(AncientAetherBlocks.HIGHSPROOT_DOOR.get(), texture(name(AncientAetherBlocks.HIGHSPROOT_DOOR.get()), "", "_bottom"), texture(name(AncientAetherBlocks.HIGHSPROOT_DOOR.get()), "", "_top"));
@@ -70,6 +73,8 @@ public class AncientAetherBlockStateProvider extends AetherBlockStateProvider {
         buttonBlock(AncientAetherBlocks.HIGHSPROOT_BUTTON.get(), texture(name(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()), ""));
         pressurePlateBlock(AncientAetherBlocks.HIGHSPROOT_PRESSURE_PLATE.get(), texture(name(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()), ""));
 
+        stairs((StairBlock) AncientAetherBlocks.SAKURA_STAIRS.get(), (Block)AncientAetherBlocks.SAKURA_PLANKS.get(), "");
+        slab((SlabBlock) AncientAetherBlocks.SAKURA_SLAB.get(), (Block)AncientAetherBlocks.SAKURA_PLANKS.get(), "");
         fence(AncientAetherBlocks.SAKURA_FENCE.get(), AncientAetherBlocks.SAKURA_PLANKS.get(), "");
         fenceGateBlock(AncientAetherBlocks.SAKURA_FENCE_GATE.get(), AncientAetherBlocks.SAKURA_PLANKS.get(), "");
         doorBlock(AncientAetherBlocks.SAKURA_DOOR.get(), texture(name(AncientAetherBlocks.SAKURA_DOOR.get()), "", "_bottom"), texture(name(AncientAetherBlocks.SAKURA_DOOR.get()), "", "_top"));
@@ -81,9 +86,8 @@ public class AncientAetherBlockStateProvider extends AetherBlockStateProvider {
 
         crossBlock(AncientAetherBlocks.HIGHSPROOT_SAPLING);
         crossBlock(AncientAetherBlocks.SAKURA_SAPLING);
-        crossBlock(AncientAetherBlocks.MOONLIT_TULIP);
+        crossBlock(AncientAetherBlocks.HIGHLAND_TULIP);
         crossBlock(AncientAetherBlocks.EDELWEISS);
-        crossBlock(AncientAetherBlocks.SKYROOT_THORN_BUSH);
         crossBlock(AncientAetherBlocks.SAKURA_BLOSSOMS);
         crossBlock(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS);
 
@@ -91,7 +95,7 @@ public class AncientAetherBlockStateProvider extends AetherBlockStateProvider {
         pottedPlant(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING.get(), AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_EDELWEISS.get(), AncientAetherBlocks.EDELWEISS.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_SAKURA_BLOSSOMS.get(), AncientAetherBlocks.SAKURA_BLOSSOMS.get(), "");
-        pottedPlant(AncientAetherBlocks.POTTED_MOONLIT_TULIP.get(), AncientAetherBlocks.MOONLIT_TULIP.get(), "");
+        pottedPlant(AncientAetherBlocks.POTTED_HIGHLAND_TULIP.get(), AncientAetherBlocks.HIGHLAND_TULIP.get(), "");
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

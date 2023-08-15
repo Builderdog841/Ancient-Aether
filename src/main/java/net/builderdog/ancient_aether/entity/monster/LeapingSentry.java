@@ -154,7 +154,7 @@ public class LeapingSentry extends Slime {
 	@Nonnull
 	@Override
 	protected ParticleOptions getParticleType() {
-		return new BlockParticleOption(ParticleTypes.BLOCK, AncientAetherBlocks.BLIGHTED_SENTRY_STONE.get().defaultBlockState());
+		return new BlockParticleOption(ParticleTypes.BLOCK, AncientAetherBlocks.ANCIENT_SENTRY_STONE.get().defaultBlockState());
 	}
 
 	@Nonnull
