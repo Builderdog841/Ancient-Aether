@@ -1,4 +1,4 @@
-// 1.19.4	2023-08-15T17:26:31.2409517	Item Models: ancient_aether
+// 1.19.4	2023-08-15T19:03:54.8285337	Item Models: ancient_aether
 65913d6f85fe4bf5531b2d75b5693e56b2475ba3 assets/ancient_aether/models/item/aechor_ice_cream_bucket.json
 7b758a31f7272894d72fc2ff7144b4d1d37b407a assets/ancient_aether/models/item/ancient_sword.json
 6f6e7ea4043b02c3002c645c7a5173a32d9cb63c assets/ancient_aether/models/item/angelic_lantern.json
@@ -26,6 +26,7 @@ fbc49480534027fea32505d0c27b4b33aeb8a672 assets/ancient_aether/models/item/holys
 65231b5ba5f9f0b8bc5e331f684ba7841dcfc875 assets/ancient_aether/models/item/music_disc_labyrinths_vengeance_builderdog_remix.json
 84be39bbd6e6ad65d0e3036d0942f9cb682452e9 assets/ancient_aether/models/item/quicksoil_brick_slab.json
 deb6ecb111c46a529a95fff2dcd5da06a674223b assets/ancient_aether/models/item/quicksoil_brick_stairs.json
+fd7e53dbb8a9f5b5f070472ee7deeab8b60d18a5 assets/ancient_aether/models/item/quicksoil_brick_wall.json
 d44c5040dfb044f44b8ef6eeaa30a9160404bba7 assets/ancient_aether/models/item/raw_buffalo_ribs.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/roothyrn_spawn_egg.json
 6acc619f3923ed633742023516b313c1ef089100 assets/ancient_aether/models/item/sakura_blossoms.json
