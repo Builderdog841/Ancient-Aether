@@ -1,5 +1,5 @@
 {
-  "parent": "ancient_aether:aether/unlock_ancient_valkyrie_library",
+  "parent": "ancient_aether:aether/find_sentry_lab",
   "criteria": {
     "unlock": {
       "trigger": "minecraft:impossible"
@@ -13,7 +13,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "ancient_aether:blighted_sentry_rune"
+      "item": "ancient_aether:ancient_sentry_rune"
     },
     "show_toast": true,
     "title": {

@@ -8,7 +8,7 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.ancient_aether.rootling_trap.desc"
+      "translate": "advancement.ancient_aether.roothyrn_trap.desc"
     },
     "frame": "task",
     "hidden": true,
@@ -17,7 +17,7 @@
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.ancient_aether.rootling_trap"
+      "translate": "advancement.ancient_aether.roothyrn_trap"
     }
   },
   "requirements": [
