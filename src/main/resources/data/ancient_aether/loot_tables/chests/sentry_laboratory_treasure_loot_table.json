@@ -52,53 +52,6 @@
           ]
         },
         {
-          "rolls": 2,
-          "entries": [
-            {
-              "type": "minecraft:item",
-              "name": "aether:ice_ring",
-              "weight": 2,
-              "functions": [
-                {
-                  "function": "set_count",
-                  "count": {
-                    "min": 0,
-                    "max": 1
-                  }
-                }
-              ]
-            },
-            {
-              "type": "minecraft:item",
-              "name": "aether:ice_pendant",
-              "weight": 1,
-              "functions": [
-                {
-                  "function": "set_count",
-                  "count": {
-                    "min": 0,
-                    "max": 1
-                  }
-                }
-              ]
-            },
-            {
-              "type": "minecraft:item",
-              "name": "minecraft:air",
-              "weight": 1,
-              "functions": [
-                {
-                  "function": "set_count",
-                  "count": {
-                    "min": 1,
-                    "max": 1
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
           "type": "minecraft:item",
           "name": "minecraft:air",
           "weight": 2,
@@ -115,11 +68,39 @@
       ]
     },
     {
-      "rolls": 1,
+      "rolls": 2,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ancient_aether:ancient_sentry_rune",
+          "name": "aether:ice_ring",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 0,
+                "max": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:ice_pendant",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 0,
+                "max": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:air",
           "weight": 1,
           "functions": [
             {
@@ -171,8 +152,8 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:quartz",
-          "weight": 3,
+          "name": "aether:zanite_gemstone",
+          "weight": 2,
           "functions": [
             {
               "function": "set_count",
@@ -185,14 +166,14 @@
         },
         {
           "type": "minecraft:item",
-          "name": "aether:zanite_gemstone",
-          "weight": 2,
+          "name": "aether:enchanted_gravitite",
+          "weight": 1,
           "functions": [
             {
               "function": "set_count",
               "count": {
-                "min": 2,
-                "max": 4
+                "min": 1,
+                "max": 2
               }
             }
           ]
@@ -229,8 +210,27 @@
             {
               "function": "set_count",
               "count": {
+                "min": 0,
+                "max": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:ancient_sentry_rune",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
                 "min": 1,
-                "max": 3
+                "max": 1
               }
             }
           ]
