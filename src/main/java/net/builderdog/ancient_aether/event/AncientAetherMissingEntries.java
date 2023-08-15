@@ -3,6 +3,7 @@ package net.builderdog.ancient_aether.event;
 import com.aetherteam.aether.block.AetherBlocks;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
+import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -67,9 +68,23 @@ public class AncientAetherMissingEntries {
                 .filter(mapping -> mapping.getKey().getPath().contains("potted_moonlit_tulip")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.POTTED_HIGHLAND_TULIP.get()));
 
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("enchanted_sentry_stone")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.ANCIENT_SENTRY_STONE.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("broken_enchanted_obelisk")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.BROKEN_SENTRY_OBELISK.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("enchanted_obelisk")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.SENTRY_OBELISK.get()));
+
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
                 .filter(mapping -> mapping.getKey().getPath().contains("blighted_sentry_stone")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.ANCIENT_SENTRY_STONE.get()));
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("broken_blighted_obelisk")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.BROKEN_SENTRY_OBELISK.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
                 .filter(mapping -> mapping.getKey().getPath().contains("blighted_obelisk")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.SENTRY_OBELISK.get()));
+
+        event.getMappings(ForgeRegistries.Keys.ITEMS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("enchanted_sentry_rune")).forEach(blockMapping -> blockMapping.remap(AncientAetherItems.ANCIENT_SENTRY_RUNE.get()));
+        event.getMappings(ForgeRegistries.Keys.ITEMS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("blighted_sentry_rune")).forEach(blockMapping -> blockMapping.remap(AncientAetherItems.ANCIENT_SENTRY_RUNE.get()));
 
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
                 .filter(mapping -> mapping.getKey().getPath().contains("quickstone")).forEach(blockMapping -> blockMapping.remap(AetherBlocks.QUICKSOIL.get()));
