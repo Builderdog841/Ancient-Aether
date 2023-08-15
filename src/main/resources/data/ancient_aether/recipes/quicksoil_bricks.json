@@ -2,19 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "1": {
+    "Q": {
       "item": "aether:quicksoil"
     },
-    "2": {
+    "H": {
       "item": "aether:holystone"
     }
   },
   "pattern": [
-    "12",
-    "21"
+    "QH"
   ],
   "result": {
-    "count": 4,
+    "count": 2,
     "item": "ancient_aether:quicksoil_bricks"
   },
   "show_notification": true

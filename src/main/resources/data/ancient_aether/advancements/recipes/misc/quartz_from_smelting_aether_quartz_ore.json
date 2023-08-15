@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "ancient_aether:quartz_from_smelting_aether_quartz_or"
+      "ancient_aether:quartz_from_smelting_aether_quartz_ore"
     ]
   }
 }
