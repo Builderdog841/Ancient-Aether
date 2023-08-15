@@ -46,7 +46,7 @@
       "aether:grass_patch",
       "minecraft:patch_taiga_grass",
       "minecraft:patch_large_fern",
-      "ancient_aether:moonlit_tulip_patch",
+      "ancient_aether:highland_tulip_patch",
       "ancient_aether:edelweiss_patch",
       "aether:white_flower_patch",
       "aether:purple_flower_patch",
@@ -167,7 +167,7 @@
         "weight": 12
       },
       {
-        "type": "ancient_aether:highlands_buffalo",
+        "type": "ancient_aether:highland_buffalo",
         "maxCount": 5,
         "minCount": 2,
         "weight": 15

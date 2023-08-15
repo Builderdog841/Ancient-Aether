@@ -57,11 +57,11 @@
       "charge": 0.4,
       "energy_budget": 0.1
     },
-    "ancient_aether:velox_whirlwind": {
+    "aether:whirlwind": {
       "charge": 0.4,
       "energy_budget": 0.1
     },
-    "ancient_aether:velox_zephyr": {
+    "aether:zephyr": {
       "charge": 0.6,
       "energy_budget": 0.16
     }
