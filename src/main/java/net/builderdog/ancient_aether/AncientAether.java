@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether;
 
+import com.aetherteam.aether.api.AetherMoaTypes;
 import com.mojang.logging.LogUtils;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
@@ -7,6 +8,7 @@ import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.client.renderer.RoothyrnRenderer;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.client.renderer.HighlandBuffaloRenderer;
+import net.builderdog.ancient_aether.entity.moa.AncientAetherMoaTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.builderdog.ancient_aether.world.biomemodifier.AncientAetherBiomeModifierSerializers;
 import net.builderdog.ancient_aether.world.biomes.AncientAetherRegion;
@@ -52,6 +54,7 @@ public class AncientAether {
 
         AncientAetherBiomeModifierSerializers.BIOME_MODIFIER_SERIALIZERS.register(modEventBus);
         AncientAetherItems.ITEMS.register(modEventBus);
+        AncientAetherMoaTypes.MOA_TYPES.register(modEventBus);
         AncientAetherBlocks.BLOCKS.register(modEventBus);
         AncientAetherFoliagePlacerTypes.FOLIAGE_PLACERS.register(modEventBus);
         AncientAetherBlockEntityTypes.BLOCK_ENTITY_TYPES.register(modEventBus);
