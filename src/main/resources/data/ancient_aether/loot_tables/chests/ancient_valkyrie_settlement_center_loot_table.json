@@ -162,8 +162,8 @@
             {
               "function": "set_count",
               "count": {
-                "min": 2,
-                "max": 3
+                "min": 3,
+                "max": 5
               }
             }
           ]
@@ -250,6 +250,20 @@
         {
           "type": "minecraft:item",
           "name": "aether:skyroot_sapling",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 0,
+                "max": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:highsproot_sapling",
           "weight": 1,
           "functions": [
             {
@@ -302,20 +316,6 @@
         {
           "type": "minecraft:item",
           "name": "ancient_aether:aechor_ice_cream_bucket",
-          "weight": 1,
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 1,
-                "max": 2
-              }
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "ancient_aether:cactus_flower_ice_cream_bucket",
           "weight": 1,
           "functions": [
             {

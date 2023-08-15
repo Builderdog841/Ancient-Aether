@@ -13,7 +13,7 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "ancient_aether:locked_blighted_sentry_stone"
+            "Name": "ancient_aether:locked_ancient_sentry_stone"
           }
         },
         {
