@@ -82,6 +82,8 @@ public class AncientAetherBlockStateProvider extends AetherBlockStateProvider {
         buttonBlock(AncientAetherBlocks.SAKURA_BUTTON.get(), texture(name(AncientAetherBlocks.SAKURA_PLANKS.get()), ""));
         pressurePlateBlock(AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get(), texture(name(AncientAetherBlocks.SAKURA_PLANKS.get()), ""));
 
+        stairs((StairBlock) AncientAetherBlocks.QUICKSOIL_BRICK_STAIRS.get(), (Block)AncientAetherBlocks.QUICKSOIL_BRICKS.get(), "");
+        slab((SlabBlock) AncientAetherBlocks.QUICKSOIL_BRICK_SLAB.get(), (Block)AncientAetherBlocks.QUICKSOIL_BRICKS.get(), "");
         wallBlock(AncientAetherBlocks.QUICKSOIL_BRICK_WALL.get(), AncientAetherBlocks.QUICKSOIL_BRICKS.get(), "");
 
         crossBlock(AncientAetherBlocks.HIGHSPROOT_SAPLING);

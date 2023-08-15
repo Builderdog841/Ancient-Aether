@@ -1,8 +1,0 @@
-{
-  "parent": "ancient_aether:block/template_small_aether_cactus",
-  "render_type": "minecraft:cutout_mipped",
-  "textures": {
-    "0": "ancient_aether:block/small_aether_cactus",
-    "particle": "ancient_aether:block/small_aether_cactus"
-  }
-}

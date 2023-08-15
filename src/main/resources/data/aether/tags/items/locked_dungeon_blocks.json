@@ -2,7 +2,6 @@
   "replace": false,
   "values": [
     "ancient_aether:locked_carved_stone_mosaic",
-    "ancient_aether:locked_enchanted_sentry_stone",
-    "ancient_aether:locked_blighted_sentry_stone"
+    "ancient_aether:locked_ancient_sentry_stone"
   ]
 }

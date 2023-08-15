@@ -2,10 +2,8 @@
   "replace": false,
   "values": [
     "ancient_aether:aether_quartz_ore",
-    "ancient_aether:enchanted_sentry_stone",
-    "ancient_aether:blighted_sentry_stone",
+    "ancient_aether:ancient_sentry_stone",
     "ancient_aether:quicksoil_bricks",
-    "ancient_aether:quickstone",
     "ancient_aether:quicksoil_brick_stairs",
     "ancient_aether:quicksoil_brick_slab",
     "ancient_aether:quicksoil_brick_wall",
@@ -20,7 +18,6 @@
     "ancient_aether:angelic_stone_mosaic",
     "ancient_aether:hellfire_stone_mosaic",
     "ancient_aether:gale_stone_mosaic",
-    "ancient_aether:enchanted_obelisk",
-    "ancient_aether:blighted_obelisk"
+    "ancient_aether:ancient_obelisk"
   ]
 }

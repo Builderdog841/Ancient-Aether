@@ -2,8 +2,6 @@
   "replace": false,
   "values": [
     "ancient_aether:highsproot_leaves",
-    "ancient_aether:sakura_leaves",
-    "ancient_aether:aether_cactus",
-    "ancient_aether:stripped_aether_cactus"
+    "ancient_aether:sakura_leaves"
   ]
 }

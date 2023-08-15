@@ -1,8 +1,7 @@
 {
   "replace": false,
   "values": [
-    "ancient_aether:enchanted_sentry_stone",
-    "ancient_aether:blighted_sentry_stone",
+    "ancient_aether:ancient_sentry_stone",
     "ancient_aether:sentry_lantern",
     "ancient_aether:angelic_lantern",
     "ancient_aether:hellfire_lantern",

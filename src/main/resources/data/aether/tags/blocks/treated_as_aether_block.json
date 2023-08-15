@@ -54,8 +54,7 @@
     "ancient_aether:quicksoil_brick_stairs",
     "ancient_aether:quicksoil_brick_slab",
     "ancient_aether:quicksoil_brick_wall",
-    "ancient_aether:enchanted_sentry_stone",
-    "ancient_aether:blighted_sentry_stone",
+    "ancient_aether:ancient_sentry_stone",
     "ancient_aether:cracked_slider",
     "ancient_aether:holystone_brick_mosaic",
     "ancient_aether:carved_stone_mosaic",
@@ -68,10 +67,7 @@
     "ancient_aether:hellfire_lantern",
     "ancient_aether:gale_lantern",
     "ancient_aether:edelweiss",
-    "ancient_aether:moonlit_tulip",
-    "ancient_aether:enchanted_obelisk",
-    "ancient_aether:broken_enchanted_obelisk",
-    "ancient_aether:blighted_obelisk",
-    "ancient_aether:broken_blighted_obelisk"
+    "ancient_aether:highland_tulip",
+    "ancient_aether:sentry_obelisk"
   ]
 }

@@ -9,7 +9,7 @@
       "item": "aether:enchanted_gravitite"
     },
     "R": {
-      "item": "ancient_aether:blighted_sentry_rune"
+      "item": "ancient_aether:ancient_sentry_rune"
     }
   },
   "pattern": [
@@ -18,7 +18,7 @@
     "GSG"
   ],
   "result": {
-    "item": "ancient_aether:blighted_sentry_rune",
+    "item": "ancient_aether:ancient_sentry_rune",
     "count": 2
   },
   "show_notification": true

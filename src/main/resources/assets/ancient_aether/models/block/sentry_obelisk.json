@@ -1,8 +1,8 @@
 {
-  "parent": "ancient_aether:block/template_obelisk_open",
+  "parent": "ancient_aether:block/template_obelisk_closed",
   "render_type": "minecraft:cutout_mipped",
   "textures": {
-    "0": "ancient_aether:block/broken_enchanted_obelisk",
+    "0": "ancient_aether:block/sentry_obelisk",
     "particle": "aether:block/dungeon/carved_stone"
   }
 }
