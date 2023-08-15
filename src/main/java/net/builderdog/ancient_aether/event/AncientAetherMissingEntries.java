@@ -1,7 +1,9 @@
 package net.builderdog.ancient_aether.event;
 
+import com.aetherteam.aether.data.resources.registries.AetherBiomes;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
+import net.builderdog.ancient_aether.world.biomes.AncientAetherBiomes;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -57,5 +59,10 @@ public class AncientAetherMissingEntries {
                 .filter(mapping -> mapping.getKey().getPath().contains("stripped_highlands_pine_wood_wall")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD_WALL.get()));
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
                 .filter(mapping -> mapping.getKey().getPath().contains("potted_small_aether_cactus")).forEach(blockMapping -> blockMapping.remap(Blocks.FLOWER_POT));
+
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("potted_small_aether_cactus")).forEach(blockMapping -> blockMapping.remap(Blocks.FLOWER_POT));
+
+
     }
 }
