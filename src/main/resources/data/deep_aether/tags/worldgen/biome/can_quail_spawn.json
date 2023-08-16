@@ -1,10 +1,10 @@
 {
   "values": [
-    "ancient_aether:highland_taiga",
-    "ancient_aether:festive_highland_taiga",
-    "ancient_aether:highland",
-    "ancient_aether:skyroot_pine_forest",
+    "ancient_aether:wyndcap_taiga",
+    "ancient_aether:festive_wyndcap_taiga",
+    "ancient_aether:wyndcap_highland",
     "ancient_aether:sakura_jungle",
-    "ancient_aether:sparse_sakura_jungle"
+    "ancient_aether:skyroot_jungle",
+    "ancient_aether:skyroot_pine_forest"
   ]
 }

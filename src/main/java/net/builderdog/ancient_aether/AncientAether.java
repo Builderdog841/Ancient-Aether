@@ -1,6 +1,5 @@
 package net.builderdog.ancient_aether;
 
-import com.aetherteam.aether.api.AetherMoaTypes;
 import com.mojang.logging.LogUtils;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;

@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.world.structure;
 
+import com.aetherteam.aether.world.structurepiece.LegacyCloudBed;
 import net.builderdog.ancient_aether.AncientAether;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.structure.StructureType;
