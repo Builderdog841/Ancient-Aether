@@ -84,6 +84,7 @@ public class AncientAetherCreativeModeTabs {
                             output.accept(AncientAetherBlocks.ANGELIC_LANTERN.get());
                             output.accept(AncientAetherBlocks.HELLFIRE_LANTERN.get());
                             output.accept(AncientAetherBlocks.GALE_LANTERN.get());
+                            output.accept(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get());
                             output.accept(AncientAetherBlocks.ANCIENT_SENTRY_STONE.get());
                             output.accept(AncientAetherBlocks.BROKEN_SENTRY_OBELISK.get());
                             output.accept(AncientAetherBlocks.SENTRY_OBELISK.get());
