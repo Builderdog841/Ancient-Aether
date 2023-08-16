@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/template_campfire",
+  "parent": "ancient_aether:block/template_ambrosium_campfire",
   "textures": {
     "fire": "ancient_aether:block/ambrosium_campfire_fire",
     "lit_log": "ancient_aether:block/ambrosium_campfire_log_lit"
