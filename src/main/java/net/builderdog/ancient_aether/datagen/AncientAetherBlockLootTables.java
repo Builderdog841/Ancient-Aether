@@ -38,7 +38,7 @@ public class AncientAetherBlockLootTables extends AetherBlockLootSubProvider {
         dropSelf(AncientAetherBlocks.HIGHSPROOT_SLAB.get());
         dropSelf(AncientAetherBlocks.HIGHSPROOT_FENCE.get());
         dropSelf(AncientAetherBlocks.HIGHSPROOT_FENCE_GATE.get());
-        dropSelf(AncientAetherBlocks.HIGHSPROOT_DOOR.get());
+        add(AncientAetherBlocks.HIGHSPROOT_DOOR.get(), createDoorTable(AncientAetherBlocks.HIGHSPROOT_DOOR.get()));
         dropSelf(AncientAetherBlocks.HIGHSPROOT_TRAPDOOR.get());
         dropSelf(AncientAetherBlocks.HIGHSPROOT_BUTTON.get());
         dropSelf(AncientAetherBlocks.HIGHSPROOT_PRESSURE_PLATE.get());
@@ -58,7 +58,7 @@ public class AncientAetherBlockLootTables extends AetherBlockLootSubProvider {
         dropSelf(AncientAetherBlocks.SAKURA_SLAB.get());
         dropSelf(AncientAetherBlocks.SAKURA_FENCE.get());
         dropSelf(AncientAetherBlocks.SAKURA_FENCE_GATE.get());
-        dropSelf(AncientAetherBlocks.SAKURA_DOOR.get());
+        add(AncientAetherBlocks.SAKURA_DOOR.get(), createDoorTable(AncientAetherBlocks.SAKURA_DOOR.get()));
         dropSelf(AncientAetherBlocks.SAKURA_TRAPDOOR.get());
         dropSelf(AncientAetherBlocks.SAKURA_BUTTON.get());
         dropSelf(AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get());

@@ -1,4 +1,4 @@
-// 1.19.4	2023-08-15T16:30:39.8066304	Loot Tables
+// 1.19.4	2023-08-16T16:48:52.5448109	Loot Tables
 15236b68986e73bfc7bdc6ecba5c2035fa26673b data/ancient_aether/loot_tables/blocks/aether_quartz_ore.json
 29f0220258ec4dafcec643f77e9a6caf51ca5f05 data/ancient_aether/loot_tables/blocks/ancient_sentry_stone.json
 5fb03435913f6569ddb87fd8b1328d449bf5cb2f data/ancient_aether/loot_tables/blocks/angelic_lantern.json
@@ -12,7 +12,7 @@ ee45cc02419ce77f69804251a9e86c822a914eff data/ancient_aether/loot_tables/blocks/
 948ec55fb4699561b715d8cee90952ec5a7d14d4 data/ancient_aether/loot_tables/blocks/hellfire_stone_mosaic.json
 bb147047cac484f7d1ab1e6621a7939014194b97 data/ancient_aether/loot_tables/blocks/highland_tulip.json
 bbbd5efcb5d6d7e4bb6f0d91ea0c8ffc2b7ccf6a data/ancient_aether/loot_tables/blocks/highsproot_button.json
-734d759f44ed2069b72dd97ca725a3d1e5dd3740 data/ancient_aether/loot_tables/blocks/highsproot_door.json
+223fb3a2745780d7a298ccbef90ecd1a34062c98 data/ancient_aether/loot_tables/blocks/highsproot_door.json
 c3b5e1dcd45a2d330beb1ebcd552d8ab6770bcef data/ancient_aether/loot_tables/blocks/highsproot_fence.json
 10cebdb3105e8caaeca482cc115fe58a9418aba3 data/ancient_aether/loot_tables/blocks/highsproot_fence_gate.json
 edfe278f2905655e7949881a78f90cb8527c5212 data/ancient_aether/loot_tables/blocks/highsproot_leaves.json
@@ -42,7 +42,7 @@ fd491cbd07c139f0cb02fb1d93c4a0b99762471e data/ancient_aether/loot_tables/blocks/
 5068296e37c5d59b99a9096c125a046a485a1219 data/ancient_aether/loot_tables/blocks/quicksoil_brick_wall.json
 7141f40a2af3633662fa76cef78111bc70c0aef0 data/ancient_aether/loot_tables/blocks/sakura_blossoms.json
 031c75034776f69f2a365581680b05d68c5d625a data/ancient_aether/loot_tables/blocks/sakura_button.json
-d8ce764cfa5203d867097e3e7b4ef9f30987295d data/ancient_aether/loot_tables/blocks/sakura_door.json
+b1fde14526bf43b7bf5c229fdddf08ccaff84dd4 data/ancient_aether/loot_tables/blocks/sakura_door.json
 36bb3a84d26bedc362a56c46566b687c311b3d37 data/ancient_aether/loot_tables/blocks/sakura_fence.json
 8eef894600e440d90153e979c44020ed8d89c9f6 data/ancient_aether/loot_tables/blocks/sakura_fence_gate.json
 6d19b8a573df5c3dbcfff7f3da5cae2057c8a64c data/ancient_aether/loot_tables/blocks/sakura_leaves.json
