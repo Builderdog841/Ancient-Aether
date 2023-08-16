@@ -2,6 +2,8 @@ package net.builderdog.ancient_aether.block;
 
 import java.util.Optional;
 import javax.annotation.Nullable;
+
+import net.builderdog.ancient_aether.blockentity.AncientAetherCampfireBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -235,7 +237,7 @@ public class AmbrosiumCampfireBlock extends BaseEntityBlock implements SimpleWat
     }
 
     public BlockEntity newBlockEntity(BlockPos p_152759_, BlockState p_152760_) {
-        return new CampfireBlockEntity(p_152759_, p_152760_);
+        return new AncientAetherCampfireBlockEntity(p_152759_, p_152760_);
     }
 
     @Nullable

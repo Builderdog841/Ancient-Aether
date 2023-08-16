@@ -228,7 +228,7 @@ public class AncientAetherBlocks  {
             () -> new TrappedFlowerBlock(AncientAetherEntities.ROOTHYRN::get,
                     () -> AIR.defaultBlockState(), Block.Properties.copy(SAKURA_BLOSSOMS.get())));
     public static final RegistryObject<Block> AMBROSIUM_CAMPFIRE = registerBlock("ambrosium_campfire",
-            () -> new CampfireBlock(true, 1, Block.Properties.copy(Blocks.CAMPFIRE)));
+            () -> new AmbrosiumCampfireBlock(true, 1, Block.Properties.copy(Blocks.CAMPFIRE)));
 
     public static void registerPots() {
         FlowerPotBlock pot = (FlowerPotBlock) Blocks.FLOWER_POT;
