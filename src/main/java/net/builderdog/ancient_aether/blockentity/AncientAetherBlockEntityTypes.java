@@ -14,4 +14,8 @@ public class AncientAetherBlockEntityTypes {
             AncientAetherBlocks.HIGHSPROOT_SIGN.get(), AncientAetherBlocks.HIGHSPROOT_WALL_SIGN.get(),
             AncientAetherBlocks.SAKURA_SIGN.get(), AncientAetherBlocks.SAKURA_WALL_SIGN.get()
     ).build(null));
+
+    public static final RegistryObject<BlockEntityType<AncientAetherCampfireBlockEntity>> CAMPFIRE = BLOCK_ENTITY_TYPES.register("campfire", () -> BlockEntityType.Builder.of(AncientAetherCampfireBlockEntity::new,
+            AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get()
+    ).build(null));
 }
