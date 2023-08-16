@@ -2,6 +2,7 @@
   "item.minecraft.quartz": "Quartz",
 
   "block.ancient_aether.aether_quartz_ore": "Aether Quartz Ore",
+  "block.ancient_aether.ambrosium_campfire": "Ambrosium Campfire",
   "block.ancient_aether.quicksoil_bricks": "Quicksoil Bricks",
   "block.ancient_aether.ancient_sentry_stone": "Ancient Sentry Stone",
   "block.ancient_aether.highsproot_log": "Highsproot Log",
@@ -139,7 +140,8 @@
   "lore.block.ancient_aether.hellfire_lantern": "A decoration block that is crafted from Hellfire Stone, Light Hellfire Stone and an Ambrosium Torch. This Lantern also works in the Aether.",
   "lore.block.ancient_aether.gale_lantern": "A decoration block that is crafted from Gale Stone, Light Gale Stone and an Ambrosium Torch. This Lantern also works in the Aether.",
   "lore.block.ancient_aether.aether_quartz_ore": "An ore that is a source of Quartz in the Aether.",
-  "lore.block.ancient_aether.quicksoil_bricks": "A building block that is created by combining Quickstone and Quicksoil that is exactly as slippery as Quicksoil.",
+  "lore.block.ancient_aether.ambrosium_campfire": "A campfire that works in the Aether. It is a good Furnace alternative if you don't have a lot of Ambrosium.",
+  "lore.block.ancient_aether.quicksoil_bricks": "A building block that is created by combining Holystone and Quicksoil that is exactly as slippery as Quicksoil.",
   "lore.block.ancient_aether.quicksoil_brick_slab": "Crafted from Quicksoil Bricks. Slabs are half blocks, versatile for decoration and smooth slopes. Try adding some to a building's roofing! They also have the same properties as Quicksoil!",
   "lore.block.ancient_aether.quicksoil_brick_stairs": "Crafted from Quicksoil Bricks. Stairs are useful for adding verticality to builds and are often used for decoration too! They also have the same properties as Quicksoil!",
   "lore.block.ancient_aether.quicksoil_brick_wall": "Crafted from Quicksoil Bricks. Can be used for decorative enclosures and defences. Great for keeping nasty intruders away! They also have the same properties as Quicksoil!",
