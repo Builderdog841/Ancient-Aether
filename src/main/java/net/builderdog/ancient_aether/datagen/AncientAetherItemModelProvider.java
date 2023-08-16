@@ -79,6 +79,8 @@ public class AncientAetherItemModelProvider extends AetherItemModelProvider {
         item(AncientAetherBlocks.HIGHSPROOT_SIGN.get().asItem(), "");
         item(AncientAetherBlocks.SAKURA_SIGN.get().asItem(), "");
 
+        item(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get().asItem(), "");
+
         itemBlockFlat(AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.SAKURA_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.SAKURA_BLOSSOMS.get(), "");

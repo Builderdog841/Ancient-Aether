@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_campfire",
+  "textures": {
+    "fire": "ancient_aether:block/ambrosium_campfire_fire",
+    "lit_log": "ancient_aether:block/ambrosium_campfire_log_lit"
+  }
+}

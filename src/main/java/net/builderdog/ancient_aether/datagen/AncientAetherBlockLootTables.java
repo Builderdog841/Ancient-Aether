@@ -1,6 +1,7 @@
 package net.builderdog.ancient_aether.datagen;
 
 import com.aetherteam.aether.data.providers.AetherBlockLootSubProvider;
+import com.aetherteam.aether.item.AetherItems;
 import com.aetherteam.aether.mixin.mixins.common.accessor.BlockLootAccessor;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.minecraft.world.flag.FeatureFlags;
@@ -80,6 +81,8 @@ public class AncientAetherBlockLootTables extends AetherBlockLootSubProvider {
         dropSelf(AncientAetherBlocks.MOONLIT_WATERLILY.get());
 
         dropOther(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get(), AncientAetherBlocks.SAKURA_BLOSSOMS.get());
+
+        dropOther(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get(), AetherItems.AMBROSIUM_SHARD.get());
 
         dropPottedContents(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING.get());
         dropPottedContents(AncientAetherBlocks.POTTED_SAKURA_SAPLING.get());

@@ -1,5 +1,6 @@
-// 1.19.4	2023-08-16T16:48:52.5448109	Loot Tables
+// 1.19.4	2023-08-16T19:18:33.2245274	Loot Tables
 15236b68986e73bfc7bdc6ecba5c2035fa26673b data/ancient_aether/loot_tables/blocks/aether_quartz_ore.json
+d59427be87168dfc3f57268fff70276adc7e9c60 data/ancient_aether/loot_tables/blocks/ambrosium_campfire.json
 29f0220258ec4dafcec643f77e9a6caf51ca5f05 data/ancient_aether/loot_tables/blocks/ancient_sentry_stone.json
 5fb03435913f6569ddb87fd8b1328d449bf5cb2f data/ancient_aether/loot_tables/blocks/angelic_lantern.json
 aea576bde87a906823fb42f59ae043d5f90f5cd1 data/ancient_aether/loot_tables/blocks/angelic_stone_mosaic.json
