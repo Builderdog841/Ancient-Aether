@@ -30,7 +30,7 @@
     [
       "aether:aether_dirt_ore",
       "aether:icestone_ore",
-      "aether:ambrosium_ore",
+      "ancient_aether:overgrown_caverns_ambrosium_ore",
       "aether:zanite_ore",
       "aether:gravitite_ore",
       "aether:lower_gravitite_ore"
