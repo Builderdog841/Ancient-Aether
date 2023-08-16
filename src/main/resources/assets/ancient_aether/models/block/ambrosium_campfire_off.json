@@ -1,5 +1,6 @@
 {
     "parent": "block/block",
+    "render_type": "minecraft:cutout_mipped",
     "display": {
         "head": {
             "rotation": [ 0, 0, 0 ],
@@ -8,8 +9,8 @@
         }
     },
     "textures": {
-        "particle": "block/ambrosium_campfire_log",
-        "log": "block/ambrosium_campfire_log"
+        "particle": "ancient_aether:block/ambrosium_campfire_log",
+        "log": "ancient_aether:block/ambrosium_campfire_log"
     },
     "elements": [
         {
