@@ -1,15 +1,19 @@
 {
   "values": [
     {
-      "id": "ancient_aether:highland_taiga",
+      "id": "ancient_aether:wyndcap_taiga",
       "required": false
     },
     {
-      "id": "ancient_aether:highland_clearing",
+      "id": "ancient_aether:wyndcap_highland",
       "required": false
     },
     {
-      "id": "ancient_aether:icestone_caverns",
+      "id": "ancient_aether:festive_wyndcap_taiga",
+      "required": false
+    },
+    {
+      "id": "ancient_aether:wyndcap_peaks",
       "required": false
     },
     {
@@ -17,16 +21,24 @@
       "required": false
     },
     {
-      "id": "ancient_aether:deep_sakura_jungle",
+      "id": "ancient_aether:skyroot_jungle",
       "required": false
     },
     {
-      "id": "ancient_aether:sparse_sakura_jungle",
+      "id": "ancient_aether:skyroot_pine_taiga",
       "required": false
     },
     {
-      "id": "ancient_aether:overgrown_caves",
+      "id": "ancient_aether:highsproot_grove",
       "required": false
     },
+    {
+      "id": "ancient_aether:aerogel_caves",
+      "required": false
+    },
+    {
+      "id": "ancient_aether:overgrown_caverns",
+      "required": false
+    }
   ]
 }
