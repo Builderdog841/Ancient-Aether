@@ -29,7 +29,8 @@
       "direction_of_search": "up",
       "max_steps": 12,
       "target_condition": {
-        "type": "minecraft:has_sturdy_face",
+        "type": "minecraft:matching_blocks",
+        "blocks": "aether:holystone",
         "direction": "down"
       }
     },

@@ -21,7 +21,6 @@ public class AncientAetherBiomes {
     //Default Biomes
     public static final ResourceKey<Biome> SKYROOT_PINE_FOREST = createKey("skyroot_pine_forest");
     public static final ResourceKey<Biome> SKYROOT_JUNGLE = createKey("skyroot_jungle");
-    public static final ResourceKey<Biome> HIGHSPROOT_GROVE = createKey("highsproot_grove");
 
     //Sakura Jungle
     public static final ResourceKey<Biome> SAKURA_JUNGLE = createKey("sakura_jungle");
