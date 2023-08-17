@@ -10,7 +10,11 @@ import org.jetbrains.annotations.Nullable;
 public class HighsprootTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
-    protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource p_222910_, boolean p_222911_) {
-        return AncientAetherConfiguredFeatures.HIGHSPROOT_TREE;
+    protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource random, boolean largeHive) {
+        if (random.nextInt(10) == 0) {
+            return AncientAetherConfiguredFeatures.HIGHSPROOT_TREE;
+        } else {
+            return AncientAetherConfiguredFeatures.HIGHSPROOT_PINE_TREE;
+        }
     }
 }

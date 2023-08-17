@@ -3,6 +3,7 @@ package net.builderdog.ancient_aether.block;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.blockentity.AncientAetherCampfireBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -68,7 +69,7 @@ public class AmbrosiumCampfireBlock extends BaseEntityBlock implements SimpleWat
 
     public InteractionResult use(BlockState p_51274_, Level p_51275_, BlockPos p_51276_, Player p_51277_, InteractionHand p_51278_, BlockHitResult p_51279_) {
         BlockEntity blockentity = p_51275_.getBlockEntity(p_51276_);
-        if (blockentity instanceof CampfireBlockEntity campfireblockentity) {
+        if (blockentity instanceof AncientAetherCampfireBlockEntity campfireblockentity) {
             ItemStack itemstack = p_51277_.getItemInHand(p_51278_);
             Optional<CampfireCookingRecipe> optional = campfireblockentity.getCookableRecipe(itemstack);
             if (optional.isPresent()) {
@@ -95,8 +96,8 @@ public class AmbrosiumCampfireBlock extends BaseEntityBlock implements SimpleWat
     public void onRemove(BlockState p_51281_, Level p_51282_, BlockPos p_51283_, BlockState p_51284_, boolean p_51285_) {
         if (!p_51281_.is(p_51284_.getBlock())) {
             BlockEntity blockentity = p_51282_.getBlockEntity(p_51283_);
-            if (blockentity instanceof CampfireBlockEntity) {
-                Containers.dropContents(p_51282_, p_51283_, ((CampfireBlockEntity)blockentity).getItems());
+            if (blockentity instanceof AncientAetherCampfireBlockEntity) {
+                Containers.dropContents(p_51282_, p_51283_, ((AncientAetherCampfireBlockEntity)blockentity).getItems());
             }
 
             super.onRemove(p_51281_, p_51282_, p_51283_, p_51284_, p_51285_);
@@ -154,8 +155,8 @@ public class AmbrosiumCampfireBlock extends BaseEntityBlock implements SimpleWat
         }
 
         BlockEntity blockentity = p_152751_.getBlockEntity(p_152752_);
-        if (blockentity instanceof CampfireBlockEntity) {
-            ((CampfireBlockEntity)blockentity).dowse();
+        if (blockentity instanceof AncientAetherCampfireBlockEntity) {
+            ((AncientAetherCampfireBlockEntity)blockentity).dowse();
         }
 
         p_152751_.gameEvent(p_152750_, GameEvent.BLOCK_CHANGE, p_152752_);
@@ -243,9 +244,9 @@ public class AmbrosiumCampfireBlock extends BaseEntityBlock implements SimpleWat
     @Nullable
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level p_152755_, BlockState p_152756_, BlockEntityType<T> p_152757_) {
         if (p_152755_.isClientSide) {
-            return p_152756_.getValue(LIT) ? createTickerHelper(p_152757_, BlockEntityType.CAMPFIRE, CampfireBlockEntity::particleTick) : null;
+            return p_152756_.getValue(LIT) ? createTickerHelper(p_152757_, BlockEntityType.CAMPFIRE, AncientAetherCampfireBlockEntity::particleTick) : null;
         } else {
-            return p_152756_.getValue(LIT) ? createTickerHelper(p_152757_, BlockEntityType.CAMPFIRE, CampfireBlockEntity::cookTick) : createTickerHelper(p_152757_, BlockEntityType.CAMPFIRE, CampfireBlockEntity::cooldownTick);
+            return p_152756_.getValue(LIT) ? createTickerHelper(p_152757_, BlockEntityType.CAMPFIRE, AncientAetherCampfireBlockEntity::cookTick) : createTickerHelper(p_152757_, BlockEntityType.CAMPFIRE, AncientAetherCampfireBlockEntity::cooldownTick);
         }
     }
 
