@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "#aether:aether_island_blocks",
+    "#aether:holystone",
+    "#aether:dungeon_blocks",
+    "#forge:ores",
+    "aether:quicksoil",
+    "aether:icestone"
+  ]
+}

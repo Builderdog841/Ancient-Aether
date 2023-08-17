@@ -30,7 +30,7 @@
       "max_steps": 12,
       "target_condition": {
         "type": "minecraft:matching_blocks",
-        "blocks": "aether:holystone",
+        "blocks": "#ancient_aether:leaf_vine_can_spawn_on",
         "direction": "down"
       }
     },
