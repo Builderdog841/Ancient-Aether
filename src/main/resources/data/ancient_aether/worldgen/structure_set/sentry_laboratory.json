@@ -1,0 +1,18 @@
+{
+  "structures": [
+    {
+      "structure": "ancient_aether:sentry_laboratory",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 36354461,
+    "spacing": 12,
+    "separation": 8,
+    "type": "minecraft:random_spread"
+  },
+  "exclusion_zone": {
+    "chunk_count": 10,
+    "other_set": "aether:bronze_dungeon"
+  }
+}

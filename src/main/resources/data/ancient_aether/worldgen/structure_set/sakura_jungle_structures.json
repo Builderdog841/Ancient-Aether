@@ -1,8 +1,8 @@
 {
   "structures": [
     {
-      "structure": "ancient_aether:sentry_laboratory",
-      "weight": 1
+      "structure": "ancient_aether:ancient_ruins",
+      "weight": 3
     },
     {
       "structure": "ancient_aether:valkyrian_vaults",
@@ -11,8 +11,8 @@
   ],
   "placement": {
     "salt": 168128697,
-    "spacing": 15,
-    "separation": 10,
+    "spacing": 7,
+    "separation": 5,
     "type": "minecraft:random_spread"
   },
   "exclusion_zone": {
