@@ -97,22 +97,6 @@
       },
       "trigger": "minecraft:location"
     },
-    "ancient_aether:highsproot_grove": {
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "location": {
-                "biome": "ancient_aether:highsproot_grove"
-              }
-            }
-          }
-        ]
-      },
-      "trigger": "minecraft:location"
-    },
     "ancient_aether:skyroot_jungle": {
       "conditions": {
         "player": [
@@ -179,9 +163,6 @@
     ],
     [
       "ancient_aether:sakura_jungle"
-    ],
-    [
-      "ancient_aether:highsproot_grove"
     ],
     [
       "ancient_aether:skyroot_jungle"
