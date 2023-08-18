@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ancient_aether:block/blighted_obelisk"
+      "model": "ancient_aether:block/sentry_obelisk"
     }
   }
 }
