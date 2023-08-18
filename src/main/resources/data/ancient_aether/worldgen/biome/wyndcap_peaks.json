@@ -1,7 +1,7 @@
 {
   "carvers": {},
   "temperature": 0.2,
-  "downfall": 1,
+  "downfall": 0,
   "effects": {
     "fog_color": 9671612,
     "foliage_color": 11665355,
