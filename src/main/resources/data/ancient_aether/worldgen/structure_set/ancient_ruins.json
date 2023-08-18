@@ -1,0 +1,22 @@
+{
+  "structures": [
+    {
+      "structure": "ancient_aether:ancient_ruins",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 168128697,
+    "spacing": 7,
+    "separation": 5,
+    "type": "minecraft:random_spread"
+  },
+  "exclusion_zone": {
+    "chunk_count": 10,
+    "other_set": "aether:bronze_dungeon"
+  },
+  "exclusion_zone": {
+    "chunk_count": 5,
+    "other_set": "ancient_aether:valkyrian_vaults"
+  }
+}

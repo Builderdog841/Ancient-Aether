@@ -1,18 +1,14 @@
 {
   "structures": [
     {
-      "structure": "ancient_aether:ancient_ruins",
-      "weight": 3
-    },
-    {
       "structure": "ancient_aether:valkyrian_vaults",
       "weight": 1
     }
   ],
   "placement": {
     "salt": 168128697,
-    "spacing": 7,
-    "separation": 5,
+    "spacing": 12,
+    "separation": 10,
     "type": "minecraft:random_spread"
   },
   "exclusion_zone": {
