@@ -1,12 +1,12 @@
 {
-  "name": "ancient_aether:valkyrian_vaults/hallway",
+  "name": "ancient_aether:valkyrian_vaults/staircase",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
 
-        "location": "ancient_aether:valkyrian_vaults/hallway",
+        "location": "ancient_aether:valkyrian_vaults/staircase",
         "processors": "ancient_aether:valkyrian_vaults_randomizer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
