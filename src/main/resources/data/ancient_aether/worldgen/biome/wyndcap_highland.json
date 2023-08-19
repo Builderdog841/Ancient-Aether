@@ -2,6 +2,7 @@
   "carvers": {},
   "temperature": 0.2,
   "downfall": 0,
+  "creature_spawn_probability": 0.25,
   "effects": {
     "fog_color": 9671612,
     "foliage_color": 11665355,

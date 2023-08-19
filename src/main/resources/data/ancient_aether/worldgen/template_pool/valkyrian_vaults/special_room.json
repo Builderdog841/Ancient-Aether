@@ -1,0 +1,16 @@
+{
+  "name": "ancient_aether:valkyrian_vaults/special_room",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+
+        "location": "ancient_aether:valkyrian_vaults/library",
+        "processors": "ancient_aether:valkyrian_vaults_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
