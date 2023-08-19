@@ -6,7 +6,7 @@
       "weight": 1,
       "element": {
 
-        "location": "ancient_aether:valkyrian_vaults/vault_room_1",
+        "location": "ancient_aether:valkyrian_vaults/small_vault_room_1",
         "processors": "ancient_aether:valkyrian_vaults_randomizer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -16,7 +16,7 @@
       "weight": 1,
       "element": {
 
-        "location": "ancient_aether:valkyrian_vaults/vault_room_2",
+        "location": "ancient_aether:valkyrian_vaults/small_vault_room_2",
         "processors": "ancient_aether:valkyrian_vaults_randomizer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -26,17 +26,7 @@
       "weight": 1,
       "element": {
 
-        "location": "ancient_aether:valkyrian_vaults/vault_room_3",
-        "processors": "ancient_aether:valkyrian_vaults_randomizer",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-
-        "location": "ancient_aether:valkyrian_vaults/vault_room_4",
+        "location": "ancient_aether:valkyrian_vaults/small_vault_room_3",
         "processors": "ancient_aether:valkyrian_vaults_randomizer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
