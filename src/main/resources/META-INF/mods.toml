@@ -7,7 +7,7 @@ modId="ancient_aether"
 version="${file.jarVersion}"
 displayName="Ancient Aether"
 logoFile="ancient_aether.png"
-credits="Credit goes to Tuneful Turnip for making the Cactus Generation. Credit also goes to Zepalesque and all the other people that helped and gave me feedback on the Aether Project Discord Server. Also thanks to Unroman for the Ukranian Translation"
+credits="Credit goes to Tuneful Turnip for making the Cactus Generation. Credit also goes to Zepalesque and all the other people that helped and gave me feedback on the Aether Project Discord Server. Also thanks to Unroman for the Ukranian Translation."
 authors="Builderdog"
 description='''
 Ancient Aether is an Aether Add-On that adds new Ancient Valkyrie Structures aswell as unique biomes. There are also a ton of new Quality of Life things like Aether Quartz Ore, Aether Lanterns and Quicksoil Bricks. A lot more content is planned like a new Boss with a new progression system using the new Ancient Valkyrie Structures. This mod requires: Gecko Lib, Terrablender and Aeroblender. It is compatible with every other Aether Add-On.
