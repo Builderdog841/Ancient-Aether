@@ -51,9 +51,9 @@ public class BrokenObeliskBlock extends Block {
                     player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
                     stack.shrink(1);
                 }
-                for (int x1 = Mth.floor(x - 39); x1 <= Mth.ceil(x + 39); x1++) {
-                    for (int y1 = Mth.floor(y - 28); y1 <= Mth.ceil(y + 10); y1++) {
-                        for (int z1 = Mth.floor(z - 39); z1 <= Mth.ceil(z + 39); z1++) {
+                for (int x1 = Mth.floor(x - 55); x1 <= Mth.ceil(x + 55); x1++) {
+                    for (int y1 = Mth.floor(y - 48); y1 <= Mth.ceil(y + 20); y1++) {
+                        for (int z1 = Mth.floor(z - 55); z1 <= Mth.ceil(z + 55); z1++) {
                             BlockPos checkedPos = new BlockPos(x1, y1, z1);
                             BlockState checkedState = level.getBlockState(checkedPos);
 
