@@ -1,9 +1,21 @@
 {
-  "feature": "ancient_aether:trees_highsproot_and_skyroot",
+  "feature": "ancient_aether:trees_highsproot_and_holiday",
   "placement": [
     {
-      "type": "minecraft:rarity_filter",
-      "chance": 4
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:weighted_list",
+        "distribution": [
+          {
+            "data": 12,
+            "weight": 8
+          },
+          {
+            "data": 10,
+            "weight": 1
+          }
+        ]
+      }
     },
     {
       "type": "minecraft:surface_water_depth_filter",
