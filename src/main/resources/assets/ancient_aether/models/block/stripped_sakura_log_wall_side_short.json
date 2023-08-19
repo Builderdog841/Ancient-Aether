@@ -1,8 +1,0 @@
-{
-  "parent": "ancient_aether:block/wooden_side_short",
-  "textures": {
-    "particle": "ancient_aether:block/stripped_sakura_log",
-    "side": "ancient_aether:block/stripped_sakura_log",
-    "top": "ancient_aether:block/stripped_sakura_log_top"
-  }
-}

@@ -87,6 +87,7 @@ public class AncientAetherItemModelProvider extends AetherItemModelProvider {
         itemBlockFlat(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get(), "");
         itemBlockFlat(AncientAetherBlocks.EDELWEISS.get(), "");
         itemBlockFlat(AncientAetherBlocks.HIGHLAND_TULIP.get(), "");
+        item(AncientAetherBlocks.MOONLIT_WATERLILY.get().asItem(), "");
     }
 
     public String itemName(Item item) {

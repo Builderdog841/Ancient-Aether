@@ -1,4 +1,4 @@
-// 1.19.4	2023-08-16T19:18:33.2225275	Item Models: ancient_aether
+// 1.19.4	2023-08-19T22:19:48.6273863	Item Models: ancient_aether
 65913d6f85fe4bf5531b2d75b5693e56b2475ba3 assets/ancient_aether/models/item/aechor_ice_cream_bucket.json
 37ccb563fa16dca6b181b58274921d2bfce2efea assets/ancient_aether/models/item/ambrosium_campfire.json
 7b758a31f7272894d72fc2ff7144b4d1d37b407a assets/ancient_aether/models/item/ancient_sword.json
@@ -24,6 +24,7 @@ b04b2498d89429299562a586c9fdb7853d70b26a assets/ancient_aether/models/item/highs
 60617acc1f09e87b868367f7e6991e1e83d84116 assets/ancient_aether/models/item/highsproot_trapdoor.json
 fbc49480534027fea32505d0c27b4b33aeb8a672 assets/ancient_aether/models/item/holystone_lantern.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/leaping_sentry_spawn_egg.json
+ab37a895a9f1f466078e7fdb886615723ae7932d assets/ancient_aether/models/item/moonlit_waterlily.json
 65231b5ba5f9f0b8bc5e331f684ba7841dcfc875 assets/ancient_aether/models/item/music_disc_labyrinths_vengeance_builderdog_remix.json
 84be39bbd6e6ad65d0e3036d0942f9cb682452e9 assets/ancient_aether/models/item/quicksoil_brick_slab.json
 deb6ecb111c46a529a95fff2dcd5da06a674223b assets/ancient_aether/models/item/quicksoil_brick_stairs.json
