@@ -1,0 +1,10 @@
+{
+  "type": "aether:enchanting",
+  "category": "enchanting_blocks",
+  "cookingtime": 2000,
+  "experience": 0.4,
+  "ingredient": {
+    "item": "aether:aerogel"
+  },
+  "result": "minecraft:obsidian"
+}
