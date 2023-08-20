@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "lost_aether_content:light_gale_stone"
-  },
-  "result": "ancient_aether:gale_stone_mosaic"
-}

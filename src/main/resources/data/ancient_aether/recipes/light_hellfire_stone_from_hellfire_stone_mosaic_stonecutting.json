@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "ancient_aether:hellfire_stone_mosaic"
-  },
-  "result": "aether:light_hellfire_stone"
-}
