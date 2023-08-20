@@ -85,7 +85,7 @@ public class AncientAether {
         });
 
         event.enqueueWork(() -> {
-            Regions.register(new AncientAetherRegion(new ResourceLocation(MOD_ID, "ancient_aether"), 20));
+            Regions.register(new AncientAetherRegion(new ResourceLocation(MOD_ID, "ancient_aether"), AncientAetherConfig.COMMON.ancient_aether_biome_weight.get()));
 
             SurfaceRuleManager.addSurfaceRules(AetherRuleCategory.THE_AETHER, MOD_ID, AncientAetherSurfaceData.makeRules());
         });

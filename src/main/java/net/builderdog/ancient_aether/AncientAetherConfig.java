@@ -8,12 +8,12 @@ public class AncientAetherConfig {
 
     public static class Common {
 
-        public final ConfigValue<Integer> deep_aether_biome_weight;
+        public final ConfigValue<Integer> ancient_aether_biome_weight;
 
         public Common(ForgeConfigSpec.Builder builder) {
 
             builder.push("Gameplay");
-            deep_aether_biome_weight = builder
+            ancient_aether_biome_weight = builder
                     .comment("The weighting of Ancient Aether regions in the aether")
                     .translation("config.ancient_aether.common.gameplay.ancient_aether_region_weight")
                     .define("Ancient Aether Region Weight", 20);
