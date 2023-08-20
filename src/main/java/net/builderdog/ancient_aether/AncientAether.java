@@ -31,7 +31,9 @@ import net.minecraftforge.event.AddPackFindersEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -42,6 +44,8 @@ import terrablender.api.Regions;
 import terrablender.api.SurfaceRuleManager;
 
 import java.nio.file.Path;
+
+import static com.aetherteam.aether.Aether.DIRECTORY;
 
 @Mod(AncientAether.MOD_ID)
 public class AncientAether {
@@ -66,9 +70,12 @@ public class AncientAether {
         modEventBus.addListener(this::packSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
-    }
 
-    private void commonSetup(final FMLCommonSetupEvent event) {
+        DIRECTORY.toFile().mkdirs(); // Ensures the Deep Aether's config folder is generated.
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, AncientAetherConfig.COMMON_SPEC);
+    }
+    private void commonSetup(
+            final FMLCommonSetupEvent event) {
 
         event.enqueueWork(() -> {
             AncientAetherBlocks.registerPots();
