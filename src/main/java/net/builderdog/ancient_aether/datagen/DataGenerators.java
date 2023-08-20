@@ -23,6 +23,7 @@ public class DataGenerators {
 
         generator.addProvider(true, AncientAetherLootTableProvider.create(packOutput));
         generator.addProvider(true, new AncientAetherBlockStateProvider(packOutput, existingFileHelper));
+        generator.addProvider(true, new AncientAetherRecipeProvider(packOutput));
         generator.addProvider(true, new AncientAetherItemModelProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeServer(), new AncientAetherWorldGenProvider(packOutput, lookupProvider));
     }
