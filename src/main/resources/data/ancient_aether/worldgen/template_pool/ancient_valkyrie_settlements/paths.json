@@ -3,38 +3,110 @@
     {
       "element": {
         "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:ancient_valkyrie_settlements/dead_end",
+        "location": "ancient_aether:ancient_valkyrie_settlements/long_path_1",
         "processors": "ancient_aether:ancient_valkyrie_settlements_paths_randomizer",
         "projection": "terrain_matching"
       },
-      "weight": 2
+      "weight": 1
     },
     {
       "element": {
         "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:ancient_valkyrie_settlements/short_path",
+        "location": "ancient_aether:ancient_valkyrie_settlements/long_path_2",
         "processors": "ancient_aether:ancient_valkyrie_settlements_paths_randomizer",
         "projection": "terrain_matching"
       },
-      "weight": 2
+      "weight": 1
     },
     {
       "element": {
         "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:ancient_valkyrie_settlements/medium_path",
+        "location": "ancient_aether:ancient_valkyrie_settlements/long_path_3",
         "processors": "ancient_aether:ancient_valkyrie_settlements_paths_randomizer",
         "projection": "terrain_matching"
       },
-      "weight": 2
+      "weight": 1
     },
     {
       "element": {
         "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:ancient_valkyrie_settlements/long_path",
+        "location": "ancient_aether:ancient_valkyrie_settlements/long_path_4",
         "processors": "ancient_aether:ancient_valkyrie_settlements_paths_randomizer",
         "projection": "terrain_matching"
       },
-      "weight": 2
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "ancient_aether:ancient_valkyrie_settlements/long_path_5",
+        "processors": "ancient_aether:ancient_valkyrie_settlements_paths_randomizer",
+        "projection": "terrain_matching"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "ancient_aether:ancient_valkyrie_settlements/long_path_6",
+        "processors": "ancient_aether:ancient_valkyrie_settlements_paths_randomizer",
+        "projection": "terrain_matching"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "ancient_aether:ancient_valkyrie_settlements/short_path_1",
+        "processors": "ancient_aether:ancient_valkyrie_settlements_paths_randomizer",
+        "projection": "terrain_matching"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "ancient_aether:ancient_valkyrie_settlements/short_path_2",
+        "processors": "ancient_aether:ancient_valkyrie_settlements_paths_randomizer",
+        "projection": "terrain_matching"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "ancient_aether:ancient_valkyrie_settlements/short_path_3",
+        "processors": "ancient_aether:ancient_valkyrie_settlements_paths_randomizer",
+        "projection": "terrain_matching"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "ancient_aether:ancient_valkyrie_settlements/short_path_4",
+        "processors": "ancient_aether:ancient_valkyrie_settlements_paths_randomizer",
+        "projection": "terrain_matching"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "ancient_aether:ancient_valkyrie_settlements/short_path_5",
+        "processors": "ancient_aether:ancient_valkyrie_settlements_paths_randomizer",
+        "projection": "terrain_matching"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "ancient_aether:ancient_valkyrie_settlements/short_path_6",
+        "processors": "ancient_aether:ancient_valkyrie_settlements_paths_randomizer",
+        "projection": "terrain_matching"
+      },
+      "weight": 1
     }
   ],
   "fallback": "minecraft:empty"

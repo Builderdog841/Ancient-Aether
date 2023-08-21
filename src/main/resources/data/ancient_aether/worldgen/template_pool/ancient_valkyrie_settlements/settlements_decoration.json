@@ -4,10 +4,10 @@
   "elements": [
     {
 
-      "weight": 1,
+      "weight": 5,
       "element": {
 
-        "location": "ancient_aether:ancient_valkyrie_settlements/settlement_1",
+        "location": "ancient_aether:ancient_valkyrie_settlements/berry_farm",
         "processors": "ancient_aether:ancient_valkyrie_settlements_randomizer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -18,18 +18,7 @@
       "weight": 1,
       "element": {
 
-        "location": "ancient_aether:ancient_valkyrie_settlements/settlement_2",
-        "processors": "ancient_aether:ancient_valkyrie_settlements_randomizer",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
-      }
-    },
-    {
-
-      "weight": 2,
-      "element": {
-
-        "location": "ancient_aether:ancient_valkyrie_settlements/settlement_3",
+        "location": "ancient_aether:ancient_valkyrie_settlements/well",
         "processors": "ancient_aether:ancient_valkyrie_settlements_randomizer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
