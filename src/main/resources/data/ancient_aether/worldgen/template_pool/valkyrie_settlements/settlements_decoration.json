@@ -8,7 +8,7 @@
       "element": {
 
         "location": "ancient_aether:valkyrie_settlements/berry_farm",
-        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
