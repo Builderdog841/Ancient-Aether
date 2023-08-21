@@ -31,6 +31,26 @@
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
+    },
+    {
+      "weight": 1,
+      "element": {
+
+        "location": "ancient_aether:ancient_dungeon/tall_vault_room",
+        "processors": "ancient_aether:ancient_dungeon_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+
+        "location": "ancient_aether:ancient_dungeon/big_vault_room",
+        "processors": "ancient_aether:ancient_dungeon_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
     }
   ]
 }
