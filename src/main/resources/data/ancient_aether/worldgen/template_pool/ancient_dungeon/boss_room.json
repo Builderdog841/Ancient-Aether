@@ -1,13 +1,13 @@
 {
-  "name": "ancient_aether:valkyrian_vaults/hallway",
+  "name": "ancient_aether:ancient_dungeon/boss_room",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
 
-        "location": "ancient_aether:valkyrian_vaults/hallway",
-        "processors": "ancient_aether:valkyrian_vaults_randomizer",
+        "location": "ancient_aether:ancient_dungeon/boss_room",
+        "processors": "ancient_aether:ancient_dungeon_randomizer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
