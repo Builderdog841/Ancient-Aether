@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.datagen;
+package net.builderdog.ancient_aether.datagen.generators;
 
 import com.aetherteam.aether.data.providers.AetherBlockLootSubProvider;
 import com.aetherteam.aether.item.AetherItems;
@@ -11,8 +11,8 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
 
-public class AncientAetherBlockLootTables extends AetherBlockLootSubProvider {
-    public AncientAetherBlockLootTables() {
+public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider {
+    public AncientAetherBlockLootTableData() {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags());
     }
 

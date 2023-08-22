@@ -2,20 +2,23 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "H": {
-      "item": "aether:holystone"
+    "A": {
+      "item": "aether:angelic_stone"
+    },
+    "L": {
+      "item": "aether:light_angelic_stone"
     },
     "T": {
       "item": "aether:ambrosium_torch"
     }
   },
   "pattern": [
-    "HHH",
-    "HTH",
-    "HHH"
+    "AAA",
+    "LTL",
+    "AAA"
   ],
   "result": {
-    "item": "aether:incubator"
+    "item": "ancient_aether:angelic_lantern"
   },
   "show_notification": true
 }

@@ -1,6 +1,5 @@
-package net.builderdog.ancient_aether.datagen;
+package net.builderdog.ancient_aether.datagen.generators;
 
-import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.data.providers.AetherBlockStateProvider;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
@@ -20,8 +19,8 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Map;
 
-public class AncientAetherBlockStateProvider extends AetherBlockStateProvider {
-    public AncientAetherBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
+public class AncientAetherBlockStateData extends AetherBlockStateProvider {
+    public AncientAetherBlockStateData(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, AncientAether.MOD_ID, exFileHelper);
     }
     @Override

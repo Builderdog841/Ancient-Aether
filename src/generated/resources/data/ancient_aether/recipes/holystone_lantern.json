@@ -1,21 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "building",
+  "category": "misc",
   "key": {
-    "B": {
+    "H": {
       "item": "aether:holystone"
     },
-    "A": {
-      "item": "aether:ambrosium_torch"
+    "S": {
+      "tag": "forge:rods/wooden"
     },
-     "S": {
-       "tag": "aether:skyroot_stick"
-      }
-      },
+    "T": {
+      "item": "aether:ambrosium_torch"
+    }
+  },
   "pattern": [
-    "BBB",
-    "SAS",
-    "BBB"
+    "HHH",
+    "STS",
+    "HHH"
   ],
   "result": {
     "item": "ancient_aether:holystone_lantern"

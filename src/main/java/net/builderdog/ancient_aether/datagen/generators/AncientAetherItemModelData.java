@@ -1,6 +1,5 @@
-package net.builderdog.ancient_aether.datagen;
+package net.builderdog.ancient_aether.datagen.generators;
 
-import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.data.providers.AetherItemModelProvider;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
@@ -14,8 +13,8 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class AncientAetherItemModelProvider extends AetherItemModelProvider {
-    public AncientAetherItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+public class AncientAetherItemModelData extends AetherItemModelProvider {
+    public AncientAetherItemModelData(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, AncientAether.MOD_ID, existingFileHelper);
     }
 

@@ -1,26 +1,28 @@
-package net.builderdog.ancient_aether.datagen;
+package net.builderdog.ancient_aether.datagen.generators;
 
 import com.aetherteam.aether.Aether;
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.data.providers.AetherRecipeProvider;
 import com.aetherteam.aether.entity.AetherEntityTypes;
-import com.aetherteam.aether.item.AetherItems;
 import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.entity.moa.AncientAetherMoaTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.*;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 
 import java.util.function.Consumer;
 
-public class AncientAetherRecipeProvider extends AetherRecipeProvider {
-    public AncientAetherRecipeProvider(PackOutput output) {
+public class AncientAetherRecipeData extends AetherRecipeProvider {
+    public AncientAetherRecipeData(PackOutput output) {
         super(output, Aether.MODID);
     }
 
@@ -36,13 +38,44 @@ public class AncientAetherRecipeProvider extends AetherRecipeProvider {
         woodFromLogs(consumer, AncientAetherBlocks.STRIPPED_SAKURA_WOOD.get(), AncientAetherBlocks.STRIPPED_SAKURA_LOG.get());
         planksFromLogs(consumer, AncientAetherBlocks.SAKURA_PLANKS.get(), AncientAetherTags.Items.CRAFTS_SAKURA_PLANKS, 4);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AetherBlocks.INCUBATOR.get(), 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherBlocks.HOLYSTONE_LANTERN.get())
                 .define('H', AetherBlocks.HOLYSTONE.get())
+                .define('S', Tags.Items.RODS_WOODEN)
                 .define('T', AetherBlocks.AMBROSIUM_TORCH.get())
                 .pattern("HHH")
-                .pattern("HTH")
+                .pattern("STS")
                 .pattern("HHH")
-                .unlockedBy(getHasName(AetherBlocks.HOLYSTONE.get()), has(AetherBlocks.HOLYSTONE.get()))
+                .unlockedBy(getHasName(AetherBlocks.AMBROSIUM_TORCH.get()), has(AetherBlocks.AMBROSIUM_TORCH.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherBlocks.SENTRY_LANTERN.get())
+                .define('C', AetherBlocks.CARVED_STONE.get())
+                .define('S', AetherBlocks.SENTRY_STONE.get())
+                .define('T', AetherBlocks.AMBROSIUM_TORCH.get())
+                .pattern("CCC")
+                .pattern("STS")
+                .pattern("CCC")
+                .unlockedBy(getHasName(AetherBlocks.AMBROSIUM_TORCH.get()), has(AetherBlocks.AMBROSIUM_TORCH.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherBlocks.ANGELIC_LANTERN.get())
+                .define('A', AetherBlocks.ANGELIC_STONE.get())
+                .define('L', AetherBlocks.LIGHT_ANGELIC_STONE.get())
+                .define('T', AetherBlocks.AMBROSIUM_TORCH.get())
+                .pattern("AAA")
+                .pattern("LTL")
+                .pattern("AAA")
+                .unlockedBy(getHasName(AetherBlocks.AMBROSIUM_TORCH.get()), has(AetherBlocks.AMBROSIUM_TORCH.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherBlocks.HELLFIRE_LANTERN.get())
+                .define('H', AetherBlocks.HELLFIRE_STONE.get())
+                .define('L', AetherBlocks.LIGHT_HELLFIRE_STONE.get())
+                .define('T', AetherBlocks.AMBROSIUM_TORCH.get())
+                .pattern("HHH")
+                .pattern("LTL")
+                .pattern("HHH")
+                .unlockedBy(getHasName(AetherBlocks.AMBROSIUM_TORCH.get()), has(AetherBlocks.AMBROSIUM_TORCH.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherItems.HIGHSPROOT_SIGN.get(), 3)

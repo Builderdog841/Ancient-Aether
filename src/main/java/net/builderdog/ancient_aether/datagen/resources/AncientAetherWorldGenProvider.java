@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.datagen;
+package net.builderdog.ancient_aether.datagen.resources;
 
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.world.AncientAetherConfiguredFeatures;

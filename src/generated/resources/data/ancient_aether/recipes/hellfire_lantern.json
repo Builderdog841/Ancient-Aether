@@ -1,21 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "building",
+  "category": "misc",
   "key": {
-    "B": {
+    "H": {
       "item": "aether:hellfire_stone"
     },
-    "A": {
-      "item": "aether:ambrosium_torch"
+    "L": {
+      "item": "aether:light_hellfire_stone"
     },
-     "S": {
-       "item": "aether:light_hellfire_stone"
-      }
-      },
+    "T": {
+      "item": "aether:ambrosium_torch"
+    }
+  },
   "pattern": [
-    "BBB",
-    "SAS",
-    "BBB"
+    "HHH",
+    "LTL",
+    "HHH"
   ],
   "result": {
     "item": "ancient_aether:hellfire_lantern"

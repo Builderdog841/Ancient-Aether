@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_holystone": {
+    "has_ambrosium_torch": {
       "conditions": {
         "items": [
           {
             "items": [
-              "aether:holystone"
+              "aether:ambrosium_torch"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "aether:incubator"
+        "recipe": "ancient_aether:hellfire_lantern"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_holystone",
+      "has_ambrosium_torch",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "aether:incubator"
+      "ancient_aether:hellfire_lantern"
     ]
   }
 }

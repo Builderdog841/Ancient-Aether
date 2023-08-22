@@ -1,6 +1,11 @@
 package net.builderdog.ancient_aether.datagen;
 
 import net.builderdog.ancient_aether.AncientAether;
+import net.builderdog.ancient_aether.datagen.generators.AncientAetherBlockStateData;
+import net.builderdog.ancient_aether.datagen.generators.AncientAetherItemModelData;
+import net.builderdog.ancient_aether.datagen.generators.AncientAetherRecipeData;
+import net.builderdog.ancient_aether.datagen.providers.AncientAetherLootTableProvider;
+import net.builderdog.ancient_aether.datagen.resources.AncientAetherWorldGenProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -22,9 +27,9 @@ public class DataGenerators {
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
         generator.addProvider(true, AncientAetherLootTableProvider.create(packOutput));
-        generator.addProvider(true, new AncientAetherBlockStateProvider(packOutput, existingFileHelper));
-        generator.addProvider(true, new AncientAetherRecipeProvider(packOutput));
-        generator.addProvider(true, new AncientAetherItemModelProvider(packOutput, existingFileHelper));
+        generator.addProvider(true, new AncientAetherBlockStateData(packOutput, existingFileHelper));
+        generator.addProvider(true, new AncientAetherRecipeData(packOutput));
+        generator.addProvider(true, new AncientAetherItemModelData(packOutput, existingFileHelper));
         generator.addProvider(event.includeServer(), new AncientAetherWorldGenProvider(packOutput, lookupProvider));
     }
 }
