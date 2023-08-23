@@ -8,7 +8,7 @@
   "terrain_adaptation": "bury",
   "step": "surface_structures",
   "start_height": {
-    "absolute": -22,
+    "absolute": -40,
     "max_inclusive": { "below_top": 128 },
     "min_inclusive": { "above_bottom": 64 }
   },

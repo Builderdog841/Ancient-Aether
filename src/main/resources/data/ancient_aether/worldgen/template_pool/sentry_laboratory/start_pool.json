@@ -4,10 +4,10 @@
   "elements": [
     {
 
-      "weight": 5,
+      "weight": 1,
       "element": {
 
-        "location": "ancient_aether:sentry_laboratory/entrance",
+        "location": "ancient_aether:sentry_laboratory/lab_entrance",
         "processors": "ancient_aether:sentry_laboratory_randomizer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
