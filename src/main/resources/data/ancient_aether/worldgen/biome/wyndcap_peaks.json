@@ -52,6 +52,7 @@
       "aether:berry_bush_patch"
     ],
     [
+      "minecraft:freeze_top_layer",
       "aether:crystal_island",
       "aether:cold_aercloud",
       "aether:blue_aercloud",

@@ -261,9 +261,9 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         smeltingOreRecipe(Items.QUARTZ, AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), 0.5F).save(consumer, name("quartz_from_smelting_aether_quartz_ore"));
         blastingOreRecipe(Items.QUARTZ, AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), 0.5F).save(consumer, name("quartz_from_blasting_aether_quartz_ore"));
 
-        smeltingOreRecipe(AncientAetherItems.COOKED_BUFFALO_RIBS.get(), AncientAetherItems.RAW_BUFFALO_RIBS.get(), 0.2F).save(consumer);
-        smokingRecipe(AncientAetherItems.COOKED_BUFFALO_RIBS.get(), AncientAetherItems.RAW_BUFFALO_RIBS.get(), 0.2F).save(consumer, name("cooked_buffalo_ribs_from_smoking"));
-        campfireCookingRecipe(AncientAetherItems.COOKED_BUFFALO_RIBS.get(), AncientAetherItems.RAW_BUFFALO_RIBS.get(), 0.2F).save(consumer, name("cooked_buffalo_ribs_from_campfire_cooking"));
+        smeltingOreRecipe(AncientAetherItems.COOKED_BUFFALO_RIBS.get(), AncientAetherItems.RAW_BUFFALO_RIBS.get(), 0.35F).save(consumer);
+        smokingRecipe(AncientAetherItems.COOKED_BUFFALO_RIBS.get(), AncientAetherItems.RAW_BUFFALO_RIBS.get(), 0.35F).save(consumer, name("cooked_buffalo_ribs_from_smoking"));
+        campfireCookingRecipe(AncientAetherItems.COOKED_BUFFALO_RIBS.get(), AncientAetherItems.RAW_BUFFALO_RIBS.get(), 0.35F).save(consumer, name("cooked_buffalo_ribs_from_campfire_cooking"));
 
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.ANCIENT_SENTRY_STONE.get(), AetherBlocks.CARVED_STONE.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AetherBlocks.CARVED_STONE.get(), AncientAetherBlocks.ANCIENT_SENTRY_STONE.get());
@@ -294,7 +294,7 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .unlockedBy(getHasName(ingredient), has(ingredient));
     }
     protected static SimpleCookingRecipeBuilder campfireCookingRecipe(ItemLike result, ItemLike ingredient, float experience) {
-        return SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(ingredient), RecipeCategory.MISC, result, experience, 100)
+        return SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(ingredient), RecipeCategory.MISC, result, experience, 600)
                 .unlockedBy(getHasName(ingredient), has(ingredient));
     }
 }
