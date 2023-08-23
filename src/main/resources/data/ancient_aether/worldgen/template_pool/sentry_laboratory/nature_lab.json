@@ -1,12 +1,12 @@
 {
-  "name": "ancient_aether:sentry_laboratory/start_pool",
+  "name": "ancient_aether:sentry_laboratory/nature_lab",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
 
-        "location": "ancient_aether:sentry_laboratory/lab_entrance",
+        "location": "ancient_aether:sentry_laboratory/nature_lab",
         "processors": "ancient_aether:sentry_laboratory_randomizer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"

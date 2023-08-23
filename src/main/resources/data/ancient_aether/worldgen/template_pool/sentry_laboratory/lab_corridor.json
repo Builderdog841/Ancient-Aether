@@ -1,0 +1,26 @@
+{
+  "name": "ancient_aether:sentry_laboratory/lab_corridor",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+
+        "location": "ancient_aether:sentry_laboratory/lab_corridor_1",
+        "processors": "ancient_aether:sentry_laboratory_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+
+        "location": "ancient_aether:sentry_laboratory/lab_corridor_2",
+        "processors": "ancient_aether:sentry_laboratory_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
