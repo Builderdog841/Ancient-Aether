@@ -89,7 +89,7 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .unlockedBy(getHasName(AncientAetherItems.ANCIENT_SENTRY_RUNE.get()), has(AncientAetherItems.ANCIENT_SENTRY_RUNE.get()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, Blocks.ENCHANTING_TABLE)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.ENCHANTING_TABLE)
                 .define('G', AetherBlocks.ENCHANTED_GRAVITITE.get())
                 .define('O', Blocks.OBSIDIAN)
                 .define('B', Items.BOOK)
@@ -99,7 +99,23 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .unlockedBy(getHasName(AetherBlocks.ENCHANTED_GRAVITITE.get()), has(AetherBlocks.ENCHANTED_GRAVITITE.get()))
                 .save(consumer, name("enchanting_table_from_gravitite"));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.ANVIL)
+                .define('Z', AetherItems.ZANITE_GEMSTONE.get())
+                .define('B', AetherBlocks.ZANITE_BLOCK.get())
+                .pattern("BBB")
+                .pattern(" Z ")
+                .pattern("ZZZ")
+                .unlockedBy(getHasName(AetherBlocks.ZANITE_BLOCK.get()), has(AetherBlocks.ZANITE_BLOCK.get()))
+                .save(consumer, name("zanite_anvil"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Items.SHEARS)
+                .define('Z', AetherItems.ZANITE_GEMSTONE.get())
+                .pattern("Z ")
+                .pattern(" Z")
+                .unlockedBy(getHasName(AetherItems.ZANITE_GEMSTONE.get()), has(AetherItems.ZANITE_GEMSTONE.get()))
+                .save(consumer, name("zanite_shears"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get())
                 .define('L', ItemTags.LOGS)
                 .define('A', AetherItems.AMBROSIUM_SHARD.get())
                 .define('S', Tags.Items.RODS_WOODEN)
@@ -109,7 +125,9 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .unlockedBy(getHasName(AetherItems.AMBROSIUM_SHARD.get()), has(AetherItems.AMBROSIUM_SHARD.get()))
                 .save(consumer);
 
-        slabBuilder(RecipeCategory.MISC, Items.PAPER, Ingredient.of(AetherItems.AECHOR_PETAL.get()))
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.PAPER, 3)
+                .define('P', AetherItems.AECHOR_PETAL.get().asItem())
+                .pattern("PPP")
                 .unlockedBy(getHasName(AetherItems.AECHOR_PETAL.get()), has(AetherItems.AECHOR_PETAL.get()))
                 .save(consumer ,name("paper_from_aechor_petals"));
 
@@ -229,8 +247,10 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         buttonBuilder(AncientAetherBlocks.SAKURA_BUTTON.get(), Ingredient.of(AncientAetherBlocks.SAKURA_PLANKS.get())).unlockedBy(getHasName(AncientAetherBlocks.SAKURA_PLANKS.get()), has(AncientAetherBlocks.SAKURA_PLANKS.get())).group("wooden_button").save(consumer);
         pressurePlateBuilder(RecipeCategory.REDSTONE, AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get(), Ingredient.of(AncientAetherBlocks.SAKURA_PLANKS.get())).unlockedBy(getHasName(AncientAetherBlocks.SAKURA_PLANKS.get()), has(AncientAetherBlocks.SAKURA_PLANKS.get())).group("wooden_pressure_plate").save(consumer);
 
-        smeltingOreRecipe(Items.QUARTZ, AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), 0.7F).save(consumer, name("quartz_from_smelting_aether_quartz_ore"));
-        blastingOreRecipe(Items.QUARTZ, AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), 0.7F).save(consumer, name("quartz_from_blasting_aether_quartz_ore"));
+        smeltingOreRecipe(Items.QUARTZ, AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), 0.5F).save(consumer, name("quartz_from_smelting_aether_quartz_ore"));
+        blastingOreRecipe(Items.QUARTZ, AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), 0.5F).save(consumer, name("quartz_from_blasting_aether_quartz_ore"));
+
+        smeltingOreRecipe(AncientAetherItems.RAW_BUFFALO_RIBS.get(), AncientAetherItems.COOKED_BUFFALO_RIBS.get(), 0.2F).save(consumer);
 
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.ANCIENT_SENTRY_STONE.get(), AetherBlocks.CARVED_STONE.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AetherBlocks.CARVED_STONE.get(), AncientAetherBlocks.ANCIENT_SENTRY_STONE.get());

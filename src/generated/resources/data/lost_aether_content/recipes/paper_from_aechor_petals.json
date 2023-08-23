@@ -2,15 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
+    "P": {
       "item": "aether:aechor_petal"
     }
   },
   "pattern": [
-    "###"
+    "PPP"
   ],
   "result": {
-    "count": 6,
+    "count": 3,
     "item": "minecraft:paper"
   },
   "show_notification": true

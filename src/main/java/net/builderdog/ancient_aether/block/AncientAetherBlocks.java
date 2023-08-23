@@ -39,7 +39,7 @@ public class AncientAetherBlocks  {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, AncientAether.MOD_ID);
 
-    //Highsprout Wood
+    //Highsproot Wood
     public static final RegistryObject<Block> HIGHSPROOT_LOG = registerBlock("highsproot_log",
             () -> new AncientAetherLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)
                     .strength(2f)));
