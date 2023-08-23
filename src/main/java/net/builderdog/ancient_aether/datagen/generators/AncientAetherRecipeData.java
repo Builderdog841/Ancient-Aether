@@ -10,13 +10,11 @@ import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.entity.moa.AncientAetherMoaTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.ShapedRecipeBuilder;
-import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 
@@ -30,6 +28,19 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
     @Override
     @SuppressWarnings("removal")
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, AncientAetherItems.BUFFALO_RIB.get())
+                .requires(AncientAetherItems.COOKED_BUFFALO_RIBS.get())
+                .unlockedBy(getHasName(AncientAetherItems.COOKED_BUFFALO_RIBS.get()), has(AncientAetherItems.COOKED_BUFFALO_RIBS.get()))
+                .save(consumer, name("buffalo_rib"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, AncientAetherItems.AECHOR_ICE_CREAM_BUCKET.get())
+                .requires(AetherItems.AECHOR_PETAL.get())
+                .requires(AetherItems.SKYROOT_BUCKET.get())
+                .requires(AetherBlocks.ICESTONE.get())
+                .requires(Items.SUGAR)
+                .unlockedBy(getHasName(AetherItems.AECHOR_PETAL.get()), has(AetherItems.AECHOR_PETAL.get()))
+                .save(consumer, name("aechor_ice_cream_bucket"));
 
         woodFromLogs(consumer, AncientAetherBlocks.HIGHSPROOT_WOOD.get(), AncientAetherBlocks.HIGHSPROOT_LOG.get());
         woodFromLogs(consumer, AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD.get(), AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get());
@@ -250,7 +261,9 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         smeltingOreRecipe(Items.QUARTZ, AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), 0.5F).save(consumer, name("quartz_from_smelting_aether_quartz_ore"));
         blastingOreRecipe(Items.QUARTZ, AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), 0.5F).save(consumer, name("quartz_from_blasting_aether_quartz_ore"));
 
-        smeltingOreRecipe(AncientAetherItems.RAW_BUFFALO_RIBS.get(), AncientAetherItems.COOKED_BUFFALO_RIBS.get(), 0.2F).save(consumer);
+        smeltingOreRecipe(AncientAetherItems.COOKED_BUFFALO_RIBS.get(), AncientAetherItems.RAW_BUFFALO_RIBS.get(), 0.2F).save(consumer);
+        smokingRecipe(AncientAetherItems.COOKED_BUFFALO_RIBS.get(), AncientAetherItems.RAW_BUFFALO_RIBS.get(), 0.2F).save(consumer, name("cooked_buffalo_ribs_from_smoking"));
+        campfireCookingRecipe(AncientAetherItems.COOKED_BUFFALO_RIBS.get(), AncientAetherItems.RAW_BUFFALO_RIBS.get(), 0.2F).save(consumer, name("cooked_buffalo_ribs_from_campfire_cooking"));
 
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.ANCIENT_SENTRY_STONE.get(), AetherBlocks.CARVED_STONE.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AetherBlocks.CARVED_STONE.get(), AncientAetherBlocks.ANCIENT_SENTRY_STONE.get());
@@ -275,5 +288,13 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         enchantingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.OBSIDIAN, AetherBlocks.AEROGEL.get(), 0.4F, 2000).save(consumer, name("obsidian_enchanting"));
 
         moaIncubationRecipe(AetherEntityTypes.MOA.get(), AncientAetherMoaTypes.SAKURA, AncientAetherItems.SAKURA_MOA_EGG.get()).save(consumer, name("sakura_moa_incubation"));
+    }
+    protected static SimpleCookingRecipeBuilder smokingRecipe(ItemLike result, ItemLike ingredient, float experience) {
+        return SimpleCookingRecipeBuilder.smoking(Ingredient.of(ingredient), RecipeCategory.MISC, result, experience, 100)
+                .unlockedBy(getHasName(ingredient), has(ingredient));
+    }
+    protected static SimpleCookingRecipeBuilder campfireCookingRecipe(ItemLike result, ItemLike ingredient, float experience) {
+        return SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(ingredient), RecipeCategory.MISC, result, experience, 100)
+                .unlockedBy(getHasName(ingredient), has(ingredient));
     }
 }

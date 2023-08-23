@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_buffalo_ribs": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ancient_aether:raw_buffalo_ribs"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "lost_aether_content:cooked_buffalo_ribs_from_campfire_cooking"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_raw_buffalo_ribs",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "lost_aether_content:cooked_buffalo_ribs_from_campfire_cooking"
+    ]
+  }
+}

@@ -7,8 +7,6 @@
     }
   ],
   "result": {
-    "item": "ancient_aether:buffalo_rib",
-    "count": 4
-  },
-  "show_notification": true
+    "item": "ancient_aether:buffalo_rib"
+  }
 }

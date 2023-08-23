@@ -1,8 +1,8 @@
 {
   "type": "minecraft:campfire_cooking",
-  "category": "misc",
-  "experience": 2,
-  "cookingtime": 600,
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.2,
   "ingredient": {
     "item": "ancient_aether:raw_buffalo_ribs"
   },

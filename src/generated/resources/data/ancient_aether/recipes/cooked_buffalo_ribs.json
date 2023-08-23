@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.2,
+  "ingredient": {
+    "item": "ancient_aether:raw_buffalo_ribs"
+  },
+  "result": "ancient_aether:cooked_buffalo_ribs"
+}

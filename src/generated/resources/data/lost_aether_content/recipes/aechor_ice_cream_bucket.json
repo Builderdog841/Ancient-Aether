@@ -3,20 +3,19 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "aether:icestone"
-    },
-    {
       "item": "aether:aechor_petal"
     },
     {
-      "item": "minecraft:sugar"
+      "item": "aether:skyroot_bucket"
     },
     {
-      "item": "aether:skyroot_bucket"
+      "item": "aether:icestone"
+    },
+    {
+      "item": "minecraft:sugar"
     }
   ],
   "result": {
-    "count": 1,
     "item": "ancient_aether:aechor_ice_cream_bucket"
   }
 }
