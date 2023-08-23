@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "aether:enchanted_gravitite"
+    },
+    "R": {
+      "item": "ancient_aether:ancient_sentry_rune"
+    },
+    "S": {
+      "item": "ancient_aether:ancient_sentry_stone"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "GRG",
+    "GSG"
+  ],
+  "result": {
+    "count": 2,
+    "item": "ancient_aether:ancient_sentry_rune"
+  },
+  "show_notification": true
+}
