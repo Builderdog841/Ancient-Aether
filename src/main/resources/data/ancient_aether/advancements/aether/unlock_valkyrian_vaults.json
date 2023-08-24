@@ -8,7 +8,7 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.ancient_aether.unlock_valkyrian_vaults.desc"
+      "translate": "advancement.ancient_aether.unlock_ancient_dungeon.desc"
     },
     "frame": "task",
     "hidden": false,
@@ -17,7 +17,7 @@
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.ancient_aether.unlock_valkyrian_vaults"
+      "translate": "advancement.ancient_aether.unlock_ancient_dungeon"
     }
   },
   "requirements": [
