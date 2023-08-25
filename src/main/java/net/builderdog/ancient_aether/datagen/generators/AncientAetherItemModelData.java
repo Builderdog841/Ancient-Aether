@@ -24,7 +24,7 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
     protected void registerModels() {
 
         //Food
-        simpleItem(AncientAetherItems.AECHOR_ICE_CREAM_BUCKET);
+        simpleItem(AncientAetherItems.GRAPES);
         simpleItem(AncientAetherItems.RAW_BUFFALO_RIBS);
         simpleItem(AncientAetherItems.COOKED_BUFFALO_RIBS);
         simpleItem(AncientAetherItems.BUFFALO_RIB);

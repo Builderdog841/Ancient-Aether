@@ -34,14 +34,6 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .unlockedBy(getHasName(AncientAetherItems.COOKED_BUFFALO_RIBS.get()), has(AncientAetherItems.COOKED_BUFFALO_RIBS.get()))
                 .save(consumer, name("buffalo_rib"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, AncientAetherItems.AECHOR_ICE_CREAM_BUCKET.get())
-                .requires(AetherItems.AECHOR_PETAL.get())
-                .requires(AetherItems.SKYROOT_BUCKET.get())
-                .requires(AetherBlocks.ICESTONE.get())
-                .requires(Items.SUGAR)
-                .unlockedBy(getHasName(AetherItems.AECHOR_PETAL.get()), has(AetherItems.AECHOR_PETAL.get()))
-                .save(consumer, name("aechor_ice_cream_bucket"));
-
         woodFromLogs(consumer, AncientAetherBlocks.HIGHSPROOT_WOOD.get(), AncientAetherBlocks.HIGHSPROOT_LOG.get());
         woodFromLogs(consumer, AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD.get(), AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get());
         planksFromLogs(consumer, AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), AncientAetherTags.Items.CRAFTS_HIGHSPROOT_PLANKS, 4);

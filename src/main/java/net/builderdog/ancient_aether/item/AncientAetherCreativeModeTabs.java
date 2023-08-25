@@ -18,7 +18,7 @@ public class AncientAetherCreativeModeTabs {
     @SubscribeEvent
     public static void registerCreativeModeTabs(CreativeModeTabEvent.Register event) {
         ANCIENT_AETHER_TAB = event.registerCreativeModeTab(new ResourceLocation(AncientAether.MOD_ID, "aether_crystallium_tab"),
-                builder -> builder.icon(() -> new ItemStack(AncientAetherItems.AECHOR_ICE_CREAM_BUCKET.get()))
+                builder -> builder.icon(() -> new ItemStack(AncientAetherBlocks.CRACKED_SLIDER.get()))
                         .title(Component.translatable("creativemodetab.ancient_aether_tab"))
                         .displayItems((features, output) -> {
                             output.accept(AncientAetherBlocks.HIGHSPROOT_LOG.get());
@@ -116,7 +116,7 @@ public class AncientAetherCreativeModeTabs {
                             output.accept(AncientAetherItems.RAW_BUFFALO_RIBS.get());
                             output.accept(AncientAetherItems.COOKED_BUFFALO_RIBS.get());
                             output.accept(AncientAetherItems.BUFFALO_RIB.get());
-                            output.accept(AncientAetherItems.AECHOR_ICE_CREAM_BUCKET.get());
+                            output.accept(AncientAetherItems.GRAPES.get());
                             output.accept(AncientAetherItems.ANCIENT_DUNGEON_KEY.get());
                             output.accept(AncientAetherItems.ANCIENT_SWORD.get());
                             output.accept(AncientAetherItems.MUSIC_DISC_LABYRINTHS_VENGEANCE_BUILDERDOG_REMIX.get());
