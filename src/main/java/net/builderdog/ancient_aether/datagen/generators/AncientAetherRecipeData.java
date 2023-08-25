@@ -29,7 +29,7 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
     @SuppressWarnings("removal")
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, AncientAetherItems.BUFFALO_RIB.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, AncientAetherItems.BUFFALO_RIB.get(),4)
                 .requires(AncientAetherItems.COOKED_BUFFALO_RIBS.get())
                 .unlockedBy(getHasName(AncientAetherItems.COOKED_BUFFALO_RIBS.get()), has(AncientAetherItems.COOKED_BUFFALO_RIBS.get()))
                 .save(consumer, name("buffalo_rib"));
