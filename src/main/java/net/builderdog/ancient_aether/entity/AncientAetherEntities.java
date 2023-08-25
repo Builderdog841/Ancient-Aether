@@ -2,6 +2,7 @@ package net.builderdog.ancient_aether.entity;
 
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.entity.animals.HighlandBuffalo;
+import net.builderdog.ancient_aether.entity.boss.ancient_guardian.AncientGuardian;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherChestBoatEntity;
 import net.builderdog.ancient_aether.entity.monster.LeapingSentry;
@@ -36,6 +37,13 @@ public class AncientAetherEntities {
                     .sized(2.0F, 2.0F).clientTrackingRange(10)
                     .build("leaping_sentry"));
 
+    // BOSS
+
+    public static final RegistryObject<EntityType<AncientGuardian>> ANCIENT_GUARDIAN =
+            ENTITY_TYPES.register("ancient_guardian",
+                    () -> EntityType.Builder.of(AncientGuardian::new, MobCategory.MONSTER)
+                            .sized(2f, 1f).clientTrackingRange(64)
+                            .build(new ResourceLocation(AncientAether.MOD_ID, "ancient_guardian").toString()));
     // MISC
     public static final RegistryObject<EntityType<AncientAetherBoatEntity>> BOAT =
             ENTITY_TYPES.register("boat",
