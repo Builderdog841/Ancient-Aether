@@ -93,9 +93,8 @@ public class AncientAether {
     }
     public void packSetup(AddPackFindersEvent event) {
         this.setupOptionalPack(event, "ancient_aether_programmer_art", "Programmer Art", "Changes the textures to the classic art style");
-        this.setupDatapack(event, "ancient_aether_water_color", "Watercolor", "Changes the Watercolor of the Aether", PackSource.BUILT_IN);
         this.setupDatapack(event, "ancient_aether_new_worldgen", "New World Generation", "Adds larger Islands, Mountains and a lot more", PackSource.BUILT_IN);
-        this.setupDatapack(event, "ancient_aether_default_biome_improvements", "Default Biome Improvements", "Adds more flowers and tree variation to the Default Aether Biomes", PackSource.BUILT_IN);
+        this.setupDatapack(event, "ancient_aether_default_biome_improvements", "Default Biome Improvements", "Adds more flowers and tree variation to the Default Aether Biomes. It also gives the Aether a new Watercolor.", PackSource.BUILT_IN);
 
         if (ModList.get().isLoaded("aether_genesis")) {
             this.setupDatapack(event, "aether_genesis_compat", "Aether Genesis Compatibility", "Makes Log and Wood Walls from Ancient Aether craftable", PackSource.BUILT_IN);
