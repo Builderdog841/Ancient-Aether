@@ -27,9 +27,9 @@
       "xz_scale": 1,
       "y_scale": 0.5
     },
-    "continents": 0.0,
+    "continents": "minecraft:overworld/continents",
     "depth": "aether:the_aether/depth",
-    "erosion": 0.0,
+    "erosion": "minecraft:overworld/erosion",
     "final_density": {
       "type": "minecraft:squeeze",
       "argument": {
@@ -49,7 +49,7 @@
                   "from_value": 0.0,
                   "from_y": -8,
                   "to_value": 1.0,
-                  "to_y": 72
+                  "to_y": 76
                 },
                 "argument2": {
                   "type": "minecraft:add",
