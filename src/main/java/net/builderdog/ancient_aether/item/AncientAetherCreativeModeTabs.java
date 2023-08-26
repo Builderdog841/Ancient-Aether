@@ -111,6 +111,11 @@ public class AncientAetherCreativeModeTabs {
                             output.accept(AncientAetherBlocks.SENTRY_OBELISK.get());
                             output.accept(AncientAetherBlocks.CRACKED_SLIDER.get());
                             output.accept(AncientAetherBlocks.LOCKED_CARVED_STONE_MOSAIC.get());
+                            output.accept(AncientAetherBlocks.LOCKED_ANGELIC_STONE_MOSAIC.get());
+                            output.accept(AncientAetherBlocks.LOCKED_HELLFIRE_STONE_MOSAIC.get());
+                            if (ModList.get().isLoaded("lost_aether_content")) {
+                                output.accept(AncientAetherBlocks.LOCKED_GALE_STONE_MOSAIC.get());
+                            }
                             output.accept(AncientAetherBlocks.LOCKED_ANCIENT_SENTRY_STONE.get());
                             output.accept(AncientAetherItems.ANCIENT_SENTRY_RUNE.get());
                             output.accept(AncientAetherItems.RAW_BUFFALO_RIBS.get());
