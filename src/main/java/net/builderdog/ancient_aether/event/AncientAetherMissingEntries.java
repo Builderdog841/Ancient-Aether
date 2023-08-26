@@ -1,6 +1,7 @@
 package net.builderdog.ancient_aether.event;
 
 import com.aetherteam.aether.block.AetherBlocks;
+import com.aetherteam.aether.item.AetherItems;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
@@ -85,6 +86,8 @@ public class AncientAetherMissingEntries {
                 .filter(mapping -> mapping.getKey().getPath().contains("enchanted_sentry_rune")).forEach(blockMapping -> blockMapping.remap(AncientAetherItems.ANCIENT_SENTRY_RUNE.get()));
         event.getMappings(ForgeRegistries.Keys.ITEMS, AncientAether.MOD_ID).stream()
                 .filter(mapping -> mapping.getKey().getPath().contains("blighted_sentry_rune")).forEach(blockMapping -> blockMapping.remap(AncientAetherItems.ANCIENT_SENTRY_RUNE.get()));
+        event.getMappings(ForgeRegistries.Keys.ITEMS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("aechor_ice_cream_bucket")).forEach(blockMapping -> blockMapping.remap(AetherItems.SKYROOT_BUCKET.get()));
 
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
                 .filter(mapping -> mapping.getKey().getPath().contains("quickstone")).forEach(blockMapping -> blockMapping.remap(AetherBlocks.QUICKSOIL.get()));
