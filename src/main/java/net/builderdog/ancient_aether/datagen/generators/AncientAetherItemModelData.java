@@ -42,9 +42,6 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
 
         moaEggItem(AncientAetherItems.SAKURA_MOA_EGG.get(), "");
 
-        //Music Discs
-        simpleItem(AncientAetherItems.MUSIC_DISC_LABYRINTHS_VENGEANCE_BUILDERDOG_REMIX);
-
         //Dungeon Loot
         handheldItem(AncientAetherItems.ANCIENT_SWORD.get(), "");
 

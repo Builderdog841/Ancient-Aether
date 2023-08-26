@@ -70,10 +70,6 @@ public class AncientAetherItems {
     public static final RegistryObject<Item> SAKURA_MOA_EGG = ITEMS.register("sakura_moa_egg",
             () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0xD09FA9, new Item.Properties()));
 
-    //Music Discs
-
-    public static final RegistryObject<Item> MUSIC_DISC_LABYRINTHS_VENGEANCE_BUILDERDOG_REMIX  = ITEMS.register("music_disc_labyrinths_vengeance_builderdog_remix",
-            () -> new AetherRecordItem(5, AncientAetherSoundEvents.ITEM_MUSIC_DISC_LABYRINTHS_VENGEANCE_BUILDERDOG_REMIX, new Item.Properties().stacksTo(1).rarity(Rarity.RARE), 2400).addDungeonTooltip(ANCIENT_DUNGEON_TOOLTIP));
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

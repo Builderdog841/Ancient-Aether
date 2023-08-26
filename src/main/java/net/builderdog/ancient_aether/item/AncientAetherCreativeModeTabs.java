@@ -30,38 +30,27 @@ public class AncientAetherCreativeModeTabs {
                             if (ModList.get().isLoaded("aether_genesis")) {
                                 output.accept(AncientAetherBlocks.HIGHSPROOT_WOOD_WALL.get());
                             }
-                            output.accept(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get());
                             if (ModList.get().isLoaded("aether_genesis")) {
                                 output.accept(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG_WALL.get());
                             }
-                            output.accept(AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD.get());
                             if (ModList.get().isLoaded("aether_genesis")) {
                                 output.accept(AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD_WALL.get());
                             }
                             if (ModList.get().isLoaded("aether_genesis")) {
                                 output.accept(AncientAetherBlocks.SAKURA_LOG_WALL.get());
                             }
-                            output.accept(AncientAetherBlocks.SAKURA_WOOD.get());
                             if (ModList.get().isLoaded("aether_genesis")) {
                                 output.accept(AncientAetherBlocks.SAKURA_WOOD_WALL.get());
                             }
-                            output.accept(AncientAetherBlocks.STRIPPED_SAKURA_LOG.get());
                             if (ModList.get().isLoaded("aether_genesis")) {
                                 output.accept(AncientAetherBlocks.STRIPPED_SAKURA_LOG_WALL.get());
                             }
-                            output.accept(AncientAetherBlocks.STRIPPED_SAKURA_WOOD.get());
                             if (ModList.get().isLoaded("aether_genesis")) {
                                 output.accept(AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL.get());
                             }
-                            output.accept(AncientAetherBlocks.EDELWEISS.get());
-                            output.accept(AncientAetherBlocks.HIGHLAND_TULIP.get());
-                            output.accept(AncientAetherBlocks.SAKURA_BLOSSOMS.get());
-                            output.accept(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get());
-                            output.accept(AncientAetherBlocks.MOONLIT_WATERLILY.get());
                             if (ModList.get().isLoaded("lost_aether_content")) {
                                 output.accept(AncientAetherBlocks.LOCKED_GALE_STONE_MOSAIC.get());
                             }
-                            output.accept(AncientAetherItems.ANCIENT_SENTRY_RUNE.get());
                             output.accept(AncientAetherItems.HIGHLAND_BUFFALO_SPAWN_EGG.get());
                             output.accept(AncientAetherItems.LEAPING_SENTRY_SPAWN_EGG.get());
                             output.accept(AncientAetherItems.ROOTHYRN_SPAWN_EGG.get());
@@ -121,12 +110,12 @@ public class AncientAetherCreativeModeTabs {
         if (tab == AetherCreativeTabs.AETHER_EQUIPMENT_AND_UTILITIES) {
             event.getEntries().putAfter(new ItemStack(AetherItems.FLAMING_SWORD.get()), new ItemStack(AncientAetherItems.ANCIENT_SWORD.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AetherItems.BLACK_MOA_EGG.get()), new ItemStack(AncientAetherItems.SAKURA_MOA_EGG.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putBefore(new ItemStack(AetherItems.BLUE_MOA_EGG.get()), new ItemStack(AncientAetherItems.ANCIENT_SENTRY_RUNE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AetherItems.SKYROOT_CHEST_BOAT.get()), new ItemStack(AncientAetherItems.HIGHSPROOT_BOAT.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherItems.HIGHSPROOT_BOAT.get()), new ItemStack(AncientAetherItems.HIGHSPROOT_CHEST_BOAT.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherItems.HIGHSPROOT_CHEST_BOAT.get()), new ItemStack(AncientAetherItems.SAKURA_BOAT.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherItems.SAKURA_BOAT.get()), new ItemStack(AncientAetherItems.SAKURA_CHEST_BOAT.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AetherItems.GOLD_DUNGEON_KEY.get()), new ItemStack(AncientAetherItems.ANCIENT_DUNGEON_KEY.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(new ItemStack(AetherItems.MUSIC_DISC_ASCENDING_DAWN.get()), new ItemStack(AncientAetherItems.MUSIC_DISC_LABYRINTHS_VENGEANCE_BUILDERDOG_REMIX.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
         if (tab == AetherCreativeTabs.AETHER_FOOD_AND_DRINKS) {
             event.getEntries().putAfter(new ItemStack(AetherItems.ENCHANTED_BERRY.get()), new ItemStack(AncientAetherItems.GRAPES.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -136,6 +125,9 @@ public class AncientAetherCreativeModeTabs {
         }
         if (tab == AetherCreativeTabs.AETHER_SPAWN_EGGS) {
             event.getEntries().putAfter(new ItemStack(AetherItems.BLACK_MOA_EGG.get()), new ItemStack(AncientAetherItems.SAKURA_MOA_EGG.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+        }
+        if (tab == AetherCreativeTabs.AETHER_INGREDIENTS) {
+            event.getEntries().putAfter(new ItemStack(AncientAetherItems.ANCIENT_SENTRY_RUNE.get()), new ItemStack(AncientAetherItems.ANCIENT_SENTRY_RUNE.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
         }
         if (tab == AetherCreativeTabs.AETHER_FUNCTIONAL_BLOCKS) {
             event.getEntries().putAfter(new ItemStack(AetherBlocks.AMBROSIUM_TORCH.get()), new ItemStack(AncientAetherBlocks.HOLYSTONE_LANTERN.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
