@@ -32,7 +32,7 @@ import java.util.Objects;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-import static com.aetherteam.aether.block.AetherBlocks.LOCKED_CARVED_STONE;
+import static com.aetherteam.aether.block.AetherBlocks.*;
 import static net.minecraft.world.level.block.Blocks.AIR;
 
 public class AncientAetherBlocks  {
@@ -152,6 +152,12 @@ public class AncientAetherBlocks  {
     public static final RegistryObject<Block> LOCKED_ANCIENT_SENTRY_STONE = registerBlock("locked_ancient_sentry_stone",
             () -> new Block(Block.Properties.copy(LOCKED_CARVED_STONE.get()).lightLevel(s -> 11).noLootTable()));
     public static final RegistryObject<RotatedPillarBlock> LOCKED_CARVED_STONE_MOSAIC = registerBlock("locked_carved_stone_mosaic",
+            () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_CARVED_STONE.get()).noLootTable()));
+    public static final RegistryObject<RotatedPillarBlock> LOCKED_ANGELIC_STONE_MOSAIC = registerBlock("locked_angelic_stone_mosaic",
+            () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_ANGELIC_STONE.get()).noLootTable()));
+    public static final RegistryObject<RotatedPillarBlock> LOCKED_HELLFIRE_STONE_MOSAIC = registerBlock("locked_hellfire_stone_mosaic",
+            () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_HELLFIRE_STONE.get()).noLootTable()));
+    public static final RegistryObject<RotatedPillarBlock> LOCKED_GALE_STONE_MOSAIC = registerBlock("locked_gale_stone_mosaic",
             () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_CARVED_STONE.get()).noLootTable()));
     public static final RegistryObject<Block> ANCIENT_SENTRY_STONE = registerBlock("ancient_sentry_stone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
