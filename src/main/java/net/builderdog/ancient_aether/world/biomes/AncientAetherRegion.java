@@ -34,8 +34,8 @@ public class AncientAetherRegion extends Region {
         Climate.Parameter tempSakura3 = Climate.Parameter.span(-0.65F, -0.325F);
         Climate.Parameter tempSakura4 = Climate.Parameter.span(-0.8F, -0.65F);
 
-        Climate.Parameter tempWyndcaps1 = Climate.Parameter.span(0.35F, 0.5F);
-        Climate.Parameter tempWyndcaps2 = Climate.Parameter.span(0.5F, 0.8F);
+        Climate.Parameter tempWyndcaps1 = Climate.Parameter.span(0.35F, 0.4F);
+        Climate.Parameter tempWyndcaps2 = Climate.Parameter.span(0.4F, 0.8F);
         Climate.Parameter tempWyndcaps3 = Climate.Parameter.span(0.8F, 0.93F);
         Climate.Parameter tempWyndcaps4 = Climate.Parameter.span(0.35F, 0.93F);
 
