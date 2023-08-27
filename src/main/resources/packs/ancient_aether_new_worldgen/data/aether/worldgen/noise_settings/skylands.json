@@ -38,7 +38,7 @@
           "type": "minecraft:blend_density",
           "argument": {
             "type": "minecraft:add",
-            "argument1": -0.05,
+            "argument1": 0.05,
             "argument2": {
               "type": "minecraft:add",
               "argument1": -0.1,
@@ -157,7 +157,7 @@
       }
     },
     "lava": 0.0,
-    "ridges": 0.0,
+    "ridges": "minecraft:overworld/ridges",
     "temperature": {
       "type": "minecraft:shifted_noise",
       "noise": "aether:temperature",
