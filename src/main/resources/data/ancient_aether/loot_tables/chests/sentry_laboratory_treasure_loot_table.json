@@ -209,7 +209,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ancient_aether:ancient_sentry_rune",
+          "name": "ancient_aether:ancient_rune",
           "weight": 1,
           "functions": [
             {

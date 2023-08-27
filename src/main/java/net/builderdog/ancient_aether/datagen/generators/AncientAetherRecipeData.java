@@ -82,14 +82,14 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .unlockedBy(getHasName(AetherBlocks.AMBROSIUM_TORCH.get()), has(AetherBlocks.AMBROSIUM_TORCH.get()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AncientAetherItems.ANCIENT_SENTRY_RUNE.get(),2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AncientAetherItems.ANCIENT_RUNE.get(),2)
                 .define('G', AetherBlocks.ENCHANTED_GRAVITITE.get())
-                .define('R', AncientAetherItems.ANCIENT_SENTRY_RUNE.get())
+                .define('R', AncientAetherItems.ANCIENT_RUNE.get())
                 .define('S', AncientAetherBlocks.ANCIENT_SENTRY_STONE.get())
                 .pattern("GGG")
                 .pattern("GRG")
                 .pattern("GSG")
-                .unlockedBy(getHasName(AncientAetherItems.ANCIENT_SENTRY_RUNE.get()), has(AncientAetherItems.ANCIENT_SENTRY_RUNE.get()))
+                .unlockedBy(getHasName(AncientAetherItems.ANCIENT_RUNE.get()), has(AncientAetherItems.ANCIENT_RUNE.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.ENCHANTING_TABLE)

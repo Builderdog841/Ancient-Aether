@@ -84,7 +84,7 @@
   "item.ancient_aether.highsproot_chest_boat": "Highsproot Chest Boat",
   "item.ancient_aether.sakura_boat": "Sakura Boat",
   "item.ancient_aether.sakura_chest_boat": "Sakura Chest Boat",
-  "item.ancient_aether.ancient_sentry_rune": "Ancient Sentry Rune",
+  "item.ancient_aether.ancient_rune": "Ancient Rune",
   "item.ancient_aether.ancient_dungeon_key": "Ancient Dungeon Key",
   "item.ancient_aether.ancient_sword": "Ancient Sword",
 
@@ -194,7 +194,7 @@
   "lore.block.ancient_aether.moonlit_waterlily": "A new type of waterlily generating in the lakes of the Sakura Jungle. They also glow in the dark.",
 
   "lore.item.ancient_aether.grapes": "They can be sometimes found on a field in Valkyrie Settlements as this is the favourite fruit of the Valkyries. They can also be crafted into Valkyrie Wine.",
-  "lore.item.ancient_aether.ancient_sentry_rune": "Found in Sentry Laboratories, this Rune is the key to the Ancient Dungeon as it unlocks Broken Sentry Obelisks. It can also be duplicated using 7 Enchanted Gravitite and 1 Ancient Sentry Stone.",
+  "lore.item.ancient_aether.ancient_rune": "Found in Sentry Laboratories, this Rune is the key to the Ancient Dungeon as it unlocks Broken Sentry Obelisks. It can also be duplicated using 7 Enchanted Gravitite and 1 Ancient Sentry Stone.",
   "lore.item.ancient_aether.raw_buffalo_ribs": "Dropped by Highland Buffalos, these ribs can be cooked into Cooked Buffalo Ribs that are a great food source.",
   "lore.item.ancient_aether.cooked_buffalo_ribs": "A good food source made by cooking Raw Buffalo Ribs. They can also be crafted into 3 singular Buffalo Ribs which give more Hunger Points but less Saturation.",
   "lore.item.ancient_aether.buffalo_rib": "Singular Buffalo Ribs can be eaten faster and give more Hunger Points but less Saturation than an entire Buffalo Rib Cage.",

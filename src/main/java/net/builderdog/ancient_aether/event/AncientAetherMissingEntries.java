@@ -83,9 +83,11 @@ public class AncientAetherMissingEntries {
                 .filter(mapping -> mapping.getKey().getPath().contains("blighted_obelisk")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.SENTRY_OBELISK.get()));
 
         event.getMappings(ForgeRegistries.Keys.ITEMS, AncientAether.MOD_ID).stream()
-                .filter(mapping -> mapping.getKey().getPath().contains("enchanted_sentry_rune")).forEach(blockMapping -> blockMapping.remap(AncientAetherItems.ANCIENT_SENTRY_RUNE.get()));
+                .filter(mapping -> mapping.getKey().getPath().contains("enchanted_sentry_rune")).forEach(blockMapping -> blockMapping.remap(AncientAetherItems.ANCIENT_RUNE.get()));
         event.getMappings(ForgeRegistries.Keys.ITEMS, AncientAether.MOD_ID).stream()
-                .filter(mapping -> mapping.getKey().getPath().contains("blighted_sentry_rune")).forEach(blockMapping -> blockMapping.remap(AncientAetherItems.ANCIENT_SENTRY_RUNE.get()));
+                .filter(mapping -> mapping.getKey().getPath().contains("blighted_sentry_rune")).forEach(blockMapping -> blockMapping.remap(AncientAetherItems.ANCIENT_RUNE.get()));
+        event.getMappings(ForgeRegistries.Keys.ITEMS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("ancient_sentry_rune")).forEach(blockMapping -> blockMapping.remap(AncientAetherItems.ANCIENT_RUNE.get()));
         event.getMappings(ForgeRegistries.Keys.ITEMS, AncientAether.MOD_ID).stream()
                 .filter(mapping -> mapping.getKey().getPath().contains("aechor_ice_cream_bucket")).forEach(blockMapping -> blockMapping.remap(AetherItems.SKYROOT_BUCKET.get()));
 

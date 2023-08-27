@@ -45,7 +45,7 @@ public class BrokenObeliskBlock extends Block {
 
         if (player instanceof ServerPlayer _plr0 && _plr0.level instanceof ServerLevel
                 && _plr0.getAdvancements().getOrStartProgress(_plr0.server.getAdvancements().getAdvancement(new ResourceLocation("aether:silver_dungeon"))).isDone()) {
-            if ((player instanceof ServerPlayer _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == AncientAetherItems.ANCIENT_SENTRY_RUNE.get()) {
+            if ((player instanceof ServerPlayer _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == AncientAetherItems.ANCIENT_RUNE.get()) {
                 ItemStack stack = player.getMainHandItem();
                 if (!(entity instanceof ServerPlayer _livEnt ? _livEnt.getAbilities().instabuild : false)) {
                     player.awardStat(Stats.ITEM_USED.get(stack.getItem()));

@@ -92,7 +92,7 @@ public class AncientAetherCreativeModeTabs {
         if (tab == AetherCreativeTabs.AETHER_EQUIPMENT_AND_UTILITIES) {
             event.getEntries().putAfter(new ItemStack(AetherItems.FLAMING_SWORD.get()), new ItemStack(AncientAetherItems.ANCIENT_SWORD.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AetherItems.BLACK_MOA_EGG.get()), new ItemStack(AncientAetherItems.SAKURA_MOA_EGG.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putBefore(new ItemStack(AetherItems.BLUE_MOA_EGG.get()), new ItemStack(AncientAetherItems.ANCIENT_SENTRY_RUNE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putBefore(new ItemStack(AetherItems.BLUE_MOA_EGG.get()), new ItemStack(AncientAetherItems.ANCIENT_RUNE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AetherItems.SKYROOT_CHEST_BOAT.get()), new ItemStack(AncientAetherItems.HIGHSPROOT_BOAT.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherItems.HIGHSPROOT_BOAT.get()), new ItemStack(AncientAetherItems.HIGHSPROOT_CHEST_BOAT.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherItems.HIGHSPROOT_CHEST_BOAT.get()), new ItemStack(AncientAetherItems.SAKURA_BOAT.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -112,7 +112,7 @@ public class AncientAetherCreativeModeTabs {
             event.getEntries().putBefore(new ItemStack(AetherItems.SENTRY_SPAWN_EGG.get()), new ItemStack(AncientAetherItems.ROOTHYRN_SPAWN_EGG.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
         }
         if (tab == AetherCreativeTabs.AETHER_INGREDIENTS) {
-            event.getEntries().putAfter(new ItemStack(AncientAetherItems.ANCIENT_SENTRY_RUNE.get()), new ItemStack(AncientAetherItems.ANCIENT_SENTRY_RUNE.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
+            event.getEntries().putAfter(new ItemStack(AncientAetherItems.ANCIENT_RUNE.get()), new ItemStack(AncientAetherItems.ANCIENT_RUNE.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
         }
         if (tab == AetherCreativeTabs.AETHER_FUNCTIONAL_BLOCKS) {
             event.getEntries().putAfter(new ItemStack(AetherBlocks.AMBROSIUM_TORCH.get()), new ItemStack(AncientAetherBlocks.HOLYSTONE_LANTERN.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
