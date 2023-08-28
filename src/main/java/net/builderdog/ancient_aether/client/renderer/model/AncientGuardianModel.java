@@ -26,7 +26,7 @@ public class AncientGuardianModel<T extends AncientGuardian> extends EntityModel
                 .texOffs(72, 78).addBox(-10.0F, -68.0F, -7.0F, 20.0F, 20.0F, 20.0F, new CubeDeformation(0.0F))
                 .texOffs(92, 42).addBox(-9.0F, -67.0F, -6.0F, 18.0F, 18.0F, 18.0F, new CubeDeformation(0.0F))
                 .texOffs(132, 86).addBox(-10.0F, -48.0F, 13.0F, 20.0F, 8.0F, 0.0F, new CubeDeformation(0.0F))
-                .texOffs(132, 78).addBox(-10.0F, -76.0F, 13.0F, 20.0F, 8.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
+                .texOffs(132, 78).addBox(-10.0F, -76.0F, 13.0F, 20.0F, 8.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 24.0F, 0.0F, 0.0F, 3.1416F, 0.0F));
 
         PartDefinition cube_r1 = bone.addOrReplaceChild("cube_r1", CubeListBuilder.create().texOffs(84, 0).addBox(-57.0F, -57.0F, 12.0F, 6.0F, 6.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.7854F));
 
