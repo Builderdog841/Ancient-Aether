@@ -1,4 +1,5 @@
-// 1.19.4	2023-08-28T15:03:44.2006965	Item Models: ancient_aether
+// 1.19.4	2023-08-28T18:33:32.3696162	Item Models: ancient_aether
+dc22e9f245c5e59d55b0aec4ae45dec8337daa28 assets/ancient_aether/models/item/aerogel_bottle.json
 37ccb563fa16dca6b181b58274921d2bfce2efea assets/ancient_aether/models/item/ambrosium_campfire.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/ancient_guardian_spawn_egg.json
 7b758a31f7272894d72fc2ff7144b4d1d37b407a assets/ancient_aether/models/item/ancient_sword.json
@@ -55,3 +56,4 @@ e6c1cf2f9b2e9f820237cd5e08913258fb06ea10 assets/ancient_aether/models/item/sakur
 d512fb5f2be651f11b0e848cdfef97b5301df83b assets/ancient_aether/models/item/stripped_sakura_log_wall.json
 67d9f688b85555c143221bf3f650e68c9af8b7a2 assets/ancient_aether/models/item/stripped_sakura_wood_wall.json
 54cc305d29f244b771fe2d06ef99fd40c680df91 assets/ancient_aether/models/item/trapped_sakura_blossoms.json
+b2904a38ad6961e7fe7f085a71ff5c00372cddfd assets/ancient_aether/models/item/valkyrie_wine.json

@@ -104,6 +104,7 @@ public class AncientAetherCreativeModeTabs {
             event.getEntries().putAfter(new ItemStack(AetherItems.WHITE_APPLE.get()), new ItemStack(AncientAetherItems.RAW_BUFFALO_RIBS.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherItems.RAW_BUFFALO_RIBS.get()), new ItemStack(AncientAetherItems.COOKED_BUFFALO_RIBS.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherItems.COOKED_BUFFALO_RIBS.get()), new ItemStack(AncientAetherItems.BUFFALO_RIB.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AetherItems.SKYROOT_POISON_BUCKET.get()), new ItemStack(AncientAetherItems.VALKYRIE_WINE.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
         }
         if (tab == AetherCreativeTabs.AETHER_SPAWN_EGGS) {
             event.getEntries().putAfter(new ItemStack(AetherItems.BLACK_MOA_EGG.get()), new ItemStack(AncientAetherItems.SAKURA_MOA_EGG.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -112,6 +113,7 @@ public class AncientAetherCreativeModeTabs {
             event.getEntries().putBefore(new ItemStack(AetherItems.SENTRY_SPAWN_EGG.get()), new ItemStack(AncientAetherItems.ROOTHYRN_SPAWN_EGG.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
         }
         if (tab == AetherCreativeTabs.AETHER_INGREDIENTS) {
+            event.getEntries().putBefore(new ItemStack(AetherItems.SKYROOT_POISON_BUCKET.get()), new ItemStack(AncientAetherItems.AEROGEL_BOTTLE.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
             event.getEntries().putAfter(new ItemStack(AncientAetherItems.ANCIENT_RUNE.get()), new ItemStack(AncientAetherItems.ANCIENT_RUNE.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
         }
         if (tab == AetherCreativeTabs.AETHER_FUNCTIONAL_BLOCKS) {

@@ -25,6 +25,8 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
 
         //Food
         simpleItem(AncientAetherItems.GRAPES);
+        simpleItem(AncientAetherItems.AEROGEL_BOTTLE);
+        simpleItem(AncientAetherItems.VALKYRIE_WINE);
         simpleItem(AncientAetherItems.RAW_BUFFALO_RIBS);
         simpleItem(AncientAetherItems.COOKED_BUFFALO_RIBS);
         simpleItem(AncientAetherItems.BUFFALO_RIB);
