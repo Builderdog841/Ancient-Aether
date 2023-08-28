@@ -11,6 +11,7 @@ import net.builderdog.ancient_aether.entity.moa.AncientAetherMoaTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.tags.GameEventTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -117,6 +118,23 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .pattern(" Z")
                 .unlockedBy(getHasName(AetherItems.ZANITE_GEMSTONE.get()), has(AetherItems.ZANITE_GEMSTONE.get()))
                 .save(consumer, name("zanite_shears"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, AncientAetherItems.AEROGEL_BOTTLE.get(),3)
+                .define('A', AetherBlocks.AEROGEL.get())
+                .pattern("A A")
+                .pattern(" A ")
+                .unlockedBy(getHasName(AetherBlocks.AEROGEL.get()), has(AetherBlocks.AEROGEL.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AncientAetherItems.VALKYRIE_WINE.get())
+                .define('B', AncientAetherItems.AEROGEL_BOTTLE.get())
+                .define('G', AncientAetherItems.GRAPES.get())
+                .define('A', AetherItems.AMBROSIUM_SHARD.get())
+                .pattern("GAG")
+                .pattern("GBG")
+                .pattern("GGG")
+                .unlockedBy(getHasName(AncientAetherItems.GRAPES.get()), has(AncientAetherItems.GRAPES.get()))
+                .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get())
                 .define('L', ItemTags.LOGS)
