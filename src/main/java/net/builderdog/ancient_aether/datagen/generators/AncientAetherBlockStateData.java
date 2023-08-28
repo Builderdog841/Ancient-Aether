@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.datagen.generators;
 
+import com.aetherteam.aether.block.AetherBlocks;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.datagen.resources.AncientAetherBlockStateProvider;
@@ -42,9 +43,9 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
 
         logBlock(((RotatedPillarBlock) AncientAetherBlocks.SAKURA_LOG.get()));
         axisBlock((RotatedPillarBlock) AncientAetherBlocks.SAKURA_WOOD.get(), blockTexture(AncientAetherBlocks.SAKURA_LOG.get()), blockTexture(AncientAetherBlocks.SAKURA_LOG.get()));
-        axisBlock((RotatedPillarBlock) AncientAetherBlocks.STRIPPED_SAKURA_LOG.get(),new ResourceLocation(AncientAether.MOD_ID,"block/stripped_sakura_log"),
+        axisBlock((RotatedPillarBlock) AncientAetherBlocks.STRIPPED_SAKURA_LOG.get(), new ResourceLocation(AncientAether.MOD_ID,"block/stripped_sakura_log"),
                 new ResourceLocation(AncientAether.MOD_ID,"block/stripped_sakura_log_top"));
-        axisBlock((RotatedPillarBlock) AncientAetherBlocks.STRIPPED_SAKURA_WOOD.get(),new ResourceLocation(AncientAether.MOD_ID,"block/stripped_sakura_log"),
+        axisBlock((RotatedPillarBlock) AncientAetherBlocks.STRIPPED_SAKURA_WOOD.get(), new ResourceLocation(AncientAether.MOD_ID,"block/stripped_sakura_log"),
                 new ResourceLocation(AncientAether.MOD_ID,"block/stripped_sakura_log"));
 
         simpleBlockItem(AncientAetherBlocks.SAKURA_LOG.get(), models().withExistingParent("ancient_aether:sakura_log","minecraft:block/cube_column"));
