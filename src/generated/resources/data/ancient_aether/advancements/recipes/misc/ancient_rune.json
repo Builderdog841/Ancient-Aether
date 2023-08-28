@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_ancient_sentry_rune": {
+    "has_ancient_rune": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ancient_aether:ancient_sentry_rune"
+              "ancient_aether:ancient_rune"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ancient_aether:ancient_sentry_rune"
+        "recipe": "ancient_aether:ancient_rune"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_ancient_sentry_rune",
+      "has_ancient_rune",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "ancient_aether:ancient_sentry_rune"
+      "ancient_aether:ancient_rune"
     ]
   }
 }

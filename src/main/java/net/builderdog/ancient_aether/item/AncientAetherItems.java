@@ -71,6 +71,8 @@ public class AncientAetherItems {
             () -> new ForgeSpawnEggItem(AncientAetherEntities.ROOTHYRN, 0x737558, 0x6FA871, new Item.Properties()));
     public static final RegistryObject<SpawnEggItem> LEAPING_SENTRY_SPAWN_EGG = ITEMS.register("leaping_sentry_spawn_egg",
             () -> new ForgeSpawnEggItem(AncientAetherEntities.LEAPING_SENTRY, 0x808080, 0xE072D7, new Item.Properties()));
+    public static final RegistryObject<SpawnEggItem> ANCIENT_GUARDIAN_SPAWN_EGG = ITEMS.register("ancient_guardian_spawn_egg",
+            () -> new ForgeSpawnEggItem(AncientAetherEntities.ANCIENT_GUARDIAN, 0xB7B2FF, 0x35343D, new Item.Properties()));
     public static final RegistryObject<Item> SAKURA_MOA_EGG = ITEMS.register("sakura_moa_egg",
             () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0xD09FA9, new Item.Properties()));
 

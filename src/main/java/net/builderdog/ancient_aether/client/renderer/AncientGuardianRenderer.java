@@ -1,26 +1,26 @@
 package net.builderdog.ancient_aether.client.renderer;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-import net.builderdog.ancient_aether.AncientAether;
+import net.builderdog.ancient_aether.client.renderer.layers.AncientAetherModelLayers;
+import net.builderdog.ancient_aether.client.renderer.layers.AncientGuardianLayer;
 import net.builderdog.ancient_aether.client.renderer.model.AncientGuardianModel;
 import net.builderdog.ancient_aether.entity.boss.ancient_guardian.AncientGuardian;
-import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
-import software.bernie.geckolib.renderer.GeoEntityRenderer;
 
-public class AncientGuardianRenderer extends GeoEntityRenderer<AncientGuardian> {
-    public AncientGuardianRenderer(EntityRendererProvider.Context renderManager) {
-        super(renderManager, new AncientGuardianModel());
-    }
-    @Override
-    public ResourceLocation getTextureLocation(AncientGuardian animatable) {
-        return new ResourceLocation(AncientAether.MOD_ID, "textures/entity/boss/ancient_guardian.png");
-    }
-    @Override
-    public void render(AncientGuardian entity, float entityYaw, float partialTick, PoseStack poseStack,
-                       MultiBufferSource bufferSource, int packedLight) {
+import javax.annotation.Nonnull;
 
-        super.render(entity, entityYaw, partialTick, poseStack, bufferSource, packedLight);
+public class AncientGuardianRenderer extends MobRenderer<AncientGuardian, AncientGuardianModel<AncientGuardian>> {
+    private static final ResourceLocation ANCIENT_GUARDIAN_TEXTURE = new ResourceLocation("ancient_aether", "textures/entity/boss/ancient_guardian/ancient_guardian.png");
+    private static final ResourceLocation ANCIENT_GUARDIAN_TEXTURE_GLOW = new ResourceLocation("ancient_aether", "textures/entity/boss/ancient_guardian/ancient_guardian.png");
+
+    public AncientGuardianRenderer(EntityRendererProvider.Context context) {
+        super(context, new AncientGuardianModel(context.bakeLayer(AncientAetherModelLayers.ANCIENT_GUARDIAN)), 0.5F);
+        this.addLayer(new AncientGuardianLayer(this));
+    }
+
+    @Nonnull
+    public ResourceLocation getTextureLocation(@Nonnull AncientGuardian ancientGuardian) {
+        return ancientGuardian.isAwake() ? ANCIENT_GUARDIAN_TEXTURE_GLOW : ANCIENT_GUARDIAN_TEXTURE;
     }
 }

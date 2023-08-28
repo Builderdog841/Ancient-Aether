@@ -6,7 +6,7 @@
       "item": "aether:enchanted_gravitite"
     },
     "R": {
-      "item": "ancient_aether:ancient_sentry_rune"
+      "item": "ancient_aether:ancient_rune"
     },
     "S": {
       "item": "ancient_aether:ancient_sentry_stone"
@@ -19,7 +19,7 @@
   ],
   "result": {
     "count": 2,
-    "item": "ancient_aether:ancient_sentry_rune"
+    "item": "ancient_aether:ancient_rune"
   },
   "show_notification": true
 }

@@ -42,7 +42,7 @@ public class AncientAetherEntities {
     public static final RegistryObject<EntityType<AncientGuardian>> ANCIENT_GUARDIAN =
             ENTITY_TYPES.register("ancient_guardian",
                     () -> EntityType.Builder.of(AncientGuardian::new, MobCategory.MONSTER)
-                            .sized(2f, 1f).clientTrackingRange(64)
+                            .sized(2f, 4f).clientTrackingRange(64)
                             .build(new ResourceLocation(AncientAether.MOD_ID, "ancient_guardian").toString()));
     // MISC
     public static final RegistryObject<EntityType<AncientAetherBoatEntity>> BOAT =

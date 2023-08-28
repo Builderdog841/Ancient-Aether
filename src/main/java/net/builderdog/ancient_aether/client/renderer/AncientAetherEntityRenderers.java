@@ -1,7 +1,11 @@
 package net.builderdog.ancient_aether.client.renderer;
 
+import com.aetherteam.aether_genesis.client.renderer.GenesisModelLayers;
+import com.aetherteam.aether_genesis.client.renderer.entity.model.SentryGuardianModel;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
+import net.builderdog.ancient_aether.client.renderer.layers.AncientAetherModelLayers;
+import net.builderdog.ancient_aether.client.renderer.model.AncientGuardianModel;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.minecraft.client.model.BoatModel;
@@ -9,6 +13,7 @@ import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.blockentity.CampfireRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -24,12 +29,16 @@ public class AncientAetherEntityRenderers {
         event.registerEntityRenderer(AncientAetherEntities.BOAT.get(), context -> new AncientAetherBoatRenderer<>(context, false));
         event.registerEntityRenderer(AncientAetherEntities.CHEST_BOAT.get(), context -> new AncientAetherBoatRenderer<>(context, true));
         event.registerEntityRenderer(AncientAetherEntities.LEAPING_SENTRY.get(), LeapingSentryRenderer::new);
+        event.registerEntityRenderer(AncientAetherEntities.ANCIENT_GUARDIAN.get(), AncientGuardianRenderer::new);
+        event.registerEntityRenderer(AncientAetherEntities.HIGHLAND_BUFFALO.get(), HighlandBuffaloRenderer::new);
+        event.registerEntityRenderer(AncientAetherEntities.ROOTHYRN.get(), RoothyrnRenderer::new);
     }
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
         for (AncientAetherBoatEntity.Type type : AncientAetherBoatEntity.Type.values()) {
             event.registerLayerDefinition(new ModelLayerLocation(new ResourceLocation(AncientAether.MOD_ID, type.getModelLocation()), "main"), BoatModel::createBodyModel);
             event.registerLayerDefinition(new ModelLayerLocation(new ResourceLocation(AncientAether.MOD_ID, type.getChestModelLocation()), "main"), ChestBoatModel::createBodyModel);
+            event.registerLayerDefinition(AncientAetherModelLayers.ANCIENT_GUARDIAN, AncientGuardianModel::createBodyLayer);
         }
     }
 }

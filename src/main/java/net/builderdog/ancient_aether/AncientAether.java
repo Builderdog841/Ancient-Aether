@@ -166,11 +166,5 @@ public class AncientAether {
     }
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event) {
-            EntityRenderers.register(AncientAetherEntities.HIGHLAND_BUFFALO.get(), HighlandBuffaloRenderer::new);
-            EntityRenderers.register(AncientAetherEntities.ROOTHYRN.get(), RoothyrnRenderer::new);
-            EntityRenderers.register(AncientAetherEntities.ANCIENT_GUARDIAN.get(), AncientGuardianRenderer::new);
-        }
     }
 }

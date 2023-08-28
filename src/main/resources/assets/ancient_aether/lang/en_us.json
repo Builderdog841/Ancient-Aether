@@ -79,6 +79,7 @@
   "item.ancient_aether.highland_buffalo_spawn_egg": "Highland Buffalo Spawn Egg",
   "item.ancient_aether.roothyrn_spawn_egg": "Roothyrn Spawn Egg",
   "item.ancient_aether.leaping_sentry_spawn_egg": "Leaping Sentry Spawn Egg",
+  "item.ancient_aether.ancient_guardian_spawn_egg": "Ancient Guardian Spawn Egg",
   "item.ancient_aether.sakura_moa_egg": "Sakura Moa Egg",
   "item.ancient_aether.highsproot_boat": "Highsproot Boat",
   "item.ancient_aether.highsproot_chest_boat": "Highsproot Chest Boat",
@@ -90,6 +91,8 @@
 
   "entity.ancient_aether.highland_buffalo": "Highland Buffalo",
   "entity.ancient_aether.leaping_sentry": "Leaping Sentry",
+  "entity.ancient_aether.ancient_guardian": "Ancient Guardian",
+  "entity.ancient_aether.ancient_core": "Ancient Core",
   "entity.ancient_aether.roothyrn": "Roothyrn",
   "entity.ancient_aether.boat": "Boat",
   "entity.ancient_aether.chest_boat": "Boat with Chest",
@@ -124,6 +127,8 @@
   "advancement.ancient_aether.roothyrn_trap.desc": "You fell right into the trap of a Roothyrn",
 
   "gui.ancient_aether.obelisk_valkyrie_queen": "You haven't defeated the Valkyrie Queen yet",
+  "gui.ancient_aether.ancient_guardian.title": "Ancient Guardian",
+  "gui.ancient_aether.ancient_core.title": "Ancient Core",
 
   "ancient_aether.dungeon.ancient_dungeon": "Ancient Dungeon",
 
