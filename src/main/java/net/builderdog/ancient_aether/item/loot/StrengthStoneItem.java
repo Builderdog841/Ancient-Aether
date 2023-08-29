@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.item;
+package net.builderdog.ancient_aether.item.loot;
 
 import com.aetherteam.aether.item.accessories.AccessoryItem;
 import net.minecraft.world.entity.LivingEntity;

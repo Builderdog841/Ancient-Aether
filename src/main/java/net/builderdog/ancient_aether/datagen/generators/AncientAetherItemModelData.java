@@ -31,6 +31,7 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         simpleItem(AncientAetherItems.COOKED_BUFFALO_RIBS);
         simpleItem(AncientAetherItems.BUFFALO_RIB);
         simpleItem(AncientAetherItems.STRENGTH_STONE);
+        simpleItem(AncientAetherItems.ANCIENT_PENDANT);
 
         //Boats
         item(AncientAetherItems.HIGHSPROOT_BOAT.get(), "");

@@ -1,6 +1,7 @@
-package net.builderdog.ancient_aether.block;
+package net.builderdog.ancient_aether.block.functional;
 
 import com.aetherteam.aether.block.AetherBlocks;
+import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.ChatFormatting;

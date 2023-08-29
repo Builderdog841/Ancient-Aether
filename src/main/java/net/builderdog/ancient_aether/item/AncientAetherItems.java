@@ -1,16 +1,18 @@
 package net.builderdog.ancient_aether.item;
 
-import com.aetherteam.aether.api.AetherMoaTypes;
-import com.aetherteam.aether.item.accessories.miscellaneous.RegenerationStoneItem;
-import com.aetherteam.aether.item.miscellaneous.AetherRecordItem;
 import com.aetherteam.aether.item.miscellaneous.DungeonKeyItem;
 import com.aetherteam.aether.item.miscellaneous.MoaEggItem;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
-import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.entity.moa.AncientAetherMoaTypes;
+import net.builderdog.ancient_aether.item.consumables.BuffaloRib;
+import net.builderdog.ancient_aether.item.consumables.ValkyrieWineItem;
+import net.builderdog.ancient_aether.item.loot.AncientPendantItem;
+import net.builderdog.ancient_aether.item.loot.AncientSwordItem;
+import net.builderdog.ancient_aether.item.loot.StrengthStoneItem;
+import net.builderdog.ancient_aether.item.misc.AncientAetherBoatItem;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.network.chat.TextColor;
@@ -42,6 +44,7 @@ public class AncientAetherItems {
     //Dungeon Loot
     public static final RegistryObject<SwordItem> ANCIENT_SWORD = ITEMS.register("ancient_sword", () -> new AncientSwordItem().addDungeonTooltip(ANCIENT_DUNGEON_TOOLTIP));
     public static final RegistryObject<Item> STRENGTH_STONE = ITEMS.register("strength_stone", () -> new StrengthStoneItem(new Item.Properties().stacksTo(1).rarity(AETHER_LOOT)).addDungeonTooltip(ANCIENT_DUNGEON_TOOLTIP));
+    public static final RegistryObject<Item> ANCIENT_PENDANT = ITEMS.register("ancient_pendant", () -> new AncientPendantItem(new Item.Properties().stacksTo(1)));
 
     //Signs
     public static final RegistryObject<Item> HIGHSPROOT_SIGN = ITEMS.register("highsproot_sign", () -> new SignItem(new Item.Properties().stacksTo(16), AncientAetherBlocks.HIGHSPROOT_SIGN.get(), AncientAetherBlocks.HIGHSPROOT_WALL_SIGN.get()));

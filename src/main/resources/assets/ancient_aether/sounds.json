@@ -45,5 +45,27 @@
       "aether:block/dungeon_trap/trigger6"
     ],
     "subtitle": "subtitles.ancient_aether.block.roothyrn_trap.trigger"
+  },
+  "item.accessory.equip_ancient_pendant": {
+    "sounds": [
+      "item/armor/equip_chain1",
+      "item/armor/equip_chain2",
+      "item/armor/equip_chain3",
+      "item/armor/equip_chain4",
+      "item/armor/equip_chain5",
+      "item/armor/equip_chain6"
+    ],
+    "subtitle": "subtitles.aether.item.accessory.equip_ancient_pendant"
+  },
+  "item.accessory.equip_ancient_ring": {
+    "sounds": [
+      "item/armor/equip_chain1",
+      "item/armor/equip_chain2",
+      "item/armor/equip_chain3",
+      "item/armor/equip_chain4",
+      "item/armor/equip_chain5",
+      "item/armor/equip_chain6"
+    ],
+    "subtitle": "subtitles.aether.item.accessory.equip_ancient_ring"
   }
 }

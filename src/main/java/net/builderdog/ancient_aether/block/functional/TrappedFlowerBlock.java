@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.block;
+package net.builderdog.ancient_aether.block.functional;
 
 import com.aetherteam.aether.event.dispatch.AetherEventDispatch;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
@@ -44,7 +44,7 @@ public class TrappedFlowerBlock extends BushBlock {
     }
 
     /**
-     * If a player steps on the block, it converts to the state given by {@link net.builderdog.ancient_aether.block.TrappedFlowerBlock#defaultStateSupplier} and spawns the entity given by {@link net.builderdog.ancient_aether.block.TrappedFlowerBlock#spawnableEntityTypeSupplier}.
+     * If a player steps on the block, it converts to the state given by {@link TrappedFlowerBlock#defaultStateSupplier} and spawns the entity given by {@link TrappedFlowerBlock#spawnableEntityTypeSupplier}.
      * @param level The {@link Level} the block is in.
      * @param blockPos The {@link BlockPos} of the block.
      * @param blockState The {@link BlockState} of the block.

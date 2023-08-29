@@ -1,7 +1,8 @@
-package net.builderdog.ancient_aether.block;
+package net.builderdog.ancient_aether.block.building;
 
 import com.aetherteam.aether.block.AetherBlockStateProperties;
 import com.aetherteam.aether.block.natural.AetherLogBlock;
+import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.block.state.BlockState;

@@ -1,6 +1,7 @@
-package net.builderdog.ancient_aether.item;
+package net.builderdog.ancient_aether.item.consumables;
 
 import com.aetherteam.aether.item.miscellaneous.ConsumableItem;
+import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;

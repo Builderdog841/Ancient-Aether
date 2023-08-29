@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.block;
+package net.builderdog.ancient_aether.block.functional;
 
 import java.util.Optional;
 import javax.annotation.Nullable;

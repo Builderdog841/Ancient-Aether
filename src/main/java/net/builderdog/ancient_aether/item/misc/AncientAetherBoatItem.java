@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.item;
+package net.builderdog.ancient_aether.item.misc;
 
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherChestBoatEntity;

@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.item;
+package net.builderdog.ancient_aether.item.loot;
 
 import com.aetherteam.aether.item.AetherItems;
 import com.aetherteam.aether.item.combat.AetherItemTiers;
