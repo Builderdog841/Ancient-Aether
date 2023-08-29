@@ -33,7 +33,7 @@ public class AncientAetherItems {
     public static final DeferredRegister<Item> ITEMS =
            DeferredRegister.create(ForgeRegistries.ITEMS, AncientAether.MOD_ID) ;
 
-    public static final Component ANCIENT_DUNGEON_TOOLTIP = Component.translatable("ancient_aether.dungeon.ancient_dungeon").withStyle(Style.EMPTY.withItalic(true).withColor(TextColor.parseColor("#3A466B")));
+    public static final Component ANCIENT_DUNGEON_TOOLTIP = Component.translatable("ancient_aether.dungeon.ancient_dungeon").withStyle(Style.EMPTY.withItalic(true).withColor(TextColor.parseColor("#5C70A8")));
 
     //Misc
     public static final RegistryObject<Item> AEROGEL_BOTTLE = ITEMS.register("aerogel_bottle",
