@@ -91,6 +91,7 @@
   "item.ancient_aether.ancient_dungeon_key": "Ancient Dungeon Key",
   "item.ancient_aether.ancient_sword": "Ancient Sword",
   "item.ancient_aether.ancient_pendant": "Ancient Pendant",
+  "item.ancient_aether.ancient_ring": "Ancient Ring",
   "item.ancient_aether.strength_stone": "Strength Stone",
 
   "entity.ancient_aether.highland_buffalo": "Highland Buffalo",
@@ -207,7 +208,9 @@
   "lore.item.ancient_aether.grapes": "They can be sometimes found on a field in Valkyrie Settlements as this is the favourite fruit of the Valkyries. They can be crafted into Valkyrie Wine.",
   "lore.item.ancient_aether.ancient_rune": "Found in Sentry Laboratories, this Rune is the key to the Ancient Dungeon as it unlocks Broken Sentry Obelisks. It can also be duplicated using 7 Enchanted Gravitite and 1 Ancient Sentry Stone.",
   "lore.item.ancient_aether.ancient_sword": "This Sword is a reward for defeating the Ancient Guardian. It is very powerful due to its high Attack Speed.",
-  "lore.item.ancient_aether.strength_stone": "A reward from defeating the Ancient Guardian, this gemstone multiplies your damage by a factor of 1,25.",
+  "lore.item.ancient_aether.strength_stone": "A reward from defeating the Ancient Guardian. This gemstone multiplies your damage by a factor of 1,25.",
+  "lore.item.ancient_aether.ancient_ring": "A reward from defeating the Ancient Guardian. This ring boosts your Attack Speed by 0,1.",
+  "lore.item.ancient_aether.ancient_pendant": "A reward from defeating the Ancient Guardian. This pendant boosts your Attack Speed by 0,2.",
   "lore.item.ancient_aether.raw_buffalo_ribs": "Dropped by Highland Buffalos, these ribs can be cooked into Cooked Buffalo Ribs that are a great food source.",
   "lore.item.ancient_aether.cooked_buffalo_ribs": "A good food source made by cooking Raw Buffalo Ribs. They can also be crafted into 3 singular Buffalo Ribs which give more Hunger Points but less Saturation.",
   "lore.item.ancient_aether.aerogel_bottle": "A bottle crafted from Aerogel that is used for very special beverages like Valkyrie Wine.",
