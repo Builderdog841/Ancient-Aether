@@ -1,21 +1,20 @@
 {
   "carvers": {},
-  "temperature": 0.8,
-  "downfall": 0,
   "creature_spawn_probability": 0.25,
+  "downfall": 0.0,
   "effects": {
     "fog_color": 9671612,
     "foliage_color": 11665355,
     "grass_color": 11665355,
-    "sky_color": 12632319,
-    "water_color": 4159204,
-    "water_fog_color": 329011,
     "music": {
       "max_delay": 5000,
       "min_delay": 5000,
       "replace_current_music": true,
       "sound": "aether:music.aether"
-    }
+    },
+    "sky_color": 12632319,
+    "water_color": 4159204,
+    "water_fog_color": 329011
   },
   "features": [
     [
@@ -41,14 +40,10 @@
       "aether:water_spring"
     ],
     [
-      "ancient_aether:icestone_boulder",
-      "ancient_aether:wyndcap_taiga_trees",
+      "aether:skyroot_forest_trees",
       "aether:holiday_tree",
       "aether:grass_patch",
-      "minecraft:patch_taiga_grass",
-      "minecraft:patch_large_fern",
-      "ancient_aether:highland_tulip_patch",
-      "ancient_aether:edelweiss_patch",
+      "aether:tall_grass_patch",
       "aether:white_flower_patch",
       "aether:purple_flower_patch",
       "aether:berry_bush_patch"
@@ -168,10 +163,10 @@
         "weight": 12
       },
       {
-        "type": "ancient_aether:highland_buffalo",
+        "type": "aether:flying_cow",
         "maxCount": 5,
         "minCount": 2,
-        "weight": 15
+        "weight": 12
       },
       {
         "type": "aether:aerbunny",
@@ -191,5 +186,6 @@
     "underground_water_creature": [],
     "water_ambient": [],
     "water_creature": []
-  }
+  },
+  "temperature": 0.8
 }
