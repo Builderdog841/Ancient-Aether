@@ -30,10 +30,10 @@ public class AncientPendantItem extends PendantItem {
     @Override
     public void onUnequip(SlotContext slotContext, ItemStack newStack, ItemStack stack) {
         LivingEntity livingEntity = slotContext.entity();
-        AttributeInstance stepHeight = livingEntity.getAttribute(Attributes.ATTACK_SPEED);
-        if (stepHeight != null) {
-            if (stepHeight.hasModifier(getdamageModifier())) {
-                stepHeight.removeModifier(getdamageModifier());
+        AttributeInstance attackSpeed = livingEntity.getAttribute(Attributes.ATTACK_SPEED);
+        if (attackSpeed != null) {
+            if (attackSpeed.hasModifier(getdamageModifier())) {
+                attackSpeed.removeModifier(getdamageModifier());
             }
         }
     }

@@ -29,10 +29,10 @@ public class StrengthStoneItem extends AccessoryItem {
     @Override
     public void onUnequip(SlotContext slotContext, ItemStack newStack, ItemStack stack) {
         LivingEntity livingEntity = slotContext.entity();
-        AttributeInstance stepHeight = livingEntity.getAttribute(Attributes.ATTACK_DAMAGE);
-        if (stepHeight != null) {
-            if (stepHeight.hasModifier(getdamageModifier())) {
-                stepHeight.removeModifier(getdamageModifier());
+        AttributeInstance damage = livingEntity.getAttribute(Attributes.ATTACK_DAMAGE);
+        if (damage  != null) {
+            if (damage .hasModifier(getdamageModifier())) {
+                damage .removeModifier(getdamageModifier());
             }
         }
     }
