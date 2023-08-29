@@ -31,7 +31,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'io.github.0ffz.github-packages'
 apply plugin: 'org.spongepowered.mixin'
 
-version = '0.6.4'
+version = '0.6.5'
 group = 'net.builderdog.ancient_aether'
 archivesBaseName = 'ancient_aether'
 
@@ -152,7 +152,7 @@ dependencies {
     implementation fg.deobf("curse.maven:configured-457570:4462894")
     //implementation fg.deobf("curse.maven:aether-gravitation-855631:4649012")
     //implementation fg.deobf('local:aether_genesis:1.19.4-0.0.1-forge')
-    //implementation fg.deobf("curse.maven:aether-redux-867237:4682405")
+    implementation fg.deobf("curse.maven:aether-redux-867237:4682405")
     //implementation fg.deobf("curse.maven:deep-aether-852465:4620674")
 }
 jar {
