@@ -1,4 +1,4 @@
-// 1.19.4	2023-08-28T18:33:32.3696162	Item Models: ancient_aether
+// 1.19.4	2023-08-29T20:41:33.5139684	Item Models: ancient_aether
 dc22e9f245c5e59d55b0aec4ae45dec8337daa28 assets/ancient_aether/models/item/aerogel_bottle.json
 37ccb563fa16dca6b181b58274921d2bfce2efea assets/ancient_aether/models/item/ambrosium_campfire.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/ancient_guardian_spawn_egg.json
@@ -51,6 +51,7 @@ b5f57985ae50e92184ef2d80c666a9950a811db2 assets/ancient_aether/models/item/sakur
 bed0eab0ac3fd6ff1db0dc21b542f50f4048c2b9 assets/ancient_aether/models/item/sakura_trapdoor.json
 e6c1cf2f9b2e9f820237cd5e08913258fb06ea10 assets/ancient_aether/models/item/sakura_wood_wall.json
 1ff1dfbd020234c9d222b25637694c23914ea93a assets/ancient_aether/models/item/sentry_lantern.json
+91c8bd4c3e5f39b613322a1e535a01eb7f6d55fe assets/ancient_aether/models/item/strength_stone.json
 4a1875d25df6433044e34e5c18d5317293da832a assets/ancient_aether/models/item/stripped_highsproot_log_wall.json
 1278fa36814adb56c82340a15053d203a2b06a93 assets/ancient_aether/models/item/stripped_highsproot_wood_wall.json
 d512fb5f2be651f11b0e848cdfef97b5301df83b assets/ancient_aether/models/item/stripped_sakura_log_wall.json

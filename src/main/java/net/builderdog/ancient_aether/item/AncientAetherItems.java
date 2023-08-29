@@ -1,6 +1,7 @@
 package net.builderdog.ancient_aether.item;
 
 import com.aetherteam.aether.api.AetherMoaTypes;
+import com.aetherteam.aether.item.accessories.miscellaneous.RegenerationStoneItem;
 import com.aetherteam.aether.item.miscellaneous.AetherRecordItem;
 import com.aetherteam.aether.item.miscellaneous.DungeonKeyItem;
 import com.aetherteam.aether.item.miscellaneous.MoaEggItem;
@@ -40,6 +41,7 @@ public class AncientAetherItems {
 
     //Dungeon Loot
     public static final RegistryObject<SwordItem> ANCIENT_SWORD = ITEMS.register("ancient_sword", () -> new AncientSwordItem().addDungeonTooltip(ANCIENT_DUNGEON_TOOLTIP));
+    public static final RegistryObject<Item> STRENGTH_STONE = ITEMS.register("strength_stone", () -> new StrengthStoneItem(new Item.Properties().stacksTo(1).rarity(AETHER_LOOT)).addDungeonTooltip(ANCIENT_DUNGEON_TOOLTIP));
 
     //Signs
     public static final RegistryObject<Item> HIGHSPROOT_SIGN = ITEMS.register("highsproot_sign", () -> new SignItem(new Item.Properties().stacksTo(16), AncientAetherBlocks.HIGHSPROOT_SIGN.get(), AncientAetherBlocks.HIGHSPROOT_WALL_SIGN.get()));
