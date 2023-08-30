@@ -20,10 +20,10 @@ public class AncientPendantItem extends PendantItem {
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {
         LivingEntity livingEntity = slotContext.entity();
-        AttributeInstance damage = livingEntity.getAttribute(Attributes.ATTACK_SPEED);
-        if (damage != null) {
-            if (!damage.hasModifier(getdamageModifier())) {
-                damage.addTransientModifier(getdamageModifier());
+        AttributeInstance attackSpeed = livingEntity.getAttribute(Attributes.ATTACK_SPEED);
+        if (attackSpeed != null) {
+            if (!attackSpeed.hasModifier(getdamageModifier())) {
+                attackSpeed.addTransientModifier(getdamageModifier());
             }
         }
     }

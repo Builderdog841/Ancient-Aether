@@ -1,4 +1,4 @@
-// 1.19.4	2023-08-29T23:09:04.3595921	Item Models: ancient_aether
+// 1.19.4	2023-08-30T10:23:20.8334938	Item Models: ancient_aether
 dc22e9f245c5e59d55b0aec4ae45dec8337daa28 assets/ancient_aether/models/item/aerogel_bottle.json
 37ccb563fa16dca6b181b58274921d2bfce2efea assets/ancient_aether/models/item/ambrosium_campfire.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/ancient_guardian_spawn_egg.json
@@ -11,6 +11,8 @@ c3272ab19c230cf6ebff5ea420ce3ccbc1c229fc assets/ancient_aether/models/item/cooke
 2cfb6392a2bcd557586e8a7687ea7804d0c3e128 assets/ancient_aether/models/item/edelweiss.json
 847fb5b6aa35f5048e62d3bf76e55f05c6b41f80 assets/ancient_aether/models/item/gale_lantern.json
 76dcbb064b6afcca77cbab1d82750b6e6c30765c assets/ancient_aether/models/item/grapes.json
+2726803d4e188921de701cb2dacc39c4f08b9acf assets/ancient_aether/models/item/health_pendant.json
+4f9236d35c4bf383f96a3026d37273520e4cbbf6 assets/ancient_aether/models/item/health_ring.json
 fbd830b4a955ffc654b7582bfed186176715ba49 assets/ancient_aether/models/item/hellfire_lantern.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/highland_buffalo_spawn_egg.json
 d86c3fcae396cd54d74c8351a02e56aea9cbe970 assets/ancient_aether/models/item/highland_tulip.json

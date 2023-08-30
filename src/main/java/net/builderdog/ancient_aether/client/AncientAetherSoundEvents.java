@@ -19,6 +19,8 @@ public class AncientAetherSoundEvents {
     public static final RegistryObject<SoundEvent> ROOTHYRN_EMERGES = register("block.roothyrn_trap.trigger");
     public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_ANCIENT_RING = register("item.accessory.equip_ancient_ring");
     public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_ANCIENT_PENDANT = register("item.accessory.equip_ancient_pendant");
+    public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_HEALTH_RING = register("item.accessory.equip_health_ring");
+    public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_HEALTH_PENDANT = register("item.accessory.equip_health_pendant");
 
     private static RegistryObject<SoundEvent> register(String name) {
         return SOUNDS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(AncientAether.MOD_ID, name)));

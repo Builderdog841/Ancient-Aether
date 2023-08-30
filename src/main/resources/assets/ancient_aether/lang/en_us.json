@@ -92,6 +92,8 @@
   "item.ancient_aether.ancient_sword": "Ancient Sword",
   "item.ancient_aether.ancient_pendant": "Ancient Pendant",
   "item.ancient_aether.ancient_ring": "Ancient Ring",
+  "item.ancient_aether.health_pendant": "Health Pendant",
+  "item.ancient_aether.health_ring": "Health Ring",
   "item.ancient_aether.strength_stone": "Strength Stone",
 
   "entity.ancient_aether.highland_buffalo": "Highland Buffalo",
@@ -121,6 +123,8 @@
   "subtitles.ancient_aether.block.roothyrn_trap.trigger": "Roothyrn emerges",
   "subtitles.aether.item.accessory.equip_ancient_pendant": "Ancient Pendant jingles",
   "subtitles.aether.item.accessory.equip_ancient_ring": "Ancient Ring jingles",
+  "subtitles.aether.item.accessory.equip_health_pendant": "Health Pendant jingles",
+  "subtitles.aether.item.accessory.equip_health_ring": "Health Ring jingles",
 
   "advancement.ancient_aether.ancient_aether_exploration": "The Ancient Aether",
   "advancement.ancient_aether.ancient_aether_exploration.desc": "Find all biomes added by the Ancient Aether Add-On",
@@ -211,6 +215,8 @@
   "lore.item.ancient_aether.strength_stone": "A reward from defeating the Ancient Guardian. This gemstone multiplies your damage by a factor of 1,25.",
   "lore.item.ancient_aether.ancient_ring": "A reward from defeating the Ancient Guardian. This ring boosts your Attack Speed by 0,1.",
   "lore.item.ancient_aether.ancient_pendant": "A reward from defeating the Ancient Guardian. This pendant boosts your Attack Speed by 0,2.",
+  "lore.item.ancient_aether.health_ring": "A reward from defeating the Ancient Guardian. This ring grants you 1 Bonus Health Point.",
+  "lore.item.ancient_aether.health_pendant": "A reward from defeating the Ancient Guardian. This pendants grants you 2 Bonus Health Points.",
   "lore.item.ancient_aether.raw_buffalo_ribs": "Dropped by Highland Buffalos, these ribs can be cooked into Cooked Buffalo Ribs that are a great food source.",
   "lore.item.ancient_aether.cooked_buffalo_ribs": "A good food source made by cooking Raw Buffalo Ribs. They can also be crafted into 3 singular Buffalo Ribs which give more Hunger Points but less Saturation.",
   "lore.item.ancient_aether.aerogel_bottle": "A bottle crafted from Aerogel that is used for very special beverages like Valkyrie Wine.",
