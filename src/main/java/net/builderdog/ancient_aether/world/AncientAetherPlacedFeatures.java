@@ -33,7 +33,7 @@ public class AncientAetherPlacedFeatures {
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(128))));
 
         register(context, HIGHLAND_TULIP_PATCH, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.HIGHLAND_TULIP_PATCH),
-                RarityFilter.onAverageOnceEvery(8),
+                RarityFilter.onAverageOnceEvery(3),
                 InSquarePlacement.spread(),
                 PlacementUtils.HEIGHTMAP,
                 BiomeFilter.biome());

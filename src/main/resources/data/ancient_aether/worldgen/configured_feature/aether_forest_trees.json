@@ -40,9 +40,29 @@
         }
       },
       {
-        "chance": 0.3,
+        "chance": 0.2,
         "feature": {
           "feature": "ancient_aether:skyroot_pine_tree",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:would_survive",
+                "state": {
+                  "Name": "aether:skyroot_sapling",
+                  "Properties": {
+                    "stage": "0"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chance": 0.1,
+        "feature": {
+          "feature": "ancient_aether:fancy_skyroot",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",
