@@ -16,7 +16,7 @@ public class AncientGuardianRenderer extends MobRenderer<AncientGuardian, Ancien
 
     public AncientGuardianRenderer(EntityRendererProvider.Context context) {
         super(context, new AncientGuardianModel(context.bakeLayer(AncientAetherModelLayers.ANCIENT_GUARDIAN)), 0.5F);
-        this.addLayer(new AncientGuardianLayer(this));
+        addLayer(new AncientGuardianLayer(this));
     }
 
     @Nonnull

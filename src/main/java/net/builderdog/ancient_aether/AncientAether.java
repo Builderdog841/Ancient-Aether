@@ -122,14 +122,6 @@ public class AncientAether {
 
     }
 
-    private void setupBuiltinDatapack(AddPackFindersEvent event, String path, String displayName, String desc) {
-        this.setupDatapack(event, path, displayName, desc, PackSource.BUILT_IN);
-    }
-
-    private void setupFeatureDatapack(AddPackFindersEvent event, String path, String displayName, String desc) {
-        this.setupDatapack(event, path, displayName, desc, PackSource.FEATURE);
-    }
-
     private void setupDatapack(AddPackFindersEvent event, String path, String displayName, String desc, PackSource source) {
         if (event.getPackType() == PackType.SERVER_DATA) {
             Path resourcePath = ModList.get().getModFileById("ancient_aether").getFile().findResource(new String[]{"packs/" + path});
@@ -141,7 +133,6 @@ public class AncientAether {
                 }, new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.SERVER_DATA), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()), PackType.SERVER_DATA, Pack.Position.TOP, false, source));
             });
         }
-
     }
 
     private void registerComposting() {

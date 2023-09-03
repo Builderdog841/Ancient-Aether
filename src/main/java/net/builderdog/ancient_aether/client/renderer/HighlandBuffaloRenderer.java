@@ -1,24 +1,27 @@
 package net.builderdog.ancient_aether.client.renderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.builderdog.ancient_aether.AncientAether;
+import net.builderdog.ancient_aether.client.renderer.layers.AncientAetherModelLayers;
 import net.builderdog.ancient_aether.client.renderer.model.HighlandBuffaloModel;
 import net.builderdog.ancient_aether.entity.animals.HighlandBuffalo;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
-import software.bernie.geckolib.renderer.GeoEntityRenderer;
 
-public class HighlandBuffaloRenderer extends GeoEntityRenderer<HighlandBuffalo> {
-    public HighlandBuffaloRenderer(EntityRendererProvider.Context renderManager) {
-        super(renderManager, new HighlandBuffaloModel());
+import javax.annotation.Nonnull;
+
+public class HighlandBuffaloRenderer extends MobRenderer<HighlandBuffalo, HighlandBuffaloModel<HighlandBuffalo>> {
+    private static final ResourceLocation HIGHLAND_BUFFALO_TEXTURE = new ResourceLocation("ancient_aether", "textures/entity/highland_buffalo.png");
+
+    public HighlandBuffaloRenderer(EntityRendererProvider.Context context) {
+        super(context, new HighlandBuffaloModel(context.bakeLayer(AncientAetherModelLayers.HIGHLAND_BUFFALO)), 0.7F);
     }
 
-    @Override
-    public ResourceLocation getTextureLocation(HighlandBuffalo animatable) {
-        return new ResourceLocation(AncientAether.MOD_ID, "textures/entity/highland_buffalo.png");
+    @Nonnull
+    public ResourceLocation getTextureLocation(@Nonnull HighlandBuffalo buffalo) {
+        return HIGHLAND_BUFFALO_TEXTURE;
     }
-
     @Override
     public void render(HighlandBuffalo entity, float entityYaw, float partialTick, PoseStack poseStack,
                        MultiBufferSource bufferSource, int packedLight) {
