@@ -71,9 +71,8 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         itemButton(AncientAetherBlocks.SAKURA_BUTTON.get(), AncientAetherBlocks.SAKURA_PLANKS.get(), "");
         itemBlock(AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get());
 
-        itemBlock(AncientAetherBlocks.QUICKSOIL_BRICK_STAIRS.get());
-        itemBlock(AncientAetherBlocks.QUICKSOIL_BRICK_SLAB.get());
-        itemWallBlock(AncientAetherBlocks.QUICKSOIL_BRICK_WALL.get(), AncientAetherBlocks.QUICKSOIL_BRICKS.get(), "");
+        itemBlock(AncientAetherBlocks.QUICKSTONE_STAIRS.get());
+        itemBlock(AncientAetherBlocks.QUICKSTONE_SLAB.get());
 
         item(AncientAetherBlocks.HOLYSTONE_LANTERN.get().asItem(), "");
         item(AncientAetherBlocks.SENTRY_LANTERN.get().asItem(), "");

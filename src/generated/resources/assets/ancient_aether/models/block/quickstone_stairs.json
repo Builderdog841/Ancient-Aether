@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "ancient_aether:block/quickstone",
+    "side": "ancient_aether:block/quickstone",
+    "top": "ancient_aether:block/quickstone"
+  }
+}

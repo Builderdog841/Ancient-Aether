@@ -87,7 +87,7 @@ public class AncientAetherBlocks  {
     public static final RegistryObject<Block> HIGHSPROOT_WALL_SIGN = BLOCKS.register("highsproot_wall_sign", () -> new AncientAetherWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), AncientAetherWoodTypes.HIGHSPROOT));
     public static final RegistryObject<Block> HIGHSPROOT_SIGN = BLOCKS.register("highsproot_sign", () -> new AncientAetherSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), AncientAetherWoodTypes.HIGHSPROOT));
     public static final RegistryObject<Block> HIGHSPROOT_LEAVES = registerBlock("highsproot_leaves",
-            () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
+            () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.of(Material.LEAVES, MaterialColor.COLOR_BLUE)
                     .strength(0.2f).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
     public static final RegistryObject<Block> HIGHSPROOT_SAPLING = registerBlock("highsproot_sapling",
             () -> new SaplingBlock(new HighsprootTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
@@ -136,7 +136,7 @@ public class AncientAetherBlocks  {
     public static final RegistryObject<Block> SAKURA_WALL_SIGN = BLOCKS.register("sakura_wall_sign", () -> new AncientAetherWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), AncientAetherWoodTypes.SAKURA));
     public static final RegistryObject<Block> SAKURA_SIGN = BLOCKS.register("sakura_sign", () -> new AncientAetherSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), AncientAetherWoodTypes.SAKURA));
     public static final RegistryObject<Block> SAKURA_LEAVES = registerBlock("sakura_leaves",
-            () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
+            () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.of(Material.LEAVES, MaterialColor.COLOR_PINK)
                     .strength(0.2f).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
     public static final RegistryObject<Block> SAKURA_SAPLING = registerBlock("sakura_sapling",
             () -> new SaplingBlock(new SakuraTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
@@ -206,16 +206,14 @@ public class AncientAetherBlocks  {
             () -> new LanternBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.LANTERN)
                     .strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 12)));
 
-    //Quicksoil Bricks
-    public static final RegistryObject<Block> QUICKSOIL_BRICKS = registerBlock("quicksoil_bricks",
+    //Quickstone
+    public static final RegistryObject<Block> QUICKSTONE = registerBlock("quickstone",
             () -> new QuicksoilGlassBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(0.5F).friction(1.1F).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> QUICKSOIL_BRICK_STAIRS = registerBlock("quicksoil_brick_stairs",
-            () -> new StairBlock(() -> QUICKSOIL_BRICKS.get().defaultBlockState(), (BlockBehaviour.Properties.copy(AncientAetherBlocks.QUICKSOIL_BRICKS.get()))));
-    public static final RegistryObject<Block> QUICKSOIL_BRICK_SLAB = registerBlock("quicksoil_brick_slab",
-            () -> new QuicksoilBrickSlabBlock(Block.Properties.copy(AncientAetherBlocks.QUICKSOIL_BRICKS.get()).strength(2.0F, 3.0F)));
-    public static final RegistryObject<WallBlock> QUICKSOIL_BRICK_WALL = registerBlock("quicksoil_brick_wall",
-            () -> new QuicksoilBrickWallBlock(Block.Properties.copy(AncientAetherBlocks.QUICKSOIL_BRICKS.get())));
+    public static final RegistryObject<Block> QUICKSTONE_STAIRS = registerBlock("quickstone_stairs",
+            () -> new StairBlock(() -> QUICKSTONE.get().defaultBlockState(), (BlockBehaviour.Properties.copy(AncientAetherBlocks.QUICKSTONE.get()))));
+    public static final RegistryObject<Block> QUICKSTONE_SLAB = registerBlock("quickstone_slab",
+            () -> new QuickstoneSlabBlock(Block.Properties.copy(AncientAetherBlocks.QUICKSTONE.get()).strength(2.0F, 3.0F)));
 
     //Mosaic Blocks
     public static final RegistryObject<RotatedPillarBlock> HOLYSTONE_BRICK_MOSAIC = registerBlock("holystone_brick_mosaic",

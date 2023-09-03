@@ -3,15 +3,17 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "ancient_aether:quicksoil_bricks"
+      "item": "ancient_aether:quickstone"
     }
   },
   "pattern": [
+    "#  ",
+    "## ",
     "###"
   ],
   "result": {
-    "count": 6,
-    "item": "ancient_aether:quicksoil_brick_slab"
+    "count": 4,
+    "item": "ancient_aether:quickstone_stairs"
   },
   "show_notification": true
 }

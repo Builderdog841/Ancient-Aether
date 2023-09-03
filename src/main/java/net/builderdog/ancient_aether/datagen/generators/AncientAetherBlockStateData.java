@@ -21,7 +21,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
     protected void registerStatesAndModels() {
         blockWithItem(AncientAetherBlocks.AETHER_QUARTZ_ORE);
         blockWithItem(AncientAetherBlocks.ANCIENT_SENTRY_STONE);
-        blockWithItem(AncientAetherBlocks.QUICKSOIL_BRICKS);
+        blockWithItem(AncientAetherBlocks.QUICKSTONE);
         blockWithItem(AncientAetherBlocks.HIGHSPROOT_PLANKS);
         blockWithItem(AncientAetherBlocks.SAKURA_PLANKS);
         blockWithItem(AncientAetherBlocks.HIGHSPROOT_LEAVES);
@@ -83,9 +83,8 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         buttonBlock(AncientAetherBlocks.SAKURA_BUTTON.get(), texture(name(AncientAetherBlocks.SAKURA_PLANKS.get()), ""));
         pressurePlateBlock(AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get(), texture(name(AncientAetherBlocks.SAKURA_PLANKS.get()), ""));
 
-        stairs((StairBlock) AncientAetherBlocks.QUICKSOIL_BRICK_STAIRS.get(), (Block)AncientAetherBlocks.QUICKSOIL_BRICKS.get(), "");
-        slab((SlabBlock) AncientAetherBlocks.QUICKSOIL_BRICK_SLAB.get(), (Block)AncientAetherBlocks.QUICKSOIL_BRICKS.get(), "");
-        wallBlock(AncientAetherBlocks.QUICKSOIL_BRICK_WALL.get(), AncientAetherBlocks.QUICKSOIL_BRICKS.get(), "");
+        stairs((StairBlock) AncientAetherBlocks.QUICKSTONE_STAIRS.get(), (Block)AncientAetherBlocks.QUICKSTONE.get(), "");
+        slab((SlabBlock) AncientAetherBlocks.QUICKSTONE_SLAB.get(), (Block)AncientAetherBlocks.QUICKSTONE.get(), "");
 
         crossBlock(AncientAetherBlocks.HIGHSPROOT_SAPLING);
         crossBlock(AncientAetherBlocks.SAKURA_SAPLING);

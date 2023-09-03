@@ -19,7 +19,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
     @Override
     protected void generate() {
         dropSelf(AncientAetherBlocks.ANCIENT_SENTRY_STONE.get());
-        dropSelf(AncientAetherBlocks.QUICKSOIL_BRICKS.get());
+        dropSelf(AncientAetherBlocks.QUICKSTONE.get());
         dropSelf(AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get());
         dropSelf(AncientAetherBlocks.CARVED_STONE_MOSAIC.get());
         dropSelf(AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get());
@@ -65,9 +65,8 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get());
         dropSelf(AncientAetherBlocks.SAKURA_SIGN.get());
         dropSelf(AncientAetherBlocks.SAKURA_WALL_SIGN.get());
-        dropSelf(AncientAetherBlocks.QUICKSOIL_BRICK_STAIRS.get());
-        dropSelf(AncientAetherBlocks.QUICKSOIL_BRICK_SLAB.get());
-        dropSelf(AncientAetherBlocks.QUICKSOIL_BRICK_WALL.get());
+        dropSelf(AncientAetherBlocks.QUICKSTONE_STAIRS.get());
+        dropSelf(AncientAetherBlocks.QUICKSTONE_SLAB.get());
         dropSelf(AncientAetherBlocks.HIGHLAND_TULIP.get());
         dropSelf(AncientAetherBlocks.EDELWEISS.get());
         dropSelf(AncientAetherBlocks.SAKURA_BLOSSOMS.get());

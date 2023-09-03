@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_quicksoil_bricks": {
+    "has_quickstone": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ancient_aether:quicksoil_bricks"
+              "ancient_aether:quickstone"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ancient_aether:quicksoil_brick_stairs"
+        "recipe": "ancient_aether:quickstone_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_quicksoil_bricks",
+      "has_quickstone",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "ancient_aether:quicksoil_brick_stairs"
+      "ancient_aether:quickstone_stairs"
     ]
   }
 }

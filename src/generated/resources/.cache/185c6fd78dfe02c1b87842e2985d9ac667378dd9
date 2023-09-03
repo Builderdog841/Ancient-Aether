@@ -1,4 +1,4 @@
-// 1.19.4	2023-08-30T10:23:20.8334938	Item Models: ancient_aether
+// 1.19.4	2023-09-03T12:35:10.6726689	Item Models: ancient_aether
 dc22e9f245c5e59d55b0aec4ae45dec8337daa28 assets/ancient_aether/models/item/aerogel_bottle.json
 37ccb563fa16dca6b181b58274921d2bfce2efea assets/ancient_aether/models/item/ambrosium_campfire.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/ancient_guardian_spawn_egg.json
@@ -33,9 +33,8 @@ f5db49e83578d5a9ad97bdb124582f7b3b6c0a32 assets/ancient_aether/models/item/highs
 fbc49480534027fea32505d0c27b4b33aeb8a672 assets/ancient_aether/models/item/holystone_lantern.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/leaping_sentry_spawn_egg.json
 ab37a895a9f1f466078e7fdb886615723ae7932d assets/ancient_aether/models/item/moonlit_waterlily.json
-84be39bbd6e6ad65d0e3036d0942f9cb682452e9 assets/ancient_aether/models/item/quicksoil_brick_slab.json
-deb6ecb111c46a529a95fff2dcd5da06a674223b assets/ancient_aether/models/item/quicksoil_brick_stairs.json
-fd7e53dbb8a9f5b5f070472ee7deeab8b60d18a5 assets/ancient_aether/models/item/quicksoil_brick_wall.json
+db9205c807c1c097354713164dbfe06e10bc40ae assets/ancient_aether/models/item/quickstone_slab.json
+646c8d4dc55880b9ea5c42176ed3b42f3e8ac97f assets/ancient_aether/models/item/quickstone_stairs.json
 d44c5040dfb044f44b8ef6eeaa30a9160404bba7 assets/ancient_aether/models/item/raw_buffalo_ribs.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/roothyrn_spawn_egg.json
 6acc619f3923ed633742023516b313c1ef089100 assets/ancient_aether/models/item/sakura_blossoms.json

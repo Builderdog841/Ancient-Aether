@@ -33,7 +33,13 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, AncientAetherItems.BUFFALO_RIB.get(),3)
                 .requires(AncientAetherItems.COOKED_BUFFALO_RIBS.get())
                 .unlockedBy(getHasName(AncientAetherItems.COOKED_BUFFALO_RIBS.get()), has(AncientAetherItems.COOKED_BUFFALO_RIBS.get()))
-                .save(consumer, name("buffalo_rib"));
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, AncientAetherBlocks.QUICKSTONE.get(),2)
+                .requires(AetherBlocks.QUICKSOIL.get())
+                .requires(AetherBlocks.HOLYSTONE.get())
+                .unlockedBy(getHasName(AetherBlocks.QUICKSOIL.get()), has(AetherBlocks.QUICKSOIL.get()))
+                .save(consumer);
 
         woodFromLogs(consumer, AncientAetherBlocks.HIGHSPROOT_WOOD.get(), AncientAetherBlocks.HIGHSPROOT_LOG.get());
         woodFromLogs(consumer, AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD.get(), AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get());
@@ -183,11 +189,9 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         fence(AncientAetherBlocks.SAKURA_FENCE, AncientAetherBlocks.SAKURA_PLANKS).save(consumer);
         fenceGate(AncientAetherBlocks.SAKURA_FENCE_GATE, AncientAetherBlocks.SAKURA_PLANKS).save(consumer);
 
-        wall(consumer, RecipeCategory.DECORATIONS, AncientAetherBlocks.QUICKSOIL_BRICK_WALL.get(), AncientAetherBlocks.QUICKSOIL_BRICKS.get());
-
         stairs(AncientAetherBlocks.HIGHSPROOT_STAIRS, AncientAetherBlocks.HIGHSPROOT_PLANKS).group("wooden_stairs").save(consumer);
         stairs(AncientAetherBlocks.SAKURA_STAIRS, AncientAetherBlocks.SAKURA_PLANKS).group("wooden_stairs").save(consumer);
-        stairs(AncientAetherBlocks.QUICKSOIL_BRICK_STAIRS, AncientAetherBlocks.QUICKSOIL_BRICKS).save(consumer);
+        stairs(AncientAetherBlocks.QUICKSTONE_STAIRS, AncientAetherBlocks.QUICKSTONE).save(consumer);
 
         slabBuilder(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.HIGHSPROOT_SLAB.get(), Ingredient.of(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()))
                 .group("wooden_slab")
@@ -198,7 +202,7 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .unlockedBy(getHasName(AncientAetherBlocks.SAKURA_PLANKS.get()), has(AncientAetherBlocks.SAKURA_PLANKS.get()))
                 .save(consumer);
 
-        slab(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.QUICKSOIL_BRICK_SLAB.get(), AncientAetherBlocks.QUICKSOIL_BRICKS.get());
+        slab(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.QUICKSTONE_SLAB.get(), AncientAetherBlocks.QUICKSTONE.get());
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AetherBlocks.SKYROOT_BOOKSHELF.get())
                 .define('P', AncientAetherBlocks.HIGHSPROOT_PLANKS.get())
@@ -291,9 +295,8 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get(), AetherBlocks.HOLYSTONE_BRICKS.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AetherBlocks.HOLYSTONE_BRICKS.get(), AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get());
 
-        stonecuttingRecipe(consumer, RecipeCategory.DECORATIONS, AncientAetherBlocks.QUICKSOIL_BRICK_WALL.get(), AncientAetherBlocks.QUICKSOIL_BRICKS.get());
-        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.QUICKSOIL_BRICK_STAIRS.get(), AncientAetherBlocks.QUICKSOIL_BRICKS.get());
-        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.QUICKSOIL_BRICK_SLAB.get(), AncientAetherBlocks.QUICKSOIL_BRICKS.get(), 2);
+        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.QUICKSTONE_STAIRS.get(), AncientAetherBlocks.QUICKSTONE.get());
+        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.QUICKSTONE_SLAB.get(), AncientAetherBlocks.QUICKSTONE.get(), 2);
 
         enchantingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.OBSIDIAN, AetherBlocks.AEROGEL.get(), 0.4F, 2000).save(consumer, name("obsidian_enchanting"));
 
