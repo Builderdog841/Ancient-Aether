@@ -61,8 +61,8 @@ public class HighlandBuffaloModel<T extends HighlandBuffalo> extends EntityModel
         leftHindLeg.xRot = Mth.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
         rightFrontLeg.xRot = Mth.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
         leftFrontLeg.xRot = Mth.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
-        head.xRot = limbSwing * ((float)Math.PI / 180F);
-        head.yRot = limbSwing * ((float)Math.PI / 180F);
+        head.yRot = netHeadYaw * 0.017453292F;
+        head.xRot = headPitch * 0.017453292F;
     }
 
     @Override
