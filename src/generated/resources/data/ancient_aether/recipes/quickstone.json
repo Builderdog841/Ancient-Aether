@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "aether:quicksoil"
+    },
+    {
+      "item": "aether:holystone"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "ancient_aether:quickstone"
+  }
+}
