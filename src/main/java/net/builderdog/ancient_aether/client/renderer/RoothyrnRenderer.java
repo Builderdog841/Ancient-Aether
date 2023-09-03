@@ -1,26 +1,23 @@
 package net.builderdog.ancient_aether.client.renderer;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-import net.builderdog.ancient_aether.AncientAether;
+import net.builderdog.ancient_aether.client.renderer.layers.AncientAetherModelLayers;
 import net.builderdog.ancient_aether.client.renderer.model.RoothyrnModel;
 import net.builderdog.ancient_aether.entity.monster.Roothyrn;
-import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
-import software.bernie.geckolib.renderer.GeoEntityRenderer;
 
-public class RoothyrnRenderer extends GeoEntityRenderer<Roothyrn> {
-    public RoothyrnRenderer(EntityRendererProvider.Context renderManager) {
-        super(renderManager, new RoothyrnModel());
-    }
-    @Override
-    public ResourceLocation getTextureLocation(Roothyrn animatable) {
-        return new ResourceLocation(AncientAether.MOD_ID, "textures/entity/roothyrn.png");
-    }
-    @Override
-    public void render(Roothyrn entity, float entityYaw, float partialTick, PoseStack poseStack,
-                       MultiBufferSource bufferSource, int packedLight) {
+import javax.annotation.Nonnull;
 
-        super.render(entity, entityYaw, partialTick, poseStack, bufferSource, packedLight);
+public class RoothyrnRenderer extends MobRenderer<Roothyrn, RoothyrnModel<Roothyrn>> {
+    private static final ResourceLocation ROOTHYRN_TEXTURE = new ResourceLocation("ancient_aether", "textures/entity/roothyrn.png");
+
+    public RoothyrnRenderer(EntityRendererProvider.Context context) {
+        super(context, new RoothyrnModel(context.bakeLayer(AncientAetherModelLayers.ROOTHYRN)), 0.7F);
+    }
+
+    @Nonnull
+    public ResourceLocation getTextureLocation(@Nonnull Roothyrn roothyrn) {
+        return ROOTHYRN_TEXTURE;
     }
 }

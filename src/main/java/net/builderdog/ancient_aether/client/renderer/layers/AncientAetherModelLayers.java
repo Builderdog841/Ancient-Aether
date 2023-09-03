@@ -6,6 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 public class AncientAetherModelLayers {
     public static final ModelLayerLocation ANCIENT_GUARDIAN = register("ancient_guardian");
     public static final ModelLayerLocation HIGHLAND_BUFFALO = register("highland_buffalo");
+    public static final ModelLayerLocation ROOTHYRN = register("roothyrn");
 
     public AncientAetherModelLayers() {
     }
