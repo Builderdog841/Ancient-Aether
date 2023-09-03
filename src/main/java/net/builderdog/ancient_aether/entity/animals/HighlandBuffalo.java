@@ -1,8 +1,8 @@
 package net.builderdog.ancient_aether.entity.animals;
 
-import com.aetherteam.aether.AetherTags;
 import com.aetherteam.aether.entity.ai.goal.FallingRandomStrollGoal;
 import com.aetherteam.aether.entity.passive.AetherAnimal;
+import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.minecraft.server.level.ServerLevel;
@@ -44,7 +44,7 @@ public class HighlandBuffalo extends AetherAnimal {
     }
     @Override
     public boolean isFood(ItemStack stack) {
-        return stack.is(AetherTags.Items.FLYING_COW_TEMPTATION_ITEMS);
+        return stack.is(AncientAetherTags.Items.HIGHLAND_BUFFALO_TEMPTATION_ITEMS);
     }
 
     @Override
@@ -53,17 +53,17 @@ public class HighlandBuffalo extends AetherAnimal {
         this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
             @Override
             protected double getAttackReachSqr(LivingEntity entity) {
-                return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
+                return mob.getBbWidth() * mob.getBbWidth() + entity.getBbWidth();
             }
         });
-        this.goalSelector.addGoal(0, new FloatGoal(this));
-        this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
-        this.goalSelector.addGoal(2, new BreedGoal(this, 1.0));
-        this.goalSelector.addGoal(3, new TemptGoal(this, 1.25, Ingredient.of(AetherTags.Items.FLYING_COW_TEMPTATION_ITEMS), false));
-        this.goalSelector.addGoal(4, new FollowParentGoal(this, 1.25));
-        this.goalSelector.addGoal(5, new FallingRandomStrollGoal(this, 1.0));
-        this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 6.0F));
-        this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
+        goalSelector.addGoal(0, new FloatGoal(this));
+        targetSelector.addGoal(1, new HurtByTargetGoal(this));
+        goalSelector.addGoal(2, new BreedGoal(this, 1.0));
+        goalSelector.addGoal(3, new TemptGoal(this, 1.25, Ingredient.of(AncientAetherTags.Items.HIGHLAND_BUFFALO_TEMPTATION_ITEMS), false));
+        goalSelector.addGoal(4, new FollowParentGoal(this, 1.25));
+        goalSelector.addGoal(5, new FallingRandomStrollGoal(this, 1.0));
+        goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 6.0F));
+        goalSelector.addGoal(7, new RandomLookAroundGoal(this));
     }
     @Nullable
     @Override
@@ -93,6 +93,7 @@ public class HighlandBuffalo extends AetherAnimal {
     protected SoundEvent getDeathSound() {
         return AncientAetherSoundEvents.HIGHLAND_BUFFALO_DEATH.get();
     }
+
     @Override
     protected float getSoundVolume() {
         return 0.4F;

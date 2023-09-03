@@ -1,7 +1,6 @@
 {
   "item.minecraft.quartz": "Кварц",
   "block.ancient_aether.aether_quartz_ore": "Кварцова руда Етеру",
-  "block.ancient_aether.quicksoil_bricks": "Жвавокам'яна цегла",
   "block.ancient_aether.sakura_log": "Сакурова колода",
   "block.ancient_aether.sakura_wood": "Сакурова деревина",
   "block.ancient_aether.stripped_sakura_log": "Обтесана сакурова колода",
@@ -22,9 +21,6 @@
   "block.ancient_aether.sakura_door": "Сакурові двері",
   "block.ancient_aether.sakura_trapdoor": "Сакуровий люк",
   "block.ancient_aether.sakura_sign": "Сакурова табличка",
-  "block.ancient_aether.quicksoil_brick_stairs": "Сходи зі жвавокам'яної цегли",
-  "block.ancient_aether.quicksoil_brick_slab": "Плита зі жвавокам'яної цегли",
-  "block.ancient_aether.quicksoil_brick_wall": "Стіна зі жвавокам'яної цегли",
   "block.ancient_aether.edelweiss": "Білотка",
   "block.ancient_aether.cracked_slider": "Тріснутий ковзач",
   "block.ancient_aether.holystone_lantern": "Священнокам'яний ліхтар",
@@ -38,13 +34,7 @@
   "lore.block.ancient_aether.angelic_lantern": "Декоративний блок, що виготовляється зі звичайного та яскравого ангельського каменю й амброзієвого смолоскипа. Цей ліхтар працює в Етері.",
   "lore.block.ancient_aether.hellfire_lantern": "Декоративний блок, що виготовляється зі звичайного та яскравого пекельно-вогневого каменю й амброзієвого смолоскипа. Цей ліхтар працює в Етері.",
   "lore.block.ancient_aether.gale_lantern": "Декоративний блок, що виготовляється зі звичайного та яскравого штормового каменю й амброзієвого смолоскипа. Цей ліхтар працює в Етері.",
-  "item.ancient_aether.aechor_ice_cream_bucket": "Відро морозива з пелюстками ехори",
-  "creativemodetab.ancient_aether_tab": "Ancient Aether",
   "lore.block.ancient_aether.aether_quartz_ore": "Руда, що є джерелом кварцу в Етері.",
-  "lore.block.ancient_aether.quicksoil_bricks": "Будівельний блок, створений поєднанням жвавокаменю та жвавоґрунту, має ту ж властивість, що й жвавоґрунт.",
-  "lore.block.ancient_aether.quicksoil_brick_slab": "Створені зі жвавоґрунтової цегли. Плити - це універсальні напівблоки, для обробки гладких скосів. Спробуйте додати трохи на покрівлю будівлі!",
-  "lore.block.ancient_aether.quicksoil_brick_stairs": "Створені зі жвавоґрунтової цегли. Сходи можна ужити для вертикальності будівлі. Їх часто використовують для декорацій!",
-  "lore.block.ancient_aether.quicksoil_brick_wall": "Створена зі жвавоґрунтової цегли. Можна використовувати для декоративних огорож. Чудово зупиняють зловмисників!",
   "lore.block.ancient_aether.edelweiss": "Квітка, що генерується в морозних верхоземлях. Національний символ багатьох країн. Можна виготовити білий барвник або зачарувати у світлокам'яний пил.",
   "lore.block.ancient_aether.sakura_log": "Колода дерева, знайдена у дуже рідкісному біомі Етеру - сакурових джунглях. Дає 4 сакурові дошки у верстаку.",
   "lore.block.ancient_aether.stripped_sakura_log": "\nСакурова колода яку обтесали сокирою. Дає 4 сакурові дошки у верстаку.",
@@ -66,5 +56,4 @@
   "lore.block.ancient_aether.sakura_stairs": "Створені із сакурових дощок. Сходи можна ужити для вертикальності будівлі. Їх часто використовують для декорацій!",
   "lore.block.ancient_aether.sakura_trapdoor": "Створений із сакурових дощок. Люком можна закрити отвір в один блок. Його часто використовують для додаткового захисту сходів.",
   "lore.block.ancient_aether.cracked_slider": "Невдалий експеримент стародавніх валькірій, який можна добути гравітитовим або іншими кайлами. Взаємодіє з редстоуном.",
-  "lore.item.ancient_aether.aechor_ice_cream_bucket": "Мармеладний десерт приготований поєднанням пелюсток ехори, цукру, льодокаменю та небесно-дерев'яного відра у верстаку"
 }
