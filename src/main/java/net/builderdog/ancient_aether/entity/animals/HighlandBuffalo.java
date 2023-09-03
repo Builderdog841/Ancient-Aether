@@ -1,12 +1,15 @@
 package net.builderdog.ancient_aether.entity.animals;
 
 import com.aetherteam.aether.AetherTags;
+import com.aetherteam.aether.client.AetherSoundEvents;
 import com.aetherteam.aether.entity.ai.goal.FallingRandomStrollGoal;
 import com.aetherteam.aether.entity.passive.AetherAnimal;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
@@ -18,6 +21,8 @@ import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemUtils;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
@@ -77,6 +82,19 @@ public class HighlandBuffalo extends AetherAnimal implements GeoEntity {
     @Nullable
     @Override
     protected SoundEvent getHurtSound(@Nonnull DamageSource damageSource) { return AncientAetherSoundEvents.HIGHLAND_BUFFALO_HURT.get();}
+
+    @Nonnull
+    public InteractionResult mobInteract(Player playerEntity, @Nonnull InteractionHand hand) {
+        ItemStack itemStack = playerEntity.getItemInHand(hand);
+        if (itemStack.is(Items.BUCKET) && !isBaby()) {
+            playerEntity.playSound((SoundEvent) AetherSoundEvents.ENTITY_FLYING_COW_MILK.get(), 1.0F, 1.0F);
+            ItemStack itemStack1 = ItemUtils.createFilledResult(itemStack, playerEntity, Items.MILK_BUCKET.getDefaultInstance());
+            playerEntity.setItemInHand(hand, itemStack1);
+            return InteractionResult.sidedSuccess(level.isClientSide);
+        } else {
+            return super.mobInteract(playerEntity, hand);
+        }
+    }
 
     @Nullable
     @Override
