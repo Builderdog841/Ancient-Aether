@@ -19,12 +19,21 @@ public class ValkyrieWineItem extends Item implements ConsumableItem {
         super(properties);
     }
     @Override
-    public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity user) {
+    public ItemStack finishUsingItem(ItemStack itemstack, Level level, LivingEntity user) {
+        ItemStack retval = new ItemStack(AncientAetherItems.AEROGEL_BOTTLE.get());
+        super.finishUsingItem(itemstack, level, user);
         if (!level.isClientSide()) {
-            user.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 500, 0));
+         user.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 500, 0));
+         }
+        if (itemstack.isEmpty()) {
+            return retval;
+        } else {
+            if (user instanceof Player player && !player.getAbilities().instabuild) {
+                if (!player.getInventory().add(retval))
+                    player.drop(retval, false);
+            }
+            return itemstack;
         }
-        consume(this, stack, user);
-        return stack.isEmpty() ? new ItemStack(AncientAetherItems.AEROGEL_BOTTLE.get()) : stack;
     }
 
     @Override
