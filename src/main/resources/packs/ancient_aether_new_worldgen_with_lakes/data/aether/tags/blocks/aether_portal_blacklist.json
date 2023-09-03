@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "aether:cold_aercloud",
+    "#aether:holystone",
+    "aether:ambrosium_ore",
+    "aether:zanite_ore",
+    "ancient_aether:aether_quartz_ore",
+    "aether:gravitite_ore",
+    "aether:icestone",
+    "aether:aerogel",
+    "aether:aether_dirt",
+    "#aether:dungeon_blocks"
+  ]
+}
