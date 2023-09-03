@@ -1,18 +1,22 @@
 package net.builderdog.ancient_aether.entity.animals;
 
+import com.aetherteam.aether.AetherTags;
 import com.aetherteam.aether.entity.ai.goal.FallingRandomStrollGoal;
 import com.aetherteam.aether.entity.passive.AetherAnimal;
 import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
+import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
@@ -24,6 +28,7 @@ import net.minecraft.world.item.ItemUtils;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
@@ -75,6 +80,9 @@ public class HighlandBuffalo extends AetherAnimal {
     @Override
     protected SoundEvent getHurtSound(@Nonnull DamageSource damageSource) { return AncientAetherSoundEvents.HIGHLAND_BUFFALO_HURT.get();}
 
+    /**
+     * [CODE COPY] - {@link net.minecraft.world.entity.animal.Cow#mobInteract(Player, InteractionHand)}.
+     */
     @Nonnull
     public InteractionResult mobInteract(Player playerEntity, @Nonnull InteractionHand hand) {
         ItemStack itemStack = playerEntity.getItemInHand(hand);
