@@ -17,6 +17,14 @@
     ],
     "subtitle": "subtitles.ancient_aether.entity.highland_buffalo.hurt"
   },
+  "entity.highland_buffalo.milk": {
+    "sounds": [
+      "entity/cow/milk1",
+      "entity/cow/milk2",
+      "entity/cow/milk3"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.highland_buffalo.milk"
+  },
   "entity.highland_buffalo.death": {
     "sounds": [
       "ancient_aether:entity/highland_buffalo/highland_buffalo_hurt"

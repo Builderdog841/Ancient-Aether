@@ -14,6 +14,7 @@ public class AncientAetherSoundEvents {
     public static final RegistryObject<SoundEvent> HIGHLAND_BUFFALO_AMBIENT = register("entity.highland_buffalo.ambient");
     public static final RegistryObject<SoundEvent> HIGHLAND_BUFFALO_HURT = register("entity.highland_buffalo.hurt");
     public static final RegistryObject<SoundEvent> HIGHLAND_BUFFALO_DEATH = register("entity.highland_buffalo.death");
+    public static final RegistryObject<SoundEvent> ENTITY_HIGHLAND_BUFFALO_MILK = register("entity.highland_buffalo.milk");
     public static final RegistryObject<SoundEvent> ROOTHYRN_HURT = register("entity.roothyrn.hurt");
     public static final RegistryObject<SoundEvent> ROOTHYRN_DEATH = register("entity.roothyrn.death");
     public static final RegistryObject<SoundEvent> ROOTHYRN_EMERGES = register("block.roothyrn_trap.trigger");

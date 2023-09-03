@@ -1,7 +1,6 @@
 package net.builderdog.ancient_aether.entity.animals;
 
 import com.aetherteam.aether.AetherTags;
-import com.aetherteam.aether.client.AetherSoundEvents;
 import com.aetherteam.aether.entity.ai.goal.FallingRandomStrollGoal;
 import com.aetherteam.aether.entity.passive.AetherAnimal;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
@@ -87,7 +86,7 @@ public class HighlandBuffalo extends AetherAnimal implements GeoEntity {
     public InteractionResult mobInteract(Player playerEntity, @Nonnull InteractionHand hand) {
         ItemStack itemStack = playerEntity.getItemInHand(hand);
         if (itemStack.is(Items.BUCKET) && !isBaby()) {
-            playerEntity.playSound((SoundEvent) AetherSoundEvents.ENTITY_FLYING_COW_MILK.get(), 1.0F, 1.0F);
+            playerEntity.playSound((SoundEvent) AncientAetherSoundEvents.ENTITY_HIGHLAND_BUFFALO_MILK.get(), 1.0F, 1.0F);
             ItemStack itemStack1 = ItemUtils.createFilledResult(itemStack, playerEntity, Items.MILK_BUCKET.getDefaultInstance());
             playerEntity.setItemInHand(hand, itemStack1);
             return InteractionResult.sidedSuccess(level.isClientSide);
