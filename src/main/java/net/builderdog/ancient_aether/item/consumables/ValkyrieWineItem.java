@@ -23,7 +23,7 @@ public class ValkyrieWineItem extends Item implements ConsumableItem {
         if (!level.isClientSide()) {
             user.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 500, 0));
         }
-        this.consume(this, stack, user);
+        consume(this, stack, user);
         return stack.isEmpty() ? new ItemStack(AncientAetherItems.AEROGEL_BOTTLE.get()) : stack;
     }
 
