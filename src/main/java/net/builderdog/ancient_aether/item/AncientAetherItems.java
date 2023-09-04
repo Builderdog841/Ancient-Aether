@@ -58,9 +58,9 @@ public class AncientAetherItems {
     public static final RegistryObject<Item> VALKYRIE_WINE = ITEMS.register("valkyrie_wine",
             () -> new ValkyrieWineItem(new Item.Properties().rarity(Rarity.COMMON).stacksTo(16).food((new FoodProperties.Builder()).nutrition(0).saturationMod(0f).build())));
     public static final RegistryObject<Item> RAW_BUFFALO_RIBS = ITEMS.register("raw_buffalo_ribs",
-            () -> new Item(new Item.Properties().rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(2).saturationMod(0.2f).build())));
+            () -> new Item(new Item.Properties().rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(3).saturationMod(0.2f).build())));
     public static final RegistryObject<Item> COOKED_BUFFALO_RIBS = ITEMS.register("cooked_buffalo_ribs",
-            () -> new Item(new Item.Properties().rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(6).saturationMod(1.2f).build())));
+            () -> new Item(new Item.Properties().rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(8).saturationMod(1.2f).build())));
     public static final RegistryObject<Item> BUFFALO_RIB = ITEMS.register("buffalo_rib",
             () -> new BuffaloRib(new Item.Properties().rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(3).saturationMod(0.35f).build())));
 
