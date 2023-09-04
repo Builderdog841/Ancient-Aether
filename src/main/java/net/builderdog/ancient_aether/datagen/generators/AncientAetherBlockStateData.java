@@ -20,8 +20,8 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(AncientAetherBlocks.AETHER_QUARTZ_ORE);
-        blockWithItem(AncientAetherBlocks.ANCIENT_SENTRY_STONE);
-        blockWithItem(AncientAetherBlocks.QUICKSTONE);
+        blockWithItem(AncientAetherBlocks.AEROTIC_STONE);
+        blockWithItem(AncientAetherBlocks.LIGHT_AEROTIC_STONE);
         blockWithItem(AncientAetherBlocks.HIGHSPROOT_PLANKS);
         blockWithItem(AncientAetherBlocks.SAKURA_PLANKS);
         blockWithItem(AncientAetherBlocks.HIGHSPROOT_LEAVES);
@@ -59,12 +59,6 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         logBlock(((RotatedPillarBlock) AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get()));
         logBlock(((RotatedPillarBlock) AncientAetherBlocks.GALE_STONE_MOSAIC.get()));
 
-        simpleBlockItem(AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get(), models().withExistingParent("ancient_aether:holystone_brick_mosaic","minecraft:block/cube_column"));
-        simpleBlockItem(AncientAetherBlocks.CARVED_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:carved_stone_mosaic","minecraft:block/cube_column"));
-        simpleBlockItem(AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:angelic_stone_mosaic","minecraft:block/cube_column"));
-        simpleBlockItem(AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:hellfire_stone_mosaic","minecraft:block/cube_column"));
-        simpleBlockItem(AncientAetherBlocks.GALE_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:gale_stone_mosaic","minecraft:block/cube_column"));
-
         stairs((StairBlock) AncientAetherBlocks.HIGHSPROOT_STAIRS.get(), (Block)AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), "");
         slab((SlabBlock) AncientAetherBlocks.HIGHSPROOT_SLAB.get(), (Block)AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), "");
         fence(AncientAetherBlocks.HIGHSPROOT_FENCE.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), "");
@@ -83,8 +77,15 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         buttonBlock(AncientAetherBlocks.SAKURA_BUTTON.get(), texture(name(AncientAetherBlocks.SAKURA_PLANKS.get()), ""));
         pressurePlateBlock(AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get(), texture(name(AncientAetherBlocks.SAKURA_PLANKS.get()), ""));
 
+        blockWithItem(AncientAetherBlocks.QUICKSTONE);
         stairs((StairBlock) AncientAetherBlocks.QUICKSTONE_STAIRS.get(), (Block)AncientAetherBlocks.QUICKSTONE.get(), "");
         slab((SlabBlock) AncientAetherBlocks.QUICKSTONE_SLAB.get(), (Block)AncientAetherBlocks.QUICKSTONE.get(), "");
+
+        simpleBlockItem(AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get(), models().withExistingParent("ancient_aether:holystone_brick_mosaic","minecraft:block/cube_column"));
+        simpleBlockItem(AncientAetherBlocks.CARVED_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:carved_stone_mosaic","minecraft:block/cube_column"));
+        simpleBlockItem(AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:angelic_stone_mosaic","minecraft:block/cube_column"));
+        simpleBlockItem(AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:hellfire_stone_mosaic","minecraft:block/cube_column"));
+        simpleBlockItem(AncientAetherBlocks.GALE_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:gale_stone_mosaic","minecraft:block/cube_column"));
 
         crossBlock(AncientAetherBlocks.HIGHSPROOT_SAPLING);
         crossBlock(AncientAetherBlocks.SAKURA_SAPLING);

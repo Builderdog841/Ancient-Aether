@@ -92,7 +92,7 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AncientAetherItems.ANCIENT_RUNE.get(),2)
                 .define('G', AetherBlocks.ENCHANTED_GRAVITITE.get())
                 .define('R', AncientAetherItems.ANCIENT_RUNE.get())
-                .define('S', AncientAetherBlocks.ANCIENT_SENTRY_STONE.get())
+                .define('S', AncientAetherBlocks.AEROTIC_STONE.get())
                 .pattern("GGG")
                 .pattern("GRG")
                 .pattern("GSG")
@@ -279,10 +279,6 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         smokingRecipe(AncientAetherItems.COOKED_BUFFALO_RIBS.get(), AncientAetherItems.RAW_BUFFALO_RIBS.get(), 0.35F).save(consumer, name("cooked_buffalo_ribs_from_smoking"));
         campfireCookingRecipe(AncientAetherItems.COOKED_BUFFALO_RIBS.get(), AncientAetherItems.RAW_BUFFALO_RIBS.get(), 0.35F).save(consumer, name("cooked_buffalo_ribs_from_campfire_cooking"));
 
-        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.ANCIENT_SENTRY_STONE.get(), AetherBlocks.CARVED_STONE.get());
-        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AetherBlocks.CARVED_STONE.get(), AncientAetherBlocks.ANCIENT_SENTRY_STONE.get());
-        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.ANCIENT_SENTRY_STONE.get(), AetherBlocks.SENTRY_STONE.get());
-        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AetherBlocks.SENTRY_STONE.get(), AncientAetherBlocks.ANCIENT_SENTRY_STONE.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_STONE_MOSAIC.get(), AetherBlocks.CARVED_STONE.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AetherBlocks.CARVED_STONE.get(), AncientAetherBlocks.CARVED_STONE_MOSAIC.get());
 

@@ -27,8 +27,8 @@ import net.minecraft.world.phys.BlockHitResult;
 
 import static net.minecraft.world.level.block.RotatedPillarBlock.AXIS;
 
-public class BrokenObeliskBlock extends Block {
-    public BrokenObeliskBlock(Properties properties) {
+public class UnpoweredObeliskBlock extends Block {
+    public UnpoweredObeliskBlock(Properties properties) {
         super(properties);
     }
 
@@ -63,9 +63,6 @@ public class BrokenObeliskBlock extends Block {
                             }
                             if (checkedState.getBlock() == AncientAetherBlocks.LOCKED_CARVED_STONE_MOSAIC.get()) {
                                 level.setBlockAndUpdate(checkedPos, AncientAetherBlocks.CARVED_STONE_MOSAIC.get().defaultBlockState().setValue(AXIS, checkedState.getValue(AXIS)));
-                            }
-                            if (checkedState.getBlock() == AncientAetherBlocks.LOCKED_ANCIENT_SENTRY_STONE.get()) {
-                                level.setBlockAndUpdate(checkedPos, AncientAetherBlocks.ANCIENT_SENTRY_STONE.get().defaultBlockState());
                             }
                             if (checkedState.getBlock() == AetherBlocks.BOSS_DOORWAY_CARVED_STONE.get()) {
                                 level.setBlockAndUpdate(checkedPos, Blocks.AIR.defaultBlockState());

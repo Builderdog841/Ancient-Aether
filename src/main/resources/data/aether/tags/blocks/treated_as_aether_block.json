@@ -48,7 +48,8 @@
     "ancient_aether:quickstone",
     "ancient_aether:quickstone_stairs",
     "ancient_aether:quickstone_slab",
-    "ancient_aether:ancient_sentry_stone",
+    "ancient_aether:aerotic_stone",
+    "ancient_aether:light_aerotic_stone",
     "ancient_aether:cracked_slider",
     "ancient_aether:holystone_brick_mosaic",
     "ancient_aether:carved_stone_mosaic",
@@ -62,6 +63,6 @@
     "ancient_aether:gale_lantern",
     "ancient_aether:edelweiss",
     "ancient_aether:highland_tulip",
-    "ancient_aether:sentry_obelisk"
+    "ancient_aether:ancient_obelisk"
   ]
 }

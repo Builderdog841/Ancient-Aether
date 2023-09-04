@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ancient_aether:sentry_obelisk"
+          "name": "ancient_aether:ancient_obelisk"
         }
       ],
       "rolls": 1.0

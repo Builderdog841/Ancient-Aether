@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "ancient_aether:block/ancient_sentry_stone"
+    "all": "ancient_aether:block/aerotic_stone"
   }
 }
