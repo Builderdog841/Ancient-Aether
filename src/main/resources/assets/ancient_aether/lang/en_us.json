@@ -207,8 +207,8 @@
   "lore.block.ancient_aether.sakura_trapdoor": "Crafted from Sakura Planks. A Trapdoor useful for covering entryways one block wide. Often used to add extra protection to staircases.",
   "lore.block.ancient_aether.sakura_sign": "Crafted from Sakura Planks and Skyroot Sticks. A helpful sign perfect for writing messages and directions on.",
   "lore.block.ancient_aether.cracked_slider": "A failed experiment of the Ancient Valkyries that can only be mined by Gravitite or better Pickaxes. It also some Redstone functionality.",
-  "lore.block.ancient_aether.broken_sentry_obelisk": "Found at the entrances of Ancient Dungeons, this block can be unlocked by Ancient Sentry Runes.",
-  "lore.block.ancient_aether.sentry_obelisk": "A fancy decoration block which can only be mined with a Gravitite Pickaxe or better.",
+  "lore.block.ancient_aether.unpowered_aerotic_obelisk": "Found at the entrances of Ancient Dungeons, this block can be unlocked by Ancient Runes.",
+  "lore.block.ancient_aether.ancient_obelisk": "A fancy decoration block which can only be mined with a Gravitite Pickaxe or better.",
   "lore.block.ancient_aether.moonlit_waterlily": "A new type of waterlily generating in the lakes of the Sakura Jungle. They also glow in the dark.",
 
   "lore.item.ancient_aether.grapes": "They can be sometimes found on a field in Valkyrie Settlements as this is the favourite fruit of the Valkyries. They can be crafted into Valkyrie Wine.",

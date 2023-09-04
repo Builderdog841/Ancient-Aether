@@ -21,6 +21,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.AEROTIC_STONE.get());
         dropSelf(AncientAetherBlocks.AEROTIC_STONE_MOSAIC.get());
         dropSelf(AncientAetherBlocks.LIGHT_AEROTIC_STONE.get());
+        dropSelf(AncientAetherBlocks.CORRUPTED_LIGHT_AEROTIC_STONE.get());
         dropSelf(AncientAetherBlocks.QUICKSTONE.get());
         dropSelf(AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get());
         dropSelf(AncientAetherBlocks.CARVED_STONE_MOSAIC.get());
@@ -77,6 +78,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.SENTRY_LANTERN.get());
         dropSelf(AncientAetherBlocks.ANGELIC_LANTERN.get());
         dropSelf(AncientAetherBlocks.HELLFIRE_LANTERN.get());
+        dropSelf(AncientAetherBlocks.AEROTIC_LANTERN.get());
         dropSelf(AncientAetherBlocks.GALE_LANTERN.get());
         dropSelf(AncientAetherBlocks.SENTRY_OBELISK.get());
         dropSelf(AncientAetherBlocks.MOONLIT_WATERLILY.get());

@@ -96,6 +96,7 @@ public class AncientAetherBlocks  {
     //Dungeon Blocks
     public static final RegistryObject<Block> AEROTIC_STONE = registerBlock("aerotic_stone", () -> new Block(Block.Properties.of(Material.STONE, MaterialColor.TERRACOTTA_CYAN).strength(0.5F, 6.0F).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> LIGHT_AEROTIC_STONE = registerBlock("light_aerotic_stone", () -> new Block(Block.Properties.copy(AEROTIC_STONE.get()).lightLevel(s -> 11)));
+    public static final RegistryObject<Block> CORRUPTED_LIGHT_AEROTIC_STONE = registerBlock("corrupted_light_aerotic_stone", () -> new Block(Block.Properties.copy(LIGHT_AEROTIC_STONE.get())));
     public static final RegistryObject<RotatedPillarBlock> LOCKED_CARVED_STONE_MOSAIC = registerBlock("locked_carved_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_CARVED_STONE.get()).noLootTable()));
     public static final RegistryObject<RotatedPillarBlock> LOCKED_ANGELIC_STONE_MOSAIC = registerBlock("locked_angelic_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_ANGELIC_STONE.get()).noLootTable()));
     public static final RegistryObject<RotatedPillarBlock> LOCKED_HELLFIRE_STONE_MOSAIC = registerBlock("locked_hellfire_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_HELLFIRE_STONE.get()).noLootTable()));
@@ -123,6 +124,7 @@ public class AncientAetherBlocks  {
     public static final RegistryObject<Block> HELLFIRE_LANTERN = registerBlock("hellfire_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.LANTERN).strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 12)));
     public static final RegistryObject<Block> GALE_LANTERN = registerBlock("gale_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.LANTERN).strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 12)));
     public static final RegistryObject<Block> AEROTIC_LANTERN = registerBlock("aerotic_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.LANTERN).strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 12)));
+
     //Quickstone
     public static final RegistryObject<Block> QUICKSTONE = registerBlock("quickstone", () -> new QuicksoilGlassBlock(BlockBehaviour.Properties.of(Material.STONE).strength(0.5F).friction(1.1F).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> QUICKSTONE_STAIRS = registerBlock("quickstone_stairs", () -> new StairBlock(() -> QUICKSTONE.get().defaultBlockState(), (BlockBehaviour.Properties.copy(AncientAetherBlocks.QUICKSTONE.get()))));
