@@ -90,6 +90,8 @@ public class AncientAetherMissingEntries {
                 .filter(mapping -> mapping.getKey().getPath().contains("ancient_sentry_rune")).forEach(blockMapping -> blockMapping.remap(AncientAetherItems.ANCIENT_RUNE.get()));
         event.getMappings(ForgeRegistries.Keys.ITEMS, AncientAether.MOD_ID).stream()
                 .filter(mapping -> mapping.getKey().getPath().contains("aechor_ice_cream_bucket")).forEach(blockMapping -> blockMapping.remap(AetherItems.SKYROOT_BUCKET.get()));
+        event.getMappings(ForgeRegistries.Keys.ITEMS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("raw_buffalo_ribs")).forEach(blockMapping -> blockMapping.remap(AncientAetherItems.RAW_BUFFALO_RIBS.get()));
 
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
                 .filter(mapping -> mapping.getKey().getPath().contains("quicksoil_bricks")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.QUICKSTONE.get()));
