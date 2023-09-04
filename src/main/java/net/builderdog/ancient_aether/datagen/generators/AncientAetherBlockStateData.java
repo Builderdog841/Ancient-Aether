@@ -22,6 +22,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         blockWithItem(AncientAetherBlocks.AETHER_QUARTZ_ORE);
         blockWithItem(AncientAetherBlocks.AEROTIC_STONE);
         blockWithItem(AncientAetherBlocks.LIGHT_AEROTIC_STONE);
+        blockWithItem(AncientAetherBlocks.CORRUPTED_LIGHT_AEROTIC_STONE);
         blockWithItem(AncientAetherBlocks.HIGHSPROOT_PLANKS);
         blockWithItem(AncientAetherBlocks.SAKURA_PLANKS);
         blockWithItem(AncientAetherBlocks.HIGHSPROOT_LEAVES);
