@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_raw_buffalo_ribs": {
+    "has_buffalo_ribs": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ancient_aether:raw_buffalo_ribs"
+              "ancient_aether:buffalo_ribs"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_raw_buffalo_ribs",
+      "has_buffalo_ribs",
       "has_the_recipe"
     ]
   ],

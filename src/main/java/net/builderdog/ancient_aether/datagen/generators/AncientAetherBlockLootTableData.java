@@ -19,6 +19,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
     @Override
     protected void generate() {
         dropSelf(AncientAetherBlocks.AEROTIC_STONE.get());
+        dropSelf(AncientAetherBlocks.AEROTIC_STONE_MOSAIC.get());
         dropSelf(AncientAetherBlocks.LIGHT_AEROTIC_STONE.get());
         dropSelf(AncientAetherBlocks.QUICKSTONE.get());
         dropSelf(AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get());

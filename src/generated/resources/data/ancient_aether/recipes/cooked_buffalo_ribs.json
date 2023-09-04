@@ -4,7 +4,7 @@
   "cookingtime": 200,
   "experience": 0.35,
   "ingredient": {
-    "item": "ancient_aether:raw_buffalo_ribs"
+    "item": "ancient_aether:buffalo_ribs"
   },
   "result": "ancient_aether:cooked_buffalo_ribs"
 }

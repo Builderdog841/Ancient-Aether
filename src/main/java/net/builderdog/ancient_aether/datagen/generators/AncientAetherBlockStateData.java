@@ -58,6 +58,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         logBlock(((RotatedPillarBlock) AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get()));
         logBlock(((RotatedPillarBlock) AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get()));
         logBlock(((RotatedPillarBlock) AncientAetherBlocks.GALE_STONE_MOSAIC.get()));
+        logBlock(((RotatedPillarBlock) AncientAetherBlocks.AEROTIC_STONE_MOSAIC.get()));
 
         stairs((StairBlock) AncientAetherBlocks.HIGHSPROOT_STAIRS.get(), (Block)AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), "");
         slab((SlabBlock) AncientAetherBlocks.HIGHSPROOT_SLAB.get(), (Block)AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), "");

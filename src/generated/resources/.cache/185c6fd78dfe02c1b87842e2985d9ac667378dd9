@@ -1,4 +1,4 @@
-// 1.19.4	2023-09-03T12:35:10.6726689	Item Models: ancient_aether
+// 1.19.4	2023-09-04T22:04:22.5024384	Item Models: ancient_aether
 dc22e9f245c5e59d55b0aec4ae45dec8337daa28 assets/ancient_aether/models/item/aerogel_bottle.json
 37ccb563fa16dca6b181b58274921d2bfce2efea assets/ancient_aether/models/item/ambrosium_campfire.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/ancient_guardian_spawn_egg.json
@@ -7,6 +7,7 @@ e33c85e0901587bf84b2a93e0f74636995731436 assets/ancient_aether/models/item/ancie
 7b758a31f7272894d72fc2ff7144b4d1d37b407a assets/ancient_aether/models/item/ancient_sword.json
 6f6e7ea4043b02c3002c645c7a5173a32d9cb63c assets/ancient_aether/models/item/angelic_lantern.json
 ebbb314be0e3b10376468fa80420375a40b93108 assets/ancient_aether/models/item/buffalo_rib.json
+dec43224a81e6b4b281f534edfa1b2392915fd98 assets/ancient_aether/models/item/buffalo_ribs.json
 c3272ab19c230cf6ebff5ea420ce3ccbc1c229fc assets/ancient_aether/models/item/cooked_buffalo_ribs.json
 2cfb6392a2bcd557586e8a7687ea7804d0c3e128 assets/ancient_aether/models/item/edelweiss.json
 847fb5b6aa35f5048e62d3bf76e55f05c6b41f80 assets/ancient_aether/models/item/gale_lantern.json
@@ -35,7 +36,6 @@ fbc49480534027fea32505d0c27b4b33aeb8a672 assets/ancient_aether/models/item/holys
 ab37a895a9f1f466078e7fdb886615723ae7932d assets/ancient_aether/models/item/moonlit_waterlily.json
 db9205c807c1c097354713164dbfe06e10bc40ae assets/ancient_aether/models/item/quickstone_slab.json
 646c8d4dc55880b9ea5c42176ed3b42f3e8ac97f assets/ancient_aether/models/item/quickstone_stairs.json
-d44c5040dfb044f44b8ef6eeaa30a9160404bba7 assets/ancient_aether/models/item/raw_buffalo_ribs.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/roothyrn_spawn_egg.json
 6acc619f3923ed633742023516b313c1ef089100 assets/ancient_aether/models/item/sakura_blossoms.json
 f6ec6ffe46ca890025a12785250d13129a973a1a assets/ancient_aether/models/item/sakura_boat.json
