@@ -79,6 +79,7 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         item(AncientAetherBlocks.ANGELIC_LANTERN.get().asItem(), "");
         item(AncientAetherBlocks.HELLFIRE_LANTERN.get().asItem(), "");
         item(AncientAetherBlocks.GALE_LANTERN.get().asItem(), "");
+        item(AncientAetherBlocks.AEROTIC_LANTERN.get().asItem(), "");
 
         item(AncientAetherBlocks.HIGHSPROOT_SIGN.get().asItem(), "");
         item(AncientAetherBlocks.SAKURA_SIGN.get().asItem(), "");
