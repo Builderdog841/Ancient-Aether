@@ -119,7 +119,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:air",
-          "weight": 2,
+          "weight": 5,
           "functions": [
             {
               "function": "set_count",
@@ -229,7 +229,7 @@
               "function": "set_count",
               "count": {
                 "min": 1,
-                "max": 4
+                "max": 3
               }
             }
           ]
