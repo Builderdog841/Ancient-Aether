@@ -31,8 +31,8 @@
             {
               "function": "set_count",
               "count": {
-                "min": 2,
-                "max": 4
+                "min": 1,
+                "max": 3
               }
             }
           ]
@@ -119,7 +119,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:air",
-          "weight": 1,
+          "weight": 2,
           "functions": [
             {
               "function": "set_count",
@@ -143,7 +143,7 @@
             {
               "function": "set_count",
               "count": {
-                "min": 3,
+                "min": 2,
                 "max": 6
               }
             }
@@ -157,7 +157,7 @@
             {
               "function": "set_count",
               "count": {
-                "min": 3,
+                "min": 2,
                 "max": 6
               }
             }
@@ -196,7 +196,21 @@
               "function": "set_count",
               "count": {
                 "min": 0,
-                "max": 2
+                "max": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:air",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 1
               }
             }
           ]
@@ -214,8 +228,8 @@
             {
               "function": "set_count",
               "count": {
-                "min": 2,
-                "max": 6
+                "min": 1,
+                "max": 4
               }
             }
           ]
@@ -250,60 +264,8 @@
             {
               "function": "set_count",
               "count": {
-                "min": 1,
-                "max": 1
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "aether:skyroot_sapling",
-          "weight": 2,
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
                 "min": 0,
                 "max": 1
-              }
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "ancient_aether:highsproot_sapling",
-          "weight": 1,
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 0,
-                "max": 1
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "aether:skyroot_planks",
-          "weight": 1,
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 2,
-                "max": 5
               }
             }
           ]
@@ -321,7 +283,7 @@
             {
               "function": "set_count",
               "count": {
-                "min": 1,
+                "min": 0,
                 "max": 1
               }
             }
