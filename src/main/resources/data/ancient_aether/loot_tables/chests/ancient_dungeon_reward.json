@@ -44,6 +44,25 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "name": "ancient_aether:gravitite_dart_shooter",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 0,
+                "max": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
           "name": "ancient_aether:sakura_moa_egg",
           "weight": 1,
           "functions": [

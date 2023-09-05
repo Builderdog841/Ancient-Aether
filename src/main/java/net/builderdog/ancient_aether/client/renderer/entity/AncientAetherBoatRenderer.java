@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.client.renderer;
+package net.builderdog.ancient_aether.client.renderer.entity;
 
 import com.google.common.collect.ImmutableMap;
 import com.mojang.blaze3d.vertex.PoseStack;

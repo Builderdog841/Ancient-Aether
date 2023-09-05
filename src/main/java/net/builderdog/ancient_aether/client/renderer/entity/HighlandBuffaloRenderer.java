@@ -1,8 +1,8 @@
-package net.builderdog.ancient_aether.client.renderer;
+package net.builderdog.ancient_aether.client.renderer.entity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.builderdog.ancient_aether.client.renderer.layers.AncientAetherModelLayers;
-import net.builderdog.ancient_aether.client.renderer.model.HighlandBuffaloModel;
+import net.builderdog.ancient_aether.client.renderer.entity.layers.AncientAetherModelLayers;
+import net.builderdog.ancient_aether.client.renderer.entity.model.HighlandBuffaloModel;
 import net.builderdog.ancient_aether.entity.animals.HighlandBuffalo;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;

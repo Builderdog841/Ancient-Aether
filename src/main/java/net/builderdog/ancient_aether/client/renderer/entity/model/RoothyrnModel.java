@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.client.renderer.model;
+package net.builderdog.ancient_aether.client.renderer.entity.model;
 
 import com.aetherteam.aether.entity.monster.dungeon.Mimic;
 import com.mojang.blaze3d.vertex.PoseStack;

@@ -36,6 +36,7 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         simpleItem(AncientAetherItems.ANCIENT_PENDANT);
         simpleItem(AncientAetherItems.HEALTH_RING);
         simpleItem(AncientAetherItems.HEALTH_PENDANT);
+        simpleItem(AncientAetherItems.GRAVITITE_DART_SHOOTER);
 
         //Boats
         item(AncientAetherItems.HIGHSPROOT_BOAT.get(), "");

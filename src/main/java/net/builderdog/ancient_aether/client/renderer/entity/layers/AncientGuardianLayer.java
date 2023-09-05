@@ -1,10 +1,10 @@
-package net.builderdog.ancient_aether.client.renderer.layers;
+package net.builderdog.ancient_aether.client.renderer.entity.layers;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import javax.annotation.Nonnull;
 
-import net.builderdog.ancient_aether.client.renderer.model.AncientGuardianModel;
+import net.builderdog.ancient_aether.client.renderer.entity.model.AncientGuardianModel;
 import net.builderdog.ancient_aether.entity.boss.ancient_guardian.AncientGuardian;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;

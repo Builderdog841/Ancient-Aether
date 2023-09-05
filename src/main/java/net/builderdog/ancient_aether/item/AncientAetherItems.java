@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.item;
 
+import com.aetherteam.aether.item.AetherItems;
 import com.aetherteam.aether.item.miscellaneous.DungeonKeyItem;
 import com.aetherteam.aether.item.miscellaneous.MoaEggItem;
 import net.builderdog.ancient_aether.AncientAether;
@@ -10,6 +11,7 @@ import net.builderdog.ancient_aether.entity.moa.AncientAetherMoaTypes;
 import net.builderdog.ancient_aether.item.consumables.BuffaloRib;
 import net.builderdog.ancient_aether.item.consumables.ValkyrieWineItem;
 import net.builderdog.ancient_aether.item.loot.*;
+import net.builderdog.ancient_aether.item.loot.accessories.*;
 import net.builderdog.ancient_aether.item.misc.AncientAetherBoatItem;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
@@ -40,6 +42,7 @@ public class AncientAetherItems {
 
     //Dungeon Loot
     public static final RegistryObject<SwordItem> ANCIENT_SWORD = ITEMS.register("ancient_sword", () -> new AncientSwordItem().addDungeonTooltip(ANCIENT_DUNGEON_TOOLTIP));
+    public static final RegistryObject<Item> GRAVITITE_DART_SHOOTER = ITEMS.register("gravitite_dart_shooter", () -> new GravititeDartShooterItem(AetherItems.GOLDEN_DART, (new Item.Properties().stacksTo(1).rarity(AETHER_LOOT))).addDungeonTooltip(ANCIENT_DUNGEON_TOOLTIP));
     public static final RegistryObject<Item> STRENGTH_STONE = ITEMS.register("strength_stone", () -> new StrengthStoneItem(new Item.Properties().stacksTo(1).rarity(AETHER_LOOT)).addDungeonTooltip(ANCIENT_DUNGEON_TOOLTIP));
     public static final RegistryObject<Item> ANCIENT_RING = ITEMS.register("ancient_ring", () -> new AncientRingItem(new Item.Properties().stacksTo(1).rarity(AETHER_LOOT)).addDungeonTooltip(ANCIENT_DUNGEON_TOOLTIP));
     public static final RegistryObject<Item> ANCIENT_PENDANT = ITEMS.register("ancient_pendant", () -> new AncientPendantItem(new Item.Properties().stacksTo(1).rarity(AETHER_LOOT)).addDungeonTooltip(ANCIENT_DUNGEON_TOOLTIP));

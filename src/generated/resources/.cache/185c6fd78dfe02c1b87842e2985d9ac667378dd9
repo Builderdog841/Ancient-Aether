@@ -1,4 +1,4 @@
-// 1.19.4	2023-09-05T16:35:28.522172	Item Models: ancient_aether
+// 1.19.4	2023-09-05T20:18:02.5988757	Item Models: ancient_aether
 dc22e9f245c5e59d55b0aec4ae45dec8337daa28 assets/ancient_aether/models/item/aerogel_bottle.json
 2b792d3780c8a2525546b071319a3e5ed1ab9ac4 assets/ancient_aether/models/item/aerotic_lantern.json
 6f8b483fe39f1c9ec95642516d3878f574aeb929 assets/ancient_aether/models/item/aerotic_slab.json
@@ -17,6 +17,7 @@ c3272ab19c230cf6ebff5ea420ce3ccbc1c229fc assets/ancient_aether/models/item/cooke
 2cfb6392a2bcd557586e8a7687ea7804d0c3e128 assets/ancient_aether/models/item/edelweiss.json
 847fb5b6aa35f5048e62d3bf76e55f05c6b41f80 assets/ancient_aether/models/item/gale_lantern.json
 76dcbb064b6afcca77cbab1d82750b6e6c30765c assets/ancient_aether/models/item/grapes.json
+4aec7cfb55018b780f7d738a111bdc280f060489 assets/ancient_aether/models/item/gravitite_dart_shooter.json
 2726803d4e188921de701cb2dacc39c4f08b9acf assets/ancient_aether/models/item/health_pendant.json
 4f9236d35c4bf383f96a3026d37273520e4cbbf6 assets/ancient_aether/models/item/health_ring.json
 fbd830b4a955ffc654b7582bfed186176715ba49 assets/ancient_aether/models/item/hellfire_lantern.json

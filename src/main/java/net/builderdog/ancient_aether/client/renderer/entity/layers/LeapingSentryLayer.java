@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.client.renderer.layers;
+package net.builderdog.ancient_aether.client.renderer.entity.layers;
 
 import com.aetherteam.aether.Aether;
 import com.aetherteam.aether.entity.monster.dungeon.Sentry;

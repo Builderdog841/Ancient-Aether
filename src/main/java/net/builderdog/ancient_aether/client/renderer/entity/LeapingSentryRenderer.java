@@ -1,12 +1,9 @@
-package net.builderdog.ancient_aether.client.renderer;
+package net.builderdog.ancient_aether.client.renderer.entity;
 
-import com.aetherteam.aether.Aether;
 import com.aetherteam.aether.client.renderer.AetherModelLayers;
-import com.aetherteam.aether.client.renderer.entity.layers.SentryLayer;
-import com.aetherteam.aether.entity.monster.dungeon.Sentry;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.client.renderer.layers.LeapingSentryLayer;
+import net.builderdog.ancient_aether.client.renderer.entity.layers.LeapingSentryLayer;
 import net.builderdog.ancient_aether.entity.monster.LeapingSentry;
 import net.minecraft.client.model.SlimeModel;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
