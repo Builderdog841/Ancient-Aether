@@ -302,7 +302,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:air",
-          "weight": 15,
+          "weight": 16,
           "functions": [
             {
               "function": "set_count",
@@ -316,7 +316,7 @@
         {
           "type": "minecraft:item",
           "name": "aether:black_moa_egg",
-          "weight": 7,
+          "weight": 8,
           "functions": [
             {
               "function": "set_count",
