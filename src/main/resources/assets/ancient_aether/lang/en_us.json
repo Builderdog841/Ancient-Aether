@@ -93,6 +93,7 @@
   "item.ancient_aether.ancient_rune": "Ancient Rune",
   "item.ancient_aether.ancient_dungeon_key": "Ancient Dungeon Key",
   "item.ancient_aether.ancient_sword": "Ancient Sword",
+  "item.ancient_aether.crystal_gold_coin": "Crystal Gold Coin",
   "item.ancient_aether.ancient_pendant": "Ancient Pendant",
   "item.ancient_aether.ancient_ring": "Ancient Ring",
   "item.ancient_aether.health_pendant": "Health Pendant",
@@ -146,6 +147,7 @@
   "gui.ancient_aether.ancient_core.title": "the Ancient Core",
 
   "ancient_aether.dungeon.ancient_dungeon": "Ancient Dungeon",
+  "ancient_aether.pouch.accessory": "Accessory Pouch Exclusive",
 
   "lore.block.ancient_aether.holystone_brick_mosaic": "A fancy Holystone Brick variant that can be rotated in various different directions.",
   "lore.block.ancient_aether.sentry_stone_mosaic": "A fancy Carved Stone variant that can be rotated in various different directions.",
