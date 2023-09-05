@@ -1,10 +1,6 @@
 {
   "replace": false,
   "values": [
-    "ancient_aether:unpowered_ancient_obelisk",
-    "ancient_aether:locked_carved_stone_mosaic",
-    "ancient_aether:locked_angelic_stone_mosaic",
-    "ancient_aether:locked_hellfire_stone_mosaic",
-    "ancient_aether:locked_gale_stone_mosaic"
+    "ancient_aether:unpowered_ancient_obelisk"
   ]
 }
