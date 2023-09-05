@@ -1,5 +1,6 @@
-package net.builderdog.ancient_aether.block;
+package net.builderdog.ancient_aether.block.building;
 
+import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.block.WallBlock;

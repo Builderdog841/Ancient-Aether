@@ -1,7 +1,10 @@
-// 1.19.4	2023-09-04T22:22:45.7122022	Loot Tables
+// 1.19.4	2023-09-05T16:35:28.5244499	Loot Tables
 7dd5a46063944db5ae8f50f85b3353f48ac4cda5 data/ancient_aether/loot_tables/blocks/aerotic_lantern.json
+d7531b1f4d790023ec0ded4f07ad30772e573c2d data/ancient_aether/loot_tables/blocks/aerotic_slab.json
+fae6ca80f9f5a058b5a49b15065c89ca3862b843 data/ancient_aether/loot_tables/blocks/aerotic_stairs.json
 d7da07b9fd20ec87b96556596d68a57afcf13740 data/ancient_aether/loot_tables/blocks/aerotic_stone.json
 f349ba9e9a5179b3779ac633c43e13f6ab040dde data/ancient_aether/loot_tables/blocks/aerotic_stone_mosaic.json
+af1675aff956ae3755318284434a26516326dc6b data/ancient_aether/loot_tables/blocks/aerotic_wall.json
 15236b68986e73bfc7bdc6ecba5c2035fa26673b data/ancient_aether/loot_tables/blocks/aether_quartz_ore.json
 d59427be87168dfc3f57268fff70276adc7e9c60 data/ancient_aether/loot_tables/blocks/ambrosium_campfire.json
 815136f7f9be243a6b1803ba8ce41916b3c096ef data/ancient_aether/loot_tables/blocks/ancient_obelisk.json

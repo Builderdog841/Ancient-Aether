@@ -7,6 +7,7 @@ import com.aetherteam.aether.block.natural.AetherDoubleDropsOreBlock;
 import com.aetherteam.aether.mixin.mixins.common.accessor.FireBlockAccessor;
 import net.builderdog.ancient_aether.block.building.*;
 import net.builderdog.ancient_aether.block.functional.AmbrosiumCampfireBlock;
+import net.builderdog.ancient_aether.block.functional.CrackedSliderBlock;
 import net.builderdog.ancient_aether.block.functional.TrappedFlowerBlock;
 import net.builderdog.ancient_aether.block.functional.UnpoweredObeliskBlock;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
@@ -90,13 +91,25 @@ public class AncientAetherBlocks  {
     public static final RegistryObject<Block> SAKURA_LEAVES = registerBlock("sakura_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.of(Material.LEAVES, MaterialColor.COLOR_PINK).strength(0.2f).noOcclusion().isValidSpawn(AncientAetherBlocks::ocelotOrParrot).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
     public static final RegistryObject<Block> SAKURA_SAPLING = registerBlock("sakura_sapling", () -> new SaplingBlock(new SakuraTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
-    //Ores
+    //Stone Blocks
+    public static final RegistryObject<RotatedPillarBlock> HOLYSTONE_BRICK_MOSAIC = registerBlock("holystone_brick_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.HOLYSTONE_BRICKS.get())));
+    public static final RegistryObject<Block> QUICKSTONE = registerBlock("quickstone", () -> new QuicksoilGlassBlock(BlockBehaviour.Properties.of(Material.STONE).strength(0.5F).friction(1.1F).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> QUICKSTONE_STAIRS = registerBlock("quickstone_stairs", () -> new StairBlock(() -> QUICKSTONE.get().defaultBlockState(), (BlockBehaviour.Properties.copy(AncientAetherBlocks.QUICKSTONE.get()))));
+    public static final RegistryObject<Block> QUICKSTONE_SLAB = registerBlock("quickstone_slab", () -> new QuickstoneSlabBlock(Block.Properties.copy(AncientAetherBlocks.QUICKSTONE.get()).strength(2.0F, 3.0F)));
     public static final RegistryObject<Block> AETHER_QUARTZ_ORE = registerBlock("aether_quartz_ore", () -> new AetherDoubleDropsOreBlock(Block.Properties.of(Material.STONE, MaterialColor.QUARTZ).strength(3.0F).requiresCorrectToolForDrops(), UniformInt.of(2, 5)));
 
     //Dungeon Blocks
     public static final RegistryObject<Block> AEROTIC_STONE = registerBlock("aerotic_stone", () -> new Block(Block.Properties.of(Material.STONE, MaterialColor.TERRACOTTA_CYAN).strength(0.5F, 6.0F).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> AEROTIC_STAIRS = registerBlock("aerotic_stairs", () -> new StairBlock(() -> AEROTIC_STONE.get().defaultBlockState(), (Block.Properties.copy(AEROTIC_STONE.get()))));
+    public static final RegistryObject<Block> AEROTIC_SLAB = registerBlock("aerotic_slab", () -> new SlabBlock(Block.Properties.copy(AEROTIC_STONE.get())));
+    public static final RegistryObject<Block> AEROTIC_WALL = registerBlock("aerotic_wall", () -> new WallBlock(Block.Properties.copy(AEROTIC_STONE.get())));
     public static final RegistryObject<Block> LIGHT_AEROTIC_STONE = registerBlock("light_aerotic_stone", () -> new Block(Block.Properties.copy(AEROTIC_STONE.get()).lightLevel(s -> 11)));
     public static final RegistryObject<Block> CORRUPTED_LIGHT_AEROTIC_STONE = registerBlock("corrupted_light_aerotic_stone", () -> new Block(Block.Properties.copy(LIGHT_AEROTIC_STONE.get())));
+    public static final RegistryObject<RotatedPillarBlock> CARVED_STONE_MOSAIC = registerBlock("carved_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.CARVED_STONE.get())));
+    public static final RegistryObject<RotatedPillarBlock> ANGELIC_STONE_MOSAIC = registerBlock("angelic_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.ANGELIC_STONE.get())));
+    public static final RegistryObject<RotatedPillarBlock> HELLFIRE_STONE_MOSAIC = registerBlock("hellfire_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.HELLFIRE_STONE.get())));
+    public static final RegistryObject<RotatedPillarBlock> AEROTIC_STONE_MOSAIC = registerBlock("aerotic_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AncientAetherBlocks.AEROTIC_STONE.get())));
+    public static final RegistryObject<RotatedPillarBlock> GALE_STONE_MOSAIC = registerBlock("gale_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.CARVED_STONE.get())));
     public static final RegistryObject<RotatedPillarBlock> LOCKED_CARVED_STONE_MOSAIC = registerBlock("locked_carved_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_CARVED_STONE.get()).noLootTable()));
     public static final RegistryObject<RotatedPillarBlock> LOCKED_ANGELIC_STONE_MOSAIC = registerBlock("locked_angelic_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_ANGELIC_STONE.get()).noLootTable()));
     public static final RegistryObject<RotatedPillarBlock> LOCKED_HELLFIRE_STONE_MOSAIC = registerBlock("locked_hellfire_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_HELLFIRE_STONE.get()).noLootTable()));
@@ -124,19 +137,6 @@ public class AncientAetherBlocks  {
     public static final RegistryObject<Block> HELLFIRE_LANTERN = registerBlock("hellfire_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.LANTERN).strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 12)));
     public static final RegistryObject<Block> GALE_LANTERN = registerBlock("gale_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.LANTERN).strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 12)));
     public static final RegistryObject<Block> AEROTIC_LANTERN = registerBlock("aerotic_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.LANTERN).strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 12)));
-
-    //Quickstone
-    public static final RegistryObject<Block> QUICKSTONE = registerBlock("quickstone", () -> new QuicksoilGlassBlock(BlockBehaviour.Properties.of(Material.STONE).strength(0.5F).friction(1.1F).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> QUICKSTONE_STAIRS = registerBlock("quickstone_stairs", () -> new StairBlock(() -> QUICKSTONE.get().defaultBlockState(), (BlockBehaviour.Properties.copy(AncientAetherBlocks.QUICKSTONE.get()))));
-    public static final RegistryObject<Block> QUICKSTONE_SLAB = registerBlock("quickstone_slab", () -> new QuickstoneSlabBlock(Block.Properties.copy(AncientAetherBlocks.QUICKSTONE.get()).strength(2.0F, 3.0F)));
-
-    //Mosaic Blocks
-    public static final RegistryObject<RotatedPillarBlock> HOLYSTONE_BRICK_MOSAIC = registerBlock("holystone_brick_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.HOLYSTONE_BRICKS.get())));
-    public static final RegistryObject<RotatedPillarBlock> CARVED_STONE_MOSAIC = registerBlock("carved_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.CARVED_STONE.get())));
-    public static final RegistryObject<RotatedPillarBlock> ANGELIC_STONE_MOSAIC = registerBlock("angelic_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.ANGELIC_STONE.get())));
-    public static final RegistryObject<RotatedPillarBlock> HELLFIRE_STONE_MOSAIC = registerBlock("hellfire_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.HELLFIRE_STONE.get())));
-    public static final RegistryObject<RotatedPillarBlock> AEROTIC_STONE_MOSAIC = registerBlock("aerotic_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AncientAetherBlocks.AEROTIC_STONE.get())));
-    public static final RegistryObject<RotatedPillarBlock> GALE_STONE_MOSAIC = registerBlock("gale_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.CARVED_STONE.get())));
 
     //Misc Blocks
     public static final RegistryObject<Block> CRACKED_SLIDER = registerBlock("cracked_slider", () -> new CrackedSliderBlock(BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops().noOcclusion().lightLevel((state) -> state.getValue(RedstoneLampBlock.LIT) ? 15 : 0)));

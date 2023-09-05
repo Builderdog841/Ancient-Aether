@@ -75,6 +75,10 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         itemBlock(AncientAetherBlocks.QUICKSTONE_STAIRS.get());
         itemBlock(AncientAetherBlocks.QUICKSTONE_SLAB.get());
 
+        itemBlock(AncientAetherBlocks.AEROTIC_STAIRS.get());
+        itemBlock(AncientAetherBlocks.AEROTIC_SLAB.get());
+        itemWallBlock(AncientAetherBlocks.AEROTIC_WALL.get(), AncientAetherBlocks.AEROTIC_STONE.get(), "");
+
         item(AncientAetherBlocks.HOLYSTONE_LANTERN.get().asItem(), "");
         item(AncientAetherBlocks.SENTRY_LANTERN.get().asItem(), "");
         item(AncientAetherBlocks.ANGELIC_LANTERN.get().asItem(), "");

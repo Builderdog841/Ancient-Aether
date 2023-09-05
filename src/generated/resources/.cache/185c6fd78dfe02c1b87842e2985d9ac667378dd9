@@ -1,6 +1,9 @@
-// 1.19.4	2023-09-05T15:28:14.6636721	Item Models: ancient_aether
+// 1.19.4	2023-09-05T16:35:28.522172	Item Models: ancient_aether
 dc22e9f245c5e59d55b0aec4ae45dec8337daa28 assets/ancient_aether/models/item/aerogel_bottle.json
 2b792d3780c8a2525546b071319a3e5ed1ab9ac4 assets/ancient_aether/models/item/aerotic_lantern.json
+6f8b483fe39f1c9ec95642516d3878f574aeb929 assets/ancient_aether/models/item/aerotic_slab.json
+cc9bbe1b4964267d20d315e771afefa35dbaa9d9 assets/ancient_aether/models/item/aerotic_stairs.json
+ee19d1f5102e9b209c3ea9283f63965b3eb510b4 assets/ancient_aether/models/item/aerotic_wall.json
 37ccb563fa16dca6b181b58274921d2bfce2efea assets/ancient_aether/models/item/ambrosium_campfire.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/ancient_guardian_spawn_egg.json
 e33c85e0901587bf84b2a93e0f74636995731436 assets/ancient_aether/models/item/ancient_pendant.json

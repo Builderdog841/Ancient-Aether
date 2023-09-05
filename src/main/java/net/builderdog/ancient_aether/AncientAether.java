@@ -69,6 +69,7 @@ public class AncientAether {
         DIRECTORY.toFile().mkdirs();
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, AncientAetherConfig.COMMON_SPEC);
     }
+
     private void commonSetup(
             final FMLCommonSetupEvent event) {
 
@@ -76,7 +77,7 @@ public class AncientAether {
             AncientAetherBlocks.registerPots();
             AncientAetherBlocks.registerFlammability();
 
-            this.registerComposting();
+            registerComposting();
         });
 
         event.enqueueWork(() -> {
@@ -85,6 +86,7 @@ public class AncientAether {
             SurfaceRuleManager.addSurfaceRules(AetherRuleCategory.THE_AETHER, MOD_ID, AncientAetherSurfaceData.makeRules());
         });
     }
+
     public void packSetup(AddPackFindersEvent event) {
         this.setupOptionalPack(event, "ancient_aether_programmer_art", "Programmer Art", "Changes the textures to the classic art style");
         this.setupDatapack(event, "ancient_aether_new_worldgen", "New World Generation", "Adds larger Islands, Mountains and a lot more", PackSource.BUILT_IN);
@@ -106,20 +108,6 @@ public class AncientAether {
                 }, new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.SERVER_DATA), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()), PackType.CLIENT_RESOURCES, Pack.Position.TOP, false, PackSource.BUILT_IN));
             });
         }
-    }
-
-    private void setupMandatoryDataPack(AddPackFindersEvent event, String path, String displayName, String desc) {
-        if (event.getPackType() == PackType.SERVER_DATA) {
-            Path resourcePath = ModList.get().getModFileById("ancient_aether").getFile().findResource(new String[]{"packs/" + path});
-            PathPackResources pack = new PathPackResources(ModList.get().getModFileById("ancient_aether").getFile().getFileName() + ":" + resourcePath, true, resourcePath);
-            PackMetadataSection metadata = new PackMetadataSection(Component.translatable(desc), SharedConstants.getCurrentVersion().getPackVersion(PackType.SERVER_DATA));
-            event.addRepositorySource((packConsumer) -> {
-                packConsumer.accept(Pack.create("builtin/" + path, Component.literal("Ancient Aether: " + displayName), true, (string) -> {
-                    return pack;
-                }, new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.SERVER_DATA), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()), PackType.SERVER_DATA, Pack.Position.TOP, false, PackSource.BUILT_IN));
-            });
-        }
-
     }
 
     private void setupDatapack(AddPackFindersEvent event, String path, String displayName, String desc, PackSource source) {

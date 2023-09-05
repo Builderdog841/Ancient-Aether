@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.block;
+package net.builderdog.ancient_aether.block.functional;
 
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -12,7 +12,7 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 public class CrackedSliderBlock extends RedstoneLampBlock {
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
     public static final BooleanProperty LIT = RedstoneTorchBlock.LIT;
-    protected CrackedSliderBlock(BlockBehaviour.Properties p_48687_) {
+    public CrackedSliderBlock(BlockBehaviour.Properties p_48687_) {
         super(p_48687_);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(LIT, Boolean.valueOf(false)));
     }
