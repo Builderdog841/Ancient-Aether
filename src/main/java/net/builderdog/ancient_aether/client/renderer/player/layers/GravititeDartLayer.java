@@ -4,8 +4,8 @@ import com.aetherteam.aether.client.renderer.player.layer.AbstractDartLayer;
 import com.aetherteam.aether.entity.AetherEntityTypes;
 import com.aetherteam.aether.entity.projectile.dart.AbstractDart;
 import com.aetherteam.aether.entity.projectile.dart.GoldenDart;
-import com.aetherteam.aether_genesis.capability.player.GenesisPlayer;
 import com.mojang.blaze3d.vertex.PoseStack;
+import net.builderdog.ancient_aether.capability.player.AncientAetherPlayer;
 import net.minecraft.client.model.PlayerModel;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
@@ -24,9 +24,9 @@ public class GravititeDartLayer<T extends LivingEntity, M extends PlayerModel<T>
 
     protected int numStuck(@Nonnull T entity) {
         if (entity instanceof Player player) {
-            Optional<GenesisPlayer> genesisPlayerOptional = GenesisPlayer.get(player).resolve();
-            if (genesisPlayerOptional.isPresent()) {
-                return (genesisPlayerOptional.get()).getPhoenixDartCount();
+            Optional<AncientAetherPlayer> ancientAetherPlayerOptional = AncientAetherPlayer.get(player).resolve();
+            if (ancientAetherPlayerOptional.isPresent()) {
+                return (ancientAetherPlayerOptional.get()).getGravititeDartCount();
             }
         }
         return 0;
