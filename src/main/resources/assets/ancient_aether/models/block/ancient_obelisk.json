@@ -1,0 +1,8 @@
+{
+  "parent": "ancient_aether:block/template_ancient_obelisk",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "1": "ancient_aether:block/ancient_obelisk",
+    "particle": "ancient_aether:block/aerotic_stone"
+  }
+}

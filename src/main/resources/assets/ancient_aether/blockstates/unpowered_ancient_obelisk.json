@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ancient_aether:block/unpowered_ancient_obelisk"
+    }
+  }
+}
