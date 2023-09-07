@@ -69,7 +69,7 @@ public class AncientAetherRegion extends Region {
                 AncientAetherBiomes.FESTIVE_WYNDCAP_TAIGA);
         addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps3, Climate.Parameter.span(-1.0F, 1.0F), fullRange, fullRange, Climate.Parameter.span(-0.6F, -0.35F), fullRange, 0),
                 AncientAetherBiomes.WYNDCAP_HIGHLAND);
-        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps3, Climate.Parameter.span(-1.0F, 1.0F), fullRange, fullRange, Climate.Parameter.span(-1.5F, -0.6F), fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps3, Climate.Parameter.span(-1.0F, 1.0F), fullRange, fullRange, Climate.Parameter.span(-1.0F, -0.6F), fullRange, 0),
                 AncientAetherBiomes.WYNDCAP_PEAKS);
 
         addBiome(mapper, new Climate.ParameterPoint(tempDefault2, Climate.Parameter.span(0.0F, 0.3F), fullRange, fullRange, Climate.Parameter.span(-1.0F, 0.3F), fullRange, 0),
