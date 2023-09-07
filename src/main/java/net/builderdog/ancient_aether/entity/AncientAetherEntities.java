@@ -42,6 +42,7 @@ public class AncientAetherEntities {
             -> EntityType.Builder.<AncientAetherChestBoatEntity>of(AncientAetherChestBoatEntity::new, MobCategory.MISC).sized(1.375F, 0.5625F).clientTrackingRange(10).build("chest_boat"));
     public static final RegistryObject<EntityType<GravititeDart>> GRAVITITE_DART = ENTITY_TYPES.register("gravitite_dart",
             () -> EntityType.Builder.<GravititeDart>of(GravititeDart::new, MobCategory.MISC).sized(0.5F, 0.5F).clientTrackingRange(4).updateInterval(20).build("gravitite_dart"));
+
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }
