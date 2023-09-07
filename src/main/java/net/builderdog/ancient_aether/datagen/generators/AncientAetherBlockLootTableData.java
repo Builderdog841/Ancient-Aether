@@ -83,7 +83,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.HELLFIRE_LANTERN.get());
         dropSelf(AncientAetherBlocks.AEROTIC_LANTERN.get());
         dropSelf(AncientAetherBlocks.GALE_LANTERN.get());
-        dropSelf(AncientAetherBlocks.SENTRY_OBELISK.get());
+        dropSelf(AncientAetherBlocks.ANCIENT_OBELISK.get());
         dropSelf(AncientAetherBlocks.MOONLIT_WATERLILY.get());
 
         dropOther(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get(), AncientAetherBlocks.SAKURA_BLOSSOMS.get());
