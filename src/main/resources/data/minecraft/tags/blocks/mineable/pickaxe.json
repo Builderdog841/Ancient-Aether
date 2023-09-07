@@ -3,7 +3,11 @@
   "values": [
     "ancient_aether:aether_quartz_ore",
     "ancient_aether:aerotic_stone",
-    "ancient_aether:light_stone",
+    "ancient_aether:aerotic_stairs",
+    "ancient_aether:aerotic_slab",
+    "ancient_aether:aerotic_wall",
+    "ancient_aether:light_aerotic_stone",
+    "ancient_aether:corrupted_aerotic_stone",
     "ancient_aether:quickstone",
     "ancient_aether:quickstone_stairs",
     "ancient_aether:quickstone_slab",
@@ -17,6 +21,7 @@
     "ancient_aether:carved_stone_mosaic",
     "ancient_aether:angelic_stone_mosaic",
     "ancient_aether:hellfire_stone_mosaic",
+    "ancient_aether:aerotic_stone_mosaic",
     "ancient_aether:gale_stone_mosaic",
     "ancient_aether:ancient_obelisk"
   ]
