@@ -99,12 +99,12 @@ public class AncientAether {
     }
 
     public void packSetup(AddPackFindersEvent event) {
-        this.setupOptionalPack(event, "ancient_aether_programmer_art", "Programmer Art", "Changes the textures to the classic art style");
-        this.setupDatapack(event, "ancient_aether_new_worldgen", "New World Generation", "Adds larger Islands, Mountains and a lot more", PackSource.BUILT_IN);
-        this.setupDatapack(event, "ancient_aether_default_biome_improvements", "Default Biome Improvements", "Adds more flowers and tree variation to the Default Aether Biomes. It also gives the Aether a new Watercolor.", PackSource.BUILT_IN);
+        setupOptionalPack(event, "ancient_aether_programmer_art", "Programmer Art", "Changes the textures to the classic art style");
+        setupDatapack(event, "ancient_aether_new_worldgen", "New World Generation", "Adds larger Islands, Mountains and a lot more", PackSource.BUILT_IN);
+        setupDatapack(event, "ancient_aether_default_biome_improvements", "Default Biome Improvements", "Adds more flowers and tree variation to the Default Aether Biomes. It also gives the Aether a new Watercolor.", PackSource.BUILT_IN);
 
         if (ModList.get().isLoaded("aether_genesis")) {
-            this.setupDatapack(event, "aether_genesis_compat", "Aether Genesis Compatibility", "Makes Log and Wood Walls from Ancient Aether craftable", PackSource.BUILT_IN);
+            setupDatapack(event, "aether_genesis_compat", "Aether Genesis Compatibility", "Makes Log and Wood Walls from Ancient Aether craftable", PackSource.BUILT_IN);
         }
     }
 
@@ -135,14 +135,14 @@ public class AncientAether {
     }
 
     private void registerComposting() {
-        this.addCompost(0.3F, AncientAetherBlocks.HIGHSPROOT_LEAVES.get().asItem());
-        this.addCompost(0.3F, AncientAetherBlocks.SAKURA_LEAVES.get().asItem());
-        this.addCompost(0.3F, AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
-        this.addCompost(0.3F, AncientAetherBlocks.SAKURA_SAPLING.get());
-        this.addCompost(0.65F,AncientAetherBlocks.HIGHLAND_TULIP.get());
-        this.addCompost(0.65F,AncientAetherBlocks.SAKURA_BLOSSOMS.get());
-        this.addCompost(0.65F,AncientAetherBlocks.EDELWEISS.get());
-        this.addCompost(0.65F,AncientAetherBlocks.MOONLIT_WATERLILY.get());
+        addCompost(0.3F, AncientAetherBlocks.HIGHSPROOT_LEAVES.get().asItem());
+        addCompost(0.3F, AncientAetherBlocks.SAKURA_LEAVES.get().asItem());
+        addCompost(0.3F, AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
+        addCompost(0.3F, AncientAetherBlocks.SAKURA_SAPLING.get());
+        addCompost(0.65F,AncientAetherBlocks.HIGHLAND_TULIP.get());
+        addCompost(0.65F,AncientAetherBlocks.SAKURA_BLOSSOMS.get());
+        addCompost(0.65F,AncientAetherBlocks.EDELWEISS.get());
+        addCompost(0.65F,AncientAetherBlocks.MOONLIT_WATERLILY.get());
     }
 
     private void addCompost(float chance, ItemLike item) {
