@@ -1,9 +1,11 @@
 package net.builderdog.ancient_aether;
 
+import com.aetherteam.aether.AetherConfig;
 import com.mojang.logging.LogUtils;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
+import net.builderdog.ancient_aether.client.renderer.AncientAetherEntityRenderers;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.entity.moa.AncientAetherMoaTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
@@ -30,6 +32,7 @@ import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.resource.PathPackResources;
@@ -62,12 +65,20 @@ public class AncientAether {
         AncientAetherSoundEvents.SOUNDS.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(this::clientSetup);
         modEventBus.addListener(this::packSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
 
         DIRECTORY.toFile().mkdirs();
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, AncientAetherConfig.COMMON_SPEC);
+    }
+
+    private void clientSetup(FMLClientSetupEvent event) {
+        event.enqueueWork(() -> {
+                AetherConfig.COMMON.add_ruined_portal_automatically.set(true);
+                AetherConfig.COMMON.add_temporary_freezing_automatically.set(true);
+        });
     }
 
     private void commonSetup(

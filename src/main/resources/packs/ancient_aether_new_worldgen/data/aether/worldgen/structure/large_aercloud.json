@@ -1,0 +1,18 @@
+{
+  "type": "aether:large_aercloud",
+  "biomes": "#aether:has_large_aercloud",
+  "blocks": {
+    "type": "minecraft:simple_state_provider",
+    "state": {
+      "Name": "aether:cold_aercloud",
+      "Properties": {
+        "double_drops": "true"
+      }
+    }
+  },
+  "minY": 64,
+  "rangeY": 8,
+  "size": 3,
+  "spawn_overrides": {},
+  "step": "surface_structures"
+}
