@@ -10,7 +10,6 @@
       }
     }
   },
-  "minY": 64,
   "rangeY": 8,
   "size": 3,
   "spawn_overrides": {},
