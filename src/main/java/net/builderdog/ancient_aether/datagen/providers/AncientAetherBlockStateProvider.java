@@ -22,7 +22,7 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
     }
 
     protected BlockModelBuilder makeWallPostModel(int width, int height, String name) {
-        return models().withExistingParent(name, this.mcLoc("block/block"))
+        return models().withExistingParent(name, mcLoc("block/block"))
                 .element().from(8 - width, 0.0F, 8 - width).to(8 + width, height, 8 + width)
                 .face(Direction.DOWN).texture("#top").cullface(Direction.DOWN).end()
                 .face(Direction.UP).texture("#top").cullface(Direction.UP).end()
@@ -33,7 +33,7 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
     }
 
     protected BlockModelBuilder makeWallSideModel(int length, int height, String name, ModelBuilder.FaceRotation faceRotation, int u1, int u2) {
-        return models().withExistingParent(name, this.mcLoc("block/block"))
+        return models().withExistingParent(name, mcLoc("block/block"))
                 .element().from(5.0F, 0.0F, 0.0F).to(11.0F, height, length)
                 .face(Direction.DOWN).texture("#top").rotation(faceRotation).uvs(u1, 5, u2, 11).cullface(Direction.DOWN).end()
                 .face(Direction.UP).texture("#top").rotation(faceRotation).uvs(u1, 5, u2, 11).end()
@@ -44,12 +44,12 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
     }
 
     public void logWallBlock(WallBlock block, Block baseBlock, String location, String modid, boolean postUsesTop, ModelFile postBig, ModelFile postShort, ModelFile postTall, ModelFile side, ModelFile sideAlt, ModelFile sideTall, ModelFile sideTallAlt, ModelFile sideShort, ModelFile sideAltShort, ModelFile sideTallShort, ModelFile sideTallAltShort) {
-        this.logWallBlockInternal(block, this.name(block), new ResourceLocation(modid, "block/" + location + this.name(baseBlock)), postUsesTop, postBig, postShort, postTall, side, sideAlt, sideTall, sideTallAlt, sideShort, sideAltShort, sideTallShort, sideTallAltShort);
+        logWallBlockInternal(block, name(block), new ResourceLocation(modid, "block/" + location + name(baseBlock)), postUsesTop, postBig, postShort, postTall, side, sideAlt, sideTall, sideTallAlt, sideShort, sideAltShort, sideTallShort, sideTallAltShort);
     }
 
     private void logWallBlockInternal(WallBlock block, String baseName, ResourceLocation texture, boolean postUsesTop, ModelFile postBig, ModelFile postShort, ModelFile postTall, ModelFile side, ModelFile sideAlt, ModelFile sideTall, ModelFile sideTallAlt, ModelFile sideShort, ModelFile sideAltShort, ModelFile sideTallShort, ModelFile sideTallAltShort) {
-        this.logWallBlock(
-                this.getMultipartBuilder(block),
+        logWallBlock(
+                getMultipartBuilder(block),
                 models().getBuilder(baseName + "_post_short").parent(postShort).texture("particle", texture).texture("top", texture).texture("side", texture),
                 models().getBuilder(baseName + "_post_tall").parent(postTall).texture("particle", texture).texture("top", texture).texture("side", texture),
                 models().getBuilder(baseName + "_side").parent(side).texture("particle", texture).texture("top", texture).texture("side", texture),
@@ -98,8 +98,8 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
         WALL_PROPS.entrySet().stream()
                 .filter(e -> e.getKey().getAxis().isHorizontal())
                 .forEach(e -> {
-                    this.logWallSidePart(builder, side, sideAlt, e, WallSide.LOW, true);
-                    this.logWallSidePart(builder, sideTall, sideTallAlt, e, WallSide.TALL, true);
+                    logWallSidePart(builder, side, sideAlt, e, WallSide.LOW, true);
+                    logWallSidePart(builder, sideTall, sideTallAlt, e, WallSide.TALL, true);
                 });
     }
 

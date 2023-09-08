@@ -109,22 +109,6 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .unlockedBy(getHasName(AetherBlocks.ENCHANTED_GRAVITITE.get()), has(AetherBlocks.ENCHANTED_GRAVITITE.get()))
                 .save(consumer, name("enchanting_table_from_gravitite"));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.ANVIL)
-                .define('Z', AetherItems.ZANITE_GEMSTONE.get())
-                .define('B', AetherBlocks.ZANITE_BLOCK.get())
-                .pattern("BBB")
-                .pattern(" Z ")
-                .pattern("ZZZ")
-                .unlockedBy(getHasName(AetherBlocks.ZANITE_BLOCK.get()), has(AetherBlocks.ZANITE_BLOCK.get()))
-                .save(consumer, name("zanite_anvil"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Items.SHEARS)
-                .define('Z', AetherItems.ZANITE_GEMSTONE.get())
-                .pattern("Z ")
-                .pattern(" Z")
-                .unlockedBy(getHasName(AetherItems.ZANITE_GEMSTONE.get()), has(AetherItems.ZANITE_GEMSTONE.get()))
-                .save(consumer, name("zanite_shears"));
-
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, AncientAetherItems.AEROGEL_BOTTLE.get(),3)
                 .define('A', AetherBlocks.AEROGEL.get())
                 .pattern("A A")

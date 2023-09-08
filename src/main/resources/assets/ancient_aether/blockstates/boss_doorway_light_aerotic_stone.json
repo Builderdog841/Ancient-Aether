@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "invisible=false": {
+      "model": "ancient_aether:block/light_aerotic_stone"
+    },
+    "invisible=true": {
+      "model": "ancient_aether:block/boss_doorway_light_aerotic_stone"
+    }
+  }
+}
