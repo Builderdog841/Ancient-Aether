@@ -78,6 +78,8 @@ public class AncientAether {
         event.enqueueWork(() -> {
                 AetherConfig.COMMON.add_ruined_portal_automatically.set(true);
                 AetherConfig.COMMON.add_temporary_freezing_automatically.set(true);
+                AetherConfig.CLIENT.music_backup_min_delay.set(1);
+                AetherConfig.CLIENT.music_backup_max_delay.set(2);
         });
     }
 
