@@ -1,7 +1,6 @@
 package net.builderdog.ancient_aether.item.loot;
 
 import com.aetherteam.aether.entity.projectile.dart.AbstractDart;
-import com.aetherteam.aether.item.accessories.AccessoryItem;
 import com.aetherteam.aether.item.combat.DartShooterItem;
 import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.entity.misc.GravititeDart;
@@ -44,9 +43,5 @@ public class GravititeDartShooterItem extends DartShooterItem {
         if (flag.isCreative()) {
             components.addAll(dungeonTooltips);
         }
-    }
-    public GravititeDartShooterItem addDungeonTooltip(Component dungeonTooltip) {
-        dungeonTooltips.add(dungeonTooltip);
-        return this;
     }
 }

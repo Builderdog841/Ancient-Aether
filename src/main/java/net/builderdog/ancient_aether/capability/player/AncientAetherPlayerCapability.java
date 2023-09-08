@@ -1,54 +1,64 @@
 package net.builderdog.ancient_aether.capability.player;
 
-import com.aetherteam.aether.capability.CapabilitySyncing;
-import com.aetherteam.aether.network.AetherPacket;
+import com.aetherteam.aether.network.AetherPacketHandler;
 import com.aetherteam.aether.network.packet.AetherPlayerSyncPacket;
+import com.aetherteam.nitrogen.network.BasePacket;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.player.Player;
+import net.minecraftforge.network.simple.SimpleChannel;
+import org.apache.commons.lang3.tuple.Triple;
 
-public class AncientAetherPlayerCapability extends CapabilitySyncing implements AncientAetherPlayer {
+import java.util.Map;
+import java.util.function.Consumer;
+import java.util.function.Supplier;
+
+public class AncientAetherPlayerCapability implements AncientAetherPlayer {
     private final Player player;
     private int gravititeDartCount;
 
+    private final Map<String, Triple<Type, Consumer<Object>, Supplier<Object>>> synchableFunctions = Map.ofEntries(
+            Map.entry("setGravititeDartCount", Triple.of(Type.INT, (object) -> setGravititeDartCount((int) object), this::getGravititeDartCount))
+    );
 
     public AncientAetherPlayerCapability(Player player) {
         this.player = player;
     }
 
+    @Override
     public Player getPlayer() {
-        return player;
+        return this.player;
     }
 
+    @Override
     public CompoundTag serializeNBT() {
         return new CompoundTag();
     }
 
-    public void deserializeNBT(CompoundTag nbt) {
+    @Override
+    public void deserializeNBT(CompoundTag nbt) { }
+
+    @Override
+    public Map<String, Triple<Type, Consumer<Object>, Supplier<Object>>> getSynchableFunctions() {
+        return this.synchableFunctions;
     }
 
-    public CompoundTag serializeSynchableNBT() {
-        CompoundTag tag = new CompoundTag();
-        tag.putInt("GravititeDartCount_Syncing", getGravititeDartCount());
-        return tag;
-    }
-
-    public void deserializeSynchableNBT(CompoundTag tag) {
-        if (tag.contains("GravititeDartCount_Syncing")) {
-            setGravititeDartCount(tag.getInt("GravititeDartCount_Syncing"));
-        }
-
-    }
-
+    @Override
     public void setGravititeDartCount(int count) {
-        this.markDirty(true);
-        this.gravititeDartCount = count;
+        gravititeDartCount = count;
     }
 
+    @Override
     public int getGravititeDartCount() {
         return gravititeDartCount;
     }
 
-    public AetherPacket getSyncPacket(CompoundTag tag) {
-        return new AetherPlayerSyncPacket(getPlayer().getId(), tag);
+    @Override
+    public BasePacket getSyncPacket(String key, Type type, Object value) {
+        return new AetherPlayerSyncPacket(this.getPlayer().getId(), key, type, value);
+    }
+
+    @Override
+    public SimpleChannel getPacketChannel() {
+        return AetherPacketHandler.INSTANCE;
     }
 }

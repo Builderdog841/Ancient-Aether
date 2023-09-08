@@ -1,11 +1,12 @@
 package net.builderdog.ancient_aether.entity.boss.ancient_guardian;
 
-import com.aetherteam.aether.api.BossNameGenerator;
-import com.aetherteam.aether.api.BossRoomTracker;
-import com.aetherteam.aether.entity.BossMob;
+import com.aetherteam.aether.entity.AetherBossMob;
+import com.aetherteam.aether.entity.monster.dungeon.boss.BossNameGenerator;
+import com.aetherteam.aether.network.packet.serverbound.BossInfoPacket;
+import com.aetherteam.nitrogen.entity.BossRoomTracker;
+import com.aetherteam.nitrogen.network.PacketRelay;
 import com.aetherteam.aether.entity.ai.goal.ContinuousMeleeAttackGoal;
 import com.aetherteam.aether.network.AetherPacketHandler;
-import com.aetherteam.aether.network.packet.client.BossInfoPacket;
 import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
@@ -45,7 +46,7 @@ import org.jetbrains.annotations.Nullable;
 import javax.annotation.Nonnull;
 import java.util.EnumSet;
 
-public class AncientGuardian extends PathfinderMob implements BossMob<AncientGuardian>, Enemy, IEntityAdditionalSpawnData {
+public class AncientGuardian extends PathfinderMob implements AetherBossMob<AncientGuardian>, Enemy, IEntityAdditionalSpawnData {
     public static final EntityDataAccessor<Boolean> DATA_AWAKE_ID;
     public static final EntityDataAccessor<Component> DATA_BOSS_NAME_ID;
     public int chatTime;
@@ -247,48 +248,50 @@ public class AncientGuardian extends PathfinderMob implements BossMob<AncientGua
 
     public void writeSpawnData(FriendlyByteBuf buffer) {
         CompoundTag tag = new CompoundTag();
-        this.addBossSaveData(tag);
+        addBossSaveData(tag);
         buffer.writeNbt(tag);
     }
 
     public void readSpawnData(FriendlyByteBuf additionalData) {
         CompoundTag tag = additionalData.readNbt();
         if (tag != null) {
-            this.readBossSaveData(tag);
+            readBossSaveData(tag);
         }
 
     }
 
+    @Override
     public void startSeenByPlayer(@Nonnull ServerPlayer player) {
         super.startSeenByPlayer(player);
-        AetherPacketHandler.sendToPlayer(new BossInfoPacket.Display(this.bossFight.getId()), player);
+        PacketRelay.sendToPlayer(AetherPacketHandler.INSTANCE, new BossInfoPacket.Display(this.bossFight.getId()), player);
         if (this.getDungeon() == null || this.getDungeon().isPlayerTracked(player)) {
             this.bossFight.addPlayer(player);
         }
-
     }
+
     public void customServerAiStep() {
         super.customServerAiStep();
-        this.bossFight.setProgress(this.getHealth() / this.getMaxHealth());
-        this.trackDungeon();
+        bossFight.setProgress(getHealth() / getMaxHealth());
+        trackDungeon();
     }
 
+    @Override
     public void stopSeenByPlayer(@Nonnull ServerPlayer player) {
         super.stopSeenByPlayer(player);
-        AetherPacketHandler.sendToPlayer(new BossInfoPacket.Remove(this.bossFight.getId()), player);
+        PacketRelay.sendToPlayer(AetherPacketHandler.INSTANCE, new BossInfoPacket.Remove(this.bossFight.getId()), player);
         this.bossFight.removePlayer(player);
     }
 
     public void onDungeonPlayerAdded(@javax.annotation.Nullable Player player) {
         if (player instanceof ServerPlayer serverPlayer) {
-            this.bossFight.addPlayer(serverPlayer);
+            bossFight.addPlayer(serverPlayer);
         }
 
     }
 
     public void onDungeonPlayerRemoved(@javax.annotation.Nullable Player player) {
         if (player instanceof ServerPlayer serverPlayer) {
-            this.bossFight.removePlayer(serverPlayer);
+            bossFight.removePlayer(serverPlayer);
         }
 
     }
@@ -314,10 +317,11 @@ public class AncientGuardian extends PathfinderMob implements BossMob<AncientGua
         this.moveTo((double) Mth.floor(this.getX()), this.getY(), (double) Mth.floor(this.getZ()));
     }
 
-    public static MutableComponent generateGuardianName() {
-        MutableComponent result = BossNameGenerator.generateBossName();
+    public MutableComponent generateGuardianName() {
+        MutableComponent result = BossNameGenerator.generateBossName(this.getRandom());
         return result.append(Component.translatable("gui.ancient_aether.ancient_guardian.title"));
     }
+
 
     public SpawnGroupData finalizeSpawn(@Nonnull ServerLevelAccessor pLevel, @Nonnull DifficultyInstance pDifficulty, @Nonnull MobSpawnType pReason, @javax.annotation.Nullable SpawnGroupData pSpawnData, @javax.annotation.Nullable CompoundTag pDataTag) {
         this.alignSpawnPos();

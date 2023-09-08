@@ -1,5 +1,7 @@
 package net.builderdog.ancient_aether.client.renderer;
 
+import com.aetherteam.aether.capability.player.AetherPlayer;
+import com.aetherteam.aether.client.renderer.player.layer.DartLayer;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.client.renderer.entity.*;
@@ -8,9 +10,9 @@ import net.builderdog.ancient_aether.client.renderer.entity.model.AncientGuardia
 import net.builderdog.ancient_aether.client.renderer.entity.model.GravititeDartRenderer;
 import net.builderdog.ancient_aether.client.renderer.entity.model.HighlandBuffaloModel;
 import net.builderdog.ancient_aether.client.renderer.entity.model.RoothyrnModel;
-import net.builderdog.ancient_aether.client.renderer.player.layers.GravititeDartLayer;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
+import net.builderdog.ancient_aether.entity.misc.GravititeDart;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
@@ -53,14 +55,10 @@ public class AncientAetherEntityRenderers {
     public static void addPlayerLayers(EntityRenderersEvent.AddLayers event) {
         EntityRenderDispatcher renderDispatcher = Minecraft.getInstance().getEntityRenderDispatcher();
         String[] types = new String[]{"default", "slim"};
-        String[] var3 = types;
-        int var4 = types.length;
-
-        for(int var5 = 0; var5 < var4; ++var5) {
-            String type = var3[var5];
+        for (String type : types) {
             PlayerRenderer playerRenderer = event.getSkin(type);
             if (playerRenderer != null) {
-                playerRenderer.addLayer(new GravititeDartLayer(renderDispatcher, playerRenderer));
+                playerRenderer.addLayer(new DartLayer<>(renderDispatcher, playerRenderer, (entity) -> new GravititeDart(AncientAetherEntities.GRAVITITE_DART.get(), entity.getLevel()), AetherPlayer::getGoldenDartCount, 1.0F));
             }
         }
     }

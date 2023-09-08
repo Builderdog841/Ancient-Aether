@@ -1,6 +1,6 @@
 package net.builderdog.ancient_aether.entity.misc;
 
-import com.aetherteam.aether.entity.SkyrootBoatBehavior;
+import com.aetherteam.aether.entity.miscellaneous.SkyrootBoatBehavior;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.item.AncientAetherItems;

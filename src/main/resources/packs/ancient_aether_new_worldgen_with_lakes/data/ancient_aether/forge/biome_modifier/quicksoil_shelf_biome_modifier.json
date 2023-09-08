@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#aether:is_aether",
-  "features": "aether:quicksoil_shelf",
-  "step": "underground_ores"
-}

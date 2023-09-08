@@ -2,7 +2,7 @@ package net.builderdog.ancient_aether.datagen.generators;
 
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
-import net.builderdog.ancient_aether.datagen.resources.AncientAetherBlockStateProvider;
+import net.builderdog.ancient_aether.datagen.providers.AncientAetherBlockStateProvider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
@@ -89,6 +89,21 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         stairs((StairBlock) AncientAetherBlocks.AEROTIC_STAIRS.get(), AncientAetherBlocks.AEROTIC_STONE.get(), "");
         slab((SlabBlock) AncientAetherBlocks.AEROTIC_SLAB.get(), AncientAetherBlocks.AEROTIC_STONE.get(), "");
         wallBlock((WallBlock) AncientAetherBlocks.AEROTIC_WALL.get(), AncientAetherBlocks.AEROTIC_STONE.get(), "");
+        //dungeonBlock(AncientAetherBlocks.LOCKED_AEROTIC_STONE.get(), AncientAetherBlocks.AEROTIC_STONE.get());
+        //dungeonBlock(AncientAetherBlocks.LOCKED_LIGHT_AEROTIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROTIC_STONE.get());
+        //dungeonBlock(AncientAetherBlocks.LOCKED_CORRUPTED_LIGHT_AEROTIC_STONE.get(), AncientAetherBlocks.CORRUPTED_LIGHT_AEROTIC_STONE.get());
+        //dungeonBlock(AncientAetherBlocks.TRAPPED_AEROTIC_STONE.get(), AncientAetherBlocks.AEROTIC_STONE.get());
+        //dungeonBlock(AncientAetherBlocks.TRAPPED_LIGHT_AEROTIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROTIC_STONE.get());
+        //dungeonBlock(AncientAetherBlocks.TRAPPED_CORRUPTED_LIGHT_AEROTIC_STONE.get(), AncientAetherBlocks.CORRUPTED_LIGHT_AEROTIC_STONE.get());
+        //dungeonBlock(AncientAetherBlocks.BOSS_DOORWAY_AEROTIC_STONE.get(), AncientAetherBlocks.AEROTIC_STONE.get());
+        //dungeonBlock(AncientAetherBlocks.BOSS_DOORWAY_LIGHT_AEROTIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROTIC_STONE.get());
+        //dungeonBlock(AncientAetherBlocks.BOSS_DOORWAY_CORRUPTED_LIGHT_AEROTIC_STONE.get(), AncientAetherBlocks.CORRUPTED_LIGHT_AEROTIC_STONE.get());
+        //dungeonBlock(AncientAetherBlocks.TRAPPED_AEROTIC_STONE.get(), AncientAetherBlocks.AEROTIC_STONE.get());
+        //dungeonBlock(AncientAetherBlocks.TRAPPED_LIGHT_AEROTIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROTIC_STONE.get());
+        //dungeonBlock(AncientAetherBlocks.TRAPPED_CORRUPTED_LIGHT_AEROTIC_STONE.get(), AncientAetherBlocks.CORRUPTED_LIGHT_AEROTIC_STONE.get());
+        //dungeonBlock(AncientAetherBlocks.TREASURE_DOORWAY_AEROTIC_STONE.get(), AncientAetherBlocks.AEROTIC_STONE.get());
+        //dungeonBlock(AncientAetherBlocks.TREASURE_DOORWAY_LIGHT_AEROTIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROTIC_STONE.get());
+        //dungeonBlock(AncientAetherBlocks.TREASURE_DOORWAY_CORRUPTED_LIGHT_AEROTIC_STONE.get(), AncientAetherBlocks.CORRUPTED_LIGHT_AEROTIC_STONE.get());
 
         blockWithItem(AncientAetherBlocks.HIGHSPROOT_LEAVES);
         blockWithItem(AncientAetherBlocks.SAKURA_LEAVES);

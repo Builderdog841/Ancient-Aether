@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.datagen.resources;
+package net.builderdog.ancient_aether.datagen.providers;
 
 import com.aetherteam.aether.data.providers.AetherBlockStateProvider;
 import net.minecraft.core.Direction;
@@ -20,6 +20,7 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
     public AncientAetherBlockStateProvider(PackOutput output, String id, ExistingFileHelper helper) {
         super(output, id, helper);
     }
+
     protected BlockModelBuilder makeWallPostModel(int width, int height, String name) {
         return models().withExistingParent(name, this.mcLoc("block/block"))
                 .element().from(8 - width, 0.0F, 8 - width).to(8 + width, height, 8 + width)

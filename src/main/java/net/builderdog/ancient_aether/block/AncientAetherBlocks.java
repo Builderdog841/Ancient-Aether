@@ -2,6 +2,9 @@ package net.builderdog.ancient_aether.block;
 
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.block.construction.QuicksoilGlassBlock;
+import com.aetherteam.aether.block.dungeon.DoorwayBlock;
+import com.aetherteam.aether.block.dungeon.TrappedBlock;
+import com.aetherteam.aether.block.dungeon.TreasureDoorwayBlock;
 import com.aetherteam.aether.block.natural.AetherDoubleDropsLeaves;
 import com.aetherteam.aether.block.natural.AetherDoubleDropsOreBlock;
 import com.aetherteam.aether.mixin.mixins.common.accessor.FireBlockAccessor;
@@ -107,6 +110,16 @@ public class AncientAetherBlocks  {
     public static final RegistryObject<Block> CORRUPTED_LIGHT_AEROTIC_STONE = registerBlock("corrupted_light_aerotic_stone", () -> new Block(Block.Properties.copy(LIGHT_AEROTIC_STONE.get())));
     public static final RegistryObject<Block> LOCKED_AEROTIC_STONE = registerBlock("locked_aerotic_stone", () -> new Block(Block.Properties.of(Material.STONE, MaterialColor.TERRACOTTA_CYAN).strength(-1.0F, 3600000.0F).noLootTable()));
     public static final RegistryObject<Block> LOCKED_LIGHT_AEROTIC_STONE = registerBlock("locked_light_aerotic_stone", () -> new Block(Block.Properties.copy(LOCKED_AEROTIC_STONE.get()).lightLevel(s -> 11).noLootTable()));
+    public static final RegistryObject<Block> LOCKED_CORRUPTED_LIGHT_AEROTIC_STONE = registerBlock("locked_corrupted_light_aerotic_stone", () -> new Block(Block.Properties.copy(LOCKED_LIGHT_AEROTIC_STONE.get()).noLootTable()));
+    public static final RegistryObject<Block> TRAPPED_AEROTIC_STONE = registerBlock("trapped_aerotic_stone", () -> new TrappedBlock(AncientAetherEntities.LEAPING_SENTRY::get, () -> AEROTIC_STONE.get().defaultBlockState(), Block.Properties.copy(AEROTIC_STONE.get()).noLootTable()));
+    public static final RegistryObject<Block> TRAPPED_LIGHT_AEROTIC_STONE = registerBlock("trapped_light_aerotic_stone", () -> new TrappedBlock(AncientAetherEntities.LEAPING_SENTRY::get, () -> LIGHT_AEROTIC_STONE.get().defaultBlockState(), Block.Properties.copy(LIGHT_AEROTIC_STONE.get()).noLootTable()));
+    public static final RegistryObject<Block> TRAPPED_CORRUPTED_LIGHT_AEROTIC_STONE = registerBlock("trapped_corrupted_light_aerotic_stone", () -> new TrappedBlock(AncientAetherEntities.LEAPING_SENTRY::get, () -> CORRUPTED_LIGHT_AEROTIC_STONE.get().defaultBlockState(), Block.Properties.copy(CORRUPTED_LIGHT_AEROTIC_STONE.get()).noLootTable()));
+    public static final RegistryObject<Block> BOSS_DOORWAY_AEROTIC_STONE = registerBlock("boss_doorway_aerotic_stone", () -> new DoorwayBlock(AncientAetherEntities.ANCIENT_GUARDIAN::get, BlockBehaviour.Properties.copy(LOCKED_AEROTIC_STONE.get()).noLootTable()));
+    public static final RegistryObject<Block> BOSS_DOORWAY_LIGHT_AEROTIC_STONE = registerBlock("boss_doorway_light_aerotic_stone", () -> new DoorwayBlock(AncientAetherEntities.ANCIENT_GUARDIAN::get, BlockBehaviour.Properties.copy(LOCKED_LIGHT_AEROTIC_STONE.get()).noLootTable()));
+    public static final RegistryObject<Block> BOSS_DOORWAY_CORRUPTED_LIGHT_AEROTIC_STONE = registerBlock("boss_doorway_corrupted_light_aerotic_stone", () -> new DoorwayBlock(AncientAetherEntities.ANCIENT_GUARDIAN::get, BlockBehaviour.Properties.copy(LOCKED_CORRUPTED_LIGHT_AEROTIC_STONE.get()).noLootTable()));
+    public static final RegistryObject<Block> TREASURE_DOORWAY_AEROTIC_STONE = registerBlock("treasure_doorway_aerotic_stone", () -> new TreasureDoorwayBlock(BlockBehaviour.Properties.copy(AEROTIC_STONE.get()).noLootTable()));
+    public static final RegistryObject<Block> TREASURE_DOORWAY_LIGHT_AEROTIC_STONE = registerBlock("treasure_doorway_light_aerotic_stone", () -> new TreasureDoorwayBlock(BlockBehaviour.Properties.copy(LIGHT_AEROTIC_STONE.get()).noLootTable()));
+    public static final RegistryObject<Block> TREASURE_DOORWAY_CORRUPTED_LIGHT_AEROTIC_STONE = registerBlock("treasure_doorway_corrupted_light_aerotic_stone", () -> new TreasureDoorwayBlock(BlockBehaviour.Properties.copy(CORRUPTED_LIGHT_AEROTIC_STONE.get()).noLootTable()));
     public static final RegistryObject<RotatedPillarBlock> CARVED_STONE_MOSAIC = registerBlock("carved_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.CARVED_STONE.get())));
     public static final RegistryObject<RotatedPillarBlock> ANGELIC_STONE_MOSAIC = registerBlock("angelic_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.ANGELIC_STONE.get())));
     public static final RegistryObject<RotatedPillarBlock> HELLFIRE_STONE_MOSAIC = registerBlock("hellfire_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.HELLFIRE_STONE.get())));
