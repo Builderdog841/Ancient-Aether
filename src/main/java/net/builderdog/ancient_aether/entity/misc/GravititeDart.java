@@ -16,7 +16,7 @@ import net.minecraft.world.phys.HitResult;
 
 import javax.annotation.Nonnull;
 
-public class GravititeDart extends GoldenDart implements GravititeWeapon {
+public class GravititeDart extends GoldenDart {
     public GravititeDart(Level level) {
         super(AncientAetherEntities.GRAVITITE_DART.get(), level);
         this.setBaseDamage(4.0);
