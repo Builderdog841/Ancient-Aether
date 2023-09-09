@@ -94,7 +94,7 @@ public class AmbrosiumCampfireBlock extends BaseEntityBlock implements SimpleWat
         super.entityInside(p_51269_, p_51270_, p_51271_, p_51272_);
     }
 
-    public void onRemove(BlockState p_51281_, Level p_51282_, BlockPos p_51283_, BlockState p_51284_, boolean p_51285_) {
+    public void onRemove(BlockState p_51281_, @NotNull Level p_51282_, BlockPos p_51283_, BlockState p_51284_, boolean p_51285_) {
         if (!p_51281_.is(p_51284_.getBlock())) {
             BlockEntity blockentity = p_51282_.getBlockEntity(p_51283_);
             if (blockentity instanceof AncientAetherCampfireBlockEntity) {
@@ -168,10 +168,10 @@ public class AmbrosiumCampfireBlock extends BaseEntityBlock implements SimpleWat
             boolean flag = p_51259_.getValue(LIT);
             if (flag) {
                 if (!p_51257_.isClientSide()) {
-                    p_51257_.playSound((Player)null, p_51258_, SoundEvents.GENERIC_EXTINGUISH_FIRE, SoundSource.BLOCKS, 1.0F, 1.0F);
+                    p_51257_.playSound(null, p_51258_, SoundEvents.GENERIC_EXTINGUISH_FIRE, SoundSource.BLOCKS, 1.0F, 1.0F);
                 }
 
-                dowse((Entity)null, p_51257_, p_51258_, p_51259_);
+                dowse(null, p_51257_, p_51258_, p_51259_);
             }
 
             p_51257_.setBlock(p_51258_, p_51259_.setValue(WATERLOGGED, Boolean.valueOf(true)).setValue(LIT, Boolean.valueOf(false)), 3);

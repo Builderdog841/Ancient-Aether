@@ -88,6 +88,16 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .unlockedBy(getHasName(AetherBlocks.AMBROSIUM_TORCH.get()), has(AetherBlocks.AMBROSIUM_TORCH.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherBlocks.AEROTIC_LANTERN.get())
+                .define('A', AncientAetherBlocks.AEROTIC_STONE.get())
+                .define('L', AncientAetherBlocks.LIGHT_AEROTIC_STONE.get())
+                .define('T', AetherBlocks.AMBROSIUM_TORCH.get())
+                .pattern("AAA")
+                .pattern("LTL")
+                .pattern("AAA")
+                .unlockedBy(getHasName(AetherBlocks.AMBROSIUM_TORCH.get()), has(AetherBlocks.AMBROSIUM_TORCH.get()))
+                .save(consumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AncientAetherItems.ANCIENT_RUNE.get(),2)
                 .define('G', AetherBlocks.ENCHANTED_GRAVITITE.get())
                 .define('R', AncientAetherItems.ANCIENT_RUNE.get())
