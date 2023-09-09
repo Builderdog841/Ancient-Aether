@@ -91,9 +91,11 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         wallBlock((WallBlock) AncientAetherBlocks.AEROTIC_WALL.get(), AncientAetherBlocks.AEROTIC_STONE.get(), "");
 
         blockWithItem(AncientAetherBlocks.HIGHSPROOT_LEAVES);
+        blockWithItem(AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES);
         blockWithItem(AncientAetherBlocks.SAKURA_LEAVES);
 
         crossBlock(AncientAetherBlocks.HIGHSPROOT_SAPLING);
+        crossBlock(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING);
         crossBlock(AncientAetherBlocks.SAKURA_SAPLING);
         crossBlock(AncientAetherBlocks.HIGHLAND_TULIP);
         crossBlock(AncientAetherBlocks.EDELWEISS);

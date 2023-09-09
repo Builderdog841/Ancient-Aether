@@ -1,4 +1,4 @@
-// 1.19.4	2023-09-05T20:18:02.5988757	Item Models: ancient_aether
+// 1.19.4	2023-09-09T15:45:33.5264461	Item Models: ancient_aether
 dc22e9f245c5e59d55b0aec4ae45dec8337daa28 assets/ancient_aether/models/item/aerogel_bottle.json
 2b792d3780c8a2525546b071319a3e5ed1ab9ac4 assets/ancient_aether/models/item/aerotic_lantern.json
 6f8b483fe39f1c9ec95642516d3878f574aeb929 assets/ancient_aether/models/item/aerotic_slab.json
@@ -15,6 +15,7 @@ dec43224a81e6b4b281f534edfa1b2392915fd98 assets/ancient_aether/models/item/buffa
 c3272ab19c230cf6ebff5ea420ce3ccbc1c229fc assets/ancient_aether/models/item/cooked_buffalo_ribs.json
 6a685c107fc07f790104809660de0f58850bff3b assets/ancient_aether/models/item/crystal_gold_coin.json
 2cfb6392a2bcd557586e8a7687ea7804d0c3e128 assets/ancient_aether/models/item/edelweiss.json
+adb8bde9f62a21d4a492e030b93e0aa3e6f9f404 assets/ancient_aether/models/item/frosted_highsproot_sapling.json
 847fb5b6aa35f5048e62d3bf76e55f05c6b41f80 assets/ancient_aether/models/item/gale_lantern.json
 76dcbb064b6afcca77cbab1d82750b6e6c30765c assets/ancient_aether/models/item/grapes.json
 4aec7cfb55018b780f7d738a111bdc280f060489 assets/ancient_aether/models/item/gravitite_dart_shooter.json

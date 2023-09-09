@@ -1,4 +1,4 @@
-// 1.19.4	2023-09-05T16:35:28.5244499	Loot Tables
+// 1.19.4	2023-09-09T15:45:33.5274471	Loot Tables
 7dd5a46063944db5ae8f50f85b3353f48ac4cda5 data/ancient_aether/loot_tables/blocks/aerotic_lantern.json
 d7531b1f4d790023ec0ded4f07ad30772e573c2d data/ancient_aether/loot_tables/blocks/aerotic_slab.json
 fae6ca80f9f5a058b5a49b15065c89ca3862b843 data/ancient_aether/loot_tables/blocks/aerotic_stairs.json
@@ -14,6 +14,8 @@ aea576bde87a906823fb42f59ae043d5f90f5cd1 data/ancient_aether/loot_tables/blocks/
 ce720e35be07bdad4a889822687a5e30abacc76a data/ancient_aether/loot_tables/blocks/corrupted_light_aerotic_stone.json
 d9d0160ab670582551667d6ae903eace32a40a30 data/ancient_aether/loot_tables/blocks/cracked_slider.json
 a3824bae6067e28aa5a9679dbe4e47753fda3b2c data/ancient_aether/loot_tables/blocks/edelweiss.json
+4cae1b507464f22f9af91d7d4e4a8534a3ecefea data/ancient_aether/loot_tables/blocks/frosted_highsproot_leaves.json
+941d01381e44339f918f27e5b0efa677cb4558b0 data/ancient_aether/loot_tables/blocks/frosted_highsproot_sapling.json
 609e1379f42e0923c58e286be0384bb48a41be27 data/ancient_aether/loot_tables/blocks/gale_lantern.json
 0d197c01f2d8b883c52b56f2925bfc217d77697e data/ancient_aether/loot_tables/blocks/gale_stone_mosaic.json
 ee45cc02419ce77f69804251a9e86c822a914eff data/ancient_aether/loot_tables/blocks/hellfire_lantern.json

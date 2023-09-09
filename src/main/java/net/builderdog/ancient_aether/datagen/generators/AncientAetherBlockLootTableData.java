@@ -61,6 +61,8 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL.get());
         dropSelf(AncientAetherBlocks.SAKURA_PLANKS.get());
         dropSelf(AncientAetherBlocks.SAKURA_SAPLING.get());
+        dropSelf(AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
+        dropSelf(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get());
         dropSelf(AncientAetherBlocks.SAKURA_STAIRS.get());
         dropSelf(AncientAetherBlocks.SAKURA_SLAB.get());
         dropSelf(AncientAetherBlocks.SAKURA_FENCE.get());
@@ -100,6 +102,8 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
 
         add(AncientAetherBlocks.HIGHSPROOT_LEAVES.get(),
                 (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
+        add(AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES.get(),
+                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
         add(AncientAetherBlocks.SAKURA_LEAVES.get(),
                 (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.SAKURA_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
     }
