@@ -8,6 +8,7 @@ import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Set;
 
@@ -109,7 +110,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
     }
 
     @Override
-    protected Iterable<Block> getKnownBlocks() {
+    protected @NotNull Iterable<Block> getKnownBlocks() {
         return AncientAetherBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
     }
 }

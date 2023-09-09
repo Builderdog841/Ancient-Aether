@@ -12,6 +12,8 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.Objects;
+
 public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider {
     public AncientAetherBlockStateData(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, AncientAether.MOD_ID, exFileHelper);
@@ -143,6 +145,6 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
 
     private void crossBlock(RegistryObject<Block> blockRegistryObject) {
         simpleBlock(blockRegistryObject.get(),
-                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+                models().cross(Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get())).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 }

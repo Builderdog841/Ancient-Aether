@@ -5,7 +5,6 @@ import com.mojang.logging.LogUtils;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
-import net.builderdog.ancient_aether.client.renderer.AncientAetherEntityRenderers;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.entity.moa.AncientAetherMoaTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;

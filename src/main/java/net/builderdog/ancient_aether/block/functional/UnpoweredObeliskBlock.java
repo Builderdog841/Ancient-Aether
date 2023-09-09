@@ -1,6 +1,5 @@
 package net.builderdog.ancient_aether.block.functional;
 
-import com.aetherteam.aether.block.AetherBlocks;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
@@ -24,6 +23,9 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
+import org.jetbrains.annotations.NotNull;
+
+import java.util.Objects;
 
 import static net.minecraft.world.level.block.RotatedPillarBlock.AXIS;
 
@@ -33,17 +35,18 @@ public class UnpoweredObeliskBlock extends Block {
     }
 
     @Override
-    public InteractionResult use(BlockState blockstate, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    public @NotNull InteractionResult use(@NotNull BlockState blockstate, @NotNull Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
         super.use(blockstate, level, pos, player, hand, hit);
         int x = pos.getX();
         int y = pos.getY();
         int z = pos.getZ();
 
         if (player instanceof ServerPlayer _plr0 && _plr0.level instanceof ServerLevel
-                && _plr0.getAdvancements().getOrStartProgress(_plr0.server.getAdvancements().getAdvancement(new ResourceLocation("aether:silver_dungeon"))).isDone()) {
+                && _plr0.getAdvancements().getOrStartProgress(Objects.requireNonNull(_plr0.server.getAdvancements().getAdvancement(new ResourceLocation("aether:silver_dungeon")))).isDone()) {
             if ((player instanceof ServerPlayer _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == AncientAetherItems.ANCIENT_RUNE.get()) {
                 ItemStack stack = player.getMainHandItem();
-                if (!(player instanceof ServerPlayer _livEnt && _livEnt.getAbilities().instabuild)) {
+                ServerPlayer _livEnt = (ServerPlayer) player;
+                if (!_livEnt.getAbilities().instabuild) {
                     player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
                     stack.shrink(1);
                 }
@@ -77,22 +80,22 @@ public class UnpoweredObeliskBlock extends Block {
                         }
                     }
                 }
-                if (player instanceof ServerPlayer _player) {
-                    Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("ancient_aether:aether/unlock_ancient_valkyrian_vaults"));
-                    AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-                    if (!_ap.isDone()) {
-                        for (String criteria : _ap.getRemainingCriteria())
-                            _player.getAdvancements().award(_adv, criteria);
-                    }
+                ServerPlayer _player = (ServerPlayer) player;
+                Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("ancient_aether:aether/unlock_ancient_valkyrian_vaults"));
+                assert _adv != null;
+                AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+                if (!_ap.isDone()) {
+                    for (String criteria : _ap.getRemainingCriteria())
+                        _player.getAdvancements().award(_adv, criteria);
                 }
             }
         } else {
-            if (player != null && !level.isClientSide) {
+            if (!level.isClientSide) {
                 player.displayClientMessage(Component.translatable("gui.ancient_aether.obelisk_valkyrie_queen").withStyle(ChatFormatting.RED), true);
             } else {
                 level.playSound(player, pos, AncientAetherSoundEvents.OBELISK_ACTIVATION.get(), SoundSource.BLOCKS, 0.8f,
                         0.5f + (((float) (Math.pow(level.random.nextDouble(), 2.5))) * 0.5f));
-                return InteractionResult.sidedSuccess(level.isClientSide);
+                return InteractionResult.sidedSuccess(true);
             }
         }
         return InteractionResult.SUCCESS;
