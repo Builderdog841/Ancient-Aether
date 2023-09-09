@@ -48,7 +48,7 @@ public class UnpoweredObeliskBlock extends Block {
                     stack.shrink(1);
                 }
                 for (int x1 = Mth.floor(x - 55); x1 <= Mth.ceil(x + 55); x1++) {
-                    for (int y1 = Mth.floor(y - 48); y1 <= Mth.ceil(y + 20); y1++) {
+                    for (int y1 = Mth.floor(y - 53); y1 <= Mth.ceil(y + 20); y1++) {
                         for (int z1 = Mth.floor(z - 55); z1 <= Mth.ceil(z + 55); z1++) {
                             BlockPos checkedPos = new BlockPos(x1, y1, z1);
                             BlockState checkedState = level.getBlockState(checkedPos);
@@ -56,10 +56,19 @@ public class UnpoweredObeliskBlock extends Block {
                             if (checkedState.getBlock() == AncientAetherBlocks.LOCKED_AEROTIC_STONE.get()) {
                                 level.setBlockAndUpdate(checkedPos, AncientAetherBlocks.AEROTIC_STONE.get().defaultBlockState());
                             }
+                            if (checkedState.getBlock() == AncientAetherBlocks.LOCKED_LIGHT_AEROTIC_STONE.get()) {
+                                level.setBlockAndUpdate(checkedPos, AncientAetherBlocks.LIGHT_AEROTIC_STONE.get().defaultBlockState());
+                            }
+                            if (checkedState.getBlock() == Blocks.VINE) {
+                                level.setBlockAndUpdate(checkedPos, Blocks.AIR.defaultBlockState());
+                            }
                             if (checkedState.getBlock() == AncientAetherBlocks.LOCKED_AEROTIC_STONE_MOSAIC.get()) {
                                 level.setBlockAndUpdate(checkedPos, AncientAetherBlocks.AEROTIC_STONE_MOSAIC.get().defaultBlockState().setValue(AXIS, checkedState.getValue(AXIS)));
                             }
-                            if (checkedState.getBlock() == AetherBlocks.BOSS_DOORWAY_CARVED_STONE.get()) {
+                            if (checkedState.getBlock() == AncientAetherBlocks.BOSS_DOORWAY_AEROTIC_STONE.get()) {
+                                level.setBlockAndUpdate(checkedPos, Blocks.AIR.defaultBlockState());
+                            }
+                            if (checkedState.getBlock() == AncientAetherBlocks.BOSS_DOORWAY_LIGHT_AEROTIC_STONE.get()) {
                                 level.setBlockAndUpdate(checkedPos, Blocks.AIR.defaultBlockState());
                             }
                             if (checkedState.getBlock() == AncientAetherBlocks.DEACTIVATED_ANCIENT_OBELISK.get()) {
