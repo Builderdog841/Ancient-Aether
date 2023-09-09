@@ -7,8 +7,8 @@
     "ancient_aether:stripped_highsproot_wood",
     "ancient_aether:highsproot_log_wall",
     "ancient_aether:highsproot_wood_wall",
-    "ancient_aether:stripped_highlands_pine_log_wall",
-    "ancient_aether:stripped_highlands_pine_wood_wall",
+    "ancient_aether:stripped_highsproot_log_wall",
+    "ancient_aether:stripped_highsproot_wood_wall",
     "ancient_aether:sakura_log",
     "ancient_aether:sakura_wood",
     "ancient_aether:stripped_sakura_log",
@@ -16,6 +16,9 @@
     "ancient_aether:sakura_log_wall",
     "ancient_aether:sakura_wood_wall",
     "ancient_aether:stripped_sakura_log_wall",
-    "ancient_aether:stripped_sakura_wood_wall"
+    "ancient_aether:stripped_sakura_wood_wall",
+    "ancient_aether:highsproot_leaves",
+    "ancient_aether:frosted_highsproot_leaves",
+    "ancient_aether:sakura_leaves"
   ]
 }
