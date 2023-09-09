@@ -175,6 +175,7 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         pressurePlateBuilder(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_STONE_MOSAIC.get(), Ingredient.of(AetherBlocks.CARVED_SLAB.get())).unlockedBy(getHasName(AetherBlocks.CARVED_SLAB.get()), has(AetherBlocks.CARVED_SLAB.get())).save(consumer);
         pressurePlateBuilder(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get(), Ingredient.of(AetherBlocks.ANGELIC_SLAB.get())).unlockedBy(getHasName(AetherBlocks.ANGELIC_SLAB.get()), has(AetherBlocks.ANGELIC_SLAB.get())).save(consumer);
         pressurePlateBuilder(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get(), Ingredient.of(AetherBlocks.HELLFIRE_SLAB.get())).unlockedBy(getHasName(AetherBlocks.HELLFIRE_SLAB.get()), has(AetherBlocks.HELLFIRE_SLAB.get())).save(consumer);
+        pressurePlateBuilder(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROTIC_STONE_MOSAIC.get(), Ingredient.of(AncientAetherBlocks.AEROTIC_SLAB.get())).unlockedBy(getHasName(AncientAetherBlocks.AEROTIC_SLAB.get()), has(AncientAetherBlocks.AEROTIC_SLAB.get())).save(consumer);
 
         fence(AncientAetherBlocks.HIGHSPROOT_FENCE, AncientAetherBlocks.HIGHSPROOT_PLANKS).save(consumer);
         fenceGate(AncientAetherBlocks.HIGHSPROOT_FENCE_GATE, AncientAetherBlocks.HIGHSPROOT_PLANKS).save(consumer);
@@ -185,6 +186,9 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         stairs(AncientAetherBlocks.HIGHSPROOT_STAIRS, AncientAetherBlocks.HIGHSPROOT_PLANKS).group("wooden_stairs").save(consumer);
         stairs(AncientAetherBlocks.SAKURA_STAIRS, AncientAetherBlocks.SAKURA_PLANKS).group("wooden_stairs").save(consumer);
         stairs(AncientAetherBlocks.QUICKSTONE_STAIRS, AncientAetherBlocks.QUICKSTONE).save(consumer);
+        stairs(AncientAetherBlocks.AEROTIC_STAIRS, AncientAetherBlocks.AEROTIC_STONE).save(consumer);
+
+        wall(consumer, RecipeCategory.DECORATIONS, AncientAetherBlocks.AEROTIC_WALL.get(), AncientAetherBlocks.AEROTIC_STONE.get());
 
         slabBuilder(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.HIGHSPROOT_SLAB.get(), Ingredient.of(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()))
                 .group("wooden_slab")
@@ -196,6 +200,7 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .save(consumer);
 
         slab(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.QUICKSTONE_SLAB.get(), AncientAetherBlocks.QUICKSTONE.get());
+        slab(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROTIC_SLAB.get(), AncientAetherBlocks.AEROTIC_STONE.get());
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AetherBlocks.SKYROOT_BOOKSHELF.get())
                 .define('P', AncientAetherBlocks.HIGHSPROOT_PLANKS.get())
