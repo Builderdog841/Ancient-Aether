@@ -8,6 +8,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import org.jetbrains.annotations.NotNull;
 
 public class CrackedSliderBlock extends RedstoneLampBlock {
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
@@ -19,13 +20,13 @@ public class CrackedSliderBlock extends RedstoneLampBlock {
     public BlockState getStateForPlacement(BlockPlaceContext p_48689_) {
         return this.defaultBlockState().setValue(FACING, p_48689_.getHorizontalDirection().getOpposite());
     }
-    public RenderShape getRenderShape(BlockState p_48727_) {
+    public @NotNull RenderShape getRenderShape(@NotNull BlockState p_48727_) {
         return RenderShape.MODEL;
     }
-    public BlockState rotate(BlockState p_48722_, Rotation p_48723_) {
+    public @NotNull BlockState rotate(BlockState p_48722_, Rotation p_48723_) {
         return p_48722_.setValue(FACING, p_48723_.rotate(p_48722_.getValue(FACING)));
     }
-    public BlockState mirror(BlockState p_48719_, Mirror p_48720_) {
+    public @NotNull BlockState mirror(BlockState p_48719_, Mirror p_48720_) {
         return p_48719_.rotate(p_48720_.getRotation(p_48719_.getValue(FACING)));
     }
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> p_48725_) {

@@ -25,6 +25,7 @@ import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Supplier;
 
@@ -51,7 +52,7 @@ public class TrappedFlowerBlock extends BushBlock {
      * @param entity The {@link Entity} stepping on the block.
      */
     @Override
-    public void entityInside(BlockState blockState, Level level, BlockPos blockPos, Entity entity) {
+    public void entityInside(@NotNull BlockState blockState, @NotNull Level level, @NotNull BlockPos blockPos, @NotNull Entity entity) {
         if (entity instanceof Player player && AetherEventDispatch.onTriggerTrap(player, level, blockPos, blockState)) {
             level.setBlockAndUpdate(blockPos, this.defaultStateSupplier.get());
             if (level instanceof ServerLevel serverLevel) {
@@ -65,6 +66,7 @@ public class TrappedFlowerBlock extends BushBlock {
                 }
                 if (entity instanceof ServerPlayer _player) {
                     Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("ancient_aether:aether/roothyrn_trap"));
+                    assert _adv != null;
                     AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
                     if (!_ap.isDone()) {
                         for (String criteria : _ap.getRemainingCriteria())
@@ -76,7 +78,7 @@ public class TrappedFlowerBlock extends BushBlock {
             }
         }
     }
-    public VoxelShape getShape(BlockState p_53517_, BlockGetter p_53518_, BlockPos p_53519_, CollisionContext p_53520_) {
+    public VoxelShape getShape(BlockState p_53517_, @NotNull BlockGetter p_53518_, @NotNull BlockPos p_53519_, @NotNull CollisionContext p_53520_) {
         Vec3 vec3 = p_53517_.getOffset(p_53518_, p_53519_);
         return SHAPE.move(vec3.x, vec3.y, vec3.z);
     }
