@@ -6,7 +6,7 @@
       "weight": 1,
       "element": {
 
-        "location": "ancient_aether:ancient_dungeon/entrance",
+        "location": "ancient_aether:ancient_dungeon/entrance_arm",
         "processors": "ancient_aether:ancient_dungeon_randomizer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
