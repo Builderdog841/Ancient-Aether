@@ -6,6 +6,7 @@ import net.minecraft.world.level.block.WallSignBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.WoodType;
+import org.jetbrains.annotations.NotNull;
 
 public class AncientAetherWallSignBlock extends WallSignBlock {
     public AncientAetherWallSignBlock(Properties properties, WoodType woodType) {
@@ -13,7 +14,7 @@ public class AncientAetherWallSignBlock extends WallSignBlock {
     }
 
     @Override
-    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+    public BlockEntity newBlockEntity(@NotNull BlockPos pos, @NotNull BlockState state) {
         return new AncientAetherSignBlockEntity(pos, state);
     }
 }

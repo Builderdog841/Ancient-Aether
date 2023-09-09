@@ -4,6 +4,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.SignBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import org.jetbrains.annotations.NotNull;
 
 public class AncientAetherSignBlockEntity extends SignBlockEntity {
     public AncientAetherSignBlockEntity(BlockPos pos, BlockState state) {
@@ -11,7 +12,7 @@ public class AncientAetherSignBlockEntity extends SignBlockEntity {
     }
 
     @Override
-    public BlockEntityType<AncientAetherSignBlockEntity> getType() {
+    public @NotNull BlockEntityType<AncientAetherSignBlockEntity> getType() {
         return AncientAetherBlockEntityTypes.SIGN.get();
     }
 }

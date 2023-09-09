@@ -1,7 +1,7 @@
 package net.builderdog.ancient_aether;
 
 import com.aetherteam.aether.AetherConfig;
-import com.mojang.logging.LogUtils;
+//import com.mojang.logging.LogUtils;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
@@ -35,7 +35,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.resource.PathPackResources;
-import org.slf4j.Logger;
+//import org.slf4j.Logger;
 import teamrazor.aeroblender.aether.AetherRuleCategory;
 import terrablender.api.Regions;
 import terrablender.api.SurfaceRuleManager;
@@ -47,7 +47,8 @@ import static com.aetherteam.aether.Aether.DIRECTORY;
 @Mod(AncientAether.MOD_ID)
 public class AncientAether {
     public static final String MOD_ID = "ancient_aether";
-    private static final Logger LOGGER = LogUtils.getLogger();
+
+    //private static final Logger LOGGER = LogUtils.getLogger();
 
     public AncientAether() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -101,37 +102,35 @@ public class AncientAether {
     }
 
     public void packSetup(AddPackFindersEvent event) {
-        setupOptionalPack(event, "ancient_aether_programmer_art", "Programmer Art", "Changes the textures to the classic art style");
-        setupDatapack(event, "ancient_aether_new_worldgen", "New World Generation", "Adds larger Islands, Mountains and a lot more", PackSource.BUILT_IN);
-        setupDatapack(event, "ancient_aether_default_biome_improvements", "Default Biome Improvements", "Adds more flowers and tree variation to the Default Aether Biomes. It also gives the Aether a new Watercolor.", PackSource.BUILT_IN);
+        setupOptionalPack(event);
+        setupDatapack(event, "ancient_aether_new_worldgen", "New World Generation", "Adds larger Islands, Mountains and a lot more");
+        setupDatapack(event, "ancient_aether_default_biome_improvements", "Default Biome Improvements", "Adds more flowers and tree variation to the Default Aether Biomes. It also gives the Aether a new Watercolor.");
 
         if (ModList.get().isLoaded("aether_genesis")) {
-            setupDatapack(event, "aether_genesis_compat", "Aether Genesis Compatibility", "Makes Log and Wood Walls from Ancient Aether craftable", PackSource.BUILT_IN);
+            setupDatapack(event, "aether_genesis_compat", "Aether Genesis Compatibility", "Makes Log and Wood Walls from Ancient Aether craftable");
         }
     }
 
-    private void setupOptionalPack(AddPackFindersEvent event, String path, String displayName, String desc) {
+    private void setupOptionalPack(AddPackFindersEvent event) {
         if (event.getPackType() == PackType.CLIENT_RESOURCES) {
-            Path resourcePath = ModList.get().getModFileById("ancient_aether").getFile().findResource(new String[]{"packs/" + path});
+            Path resourcePath = ModList.get().getModFileById("ancient_aether").getFile().findResource("packs/" + "ancient_aether_programmer_art");
             PathPackResources pack = new PathPackResources(ModList.get().getModFileById("ancient_aether").getFile().getFileName() + ":" + resourcePath, true, resourcePath);
-            PackMetadataSection metadata = new PackMetadataSection(Component.translatable(desc), SharedConstants.getCurrentVersion().getPackVersion(PackType.CLIENT_RESOURCES));
+            PackMetadataSection metadata = new PackMetadataSection(Component.translatable("Changes the textures to the classic art style"), SharedConstants.getCurrentVersion().getPackVersion(PackType.CLIENT_RESOURCES));
             event.addRepositorySource((packConsumer) -> {
-                packConsumer.accept(Pack.create("builtin/" + path, Component.literal("Ancient Aether: " + displayName), false, (string) -> {
+                packConsumer.accept(Pack.create("builtin/" + "ancient_aether_programmer_art", Component.literal("Ancient Aether: " + "Programmer Art"), false, (string) -> {
                     return pack;
                 }, new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.SERVER_DATA), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()), PackType.CLIENT_RESOURCES, Pack.Position.TOP, false, PackSource.BUILT_IN));
             });
         }
     }
 
-    private void setupDatapack(AddPackFindersEvent event, String path, String displayName, String desc, PackSource source) {
+    private void setupDatapack(AddPackFindersEvent event, String path, String displayName, String desc) {
         if (event.getPackType() == PackType.SERVER_DATA) {
-            Path resourcePath = ModList.get().getModFileById("ancient_aether").getFile().findResource(new String[]{"packs/" + path});
+            Path resourcePath = ModList.get().getModFileById("ancient_aether").getFile().findResource("packs/" + path);
             PathPackResources pack = new PathPackResources(ModList.get().getModFileById("ancient_aether").getFile().getFileName() + ":" + resourcePath, true, resourcePath);
             PackMetadataSection metadata = new PackMetadataSection(Component.translatable(desc), SharedConstants.getCurrentVersion().getPackVersion(PackType.SERVER_DATA));
             event.addRepositorySource((packConsumer) -> {
-                packConsumer.accept(Pack.create("builtin/" + path, Component.literal("Ancient Aether: " + displayName), false, (string) -> {
-                    return pack;
-                }, new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.SERVER_DATA), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()), PackType.SERVER_DATA, Pack.Position.TOP, false, source));
+                packConsumer.accept(Pack.create("builtin/" + path, Component.literal("Ancient Aether: " + displayName), false, (string) -> pack, new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.SERVER_DATA), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()), PackType.SERVER_DATA, Pack.Position.TOP, false, PackSource.BUILT_IN));
             });
         }
     }
