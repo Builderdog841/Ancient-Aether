@@ -22,7 +22,7 @@
       {
         "chance": 0.2,
         "feature": {
-          "feature": "ancient_aether:small_highsproot_pine_tree",
+          "feature": "ancient_aether:highsproot_pine_tree",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",
