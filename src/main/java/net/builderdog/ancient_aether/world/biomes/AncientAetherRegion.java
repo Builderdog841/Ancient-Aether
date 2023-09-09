@@ -63,13 +63,13 @@ public class AncientAetherRegion extends Region {
         addBiome(mapper, new Climate.ParameterPoint(tempDefault4, fullRange, fullRange, fullRange, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_WOODLAND);
 
-        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps1, Climate.Parameter.span(-1.0F, 1.0F), fullRange, fullRange, Climate.Parameter.span(-0.35F, 1.0F), fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps1, Climate.Parameter.span(-1.0F, 1.0F), fullRange, fullRange, Climate.Parameter.span(-0.5F, 1.0F), fullRange, 0),
                 AncientAetherBiomes.WYNDCAP_TAIGA);
-        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps2, Climate.Parameter.span(-1.0F, 1.0F), fullRange, fullRange, Climate.Parameter.span(-0.35F, 1.0F), fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps2, Climate.Parameter.span(-1.0F, 1.0F), fullRange, fullRange, Climate.Parameter.span(-0.5F, 1.0F), fullRange, 0),
                 AncientAetherBiomes.FESTIVE_WYNDCAP_TAIGA);
-        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps3, Climate.Parameter.span(-1.0F, 1.0F), fullRange, fullRange, Climate.Parameter.span(-0.6F, -0.35F), fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps3, Climate.Parameter.span(-1.0F, 1.0F), fullRange, fullRange, Climate.Parameter.span(-0.7F, -0.5F), fullRange, 0),
                 AncientAetherBiomes.WYNDCAP_HIGHLAND);
-        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps3, Climate.Parameter.span(-1.0F, 1.0F), fullRange, fullRange, Climate.Parameter.span(-1.0F, -0.6F), fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps3, Climate.Parameter.span(-1.0F, 1.0F), fullRange, fullRange, Climate.Parameter.span(-1.0F, -0.7F), fullRange, 0),
                 AncientAetherBiomes.WYNDCAP_PEAKS);
 
         addBiome(mapper, new Climate.ParameterPoint(tempDefault2, Climate.Parameter.span(0.0F, 0.3F), fullRange, fullRange, Climate.Parameter.span(-1.0F, 0.3F), fullRange, 0),

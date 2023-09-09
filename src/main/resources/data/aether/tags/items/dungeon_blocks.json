@@ -1,9 +1,5 @@
 {
   "values": [
-    "ancient_aether:hellfire_stone_mosaic",
-    "ancient_aether:angelic_stone_mosaic",
-    "ancient_aether:carved_stone_mosaic",
-    "ancient_aether:gale_stone_mosaic",
-    "ancient_aether:ancient_sentry_stone"
+    "ancient_aether:#aerotic_blocks"
   ]
 }

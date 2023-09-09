@@ -80,6 +80,7 @@ public class AncientAether {
                 AetherConfig.COMMON.add_temporary_freezing_automatically.set(true);
                 AetherConfig.CLIENT.music_backup_min_delay.set(1);
                 AetherConfig.CLIENT.music_backup_max_delay.set(2);
+                AetherConfig.CLIENT.disable_music_manager.set(false);
         });
     }
 

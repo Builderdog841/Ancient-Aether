@@ -4,6 +4,10 @@
     "ancient_aether:locked_carved_stone_mosaic",
     "ancient_aether:locked_angelic_stone_mosaic",
     "ancient_aether:locked_hellfire_stone_mosaic",
-    "ancient_aether:locked_gale_stone_mosaic"
+    "ancient_aether:locked_gale_stone_mosaic",
+    "ancient_aether:locked_aerotic_stone_mosaic",
+    "ancient_aether:locked_aerotic_stone",
+    "ancient_aether:locked_light_aerotic_stone",
+    "ancient_aether:locked_corrupted_light_aerotic_stone"
   ]
 }
