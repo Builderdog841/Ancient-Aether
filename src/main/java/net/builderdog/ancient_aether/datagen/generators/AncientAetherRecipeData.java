@@ -277,6 +277,16 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         smokingRecipe(AncientAetherItems.COOKED_BUFFALO_RIBS.get(), AncientAetherItems.RAW_BUFFALO_RIBS.get()).save(consumer, name("cooked_buffalo_ribs_from_smoking"));
         campfireCookingRecipe(AncientAetherItems.COOKED_BUFFALO_RIBS.get(), AncientAetherItems.RAW_BUFFALO_RIBS.get()).save(consumer, name("cooked_buffalo_ribs_from_campfire_cooking"));
 
+        stonecuttingRecipe(consumer, RecipeCategory.DECORATIONS, AncientAetherBlocks.AEROTIC_WALL.get(), AncientAetherBlocks.AEROTIC_STONE.get());
+        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROTIC_STAIRS.get(), AncientAetherBlocks.AEROTIC_STONE.get());
+        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROTIC_SLAB.get(), AncientAetherBlocks.AEROTIC_STONE.get(), 2);
+        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROTIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROTIC_STONE.get());
+        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROTIC_STONE.get(), AncientAetherBlocks.CORRUPTED_LIGHT_AEROTIC_STONE.get());
+        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.LIGHT_AEROTIC_STONE.get(), AncientAetherBlocks.CORRUPTED_LIGHT_AEROTIC_STONE.get());
+        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.LIGHT_AEROTIC_STONE.get(), AncientAetherBlocks.AEROTIC_STONE.get());
+        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CORRUPTED_LIGHT_AEROTIC_STONE.get(), AncientAetherBlocks.AEROTIC_STONE.get());
+        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CORRUPTED_LIGHT_AEROTIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROTIC_STONE.get());
+
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_STONE_MOSAIC.get(), AetherBlocks.CARVED_STONE.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AetherBlocks.CARVED_STONE.get(), AncientAetherBlocks.CARVED_STONE_MOSAIC.get());
 
