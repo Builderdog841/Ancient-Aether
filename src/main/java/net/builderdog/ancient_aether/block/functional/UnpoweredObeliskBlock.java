@@ -68,10 +68,10 @@ public class UnpoweredObeliskBlock extends Block {
                             if (checkedState.getBlock() == AncientAetherBlocks.LOCKED_AEROTIC_STONE_MOSAIC.get()) {
                                 level.setBlockAndUpdate(checkedPos, AncientAetherBlocks.AEROTIC_STONE_MOSAIC.get().defaultBlockState().setValue(AXIS, checkedState.getValue(AXIS)));
                             }
-                            if (checkedState.getBlock() == AncientAetherBlocks.BOSS_DOORWAY_AEROTIC_STONE.get()) {
+                            if (checkedState.getBlock() == AncientAetherBlocks.TREASURE_DOORWAY_AEROTIC_STONE.get()) {
                                 level.setBlockAndUpdate(checkedPos, Blocks.AIR.defaultBlockState());
                             }
-                            if (checkedState.getBlock() == AncientAetherBlocks.BOSS_DOORWAY_LIGHT_AEROTIC_STONE.get()) {
+                            if (checkedState.getBlock() == AncientAetherBlocks.TREASURE_DOORWAY_LIGHT_AEROTIC_STONE.get()) {
                                 level.setBlockAndUpdate(checkedPos, Blocks.AIR.defaultBlockState());
                             }
                             if (checkedState.getBlock() == AncientAetherBlocks.DEACTIVATED_ANCIENT_OBELISK.get()) {
