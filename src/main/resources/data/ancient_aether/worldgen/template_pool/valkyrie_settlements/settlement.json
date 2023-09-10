@@ -4,7 +4,7 @@
   "elements": [
     {
 
-      "weight": 3,
+      "weight": 4,
       "element": {
 
         "location": "ancient_aether:valkyrie_settlements/settlement_1",
@@ -30,6 +30,39 @@
       "element": {
 
         "location": "ancient_aether:valkyrie_settlements/settlement_3",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 4,
+      "element": {
+
+        "location": "ancient_aether:valkyrie_settlements/settlement_4",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 2,
+      "element": {
+
+        "location": "ancient_aether:valkyrie_settlements/settlement_5",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 2,
+      "element": {
+
+        "location": "ancient_aether:valkyrie_settlements/settlement_6",
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
