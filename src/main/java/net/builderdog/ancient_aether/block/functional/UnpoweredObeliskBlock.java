@@ -50,9 +50,9 @@ public class UnpoweredObeliskBlock extends Block {
                     player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
                     stack.shrink(1);
                 }
-                for (int x1 = Mth.floor(x - 55); x1 <= Mth.ceil(x + 55); x1++) {
+                for (int x1 = Mth.floor(x -45); x1 <= Mth.ceil(x + 45); x1++) {
                     for (int y1 = Mth.floor(y - 53); y1 <= Mth.ceil(y + 20); y1++) {
-                        for (int z1 = Mth.floor(z - 55); z1 <= Mth.ceil(z + 55); z1++) {
+                        for (int z1 = Mth.floor(z - 45); z1 <= Mth.ceil(z + 45); z1++) {
                             BlockPos checkedPos = new BlockPos(x1, y1, z1);
                             BlockState checkedState = level.getBlockState(checkedPos);
 
@@ -61,9 +61,6 @@ public class UnpoweredObeliskBlock extends Block {
                             }
                             if (checkedState.getBlock() == AncientAetherBlocks.LOCKED_LIGHT_AEROTIC_STONE.get()) {
                                 level.setBlockAndUpdate(checkedPos, AncientAetherBlocks.LIGHT_AEROTIC_STONE.get().defaultBlockState());
-                            }
-                            if (checkedState.getBlock() == Blocks.VINE) {
-                                level.setBlockAndUpdate(checkedPos, Blocks.AIR.defaultBlockState());
                             }
                             if (checkedState.getBlock() == AncientAetherBlocks.LOCKED_AEROTIC_STONE_MOSAIC.get()) {
                                 level.setBlockAndUpdate(checkedPos, AncientAetherBlocks.AEROTIC_STONE_MOSAIC.get().defaultBlockState().setValue(AXIS, checkedState.getValue(AXIS)));
@@ -76,6 +73,17 @@ public class UnpoweredObeliskBlock extends Block {
                             }
                             if (checkedState.getBlock() == AncientAetherBlocks.DEACTIVATED_ANCIENT_OBELISK.get()) {
                                 level.setBlockAndUpdate(checkedPos, AncientAetherBlocks.ANCIENT_OBELISK.get().defaultBlockState());
+                            }
+                        }
+                    }
+                }
+                for (int x1 = Mth.floor(x -64); x1 <= Mth.ceil(x + 64); x1++) {
+                    for (int y1 = Mth.floor(y - 53); y1 <= Mth.ceil(y + 20); y1++) {
+                        for (int z1 = Mth.floor(z - 64); z1 <= Mth.ceil(z + 64); z1++) {
+                            BlockPos checkedPos = new BlockPos(x1, y1, z1);
+                            BlockState checkedState = level.getBlockState(checkedPos);
+                            if (checkedState.getBlock() == Blocks.VINE) {
+                                level.setBlockAndUpdate(checkedPos, Blocks.AIR.defaultBlockState());
                             }
                         }
                     }
