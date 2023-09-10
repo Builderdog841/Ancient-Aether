@@ -1,4 +1,4 @@
-// 1.19.4	2023-09-09T15:45:33.5274471	Loot Tables
+// 1.19.4	2023-09-10T12:45:28.0650494	Loot Tables
 7dd5a46063944db5ae8f50f85b3353f48ac4cda5 data/ancient_aether/loot_tables/blocks/aerotic_lantern.json
 d7531b1f4d790023ec0ded4f07ad30772e573c2d data/ancient_aether/loot_tables/blocks/aerotic_slab.json
 fae6ca80f9f5a058b5a49b15065c89ca3862b843 data/ancient_aether/loot_tables/blocks/aerotic_stairs.json
@@ -43,6 +43,7 @@ bf7f113866fc443cb8172f2651e7b551a51c6cf4 data/ancient_aether/loot_tables/blocks/
 5d22ed8d3603410c6877d65b0deb49b880e98a7c data/ancient_aether/loot_tables/blocks/light_aerotic_stone.json
 80980d0cbee8ba3ce1795dbec7ea8398da983d8a data/ancient_aether/loot_tables/blocks/moonlit_waterlily.json
 f5492f65be2eb8c58f6e4e0015ace0684012922e data/ancient_aether/loot_tables/blocks/potted_edelweiss.json
+7e94e81cdbcac4c11d4b921e5f6c754c0ba50a67 data/ancient_aether/loot_tables/blocks/potted_frosted_highsproot_sapling.json
 446ba80f21750a56101a5c7cb578704106cf9714 data/ancient_aether/loot_tables/blocks/potted_highland_tulip.json
 aed1fda3c47b6a3cea63d01015eff631e7f81ed7 data/ancient_aether/loot_tables/blocks/potted_highsproot_sapling.json
 0f299df81f9a123a5a7986b553b64b40687e118e data/ancient_aether/loot_tables/blocks/potted_sakura_blossoms.json

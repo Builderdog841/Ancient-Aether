@@ -94,6 +94,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropOther(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get(), AetherItems.AMBROSIUM_SHARD.get());
 
         dropPottedContents(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING.get());
+        dropPottedContents(AncientAetherBlocks.POTTED_FROSTED_HIGHSPROOT_SAPLING.get());
         dropPottedContents(AncientAetherBlocks.POTTED_SAKURA_SAPLING.get());
         dropPottedContents(AncientAetherBlocks.POTTED_HIGHLAND_TULIP.get());
         dropPottedContents(AncientAetherBlocks.POTTED_EDELWEISS.get());

@@ -106,6 +106,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
 
         pottedPlant(AncientAetherBlocks.POTTED_SAKURA_SAPLING.get(), AncientAetherBlocks.SAKURA_SAPLING.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING.get(), AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), "");
+        pottedPlant(AncientAetherBlocks.POTTED_FROSTED_HIGHSPROOT_SAPLING.get(), AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_EDELWEISS.get(), AncientAetherBlocks.EDELWEISS.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_SAKURA_BLOSSOMS.get(), AncientAetherBlocks.SAKURA_BLOSSOMS.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_HIGHLAND_TULIP.get(), AncientAetherBlocks.HIGHLAND_TULIP.get(), "");
