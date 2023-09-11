@@ -85,9 +85,9 @@ public class AncientAetherConfiguredFeatures {
                         new TwoLayersFeatureSize(2, 0, 2)
                 ).ignoreVines().build());
 
-        register(context, AETHER_QUARTZ_ORE, Feature.ORE, new OreConfiguration(aetherQuartzOre, 12, 0f));
+        register(context, AETHER_QUARTZ_ORE, Feature.ORE, new OreConfiguration(aetherQuartzOre, 6, 0f));
 
-        register(context, AEROGEL_BLOBS, Feature.ORE, new OreConfiguration(aerogelOre, 64, 0f));
+        register(context, AEROGEL_BLOBS, Feature.ORE, new OreConfiguration(aerogelOre, 32, 0f));
 
         register(context, HIGHLAND_TULIP_PATCH, Feature.FLOWER,
                 NitrogenConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()

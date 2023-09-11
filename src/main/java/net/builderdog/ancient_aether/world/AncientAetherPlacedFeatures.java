@@ -25,11 +25,11 @@ public class AncientAetherPlacedFeatures {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, AETHER_QUARTZ_ORE_PLACED, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.AETHER_QUARTZ_ORE),
-                AncientAetherPlacedFeatureBuilder.commonOrePlacement(16,
+                AncientAetherPlacedFeatureBuilder.commonOrePlacement(5,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(128))));
 
         register(context, AEROGEL_ORE_PLACED, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.AEROGEL_BLOBS),
-                AncientAetherPlacedFeatureBuilder.commonOrePlacement(8,
+                AncientAetherPlacedFeatureBuilder.commonOrePlacement(4,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(128))));
 
         register(context, HIGHLAND_TULIP_PATCH, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.HIGHLAND_TULIP_PATCH),
