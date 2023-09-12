@@ -1,7 +1,7 @@
 {
   "type": "aether:bronze_dungeon",
   "aboveBottom": 16,
-  "belowTop": 154,
+  "belowTop": 128,
   "biomes": "#aether:has_bronze_dungeon",
   "maxrooms": 8,
   "spawn_overrides": {
