@@ -9,9 +9,9 @@
       "argument1": {
         "type": "minecraft:y_clamped_gradient",
         "from_value": 0.0,
-        "from_y": 200,
+        "from_y": 27,
         "to_value": 1.0,
-        "to_y": 210
+        "to_y": 111
       },
       "argument2": {
         "type": "minecraft:add",
@@ -24,9 +24,9 @@
             "argument1": {
               "type": "minecraft:y_clamped_gradient",
               "from_value": 1.0,
-              "from_y": 220,
+              "from_y": 115,
               "to_value": 0.0,
-              "to_y": 240
+              "to_y": 231
             },
             "argument2": {
               "type": "minecraft:add",
@@ -34,7 +34,7 @@
               "argument2": {
                 "type": "minecraft:add",
                 "argument1": -0.13,
-                "argument2": "aether:base_3d_noise_aether"
+                "argument2": "aether:hilly_3d_noise_aether"
               }
             }
           }
