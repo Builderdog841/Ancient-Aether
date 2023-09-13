@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_highland_tulip": {
+    "has_moonlit_waterlily": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ancient_aether:highland_tulip"
+              "ancient_aether:moonlit_waterlily"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "aether:flower_to_blue_dye"
+        "recipe": "aether:moonlit_waterlily_to_purple_dye"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_highland_tulip",
+      "has_moonlit_waterlily",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "aether:flower_to_blue_dye"
+      "aether:moonlit_waterlily_to_purple_dye"
     ]
   }
 }

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_moonlit_waterlily": {
+    "has_sakura_blossoms": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ancient_aether:moonlit_waterlily"
+              "ancient_aether:sakura_blossoms"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "aether:flower_to_purple_dye"
+        "recipe": "aether:sakura_blossom_to_pink_dye"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_moonlit_waterlily",
+      "has_sakura_blossoms",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "aether:flower_to_purple_dye"
+      "aether:sakura_blossom_to_pink_dye"
     ]
   }
 }

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_edelweiss": {
+    "has_highland_tulip": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ancient_aether:edelweiss"
+              "ancient_aether:highland_tulip"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "aether:flower_to_white_dye"
+        "recipe": "aether:highland_tulip_to_blue_dye"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_edelweiss",
+      "has_highland_tulip",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "aether:flower_to_white_dye"
+      "aether:highland_tulip_to_blue_dye"
     ]
   }
 }

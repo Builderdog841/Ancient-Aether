@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_sakura_blossoms": {
+    "has_edelweiss": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ancient_aether:sakura_blossoms"
+              "ancient_aether:edelweiss"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "aether:flower_to_pink_dye"
+        "recipe": "aether:edelweiss_to_white_dye"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_sakura_blossoms",
+      "has_edelweiss",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "aether:flower_to_pink_dye"
+      "aether:edelweiss_to_white_dye"
     ]
   }
 }
