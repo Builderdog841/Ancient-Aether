@@ -15,7 +15,7 @@
   "disable_mob_generation": false,
   "legacy_random_source": false,
   "noise": {
-    "height": 256,
+    "height": 320,
     "min_y": 0,
     "size_horizontal": 2,
     "size_vertical": 1
@@ -87,11 +87,23 @@
               },
               "argument2": {
                 "type": "minecraft:add",
-                "argument1": 0.2,
+                "argument1": {
+                  "type": "minecraft:add",
+                  "argument1": 0.2,
+                  "argument2": {
+                    "type": "minecraft:add",
+                    "argument1": -0.13,
+                    "argument2": "aether:the_aether/hilly_islands"
+                  }
+                },
                 "argument2": {
                   "type": "minecraft:add",
-                  "argument1": -0.13,
-                  "argument2": "aether:the_aether/hilly_islands"
+                  "argument1": 0.2,
+                  "argument2": {
+                    "type": "minecraft:add",
+                    "argument1": -0.13,
+                    "argument2": "aether:the_aether/golden_isles"
+                  }
                 }
               }
             },
