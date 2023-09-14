@@ -11,10 +11,10 @@
       }
     },
     "radius": 10.55,
-    "valid_blocks": "#aether:aether_island_blocks",
+    "valid_blocks": "#aether:aether_dirt",
     "y_range": {
-      "max_inclusive": 80,
-      "min_inclusive": 79
+      "max_inclusive": 111,
+      "min_inclusive": 110
     }
   }
 }
