@@ -9,9 +9,9 @@
       "argument1": {
         "type": "minecraft:y_clamped_gradient",
         "from_value": 0.0,
-        "from_y": 266,
+        "from_y": 240,
         "to_value": 1.0,
-        "to_y": 286
+        "to_y": 260
       },
       "argument2": {
         "type": "minecraft:add",
@@ -24,16 +24,16 @@
             "argument1": {
               "type": "minecraft:y_clamped_gradient",
               "from_value": 1.0,
-              "from_y": 290,
+              "from_y": 260,
               "to_value": 0.0,
-              "to_y": 300
+              "to_y": 270
             },
             "argument2": {
               "type": "minecraft:add",
               "argument1": 0.2,
               "argument2": {
                 "type": "minecraft:add",
-                "argument1": -0.13,
+                "argument1": -0.2,
                 "argument2": "aether:golden_isles_3d_noise_aether"
               }
             }

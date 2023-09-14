@@ -22,7 +22,7 @@ public class AncientAetherRegion extends Region {
 
     @Override
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper) {
-        Climate.Parameter fullRange = Climate.Parameter.span(-1.0F, 1.0F);
+        Climate.Parameter fullRange = Climate.Parameter.span(-1.5F, 1.5F);
 
         Climate.Parameter tempDefault1 = Climate.Parameter.span(-1.0F, -0.8F);
         Climate.Parameter tempDefault2 = Climate.Parameter.span(-0.25F, 0.35F);
@@ -87,7 +87,7 @@ public class AncientAetherRegion extends Region {
         addBiome(mapper, new Climate.ParameterPoint(tempDefault2, Climate.Parameter.span(0.3F, 0.4F), fullRange, fullRange, Climate.Parameter.span(0.2F, 1.0F), fullRange, 0),
                 AncientAetherBiomes.AEROGEL_CAVES);
 
-        addBiome(mapper, new Climate.ParameterPoint(tempDefault2, fullRange, fullRange, fullRange, Climate.Parameter.span(-2.0F, -1.5F), fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempDefault2, fullRange, fullRange, fullRange, Climate.Parameter.span(-2.0F, -1.8F), fullRange, 0),
                 AncientAetherBiomes.GOLDEN_FOREST);
     }
 }
