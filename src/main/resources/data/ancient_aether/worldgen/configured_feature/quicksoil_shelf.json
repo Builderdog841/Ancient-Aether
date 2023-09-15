@@ -13,8 +13,8 @@
     "radius": 10.55,
     "valid_blocks": "#aether:aether_dirt",
     "y_range": {
-      "max_inclusive": 111,
-      "min_inclusive": 110
+      "max_inclusive": 112,
+      "min_inclusive": 111
     }
   }
 }

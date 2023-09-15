@@ -33,7 +33,7 @@
               "argument1": 0.2,
               "argument2": {
                 "type": "minecraft:add",
-                "argument1": -0.2,
+                "argument1": -0.1,
                 "argument2": "aether:golden_isles_3d_noise_aether"
               }
             }
