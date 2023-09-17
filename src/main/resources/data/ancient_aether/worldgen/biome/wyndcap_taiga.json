@@ -1,8 +1,8 @@
 {
   "carvers": {},
-  "temperature": 0.8,
+  "temperature": -0.5,
   "downfall": 0,
-  "creature_spawn_probability": 0.25,
+  "creature_spawn_probability": 0.05,
   "effects": {
     "fog_color": 9671612,
     "foliage_color": 11665355,
@@ -43,17 +43,14 @@
       "ancient_aether:icestone_boulder",
       "ancient_aether:wyndcap_taiga_trees",
       "aether:holiday_tree",
-      "aether:grass_patch",
-      "minecraft:patch_taiga_grass",
+      "minecraft:patch_grass_taiga_2",
       "minecraft:patch_large_fern",
-      "ancient_aether:highland_tulip_patch",
-      "ancient_aether:edelweiss_patch",
-      "aether:white_flower_patch",
-      "aether:purple_flower_patch",
+      "ancient_aether:wyndcaps_flower_patch",
       "aether:berry_bush_patch"
     ],
     [
       "aether:crystal_island",
+      "minecraft:freeze_top_layer",
       "aether:cold_aercloud",
       "aether:blue_aercloud",
       "aether:golden_aercloud"

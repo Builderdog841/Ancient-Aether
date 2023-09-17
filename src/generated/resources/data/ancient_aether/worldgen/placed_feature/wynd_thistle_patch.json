@@ -1,16 +1,16 @@
 {
-  "feature": "ancient_aether:patch_moonlit_waterlily",
+  "feature": "ancient_aether:wynd_thistle_patch",
   "placement": [
     {
-      "type": "minecraft:count",
-      "count": 4
+      "type": "minecraft:rarity_filter",
+      "chance": 3
     },
     {
       "type": "minecraft:in_square"
     },
     {
       "type": "minecraft:heightmap",
-      "heightmap": "WORLD_SURFACE_WG"
+      "heightmap": "MOTION_BLOCKING"
     },
     {
       "type": "minecraft:biome"
