@@ -1,6 +1,6 @@
 {
   "carvers": {},
-  "temperature": -0.5,
+  "temperature": 0.5,
   "downfall": 0,
   "creature_spawn_probability": 0.1,
   "effects": {
@@ -43,6 +43,8 @@
       "ancient_aether:icestone_boulder",
       "ancient_aether:wyndcap_highland_trees",
       "aether:holiday_tree",
+      "aether:grass_patch",
+      "aether:tall_grass_patch",
       "minecraft:patch_grass_taiga_2",
       "minecraft:patch_large_fern",
       "ancient_aether:wyndcaps_flower_patch",
@@ -50,7 +52,6 @@
     ],
     [
       "aether:crystal_island",
-      "minecraft:freeze_top_layer",
       "aether:cold_aercloud",
       "aether:blue_aercloud",
       "aether:golden_aercloud"

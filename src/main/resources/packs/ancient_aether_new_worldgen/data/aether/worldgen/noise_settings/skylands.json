@@ -87,24 +87,12 @@
               },
               "argument2": {
                 "type": "minecraft:add",
-                "argument1": {
-                  "type": "minecraft:add",
                   "argument1": 0.2,
                   "argument2": {
                     "type": "minecraft:add",
                     "argument1": -0.13,
                     "argument2": "aether:the_aether/hilly_islands"
                   }
-                },
-                "argument2": {
-                  "type": "minecraft:add",
-                  "argument1": 0.2,
-                  "argument2": {
-                    "type": "minecraft:add",
-                    "argument1": -0.13,
-                    "argument2": "aether:the_aether/golden_isles"
-                  }
-                }
               }
             },
             "argument2": {
