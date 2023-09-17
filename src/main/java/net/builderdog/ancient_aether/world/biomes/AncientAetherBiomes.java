@@ -25,9 +25,6 @@ public class AncientAetherBiomes {
     //Sakura Jungle
     public static final ResourceKey<Biome> SAKURA_JUNGLE = createKey("sakura_jungle");
 
-    //Upper Isles
-    public static final ResourceKey<Biome> GOLDEN_FOREST = createKey("golden_forest");
-
     private static ResourceKey<Biome> createKey(String name) {
         return ResourceKey.create(Registries.BIOME, new ResourceLocation(AncientAether.MOD_ID, name));
     }
