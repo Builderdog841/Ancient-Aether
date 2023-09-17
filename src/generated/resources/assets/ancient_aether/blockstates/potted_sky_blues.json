@@ -1,12 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "ancient_aether:block/potted_sky_blues"
-      },
-      {
-        "model": "ancient_aether:block/potted_sky_blues"
-      }
-    ]
+    "": {
+      "model": "ancient_aether:block/potted_sky_blues"
+    }
   }
 }
