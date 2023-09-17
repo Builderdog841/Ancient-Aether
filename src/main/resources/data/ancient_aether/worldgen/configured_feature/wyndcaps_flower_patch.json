@@ -47,7 +47,7 @@
       {
         "chance": 0.2,
         "feature": {
-          "feature": "ancient_aether:wynd_thistle_patch",
+          "feature": "ancient_aether:sky_blues_patch",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",
