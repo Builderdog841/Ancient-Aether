@@ -1,4 +1,4 @@
-// 1.19.4	2023-09-09T15:45:33.5264461	Item Models: ancient_aether
+// 1.19.4	2023-09-17T14:12:46.6508726	Item Models: ancient_aether
 dc22e9f245c5e59d55b0aec4ae45dec8337daa28 assets/ancient_aether/models/item/aerogel_bottle.json
 2b792d3780c8a2525546b071319a3e5ed1ab9ac4 assets/ancient_aether/models/item/aerotic_lantern.json
 6f8b483fe39f1c9ec95642516d3878f574aeb929 assets/ancient_aether/models/item/aerotic_slab.json
@@ -14,7 +14,6 @@ ebbb314be0e3b10376468fa80420375a40b93108 assets/ancient_aether/models/item/buffa
 dec43224a81e6b4b281f534edfa1b2392915fd98 assets/ancient_aether/models/item/buffalo_ribs.json
 c3272ab19c230cf6ebff5ea420ce3ccbc1c229fc assets/ancient_aether/models/item/cooked_buffalo_ribs.json
 6a685c107fc07f790104809660de0f58850bff3b assets/ancient_aether/models/item/crystal_gold_coin.json
-2cfb6392a2bcd557586e8a7687ea7804d0c3e128 assets/ancient_aether/models/item/edelweiss.json
 adb8bde9f62a21d4a492e030b93e0aa3e6f9f404 assets/ancient_aether/models/item/frosted_highsproot_sapling.json
 847fb5b6aa35f5048e62d3bf76e55f05c6b41f80 assets/ancient_aether/models/item/gale_lantern.json
 76dcbb064b6afcca77cbab1d82750b6e6c30765c assets/ancient_aether/models/item/grapes.json
@@ -23,7 +22,7 @@ adb8bde9f62a21d4a492e030b93e0aa3e6f9f404 assets/ancient_aether/models/item/frost
 4f9236d35c4bf383f96a3026d37273520e4cbbf6 assets/ancient_aether/models/item/health_ring.json
 fbd830b4a955ffc654b7582bfed186176715ba49 assets/ancient_aether/models/item/hellfire_lantern.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/highland_buffalo_spawn_egg.json
-d86c3fcae396cd54d74c8351a02e56aea9cbe970 assets/ancient_aether/models/item/highland_tulip.json
+686ec049e0fc08064a073c0ef953e17535bdf5af assets/ancient_aether/models/item/highland_viola.json
 cbf95b10f250b1c7368179866d5c5f431a2a6a80 assets/ancient_aether/models/item/highsproot_boat.json
 82f801a89ca15326afea823a172f336e1d0ee7c1 assets/ancient_aether/models/item/highsproot_button.json
 1c4e81b551053ffcb2dcbbd50a1ff820a2510ad3 assets/ancient_aether/models/item/highsproot_chest_boat.json
@@ -40,7 +39,6 @@ b04b2498d89429299562a586c9fdb7853d70b26a assets/ancient_aether/models/item/highs
 f5db49e83578d5a9ad97bdb124582f7b3b6c0a32 assets/ancient_aether/models/item/highsproot_wood_wall.json
 fbc49480534027fea32505d0c27b4b33aeb8a672 assets/ancient_aether/models/item/holystone_lantern.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/leaping_sentry_spawn_egg.json
-ab37a895a9f1f466078e7fdb886615723ae7932d assets/ancient_aether/models/item/moonlit_waterlily.json
 db9205c807c1c097354713164dbfe06e10bc40ae assets/ancient_aether/models/item/quickstone_slab.json
 646c8d4dc55880b9ea5c42176ed3b42f3e8ac97f assets/ancient_aether/models/item/quickstone_stairs.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/roothyrn_spawn_egg.json
@@ -61,6 +59,7 @@ b5f57985ae50e92184ef2d80c666a9950a811db2 assets/ancient_aether/models/item/sakur
 bed0eab0ac3fd6ff1db0dc21b542f50f4048c2b9 assets/ancient_aether/models/item/sakura_trapdoor.json
 e6c1cf2f9b2e9f820237cd5e08913258fb06ea10 assets/ancient_aether/models/item/sakura_wood_wall.json
 1ff1dfbd020234c9d222b25637694c23914ea93a assets/ancient_aether/models/item/sentry_lantern.json
+2590d5cc1f45aacb63586ef37acbdb9fd6098d05 assets/ancient_aether/models/item/sky_blues.json
 91c8bd4c3e5f39b613322a1e535a01eb7f6d55fe assets/ancient_aether/models/item/strength_stone.json
 4a1875d25df6433044e34e5c18d5317293da832a assets/ancient_aether/models/item/stripped_highsproot_log_wall.json
 1278fa36814adb56c82340a15053d203a2b06a93 assets/ancient_aether/models/item/stripped_highsproot_wood_wall.json
@@ -68,3 +67,4 @@ d512fb5f2be651f11b0e848cdfef97b5301df83b assets/ancient_aether/models/item/strip
 67d9f688b85555c143221bf3f650e68c9af8b7a2 assets/ancient_aether/models/item/stripped_sakura_wood_wall.json
 54cc305d29f244b771fe2d06ef99fd40c680df91 assets/ancient_aether/models/item/trapped_sakura_blossoms.json
 b2904a38ad6961e7fe7f085a71ff5c00372cddfd assets/ancient_aether/models/item/valkyrie_wine.json
+98329ebaf90bee628ae611077334ab6049fd816a assets/ancient_aether/models/item/wynd_thistle.json

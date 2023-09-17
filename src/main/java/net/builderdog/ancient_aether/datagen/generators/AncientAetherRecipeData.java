@@ -220,25 +220,25 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .unlockedBy(getHasName(Items.BOOK), has(Items.BOOK))
                 .save(consumer, name("sakura_bookshelf"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.PURPLE_DYE)
-                .group("purple_dye")
-                .requires(AncientAetherBlocks.MOONLIT_WATERLILY.get())
-                .unlockedBy(getHasName(AncientAetherBlocks.MOONLIT_WATERLILY.get()), has(AncientAetherBlocks.MOONLIT_WATERLILY.get()))
-                .save(consumer, name("moonlit_waterlily_to_purple_dye"));
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.MAGENTA_DYE)
+                .group("magenta_dye")
+                .requires(AncientAetherBlocks.HIGHLAND_VIOLA.get())
+                .unlockedBy(getHasName(AncientAetherBlocks.HIGHLAND_VIOLA.get()), has(AncientAetherBlocks.HIGHLAND_VIOLA.get()))
+                .save(consumer, name("highland_viola_to_magenta_dye"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.BLUE_DYE)
-                .group("blue_dye")
-                .requires(AncientAetherBlocks.HIGHLAND_TULIP.get())
-                .unlockedBy(getHasName(AncientAetherBlocks.HIGHLAND_TULIP.get()), has(AncientAetherBlocks.HIGHLAND_TULIP.get()))
-                .save(consumer, name("highland_tulip_to_blue_dye"));
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.CYAN_DYE)
+                .group("cyan_dye")
+                .requires(AncientAetherBlocks.SKY_BLUES.get())
+                .unlockedBy(getHasName(AncientAetherBlocks.SKY_BLUES.get()), has(AncientAetherBlocks.SKY_BLUES.get()))
+                .save(consumer, name("sky_blues_to_cyan_dye"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.WHITE_DYE)
-                .group("white_dye")
-                .requires(AncientAetherBlocks.EDELWEISS.get())
-                .unlockedBy(getHasName(AncientAetherBlocks.EDELWEISS.get()), has(AncientAetherBlocks.EDELWEISS.get()))
-                .save(consumer, name("edelweiss_to_white_dye"));
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.LIGHT_BLUE_DYE)
+                .group("light_blue_dye")
+                .requires(AncientAetherBlocks.WYND_THISTLE.get())
+                .unlockedBy(getHasName(AncientAetherBlocks.WYND_THISTLE.get()), has(AncientAetherBlocks.WYND_THISTLE.get()))
+                .save(consumer, name("wynd_thistle_to_light_blue_dye"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.BLUE_DYE)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.PINK_DYE)
                 .group("pink_dye")
                 .requires(AncientAetherBlocks.SAKURA_BLOSSOMS.get())
                 .unlockedBy(getHasName(AncientAetherBlocks.SAKURA_BLOSSOMS.get()), has(AncientAetherBlocks.SAKURA_BLOSSOMS.get()))

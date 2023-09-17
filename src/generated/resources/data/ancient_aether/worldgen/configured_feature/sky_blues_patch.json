@@ -10,7 +10,7 @@
             "entries": [
               {
                 "data": {
-                  "Name": "ancient_aether:edelweiss"
+                  "Name": "ancient_aether:sky_blues"
                 },
                 "weight": 3
               }
@@ -28,7 +28,7 @@
         }
       ]
     },
-    "tries": 32,
+    "tries": 64,
     "xz_spread": 7,
     "y_spread": 3
   }

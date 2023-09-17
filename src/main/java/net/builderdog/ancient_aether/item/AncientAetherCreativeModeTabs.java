@@ -84,11 +84,11 @@ public class AncientAetherCreativeModeTabs {
             event.getEntries().putAfter(new ItemStack(AetherBlocks.GOLDEN_OAK_SAPLING.get()), new ItemStack(AncientAetherBlocks.HIGHSPROOT_SAPLING.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.HIGHSPROOT_SAPLING.get()), new ItemStack(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get()), new ItemStack(AncientAetherBlocks.SAKURA_SAPLING.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(new ItemStack(AetherBlocks.WHITE_FLOWER.get()), new ItemStack(AncientAetherBlocks.EDELWEISS.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.EDELWEISS.get()), new ItemStack(AncientAetherBlocks.HIGHLAND_TULIP.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.HIGHLAND_TULIP.get()), new ItemStack(AncientAetherBlocks.SAKURA_BLOSSOMS.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AetherBlocks.WHITE_FLOWER.get()), new ItemStack(AncientAetherBlocks.HIGHLAND_VIOLA.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.HIGHLAND_VIOLA.get()), new ItemStack(AncientAetherBlocks.SKY_BLUES.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.SKY_BLUES.get()), new ItemStack(AncientAetherBlocks.WYND_THISTLE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.WYND_THISTLE.get()), new ItemStack(AncientAetherBlocks.SAKURA_BLOSSOMS.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.SAKURA_BLOSSOMS.get()), new ItemStack(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get()), new ItemStack(AncientAetherBlocks.MOONLIT_WATERLILY.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
         if (tab == AetherCreativeTabs.AETHER_EQUIPMENT_AND_UTILITIES) {
             event.getEntries().putAfter(new ItemStack(AetherItems.FLAMING_SWORD.get()), new ItemStack(AncientAetherItems.ANCIENT_SWORD.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);

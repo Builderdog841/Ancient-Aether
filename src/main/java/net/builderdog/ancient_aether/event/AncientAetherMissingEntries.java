@@ -62,11 +62,9 @@ public class AncientAetherMissingEntries {
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
                 .filter(mapping -> mapping.getKey().getPath().contains("potted_small_aether_cactus")).forEach(blockMapping -> blockMapping.remap(Blocks.FLOWER_POT));
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
-                .filter(mapping -> mapping.getKey().getPath().contains("moonlit_tulip")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.HIGHLAND_TULIP.get()));
+                .filter(mapping -> mapping.getKey().getPath().contains("moonlit_tulip")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.SKY_BLUES.get()));
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
-                .filter(mapping -> mapping.getKey().getPath().contains("potted_moonlit_tulip")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.POTTED_HIGHLAND_TULIP.get()));
-        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
-                .filter(mapping -> mapping.getKey().getPath().contains("potted_moonlit_tulip")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.POTTED_HIGHLAND_TULIP.get()));
+                .filter(mapping -> mapping.getKey().getPath().contains("potted_moonlit_tulip")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.POTTED_SKY_BLUES.get()));
 
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
                 .filter(mapping -> mapping.getKey().getPath().contains("enchanted_sentry_stone")).forEach(blockMapping -> blockMapping.remap(AetherBlocks.SENTRY_STONE.get()));

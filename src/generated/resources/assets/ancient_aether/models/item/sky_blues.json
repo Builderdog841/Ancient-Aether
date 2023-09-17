@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "ancient_aether:block/edelweiss"
+    "layer0": "ancient_aether:block/sky_blues"
   }
 }

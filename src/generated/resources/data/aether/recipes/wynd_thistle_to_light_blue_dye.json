@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "group": "blue_dye",
+  "group": "light_blue_dye",
   "ingredients": [
     {
-      "item": "ancient_aether:highland_tulip"
+      "item": "ancient_aether:wynd_thistle"
     }
   ],
   "result": {
-    "item": "minecraft:blue_dye"
+    "item": "minecraft:light_blue_dye"
   }
 }

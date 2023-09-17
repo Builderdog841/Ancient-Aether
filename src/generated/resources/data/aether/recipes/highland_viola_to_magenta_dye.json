@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "group": "purple_dye",
+  "group": "magenta_dye",
   "ingredients": [
     {
-      "item": "ancient_aether:moonlit_waterlily"
+      "item": "ancient_aether:highland_viola"
     }
   ],
   "result": {
-    "item": "minecraft:purple_dye"
+    "item": "minecraft:magenta_dye"
   }
 }

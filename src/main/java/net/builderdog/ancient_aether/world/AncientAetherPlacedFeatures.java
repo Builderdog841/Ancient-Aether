@@ -32,7 +32,7 @@ public class AncientAetherPlacedFeatures {
                 AncientAetherPlacedFeatureBuilder.commonOrePlacement(4,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(128))));
 
-        register(context, HIGHLAND_TULIP_PATCH, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.HIGHLAND_TULIP_PATCH),
+        register(context, HIGHLAND_TULIP_PATCH, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.WYND_THISTLE_PATCH),
                 RarityFilter.onAverageOnceEvery(3),
                 InSquarePlacement.spread(),
                 PlacementUtils.HEIGHTMAP,
@@ -44,7 +44,7 @@ public class AncientAetherPlacedFeatures {
                 PlacementUtils.HEIGHTMAP,
                 BiomeFilter.biome());
 
-        register(context, EDELWEISS_PATCH, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.EDELWEISS_PATCH),
+        register(context, EDELWEISS_PATCH, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.SKY_BLUES_PATCH),
                 RarityFilter.onAverageOnceEvery(1),
                 InSquarePlacement.spread(),
                 PlacementUtils.HEIGHTMAP,

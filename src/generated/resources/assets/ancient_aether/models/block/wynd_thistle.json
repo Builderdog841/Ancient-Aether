@@ -2,6 +2,6 @@
   "parent": "minecraft:block/cross",
   "render_type": "minecraft:cutout",
   "textures": {
-    "cross": "ancient_aether:block/highland_tulip"
+    "cross": "ancient_aether:block/wynd_thistle"
   }
 }

@@ -42,9 +42,9 @@ public class AncientAetherConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_FROSTED_HIGHSPROOT_SPRUCE_TREE  = registerKey("tall_frosted_highsproot_spruce_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_TREE = registerKey("sakura_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_SAKURA_TREE = registerKey("tall_sakura_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHLAND_TULIP_PATCH = registerKey("highland_tulip_patch");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WYND_THISTLE_PATCH = registerKey("highland_tulip_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_BLOSSOMS_PATCH = registerKey("sakura_blossoms_patch");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> EDELWEISS_PATCH = registerKey("edelweiss_patch");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SKY_BLUES_PATCH = registerKey("sky_blues_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_QUARTZ_ORE = registerKey("aether_quartz_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AEROGEL_BLOBS = registerKey("aerogel_blobs");
 
@@ -89,13 +89,13 @@ public class AncientAetherConfiguredFeatures {
 
         register(context, AEROGEL_BLOBS, Feature.ORE, new OreConfiguration(aerogelOre, 32, 0f));
 
-        register(context, HIGHLAND_TULIP_PATCH, Feature.FLOWER,
+        register(context, WYND_THISTLE_PATCH, Feature.FLOWER,
                 NitrogenConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
-                        .add(AncientAetherBlocks.HIGHLAND_TULIP.get().defaultBlockState(), 3)), 64));
+                        .add(AncientAetherBlocks.WYND_THISTLE.get().defaultBlockState(), 3)), 64));
 
-        register(context, EDELWEISS_PATCH, Feature.FLOWER,
+        register(context, SKY_BLUES_PATCH, Feature.FLOWER,
                 NitrogenConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
-                        .add(AncientAetherBlocks.EDELWEISS.get().defaultBlockState(), 3)), 64));
+                        .add(AncientAetherBlocks.SKY_BLUES.get().defaultBlockState(), 3)), 64));
 
         register(context, SAKURA_BLOSSOMS_PATCH, Feature.FLOWER,
                 NitrogenConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()

@@ -19,19 +19,8 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
 
     @Override
     protected void generate() {
-        dropSelf(AncientAetherBlocks.AEROTIC_STONE.get());
-        dropSelf(AncientAetherBlocks.AEROTIC_STAIRS.get());
-        dropSelf(AncientAetherBlocks.AEROTIC_SLAB.get());
-        dropSelf(AncientAetherBlocks.AEROTIC_WALL.get());
-        dropSelf(AncientAetherBlocks.AEROTIC_STONE_MOSAIC.get());
-        dropSelf(AncientAetherBlocks.LIGHT_AEROTIC_STONE.get());
-        dropSelf(AncientAetherBlocks.CORRUPTED_LIGHT_AEROTIC_STONE.get());
-        dropSelf(AncientAetherBlocks.QUICKSTONE.get());
-        dropSelf(AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get());
-        dropSelf(AncientAetherBlocks.CARVED_STONE_MOSAIC.get());
-        dropSelf(AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get());
-        dropSelf(AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get());
-        dropSelf(AncientAetherBlocks.GALE_STONE_MOSAIC.get());
+
+        //Highsproot
         dropSelfDouble(AncientAetherBlocks.HIGHSPROOT_LOG.get());
         dropSelf(AncientAetherBlocks.HIGHSPROOT_WOOD.get());
         dropSelf(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get());
@@ -52,6 +41,14 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.HIGHSPROOT_PRESSURE_PLATE.get());
         dropSelf(AncientAetherBlocks.HIGHSPROOT_SIGN.get());
         dropSelf(AncientAetherBlocks.HIGHSPROOT_WALL_SIGN.get());
+        dropSelf(AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
+        dropSelf(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get());
+        add(AncientAetherBlocks.HIGHSPROOT_LEAVES.get(),
+                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
+        add(AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES.get(),
+                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
+
+        //Sakura
         dropSelfDouble(AncientAetherBlocks.SAKURA_LOG.get());
         dropSelf(AncientAetherBlocks.SAKURA_WOOD.get());
         dropSelf(AncientAetherBlocks.STRIPPED_SAKURA_LOG.get());
@@ -61,9 +58,6 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.STRIPPED_SAKURA_LOG_WALL.get());
         dropSelf(AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL.get());
         dropSelf(AncientAetherBlocks.SAKURA_PLANKS.get());
-        dropSelf(AncientAetherBlocks.SAKURA_SAPLING.get());
-        dropSelf(AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
-        dropSelf(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get());
         dropSelf(AncientAetherBlocks.SAKURA_STAIRS.get());
         dropSelf(AncientAetherBlocks.SAKURA_SLAB.get());
         dropSelf(AncientAetherBlocks.SAKURA_FENCE.get());
@@ -74,40 +68,62 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get());
         dropSelf(AncientAetherBlocks.SAKURA_SIGN.get());
         dropSelf(AncientAetherBlocks.SAKURA_WALL_SIGN.get());
+        dropSelf(AncientAetherBlocks.SAKURA_SAPLING.get());
+        add(AncientAetherBlocks.SAKURA_LEAVES.get(),
+                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.SAKURA_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
+
+        //Ores
+        dropDoubleWithFortune(AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), Items.QUARTZ);
+
+        //Quickstone
+        dropSelf(AncientAetherBlocks.QUICKSTONE.get());
         dropSelf(AncientAetherBlocks.QUICKSTONE_STAIRS.get());
         dropSelf(AncientAetherBlocks.QUICKSTONE_SLAB.get());
-        dropSelf(AncientAetherBlocks.HIGHLAND_TULIP.get());
-        dropSelf(AncientAetherBlocks.EDELWEISS.get());
-        dropSelf(AncientAetherBlocks.SAKURA_BLOSSOMS.get());
-        dropSelf(AncientAetherBlocks.CRACKED_SLIDER.get());
+
+        //Dungeon Blocks
+        dropSelf(AncientAetherBlocks.AEROTIC_STONE.get());
+        dropSelf(AncientAetherBlocks.AEROTIC_STAIRS.get());
+        dropSelf(AncientAetherBlocks.AEROTIC_SLAB.get());
+        dropSelf(AncientAetherBlocks.AEROTIC_WALL.get());
+        dropSelf(AncientAetherBlocks.AEROTIC_STONE_MOSAIC.get());
+        dropSelf(AncientAetherBlocks.LIGHT_AEROTIC_STONE.get());
+        dropSelf(AncientAetherBlocks.CORRUPTED_LIGHT_AEROTIC_STONE.get());
+        dropSelf(AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get());
+        dropSelf(AncientAetherBlocks.CARVED_STONE_MOSAIC.get());
+        dropSelf(AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get());
+        dropSelf(AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get());
+        dropSelf(AncientAetherBlocks.GALE_STONE_MOSAIC.get());
+        dropSelf(AncientAetherBlocks.ANCIENT_OBELISK.get());
+
+        //Lanterns
         dropSelf(AncientAetherBlocks.HOLYSTONE_LANTERN.get());
         dropSelf(AncientAetherBlocks.SENTRY_LANTERN.get());
         dropSelf(AncientAetherBlocks.ANGELIC_LANTERN.get());
         dropSelf(AncientAetherBlocks.HELLFIRE_LANTERN.get());
         dropSelf(AncientAetherBlocks.AEROTIC_LANTERN.get());
         dropSelf(AncientAetherBlocks.GALE_LANTERN.get());
-        dropSelf(AncientAetherBlocks.ANCIENT_OBELISK.get());
-        dropSelf(AncientAetherBlocks.MOONLIT_WATERLILY.get());
 
+        //Redstone Blocks
+        dropSelf(AncientAetherBlocks.CRACKED_SLIDER.get());
+
+        //Plants
+        dropSelf(AncientAetherBlocks.SKY_BLUES.get());
+        dropSelf(AncientAetherBlocks.WYND_THISTLE.get());
+        dropSelf(AncientAetherBlocks.HIGHLAND_VIOLA.get());
+        dropSelf(AncientAetherBlocks.SAKURA_BLOSSOMS.get());
         dropOther(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get(), AncientAetherBlocks.SAKURA_BLOSSOMS.get());
 
-        dropOther(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get(), AetherItems.AMBROSIUM_SHARD.get());
-
+        //Potted Plants
         dropPottedContents(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING.get());
         dropPottedContents(AncientAetherBlocks.POTTED_FROSTED_HIGHSPROOT_SAPLING.get());
         dropPottedContents(AncientAetherBlocks.POTTED_SAKURA_SAPLING.get());
-        dropPottedContents(AncientAetherBlocks.POTTED_HIGHLAND_TULIP.get());
-        dropPottedContents(AncientAetherBlocks.POTTED_EDELWEISS.get());
+        dropPottedContents(AncientAetherBlocks.POTTED_SKY_BLUES.get());
+        dropPottedContents(AncientAetherBlocks.POTTED_WYND_THISTLE.get());
+        dropPottedContents(AncientAetherBlocks.POTTED_HIGHLAND_VIOLA.get());
         dropPottedContents(AncientAetherBlocks.POTTED_SAKURA_BLOSSOMS.get());
 
-        dropDoubleWithFortune(AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), Items.QUARTZ);
-
-        add(AncientAetherBlocks.HIGHSPROOT_LEAVES.get(),
-                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
-        add(AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES.get(),
-                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
-        add(AncientAetherBlocks.SAKURA_LEAVES.get(),
-                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.SAKURA_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
+        //Misc
+        dropOther(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get(), AetherItems.AMBROSIUM_SHARD.get());
     }
 
     @Override

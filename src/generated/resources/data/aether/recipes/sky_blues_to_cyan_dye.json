@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "group": "white_dye",
+  "group": "cyan_dye",
   "ingredients": [
     {
-      "item": "ancient_aether:edelweiss"
+      "item": "ancient_aether:sky_blues"
     }
   ],
   "result": {
-    "item": "minecraft:white_dye"
+    "item": "minecraft:cyan_dye"
   }
 }

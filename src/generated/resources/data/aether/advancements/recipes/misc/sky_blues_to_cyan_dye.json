@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_highland_tulip": {
+    "has_sky_blues": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ancient_aether:highland_tulip"
+              "ancient_aether:sky_blues"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "aether:highland_tulip_to_blue_dye"
+        "recipe": "aether:sky_blues_to_cyan_dye"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_highland_tulip",
+      "has_sky_blues",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "aether:highland_tulip_to_blue_dye"
+      "aether:sky_blues_to_cyan_dye"
     ]
   }
 }

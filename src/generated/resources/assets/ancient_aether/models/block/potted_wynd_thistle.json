@@ -2,6 +2,6 @@
   "parent": "minecraft:block/flower_pot_cross",
   "render_type": "minecraft:cutout",
   "textures": {
-    "plant": "ancient_aether:block/edelweiss"
+    "plant": "ancient_aether:block/wynd_thistle"
   }
 }

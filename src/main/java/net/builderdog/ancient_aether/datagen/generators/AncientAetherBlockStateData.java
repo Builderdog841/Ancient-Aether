@@ -21,20 +21,17 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
     @Override
     protected void registerStatesAndModels() {
 
-        blockWithItem(AncientAetherBlocks.AETHER_QUARTZ_ORE);
-
+        //Highsproot
         logBlock(((RotatedPillarBlock) AncientAetherBlocks.HIGHSPROOT_LOG.get()));
         axisBlock((RotatedPillarBlock) AncientAetherBlocks.HIGHSPROOT_WOOD.get(), blockTexture(AncientAetherBlocks.HIGHSPROOT_LOG.get()), blockTexture(AncientAetherBlocks.HIGHSPROOT_LOG.get()));
         axisBlock((RotatedPillarBlock) AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get(),new ResourceLocation(AncientAether.MOD_ID,"block/stripped_highsproot_log"),
                 new ResourceLocation(AncientAether.MOD_ID,"block/stripped_highsproot_log_top"));
         axisBlock((RotatedPillarBlock) AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD.get(),new ResourceLocation(AncientAether.MOD_ID,"block/stripped_highsproot_log"),
                 new ResourceLocation(AncientAether.MOD_ID,"block/stripped_highsproot_log"));
-
         simpleBlockItem(AncientAetherBlocks.HIGHSPROOT_LOG.get(), models().withExistingParent("ancient_aether:highsproot_log","minecraft:block/cube_column"));
         simpleBlockItem(AncientAetherBlocks.HIGHSPROOT_WOOD.get(), models().withExistingParent("ancient_aether:highsproot_wood","minecraft:block/cube_column"));
         simpleBlockItem(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get(), models().withExistingParent("ancient_aether:stripped_highsproot_log","minecraft:block/cube_column"));
         simpleBlockItem(AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD.get(), models().withExistingParent("ancient_aether:stripped_highsproot_wood","minecraft:block/cube_column"));
-
         blockWithItem(AncientAetherBlocks.HIGHSPROOT_PLANKS);
         stairs((StairBlock) AncientAetherBlocks.HIGHSPROOT_STAIRS.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), "");
         slab((SlabBlock) AncientAetherBlocks.HIGHSPROOT_SLAB.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), "");
@@ -45,18 +42,17 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         buttonBlock(AncientAetherBlocks.HIGHSPROOT_BUTTON.get(), texture(name(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()), ""));
         pressurePlateBlock(AncientAetherBlocks.HIGHSPROOT_PRESSURE_PLATE.get(), texture(name(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()), ""));
 
+        //Sakura
         logBlock(((RotatedPillarBlock) AncientAetherBlocks.SAKURA_LOG.get()));
         axisBlock((RotatedPillarBlock) AncientAetherBlocks.SAKURA_WOOD.get(), blockTexture(AncientAetherBlocks.SAKURA_LOG.get()), blockTexture(AncientAetherBlocks.SAKURA_LOG.get()));
         axisBlock((RotatedPillarBlock) AncientAetherBlocks.STRIPPED_SAKURA_LOG.get(), new ResourceLocation(AncientAether.MOD_ID,"block/stripped_sakura_log"),
                 new ResourceLocation(AncientAether.MOD_ID,"block/stripped_sakura_log_top"));
         axisBlock((RotatedPillarBlock) AncientAetherBlocks.STRIPPED_SAKURA_WOOD.get(), new ResourceLocation(AncientAether.MOD_ID,"block/stripped_sakura_log"),
                 new ResourceLocation(AncientAether.MOD_ID,"block/stripped_sakura_log"));
-
         simpleBlockItem(AncientAetherBlocks.SAKURA_LOG.get(), models().withExistingParent("ancient_aether:sakura_log","minecraft:block/cube_column"));
         simpleBlockItem(AncientAetherBlocks.SAKURA_WOOD.get(), models().withExistingParent("ancient_aether:sakura_wood","minecraft:block/cube_column"));
         simpleBlockItem(AncientAetherBlocks.STRIPPED_SAKURA_LOG.get(), models().withExistingParent("ancient_aether:stripped_sakura_log","minecraft:block/cube_column"));
         simpleBlockItem(AncientAetherBlocks.STRIPPED_SAKURA_WOOD.get(), models().withExistingParent("ancient_aether:stripped_sakura_wood","minecraft:block/cube_column"));
-
         blockWithItem(AncientAetherBlocks.SAKURA_PLANKS);
         stairs((StairBlock) AncientAetherBlocks.SAKURA_STAIRS.get(), AncientAetherBlocks.SAKURA_PLANKS.get(), "");
         slab((SlabBlock) AncientAetherBlocks.SAKURA_SLAB.get(), AncientAetherBlocks.SAKURA_PLANKS.get(), "");
@@ -67,17 +63,21 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         buttonBlock(AncientAetherBlocks.SAKURA_BUTTON.get(), texture(name(AncientAetherBlocks.SAKURA_PLANKS.get()), ""));
         pressurePlateBlock(AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get(), texture(name(AncientAetherBlocks.SAKURA_PLANKS.get()), ""));
 
+        //Ores
+        blockWithItem(AncientAetherBlocks.AETHER_QUARTZ_ORE);
+
+        //Quickstone
         blockWithItem(AncientAetherBlocks.QUICKSTONE);
         stairs((StairBlock) AncientAetherBlocks.QUICKSTONE_STAIRS.get(), AncientAetherBlocks.QUICKSTONE.get(), "");
         slab((SlabBlock) AncientAetherBlocks.QUICKSTONE_SLAB.get(), AncientAetherBlocks.QUICKSTONE.get(), "");
 
+        //Mosaic Blocks
         logBlock((AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get()));
         logBlock((AncientAetherBlocks.CARVED_STONE_MOSAIC.get()));
         logBlock((AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get()));
         logBlock((AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get()));
         logBlock((AncientAetherBlocks.GALE_STONE_MOSAIC.get()));
         logBlock((AncientAetherBlocks.AEROTIC_STONE_MOSAIC.get()));
-
         simpleBlockItem(AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get(), models().withExistingParent("ancient_aether:holystone_brick_mosaic","minecraft:block/cube_column"));
         simpleBlockItem(AncientAetherBlocks.CARVED_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:carved_stone_mosaic","minecraft:block/cube_column"));
         simpleBlockItem(AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:angelic_stone_mosaic","minecraft:block/cube_column"));
@@ -85,6 +85,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         simpleBlockItem(AncientAetherBlocks.GALE_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:gale_stone_mosaic","minecraft:block/cube_column"));
         simpleBlockItem(AncientAetherBlocks.AEROTIC_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:aerotic_stone_mosaic","minecraft:block/cube_column"));
 
+        //Aerotic Stone
         blockWithItem(AncientAetherBlocks.AEROTIC_STONE);
         blockWithItem(AncientAetherBlocks.LIGHT_AEROTIC_STONE);
         blockWithItem(AncientAetherBlocks.CORRUPTED_LIGHT_AEROTIC_STONE);
@@ -92,24 +93,28 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         slab((SlabBlock) AncientAetherBlocks.AEROTIC_SLAB.get(), AncientAetherBlocks.AEROTIC_STONE.get(), "");
         wallBlock((WallBlock) AncientAetherBlocks.AEROTIC_WALL.get(), AncientAetherBlocks.AEROTIC_STONE.get(), "");
 
+        //Leaves
         blockWithItem(AncientAetherBlocks.HIGHSPROOT_LEAVES);
         blockWithItem(AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES);
         blockWithItem(AncientAetherBlocks.SAKURA_LEAVES);
 
+        //Plants
         crossBlock(AncientAetherBlocks.HIGHSPROOT_SAPLING);
         crossBlock(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING);
         crossBlock(AncientAetherBlocks.SAKURA_SAPLING);
-        crossBlock(AncientAetherBlocks.HIGHLAND_TULIP);
-        crossBlock(AncientAetherBlocks.EDELWEISS);
+        crossBlock(AncientAetherBlocks.WYND_THISTLE);
+        crossBlock(AncientAetherBlocks.SKY_BLUES);
         crossBlock(AncientAetherBlocks.SAKURA_BLOSSOMS);
         crossBlock(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS);
 
+        //Potted Plants
         pottedPlant(AncientAetherBlocks.POTTED_SAKURA_SAPLING.get(), AncientAetherBlocks.SAKURA_SAPLING.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING.get(), AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_FROSTED_HIGHSPROOT_SAPLING.get(), AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get(), "");
-        pottedPlant(AncientAetherBlocks.POTTED_EDELWEISS.get(), AncientAetherBlocks.EDELWEISS.get(), "");
+        pottedPlant(AncientAetherBlocks.POTTED_WYND_THISTLE.get(), AncientAetherBlocks.WYND_THISTLE.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_SAKURA_BLOSSOMS.get(), AncientAetherBlocks.SAKURA_BLOSSOMS.get(), "");
-        pottedPlant(AncientAetherBlocks.POTTED_HIGHLAND_TULIP.get(), AncientAetherBlocks.HIGHLAND_TULIP.get(), "");
+        pottedPlant(AncientAetherBlocks.POTTED_SKY_BLUES.get(), AncientAetherBlocks.SKY_BLUES.get(), "");
+        pottedPlant(AncientAetherBlocks.POTTED_SKY_BLUES.get(), AncientAetherBlocks.SKY_BLUES.get(), "");
 
         makeLogWalls();
     }

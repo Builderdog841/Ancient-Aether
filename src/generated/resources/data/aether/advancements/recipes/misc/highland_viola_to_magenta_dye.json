@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_moonlit_waterlily": {
+    "has_highland_viola": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ancient_aether:moonlit_waterlily"
+              "ancient_aether:highland_viola"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "aether:moonlit_waterlily_to_purple_dye"
+        "recipe": "aether:highland_viola_to_magenta_dye"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_moonlit_waterlily",
+      "has_highland_viola",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "aether:moonlit_waterlily_to_purple_dye"
+      "aether:highland_viola_to_magenta_dye"
     ]
   }
 }
