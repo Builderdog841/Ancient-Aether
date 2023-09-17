@@ -68,7 +68,7 @@ public class AmbrosiumCampfireBlock extends BaseEntityBlock implements SimpleWat
         this.registerDefaultState(this.stateDefinition.any().setValue(LIT, Boolean.valueOf(true)).setValue(SIGNAL_FIRE, Boolean.valueOf(false)).setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(FACING, Direction.NORTH));
     }
 
-    public InteractionResult use(@NotNull BlockState p_51274_, Level p_51275_, @NotNull BlockPos p_51276_, Player p_51277_, InteractionHand p_51278_, BlockHitResult p_51279_) {
+    public InteractionResult use(BlockState p_51274_, Level p_51275_, BlockPos p_51276_, Player p_51277_, InteractionHand p_51278_, BlockHitResult p_51279_) {
         BlockEntity blockentity = p_51275_.getBlockEntity(p_51276_);
         if (blockentity instanceof AncientAetherCampfireBlockEntity campfireblockentity) {
             ItemStack itemstack = p_51277_.getItemInHand(p_51278_);
@@ -94,7 +94,7 @@ public class AmbrosiumCampfireBlock extends BaseEntityBlock implements SimpleWat
         super.entityInside(p_51269_, p_51270_, p_51271_, p_51272_);
     }
 
-    public void onRemove(BlockState p_51281_, @NotNull Level p_51282_, BlockPos p_51283_, BlockState p_51284_, boolean p_51285_) {
+    public void onRemove(BlockState p_51281_, Level p_51282_, BlockPos p_51283_, BlockState p_51284_, boolean p_51285_) {
         if (!p_51281_.is(p_51284_.getBlock())) {
             BlockEntity blockentity = p_51282_.getBlockEntity(p_51283_);
             if (blockentity instanceof AncientAetherCampfireBlockEntity) {
@@ -113,7 +113,7 @@ public class AmbrosiumCampfireBlock extends BaseEntityBlock implements SimpleWat
         return this.defaultBlockState().setValue(WATERLOGGED, Boolean.valueOf(flag)).setValue(SIGNAL_FIRE, Boolean.valueOf(this.isSmokeSource(levelaccessor.getBlockState(blockpos.below())))).setValue(LIT, Boolean.valueOf(!flag)).setValue(FACING, p_51240_.getHorizontalDirection());
     }
 
-    public BlockState updateShape(BlockState p_51298_, Direction p_51299_, BlockState p_51300_, LevelAccessor p_51301_, BlockPos p_51302_, BlockPos p_51303_) {
+    public @NotNull BlockState updateShape(BlockState p_51298_, Direction p_51299_, BlockState p_51300_, LevelAccessor p_51301_, BlockPos p_51302_, BlockPos p_51303_) {
         if (p_51298_.getValue(WATERLOGGED)) {
             p_51301_.scheduleTick(p_51302_, Fluids.WATER, Fluids.WATER.getTickDelay(p_51301_));
         }
@@ -125,11 +125,11 @@ public class AmbrosiumCampfireBlock extends BaseEntityBlock implements SimpleWat
         return p_51324_.is(Blocks.HAY_BLOCK);
     }
 
-    public VoxelShape getShape(BlockState p_51309_, BlockGetter p_51310_, BlockPos p_51311_, CollisionContext p_51312_) {
+    public @NotNull VoxelShape getShape(BlockState p_51309_, BlockGetter p_51310_, BlockPos p_51311_, CollisionContext p_51312_) {
         return SHAPE;
     }
 
-    public RenderShape getRenderShape(BlockState p_51307_) {
+    public RenderShape getRenderShape(@NotNull BlockState p_51307_) {
         return RenderShape.MODEL;
     }
 
@@ -163,7 +163,7 @@ public class AmbrosiumCampfireBlock extends BaseEntityBlock implements SimpleWat
         p_152751_.gameEvent(p_152750_, GameEvent.BLOCK_CHANGE, p_152752_);
     }
 
-    public boolean placeLiquid(LevelAccessor p_51257_, BlockPos p_51258_, BlockState p_51259_, FluidState p_51260_) {
+    public boolean placeLiquid(@NotNull LevelAccessor p_51257_, @NotNull BlockPos p_51258_, BlockState p_51259_, FluidState p_51260_) {
         if (!p_51259_.getValue(BlockStateProperties.WATERLOGGED) && p_51260_.getType() == Fluids.WATER) {
             boolean flag = p_51259_.getValue(LIT);
             if (flag) {
@@ -182,7 +182,7 @@ public class AmbrosiumCampfireBlock extends BaseEntityBlock implements SimpleWat
         }
     }
 
-    public void onProjectileHit(Level p_51244_, BlockState p_51245_, BlockHitResult p_51246_, Projectile p_51247_) {
+    public void onProjectileHit(Level p_51244_, @NotNull BlockState p_51245_, BlockHitResult p_51246_, Projectile p_51247_) {
         BlockPos blockpos = p_51246_.getBlockPos();
         if (!p_51244_.isClientSide && p_51247_.isOnFire() && p_51247_.mayInteract(p_51244_, blockpos) && !p_51245_.getValue(LIT) && !p_51245_.getValue(WATERLOGGED)) {
             p_51244_.setBlock(blockpos, p_51245_.setValue(BlockStateProperties.LIT, Boolean.valueOf(true)), 11);
@@ -243,15 +243,15 @@ public class AmbrosiumCampfireBlock extends BaseEntityBlock implements SimpleWat
     }
 
     @Nullable
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level p_152755_, BlockState p_152756_, BlockEntityType<T> p_152757_) {
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level p_152755_, @NotNull BlockState p_152756_, @NotNull BlockEntityType<T> p_152757_) {
         if (p_152755_.isClientSide) {
-            return p_152756_.getValue(LIT) ? createTickerHelper(p_152757_, BlockEntityType.CAMPFIRE, AncientAetherCampfireBlockEntity::particleTick) : null;
+            return p_152756_.getValue(LIT) ? createTickerHelper(p_152757_, BlockEntityType.CAMPFIRE, CampfireBlockEntity::particleTick) : null;
         } else {
-            return p_152756_.getValue(LIT) ? createTickerHelper(p_152757_, BlockEntityType.CAMPFIRE, AncientAetherCampfireBlockEntity::cookTick) : createTickerHelper(p_152757_, BlockEntityType.CAMPFIRE, AncientAetherCampfireBlockEntity::cooldownTick);
+            return p_152756_.getValue(LIT) ? createTickerHelper(p_152757_, BlockEntityType.CAMPFIRE, CampfireBlockEntity::cookTick) : createTickerHelper(p_152757_, BlockEntityType.CAMPFIRE, CampfireBlockEntity::cooldownTick);
         }
     }
 
-    public boolean isPathfindable(BlockState p_51264_, BlockGetter p_51265_, BlockPos p_51266_, PathComputationType p_51267_) {
+    public boolean isPathfindable(@NotNull BlockState p_51264_, @NotNull BlockGetter p_51265_, @NotNull BlockPos p_51266_, @NotNull PathComputationType p_51267_) {
         return false;
     }
 

@@ -3,6 +3,7 @@ package net.builderdog.ancient_aether.blockentity;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.CampfireBlockEntity;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -15,7 +16,7 @@ public class AncientAetherBlockEntityTypes {
             AncientAetherBlocks.SAKURA_SIGN.get(), AncientAetherBlocks.SAKURA_WALL_SIGN.get()
     ).build(null));
 
-    public static final RegistryObject<BlockEntityType<AncientAetherCampfireBlockEntity>> CAMPFIRE = BLOCK_ENTITY_TYPES.register("campfire", () -> BlockEntityType.Builder.of(AncientAetherCampfireBlockEntity::new,
+    public static final RegistryObject<BlockEntityType<CampfireBlockEntity>> CAMPFIRE = BLOCK_ENTITY_TYPES.register("campfire", () -> BlockEntityType.Builder.of(CampfireBlockEntity::new,
             AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get()
     ).build(null));
 }
