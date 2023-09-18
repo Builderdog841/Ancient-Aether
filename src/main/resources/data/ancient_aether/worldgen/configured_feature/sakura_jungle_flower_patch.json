@@ -2,7 +2,7 @@
   "type": "minecraft:random_selector",
   "config": {
     "default": {
-      "feature": "sakura_blossoms_patch",
+      "feature": "ancient_aether:sakura_blossoms_patch",
         "placement": [
           {
             "type": "minecraft:block_predicate_filter",
