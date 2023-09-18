@@ -2,7 +2,7 @@
   "type": "minecraft:random_selector",
   "config": {
     "default": {
-      "feature": "ancient_aether:wynd_thistle_patch",
+      "feature": "aether:white_flower_patch",
         "placement": [
           {
             "type": "minecraft:block_predicate_filter",
@@ -15,9 +15,9 @@
     },
     "features": [
       {
-        "chance": 0.4,
+        "chance": 0.3,
         "feature": {
-          "feature": "ancient_aether:aether_flower_patch",
+          "feature": "aether:purple_flower_patch",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",
@@ -32,7 +32,7 @@
       {
         "chance": 0.2,
         "feature": {
-          "feature": "ancient_aether:sky_blues_patch",
+          "feature": "ancient_aether:highland_viola_patch",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",

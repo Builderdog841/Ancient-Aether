@@ -17,9 +17,6 @@ import java.util.List;
 public class AncientAetherPlacedFeatures {
     public static final ResourceKey<PlacedFeature> AETHER_QUARTZ_ORE_PLACED = createKey("aether_quartz_ore");
     public static final ResourceKey<PlacedFeature> AEROGEL_ORE_PLACED = createKey("aerogel_blobs");
-    public static final ResourceKey<PlacedFeature> WYND_THISTLE_PATCH = createKey("wynd_thistle_patch");
-    public static final ResourceKey<PlacedFeature> SKY_BLUES_PATCH = createKey("sky_blues_patch");
-    public static final ResourceKey<PlacedFeature> SAKURA_BLOSSOMS_PATCH = createKey("sakura_blossoms_patch");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -31,24 +28,6 @@ public class AncientAetherPlacedFeatures {
         register(context, AEROGEL_ORE_PLACED, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.AEROGEL_BLOBS),
                 AncientAetherPlacedFeatureBuilder.commonOrePlacement(4,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(128))));
-
-        register(context, WYND_THISTLE_PATCH, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.WYND_THISTLE_PATCH),
-                RarityFilter.onAverageOnceEvery(3),
-                InSquarePlacement.spread(),
-                PlacementUtils.HEIGHTMAP,
-                BiomeFilter.biome());
-
-        register(context, SAKURA_BLOSSOMS_PATCH, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.SAKURA_BLOSSOMS_PATCH),
-                RarityFilter.onAverageOnceEvery(8),
-                InSquarePlacement.spread(),
-                PlacementUtils.HEIGHTMAP,
-                BiomeFilter.biome());
-
-        register(context,SKY_BLUES_PATCH, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.SKY_BLUES_PATCH),
-                RarityFilter.onAverageOnceEvery(1),
-                InSquarePlacement.spread(),
-                PlacementUtils.HEIGHTMAP,
-                BiomeFilter.biome());
     }
 
     private static ResourceKey<PlacedFeature> createKey(String name) {

@@ -37,12 +37,12 @@ public class AncientAetherConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHSPROOT_TREE = registerKey("highsproot_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHSPROOT_PINE_TREE = registerKey("highsproot_pine_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHSPROOT_SPRUCE_TREE = registerKey("highsproot_spruce_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_HIGHSPROOT_SPRUCE_TREE = registerKey("tall_highsproot_spruce_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FROSTED_HIGHSPROOT_SPRUCE_TREE = registerKey("frosted_highsproot_spruce_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_FROSTED_HIGHSPROOT_SPRUCE_TREE  = registerKey("tall_frosted_highsproot_spruce_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_TREE = registerKey("sakura_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_SAKURA_TREE = registerKey("tall_sakura_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> WYND_THISTLE_PATCH = registerKey("wynd_thistle_patch");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHLAND_VIOLA_PATCH = registerKey("highland_viola_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_BLOSSOMS_PATCH = registerKey("sakura_blossoms_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKY_BLUES_PATCH = registerKey("sky_blues_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_QUARTZ_ORE = registerKey("aether_quartz_ore");
@@ -93,6 +93,10 @@ public class AncientAetherConfiguredFeatures {
                 NitrogenConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
                         .add(AncientAetherBlocks.WYND_THISTLE.get().defaultBlockState(), 3)), 64));
 
+        register(context, HIGHLAND_VIOLA_PATCH, Feature.FLOWER,
+                NitrogenConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
+                        .add(AncientAetherBlocks.HIGHLAND_VIOLA.get().defaultBlockState(), 3)), 64));
+
         register(context, SKY_BLUES_PATCH, Feature.FLOWER,
                 NitrogenConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
                         .add(AncientAetherBlocks.SKY_BLUES.get().defaultBlockState(), 3)), 64));
@@ -108,8 +112,7 @@ public class AncientAetherConfiguredFeatures {
 
     }
 
-    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstapContext<ConfiguredFeature<?, ?>> context,
-                                                                                          ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstapContext<ConfiguredFeature<?, ?>> context, ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
         context.register(key, new ConfiguredFeature<>(feature, configuration));
     }
 
