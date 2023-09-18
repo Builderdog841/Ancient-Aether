@@ -103,11 +103,14 @@ public class AncientAether {
 
     public void packSetup(AddPackFindersEvent event) {
         setupOptionalPack(event);
-        setupDatapack(event, "ancient_aether_new_worldgen", "New World Generation", "Adds larger Islands, Mountains and a lot more");
+        setupDatapack(event, "ancient_aether_new_worldgen", "New World Generation", "Completely overhauls the Aether Worldgen");
         setupDatapack(event, "ancient_aether_default_biome_improvements", "Default Biome Improvements", "Adds more flowers and tree variation to the Default Aether Biomes. It also gives the Aether a new Watercolor.");
 
         if (ModList.get().isLoaded("aether_genesis")) {
-            setupDatapack(event, "aether_genesis_compat", "Aether Genesis Compatibility", "Makes Log and Wood Walls from Ancient Aether craftable");
+            setupDatapack(event, "aether_genesis_compat", "Aether Genesis Compatibility", "Better Compatibility with Aether Genesis");
+        }
+        if (ModList.get().isLoaded("lost_aether_content")) {
+            setupDatapack(event, "lost_content_compat", "Lost Content Compatibility", "Better Compatibility with Lost Content");
         }
     }
 
