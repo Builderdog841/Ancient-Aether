@@ -3,7 +3,6 @@ package net.builderdog.ancient_aether;
 import com.aetherteam.aether.AetherConfig;
 //import com.mojang.logging.LogUtils;
 import com.aetherteam.cumulus.CumulusConfig;
-import net.builderdog.ancient_aether.api.AncientAetherMenus;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
