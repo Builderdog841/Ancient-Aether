@@ -131,7 +131,7 @@ public class AncientAetherCreativeModeTabs {
             }
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.HELLFIRE_LANTERN.get()), new ItemStack(AncientAetherBlocks.AEROTIC_LANTERN.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.GALE_LANTERN.get()), new ItemStack(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(new ItemStack(AetherBlocks.SKYROOT_SIGN.get()), new ItemStack(AncientAetherBlocks.HIGHSPROOT_SIGN.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AetherBlocks.SKYROOT_HANGING_SIGN.get()), new ItemStack(AncientAetherBlocks.HIGHSPROOT_SIGN.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.HIGHSPROOT_SIGN.get()), new ItemStack(AncientAetherBlocks.SAKURA_SIGN.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.DEACTIVATED_ANCIENT_OBELISK.get()), new ItemStack(AncientAetherBlocks.DEACTIVATED_ANCIENT_OBELISK.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.DEACTIVATED_ANCIENT_OBELISK.get()), new ItemStack(AncientAetherBlocks.ANCIENT_OBELISK.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
