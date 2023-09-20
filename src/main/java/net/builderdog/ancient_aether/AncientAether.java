@@ -2,6 +2,8 @@ package net.builderdog.ancient_aether;
 
 import com.aetherteam.aether.AetherConfig;
 //import com.mojang.logging.LogUtils;
+import com.aetherteam.cumulus.CumulusConfig;
+import net.builderdog.ancient_aether.api.AncientAetherMenus;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
@@ -81,6 +83,7 @@ public class AncientAether {
                 AetherConfig.CLIENT.music_backup_min_delay.set(1);
                 AetherConfig.CLIENT.music_backup_max_delay.set(2);
                 AetherConfig.CLIENT.disable_music_manager.set(false);
+                CumulusConfig.CLIENT.enable_menu_list_button.set(true);
         });
     }
 
