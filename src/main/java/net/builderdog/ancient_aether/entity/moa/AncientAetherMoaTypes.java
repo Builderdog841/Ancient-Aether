@@ -4,12 +4,7 @@ import com.aetherteam.aether.api.AetherMoaTypes;
 import com.aetherteam.aether.api.registers.MoaType;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
-import net.minecraft.core.Registry;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.registries.*;
-
-import java.util.function.Supplier;
 
 public class AncientAetherMoaTypes {
     public static final DeferredRegister<MoaType> MOA_TYPES = DeferredRegister.create(AetherMoaTypes.MOA_TYPE_REGISTRY_KEY, AncientAether.MOD_ID);

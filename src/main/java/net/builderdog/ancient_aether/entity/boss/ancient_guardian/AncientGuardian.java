@@ -82,7 +82,7 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         this.setPersistenceRequired();
     }
     public void die(DamageSource source) {
-        level.explode(this, this.position().x, this.position().y, this.position().z, 0.3F, false, Level.ExplosionInteraction.TNT);
+        level().explode(this, this.position().x, this.position().y, this.position().z, 0.3F, false, Level.ExplosionInteraction.TNT);
         super.die(source);
     }
 
@@ -118,9 +118,9 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
             double e = this.getBoundingBox().minY + b - 0.30000001192092896;
             double f = this.position().z + c * b;
             if (!this.isAwake()) {
-                this.level.addParticle(new DustParticleOptions(Vec3.fromRGB24(10444703).toVector3f(), 1.0F), d, e, f, 0.28999999165534973, 0.2800000011920929, 0.47999998927116394);
+                level().addParticle(new DustParticleOptions(Vec3.fromRGB24(10444703).toVector3f(), 1.0F), d, e, f, 0.28999999165534973, 0.2800000011920929, 0.47999998927116394);
             } else {
-                this.level.addParticle(new DustParticleOptions(Vec3.fromRGB24(9315170).toVector3f(), 1.0F), d, e, f, 0.4300000071525574, 0.18000000715255737, 0.2800000011920929);
+                level().addParticle(new DustParticleOptions(Vec3.fromRGB24(9315170).toVector3f(), 1.0F), d, e, f, 0.4300000071525574, 0.18000000715255737, 0.2800000011920929);
             }
         }
 
@@ -144,7 +144,7 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
 
     public boolean doHurtTarget(Entity pEntity) {
         this.attackTime = 10;
-        this.level.broadcastEntityEvent(this, (byte) 4);
+        level().broadcastEntityEvent(this, (byte) 4);
         float f = (float) (7 + this.random.nextInt(15));
         float f1 = (int) f > 0 ? f / 2.0F + (float) this.random.nextInt((int) f) : f;
         boolean flag = pEntity.hurt(this.damageSources().mobAttack(this), f1);
@@ -198,7 +198,7 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         Entity entity = source.getDirectEntity();
         Entity attacker = source.getEntity();
         if (entity != null && source.is(DamageTypeTags.IS_PROJECTILE)) {
-            if (!level.isClientSide && attacker instanceof Player && ((Player) attacker).getMainHandItem() != Items.AIR.getDefaultInstance()) {
+            if (!level().isClientSide && attacker instanceof Player && ((Player) attacker).getMainHandItem() != Items.AIR.getDefaultInstance()) {
                 chatTime = 60;
                 attacker.sendSystemMessage(Component.translatable("gui.aether_genesis.boss.message.projectile"));
             }

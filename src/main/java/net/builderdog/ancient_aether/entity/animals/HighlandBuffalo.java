@@ -86,7 +86,7 @@ public class HighlandBuffalo extends AetherAnimal {
             playerEntity.playSound( AncientAetherSoundEvents.ENTITY_HIGHLAND_BUFFALO_MILK.get(), 1.0F, 1.0F);
             ItemStack itemStack1 = ItemUtils.createFilledResult(itemStack, playerEntity, Items.MILK_BUCKET.getDefaultInstance());
             playerEntity.setItemInHand(hand, itemStack1);
-            return InteractionResult.sidedSuccess(level.isClientSide);
+            return InteractionResult.sidedSuccess(level().isClientSide);
         } else {
             return super.mobInteract(playerEntity, hand);
         }

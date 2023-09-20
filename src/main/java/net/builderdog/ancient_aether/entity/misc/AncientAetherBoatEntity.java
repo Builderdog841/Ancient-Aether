@@ -16,6 +16,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.vehicle.Boat;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Supplier;
 
@@ -49,7 +50,7 @@ public class AncientAetherBoatEntity extends Boat implements SkyrootBoatBehavior
     }
 
     @Override
-    protected void addAdditionalSaveData(CompoundTag pCompound) {
+    protected void addAdditionalSaveData(@NotNull CompoundTag pCompound) {
         super.addAdditionalSaveData(pCompound);
         pCompound.putString("Type", this.getWoodType().getName());
     }
@@ -63,18 +64,18 @@ public class AncientAetherBoatEntity extends Boat implements SkyrootBoatBehavior
     }
 
     @Override
-    public Item getDropItem() {
+    public @NotNull Item getDropItem() {
         return this.getWoodType().getItem().get();
     }
 
     @Override
-    public Packet<ClientGamePacketListener> getAddEntityPacket() {
+    public @NotNull Packet<ClientGamePacketListener> getAddEntityPacket() {
         return new ClientboundAddEntityPacket(this);
     }
 
     public enum Type {
-        HIGHLANDS_PINE("highsproot", () -> AncientAetherItems.HIGHSPROOT_BOAT.get(), () -> AncientAetherItems.HIGHSPROOT_CHEST_BOAT.get()),
-        SAKURA("sakura", () -> AncientAetherItems.SAKURA_BOAT.get(), () -> AncientAetherItems.SAKURA_CHEST_BOAT.get());
+        HIGHLANDS_PINE("highsproot", AncientAetherItems.HIGHSPROOT_BOAT, AncientAetherItems.HIGHSPROOT_CHEST_BOAT),
+        SAKURA("sakura", AncientAetherItems.SAKURA_BOAT, AncientAetherItems.SAKURA_CHEST_BOAT);
 
         private final String name;
         private final Supplier<Item> item;
@@ -125,9 +126,9 @@ public class AncientAetherBoatEntity extends Boat implements SkyrootBoatBehavior
         public static Type byName(String name) {
             Type[] values = values();
 
-            for(int i = 0; i < values.length; ++i) {
-                if (values[i].getName().equals(name)) {
-                    return values[i];
+            for (Type value : values) {
+                if (value.getName().equals(name)) {
+                    return value;
                 }
             }
 

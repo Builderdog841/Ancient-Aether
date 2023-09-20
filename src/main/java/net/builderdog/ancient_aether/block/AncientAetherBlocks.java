@@ -29,8 +29,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.WoodType;
-import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -39,7 +38,7 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.function.Supplier;
 
 import static com.aetherteam.aether.block.AetherBlocks.*;
-import static net.minecraft.world.level.block.Blocks.AIR;
+import static net.minecraft.world.level.block.Blocks.*;
 
 public class AncientAetherBlocks  {
     public static final DeferredRegister<Block> BLOCKS =
@@ -65,9 +64,9 @@ public class AncientAetherBlocks  {
     public static final RegistryObject<PressurePlateBlock> HIGHSPROOT_PRESSURE_PLATE = registerBlock("highsproot_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.copy(Blocks.OAK_PRESSURE_PLATE), AncientAetherWoodTypes.HIGHSPROOT_BLOCK_SET));
     public static final RegistryObject<Block> HIGHSPROOT_WALL_SIGN = BLOCKS.register("highsproot_wall_sign", () -> new AncientAetherWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), AncientAetherWoodTypes.HIGHSPROOT));
     public static final RegistryObject<Block> HIGHSPROOT_SIGN = BLOCKS.register("highsproot_sign", () -> new AncientAetherSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), AncientAetherWoodTypes.HIGHSPROOT));
-    public static final RegistryObject<Block> HIGHSPROOT_LEAVES = registerBlock("highsproot_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.of(Material.LEAVES, MaterialColor.COLOR_BLUE).strength(0.2f).sound(SoundType.GRASS).noOcclusion().isValidSpawn(AncientAetherBlocks::ocelotOrParrot).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
+    public static final RegistryObject<Block> HIGHSPROOT_LEAVES = registerBlock("highsproot_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(SKYROOT_LEAVES.get()).strength(0.2f).sound(SoundType.GRASS).mapColor(MapColor.COLOR_BLUE).noOcclusion().isValidSpawn(AncientAetherBlocks::ocelotOrParrot).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
     public static final RegistryObject<Block> HIGHSPROOT_SAPLING = registerBlock("highsproot_sapling", () -> new SaplingBlock(new HighsprootTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-    public static final RegistryObject<Block> FROSTED_HIGHSPROOT_LEAVES = registerBlock("frosted_highsproot_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.of(Material.LEAVES, MaterialColor.COLOR_LIGHT_BLUE).strength(0.2f).sound(SoundType.GRASS).noOcclusion().isValidSpawn(AncientAetherBlocks::ocelotOrParrot).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
+    public static final RegistryObject<Block> FROSTED_HIGHSPROOT_LEAVES = registerBlock("frosted_highsproot_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(SKYROOT_LEAVES.get()).strength(0.2f).sound(SoundType.GRASS).mapColor(MapColor.COLOR_LIGHT_BLUE).noOcclusion().isValidSpawn(AncientAetherBlocks::ocelotOrParrot).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
     public static final RegistryObject<Block> FROSTED_HIGHSPROOT_SAPLING = registerBlock("frosted_highsproot_sapling", () -> new SaplingBlock(new FrostedHighsprootTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
     //Sakura Wood
@@ -90,24 +89,24 @@ public class AncientAetherBlocks  {
     public static final RegistryObject<PressurePlateBlock> SAKURA_PRESSURE_PLATE = registerBlock("sakura_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.copy(Blocks.OAK_PRESSURE_PLATE), AncientAetherWoodTypes.SAKURA_BLOCK_SET));
     public static final RegistryObject<Block> SAKURA_WALL_SIGN = BLOCKS.register("sakura_wall_sign", () -> new AncientAetherWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), AncientAetherWoodTypes.SAKURA));
     public static final RegistryObject<Block> SAKURA_SIGN = BLOCKS.register("sakura_sign", () -> new AncientAetherSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), AncientAetherWoodTypes.SAKURA));
-    public static final RegistryObject<Block> SAKURA_LEAVES = registerBlock("sakura_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.of(Material.LEAVES, MaterialColor.COLOR_PINK).strength(0.2f).sound(SoundType.GRASS).noOcclusion().isValidSpawn(AncientAetherBlocks::ocelotOrParrot).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
+    public static final RegistryObject<Block> SAKURA_LEAVES = registerBlock("sakura_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(SKYROOT_LEAVES.get()).strength(0.2f).sound(SoundType.GRASS).mapColor(MapColor.COLOR_PINK).strength(0.2f).sound(SoundType.GRASS).noOcclusion().isValidSpawn(AncientAetherBlocks::ocelotOrParrot).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
     public static final RegistryObject<Block> SAKURA_SAPLING = registerBlock("sakura_sapling", () -> new SaplingBlock(new SakuraTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
     //Stone Blocks
     public static final RegistryObject<RotatedPillarBlock> HOLYSTONE_BRICK_MOSAIC = registerBlock("holystone_brick_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.HOLYSTONE_BRICKS.get())));
-    public static final RegistryObject<Block> QUICKSTONE = registerBlock("quickstone", () -> new QuicksoilGlassBlock(BlockBehaviour.Properties.of(Material.STONE).strength(0.5F).friction(1.1F).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> QUICKSTONE = registerBlock("quickstone", () -> new QuicksoilGlassBlock(BlockBehaviour.Properties.copy(STONE).strength(0.5F).friction(1.1F).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> QUICKSTONE_STAIRS = registerBlock("quickstone_stairs", () -> new StairBlock(() -> QUICKSTONE.get().defaultBlockState(), (BlockBehaviour.Properties.copy(AncientAetherBlocks.QUICKSTONE.get()))));
     public static final RegistryObject<Block> QUICKSTONE_SLAB = registerBlock("quickstone_slab", () -> new QuickstoneSlabBlock(Block.Properties.copy(AncientAetherBlocks.QUICKSTONE.get()).strength(2.0F, 3.0F)));
-    public static final RegistryObject<Block> AETHER_QUARTZ_ORE = registerBlock("aether_quartz_ore", () -> new AetherDoubleDropsOreBlock(Block.Properties.of(Material.STONE, MaterialColor.QUARTZ).strength(3.0F).requiresCorrectToolForDrops(), UniformInt.of(2, 5)));
+    public static final RegistryObject<Block> AETHER_QUARTZ_ORE = registerBlock("aether_quartz_ore", () -> new AetherDoubleDropsOreBlock(Block.Properties.copy(NETHER_QUARTZ_ORE).strength(3.0F).requiresCorrectToolForDrops(), UniformInt.of(2, 5)));
 
     //Dungeon Blocks
-    public static final RegistryObject<Block> AEROTIC_STONE = registerBlock("aerotic_stone", () -> new Block(Block.Properties.of(Material.STONE, MaterialColor.TERRACOTTA_CYAN).strength(0.5F, 6.0F).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> AEROTIC_STONE = registerBlock("aerotic_stone", () -> new Block(Block.Properties.copy(STONE).strength(0.5F, 6.0F).mapColor(MapColor.COLOR_CYAN).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> AEROTIC_STAIRS = registerBlock("aerotic_stairs", () -> new StairBlock(() -> AEROTIC_STONE.get().defaultBlockState(), (Block.Properties.copy(AEROTIC_STONE.get()))));
     public static final RegistryObject<Block> AEROTIC_SLAB = registerBlock("aerotic_slab", () -> new SlabBlock(Block.Properties.copy(AEROTIC_STONE.get())));
     public static final RegistryObject<Block> AEROTIC_WALL = registerBlock("aerotic_wall", () -> new WallBlock(Block.Properties.copy(AEROTIC_STONE.get())));
     public static final RegistryObject<Block> LIGHT_AEROTIC_STONE = registerBlock("light_aerotic_stone", () -> new Block(Block.Properties.copy(AEROTIC_STONE.get()).lightLevel(s -> 11)));
     public static final RegistryObject<Block> CORRUPTED_LIGHT_AEROTIC_STONE = registerBlock("corrupted_light_aerotic_stone", () -> new Block(Block.Properties.copy(LIGHT_AEROTIC_STONE.get())));
-    public static final RegistryObject<Block> LOCKED_AEROTIC_STONE = registerBlock("locked_aerotic_stone", () -> new Block(Block.Properties.of(Material.STONE, MaterialColor.TERRACOTTA_CYAN).strength(-1.0F, 3600000.0F).noLootTable()));
+    public static final RegistryObject<Block> LOCKED_AEROTIC_STONE = registerBlock("locked_aerotic_stone", () -> new Block(Block.Properties.copy(AEROTIC_STONE.get()).strength(-1.0F, 3600000.0F).noLootTable()));
     public static final RegistryObject<Block> LOCKED_LIGHT_AEROTIC_STONE = registerBlock("locked_light_aerotic_stone", () -> new Block(Block.Properties.copy(LOCKED_AEROTIC_STONE.get()).lightLevel(s -> 11).noLootTable()));
     public static final RegistryObject<Block> LOCKED_CORRUPTED_LIGHT_AEROTIC_STONE = registerBlock("locked_corrupted_light_aerotic_stone", () -> new Block(Block.Properties.copy(LOCKED_LIGHT_AEROTIC_STONE.get()).noLootTable()));
     public static final RegistryObject<Block> TRAPPED_AEROTIC_STONE = registerBlock("trapped_aerotic_stone", () -> new TrappedBlock(AncientAetherEntities.LEAPING_SENTRY::get, () -> AEROTIC_STONE.get().defaultBlockState(), Block.Properties.copy(AEROTIC_STONE.get()).noLootTable()));
@@ -129,8 +128,8 @@ public class AncientAetherBlocks  {
     public static final RegistryObject<RotatedPillarBlock> LOCKED_HELLFIRE_STONE_MOSAIC = registerBlock("locked_hellfire_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_HELLFIRE_STONE.get()).noLootTable()));
     public static final RegistryObject<RotatedPillarBlock> LOCKED_GALE_STONE_MOSAIC = registerBlock("locked_gale_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_CARVED_STONE.get()).noLootTable()));
     public static final RegistryObject<RotatedPillarBlock> LOCKED_AEROTIC_STONE_MOSAIC = registerBlock("locked_aerotic_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_AEROTIC_STONE.get()).noLootTable()));
-    public static final RegistryObject<Block> DEACTIVATED_ANCIENT_OBELISK = registerBlock("unpowered_ancient_obelisk", () -> new UnpoweredObeliskBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).lightLevel(s -> 3).noLootTable().strength(-1.0F, 3600000.0F).noOcclusion()));
-    public static final RegistryObject<Block> ANCIENT_OBELISK = registerBlock("ancient_obelisk", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(5f).lightLevel(s -> 12).requiresCorrectToolForDrops().noOcclusion()));
+    public static final RegistryObject<Block> DEACTIVATED_ANCIENT_OBELISK = registerBlock("unpowered_ancient_obelisk", () -> new UnpoweredObeliskBlock(BlockBehaviour.Properties.copy(STONE).sound(SoundType.STONE).lightLevel(s -> 3).noLootTable().strength(-1.0F, 3600000.0F).noOcclusion()));
+    public static final RegistryObject<Block> ANCIENT_OBELISK = registerBlock("ancient_obelisk", () -> new Block(BlockBehaviour.Properties.copy(STONE).sound(SoundType.STONE).strength(5f).lightLevel(s -> 12).requiresCorrectToolForDrops().noOcclusion()));
 
     //Plants
     public static final RegistryObject<Block> HIGHLAND_VIOLA = registerBlock("highland_viola", () -> new FlowerBlock(() -> MobEffects.REGENERATION, 4, Block.Properties.copy(WHITE_FLOWER.get())));
@@ -148,15 +147,15 @@ public class AncientAetherBlocks  {
     public static final RegistryObject<FlowerPotBlock> POTTED_SAKURA_SAPLING = BLOCKS.register("potted_sakura_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SAKURA_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
 
     //Lanterns
-    public static final RegistryObject<Block> HOLYSTONE_LANTERN = registerBlock("holystone_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.LANTERN).strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 15)));
-    public static final RegistryObject<Block> SENTRY_LANTERN = registerBlock("sentry_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.LANTERN).strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 12)));
-    public static final RegistryObject<Block> ANGELIC_LANTERN = registerBlock("angelic_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.LANTERN).strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 12)));
-    public static final RegistryObject<Block> HELLFIRE_LANTERN = registerBlock("hellfire_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.LANTERN).strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 12)));
-    public static final RegistryObject<Block> GALE_LANTERN = registerBlock("gale_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.LANTERN).strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 12)));
-    public static final RegistryObject<Block> AEROTIC_LANTERN = registerBlock("aerotic_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.LANTERN).strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 12)));
+    public static final RegistryObject<Block> HOLYSTONE_LANTERN = registerBlock("holystone_lantern", () -> new LanternBlock(BlockBehaviour.Properties.copy(LANTERN).sound(SoundType.LANTERN).strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 15)));
+    public static final RegistryObject<Block> SENTRY_LANTERN = registerBlock("sentry_lantern", () -> new LanternBlock(BlockBehaviour.Properties.copy(LANTERN).sound(SoundType.LANTERN).strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 12)));
+    public static final RegistryObject<Block> ANGELIC_LANTERN = registerBlock("angelic_lantern", () -> new LanternBlock(BlockBehaviour.Properties.copy(LANTERN).sound(SoundType.LANTERN).strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 12)));
+    public static final RegistryObject<Block> HELLFIRE_LANTERN = registerBlock("hellfire_lantern", () -> new LanternBlock(BlockBehaviour.Properties.copy(LANTERN).sound(SoundType.LANTERN).strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 12)));
+    public static final RegistryObject<Block> GALE_LANTERN = registerBlock("gale_lantern", () -> new LanternBlock(BlockBehaviour.Properties.copy(LANTERN).sound(SoundType.LANTERN).strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 12)));
+    public static final RegistryObject<Block> AEROTIC_LANTERN = registerBlock("aerotic_lantern", () -> new LanternBlock(BlockBehaviour.Properties.copy(LANTERN).sound(SoundType.LANTERN).strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 12)));
 
     //Misc Blocks
-    public static final RegistryObject<Block> CRACKED_SLIDER = registerBlock("cracked_slider", () -> new CrackedSliderBlock(BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops().noOcclusion().lightLevel((state) -> state.getValue(RedstoneLampBlock.LIT) ? 15 : 0)));
+    public static final RegistryObject<Block> CRACKED_SLIDER = registerBlock("cracked_slider", () -> new CrackedSliderBlock(BlockBehaviour.Properties.copy(STONE).strength(5f).requiresCorrectToolForDrops().noOcclusion().lightLevel((state) -> state.getValue(RedstoneLampBlock.LIT) ? 15 : 0)));
     public static final RegistryObject<Block> TRAPPED_SAKURA_BLOSSOMS = registerBlock("trapped_sakura_blossoms", () -> new TrappedFlowerBlock(AncientAetherEntities.ROOTHYRN::get, AIR::defaultBlockState, Block.Properties.copy(SAKURA_BLOSSOMS.get())));
     public static final RegistryObject<Block> AMBROSIUM_CAMPFIRE = registerBlock("ambrosium_campfire", () -> new CampfireBlock(true, 1, Block.Properties.copy(Blocks.CAMPFIRE)));
 

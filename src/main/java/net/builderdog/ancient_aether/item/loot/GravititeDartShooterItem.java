@@ -21,7 +21,7 @@ public class GravititeDartShooterItem extends DartShooterItem {
     }
 
     public AbstractDart customDart(AbstractDart dart) {
-        GravititeDart gravititedart = new GravititeDart(dart.level);
+        GravititeDart gravititedart = new GravititeDart(dart.level());
         gravititedart.setOwner(dart.getOwner());
         if (gravititedart.getOwner() != null) {
             gravititedart.setPos(gravititedart.getOwner().getX(), gravititedart.getOwner().getEyeY() - 0.1, gravititedart.getOwner().getZ());

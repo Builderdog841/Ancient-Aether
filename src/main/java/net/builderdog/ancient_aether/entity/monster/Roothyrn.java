@@ -17,6 +17,7 @@ import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
@@ -39,7 +40,7 @@ public class Roothyrn extends Monster {
         super.registerGoals();
         this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
             @Override
-            protected double getAttackReachSqr(LivingEntity entity) {
+            protected double getAttackReachSqr(@NotNull LivingEntity entity) {
                 return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
             }
         });

@@ -24,9 +24,9 @@ public class GravititeDart extends GoldenDart {
 
     protected void onHitEntity(EntityHitResult entityHitResult) {
         super.onHitEntity(entityHitResult);
-        if (!level.isClientSide) {
+        if (!level().isClientSide) {
             Entity entity = entityHitResult.getEntity();
-            if (!entity.getType().is(AetherTags.Entities.UNLAUNCHABLE) && (entity.isOnGround() || entity.isInFluidType())) {
+            if (!entity.getType().is(AetherTags.Entities.UNLAUNCHABLE) && (entity.onGround() || entity.isInFluidType())) {
                 entity.push(0.0, 1.0, 0.0);
                 if (entity instanceof ServerPlayer serverPlayer) {
                     serverPlayer.connection.send(new ClientboundSetEntityMotionPacket(serverPlayer));

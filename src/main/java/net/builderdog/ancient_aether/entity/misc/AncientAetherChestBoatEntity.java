@@ -22,6 +22,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 
@@ -55,7 +56,7 @@ public class AncientAetherChestBoatEntity extends AncientAetherBoatEntity implem
     }
 
     @Override
-    protected void addAdditionalSaveData(CompoundTag pCompound) {
+    protected void addAdditionalSaveData(@NotNull CompoundTag pCompound) {
         super.addAdditionalSaveData(pCompound);
         this.addChestVehicleSaveData(pCompound);
     }
@@ -69,13 +70,13 @@ public class AncientAetherChestBoatEntity extends AncientAetherBoatEntity implem
     @Override
     public void destroy(DamageSource source) {
         super.destroy(source);
-        this.chestVehicleDestroyed(source, this.level, this);
+        this.chestVehicleDestroyed(source, level(), this);
     }
 
     @Override
     public void remove(RemovalReason pReason) {
-        if (!this.level.isClientSide && pReason.shouldDestroy()) {
-            Containers.dropContents(this.level, this, this);
+        if (!level().isClientSide && pReason.shouldDestroy()) {
+            Containers.dropContents(level(), this, this);
         }
 
         super.remove(pReason);
@@ -89,7 +90,7 @@ public class AncientAetherChestBoatEntity extends AncientAetherBoatEntity implem
     @Override
     public void openCustomInventoryScreen(Player player) {
         player.openMenu(this);
-        if (!player.level.isClientSide) {
+        if (!player.level().isClientSide) {
             this.gameEvent(GameEvent.CONTAINER_OPEN, player);
             PiglinAi.angerNearbyPiglins(player, true);
         }
@@ -97,7 +98,7 @@ public class AncientAetherChestBoatEntity extends AncientAetherBoatEntity implem
     }
 
     @Override
-    public Item getDropItem() {
+    public @NotNull Item getDropItem() {
         return this.getWoodType().getChestItem().get();
     }
 
@@ -141,12 +142,12 @@ public class AncientAetherChestBoatEntity extends AncientAetherBoatEntity implem
     }
 
     @Override
-    public boolean stillValid(Player pPlayer) {
+    public boolean stillValid(@NotNull Player pPlayer) {
         return this.isChestVehicleStillValid(pPlayer);
     }
 
     @Nullable
-    public AbstractContainerMenu createMenu(int pContainerId, Inventory pInventory, Player pPlayer) {
+    public AbstractContainerMenu createMenu(int pContainerId, @NotNull Inventory pInventory, @NotNull Player pPlayer) {
         if (this.lootTable != null && pPlayer.isSpectator()) {
             return null;
         } else {
