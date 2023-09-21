@@ -202,23 +202,23 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         slab(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.QUICKSTONE_SLAB.get(), AncientAetherBlocks.QUICKSTONE.get());
         slab(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROTIC_SLAB.get(), AncientAetherBlocks.AEROTIC_STONE.get());
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AetherBlocks.SKYROOT_BOOKSHELF.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.HIGHSPROOT_BOOKSHELF.get())
                 .define('P', AncientAetherBlocks.HIGHSPROOT_PLANKS.get())
                 .define('B', Items.BOOK)
                 .pattern("PPP")
                 .pattern("BBB")
                 .pattern("PPP")
                 .unlockedBy(getHasName(Items.BOOK), has(Items.BOOK))
-                .save(consumer, name("highsproot_bookshelf"));
+                .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AetherBlocks.SKYROOT_BOOKSHELF.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.SAKURA_BOOKSHELF.get())
                 .define('P', AncientAetherBlocks.SAKURA_PLANKS.get())
                 .define('B', Items.BOOK)
                 .pattern("PPP")
                 .pattern("BBB")
                 .pattern("PPP")
                 .unlockedBy(getHasName(Items.BOOK), has(Items.BOOK))
-                .save(consumer, name("sakura_bookshelf"));
+                .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.MAGENTA_DYE)
                 .group("magenta_dye")
