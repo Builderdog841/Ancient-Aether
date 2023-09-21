@@ -41,7 +41,7 @@ public class AncientAetherItems {
     public static final RegistryObject<Item> ANCIENT_DUNGEON_KEY = ITEMS.register("ancient_dungeon_key", () -> new DungeonKeyItem(new ResourceLocation(AncientAether.MOD_ID, "ancient"), new Item.Properties().stacksTo(1).rarity(AETHER_LOOT).fireResistant()));
 
     //Dungeon Loot
-    public static final RegistryObject<SwordItem> ANCIENT_SWORD = ITEMS.register("ancient_sword", () -> new AncientSwordItem());
+    public static final RegistryObject<SwordItem> ANCIENT_SWORD = ITEMS.register("ancient_sword", AncientSwordItem::new);
     public static final RegistryObject<Item> GRAVITITE_DART_SHOOTER = ITEMS.register("gravitite_dart_shooter", () -> new GravititeDartShooterItem(AetherItems.GOLDEN_DART, (new Item.Properties().stacksTo(1).rarity(AETHER_LOOT))));
     public static final RegistryObject<Item> STRENGTH_STONE = ITEMS.register("strength_stone", () -> new StrengthStoneItem(new Item.Properties().stacksTo(1).rarity(AETHER_LOOT)));
     public static final RegistryObject<Item> ANCIENT_RING = ITEMS.register("ancient_ring", () -> new AncientRingItem(new Item.Properties().stacksTo(1).rarity(AETHER_LOOT)));
