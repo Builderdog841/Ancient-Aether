@@ -30,5 +30,6 @@
     "recipes": [
       "aether:sky_blues_to_cyan_dye"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

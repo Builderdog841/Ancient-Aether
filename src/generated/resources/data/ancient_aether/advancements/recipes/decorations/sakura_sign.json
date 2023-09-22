@@ -30,5 +30,6 @@
     "recipes": [
       "ancient_aether:sakura_sign"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

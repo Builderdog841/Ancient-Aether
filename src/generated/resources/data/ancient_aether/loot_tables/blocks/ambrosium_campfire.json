@@ -14,7 +14,8 @@
           "name": "aether:ambrosium_shard"
         }
       ],
-      "rolls": 2.0
+      "rolls": 1.0
     }
-  ]
+  ],
+  "random_sequence": "ancient_aether:blocks/ambrosium_campfire"
 }

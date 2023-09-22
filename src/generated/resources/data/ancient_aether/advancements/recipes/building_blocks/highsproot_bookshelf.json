@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "aether:sakura_bookshelf"
+        "recipe": "ancient_aether:highsproot_bookshelf"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,8 @@
   ],
   "rewards": {
     "recipes": [
-      "aether:sakura_bookshelf"
+      "ancient_aether:highsproot_bookshelf"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

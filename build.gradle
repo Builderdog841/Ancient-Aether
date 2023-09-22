@@ -29,7 +29,7 @@ minecraft {
             property 'forge.enabledGameTestNamespaces', 'ancient_aether'
 
             mods {
-                deepaether {
+                examplemod {
                     source sourceSets.main
                 }
             }
@@ -76,7 +76,7 @@ minecraft {
             property "mixin.env.remapRefMap", "true"
             property "mixin.env.refMapRemappingFile", "${projectDir}/build/createSrgToMcp/output.srg"
 
-            args '--mod', 'deep_aether', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'ancient_aether', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             environment 'target', 'fmluserdevdata'
 

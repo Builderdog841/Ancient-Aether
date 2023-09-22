@@ -1,0 +1,12 @@
+{
+  "parent": "block/grass_block",
+  "textures": {
+    "particle": "aether:block/natural/aether_dirt",
+    "bottom": "aether:block/natural/aether_dirt",
+    "top": "aether:block/natural/aether_grass_block_top",
+    "side": "aether:block/natural/aether_grass_block_side",
+    "overlay": "aether:block/natural/aether_grass_block_side_overlay"
+  },
+  "tintindexes": "1",
+  "render_type": "cutout_mipped"
+}

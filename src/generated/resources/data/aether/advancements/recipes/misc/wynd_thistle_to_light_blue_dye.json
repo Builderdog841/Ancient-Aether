@@ -30,5 +30,6 @@
     "recipes": [
       "aether:wynd_thistle_to_light_blue_dye"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "aether:cooked_buffalo_ribs_from_campfire_cooking"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

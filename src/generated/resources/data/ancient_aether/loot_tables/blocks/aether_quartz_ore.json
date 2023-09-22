@@ -50,5 +50,6 @@
       ],
       "rolls": 1.0
     }
-  ]
+  ],
+  "random_sequence": "ancient_aether:blocks/aether_quartz_ore"
 }

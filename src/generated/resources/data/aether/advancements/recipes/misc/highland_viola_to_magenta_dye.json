@@ -30,5 +30,6 @@
     "recipes": [
       "aether:highland_viola_to_magenta_dye"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

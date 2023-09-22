@@ -30,5 +30,6 @@
     "recipes": [
       "ancient_aether:highsproot_stairs"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -24,5 +24,6 @@
     "recipes": [
       "ancient_aether:sakura_boat"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

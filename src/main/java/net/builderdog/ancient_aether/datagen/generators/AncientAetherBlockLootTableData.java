@@ -42,6 +42,8 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.HIGHSPROOT_PRESSURE_PLATE.get());
         dropSelf(AncientAetherBlocks.HIGHSPROOT_SIGN.get());
         dropSelf(AncientAetherBlocks.HIGHSPROOT_WALL_SIGN.get());
+        dropSelf(AncientAetherBlocks.HIGHSPROOT_HANGING_SIGN.get());
+        dropSelf(AncientAetherBlocks.HIGHSPROOT_WALL_HANGING_SIGN.get());
         dropSelf(AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
         dropSelf(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get());
         add(AncientAetherBlocks.HIGHSPROOT_LEAVES.get(),
@@ -71,6 +73,8 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get());
         dropSelf(AncientAetherBlocks.SAKURA_SIGN.get());
         dropSelf(AncientAetherBlocks.SAKURA_WALL_SIGN.get());
+        dropSelf(AncientAetherBlocks.SAKURA_HANGING_SIGN.get());
+        dropSelf(AncientAetherBlocks.SAKURA_WALL_HANGING_SIGN.get());
         dropSelf(AncientAetherBlocks.SAKURA_SAPLING.get());
         add(AncientAetherBlocks.SAKURA_LEAVES.get(),
                 (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.SAKURA_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));

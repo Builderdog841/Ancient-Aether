@@ -30,5 +30,6 @@
     "recipes": [
       "ancient_aether:ancient_rune"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

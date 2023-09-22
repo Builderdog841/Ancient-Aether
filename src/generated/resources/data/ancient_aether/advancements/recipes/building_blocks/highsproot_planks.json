@@ -28,5 +28,6 @@
     "recipes": [
       "ancient_aether:highsproot_planks"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

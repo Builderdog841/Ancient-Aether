@@ -1,4 +1,4 @@
-// 1.19.4	2023-09-17T14:12:46.6508726	Item Models: ancient_aether
+// 1.20.1	2023-09-22T19:31:07.3119616	Item Models: ancient_aether
 dc22e9f245c5e59d55b0aec4ae45dec8337daa28 assets/ancient_aether/models/item/aerogel_bottle.json
 2b792d3780c8a2525546b071319a3e5ed1ab9ac4 assets/ancient_aether/models/item/aerotic_lantern.json
 6f8b483fe39f1c9ec95642516d3878f574aeb929 assets/ancient_aether/models/item/aerotic_slab.json
@@ -24,6 +24,7 @@ fbd830b4a955ffc654b7582bfed186176715ba49 assets/ancient_aether/models/item/hellf
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/highland_buffalo_spawn_egg.json
 686ec049e0fc08064a073c0ef953e17535bdf5af assets/ancient_aether/models/item/highland_viola.json
 cbf95b10f250b1c7368179866d5c5f431a2a6a80 assets/ancient_aether/models/item/highsproot_boat.json
+befbd64363614d0071c8ef07a1c295928d483119 assets/ancient_aether/models/item/highsproot_bookshelf.json
 82f801a89ca15326afea823a172f336e1d0ee7c1 assets/ancient_aether/models/item/highsproot_button.json
 1c4e81b551053ffcb2dcbbd50a1ff820a2510ad3 assets/ancient_aether/models/item/highsproot_chest_boat.json
 fb3e9c920a4172db7b45ac21daff33c046429a94 assets/ancient_aether/models/item/highsproot_door.json
@@ -44,6 +45,7 @@ db9205c807c1c097354713164dbfe06e10bc40ae assets/ancient_aether/models/item/quick
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/roothyrn_spawn_egg.json
 6acc619f3923ed633742023516b313c1ef089100 assets/ancient_aether/models/item/sakura_blossoms.json
 f6ec6ffe46ca890025a12785250d13129a973a1a assets/ancient_aether/models/item/sakura_boat.json
+48b48509cb977fdd51219fbdd14f79e3b310a3dd assets/ancient_aether/models/item/sakura_bookshelf.json
 9c16aadb762696604cfec2c6ad0cc651c0a3dc9b assets/ancient_aether/models/item/sakura_button.json
 9cd7f066146f2e9a7f99fde45d786b63b4b40122 assets/ancient_aether/models/item/sakura_chest_boat.json
 d77d8a8a8ad2347a045eb49938e291faa4f5dd14 assets/ancient_aether/models/item/sakura_door.json

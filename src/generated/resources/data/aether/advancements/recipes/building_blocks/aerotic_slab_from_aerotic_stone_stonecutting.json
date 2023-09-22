@@ -30,5 +30,6 @@
     "recipes": [
       "aether:aerotic_slab_from_aerotic_stone_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

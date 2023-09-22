@@ -30,5 +30,6 @@
     "recipes": [
       "aether:enchanting_table_from_gravitite"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

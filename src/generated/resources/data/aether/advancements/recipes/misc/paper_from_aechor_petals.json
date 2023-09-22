@@ -30,5 +30,6 @@
     "recipes": [
       "aether:paper_from_aechor_petals"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

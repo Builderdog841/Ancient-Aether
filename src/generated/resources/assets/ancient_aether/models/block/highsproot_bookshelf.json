@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "ancient_aether:block/construction/highsproot_planks",
+    "side": "ancient_aether:block/construction/highsproot_bookshelf"
+  }
+}
