@@ -17,6 +17,7 @@ import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.builderdog.ancient_aether.world.biomemodifier.AncientAetherBiomeModifierSerializers;
 import net.builderdog.ancient_aether.world.biomes.AncientAetherRegion;
 import net.builderdog.ancient_aether.world.biomes.AncientAetherSurfaceData;
+import net.builderdog.ancient_aether.world.feature.AncientAetherFeatures;
 import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherFoliagePlacerTypes;
 import net.builderdog.ancient_aether.world.structure.AncientAetherStructureTypes;
 import net.minecraft.SharedConstants;
@@ -75,6 +76,7 @@ public class AncientAether {
         AncientAetherBlocks.registerWoodTypes();
         AncientAetherEntities.ENTITY_TYPES.register(modEventBus);
         AncientAetherSoundEvents.SOUNDS.register(modEventBus);
+        AncientAetherFeatures.FEATURES.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::clientSetup);

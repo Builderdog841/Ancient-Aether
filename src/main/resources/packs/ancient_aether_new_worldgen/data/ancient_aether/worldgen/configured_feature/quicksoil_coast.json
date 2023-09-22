@@ -1,5 +1,5 @@
 {
-  "type": "aether:shelf",
+  "type": "ancient_aether:coast",
   "config": {
     "block": {
       "type": "minecraft:simple_state_provider",
@@ -13,8 +13,8 @@
     "radius": 10.55,
     "valid_blocks": "#aether:aether_dirt",
     "y_range": {
-      "max_inclusive": 112,
-      "min_inclusive": 111
+      "max_inclusive": 80,
+      "min_inclusive": 79
     }
   }
 }
