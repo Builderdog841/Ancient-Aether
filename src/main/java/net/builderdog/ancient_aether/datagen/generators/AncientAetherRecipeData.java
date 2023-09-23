@@ -171,6 +171,26 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .unlockedBy(getHasName(AncientAetherBlocks.SAKURA_PLANKS.get()), has(AncientAetherBlocks.SAKURA_PLANKS.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherBlocks.HIGHSPROOT_HANGING_SIGN.get(), 6)
+                .group("hanging_sign")
+                .define('#', AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get())
+                .define('X', Items.CHAIN)
+                .pattern("X X")
+                .pattern("###")
+                .pattern("###")
+                .unlockedBy("has_stripped_logs", has(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherBlocks.SAKURA_HANGING_SIGN.get(), 6)
+                .group("hanging_sign")
+                .define('#', AncientAetherBlocks.STRIPPED_SAKURA_LOG.get())
+                .define('X', Items.CHAIN)
+                .pattern("X X")
+                .pattern("###")
+                .pattern("###")
+                .unlockedBy("has_stripped_logs", has(AncientAetherBlocks.STRIPPED_SAKURA_LOG.get()))
+                .save(consumer);
+
         pressurePlateBuilder(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get(), Ingredient.of(AetherBlocks.HOLYSTONE_BRICK_SLAB.get())).unlockedBy(getHasName(AetherBlocks.HOLYSTONE_BRICK_SLAB.get()), has(AetherBlocks.HOLYSTONE_BRICK_SLAB.get())).save(consumer);
         pressurePlateBuilder(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_STONE_MOSAIC.get(), Ingredient.of(AetherBlocks.CARVED_SLAB.get())).unlockedBy(getHasName(AetherBlocks.CARVED_SLAB.get()), has(AetherBlocks.CARVED_SLAB.get())).save(consumer);
         pressurePlateBuilder(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get(), Ingredient.of(AetherBlocks.ANGELIC_SLAB.get())).unlockedBy(getHasName(AetherBlocks.ANGELIC_SLAB.get()), has(AetherBlocks.ANGELIC_SLAB.get())).save(consumer);
