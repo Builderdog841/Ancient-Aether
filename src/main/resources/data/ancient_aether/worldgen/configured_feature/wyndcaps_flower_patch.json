@@ -30,7 +30,7 @@
         }
       },
       {
-        "chance": 0.2,
+        "chance": 0.3,
         "feature": {
           "feature": "ancient_aether:sky_blues_patch",
           "placement": [
