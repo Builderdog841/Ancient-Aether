@@ -78,13 +78,13 @@ public class AncientAetherRegion extends Region {
         addBiome(mapper, new Climate.ParameterPoint(tempDefault2, Climate.Parameter.span(0.0F, 0.3F), fullRange, fullRange, Climate.Parameter.span(-1.0F, 0.3F), fullRange, 0),
                 AncientAetherBiomes.SKYROOT_PINE_FOREST);
 
-        addBiome(mapper, new Climate.ParameterPoint(tempSakura1, Climate.Parameter.span(-1.0F, 0.5F), fullRange, fullRange, Climate.Parameter.span(0.2F, 1.0F), fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempSakura1, Climate.Parameter.span(-1.0F, 0.6F), fullRange, fullRange, Climate.Parameter.span(0.2F, 1.0F), fullRange, 0),
                 AncientAetherBiomes.OVERGROWN_CAVERNS);
-        addBiome(mapper, new Climate.ParameterPoint(tempSakura1, Climate.Parameter.span(-1.0F, 0.5F), fullRange, fullRange, Climate.Parameter.span(-1.0F, 0.2F), fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempSakura1, Climate.Parameter.span(-1.0F, 0.6F), fullRange, fullRange, Climate.Parameter.span(-1.0F, 0.2F), fullRange, 0),
                 AncientAetherBiomes.SAKURA_JUNGLE);
-        addBiome(mapper, new Climate.ParameterPoint(tempSakura2, Climate.Parameter.span(-1.0F, 0.5F), fullRange, fullRange, Climate.Parameter.span(-1.0F, 0.2F), fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempSakura2, Climate.Parameter.span(-1.0F, 0.6F), fullRange, fullRange, Climate.Parameter.span(-1.0F, 0.2F), fullRange, 0),
                 AncientAetherBiomes.SKYROOT_JUNGLE);
-        addBiome(mapper, new Climate.ParameterPoint(tempSakura3, Climate.Parameter.span(-1.0F, 0.5F), fullRange, fullRange, Climate.Parameter.span(-1.0F, 0.2F), fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempSakura3, Climate.Parameter.span(-1.0F, 0.6F), fullRange, fullRange, Climate.Parameter.span(-1.0F, 0.2F), fullRange, 0),
                 AncientAetherBiomes.SKYROOT_JUNGLE);
 
         addBiome(mapper, new Climate.ParameterPoint(tempDefault2, Climate.Parameter.span(0.3F, 0.4F), fullRange, fullRange, Climate.Parameter.span(0.2F, 1.0F), fullRange, 0),
