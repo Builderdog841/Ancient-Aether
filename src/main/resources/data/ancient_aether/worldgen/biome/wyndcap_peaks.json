@@ -169,12 +169,6 @@
         "weight": 20
       },
       {
-        "type": "aether:flying_cow",
-        "maxCount": 5,
-        "minCount": 2,
-        "weight": 6
-      },
-      {
         "type": "aether:aerbunny",
         "maxCount": 3,
         "minCount": 3,
