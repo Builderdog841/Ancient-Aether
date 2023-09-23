@@ -173,9 +173,10 @@
   "ancient_aether.pouch.accessory": "Accessory Pouch Exclusive",
 
   "lore.block.ancient_aether.holystone_brick_mosaic": "A fancy Holystone Brick variant that can be rotated in various different directions.",
-  "lore.block.ancient_aether.sentry_stone_mosaic": "A fancy Carved Stone variant that can be rotated in various different directions.",
+  "lore.block.ancient_aether.carved_stone_mosaic": "A fancy Carved Stone variant that can be rotated in various different directions.",
   "lore.block.ancient_aether.angelic_stone_mosaic": "A fancy Angelic Stone variant that can be rotated in various different directions.",
   "lore.block.ancient_aether.hellfire_stone_mosaic": "A fancy Hellfire Stone variant that can be rotated in various different directions.",
+  "lore.block.ancient_aether.aerotic_stone_mosaic": "A fancy Aerotic Stone variant that can be rotated in various different directions.",
   "lore.block.ancient_aether.gale_stone_mosaic": "A fancy Gale Stone variant that can be rotated in various different directions.",
   "lore.block.ancient_aether.holystone_lantern": "A decoration block that is crafted from Holystone, Skyroot Sticks and an Ambrosium Torch. This Lantern also works in the Aether.",
   "lore.block.ancient_aether.sentry_lantern": "A decoration block that is crafted from Carved Stone, Sentry Stone and an Ambrosium Torch. This Lantern also works in the Aether.",
