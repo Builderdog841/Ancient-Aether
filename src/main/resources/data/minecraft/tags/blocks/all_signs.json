@@ -4,6 +4,10 @@
     "ancient_aether:highsproot_sign",
     "ancient_aether:highsproot_wall_sign",
     "ancient_aether:sakura_sign",
-    "ancient_aether:sakura_wall_sign"
+    "ancient_aether:sakura_wall_sign",
+    "ancient_aether:highsproot_hanging_sign",
+    "ancient_aether:highsproot_wall_hanging_sign",
+    "ancient_aether:sakura_hanging_sign",
+    "ancient_aether:sakura_wall_hanging_sign"
   ]
 }
