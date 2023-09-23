@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.event;
 
+import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.entity.passive.AetherAnimal;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
@@ -8,11 +9,15 @@ import net.builderdog.ancient_aether.entity.boss.ancient_guardian.AncientGuardia
 import net.builderdog.ancient_aether.entity.monster.LeapingSentry;
 import net.builderdog.ancient_aether.entity.monster.Roothyrn;
 import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.level.GrassColor;
 import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.entity.SpawnPlacementRegisterEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+
+import static net.minecraft.client.renderer.BiomeColors.getAverageGrassColor;
 
 @Mod.EventBusSubscriber(modid = AncientAether.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class AncientAetherEvents {

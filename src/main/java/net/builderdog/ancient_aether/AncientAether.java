@@ -5,7 +5,6 @@ import com.aetherteam.aether.AetherConfig;
 import com.aetherteam.cumulus.CumulusConfig;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
-import net.builderdog.ancient_aether.client.AncientAetherBlockColors;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.datagen.generators.AncientAetherBlockStateData;
 import net.builderdog.ancient_aether.datagen.generators.AncientAetherItemModelData;
@@ -34,7 +33,6 @@ import net.minecraft.server.packs.repository.PackSource;
 import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.ComposterBlock;
-import net.minecraft.world.level.block.GrassBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -108,7 +106,6 @@ public class AncientAether {
         event.enqueueWork(() -> {
             AncientAetherBlocks.registerPots();
             AncientAetherBlocks.registerFlammability();
-            AncientAetherBlockColors.createDefault();
 
             registerComposting();
         });
