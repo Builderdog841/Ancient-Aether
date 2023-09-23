@@ -200,7 +200,7 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         if (entity != null && source.is(DamageTypeTags.IS_PROJECTILE)) {
             if (!level().isClientSide && attacker instanceof Player && ((Player) attacker).getMainHandItem() != Items.AIR.getDefaultInstance()) {
                 chatTime = 60;
-                attacker.sendSystemMessage(Component.translatable("gui.aether_genesis.boss.message.projectile"));
+                attacker.sendSystemMessage(Component.literal("gui.aether_genesis.boss.message.projectile"));
             }
 
             return false;
