@@ -236,6 +236,12 @@
   "lore.block.ancient_aether.cracked_slider": "A failed experiment of the Ancient Valkyries that can only be mined by Gravitite or better Pickaxes. It also some Redstone functionality.",
   "lore.block.ancient_aether.unpowered_aerotic_obelisk": "Found at the entrances of Ancient Dungeons, this block can be unlocked by Ancient Runes.",
   "lore.block.ancient_aether.ancient_obelisk": "A fancy decoration block which can only be mined with a Gravitite Pickaxe or better.",
+  "lore.block.aether.highsproot_bookshelf": "Crafted from Highsproot Planks and Books. Bookshelves can be used to enhance the enchanting capabilities of an Enchanting Table.",
+  "lore.block.aether.sakura_bookshelf": "Crafted from Sakura Planks and Books. Bookshelves can be used to enhance the enchanting capabilities of an Enchanting Table.",
+  "lore.block.aether.carved_slab": "Crafted from Carved Stone. Slabs are half blocks, versatile for decoration and smooth slopes. Try adding some to a building's roofing!",
+  "lore.block.aether.carved_stairs": "Crafted from Carved Stone. Stairs are useful for adding verticality to builds and are often used for decoration too!",
+  "lore.block.aether.carved_stone": "The stone found in Bronze Dungeons. This stone has a gray color to it and can be mined as a decorative block.",
+  "lore.block.aether.carved_wall": "Crafted from Carved Stone. Can be used for decorative enclosures and defenses. Great for keeping nasty intruders away!",
 
   "lore.item.ancient_aether.grapes": "They can be sometimes found on a field in Valkyrie Settlements as this is the favourite fruit of the Valkyries. They can be crafted into Valkyrie Wine.",
   "lore.item.ancient_aether.ancient_rune": "Found in Sentry Laboratories, this Rune is the key to the Ancient Dungeon as it unlocks Broken Sentry Obelisks. It can also be duplicated using 7 Enchanted Gravitite and 1 Ancient Sentry Stone.",
@@ -254,5 +260,6 @@
   "lore.item.ancient_aether.sakura_boat": "While the Aether does not have many large bodies of water, a boat can occasionally be a useful tool for crossing large distances over ice!",
   "lore.item.ancient_aether.highsproot_chest_boat": "A Highsproot Boat with a handy chest in the back. Helpful for transporting more items over long stretches of water, which are famously difficult to find in the Aether.",
   "lore.item.ancient_aether.sakura_chest_boat": "A Sakura Boat with a handy chest in the back. Helpful for transporting more items over long stretches of water, which are famously difficult to find in the Aether.",
-  "lore.item.ancient_aether.sakura_moa_egg": "A very rare Moa Egg that can only be found in Ancient Dungeon Chests. Hatching this provides a Sakura Moa with 10 mid-air jumps."
+  "lore.item.ancient_aether.sakura_moa_egg": "A very rare Moa Egg that can only be found in Ancient Dungeon Chests. Hatching this provides a Sakura Moa with 10 mid-air jumps.",
+  "lore.item.ancient_aether.gravitite_dart_shooter": "A reward from defeating the Ancient Guardian. This Dart Shooter launches Mobs high up in the air similar to Gravitite Equipment. You can use any type of Dart as Ammunition."
 }

@@ -51,6 +51,10 @@
     "ancient_aether:ancient_obelisk",
     "#ancient_aether:aerotic_blocks",
     "#ancient_aether:aether_lanterns",
-    "#ancient_aether:ancient_aether_log_walls"
+    "#ancient_aether:ancient_aether_log_walls",
+    "ancient_aether:highsproot_hanging_sign",
+    "ancient_aether:highsproot_wall_hanging_sign",
+    "ancient_aether:sakura_hanging_sign",
+    "ancient_aether:sakura_wall_hanging_sign"
   ]
 }
