@@ -10,7 +10,7 @@
     "radius": 6.1423,
     "valid_blocks": "#aether:aether_island_blocks",
     "y_range": {
-      "max_inclusive": 96,
+      "max_inclusive": 110,
       "min_inclusive": 79
     }
   }
