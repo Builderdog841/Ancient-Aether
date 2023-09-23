@@ -1,5 +1,5 @@
 {
-  "type": "ancient_aether:shelf",
+  "type": "aether:shelf",
   "config": {
     "block": {
       "type": "minecraft:simple_state_provider",
