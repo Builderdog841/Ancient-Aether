@@ -1,4 +1,4 @@
-// 1.20.1	2023-09-22T19:31:07.3119616	Item Models: ancient_aether
+// 1.20.1	2023-09-23T17:25:56.8600424	Item Models: ancient_aether
 dc22e9f245c5e59d55b0aec4ae45dec8337daa28 assets/ancient_aether/models/item/aerogel_bottle.json
 2b792d3780c8a2525546b071319a3e5ed1ab9ac4 assets/ancient_aether/models/item/aerotic_lantern.json
 6f8b483fe39f1c9ec95642516d3878f574aeb929 assets/ancient_aether/models/item/aerotic_slab.json
@@ -30,6 +30,7 @@ befbd64363614d0071c8ef07a1c295928d483119 assets/ancient_aether/models/item/highs
 fb3e9c920a4172db7b45ac21daff33c046429a94 assets/ancient_aether/models/item/highsproot_door.json
 8f430c0d05c70b5c0329f2237e74ac2f98d91a26 assets/ancient_aether/models/item/highsproot_fence.json
 b9233070ef984a838dcb566437f3ee9f3fd96056 assets/ancient_aether/models/item/highsproot_fence_gate.json
+cd491f85eb87718817f934bc04f950cff1141332 assets/ancient_aether/models/item/highsproot_hanging_sign.json
 546d37cc6f538cc15997afcd8e4811c788f08e92 assets/ancient_aether/models/item/highsproot_log_wall.json
 1d2a93167d82473c7ea235e811e4f5d3a381ddc5 assets/ancient_aether/models/item/highsproot_pressure_plate.json
 a09c8a9c88c0129d212714128a7036ab88bd2471 assets/ancient_aether/models/item/highsproot_sapling.json
@@ -51,6 +52,7 @@ f6ec6ffe46ca890025a12785250d13129a973a1a assets/ancient_aether/models/item/sakur
 d77d8a8a8ad2347a045eb49938e291faa4f5dd14 assets/ancient_aether/models/item/sakura_door.json
 db66aca6e4e03a59bb47eff623baddd1bfb5d81f assets/ancient_aether/models/item/sakura_fence.json
 701bba795487dbee8c78cf54b7ff0a749466b0fc assets/ancient_aether/models/item/sakura_fence_gate.json
+8e48ee060d465fa49854296acbd6ae38b22aac1b assets/ancient_aether/models/item/sakura_hanging_sign.json
 1c502c6928d20ba985b4253a2ddcf18e43080112 assets/ancient_aether/models/item/sakura_log_wall.json
 5e063b6b15bde5114f543d0f714c8780d70b9cba assets/ancient_aether/models/item/sakura_moa_egg.json
 77a1f8c88c8cb8460cc30f1faaa1a52f01c2d362 assets/ancient_aether/models/item/sakura_pressure_plate.json

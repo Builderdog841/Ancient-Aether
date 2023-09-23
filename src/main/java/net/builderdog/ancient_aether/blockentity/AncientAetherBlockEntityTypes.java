@@ -16,6 +16,11 @@ public class AncientAetherBlockEntityTypes {
             AncientAetherBlocks.SAKURA_SIGN.get(), AncientAetherBlocks.SAKURA_WALL_SIGN.get()
     ).build(null));
 
+    public static final RegistryObject<BlockEntityType<AncientAetherHangingSignBlockEntity>> HANGING_SIGN = BLOCK_ENTITY_TYPES.register("hanging_sign", () -> BlockEntityType.Builder.of(AncientAetherHangingSignBlockEntity::new,
+            AncientAetherBlocks.HIGHSPROOT_HANGING_SIGN.get(), AncientAetherBlocks.HIGHSPROOT_WALL_HANGING_SIGN.get(),
+            AncientAetherBlocks.SAKURA_HANGING_SIGN.get(), AncientAetherBlocks.SAKURA_WALL_HANGING_SIGN.get()
+    ).build(null));
+
     public static final RegistryObject<BlockEntityType<CampfireBlockEntity>> CAMPFIRE = BLOCK_ENTITY_TYPES.register("campfire", () -> BlockEntityType.Builder.of(CampfireBlockEntity::new,
             AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get()
     ).build(null));
