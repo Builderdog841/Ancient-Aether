@@ -169,10 +169,11 @@
   "gui.ancient_aether.ancient_guardian.title": "the Ancient Guardian",
   "gui.ancient_aether.ancient_core.title": "the Ancient Core",
 
-  "ancient_aether.menu_title.ancient_aether": "Ancient Aether",
-
   "ancient_aether.dungeon.ancient_dungeon": "Ancient Dungeon",
   "ancient_aether.pouch.accessory": "Accessory Pouch Exclusive",
+
+  "menu.ancient_aether.ancient_treasure_chest": "Ancient Treasure Chest",
+  "ancient_aether.ancient_treasure_chest_locked": "This Treasure Chest must be unlocked with an Ancient Key",
 
   "lore.block.ancient_aether.holystone_brick_mosaic": "A fancy Holystone Brick variant that can be rotated in various different directions.",
   "lore.block.ancient_aether.carved_stone_mosaic": "A fancy Carved Stone variant that can be rotated in various different directions.",
