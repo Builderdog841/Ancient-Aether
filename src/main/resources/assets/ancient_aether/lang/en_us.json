@@ -165,9 +165,11 @@
   "advancement.ancient_aether.roothyrn_trap": "Surprise!",
   "advancement.ancient_aether.roothyrn_trap.desc": "You fell right into the trap of a Roothyrn",
 
-  "gui.ancient_aether.obelisk_valkyrie_queen": "You haven't defeated the Valkyrie Queen yet",
+  "gui.ancient_aether.obelisk_sun_spirit": "You haven't defeated the Sun Spirit yet",
   "gui.ancient_aether.ancient_guardian.title": "the Ancient Guardian",
   "gui.ancient_aether.ancient_core.title": "the Ancient Core",
+
+  "ancient_aether.menu_title.ancient_aether": "Ancient Aether",
 
   "ancient_aether.dungeon.ancient_dungeon": "Ancient Dungeon",
   "ancient_aether.pouch.accessory": "Accessory Pouch Exclusive",

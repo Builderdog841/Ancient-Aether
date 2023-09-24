@@ -42,6 +42,7 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.event.AddPackFindersEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -50,7 +51,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.resource.PathPackResources;
 //import org.slf4j.Logger;
 import teamrazor.aeroblender.aether.AetherRuleCategory;
@@ -59,7 +59,6 @@ import terrablender.api.SurfaceRuleManager;
 
 import java.nio.file.Path;
 import java.util.concurrent.CompletableFuture;
-import java.util.function.Supplier;
 
 import static com.aetherteam.aether.Aether.DIRECTORY;
 
@@ -72,27 +71,39 @@ public class AncientAether {
     public AncientAether() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        AncientAetherBiomeModifierSerializers.BIOME_MODIFIER_SERIALIZERS.register(modEventBus);
-        AncientAetherItems.ITEMS.register(modEventBus);
-        AncientAetherMoaTypes.MOA_TYPES.register(modEventBus);
-        AncientAetherBlocks.BLOCKS.register(modEventBus);
-        AncientAetherFoliagePlacerTypes.FOLIAGE_PLACERS.register(modEventBus);
-        AncientAetherBlockEntityTypes.BLOCK_ENTITY_TYPES.register(modEventBus);
-        AncientAetherStructureTypes.STRUCTURE_TYPES.register(modEventBus);
-        AncientAetherBlocks.registerWoodTypes();
-        AncientAetherEntities.ENTITY_TYPES.register(modEventBus);
-        AncientAetherSoundEvents.SOUNDS.register(modEventBus);
-        AncientAetherFeatures.FEATURES.register(modEventBus);
-
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::clientSetup);
         modEventBus.addListener(this::packSetup);
         modEventBus.addListener(this::dataSetup);
 
-        MinecraftForge.EVENT_BUS.register(this);
+        DeferredRegister<?>[] registers = {
+
+                AncientAetherItems.ITEMS,
+                AncientAetherMoaTypes.MOA_TYPES,
+                AncientAetherBlocks.BLOCKS,
+                AncientAetherFoliagePlacerTypes.FOLIAGE_PLACERS,
+                AncientAetherBlockEntityTypes.BLOCK_ENTITY_TYPES,
+                AncientAetherStructureTypes.STRUCTURE_TYPES,
+                AncientAetherEntities.ENTITY_TYPES,
+                AncientAetherSoundEvents.SOUNDS,
+                AncientAetherFeatures.FEATURES,
+                AncientAetherBiomeModifierSerializers.BIOME_MODIFIER_SERIALIZERS,
+
+                };
 
         DIRECTORY.toFile().mkdirs();
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, AncientAetherConfig.COMMON_SPEC);
+
+        AncientAetherBlocks.registerWoodTypes();
+
+        for (DeferredRegister<?> register : registers) {
+            register.register(modEventBus);
+        }
+
+        DistExecutor.unsafeRunForDist(() -> () -> {
+            AncientAetherMenus.MENUS.register(modEventBus);
+            return true;
+        }, () -> () -> false);
     }
 
     private void clientSetup(FMLClientSetupEvent event) {
@@ -188,7 +199,6 @@ public class AncientAether {
     private void addCompost(float chance, ItemLike item) {
         ComposterBlock.COMPOSTABLES.put(item.asItem(), chance);
     }
-
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
     }

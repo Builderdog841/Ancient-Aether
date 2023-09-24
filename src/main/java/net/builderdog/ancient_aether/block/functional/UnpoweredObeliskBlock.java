@@ -107,7 +107,7 @@ public class UnpoweredObeliskBlock extends Block {
             }
         } else {
             if (!level.isClientSide) {
-                player.displayClientMessage(Component.translatable("gui.ancient_aether.obelisk_valkyrie_queen").withStyle(ChatFormatting.RED), true);
+                player.displayClientMessage(Component.translatable("gui.ancient_aether.obelisk_sun_spirit").withStyle(ChatFormatting.RED), true);
             } else {
                 level.playSound(player, pos, AncientAetherSoundEvents.OBELISK_ACTIVATION.get(), SoundSource.BLOCKS, 0.8f,
                         0.5f + (((float) (Math.pow(level.random.nextDouble(), 2.5))) * 0.5f));
