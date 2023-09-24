@@ -6,21 +6,20 @@ import org.apache.commons.lang3.tuple.Pair;
 
 public class AncientAetherConfig {
 
+
     public static class Common {
 
         public final ConfigValue<Integer> ancient_aether_biome_weight;
-
         public Common(ForgeConfigSpec.Builder builder) {
 
             builder.push("Gameplay");
             ancient_aether_biome_weight = builder
-                    .comment("The weighting of Ancient Aether regions in the aether")
+                    .comment("The weighting of Ancient Aether regions in the Aether")
                     .translation("config.ancient_aether.common.gameplay.ancient_aether_region_weight")
                     .define("Ancient Aether Region Weight", 20);
             builder.pop();
         }
     }
-
 
     public static final ForgeConfigSpec COMMON_SPEC;
     public static final Common COMMON;
