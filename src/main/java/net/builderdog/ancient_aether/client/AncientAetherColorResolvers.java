@@ -62,17 +62,16 @@ public class AncientAetherColorResolvers {
                     }
                 }
 
-                return ((BlockColor)entry.getValue()).getColor(state, level, pos, tintIndex);
-            }, (Block)entry.getKey());
+                return (entry.getValue()).getColor(state, level, pos, tintIndex);
+            }, entry.getKey());
         }
-
     }
 
     @SubscribeEvent
     static void registerItemColor(RegisterColorHandlersEvent.Item event) {
         event.register((color, itemProvider) -> {
             return itemProvider > 0 ? -1 : ((DyeableLeatherItem)color.getItem()).getColor(color);
-        }, (ItemLike) AetherItems.LEATHER_GLOVES.get());
+        }, AetherItems.LEATHER_GLOVES.get());
         Iterator var1 = MoaEggItem.moaEggs().iterator();
 
         while(var1.hasNext()) {
