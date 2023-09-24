@@ -7,7 +7,7 @@ plugins {
     id 'org.spongepowered.mixin' version '[0.7,0.8)'
 }
 
-version = '0.6.11'
+version = '0.6.12'
 group = 'net.builderdog.ancient_aether'
 archivesBaseName = 'ancient_aether'
 
