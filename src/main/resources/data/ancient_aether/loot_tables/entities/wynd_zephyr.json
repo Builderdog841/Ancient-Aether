@@ -25,7 +25,7 @@
               "function": "minecraft:looting_enchant"
             }
           ],
-          "name": "ancient_aether:blue_aercloud"
+          "name": "aether:blue_aercloud"
         }
       ],
       "rolls": 1.0
