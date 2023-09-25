@@ -41,6 +41,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.entity.IEntityAdditionalSpawnData;
 import net.minecraftforge.network.NetworkHooks;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
@@ -64,14 +65,10 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         this.targetSelector.addGoal(2, new ContinuousMeleeAttackGoal(this, 1.0, false));
         this.goalSelector.addGoal(5, new MoveTowardsRestrictionGoal(this, 1.0));
         this.goalSelector.addGoal(7, new WaterAvoidingRandomStrollGoal(this, 1.0));
-        this.targetSelector.addGoal(1, new HurtByTargetGoal(this, new Class[]{AncientGuardian.class}));
-        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Player.class, 10, true, false, (livingEntity) -> {
+        this.targetSelector.addGoal(1, new HurtByTargetGoal(this, AncientGuardian.class));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, (livingEntity) -> {
             return this.isBossFight();
         }));
-    }
-
-    public int getAttackAnimationTick() {
-        return attackTime;
     }
 
     public AncientGuardian(EntityType<? extends PathfinderMob> pEntityType, Level pLevel) {
@@ -81,7 +78,7 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         this.xpReward = 50;
         this.setPersistenceRequired();
     }
-    public void die(DamageSource source) {
+    public void die(@NotNull DamageSource source) {
         level().explode(this, this.position().x, this.position().y, this.position().z, 0.3F, false, Level.ExplosionInteraction.TNT);
         super.die(source);
     }
@@ -96,24 +93,23 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         {
             if (this.isAwake()) {
                 LivingEntity var2 = this.getTarget();
-                if (!(var2 instanceof Player)) {
+                if (!(var2 instanceof Player player)) {
                     break label30;
                 }
 
-                Player player = (Player) var2;
                 if (!player.isCreative() && !player.isSpectator()) {
                     break label30;
                 }
             }
 
-            this.setTarget((LivingEntity) null);
+            this.setTarget( null);
         }
 
         this.extinguishFire();
         if (this.getHealth() > 0.0F) {
-            double a = (double) (this.random.nextFloat() - 0.5F);
-            double b = (double) this.random.nextFloat();
-            double c = (double) (this.random.nextFloat() - 0.5F);
+            double a = this.random.nextFloat() - 0.5F;
+            double b = this.random.nextFloat();
+            double c = this.random.nextFloat() - 0.5F;
             double d = this.position().x + a * b;
             double e = this.getBoundingBox().minY + b - 0.30000001192092896;
             double f = this.position().z + c * b;
@@ -133,7 +129,7 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     public void reset() {
         this.setAwake(false);
         this.setBossFight(false);
-        this.setTarget((LivingEntity) null);
+        this.setTarget( null);
         this.setHealth(this.getMaxHealth());
         if (this.getDungeon() != null) {
             this.setPos(this.getDungeon().originCoordinates());
@@ -150,8 +146,7 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         boolean flag = pEntity.hurt(this.damageSources().mobAttack(this), f1);
         if (flag) {
             double d2;
-            if (pEntity instanceof LivingEntity) {
-                LivingEntity livingentity = (LivingEntity) pEntity;
+            if (pEntity instanceof LivingEntity livingentity) {
                 d2 = livingentity.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE);
             } else {
                 d2 = 0.0;
@@ -175,7 +170,7 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         this.entityData.define(DATA_BOSS_NAME_ID, Component.literal("Ancient Guardian"));
     }
 
-    public Packet<ClientGamePacketListener> getAddEntityPacket() {
+    public @NotNull Packet<ClientGamePacketListener> getAddEntityPacket() {
         return NetworkHooks.getEntitySpawningPacket(this);
     }
 
@@ -297,7 +292,7 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     }
 
     public boolean isAwake() {
-        return (Boolean) this.entityData.get(DATA_AWAKE_ID);
+        return this.entityData.get(DATA_AWAKE_ID);
     }
 
     public void setAwake(boolean ready) {
@@ -305,7 +300,7 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     }
 
     public Component getBossName() {
-        return (Component) this.entityData.get(DATA_BOSS_NAME_ID);
+        return this.entityData.get(DATA_BOSS_NAME_ID);
     }
 
     public void setBossName(Component component) {
@@ -314,7 +309,7 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     }
 
     protected void alignSpawnPos() {
-        this.moveTo((double) Mth.floor(this.getX()), this.getY(), (double) Mth.floor(this.getZ()));
+        this.moveTo(Mth.floor(this.getX()), this.getY(), Mth.floor(this.getZ()));
     }
 
     public MutableComponent generateGuardianName() {
