@@ -15,8 +15,8 @@ public class AncientGuardianRenderer extends MobRenderer<AncientGuardian, Ancien
     private static final ResourceLocation ANCIENT_GUARDIAN_TEXTURE_GLOW = new ResourceLocation("ancient_aether", "textures/entity/boss/ancient_guardian/ancient_guardian.png");
 
     public AncientGuardianRenderer(EntityRendererProvider.Context context) {
-        super(context, new AncientGuardianModel(context.bakeLayer(AncientAetherModelLayers.ANCIENT_GUARDIAN)), 0.5F);
-        addLayer(new AncientGuardianLayer(this));
+        super(context, new AncientGuardianModel<>(context.bakeLayer(AncientAetherModelLayers.ANCIENT_GUARDIAN)), 0.5F);
+        addLayer(new AncientGuardianLayer<>(this));
     }
 
     @Nonnull

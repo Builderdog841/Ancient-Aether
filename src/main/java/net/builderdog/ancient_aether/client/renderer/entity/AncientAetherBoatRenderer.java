@@ -21,6 +21,7 @@ import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.vehicle.Boat;
+import org.jetbrains.annotations.NotNull;
 import org.joml.Quaternionf;
 
 import java.util.Map;
@@ -45,7 +46,7 @@ public class AncientAetherBoatRenderer<T extends AncientAetherBoatEntity> extend
     }
 
     @Override
-    public void render(T entity, float entityYaw, float partialTicks, PoseStack matrixStack, MultiBufferSource buffer, int packedLight) {
+    public void render(T entity, float entityYaw, float partialTicks, PoseStack matrixStack, @NotNull MultiBufferSource buffer, int packedLight) {
         float h;
         matrixStack.pushPose();
         matrixStack.translate(0.0f, 0.375f, 0.0f);
@@ -80,7 +81,7 @@ public class AncientAetherBoatRenderer<T extends AncientAetherBoatEntity> extend
     }
 
     @Override
-    public ResourceLocation getTextureLocation(AncientAetherBoatEntity boat) {
+    public @NotNull ResourceLocation getTextureLocation(AncientAetherBoatEntity boat) {
         return boatResources.get(boat.getWoodType()).getFirst();
     }
 }

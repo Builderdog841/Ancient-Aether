@@ -2,7 +2,6 @@ package net.builderdog.ancient_aether.event;
 
 import com.aetherteam.aether.block.AetherBlocks;
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.AncientAetherConfig;
 import net.builderdog.ancient_aether.block.AncientAetherWoodTypes;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.level.GrassColor;

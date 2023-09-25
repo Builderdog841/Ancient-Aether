@@ -13,7 +13,7 @@ public class RoothyrnRenderer extends MobRenderer<Roothyrn, RoothyrnModel<Roothy
     private static final ResourceLocation ROOTHYRN_TEXTURE = new ResourceLocation("ancient_aether", "textures/entity/roothyrn.png");
 
     public RoothyrnRenderer(EntityRendererProvider.Context context) {
-        super(context, new RoothyrnModel(context.bakeLayer(AncientAetherModelLayers.ROOTHYRN)), 0.7F);
+        super(context, new RoothyrnModel<>(context.bakeLayer(AncientAetherModelLayers.ROOTHYRN)), 0.7F);
     }
 
     @Nonnull
