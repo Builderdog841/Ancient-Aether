@@ -7,6 +7,7 @@ import com.aetherteam.nitrogen.entity.BossRoomTracker;
 import com.aetherteam.nitrogen.network.PacketRelay;
 import com.aetherteam.aether.entity.ai.goal.ContinuousMeleeAttackGoal;
 import com.aetherteam.aether.network.AetherPacketHandler;
+import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
@@ -20,7 +21,6 @@ import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.util.Mth;
 import net.minecraft.world.BossEvent;
 import net.minecraft.world.DifficultyInstance;
@@ -34,9 +34,9 @@ import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.entity.IEntityAdditionalSpawnData;
@@ -53,7 +53,7 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     public int chatTime;
     private int attackTime = 0;
     private final ServerBossEvent bossFight;
-    private BossRoomTracker<AncientGuardian> bronzeDungeon;
+    private BossRoomTracker<AncientGuardian> ancientDungeon;
 
     @Nonnull
     public static AttributeSupplier.Builder createMobAttributes() {
@@ -66,9 +66,7 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         this.goalSelector.addGoal(5, new MoveTowardsRestrictionGoal(this, 1.0));
         this.goalSelector.addGoal(7, new WaterAvoidingRandomStrollGoal(this, 1.0));
         this.targetSelector.addGoal(1, new HurtByTargetGoal(this, AncientGuardian.class));
-        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, (livingEntity) -> {
-            return this.isBossFight();
-        }));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, (livingEntity) -> this.isBossFight()));
     }
 
     public AncientGuardian(EntityType<? extends PathfinderMob> pEntityType, Level pLevel) {
@@ -189,23 +187,34 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
 
     }
 
-    public boolean hurt(DamageSource source, float damage) {
-        Entity entity = source.getDirectEntity();
-        Entity attacker = source.getEntity();
-        if (entity != null && source.is(DamageTypeTags.IS_PROJECTILE)) {
-            if (!level().isClientSide && attacker instanceof Player && ((Player) attacker).getMainHandItem() != Items.AIR.getDefaultInstance()) {
-                chatTime = 60;
-                attacker.sendSystemMessage(Component.literal("gui.aether_genesis.boss.message.projectile"));
-            }
+    @Nullable
+    @Override
+    public BlockState convertBlock(BlockState state) {
+        if (state.is(AncientAetherBlocks.LOCKED_AEROTIC_STONE.get())) {
+            return AncientAetherBlocks.AEROTIC_STONE.get().defaultBlockState();
+        }
+        if (state.is(AncientAetherBlocks.LOCKED_LIGHT_AEROTIC_STONE.get())) {
+            return AncientAetherBlocks.LIGHT_AEROTIC_STONE.get().defaultBlockState();
+        }
+        if (state.is(AncientAetherBlocks.BOSS_DOORWAY_AEROTIC_STONE.get())) {
+            return Blocks.AIR.defaultBlockState();
+        }
+        if (state.is(AncientAetherBlocks.TREASURE_DOORWAY_AEROTIC_STONE.get())) {
+            return Blocks.AIR.defaultBlockState();
+        }
+        return null;
+    }
 
-            return false;
-        } else {
-            if (!isBossFight()) {
-                setAwake(true);
-                setBossFight(true);
-            }
-
-            return super.hurt(source, damage);
+    /**
+     * Tracks the player as a part of the boss fight when the player is nearby, displaying the boss bar for them.
+     * @param player The {@link ServerPlayer}.
+     */
+    @Override
+    public void startSeenByPlayer(ServerPlayer player) {
+        super.startSeenByPlayer(player);
+        PacketRelay.sendToPlayer(AetherPacketHandler.INSTANCE, new BossInfoPacket.Display(this.bossFight.getId()), player);
+        if (this.getDungeon() == null || this.getDungeon().isPlayerTracked(player)) {
+            this.bossFight.addPlayer(player);
         }
     }
 
@@ -226,19 +235,15 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     }
 
     public BossRoomTracker<AncientGuardian> getDungeon() {
-        return this.bronzeDungeon;
+        return this.ancientDungeon;
     }
 
     public void setDungeon(BossRoomTracker<AncientGuardian> bossRoomTracker) {
-        this.bronzeDungeon = bossRoomTracker;
+        this.ancientDungeon = bossRoomTracker;
     }
 
     public int getDeathScore() {
         return this.deathScore;
-    }
-
-    public @Nullable BlockState convertBlock(BlockState blockState) {
-        return null;
     }
 
     public void writeSpawnData(FriendlyByteBuf buffer) {
@@ -253,15 +258,6 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
             readBossSaveData(tag);
         }
 
-    }
-
-    @Override
-    public void startSeenByPlayer(@Nonnull ServerPlayer player) {
-        super.startSeenByPlayer(player);
-        PacketRelay.sendToPlayer(AetherPacketHandler.INSTANCE, new BossInfoPacket.Display(this.bossFight.getId()), player);
-        if (this.getDungeon() == null || this.getDungeon().isPlayerTracked(player)) {
-            this.bossFight.addPlayer(player);
-        }
     }
 
     public void customServerAiStep() {
@@ -316,7 +312,6 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         MutableComponent result = BossNameGenerator.generateBossName(this.getRandom());
         return result.append(Component.translatable("gui.ancient_aether.ancient_guardian.title"));
     }
-
 
     public SpawnGroupData finalizeSpawn(@Nonnull ServerLevelAccessor pLevel, @Nonnull DifficultyInstance pDifficulty, @Nonnull MobSpawnType pReason, @javax.annotation.Nullable SpawnGroupData pSpawnData, @javax.annotation.Nullable CompoundTag pDataTag) {
         this.alignSpawnPos();
