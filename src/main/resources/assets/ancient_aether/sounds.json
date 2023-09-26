@@ -97,5 +97,13 @@
       "item/armor/equip_chain6"
     ],
     "subtitle": "subtitles.aether.item.accessory.equip_health_ring"
+  },
+  "ui.toast.aether_gold": {
+    "sounds": [
+      {
+        "name": "ancient_aether:achievement/achievement_gold",
+        "stream": true
+      }
+    ]
   }
 }
