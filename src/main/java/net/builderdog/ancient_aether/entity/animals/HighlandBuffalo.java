@@ -29,7 +29,7 @@ import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
 
-public class HighlandBuffalo extends AetherAnimal {
+public class HighlandBuffalo extends WyndcapsAnimal {
 
     public HighlandBuffalo(EntityType<? extends AetherAnimal> entityType, Level level) {
         super(entityType, level);
@@ -76,9 +76,6 @@ public class HighlandBuffalo extends AetherAnimal {
     @Override
     protected SoundEvent getHurtSound(@Nonnull DamageSource damageSource) { return AncientAetherSoundEvents.HIGHLAND_BUFFALO_HURT.get();}
 
-    /**
-     * [CODE COPY] - {@link net.minecraft.world.entity.animal.Cow#mobInteract(Player, InteractionHand)}.
-     */
     @Nonnull
     public InteractionResult mobInteract(Player playerEntity, @Nonnull InteractionHand hand) {
         ItemStack itemStack = playerEntity.getItemInHand(hand);
