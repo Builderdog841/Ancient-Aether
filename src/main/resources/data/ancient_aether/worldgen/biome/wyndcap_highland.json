@@ -165,7 +165,7 @@
         "weight": 12
       },
       {
-        "type": "ancient_aether:highland_buffalo",
+        "type": "aether:flying_cow",
         "maxCount": 5,
         "minCount": 2,
         "weight": 12
