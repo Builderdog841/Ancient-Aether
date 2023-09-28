@@ -2,9 +2,7 @@ package net.builderdog.ancient_aether;
 
 import com.aetherteam.aether.AetherConfig;
 //import com.mojang.logging.LogUtils;
-import com.aetherteam.cumulus.Cumulus;
 import com.aetherteam.cumulus.CumulusConfig;
-import com.aetherteam.cumulus.api.Menu;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
@@ -23,6 +21,7 @@ import net.builderdog.ancient_aether.world.biomes.AncientAetherSurfaceData;
 import net.builderdog.ancient_aether.world.feature.AncientAetherFeatures;
 import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherFoliagePlacerTypes;
 import net.builderdog.ancient_aether.world.structure.AncientAetherStructureTypes;
+import net.minecraft.ChatFormatting;
 import net.minecraft.SharedConstants;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -37,7 +36,6 @@ import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.event.AddPackFindersEvent;
@@ -53,12 +51,14 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.resource.PathPackResources;
 //import org.slf4j.Logger;
+import org.jetbrains.annotations.NotNull;
 import teamrazor.aeroblender.aether.AetherRuleCategory;
 import terrablender.api.Regions;
 import terrablender.api.SurfaceRuleManager;
 
 import java.nio.file.Path;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.UnaryOperator;
 
 import static com.aetherteam.aether.Aether.DIRECTORY;
 
@@ -136,8 +136,8 @@ public class AncientAether {
 
     public void packSetup(AddPackFindersEvent event) {
         setupOptionalPack(event);
-        setupDatapack(event, "ancient_aether_new_worldgen", "New World Generation", "Completely overhauls the Aether Worldgen");
-        setupDatapack(event, "ancient_aether_default_biome_improvements", "Default Biome Improvements", "Adds more flowers and tree variation to the Default Aether Biomes. It also gives the Aether a new Watercolor.");
+        setupNewWorldgenPack(event);
+        setupImprovedDefaultBiomesPack(event);
 
         if (ModList.get().isLoaded("aether_genesis")) {
             setupDatapack(event, "aether_genesis_compat", "Aether Genesis Compatibility", "Better Compatibility with Aether Genesis");
@@ -167,6 +167,64 @@ public class AncientAether {
                 packConsumer.accept(Pack.create("builtin/" + path, Component.literal("Ancient Aether: " + displayName), false, (string) -> pack, new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.SERVER_DATA), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()), PackType.SERVER_DATA, Pack.Position.TOP, false, PackSource.BUILT_IN));
             });
         }
+    }
+
+    private void setupNewWorldgenPack(AddPackFindersEvent event) {
+        if (event.getPackType() == PackType.SERVER_DATA) {
+            Path resourcePath = ModList.get().getModFileById(AncientAether.MOD_ID).getFile().findResource("packs/ancient_aether_new_worldgen");
+            PathPackResources pack = new PathPackResources(ModList.get().getModFileById(AncientAether.MOD_ID).getFile().getFileName() + ":" + resourcePath, true, resourcePath);
+            PackMetadataSection metadata = new PackMetadataSection(Component.translatable("pack.ancient_aether.ancient_aether_new_worldgen.description"), SharedConstants.getCurrentVersion().getPackVersion(PackType.SERVER_DATA));
+            event.addRepositorySource((source) ->
+                    source.accept(Pack.create(
+                            "packs/ancient_aether_new_worldgen",
+                            Component.translatable("pack.ancient_aether.ancient_aether_new_worldgen.title"),
+                            false,
+                            (string) -> pack,
+                            new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.SERVER_DATA), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()),
+                            PackType.SERVER_DATA,
+                            Pack.Position.TOP,
+                            false,
+                            create(decorateWithSource(), AncientAetherConfig.COMMON.new_worldgen_datapack.get()))
+                    )
+            );
+        }
+    }
+
+    private void setupImprovedDefaultBiomesPack(AddPackFindersEvent event) {
+        if (event.getPackType() == PackType.SERVER_DATA) {
+            Path resourcePath = ModList.get().getModFileById(AncientAether.MOD_ID).getFile().findResource("packs/ancient_aether_default_biome_improvements");
+            PathPackResources pack = new PathPackResources(ModList.get().getModFileById(AncientAether.MOD_ID).getFile().getFileName() + ":" + resourcePath, true, resourcePath);
+            PackMetadataSection metadata = new PackMetadataSection(Component.translatable("pack.ancient_aether.ancient_aether_default_biome_improvements.description"), SharedConstants.getCurrentVersion().getPackVersion(PackType.SERVER_DATA));
+            event.addRepositorySource((source) ->
+                    source.accept(Pack.create(
+                            "builtin/ancient_aether_default_biome_improvements",
+                            Component.translatable("pack.ancient_aether.ancient_aether_default_biome_improvements.title"),
+                            false,
+                            (string) -> pack,
+                            new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.SERVER_DATA), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()),
+                            PackType.SERVER_DATA,
+                            Pack.Position.TOP,
+                            false,
+                            create(decorateWithSource(), AncientAetherConfig.COMMON.default_biome_datapack.get()))
+                    )
+            );
+        }
+    }
+
+    static PackSource create(final UnaryOperator<Component> decorator, final boolean shouldAddAutomatically) {
+        return new PackSource() {
+            public @NotNull Component decorate(@NotNull Component component) {
+                return decorator.apply(component);
+            }
+
+            public boolean shouldAddAutomatically() {
+                return shouldAddAutomatically;
+            }
+        };
+    }
+    private static UnaryOperator<Component> decorateWithSource() {
+        Component component = Component.translatable("pack.source.builtin");
+        return (name) -> Component.translatable("pack.nameAndSource", name, component).withStyle(ChatFormatting.GRAY);
     }
 
     public void dataSetup(GatherDataEvent event) {

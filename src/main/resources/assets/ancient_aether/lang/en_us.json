@@ -178,6 +178,11 @@
   "menu.ancient_aether.ancient_treasure_chest": "Ancient Treasure Chest",
   "ancient_aether.ancient_treasure_chest_locked": "This Treasure Chest must be unlocked with an Ancient Key",
 
+  "pack.ancient_aether.ancient_aether_new_worldgen.title": "New World Generation",
+  "pack.ancient_aether.ancient_aether_new_worldgen.description": "Completely overhauls the Terrain Generation of the Aether.",
+  "pack.ancient_aether.ancient_aether_default_biome_improvements.title": "Aether Default Biomes Improvements",
+  "pack.ancient_aether.ancient_aether_default_biome_improvements.description": "Adds more vegetation and other improvements to the Aether's Default Biomes.",
+
   "lore.block.ancient_aether.holystone_brick_mosaic": "A fancy Holystone Brick variant that can be rotated in various different directions.",
   "lore.block.ancient_aether.carved_stone_mosaic": "A fancy Carved Stone variant that can be rotated in various different directions.",
   "lore.block.ancient_aether.angelic_stone_mosaic": "A fancy Angelic Stone variant that can be rotated in various different directions.",
