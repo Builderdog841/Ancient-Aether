@@ -245,9 +245,9 @@ public class AmbrosiumCampfireBlock extends BaseEntityBlock implements SimpleWat
     @Nullable
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level p_152755_, @NotNull BlockState p_152756_, @NotNull BlockEntityType<T> p_152757_) {
         if (p_152755_.isClientSide) {
-            return p_152756_.getValue(LIT) ? createTickerHelper(p_152757_, BlockEntityType.CAMPFIRE, CampfireBlockEntity::particleTick) : null;
+            return p_152756_.getValue(LIT) ? createTickerHelper(p_152757_, (BlockEntityType) AncientAetherBlockEntityTypes.CAMPFIRE.get(), CampfireBlockEntity::particleTick) : null;
         } else {
-            return p_152756_.getValue(LIT) ? createTickerHelper(p_152757_, BlockEntityType.CAMPFIRE, CampfireBlockEntity::cookTick) : createTickerHelper(p_152757_, BlockEntityType.CAMPFIRE, CampfireBlockEntity::cooldownTick);
+            return p_152756_.getValue(LIT) ? createTickerHelper(p_152757_, (BlockEntityType) AncientAetherBlockEntityTypes.CAMPFIRE.get(), CampfireBlockEntity::cookTick) : createTickerHelper(p_152757_, (BlockEntityType) AncientAetherBlockEntityTypes.CAMPFIRE.get(), CampfireBlockEntity::cooldownTick);
         }
     }
 
