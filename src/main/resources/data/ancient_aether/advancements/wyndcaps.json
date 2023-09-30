@@ -81,5 +81,18 @@
       "translate": "advancement.ancient_aether.wyndcaps"
     }
   },
-  "requirements": []
+  "requirements": [
+    [
+      "ancient_aether:wyndcap_taiga"
+    ],
+    [
+      "ancient_aether:festive_wyndcap_taiga"
+    ],
+    [
+      "ancient_aether:wyndcap_highland"
+    ],
+    [
+      "ancient_aether:wyndcap_peaks"
+    ]
+  ]
 }

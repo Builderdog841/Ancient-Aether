@@ -37,7 +37,7 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.ancient_aether.sakura.desc"
+      "translate": "advancement.ancient_aether.sakura_jungle.desc"
     },
     "frame": "task",
     "hidden": false,
@@ -46,8 +46,15 @@
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.ancient_aether.sakura"
+      "translate": "advancement.ancient_aether.sakura_jungle"
     }
   },
-  "requirements": []
+  "requirements": [
+    [
+      "ancient_aether:sakura_jungle"
+    ],
+    [
+      "ancient_aether:overgrown_caverns"
+    ]
+  ]
 }

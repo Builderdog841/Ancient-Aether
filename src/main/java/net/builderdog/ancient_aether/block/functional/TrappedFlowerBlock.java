@@ -44,13 +44,6 @@ public class TrappedFlowerBlock extends BushBlock {
         return this.defaultStateSupplier.get();
     }
 
-    /**
-     * If a player steps on the block, it converts to the state given by {@link TrappedFlowerBlock#defaultStateSupplier} and spawns the entity given by {@link TrappedFlowerBlock#spawnableEntityTypeSupplier}.
-     * @param level The {@link Level} the block is in.
-     * @param blockPos The {@link BlockPos} of the block.
-     * @param blockState The {@link BlockState} of the block.
-     * @param entity The {@link Entity} stepping on the block.
-     */
     @Override
     public void entityInside(@NotNull BlockState blockState, @NotNull Level level, @NotNull BlockPos blockPos, @NotNull Entity entity) {
         if (entity instanceof Player player && AetherEventDispatch.onTriggerTrap(player, level, blockPos, blockState)) {
@@ -65,7 +58,7 @@ public class TrappedFlowerBlock extends BushBlock {
                     spawnPos = spawnPos.relative(hitResult.getDirection());
                 }
                 if (entity instanceof ServerPlayer _player) {
-                    Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("ancient_aether:aether/roothyrn_trap"));
+                    Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("ancient_aether:roothyrn_trap"));
                     assert _adv != null;
                     AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
                     if (!_ap.isDone()) {
@@ -78,7 +71,7 @@ public class TrappedFlowerBlock extends BushBlock {
             }
         }
     }
-    public VoxelShape getShape(BlockState p_53517_, @NotNull BlockGetter p_53518_, @NotNull BlockPos p_53519_, @NotNull CollisionContext p_53520_) {
+    public @NotNull VoxelShape getShape(BlockState p_53517_, @NotNull BlockGetter p_53518_, @NotNull BlockPos p_53519_, @NotNull CollisionContext p_53520_) {
         Vec3 vec3 = p_53517_.getOffset(p_53518_, p_53519_);
         return SHAPE.move(vec3.x, vec3.y, vec3.z);
     }
