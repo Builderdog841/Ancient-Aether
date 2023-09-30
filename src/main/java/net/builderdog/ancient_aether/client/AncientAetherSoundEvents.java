@@ -22,7 +22,6 @@ public class AncientAetherSoundEvents {
     public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_ANCIENT_PENDANT = register("item.accessory.equip_ancient_pendant");
     public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_HEALTH_RING = register("item.accessory.equip_health_ring");
     public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_HEALTH_PENDANT = register("item.accessory.equip_health_pendant");
-    public static final RegistryObject<SoundEvent> UI_TOAST_AETHER_GOLD = register("ui.toast.aether_gold");
 
 
     private static RegistryObject<SoundEvent> register(String name) {
