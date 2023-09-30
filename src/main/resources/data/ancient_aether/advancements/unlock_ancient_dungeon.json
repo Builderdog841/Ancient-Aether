@@ -1,5 +1,5 @@
 {
-  "parent": "ancient_aether:aether/find_sentry_lab",
+  "parent": "aether:gold_dungeon",
   "criteria": {
     "unlock": {
       "trigger": "minecraft:impossible"

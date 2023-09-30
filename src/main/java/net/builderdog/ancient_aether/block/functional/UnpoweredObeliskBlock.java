@@ -97,7 +97,7 @@ public class UnpoweredObeliskBlock extends Block {
                     }
                 }
                 ServerPlayer _player = (ServerPlayer) player;
-                Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("ancient_aether:aether/unlock_ancient_valkyrian_vaults"));
+                Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("ancient_aether:unlock_ancient_dungeon"));
                 assert _adv != null;
                 AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
                 if (!_ap.isDone()) {

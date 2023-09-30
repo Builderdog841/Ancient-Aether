@@ -1,5 +1,5 @@
 {
-  "parent": "ancient_aether:aether/find_sentry_lab",
+  "parent": "aether:enchanted_gravitite",
   "criteria": {
     "cracked_slider_loot": {
       "conditions": {
@@ -20,7 +20,7 @@
       "translate": "advancement.ancient_aether.cracked_slider.desc"
     },
     "frame": "task",
-    "hidden": false,
+    "hidden": true,
     "icon": {
       "item": "ancient_aether:cracked_slider"
     },
