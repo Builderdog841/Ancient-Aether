@@ -1,5 +1,5 @@
 {
-  "parent": "aether:the_aether",
+  "parent": "ancient_aether:sakura_jungle",
   "criteria": {
     "unlock": {
       "trigger": "minecraft:impossible"

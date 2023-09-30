@@ -1,0 +1,53 @@
+{
+  "parent": "aether:black_moa",
+  "criteria": {
+    "ancient_aether:sakura_jungle": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biome": "ancient_aether:sakura_jungle"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
+    "ancient_aether:overgrown_caverns": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biome": "ancient_aether:overgrown_caverns"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.ancient_aether.sakura.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "ancient_aether:sakura_sapling"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.ancient_aether.sakura"
+    }
+  },
+  "requirements": []
+}
