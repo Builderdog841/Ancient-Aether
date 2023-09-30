@@ -1,7 +1,9 @@
 package net.builderdog.ancient_aether.item.loot.accessories;
 
 import com.aetherteam.aether.item.accessories.pendant.PendantItem;
+import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -15,7 +17,7 @@ public class HealthPendantItem extends PendantItem {
     private static final UUID HEALTH_UUID = UUID.fromString("A022E1C-E2D5-4A0B-9562-55C75FE53A1E");
 
     public HealthPendantItem(Properties properties) {
-        super("health_pendant", AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_HEALTH_PENDANT, properties);
+        super(new ResourceLocation(AncientAether.MOD_ID, "health_pendant"), AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_HEALTH_PENDANT, properties);
     }
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {
