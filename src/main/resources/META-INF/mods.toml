@@ -7,7 +7,7 @@ modId="ancient_aether"
 version="${file.jarVersion}"
 displayName="Ancient Aether"
 logoFile="ancient_aether.png"
-credits= "Credit goes to Emile van Krieken for the Sun Spirit Victory Music, to unroman for making the Ukranian Translation and all the amazing people on the Aether Project that helped me with this mod."
+credits= "Credit to unroman for making the Ukranian Translation and all the amazing people on the Aether Project that helped me with this mod."
 authors="Builderdog"
 description='''
 Ancient Aether is an Aether Add-On that adds new Structures aswell as unique Biomes. There are also a ton of new Quality of Life things like Aether Quartz Ore, Aether Lanterns and Ambrosium Campfires. A lot more content is planned like a new Boss and a Valkyrie Trading System.
