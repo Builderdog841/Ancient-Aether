@@ -6,6 +6,7 @@ import com.aetherteam.cumulus.CumulusConfig;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
+import net.builderdog.ancient_aether.client.renderer.AncientAetherEntityRenderers;
 import net.builderdog.ancient_aether.datagen.generators.AncientAetherBlockStateData;
 import net.builderdog.ancient_aether.datagen.generators.AncientAetherItemModelData;
 import net.builderdog.ancient_aether.datagen.generators.AncientAetherRecipeData;
@@ -108,6 +109,7 @@ public class AncientAether {
 
     private void clientSetup(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
+                AncientAetherEntityRenderers.registerCuriosRenderers();
                 AetherConfig.COMMON.add_ruined_portal_automatically.set(true);
                 AetherConfig.COMMON.add_temporary_freezing_automatically.set(true);
                 AetherConfig.CLIENT.music_backup_min_delay.set(1);

@@ -1,6 +1,7 @@
 package net.builderdog.ancient_aether.client.renderer;
 
 import com.aetherteam.aether.capability.player.AetherPlayer;
+import com.aetherteam.aether.client.renderer.accessory.PendantRenderer;
 import com.aetherteam.aether.client.renderer.player.layer.DartLayer;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
@@ -10,6 +11,7 @@ import net.builderdog.ancient_aether.client.renderer.entity.model.*;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.entity.misc.GravititeDart;
+import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
@@ -25,6 +27,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class AncientAetherEntityRenderers {
@@ -66,5 +69,10 @@ public class AncientAetherEntityRenderers {
                 playerRenderer.addLayer(new DartLayer<>(renderDispatcher, playerRenderer, (entity) -> new GravititeDart(AncientAetherEntities.GRAVITITE_DART.get(), entity.level()), AetherPlayer::getGoldenDartCount, 1.0F));
             }
         }
+    }
+
+    public static void registerCuriosRenderers() {
+        CuriosRendererRegistry.register(AncientAetherItems.ANCIENT_PENDANT.get(), PendantRenderer::new);
+        CuriosRendererRegistry.register(AncientAetherItems.HEALTH_PENDANT.get(), PendantRenderer::new);
     }
 }
