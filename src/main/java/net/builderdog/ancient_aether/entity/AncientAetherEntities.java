@@ -8,7 +8,7 @@ import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherChestBoatEntity;
 import net.builderdog.ancient_aether.entity.misc.GravititeDart;
 import net.builderdog.ancient_aether.entity.misc.WyndZephyrSnowball;
-import net.builderdog.ancient_aether.entity.monster.LeapingSentry;
+import net.builderdog.ancient_aether.entity.monster.AeronauticLeaper;
 import net.builderdog.ancient_aether.entity.monster.Roothyrn;
 import net.builderdog.ancient_aether.entity.monster.WyndZephyr;
 import net.minecraft.resources.ResourceLocation;
@@ -31,8 +31,8 @@ public class AncientAetherEntities {
     // Monster
     public static final RegistryObject<EntityType<Roothyrn>> ROOTHYRN = ENTITY_TYPES.register("roothyrn",
             () -> EntityType.Builder.of(Roothyrn::new, MobCategory.MONSTER).sized(0.7f, 0.7f).clientTrackingRange(16).build(new ResourceLocation(AncientAether.MOD_ID, "roothyrn").toString()));
-    public static final RegistryObject<EntityType<LeapingSentry>> LEAPING_SENTRY = ENTITY_TYPES.register("leaping_sentry",
-            () -> EntityType.Builder.of(LeapingSentry::new, MobCategory.MONSTER).sized(2.0F, 2.0F).clientTrackingRange(10).build("leaping_sentry"));
+    public static final RegistryObject<EntityType<AeronauticLeaper>> AERONAUTIC_LEAPER = ENTITY_TYPES.register("aeronautic_leaper",
+            () -> EntityType.Builder.of(AeronauticLeaper::new, MobCategory.MONSTER).sized(2.0F, 2.0F).clientTrackingRange(10).build("aeronautic_leaper"));
     public static final RegistryObject<EntityType<WyndZephyr>> WYND_ZEPHYR =
             ENTITY_TYPES.register("wynd_zephyr",
                     () -> EntityType.Builder.of(WyndZephyr::new, AetherMobCategory.AETHER_SKY_MONSTER)

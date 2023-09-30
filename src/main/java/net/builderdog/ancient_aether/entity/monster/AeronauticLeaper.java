@@ -8,9 +8,7 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Mth;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
@@ -21,15 +19,16 @@ import net.minecraft.world.entity.monster.Slime;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.common.ForgeMod;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nonnull;
 
-public class LeapingSentry extends Slime {
-	public static final EntityDataAccessor<Boolean> DATA_AWAKE_ID = SynchedEntityData.defineId(LeapingSentry.class, EntityDataSerializers.BOOLEAN);
+public class AeronauticLeaper extends Slime {
+	public static final EntityDataAccessor<Boolean> DATA_AWAKE_ID = SynchedEntityData.defineId(AeronauticLeaper.class, EntityDataSerializers.BOOLEAN);
 
 	public float timeSpotted = 0.0F;
 
-	public LeapingSentry(EntityType<? extends LeapingSentry> type, Level level) {
+	public AeronauticLeaper(EntityType<? extends AeronauticLeaper> type, Level level) {
 		super(type, level);
 	}
 
@@ -57,9 +56,6 @@ public class LeapingSentry extends Slime {
 		this.getEntityData().define(DATA_AWAKE_ID, false);
 	}
 
-	/**
-	 * Handles waking the Sentry up if a target is spotted for long enough.
-	 */
 	@Override
 	public void tick() {
 		if (this.level().getNearestPlayer(this.getX(), this.getY(), this.getZ(), 8.0, EntitySelector.NO_SPECTATORS) != null) {
@@ -75,9 +71,6 @@ public class LeapingSentry extends Slime {
 		super.tick();
 	}
 
-	/**
-	 * Only allows jumping when the Sentry is awake.
-	 */
 	@Override
 	protected void jumpFromGround() {
 		if (this.isAwake()) {
@@ -85,52 +78,12 @@ public class LeapingSentry extends Slime {
 		}
 	}
 
-	/**
-	 * When this entity is pushed.
-	 * @param entity The pushing {@link Entity}.
-	 */
-	@Override
-	public void push(Entity entity) {
-		super.push(entity);
-		if (entity instanceof LivingEntity livingEntity && !(entity instanceof LeapingSentry)) {
-			this.explodeAt(livingEntity);
-		}
-	}
-
-	/**
-	 * Handles exploding when a player touches the Sentry.
-	 * @param player The {@link Player}.
-	 */
-	@Override
-	public void playerTouch(Player player) {
-		if (EntitySelector.NO_CREATIVE_OR_SPECTATOR.test(player)) {
-			this.explodeAt(player);
-		}
-	}
-
-	/**
-	 * Handles explosion behavior if the Sentry is close enough to an entity.
-	 * @param entity The colliding {@link Entity}.
-	 */
-	protected void explodeAt(LivingEntity entity) {
-		if (this.distanceToSqr(entity) < 1.5 && this.isAwake() && this.hasLineOfSight(entity) && entity.hurt(this.damageSources().mobAttack(this), 1.0F) && this.tickCount > 20 && this.isAlive()) {
-			entity.push(0.3, 0.4, 0.3);
-			this.level().explode(this, this.getX(), this.getY(), this.getZ(), 1.0F, Level.ExplosionInteraction.MOB);
-			this.playSound(SoundEvents.GENERIC_EXPLODE, 1.0F, 0.2F * (this.getRandom().nextFloat() - this.getRandom().nextFloat()) + 1);
-			if (this.level() instanceof ServerLevel level) {
-				level.broadcastEntityEvent(this, (byte) 70);
-				level.sendParticles(ParticleTypes.EXPLOSION_EMITTER, this.getX(), this.getY(), this.getZ(), 1, 0.0, 0.0, 0.0, 0.5);
-			}
-			this.doEnchantDamageEffects(this, entity);
-			this.discard();
-		}
-	}
 
 	/**
 	 * [CODE COPY] - {@link Entity#remove(RemovalReason)}.
 	 */
 	@Override
-	public void remove(Entity.RemovalReason pReason) {
+	public void remove(RemovalReason pReason) {
 		this.setRemoved(pReason);
 		this.invalidateCaps();
 	}
@@ -159,12 +112,12 @@ public class LeapingSentry extends Slime {
 	public void setSize(int size, boolean resetHealth) { }
 
 	@Override
-	protected ParticleOptions getParticleType() {
+	protected @NotNull ParticleOptions getParticleType() {
 		return new BlockParticleOption(ParticleTypes.BLOCK, AncientAetherBlocks.LIGHT_AEROTIC_STONE.get().defaultBlockState());
 	}
 
 	@Override
-	protected SoundEvent getHurtSound(DamageSource damageSource) {
+	protected SoundEvent getHurtSound(@NotNull DamageSource damageSource) {
 		return AetherSoundEvents.ENTITY_SENTRY_HURT.get();
 	}
 
@@ -174,17 +127,17 @@ public class LeapingSentry extends Slime {
 	}
 
 	@Override
-	protected SoundEvent getSquishSound() {
+	protected @NotNull SoundEvent getSquishSound() {
 		return AetherSoundEvents.ENTITY_SENTRY_JUMP.get();
 	}
 
 	@Override
-	protected SoundEvent getJumpSound() {
+	protected @NotNull SoundEvent getJumpSound() {
 		return AetherSoundEvents.ENTITY_SENTRY_JUMP.get();
 	}
 
 	@Override
-	public EntityDimensions getDimensions(Pose pose) {
+	public @NotNull EntityDimensions getDimensions(Pose pose) {
 		return super.getDimensions(pose).scale(1.76F);
 	}
 
@@ -209,9 +162,9 @@ public class LeapingSentry extends Slime {
 	}
 
 	static class LeapingSentryAttackGoal extends SlimeAttackGoal {
-		private final LeapingSentry leapingSentry;
+		private final AeronauticLeaper leapingSentry;
 
-		public LeapingSentryAttackGoal(LeapingSentry leapingSentry) {
+		public LeapingSentryAttackGoal(AeronauticLeaper leapingSentry) {
 			super(leapingSentry);
 			this.leapingSentry = leapingSentry;
 		}
@@ -228,9 +181,9 @@ public class LeapingSentry extends Slime {
 	}
 
 	static class LeapingSentryFloatGoal extends SlimeFloatGoal {
-		private final LeapingSentry leapingSentry;
+		private final AeronauticLeaper leapingSentry;
 
-		public LeapingSentryFloatGoal(LeapingSentry leapingSentry) {
+		public LeapingSentryFloatGoal(AeronauticLeaper leapingSentry) {
 			super(leapingSentry);
 			this.leapingSentry = leapingSentry;
 		}
@@ -247,9 +200,9 @@ public class LeapingSentry extends Slime {
 	}
 
 	static class LeapingSentryKeepOnJumpingGoal extends SlimeKeepOnJumpingGoal {
-		private final LeapingSentry leapingSentry;
+		private final AeronauticLeaper leapingSentry;
 
-		public LeapingSentryKeepOnJumpingGoal(LeapingSentry leapingSentry) {
+		public LeapingSentryKeepOnJumpingGoal(AeronauticLeaper leapingSentry) {
 			super(leapingSentry);
 			this.leapingSentry = leapingSentry;
 		}
@@ -266,9 +219,9 @@ public class LeapingSentry extends Slime {
 	}
 
 	static class LeapingSentryRandomDirectionGoal extends SlimeRandomDirectionGoal {
-		private final LeapingSentry leapingSentry;
+		private final AeronauticLeaper leapingSentry;
 
-		public LeapingSentryRandomDirectionGoal(LeapingSentry leapingSentry) {
+		public LeapingSentryRandomDirectionGoal(AeronauticLeaper leapingSentry) {
 			super(leapingSentry);
 			this.leapingSentry = leapingSentry;
 		}

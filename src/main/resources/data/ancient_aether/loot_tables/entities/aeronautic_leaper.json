@@ -25,7 +25,7 @@
               "function": "minecraft:looting_enchant"
             }
           ],
-          "name": "aether:carved_stone",
+          "name": "ancient_aether:aerotic_stone",
           "weight": 4
         },
         {
@@ -49,7 +49,7 @@
               "function": "minecraft:looting_enchant"
             }
           ],
-          "name": "ancient_aether:blighted_sentry_stone"
+          "name": "aether:aerogel"
         }
       ],
       "rolls": 1.0

@@ -9,10 +9,10 @@ import net.minecraft.world.level.block.Block;
 public class AncientAetherTags {
 
     public static class Blocks {
-        public static final TagKey<Block> WYNDCAPS_ANIMAL_SPAWNABLE_ON = tag("wyndcaps_animals_spawnable_on");
+        public static final TagKey<Block> WYNDCAPS_ANIMAL_SPAWNABLE_ON = tag();
 
-        private static TagKey<Block> tag(String name) {
-            return TagKey.create(Registries.BLOCK, new ResourceLocation(AncientAether.MOD_ID, name));
+        private static TagKey<Block> tag() {
+            return TagKey.create(Registries.BLOCK, new ResourceLocation(AncientAether.MOD_ID, "wyndcaps_animals_spawnable_on"));
         }
     }
     public static class Items {

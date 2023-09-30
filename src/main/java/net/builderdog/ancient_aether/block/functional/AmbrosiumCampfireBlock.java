@@ -68,7 +68,7 @@ public class AmbrosiumCampfireBlock extends BaseEntityBlock implements SimpleWat
         this.registerDefaultState(this.stateDefinition.any().setValue(LIT, Boolean.valueOf(true)).setValue(SIGNAL_FIRE, Boolean.valueOf(false)).setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(FACING, Direction.NORTH));
     }
 
-    public InteractionResult use(BlockState p_51274_, Level p_51275_, BlockPos p_51276_, Player p_51277_, InteractionHand p_51278_, BlockHitResult p_51279_) {
+    public @NotNull InteractionResult use(@NotNull BlockState p_51274_, Level p_51275_, BlockPos p_51276_, Player p_51277_, InteractionHand p_51278_, BlockHitResult p_51279_) {
         BlockEntity blockentity = p_51275_.getBlockEntity(p_51276_);
         if (blockentity instanceof AncientAetherCampfireBlockEntity campfireblockentity) {
             ItemStack itemstack = p_51277_.getItemInHand(p_51278_);
@@ -86,7 +86,7 @@ public class AmbrosiumCampfireBlock extends BaseEntityBlock implements SimpleWat
         return InteractionResult.PASS;
     }
 
-    public void entityInside(BlockState p_51269_, Level p_51270_, BlockPos p_51271_, Entity p_51272_) {
+    public void entityInside(BlockState p_51269_, @NotNull Level p_51270_, @NotNull BlockPos p_51271_, Entity p_51272_) {
         if (p_51269_.getValue(LIT) && p_51272_ instanceof LivingEntity && !EnchantmentHelper.hasFrostWalker((LivingEntity)p_51272_)) {
             p_51272_.hurt(p_51270_.damageSources().inFire(), (float)this.fireDamage);
         }
@@ -94,7 +94,7 @@ public class AmbrosiumCampfireBlock extends BaseEntityBlock implements SimpleWat
         super.entityInside(p_51269_, p_51270_, p_51271_, p_51272_);
     }
 
-    public void onRemove(BlockState p_51281_, Level p_51282_, BlockPos p_51283_, BlockState p_51284_, boolean p_51285_) {
+    public void onRemove(BlockState p_51281_, @NotNull Level p_51282_, @NotNull BlockPos p_51283_, BlockState p_51284_, boolean p_51285_) {
         if (!p_51281_.is(p_51284_.getBlock())) {
             BlockEntity blockentity = p_51282_.getBlockEntity(p_51283_);
             if (blockentity instanceof AncientAetherCampfireBlockEntity) {
@@ -129,7 +129,7 @@ public class AmbrosiumCampfireBlock extends BaseEntityBlock implements SimpleWat
         return SHAPE;
     }
 
-    public RenderShape getRenderShape(@NotNull BlockState p_51307_) {
+    public @NotNull RenderShape getRenderShape(@NotNull BlockState p_51307_) {
         return RenderShape.MODEL;
     }
 
@@ -222,15 +222,15 @@ public class AmbrosiumCampfireBlock extends BaseEntityBlock implements SimpleWat
         return p_51320_.hasProperty(LIT) && p_51320_.is(BlockTags.CAMPFIRES) && p_51320_.getValue(LIT);
     }
 
-    public FluidState getFluidState(BlockState p_51318_) {
+    public @NotNull FluidState getFluidState(BlockState p_51318_) {
         return p_51318_.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(p_51318_);
     }
 
-    public BlockState rotate(BlockState p_51295_, Rotation p_51296_) {
+    public @NotNull BlockState rotate(BlockState p_51295_, Rotation p_51296_) {
         return p_51295_.setValue(FACING, p_51296_.rotate(p_51295_.getValue(FACING)));
     }
 
-    public BlockState mirror(BlockState p_51292_, Mirror p_51293_) {
+    public @NotNull BlockState mirror(BlockState p_51292_, Mirror p_51293_) {
         return p_51292_.rotate(p_51293_.getRotation(p_51292_.getValue(FACING)));
     }
 
@@ -243,7 +243,7 @@ public class AmbrosiumCampfireBlock extends BaseEntityBlock implements SimpleWat
     }
 
     @Nullable
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level p_152755_, @NotNull BlockState p_152756_, @NotNull BlockEntityType<T> p_152757_) {
+    public <T extends BlockEntity> BlockEntityTicker getTicker(Level p_152755_, @NotNull BlockState p_152756_, @NotNull BlockEntityType<T> p_152757_) {
         if (p_152755_.isClientSide) {
             return p_152756_.getValue(LIT) ? createTickerHelper(p_152757_, (BlockEntityType) AncientAetherBlockEntityTypes.CAMPFIRE.get(), CampfireBlockEntity::particleTick) : null;
         } else {
