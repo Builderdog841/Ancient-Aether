@@ -44,7 +44,7 @@ public class AeronauticLeaper extends Slime {
 		this.goalSelector.addGoal(2, new AeronauticLeaper.AttackGoal(this));
 		this.goalSelector.addGoal(3, new AeronauticLeaper.RandomDirectionGoal(this));
 		this.goalSelector.addGoal(5, new AeronauticLeaper.KeepOnJumpingGoal(this));
-		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, (entity) -> Math.abs(entity.getY() - this.getY()) <= 4.0));
+		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, (entity) -> Math.abs(entity.getY() - this.getY()) <= 5.0));
 	}
 
 	@Nonnull
