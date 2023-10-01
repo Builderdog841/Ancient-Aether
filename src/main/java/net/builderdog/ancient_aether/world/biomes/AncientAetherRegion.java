@@ -29,8 +29,8 @@ public class AncientAetherRegion extends Region {
         Climate.Parameter tempDefault3 = Climate.Parameter.span(0.93F, 0.94F);
         Climate.Parameter tempDefault4 = Climate.Parameter.span(0.94F, 1.0F);
 
-        Climate.Parameter tempWyndcaps1 = Climate.Parameter.span(-0.75F, -0.35F);
-        Climate.Parameter tempWyndcaps2 = Climate.Parameter.span(-0.8F, -0.75F);
+        Climate.Parameter tempWyndcaps1 = Climate.Parameter.span(-0.7F, -0.35F);
+        Climate.Parameter tempWyndcaps2 = Climate.Parameter.span(-0.8F, -0.7F);
         Climate.Parameter tempWyndcaps3 = Climate.Parameter.span(-0.8F, -0.35F);
         Climate.Parameter tempWyndcaps4 = Climate.Parameter.span(-0.93F, -0.8F);
 
