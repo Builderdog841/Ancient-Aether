@@ -92,11 +92,11 @@ public class AncientAetherMissingEntries {
                 .filter(mapping -> mapping.getKey().getPath().contains("raw_buffalo_ribs")).forEach(blockMapping -> blockMapping.remap(AncientAetherItems.RAW_BUFFALO_RIBS.get()));
 
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
-                .filter(mapping -> mapping.getKey().getPath().contains("quicksoil_bricks")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.QUICKSTONE.get()));
+                .filter(mapping -> mapping.getKey().getPath().contains("quicksoil_bricks")).forEach(blockMapping -> blockMapping.remap(AetherBlocks.QUICKSOIL.get()));
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
-                .filter(mapping -> mapping.getKey().getPath().contains("quicksoil_brick_stairs")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.QUICKSTONE_STAIRS.get()));
+                .filter(mapping -> mapping.getKey().getPath().contains("quicksoil_brick_stairs")).forEach(blockMapping -> blockMapping.remap(AetherBlocks.HOLYSTONE_SLAB.get()));
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
-                .filter(mapping -> mapping.getKey().getPath().contains("quicksoil_brick_slab")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.QUICKSTONE_SLAB.get()));
+                .filter(mapping -> mapping.getKey().getPath().contains("quicksoil_brick_slab")).forEach(blockMapping -> blockMapping.remap(AetherBlocks.HOLYSTONE_SLAB.get()));
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
                 .filter(mapping -> mapping.getKey().getPath().contains("quicksoil_brick_wall")).forEach(blockMapping -> blockMapping.remap(AetherBlocks.HOLYSTONE_WALL.get()));
     }

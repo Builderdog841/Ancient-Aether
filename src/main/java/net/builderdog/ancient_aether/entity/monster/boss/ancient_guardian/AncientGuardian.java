@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.entity.boss.ancient_guardian;
+package net.builderdog.ancient_aether.entity.monster.boss.ancient_guardian;
 
 import com.aetherteam.aether.entity.AetherBossMob;
 import com.aetherteam.aether.entity.monster.dungeon.boss.BossNameGenerator;

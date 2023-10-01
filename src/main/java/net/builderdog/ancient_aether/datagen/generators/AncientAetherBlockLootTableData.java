@@ -45,11 +45,8 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.HIGHSPROOT_HANGING_SIGN.get());
         dropSelf(AncientAetherBlocks.HIGHSPROOT_WALL_HANGING_SIGN.get());
         dropSelf(AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
-        dropSelf(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get());
         add(AncientAetherBlocks.HIGHSPROOT_LEAVES.get(),
                 (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
-        add(AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES.get(),
-                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
         add(AncientAetherBlocks.HIGHSPROOT_BOOKSHELF.get(),
                 (bookshelf) -> createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantValue.exactly(3)));
 
@@ -83,11 +80,6 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
 
         //Ores
         dropDoubleWithFortune(AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), Items.QUARTZ);
-
-        //Quickstone
-        dropSelf(AncientAetherBlocks.QUICKSTONE.get());
-        dropSelf(AncientAetherBlocks.QUICKSTONE_STAIRS.get());
-        dropSelf(AncientAetherBlocks.QUICKSTONE_SLAB.get());
 
         //Dungeon Blocks
         dropSelf(AncientAetherBlocks.AEROTIC_STONE.get());
@@ -124,7 +116,6 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
 
         //Potted Plants
         dropPottedContents(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING.get());
-        dropPottedContents(AncientAetherBlocks.POTTED_FROSTED_HIGHSPROOT_SAPLING.get());
         dropPottedContents(AncientAetherBlocks.POTTED_SAKURA_SAPLING.get());
         dropPottedContents(AncientAetherBlocks.POTTED_SKY_BLUES.get());
         dropPottedContents(AncientAetherBlocks.POTTED_WYND_THISTLE.get());

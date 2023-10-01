@@ -69,11 +69,6 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         //Ores
         blockWithItem(AncientAetherBlocks.AETHER_QUARTZ_ORE);
 
-        //Quickstone
-        blockWithItem(AncientAetherBlocks.QUICKSTONE);
-        stairs((StairBlock) AncientAetherBlocks.QUICKSTONE_STAIRS.get(), AncientAetherBlocks.QUICKSTONE.get(), "");
-        slab((SlabBlock) AncientAetherBlocks.QUICKSTONE_SLAB.get(), AncientAetherBlocks.QUICKSTONE.get(), "");
-
         //Mosaic Blocks
         logBlock((AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get()));
         logBlock((AncientAetherBlocks.CARVED_STONE_MOSAIC.get()));
@@ -98,12 +93,10 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
 
         //Leaves
         blockWithItem(AncientAetherBlocks.HIGHSPROOT_LEAVES);
-        blockWithItem(AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES);
         blockWithItem(AncientAetherBlocks.SAKURA_LEAVES);
 
         //Plants
         crossBlock(AncientAetherBlocks.HIGHSPROOT_SAPLING);
-        crossBlock(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING);
         crossBlock(AncientAetherBlocks.SAKURA_SAPLING);
         crossBlock(AncientAetherBlocks.WYND_THISTLE);
         crossBlock(AncientAetherBlocks.SKY_BLUES);
@@ -114,7 +107,6 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         //Potted Plants
         pottedPlant(AncientAetherBlocks.POTTED_SAKURA_SAPLING.get(), AncientAetherBlocks.SAKURA_SAPLING.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING.get(), AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), "");
-        pottedPlant(AncientAetherBlocks.POTTED_FROSTED_HIGHSPROOT_SAPLING.get(), AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_WYND_THISTLE.get(), AncientAetherBlocks.WYND_THISTLE.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_SAKURA_BLOSSOMS.get(), AncientAetherBlocks.SAKURA_BLOSSOMS.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_HIGHLAND_VIOLA.get(), AncientAetherBlocks.HIGHLAND_VIOLA.get(), "");

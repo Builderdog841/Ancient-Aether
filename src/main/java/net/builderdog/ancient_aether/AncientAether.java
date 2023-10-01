@@ -244,10 +244,8 @@ public class AncientAether {
 
     private void registerComposting() {
         addCompost(0.3F, AncientAetherBlocks.HIGHSPROOT_LEAVES.get().asItem());
-        addCompost(0.3F, AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES.get().asItem());
         addCompost(0.3F, AncientAetherBlocks.SAKURA_LEAVES.get().asItem());
         addCompost(0.3F, AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
-        addCompost(0.3F, AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get());
         addCompost(0.3F, AncientAetherBlocks.SAKURA_SAPLING.get());
         addCompost(0.65F,AncientAetherBlocks.SKY_BLUES.get());
         addCompost(0.65F,AncientAetherBlocks.SAKURA_BLOSSOMS.get());

@@ -1,4 +1,4 @@
-// 1.20.1	2023-09-30T14:40:28.5448487	Item Models: ancient_aether
+// 1.20.1	2023-10-01T21:45:30.774421	Item Models: ancient_aether
 dc22e9f245c5e59d55b0aec4ae45dec8337daa28 assets/ancient_aether/models/item/aerogel_bottle.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/aeronautic_leaper_spawn_egg.json
 2b792d3780c8a2525546b071319a3e5ed1ab9ac4 assets/ancient_aether/models/item/aerotic_lantern.json
@@ -15,7 +15,6 @@ ebbb314be0e3b10376468fa80420375a40b93108 assets/ancient_aether/models/item/buffa
 dec43224a81e6b4b281f534edfa1b2392915fd98 assets/ancient_aether/models/item/buffalo_ribs.json
 c3272ab19c230cf6ebff5ea420ce3ccbc1c229fc assets/ancient_aether/models/item/cooked_buffalo_ribs.json
 6a685c107fc07f790104809660de0f58850bff3b assets/ancient_aether/models/item/crystal_gold_coin.json
-adb8bde9f62a21d4a492e030b93e0aa3e6f9f404 assets/ancient_aether/models/item/frosted_highsproot_sapling.json
 847fb5b6aa35f5048e62d3bf76e55f05c6b41f80 assets/ancient_aether/models/item/gale_lantern.json
 76dcbb064b6afcca77cbab1d82750b6e6c30765c assets/ancient_aether/models/item/grapes.json
 4aec7cfb55018b780f7d738a111bdc280f060489 assets/ancient_aether/models/item/gravitite_dart_shooter.json
@@ -41,8 +40,6 @@ b04b2498d89429299562a586c9fdb7853d70b26a assets/ancient_aether/models/item/highs
 60617acc1f09e87b868367f7e6991e1e83d84116 assets/ancient_aether/models/item/highsproot_trapdoor.json
 f5db49e83578d5a9ad97bdb124582f7b3b6c0a32 assets/ancient_aether/models/item/highsproot_wood_wall.json
 fbc49480534027fea32505d0c27b4b33aeb8a672 assets/ancient_aether/models/item/holystone_lantern.json
-db9205c807c1c097354713164dbfe06e10bc40ae assets/ancient_aether/models/item/quickstone_slab.json
-646c8d4dc55880b9ea5c42176ed3b42f3e8ac97f assets/ancient_aether/models/item/quickstone_stairs.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/roothyrn_spawn_egg.json
 6acc619f3923ed633742023516b313c1ef089100 assets/ancient_aether/models/item/sakura_blossoms.json
 f6ec6ffe46ca890025a12785250d13129a973a1a assets/ancient_aether/models/item/sakura_boat.json

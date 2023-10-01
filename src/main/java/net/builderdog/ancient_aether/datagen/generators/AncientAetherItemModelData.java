@@ -73,9 +73,6 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         itemButton(AncientAetherBlocks.SAKURA_BUTTON.get(), AncientAetherBlocks.SAKURA_PLANKS.get(), "");
         itemBlock(AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get());
 
-        itemBlock(AncientAetherBlocks.QUICKSTONE_STAIRS.get());
-        itemBlock(AncientAetherBlocks.QUICKSTONE_SLAB.get());
-
         itemBlock(AncientAetherBlocks.AEROTIC_STAIRS.get());
         itemBlock(AncientAetherBlocks.AEROTIC_SLAB.get());
         itemWallBlock(AncientAetherBlocks.AEROTIC_WALL.get(), AncientAetherBlocks.AEROTIC_STONE.get(), "");
@@ -98,7 +95,6 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         item(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get().asItem(), "");
 
         itemBlockFlat(AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), "");
-        itemBlockFlat(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.SAKURA_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.SAKURA_BLOSSOMS.get(), "");
         itemBlockFlat(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get(), "");

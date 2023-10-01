@@ -4,7 +4,7 @@ import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.entity.animals.HighlandBuffalo;
 import net.builderdog.ancient_aether.entity.animals.WyndcapsAnimal;
-import net.builderdog.ancient_aether.entity.boss.ancient_guardian.AncientGuardian;
+import net.builderdog.ancient_aether.entity.monster.boss.ancient_guardian.AncientGuardian;
 import net.builderdog.ancient_aether.entity.monster.AeronauticLeaper;
 import net.builderdog.ancient_aether.entity.monster.Roothyrn;
 import net.builderdog.ancient_aether.entity.monster.WyndZephyr;
@@ -24,6 +24,7 @@ public class AncientAetherEvents {
         event.put(AncientAetherEntities.ROOTHYRN.get(), Roothyrn.createMobAttributes().build());
         event.put(AncientAetherEntities.AERONAUTIC_LEAPER.get(), AeronauticLeaper.createMobAttributes().build());
         event.put(AncientAetherEntities.ANCIENT_GUARDIAN.get(), AncientGuardian.createMobAttributes().build());
+        event.put(AncientAetherEntities.ANCIENT_CORE.get(), AncientGuardian.createMobAttributes().build());
         event.put(AncientAetherEntities.WYND_ZEPHYR.get(), WyndZephyr.createMobAttributes().build());
     }
 

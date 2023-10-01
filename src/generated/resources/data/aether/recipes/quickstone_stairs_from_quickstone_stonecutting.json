@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "ancient_aether:quickstone"
-  },
-  "result": "ancient_aether:quickstone_stairs"
-}
