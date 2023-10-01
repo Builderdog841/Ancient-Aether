@@ -1,15 +1,17 @@
 package net.builderdog.ancient_aether.entity.monster;
 
+import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.client.AetherSoundEvents;
-import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.util.Mth;
+import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -18,46 +20,66 @@ import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Slime;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.common.ForgeMod;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 public class AeronauticLeaper extends Slime {
 	public static final EntityDataAccessor<Boolean> DATA_AWAKE_ID = SynchedEntityData.defineId(AeronauticLeaper.class, EntityDataSerializers.BOOLEAN);
 
 	public float timeSpotted = 0.0F;
 
-	public AeronauticLeaper(EntityType<? extends AeronauticLeaper> entityType, Level level) {
-		super(entityType, level);
+	public AeronauticLeaper(EntityType<? extends AeronauticLeaper> pEntityType, Level pLevel) {
+		super(pEntityType, pLevel);
 	}
 
 	@Override
 	protected void registerGoals() {
-		super.registerGoals();
-
-		goalSelector.addGoal(1, new LeapingSentryFloatGoal(this));
-		goalSelector.addGoal(3, new LeapingSentryAttackGoal(this));
-		goalSelector.addGoal(4, new LeapingSentryRandomDirectionGoal(this));
-		goalSelector.addGoal(5, new LeapingSentryKeepOnJumpingGoal(this));
-
-		targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, (p_289461_) -> Math.abs(p_289461_.getY() - this.getY()) <= 4.0D));
+		this.goalSelector.addGoal(1, new AeronauticLeaper.FloatGoal(this));
+		this.goalSelector.addGoal(2, new AeronauticLeaper.AttackGoal(this));
+		this.goalSelector.addGoal(3, new AeronauticLeaper.RandomDirectionGoal(this));
+		this.goalSelector.addGoal(5, new AeronauticLeaper.KeepOnJumpingGoal(this));
+		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, (entity) -> Math.abs(entity.getY() - this.getY()) <= 4.0));
 	}
 
 	@Nonnull
 	public static AttributeSupplier.Builder createMobAttributes() {
 		return Mob.createMobAttributes()
-				.add(Attributes.MAX_HEALTH, 10D)
-				.add(Attributes.MOVEMENT_SPEED, 1f)
-				.add(ForgeMod.ENTITY_GRAVITY.get(), 0.025)
-				.add(Attributes.ATTACK_DAMAGE, 4f)
-		        .add(Attributes.ATTACK_SPEED, 1.2f);
+				.add(Attributes.MAX_HEALTH, 10.0)
+				.add(Attributes.MOVEMENT_SPEED, 0.8)
+				.add(Attributes.ATTACK_DAMAGE, 5.0)
+			    .add(ForgeMod.ENTITY_GRAVITY.get(), 0.025);
 	}
 
 	@Override
 	protected void defineSynchedData() {
 		super.defineSynchedData();
-		this.getEntityData().define(DATA_AWAKE_ID, false);
+		this.entityData.define(DATA_AWAKE_ID, false);
+	}
+
+	@Override
+	public void setSize(int size, boolean resetHealth) {}
+
+	@Override
+	public void remove(@Nonnull Entity.RemovalReason reason) {
+		this.setRemoved(reason);
+		if (reason == Entity.RemovalReason.KILLED) {
+			this.gameEvent(GameEvent.ENTITY_DIE);
+		}
+		this.invalidateCaps();
+	}
+
+	public boolean isAwake() {
+		return this.entityData.get(DATA_AWAKE_ID);
+	}
+
+	public void setAwake(boolean awake) {
+		this.entityData.set(DATA_AWAKE_ID, awake);
 	}
 
 	@Override
@@ -76,36 +98,21 @@ public class AeronauticLeaper extends Slime {
 	}
 
 	@Override
-	protected void jumpFromGround() {
-		if (this.isAwake()) {
-			super.jumpFromGround();
-		}
+	public @Nullable
+	SpawnGroupData finalizeSpawn(@Nonnull ServerLevelAccessor level, @Nonnull DifficultyInstance difficulty, @Nonnull MobSpawnType reason, @Nullable SpawnGroupData spawnData, @Nullable CompoundTag tag) {
+		this.setSize(1, true);
+		this.setLeftHanded(false);
+		return spawnData;
+	}
+
+	@Nonnull
+	@Override
+	protected ResourceLocation getDefaultLootTable() {
+		return this.getType().getDefaultLootTable();
 	}
 
 	@Override
-	public void remove(@NotNull RemovalReason pReason) {
-		this.setRemoved(pReason);
-		this.invalidateCaps();
-	}
-
-	public boolean isAwake() {
-		return this.getEntityData().get(DATA_AWAKE_ID);
-	}
-
-	public void setAwake(boolean awake) {
-		this.getEntityData().set(DATA_AWAKE_ID, awake);
-	}
-
-	@Override
-	public void setSize(int size, boolean resetHealth) { }
-
-	@Override
-	protected @NotNull ParticleOptions getParticleType() {
-		return new BlockParticleOption(ParticleTypes.BLOCK, AncientAetherBlocks.LIGHT_AEROTIC_STONE.get().defaultBlockState());
-	}
-
-	@Override
-	protected SoundEvent getHurtSound(@NotNull DamageSource damageSource) {
+	protected SoundEvent getHurtSound(@Nonnull DamageSource damageSource) {
 		return AetherSoundEvents.ENTITY_SENTRY_HURT.get();
 	}
 
@@ -114,19 +121,39 @@ public class AeronauticLeaper extends Slime {
 		return AetherSoundEvents.ENTITY_SENTRY_DEATH.get();
 	}
 
+	protected boolean isDealsDamage() {
+		return this.isEffectiveAi();
+	}
+
+	@Nonnull
 	@Override
-	protected @NotNull SoundEvent getSquishSound() {
+	protected SoundEvent getSquishSound() {
 		return AetherSoundEvents.ENTITY_SENTRY_JUMP.get();
 	}
 
+	@Nonnull
 	@Override
-	protected @NotNull SoundEvent getJumpSound() {
+	protected SoundEvent getJumpSound() {
 		return AetherSoundEvents.ENTITY_SENTRY_JUMP.get();
 	}
 
+	@Nonnull
 	@Override
-	public @NotNull EntityDimensions getDimensions(@NotNull Pose pose) {
-		return super.getDimensions(pose).scale(1.76F);
+	public EntityDimensions getDimensions(@NotNull Pose pose) {
+		return super.getDimensions(pose).scale(2*0.879F);
+	}
+
+	@Nonnull
+	@Override
+	protected ParticleOptions getParticleType() {
+		return new BlockParticleOption(ParticleTypes.BLOCK, AetherBlocks.AEROGEL.get().defaultBlockState());
+	}
+
+	@SuppressWarnings("unchecked")
+	@Nonnull
+	@Override
+	public EntityType<? extends AeronauticLeaper> getType() {
+		return (EntityType<? extends AeronauticLeaper>) super.getType();
 	}
 
 	@Override
@@ -134,94 +161,87 @@ public class AeronauticLeaper extends Slime {
 		return true;
 	}
 
-	@Override
-	public void handleEntityEvent(byte id) {
-		if (id == 70) {
-			for (int i = 0; i < 40; i++) {
-				double x = this.getX() + (this.getRandom().nextFloat() * 0.25);
-				double y = this.getY() + 0.5;
-				double z = this.getZ() + (this.getRandom().nextFloat() * 0.25);
-				float f1 = this.getRandom().nextFloat() * 360.0F;
-				this.level().addParticle(ParticleTypes.POOF, x, y, z, -Math.sin(Mth.DEG_TO_RAD * f1) * 0.75, 0.125, Math.cos(Mth.DEG_TO_RAD * f1) * 0.75);
-			}
-		} else {
-			super.handleEntityEvent(id);
+	protected void jumpFromGround() {
+		if(isAwake()) {
+			Vec3 vec3 = this.getDeltaMovement();
+			this.setDeltaMovement(vec3.x, 0.3, vec3.z);
+			this.hasImpulse = true;
 		}
 	}
 
-	static class LeapingSentryAttackGoal extends SlimeAttackGoal {
-		private final AeronauticLeaper aeronauticLeaper;
+	public static class AttackGoal extends SlimeAttackGoal {
+		private final AeronauticLeaper sentry;
 
-		public LeapingSentryAttackGoal(AeronauticLeaper aeronauticLeaper) {
-			super(aeronauticLeaper);
-			this.aeronauticLeaper = aeronauticLeaper;
+		public AttackGoal(AeronauticLeaper sentryIn) {
+			super(sentryIn);
+			this.sentry = sentryIn;
 		}
 
 		@Override
 		public boolean canUse() {
-			return aeronauticLeaper.isAwake() && super.canUse();
+			return this.sentry.isAwake() && super.canUse();
 		}
 
 		@Override
 		public boolean canContinueToUse() {
-			return aeronauticLeaper.isAwake() && super.canContinueToUse();
+			return this.sentry.isAwake() && super.canContinueToUse();
 		}
 	}
 
-	static class LeapingSentryFloatGoal extends SlimeFloatGoal {
-		private final AeronauticLeaper aeronauticLeaper;
+	public static class FloatGoal extends SlimeFloatGoal {
+		private final AeronauticLeaper sentry;
 
-		public LeapingSentryFloatGoal(AeronauticLeaper aeronauticLeaper) {
-			super(aeronauticLeaper);
-			this.aeronauticLeaper = aeronauticLeaper;
+		public FloatGoal(AeronauticLeaper sentryIn) {
+			super(sentryIn);
+			this.sentry = sentryIn;
 		}
 
 		@Override
 		public boolean canUse() {
-			return aeronauticLeaper.isAwake() && super.canUse();
+			return this.sentry.isAwake() && super.canUse();
 		}
 
 		@Override
 		public boolean canContinueToUse() {
-			return aeronauticLeaper.isAwake() && super.canContinueToUse();
+			return this.sentry.isAwake() && super.canContinueToUse();
 		}
 	}
 
-	static class LeapingSentryKeepOnJumpingGoal extends SlimeKeepOnJumpingGoal {
-		private final AeronauticLeaper aeronauticLeaper;
+	public static class KeepOnJumpingGoal extends SlimeKeepOnJumpingGoal {
+		private final AeronauticLeaper sentry;
 
-		public LeapingSentryKeepOnJumpingGoal(AeronauticLeaper aeronauticLeaper) {
-			super(aeronauticLeaper);
-			this.aeronauticLeaper = aeronauticLeaper;
+		public KeepOnJumpingGoal(AeronauticLeaper sentryIn) {
+			super(sentryIn);
+			this.sentry = sentryIn;
 		}
 
 		@Override
 		public boolean canUse() {
-			return aeronauticLeaper.isAwake() && super.canUse();
+			return this.sentry.isAwake() && super.canUse();
 		}
 
 		@Override
 		public boolean canContinueToUse() {
-			return aeronauticLeaper.isAwake() && super.canContinueToUse();
+			return this.sentry.isAwake() && super.canContinueToUse();
 		}
 	}
 
-	static class LeapingSentryRandomDirectionGoal extends SlimeRandomDirectionGoal {
-		private final AeronauticLeaper aeronauticLeaper;
+	public static class RandomDirectionGoal extends SlimeRandomDirectionGoal {
+		private final AeronauticLeaper sentry;
 
-		public LeapingSentryRandomDirectionGoal(AeronauticLeaper aeronauticLeaper) {
-			super(aeronauticLeaper);
-			this.aeronauticLeaper = aeronauticLeaper;
+		public RandomDirectionGoal(AeronauticLeaper sentryIn) {
+			super(sentryIn);
+			this.sentry = sentryIn;
 		}
 
 		@Override
 		public boolean canUse() {
-			return aeronauticLeaper.isAwake() && super.canUse();
+			return this.sentry.isAwake() && super.canUse();
 		}
 
 		@Override
 		public boolean canContinueToUse() {
-			return aeronauticLeaper.isAwake() && super.canContinueToUse();
+			return this.sentry.isAwake() && super.canContinueToUse();
 		}
 	}
 }
