@@ -101,7 +101,7 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AncientAetherItems.ANCIENT_RUNE.get(),2)
                 .define('G', AetherBlocks.ENCHANTED_GRAVITITE.get())
                 .define('R', AncientAetherItems.ANCIENT_RUNE.get())
-                .define('S', AncientAetherBlocks.AEROTIC_STONE.get())
+                .define('S', AetherBlocks.AEROGEL.get())
                 .pattern("GGG")
                 .pattern("GRG")
                 .pattern("GSG")
