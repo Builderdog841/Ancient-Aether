@@ -11,10 +11,6 @@ public class FrostedHighsprootTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource random, boolean largeHive) {
-        if (random.nextInt(10) == 0) {
-            return AncientAetherConfiguredFeatures.TALL_FROSTED_HIGHSPROOT_SPRUCE_TREE;
-        } else {
             return AncientAetherConfiguredFeatures.FROSTED_HIGHSPROOT_SPRUCE_TREE;
-        }
     }
 }

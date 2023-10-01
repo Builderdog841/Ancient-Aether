@@ -8,7 +8,6 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class AncientAetherFoliagePlacerTypes {
 
-    //This code was written by the Aether Team and not by me
     public static final DeferredRegister<FoliagePlacerType<?>> FOLIAGE_PLACERS = DeferredRegister.create(ForgeRegistries.FOLIAGE_PLACER_TYPES, AncientAether.MOD_ID);
 
     public static final RegistryObject<FoliagePlacerType<AncientAetherPineFoliagePlacer>> ANCIENT_AETHER_PINE_FOLIAGE_PLACER = FOLIAGE_PLACERS.register("ancient_aether_pine_foliage_placer", () -> new FoliagePlacerType<>(AncientAetherPineFoliagePlacer.CODEC));

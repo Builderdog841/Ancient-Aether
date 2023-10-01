@@ -12,7 +12,6 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerTy
 
 public class AncientAetherPineFoliagePlacer extends FoliagePlacer {
 
-    //This code was written by the Aether Team and not by me
     public static final Codec<AncientAetherPineFoliagePlacer> CODEC = RecordCodecBuilder.create((codec) -> foliagePlacerParts(codec)
             .and(IntProvider.codec(0, 24).fieldOf("trunk_height").forGetter((placer) -> placer.trunkHeight))
             .apply(codec, AncientAetherPineFoliagePlacer::new));

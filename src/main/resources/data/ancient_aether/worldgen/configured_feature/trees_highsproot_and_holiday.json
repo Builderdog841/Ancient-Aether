@@ -40,9 +40,9 @@
         }
       },
       {
-        "chance": 0.2,
+        "chance": 0.1,
         "feature": {
-          "feature": "ancient_aether:tall_highsproot_spruce_tree",
+          "feature": "ancient_aether:highsproot_pine_tree",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",

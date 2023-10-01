@@ -9,28 +9,10 @@
       }
     },
     "foliage_placer": {
-      "type": "minecraft:spruce_foliage_placer",
-      "offset": {
-        "type": "minecraft:uniform",
-        "value": {
-          "max_inclusive": 2,
-          "min_inclusive": 0
-        }
-      },
-      "radius": {
-        "type": "minecraft:uniform",
-        "value": {
-          "max_inclusive": 2,
-          "min_inclusive": 2
-        }
-      },
-      "trunk_height": {
-        "type": "minecraft:uniform",
-        "value": {
-          "max_inclusive": 2,
-          "min_inclusive": 1
-        }
-      }
+      "type": "aether:crystal_foliage_placer",
+      "offset": 0,
+      "radius": 0,
+      "trunk_height": 8
     },
     "foliage_provider": {
       "type": "minecraft:simple_state_provider",
@@ -55,7 +37,7 @@
     "trunk_placer": {
       "type": "minecraft:straight_trunk_placer",
       "base_height": 8,
-      "height_rand_a": 3,
+      "height_rand_a": 4,
       "height_rand_b": 1
     },
     "trunk_provider": {
