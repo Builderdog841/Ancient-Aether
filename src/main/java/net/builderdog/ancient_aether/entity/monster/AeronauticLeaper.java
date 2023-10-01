@@ -164,7 +164,7 @@ public class AeronauticLeaper extends Slime {
 	protected void jumpFromGround() {
 		if(isAwake()) {
 			Vec3 vec3 = this.getDeltaMovement();
-			this.setDeltaMovement(vec3.x, 0.3, vec3.z);
+			this.setDeltaMovement(vec3.x, 0.25, vec3.z);
 			this.hasImpulse = true;
 		}
 	}
