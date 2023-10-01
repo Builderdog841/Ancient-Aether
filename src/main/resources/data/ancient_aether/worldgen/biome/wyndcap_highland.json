@@ -87,7 +87,7 @@
       "charge": 0.4,
       "energy_budget": 0.1
     },
-    "ancient_aether:wynd_zephyr": {
+    "aether:zephyr": {
       "charge": 0.6,
       "energy_budget": 0.16
     }
@@ -111,7 +111,7 @@
     ],
     "aether_sky_monster": [
       {
-        "type": "ancient_aether:wynd_zephyr",
+        "type": "aether:zephyr",
         "maxCount": 1,
         "minCount": 1,
         "weight": 20
