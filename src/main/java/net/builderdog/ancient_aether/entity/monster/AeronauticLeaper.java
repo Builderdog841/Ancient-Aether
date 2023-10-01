@@ -52,7 +52,7 @@ public class AeronauticLeaper extends Slime {
 		return Mob.createMobAttributes()
 				.add(Attributes.MAX_HEALTH, 10.0)
 				.add(Attributes.MOVEMENT_SPEED, 0.8)
-				.add(Attributes.ATTACK_DAMAGE, 5.0)
+				.add(Attributes.ATTACK_DAMAGE, 8.0)
 			    .add(ForgeMod.ENTITY_GRAVITY.get(), 0.025);
 	}
 
