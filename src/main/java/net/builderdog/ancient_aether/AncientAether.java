@@ -53,6 +53,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.resource.PathPackResources;
 //import org.slf4j.Logger;
 import org.jetbrains.annotations.NotNull;
+import teamrazor.aeroblender.AeroBlenderConfig;
 import teamrazor.aeroblender.aether.AetherRuleCategory;
 import terrablender.api.Regions;
 import terrablender.api.SurfaceRuleManager;
@@ -116,6 +117,7 @@ public class AncientAether {
                 AetherConfig.CLIENT.music_backup_max_delay.set(2);
                 AetherConfig.CLIENT.disable_music_manager.set(false);
                 CumulusConfig.CLIENT.enable_menu_list_button.set(true);
+                AeroBlenderConfig.COMMON.aetherRegionSize.set(0);
         });
     }
 

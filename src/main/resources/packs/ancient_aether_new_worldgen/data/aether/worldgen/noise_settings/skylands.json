@@ -59,7 +59,7 @@
       "shift_x": "minecraft:shift_x",
       "shift_y": 0.0,
       "shift_z": "minecraft:shift_z",
-      "xz_scale": 0.02,
+      "xz_scale": 0.05,
       "y_scale": 0.0
     },
     "vegetation": {
@@ -68,7 +68,7 @@
       "shift_x": "minecraft:shift_x",
       "shift_y": 0.0,
       "shift_z": "minecraft:shift_z",
-      "xz_scale": 0.02,
+      "xz_scale": 0.05,
       "y_scale": 0.0
     },
     "vein_gap": 0.0,
@@ -104,9 +104,10 @@
               "then_run": {
                 "type": "minecraft:block",
                 "result_state": {
-                  "Name": "aether:quicksoil",
+                  "Name": "aether:aether_grass_block",
                   "Properties": {
-                    "double_drops": "true"
+                    "double_drops": "true",
+                    "snowy": "false"
                   }
                 }
               }
