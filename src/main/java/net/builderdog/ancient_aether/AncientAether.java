@@ -117,7 +117,7 @@ public class AncientAether {
                 AetherConfig.CLIENT.music_backup_max_delay.set(2);
                 AetherConfig.CLIENT.disable_music_manager.set(false);
                 CumulusConfig.CLIENT.enable_menu_list_button.set(true);
-                AeroBlenderConfig.COMMON.aetherRegionSize.set(0);
+                AeroBlenderConfig.COMMON.vanillaAetherRegionWeight.set(0);
         });
     }
 
