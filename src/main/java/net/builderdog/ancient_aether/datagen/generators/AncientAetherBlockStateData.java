@@ -93,10 +93,12 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
 
         //Leaves
         blockWithItem(AncientAetherBlocks.HIGHSPROOT_LEAVES);
+        blockWithItem(AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES);
         blockWithItem(AncientAetherBlocks.SAKURA_LEAVES);
 
         //Plants
         crossBlock(AncientAetherBlocks.HIGHSPROOT_SAPLING);
+        crossBlock(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING);
         crossBlock(AncientAetherBlocks.SAKURA_SAPLING);
         crossBlock(AncientAetherBlocks.WYND_THISTLE);
         crossBlock(AncientAetherBlocks.SKY_BLUES);

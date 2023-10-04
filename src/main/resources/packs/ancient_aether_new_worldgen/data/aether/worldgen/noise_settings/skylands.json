@@ -38,36 +38,12 @@
           "type": "minecraft:blend_density",
           "argument": {
             "type": "minecraft:add",
-            "argument1": {
-              "type": "minecraft:add",
-              "argument1": {
-                "type": "minecraft:add",
                 "argument1": 0.2,
                 "argument2": {
                   "type": "minecraft:add",
                   "argument1": -0.16,
-                  "argument2": "aether:the_aether/higher_islands"
+                  "argument2": "aether:the_aether/base_islands"
                 }
-              },
-              "argument2": {
-                "type": "minecraft:add",
-                "argument1": 0.2,
-                "argument2": {
-                  "type": "minecraft:add",
-                  "argument1": -0.13,
-                  "argument2": "aether:the_aether/hilly_islands"
-                }
-              }
-            },
-            "argument2": {
-              "type": "minecraft:add",
-              "argument1": 0.2,
-              "argument2": {
-                "type": "minecraft:add",
-                "argument1": -0.13,
-                "argument2": "aether:the_aether/base_islands"
-              }
-            }
           }
         }
       }
@@ -83,7 +59,7 @@
       "shift_x": "minecraft:shift_x",
       "shift_y": 0.0,
       "shift_z": "minecraft:shift_z",
-      "xz_scale": 0.05,
+      "xz_scale": 0.02,
       "y_scale": 0.0
     },
     "vegetation": {
@@ -92,7 +68,7 @@
       "shift_x": "minecraft:shift_x",
       "shift_y": 0.0,
       "shift_z": "minecraft:shift_z",
-      "xz_scale": 0.05,
+      "xz_scale": 0.02,
       "y_scale": 0.0
     },
     "vein_gap": 0.0,
@@ -128,20 +104,10 @@
               "then_run": {
                 "type": "minecraft:block",
                 "result_state": {
-                  "Name": "aether:aether_grass_block",
+                  "Name": "aether:quicksoil",
                   "Properties": {
-                    "double_drops": "true",
-                    "snowy": "false"
+                    "double_drops": "true"
                   }
-                }
-              }
-            },
-            {
-              "type": "minecraft:block",
-              "result_state": {
-                "Name": "aether:aether_dirt",
-                "Properties": {
-                  "double_drops": "true"
                 }
               }
             }
