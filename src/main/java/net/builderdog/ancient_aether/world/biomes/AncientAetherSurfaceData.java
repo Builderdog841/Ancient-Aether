@@ -21,11 +21,7 @@ public class AncientAetherSurfaceData {
 
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.WYNDCAP_PEAKS),
                         SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(Blocks.SNOW_BLOCK.defaultBlockState()))
-                ),
-
-                SurfaceRules.ifTrue(SurfaceRules.isBiome(AetherBiomes.SKYROOT_MEADOW, AetherBiomes.SKYROOT_GROVE, AetherBiomes.SKYROOT_FOREST, AetherBiomes.SKYROOT_WOODLAND, AncientAetherBiomes.SKYROOT_PINE_FOREST, AncientAetherBiomes.SKYROOT_JUNGLE),
-                       SurfaceRules.ifTrue(SurfaceRules.yStartCheck(VerticalAnchor.belowTop(144),144),
-                                SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(AetherFeatureStates.QUICKSOIL))))
+                )
         );
     }
 }

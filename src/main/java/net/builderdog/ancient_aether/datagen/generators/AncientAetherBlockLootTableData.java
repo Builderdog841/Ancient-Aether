@@ -45,8 +45,11 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.HIGHSPROOT_HANGING_SIGN.get());
         dropSelf(AncientAetherBlocks.HIGHSPROOT_WALL_HANGING_SIGN.get());
         dropSelf(AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
+        dropSelf(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get());
         add(AncientAetherBlocks.HIGHSPROOT_LEAVES.get(),
                 (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
+        add(AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES.get(),
+                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
         add(AncientAetherBlocks.HIGHSPROOT_BOOKSHELF.get(),
                 (bookshelf) -> createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantValue.exactly(3)));
 

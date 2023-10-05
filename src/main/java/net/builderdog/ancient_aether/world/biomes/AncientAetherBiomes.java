@@ -18,10 +18,6 @@ public class AncientAetherBiomes {
     //Sakura Jungle
     public static final ResourceKey<Biome> SKYROOT_JUNGLE = createKey("skyroot_jungle");
     public static final ResourceKey<Biome> SAKURA_JUNGLE = createKey("sakura_jungle");
-    public static final ResourceKey<Biome> OVERGROWN_CAVERNS = createKey("overgrown_caverns");
-
-    //Misc Biomes
-    public static final ResourceKey<Biome> AEROGEL_CAVES = createKey("aerogel_caves");
 
     private static ResourceKey<Biome> createKey(String name) {
         return ResourceKey.create(Registries.BIOME, new ResourceLocation(AncientAether.MOD_ID, name));

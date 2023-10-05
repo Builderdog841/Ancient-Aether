@@ -24,70 +24,8 @@ public class AncientAetherRegion extends Region {
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper) {
         Climate.Parameter fullRange = Climate.Parameter.span(-1.5F, 1.5F);
 
-        Climate.Parameter tempDefault1 = Climate.Parameter.span(-1.0F, -0.8F);
-        Climate.Parameter tempDefault2 = Climate.Parameter.span(-0.25F, 0.35F);
-        Climate.Parameter tempDefault3 = Climate.Parameter.span(0.93F, 0.94F);
-        Climate.Parameter tempDefault4 = Climate.Parameter.span(0.94F, 1.0F);
-
-        Climate.Parameter tempWyndcaps1 = Climate.Parameter.span(-0.7F, -0.35F);
-        Climate.Parameter tempWyndcaps2 = Climate.Parameter.span(-0.8F, -0.7F);
-        Climate.Parameter tempWyndcaps3 = Climate.Parameter.span(-0.8F, -0.35F);
-        Climate.Parameter tempWyndcaps4 = Climate.Parameter.span(-0.93F, -0.8F);
-
-        Climate.Parameter tempSakura1 = Climate.Parameter.span(0.4F, 0.8F);
-        Climate.Parameter tempSakura2 = Climate.Parameter.span(0.2F, 0.4F);
-        Climate.Parameter tempSakura3 = Climate.Parameter.span(0.8F, 1F);
-
-        addBiome(mapper, new Climate.ParameterPoint(tempDefault2, Climate.Parameter.span(0.5F, 0.8F), fullRange, fullRange, Climate.Parameter.span(-1.0F, 0.3F), fullRange, 0),
-                AetherBiomes.SKYROOT_FOREST);
-        addBiome(mapper, new Climate.ParameterPoint(tempDefault3, Climate.Parameter.span(-0.3F, 1.0F), fullRange, fullRange, fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_FOREST);
-        addBiome(mapper, new Climate.ParameterPoint(tempDefault3, Climate.Parameter.span(0.8F, 1.0F), fullRange, fullRange, fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_FOREST);
-
-        addBiome(mapper, new Climate.ParameterPoint(tempDefault1, Climate.Parameter.span(0.0F, 1.0F), fullRange, fullRange, fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_MEADOW);
-        addBiome(mapper, new Climate.ParameterPoint(tempDefault1, fullRange, fullRange, fullRange, fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_MEADOW);
-        addBiome(mapper, new Climate.ParameterPoint(tempDefault3, Climate.Parameter.span(-1.0F, -0.6F), fullRange, fullRange, fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_MEADOW);
-
-        addBiome(mapper, new Climate.ParameterPoint(tempDefault2, Climate.Parameter.span(-1.0F, 0.0F), fullRange, fullRange, Climate.Parameter.span(-1.0F, 0.3F), fullRange, 0),
-                AetherBiomes.SKYROOT_GROVE);
-        addBiome(mapper, new Climate.ParameterPoint(tempDefault2, Climate.Parameter.span(0.8F, 1.0F), fullRange, fullRange, Climate.Parameter.span(-1.0F, 0.3F), fullRange, 0),
-                AetherBiomes.SKYROOT_GROVE);
-        addBiome(mapper, new Climate.ParameterPoint(tempDefault3, Climate.Parameter.span(-0.6F, -0.3F), fullRange, fullRange, fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_GROVE);
-
-        addBiome(mapper, new Climate.ParameterPoint(tempDefault2, Climate.Parameter.span(0.3F, 0.8F), fullRange, fullRange, Climate.Parameter.span(-1.0F, 0.2F), fullRange, 0),
-                AetherBiomes.SKYROOT_WOODLAND);
-        addBiome(mapper, new Climate.ParameterPoint(tempDefault4, fullRange, fullRange, fullRange, fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_WOODLAND);
-
-        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps1, Climate.Parameter.span(-1.0F, 1.0F), fullRange, fullRange, Climate.Parameter.span(-0.5F, 1.0F), fullRange, 0),
-                AncientAetherBiomes.WYNDCAP_TAIGA);
-        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps2, Climate.Parameter.span(-1.0F, 1.0F), fullRange, fullRange, Climate.Parameter.span(-0.5F, 1.0F), fullRange, 0),
-                AncientAetherBiomes.FESTIVE_WYNDCAP_TAIGA);
-        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps3, Climate.Parameter.span(-1.0F, 1.0F), fullRange, fullRange, Climate.Parameter.span(-0.7F, -0.5F), fullRange, 0),
-                AncientAetherBiomes.WYNDCAP_HIGHLAND);
-        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps3, Climate.Parameter.span(-1.0F, 1.0F), fullRange, fullRange, Climate.Parameter.span(-1.0F, -0.7F), fullRange, 0),
-                AncientAetherBiomes.WYNDCAP_PEAKS);
-        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps4, Climate.Parameter.span(-1.0F, 1.0F), fullRange, fullRange, Climate.Parameter.span(-0.5F, 1.0F), fullRange, 0),
-                AncientAetherBiomes.WYNDCAP_TAIGA);
-
-        addBiome(mapper, new Climate.ParameterPoint(tempDefault2, Climate.Parameter.span(0.0F, 0.3F), fullRange, fullRange, Climate.Parameter.span(-1.0F, 0.3F), fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(0.5F, 0.8F), fullRange, fullRange, Climate.Parameter.span(-1.0F, 0.3F), fullRange, 0),
                 AncientAetherBiomes.SKYROOT_PINE_FOREST);
 
-        addBiome(mapper, new Climate.ParameterPoint(tempSakura1, Climate.Parameter.span(-1.0F, 0.6F), fullRange, fullRange, Climate.Parameter.span(0.2F, 1.0F), fullRange, 0),
-                AncientAetherBiomes.OVERGROWN_CAVERNS);
-        addBiome(mapper, new Climate.ParameterPoint(tempSakura1, Climate.Parameter.span(-1.0F, 0.6F), fullRange, fullRange, Climate.Parameter.span(-1.0F, 0.2F), fullRange, 0),
-                AncientAetherBiomes.SAKURA_JUNGLE);
-        addBiome(mapper, new Climate.ParameterPoint(tempSakura2, Climate.Parameter.span(-1.0F, 0.6F), fullRange, fullRange, Climate.Parameter.span(-1.0F, 0.2F), fullRange, 0),
-                AncientAetherBiomes.SKYROOT_JUNGLE);
-        addBiome(mapper, new Climate.ParameterPoint(tempSakura3, Climate.Parameter.span(-1.0F, 0.6F), fullRange, fullRange, Climate.Parameter.span(-1.0F, 0.2F), fullRange, 0),
-                AncientAetherBiomes.SKYROOT_JUNGLE);
-
-        addBiome(mapper, new Climate.ParameterPoint(tempDefault2, Climate.Parameter.span(0.3F, 0.4F), fullRange, fullRange, Climate.Parameter.span(0.2F, 1.0F), fullRange, 0),
-                AncientAetherBiomes.AEROGEL_CAVES);
     }
 }
