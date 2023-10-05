@@ -95,6 +95,7 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         item(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get().asItem(), "");
 
         itemBlockFlat(AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), "");
+        itemBlockFlat(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.SAKURA_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.SAKURA_BLOSSOMS.get(), "");
         itemBlockFlat(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get(), "");
