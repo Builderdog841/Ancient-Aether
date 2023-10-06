@@ -32,6 +32,7 @@
       "aether:aether_dirt_ore",
       "aether:icestone_ore",
       "aether:ambrosium_ore",
+      "ancient_aether:sakura_jungle_ambrosium_ore",
       "aether:zanite_ore",
       "aether:gravitite_ore"
     ],
@@ -46,8 +47,9 @@
       "minecraft:patch_grass_jungle",
       "aether:grass_patch",
       "aether:tall_grass_patch",
-      "ancient_aether:sakura_jungle_flower_patch",
-      "minecraft:vines",
+      "ancient_aether:overgrown_caverns_leaf_vines",
+      "ancient_aether:short_overgrown_caverns_leaf_vines",
+      "ancient_aether:overgrown_caverns_vines",
       "aether:berry_bush_patch"
     ],
     [

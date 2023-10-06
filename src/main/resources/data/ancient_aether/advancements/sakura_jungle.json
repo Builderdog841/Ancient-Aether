@@ -17,7 +17,7 @@
       },
       "trigger": "minecraft:location"
     },
-    "ancient_aether:overgrown_caverns": {
+    "ancient_aether:skyroot_jungle": {
       "conditions": {
         "player": [
           {
@@ -25,7 +25,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "biome": "ancient_aether:overgrown_caverns"
+                "biome": "ancient_aether:skyroot_jungle"
               }
             }
           }
@@ -54,7 +54,7 @@
       "ancient_aether:sakura_jungle"
     ],
     [
-      "ancient_aether:overgrown_caverns"
+      "ancient_aether:skyroot_jungle"
     ]
   ]
 }
