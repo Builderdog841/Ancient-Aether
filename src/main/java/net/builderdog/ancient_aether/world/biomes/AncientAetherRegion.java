@@ -24,12 +24,12 @@ public class AncientAetherRegion extends Region {
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper) {
         Climate.Parameter fullRange = Climate.Parameter.span(-1.5F, 1.5F);
 
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.65F, 1F), Climate.Parameter.span(-1.0F, 1.0F), fullRange, fullRange, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.6F, 1F), Climate.Parameter.span(-1.0F, 1.0F), fullRange, fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.SAKURA_JUNGLE);
 
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.5F, 0.65F), Climate.Parameter.span(-1.0F, -0.5F), fullRange, fullRange, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.5F, 0.6F), Climate.Parameter.span(-1.0F, -0.5F), fullRange, fullRange, fullRange, fullRange, 0),
                     AncientAetherBiomes.SKYROOT_PINE_FOREST);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.5F, 0.65F), Climate.Parameter.span(-0.5F, 1.0F), fullRange, fullRange, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.5F, 0.6F), Climate.Parameter.span(-0.5F, 1.0F), fullRange, fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.SKYROOT_JUNGLE);
 
         addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.25F, 0.5F), Climate.Parameter.span(-1F, -0.6F), fullRange, fullRange, fullRange, fullRange, 0),
