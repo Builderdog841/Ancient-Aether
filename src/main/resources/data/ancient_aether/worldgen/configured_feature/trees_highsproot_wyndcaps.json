@@ -20,9 +20,49 @@
     },
     "features": [
       {
+        "chance": 0.2,
+        "feature": {
+          "feature": "ancient_aether:frosted_highsproot_spruce_tree",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:would_survive",
+                "state": {
+                  "Name": "aether:skyroot_sapling",
+                  "Properties": {
+                    "stage": "0"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
         "chance": 0.1,
         "feature": {
           "feature": "ancient_aether:highsproot_pine_tree",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:would_survive",
+                "state": {
+                  "Name": "aether:skyroot_sapling",
+                  "Properties": {
+                    "stage": "0"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chance": 0.001,
+        "feature": {
+          "feature": "aether:golden_oak_tree",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",
