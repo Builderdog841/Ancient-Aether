@@ -1,11 +1,8 @@
 package net.builderdog.ancient_aether.world.biomes;
 
-import com.aetherteam.aether.data.resources.AetherFeatureStates;
-import com.aetherteam.aether.data.resources.registries.AetherBiomes;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.Noises;
 import net.minecraft.world.level.levelgen.SurfaceRules;
-import net.minecraft.world.level.levelgen.VerticalAnchor;
 
 public class AncientAetherSurfaceData {
 
