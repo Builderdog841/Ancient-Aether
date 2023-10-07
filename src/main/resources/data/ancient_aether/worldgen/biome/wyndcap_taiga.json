@@ -18,9 +18,7 @@
     }
   },
   "features": [
-    [
-      "ancient_aether:aerogel_shelf"
-    ],
+    [],
     [
       "aether:water_lake"
     ],
