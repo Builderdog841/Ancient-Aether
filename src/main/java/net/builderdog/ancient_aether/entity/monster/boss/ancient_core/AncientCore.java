@@ -147,9 +147,6 @@ public class AncientCore extends PathfinderMob implements AetherBossMob<AncientC
 
     public boolean hurt(@NotNull DamageSource source, float damage) {
         if (!this.isBossFight()) {
-            if (this.getAwakenSound() != null) {
-                this.playSound(this.getAwakenSound(), 2.5F, 1.0F / (this.random.nextFloat() * 0.2F + 0.9F));
-            }
             this.setAwake(true);
             this.setBossFight(true);
         }
@@ -286,10 +283,6 @@ public class AncientCore extends PathfinderMob implements AetherBossMob<AncientC
     @Override
     public void setBossFight(boolean isFighting) {
         this.bossFight.setVisible(isFighting);
-    }
-
-    protected SoundEvent getAwakenSound() {
-        return AetherSoundEvents.ENTITY_SLIDER_AWAKEN.get();
     }
 
     @Override
