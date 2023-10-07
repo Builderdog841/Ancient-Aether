@@ -7,6 +7,7 @@ import com.aetherteam.aether.network.AetherPacketHandler;
 import com.aetherteam.aether.network.packet.serverbound.BossInfoPacket;
 import com.aetherteam.nitrogen.entity.BossRoomTracker;
 import com.aetherteam.nitrogen.network.PacketRelay;
+import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
@@ -38,6 +39,7 @@ import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.entity.IEntityAdditionalSpawnData;
@@ -64,7 +66,7 @@ public class AncientCore extends PathfinderMob implements AetherBossMob<AncientC
 
     public AncientCore(EntityType<? extends AncientCore> entityType, Level level) {
         super(entityType, level);
-        this.bossFight = new ServerBossEvent(this.getBossName(), BossEvent.BossBarColor.BLUE, BossEvent.BossBarOverlay.PROGRESS);
+        this.bossFight = new ServerBossEvent(this.getBossName(), BossEvent.BossBarColor.RED, BossEvent.BossBarOverlay.PROGRESS);
         this.bossFight.setVisible(false);
         this.xpReward = XP_REWARD_BOSS;
         this.setPersistenceRequired();
@@ -107,10 +109,11 @@ public class AncientCore extends PathfinderMob implements AetherBossMob<AncientC
         this.moveTo(Mth.floor(this.getX()), this.getY(), Mth.floor(this.getZ()));
     }
 
-    public static AttributeSupplier.Builder createAncientCoreAttributes() {
+    public static AttributeSupplier.@NotNull Builder createMobAttributes() {
         return Mob.createMobAttributes()
                 .add(Attributes.MAX_HEALTH, 500)
-                .add(Attributes.MOVEMENT_SPEED, 0.28)
+                .add(Attributes.MOVEMENT_SPEED, 0.3)
+                .add(Attributes.KNOCKBACK_RESISTANCE, 1)
                 .add(Attributes.FOLLOW_RANGE, 64.0);
     }
 
@@ -168,7 +171,6 @@ public class AncientCore extends PathfinderMob implements AetherBossMob<AncientC
         super.die(damageSource);
     }
 
-
     private void stop() {
         this.setDeltaMovement(Vec3.ZERO);
     }
@@ -185,9 +187,21 @@ public class AncientCore extends PathfinderMob implements AetherBossMob<AncientC
         }
     }
 
-    @Override
     @Nullable
+    @Override
     public BlockState convertBlock(BlockState state) {
+        if (state.is(AncientAetherBlocks.LOCKED_AEROTIC_STONE.get())) {
+            return AncientAetherBlocks.AEROTIC_STONE.get().defaultBlockState();
+        }
+        if (state.is(AncientAetherBlocks.LOCKED_LIGHT_AEROTIC_STONE.get())) {
+            return AncientAetherBlocks.LIGHT_AEROTIC_STONE.get().defaultBlockState();
+        }
+        if (state.is(AncientAetherBlocks.BOSS_DOORWAY_AEROTIC_STONE.get())) {
+            return Blocks.AIR.defaultBlockState();
+        }
+        if (state.is(AncientAetherBlocks.TREASURE_DOORWAY_AEROTIC_STONE.get())) {
+            return Blocks.AIR.defaultBlockState();
+        }
         return null;
     }
 

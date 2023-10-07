@@ -52,8 +52,8 @@ import javax.annotation.Nonnull;
 import java.util.EnumSet;
 
 public class AncientGuardian extends PathfinderMob implements AetherBossMob<AncientGuardian>, Enemy, IEntityAdditionalSpawnData {
-    public static final EntityDataAccessor<Boolean> DATA_AWAKE_ID;
-    public static final EntityDataAccessor<Component> DATA_BOSS_NAME_ID;
+    public static final EntityDataAccessor<Boolean> DATA_AWAKE_ID = SynchedEntityData.defineId(AncientGuardian.class, EntityDataSerializers.BOOLEAN);
+    public static final EntityDataAccessor<Component> DATA_BOSS_NAME_ID = SynchedEntityData.defineId(AncientGuardian.class, EntityDataSerializers.COMPONENT);
     public int chatTime;
     private int attackTime = 0;
     private final ServerBossEvent bossFight;
@@ -61,7 +61,11 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
 
     @Nonnull
     public static AttributeSupplier.Builder createMobAttributes() {
-        return Monster.createMobAttributes().add(Attributes.MAX_HEALTH, 500.0).add(Attributes.MOVEMENT_SPEED, 0.35).add(Attributes.FOLLOW_RANGE, 8.0);
+        return Mob.createMobAttributes()
+                .add(Attributes.MAX_HEALTH, 500)
+                .add(Attributes.MOVEMENT_SPEED, 0.3)
+                .add(Attributes.KNOCKBACK_RESISTANCE, 1)
+                .add(Attributes.FOLLOW_RANGE, 64.0);
     }
 
     protected void registerGoals() {
@@ -100,7 +104,6 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         if (this.attackTime > 0) {
             --this.attackTime;
         }
-
         label30:
         {
             if (this.isAwake()) {
@@ -113,29 +116,12 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
                     break label30;
                 }
             }
-
             this.setTarget( null);
-        }
-
-        this.extinguishFire();
-        if (this.getHealth() > 0.0F) {
-            double a = this.random.nextFloat() - 0.5F;
-            double b = this.random.nextFloat();
-            double c = this.random.nextFloat() - 0.5F;
-            double d = this.position().x + a * b;
-            double e = this.getBoundingBox().minY + b - 0.30000001192092896;
-            double f = this.position().z + c * b;
-            if (!this.isAwake()) {
-                level().addParticle(new DustParticleOptions(Vec3.fromRGB24(10444703).toVector3f(), 1.0F), d, e, f, 0.28999999165534973, 0.2800000011920929, 0.47999998927116394);
-            } else {
-                level().addParticle(new DustParticleOptions(Vec3.fromRGB24(9315170).toVector3f(), 1.0F), d, e, f, 0.4300000071525574, 0.18000000715255737, 0.2800000011920929);
-            }
         }
 
         if (this.chatTime > 0) {
             --this.chatTime;
         }
-
     }
 
     public void reset() {
@@ -182,25 +168,6 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         this.entityData.define(DATA_BOSS_NAME_ID, Component.literal("Ancient Guardian"));
     }
 
-    public @NotNull Packet<ClientGamePacketListener> getAddEntityPacket() {
-        return NetworkHooks.getEntitySpawningPacket(this);
-    }
-
-    public void addAdditionalSaveData(@Nonnull CompoundTag tag) {
-        super.addAdditionalSaveData(tag);
-        this.addBossSaveData(tag);
-        tag.putBoolean("Awake", this.isAwake());
-    }
-
-    public void readAdditionalSaveData(@Nonnull CompoundTag tag) {
-        super.readAdditionalSaveData(tag);
-        this.readBossSaveData(tag);
-        if (tag.contains("Awake")) {
-            this.setAwake(tag.getBoolean("Awake"));
-        }
-
-    }
-
     @Nullable
     @Override
     public BlockState convertBlock(BlockState state) {
@@ -219,10 +186,6 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         return null;
     }
 
-    /**
-     * Tracks the player as a part of the boss fight when the player is nearby, displaying the boss bar for them.
-     * @param player The {@link ServerPlayer}.
-     */
     @Override
     public void startSeenByPlayer(ServerPlayer player) {
         super.startSeenByPlayer(player);
@@ -260,20 +223,6 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         return this.deathScore;
     }
 
-    public void writeSpawnData(FriendlyByteBuf buffer) {
-        CompoundTag tag = new CompoundTag();
-        addBossSaveData(tag);
-        buffer.writeNbt(tag);
-    }
-
-    public void readSpawnData(FriendlyByteBuf additionalData) {
-        CompoundTag tag = additionalData.readNbt();
-        if (tag != null) {
-            readBossSaveData(tag);
-        }
-
-    }
-
     public void customServerAiStep() {
         super.customServerAiStep();
         bossFight.setProgress(getHealth() / getMaxHealth());
@@ -287,18 +236,18 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         this.bossFight.removePlayer(player);
     }
 
+    @Override
     public void onDungeonPlayerAdded(@javax.annotation.Nullable Player player) {
         if (player instanceof ServerPlayer serverPlayer) {
-            bossFight.addPlayer(serverPlayer);
+            this.bossFight.addPlayer(serverPlayer);
         }
-
     }
 
+    @Override
     public void onDungeonPlayerRemoved(@javax.annotation.Nullable Player player) {
         if (player instanceof ServerPlayer serverPlayer) {
-            bossFight.removePlayer(serverPlayer);
+            this.bossFight.removePlayer(serverPlayer);
         }
-
     }
 
     public boolean isAwake() {
@@ -309,14 +258,17 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         this.entityData.set(DATA_AWAKE_ID, ready);
     }
 
+    @Override
     public Component getBossName() {
         return this.entityData.get(DATA_BOSS_NAME_ID);
     }
 
+    @Override
     public void setBossName(Component component) {
         this.entityData.set(DATA_BOSS_NAME_ID, component);
         this.bossFight.setName(component);
     }
+
 
     protected void alignSpawnPos() {
         this.moveTo(Mth.floor(this.getX()), this.getY(), Mth.floor(this.getZ()));
@@ -334,21 +286,77 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         return data;
     }
 
-    public void setCustomName(@javax.annotation.Nullable Component name) {
+    public void setCustomName(@Nullable Component name) {
         super.setCustomName(name);
         setBossName(name);
     }
 
-    static {
-        DATA_AWAKE_ID = SynchedEntityData.defineId(AncientGuardian.class, EntityDataSerializers.BOOLEAN);
-        DATA_BOSS_NAME_ID = SynchedEntityData.defineId(AncientGuardian.class, EntityDataSerializers.COMPONENT);
+    @Override
+    protected boolean canRide(@Nonnull Entity vehicle) {
+        return false;
+    }
+
+    @Override
+    public boolean canBeCollidedWith() {
+        return !this.isAwake();
+    }
+
+    @Override
+    public boolean isPushable() {
+        return false;
+    }
+
+    @Override
+    public boolean isNoGravity() {
+        return !isAwake();
+    }
+
+    @Override
+    public boolean shouldDiscardFriction() {
+        return !isAwake();
+    }
+
+    @Override
+    public void addAdditionalSaveData(@Nonnull CompoundTag tag) {
+        super.addAdditionalSaveData(tag);
+        this.addBossSaveData(tag);
+        tag.putBoolean("Awake", this.isAwake());
+    }
+
+    @Override
+    public void readAdditionalSaveData(@Nonnull CompoundTag tag) {
+        super.readAdditionalSaveData(tag);
+        this.readBossSaveData(tag);
+        if (tag.contains("Awake")) {
+            this.setAwake(tag.getBoolean("Awake"));
+        }
+    }
+
+    @Override
+    public void writeSpawnData(FriendlyByteBuf buffer) {
+        CompoundTag tag = new CompoundTag();
+        this.addBossSaveData(tag);
+        buffer.writeNbt(tag);
+    }
+
+    @Override
+    public void readSpawnData(FriendlyByteBuf additionalData) {
+        CompoundTag tag = additionalData.readNbt();
+        if (tag != null) {
+            this.readBossSaveData(tag);
+        }
+    }
+
+    @Override
+    public @NotNull Packet<ClientGamePacketListener> getAddEntityPacket() {
+        return NetworkHooks.getEntitySpawningPacket(this);
     }
 
     public static class DoNothingGoal extends Goal {
         private final AncientGuardian ancientGuardian;
 
-        public DoNothingGoal(AncientGuardian sentryGuardian) {
-            this.ancientGuardian = sentryGuardian;
+        public DoNothingGoal(AncientGuardian ancientGuardian) {
+            this.ancientGuardian = ancientGuardian;
             this.setFlags(EnumSet.of(Flag.MOVE, Flag.JUMP));
         }
 
