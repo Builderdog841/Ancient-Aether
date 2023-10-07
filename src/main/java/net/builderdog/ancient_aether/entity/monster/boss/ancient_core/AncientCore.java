@@ -109,7 +109,7 @@ public class AncientCore extends PathfinderMob implements AetherBossMob<AncientC
 
     public static AttributeSupplier.Builder createAncientCoreAttributes() {
         return Mob.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 175)
+                .add(Attributes.MAX_HEALTH, 500)
                 .add(Attributes.MOVEMENT_SPEED, 0.28)
                 .add(Attributes.FOLLOW_RANGE, 64.0);
     }
