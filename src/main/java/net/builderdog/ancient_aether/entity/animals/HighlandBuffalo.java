@@ -42,7 +42,7 @@ public class HighlandBuffalo extends WyndcapsAnimal {
                 .add(Attributes.ATTACK_DAMAGE, 4.0f)
                 .add(Attributes.ATTACK_SPEED, 1.0f)
                 .add(Attributes.MOVEMENT_SPEED, 0.2f)
-                .add(Attributes.ATTACK_KNOCKBACK, 1f);
+                .add(Attributes.ATTACK_KNOCKBACK, 2f);
     }
     @Override
     public boolean isFood(ItemStack stack) {
