@@ -312,6 +312,10 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
 
         enchantingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.OBSIDIAN, AetherBlocks.AEROGEL.get(), 0.4F, 2000).save(consumer, name("obsidian_enchanting"));
 
+        enchantingRecipe(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES.get(), AncientAetherBlocks.HIGHSPROOT_LEAVES.get(), 0.1F, 50).save(consumer);
+
+        enchantingRecipe(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get(), AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), 0.3F, 500).save(consumer);
+
         moaIncubationRecipe(AetherEntityTypes.MOA.get(), AncientAetherMoaTypes.SAKURA, AncientAetherItems.SAKURA_MOA_EGG.get()).save(consumer, name("sakura_moa_incubation"));
     }
     protected static SimpleCookingRecipeBuilder smokingRecipe(ItemLike result, ItemLike ingredient) {

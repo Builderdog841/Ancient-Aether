@@ -7,14 +7,14 @@ import net.minecraft.world.level.block.grower.AbstractTreeGrower;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import org.jetbrains.annotations.Nullable;
 
-public class HighsprootTreeGrower extends AbstractTreeGrower {
+public class FrostedHighsprootTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource random, boolean largeHive) {
         if (random.nextInt(10) == 0) {
-            return AncientAetherConfiguredFeatures.HIGHSPROOT_PINE_TREE;
+            return AncientAetherConfiguredFeatures.TALL_FROSTED_HIGHSPROOT_TREE;
         } else {
-            return AncientAetherConfiguredFeatures.HIGHSPROOT_TREE;
+            return AncientAetherConfiguredFeatures.FROSTED_HIGHSPROOT_TREE;
         }
     }
 }
