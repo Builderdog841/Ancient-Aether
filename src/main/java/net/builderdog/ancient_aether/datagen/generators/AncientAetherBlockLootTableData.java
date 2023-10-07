@@ -116,6 +116,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.HIGHLAND_VIOLA.get());
         dropSelf(AncientAetherBlocks.SAKURA_BLOSSOMS.get());
         dropOther(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get(), AncientAetherBlocks.SAKURA_BLOSSOMS.get());
+        dropWhenSilkTouch(AncientAetherBlocks.DRIFT_WEED.get());
 
         //Potted Plants
         dropPottedContents(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING.get());
@@ -124,6 +125,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropPottedContents(AncientAetherBlocks.POTTED_WYND_THISTLE.get());
         dropPottedContents(AncientAetherBlocks.POTTED_HIGHLAND_VIOLA.get());
         dropPottedContents(AncientAetherBlocks.POTTED_SAKURA_BLOSSOMS.get());
+        dropPottedContents(AncientAetherBlocks.POTTED_FROSTED_HIGHSPROOT_SAPLING.get());
 
         //Misc
         dropOther(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get(), AetherItems.AMBROSIUM_SHARD.get());

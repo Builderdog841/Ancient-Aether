@@ -1,4 +1,4 @@
-// 1.20.1	2023-10-05T20:37:13.2097632	Loot Tables
+// 1.20.1	2023-10-07T18:50:35.9098116	Loot Tables
 59ddcd55f69c4b8f71e6eb6282eae1625c06b357 data/ancient_aether/loot_tables/blocks/aerotic_lantern.json
 b8cb4c206d3462b1a04e783ddc7144a7a138e4ab data/ancient_aether/loot_tables/blocks/aerotic_slab.json
 fc8f3ed9297b6a4e28e2ff4bdb8b8616bd64589b data/ancient_aether/loot_tables/blocks/aerotic_stairs.json
@@ -13,6 +13,7 @@ f346e2fa7e1e914c323a66125f68b2ae7c3ecda5 data/ancient_aether/loot_tables/blocks/
 07e5a503893020d9852e02f7a687103c325d37a9 data/ancient_aether/loot_tables/blocks/carved_stone_mosaic.json
 27344c98071e908c6aec928704b2788d38cca3df data/ancient_aether/loot_tables/blocks/corrupted_light_aerotic_stone.json
 503d82dd0a464d22c432cf15d95aa61860197db6 data/ancient_aether/loot_tables/blocks/cracked_slider.json
+fcab65bee04ed30c6384641991c802fc6fab7aa3 data/ancient_aether/loot_tables/blocks/drift_weed.json
 07155f19e7eb7d78e644a94801e4a5b1023d25cd data/ancient_aether/loot_tables/blocks/frosted_highsproot_leaves.json
 a86198e272cad448f55a6ed6cf93c0fdb406b842 data/ancient_aether/loot_tables/blocks/frosted_highsproot_sapling.json
 68ae82a00f438e7a97944585e600c87c81233b7f data/ancient_aether/loot_tables/blocks/gale_lantern.json
@@ -43,6 +44,7 @@ dcc473079987f1adb8707bae9a653a365e2f03e4 data/ancient_aether/loot_tables/blocks/
 30cc1ad38ab2baf6f8838ee803f9a76f97f38cdd data/ancient_aether/loot_tables/blocks/holystone_brick_mosaic.json
 344d32e44545f5501bfda3aff72a61ff534ac5b8 data/ancient_aether/loot_tables/blocks/holystone_lantern.json
 9bbfa7490063bd2cf97cb7c4f354cc572018c99e data/ancient_aether/loot_tables/blocks/light_aerotic_stone.json
+e3dc6c3343a6c43780d143218a413db55714b7db data/ancient_aether/loot_tables/blocks/potted_frosted_highsproot_sapling.json
 ff0e103abc91e9825cfa8039ae2dcbbdd8a06874 data/ancient_aether/loot_tables/blocks/potted_highland_viola.json
 52b743258d84583c9c230d4d36115feef596e228 data/ancient_aether/loot_tables/blocks/potted_highsproot_sapling.json
 67004559dc2887fac8466ae3c11b671bb3f32b2d data/ancient_aether/loot_tables/blocks/potted_sakura_blossoms.json

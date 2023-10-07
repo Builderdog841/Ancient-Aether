@@ -103,6 +103,7 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         itemBlockFlat(AncientAetherBlocks.WYND_THISTLE.get(), "");
         itemBlockFlat(AncientAetherBlocks.SKY_BLUES.get(), "");
         itemBlockFlat(AncientAetherBlocks.HIGHLAND_VIOLA.get(), "");
+        itemBlockFlat(AncientAetherBlocks.DRIFT_WEED.get(), "");
 
         itemLogWallBlock(AncientAetherBlocks.HIGHSPROOT_LOG_WALL.get(), AncientAetherBlocks.HIGHSPROOT_LOG.get(), "", "ancient_aether");
         itemLogWallBlock(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG_WALL.get(), AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get(), "", "ancient_aether");

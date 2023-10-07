@@ -105,6 +105,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         crossBlock(AncientAetherBlocks.SAKURA_BLOSSOMS);
         crossBlock(AncientAetherBlocks.HIGHLAND_VIOLA);
         crossBlock(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS);
+        crossBlock(AncientAetherBlocks.DRIFT_WEED);
 
         //Potted Plants
         pottedPlant(AncientAetherBlocks.POTTED_SAKURA_SAPLING.get(), AncientAetherBlocks.SAKURA_SAPLING.get(), "");
@@ -113,6 +114,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         pottedPlant(AncientAetherBlocks.POTTED_SAKURA_BLOSSOMS.get(), AncientAetherBlocks.SAKURA_BLOSSOMS.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_HIGHLAND_VIOLA.get(), AncientAetherBlocks.HIGHLAND_VIOLA.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_SKY_BLUES.get(), AncientAetherBlocks.SKY_BLUES.get(), "");
+        pottedPlant(AncientAetherBlocks.POTTED_FROSTED_HIGHSPROOT_SAPLING.get(), AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get(), "");
 
         makeLogWalls();
     }
