@@ -10,7 +10,6 @@ import com.aetherteam.aether.network.AetherPacketHandler;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.entity.monster.boss.ancient_core.AncientCore;
-import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
@@ -35,7 +34,6 @@ import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Enemy;
-import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
@@ -124,16 +122,17 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         }
     }
 
+
     public void reset() {
+        this.stop();
         this.setAwake(false);
         this.setBossFight(false);
-        this.setTarget( null);
+        this.setTarget(null);
         this.setHealth(this.getMaxHealth());
         if (this.getDungeon() != null) {
             this.setPos(this.getDungeon().originCoordinates());
             this.openRoom();
         }
-
     }
 
     public boolean doHurtTarget(Entity pEntity) {
@@ -162,6 +161,22 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     public void checkDespawn() {
     }
 
+    @Override
+    public int getDeathScore() {
+        return this.deathScore;
+    }
+
+    @Override
+    public boolean isBossFight() {
+        return this.bossFight.isVisible();
+    }
+
+    @Override
+    public void setBossFight(boolean isFighting) {
+        this.bossFight.setVisible(isFighting);
+    }
+
+
     public void defineSynchedData() {
         super.defineSynchedData();
         this.entityData.define(DATA_AWAKE_ID, false);
@@ -186,29 +201,12 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         return null;
     }
 
-    @Override
-    public void startSeenByPlayer(ServerPlayer player) {
-        super.startSeenByPlayer(player);
-        PacketRelay.sendToPlayer(AetherPacketHandler.INSTANCE, new BossInfoPacket.Display(this.bossFight.getId()), player);
-        if (this.getDungeon() == null || this.getDungeon().isPlayerTracked(player)) {
-            this.bossFight.addPlayer(player);
-        }
-    }
-
     protected float getJumpPower() {
         return 0.0F;
     }
 
     public AncientGuardian self() {
         return this;
-    }
-
-    public boolean isBossFight() {
-        return this.bossFight.isVisible();
-    }
-
-    public void setBossFight(boolean isFighting) {
-        this.bossFight.setVisible(isFighting);
     }
 
     public BossRoomTracker<AncientGuardian> getDungeon() {
@@ -219,14 +217,20 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         this.ancientDungeon = bossRoomTracker;
     }
 
-    public int getDeathScore() {
-        return this.deathScore;
-    }
-
+    @Override
     public void customServerAiStep() {
         super.customServerAiStep();
-        bossFight.setProgress(getHealth() / getMaxHealth());
-        trackDungeon();
+        this.bossFight.setProgress(this.getHealth() / this.getMaxHealth());
+        this.trackDungeon();
+    }
+
+    @Override
+    public void startSeenByPlayer(@Nonnull ServerPlayer player) {
+        super.startSeenByPlayer(player);
+        PacketRelay.sendToPlayer(AetherPacketHandler.INSTANCE, new BossInfoPacket.Display(this.bossFight.getId()), player);
+        if (this.getDungeon() == null || this.getDungeon().isPlayerTracked(player)) {
+            this.bossFight.addPlayer(player);
+        }
     }
 
     @Override
@@ -291,6 +295,15 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         setBossName(name);
     }
 
+    public boolean hurt(@NotNull DamageSource source, float damage) {
+        if (!this.isBossFight()) {
+            this.setAwake(true);
+            this.setBossFight(true);
+        }
+        return super.hurt(source, damage);
+    }
+
+
     @Override
     protected boolean canRide(@Nonnull Entity vehicle) {
         return false;
@@ -317,14 +330,14 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     }
 
     @Override
-    public void addAdditionalSaveData(@Nonnull CompoundTag tag) {
+    public void addAdditionalSaveData(CompoundTag tag) {
         super.addAdditionalSaveData(tag);
         this.addBossSaveData(tag);
         tag.putBoolean("Awake", this.isAwake());
     }
 
     @Override
-    public void readAdditionalSaveData(@Nonnull CompoundTag tag) {
+    public void readAdditionalSaveData(CompoundTag tag) {
         super.readAdditionalSaveData(tag);
         this.readBossSaveData(tag);
         if (tag.contains("Awake")) {
@@ -368,5 +381,9 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
             ancientGuardian.setDeltaMovement(Vec3.ZERO);
             ancientGuardian.setPos(ancientGuardian.position().x, ancientGuardian.position().y, ancientGuardian.position().z);
         }
+    }
+
+    private void stop() {
+        this.setDeltaMovement(Vec3.ZERO);
     }
 }
