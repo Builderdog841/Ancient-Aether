@@ -73,6 +73,7 @@ public class AncientAetherItems {
     public static final RegistryObject<SpawnEggItem> ROOTHYRN_SPAWN_EGG = ITEMS.register("roothyrn_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntities.ROOTHYRN, 0x737558, 0x6FA871, new Item.Properties()));
     public static final RegistryObject<SpawnEggItem> AERONAUTIC_LEAPER_SPAWN_EGG = ITEMS.register("aeronautic_leaper_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntities.AERONAUTIC_LEAPER, 0x35343D, 0xB7B2FF, new Item.Properties()));
     public static final RegistryObject<SpawnEggItem> ANCIENT_GUARDIAN_SPAWN_EGG = ITEMS.register("ancient_guardian_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntities.ANCIENT_GUARDIAN, 0xB7B2FF, 0x35343D, new Item.Properties()));
+    public static final RegistryObject<SpawnEggItem> ANCIENT_CORE_SPAWN_EGG = ITEMS.register("ancient_core_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntities.ANCIENT_CORE, 0xCC6C80, 0x35343D, new Item.Properties()));
     public static final RegistryObject<SpawnEggItem> WYND_ZEPHYR_SPAWN_EGG = ITEMS.register("wynd_zephyr_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntities.WYND_ZEPHYR, 0xA9C5C9, 0x47585B, new Item.Properties()));
     public static final RegistryObject<Item> SAKURA_MOA_EGG = ITEMS.register("sakura_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0xD09FA9, new Item.Properties()));
 
