@@ -26,7 +26,7 @@ public class AncientAetherPlacedFeatures {
 
         register(context, AEROGEL_ORE, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.AEROGEL_BLOBS),
                 AncientAetherPlacedFeatureBuilder.commonOrePlacement(4,
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(128))));
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(64))));
 
     }
 

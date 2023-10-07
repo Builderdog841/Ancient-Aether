@@ -3,9 +3,6 @@
 
   "block.ancient_aether.aether_quartz_ore": "Aether Quartz Ore",
   "block.ancient_aether.ambrosium_campfire": "Ambrosium Campfire",
-  "block.ancient_aether.quickstone": "Quickstone",
-  "block.ancient_aether.quickstone_stairs": "Quickstone Stairs",
-  "block.ancient_aether.quickstone_slab": "Quickstone Slab",
   "block.ancient_aether.aerotic_stone": "Aerotic Stone",
   "block.ancient_aether.locked_aerotic_stone": "Locked Aerotic Stone",
   "block.ancient_aether.trapped_aerotic_stone": "Trapped Aerotic Stone",
@@ -141,8 +138,7 @@
   "biome.ancient_aether.sakura_jungle": "Sakura Jungle",
   "biome.ancient_aether.skyroot_jungle": "Skyroot Jungle",
   "biome.ancient_aether.skyroot_pine_forest": "Skyroot Pine Forest",
-  "biome.ancient_aether.overgrown_caverns": "Overgrown Caverns",
-  "biome.ancient_aether.aerogel_caves": "Aerogel Caves",
+  "biome.ancient_aether.crystal_hollows": "Crystal Hollows",
 
   "subtitles.ancient_aether.block.obelisk.obelisk_activation": "Obelisk activated",
   "subtitles.ancient_aether.entity.highland_buffalo.hurt": "Highland Buffalo hurts",

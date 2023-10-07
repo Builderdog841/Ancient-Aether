@@ -1,8 +1,4 @@
 {
   "replace": false,
-  "values": [
-    "ancient_aether:quickstone",
-    "ancient_aether:quickstone_stairs",
-    "ancient_aether:quickstone_slab"
-  ]
+  "values": []
 }

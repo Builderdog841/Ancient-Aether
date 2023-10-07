@@ -1,4 +1,4 @@
-// 1.20.1	2023-10-05T21:19:59.8452694	Registries
+// 1.20.1	2023-10-07T09:47:45.0482148	Registries
 2cf08e50ac74f6af67fe26f51cd18f7d83b169bc data/ancient_aether/worldgen/configured_feature/aerogel_blobs.json
 344034581163b955acca307272aa62dfa56193dd data/ancient_aether/worldgen/configured_feature/aether_quartz_ore.json
 5bc8974658355a4f706bad0de9b97924353fbe4c data/ancient_aether/worldgen/configured_feature/highland_viola_patch.json
@@ -8,5 +8,5 @@ cb503849924e63c1a260f4df4e3ef0f3cbe5f419 data/ancient_aether/worldgen/configured
 1af3ba8aff0ee853278877022e83dfdcaf2eb1a0 data/ancient_aether/worldgen/configured_feature/skyroot_pine_tree.json
 42b70bda4d8c9934375c4da4349fb19f393ceba6 data/ancient_aether/worldgen/configured_feature/sky_blues_patch.json
 f62e1503ccaebdd26bcb6ce62143eb7986ce5dd3 data/ancient_aether/worldgen/configured_feature/wynd_thistle_patch.json
-f6868304909ca07cd7bca76e01433c9e38bad788 data/ancient_aether/worldgen/placed_feature/aerogel_blobs.json
+b8ef03df0d9d62ff278bd1e9cad3e9c2c0fe347e data/ancient_aether/worldgen/placed_feature/aerogel_blobs.json
 ee2dea4e38751c7ecb0b0c0517513518da247f56 data/ancient_aether/worldgen/placed_feature/aether_quartz_ore.json
