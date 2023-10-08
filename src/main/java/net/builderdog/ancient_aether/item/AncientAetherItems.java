@@ -13,6 +13,7 @@ import net.builderdog.ancient_aether.item.consumables.ValkyrieWineItem;
 import net.builderdog.ancient_aether.item.loot.*;
 import net.builderdog.ancient_aether.item.loot.accessories.*;
 import net.builderdog.ancient_aether.item.misc.AncientAetherBoatItem;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.network.chat.TextColor;
@@ -32,7 +33,7 @@ public class AncientAetherItems {
            DeferredRegister.create(ForgeRegistries.ITEMS, AncientAether.MOD_ID) ;
 
     public static final Component ANCIENT_DUNGEON_TOOLTIP = Component.translatable("ancient_aether.dungeon.ancient_dungeon").withStyle(Style.EMPTY.withItalic(true).withColor(TextColor.parseColor("#5C70A8")));
-    public static final Component ACCESSORY_POUCH_TOOLTIP = Component.translatable("ancient_aether.pouch.accessory").withStyle(Style.EMPTY.withItalic(true).withColor(TextColor.parseColor("#EFECE1")));
+    public static final Component DEPRECATED = Component.translatable("ancient_aether.deprecated").withStyle(Style.EMPTY.withColor(ChatFormatting.RED));
 
     //Misc
     public static final RegistryObject<Item> AEROGEL_BOTTLE = ITEMS.register("aerogel_bottle", () -> new Item(new Item.Properties()));
