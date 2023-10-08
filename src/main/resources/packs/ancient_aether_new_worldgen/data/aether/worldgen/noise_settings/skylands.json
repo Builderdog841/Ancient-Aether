@@ -37,12 +37,24 @@
         "argument": {
           "type": "minecraft:blend_density",
           "argument": {
+            "type": "minecraft:add",
+            "argument1": {
               "type": "minecraft:add",
               "argument1": 0.2,
               "argument2": {
                 "type": "minecraft:add",
                 "argument1": -0.1,
                 "argument2": "aether:the_aether/base_islands/base_islands"
+              }
+            },
+            "argument2": {
+              "type": "minecraft:add",
+              "argument1": 0.2,
+              "argument2": {
+                "type": "minecraft:add",
+                "argument1": -0.1,
+                "argument2": "aether:the_aether/hilly_terrain/hilly_terrain"
+              }
             }
           }
         }
