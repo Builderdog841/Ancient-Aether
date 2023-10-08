@@ -96,7 +96,7 @@ public class AncientAetherConfiguredFeatures {
 
         register(context, DRIFT_WEED_PATCH, Feature.FLOWER,
                 NitrogenConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
-                        .add(AncientAetherBlocks.DRIFT_WEED.get().defaultBlockState(), 3)), 64));
+                        .add(AncientAetherBlocks.DRIFT_WEED.get().defaultBlockState(), 3)), 32));
 
         register(context, HIGHLAND_VIOLA_PATCH, Feature.FLOWER,
                 NitrogenConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()

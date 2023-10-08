@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#ancient_aether:has_quicksoil_disks",
+  "features": "ancient_aether:drift_weed_patch",
+  "step": "underground_ores"
+}
