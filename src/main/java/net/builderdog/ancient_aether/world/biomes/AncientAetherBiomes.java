@@ -10,6 +10,7 @@ public class AncientAetherBiomes {
 
     //Default
     public static final ResourceKey<Biome> SKYROOT_PINE_FOREST = createKey("skyroot_pine_forest");
+    public static final ResourceKey<Biome> BLUE_SKYROOT_FOREST = createKey("blue_skyroot_forest");
 
     //Wyndcaps
     public static final ResourceKey<Biome> WYNDCAP_TAIGA = createKey("wyndcap_taiga");
