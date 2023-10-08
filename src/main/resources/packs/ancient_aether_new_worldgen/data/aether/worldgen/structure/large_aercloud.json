@@ -10,7 +10,7 @@
       }
     }
   },
-  "rangeY": 64,
+  "rangeY": 96,
   "size": 3,
   "spawn_overrides": {},
   "step": "surface_structures"

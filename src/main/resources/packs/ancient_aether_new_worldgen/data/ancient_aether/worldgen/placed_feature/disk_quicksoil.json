@@ -7,11 +7,11 @@
         "type": "minecraft:weighted_list",
         "distribution": [
           {
-            "data": 16,
+            "data": 18,
             "weight": 2
           },
           {
-            "data": 18,
+            "data": 22,
             "weight": 3
           }
         ]
@@ -25,10 +25,10 @@
       "height": {
         "type": "minecraft:uniform",
         "max_inclusive": {
-          "above_bottom": 114
+          "above_bottom": 116
         },
         "min_inclusive": {
-          "above_bottom": 72
+          "above_bottom": 96
         }
       }
     },

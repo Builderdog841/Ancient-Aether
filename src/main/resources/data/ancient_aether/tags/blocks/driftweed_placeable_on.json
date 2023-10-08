@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "aether:quicksoil",
+    "#minecraft:dirt"
+  ]
+}
