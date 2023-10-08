@@ -15,7 +15,7 @@
   "disable_mob_generation": false,
   "legacy_random_source": false,
   "noise": {
-    "height": 320,
+    "height": 256,
     "min_y": 0,
     "size_horizontal": 2,
     "size_vertical": 1
@@ -37,13 +37,13 @@
         "argument": {
           "type": "minecraft:blend_density",
           "argument": {
+            "type": "minecraft:add",
+            "argument1": 0.2,
+            "argument2": {
               "type": "minecraft:add",
-              "argument1": 0.2,
-              "argument2": {
-                "type": "minecraft:add",
-                "argument1": -0.1,
-                "argument2": "aether:the_aether/base_islands/base_islands"
-              }
+              "argument1": -0.1,
+              "argument2": "aether:the_aether/base_islands/base_islands"
+            }
           }
         }
       }
