@@ -76,9 +76,10 @@ public class AncientAetherRegion extends Region {
         addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-1.F, -0.55F), fullRange, fullRange, fullRange, Climate.Parameter.span(-0.7F, -0.6F), fullRange, 0),
                 AncientAetherBiomes.WYNDCAP_HIGHLAND);
 
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.55F, -0.45F), fullRange, fullRange, fullRange, Climate.Parameter.span(-1.5F, -0.7F), fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.55F, -0.45F), fullRange, fullRange, fullRange, Climate.Parameter.span(-0.9F, -0.7F), fullRange, 0),
                 AncientAetherBiomes.WYNDCAP_HIGHLAND);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-1.F, -0.55F), fullRange, fullRange, fullRange, Climate.Parameter.span(-1.5F, -0.7F), fullRange, 0),
+
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-1.F, -0.55F), fullRange, fullRange, fullRange, Climate.Parameter.span(-1.5F, -0.9F), fullRange, 0),
                 AncientAetherBiomes.WYNDCAP_PEAKS);
 
         addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, fullRange, fullRange, Climate.Parameter.span(0.4F, 1.0F), fullRange, 0),
