@@ -3,9 +3,6 @@
 
   "block.ancient_aether.aether_quartz_ore": "エーテルクォーツ鉱石",
   "block.ancient_aether.ambrosium_campfire": "アンブロシアの焚き火",
-  "block.ancient_aether.quickstone": "流石",
-  "block.ancient_aether.quickstone_stairs": "流石の階段",
-  "block.ancient_aether.quickstone_slab": "流石のハーフブロック",
   "block.ancient_aether.aerotic_stone": "空石",
   "block.ancient_aether.locked_aerotic_stone": "鍵のかかった空石",
   "block.ancient_aether.trapped_aerotic_stone": "トラップ空石",
@@ -106,7 +103,6 @@
   "item.ancient_aether.valkyrie_wine": "ワルキューレワイン",
   "item.ancient_aether.highland_buffalo_spawn_egg": "空島バッファローのスポーンエッグ",
   "item.ancient_aether.roothyrn_spawn_egg": "ルーシリンのスポーンエッグ",
-  "item.ancient_aether.leaping_sentry_spawn_egg": "リーピングセントリーのスポーンエッグ",
   "item.ancient_aether.ancient_guardian_spawn_egg": "エンシェントガーディアンのスポーンエッグ",
   "item.ancient_aether.sakura_moa_egg": "サクラモアの卵",
   "item.ancient_aether.highsproot_boat": "ハイスプルートのボート",
@@ -124,7 +120,6 @@
   "item.ancient_aether.strength_stone": "力の石",
 
   "entity.ancient_aether.highland_buffalo": "空島バッファロー",
-  "entity.ancient_aether.leaping_sentry": "リーピングセントリー",
   "entity.ancient_aether.ancient_guardian": "エンシェントガーディアン",
   "entity.ancient_aether.ancient_core": "エンシェントコア",
   "entity.ancient_aether.roothyrn": "ルーシリン",
@@ -138,8 +133,6 @@
   "biome.ancient_aether.sakura_jungle": "天界サクラのジャングル",
   "biome.ancient_aether.skyroot_jungle": "スカイルートのジャングル",
   "biome.ancient_aether.skyroot_pine_forest": "スカイルートの松の森",
-  "biome.ancient_aether.overgrown_caverns": "生い茂った洞窟",
-  "biome.ancient_aether.aerogel_caves": "エアロゲルの洞窟",
 
   "subtitles.ancient_aether.block.obelisk.obelisk_activation": "Obelisk activated",
   "subtitles.ancient_aether.entity.highland_buffalo.hurt": "Highland Buffalo hurts",
@@ -154,12 +147,8 @@
   "subtitles.aether.item.accessory.equip_health_pendant": "Health Pendant jingles",
   "subtitles.aether.item.accessory.equip_health_ring": "Health Ring jingles",
 
-  "advancement.ancient_aether.ancient_aether_exploration": "Ancient Aether",
-  "advancement.ancient_aether.ancient_aether_exploration.desc": "Ancient Aetherで追加されたすべてのバイオームを見つける",
   "advancement.ancient_aether.cracked_slider": "故障中",
   "advancement.ancient_aether.cracked_slider.desc": "グラビタイトのツルハシでひび割れたスライダーを採掘する",
-  "advancement.ancient_aether.find_sentry_lab": "古くて忘れられたもの",
-  "advancement.ancient_aether.find_sentry_lab.desc": "ウィンドキャップにあるセントリー研究所を見つける",
   "advancement.ancient_aether.unlock_ancient_dungeon": "ジャングルの中で、偉大なジャングルで",
   "advancement.ancient_aether.unlock_ancient_dungeon.desc": "セントリー研究所にある「古代のセントリーのルーン」を持つ壊れたセントリーのオベリスクをクリックしてエンシェントダンジョンに入る。",
   "advancement.ancient_aether.roothyrn_trap": "サプライズ!",
@@ -170,7 +159,6 @@
   "gui.ancient_aether.ancient_core.title": "エンシェントコア",
 
   "ancient_aether.dungeon.ancient_dungeon": "エンシェントダンジョン",
-  "ancient_aether.pouch.accessory": "専用アクセサリーポーチ",
 
   "menu.ancient_aether.ancient_treasure_chest": "古代の宝箱",
   "ancient_aether.ancient_treasure_chest_locked": "この宝箱を開けるには古代の鍵が必要です。",
