@@ -1,19 +1,15 @@
 package net.builderdog.ancient_aether.item.consumables;
 
-import com.aetherteam.aether.item.AetherItems;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.UseAnim;
-import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 
 public class BuffaloRib extends Item {
-    public BuffaloRib(Properties p_41383_) {
-        super(p_41383_);
+    public BuffaloRib(Properties properties) {
+        super(properties);
     }
     @Override
-    public int getUseDuration(ItemStack itemstack) {
+    public int getUseDuration(@NotNull ItemStack itemstack) {
         return 16;
     }
 }

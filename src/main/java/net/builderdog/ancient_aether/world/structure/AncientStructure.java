@@ -13,6 +13,7 @@ import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraft.world.level.levelgen.structure.StructureType;
 import net.minecraft.world.level.levelgen.structure.pools.JigsawPlacement;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Optional;
 
@@ -57,34 +58,32 @@ public class AncientStructure extends Structure {
                 chunkpos.getMiddleBlockZ(),
                 Heightmap.Types.WORLD_SURFACE_WG,
                 context.heightAccessor(),
-                context.randomState()) > 96;
+                context.randomState()) > 112;
     }
 
     @Override
-    public Optional<GenerationStub> findGenerationPoint(GenerationContext context) {
+    public @NotNull Optional<GenerationStub> findGenerationPoint(@NotNull GenerationContext context) {
         if (!AncientStructure.extraSpawningChecks(context)) {
             return Optional.empty();
         }
         int startY = this.startHeight.sample(context.random(), new WorldGenerationContext(context.chunkGenerator(), context.heightAccessor()));
+
         ChunkPos chunkPos = context.chunkPos();
         BlockPos blockPos = new BlockPos(chunkPos.getMiddleBlockX(), startY, chunkPos.getMiddleBlockZ());
 
-        Optional<GenerationStub> structurePiecesGenerator =
-                JigsawPlacement.addPieces(
-                        context,
-                        this.startPool,
-                        this.startJigsawName,
-                        this.size,
-                        blockPos,
-                        false,
-                        this.projectStartToHeightmap,
-                        this.maxDistanceFromCenter);
-
-        return structurePiecesGenerator;
+        return JigsawPlacement.addPieces(
+                context,
+                this.startPool,
+                this.startJigsawName,
+                this.size,
+                blockPos,
+                false,
+                this.projectStartToHeightmap,
+                this.maxDistanceFromCenter);
     }
 
     @Override
-    public StructureType<?> type() {
+    public @NotNull StructureType<?> type() {
         return AncientAetherStructureTypes.ANCIENT_STRUCTURE.get();
     }
 }

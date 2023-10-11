@@ -30,13 +30,15 @@ import static com.aetherteam.aether.item.AetherItems.AETHER_LOOT;
 
 public class AncientAetherItems {
     public static final DeferredRegister<Item> ITEMS =
-           DeferredRegister.create(ForgeRegistries.ITEMS, AncientAether.MOD_ID) ;
+           DeferredRegister.create(ForgeRegistries.ITEMS, AncientAether.MOD_ID);
 
+    //Tooltips
     public static final Component ANCIENT_DUNGEON_TOOLTIP = Component.translatable("ancient_aether.dungeon.ancient_dungeon").withStyle(Style.EMPTY.withItalic(true).withColor(TextColor.parseColor("#5C70A8")));
     public static final Component DEPRECATED = Component.translatable("ancient_aether.deprecated").withStyle(Style.EMPTY.withColor(ChatFormatting.RED));
 
     //Misc
     public static final RegistryObject<Item> AEROGEL_BOTTLE = ITEMS.register("aerogel_bottle", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COMETYN_CRYSTAL = ITEMS.register("cometyn_crystal", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ANCIENT_RUNE = ITEMS.register("ancient_rune", () -> new Item(new Item.Properties().rarity(AETHER_LOOT)));
     public static final RegistryObject<Item> CRYSTAL_GOLD_COIN = ITEMS.register("crystal_gold_coin", () -> new Item(new Item.Properties().rarity(AETHER_LOOT).fireResistant()));
     public static final RegistryObject<Item> ANCIENT_DUNGEON_KEY = ITEMS.register("ancient_dungeon_key", () -> new DungeonKeyItem(new ResourceLocation(AncientAether.MOD_ID, "ancient"), new Item.Properties().stacksTo(1).rarity(AETHER_LOOT).fireResistant()));
@@ -55,6 +57,7 @@ public class AncientAetherItems {
     public static final RegistryObject<Item> SAKURA_SIGN = ITEMS.register("sakura_sign", () -> new SignItem(new Item.Properties().stacksTo(16), AncientAetherBlocks.SAKURA_SIGN.get(), AncientAetherBlocks.SAKURA_WALL_SIGN.get()));
     public static final RegistryObject<Item> HIGHSPROOT_HANGING_SIGN = ITEMS.register("highsproot_hanging_sign", () -> new HangingSignItem(AncientAetherBlocks.HIGHSPROOT_HANGING_SIGN.get(), AncientAetherBlocks.HIGHSPROOT_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> SAKURA_HANGING_SIGN = ITEMS.register("sakura_hanging_sign", () -> new HangingSignItem(AncientAetherBlocks.SAKURA_HANGING_SIGN.get(), AncientAetherBlocks.SAKURA_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+
     //Food
     public static final RegistryObject<Item> GRAPES = ITEMS.register("grapes", () -> new Item(new Item.Properties().rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.6f).build())));
     public static final RegistryObject<Item> VALKYRIE_WINE = ITEMS.register("valkyrie_wine", () -> new ValkyrieWineItem(new Item.Properties().rarity(Rarity.COMMON).stacksTo(16).food((new FoodProperties.Builder()).nutrition(0).saturationMod(0f).build())));

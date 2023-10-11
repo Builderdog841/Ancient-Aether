@@ -164,7 +164,7 @@ public class AncientAether {
                         (string) -> pack,
                         new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.SERVER_DATA), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()),
                         PackType.CLIENT_RESOURCES,
-                        Pack.Position.BOTTOM,
+                        Pack.Position.TOP,
                         false,
                         PackSource.BUILT_IN));
             });
