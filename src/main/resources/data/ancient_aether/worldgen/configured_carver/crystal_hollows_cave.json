@@ -42,7 +42,7 @@
     "lava_level": {
       "above_bottom": -64
     },
-    "probability": 0.05,
+    "probability": 0.25,
     "replaceable": "#ancient_aether:aether_carver_replaceables",
     "vertical_radius_multiplier": {
       "type": "minecraft:uniform",
@@ -54,7 +54,7 @@
     "y": {
       "type": "minecraft:uniform",
       "max_inclusive": {
-        "absolute": 112
+        "absolute": 72
       },
       "min_inclusive": {
         "above_bottom": 0

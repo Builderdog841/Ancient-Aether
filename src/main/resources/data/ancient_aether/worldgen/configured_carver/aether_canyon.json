@@ -70,9 +70,9 @@
         "absolute": 256
       },
       "min_inclusive": {
-        "absolute": 0
+        "absolute": 64
       }
     },
-    "yScale": 4.0
+    "yScale": 3.5
   }
 }

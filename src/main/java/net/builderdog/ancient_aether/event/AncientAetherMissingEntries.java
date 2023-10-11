@@ -58,6 +58,12 @@ public class AncientAetherMissingEntries {
                 .filter(mapping -> mapping.getKey().getPath().contains("stripped_highlands_pine_log_wall")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG_WALL.get()));
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
                 .filter(mapping -> mapping.getKey().getPath().contains("stripped_highlands_pine_wood_wall")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD_WALL.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("quickstone")).forEach(blockMapping -> blockMapping.remap(AetherBlocks.QUICKSOIL.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("quickstone_stairs")).forEach(blockMapping -> blockMapping.remap(AetherBlocks.HOLYSTONE_STAIRS.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("quickstone_slab")).forEach(blockMapping -> blockMapping.remap(AetherBlocks.HOLYSTONE_SLAB.get()));
 
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
                 .filter(mapping -> mapping.getKey().getPath().contains("potted_small_aether_cactus")).forEach(blockMapping -> blockMapping.remap(Blocks.FLOWER_POT));

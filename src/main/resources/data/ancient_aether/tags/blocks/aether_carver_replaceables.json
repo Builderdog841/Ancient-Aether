@@ -1,6 +1,7 @@
 {
   "values": [
     "#aether:aether_island_blocks",
-    "aether:icestone"
+    "aether:icestone",
+    "snow_block"
   ]
 }
