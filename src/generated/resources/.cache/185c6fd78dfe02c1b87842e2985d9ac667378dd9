@@ -1,4 +1,4 @@
-// 1.20.1	2023-10-11T14:11:48.3835614	Item Models: ancient_aether
+// 1.20.1	2023-10-12T17:24:39.4549484	Item Models: ancient_aether
 dc22e9f245c5e59d55b0aec4ae45dec8337daa28 assets/ancient_aether/models/item/aerogel_bottle.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/aeronautic_leaper_spawn_egg.json
 2b792d3780c8a2525546b071319a3e5ed1ab9ac4 assets/ancient_aether/models/item/aerotic_lantern.json
@@ -14,10 +14,10 @@ e33c85e0901587bf84b2a93e0f74636995731436 assets/ancient_aether/models/item/ancie
 6f6e7ea4043b02c3002c645c7a5173a32d9cb63c assets/ancient_aether/models/item/angelic_lantern.json
 ebbb314be0e3b10376468fa80420375a40b93108 assets/ancient_aether/models/item/buffalo_rib.json
 dec43224a81e6b4b281f534edfa1b2392915fd98 assets/ancient_aether/models/item/buffalo_ribs.json
-b080d5f647e3302985068a94eea9845042adaaa4 assets/ancient_aether/models/item/cometyn_crystal.json
 c3272ab19c230cf6ebff5ea420ce3ccbc1c229fc assets/ancient_aether/models/item/cooked_buffalo_ribs.json
 6a685c107fc07f790104809660de0f58850bff3b assets/ancient_aether/models/item/crystal_gold_coin.json
 2c8713bef16ba7bc0097efd45cfa0a48e1924753 assets/ancient_aether/models/item/drift_weed.json
+97abc2bcd307fb2a462c95e4479c6dda447576d3 assets/ancient_aether/models/item/etheral_crystal.json
 adb8bde9f62a21d4a492e030b93e0aa3e6f9f404 assets/ancient_aether/models/item/frosted_highsproot_sapling.json
 847fb5b6aa35f5048e62d3bf76e55f05c6b41f80 assets/ancient_aether/models/item/gale_lantern.json
 76dcbb064b6afcca77cbab1d82750b6e6c30765c assets/ancient_aether/models/item/grapes.json

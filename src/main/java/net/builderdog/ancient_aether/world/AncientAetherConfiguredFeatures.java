@@ -43,11 +43,11 @@ public class AncientAetherConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> WYND_THISTLE_PATCH = registerKey("wynd_thistle_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHLAND_VIOLA_PATCH = registerKey("highland_viola_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_BLOSSOMS_PATCH = registerKey("sakura_blossoms_patch");
-
     public static final ResourceKey<ConfiguredFeature<?, ?>> DRIFT_WEED_PATCH = registerKey("drift_weed_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKY_BLUES_PATCH = registerKey("sky_blues_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_QUARTZ_ORE = registerKey("aether_quartz_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AEROGEL_BLOBS = registerKey("aerogel_blobs");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ETHERAL_DIRT_ORE = registerKey("etheral_dirt_ore");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest holystone = new TagMatchTest(AetherTags.Blocks.HOLYSTONE);
@@ -58,6 +58,9 @@ public class AncientAetherConfiguredFeatures {
 
         List<OreConfiguration.TargetBlockState> aerogelOre = List.of(OreConfiguration.target(holystone,
                 AetherBlocks.AEROGEL.get().defaultBlockState()));
+
+        List<OreConfiguration.TargetBlockState> etheralDirtOre = List.of(OreConfiguration.target(holystone,
+                AncientAetherBlocks.ETHERAL_DIRT.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)));
 
         register(context, HIGHSPROOT_TREE, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
@@ -89,6 +92,8 @@ public class AncientAetherConfiguredFeatures {
         register(context, AETHER_QUARTZ_ORE, Feature.ORE, new OreConfiguration(aetherQuartzOre, 6, 0f));
 
         register(context, AEROGEL_BLOBS, Feature.ORE, new OreConfiguration(aerogelOre, 32, 0f));
+
+        register(context, ETHERAL_DIRT_ORE, Feature.ORE, new OreConfiguration(etheralDirtOre, 64, 0f));
 
         register(context, WYND_THISTLE_PATCH, Feature.FLOWER,
                 NitrogenConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()

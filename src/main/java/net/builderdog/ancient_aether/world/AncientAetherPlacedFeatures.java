@@ -16,6 +16,7 @@ import java.util.List;
 public class AncientAetherPlacedFeatures {
     public static final ResourceKey<PlacedFeature> AETHER_QUARTZ_ORE = createKey("aether_quartz_ore");
     public static final ResourceKey<PlacedFeature> AEROGEL_ORE = createKey("aerogel_blobs");
+    public static final ResourceKey<PlacedFeature> ETHERAL_DIRT_ORE = createKey("etheral_dirt_ore");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -28,6 +29,10 @@ public class AncientAetherPlacedFeatures {
                 AncientAetherPlacedFeatureBuilder.commonOrePlacement(4,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(64))));
 
+        register(context, ETHERAL_DIRT_ORE, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.ETHERAL_DIRT_ORE),
+                AncientAetherPlacedFeatureBuilder.commonOrePlacement(6,
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(72))));
+
     }
 
     private static ResourceKey<PlacedFeature> createKey(String name) {
@@ -37,10 +42,5 @@ public class AncientAetherPlacedFeatures {
     private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration,
                                  List<PlacementModifier> modifiers) {
         context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
-    }
-
-    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration,
-                                 PlacementModifier... modifiers) {
-        register(context, key, configuration, List.of(modifiers));
     }
 }

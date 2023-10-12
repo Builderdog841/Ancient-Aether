@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "ancient_aether:item/cometyn_crystal"
+    "layer0": "ancient_aether:item/etheral_crystal"
   }
 }

@@ -66,8 +66,12 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         aabookshelf(AncientAetherBlocks.SAKURA_BOOKSHELF.get(), AncientAetherBlocks.SAKURA_PLANKS.get());
         hangingSignBlock(AncientAetherBlocks.HIGHSPROOT_HANGING_SIGN.get(), AncientAetherBlocks.HIGHSPROOT_WALL_HANGING_SIGN.get(), texture(name(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get()), ""));
         hangingSignBlock(AncientAetherBlocks.SAKURA_HANGING_SIGN.get(), AncientAetherBlocks.SAKURA_WALL_HANGING_SIGN.get(), texture(name(AncientAetherBlocks.STRIPPED_SAKURA_LOG.get()), ""));
+
         //Ores
         blockWithItem(AncientAetherBlocks.AETHER_QUARTZ_ORE);
+
+        //Dirt
+        blockWithItem(AncientAetherBlocks.ETHERAL_DIRT);
 
         //Mosaic Blocks
         logBlock((AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get()));
@@ -95,6 +99,8 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         blockWithItem(AncientAetherBlocks.HIGHSPROOT_LEAVES);
         blockWithItem(AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES);
         blockWithItem(AncientAetherBlocks.SAKURA_LEAVES);
+        blockWithItem(AncientAetherBlocks.CRYSTAL_LEAVES);
+        blockWithItem(AncientAetherBlocks.CRYSTAL_FRUIT_LEAVES);
 
         //Plants
         crossBlock(AncientAetherBlocks.HIGHSPROOT_SAPLING);

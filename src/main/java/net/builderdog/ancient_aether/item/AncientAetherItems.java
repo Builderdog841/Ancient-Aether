@@ -38,7 +38,7 @@ public class AncientAetherItems {
 
     //Misc
     public static final RegistryObject<Item> AEROGEL_BOTTLE = ITEMS.register("aerogel_bottle", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> COMETYN_CRYSTAL = ITEMS.register("cometyn_crystal", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ETHERAL_CRYSTAL = ITEMS.register("etheral_crystal", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ANCIENT_RUNE = ITEMS.register("ancient_rune", () -> new Item(new Item.Properties().rarity(AETHER_LOOT)));
     public static final RegistryObject<Item> CRYSTAL_GOLD_COIN = ITEMS.register("crystal_gold_coin", () -> new Item(new Item.Properties().rarity(AETHER_LOOT).fireResistant()));
     public static final RegistryObject<Item> ANCIENT_DUNGEON_KEY = ITEMS.register("ancient_dungeon_key", () -> new DungeonKeyItem(new ResourceLocation(AncientAether.MOD_ID, "ancient"), new Item.Properties().stacksTo(1).rarity(AETHER_LOOT).fireResistant()));
