@@ -22,6 +22,7 @@ import net.builderdog.ancient_aether.world.biomes.AncientAetherRegion;
 import net.builderdog.ancient_aether.world.biomes.AncientAetherSurfaceData;
 import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherFoliagePlacerTypes;
 import net.builderdog.ancient_aether.world.structure.AncientAetherStructureTypes;
+import net.builderdog.ancient_aether.world.trunkplacer.AncientAetherTrunkPlacers;
 import net.minecraft.ChatFormatting;
 import net.minecraft.SharedConstants;
 import net.minecraft.core.HolderLookup;
@@ -84,6 +85,7 @@ public class AncientAether {
                 AncientAetherMoaTypes.MOA_TYPES,
                 AncientAetherBlocks.BLOCKS,
                 AncientAetherFoliagePlacerTypes.FOLIAGE_PLACERS,
+                AncientAetherTrunkPlacers.TRUNK_PLACERS,
                 AncientAetherBlockEntityTypes.BLOCK_ENTITY_TYPES,
                 AncientAetherStructureTypes.STRUCTURE_TYPES,
                 AncientAetherEntities.ENTITY_TYPES,

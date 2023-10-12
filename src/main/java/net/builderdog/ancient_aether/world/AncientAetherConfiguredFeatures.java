@@ -48,6 +48,7 @@ public class AncientAetherConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_QUARTZ_ORE = registerKey("aether_quartz_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AEROGEL_BLOBS = registerKey("aerogel_blobs");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ETHERAL_DIRT_ORE = registerKey("etheral_dirt_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> HOOKED_CRYSTAL_TREE = registerKey("hooked_crystal_tree");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest holystone = new TagMatchTest(AetherTags.Blocks.HOLYSTONE);
