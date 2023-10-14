@@ -3,6 +3,7 @@ package net.builderdog.ancient_aether.entity.monster.boss.ancient_core;
 import com.aetherteam.aether.client.AetherSoundEvents;
 import com.aetherteam.aether.data.resources.registries.AetherStructures;
 import com.aetherteam.aether.entity.AetherBossMob;
+import com.aetherteam.aether.entity.ai.AetherBlockPathTypes;
 import com.aetherteam.aether.entity.monster.dungeon.boss.BossNameGenerator;
 import com.aetherteam.aether.network.AetherPacketHandler;
 import com.aetherteam.aether.network.packet.serverbound.BossInfoPacket;
@@ -14,7 +15,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -55,28 +55,25 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import java.util.ArrayList;
 import java.util.EnumSet;
-import java.util.List;
 
 
 public class AncientCore extends PathfinderMob implements AetherBossMob<AncientCore>, Enemy, IEntityAdditionalSpawnData {
     public static final EntityDataAccessor<Boolean> DATA_AWAKE_ID = SynchedEntityData.defineId(AncientCore.class, EntityDataSerializers.BOOLEAN);
     public static final EntityDataAccessor<Component> DATA_BOSS_NAME_ID = SynchedEntityData.defineId(AncientCore.class, EntityDataSerializers.COMPONENT);
 
-    private BossRoomTracker<AncientCore> bronzeDungeon;
+    private BossRoomTracker<AncientCore> ancientDungeon;
     private final ServerBossEvent bossFight;
-    private AABB dungeonBounds;
 
     private int chatCooldown;
 
-    public List<AncientCore> eyes = new ArrayList<>();
 
     public AncientCore(EntityType<? extends AncientCore> entityType, Level level) {
         super(entityType, level);
         this.bossFight = new ServerBossEvent(this.getBossName(), BossEvent.BossBarColor.RED, BossEvent.BossBarOverlay.PROGRESS);
         this.bossFight.setVisible(false);
-        this.xpReward = XP_REWARD_BOSS;
+        this.xpReward = 100;
+        this.setPathfindingMalus(AetherBlockPathTypes.BOSS_DOORWAY, -1.0F);
         this.setPersistenceRequired();
     }
 
@@ -93,199 +90,14 @@ public class AncientCore extends PathfinderMob implements AetherBossMob<AncientC
         return this;
     }
 
-    public void setDungeonBounds(@Nullable AABB dungeonBounds) {
-        this.dungeonBounds = dungeonBounds;
-    }
 
-
-
-    public void killEyes() {
-        while (this.eyes.size() != 0)
-            this.eyes.remove(0).discard();
-    }
-
-    protected void alignSpawnPos() {
-        this.moveTo(Mth.floor(this.getX()), this.getY(), Mth.floor(this.getZ()));
-    }
-
+    //Attributes
     public static AttributeSupplier.@NotNull Builder createMobAttributes() {
         return Mob.createMobAttributes()
                 .add(Attributes.MAX_HEALTH, 500)
                 .add(Attributes.MOVEMENT_SPEED, 0.3)
                 .add(Attributes.KNOCKBACK_RESISTANCE, 1)
                 .add(Attributes.FOLLOW_RANGE, 64.0);
-    }
-
-    @Override
-    public void defineSynchedData() {
-        super.defineSynchedData();
-        this.entityData.define(DATA_AWAKE_ID, false);
-        this.entityData.define(DATA_BOSS_NAME_ID, Component.literal("Ancient Core"));
-    }
-
-    @Override
-    public void tick() {
-        super.tick();
-        if (!this.isAwake() || (this.getTarget() instanceof Player player && (player.isCreative() || player.isSpectator()))) {
-            this.setTarget(null);
-        }
-        if (this.getChatCooldown() > 0) {
-            this.chatCooldown--;
-        }
-    }
-
-    @Override
-    public void checkDespawn() {}
-
-    @Override
-    public void customServerAiStep() {
-        super.customServerAiStep();
-        this.bossFight.setProgress(this.getHealth() / this.getMaxHealth());
-        this.trackDungeon();
-    }
-
-    public boolean hurt(@NotNull DamageSource source, float damage) {
-        if (!this.isBossFight()) {
-            this.setAwake(true);
-            this.setBossFight(true);
-        }
-        return super.hurt(source, damage);
-    }
-
-    @Override
-    public void die(@Nonnull DamageSource damageSource) {
-        this.setDeltaMovement(Vec3.ZERO);
-        killEyes();
-        this.explode();
-        if (this.level() instanceof ServerLevel) {
-            this.bossFight.setProgress(this.getHealth() / this.getMaxHealth());
-            if (this.getDungeon() != null) {
-                this.getDungeon().grantAdvancements(damageSource);
-                this.tearDownRoom();
-            }
-        }
-        super.die(damageSource);
-    }
-
-    private void stop() {
-        this.setDeltaMovement(Vec3.ZERO);
-    }
-
-    public void reset() {
-        this.stop();
-        this.setAwake(false);
-        this.setBossFight(false);
-        this.setTarget(null);
-        this.setHealth(this.getMaxHealth());
-        if (this.getDungeon() != null) {
-            this.setPos(this.getDungeon().originCoordinates());
-            this.openRoom();
-        }
-    }
-
-    private void explode() {
-        for (int i = 0; i < (this.getHealth() <= 0 ? 16 : 48); i++) {
-            double x = this.position().x() + (double) (this.random.nextFloat() - this.random.nextFloat()) * 1.5;
-            double y = this.getBoundingBox().minY + 1.75 + (double) (this.random.nextFloat() - this.random.nextFloat()) * 1.5;
-            double z = this.position().z() + (double) (this.random.nextFloat() - this.random.nextFloat()) * 1.5;
-            this.level().addParticle(ParticleTypes.POOF, x, y, z, 0.0, 0.0, 0.0);
-        }
-    }
-
-    @Override
-    public void startSeenByPlayer(@Nonnull ServerPlayer player) {
-        super.startSeenByPlayer(player);
-        PacketRelay.sendToPlayer(AetherPacketHandler.INSTANCE, new BossInfoPacket.Display(this.bossFight.getId()), player);
-        if (this.getDungeon() == null || this.getDungeon().isPlayerTracked(player)) {
-            this.bossFight.addPlayer(player);
-        }
-    }
-
-    @Override
-    public void stopSeenByPlayer(@Nonnull ServerPlayer player) {
-        super.stopSeenByPlayer(player);
-        PacketRelay.sendToPlayer(AetherPacketHandler.INSTANCE, new BossInfoPacket.Remove(this.bossFight.getId()), player);
-        this.bossFight.removePlayer(player);
-    }
-
-    @Override
-    public void onDungeonPlayerAdded(@Nullable Player player) {
-        if (player instanceof ServerPlayer serverPlayer) {
-            this.bossFight.addPlayer(serverPlayer);
-        }
-    }
-
-    @Override
-    public void onDungeonPlayerRemoved(@Nullable Player player) {
-        if (player instanceof ServerPlayer serverPlayer) {
-            this.bossFight.removePlayer(serverPlayer);
-        }
-    }
-
-    public boolean isAwake() {
-        return this.entityData.get(DATA_AWAKE_ID);
-    }
-
-    public void setAwake(boolean ready) {
-        this.entityData.set(DATA_AWAKE_ID, ready);
-    }
-
-    @Override
-    public Component getBossName() {
-        return this.entityData.get(DATA_BOSS_NAME_ID);
-    }
-
-    @Override
-    public void setBossName(Component component) {
-        this.entityData.set(DATA_BOSS_NAME_ID, component);
-        this.bossFight.setName(component);
-    }
-
-    @Override
-    public BossRoomTracker<AncientCore> getDungeon() {
-        return this.bronzeDungeon;
-    }
-
-    @Override
-    public void setDungeon(BossRoomTracker<AncientCore> dungeon) {
-        this.bronzeDungeon = dungeon;
-    }
-
-    @Override
-    public int getDeathScore() {
-        return this.deathScore;
-    }
-
-    @Override
-    public boolean isBossFight() {
-        return this.bossFight.isVisible();
-    }
-
-    @Override
-    public void setBossFight(boolean isFighting) {
-        this.bossFight.setVisible(isFighting);
-    }
-
-    @Override
-    protected SoundEvent getHurtSound(@Nonnull DamageSource damageSource) {
-        return AetherSoundEvents.ENTITY_SLIDER_HURT.get();
-    }
-
-    @Override
-    protected SoundEvent getDeathSound() {
-        return AetherSoundEvents.ENTITY_SLIDER_DEATH.get();
-    }
-
-    @Nonnull
-    @Override
-    public SoundSource getSoundSource() {
-        return SoundSource.HOSTILE;
-    }
-
-    @Override
-    public void setCustomName(@Nullable Component name) {
-        super.setCustomName(name);
-        this.setBossName(name);
     }
 
     @Override
@@ -323,20 +135,9 @@ public class AncientCore extends PathfinderMob implements AetherBossMob<AncientC
         return !isAwake();
     }
 
-    @Override
-    public void addAdditionalSaveData(@Nonnull CompoundTag tag) {
-        super.addAdditionalSaveData(tag);
-        this.addBossSaveData(tag);
-        tag.putBoolean("Awake", this.isAwake());
-    }
-
-    @Override
-    public void readAdditionalSaveData(@Nonnull CompoundTag tag) {
-        super.readAdditionalSaveData(tag);
-        this.readBossSaveData(tag);
-        if (tag.contains("Awake")) {
-            this.setAwake(tag.getBoolean("Awake"));
-        }
+    //On Spawn
+    protected void alignSpawnPos() {
+        this.moveTo(Mth.floor(this.getX()), this.getY(), Mth.floor(this.getZ()));
     }
 
     @Override
@@ -359,37 +160,140 @@ public class AncientCore extends PathfinderMob implements AetherBossMob<AncientC
         return NetworkHooks.getEntitySpawningPacket(this);
     }
 
-    public int getChatCooldown() {
-        return this.chatCooldown;
+    //During Fight
+    @Override
+    public void tick() {
+        super.tick();
+        if (!this.isAwake() || (this.getTarget() instanceof Player player && (player.isCreative() || player.isSpectator()))) {
+            this.setTarget(null);
+        }
+        if (this.getChatCooldown() > 0) {
+            this.chatCooldown--;
+        }
+    }
+
+    public boolean hurt(@NotNull DamageSource source, float damage) {
+        if (!this.isBossFight()) {
+            this.setAwake(true);
+            this.setBossFight(true);
+        }
+        return super.hurt(source, damage);
     }
 
     public static class DoNothingGoal extends Goal {
-        private final AncientCore sliderHostMimic;
-        public DoNothingGoal(AncientCore sliderHostMimic) {
-            this.sliderHostMimic = sliderHostMimic;
-            this.sliderHostMimic.setRot(0, 0);
+        private final AncientCore ancientCore;
+        public DoNothingGoal(AncientCore ancientCore) {
+            this.ancientCore = ancientCore;
+            this.ancientCore.setRot(0, 0);
             this.setFlags(EnumSet.of(Flag.MOVE, Flag.JUMP));
         }
 
         @Override
         public boolean canUse() {
-            return !this.sliderHostMimic.isBossFight();
+            return !this.ancientCore.isBossFight();
         }
 
         @Override
         public void start() {
-            this.sliderHostMimic.setDeltaMovement(Vec3.ZERO);
-            this.sliderHostMimic.setPos(this.sliderHostMimic.position().x,
-                    this.sliderHostMimic.position().y,
-                    this.sliderHostMimic.position().z);
+            this.ancientCore.setDeltaMovement(Vec3.ZERO);
+            this.ancientCore.setPos(this.ancientCore.position().x,
+                    this.ancientCore.position().y,
+                    this.ancientCore.position().z);
         }
+    }
+
+    @Override
+    public void startSeenByPlayer(@Nonnull ServerPlayer player) {
+        super.startSeenByPlayer(player);
+        PacketRelay.sendToPlayer(AetherPacketHandler.INSTANCE, new BossInfoPacket.Display(this.bossFight.getId()), player);
+        if (this.getDungeon() == null || this.getDungeon().isPlayerTracked(player)) {
+            this.bossFight.addPlayer(player);
+        }
+    }
+
+    @Override
+    public void stopSeenByPlayer(@Nonnull ServerPlayer player) {
+        super.stopSeenByPlayer(player);
+        PacketRelay.sendToPlayer(AetherPacketHandler.INSTANCE, new BossInfoPacket.Remove(this.bossFight.getId()), player);
+        this.bossFight.removePlayer(player);
+    }
+
+    @Override
+    public void onDungeonPlayerAdded(@Nullable Player player) {
+        if (player instanceof ServerPlayer serverPlayer) {
+            this.bossFight.addPlayer(serverPlayer);
+        }
+    }
+
+    @Override
+    public void onDungeonPlayerRemoved(@Nullable Player player) {
+        if (player instanceof ServerPlayer serverPlayer) {
+            this.bossFight.removePlayer(serverPlayer);
+        }
+    }
+
+    @Override
+    public boolean isBossFight() {
+        return this.bossFight.isVisible();
+    }
+
+    @Override
+    public void setBossFight(boolean isFighting) {
+        this.bossFight.setVisible(isFighting);
+    }
+
+    //On Death
+    @Override
+    public void die(@Nonnull DamageSource damageSource) {
+        this.setDeltaMovement(Vec3.ZERO);
+        this.explode();
+        if (this.level() instanceof ServerLevel) {
+            this.bossFight.setProgress(this.getHealth() / this.getMaxHealth());
+            if (this.getDungeon() != null) {
+                this.getDungeon().grantAdvancements(damageSource);
+                this.tearDownRoom();
+            }
+        }
+        super.die(damageSource);
+    }
+
+    private void explode() {
+        for (int i = 0; i < (this.getHealth() <= 0 ? 16 : 48); i++) {
+            double x = this.position().x() + (double) (this.random.nextFloat() - this.random.nextFloat()) * 1.5;
+            double y = this.getBoundingBox().minY + 1.75 + (double) (this.random.nextFloat() - this.random.nextFloat()) * 1.5;
+            double z = this.position().z() + (double) (this.random.nextFloat() - this.random.nextFloat()) * 1.5;
+            this.level().addParticle(ParticleTypes.POOF, x, y, z, 0.0, 0.0, 0.0);
+        }
+    }
+
+    private void stop() {
+        this.setDeltaMovement(Vec3.ZERO);
+    }
+
+    public void reset() {
+        this.stop();
+        this.setAwake(false);
+        this.setBossFight(false);
+        this.setTarget(null);
+        this.setHealth(this.getMaxHealth());
+        if (this.getDungeon() != null) {
+            this.setPos(this.getDungeon().originCoordinates());
+            this.openRoom();
+        }
+    }
+
+    @Override
+    public void checkDespawn() {}
+
+
+    //Dungeon
+    public void setDungeonBounds(@Nullable AABB dungeonBounds) {
     }
 
     @Override
     @SuppressWarnings("deprecation")
     public SpawnGroupData finalizeSpawn(@NotNull ServerLevelAccessor level, @NotNull DifficultyInstance difficulty, @NotNull MobSpawnType reason, @Nullable SpawnGroupData spawnData, @Nullable CompoundTag tag) {
         this.setBossName(BossNameGenerator.generateValkyrieName(this.getRandom()));
-        // Set the bounds for the whole dungeon.
         if (tag != null && tag.contains("Dungeon")) {
             StructureManager manager = level.getLevel().structureManager();
             manager.registryAccess().registry(Registries.STRUCTURE).ifPresent(registry -> {
@@ -424,5 +328,99 @@ public class AncientCore extends PathfinderMob implements AetherBossMob<AncientC
             return Blocks.AIR.defaultBlockState();
         }
         return null;
+    }
+
+    @Override
+    public BossRoomTracker<AncientCore> getDungeon() {
+        return this.ancientDungeon;
+    }
+
+    @Override
+    public void setDungeon(BossRoomTracker<AncientCore> dungeon) {
+        this.ancientDungeon = dungeon;
+    }
+
+    //Boss Bar and Data
+    @Override
+    public void customServerAiStep() {
+        super.customServerAiStep();
+        this.bossFight.setProgress(this.getHealth() / this.getMaxHealth());
+        this.trackDungeon();
+    }
+
+    @Override
+    public void setBossName(Component component) {
+        this.entityData.set(DATA_BOSS_NAME_ID, component);
+        this.bossFight.setName(component);
+    }
+
+    @Override
+    public void defineSynchedData() {
+        super.defineSynchedData();
+        this.entityData.define(DATA_AWAKE_ID, false);
+        this.entityData.define(DATA_BOSS_NAME_ID, Component.literal("Ancient Core"));
+    }
+
+    public boolean isAwake() {
+        return this.entityData.get(DATA_AWAKE_ID);
+    }
+
+    public void setAwake(boolean ready) {
+        this.entityData.set(DATA_AWAKE_ID, ready);
+    }
+
+    @Override
+    public void setCustomName(@Nullable Component name) {
+        super.setCustomName(name);
+        this.setBossName(name);
+    }
+
+
+    @Override
+    public void addAdditionalSaveData(@Nonnull CompoundTag tag) {
+        super.addAdditionalSaveData(tag);
+        this.addBossSaveData(tag);
+        tag.putBoolean("Awake", this.isAwake());
+    }
+
+    @Override
+    public void readAdditionalSaveData(@Nonnull CompoundTag tag) {
+        super.readAdditionalSaveData(tag);
+        this.readBossSaveData(tag);
+        if (tag.contains("Awake")) {
+            this.setAwake(tag.getBoolean("Awake"));
+        }
+    }
+
+    @Override
+    public Component getBossName() {
+        return this.entityData.get(DATA_BOSS_NAME_ID);
+    }
+
+    @Override
+    public int getDeathScore() {
+        return this.deathScore;
+    }
+
+    public int getChatCooldown() {
+        return this.chatCooldown;
+    }
+
+
+    //Sounds
+    @Override
+    protected SoundEvent getHurtSound(@Nonnull DamageSource damageSource) {
+        return AetherSoundEvents.ENTITY_SLIDER_HURT.get();
+    }
+
+    @Override
+    protected SoundEvent getDeathSound() {
+        return AetherSoundEvents.ENTITY_SLIDER_DEATH.get();
+    }
+
+    @Nonnull
+    @Override
+    public SoundSource getSoundSource() {
+        return SoundSource.HOSTILE;
     }
 }

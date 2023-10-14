@@ -1,6 +1,8 @@
 package net.builderdog.ancient_aether.entity.monster.boss.ancient_guardian;
 
+import com.aetherteam.aether.data.resources.registries.AetherStructures;
 import com.aetherteam.aether.entity.AetherBossMob;
+import com.aetherteam.aether.entity.ai.AetherBlockPathTypes;
 import com.aetherteam.aether.entity.monster.dungeon.boss.BossNameGenerator;
 import com.aetherteam.aether.network.packet.serverbound.BossInfoPacket;
 import com.aetherteam.nitrogen.entity.BossRoomTracker;
@@ -10,6 +12,7 @@ import com.aetherteam.aether.network.AetherPacketHandler;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.entity.monster.boss.ancient_core.AncientCore;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
@@ -38,8 +41,13 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.StructureManager;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.levelgen.structure.BoundingBox;
+import net.minecraft.world.level.levelgen.structure.Structure;
+import net.minecraft.world.level.levelgen.structure.StructureStart;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.entity.IEntityAdditionalSpawnData;
 import net.minecraftforge.network.NetworkHooks;
@@ -57,13 +65,13 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     private final ServerBossEvent bossFight;
     private BossRoomTracker<AncientGuardian> ancientDungeon;
 
-    @Nonnull
-    public static AttributeSupplier.Builder createMobAttributes() {
-        return Mob.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 500)
-                .add(Attributes.MOVEMENT_SPEED, 0.3)
-                .add(Attributes.KNOCKBACK_RESISTANCE, 1)
-                .add(Attributes.FOLLOW_RANGE, 64.0);
+    public AncientGuardian(EntityType<? extends PathfinderMob> pEntityType, Level pLevel) {
+        super(pEntityType, pLevel);
+        this.bossFight = new ServerBossEvent(this.getBossName(), BossEvent.BossBarColor.RED, BossEvent.BossBarOverlay.PROGRESS);
+        this.bossFight.setVisible(false);
+        this.xpReward = 0;
+        this.setPathfindingMalus(AetherBlockPathTypes.BOSS_DOORWAY, -1.0F);
+        this.setPersistenceRequired();
     }
 
     protected void registerGoals() {
@@ -75,28 +83,22 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, (livingEntity) -> this.isBossFight()));
     }
 
-    public AncientGuardian(EntityType<? extends PathfinderMob> pEntityType, Level pLevel) {
-        super(pEntityType, pLevel);
-        this.bossFight = new ServerBossEvent(this.getBossName(), BossEvent.BossBarColor.RED, BossEvent.BossBarOverlay.PROGRESS);
-        this.bossFight.setVisible(false);
-        this.xpReward = 50;
-        this.setPersistenceRequired();
-    }
-    public void die(@NotNull DamageSource source) {
-        level().explode(this, this.position().x, this.position().y, this.position().z, 0.3F, false, Level.ExplosionInteraction.TNT);
-        super.die(source);
-        LevelAccessor world = level();
-        if (world instanceof ServerLevel _level) {
-            Mob entityToSpawn = new AncientCore(AncientAetherEntities.ANCIENT_CORE.get(), _level);
-            entityToSpawn.moveTo(this.position().x, this.position().y + 1, this.position().z, 0, 0);
-            entityToSpawn.setYBodyRot(0);
-            entityToSpawn.setYHeadRot(0);
-            entityToSpawn.setDeltaMovement(0, 0, 0);
-            entityToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-            _level.addFreshEntity(entityToSpawn);
-        }
+    //Attributes
+    @Nonnull
+    public static AttributeSupplier.Builder createMobAttributes() {
+        return Mob.createMobAttributes()
+                .add(Attributes.MAX_HEALTH, 500)
+                .add(Attributes.MOVEMENT_SPEED, 0.3)
+                .add(Attributes.KNOCKBACK_RESISTANCE, 1)
+                .add(Attributes.FOLLOW_RANGE, 64.0);
     }
 
+    //On Spawn
+    protected void alignSpawnPos() {
+        this.moveTo(Mth.floor(this.getX()), this.getY(), Mth.floor(this.getZ()));
+    }
+
+    //During Fight
     public void tick() {
         super.tick();
         if (this.attackTime > 0) {
@@ -119,19 +121,6 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
 
         if (this.chatTime > 0) {
             --this.chatTime;
-        }
-    }
-
-
-    public void reset() {
-        this.stop();
-        this.setAwake(false);
-        this.setBossFight(false);
-        this.setTarget(null);
-        this.setHealth(this.getMaxHealth());
-        if (this.getDungeon() != null) {
-            this.setPos(this.getDungeon().originCoordinates());
-            this.openRoom();
         }
     }
 
@@ -161,6 +150,101 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     public void checkDespawn() {
     }
 
+    //On Death
+    public void die(@NotNull DamageSource source) {
+        level().explode(this, this.position().x, this.position().y, this.position().z, 0.3F, false, Level.ExplosionInteraction.TNT);
+        super.die(source);
+        LevelAccessor world = level();
+        if (world instanceof ServerLevel _level) {
+            Mob entityToSpawn = new AncientCore(AncientAetherEntities.ANCIENT_CORE.get(), _level);
+            entityToSpawn.moveTo(this.position().x, this.position().y, this.position().z, 0, 0);
+            entityToSpawn.setYBodyRot(0);
+            entityToSpawn.setYHeadRot(0);
+            entityToSpawn.setDeltaMovement(0, 0, 0);
+            entityToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+            _level.addFreshEntity(entityToSpawn);
+        }
+    }
+
+    public void reset() {
+        this.stop();
+        this.setAwake(false);
+        this.setBossFight(false);
+        this.setTarget(null);
+        this.setHealth(this.getMaxHealth());
+        if (this.getDungeon() != null) {
+            this.setPos(this.getDungeon().originCoordinates());
+            this.openRoom();
+        }
+    }
+
+    //Dungeon
+    public void setDungeonBounds(@javax.annotation.Nullable AABB dungeonBounds) {
+    }
+    @Override
+    @SuppressWarnings("deprecation")
+    public SpawnGroupData finalizeSpawn(@NotNull ServerLevelAccessor level, @NotNull DifficultyInstance difficulty, @NotNull MobSpawnType reason, @javax.annotation.Nullable SpawnGroupData spawnData, @javax.annotation.Nullable CompoundTag tag) {
+        this.setBossName(BossNameGenerator.generateValkyrieName(this.getRandom()));
+        if (tag != null && tag.contains("Dungeon")) {
+            StructureManager manager = level.getLevel().structureManager();
+            manager.registryAccess().registry(Registries.STRUCTURE).ifPresent(registry -> {
+                        Structure temple = registry.get(AetherStructures.SILVER_DUNGEON);
+                        if (temple != null) {
+                            StructureStart start = manager.getStructureAt(this.blockPosition(), temple);
+                            if (start != StructureStart.INVALID_START) {
+                                BoundingBox box = start.getBoundingBox();
+                                AABB dungeonBounds = new AABB(box.minX(), box.minY(), box.minZ(), box.maxX() + 1, box.maxY() + 1, box.maxZ() + 1);
+                                this.setDungeonBounds(dungeonBounds);
+                            }
+                        }
+                    }
+            );
+        }
+        return spawnData;
+    }
+
+    @Nullable
+    @Override
+    public BlockState convertBlock(BlockState state) {
+        if (state.is(AncientAetherBlocks.LOCKED_LIGHT_AEROTIC_STONE.get())) {
+            return AncientAetherBlocks.LOCKED_CORRUPTED_LIGHT_AEROTIC_STONE.get().defaultBlockState();
+        }
+        return null;
+    }
+
+    //Boss Bar and Data
+    public void defineSynchedData() {
+        super.defineSynchedData();
+        this.entityData.define(DATA_AWAKE_ID, false);
+        this.entityData.define(DATA_BOSS_NAME_ID, Component.literal("Ancient Guardian"));
+    }
+
+    @Override
+    public void customServerAiStep() {
+        super.customServerAiStep();
+        this.bossFight.setProgress(this.getHealth() / this.getMaxHealth());
+        this.trackDungeon();
+    }
+
+    @Override
+    public void addAdditionalSaveData(CompoundTag tag) {
+        super.addAdditionalSaveData(tag);
+        this.addBossSaveData(tag);
+        tag.putBoolean("Awake", this.isAwake());
+    }
+
+    @Override
+    public void readAdditionalSaveData(CompoundTag tag) {
+        super.readAdditionalSaveData(tag);
+        this.readBossSaveData(tag);
+        if (tag.contains("Awake")) {
+            this.setAwake(tag.getBoolean("Awake"));
+        }
+    }
+
+    //Sounds
+    //
+
     @Override
     public int getDeathScore() {
         return this.deathScore;
@@ -174,38 +258,6 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     @Override
     public void setBossFight(boolean isFighting) {
         this.bossFight.setVisible(isFighting);
-    }
-
-
-    public void defineSynchedData() {
-        super.defineSynchedData();
-        this.entityData.define(DATA_AWAKE_ID, false);
-        this.entityData.define(DATA_BOSS_NAME_ID, Component.literal("Ancient Guardian"));
-    }
-
-    @Nullable
-    @Override
-    public BlockState convertBlock(BlockState state) {
-        if (state.is(AncientAetherBlocks.LOCKED_AEROTIC_STONE.get())) {
-            return AncientAetherBlocks.AEROTIC_STONE.get().defaultBlockState();
-        }
-        if (state.is(AncientAetherBlocks.LOCKED_LIGHT_AEROTIC_STONE.get())) {
-            return AncientAetherBlocks.LIGHT_AEROTIC_STONE.get().defaultBlockState();
-        }
-        if (state.is(AncientAetherBlocks.BOSS_DOORWAY_AEROTIC_STONE.get())) {
-            return Blocks.AIR.defaultBlockState();
-        }
-        if (state.is(AncientAetherBlocks.TREASURE_DOORWAY_AEROTIC_STONE.get())) {
-            return Blocks.AIR.defaultBlockState();
-        }
-        return null;
-    }
-
-    @Override
-    public void customServerAiStep() {
-        super.customServerAiStep();
-        this.bossFight.setProgress(this.getHealth() / this.getMaxHealth());
-        this.trackDungeon();
     }
 
     @Override
@@ -244,21 +296,9 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         this.bossFight.setName(component);
     }
 
-
-    protected void alignSpawnPos() {
-        this.moveTo(Mth.floor(this.getX()), this.getY(), Mth.floor(this.getZ()));
-    }
-
     public MutableComponent generateGuardianName() {
         MutableComponent result = BossNameGenerator.generateBossName(this.getRandom());
         return result.append(Component.translatable("gui.ancient_aether.ancient_guardian.title"));
-    }
-
-    public SpawnGroupData finalizeSpawn(@Nonnull ServerLevelAccessor pLevel, @Nonnull DifficultyInstance pDifficulty, @Nonnull MobSpawnType pReason, @javax.annotation.Nullable SpawnGroupData pSpawnData, @javax.annotation.Nullable CompoundTag pDataTag) {
-        this.alignSpawnPos();
-        SpawnGroupData data = super.finalizeSpawn(pLevel, pDifficulty, pReason, pSpawnData, pDataTag);
-        setBossName(generateGuardianName());
-        return data;
     }
 
     public void setCustomName(@Nullable Component name) {
@@ -272,22 +312,6 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
             this.setBossFight(true);
         }
         return super.hurt(source, damage);
-    }
-
-    @Override
-    public void addAdditionalSaveData(CompoundTag tag) {
-        super.addAdditionalSaveData(tag);
-        this.addBossSaveData(tag);
-        tag.putBoolean("Awake", this.isAwake());
-    }
-
-    @Override
-    public void readAdditionalSaveData(CompoundTag tag) {
-        super.readAdditionalSaveData(tag);
-        this.readBossSaveData(tag);
-        if (tag.contains("Awake")) {
-            this.setAwake(tag.getBoolean("Awake"));
-        }
     }
 
     @Override

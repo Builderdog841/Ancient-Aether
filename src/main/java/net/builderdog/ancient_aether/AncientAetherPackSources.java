@@ -14,8 +14,6 @@ public class AncientAetherPackSources {
 
     public static UnaryOperator<Component> decorateWithSource(String pTranslationKey) {
         Component component = Component.translatable(pTranslationKey);
-        return (p_10539_) -> {
-            return Component.translatable("pack.nameAndSource", p_10539_, component).withStyle(ChatFormatting.GRAY);
-        };
+        return (p_10539_) -> Component.translatable("pack.nameAndSource", p_10539_, component).withStyle(ChatFormatting.GRAY);
     }
 }
