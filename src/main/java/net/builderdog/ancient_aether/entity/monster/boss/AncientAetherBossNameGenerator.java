@@ -6,11 +6,11 @@ import net.minecraft.util.RandomSource;
 
 public final class AncientAetherBossNameGenerator {
 
-    public static final String[] guardianNameFirst = { "Arkzenus", "Chro", "Ere", "Anu", "Ark", "Nim" };
+    public static final String[] guardianNameFirst = { "Arkzenus", "Chro", "Ere", "Anu", "Ark", "Nim", "Celci", "Tera" };
     public static final String[] guardianNameLast = { "nos", "bus", "bis", "nor", ""};
 
-    public static final String[] coreNameFirst = { "Aeronor", "Gra", "Pla", "Si", "Go", "Au", "Stra" };
-    public static final String[] coreNameMiddle = { "v", "m", "n", "t"};
+    public static final String[] coreNameFirst = { "Aeronor", "Gra", "Pla", "Si", "Go", "Au", "Stra", "Rubi" };
+    public static final String[] coreNameMiddle = { "v", "m", "n", "t", "r", "d"};
     public static final String[] coreNameLast = { "ium", "ite", "on", "us", "or"};
 
     public static MutableComponent generateAncientGuardian(RandomSource random) {
