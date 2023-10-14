@@ -3,7 +3,6 @@ package net.builderdog.ancient_aether.entity.monster.boss.ancient_guardian;
 import com.aetherteam.aether.data.resources.registries.AetherStructures;
 import com.aetherteam.aether.entity.AetherBossMob;
 import com.aetherteam.aether.entity.ai.AetherBlockPathTypes;
-import com.aetherteam.aether.entity.monster.dungeon.boss.BossNameGenerator;
 import com.aetherteam.aether.network.packet.serverbound.BossInfoPacket;
 import com.aetherteam.nitrogen.entity.BossRoomTracker;
 import com.aetherteam.nitrogen.network.PacketRelay;
@@ -11,12 +10,13 @@ import com.aetherteam.aether.entity.ai.goal.ContinuousMeleeAttackGoal;
 import com.aetherteam.aether.network.AetherPacketHandler;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
+import net.builderdog.ancient_aether.entity.monster.boss.AncientAetherBossNameGenerator;
 import net.builderdog.ancient_aether.entity.monster.boss.ancient_core.AncientCore;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -25,7 +25,6 @@ import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Mth;
 import net.minecraft.world.BossEvent;
 import net.minecraft.world.DifficultyInstance;
@@ -42,7 +41,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.StructureManager;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import net.minecraft.world.level.levelgen.structure.Structure;
@@ -63,7 +61,9 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     public int chatTime;
     private int attackTime = 0;
     private final ServerBossEvent bossFight;
-    private BossRoomTracker<AncientGuardian> ancientDungeon;
+    private BossRoomTracker<AncientGuardian> dungeon;
+    @Nullable
+    private AABB dungeonBounds;
 
     public AncientGuardian(EntityType<? extends PathfinderMob> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
@@ -91,6 +91,35 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
                 .add(Attributes.MOVEMENT_SPEED, 0.3)
                 .add(Attributes.KNOCKBACK_RESISTANCE, 1)
                 .add(Attributes.FOLLOW_RANGE, 64.0);
+    }
+
+    @Override
+    protected boolean canRide(@Nonnull Entity vehicle) {
+        return false;
+    }
+
+    @Override
+    public boolean canBeCollidedWith() {
+        return !this.isAwake();
+    }
+
+    @Override
+    public boolean isPushable() {
+        return false;
+    }
+
+    @Override
+    public boolean isNoGravity() {
+        return !isAwake();
+    }
+
+    @Override
+    public boolean shouldDiscardFriction() {
+        return !isAwake();
+    }
+
+    protected float getJumpPower() {
+        return 0.0F;
     }
 
     //On Spawn
@@ -124,27 +153,31 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         }
     }
 
-    public boolean doHurtTarget(Entity pEntity) {
-        this.attackTime = 10;
-        level().broadcastEntityEvent(this, (byte) 4);
-        float f = (float) (7 + this.random.nextInt(15));
-        float f1 = (int) f > 0 ? f / 2.0F + (float) this.random.nextInt((int) f) : f;
-        boolean flag = pEntity.hurt(this.damageSources().mobAttack(this), f1);
-        if (flag) {
-            double d2;
-            if (pEntity instanceof LivingEntity livingentity) {
-                d2 = livingentity.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE);
-            } else {
-                d2 = 0.0;
-            }
+    public boolean hurt(@NotNull DamageSource source, float damage) {
+        if (!this.isBossFight()) {
+            this.setAwake(true);
+            this.setBossFight(true);
+        }
+        return super.hurt(source, damage);
+    }
 
-            double d1 = Math.max(0.0, 1.0 - d2);
-            pEntity.setDeltaMovement(pEntity.getDeltaMovement().add(0.0, 0.4000000059604645 * d1, 0.0));
-            this.doEnchantDamageEffects(this, pEntity);
+
+    public static class DoNothingGoal extends Goal {
+        private final AncientGuardian ancientGuardian;
+
+        public DoNothingGoal(AncientGuardian ancientGuardian) {
+            this.ancientGuardian = ancientGuardian;
+            this.setFlags(EnumSet.of(Flag.MOVE, Flag.JUMP));
         }
 
-        this.playSound(SoundEvents.IRON_GOLEM_ATTACK, 1.0F, 1.0F);
-        return flag;
+        public boolean canUse() {
+            return !ancientGuardian.isBossFight();
+        }
+
+        public void start() {
+            ancientGuardian.setDeltaMovement(Vec3.ZERO);
+            ancientGuardian.setPos(ancientGuardian.position().x, ancientGuardian.position().y, ancientGuardian.position().z);
+        }
     }
 
     public void checkDespawn() {
@@ -152,6 +185,14 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
 
     //On Death
     public void die(@NotNull DamageSource source) {
+        if (!this.level().isClientSide) {
+            this.bossFight.setProgress(this.getHealth() / this.getMaxHealth()); // Forces an update to the boss health meter.
+            if (this.getDungeon() != null) {
+                this.getDungeon().grantAdvancements(source);
+                this.tearDownRoom();
+            }
+        }
+        super.die(source);
         level().explode(this, this.position().x, this.position().y, this.position().z, 0.3F, false, Level.ExplosionInteraction.TNT);
         super.die(source);
         LevelAccessor world = level();
@@ -179,12 +220,13 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     }
 
     //Dungeon
-    public void setDungeonBounds(@javax.annotation.Nullable AABB dungeonBounds) {
+    public void setDungeonBounds(@Nullable AABB dungeonBounds) {
+        this.dungeonBounds = dungeonBounds;
     }
     @Override
     @SuppressWarnings("deprecation")
     public SpawnGroupData finalizeSpawn(@NotNull ServerLevelAccessor level, @NotNull DifficultyInstance difficulty, @NotNull MobSpawnType reason, @javax.annotation.Nullable SpawnGroupData spawnData, @javax.annotation.Nullable CompoundTag tag) {
-        this.setBossName(BossNameGenerator.generateValkyrieName(this.getRandom()));
+        this.setBossName(AncientAetherBossNameGenerator.generateAncientGuardian(this.getRandom()));
         if (tag != null && tag.contains("Dungeon")) {
             StructureManager manager = level.getLevel().structureManager();
             manager.registryAccess().registry(Registries.STRUCTURE).ifPresent(registry -> {
@@ -203,6 +245,18 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         return spawnData;
     }
 
+    @Override
+    public void tearDownRoom() {
+        assert this.dungeonBounds != null;
+        for (BlockPos pos : BlockPos.betweenClosed((int) this.dungeonBounds.minX, (int) this.dungeonBounds.minY, (int) this.dungeonBounds.minZ, (int) this.dungeonBounds.maxX, (int) this.dungeonBounds.maxY, (int) this.dungeonBounds.maxZ)) {
+            BlockState state = this.level().getBlockState(pos);
+            BlockState newState = this.convertBlock(state);
+            if (newState != null) {
+                this.level().setBlock(pos, newState, 1 | 2);
+            }
+        }
+    }
+
     @Nullable
     @Override
     public BlockState convertBlock(BlockState state) {
@@ -213,6 +267,16 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     }
 
     //Boss Bar and Data
+    @Override
+    public void setBossName(Component component) {
+        this.entityData.set(DATA_BOSS_NAME_ID, component);
+        this.bossFight.setName(component);
+    }
+
+    public void setCustomName(@Nullable Component name) {
+        super.setCustomName(name);
+        setBossName(name);
+    }
     public void defineSynchedData() {
         super.defineSynchedData();
         this.entityData.define(DATA_AWAKE_ID, false);
@@ -277,41 +341,17 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     }
 
     @Override
-    public void onDungeonPlayerAdded(@javax.annotation.Nullable Player player) {
+    public void onDungeonPlayerAdded(@Nullable Player player) {
         if (player instanceof ServerPlayer serverPlayer) {
             this.bossFight.addPlayer(serverPlayer);
         }
     }
 
     @Override
-    public void onDungeonPlayerRemoved(@javax.annotation.Nullable Player player) {
+    public void onDungeonPlayerRemoved(@Nullable Player player) {
         if (player instanceof ServerPlayer serverPlayer) {
             this.bossFight.removePlayer(serverPlayer);
         }
-    }
-
-    @Override
-    public void setBossName(Component component) {
-        this.entityData.set(DATA_BOSS_NAME_ID, component);
-        this.bossFight.setName(component);
-    }
-
-    public MutableComponent generateGuardianName() {
-        MutableComponent result = BossNameGenerator.generateBossName(this.getRandom());
-        return result.append(Component.translatable("gui.ancient_aether.ancient_guardian.title"));
-    }
-
-    public void setCustomName(@Nullable Component name) {
-        super.setCustomName(name);
-        setBossName(name);
-    }
-
-    public boolean hurt(@NotNull DamageSource source, float damage) {
-        if (!this.isBossFight()) {
-            this.setAwake(true);
-            this.setBossFight(true);
-        }
-        return super.hurt(source, damage);
     }
 
     @Override
@@ -334,23 +374,6 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         return NetworkHooks.getEntitySpawningPacket(this);
     }
 
-    public static class DoNothingGoal extends Goal {
-        private final AncientGuardian ancientGuardian;
-
-        public DoNothingGoal(AncientGuardian ancientGuardian) {
-            this.ancientGuardian = ancientGuardian;
-            this.setFlags(EnumSet.of(Flag.MOVE, Flag.JUMP));
-        }
-
-        public boolean canUse() {
-            return !ancientGuardian.isBossFight();
-        }
-
-        public void start() {
-            ancientGuardian.setDeltaMovement(Vec3.ZERO);
-            ancientGuardian.setPos(ancientGuardian.position().x, ancientGuardian.position().y, ancientGuardian.position().z);
-        }
-    }
     public boolean isAwake() {
         return this.entityData.get(DATA_AWAKE_ID);
     }
@@ -364,45 +387,17 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         return this.entityData.get(DATA_BOSS_NAME_ID);
     }
 
-    @Override
-    protected boolean canRide(@Nonnull Entity vehicle) {
-        return false;
-    }
-
-    @Override
-    public boolean canBeCollidedWith() {
-        return !this.isAwake();
-    }
-
-    @Override
-    public boolean isPushable() {
-        return false;
-    }
-
-    @Override
-    public boolean isNoGravity() {
-        return !isAwake();
-    }
-
-    @Override
-    public boolean shouldDiscardFriction() {
-        return !isAwake();
-    }
-
-    protected float getJumpPower() {
-        return 0.0F;
-    }
 
     public AncientGuardian self() {
         return this;
     }
 
     public BossRoomTracker<AncientGuardian> getDungeon() {
-        return this.ancientDungeon;
+        return this.dungeon;
     }
 
     public void setDungeon(BossRoomTracker<AncientGuardian> bossRoomTracker) {
-        this.ancientDungeon = bossRoomTracker;
+        this.dungeon = bossRoomTracker;
     }
 
     private void stop() {

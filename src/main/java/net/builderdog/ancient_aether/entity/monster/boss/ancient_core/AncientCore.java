@@ -4,13 +4,13 @@ import com.aetherteam.aether.client.AetherSoundEvents;
 import com.aetherteam.aether.data.resources.registries.AetherStructures;
 import com.aetherteam.aether.entity.AetherBossMob;
 import com.aetherteam.aether.entity.ai.AetherBlockPathTypes;
-import com.aetherteam.aether.entity.monster.dungeon.boss.BossNameGenerator;
 import com.aetherteam.aether.network.AetherPacketHandler;
 import com.aetherteam.aether.network.packet.serverbound.BossInfoPacket;
 import com.aetherteam.nitrogen.entity.BossRoomTracker;
 import com.aetherteam.nitrogen.network.PacketRelay;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
-import net.minecraft.core.particles.ParticleTypes;
+import net.builderdog.ancient_aether.entity.monster.boss.AncientAetherBossNameGenerator;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
@@ -21,7 +21,6 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerBossEvent;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
@@ -62,10 +61,12 @@ public class AncientCore extends PathfinderMob implements AetherBossMob<AncientC
     public static final EntityDataAccessor<Boolean> DATA_AWAKE_ID = SynchedEntityData.defineId(AncientCore.class, EntityDataSerializers.BOOLEAN);
     public static final EntityDataAccessor<Component> DATA_BOSS_NAME_ID = SynchedEntityData.defineId(AncientCore.class, EntityDataSerializers.COMPONENT);
 
-    private BossRoomTracker<AncientCore> ancientDungeon;
+    private BossRoomTracker<AncientCore> dungeon;
     private final ServerBossEvent bossFight;
 
     private int chatCooldown;
+    @Nullable
+    private AABB dungeonBounds;
 
 
     public AncientCore(EntityType<? extends AncientCore> entityType, Level level) {
@@ -244,26 +245,15 @@ public class AncientCore extends PathfinderMob implements AetherBossMob<AncientC
 
     //On Death
     @Override
-    public void die(@Nonnull DamageSource damageSource) {
-        this.setDeltaMovement(Vec3.ZERO);
-        this.explode();
-        if (this.level() instanceof ServerLevel) {
-            this.bossFight.setProgress(this.getHealth() / this.getMaxHealth());
+    public void die(@NotNull DamageSource source) {
+        if (!this.level().isClientSide) {
+            this.bossFight.setProgress(this.getHealth() / this.getMaxHealth()); // Forces an update to the boss health meter.
             if (this.getDungeon() != null) {
-                this.getDungeon().grantAdvancements(damageSource);
+                this.getDungeon().grantAdvancements(source);
                 this.tearDownRoom();
             }
         }
-        super.die(damageSource);
-    }
-
-    private void explode() {
-        for (int i = 0; i < (this.getHealth() <= 0 ? 16 : 48); i++) {
-            double x = this.position().x() + (double) (this.random.nextFloat() - this.random.nextFloat()) * 1.5;
-            double y = this.getBoundingBox().minY + 1.75 + (double) (this.random.nextFloat() - this.random.nextFloat()) * 1.5;
-            double z = this.position().z() + (double) (this.random.nextFloat() - this.random.nextFloat()) * 1.5;
-            this.level().addParticle(ParticleTypes.POOF, x, y, z, 0.0, 0.0, 0.0);
-        }
+        super.die(source);
     }
 
     private void stop() {
@@ -288,12 +278,12 @@ public class AncientCore extends PathfinderMob implements AetherBossMob<AncientC
 
     //Dungeon
     public void setDungeonBounds(@Nullable AABB dungeonBounds) {
+        this.dungeonBounds = dungeonBounds;
     }
-
     @Override
     @SuppressWarnings("deprecation")
     public SpawnGroupData finalizeSpawn(@NotNull ServerLevelAccessor level, @NotNull DifficultyInstance difficulty, @NotNull MobSpawnType reason, @Nullable SpawnGroupData spawnData, @Nullable CompoundTag tag) {
-        this.setBossName(BossNameGenerator.generateValkyrieName(this.getRandom()));
+        this.setBossName(AncientAetherBossNameGenerator.generateAncientCore(this.getRandom()));
         if (tag != null && tag.contains("Dungeon")) {
             StructureManager manager = level.getLevel().structureManager();
             manager.registryAccess().registry(Registries.STRUCTURE).ifPresent(registry -> {
@@ -310,6 +300,18 @@ public class AncientCore extends PathfinderMob implements AetherBossMob<AncientC
             );
         }
         return spawnData;
+    }
+
+    @Override
+    public void tearDownRoom() {
+        assert this.dungeonBounds != null;
+        for (BlockPos pos : BlockPos.betweenClosed((int) this.dungeonBounds.minX, (int) this.dungeonBounds.minY, (int) this.dungeonBounds.minZ, (int) this.dungeonBounds.maxX, (int) this.dungeonBounds.maxY, (int) this.dungeonBounds.maxZ)) {
+            BlockState state = this.level().getBlockState(pos);
+            BlockState newState = this.convertBlock(state);
+            if (newState != null) {
+                this.level().setBlock(pos, newState, 1 | 2);
+            }
+        }
     }
 
     @Nullable
@@ -331,14 +333,20 @@ public class AncientCore extends PathfinderMob implements AetherBossMob<AncientC
     }
 
     @Override
-    public BossRoomTracker<AncientCore> getDungeon() {
-        return this.ancientDungeon;
+    public void setDungeon(@Nullable BossRoomTracker<AncientCore> dungeon) {
+        this.dungeon = dungeon;
+        if (this.dungeonBounds == null) {
+            assert dungeon != null;
+            this.dungeonBounds = dungeon.roomBounds();
+        }
     }
 
+
     @Override
-    public void setDungeon(BossRoomTracker<AncientCore> dungeon) {
-        this.ancientDungeon = dungeon;
+    public BossRoomTracker<AncientCore> getDungeon() {
+        return this.dungeon;
     }
+
 
     //Boss Bar and Data
     @Override
