@@ -1,7 +1,6 @@
 package net.builderdog.ancient_aether.entity.monster.boss.ancient_core;
 
 import com.aetherteam.aether.client.AetherSoundEvents;
-import com.aetherteam.aether.data.resources.registries.AetherStructures;
 import com.aetherteam.aether.entity.AetherBossMob;
 import com.aetherteam.aether.entity.ai.AetherBlockPathTypes;
 import com.aetherteam.aether.network.AetherPacketHandler;
@@ -9,6 +8,7 @@ import com.aetherteam.aether.network.packet.serverbound.BossInfoPacket;
 import com.aetherteam.nitrogen.entity.BossRoomTracker;
 import com.aetherteam.nitrogen.network.PacketRelay;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
+import net.builderdog.ancient_aether.datagen.resources.AncientAetherStructureRegistry;
 import net.builderdog.ancient_aether.entity.monster.boss.AncientAetherBossNameGenerator;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
@@ -287,7 +287,7 @@ public class AncientCore extends PathfinderMob implements AetherBossMob<AncientC
         if (tag != null && tag.contains("Dungeon")) {
             StructureManager manager = level.getLevel().structureManager();
             manager.registryAccess().registry(Registries.STRUCTURE).ifPresent(registry -> {
-                        Structure temple = registry.get(AetherStructures.SILVER_DUNGEON);
+                        Structure temple = registry.get(AncientAetherStructureRegistry.ANCIENT_DUNGEON);
                         if (temple != null) {
                             StructureStart start = manager.getStructureAt(this.blockPosition(), temple);
                             if (start != StructureStart.INVALID_START) {

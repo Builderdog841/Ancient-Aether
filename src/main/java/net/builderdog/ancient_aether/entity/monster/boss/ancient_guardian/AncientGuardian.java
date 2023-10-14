@@ -1,6 +1,5 @@
 package net.builderdog.ancient_aether.entity.monster.boss.ancient_guardian;
 
-import com.aetherteam.aether.data.resources.registries.AetherStructures;
 import com.aetherteam.aether.entity.AetherBossMob;
 import com.aetherteam.aether.entity.ai.AetherBlockPathTypes;
 import com.aetherteam.aether.network.packet.serverbound.BossInfoPacket;
@@ -9,6 +8,7 @@ import com.aetherteam.nitrogen.network.PacketRelay;
 import com.aetherteam.aether.entity.ai.goal.ContinuousMeleeAttackGoal;
 import com.aetherteam.aether.network.AetherPacketHandler;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
+import net.builderdog.ancient_aether.datagen.resources.AncientAetherStructureRegistry;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.entity.monster.boss.AncientAetherBossNameGenerator;
 import net.builderdog.ancient_aether.entity.monster.boss.ancient_core.AncientCore;
@@ -25,8 +25,10 @@ import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.util.Mth;
 import net.minecraft.world.BossEvent;
+import net.minecraft.world.Difficulty;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
@@ -127,6 +129,26 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         this.moveTo(Mth.floor(this.getX()), this.getY(), Mth.floor(this.getZ()));
     }
 
+    @Override
+    public void writeSpawnData(FriendlyByteBuf buffer) {
+        CompoundTag tag = new CompoundTag();
+        this.addBossSaveData(tag);
+        buffer.writeNbt(tag);
+    }
+
+    @Override
+    public void readSpawnData(FriendlyByteBuf additionalData) {
+        CompoundTag tag = additionalData.readNbt();
+        if (tag != null) {
+            this.readBossSaveData(tag);
+        }
+    }
+
+    @Override
+    public @NotNull Packet<ClientGamePacketListener> getAddEntityPacket() {
+        return NetworkHooks.getEntitySpawningPacket(this);
+    }
+
     //During Fight
     public void tick() {
         super.tick();
@@ -153,12 +175,30 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         }
     }
 
-    public boolean hurt(@NotNull DamageSource source, float damage) {
-        if (!this.isBossFight()) {
-            this.setAwake(true);
-            this.setBossFight(true);
+    @Override
+    public boolean hurt(DamageSource source, float amount) {
+        if (source.is(DamageTypeTags.BYPASSES_INVULNERABILITY)) {
+            return super.hurt(source, amount);
         }
-        return super.hurt(source, damage);
+            if (source.getDirectEntity() instanceof LivingEntity attacker && this.level().getDifficulty() != Difficulty.PEACEFUL) {
+                if (this.getDungeon() == null || this.getDungeon().isPlayerWithinRoomInterior(attacker)) {
+                    if (super.hurt(source, amount) && this.getHealth() > 0) {
+                        if (!this.level().isClientSide() && !this.isBossFight()) {
+                            this.setBossFight(true);
+                            if (this.getDungeon() != null) {
+                                this.closeRoom();
+                            }
+                        }
+                        return true;
+                    }
+                } else {
+                    if (!this.level().isClientSide() && attacker instanceof Player player) {
+                        this.displayTooFarMessage(player);
+                        return false;
+                    }
+                }
+            }
+        return false;
     }
 
 
@@ -179,14 +219,43 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
             ancientGuardian.setPos(ancientGuardian.position().x, ancientGuardian.position().y, ancientGuardian.position().z);
         }
     }
-
     public void checkDespawn() {
+    }
+
+    @Override
+    public void startSeenByPlayer(@Nonnull ServerPlayer player) {
+        super.startSeenByPlayer(player);
+        PacketRelay.sendToPlayer(AetherPacketHandler.INSTANCE, new BossInfoPacket.Display(this.bossFight.getId()), player);
+        if (this.getDungeon() == null || this.getDungeon().isPlayerTracked(player)) {
+            this.bossFight.addPlayer(player);
+        }
+    }
+
+    @Override
+    public void stopSeenByPlayer(@Nonnull ServerPlayer player) {
+        super.stopSeenByPlayer(player);
+        PacketRelay.sendToPlayer(AetherPacketHandler.INSTANCE, new BossInfoPacket.Remove(this.bossFight.getId()), player);
+        this.bossFight.removePlayer(player);
+    }
+
+    @Override
+    public void onDungeonPlayerAdded(@Nullable Player player) {
+        if (player instanceof ServerPlayer serverPlayer) {
+            this.bossFight.addPlayer(serverPlayer);
+        }
+    }
+
+    @Override
+    public void onDungeonPlayerRemoved(@Nullable Player player) {
+        if (player instanceof ServerPlayer serverPlayer) {
+            this.bossFight.removePlayer(serverPlayer);
+        }
     }
 
     //On Death
     public void die(@NotNull DamageSource source) {
         if (!this.level().isClientSide) {
-            this.bossFight.setProgress(this.getHealth() / this.getMaxHealth()); // Forces an update to the boss health meter.
+            this.bossFight.setProgress(this.getHealth() / this.getMaxHealth());
             if (this.getDungeon() != null) {
                 this.getDungeon().grantAdvancements(source);
                 this.tearDownRoom();
@@ -230,7 +299,7 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         if (tag != null && tag.contains("Dungeon")) {
             StructureManager manager = level.getLevel().structureManager();
             manager.registryAccess().registry(Registries.STRUCTURE).ifPresent(registry -> {
-                        Structure temple = registry.get(AetherStructures.SILVER_DUNGEON);
+                        Structure temple = registry.get(AncientAetherStructureRegistry.ANCIENT_DUNGEON);
                         if (temple != null) {
                             StructureStart start = manager.getStructureAt(this.blockPosition(), temple);
                             if (start != StructureStart.INVALID_START) {
@@ -291,14 +360,14 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     }
 
     @Override
-    public void addAdditionalSaveData(CompoundTag tag) {
+    public void addAdditionalSaveData(@NotNull CompoundTag tag) {
         super.addAdditionalSaveData(tag);
         this.addBossSaveData(tag);
         tag.putBoolean("Awake", this.isAwake());
     }
 
     @Override
-    public void readAdditionalSaveData(CompoundTag tag) {
+    public void readAdditionalSaveData(@NotNull CompoundTag tag) {
         super.readAdditionalSaveData(tag);
         this.readBossSaveData(tag);
         if (tag.contains("Awake")) {
@@ -322,56 +391,6 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     @Override
     public void setBossFight(boolean isFighting) {
         this.bossFight.setVisible(isFighting);
-    }
-
-    @Override
-    public void startSeenByPlayer(@Nonnull ServerPlayer player) {
-        super.startSeenByPlayer(player);
-        PacketRelay.sendToPlayer(AetherPacketHandler.INSTANCE, new BossInfoPacket.Display(this.bossFight.getId()), player);
-        if (this.getDungeon() == null || this.getDungeon().isPlayerTracked(player)) {
-            this.bossFight.addPlayer(player);
-        }
-    }
-
-    @Override
-    public void stopSeenByPlayer(@Nonnull ServerPlayer player) {
-        super.stopSeenByPlayer(player);
-        PacketRelay.sendToPlayer(AetherPacketHandler.INSTANCE, new BossInfoPacket.Remove(this.bossFight.getId()), player);
-        this.bossFight.removePlayer(player);
-    }
-
-    @Override
-    public void onDungeonPlayerAdded(@Nullable Player player) {
-        if (player instanceof ServerPlayer serverPlayer) {
-            this.bossFight.addPlayer(serverPlayer);
-        }
-    }
-
-    @Override
-    public void onDungeonPlayerRemoved(@Nullable Player player) {
-        if (player instanceof ServerPlayer serverPlayer) {
-            this.bossFight.removePlayer(serverPlayer);
-        }
-    }
-
-    @Override
-    public void writeSpawnData(FriendlyByteBuf buffer) {
-        CompoundTag tag = new CompoundTag();
-        this.addBossSaveData(tag);
-        buffer.writeNbt(tag);
-    }
-
-    @Override
-    public void readSpawnData(FriendlyByteBuf additionalData) {
-        CompoundTag tag = additionalData.readNbt();
-        if (tag != null) {
-            this.readBossSaveData(tag);
-        }
-    }
-
-    @Override
-    public @NotNull Packet<ClientGamePacketListener> getAddEntityPacket() {
-        return NetworkHooks.getEntitySpawningPacket(this);
     }
 
     public boolean isAwake() {
