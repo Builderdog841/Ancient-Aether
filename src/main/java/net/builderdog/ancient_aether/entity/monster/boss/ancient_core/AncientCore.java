@@ -287,9 +287,9 @@ public class AncientCore extends PathfinderMob implements AetherBossMob<AncientC
         if (tag != null && tag.contains("Dungeon")) {
             StructureManager manager = level.getLevel().structureManager();
             manager.registryAccess().registry(Registries.STRUCTURE).ifPresent(registry -> {
-                        Structure temple = registry.get(AncientAetherStructureRegistry.ANCIENT_DUNGEON);
-                        if (temple != null) {
-                            StructureStart start = manager.getStructureAt(this.blockPosition(), temple);
+                        Structure structure = registry.get(AncientAetherStructureRegistry.ANCIENT_DUNGEON);
+                        if (structure != null) {
+                            StructureStart start = manager.getStructureAt(this.blockPosition(), structure);
                             if (start != StructureStart.INVALID_START) {
                                 BoundingBox box = start.getBoundingBox();
                                 AABB dungeonBounds = new AABB(box.minX(), box.minY(), box.minZ(), box.maxX() + 1, box.maxY() + 1, box.maxZ() + 1);
@@ -320,8 +320,8 @@ public class AncientCore extends PathfinderMob implements AetherBossMob<AncientC
         if (state.is(AncientAetherBlocks.LOCKED_AEROTIC_STONE.get())) {
             return AncientAetherBlocks.AEROTIC_STONE.get().defaultBlockState();
         }
-        if (state.is(AncientAetherBlocks.LOCKED_LIGHT_AEROTIC_STONE.get())) {
-            return AncientAetherBlocks.LIGHT_AEROTIC_STONE.get().defaultBlockState();
+        if (state.is(AncientAetherBlocks.LOCKED_CORRUPTED_LIGHT_AEROTIC_STONE.get())) {
+            return AncientAetherBlocks.CORRUPTED_LIGHT_AEROTIC_STONE.get().defaultBlockState();
         }
         if (state.is(AncientAetherBlocks.BOSS_DOORWAY_AEROTIC_STONE.get())) {
             return Blocks.AIR.defaultBlockState();
