@@ -201,22 +201,6 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         return null;
     }
 
-    protected float getJumpPower() {
-        return 0.0F;
-    }
-
-    public AncientGuardian self() {
-        return this;
-    }
-
-    public BossRoomTracker<AncientGuardian> getDungeon() {
-        return this.ancientDungeon;
-    }
-
-    public void setDungeon(BossRoomTracker<AncientGuardian> bossRoomTracker) {
-        this.ancientDungeon = bossRoomTracker;
-    }
-
     @Override
     public void customServerAiStep() {
         super.customServerAiStep();
@@ -254,19 +238,6 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         }
     }
 
-    public boolean isAwake() {
-        return this.entityData.get(DATA_AWAKE_ID);
-    }
-
-    public void setAwake(boolean ready) {
-        this.entityData.set(DATA_AWAKE_ID, ready);
-    }
-
-    @Override
-    public Component getBossName() {
-        return this.entityData.get(DATA_BOSS_NAME_ID);
-    }
-
     @Override
     public void setBossName(Component component) {
         this.entityData.set(DATA_BOSS_NAME_ID, component);
@@ -301,32 +272,6 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
             this.setBossFight(true);
         }
         return super.hurt(source, damage);
-    }
-
-
-    @Override
-    protected boolean canRide(@Nonnull Entity vehicle) {
-        return false;
-    }
-
-    @Override
-    public boolean canBeCollidedWith() {
-        return !this.isAwake();
-    }
-
-    @Override
-    public boolean isPushable() {
-        return false;
-    }
-
-    @Override
-    public boolean isNoGravity() {
-        return !isAwake();
-    }
-
-    @Override
-    public boolean shouldDiscardFriction() {
-        return !isAwake();
     }
 
     @Override
@@ -381,6 +326,59 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
             ancientGuardian.setDeltaMovement(Vec3.ZERO);
             ancientGuardian.setPos(ancientGuardian.position().x, ancientGuardian.position().y, ancientGuardian.position().z);
         }
+    }
+    public boolean isAwake() {
+        return this.entityData.get(DATA_AWAKE_ID);
+    }
+
+    public void setAwake(boolean ready) {
+        this.entityData.set(DATA_AWAKE_ID, ready);
+    }
+
+    @Override
+    public Component getBossName() {
+        return this.entityData.get(DATA_BOSS_NAME_ID);
+    }
+
+    @Override
+    protected boolean canRide(@Nonnull Entity vehicle) {
+        return false;
+    }
+
+    @Override
+    public boolean canBeCollidedWith() {
+        return !this.isAwake();
+    }
+
+    @Override
+    public boolean isPushable() {
+        return false;
+    }
+
+    @Override
+    public boolean isNoGravity() {
+        return !isAwake();
+    }
+
+    @Override
+    public boolean shouldDiscardFriction() {
+        return !isAwake();
+    }
+
+    protected float getJumpPower() {
+        return 0.0F;
+    }
+
+    public AncientGuardian self() {
+        return this;
+    }
+
+    public BossRoomTracker<AncientGuardian> getDungeon() {
+        return this.ancientDungeon;
+    }
+
+    public void setDungeon(BossRoomTracker<AncientGuardian> bossRoomTracker) {
+        this.ancientDungeon = bossRoomTracker;
     }
 
     private void stop() {

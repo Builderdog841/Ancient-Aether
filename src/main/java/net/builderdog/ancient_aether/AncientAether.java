@@ -188,7 +188,7 @@ public class AncientAether {
                                 PackType.CLIENT_RESOURCES,
                                 Pack.Position.TOP,
                                 false,
-                                PackSource.BUILT_IN));
+                                AncientAetherPackSources.AUTO_APPLY_RESOURCE));
             });
         }
 

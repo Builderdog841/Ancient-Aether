@@ -1,6 +1,7 @@
 package net.builderdog.ancient_aether.entity.monster.boss.ancient_core;
 
 import com.aetherteam.aether.client.AetherSoundEvents;
+import com.aetherteam.aether.data.resources.registries.AetherStructures;
 import com.aetherteam.aether.entity.AetherBossMob;
 import com.aetherteam.aether.entity.monster.dungeon.boss.BossNameGenerator;
 import com.aetherteam.aether.network.AetherPacketHandler;
@@ -9,6 +10,7 @@ import com.aetherteam.nitrogen.entity.BossRoomTracker;
 import com.aetherteam.nitrogen.network.PacketRelay;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
@@ -39,8 +41,13 @@ import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.StructureManager;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.levelgen.structure.BoundingBox;
+import net.minecraft.world.level.levelgen.structure.Structure;
+import net.minecraft.world.level.levelgen.structure.StructureStart;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.entity.IEntityAdditionalSpawnData;
 import net.minecraftforge.network.NetworkHooks;
@@ -59,6 +66,7 @@ public class AncientCore extends PathfinderMob implements AetherBossMob<AncientC
 
     private BossRoomTracker<AncientCore> bronzeDungeon;
     private final ServerBossEvent bossFight;
+    private AABB dungeonBounds;
 
     private int chatCooldown;
 
@@ -85,12 +93,8 @@ public class AncientCore extends PathfinderMob implements AetherBossMob<AncientC
         return this;
     }
 
-    @Override
-    public SpawnGroupData finalizeSpawn(@Nonnull ServerLevelAccessor pLevel, @Nonnull DifficultyInstance pDifficulty, @Nonnull MobSpawnType pReason, @Nullable SpawnGroupData pSpawnData, @Nullable CompoundTag pDataTag) {
-        this.alignSpawnPos();
-        SpawnGroupData data = super.finalizeSpawn(pLevel, pDifficulty, pReason, pSpawnData, pDataTag);
-        this.setBossName(this.generateHostName());
-        return data;
+    public void setDungeonBounds(@Nullable AABB dungeonBounds) {
+        this.dungeonBounds = dungeonBounds;
     }
 
 
@@ -98,11 +102,6 @@ public class AncientCore extends PathfinderMob implements AetherBossMob<AncientC
     public void killEyes() {
         while (this.eyes.size() != 0)
             this.eyes.remove(0).discard();
-    }
-
-    public MutableComponent generateHostName() {
-        MutableComponent result = BossNameGenerator.generateBossName(this.getRandom());
-        return result.append(Component.translatable("gui.ancient_aether.ancient_core.title"));
     }
 
     protected void alignSpawnPos() {
@@ -182,24 +181,6 @@ public class AncientCore extends PathfinderMob implements AetherBossMob<AncientC
             this.setPos(this.getDungeon().originCoordinates());
             this.openRoom();
         }
-    }
-
-    @Nullable
-    @Override
-    public BlockState convertBlock(BlockState state) {
-        if (state.is(AncientAetherBlocks.LOCKED_AEROTIC_STONE.get())) {
-            return AncientAetherBlocks.AEROTIC_STONE.get().defaultBlockState();
-        }
-        if (state.is(AncientAetherBlocks.LOCKED_LIGHT_AEROTIC_STONE.get())) {
-            return AncientAetherBlocks.LIGHT_AEROTIC_STONE.get().defaultBlockState();
-        }
-        if (state.is(AncientAetherBlocks.BOSS_DOORWAY_AEROTIC_STONE.get())) {
-            return Blocks.AIR.defaultBlockState();
-        }
-        if (state.is(AncientAetherBlocks.TREASURE_DOORWAY_AEROTIC_STONE.get())) {
-            return Blocks.AIR.defaultBlockState();
-        }
-        return null;
     }
 
     private void explode() {
@@ -402,5 +383,46 @@ public class AncientCore extends PathfinderMob implements AetherBossMob<AncientC
                     this.sliderHostMimic.position().y,
                     this.sliderHostMimic.position().z);
         }
+    }
+
+    @Override
+    @SuppressWarnings("deprecation")
+    public SpawnGroupData finalizeSpawn(@NotNull ServerLevelAccessor level, @NotNull DifficultyInstance difficulty, @NotNull MobSpawnType reason, @Nullable SpawnGroupData spawnData, @Nullable CompoundTag tag) {
+        this.setBossName(BossNameGenerator.generateValkyrieName(this.getRandom()));
+        // Set the bounds for the whole dungeon.
+        if (tag != null && tag.contains("Dungeon")) {
+            StructureManager manager = level.getLevel().structureManager();
+            manager.registryAccess().registry(Registries.STRUCTURE).ifPresent(registry -> {
+                        Structure temple = registry.get(AetherStructures.SILVER_DUNGEON);
+                        if (temple != null) {
+                            StructureStart start = manager.getStructureAt(this.blockPosition(), temple);
+                            if (start != StructureStart.INVALID_START) {
+                                BoundingBox box = start.getBoundingBox();
+                                AABB dungeonBounds = new AABB(box.minX(), box.minY(), box.minZ(), box.maxX() + 1, box.maxY() + 1, box.maxZ() + 1);
+                                this.setDungeonBounds(dungeonBounds);
+                            }
+                        }
+                    }
+            );
+        }
+        return spawnData;
+    }
+
+    @Nullable
+    @Override
+    public BlockState convertBlock(BlockState state) {
+        if (state.is(AncientAetherBlocks.LOCKED_AEROTIC_STONE.get())) {
+            return AncientAetherBlocks.AEROTIC_STONE.get().defaultBlockState();
+        }
+        if (state.is(AncientAetherBlocks.LOCKED_LIGHT_AEROTIC_STONE.get())) {
+            return AncientAetherBlocks.LIGHT_AEROTIC_STONE.get().defaultBlockState();
+        }
+        if (state.is(AncientAetherBlocks.BOSS_DOORWAY_AEROTIC_STONE.get())) {
+            return Blocks.AIR.defaultBlockState();
+        }
+        if (state.is(AncientAetherBlocks.TREASURE_DOORWAY_AEROTIC_STONE.get())) {
+            return Blocks.AIR.defaultBlockState();
+        }
+        return null;
     }
 }
