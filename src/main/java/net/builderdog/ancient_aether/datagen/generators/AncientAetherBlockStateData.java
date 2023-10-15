@@ -105,6 +105,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         //Plants
         crossBlock(AncientAetherBlocks.HIGHSPROOT_SAPLING);
         crossBlock(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING);
+        crossBlock(AncientAetherBlocks.CRYSTAL_SAPLING);
         crossBlock(AncientAetherBlocks.SAKURA_SAPLING);
         crossBlock(AncientAetherBlocks.WYND_THISTLE);
         crossBlock(AncientAetherBlocks.SKY_BLUES);
@@ -115,6 +116,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
 
         //Potted Plants
         pottedPlant(AncientAetherBlocks.POTTED_SAKURA_SAPLING.get(), AncientAetherBlocks.SAKURA_SAPLING.get(), "");
+        pottedPlant(AncientAetherBlocks.POTTED_CRYSTAL_SAPLING.get(), AncientAetherBlocks.CRYSTAL_SAPLING.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING.get(), AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_WYND_THISTLE.get(), AncientAetherBlocks.WYND_THISTLE.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_SAKURA_BLOSSOMS.get(), AncientAetherBlocks.SAKURA_BLOSSOMS.get(), "");
