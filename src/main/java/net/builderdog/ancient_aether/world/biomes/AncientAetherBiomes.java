@@ -10,7 +10,7 @@ public class AncientAetherBiomes {
 
     //Default
     public static final ResourceKey<Biome> SKYROOT_PINE_FOREST = createKey("skyroot_pine_forest");
-    public static final ResourceKey<Biome> BLUE_SKYROOT_FOREST = createKey("blue_skyroot_forest");
+    public static final ResourceKey<Biome> COLD_SKYROOT_FOREST = createKey("cold_skyroot_forest");
 
     //Wyndcaps
     public static final ResourceKey<Biome> WYNDCAP_TAIGA = createKey("wyndcap_taiga");
@@ -23,7 +23,6 @@ public class AncientAetherBiomes {
     public static final ResourceKey<Biome> SAKURA_JUNGLE = createKey("sakura_jungle");
 
     //Caves
-
     public static final ResourceKey<Biome> CRYSTAL_HOLLOWS = createKey("crystal_hollows");
 
     private static ResourceKey<Biome> createKey(String name) {
