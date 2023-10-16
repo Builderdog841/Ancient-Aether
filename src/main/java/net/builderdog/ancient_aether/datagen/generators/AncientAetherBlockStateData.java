@@ -100,7 +100,6 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         blockWithItem(AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES);
         blockWithItem(AncientAetherBlocks.SAKURA_LEAVES);
         blockWithItem(AncientAetherBlocks.CRYSTAL_LEAVES);
-        blockWithItem(AncientAetherBlocks.CRYSTAL_FRUIT_LEAVES);
 
         //Plants
         crossBlock(AncientAetherBlocks.HIGHSPROOT_SAPLING);

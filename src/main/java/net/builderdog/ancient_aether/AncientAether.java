@@ -281,7 +281,6 @@ public class AncientAether {
         addCompost(0.3F, AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES.get().asItem());
         addCompost(0.3F, AncientAetherBlocks.SAKURA_LEAVES.get().asItem());
         addCompost(0.3F, AncientAetherBlocks.CRYSTAL_LEAVES.get().asItem());
-        addCompost(0.3F, AncientAetherBlocks.CRYSTAL_FRUIT_LEAVES.get().asItem());
         addCompost(0.3F, AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
         addCompost(0.3F, AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get());
         addCompost(0.3F, AncientAetherBlocks.SAKURA_SAPLING.get());

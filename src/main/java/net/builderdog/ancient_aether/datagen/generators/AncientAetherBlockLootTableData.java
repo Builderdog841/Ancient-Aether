@@ -84,8 +84,6 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         //Crystal Leaves
         add(AncientAetherBlocks.CRYSTAL_LEAVES.get(),
                 (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.CRYSTAL_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
-        add(AncientAetherBlocks.CRYSTAL_FRUIT_LEAVES.get(),
-                (leaves) -> droppingWithFruitAndSkyrootSticks(leaves, AetherItems.WHITE_APPLE.get()));
         dropSelf(AncientAetherBlocks.CRYSTAL_SAPLING.get());
 
         //Ores

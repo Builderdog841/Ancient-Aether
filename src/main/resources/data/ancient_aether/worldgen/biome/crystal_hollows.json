@@ -42,7 +42,9 @@
     [
       "aether:water_spring"
     ],
-    [],
+    [
+      "ancient_aether:hooked_crystal_tree"
+    ],
     [
       "aether:crystal_island",
       "aether:cold_aercloud",
