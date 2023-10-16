@@ -21,12 +21,7 @@ public class AncientAetherSurfaceData {
 
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.WYNDCAP_PEAKS),
                         SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(Blocks.SNOW_BLOCK.defaultBlockState()))
-                ),
-                SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.CRYSTAL_HOLLOWS),
-                        SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(AncientAetherBlocks.ETHERAL_DIRT.get().defaultBlockState()))
-                ),
-                SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.CRYSTAL_HOLLOWS),
-                        SurfaceRules.ifTrue(SurfaceRules.stoneDepthCheck(0, true, 0, CaveSurface.FLOOR), SurfaceRules.state(AncientAetherBlocks.ETHERAL_DIRT.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true))))
+                )
         );
     }
 }
