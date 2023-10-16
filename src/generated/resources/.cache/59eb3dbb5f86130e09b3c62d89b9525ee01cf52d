@@ -1,4 +1,4 @@
-// 1.20.1	2023-10-12T17:24:39.4579494	Loot Tables
+// 1.20.1	2023-10-16T15:37:27.6390251	Loot Tables
 59ddcd55f69c4b8f71e6eb6282eae1625c06b357 data/ancient_aether/loot_tables/blocks/aerotic_lantern.json
 b8cb4c206d3462b1a04e783ddc7144a7a138e4ab data/ancient_aether/loot_tables/blocks/aerotic_slab.json
 fc8f3ed9297b6a4e28e2ff4bdb8b8616bd64589b data/ancient_aether/loot_tables/blocks/aerotic_stairs.json
@@ -13,7 +13,6 @@ f346e2fa7e1e914c323a66125f68b2ae7c3ecda5 data/ancient_aether/loot_tables/blocks/
 07e5a503893020d9852e02f7a687103c325d37a9 data/ancient_aether/loot_tables/blocks/carved_stone_mosaic.json
 27344c98071e908c6aec928704b2788d38cca3df data/ancient_aether/loot_tables/blocks/corrupted_light_aerotic_stone.json
 503d82dd0a464d22c432cf15d95aa61860197db6 data/ancient_aether/loot_tables/blocks/cracked_slider.json
-0e548273efa097ca9d588325a7a6f37d84707e2d data/ancient_aether/loot_tables/blocks/crystal_fruit_leaves.json
 66013159aff7bd55d5023e398f83cc663f099246 data/ancient_aether/loot_tables/blocks/crystal_leaves.json
 9b6d7391e02ae4466a0f07b783e5b1c1a3aa70f4 data/ancient_aether/loot_tables/blocks/crystal_sapling.json
 fcab65bee04ed30c6384641991c802fc6fab7aa3 data/ancient_aether/loot_tables/blocks/drift_weed.json

@@ -30,8 +30,8 @@ public class AncientAetherPlacedFeatures {
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(64))));
 
         register(context, ETHERAL_DIRT_ORE, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.ETHERAL_DIRT_ORE),
-                AncientAetherPlacedFeatureBuilder.commonOrePlacement(6,
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(72))));
+                AncientAetherPlacedFeatureBuilder.commonOrePlacement(1,
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(88))));
 
     }
 
