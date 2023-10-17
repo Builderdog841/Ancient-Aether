@@ -1,5 +1,5 @@
 {
-  "feature": "ancient_aether:aether_woodland_trees",
+  "feature": "ancient_aether:trees_skyroot_woodland",
   "placement": [
     {
       "type": "minecraft:count",
@@ -7,12 +7,12 @@
         "type": "minecraft:weighted_list",
         "distribution": [
           {
-            "data": 5,
-            "weight": 9
+            "data": 12,
+            "weight": 3
           },
           {
-            "data": 6,
-            "weight": 1
+            "data": 16,
+            "weight": 2
           }
         ]
       }

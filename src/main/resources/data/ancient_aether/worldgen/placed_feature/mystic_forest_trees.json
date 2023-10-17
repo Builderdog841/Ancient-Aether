@@ -1,5 +1,5 @@
 {
-  "feature": "ancient_aether:aether_pine_trees",
+  "feature": "ancient_aether:trees_mystic_forest",
   "placement": [
     {
       "type": "minecraft:count",
@@ -7,11 +7,11 @@
         "type": "minecraft:weighted_list",
         "distribution": [
           {
-            "data": 12,
-            "weight": 3
+            "data": 6,
+            "weight": 9
           },
           {
-            "data": 16,
+            "data": 7,
             "weight": 1
           }
         ]

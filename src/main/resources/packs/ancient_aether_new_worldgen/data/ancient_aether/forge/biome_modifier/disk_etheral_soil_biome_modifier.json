@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#ancient_aether:has_divine_gravel_disks",
+  "features": "ancient_aether:disk_divine_gravel",
+  "step": "underground_ores"
+}

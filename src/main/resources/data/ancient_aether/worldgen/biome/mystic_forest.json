@@ -4,8 +4,8 @@
   "downfall": 0.0,
   "effects": {
     "fog_color": 9671612,
-    "foliage_color": 11665355,
-    "grass_color": 11665355,
+    "foliage_color": 13041624,
+    "grass_color": 13041624,
     "music": {
       "max_delay": 4500,
       "min_delay": 4500,
@@ -39,7 +39,7 @@
       "aether:water_spring"
     ],
     [
-      "ancient_aether:skyroot_pine_forest_trees",
+      "ancient_aether:mystic_forest_trees",
       "aether:holiday_tree",
       "aether:grass_patch",
       "aether:tall_grass_patch",
@@ -185,5 +185,5 @@
     "water_ambient": [],
     "water_creature": []
   },
-  "temperature": 0.6
+  "temperature": 0.8
 }

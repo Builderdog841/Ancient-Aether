@@ -1,0 +1,39 @@
+{
+  "feature": "ancient_aether:disk_divine_gravel",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:weighted_list",
+        "distribution": [
+          {
+            "data": 32,
+            "weight": 2
+          },
+          {
+            "data": 26,
+            "weight": 3
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "max_inclusive": {
+          "above_bottom": 113
+        },
+        "min_inclusive": {
+          "above_bottom": 96
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}
