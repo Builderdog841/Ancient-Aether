@@ -95,9 +95,8 @@
   "block.ancient_aether.sakura_bookshelf": "Sakura Bookshelf",
   "block.ancient_aether.drift_weed": "Drift Weed",
   "block.ancient_aether.crystal_leaves": "Crystal Leaves",
-  "block.ancient_aether.crystal_fruit_leaves": "Crystal Fruit Leaves",
   "block.ancient_aether.crystal_sapling": "Crystal Sapling",
-  "block.ancient_aether.etheral_dirt": "Etheral Dirt",
+  "block.ancient_aether.divine_gravel": "Divine Gravel",
 
   "item.ancient_aether.buffalo_ribs": "Raw Buffalo Ribs",
   "item.ancient_aether.gravitite_dart_shooter": "Gravitite Dart Shooter",
@@ -144,7 +143,9 @@
   "biome.ancient_aether.wyndcap_peaks": "Wyndcap Peaks",
   "biome.ancient_aether.sakura_jungle": "Sakura Jungle",
   "biome.ancient_aether.skyroot_jungle": "Skyroot Jungle",
-  "biome.ancient_aether.skyroot_pine_forest": "Skyroot Pine Forest",
+  "biome.ancient_aether.mythical_forest": "Mythical Forest",
+  "biome.ancient_aether.mythical_clearing": "Mythical Clearing",
+  "biome.ancient_aether.enchanted_mythical_forest": "Enchanted Mythical Forest",
   "biome.ancient_aether.crystal_hollows": "Crystal Hollows",
 
   "subtitles.ancient_aether.block.obelisk.obelisk_activation": "Obelisk activated",
@@ -260,6 +261,8 @@
   "lore.block.ancient_aether.aerotic_wall": "Crafted from Aerotic Stone. Can be used for decorative enclosures and defenses. Great for keeping nasty intruders away!",
   "lore.block.ancient_aether.light_aerotic_stone": "The light version of Aerotic Stone. It is less common than Aerotic Stone, but it looks really nice as a decorative block.",
   "lore.block.ancient_aether.corrupted_light_aerotic_stone": "A variant of Light Aerotic Stone. It appears in the Ancient Dungeon once the Ancient Guardian is in its final phase.",
+  "lore.block.ancient_aether.drift_weed": "A decorative plant that generates on Quicksoil Coasts.",
+  "lore.block.ancient_aether.divine_gravel": "A decoration block generating on the coasts of Mythical Forests. It doesn't fall to the ground unlike its Overworld counterpart.",
 
   "lore.item.ancient_aether.grapes": "They can be sometimes found on a field in Valkyrie Settlements as this is the favourite fruit of the Valkyries. They can be crafted into Valkyrie Wine.",
   "lore.item.ancient_aether.ancient_rune": "Found in Sentry Laboratories, this Rune is the key to the Ancient Dungeon as it unlocks Broken Sentry Obelisks. It can also be duplicated using 7 Enchanted Gravitite and 1 Ancient Sentry Stone.",

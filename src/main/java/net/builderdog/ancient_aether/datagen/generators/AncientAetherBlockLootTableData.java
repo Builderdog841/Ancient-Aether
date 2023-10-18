@@ -90,7 +90,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropDoubleWithFortune(AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), Items.QUARTZ);
 
         //Dirt
-        dropSelf(AncientAetherBlocks.ETHERAL_DIRT.get());
+        dropSelf(AncientAetherBlocks.DIVINE_GRAVEL.get());
 
         //Dungeon Blocks
         dropSelf(AncientAetherBlocks.AEROTIC_STONE.get());

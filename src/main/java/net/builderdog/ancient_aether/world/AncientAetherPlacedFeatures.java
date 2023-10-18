@@ -16,7 +16,7 @@ import java.util.List;
 public class AncientAetherPlacedFeatures {
     public static final ResourceKey<PlacedFeature> AETHER_QUARTZ_ORE = createKey("aether_quartz_ore");
     public static final ResourceKey<PlacedFeature> AEROGEL_ORE = createKey("aerogel_blobs");
-    public static final ResourceKey<PlacedFeature> ETHERAL_DIRT_ORE = createKey("etheral_dirt_ore");
+    public static final ResourceKey<PlacedFeature> DIVINE_GRAVEL_ORE = createKey("divine_gravel_ore");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -29,7 +29,7 @@ public class AncientAetherPlacedFeatures {
                 AncientAetherPlacedFeatureBuilder.commonOrePlacement(4,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(64))));
 
-        register(context, ETHERAL_DIRT_ORE, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.ETHERAL_DIRT_ORE),
+        register(context, DIVINE_GRAVEL_ORE, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.DIVINE_GRAVEL_ORE),
                 AncientAetherPlacedFeatureBuilder.commonOrePlacement(1,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(88))));
 

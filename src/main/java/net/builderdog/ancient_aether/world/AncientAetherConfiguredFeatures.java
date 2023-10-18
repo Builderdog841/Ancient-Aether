@@ -47,7 +47,7 @@ public class AncientAetherConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKY_BLUES_PATCH = registerKey("sky_blues_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_QUARTZ_ORE = registerKey("aether_quartz_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AEROGEL_BLOBS = registerKey("aerogel_blobs");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> ETHERAL_DIRT_ORE = registerKey("etheral_dirt_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> DIVINE_GRAVEL_ORE = registerKey("divine_gravel_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HOOKED_CRYSTAL_TREE = registerKey("hooked_crystal_tree");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
@@ -60,8 +60,8 @@ public class AncientAetherConfiguredFeatures {
         List<OreConfiguration.TargetBlockState> aerogelOre = List.of(OreConfiguration.target(holystone,
                 AetherBlocks.AEROGEL.get().defaultBlockState()));
 
-        List<OreConfiguration.TargetBlockState> etheralDirtOre = List.of(OreConfiguration.target(holystone,
-                AncientAetherBlocks.ETHERAL_DIRT.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)));
+        List<OreConfiguration.TargetBlockState> divineGravelOre = List.of(OreConfiguration.target(holystone,
+                AncientAetherBlocks.DIVINE_GRAVEL.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)));
 
         register(context, HIGHSPROOT_TREE, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
@@ -94,7 +94,7 @@ public class AncientAetherConfiguredFeatures {
 
         register(context, AEROGEL_BLOBS, Feature.ORE, new OreConfiguration(aerogelOre, 32, 0f));
 
-        register(context, ETHERAL_DIRT_ORE, Feature.ORE, new OreConfiguration(etheralDirtOre, 64, 0f));
+        register(context, DIVINE_GRAVEL_ORE, Feature.ORE, new OreConfiguration(divineGravelOre, 64, 0f));
 
         register(context, WYND_THISTLE_PATCH, Feature.FLOWER,
                 NitrogenConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
