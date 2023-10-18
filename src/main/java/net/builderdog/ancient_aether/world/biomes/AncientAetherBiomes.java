@@ -19,8 +19,10 @@ public class AncientAetherBiomes {
     public static final ResourceKey<Biome> SKYROOT_JUNGLE = createKey("skyroot_jungle");
     public static final ResourceKey<Biome> SAKURA_JUNGLE = createKey("sakura_jungle");
 
-    //Mystic Forests
-    public static final ResourceKey<Biome> MYSTIC_FOREST = createKey("mystic_forest");
+    //Mythical Forests
+    public static final ResourceKey<Biome> MYTHICAL_FOREST = createKey("mythical_forest");
+    public static final ResourceKey<Biome> MYTHICAL_CLEARING = createKey("mythical_clearing");
+    public static final ResourceKey<Biome> ENCHANTED_MYTHICAL_FOREST = createKey("enchanted_mythical_forest");
     public static final ResourceKey<Biome> CRYSTAL_HOLLOWS = createKey("crystal_hollows");
 
     private static ResourceKey<Biome> createKey(String name) {

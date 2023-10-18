@@ -25,6 +25,6 @@ public class AncientAetherRegion extends Region {
         Climate.Parameter fullRange = Climate.Parameter.span(-1.5F, 1.5F);
 
         addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.25F, 0.15F), Climate.Parameter.span(-1F, -0.6F), fullRange, fullRange, fullRange, fullRange, 0),
-                AncientAetherBiomes.MYSTIC_FOREST);
+                AncientAetherBiomes.MYTHICAL_FOREST);
     }
 }

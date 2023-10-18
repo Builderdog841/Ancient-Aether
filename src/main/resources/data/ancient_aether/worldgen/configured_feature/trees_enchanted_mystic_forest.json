@@ -2,7 +2,7 @@
   "type": "minecraft:random_selector",
   "config": {
     "default": {
-      "feature": "ancient_aether:divine_skyroot_tree",
+      "feature": "aether:golden_oak_tree",
       "placement": [
         {
           "type": "minecraft:block_predicate_filter",
@@ -20,7 +20,7 @@
     },
     "features": [
       {
-        "chance": 0.5,
+        "chance": 0.1,
         "feature": {
           "feature": "ancient_aether:highsproot_tree",
           "placement": [
@@ -42,27 +42,7 @@
       {
         "chance": 0.1,
         "feature": {
-          "feature": "ancient_aether:fancy_divine_skyroot",
-          "placement": [
-            {
-              "type": "minecraft:block_predicate_filter",
-              "predicate": {
-                "type": "minecraft:would_survive",
-                "state": {
-                  "Name": "aether:skyroot_sapling",
-                  "Properties": {
-                    "stage": "0"
-                  }
-                }
-              }
-            }
-          ]
-        }
-      },
-      {
-        "chance": 0.1,
-        "feature": {
-          "feature": "aether:golden_oak_tree",
+          "feature": "ancient_aether:divine_skyroot_tree",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",

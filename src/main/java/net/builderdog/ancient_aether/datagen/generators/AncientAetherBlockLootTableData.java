@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.datagen.generators;
 
+import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.data.providers.AetherBlockLootSubProvider;
 import com.aetherteam.aether.item.AetherItems;
 import com.aetherteam.aether.mixin.mixins.common.accessor.BlockLootAccessor;
@@ -88,6 +89,10 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
 
         //Ores
         dropDoubleWithFortune(AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), Items.QUARTZ);
+
+        //Divine Skyroot Leaves
+        add(AncientAetherBlocks.DIVINE_SKYROOT_LEAVES.get(),
+                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AetherBlocks.SKYROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
 
         //Dirt
         dropSelf(AncientAetherBlocks.DIVINE_GRAVEL.get());
