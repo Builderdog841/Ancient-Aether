@@ -9,6 +9,7 @@ import net.minecraft.world.level.LevelSimulatedReader;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerType;
+import org.jetbrains.annotations.NotNull;
 
 public class AncientAetherPineFoliagePlacer extends FoliagePlacer {
 
@@ -23,12 +24,12 @@ public class AncientAetherPineFoliagePlacer extends FoliagePlacer {
     }
 
     @Override
-    protected FoliagePlacerType<?> type() {
+    protected @NotNull FoliagePlacerType<?> type() {
         return AncientAetherFoliagePlacerTypes.ANCIENT_AETHER_PINE_FOLIAGE_PLACER.get();
     }
 
     @Override
-    protected void createFoliage(LevelSimulatedReader level, FoliageSetter setter, RandomSource random, TreeConfiguration configuration, int maxTreeHeight, FoliageAttachment attachment, int foliageHeight, int foliageRadius, int offset) {
+    protected void createFoliage(@NotNull LevelSimulatedReader level, @NotNull FoliageSetter setter, @NotNull RandomSource random, @NotNull TreeConfiguration configuration, int maxTreeHeight, FoliageAttachment attachment, int foliageHeight, int foliageRadius, int offset) {
         BlockPos blockpos = attachment.pos();
         int i = 0;
         int j = 2;
@@ -50,13 +51,13 @@ public class AncientAetherPineFoliagePlacer extends FoliagePlacer {
     }
 
     @Override
-    public int foliageHeight(RandomSource random, int height, TreeConfiguration configuration) {
+    public int foliageHeight(@NotNull RandomSource random, int height, @NotNull TreeConfiguration configuration) {
         int value = height - this.trunkHeight.sample(random);
         return Math.max(3, value);
     }
 
     @Override
-    protected boolean shouldSkipLocation(RandomSource random, int localX, int localY, int localZ, int range, boolean large) {
+    protected boolean shouldSkipLocation(@NotNull RandomSource random, int localX, int localY, int localZ, int range, boolean large) {
         return localX + localX + localZ + localZ > range + 2;
     }
 }

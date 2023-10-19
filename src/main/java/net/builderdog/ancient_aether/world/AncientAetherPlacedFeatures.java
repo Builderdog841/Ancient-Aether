@@ -31,7 +31,7 @@ public class AncientAetherPlacedFeatures {
 
         register(context, DIVINE_GRAVEL_ORE, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.DIVINE_GRAVEL_ORE),
                 AncientAetherPlacedFeatureBuilder.commonOrePlacement(1,
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(88))));
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(24), VerticalAnchor.absolute(80))));
 
     }
 
