@@ -7,7 +7,7 @@
         "block_provider": {
             "type": "minecraft:simple_state_provider",
             "state": {
-              "Name": "minecraft:glowstone"
+              "Name": "ancient_aether:growing_crystal_fruit"
           },
           "values": {
             "type": "minecraft:uniform",

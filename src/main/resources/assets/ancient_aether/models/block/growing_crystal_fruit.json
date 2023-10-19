@@ -1,0 +1,4 @@
+{
+  "parent": "ancient_aether:block/template_growing_crystal_fruit",
+  "render_type": "minecraft:translucent"
+}
