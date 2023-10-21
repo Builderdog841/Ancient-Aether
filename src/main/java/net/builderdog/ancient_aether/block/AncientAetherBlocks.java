@@ -153,7 +153,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> WYND_THISTLE = registerBlock("wynd_thistle", () -> new FlowerBlock(() -> MobEffects.HARM, 4, Block.Properties.copy(WHITE_FLOWER.get())));
     public static final RegistryObject<Block> SAKURA_BLOSSOMS = registerBlock("sakura_blossoms", () -> new FlowerBlock(() -> MobEffects.HEALTH_BOOST, 4, Block.Properties.copy(WHITE_FLOWER.get())));
     public static final RegistryObject<Block> DRIFT_WEED = registerBlock("drift_weed", () -> new DriftWeedBlock(Block.Properties.copy(GRASS)));
-    public static final RegistryObject<Block> GROWING_CRYSTAL_FRUIT = BLOCKS.register("growing_crystal_fruit", () -> new Block(Block.Properties.copy(WHITE_FLOWER.get()).lightLevel(s -> 7)));
+    public static final RegistryObject<Block> GROWING_CRYSTAL_FRUIT = BLOCKS.register("growing_crystal_fruit", () -> new Block(Block.Properties.copy(WHITE_FLOWER.get()).lightLevel(s -> 12)));
 
     //Potted Plants
     public static final RegistryObject<FlowerPotBlock> POTTED_HIGHLAND_VIOLA = BLOCKS.register("potted_highland_viola", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SKY_BLUES, Block.Properties.copy(Blocks.FLOWER_POT)));

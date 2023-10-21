@@ -1,6 +1,7 @@
 package net.builderdog.ancient_aether.item;
 
 import com.aetherteam.aether.item.AetherItems;
+import com.aetherteam.aether.item.food.WhiteAppleItem;
 import com.aetherteam.aether.item.miscellaneous.DungeonKeyItem;
 import com.aetherteam.aether.item.miscellaneous.MoaEggItem;
 import net.builderdog.ancient_aether.AncientAether;
@@ -38,9 +39,9 @@ public class AncientAetherItems {
 
     //Misc
     public static final RegistryObject<Item> AEROGEL_BOTTLE = ITEMS.register("aerogel_bottle", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> ETHERAL_CRYSTAL = ITEMS.register("etheral_crystal", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> DIVINE_CRYSTAL = ITEMS.register("divine_crystal", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ANCIENT_RUNE = ITEMS.register("ancient_rune", () -> new Item(new Item.Properties().rarity(AETHER_LOOT)));
-    public static final RegistryObject<Item> CRYSTAL_GOLD_COIN = ITEMS.register("crystal_gold_coin", () -> new Item(new Item.Properties().rarity(AETHER_LOOT).fireResistant()));
+    public static final RegistryObject<Item> CRYSTAL_GOLD_PEARL = ITEMS.register("crystal_gold_pearl", () -> new Item(new Item.Properties().rarity(AETHER_LOOT).fireResistant()));
     public static final RegistryObject<Item> ANCIENT_DUNGEON_KEY = ITEMS.register("ancient_dungeon_key", () -> new DungeonKeyItem(new ResourceLocation(AncientAether.MOD_ID, "ancient"), new Item.Properties().stacksTo(1).rarity(AETHER_LOOT).fireResistant()));
 
     //Dungeon Loot
@@ -64,6 +65,7 @@ public class AncientAetherItems {
     public static final RegistryObject<Item> RAW_BUFFALO_RIBS = ITEMS.register("buffalo_ribs", () -> new Item(new Item.Properties().rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(3).saturationMod(0.2f).build())));
     public static final RegistryObject<Item> COOKED_BUFFALO_RIBS = ITEMS.register("cooked_buffalo_ribs", () -> new Item(new Item.Properties().rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(8).saturationMod(1.2f).build())));
     public static final RegistryObject<Item> BUFFALO_RIB = ITEMS.register("buffalo_rib", () -> new BuffaloRib(new Item.Properties().rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(3).saturationMod(0.35f).build())));
+    public static final RegistryObject<Item> CRYSTAL_FRUIT = ITEMS.register("crystal_fruit", WhiteAppleItem::new);
 
     //Boats
     public static final RegistryObject<Item> HIGHSPROOT_BOAT = ITEMS.register("highsproot_boat", () -> new AncientAetherBoatItem(false, new Item.Properties().stacksTo(1), AncientAetherBoatEntity.Type.HIGHLANDS_PINE));

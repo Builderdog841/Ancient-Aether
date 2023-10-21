@@ -5,6 +5,7 @@ import com.aetherteam.aether.data.providers.AetherBlockLootSubProvider;
 import com.aetherteam.aether.item.AetherItems;
 import com.aetherteam.aether.mixin.mixins.common.accessor.BlockLootAccessor;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
+import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
@@ -130,6 +131,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.SAKURA_BLOSSOMS.get());
         dropOther(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get(), AncientAetherBlocks.SAKURA_BLOSSOMS.get());
         dropWhenSilkTouch(AncientAetherBlocks.DRIFT_WEED.get());
+        dropOther(AncientAetherBlocks.GROWING_CRYSTAL_FRUIT.get(), AncientAetherItems.CRYSTAL_FRUIT.get());
 
         //Potted Plants
         dropPottedContents(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING.get());

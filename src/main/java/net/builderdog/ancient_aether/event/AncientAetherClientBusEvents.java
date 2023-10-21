@@ -3,6 +3,7 @@ package net.builderdog.ancient_aether.event;
 import com.aetherteam.aether.block.AetherBlocks;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherWoodTypes;
+import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.level.GrassColor;
 import net.minecraftforge.api.distmarker.Dist;
@@ -14,7 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import static net.minecraft.client.renderer.BiomeColors.getAverageGrassColor;
 
 @Mod.EventBusSubscriber(modid = AncientAether.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class AncientAetherClientBusEvents {
+public class AncientAetherClientBusEvents extends BiomeColors {
 
     @SubscribeEvent
     public static void clientSetup(FMLClientSetupEvent event) {

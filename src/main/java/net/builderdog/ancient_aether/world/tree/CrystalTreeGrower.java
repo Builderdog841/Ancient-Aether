@@ -12,6 +12,6 @@ public class CrystalTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(@NotNull RandomSource random, boolean largeHive) {
-        return AncientAetherConfiguredFeatures.HOOKED_CRYSTAL_TREE;
+        return AncientAetherConfiguredFeatures.CRYSTAL_TREE;
     }
 }

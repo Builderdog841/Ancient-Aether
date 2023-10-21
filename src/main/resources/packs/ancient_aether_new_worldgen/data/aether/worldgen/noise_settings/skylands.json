@@ -29,7 +29,7 @@
     },
     "continents": 0.0,
     "depth": "aether:the_aether/depth",
-    "erosion": 0.0,
+    "erosion": "aether:the_aether/erosion",
     "final_density": {
       "type": "minecraft:squeeze",
       "argument": {
