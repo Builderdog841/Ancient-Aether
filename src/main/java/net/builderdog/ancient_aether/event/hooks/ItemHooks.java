@@ -31,9 +31,6 @@ public class ItemHooks {
             if (stack.is(AncientAetherTags.Items.ANCIENT_DUNGEON_LOOT)) {
                 components.add(position, AncientAetherItems.ANCIENT_DUNGEON_TOOLTIP);
             }
-            if (stack.is(AncientAetherTags.Items.DEPRECATED)) {
-                components.add(position, AncientAetherItems.DEPRECATED);
-            }
         }
     }
 }

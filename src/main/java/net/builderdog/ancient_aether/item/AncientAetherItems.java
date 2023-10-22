@@ -35,7 +35,6 @@ public class AncientAetherItems {
 
     //Tooltips
     public static final Component ANCIENT_DUNGEON_TOOLTIP = Component.translatable("ancient_aether.dungeon.ancient_dungeon").withStyle(Style.EMPTY.withItalic(true).withColor(TextColor.parseColor("#5C70A8")));
-    public static final Component DEPRECATED = Component.translatable("ancient_aether.deprecated").withStyle(Style.EMPTY.withColor(ChatFormatting.RED));
 
     //Misc
     public static final RegistryObject<Item> AEROGEL_BOTTLE = ITEMS.register("aerogel_bottle", () -> new Item(new Item.Properties()));
