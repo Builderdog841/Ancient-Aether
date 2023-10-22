@@ -67,9 +67,9 @@ public class AncientAetherRegion extends Region {
                 AncientAetherBiomes.MYTHICAL_CLEARING);
         addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.375F, -0.25F), Climate.Parameter.span(-0.45F, -0.3F), fullRange, fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.MYTHICAL_FOREST);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.375F, -0.25F), Climate.Parameter.span(-0.3F, -0.2F), fullRange, fullRange, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.375F, -0.25F), Climate.Parameter.span(-0.3F, -0.25F), fullRange, fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.MYTHICAL_CLEARING);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.375F, -0.25F), Climate.Parameter.span(-0.2F, -0.1F), fullRange, fullRange, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.375F, -0.25F), Climate.Parameter.span(-0.25F, -0.1F), fullRange, fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.MYTHICAL_FOREST);
         addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.375F, -0.25F), Climate.Parameter.span(-0.1F, 0.1F), fullRange, fullRange, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_MEADOW);
@@ -88,9 +88,9 @@ public class AncientAetherRegion extends Region {
                 AetherBiomes.SKYROOT_MEADOW);
         addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.25F, 0.25F), Climate.Parameter.span(-0.6F, -0.45F), fullRange, fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.MYTHICAL_FOREST);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.25F, 0.25F), Climate.Parameter.span(-0.45F, -0.35F), fullRange, fullRange, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.25F, 0.25F), Climate.Parameter.span(-0.45F, -0.4F), fullRange, fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.MYTHICAL_CLEARING);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.25F, 0.25F), Climate.Parameter.span(-0.35F, -0.25F), fullRange, fullRange, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.25F, 0.25F), Climate.Parameter.span(-0.4F, -0.25F), fullRange, fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.MYTHICAL_FOREST);
         addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.25F, 0.25F), Climate.Parameter.span(-0.25F, -0.2F), fullRange, fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.MYTHICAL_CLEARING);
