@@ -41,8 +41,8 @@
     [
       "ancient_aether:mystic_clearing_trees",
       "aether:holiday_tree",
-      "aether:grass_patch",
-      "aether:tall_grass_patch",
+      "ancient_aether:mythical_forests_grass_patch",
+      "ancient_aether:mythical_forests_tall_grass_patch",
       "ancient_aether:forest_flower_patch",
       "aether:berry_bush_patch"
     ],
