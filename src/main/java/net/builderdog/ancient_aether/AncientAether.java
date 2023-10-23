@@ -144,7 +144,7 @@ public class AncientAether {
         setupProgrammerArtPack(event);
         setupNewWorldgenDatapack(event);
         setupImprovedDefaultBiomesDatapack(event);
-        setupAssetOverridesPack(event);
+        //setupAssetOverridesPack(event);
 
         if (ModList.get().isLoaded("aether_genesis")) {
             setupCompatDatapack(event, "aether_genesis_compat", "Aether Genesis Compatibility", "Better Compatibility with Aether Genesis");
@@ -173,26 +173,26 @@ public class AncientAether {
         }
     }
 
-    private void setupAssetOverridesPack(AddPackFindersEvent event) {
-        if (event.getPackType() == PackType.CLIENT_RESOURCES) {
-            Path resourcePath = ModList.get().getModFileById("ancient_aether").getFile().findResource("packs/ancient_aether_asset_overrides");
-            PathPackResources pack = new PathPackResources(ModList.get().getModFileById("ancient_aether").getFile().getFileName() + ":" + resourcePath, true, resourcePath);
-            PackMetadataSection metadata = new PackMetadataSection(Component.literal("Tweaks the textures of the Base Mod"), SharedConstants.getCurrentVersion().getPackVersion(PackType.CLIENT_RESOURCES));
-            event.addRepositorySource((packConsumer) -> {
-                packConsumer.accept(Pack.create
-                        ("builtin/ancient_aether_asset_overrides",
-                                Component.literal("Ancient Aether Asset Overrides"),
-                                false,
-                                (string) -> pack,
-                                new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.SERVER_DATA), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()),
-                                PackType.CLIENT_RESOURCES,
-                                Pack.Position.TOP,
-                                false,
-                                create(decorateWithSource(), true)));
-            });
-        }
+    //private void setupAssetOverridesPack(AddPackFindersEvent event) {
+    //    if (event.getPackType() == PackType.CLIENT_RESOURCES) {
+     //       Path resourcePath = ModList.get().getModFileById("ancient_aether").getFile().findResource("packs/ancient_aether_asset_overrides");
+     //       PathPackResources pack = new PathPackResources(ModList.get().getModFileById("ancient_aether").getFile().getFileName() + ":" + resourcePath, true, resourcePath);
+     //       PackMetadataSection metadata = new PackMetadataSection(Component.literal("Tweaks the textures of the Base Mod"), SharedConstants.getCurrentVersion().getPackVersion(PackType.CLIENT_RESOURCES));
+     //       event.addRepositorySource((packConsumer) -> {
+      //          packConsumer.accept(Pack.create
+      //                  ("builtin/ancient_aether_asset_overrides",
+       //                         Component.literal("Ancient Aether Asset Overrides"),
+       //                         false,
+        //                        (string) -> pack,
+       //                         new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.SERVER_DATA), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()),
+         //                       PackType.CLIENT_RESOURCES,
+         //                       Pack.Position.TOP,
+         ////                       false,
+             //                   create(decorateWithSource(), true)));
+           // });
+       // }
 
-    }
+    //}
 
     private void setupCompatDatapack(AddPackFindersEvent event, String path, String displayName, String desc) {
         if (event.getPackType() == PackType.SERVER_DATA) {
