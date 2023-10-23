@@ -15,10 +15,7 @@ import net.builderdog.ancient_aether.block.functional.*;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.builderdog.ancient_aether.particle.AncientAetherParticles;
-import net.builderdog.ancient_aether.world.tree.CrystalTreeGrower;
-import net.builderdog.ancient_aether.world.tree.FrostedHighsprootTreeGrower;
-import net.builderdog.ancient_aether.world.tree.HighsprootTreeGrower;
-import net.builderdog.ancient_aether.world.tree.SakuraTreeGrower;
+import net.builderdog.ancient_aether.world.tree.*;
 import net.builderdog.ancient_aether.AncientAether;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -97,16 +94,16 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> SAKURA_BOOKSHELF = registerBlock("sakura_bookshelf", () -> new BookshelfBlock(Block.Properties.copy(Blocks.BOOKSHELF)));
 
     //Leaves and Saplings
-
-    public static final RegistryObject<Block> HIGHSPROOT_LEAVES = registerBlock("highsproot_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(SKYROOT_LEAVES.get()).strength(0.2f).sound(SoundType.GRASS).mapColor(MapColor.COLOR_BLUE).noOcclusion().isValidSpawn(AncientAetherBlocks::ocelotOrParrot).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
-    public static final RegistryObject<Block> FROSTED_HIGHSPROOT_LEAVES = registerBlock("frosted_highsproot_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(SKYROOT_LEAVES.get()).strength(0.2f).sound(SoundType.GRASS).mapColor(MapColor.COLOR_BLUE).noOcclusion().isValidSpawn(AncientAetherBlocks::ocelotOrParrot).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
+    public static final RegistryObject<Block> HIGHSPROOT_LEAVES = registerBlock("highsproot_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(SKYROOT_LEAVES.get()).strength(0.2f).sound(SoundType.GRASS).mapColor(MapColor.TERRACOTTA_LIGHT_BLUE).noOcclusion().isValidSpawn(AncientAetherBlocks::ocelotOrParrot).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
+    public static final RegistryObject<Block> FROSTED_HIGHSPROOT_LEAVES = registerBlock("frosted_highsproot_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(SKYROOT_LEAVES.get()).strength(0.2f).sound(SoundType.GRASS).mapColor(MapColor.TERRACOTTA_BLUE).noOcclusion().isValidSpawn(AncientAetherBlocks::ocelotOrParrot).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
     public static final RegistryObject<Block> SAKURA_LEAVES = registerBlock("sakura_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(SKYROOT_LEAVES.get()).strength(0.2f).sound(SoundType.GRASS).mapColor(MapColor.COLOR_PINK).strength(0.2f).sound(SoundType.GRASS).noOcclusion().isValidSpawn(AncientAetherBlocks::ocelotOrParrot).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
     public static final RegistryObject<Block> DIVINE_SKYROOT_LEAVES = registerBlock("divine_skyroot_leaves", () -> new AetherDoubleDropsLeaves(Block.Properties.of().mapColor(MapColor.LAPIS).ignitedByLava().pushReaction(PushReaction.DESTROY).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(AncientAetherBlocks::ocelotOrParrot).isRedstoneConductor(AncientAetherBlocks::never).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
     public static final RegistryObject<Block> CRYSTAL_LEAVES = registerBlock("crystal_leaves", () -> new LeavesWithParticlesBlock(AncientAetherParticles.CRYSTAL_LEAVES, Block.Properties.of().mapColor(MapColor.COLOR_PURPLE).ignitedByLava().pushReaction(PushReaction.DESTROY).strength(0.2F).randomTicks().sound(SoundType.AMETHYST).noOcclusion().isValidSpawn(AncientAetherBlocks::ocelotOrParrot).isRedstoneConductor(AncientAetherBlocks::never).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
-    public static final RegistryObject<Block> HIGHSPROOT_SAPLING = registerBlock("highsproot_sapling", () -> new SaplingBlock(new HighsprootTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get())));
-    public static final RegistryObject<Block> FROSTED_HIGHSPROOT_SAPLING = registerBlock("frosted_highsproot_sapling", () -> new SaplingBlock(new FrostedHighsprootTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get())));
-    public static final RegistryObject<Block> SAKURA_SAPLING = registerBlock("sakura_sapling", () -> new SaplingBlock(new SakuraTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get())));
+    public static final RegistryObject<Block> HIGHSPROOT_SAPLING = registerBlock("highsproot_sapling", () -> new SaplingBlock(new HighsprootTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get()).mapColor(MapColor.TERRACOTTA_LIGHT_BLUE)));
+    public static final RegistryObject<Block> FROSTED_HIGHSPROOT_SAPLING = registerBlock("frosted_highsproot_sapling", () -> new SaplingBlock(new FrostedHighsprootTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get()).mapColor(MapColor.TERRACOTTA_BLUE)));
+    public static final RegistryObject<Block> SAKURA_SAPLING = registerBlock("sakura_sapling", () -> new SaplingBlock(new SakuraTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get()).mapColor(MapColor.COLOR_PINK)));
     public static final RegistryObject<Block> CRYSTAL_SAPLING = registerBlock("crystal_sapling", () -> new CrystalSaplingBlock(new CrystalTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get()).sound(SoundType.AMETHYST).mapColor(MapColor.COLOR_PURPLE)));
+    public static final RegistryObject<Block> DIVINE_SKYROOT_SAPLING = registerBlock("divine_skyroot_sapling", () -> new SaplingBlock(new DivineSkyrootTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get()).mapColor(MapColor.LAPIS)));
 
     //Natural
     public static final RegistryObject<Block> DIVINE_GRAVEL = registerBlock("divine_gravel", () -> new AetherDoubleDropBlock(Block.Properties.of().mapColor(MapColor.TERRACOTTA_PURPLE).strength(0.25F).sound(SoundType.GRAVEL)));
