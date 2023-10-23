@@ -49,6 +49,8 @@ public class AncientAetherConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> AEROGEL_BLOBS = registerKey("aerogel_blobs");
     public static final ResourceKey<ConfiguredFeature<?, ?>> DIVINE_GRAVEL_ORE = registerKey("divine_gravel_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CRYSTAL_TREE = registerKey("crystal_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> DIVINE_SKYROOT_TREE = registerKey("divine_skyroot_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_DIVINE_SKYROOT = registerKey("fancy_divine_skyroot");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest holystone = new TagMatchTest(AetherTags.Blocks.HOLYSTONE);
