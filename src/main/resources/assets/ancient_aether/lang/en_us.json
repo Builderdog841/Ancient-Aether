@@ -102,6 +102,7 @@
   "block.ancient_aether.crystal_sapling": "Crystal Sapling",
   "block.ancient_aether.divine_gravel": "Divine Gravel",
   "block.ancient_aether.divine_skyroot_leaves": "Divine Skyroot Leaves",
+  "block.ancient_aether.divine_skyroot_sapling": "Divine Skyroot Sapling",
 
   "item.ancient_aether.buffalo_ribs": "Raw Buffalo Ribs",
   "item.ancient_aether.gravitite_dart_shooter": "Gravitite Dart Shooter",
@@ -269,6 +270,8 @@
   "lore.block.ancient_aether.corrupted_light_aerotic_stone": "A variant of Light Aerotic Stone. It appears in the Ancient Dungeon once the Ancient Guardian is in its final phase.",
   "lore.block.ancient_aether.drift_weed": "A decorative plant that generates on Quicksoil Coasts.",
   "lore.block.ancient_aether.divine_gravel": "A decoration block generating on the coasts of Mythical Forests. It doesn't fall to the ground unlike its Overworld counterpart.",
+  "lore.block.ancient_aether.divine_skyroot_sapling": "These small blue saplings will grow into a variant of the Skyroot Tree, the Divine Skyroot. They can be grown faster with Bone Meal.",
+  "lore.block.ancient_aether.crystal_sapling": "These small purple saplings will grow into magnificent Crystal Trees. They can be grown faster with Bone Meal.",
 
   "lore.item.ancient_aether.grapes": "They can be sometimes found on a field in Valkyrie Settlements as this is the favourite fruit of the Valkyries. They can be crafted into Valkyrie Wine.",
   "lore.item.ancient_aether.ancient_rune": "Found in Sentry Laboratories, this Rune is the key to the Ancient Dungeon as it unlocks Broken Sentry Obelisks. It can also be duplicated using 7 Enchanted Gravitite and 1 Ancient Sentry Stone.",
@@ -288,5 +291,6 @@
   "lore.item.ancient_aether.highsproot_chest_boat": "A Highsproot Boat with a handy chest in the back. Helpful for transporting more items over long stretches of water, which are famously difficult to find in the Aether.",
   "lore.item.ancient_aether.sakura_chest_boat": "A Sakura Boat with a handy chest in the back. Helpful for transporting more items over long stretches of water, which are famously difficult to find in the Aether.",
   "lore.item.ancient_aether.sakura_moa_egg": "A very rare Moa Egg that can only be found in Ancient Dungeon Chests. Hatching this provides a Sakura Moa with 10 mid-air jumps.",
-  "lore.item.ancient_aether.gravitite_dart_shooter": "A reward from defeating the Ancient Guardian. This Dart Shooter launches Mobs high up in the air similar to Gravitite Equipment. You can use any type of Dart as Ammunition."
+  "lore.item.ancient_aether.gravitite_dart_shooter": "A reward from defeating the Ancient Guardian. This Dart Shooter launches Mobs high up in the air similar to Gravitite Equipment. You can use any type of Dart as Ammunition.",
+  "lore.item.ancient_aether.divine_crystal": "This item has not been fully implemented yet and can't be found naturally."
 }

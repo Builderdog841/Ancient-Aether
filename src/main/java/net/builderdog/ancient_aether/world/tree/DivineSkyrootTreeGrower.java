@@ -12,9 +12,9 @@ public class DivineSkyrootTreeGrower extends AbstractTreeGrower {
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource random, boolean largeHive) {
         if (random.nextInt(10) == 0) {
-            return AncientAetherConfiguredFeatures.SAKURA_TREE;
+            return AncientAetherConfiguredFeatures.FANCY_DIVINE_SKYROOT;
         } else {
-            return AncientAetherConfiguredFeatures.TALL_SAKURA_TREE;
+            return AncientAetherConfiguredFeatures.DIVINE_SKYROOT_TREE;
         }
     }
 }

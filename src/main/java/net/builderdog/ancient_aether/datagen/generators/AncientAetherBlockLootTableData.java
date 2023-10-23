@@ -1,6 +1,5 @@
 package net.builderdog.ancient_aether.datagen.generators;
 
-import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.data.providers.AetherBlockLootSubProvider;
 import com.aetherteam.aether.item.AetherItems;
 import com.aetherteam.aether.mixin.mixins.common.accessor.BlockLootAccessor;
@@ -93,7 +92,8 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
 
         //Divine Skyroot Leaves
         add(AncientAetherBlocks.DIVINE_SKYROOT_LEAVES.get(),
-                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AetherBlocks.SKYROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
+                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
+        dropSelf(AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.get());
 
         //Dirt
         dropSelf(AncientAetherBlocks.DIVINE_GRAVEL.get());
@@ -142,6 +142,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropPottedContents(AncientAetherBlocks.POTTED_SAKURA_BLOSSOMS.get());
         dropPottedContents(AncientAetherBlocks.POTTED_FROSTED_HIGHSPROOT_SAPLING.get());
         dropPottedContents(AncientAetherBlocks.POTTED_CRYSTAL_SAPLING.get());
+        dropPottedContents(AncientAetherBlocks.POTTED_DIVINE_SKYROOT_SAPLING.get());
 
         //Misc
         dropOther(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get(), AetherItems.AMBROSIUM_SHARD.get());

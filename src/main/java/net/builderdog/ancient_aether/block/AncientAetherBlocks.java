@@ -161,7 +161,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<FlowerPotBlock> POTTED_SAKURA_SAPLING = BLOCKS.register("potted_sakura_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SAKURA_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_CRYSTAL_SAPLING = BLOCKS.register("potted_crystal_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, CRYSTAL_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_FROSTED_HIGHSPROOT_SAPLING = BLOCKS.register("potted_frosted_highsproot_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, FROSTED_HIGHSPROOT_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
-    public static final RegistryObject<FlowerPotBlock> POTTED_DIVINE_SKYROOT_SAPLING = BLOCKS.register("potted_divine_skyroot_Sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, DIVINE_SKYROOT_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
+    public static final RegistryObject<FlowerPotBlock> POTTED_DIVINE_SKYROOT_SAPLING = BLOCKS.register("potted_divine_skyroot_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, DIVINE_SKYROOT_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
 
     //Lanterns
     public static final RegistryObject<Block> HOLYSTONE_LANTERN = registerBlock("holystone_lantern", () -> new LanternBlock(BlockBehaviour.Properties.copy(LANTERN).sound(SoundType.LANTERN).strength(1f).requiresCorrectToolForDrops().lightLevel(s -> 15)));
@@ -194,6 +194,7 @@ public class AncientAetherBlocks {
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES.get(), 30, 60);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_LEAVES.get(), 30, 60);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.CRYSTAL_LEAVES.get(), 30, 60);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.DIVINE_SKYROOT_LEAVES.get(), 30, 60);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_LOG.get(), 5, 5);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get(), 5, 5);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_WOOD.get(), 5, 5);
@@ -220,6 +221,7 @@ public class AncientAetherBlocks {
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.CRYSTAL_SAPLING.get(), 60, 100);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get(), 60, 100);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_SAPLING.get(), 60, 100);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.get(), 60, 100);
     }
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
