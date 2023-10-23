@@ -186,6 +186,7 @@ public class AncientAetherBlocks {
         pot.addPlant(AncientAetherBlocks.SAKURA_SAPLING.getId(), AncientAetherBlocks.POTTED_SAKURA_SAPLING);
         pot.addPlant(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.getId(), AncientAetherBlocks.POTTED_FROSTED_HIGHSPROOT_SAPLING);
         pot.addPlant(AncientAetherBlocks.CRYSTAL_SAPLING.getId(), AncientAetherBlocks.POTTED_CRYSTAL_SAPLING);
+        pot.addPlant(AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.getId(), AncientAetherBlocks.POTTED_DIVINE_SKYROOT_SAPLING);
     }
 
     public static void registerFlammability() {
