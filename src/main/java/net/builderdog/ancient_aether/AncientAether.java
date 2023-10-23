@@ -168,7 +168,7 @@ public class AncientAether {
                         PackType.CLIENT_RESOURCES,
                         Pack.Position.TOP,
                         false,
-                        PackSource.BUILT_IN));
+                        create(decorateWithSource(), false)));
             });
         }
     }
@@ -177,7 +177,7 @@ public class AncientAether {
         if (event.getPackType() == PackType.CLIENT_RESOURCES) {
             Path resourcePath = ModList.get().getModFileById("ancient_aether").getFile().findResource("packs/ancient_aether_asset_overrides");
             PathPackResources pack = new PathPackResources(ModList.get().getModFileById("ancient_aether").getFile().getFileName() + ":" + resourcePath, true, resourcePath);
-            PackMetadataSection metadata = new PackMetadataSection(Component.literal("Overrides a few textures of the Base Mod"), SharedConstants.getCurrentVersion().getPackVersion(PackType.CLIENT_RESOURCES));
+            PackMetadataSection metadata = new PackMetadataSection(Component.literal("Tweaks the textures of the Base Mod"), SharedConstants.getCurrentVersion().getPackVersion(PackType.CLIENT_RESOURCES));
             event.addRepositorySource((packConsumer) -> {
                 packConsumer.accept(Pack.create
                         ("builtin/ancient_aether_asset_overrides",
@@ -188,7 +188,7 @@ public class AncientAether {
                                 PackType.CLIENT_RESOURCES,
                                 Pack.Position.TOP,
                                 false,
-                                AncientAetherPackSources.AUTO_APPLY_RESOURCE));
+                                create(decorateWithSource(), true)));
             });
         }
 

@@ -124,6 +124,7 @@ dependencies {
     implementation fg.deobf("com.aetherteam.cumulus:cumulus_menus:${project.cumulus_version}")
     //implementation fg.deobf("curse.maven:aether-lost-content-318602:4772926")
     //implementation fg.deobf("curse.maven:structure-gel-api-378802:4804139")
+    //implementation fg.deobf("curse.maven:aether-redux-867237:4762022")
 }
 jar {
     manifest {

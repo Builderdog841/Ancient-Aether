@@ -14,25 +14,25 @@ public class AncientAetherConfig {
         public final ConfigValue<Boolean> new_worldgen_datapack;
         public Common(ForgeConfigSpec.Builder builder) {
 
-            builder.push("Gameplay");
+            builder.push("Worldgen");
             ancient_aether_biome_weight = builder
                     .comment("The weighting of Ancient Aether regions in the Aether")
-                    .translation("config.ancient_aether.common.gameplay.ancient_aether_region_weight")
+                    .translation("config.ancient_aether.common.worldgen.ancient_aether_region_weight")
                     .define("Ancient Aether Region Weight", 30);
             builder.pop();
 
-            builder.push("Gameplay");
+            builder.push("Worldgen");
             default_biome_datapack = builder
                     .comment("Enables the Default Biome Improvement Datapack by default")
-                    .translation("config.ancient_aether.common.gameplay.default_biome_datapack")
-                    .define("Enable Biome Improvement Datapack by default", true);
+                    .translation("config.ancient_aether.common.worldgen.default_biome_datapack")
+                    .define("Enables Biome Improvement Datapack by default", true);
             builder.pop();
 
-            builder.push("Gameplay");
+            builder.push("Worldgen");
             new_worldgen_datapack = builder
                     .comment("Enables the New Worldgen Datapack by default")
-                    .translation("config.ancient_aether.common.gameplay.new_worldgen_datapack")
-                    .define("Enable Biome New Worldgen by default", true);
+                    .translation("config.ancient_aether.common.worldgen.new_worldgen_datapack")
+                    .define("Enables New Worldgen by default", true);
             builder.pop();
         }
 }
