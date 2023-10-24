@@ -43,7 +43,7 @@
               "argument1": 0.2,
               "argument2": {
                 "type": "minecraft:add",
-                "argument1": -0.1,
+                "argument1": -0.07,
                 "argument2": "aether:the_aether/base_islands/base_islands"
               }
             },
@@ -52,7 +52,7 @@
               "argument1": 0.2,
               "argument2": {
                 "type": "minecraft:add",
-                "argument1": -0.1,
+                "argument1": -0.07,
                 "argument2": "aether:the_aether/hilly_terrain/hilly_terrain"
               }
             }

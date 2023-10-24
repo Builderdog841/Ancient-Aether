@@ -39,7 +39,7 @@
   },
   "entity.roothyrn.death": {
     "sounds": [
-      "ancient_aether:entity/roothyrn/rootling_hurt"
+      "ancient_aether:entity/roothyrn/roothyrn_hurt"
     ],
     "subtitle": "subtitles.ancient_aether.entity.roothyrn.death"
   },
