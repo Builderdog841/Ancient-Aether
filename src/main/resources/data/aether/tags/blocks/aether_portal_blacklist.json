@@ -2,7 +2,6 @@
   "replace": false,
   "values": [
     "ancient_aether:unpowered_ancient_obelisk",
-    "ancient_aether:divine_gravel",
-    "aether:quicksoil"
+    "ancient_aether:divine_gravel"
   ]
 }
