@@ -96,9 +96,9 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.get());
 
         //Dirt
-        dropSelf(AncientAetherBlocks.DIVINE_GRAVEL.get());
+        dropSelfDouble(AncientAetherBlocks.DIVINE_GRAVEL.get());
 
-        dropSelf(AncientAetherBlocks.VIOLET_AERCLOUD.get());
+        dropSelfDouble(AncientAetherBlocks.VIOLET_AERCLOUD.get());
 
         //Dungeon Blocks
         dropSelf(AncientAetherBlocks.AEROTIC_STONE.get());

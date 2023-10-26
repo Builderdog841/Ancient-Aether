@@ -1,4 +1,4 @@
-// 1.20.1	2023-10-25T19:49:28.234233	Loot Tables
+// 1.20.1	2023-10-26T09:58:24.770626	Loot Tables
 59ddcd55f69c4b8f71e6eb6282eae1625c06b357 data/ancient_aether/loot_tables/blocks/aerotic_lantern.json
 b8cb4c206d3462b1a04e783ddc7144a7a138e4ab data/ancient_aether/loot_tables/blocks/aerotic_slab.json
 fc8f3ed9297b6a4e28e2ff4bdb8b8616bd64589b data/ancient_aether/loot_tables/blocks/aerotic_stairs.json
@@ -15,7 +15,7 @@ f346e2fa7e1e914c323a66125f68b2ae7c3ecda5 data/ancient_aether/loot_tables/blocks/
 503d82dd0a464d22c432cf15d95aa61860197db6 data/ancient_aether/loot_tables/blocks/cracked_slider.json
 66013159aff7bd55d5023e398f83cc663f099246 data/ancient_aether/loot_tables/blocks/crystal_leaves.json
 9b6d7391e02ae4466a0f07b783e5b1c1a3aa70f4 data/ancient_aether/loot_tables/blocks/crystal_sapling.json
-8101fbd86f2ab55eb990180158e2f436f2f53a79 data/ancient_aether/loot_tables/blocks/divine_gravel.json
+6992cd455b08be67e049c22bf06d42b66ebfca6f data/ancient_aether/loot_tables/blocks/divine_gravel.json
 796e32d84fc574f3aaaec3e6c17bfbee9319bc4a data/ancient_aether/loot_tables/blocks/divine_skyroot_leaves.json
 c0ce53d3ca8ed6a179feb4d43c66227a3f7eb788 data/ancient_aether/loot_tables/blocks/divine_skyroot_sapling.json
 fcab65bee04ed30c6384641991c802fc6fab7aa3 data/ancient_aether/loot_tables/blocks/drift_weed.json
@@ -91,5 +91,5 @@ e546ace1c68699bb85e0cfe7aca1b4a7e6b220c4 data/ancient_aether/loot_tables/blocks/
 ba4645f668eafc10c81bb0022f2efec2f7f69a3f data/ancient_aether/loot_tables/blocks/stripped_sakura_wood.json
 b68ae7feac098e7b6dd08dfdd85fb414058acaf2 data/ancient_aether/loot_tables/blocks/stripped_sakura_wood_wall.json
 4c6821d0c3f6c33b2e090f7bf842065eea85a43a data/ancient_aether/loot_tables/blocks/trapped_sakura_blossoms.json
-3c519516ae4823bd32cb9ef9b95538a2b4665a7b data/ancient_aether/loot_tables/blocks/violet_aercloud.json
+1da4372a62d6d86b5c1eda91d7c7d2b724abd83b data/ancient_aether/loot_tables/blocks/violet_aercloud.json
 7086ddb174886eadfd6c106d545ade54c4259a90 data/ancient_aether/loot_tables/blocks/wynd_thistle.json
