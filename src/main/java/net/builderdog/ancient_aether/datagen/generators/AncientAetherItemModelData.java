@@ -96,6 +96,9 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
 
         item(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get().asItem(), "");
 
+
+        itemBlock(AncientAetherBlocks.VIOLET_AERCLOUD.get());
+
         itemBlockFlat(AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.CRYSTAL_SAPLING.get(), "");

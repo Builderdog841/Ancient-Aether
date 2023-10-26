@@ -73,6 +73,9 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         //Dirt
         blockWithItem(AncientAetherBlocks.DIVINE_GRAVEL);
 
+        //Aerclouds
+        translucentBlock(AncientAetherBlocks.VIOLET_AERCLOUD.get(),"");
+
         //Mosaic Blocks
         logBlock((AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get()));
         logBlock((AncientAetherBlocks.CARVED_STONE_MOSAIC.get()));

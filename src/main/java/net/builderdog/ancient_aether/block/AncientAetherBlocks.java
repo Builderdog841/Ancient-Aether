@@ -175,6 +175,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> CRACKED_SLIDER = registerBlock("cracked_slider", () -> new CrackedSliderBlock(BlockBehaviour.Properties.copy(STONE).strength(5f).requiresCorrectToolForDrops().noOcclusion().lightLevel((state) -> state.getValue(RedstoneLampBlock.LIT) ? 15 : 0)));
     public static final RegistryObject<Block> TRAPPED_SAKURA_BLOSSOMS = registerBlock("trapped_sakura_blossoms", () -> new TrappedFlowerBlock(AncientAetherEntities.ROOTHYRN::get, AIR::defaultBlockState, Block.Properties.copy(SAKURA_BLOSSOMS.get())));
     public static final RegistryObject<Block> AMBROSIUM_CAMPFIRE = registerBlock("ambrosium_campfire", () -> new AmbrosiumCampfireBlock(true, 1, Block.Properties.copy(Blocks.CAMPFIRE)));
+    public static final RegistryObject<Block> VIOLET_AERCLOUD = registerBlock("violet_aercloud", () -> new VioletAercloudBlock(Block.Properties.of().mapColor(MapColor.COLOR_PURPLE).strength(0.3F).sound(SoundType.WOOL).noOcclusion().dynamicShape().isRedstoneConductor(AncientAetherBlocks::never).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
 
     public static void registerPots() {
         FlowerPotBlock pot = (FlowerPotBlock) Blocks.FLOWER_POT;
