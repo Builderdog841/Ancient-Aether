@@ -56,6 +56,17 @@
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
+    },
+    {
+
+      "weight": 1,
+      "element": {
+
+        "location": "ancient_aether:valkyrie_settlements/market_stall_violet",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
     }
   ]
 }
