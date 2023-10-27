@@ -9,12 +9,10 @@ import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.entity.moa.AncientAetherMoaTypes;
-import net.builderdog.ancient_aether.item.consumables.BuffaloRib;
 import net.builderdog.ancient_aether.item.consumables.ValkyrieWineItem;
 import net.builderdog.ancient_aether.item.loot.*;
 import net.builderdog.ancient_aether.item.loot.accessories.*;
 import net.builderdog.ancient_aether.item.misc.AncientAetherBoatItem;
-import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.network.chat.TextColor;
@@ -60,9 +58,6 @@ public class AncientAetherItems {
     //Food
     public static final RegistryObject<Item> GRAPES = ITEMS.register("grapes", () -> new Item(new Item.Properties().rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.6f).build())));
     public static final RegistryObject<Item> VALKYRIE_WINE = ITEMS.register("valkyrie_wine", () -> new ValkyrieWineItem(new Item.Properties().rarity(Rarity.COMMON).stacksTo(16).food((new FoodProperties.Builder()).nutrition(0).saturationMod(0f).build())));
-    public static final RegistryObject<Item> RAW_BUFFALO_RIBS = ITEMS.register("buffalo_ribs", () -> new Item(new Item.Properties().rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(3).saturationMod(0.2f).build())));
-    public static final RegistryObject<Item> COOKED_BUFFALO_RIBS = ITEMS.register("cooked_buffalo_ribs", () -> new Item(new Item.Properties().rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(8).saturationMod(1.2f).build())));
-    public static final RegistryObject<Item> BUFFALO_RIB = ITEMS.register("buffalo_rib", () -> new BuffaloRib(new Item.Properties().rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(3).saturationMod(0.35f).build())));
     public static final RegistryObject<Item> CRYSTAL_FRUIT = ITEMS.register("crystal_fruit", WhiteAppleItem::new);
 
     //Boats

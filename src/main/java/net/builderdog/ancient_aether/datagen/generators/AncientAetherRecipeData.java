@@ -29,10 +29,6 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
     @Override
     protected void buildRecipes(@NotNull Consumer<FinishedRecipe> consumer) {
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, AncientAetherItems.BUFFALO_RIB.get(),3)
-                .requires(AncientAetherItems.COOKED_BUFFALO_RIBS.get())
-                .unlockedBy(getHasName(AncientAetherItems.COOKED_BUFFALO_RIBS.get()), has(AncientAetherItems.COOKED_BUFFALO_RIBS.get()))
-                .save(consumer);
 
         woodFromLogs(consumer, AncientAetherBlocks.HIGHSPROOT_WOOD.get(), AncientAetherBlocks.HIGHSPROOT_LOG.get());
         woodFromLogs(consumer, AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD.get(), AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get());
@@ -284,10 +280,6 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
 
         smeltingOreRecipe(Items.QUARTZ, AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), 0.5F).save(consumer, name("quartz_from_smelting_aether_quartz_ore"));
         blastingOreRecipe(Items.QUARTZ, AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), 0.5F).save(consumer, name("quartz_from_blasting_aether_quartz_ore"));
-
-        smeltingOreRecipe(AncientAetherItems.COOKED_BUFFALO_RIBS.get(), AncientAetherItems.RAW_BUFFALO_RIBS.get(), 0.35F).save(consumer);
-        smokingRecipe(AncientAetherItems.COOKED_BUFFALO_RIBS.get(), AncientAetherItems.RAW_BUFFALO_RIBS.get()).save(consumer, name("cooked_buffalo_ribs_from_smoking"));
-        campfireCookingRecipe(AncientAetherItems.COOKED_BUFFALO_RIBS.get(), AncientAetherItems.RAW_BUFFALO_RIBS.get()).save(consumer, name("cooked_buffalo_ribs_from_campfire_cooking"));
 
         stonecuttingRecipe(consumer, RecipeCategory.DECORATIONS, AncientAetherBlocks.AEROTIC_WALL.get(), AncientAetherBlocks.AEROTIC_STONE.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROTIC_STAIRS.get(), AncientAetherBlocks.AEROTIC_STONE.get());
