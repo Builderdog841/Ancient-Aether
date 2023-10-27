@@ -139,12 +139,6 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .unlockedBy(getHasName(AetherItems.AMBROSIUM_SHARD.get()), has(AetherItems.AMBROSIUM_SHARD.get()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.PAPER, 3)
-                .define('P', AetherItems.AECHOR_PETAL.get().asItem())
-                .pattern("PPP")
-                .unlockedBy(getHasName(AetherItems.AECHOR_PETAL.get()), has(AetherItems.AECHOR_PETAL.get()))
-                .save(consumer ,name("paper_from_aechor_petals"));
-
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherItems.HIGHSPROOT_SIGN.get(), 3)
                 .group("wooden_sign")
                 .define('P', AncientAetherBlocks.HIGHSPROOT_PLANKS.get().asItem())
