@@ -3,19 +3,17 @@ package net.builderdog.ancient_aether.block.functional;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import org.jetbrains.annotations.NotNull;
 
-public class CrackedSliderBlock extends RedstoneLampBlock {
+public class WindBlowerBlock extends Block {
+
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
-    public static final BooleanProperty LIT = RedstoneTorchBlock.LIT;
-    public CrackedSliderBlock(BlockBehaviour.Properties properties) {
+    public WindBlowerBlock(Properties properties) {
         super(properties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(LIT, Boolean.FALSE));
+        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
     }
     public BlockState getStateForPlacement(BlockPlaceContext p_48689_) {
         return this.defaultBlockState().setValue(FACING, p_48689_.getHorizontalDirection().getOpposite());
@@ -30,6 +28,6 @@ public class CrackedSliderBlock extends RedstoneLampBlock {
         return blockState.rotate(mirror.getRotation(blockState.getValue(FACING)));
     }
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> p_48725_) {
-        p_48725_.add(FACING, LIT);
+        p_48725_.add(FACING);
     }
 }
