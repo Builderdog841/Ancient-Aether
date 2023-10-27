@@ -1,10 +1,15 @@
 {
   "parent": "minecraft:block/orientable",
+  "render_type": "minecraft:translucent",
   "textures": {
-    "bottom": "ancient_aether:block/wind_blower_bottom",
-    "top": "ancient_aether:block/wind_blower_top",
     "side": "ancient_aether:block/wind_blower_side",
-    "front": "ancient_aether:block/wind_blower_front",
-    "particle": "ancient_aether:block/wind_blower_bottom"
+
+    "down": "ancient_aether:block/wind_blower_bottom",
+    "east": "ancient_aether:block/wind_blower_side_left",
+    "north": "ancient_aether:block/wind_blower_front",
+    "particle": "ancient_aether:block/wind_blower_bottom",
+    "south": "ancient_aether:block/wind_blower_back",
+    "up": "ancient_aether:block/wind_blower_top",
+    "west": "ancient_aether:block/wind_blower_side_right"
   }
 }
