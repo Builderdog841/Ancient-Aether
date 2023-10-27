@@ -73,8 +73,13 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         //Dirt
         blockWithItem(AncientAetherBlocks.DIVINE_GRAVEL);
 
+        //Buffalo Wool
+        blockWithItem(AncientAetherBlocks.BUFFALO_WOOL);
+
         //Aerclouds
         translucentBlock(AncientAetherBlocks.VIOLET_AERCLOUD.get(),"");
+
+        translucentDoorBlock(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get(), texture(name(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get()), "", "_bottom"), texture(name(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get()), "", "_top"));
 
         //Mosaic Blocks
         logBlock((AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get()));

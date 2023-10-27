@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_bottom_right_open",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "bottom": "ancient_aether:block/aerogel_glass_door_bottom",
+    "top": "ancient_aether:block/aerogel_glass_door_top"
+  }
+}

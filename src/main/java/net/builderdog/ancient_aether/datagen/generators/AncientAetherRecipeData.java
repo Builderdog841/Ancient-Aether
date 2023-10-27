@@ -185,6 +185,13 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .unlockedBy("has_stripped_logs", has(AncientAetherBlocks.STRIPPED_SAKURA_LOG.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.BUFFALO_CARPET.get(), 3)
+                .group("carpet")
+                .define('#', AncientAetherBlocks.BUFFALO_WOOL.get())
+                .pattern("##")
+                .unlockedBy(getHasName(AncientAetherBlocks.BUFFALO_WOOL.get()), has(AncientAetherBlocks.BUFFALO_WOOL.get()))
+                .save(consumer);
+
         pressurePlateBuilder(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get(), Ingredient.of(AetherBlocks.HOLYSTONE_BRICK_SLAB.get())).unlockedBy(getHasName(AetherBlocks.HOLYSTONE_BRICK_SLAB.get()), has(AetherBlocks.HOLYSTONE_BRICK_SLAB.get())).save(consumer);
         pressurePlateBuilder(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_STONE_MOSAIC.get(), Ingredient.of(AetherBlocks.CARVED_SLAB.get())).unlockedBy(getHasName(AetherBlocks.CARVED_SLAB.get()), has(AetherBlocks.CARVED_SLAB.get())).save(consumer);
         pressurePlateBuilder(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get(), Ingredient.of(AetherBlocks.ANGELIC_SLAB.get())).unlockedBy(getHasName(AetherBlocks.ANGELIC_SLAB.get()), has(AetherBlocks.ANGELIC_SLAB.get())).save(consumer);

@@ -21,6 +21,9 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
         super(output, id, helper);
     }
 
+    public void translucentDoorBlock(DoorBlock block, ResourceLocation bottom, ResourceLocation top) {
+        this.doorBlockWithRenderType(block, bottom, top, "translucent");
+    }
     protected BlockModelBuilder makeWallPostModel(int width, int height, String name) {
         return models().withExistingParent(name, mcLoc("block/block"))
                 .element().from(8 - width, 0.0F, 8 - width).to(8 + width, height, 8 + width)

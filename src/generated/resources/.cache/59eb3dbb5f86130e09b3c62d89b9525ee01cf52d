@@ -1,4 +1,5 @@
-// 1.20.1	2023-10-26T09:58:24.770626	Loot Tables
+// 1.20.1	2023-10-27T14:27:57.7395317	Loot Tables
+9fe2ea21af5246ad9f95848f680099717062eb1c data/ancient_aether/loot_tables/blocks/aerogel_glass_door.json
 59ddcd55f69c4b8f71e6eb6282eae1625c06b357 data/ancient_aether/loot_tables/blocks/aerotic_lantern.json
 b8cb4c206d3462b1a04e783ddc7144a7a138e4ab data/ancient_aether/loot_tables/blocks/aerotic_slab.json
 fc8f3ed9297b6a4e28e2ff4bdb8b8616bd64589b data/ancient_aether/loot_tables/blocks/aerotic_stairs.json
@@ -10,6 +11,8 @@ b923778a3704ec4aaff7a5fd8ce9aeb56c25291c data/ancient_aether/loot_tables/blocks/
 31e24a624d606ca0cfed9b28e6aa09536aecfd9a data/ancient_aether/loot_tables/blocks/ancient_obelisk.json
 f346e2fa7e1e914c323a66125f68b2ae7c3ecda5 data/ancient_aether/loot_tables/blocks/angelic_lantern.json
 50401c0d72532e1255e3c534f66b3b7b9e656a43 data/ancient_aether/loot_tables/blocks/angelic_stone_mosaic.json
+76bcd4d20275a5cb65a7d334ff157a3917011a9e data/ancient_aether/loot_tables/blocks/buffalo_carpet.json
+87d5b2abeaae1c56486e3d4bad809f597509ae8f data/ancient_aether/loot_tables/blocks/buffalo_wool.json
 07e5a503893020d9852e02f7a687103c325d37a9 data/ancient_aether/loot_tables/blocks/carved_stone_mosaic.json
 27344c98071e908c6aec928704b2788d38cca3df data/ancient_aether/loot_tables/blocks/corrupted_light_aerotic_stone.json
 503d82dd0a464d22c432cf15d95aa61860197db6 data/ancient_aether/loot_tables/blocks/cracked_slider.json

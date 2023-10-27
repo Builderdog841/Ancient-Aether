@@ -98,7 +98,11 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         //Dirt
         dropSelfDouble(AncientAetherBlocks.DIVINE_GRAVEL.get());
 
+        //Aerclouds
         dropSelfDouble(AncientAetherBlocks.VIOLET_AERCLOUD.get());
+
+        //Aerogel Glass
+        add(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get(), createDoorTable(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get()));
 
         //Dungeon Blocks
         dropSelf(AncientAetherBlocks.AEROTIC_STONE.get());
@@ -148,6 +152,10 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
 
         //Misc
         dropOther(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get(), AetherItems.AMBROSIUM_SHARD.get());
+
+        //Buffalo Wool
+        dropSelf(AncientAetherBlocks.BUFFALO_WOOL.get());
+        dropSelf(AncientAetherBlocks.BUFFALO_CARPET.get());
     }
 
     @Override

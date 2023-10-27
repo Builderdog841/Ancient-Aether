@@ -104,6 +104,13 @@
   "block.ancient_aether.divine_skyroot_leaves": "Divine Skyroot Leaves",
   "block.ancient_aether.divine_skyroot_sapling": "Divine Skyroot Sapling",
   "block.ancient_aether.violet_aercloud": "Violet Aercloud",
+  "block.ancient_aether.buffalo_wool": "Buffalo Wool",
+  "block.ancient_aether.buffalo_carpet": "Buffalo Carpet",
+  "block.ancient_aether.aerogel_glass": "Aerogel Glass",
+  "block.ancient_aether.aerogel_glass_pane": "Aerogel Glass Pane",
+  "block.ancient_aether.aerogel_glass_door": "Aerogel Glass Door",
+  "block.ancient_aether.aerogel_glass_trapdoor": "Aerogel Glass Trapdoor",
+  "block.ancient_aether.wind_blower": "Wind Blower",
 
   "item.ancient_aether.buffalo_ribs": "Raw Buffalo Ribs",
   "item.ancient_aether.gravitite_dart_shooter": "Gravitite Dart Shooter",
