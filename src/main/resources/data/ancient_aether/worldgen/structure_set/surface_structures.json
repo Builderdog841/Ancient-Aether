@@ -3,6 +3,10 @@
     {
       "structure": "ancient_aether:valkyrie_settlements",
       "weight": 1
+    },
+    {
+      "structure": "ancient_aether:skyroot_forest_ruin",
+      "weight": 1
     }
   ],
   "placement": {

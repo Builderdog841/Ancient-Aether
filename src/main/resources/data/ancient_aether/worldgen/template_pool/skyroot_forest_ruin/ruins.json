@@ -1,0 +1,16 @@
+{
+  "name": "ancient_aether:skyroot_forest_ruin/ruins",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+
+        "location": "ancient_aether:skyroot_forest_ruin/pillar_ruin",
+        "processors": "ancient_aether:pillar_ruin_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
