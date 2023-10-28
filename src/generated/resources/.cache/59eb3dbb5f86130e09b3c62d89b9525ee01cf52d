@@ -1,4 +1,4 @@
-// 1.20.1	2023-10-27T20:07:26.0921517	Loot Tables
+// 1.20.1	2023-10-28T14:24:49.4254959	Loot Tables
 9fe2ea21af5246ad9f95848f680099717062eb1c data/ancient_aether/loot_tables/blocks/aerogel_glass_door.json
 59ddcd55f69c4b8f71e6eb6282eae1625c06b357 data/ancient_aether/loot_tables/blocks/aerotic_lantern.json
 b8cb4c206d3462b1a04e783ddc7144a7a138e4ab data/ancient_aether/loot_tables/blocks/aerotic_slab.json
@@ -52,6 +52,7 @@ ccd8d90b0556e6aa2c2aba4adad1916f3a144239 data/ancient_aether/loot_tables/blocks/
 dcc473079987f1adb8707bae9a653a365e2f03e4 data/ancient_aether/loot_tables/blocks/highsproot_wood_wall.json
 30cc1ad38ab2baf6f8838ee803f9a76f97f38cdd data/ancient_aether/loot_tables/blocks/holystone_brick_mosaic.json
 344d32e44545f5501bfda3aff72a61ff534ac5b8 data/ancient_aether/loot_tables/blocks/holystone_lantern.json
+7260a2dea218ca9a9454baceca1b01a206e11b19 data/ancient_aether/loot_tables/blocks/holystone_vase.json
 9bbfa7490063bd2cf97cb7c4f354cc572018c99e data/ancient_aether/loot_tables/blocks/light_aerotic_stone.json
 866887df7cdc16ccd54475c9813841ab96b35ddd data/ancient_aether/loot_tables/blocks/potted_crystal_sapling.json
 58b68de4c86c319bae127c97d1010c49390fa0a7 data/ancient_aether/loot_tables/blocks/potted_divine_skyroot_sapling.json

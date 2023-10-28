@@ -153,7 +153,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> WYND_THISTLE = registerBlock("wynd_thistle", () -> new FlowerBlock(() -> MobEffects.HARM, 4, Block.Properties.copy(WHITE_FLOWER.get())));
     public static final RegistryObject<Block> SAKURA_BLOSSOMS = registerBlock("sakura_blossoms", () -> new FlowerBlock(() -> MobEffects.HEALTH_BOOST, 4, Block.Properties.copy(WHITE_FLOWER.get())));
     public static final RegistryObject<Block> DRIFT_WEED = registerBlock("drift_weed", () -> new DriftWeedBlock(Block.Properties.copy(GRASS).mapColor(DyeColor.YELLOW)));
-    public static final RegistryObject<Block> GROWING_CRYSTAL_FRUIT = BLOCKS.register("growing_crystal_fruit", () -> new CrystalFruitBlock(Block.Properties.copy(WHITE_FLOWER.get()).lightLevel(s -> 12)));
+    public static final RegistryObject<Block> GROWING_CRYSTAL_FRUIT = BLOCKS.register("growing_crystal_fruit", () -> new CrystalFruitBlock(Block.Properties.copy(WHITE_FLOWER.get()).lightLevel(s -> 12).noParticlesOnBreak()));
 
     //Potted Plants
     public static final RegistryObject<FlowerPotBlock> POTTED_HIGHLAND_VIOLA = BLOCKS.register("potted_highland_viola", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SKY_BLUES, Block.Properties.copy(Blocks.FLOWER_POT)));
@@ -180,10 +180,12 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> AMBROSIUM_CAMPFIRE = registerBlock("ambrosium_campfire", () -> new AmbrosiumCampfireBlock(true, 1, Block.Properties.copy(Blocks.CAMPFIRE)));
     public static final RegistryObject<Block> VIOLET_AERCLOUD = registerBlock("violet_aercloud", () -> new VioletAercloudBlock(BlockBehaviour.Properties.copy(COLD_AERCLOUD.get()).mapColor(MapColor.COLOR_PURPLE)));
     public static final RegistryObject<Block> WIND_BLOWER = registerBlock("wind_blower", () -> new WindBlowerBlock(BlockBehaviour.Properties.copy(COLD_AERCLOUD.get())));
+    public static final RegistryObject<Block> HOLYSTONE_VASE = registerBlock("holystone_vase", () -> new HolystoneVaseBlock(Block.Properties.of().mapColor(MapColor.COLOR_LIGHT_GRAY).instabreak().sound(SoundType.DECORATED_POT).noOcclusion().isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
 
     //Buffalo Wool
     public static final RegistryObject<Block> BUFFALO_WOOL = registerBlock("buffalo_wool", () -> new Block(BlockBehaviour.Properties.copy(WHITE_WOOL).mapColor(MapColor.COLOR_LIGHT_BLUE)));
     public static final RegistryObject<Block> BUFFALO_CARPET = registerBlock("buffalo_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.copy(BUFFALO_WOOL.get())));
+
 
     public static void registerPots() {
         FlowerPotBlock pot = (FlowerPotBlock) Blocks.FLOWER_POT;

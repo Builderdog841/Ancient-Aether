@@ -79,6 +79,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         //Aerclouds
         translucentBlock(AncientAetherBlocks.VIOLET_AERCLOUD.get(),"");
 
+        //Aerogel Glass
         translucentDoorBlock(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get(), texture(name(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get()), "", "_bottom"), texture(name(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get()), "", "_top"));
 
         //Mosaic Blocks
