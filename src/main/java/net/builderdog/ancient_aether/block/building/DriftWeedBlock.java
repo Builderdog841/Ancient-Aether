@@ -22,7 +22,7 @@ public class DriftWeedBlock extends BushBlock {
         return blockState.is(AncientAetherTags.Blocks.DRIFTWEED_PLACEABLE_ON);
     }
 
-    public VoxelShape getShape(BlockState p_57336_, BlockGetter p_57337_, BlockPos p_57338_, CollisionContext p_57339_) {
+    public @NotNull VoxelShape getShape(@NotNull BlockState p_57336_, @NotNull BlockGetter p_57337_, @NotNull BlockPos p_57338_, CollisionContext p_57339_) {
         return SHAPE;
     }
 }

@@ -1,4 +1,4 @@
-// 1.20.1	2023-10-27T14:27:57.7395317	Loot Tables
+// 1.20.1	2023-10-27T20:07:26.0921517	Loot Tables
 9fe2ea21af5246ad9f95848f680099717062eb1c data/ancient_aether/loot_tables/blocks/aerogel_glass_door.json
 59ddcd55f69c4b8f71e6eb6282eae1625c06b357 data/ancient_aether/loot_tables/blocks/aerotic_lantern.json
 b8cb4c206d3462b1a04e783ddc7144a7a138e4ab data/ancient_aether/loot_tables/blocks/aerotic_slab.json
@@ -95,4 +95,5 @@ ba4645f668eafc10c81bb0022f2efec2f7f69a3f data/ancient_aether/loot_tables/blocks/
 b68ae7feac098e7b6dd08dfdd85fb414058acaf2 data/ancient_aether/loot_tables/blocks/stripped_sakura_wood_wall.json
 4c6821d0c3f6c33b2e090f7bf842065eea85a43a data/ancient_aether/loot_tables/blocks/trapped_sakura_blossoms.json
 1da4372a62d6d86b5c1eda91d7c7d2b724abd83b data/ancient_aether/loot_tables/blocks/violet_aercloud.json
+598c5aeece5dd942d2b7eb8911f9a21319b753ff data/ancient_aether/loot_tables/blocks/wind_blower.json
 7086ddb174886eadfd6c106d545ade54c4259a90 data/ancient_aether/loot_tables/blocks/wynd_thistle.json

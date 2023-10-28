@@ -129,6 +129,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
 
         //Redstone Blocks
         dropSelf(AncientAetherBlocks.CRACKED_SLIDER.get());
+        dropSelf(AncientAetherBlocks.WIND_BLOWER.get());
 
         //Plants
         dropSelf(AncientAetherBlocks.SKY_BLUES.get());
