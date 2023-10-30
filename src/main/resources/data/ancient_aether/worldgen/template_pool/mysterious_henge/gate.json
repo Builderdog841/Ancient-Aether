@@ -3,10 +3,30 @@
   "fallback": "minecraft:empty",
   "elements": [
     {
-      "weight": 1,
+      "weight": 6,
       "element": {
 
         "location": "ancient_aether:mysterious_henge/gate",
+        "processors": "ancient_aether:mysterious_henge_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+
+        "location": "ancient_aether:mysterious_henge/gate_broken_1",
+        "processors": "ancient_aether:mysterious_henge_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+
+        "location": "ancient_aether:mysterious_henge/gate_broken_2",
         "processors": "ancient_aether:mysterious_henge_randomizer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
