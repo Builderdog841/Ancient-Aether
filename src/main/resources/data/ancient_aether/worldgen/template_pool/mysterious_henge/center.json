@@ -8,7 +8,7 @@
 
         "location": "ancient_aether:mysterious_henge/center",
         "processors": "ancient_aether:mysterious_henge_randomizer",
-        "projection": "terrain_matching",
+        "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
     }
