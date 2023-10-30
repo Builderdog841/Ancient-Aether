@@ -1,0 +1,106 @@
+{
+  "processors": [
+    {
+      "processor_type": "minecraft:rule",
+      "rules": [
+        {
+          "input_predicate": {
+            "block": "aether:holystone_bricks",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 0.05
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "aether:holystone",
+            "Properties": {
+              "double_drops": "true"
+            }
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "ancient_aether:holystone_vase",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 0.6
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "minecraft:air"
+            }
+          },
+        {
+          "input_predicate": {
+            "block": "aether:holystone",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 0.2
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "aether:mossy_holystone",
+            "Properties": {
+              "double_drops": "true"
+            }
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "orange_wool",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 0.3
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "aether:holystone_bricks"
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "orange_wool",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 1
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "air"
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "aether:skyroot_leaves",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 0.25
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "air"
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "aether:aether_grass_block",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 0.2
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "aether:holystone_bricks"
+          }
+        }
+      ]
+    }
+  ]
+}

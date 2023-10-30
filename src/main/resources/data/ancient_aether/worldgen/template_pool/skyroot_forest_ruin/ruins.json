@@ -17,7 +17,17 @@
       "element": {
 
         "location": "ancient_aether:skyroot_forest_ruin/podium_ruin",
-        "processors": "ancient_aether:pillar_ruin_randomizer",
+        "processors": "ancient_aether:skyroot_forest_ruin_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+
+        "location": "ancient_aether:skyroot_forest_ruin/theater_ruin_above",
+        "processors": "ancient_aether:skyroot_forest_ruin_randomizer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
