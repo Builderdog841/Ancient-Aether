@@ -7,6 +7,10 @@
     {
       "structure": "ancient_aether:wyndcaps_ruin",
       "weight": 1
+    },
+    {
+      "structure": "ancient_aether:mysterious_henge",
+      "weight": 1
     }
   ],
   "placement": {

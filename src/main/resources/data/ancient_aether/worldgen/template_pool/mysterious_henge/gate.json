@@ -1,0 +1,16 @@
+{
+  "name": "ancient_aether:mysterious_henge/gate",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+
+        "location": "ancient_aether:mysterious_henge/gate",
+        "processors": "ancient_aether:mysterious_henge_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

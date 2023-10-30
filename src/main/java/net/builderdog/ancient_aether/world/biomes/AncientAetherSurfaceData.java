@@ -1,10 +1,10 @@
 package net.builderdog.ancient_aether.world.biomes;
 
-import com.aetherteam.aether.block.AetherBlocks;
+//import com.aetherteam.aether.block.AetherBlocks;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.Noises;
 import net.minecraft.world.level.levelgen.SurfaceRules;
-import net.minecraft.world.level.levelgen.VerticalAnchor;
+//import net.minecraft.world.level.levelgen.VerticalAnchor;
 
 public class AncientAetherSurfaceData {
 
@@ -20,10 +20,10 @@ public class AncientAetherSurfaceData {
 
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.WYNDCAP_PEAKS),
                         SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(Blocks.SNOW_BLOCK.defaultBlockState()))
-                ),
+                )//,
 
                 //SurfaceRules.ifTrue(SurfaceRules.hole(),
-                        SurfaceRules.ifTrue(SurfaceRules.yStartCheck(VerticalAnchor.absolute(80), 80), SurfaceRules.state(AetherBlocks.COLD_AERCLOUD.get().defaultBlockState()))//)
+                //        SurfaceRules.ifTrue(SurfaceRules.yStartCheck(VerticalAnchor.absolute(80), 80), SurfaceRules.state(AetherBlocks.COLD_AERCLOUD.get().defaultBlockState())))
          );
     }
 }

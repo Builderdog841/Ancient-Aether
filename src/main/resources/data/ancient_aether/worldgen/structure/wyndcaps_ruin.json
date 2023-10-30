@@ -8,7 +8,7 @@
   "terrain_adaptation": "beard_thin",
   "step": "surface_structures",
   "start_height": {
-    "absolute": 3,
+    "absolute": 1,
     "max_inclusive": { "below_top": 128 },
     "min_inclusive": { "above_bottom": 64 }
   },
