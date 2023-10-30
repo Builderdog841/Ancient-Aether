@@ -23,7 +23,7 @@
           "input_predicate": {
             "block": "ancient_aether:holystone_vase",
             "predicate_type": "minecraft:random_block_match",
-            "probability": 0.6
+            "probability": 0.35
           },
           "location_predicate": {
             "predicate_type": "minecraft:always_true"
@@ -34,9 +34,9 @@
           },
         {
           "input_predicate": {
-            "block": "orange_wool",
+            "block": "aether:aether_grass_block",
             "predicate_type": "minecraft:random_block_match",
-            "probability": 0.3
+            "probability": 0.15
           },
           "location_predicate": {
             "predicate_type": "minecraft:always_true"
@@ -47,33 +47,20 @@
         },
         {
           "input_predicate": {
-            "block": "orange_wool",
+            "block": "aether:holystone",
             "predicate_type": "minecraft:random_block_match",
-            "probability": 1
+            "probability": 0.1
           },
           "location_predicate": {
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "air"
+            "Name": "aether:mossy_holystone"
           }
         },
         {
           "input_predicate": {
-            "block": "aether:skyroot_leaves",
-            "predicate_type": "minecraft:random_block_match",
-            "probability": 0.25
-          },
-          "location_predicate": {
-            "predicate_type": "minecraft:always_true"
-          },
-          "output_state": {
-            "Name": "air"
-          }
-        },
-        {
-          "input_predicate": {
-            "block": "aether:aether_grass_block",
+            "block": "aether:holystone",
             "predicate_type": "minecraft:random_block_match",
             "probability": 0.2
           },
@@ -82,19 +69,6 @@
           },
           "output_state": {
             "Name": "aether:holystone_bricks"
-          }
-        },
-        {
-          "input_predicate": {
-            "block": "ancient_aether:holystone_brick_mosaic",
-            "predicate_type": "minecraft:random_block_match",
-            "probability": 0.03
-          },
-          "location_predicate": {
-            "predicate_type": "minecraft:always_true"
-          },
-          "output_state": {
-            "Name": "air"
           }
         }
       ]
