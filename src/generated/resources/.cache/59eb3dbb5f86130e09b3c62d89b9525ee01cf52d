@@ -1,5 +1,6 @@
-// 1.20.1	2023-10-29T10:22:07.0038789	Loot Tables
+// 1.20.1	2023-10-30T20:23:45.0973338	Loot Tables
 9fe2ea21af5246ad9f95848f680099717062eb1c data/ancient_aether/loot_tables/blocks/aerogel_glass_door.json
+db3d3a99aeab6a6f7de41a510cf9b4384b988eed data/ancient_aether/loot_tables/blocks/aerogel_glass_trapdoor.json
 59ddcd55f69c4b8f71e6eb6282eae1625c06b357 data/ancient_aether/loot_tables/blocks/aerotic_lantern.json
 b8cb4c206d3462b1a04e783ddc7144a7a138e4ab data/ancient_aether/loot_tables/blocks/aerotic_slab.json
 fc8f3ed9297b6a4e28e2ff4bdb8b8616bd64589b data/ancient_aether/loot_tables/blocks/aerotic_stairs.json

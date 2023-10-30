@@ -67,10 +67,8 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         hangingSignBlock(AncientAetherBlocks.HIGHSPROOT_HANGING_SIGN.get(), AncientAetherBlocks.HIGHSPROOT_WALL_HANGING_SIGN.get(), texture(name(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get()), ""));
         hangingSignBlock(AncientAetherBlocks.SAKURA_HANGING_SIGN.get(), AncientAetherBlocks.SAKURA_WALL_HANGING_SIGN.get(), texture(name(AncientAetherBlocks.STRIPPED_SAKURA_LOG.get()), ""));
 
-        //Ores
+        //Terrain
         blockWithItem(AncientAetherBlocks.AETHER_QUARTZ_ORE);
-
-        //Dirt
         blockWithItem(AncientAetherBlocks.DIVINE_GRAVEL);
 
         //Buffalo Wool
@@ -81,6 +79,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
 
         //Aerogel Glass
         translucentDoorBlock(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get(), texture(name(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get()), "", "_bottom"), texture(name(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get()), "", "_top"));
+        translucentTrapdoorBlock(AncientAetherBlocks.AEROGEL_GLASS_TRAPDOOR.get(), texture(name(AncientAetherBlocks.AEROGEL_GLASS_TRAPDOOR.get()), ""), false);
 
         //Mosaic Blocks
         logBlock((AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get()));

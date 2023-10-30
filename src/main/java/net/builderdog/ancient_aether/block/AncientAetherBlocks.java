@@ -106,7 +106,9 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> CRYSTAL_SAPLING = registerBlock("crystal_sapling", () -> new CrystalSaplingBlock(new CrystalTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get()).sound(SoundType.AMETHYST).mapColor(MapColor.COLOR_PURPLE)));
     public static final RegistryObject<Block> DIVINE_SKYROOT_SAPLING = registerBlock("divine_skyroot_sapling", () -> new SaplingBlock(new DivineSkyrootTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get()).mapColor(MapColor.LAPIS)));
 
-    public static final RegistryObject<DoorBlock> AEROGEL_GLASS_DOOR = registerBlock("aerogel_glass_door", () -> new DoorBlock(Block.Properties.copy(OAK_DOOR), AncientAetherWoodTypes.HIGHSPROOT_BLOCK_SET));
+    //Aerogel Glass
+    public static final RegistryObject<DoorBlock> AEROGEL_GLASS_DOOR = registerBlock("aerogel_glass_door", () -> new DoorBlock(Block.Properties.copy(OAK_DOOR).mapColor(MapColor.DIAMOND).strength(1.0F, 2000.0F).sound(SoundType.METAL).noOcclusion().isViewBlocking(AncientAetherBlocks::never), AncientAetherWoodTypes.AEROGEL_GLASS_BLOCK_SET));
+    public static final RegistryObject<TrapDoorBlock> AEROGEL_GLASS_TRAPDOOR = registerBlock("aerogel_glass_trapdoor", () -> new TrapDoorBlock(Block.Properties.copy(Blocks.OAK_TRAPDOOR).mapColor(MapColor.DIAMOND).strength(1.0F, 2000.0F).sound(SoundType.METAL).noOcclusion().isViewBlocking(AncientAetherBlocks::never), AncientAetherWoodTypes.AEROGEL_GLASS_BLOCK_SET));
 
     //Natural
     public static final RegistryObject<Block> DIVINE_GRAVEL = registerBlock("divine_gravel", () -> new AetherDoubleDropBlock(Block.Properties.of().mapColor(MapColor.TERRACOTTA_PURPLE).strength(0.25F).sound(SoundType.GRAVEL)));

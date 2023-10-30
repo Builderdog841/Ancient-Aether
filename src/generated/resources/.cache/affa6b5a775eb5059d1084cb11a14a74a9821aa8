@@ -1,5 +1,6 @@
-// 1.20.1	2023-10-29T10:22:07.0068788	Block States: ancient_aether
+// 1.20.1	2023-10-30T20:23:45.1013341	Block States: ancient_aether
 2bc280f754b369aa71b9442df45ae49cbfb7a38b assets/ancient_aether/blockstates/aerogel_glass_door.json
+8a4539a0a627f673d1189a5373b19d16277e473f assets/ancient_aether/blockstates/aerogel_glass_trapdoor.json
 e0420a79a9ec93d70445a0e8996c9c6e05425a60 assets/ancient_aether/blockstates/aerotic_slab.json
 1435ff6ce557fe4cf6875a182421829b31850485 assets/ancient_aether/blockstates/aerotic_stairs.json
 5fded8d7047471fb348998e6a9dda053a42109e1 assets/ancient_aether/blockstates/aerotic_stone.json
@@ -89,6 +90,9 @@ c37ca30ce07e573dd17c459afa03c206d20c5faa assets/ancient_aether/models/block/aero
 0d74759046d53e1ca02bd25ce0e3f31522e28ac1 assets/ancient_aether/models/block/aerogel_glass_door_top_left_open.json
 8e80b89994e6e201618ac4d233634f76ee64f00d assets/ancient_aether/models/block/aerogel_glass_door_top_right.json
 7fd52c44b99e6d1d8a4e33ccfc9150ef75c3089b assets/ancient_aether/models/block/aerogel_glass_door_top_right_open.json
+c11d284a6197f050722760947ac273b8242b026d assets/ancient_aether/models/block/aerogel_glass_trapdoor_bottom.json
+04fb70e1479528a3c7ff9f348631d0e28f764d7a assets/ancient_aether/models/block/aerogel_glass_trapdoor_open.json
+c61f929471559c5767afab9598da4d473f99fb73 assets/ancient_aether/models/block/aerogel_glass_trapdoor_top.json
 d2bdf3d123972373b6313af7f3a72ee41d73bd0e assets/ancient_aether/models/block/aerotic_slab.json
 e5d7bf19fe01f1be090c29ca28a47bde2caf032f assets/ancient_aether/models/block/aerotic_slab_top.json
 f91f7c0283b03dd2cd8ae196e09280655777acb3 assets/ancient_aether/models/block/aerotic_stairs.json
