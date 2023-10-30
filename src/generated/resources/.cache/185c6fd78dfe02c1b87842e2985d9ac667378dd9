@@ -1,6 +1,8 @@
-// 1.20.1	2023-10-30T20:28:18.2101772	Item Models: ancient_aether
+// 1.20.1	2023-10-30T21:54:17.1477629	Item Models: ancient_aether
 dc22e9f245c5e59d55b0aec4ae45dec8337daa28 assets/ancient_aether/models/item/aerogel_bottle.json
+532bdb7a4f7d2a6b96d474c01c8b9e7a0d1c10b4 assets/ancient_aether/models/item/aerogel_glass.json
 87e9f8f9f807a2aa763e3057d32bacf3ee32b60f assets/ancient_aether/models/item/aerogel_glass_door.json
+d1e6ed3e334d573f31a8ce9e09885c0f43832630 assets/ancient_aether/models/item/aerogel_glass_pane.json
 b4a366cd3431c85f5b4b2970f23666b65b290b60 assets/ancient_aether/models/item/aerogel_glass_trapdoor.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/aeronautic_leaper_spawn_egg.json
 2b792d3780c8a2525546b071319a3e5ed1ab9ac4 assets/ancient_aether/models/item/aerotic_lantern.json

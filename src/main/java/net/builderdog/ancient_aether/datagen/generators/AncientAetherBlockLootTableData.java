@@ -102,6 +102,8 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelfDouble(AncientAetherBlocks.VIOLET_AERCLOUD.get());
 
         //Aerogel Glass
+        dropSelf(AncientAetherBlocks.AEROGEL_GLASS.get());
+        dropSelf(AncientAetherBlocks.AEROGEL_GLASS_PANE.get());
         dropSelf(AncientAetherBlocks.AEROGEL_GLASS_TRAPDOOR.get());
         add(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get(), createDoorTable(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get()));
 

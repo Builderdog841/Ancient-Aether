@@ -1,6 +1,7 @@
 package net.builderdog.ancient_aether.datagen.generators;
 
 import com.aetherteam.aether.Aether;
+import com.aetherteam.aether.AetherTags;
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.data.providers.AetherRecipeProvider;
 import com.aetherteam.aether.entity.AetherEntityTypes;
@@ -14,7 +15,6 @@ import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
@@ -210,6 +210,15 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .save(consumer);
         slab(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROTIC_SLAB.get(), AncientAetherBlocks.AEROTIC_STONE.get());
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGEL_GLASS.get(),8)
+                .define('A', AetherBlocks.AEROGEL.get())
+                .define('P', AetherTags.Items.PLANKS_CRAFTING)
+                .pattern("AAA")
+                .pattern("APA")
+                .pattern("AAA")
+                .unlockedBy(getHasName(AetherBlocks.AEROGEL.get()), has(AetherBlocks.AEROGEL.get()))
+                .save(consumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.HIGHSPROOT_BOOKSHELF.get())
                 .define('P', AncientAetherBlocks.HIGHSPROOT_PLANKS.get())
                 .define('B', Items.BOOK)
@@ -278,6 +287,22 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         buttonBuilder(AncientAetherBlocks.SAKURA_BUTTON.get(), Ingredient.of(AncientAetherBlocks.SAKURA_PLANKS.get())).unlockedBy(getHasName(AncientAetherBlocks.SAKURA_PLANKS.get()), has(AncientAetherBlocks.SAKURA_PLANKS.get())).group("wooden_button").save(consumer);
         pressurePlateBuilder(RecipeCategory.REDSTONE, AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get(), Ingredient.of(AncientAetherBlocks.SAKURA_PLANKS.get())).unlockedBy(getHasName(AncientAetherBlocks.SAKURA_PLANKS.get()), has(AncientAetherBlocks.SAKURA_PLANKS.get())).group("wooden_pressure_plate").save(consumer);
 
+        doorBuilder(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get(), Ingredient.of(AncientAetherBlocks.AEROGEL_GLASS.get())).unlockedBy(getHasName(AncientAetherBlocks.AEROGEL_GLASS.get()), has(AncientAetherBlocks.AEROGEL_GLASS.get())).save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGEL_GLASS_PANE.get(),16)
+                .define('#', AncientAetherBlocks.AEROGEL_GLASS.get())
+                .pattern("###")
+                .pattern("###")
+                .unlockedBy(getHasName(AncientAetherBlocks.AEROGEL_GLASS.get()), has(AncientAetherBlocks.AEROGEL_GLASS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGEL_GLASS_TRAPDOOR.get(),2)
+                .define('#', AncientAetherBlocks.AEROGEL_GLASS.get())
+                .pattern("##")
+                .pattern("##")
+                .unlockedBy(getHasName(AncientAetherBlocks.AEROGEL_GLASS.get()), has(AncientAetherBlocks.AEROGEL_GLASS.get()))
+                .save(consumer);
+
         smeltingOreRecipe(Items.QUARTZ, AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), 0.5F).save(consumer, name("quartz_from_smelting_aether_quartz_ore"));
         blastingOreRecipe(Items.QUARTZ, AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), 0.5F).save(consumer, name("quartz_from_blasting_aether_quartz_ore"));
 
@@ -310,13 +335,5 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         enchantingRecipe(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get(), AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), 0.3F, 500).save(consumer);
 
         moaIncubationRecipe(AetherEntityTypes.MOA.get(), AncientAetherMoaTypes.SAKURA, AncientAetherItems.SAKURA_MOA_EGG.get()).save(consumer, name("sakura_moa_incubation"));
-    }
-    protected static SimpleCookingRecipeBuilder smokingRecipe(ItemLike result, ItemLike ingredient) {
-        return SimpleCookingRecipeBuilder.smoking(Ingredient.of(ingredient), RecipeCategory.MISC, result, (float) 0.35, 100)
-                .unlockedBy(getHasName(ingredient), has(ingredient));
-    }
-    protected static SimpleCookingRecipeBuilder campfireCookingRecipe(ItemLike result, ItemLike ingredient) {
-        return SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(ingredient), RecipeCategory.MISC, result, (float) 0.35, 600)
-                .unlockedBy(getHasName(ingredient), has(ingredient));
     }
 }

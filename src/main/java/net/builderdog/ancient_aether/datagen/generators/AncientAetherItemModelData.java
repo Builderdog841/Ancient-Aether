@@ -93,6 +93,8 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
 
         item(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get().asItem(), "");
 
+        itemBlock(AncientAetherBlocks.AEROGEL_GLASS.get());
+        pane(AncientAetherBlocks.AEROGEL_GLASS_PANE.get(), AncientAetherBlocks.AEROGEL_GLASS.get(), "");
         item(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get().asItem(), "");
         itemBlock(AncientAetherBlocks.AEROGEL_GLASS_TRAPDOOR.get(), "_bottom");
 

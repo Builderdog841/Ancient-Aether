@@ -21,6 +21,10 @@
     "ancient_aether:hellfire_stone_mosaic",
     "ancient_aether:aerotic_stone_mosaic",
     "ancient_aether:gale_stone_mosaic",
-    "ancient_aether:ancient_obelisk"
+    "ancient_aether:ancient_obelisk",
+    "ancient_aether:aerogel_glass",
+    "ancient_aether:aerogel_glass_pane",
+    "ancient_aether:aerogel_glass_door",
+    "ancient_aether:aerogel_glass_trapdoor"
   ]
 }

@@ -2,6 +2,8 @@ package net.builderdog.ancient_aether.block;
 
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.block.construction.BookshelfBlock;
+import com.aetherteam.aether.block.construction.QuicksoilGlassBlock;
+import com.aetherteam.aether.block.construction.QuicksoilGlassPaneBlock;
 import com.aetherteam.aether.block.dungeon.DoorwayBlock;
 import com.aetherteam.aether.block.dungeon.TrappedBlock;
 import com.aetherteam.aether.block.dungeon.TreasureDoorwayBlock;
@@ -107,6 +109,8 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> DIVINE_SKYROOT_SAPLING = registerBlock("divine_skyroot_sapling", () -> new SaplingBlock(new DivineSkyrootTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get()).mapColor(MapColor.LAPIS)));
 
     //Aerogel Glass
+    public static final RegistryObject<GlassBlock> AEROGEL_GLASS = registerBlock("aerogel_glass", () -> new GlassBlock(Block.Properties.of().mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.HAT).strength(1.0F, 2000.0F).sound(SoundType.METAL).noOcclusion().isRedstoneConductor(AncientAetherBlocks::never).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
+    public static final RegistryObject<IronBarsBlock> AEROGEL_GLASS_PANE = registerBlock("aerogel_glass_pane", () -> new IronBarsBlock(Block.Properties.of().mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.HAT).strength(1.0F, 2000.0F).sound(SoundType.METAL).noOcclusion()));
     public static final RegistryObject<DoorBlock> AEROGEL_GLASS_DOOR = registerBlock("aerogel_glass_door", () -> new DoorBlock(Block.Properties.copy(OAK_DOOR).mapColor(MapColor.DIAMOND).strength(1.0F, 2000.0F).sound(SoundType.METAL).noOcclusion().isViewBlocking(AncientAetherBlocks::never), AncientAetherWoodTypes.AEROGEL_GLASS_BLOCK_SET));
     public static final RegistryObject<TrapDoorBlock> AEROGEL_GLASS_TRAPDOOR = registerBlock("aerogel_glass_trapdoor", () -> new TrapDoorBlock(Block.Properties.copy(Blocks.OAK_TRAPDOOR).mapColor(MapColor.DIAMOND).strength(1.0F, 2000.0F).sound(SoundType.METAL).noOcclusion().isViewBlocking(AncientAetherBlocks::never), AncientAetherWoodTypes.AEROGEL_GLASS_BLOCK_SET));
 
