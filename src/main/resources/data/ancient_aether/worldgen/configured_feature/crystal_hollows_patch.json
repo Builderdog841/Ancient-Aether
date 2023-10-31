@@ -5,10 +5,34 @@
     "extra_bottom_block_chance": 0.5,
     "extra_edge_column_chance": 0.3,
     "ground_state": {
-      "type": "minecraft:simple_state_provider",
-      "state": {
-        "Name": "ancient_aether:divine_gravel"
-      }
+      "type": "minecraft:weighted_state_provider",
+        "entries": [
+          {
+            "data": {
+              "Name": "ancient_aether:divine_gravel",
+              "Properties": {
+                "double_drops": "true"
+              }
+            },
+            "weight": 4
+          },
+          {
+            "data": {
+              "Name": "aether:holystone",
+              "Properties": {
+                "double_drops": "true"
+              }
+            },
+            "weight": 3
+          }
+        ],
+        "values": {
+          "type": "minecraft:uniform",
+          "value": {
+            "max_inclusive": 4,
+            "min_inclusive": 0
+          }
+        }
     },
     "replaceable": "#aether:holystone",
     "surface": "floor",
