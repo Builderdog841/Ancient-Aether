@@ -12,7 +12,7 @@
     },
     "replaceable": "#aether:holystone",
     "surface": "floor",
-    "vegetation_chance": 0.025,
+    "vegetation_chance": 0.02,
     "vegetation_feature": {
       "feature": "ancient_aether:crystal_tree",
       "placement": []
