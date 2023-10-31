@@ -2,6 +2,7 @@ package net.builderdog.ancient_aether;
 
 import com.aetherteam.aether.AetherConfig;
 //import com.mojang.logging.LogUtils;
+import com.aetherteam.aether.capability.AetherCapabilities;
 import com.aetherteam.cumulus.CumulusConfig;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
@@ -128,7 +129,6 @@ public class AncientAether {
         event.enqueueWork(() -> {
             AncientAetherBlocks.registerPots();
             AncientAetherBlocks.registerFlammability();
-
             registerComposting();
         });
 
