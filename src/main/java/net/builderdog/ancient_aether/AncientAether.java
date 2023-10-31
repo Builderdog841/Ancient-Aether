@@ -142,7 +142,6 @@ public class AncientAether {
     public void packSetup(AddPackFindersEvent event) {
         setupProgrammerArtPack(event);
         setupWorldgenOverridesDatapack(event);
-        //setupAssetOverridesPack(event);
 
         if (ModList.get().isLoaded("aether_genesis")) {
             setupCompatDatapack(event, "aether_genesis_compat", "Aether Genesis Compatibility", "Better Compatibility with Aether Genesis");
