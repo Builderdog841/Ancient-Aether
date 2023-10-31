@@ -92,7 +92,6 @@ public class AncientAether {
                 AncientAetherEffects.EFFECTS,
                 AncientAetherBiomeModifierSerializers.BIOME_MODIFIER_SERIALIZERS,
                 AncientAetherParticles.PARTICLES,
-
                 };
 
         DIRECTORY.toFile().mkdirs();
@@ -142,8 +141,7 @@ public class AncientAether {
 
     public void packSetup(AddPackFindersEvent event) {
         setupProgrammerArtPack(event);
-        setupNewWorldgenDatapack(event);
-        setupImprovedDefaultBiomesDatapack(event);
+        setupWorldgenOverridesDatapack(event);
         //setupAssetOverridesPack(event);
 
         if (ModList.get().isLoaded("aether_genesis")) {
@@ -173,27 +171,6 @@ public class AncientAether {
         }
     }
 
-    //private void setupAssetOverridesPack(AddPackFindersEvent event) {
-    //    if (event.getPackType() == PackType.CLIENT_RESOURCES) {
-     //       Path resourcePath = ModList.get().getModFileById("ancient_aether").getFile().findResource("packs/ancient_aether_asset_overrides");
-     //       PathPackResources pack = new PathPackResources(ModList.get().getModFileById("ancient_aether").getFile().getFileName() + ":" + resourcePath, true, resourcePath);
-     //       PackMetadataSection metadata = new PackMetadataSection(Component.literal("Tweaks the textures of the Base Mod"), SharedConstants.getCurrentVersion().getPackVersion(PackType.CLIENT_RESOURCES));
-     //       event.addRepositorySource((packConsumer) -> {
-      //          packConsumer.accept(Pack.create
-      //                  ("builtin/ancient_aether_asset_overrides",
-       //                         Component.literal("Ancient Aether Asset Overrides"),
-       //                         false,
-        //                        (string) -> pack,
-       //                         new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.SERVER_DATA), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()),
-         //                       PackType.CLIENT_RESOURCES,
-         //                       Pack.Position.TOP,
-         ////                       false,
-             //                   create(decorateWithSource(), true)));
-           // });
-       // }
-
-    //}
-
     private void setupCompatDatapack(AddPackFindersEvent event, String path, String displayName, String desc) {
         if (event.getPackType() == PackType.SERVER_DATA) {
             Path resourcePath = ModList.get().getModFileById("ancient_aether").getFile().findResource("packs/" + path);
@@ -205,43 +182,22 @@ public class AncientAether {
         }
     }
 
-    private void setupNewWorldgenDatapack(AddPackFindersEvent event) {
+    private void setupWorldgenOverridesDatapack(AddPackFindersEvent event) {
         if (event.getPackType() == PackType.SERVER_DATA) {
-            Path resourcePath = ModList.get().getModFileById(AncientAether.MOD_ID).getFile().findResource("packs/ancient_aether_new_worldgen");
+            Path resourcePath = ModList.get().getModFileById(AncientAether.MOD_ID).getFile().findResource("packs/ancient_aether_worldgen_overrides");
             PathPackResources pack = new PathPackResources(ModList.get().getModFileById(AncientAether.MOD_ID).getFile().getFileName() + ":" + resourcePath, true, resourcePath);
-            PackMetadataSection metadata = new PackMetadataSection(Component.translatable("pack.ancient_aether.ancient_aether_new_worldgen.description"), SharedConstants.getCurrentVersion().getPackVersion(PackType.SERVER_DATA));
+            PackMetadataSection metadata = new PackMetadataSection(Component.translatable("pack.ancient_aether.ancient_aether_worldgen_overrides.description"), SharedConstants.getCurrentVersion().getPackVersion(PackType.SERVER_DATA));
             event.addRepositorySource((source) ->
                     source.accept(Pack.create(
-                            "packs/ancient_aether_new_worldgen",
-                            Component.translatable("pack.ancient_aether.ancient_aether_new_worldgen.title"),
+                            "packs/ancient_aether_worldgen_overrides",
+                            Component.translatable("pack.ancient_aether.ancient_aether_worldgen_overrides.title"),
                             false,
                             (string) -> pack,
                             new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.SERVER_DATA), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()),
                             PackType.SERVER_DATA,
                             Pack.Position.TOP,
                             false,
-                            create(decorateWithSource(), AncientAetherConfig.COMMON.new_worldgen_datapack.get()))
-                    )
-            );
-        }
-    }
-
-    private void setupImprovedDefaultBiomesDatapack(AddPackFindersEvent event) {
-        if (event.getPackType() == PackType.SERVER_DATA) {
-            Path resourcePath = ModList.get().getModFileById(AncientAether.MOD_ID).getFile().findResource("packs/ancient_aether_default_biome_improvements");
-            PathPackResources pack = new PathPackResources(ModList.get().getModFileById(AncientAether.MOD_ID).getFile().getFileName() + ":" + resourcePath, true, resourcePath);
-            PackMetadataSection metadata = new PackMetadataSection(Component.translatable("pack.ancient_aether.ancient_aether_default_biome_improvements.description"), SharedConstants.getCurrentVersion().getPackVersion(PackType.SERVER_DATA));
-            event.addRepositorySource((source) ->
-                    source.accept(Pack.create(
-                            "builtin/ancient_aether_default_biome_improvements",
-                            Component.translatable("pack.ancient_aether.ancient_aether_default_biome_improvements.title"),
-                            false,
-                            (string) -> pack,
-                            new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.SERVER_DATA), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()),
-                            PackType.SERVER_DATA,
-                            Pack.Position.TOP,
-                            false,
-                            create(decorateWithSource(), AncientAetherConfig.COMMON.default_biome_datapack.get()))
+                            create(decorateWithSource(), AncientAetherConfig.COMMON.worldgen_overrides.get()))
                     )
             );
         }

@@ -10,8 +10,7 @@ public class AncientAetherConfig {
     public static class Common {
 
         public final ConfigValue<Integer> ancient_aether_biome_weight;
-        public final ConfigValue<Boolean> default_biome_datapack;
-        public final ConfigValue<Boolean> new_worldgen_datapack;
+        public final ConfigValue<Boolean> worldgen_overrides;
         public Common(ForgeConfigSpec.Builder builder) {
 
             builder.push("Worldgen");
@@ -22,14 +21,7 @@ public class AncientAetherConfig {
             builder.pop();
 
             builder.push("Worldgen");
-            default_biome_datapack = builder
-                    .comment("Enables the Default Biome Improvement Datapack by default")
-                    .translation("config.ancient_aether.common.worldgen.default_biome_datapack")
-                    .define("Enables Biome Improvement Datapack by default", true);
-            builder.pop();
-
-            builder.push("Worldgen");
-            new_worldgen_datapack = builder
+            worldgen_overrides = builder
                     .comment("Enables the New Worldgen Datapack by default")
                     .translation("config.ancient_aether.common.worldgen.new_worldgen_datapack")
                     .define("Enables New Worldgen by default", true);
