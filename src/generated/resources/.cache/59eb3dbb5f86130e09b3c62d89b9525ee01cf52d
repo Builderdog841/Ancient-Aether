@@ -1,4 +1,4 @@
-// 1.20.1	2023-10-30T21:51:15.7490729	Loot Tables
+// 1.20.1	2023-11-01T15:42:28.114305	Loot Tables
 095a70e341d19e7b3548ddc32402abe48a79992a data/ancient_aether/loot_tables/blocks/aerogel_glass.json
 9fe2ea21af5246ad9f95848f680099717062eb1c data/ancient_aether/loot_tables/blocks/aerogel_glass_door.json
 0f84d5b4591633acc6c8dcc82b7c14988b545a9f data/ancient_aether/loot_tables/blocks/aerogel_glass_pane.json
@@ -11,6 +11,7 @@ fc8f3ed9297b6a4e28e2ff4bdb8b8616bd64589b data/ancient_aether/loot_tables/blocks/
 2fbf2380b068bbe82bb676ea088de8a539e73bea data/ancient_aether/loot_tables/blocks/aerotic_wall.json
 19550c94241d755ad6a92a5ba806a5e65d134086 data/ancient_aether/loot_tables/blocks/aether_quartz_ore.json
 b923778a3704ec4aaff7a5fd8ce9aeb56c25291c data/ancient_aether/loot_tables/blocks/ambrosium_campfire.json
+8963d1221a7bfc5af7345ff200625c4f82c2aae2 data/ancient_aether/loot_tables/blocks/ancient_holystone_vase.json
 31e24a624d606ca0cfed9b28e6aa09536aecfd9a data/ancient_aether/loot_tables/blocks/ancient_obelisk.json
 f346e2fa7e1e914c323a66125f68b2ae7c3ecda5 data/ancient_aether/loot_tables/blocks/angelic_lantern.json
 50401c0d72532e1255e3c534f66b3b7b9e656a43 data/ancient_aether/loot_tables/blocks/angelic_stone_mosaic.json

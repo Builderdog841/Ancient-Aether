@@ -1,47 +1,61 @@
 package net.builderdog.ancient_aether.block.functional;
 
+import com.aetherteam.aether.client.AetherSoundEvents;
+import com.aetherteam.aether.item.AetherItems;
+import com.aetherteam.aether.loot.AetherLoot;
+import net.builderdog.ancient_aether.block.AncientAetherBlocks;
+import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.HorizontalDirectionalBlock;
-import net.minecraft.world.level.block.Mirror;
-import net.minecraft.world.level.block.Rotation;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.stats.Stats;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.level.storage.loot.LootParams;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
+import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.NotNull;
 
-public class AncientHolystoneVaseBlock extends Block {
+import java.util.List;
 
-    public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
-    protected static final VoxelShape SHAPE = Block.box(4.0D, 0.0D, 4.0D, 12.0D, 11.0D, 12.0D);
+public class AncientHolystoneVaseBlock extends HolystoneVaseBlock {
+
     public AncientHolystoneVaseBlock(Properties properties) {
         super(properties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
     }
 
-    public BlockState getStateForPlacement(BlockPlaceContext blockPlaceContext) {
-        return this.defaultBlockState().setValue(FACING, blockPlaceContext.getHorizontalDirection().getOpposite());
-    }
+    @Override
+    public @NotNull InteractionResult use(@NotNull BlockState blockstate, @NotNull Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
+        super.use(blockstate, level, pos, player, hand, hit);
+        int x = pos.getX();
+        int y = pos.getY();
+        int z = pos.getZ();
 
-    public @NotNull BlockState rotate(BlockState blockState, Rotation rotation) {
-        return blockState.setValue(FACING, rotation.rotate(blockState.getValue(FACING)));
-    }
+        if ((player instanceof ServerPlayer serverPlayer ? serverPlayer.getMainHandItem() : ItemStack.EMPTY).getItem() == AetherItems.AMBROSIUM_SHARD.get()) {
+            level.setBlockAndUpdate(pos, AncientAetherBlocks.HOLYSTONE_VASE.get().defaultBlockState().setValue(FACING, blockstate.getValue(FACING)));
+            assert player instanceof ServerPlayer;
+            ServerPlayer livingEntity = (ServerPlayer) player;
+            ItemStack stack = player.getMainHandItem();
+            if (!livingEntity.getAbilities().instabuild) {
+                player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
+                stack.shrink(1);
+            }
+                if (level instanceof ServerLevel _level) {
+                    ItemEntity entityToSpawn = new ItemEntity(_level, x + 1, y, z, new ItemStack(AncientAetherItems.ANCIENT_RUNE.get()));
+                    entityToSpawn.setPickUpDelay(10);
+                    _level.addFreshEntity(entityToSpawn);
+            }
 
-    public @NotNull BlockState mirror(BlockState blockState, Mirror mirror) {
-        return blockState.rotate(mirror.getRotation(blockState.getValue(FACING)));
-    }
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> p_48725_) {
-        p_48725_.add(FACING);
-    }
-
-    public @NotNull VoxelShape getShape(BlockState p_53517_, @NotNull BlockGetter p_53518_, @NotNull BlockPos p_53519_, @NotNull CollisionContext p_53520_) {
-        Vec3 vec3 = p_53517_.getOffset(p_53518_, p_53519_);
-        return SHAPE.move(vec3.x, vec3.y, vec3.z);
+        }
+        return InteractionResult.SUCCESS;
     }
 }

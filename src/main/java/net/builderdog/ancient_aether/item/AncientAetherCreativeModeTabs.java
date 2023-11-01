@@ -149,6 +149,7 @@ public class AncientAetherCreativeModeTabs {
             if (ModList.get().isLoaded("lost_aether_content")) {
                 event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.HELLFIRE_LANTERN.get()), new ItemStack(AncientAetherBlocks.GALE_LANTERN.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             }
+            event.getEntries().putBefore(new ItemStack(AncientAetherBlocks.HOLYSTONE_VASE.get()), new ItemStack(AncientAetherBlocks.ANCIENT_HOLYSTONE_VASE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putBefore(new ItemStack(AetherBlocks.TREASURE_CHEST.get()), new ItemStack(AncientAetherBlocks.HOLYSTONE_VASE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AetherBlocks.SKYROOT_BOOKSHELF.get()), new ItemStack(AncientAetherBlocks.HIGHSPROOT_BOOKSHELF.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.HIGHSPROOT_BOOKSHELF.get()), new ItemStack(AncientAetherBlocks.SAKURA_BOOKSHELF.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);

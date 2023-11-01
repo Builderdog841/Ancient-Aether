@@ -2,8 +2,6 @@ package net.builderdog.ancient_aether.block;
 
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.block.construction.BookshelfBlock;
-import com.aetherteam.aether.block.construction.QuicksoilGlassBlock;
-import com.aetherteam.aether.block.construction.QuicksoilGlassPaneBlock;
 import com.aetherteam.aether.block.dungeon.DoorwayBlock;
 import com.aetherteam.aether.block.dungeon.TrappedBlock;
 import com.aetherteam.aether.block.dungeon.TreasureDoorwayBlock;
@@ -11,6 +9,7 @@ import com.aetherteam.aether.block.natural.AetherDoubleDropBlock;
 import com.aetherteam.aether.block.natural.AetherDoubleDropsLeaves;
 import com.aetherteam.aether.block.natural.AetherDoubleDropsOreBlock;
 import com.aetherteam.aether.block.natural.LeavesWithParticlesBlock;
+import com.aetherteam.aether.item.AetherItems;
 import com.aetherteam.aether.mixin.mixins.common.accessor.FireBlockAccessor;
 import net.builderdog.ancient_aether.block.building.*;
 import net.builderdog.ancient_aether.block.functional.*;
@@ -39,6 +38,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.Objects;
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 import static com.aetherteam.aether.block.AetherBlocks.*;
@@ -243,16 +244,28 @@ public class AncientAetherBlocks {
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.get(), 60, 100);
     }
 
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
-        RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn);
-        return toReturn;
+    private static <T extends Block> RegistryObject<T> baseRegister(String name, Supplier<? extends T> block, Function<RegistryObject<T>, Supplier<? extends Item>> item) {
+        RegistryObject<T> register = BLOCKS.register(name, block);
+        AncientAetherItems.ITEMS.register(name, item.apply(register));
+        return register;
     }
 
-    private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
-        AncientAetherItems.ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties()));
+    @SuppressWarnings("unchecked")
+    private static <B extends Block> RegistryObject<B> registerBlock(String name, Supplier<? extends Block> block) {
+        return (RegistryObject<B>) baseRegister(name, block, AncientAetherBlocks::registerBlockItem);
     }
+
+    private static <B extends Block> Supplier<BlockItem> registerBlockItem(final RegistryObject<B> blockRegistryObject) {
+        return () -> {
+            B block = Objects.requireNonNull(blockRegistryObject.get());
+            if (block == ANCIENT_HOLYSTONE_VASE.get()) {
+                return new BlockItem(block, new Item.Properties().rarity(AetherItems.AETHER_LOOT));
+            } else {
+                    return new BlockItem(block, new Item.Properties());
+                }
+            };
+        }
+
     public static void registerWoodTypes() {
         WoodType.register(AncientAetherWoodTypes.HIGHSPROOT);
         WoodType.register(AncientAetherWoodTypes.SAKURA);
