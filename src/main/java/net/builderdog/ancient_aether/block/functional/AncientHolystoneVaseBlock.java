@@ -45,7 +45,7 @@ public class AncientHolystoneVaseBlock extends HolystoneVaseBlock {
                 stack.shrink(1);
             }
                 if (level instanceof ServerLevel serverLevel) {
-                        ItemEntity entityToSpawn = new ItemEntity(serverLevel, x, y, z, new ItemStack((Objects.requireNonNull(ForgeRegistries.ITEMS.tags()).getTag(AncientAetherTags.Items.ANCIENT_HOLYSTONE_VASE_LOOT).getRandomElement(RandomSource.create()).orElse(Items.AIR))));
+                        ItemEntity entityToSpawn = new ItemEntity(serverLevel, x, y + 1, z, new ItemStack((Objects.requireNonNull(ForgeRegistries.ITEMS.tags()).getTag(AncientAetherTags.Items.ANCIENT_HOLYSTONE_VASE_LOOT).getRandomElement(RandomSource.create()).orElse(Items.AIR))));
                         entityToSpawn.setPickUpDelay(10);
                         serverLevel.addFreshEntity(entityToSpawn);
                 }
