@@ -1,6 +1,6 @@
 {
   "carvers": {},
-  "creature_spawn_probability": 0.12,
+  "creature_spawn_probability": 0.18,
   "downfall": 0.0,
   "effects": {
     "fog_color": 9671612,
@@ -17,33 +17,19 @@
     "water_fog_color": 329011
   },
   "features": [
-    [
-      "aether:quicksoil_shelf"
-    ],
-    [
-      "aether:water_lake"
-    ],
     [],
     [],
     [],
     [],
-    [
-      "aether:aether_dirt_ore",
-      "aether:icestone_ore",
-      "aether:ambrosium_ore",
-      "aether:zanite_ore",
-      "aether:gravitite_ore"
-    ],
+    [],
+    [],
+    [],
+    [],
     [],
     [
-      "aether:water_spring"
-    ],
-    [
-      "ancient_aether:cold_skyroot_forest_trees",
-      "aether:holiday_tree",
       "aether:grass_patch",
       "aether:tall_grass_patch",
-      "ancient_aether:forest_flower_patch",
+      "ancient_aether:meadow_flower_patch",
       "aether:berry_bush_patch"
     ],
     [

@@ -13,7 +13,6 @@ public class AncientAetherBiomes {
     public static final ResourceKey<Biome> FESTIVE_WYNDCAP_TAIGA = createKey("festive_wyndcap_taiga");
     public static final ResourceKey<Biome> WYNDCAP_HIGHLAND = createKey("wyndcap_highland");
     public static final ResourceKey<Biome> WYNDCAP_PEAKS = createKey("wyndcap_peaks");
-    public static final ResourceKey<Biome> COLD_SKYROOT_FOREST = createKey("cold_skyroot_forest");
 
     //Sakura Jungle
     public static final ResourceKey<Biome> SKYROOT_JUNGLE = createKey("skyroot_jungle");
@@ -23,6 +22,9 @@ public class AncientAetherBiomes {
     public static final ResourceKey<Biome> MYTHICAL_FOREST = createKey("mythical_forest");
     public static final ResourceKey<Biome> MYTHICAL_CLEARING = createKey("mythical_clearing");
     public static final ResourceKey<Biome> CRYSTAL_HOLLOWS = createKey("crystal_hollows");
+
+    //Void
+    public static final ResourceKey<Biome> AETHER_VOID = createKey("aether_void");
 
     private static ResourceKey<Biome> createKey(String name) {
         return ResourceKey.create(Registries.BIOME, new ResourceLocation(AncientAether.MOD_ID, name));
