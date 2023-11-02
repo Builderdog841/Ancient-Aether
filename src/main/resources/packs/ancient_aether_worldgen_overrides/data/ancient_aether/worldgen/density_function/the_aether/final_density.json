@@ -11,12 +11,19 @@
             "type": "minecraft:add",
             "argument1": -0.13,
             "argument2": {
-              "type": "minecraft:range_choice",
-              "input": "ancient_aether:the_aether/continents",
-              "min_inclusive": -0.3,
-              "max_exclusive": 0.3,
-              "when_in_range": "ancient_aether:the_aether/base_islands",
-              "when_out_of_range": "ancient_aether:the_aether/void"
+                "type": "minecraft:range_choice",
+                "input": "ancient_aether:the_aether/continents",
+                "min_inclusive": -1,
+                "max_exclusive": -0.5,
+                "when_in_range": "ancient_aether:the_aether/base_islands",
+                "when_out_of_range": {
+                  "type": "minecraft:range_choice",
+                  "input": "ancient_aether:the_aether/continents",
+                  "min_inclusive": 0.5,
+                  "max_exclusive": 1,
+                  "when_in_range": "ancient_aether:the_aether/base_islands",
+                  "when_out_of_range": "ancient_aether:the_aether/void"
+                }
             }
           }
       }
