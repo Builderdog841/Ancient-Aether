@@ -27,7 +27,7 @@ public class AncientAetherRegion extends Region {
         addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, Climate.Parameter.span(-1F, -0.5F), fullRange, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_MEADOW);
         addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, Climate.Parameter.span(0.5F, 1F), fullRange, fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_MEADOW);
+                AncientAetherBiomes.MYTHICAL_FOREST);
 
         addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, Climate.Parameter.span(-0.5F, 0.5F), fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.AETHER_VOID);
