@@ -1,0 +1,57 @@
+{
+  "type": "minecraft:selector",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:ancient_rune",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:golden_amber",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:ambrosium_block",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_gemstone",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:healing_stone",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_ring",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_pendant",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:enchanted_dart_shooter",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:aerogel_bottle",
+          "weight": 5
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "ancient_aether:selectors/ancient_holystone_vase_loot"
+}
