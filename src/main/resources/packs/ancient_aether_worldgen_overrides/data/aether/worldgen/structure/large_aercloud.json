@@ -1,6 +1,6 @@
 {
   "type": "aether:large_aercloud",
-  "biomes": "#aether:has_large_aercloud",
+  "biomes": "#ancient_aether:deprecated",
   "blocks": {
     "type": "minecraft:simple_state_provider",
     "state": {
@@ -10,7 +10,7 @@
       }
     }
   },
-  "rangeY": 96,
+  "rangeY": 4,
   "size": 3,
   "spawn_overrides": {},
   "step": "surface_structures"

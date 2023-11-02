@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#aether:is_aether",
+  "features": "ancient_aether:cloudbed",
+  "step": "underground_ores"
+}
