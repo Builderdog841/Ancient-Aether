@@ -28,38 +28,9 @@
       "y_scale": 0.5
     },
     "continents": 0.0,
-    "depth": "aether:the_aether/depth",
-    "erosion": "aether:the_aether/erosion",
-    "final_density": {
-      "type": "minecraft:squeeze",
-      "argument": {
-        "type": "minecraft:interpolated",
-        "argument": {
-          "type": "minecraft:blend_density",
-          "argument": {
-            "type": "minecraft:add",
-            "argument1": {
-              "type": "minecraft:add",
-              "argument1": 0.2,
-              "argument2": {
-                "type": "minecraft:add",
-                "argument1": -0.07,
-                "argument2": "aether:the_aether/base_islands/base_islands"
-              }
-            },
-            "argument2": {
-              "type": "minecraft:add",
-              "argument1": 0.2,
-              "argument2": {
-                "type": "minecraft:add",
-                "argument1": -0.07,
-                "argument2": "aether:the_aether/hilly_terrain/hilly_terrain"
-              }
-            }
-          }
-        }
-      }
-    },
+    "depth": "ancient_aether:the_aether/depth",
+    "erosion": "ancient_aether:the_aether/erosion",
+    "final_density": "ancient_aether:the_aether/final_density",
     "fluid_level_floodedness": 0.0,
     "fluid_level_spread": 0.0,
     "initial_density_without_jaggedness": 0.0,
