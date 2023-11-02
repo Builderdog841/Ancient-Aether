@@ -1,53 +1,24 @@
 {
   "type": "minecraft:squeeze",
   "argument": {
-    "type": "minecraft:mul",
-    "argument1": 0.333333,
-    "argument2": {
-      "type": "minecraft:add",
-      "argument1": -0.2,
-      "argument2": {
-        "type": "minecraft:interpolated",
-        "argument": {
-          "type": "minecraft:blend_density",
-          "argument": {
+    "type": "minecraft:interpolated",
+    "argument": {
+      "type": "minecraft:blend_density",
+      "argument": {
+        "type": "minecraft:add",
+          "argument1": 0.2,
+          "argument2": {
             "type": "minecraft:add",
-            "argument1": -1.4,
+            "argument1": -0.13,
             "argument2": {
-              "type": "minecraft:mul",
-              "argument1": {
-                "type": "minecraft:y_clamped_gradient",
-                "from_y": 32,
-                "to_y": 112,
-                "from_value": 0,
-                "to_value": 1
-              },
-              "argument2": {
-                "type": "minecraft:add",
-                "argument1": 1.4,
-                "argument2": {
-                  "type": "minecraft:add",
-                  "argument1": -0.1,
-                  "argument2": {
-                    "type": "minecraft:mul",
-                    "argument1": {
-                      "type": "minecraft:y_clamped_gradient",
-                      "from_y": 112,
-                      "to_y": 210,
-                      "from_value": 1,
-                      "to_value": 0
-                    },
-                    "argument2": {
-                      "type": "minecraft:add",
-                      "argument1": 0.1,
-                      "argument2": "ancient_aether:the_aether/sloped_cheese"
-                    }
-                  }
-                }
-              }
+              "type": "minecraft:range_choice",
+              "input": "ancient_aether:the_aether/continents",
+              "min_inclusive": 0,
+              "max_exclusive": 1,
+              "when_in_range": "ancient_aether:the_aether/base_islands",
+              "when_out_of_range": "ancient_aether:the_aether/void"
             }
           }
-        }
       }
     }
   }
