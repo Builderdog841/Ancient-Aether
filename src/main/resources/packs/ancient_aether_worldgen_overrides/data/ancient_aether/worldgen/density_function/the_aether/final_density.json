@@ -1,27 +1,51 @@
 {
   "type": "minecraft:squeeze",
   "argument": {
-    "type": "minecraft:interpolated",
-    "argument": {
-      "type": "minecraft:blend_density",
-      "argument": {
-        "type": "minecraft:add",
-        "argument1": {
-          "type": "minecraft:add",
-          "argument1": 0.2,
-          "argument2": {
+    "type": "minecraft:mul",
+    "argument1": 0.333333,
+    "argument2": {
+      "type": "minecraft:add",
+      "argument1": -0.2,
+      "argument2": {
+        "type": "minecraft:interpolated",
+        "argument": {
+          "type": "minecraft:blend_density",
+          "argument": {
             "type": "minecraft:add",
-            "argument1": -0.07,
-            "argument2": "ancient_aether:the_aether/base_islands/base_islands"
-          }
-        },
-        "argument2": {
-          "type": "minecraft:add",
-          "argument1": 0.2,
-          "argument2": {
-            "type": "minecraft:add",
-            "argument1": -0.07,
-            "argument2": "ancient_aether:the_aether/hilly_terrain/hilly_terrain"
+            "argument1": -1.4,
+            "argument2": {
+              "type": "minecraft:mul",
+              "argument1": {
+                "type": "minecraft:y_clamped_gradient",
+                "from_y": 32,
+                "to_y": 112,
+                "from_value": 0,
+                "to_value": 1
+              },
+              "argument2": {
+                "type": "minecraft:add",
+                "argument1": 1.4,
+                "argument2": {
+                  "type": "minecraft:add",
+                  "argument1": -0.1,
+                  "argument2": {
+                    "type": "minecraft:mul",
+                    "argument1": {
+                      "type": "minecraft:y_clamped_gradient",
+                      "from_y": 112,
+                      "to_y": 210,
+                      "from_value": 1,
+                      "to_value": 0
+                    },
+                    "argument2": {
+                      "type": "minecraft:add",
+                      "argument1": 0.1,
+                      "argument2": "ancient_aether:the_aether/sloped_cheese"
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
