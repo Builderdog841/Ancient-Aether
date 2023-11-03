@@ -29,7 +29,7 @@
     },
     "continents": "ancient_aether:the_aether/continents",
     "depth": "ancient_aether:the_aether/depth",
-    "erosion": 0.0,
+    "erosion": "ancient_aether:the_aether/erosion",
     "final_density": "ancient_aether:the_aether/final_density",
     "fluid_level_floodedness": 0.0,
     "fluid_level_spread": 0.0,
