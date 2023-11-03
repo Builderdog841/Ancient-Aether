@@ -1,47 +1,33 @@
 {
+  "type": "minecraft:add",
+  "argument1": 0.01,
+  "argument2": {
     "type": "minecraft:add",
-    "argument1": 0.01,
+    "argument1": -0.2,
     "argument2": {
-      "type": "minecraft:add",
-      "argument1": -0.2,
+      "type": "minecraft:mul",
+      "argument1": {
+        "type": "minecraft:y_clamped_gradient",
+        "from_value": 0.0,
+        "from_y": 32,
+        "to_value": 1.0,
+        "to_y": 112
+      },
       "argument2": {
-        "type": "minecraft:mul",
-        "argument1": {
-          "type": "minecraft:y_clamped_gradient",
-          "from_value": 0.0,
-          "from_y": 32,
-          "to_value": 1.0,
-          "to_y": 112
-        },
+        "type": "minecraft:add",
+        "argument1": 0.1,
         "argument2": {
           "type": "minecraft:add",
-          "argument1": 0.1,
+          "argument1": -0.2,
           "argument2": {
-            "type": "minecraft:add",
-            "argument1": -0.2,
-            "argument2": {
-              "type": "minecraft:mul",
-              "argument1": {
-                "type": "minecraft:y_clamped_gradient",
-                "from_value": 1.0,
-                "from_y": 112,
-                "to_value": 0.0,
-                "to_y": 136
-              },
-              "argument2": {
-                "type": "add",
-                "argument1": 0.2,
-                "argument2": {
-                  "type": "minecraft:add",
-                  "argument1": -0.035,
-                  "argument2": "ancient_aether:the_aether/base_3d_noise"
-                }
-              }
-            }
+            "type": "minecraft:mul",
+            "argument1": "ancient_aether:the_aether/upper_base_island_clamper",
+            "argument2": "ancient_aether:the_aether/base_3d_noise"
           }
         }
       }
     }
+  }
 }
 
 

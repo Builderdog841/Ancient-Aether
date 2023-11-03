@@ -9,7 +9,7 @@
         "argument1": 0.2,
         "argument2": {
           "type": "minecraft:add",
-          "argument1": -0.07,
+          "argument1": -0.035,
           "argument2": {
             "type": "minecraft:range_choice",
             "input": "ancient_aether:the_aether/continents",
@@ -22,10 +22,7 @@
               "min_inclusive": 0.5,
               "max_exclusive": 1,
               "when_in_range": "ancient_aether:the_aether/base_islands",
-              "when_out_of_range": {
-                "type": "minecraft:cache_2d",
-                "argument": "ancient_aether:the_aether/void"
-              }
+              "when_out_of_range": "ancient_aether:the_aether/void"
             }
           }
         }

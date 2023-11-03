@@ -1,12 +1,14 @@
 package net.builderdog.ancient_aether.world.biomes;
 
+import com.aetherteam.aether.data.resources.registries.AetherDensityFunctions;
 import net.builderdog.ancient_aether.AncientAether;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.levelgen.DensityFunction;
 
-public class AncientAetherBiomes {
+public class AncientAetherBiomes extends AetherDensityFunctions {
 
     public static final ResourceKey<Biome> WYNDCAP_TAIGA = createKey("wyndcap_taiga");
     public static final ResourceKey<Biome> FESTIVE_WYNDCAP_TAIGA = createKey("festive_wyndcap_taiga");
