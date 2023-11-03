@@ -26,34 +26,22 @@
                 "from_value": 1.0,
                 "from_y": 112,
                 "to_value": 0.0,
-                "to_y": 156
+                "to_y": 128
               },
               "argument2": {
                 "type": "add",
-                "argument1": {
-                  "type": "minecraft:add",
-                  "argument1": 0.2,
-                  "argument2": {
-                    "type": "minecraft:add",
-                    "argument1": -0.035,
-                    "argument2": "ancient_aether:the_aether/base_3d_noise"
-                  }
-                },
+                "argument1": 0.2,
                 "argument2": {
-                  "type": "minecraft:quarter_negative",
-                  "argument": {
-                    "type": "minecraft:noise",
-                    "noise": "ancient_aether:jagged",
-                    "xz_scale": 400,
-                    "y_scale": 0
-                  }
+                  "type": "minecraft:add",
+                  "argument1": -0.035,
+                  "argument2": "ancient_aether:the_aether/base_3d_noise"
                 }
               }
             }
           }
         }
       }
-  }
+    }
 }
 
 

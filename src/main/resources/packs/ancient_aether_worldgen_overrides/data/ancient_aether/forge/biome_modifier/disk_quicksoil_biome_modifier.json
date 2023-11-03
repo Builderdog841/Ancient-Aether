@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#ancient_aether:has_quicksoil_disks",
-  "features": "ancient_aether:disk_quicksoil",
-  "step": "underground_ores"
-}

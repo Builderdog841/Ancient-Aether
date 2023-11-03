@@ -63,7 +63,7 @@
         }
       ]
     },
-    "tries": 2048,
+    "tries": 4096,
     "xz_spread": 8,
     "y_spread": 1
   }
