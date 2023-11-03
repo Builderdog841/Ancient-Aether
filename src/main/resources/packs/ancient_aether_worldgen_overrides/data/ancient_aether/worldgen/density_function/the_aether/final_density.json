@@ -25,7 +25,7 @@
                     "max_exclusive": 1,
                     "when_in_range": "ancient_aether:the_aether/base_islands",
                     "when_out_of_range": {
-                      "type": "minecraft:cache_once",
+                      "type": "minecraft:blend_density",
                       "argument": "ancient_aether:the_aether/void"
                     }
                   }
