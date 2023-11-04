@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "aether:cold_aercloud",
     "#aether:holystone",
     "aether:ambrosium_ore",
     "aether:zanite_ore",

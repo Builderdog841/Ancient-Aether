@@ -2,21 +2,77 @@
   "type": "minecraft:range_choice",
   "input": "ancient_aether:the_aether/continents",
   "min_inclusive": 0.7,
-  "max_exclusive": 1,
+  "max_exclusive": 1.5,
   "when_in_range":  1,
   "when_out_of_range": {
     "type": "minecraft:range_choice",
     "input": "ancient_aether:the_aether/continents",
-    "min_inclusive": 0.6,
+    "min_inclusive": 0.68,
     "max_exclusive": 0.7,
-    "when_in_range":  1.2,
+    "when_in_range":  1.1,
     "when_out_of_range": {
       "type": "minecraft:range_choice",
       "input": "ancient_aether:the_aether/continents",
-      "min_inclusive": 0.5,
-      "max_exclusive": 0.6,
-      "when_in_range": 1.4,
-      "when_out_of_range": 0
+      "min_inclusive": 0.66,
+      "max_exclusive": 0.68,
+      "when_in_range": 1.2,
+      "when_out_of_range": {
+        "type": "minecraft:range_choice",
+        "input": "ancient_aether:the_aether/continents",
+        "min_inclusive": 0.64,
+        "max_exclusive": 0.66,
+        "when_in_range": 1.3,
+        "when_out_of_range": {
+          "type": "minecraft:range_choice",
+          "input": "ancient_aether:the_aether/continents",
+          "min_inclusive": 0.62,
+          "max_exclusive": 0.64,
+          "when_in_range": 1.4,
+          "when_out_of_range": {
+            "type": "minecraft:range_choice",
+            "input": "ancient_aether:the_aether/continents",
+            "min_inclusive": 0.6,
+            "max_exclusive": 0.62,
+            "when_in_range": 1.5,
+            "when_out_of_range": {
+              "type": "minecraft:range_choice",
+              "input": "ancient_aether:the_aether/continents",
+              "min_inclusive": 0.58,
+              "max_exclusive": 0.6,
+              "when_in_range": 1.6,
+              "when_out_of_range": {
+                "type": "minecraft:range_choice",
+                "input": "ancient_aether:the_aether/continents",
+                "min_inclusive": 0.56,
+                "max_exclusive": 0.58,
+                "when_in_range": 1.7,
+                "when_out_of_range": {
+                  "type": "minecraft:range_choice",
+                  "input": "ancient_aether:the_aether/continents",
+                  "min_inclusive": 0.54,
+                  "max_exclusive": 0.56,
+                  "when_in_range": 1.8,
+                  "when_out_of_range": {
+                    "type": "minecraft:range_choice",
+                    "input": "ancient_aether:the_aether/continents",
+                    "min_inclusive": 0.52,
+                    "max_exclusive": 0.54,
+                    "when_in_range": 1.9,
+                    "when_out_of_range": {
+                      "type": "minecraft:range_choice",
+                      "input": "ancient_aether:the_aether/continents",
+                      "min_inclusive": 0.5,
+                      "max_exclusive": 0.52,
+                      "when_in_range": 2,
+                      "when_out_of_range": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
