@@ -6,10 +6,10 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.levelgen.DensityFunction;
 
 public class AncientAetherBiomes extends AetherDensityFunctions {
 
+    public static final ResourceKey<Biome> CLOUD_OCEAN = createKey("cloud_ocean");
     public static final ResourceKey<Biome> WYNDCAP_TAIGA = createKey("wyndcap_taiga");
     public static final ResourceKey<Biome> FESTIVE_WYNDCAP_TAIGA = createKey("festive_wyndcap_taiga");
     public static final ResourceKey<Biome> WYNDCAP_HIGHLAND = createKey("wyndcap_highland");
@@ -19,7 +19,6 @@ public class AncientAetherBiomes extends AetherDensityFunctions {
     public static final ResourceKey<Biome> MYTHICAL_FOREST = createKey("mythical_forest");
     public static final ResourceKey<Biome> MYTHICAL_CLEARING = createKey("mythical_clearing");
     public static final ResourceKey<Biome> CRYSTAL_HOLLOWS = createKey("crystal_hollows");
-    public static final ResourceKey<Biome> AETHER_VOID = createKey("aether_void");
 
     private static ResourceKey<Biome> createKey(String name) {
         return ResourceKey.create(Registries.BIOME, new ResourceLocation(AncientAether.MOD_ID, name));

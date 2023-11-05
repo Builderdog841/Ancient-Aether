@@ -1,4 +1,4 @@
-// 1.20.1	2023-10-30T22:15:58.5884972	Recipes
+// 1.20.1	2023-11-05T10:33:57.8860758	Recipes
 f577544e09bc76ee8d01261626e9bd9a148a6af0 data/aether/advancements/recipes/building_blocks/aerotic_slab_from_aerotic_stone_stonecutting.json
 b732d41a1d340f95580b34bf08becb77d1035b36 data/aether/advancements/recipes/building_blocks/aerotic_stairs_from_aerotic_stone_stonecutting.json
 8821165b34de05911757ae67e13f024e13f0cc58 data/aether/advancements/recipes/building_blocks/aerotic_stone_from_corrupted_light_aerotic_stone_stonecutting.json
@@ -118,7 +118,7 @@ c356bcc1f738255dc606db94e646dd474c503d32 data/ancient_aether/recipes/aerotic_sta
 3dddcc32225a7d3a0e5f90bac335e4467e02d992 data/ancient_aether/recipes/aerotic_stone_mosaic.json
 e0f079365bb449fa59b448443c1b5f856f9ad4b5 data/ancient_aether/recipes/aerotic_wall.json
 2850a8292bf549d6bd31df07be1b8a64c832a2d6 data/ancient_aether/recipes/ambrosium_campfire.json
-3cd45e968bf5296056f879dda9a92a518b287dff data/ancient_aether/recipes/ancient_rune.json
+20fbf47f5f1f5acaed465aa843f4e73e39a7c1e4 data/ancient_aether/recipes/ancient_rune.json
 44892ee15876955e9837c73373ce09ba52f8a841 data/ancient_aether/recipes/angelic_lantern.json
 864c87a0c4279ae530c57afdcf831b8aaf05aa36 data/ancient_aether/recipes/angelic_stone_mosaic.json
 86d687ff0946c74a931e4c7179ebb32cd686844d data/ancient_aether/recipes/buffalo_carpet.json

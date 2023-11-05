@@ -24,12 +24,19 @@ public class AncientAetherRegion extends Region {
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper) {
         Climate.Parameter fullRange = Climate.Parameter.span(-1.5F, 1.5F);
 
-        addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, Climate.Parameter.span(-1F, -0.5F), fullRange, fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_MEADOW);
-        addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, Climate.Parameter.span(0.5F, 1F), fullRange, fullRange, fullRange, 0),
-                AncientAetherBiomes.MYTHICAL_FOREST);
+        addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, Climate.Parameter.span(-1.5F, -0.6F), fullRange, fullRange, fullRange, 0),
+                AncientAetherBiomes.WYNDCAP_TAIGA);
+
+        addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, Climate.Parameter.span(-0.6F, 0.5F), fullRange, fullRange, fullRange, 0),
+                AncientAetherBiomes.CLOUD_OCEAN);
 
         addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, Climate.Parameter.span(-0.5F, 0.5F), fullRange, fullRange, fullRange, 0),
-                AncientAetherBiomes.AETHER_VOID);
+                AetherBiomes.SKYROOT_MEADOW);
+
+        addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, Climate.Parameter.span(0.5F, 0.6F), fullRange, fullRange, fullRange, 0),
+                AncientAetherBiomes.CLOUD_OCEAN);
+
+        addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, Climate.Parameter.span(0.6F, 1.5F), fullRange, fullRange, fullRange, 0),
+                AncientAetherBiomes.SAKURA_JUNGLE);
     }
 }

@@ -92,9 +92,9 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .define('G', AetherBlocks.ENCHANTED_GRAVITITE.get())
                 .define('R', AncientAetherItems.ANCIENT_RUNE.get())
                 .define('S', AetherBlocks.AEROGEL.get())
-                .pattern("GGG")
                 .pattern("GRG")
                 .pattern("GSG")
+                .pattern("GGG")
                 .unlockedBy(getHasName(AncientAetherItems.ANCIENT_RUNE.get()), has(AncientAetherItems.ANCIENT_RUNE.get()))
                 .save(consumer);
 
