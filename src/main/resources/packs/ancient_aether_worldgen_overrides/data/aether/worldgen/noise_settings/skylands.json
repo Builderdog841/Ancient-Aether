@@ -16,7 +16,7 @@
   "legacy_random_source": false,
   "noise": {
     "height": 320,
-    "min_y": -64,
+    "min_y": 0,
     "size_horizontal": 2,
     "size_vertical": 1
   },
@@ -35,14 +35,14 @@
     "fluid_level_spread": 0.0,
     "initial_density_without_jaggedness": 0.0,
     "lava": 0.0,
-    "ridges": "minecraft:overworld/ridges",
+    "ridges": "ancient_aether:the_aether/ridges",
     "temperature": {
       "type": "minecraft:shifted_noise",
       "noise": "aether:temperature",
       "shift_x": "minecraft:shift_x",
       "shift_y": 0.0,
       "shift_z": "minecraft:shift_z",
-      "xz_scale": 0.06,
+      "xz_scale": 0.25,
       "y_scale": 0.0
     },
     "vegetation": {
@@ -51,7 +51,7 @@
       "shift_x": "minecraft:shift_x",
       "shift_y": 0.0,
       "shift_z": "minecraft:shift_z",
-      "xz_scale": 0.12,
+      "xz_scale": 0.25,
       "y_scale": 0.0
     },
     "vein_gap": 0.0,
