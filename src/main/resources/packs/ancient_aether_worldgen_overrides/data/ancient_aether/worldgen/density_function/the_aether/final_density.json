@@ -21,7 +21,7 @@
               "input": "ancient_aether:the_aether/continents",
               "min_inclusive": -0.6,
               "max_exclusive": 0.6,
-              "when_in_range": "ancient_aether:the_aether/basic/islands",
+              "when_in_range": "ancient_aether:the_aether/terrain_types/basic/basic_terrain_merger",
               "when_out_of_range": "ancient_aether:the_aether/terrain_types/jagged/islands"
             }
           }
