@@ -6,14 +6,14 @@
     "argument1": {
       "type": "minecraft:mul",
       "argument1": "ancient_aether:the_aether/ridges",
-      "argument2": -0.2
+      "argument2": -0.25
     },
     "argument2": {
       "type": "minecraft:mul",
       "argument1": {
         "type": "minecraft:y_clamped_gradient",
         "from_value": 0.0,
-        "from_y": 8,
+        "from_y": 16,
         "to_value": 1.0,
         "to_y": 112
       },
