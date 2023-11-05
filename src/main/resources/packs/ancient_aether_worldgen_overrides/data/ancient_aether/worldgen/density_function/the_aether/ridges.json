@@ -7,13 +7,9 @@
   "when_out_of_range": {
     "type": "minecraft:range_choice",
     "input": "ancient_aether:the_aether/continents",
-    "min_inclusive": 0.2,
+    "min_inclusive": 0.45,
     "max_exclusive": 0.5,
-    "when_in_range": {
-        "type": "add",
-        "argument1": 0.8,
-        "argument2": "ancient_aether:the_aether/continents"
-    },
+    "when_in_range": 5,
     "when_out_of_range": 1
   }
 }
