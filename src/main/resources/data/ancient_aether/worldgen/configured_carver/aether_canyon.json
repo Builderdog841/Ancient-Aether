@@ -67,10 +67,10 @@
     "y": {
       "type": "minecraft:uniform",
       "max_inclusive": {
-        "absolute": 128
+        "absolute": 72
       },
       "min_inclusive": {
-        "absolute": 64
+        "absolute": 0
       }
     },
     "yScale": 3.0
