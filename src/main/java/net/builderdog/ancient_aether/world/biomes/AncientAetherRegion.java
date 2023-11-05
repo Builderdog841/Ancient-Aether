@@ -24,12 +24,8 @@ public class AncientAetherRegion extends Region {
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper) {
         Climate.Parameter fullRange = Climate.Parameter.span(-1.5F, 1.5F);
 
-        addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, Climate.Parameter.span(-1.5F, -0.5F), fullRange, Climate.Parameter.span(-1F, 1.5F), Climate.Parameter.span(1F, 1F), 0),
+        addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, Climate.Parameter.span(-1.5F, -0.5F), fullRange, fullRange, Climate.Parameter.span(1F, 1F), 0),
                 AncientAetherBiomes.WYNDCAP_TAIGA);
-        addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, Climate.Parameter.span(-1.5F, -0.5F), fullRange, Climate.Parameter.span(-1.35F, -1F), Climate.Parameter.span(1F, 1F), 0),
-                AncientAetherBiomes.WYNDCAP_HIGHLAND);
-        addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, Climate.Parameter.span(-1.5F, -0.5F), fullRange, Climate.Parameter.span(-1.5F, 1.35F), Climate.Parameter.span(1F, 1F), 0),
-                AncientAetherBiomes.WYNDCAP_PEAKS);
 
         addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, Climate.Parameter.span(-0.5F, 0.5F), fullRange, fullRange, Climate.Parameter.span(1F, 1F), 0),
                 AetherBiomes.SKYROOT_MEADOW);
