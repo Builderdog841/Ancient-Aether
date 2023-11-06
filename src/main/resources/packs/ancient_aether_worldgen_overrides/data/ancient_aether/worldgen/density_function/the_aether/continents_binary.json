@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:range_choice",
-  "input": "ancient_aether:the_aether/continents",
-  "min_inclusive": 0.15,
-  "max_exclusive": 1.5,
-  "when_in_range": 1.0,
-  "when_out_of_range": 0.0
-}

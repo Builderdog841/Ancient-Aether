@@ -2,5 +2,5 @@
     "type": "minecraft:weird_scaled_sampler",
     "rarity_value_mapper": "type_2",
     "noise": "minecraft:erosion",
-    "input": "ancient_aether:the_aether/base_3d_noise"
+    "input": "ancient_aether:the_aether/jagged_3d_noise"
 }
