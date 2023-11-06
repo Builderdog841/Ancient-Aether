@@ -1,9 +1,9 @@
 {
   "type": "minecraft:add",
-  "argument1": 0.001,
+  "argument1": 0.01,
   "argument2": {
     "type": "minecraft:add",
-    "argument1": -0.2,
+    "argument1": -0.25,
     "argument2": {
       "type": "minecraft:mul",
       "argument1": {
@@ -26,14 +26,14 @@
               "from_value": 1,
               "from_y": 112,
               "to_value": 0.0,
-              "to_y": 128
+              "to_y": 136
             },
             "argument2": {
               "type": "add",
               "argument1": 0.2,
               "argument2": {
                 "type": "minecraft:add",
-                "argument1": -0.2,
+                "argument1": -0.25,
                 "argument2": "ancient_aether:the_aether/continents"
               }
             }
