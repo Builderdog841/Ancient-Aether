@@ -4,8 +4,8 @@
   "downfall": 0.0,
   "effects": {
     "fog_color": 9671612,
-    "foliage_color": 11665355,
-    "grass_color": 11665355,
+    "foliage_color": -3808257,
+    "grass_color": -3808257,
     "music": {
       "max_delay": 4500,
       "min_delay": 4500,
@@ -27,9 +27,9 @@
     [],
     [],
     [
-      "aether:grass_patch",
-      "aether:tall_grass_patch",
-      "ancient_aether:meadow_flower_patch",
+      "ancient_aether:mythical_forests_grass_patch",
+      "ancient_aether:mythical_forests_tall_grass_patch",
+      "ancient_aether:forest_flower_patch",
       "aether:berry_bush_patch"
     ],
     [

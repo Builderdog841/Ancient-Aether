@@ -1,13 +1,13 @@
 {
   "carvers": {},
-  "temperature": 0.5,
+  "temperature": 0.8,
   "downfall": 0,
   "creature_spawn_probability": 0.05,
   "effects": {
     "fog_color": 9671612,
     "foliage_color": -3808257,
     "grass_color": -3808257,
-    "sky_color": 11711210,
+    "sky_color": v,
     "water_color": 937679,
     "water_fog_color": 329011,
     "music": {

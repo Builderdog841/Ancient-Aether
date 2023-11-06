@@ -1,6 +1,0 @@
-{
-    "type": "minecraft:weird_scaled_sampler",
-    "rarity_value_mapper": "type_1",
-    "noise": "minecraft:erosion",
-    "input": "ancient_aether:the_aether/terrain_types/noise_3d/base_3d_noise"
-}
