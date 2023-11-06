@@ -24,7 +24,13 @@ public class AncientAetherRegion extends Region {
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper) {
         Climate.Parameter fullRange = Climate.Parameter.span(-1.5F, 1.5F);
 
-        addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, Climate.Parameter.span(-0.5F, 0.5F), fullRange, fullRange, Climate.Parameter.span(1F, 1F), 0),
-                AetherBiomes.SKYROOT_MEADOW);
+        addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, Climate.Parameter.span(0.3F, 1.5F), fullRange, fullRange, fullRange, 0),
+                AetherBiomes.SKYROOT_GROVE);
+
+        addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, Climate.Parameter.span(0.15F, 0.3F), fullRange, fullRange, fullRange, 0),
+                AncientAetherBiomes.QUICKSOIL_COAST);
+
+        addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, Climate.Parameter.span(-1.5F, 0.15F), fullRange, fullRange, fullRange, 0),
+                AncientAetherBiomes.CLOUD_OCEAN);
     }
 }

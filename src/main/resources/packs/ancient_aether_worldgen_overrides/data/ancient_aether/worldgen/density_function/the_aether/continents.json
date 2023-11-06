@@ -1,6 +1,6 @@
 {
     "type": "minecraft:weird_scaled_sampler",
     "rarity_value_mapper": "type_1",
-    "noise": "minecraft:continents",
+    "noise": "minecraft:continentalness",
     "input": "ancient_aether:the_aether/terrain/base_3d_noise"
 }
