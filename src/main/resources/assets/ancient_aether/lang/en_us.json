@@ -162,6 +162,9 @@
   "biome.ancient_aether.enchanted_mythical_forest": "Enchanted Mythical Forest",
   "biome.ancient_aether.crystal_hollows": "Crystal Hollows",
   "biome.ancient_aether.cloud_ocean": "Cloud Ocean",
+  "biome.ancient_aether.quicksoil_coast": "Quicksoil Coast",
+  "biome.ancient_aether.divine_coast": "Divine Coast",
+  "biome.ancient_aether.snowy_divine_coast": "Snowy Divine Coast",
 
   "subtitles.ancient_aether.block.obelisk.obelisk_activation": "Obelisk activated",
   "subtitles.ancient_aether.entity.highland_buffalo.hurt": "Highland Buffalo hurts",
