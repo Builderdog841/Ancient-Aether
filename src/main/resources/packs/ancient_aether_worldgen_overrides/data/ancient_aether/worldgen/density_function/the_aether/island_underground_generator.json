@@ -4,5 +4,5 @@
   "min_inclusive": 0.25,
   "max_exclusive": 1.5,
   "when_in_range": "ancient_aether:the_aether/island_underground",
-  "when_out_of_range": 0
+  "when_out_of_range": "ancient_aether:the_aether/void"
 }

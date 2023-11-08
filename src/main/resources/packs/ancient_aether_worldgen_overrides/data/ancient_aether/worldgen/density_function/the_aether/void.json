@@ -9,9 +9,9 @@
       "argument1": {
         "type": "minecraft:y_clamped_gradient",
         "from_value": 0.0,
-        "from_y": 112,
+        "from_y": 0,
         "to_value": 1.0,
-        "to_y": 130
+        "to_y": 0
       },
       "argument2": {
         "type": "minecraft:add",
@@ -24,17 +24,17 @@
             "argument1": {
               "type": "minecraft:y_clamped_gradient",
               "from_value": 1,
-              "from_y": 136,
+              "from_y": 0,
               "to_value": 0.0,
-              "to_y": 300
+              "to_y": 0
             },
             "argument2": {
               "type": "add",
               "argument1": 0.2,
               "argument2": {
                 "type": "minecraft:add",
-                "argument1": -0.25,
-                "argument2": "ancient_aether:the_aether/continents_jagged"
+                "argument1": -0.07,
+                "argument2": "ancient_aether:the_aether/continents"
               }
             }
           }
