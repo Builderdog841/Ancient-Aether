@@ -24,12 +24,16 @@ public class AncientAetherRegion extends Region {
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper) {
         Climate.Parameter fullRange = Climate.Parameter.span(-1.5F, 1.5F);
 
-        addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(-1.5F, -0.2F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(-1.5F, -0.25F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_MEADOW);
-        addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(-0.2F, 0.2F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(-0.25F, -0.05F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_GROVE);
-        addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(0.2F, 1.5F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(-0.05F, 0.1F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_WOODLAND);
+        addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(0.1F, 0.2F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
+                AetherBiomes.SKYROOT_FOREST);
+        addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(0.2F, 1.5F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
+                AetherBiomes.SKYROOT_MEADOW);
 
         addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, Climate.Parameter.span(0.27F, 0.37F), fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.QUICKSOIL_COAST);
