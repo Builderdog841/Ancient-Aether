@@ -38,7 +38,7 @@
         "shift_x": "minecraft:shift_x",
         "shift_y": 0.0,
         "shift_z": "minecraft:shift_z",
-        "xz_scale": 0.1,
+        "xz_scale": 0.08,
         "y_scale": 0.0
       }
     },
@@ -63,7 +63,7 @@
       "shift_x": "minecraft:shift_x",
       "shift_y": 0.0,
       "shift_z": "minecraft:shift_z",
-      "xz_scale": 0.06,
+      "xz_scale": 0.08,
       "y_scale": 0.0
     },
     "vegetation": {
