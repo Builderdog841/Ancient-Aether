@@ -27,10 +27,10 @@ public class AncientAetherRegion extends Region {
         Climate.Parameter temperateClimate = Climate.Parameter.span(-0.6F, 0.6F);
         Climate.Parameter tropicalClimate = Climate.Parameter.span(0.6F, 1.5F);
 
-        addBiome(mapper, new Climate.ParameterPoint(coldClimate, Climate.Parameter.span(-1.5F, 0.17F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
-                AncientAetherBiomes.WYNDCAP_TAIGA);
-        addBiome(mapper, new Climate.ParameterPoint(coldClimate, Climate.Parameter.span(0.17F, 1.5F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
-                AncientAetherBiomes.FESTIVE_WYNDCAP_TAIGA);
+        //addBiome(mapper, new Climate.ParameterPoint(coldClimate, Climate.Parameter.span(-1.5F, 0.17F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
+       //         AncientAetherBiomes.WYNDCAP_TAIGA);
+       // addBiome(mapper, new Climate.ParameterPoint(coldClimate, Climate.Parameter.span(0.17F, 1.5F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
+       //         AncientAetherBiomes.FESTIVE_WYNDCAP_TAIGA);
 
         addBiome(mapper, new Climate.ParameterPoint(temperateClimate, Climate.Parameter.span(-1.5F, -0.25F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_MEADOW);
@@ -43,11 +43,11 @@ public class AncientAetherRegion extends Region {
         addBiome(mapper, new Climate.ParameterPoint(temperateClimate, Climate.Parameter.span(0.2F, 1.5F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_MEADOW);
 
-        addBiome(mapper, new Climate.ParameterPoint(tropicalClimate, fullRange, Climate.Parameter.span(0.27F, 1.5F), fullRange, fullRange, fullRange, 0),
-                AncientAetherBiomes.SAKURA_JUNGLE);
+      //  addBiome(mapper, new Climate.ParameterPoint(tropicalClimate, fullRange, Climate.Parameter.span(0.27F, 1.5F), fullRange, fullRange, fullRange, 0),
+      //          AncientAetherBiomes.SAKURA_JUNGLE);
 
-        addBiome(mapper, new Climate.ParameterPoint(coldClimate, fullRange, Climate.Parameter.span(0.27F, 0.37F), fullRange, fullRange, fullRange, 0),
-                AncientAetherBiomes.SNOWY_DIVINE_COAST);
+       // addBiome(mapper, new Climate.ParameterPoint(coldClimate, fullRange, Climate.Parameter.span(0.27F, 0.37F), fullRange, fullRange, fullRange, 0),
+       //         AncientAetherBiomes.SNOWY_DIVINE_COAST);
         addBiome(mapper, new Climate.ParameterPoint(temperateClimate, fullRange, Climate.Parameter.span(0.27F, 0.37F), fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.QUICKSOIL_COAST);
 
