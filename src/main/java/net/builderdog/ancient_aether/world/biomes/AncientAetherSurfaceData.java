@@ -23,10 +23,7 @@ public class AncientAetherSurfaceData {
                         SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(Blocks.SNOW_BLOCK.defaultBlockState()))
                 ),
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.QUICKSOIL_COAST),
-                        SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(Blocks.AIR.defaultBlockState()))
-                ),
-                SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.QUICKSOIL_COAST),
-                        SurfaceRules.ifTrue(SurfaceRules.stoneDepthCheck(0, true, 0, CaveSurface.FLOOR), SurfaceRules.state(AetherFeatureStates.QUICKSOIL))
+                        SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(AetherFeatureStates.QUICKSOIL))
                 ),
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.DIVINE_COAST),
                         SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(AncientAetherBlocks.DIVINE_GRAVEL.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)))
