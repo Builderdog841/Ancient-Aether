@@ -57,7 +57,15 @@
     "initial_density_without_jaggedness": 0.0,
     "lava": 0.0,
     "ridges": 0.0,
-    "temperature": "ancient_aether:the_aether/temperature",
+    "temperature": {
+      "type": "minecraft:shifted_noise",
+      "noise": "aether:temperature",
+      "shift_x": "minecraft:shift_x",
+      "shift_y": 0.0,
+      "shift_z": "minecraft:shift_z",
+      "xz_scale": 0.06,
+      "y_scale": 0.0
+    },
     "vegetation": {
       "type": "minecraft:shifted_noise",
       "noise": "aether:vegetation",
