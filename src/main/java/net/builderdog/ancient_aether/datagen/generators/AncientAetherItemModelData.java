@@ -32,7 +32,6 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         simpleItem(AncientAetherItems.HEALTH_RING);
         simpleItem(AncientAetherItems.HEALTH_PENDANT);
         simpleItem(AncientAetherItems.GRAVITITE_DART_SHOOTER);
-        simpleItem(AncientAetherItems.DIVINE_CRYSTAL);
         simpleItem(AncientAetherItems.CRYSTAL_FRUIT);
 
         //Boats
