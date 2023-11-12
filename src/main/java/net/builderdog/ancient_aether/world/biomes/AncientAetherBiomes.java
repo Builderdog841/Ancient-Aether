@@ -11,8 +11,7 @@ public class AncientAetherBiomes {
     public static final ResourceKey<Biome> CLOUD_OCEAN = createKey("cloud_ocean");
     public static final ResourceKey<Biome> QUICKSOIL_COAST = createKey("quicksoil_coast");
     public static final ResourceKey<Biome> DIVINE_COAST = createKey("divine_coast");
-    public static final ResourceKey<Biome> HOLY_COAST = createKey("holy_coast");
-    public static final ResourceKey<Biome> SNOWY_HOLY_COAST = createKey("snowy_holy_coast");
+    public static final ResourceKey<Biome> ICY_COAST = createKey("icy_coast");
     public static final ResourceKey<Biome> WYNDCAP_TAIGA = createKey("wyndcap_taiga");
     public static final ResourceKey<Biome> FESTIVE_WYNDCAP_TAIGA = createKey("festive_wyndcap_taiga");
     public static final ResourceKey<Biome> WYNDCAP_HIGHLAND = createKey("wyndcap_highland");

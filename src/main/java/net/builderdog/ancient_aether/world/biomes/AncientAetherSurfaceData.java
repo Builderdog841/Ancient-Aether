@@ -28,17 +28,8 @@ public class AncientAetherSurfaceData {
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.DIVINE_COAST),
                         SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(AncientAetherBlocks.DIVINE_GRAVEL.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)))
                 ),
-                SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.HOLY_COAST),
-                        SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(AetherFeatureStates.HOLYSTONE))
-                ),
-                SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.HOLY_COAST),
-                        SurfaceRules.ifTrue(SurfaceRules.stoneDepthCheck(0, true, 0, CaveSurface.FLOOR), SurfaceRules.state(AetherFeatureStates.HOLYSTONE))
-                ),
-                SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.SNOWY_HOLY_COAST),
-                        SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(AetherFeatureStates.HOLYSTONE))
-                ),
-                SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.SNOWY_HOLY_COAST),
-                        SurfaceRules.ifTrue(SurfaceRules.stoneDepthCheck(0, true, 0, CaveSurface.FLOOR), SurfaceRules.state(AetherFeatureStates.HOLYSTONE))
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.ICY_COAST),
+                        SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(Blocks.PACKED_ICE.defaultBlockState()))
                 )
          );
     }
