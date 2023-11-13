@@ -33,18 +33,14 @@ public class AncientAetherRegion extends Region {
         addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-1.5F, -0.6F), fullRange, Climate.Parameter.span(0.47F, 1.5F), fullRange, Climate.Parameter.span(-1.5F, 0F), fullRange, 0),
                 AncientAetherBiomes.WYNDCAP_PEAKS);
 
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.6F, -0.5F), Climate.Parameter.span(-1.5F, -0.25F), Climate.Parameter.span(0.25F, 1.5F), fullRange, fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_MEADOW);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.6F, -0.5F), Climate.Parameter.span(-0.25F, 0.25F), Climate.Parameter.span(0.25F, 1.5F), fullRange, fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_WOODLAND);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.6F, -0.5F), Climate.Parameter.span(0.25F, 1.5F), Climate.Parameter.span(0.25F, 1.5F), fullRange, fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_MEADOW);
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.6F, -0.55F), fullRange, fullRange, fullRange, fullRange, fullRange, 0),
+                AncientAetherBiomes.CLOUD_OCEAN);
 
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.5F, -0.25F), Climate.Parameter.span(-1.5F, -0.25F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.55F, -0.25F), Climate.Parameter.span(-1.5F, -0.25F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_MEADOW);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.5F, -0.25F), Climate.Parameter.span(-0.25F, 0.25F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.55F, -0.25F), Climate.Parameter.span(-0.25F, 0.25F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_WOODLAND);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.5F, -0.25F), Climate.Parameter.span(0.25F, 1.5F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.55F, -0.25F), Climate.Parameter.span(0.25F, 1.5F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_MEADOW);
 
         addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.25F, 0.25F), Climate.Parameter.span(-1.5F, -0.25F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
@@ -58,21 +54,19 @@ public class AncientAetherRegion extends Region {
         addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.25F, 0.25F), Climate.Parameter.span(0.2F, 1.5F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_MEADOW);
 
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.25F, 0.45F), Climate.Parameter.span(-1.5F, -0.2F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.25F, 0.55F), Climate.Parameter.span(-1.5F, -0.2F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_MEADOW);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.25F, 0.45F), Climate.Parameter.span(-0.2F, -0.1F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.25F, 0.55F), Climate.Parameter.span(-0.2F, -0.1F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_GROVE);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.25F, 0.45F), Climate.Parameter.span(-0.1F, -0.03F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.25F, 0.55F), Climate.Parameter.span(-0.1F, -0.03F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_FOREST);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.25F, 0.45F), Climate.Parameter.span(-0.03F, 0.17F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.25F, 0.55F), Climate.Parameter.span(-0.03F, 0.17F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_GROVE);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.25F, 0.45F), Climate.Parameter.span(0.17F, 1.5F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.25F, 0.55F), Climate.Parameter.span(0.17F, 1.5F), Climate.Parameter.span(0.37F, 1.5F), fullRange, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_MEADOW);
 
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.45F, 0.6F), Climate.Parameter.span(-1.5F, 0.2F), Climate.Parameter.span(0.25F, 1.5F), fullRange, fullRange, fullRange, 0),
-                AncientAetherBiomes.SKYROOT_JUNGLE);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.45F, 0.6F), Climate.Parameter.span(0.2F, 1.5F), Climate.Parameter.span(0.25F, 1.5F), fullRange, fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_WOODLAND);
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.55F, 0.6F), fullRange, fullRange, fullRange, fullRange, fullRange, 0),
+                AncientAetherBiomes.CLOUD_OCEAN);;
 
         addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.6F, 1.5F), Climate.Parameter.span(-1.5F, 0.25F), Climate.Parameter.span(0.25F, 1.5F), fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.SAKURA_JUNGLE);
@@ -81,7 +75,7 @@ public class AncientAetherRegion extends Region {
 
         addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-1.5F, -0.6F), fullRange, Climate.Parameter.span(0.25F, 0.37F), fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.ICY_COAST);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.5F, 0.5F), fullRange, Climate.Parameter.span(0.25F, 0.37F), fullRange, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.55F, 0.55F), fullRange, Climate.Parameter.span(0.25F, 0.37F), fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.QUICKSOIL_COAST);
 
         addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, Climate.Parameter.span(-1.5F, 0.27F), fullRange, fullRange, fullRange, 0),
