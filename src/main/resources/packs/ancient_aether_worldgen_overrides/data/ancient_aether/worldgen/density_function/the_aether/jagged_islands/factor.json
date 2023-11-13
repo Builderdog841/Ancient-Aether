@@ -1,22 +1,22 @@
 {
   "type": "minecraft:range_choice",
   "input": "ancient_aether:the_aether/temperature",
-  "min_inclusive": 0.65,
+  "min_inclusive": 0.7,
   "max_exclusive": 1.5,
   "when_in_range": 1,
   "when_out_of_range": {
     "type": "minecraft:range_choice",
     "input": "ancient_aether:the_aether/temperature",
     "min_inclusive": -1.5,
-    "max_exclusive": 0.65,
+    "max_exclusive": 0.7,
     "when_in_range": {
       "type": "minecraft:add",
       "argument1": {
         "type": "minecraft:mul",
-        "argument1": 10,
+        "argument1": -10,
         "argument2": "ancient_aether:the_aether/temperature"
       },
-      "argument2": -4
+      "argument2": 7.5
     },
     "when_out_of_range": 1
   }
