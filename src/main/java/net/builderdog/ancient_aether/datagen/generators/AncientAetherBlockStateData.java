@@ -70,6 +70,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         //Terrain
         blockWithItem(AncientAetherBlocks.AETHER_QUARTZ_ORE);
         blockWithItem(AncientAetherBlocks.DIVINE_GRAVEL);
+        blockWithItem(AncientAetherBlocks.WYNDCAPS_ICE);
 
         //Buffalo Wool
         blockWithItem(AncientAetherBlocks.BUFFALO_WOOL);

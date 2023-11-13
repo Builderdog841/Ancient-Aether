@@ -6,7 +6,6 @@ import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.Noises;
 import net.minecraft.world.level.levelgen.SurfaceRules;
-import net.minecraft.world.level.levelgen.placement.CaveSurface;
 
 public class AncientAetherSurfaceData {
 
@@ -29,7 +28,7 @@ public class AncientAetherSurfaceData {
                         SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(AncientAetherBlocks.DIVINE_GRAVEL.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)))
                 ),
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.ICY_COAST),
-                        SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(Blocks.PACKED_ICE.defaultBlockState()))
+                        SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(AncientAetherBlocks.WYNDCAPS_ICE.get().defaultBlockState()))
                 )
          );
     }
