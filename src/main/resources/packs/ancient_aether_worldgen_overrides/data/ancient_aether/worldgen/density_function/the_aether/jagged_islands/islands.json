@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:add",
+  "argument1": 0.2,
+  "argument2": {
+    "type": "minecraft:add",
+    "argument1": -0.05,
+    "argument2": "ancient_aether:the_aether/jagged_islands/islands_jagged"
+  }
+}
