@@ -105,10 +105,7 @@
   "block.ancient_aether.divine_skyroot_sapling": "神圣天根树苗",
   "block.ancient_aether.violet_aercloud": "槿紫境云",
 
-  "item.ancient_aether.buffalo_ribs": "生水牛肋排",
   "item.ancient_aether.gravitite_dart_shooter": "引力之箭射手",
-  "item.ancient_aether.cooked_buffalo_ribs": "熟水牛肋排",
-  "item.ancient_aether.buffalo_rib": "水牛肋条",
   "item.ancient_aether.grapes": "葡萄",
   "item.ancient_aether.aerogel_bottle": "气凝胶瓶",
   "item.ancient_aether.valkyrie_wine": "女武神之酒",
@@ -132,7 +129,6 @@
   "item.ancient_aether.health_pendant": "生命吊坠",
   "item.ancient_aether.health_ring": "生命戒指",
   "item.ancient_aether.strength_stone": "力量之石",
-  "item.ancient_aether.divine_crystal": "神圣水晶",
 
   "entity.ancient_aether.highland_buffalo": "高地水牛",
   "entity.ancient_aether.aeronautic_leaper": "航空腾跃者",
@@ -152,9 +148,7 @@
   "biome.ancient_aether.skyroot_jungle": "天根丛林",
   "biome.ancient_aether.mythical_forest": "神秘森林",
   "biome.ancient_aether.mythical_clearing": "神秘空地",
-  "biome.ancient_aether.enchanted_mythical_forest": "附神神秘森林",
   "biome.ancient_aether.crystal_hollows": "水晶洞穴",
-  "biome.ancient_aether.cold_skyroot_forest": "冰雪天根森林",
 
   "subtitles.ancient_aether.block.obelisk.obelisk_activation": "方尖碑：激活",
   "subtitles.ancient_aether.entity.highland_buffalo.hurt": "高地水牛：受伤",
@@ -191,11 +185,6 @@
 
   "menu.ancient_aether.ancient_treasure_chest": "古代宝藏箱",
   "ancient_aether.ancient_treasure_chest_locked": "这个宝藏箱必须使用古代钥匙解锁",
-
-  "pack.ancient_aether.ancient_aether_new_worldgen.title": "新世界生成",
-  "pack.ancient_aether.ancient_aether_new_worldgen.description": "完全改变了天境的地形生成。",
-  "pack.ancient_aether.ancient_aether_default_biome_improvements.title": "天境默认生态系统改进",
-  "pack.ancient_aether.ancient_aether_default_biome_improvements.description": "为天境的默认生态系统添加了更多的植被和其他改进。",
 
   "lore.block.ancient_aether.holystone_brick_mosaic": "一种花哨的圣石砖块变体，可以在各种不同的方向旋转。",
   "lore.block.ancient_aether.carved_stone_mosaic": "一种花哨的雕纹石变体，可以在各种不同的方向旋转。",
@@ -283,11 +272,8 @@
   "lore.item.ancient_aether.ancient_pendant": "击败古代守卫的奖励。这个吊坠可以增加0.2的攻击速度。",
   "lore.item.ancient_aether.health_ring": "击败古代守卫的奖励。这个戒指可以增加1点生命值。",
   "lore.item.ancient_aether.health_pendant": "击败古代守卫的奖励。这个吊坠可以增加2点生命值。",
-  "lore.item.ancient_aether.raw_buffalo_ribs": "由高地水牛掉落，这些肋排可以烹饪成熟水牛肋排，是一个很好的食物来源。",
-  "lore.item.ancient_aether.cooked_buffalo_ribs": "通过烹饪生水牛肋排制成的良好食物来源。它们还可以制作成3块水牛肋条，总体可以提供更多的饱食度，但提供的单个饱食度较低。",
   "lore.item.ancient_aether.aerogel_bottle": "由气凝胶制成的瓶子，用于非常特殊的饮料，如女武神葡萄酒。",
   "lore.item.ancient_aether.valkyrie_wine": "一种非常受女武神欢迎的饮料，人们相信喝这种酒能延长寿命。",
-  "lore.item.ancient_aether.buffalo_rib": "水牛肋条可以更快地食用，提供更多的饱食度，但比起整块水牛肋排，提供的饱食度较低。",
   "lore.item.ancient_aether.highsproot_boat": "虽然天境没有很多大型水域，但船在穿越冰面上的大距离时偶尔会是一个有用的工具！",
   "lore.item.ancient_aether.sakura_boat": "虽然天境没有很多大型水域，但船在穿越冰面上的大距离时偶尔会是一个有用的工具！",
   "lore.item.ancient_aether.highsproot_chest_boat": "在后部带有方便的储物箱的高喷木船。在穿越天境中著名的难以找到的长距离水域时非常有用。",
