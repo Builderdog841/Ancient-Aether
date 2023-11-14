@@ -23,11 +23,11 @@ public class AncientAetherPlacedFeatures {
 
         register(context, AETHER_QUARTZ_ORE, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.AETHER_QUARTZ_ORE),
                 AncientAetherPlacedFeatureBuilder.commonOrePlacement(5,
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(128))));
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(256))));
 
         register(context, AEROGEL_ORE, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.AEROGEL_BLOBS),
                 AncientAetherPlacedFeatureBuilder.commonOrePlacement(4,
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(64))));
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(80))));
 
         register(context, DIVINE_GRAVEL_ORE, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.DIVINE_GRAVEL_ORE),
                 AncientAetherPlacedFeatureBuilder.commonOrePlacement(1,
