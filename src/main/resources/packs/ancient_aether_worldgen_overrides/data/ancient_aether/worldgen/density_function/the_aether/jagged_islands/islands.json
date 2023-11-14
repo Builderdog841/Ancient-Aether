@@ -1,20 +1,9 @@
 {
   "type": "minecraft:add",
-  "argument1": {
-    "type": "minecraft:range_choice",
-    "input": "ancient_aether:the_aether/continents",
-    "min_inclusive": 0.25,
-    "max_exclusive": 1.5,
-    "when_in_range": "ancient_aether:the_aether/jagged_islands/islands_underground",
-    "when_out_of_range": "ancient_aether:the_aether/void"
-  },
+  "argument1": 0.2,
   "argument2": {
     "type": "minecraft:add",
-    "argument1": 0.2,
-    "argument2": {
-      "type": "minecraft:add",
-      "argument1": -0.03,
-      "argument2": "ancient_aether:the_aether/jagged_islands/islands_jagged"
-    }
+    "argument1": -0.025,
+    "argument2": "ancient_aether:the_aether/jagged_islands/islands_jagged"
   }
 }
