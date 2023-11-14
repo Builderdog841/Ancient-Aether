@@ -1,8 +1,7 @@
 {
   "replace": false,
   "values": [
-    "aether:skyroot_meadow",
-    "aether:skyroot_grove",
+    "#ancient_aether:is_barren_skyroot_biome",
     "ancient_aether:mythical_clearing"
   ]
 }
