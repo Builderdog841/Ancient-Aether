@@ -59,7 +59,7 @@
               "input": "ancient_aether:the_aether/temperature",
               "min_inclusive": 0.55,
               "max_exclusive": 1.5,
-              "when_in_range": "ancient_aether:the_aether/default_islands/islands",
+              "when_in_range": "ancient_aether:the_aether/jagged_islands/islands",
               "when_out_of_range": "ancient_aether:the_aether/default_islands/islands"
             }
           }

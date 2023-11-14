@@ -100,9 +100,9 @@ public class AncientAetherRegion extends Region {
         addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.575F, 1.5F), Climate.Parameter.span(0.25F, 1.5F), Climate.Parameter.span(0.25F, 1.5F), fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.SKYROOT_JUNGLE);
 
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-1.5F, -0.6F), fullRange, Climate.Parameter.span(0.25F, 0.34F), fullRange, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-1.5F, -0.575F), fullRange, Climate.Parameter.span(0.25F, 0.34F), fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.ICY_COAST);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.55F, 0.55F), fullRange, Climate.Parameter.span(0.25F, 0.34F), fullRange, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, 0.575F), fullRange, Climate.Parameter.span(0.25F, 0.34F), fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.QUICKSOIL_COAST);
 
         addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, Climate.Parameter.span(-1.5F, 0.27F), fullRange, fullRange, fullRange, 0),
