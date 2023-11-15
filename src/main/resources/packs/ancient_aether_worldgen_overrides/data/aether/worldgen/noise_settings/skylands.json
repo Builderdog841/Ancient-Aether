@@ -30,18 +30,7 @@
       "to_value": -1.5,
       "to_y": 320
     },
-    "erosion": {
-      "type": "minecraft:flat_cache",
-      "argument": {
-        "type": "minecraft:shifted_noise",
-        "noise": "minecraft:erosion",
-        "shift_x": "minecraft:shift_x",
-        "shift_y": 0.0,
-        "shift_z": "minecraft:shift_z",
-        "xz_scale": 0.08,
-        "y_scale": 0.0
-      }
-    },
+    "erosion": "ancient_aether:the_aether/erosion",
     "final_density": {
       "type": "minecraft:squeeze",
       "argument": {
@@ -60,7 +49,21 @@
               "min_inclusive": 0.55,
               "max_exclusive": 1.5,
               "when_in_range": "ancient_aether:the_aether/jagged_islands/islands",
-              "when_out_of_range": "ancient_aether:the_aether/default_islands/islands"
+              "when_out_of_range": {
+                "type": "minecraft:range_choice",
+                "input": "ancient_aether:the_aether/temperature",
+                "min_inclusive": -0.25,
+                "max_exclusive": 0.25,
+                "when_in_range": {
+                  "type": "minecraft:range_choice",
+                  "input": "ancient_aether:the_aether/erosion",
+                  "min_inclusive": 0.2,
+                  "max_exclusive": 1.5,
+                  "when_in_range": "ancient_aether:the_aether/hilly_islands/islands",
+                  "when_out_of_range": "ancient_aether:the_aether/default_islands/islands"
+                },
+                "when_out_of_range": "ancient_aether:the_aether/default_islands/islands"
+              }
             }
           }
         }
@@ -70,7 +73,7 @@
     "fluid_level_spread": 0.0,
     "initial_density_without_jaggedness": 0.0,
     "lava": 0.0,
-    "ridges": "ancient_aether:the_aether/jagged_islands/factor",
+    "ridges": "ancient_aether:the_aether/hilly_islands/factor",
     "temperature": "ancient_aether:the_aether/temperature",
     "vegetation": {
       "type": "minecraft:shifted_noise",
