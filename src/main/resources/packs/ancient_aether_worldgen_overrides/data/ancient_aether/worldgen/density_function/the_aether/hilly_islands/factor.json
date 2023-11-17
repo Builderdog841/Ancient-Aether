@@ -1,23 +1,87 @@
 {
   "type": "minecraft:range_choice",
   "input": "ancient_aether:the_aether/erosion",
-  "min_inclusive": 0.25,
-  "max_exclusive": 1.5,
-  "when_in_range": 1,
-  "when_out_of_range": {
+  "min_inclusive": -0.25,
+  "max_exclusive": 0.25,
+  "when_in_range": {
     "type": "minecraft:range_choice",
-    "input": "ancient_aether:the_aether/erosion",
-    "min_inclusive": -1.5,
-    "max_exclusive": 0.25,
+    "input": "ancient_aether:the_aether/temperature",
+    "min_inclusive": -0.2,
+    "max_exclusive": 0.2,
     "when_in_range": {
-      "type": "minecraft:add",
-      "argument1": {
-        "type": "minecraft:mul",
-        "argument1": -10,
-        "argument2": "ancient_aether:the_aether/erosion"
-      },
-      "argument2": 3.5
+      "type": "minecraft:range_choice",
+      "input": "ancient_aether:the_aether/erosion",
+      "min_inclusive": 0.25,
+      "max_exclusive": 1.5,
+      "when_in_range": 1,
+      "when_out_of_range": {
+        "type": "minecraft:range_choice",
+        "input": "ancient_aether:the_aether/erosion",
+        "min_inclusive": -1.5,
+        "max_exclusive": 0.25,
+        "when_in_range": {
+          "type": "minecraft:add",
+          "argument1": {
+            "type": "minecraft:mul",
+            "argument1": -10,
+            "argument2": "ancient_aether:the_aether/erosion"
+          },
+          "argument2": 3.5
+        },
+        "when_out_of_range": 1
+      }
     },
-    "when_out_of_range": 1
-  }
+    "when_out_of_range": {
+      "type": "minecraft:range_choice",
+      "input": "ancient_aether:the_aether/temperature",
+      "min_inclusive": 0.2,
+      "max_exclusive": 1.5,
+      "when_in_range": {
+        "type": "minecraft:add",
+        "argument1": {
+          "type": "minecraft:mul",
+          "argument1": {
+            "type": "minecraft:add",
+            "argument1": {
+              "type": "minecraft:mul",
+              "argument1": -1,
+              "argument2": "ancient_aether:the_aether/temperature"
+            },
+            "argument2": {
+              "type": "minecraft:mul",
+              "argument1": 2,
+              "argument2": "ancient_aether:the_aether/temperature"
+            }
+          },
+          "argument2": 10
+        },
+        "argument2": -1
+      },
+      "when_out_of_range": {
+        "type": "minecraft:range_choice",
+        "input": "ancient_aether:the_aether/temperature",
+        "min_inclusive": -1.5,
+        "max_exclusive": -0.2,
+        "when_in_range": {
+          "type": "minecraft:add",
+          "argument1": {
+            "type": "minecraft:mul",
+            "argument1": {
+              "type": "minecraft:add",
+              "argument1": "ancient_aether:the_aether/temperature",
+              "argument2": {
+                "type": "minecraft:mul",
+                "argument1": -2,
+                "argument2": "ancient_aether:the_aether/temperature"
+              }
+            },
+            "argument2": 10
+          },
+          "argument2": -1
+        },
+        "when_out_of_range": 1
+      }
+    }
+  },
+  "when_out_of_range": 1
 }
