@@ -88,6 +88,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.CRYSTAL_SAPLING.get());
 
         //Ores
+        dropSelf(AncientAetherBlocks.VALKYRUM_BLOCK.get());
         dropDoubleWithFortune(AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), Items.QUARTZ);
 
         //Divine Skyroot Leaves

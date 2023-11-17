@@ -67,8 +67,11 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         hangingSignBlock(AncientAetherBlocks.HIGHSPROOT_HANGING_SIGN.get(), AncientAetherBlocks.HIGHSPROOT_WALL_HANGING_SIGN.get(), texture(name(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get()), ""));
         hangingSignBlock(AncientAetherBlocks.SAKURA_HANGING_SIGN.get(), AncientAetherBlocks.SAKURA_WALL_HANGING_SIGN.get(), texture(name(AncientAetherBlocks.STRIPPED_SAKURA_LOG.get()), ""));
 
-        //Terrain
+        //Ores
+        blockWithItem(AncientAetherBlocks.VALKYRUM_BLOCK);
         blockWithItem(AncientAetherBlocks.AETHER_QUARTZ_ORE);
+
+        //Natural Blocks
         blockWithItem(AncientAetherBlocks.DIVINE_GRAVEL);
         blockWithItem(AncientAetherBlocks.WYNDCAPS_ICE);
 

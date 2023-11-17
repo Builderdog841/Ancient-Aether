@@ -109,19 +109,22 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> CRYSTAL_SAPLING = registerBlock("crystal_sapling", () -> new CrystalSaplingBlock(new CrystalTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get()).sound(SoundType.AMETHYST).mapColor(MapColor.COLOR_PURPLE)));
     public static final RegistryObject<Block> DIVINE_SKYROOT_SAPLING = registerBlock("divine_skyroot_sapling", () -> new SaplingBlock(new DivineSkyrootTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get()).mapColor(MapColor.LAPIS)));
 
-    //Aerogel Glass
+    //Natural
+    public static final RegistryObject<Block> DIVINE_GRAVEL = registerBlock("divine_gravel", () -> new AetherDoubleDropBlock(Block.Properties.of().mapColor(MapColor.TERRACOTTA_PURPLE).strength(0.25F).sound(SoundType.GRAVEL)));
+    public static final RegistryObject<Block> WYNDCAPS_ICE = registerBlock("wyndcaps_ice", () -> new Block(Block.Properties.copy(PACKED_ICE)));
+
+    //Ores
+    public static final RegistryObject<Block> AETHER_QUARTZ_ORE = registerBlock("aether_quartz_ore", () -> new AetherDoubleDropsOreBlock(Block.Properties.copy(NETHER_QUARTZ_ORE).strength(3.0F).requiresCorrectToolForDrops(), UniformInt.of(2, 5)));
+    public static final RegistryObject<Block> VALKYRUM_BLOCK = registerBlock("valkyrum_block", () -> new Block(Block.Properties.copy(ZANITE_BLOCK.get()).strength(6.0F, 8.0F).mapColor(MapColor.QUARTZ)));
+
+    //Construction
+    public static final RegistryObject<RotatedPillarBlock> HOLYSTONE_BRICK_MOSAIC = registerBlock("holystone_brick_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.HOLYSTONE_BRICKS.get())));
     public static final RegistryObject<GlassBlock> AEROGEL_GLASS = registerBlock("aerogel_glass", () -> new GlassBlock(Block.Properties.of().mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.HAT).strength(1.0F, 2000.0F).sound(SoundType.METAL).noOcclusion().isRedstoneConductor(AncientAetherBlocks::never).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
     public static final RegistryObject<IronBarsBlock> AEROGEL_GLASS_PANE = registerBlock("aerogel_glass_pane", () -> new IronBarsBlock(Block.Properties.of().mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.HAT).strength(1.0F, 2000.0F).sound(SoundType.METAL).noOcclusion()));
     public static final RegistryObject<DoorBlock> AEROGEL_GLASS_DOOR = registerBlock("aerogel_glass_door", () -> new DoorBlock(Block.Properties.copy(OAK_DOOR).mapColor(MapColor.DIAMOND).strength(1.0F, 2000.0F).sound(SoundType.METAL).noOcclusion().isViewBlocking(AncientAetherBlocks::never), AncientAetherWoodTypes.AEROGEL_GLASS_BLOCK_SET));
     public static final RegistryObject<TrapDoorBlock> AEROGEL_GLASS_TRAPDOOR = registerBlock("aerogel_glass_trapdoor", () -> new TrapDoorBlock(Block.Properties.copy(Blocks.OAK_TRAPDOOR).mapColor(MapColor.DIAMOND).strength(1.0F, 2000.0F).sound(SoundType.METAL).noOcclusion().isViewBlocking(AncientAetherBlocks::never), AncientAetherWoodTypes.AEROGEL_GLASS_BLOCK_SET));
-
-    //Natural
-    public static final RegistryObject<Block> DIVINE_GRAVEL = registerBlock("divine_gravel", () -> new AetherDoubleDropBlock(Block.Properties.of().mapColor(MapColor.TERRACOTTA_PURPLE).strength(0.25F).sound(SoundType.GRAVEL)));
-    public static final RegistryObject<Block> AETHER_QUARTZ_ORE = registerBlock("aether_quartz_ore", () -> new AetherDoubleDropsOreBlock(Block.Properties.copy(NETHER_QUARTZ_ORE).strength(3.0F).requiresCorrectToolForDrops(), UniformInt.of(2, 5)));
-    public static final RegistryObject<Block> WYNDCAPS_ICE = registerBlock("wyndcaps_ice", () -> new Block(Block.Properties.copy(PACKED_ICE)));
-
-    //Construction
-    public static final RegistryObject<RotatedPillarBlock> HOLYSTONE_BRICK_MOSAIC = registerBlock("holystone_brick_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.HOLYSTONE_BRICKS.get())));
+    public static final RegistryObject<Block> BUFFALO_WOOL = registerBlock("buffalo_wool", () -> new Block(BlockBehaviour.Properties.copy(WHITE_WOOL).mapColor(MapColor.COLOR_LIGHT_BLUE)));
+    public static final RegistryObject<Block> BUFFALO_CARPET = registerBlock("buffalo_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.copy(BUFFALO_WOOL.get())));
 
     //Dungeon Blocks
     public static final RegistryObject<Block> AEROTIC_STONE = registerBlock("aerotic_stone", () -> new Block(Block.Properties.copy(STONE).strength(0.5F, 6.0F).mapColor(MapColor.COLOR_CYAN).requiresCorrectToolForDrops()));
@@ -190,11 +193,6 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> WIND_BLOWER = registerBlock("wind_blower", () -> new WindBlowerBlock(BlockBehaviour.Properties.copy(COLD_AERCLOUD.get())));
     public static final RegistryObject<Block> HOLYSTONE_VASE = registerBlock("holystone_vase", () -> new HolystoneVaseBlock(Block.Properties.of().mapColor(MapColor.COLOR_LIGHT_GRAY).instabreak().sound(SoundType.DECORATED_POT).noOcclusion().isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
     public static final RegistryObject<Block> ANCIENT_HOLYSTONE_VASE = registerBlock("ancient_holystone_vase", () -> new AncientHolystoneVaseBlock(BlockBehaviour.Properties.copy(HOLYSTONE_VASE.get())));
-
-    //Buffalo Wool
-    public static final RegistryObject<Block> BUFFALO_WOOL = registerBlock("buffalo_wool", () -> new Block(BlockBehaviour.Properties.copy(WHITE_WOOL).mapColor(MapColor.COLOR_LIGHT_BLUE)));
-    public static final RegistryObject<Block> BUFFALO_CARPET = registerBlock("buffalo_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.copy(BUFFALO_WOOL.get())));
-
 
     public static void registerPots() {
         FlowerPotBlock pot = (FlowerPotBlock) Blocks.FLOWER_POT;

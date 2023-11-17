@@ -1,4 +1,4 @@
-// 1.20.1	2023-11-13T18:06:32.7310176	Loot Tables
+// 1.20.1	2023-11-17T21:01:24.340293	Loot Tables
 095a70e341d19e7b3548ddc32402abe48a79992a data/ancient_aether/loot_tables/blocks/aerogel_glass.json
 9fe2ea21af5246ad9f95848f680099717062eb1c data/ancient_aether/loot_tables/blocks/aerogel_glass_door.json
 0f84d5b4591633acc6c8dcc82b7c14988b545a9f data/ancient_aether/loot_tables/blocks/aerogel_glass_pane.json
@@ -99,6 +99,7 @@ e546ace1c68699bb85e0cfe7aca1b4a7e6b220c4 data/ancient_aether/loot_tables/blocks/
 ba4645f668eafc10c81bb0022f2efec2f7f69a3f data/ancient_aether/loot_tables/blocks/stripped_sakura_wood.json
 b68ae7feac098e7b6dd08dfdd85fb414058acaf2 data/ancient_aether/loot_tables/blocks/stripped_sakura_wood_wall.json
 4c6821d0c3f6c33b2e090f7bf842065eea85a43a data/ancient_aether/loot_tables/blocks/trapped_sakura_blossoms.json
+24caaaded957a84ecadf0335438394e6b53b4467 data/ancient_aether/loot_tables/blocks/valkyrum_block.json
 1da4372a62d6d86b5c1eda91d7c7d2b724abd83b data/ancient_aether/loot_tables/blocks/violet_aercloud.json
 598c5aeece5dd942d2b7eb8911f9a21319b753ff data/ancient_aether/loot_tables/blocks/wind_blower.json
 b0275c436b311634544ff27267dc6871c2225947 data/ancient_aether/loot_tables/blocks/wyndcaps_ice.json
