@@ -3,8 +3,7 @@
   "input": "ancient_aether:the_aether/erosion",
   "min_inclusive": 0.4,
   "max_exclusive": 1.5,
-  "when_in_range": 1,
-  "when_out_of_range": {
+  "when_in_range": {
     "type": "minecraft:range_choice",
     "input": "ancient_aether:the_aether/temperature",
     "min_inclusive": -0.5,
@@ -61,5 +60,21 @@
         "when_out_of_range": 1
       }
     }
+  },
+  "when_out_of_range": {
+    "type": "minecraft:range_choice",
+    "input": "ancient_aether:the_aether/erosion",
+    "min_inclusive": -1.5,
+    "max_exclusive": 0.4,
+    "when_in_range": {
+      "type": "minecraft:add",
+      "argument1": {
+        "type": "minecraft:mul",
+        "argument1": -10,
+        "argument2": "ancient_aether:the_aether/erosion"
+      },
+      "argument2": 5
+    },
+    "when_out_of_range": 1
   }
 }
