@@ -1,4 +1,4 @@
-// 1.20.1	2023-11-13T18:06:32.7280181	Item Models: ancient_aether
+// 1.20.1	2023-11-18T10:24:39.6300539	Item Models: ancient_aether
 dc22e9f245c5e59d55b0aec4ae45dec8337daa28 assets/ancient_aether/models/item/aerogel_bottle.json
 532bdb7a4f7d2a6b96d474c01c8b9e7a0d1c10b4 assets/ancient_aether/models/item/aerogel_glass.json
 87e9f8f9f807a2aa763e3057d32bacf3ee32b60f assets/ancient_aether/models/item/aerogel_glass_door.json
@@ -74,6 +74,7 @@ d512fb5f2be651f11b0e848cdfef97b5301df83b assets/ancient_aether/models/item/strip
 67d9f688b85555c143221bf3f650e68c9af8b7a2 assets/ancient_aether/models/item/stripped_sakura_wood_wall.json
 54cc305d29f244b771fe2d06ef99fd40c680df91 assets/ancient_aether/models/item/trapped_sakura_blossoms.json
 b2904a38ad6961e7fe7f085a71ff5c00372cddfd assets/ancient_aether/models/item/valkyrie_wine.json
+8236fd7a524a8f3a35ebaa7fa5709657cbeb5372 assets/ancient_aether/models/item/valkyrum.json
 f007777affa709dfd200d16a89d618a4a1e9c59b assets/ancient_aether/models/item/violet_aercloud.json
 98329ebaf90bee628ae611077334ab6049fd816a assets/ancient_aether/models/item/wynd_thistle.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/wynd_zephyr_spawn_egg.json

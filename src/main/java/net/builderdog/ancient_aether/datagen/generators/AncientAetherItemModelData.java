@@ -33,6 +33,7 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         simpleItem(AncientAetherItems.HEALTH_PENDANT);
         simpleItem(AncientAetherItems.GRAVITITE_DART_SHOOTER);
         simpleItem(AncientAetherItems.CRYSTAL_FRUIT);
+        simpleItem(AncientAetherItems.VALKYRUM);
 
         //Boats
         item(AncientAetherItems.HIGHSPROOT_BOAT.get(), "");
