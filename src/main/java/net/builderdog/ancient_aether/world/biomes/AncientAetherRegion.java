@@ -108,7 +108,7 @@ public class AncientAetherRegion extends Region {
                 AetherBiomes.SKYROOT_GROVE);
         addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.5F, 0.575F), Climate.Parameter.span(0.17F, 1.5F), Climate.Parameter.span(0.34F, 1.5F), Climate.Parameter.span(-1.5F, 0.35F), Climate.Parameter.span(-1.5F, 0.48F), fullRange, 0),
                 AetherBiomes.SKYROOT_MEADOW);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.5F, 0.575F), fullRange, Climate.Parameter.span(0.34F, 1.5F), fullRange, Climate.Parameter.span(0.48F, 1.5F), fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.5F, 0.575F), fullRange, Climate.Parameter.span(0.34F, 1.5F), Climate.Parameter.span(-1.5F, 0.35F), Climate.Parameter.span(0.48F, 1.5F), fullRange, 0),
                 AncientAetherBiomes.QUICKSOIL_COAST);
 
         addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.5F, 0.575F), Climate.Parameter.span(-1.5F, -0.225F), Climate.Parameter.span(0.34F, 1.5F), Climate.Parameter.span(0.35F, 1.5F), Climate.Parameter.span(-1.5F, 0.48F), fullRange, 0),
