@@ -9,6 +9,10 @@
     "aether:phoenix_leggings",
     "aether:phoenix_boots",
     "aether:phoenix_gloves",
-    "aether:invisibility_cloak"
+    "aether:invisibility_cloak",
+    "ancient_aether:ancient_pendant",
+    "ancient_aether:ancient_ring",
+    "ancient_aether:health_pendant",
+    "ancient_aether:health_ring"
   ]
 }

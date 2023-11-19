@@ -32,5 +32,8 @@ public class ItemHooks {
         if (stack.is(AncientAetherTags.Items.LEGENDARY_LOOT)) {
             components.add(position, AncientAetherItems.LEGENDARY);
         }
+        if (stack.is(AncientAetherTags.Items.SEASONAL_LOOT)) {
+            components.add(position, AncientAetherItems.SEASONAL);
+        }
     }
 }

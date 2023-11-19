@@ -24,6 +24,7 @@ public class AncientAetherTags {
         public static final TagKey<Item> RARE_LOOT = tag("rare_loot");
         public static final TagKey<Item> EPIC_LOOT = tag("epic_loot");
         public static final TagKey<Item> LEGENDARY_LOOT = tag("legendary_loot");
+        public static final TagKey<Item> SEASONAL_LOOT = tag("seasonal_loot");
 
         private static TagKey<Item> tag(String name) {
             return TagKey.create(Registries.ITEM, new ResourceLocation(AncientAether.MOD_ID, name));
