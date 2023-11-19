@@ -1,0 +1,10 @@
+{
+  "block.aether.crystal_leaves": "Ancient Crystal Leaves",
+  "block.aether.crystal_fruit_leaves": "Ancient Crystal Fruit Leaves",
+  "block.lost_aether_content.crystal_sapling": "Ancient Crystal Sapling",
+
+  "item.aether.flaming_sword": "§fFlaming Sword",
+  "item.aether.holy_sword": "§fHoly Sword",
+  "item.aether.lightning_sword": "§fLightning Sword",
+  "item.aether.life_shard": "§fLife Shard"
+}

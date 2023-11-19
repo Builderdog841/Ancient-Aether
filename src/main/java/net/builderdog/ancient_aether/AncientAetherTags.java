@@ -20,8 +20,10 @@ public class AncientAetherTags {
         public static final TagKey<Item> CRAFTS_HIGHSPROOT_PLANKS = tag("crafts_highsproot_planks");
         public static final TagKey<Item> CRAFTS_SAKURA_PLANKS = tag("crafts_sakura_planks");
         public static final TagKey<Item> HIGHLAND_BUFFALO_TEMPTATION_ITEMS = tag("highland_buffalo_temptation_items");
-        public static final TagKey<Item> ANCIENT_DUNGEON_LOOT = tag("ancient_dungeon_loot");
-        public static final TagKey<Item> ANCIENT_HOLYSTONE_VASE_LOOT = tag("ancient_holystone_vase_loot");
+        public static final TagKey<Item> COMMON_LOOT = tag("common_loot");
+        public static final TagKey<Item> RARE_LOOT = tag("rare_loot");
+        public static final TagKey<Item> EPIC_LOOT = tag("epic_loot");
+        public static final TagKey<Item> LEGENDARY_LOOT = tag("legendary_loot");
 
         private static TagKey<Item> tag(String name) {
             return TagKey.create(Registries.ITEM, new ResourceLocation(AncientAether.MOD_ID, name));

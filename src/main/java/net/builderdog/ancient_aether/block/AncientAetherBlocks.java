@@ -25,6 +25,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -259,7 +260,7 @@ public class AncientAetherBlocks {
         return () -> {
             B block = Objects.requireNonNull(blockRegistryObject.get());
             if (block == ANCIENT_HOLYSTONE_VASE.get()) {
-                return new BlockItem(block, new Item.Properties().rarity(AetherItems.AETHER_LOOT));
+                return new BlockItem(block, new Item.Properties().rarity(Rarity.UNCOMMON));
             } else {
                     return new BlockItem(block, new Item.Properties());
                 }

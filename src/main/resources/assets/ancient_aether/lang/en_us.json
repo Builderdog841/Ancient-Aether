@@ -1,10 +1,6 @@
 {
   "item.minecraft.quartz": "Quartz",
 
-  "block.aether.crystal_leaves": "Ancient Crystal Leaves",
-  "block.aether.crystal_fruit_leaves": "Ancient Crystal Fruit Leaves",
-  "block.lost_aether_content.crystal_sapling": "Ancient Crystal Sapling",
-
   "block.ancient_aether.aether_quartz_ore": "Aether Quartz Ore",
   "block.ancient_aether.ambrosium_campfire": "Ambrosium Campfire",
   "block.ancient_aether.aerotic_stone": "Aerotic Stone",
@@ -197,7 +193,10 @@
   "gui.ancient_aether.ancient_guardian.title": "the Ancient Guardian",
   "gui.ancient_aether.ancient_core.title": "the Ancient Core",
 
-  "ancient_aether.dungeon.ancient_dungeon": "Ancient Dungeon",
+  "ancient_aether.tooltip.common": "Common",
+  "ancient_aether.tooltip.rare": "Rare",
+  "ancient_aether.tooltip.epic": "Epic",
+  "ancient_aether.tooltip.legendary": "Legendary",
 
   "menu.ancient_aether.ancient_treasure_chest": "Ancient Treasure Chest",
   "ancient_aether.ancient_treasure_chest_locked": "This Treasure Chest must be unlocked with an Ancient Key",

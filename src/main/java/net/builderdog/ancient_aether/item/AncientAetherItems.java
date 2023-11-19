@@ -13,9 +13,9 @@ import net.builderdog.ancient_aether.item.consumables.ValkyrieWineItem;
 import net.builderdog.ancient_aether.item.loot.*;
 import net.builderdog.ancient_aether.item.loot.accessories.*;
 import net.builderdog.ancient_aether.item.misc.AncientAetherBoatItem;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
-import net.minecraft.network.chat.TextColor;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
@@ -25,29 +25,30 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import static com.aetherteam.aether.item.AetherItems.AETHER_LOOT;
-
 public class AncientAetherItems {
     public static final DeferredRegister<Item> ITEMS =
            DeferredRegister.create(ForgeRegistries.ITEMS, AncientAether.MOD_ID);
 
     //Tooltips
-    public static final Component ANCIENT_DUNGEON_TOOLTIP = Component.translatable("ancient_aether.dungeon.ancient_dungeon").withStyle(Style.EMPTY.withItalic(true).withColor(TextColor.parseColor("#5C70A8")));
+    public static final Component COMMON = Component.translatable("ancient_aether.tooltip.common").withStyle(Style.EMPTY.withItalic(true).withColor(ChatFormatting.GRAY));
+    public static final Component RARE = Component.translatable("ancient_aether.tooltip.rare").withStyle(Style.EMPTY.withItalic(true).withColor(ChatFormatting.AQUA));
+    public static final Component EPIC = Component.translatable("ancient_aether.tooltip.epic").withStyle(Style.EMPTY.withItalic(true).withColor(ChatFormatting.DARK_PURPLE));
+    public static final Component LEGENDARY = Component.translatable("ancient_aether.tooltip.legendary").withStyle(Style.EMPTY.withItalic(true).withColor(ChatFormatting.GOLD));
 
     //Misc
     public static final RegistryObject<Item> AEROGEL_BOTTLE = ITEMS.register("aerogel_bottle", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> ANCIENT_RUNE = ITEMS.register("ancient_rune", () -> new Item(new Item.Properties().rarity(AETHER_LOOT)));
-    public static final RegistryObject<Item> ANCIENT_DUNGEON_KEY = ITEMS.register("ancient_dungeon_key", () -> new DungeonKeyItem(new ResourceLocation(AncientAether.MOD_ID, "ancient"), new Item.Properties().stacksTo(1).rarity(AETHER_LOOT).fireResistant()));
+    public static final RegistryObject<Item> ANCIENT_RUNE = ITEMS.register("ancient_rune", () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> ANCIENT_DUNGEON_KEY = ITEMS.register("ancient_dungeon_key", () -> new DungeonKeyItem(new ResourceLocation(AncientAether.MOD_ID, "ancient"), new Item.Properties().stacksTo(1).fireResistant()));
     public static final RegistryObject<Item> VALKYRUM = ITEMS.register("valkyrum", () -> new Item(new Item.Properties()));
 
     //Dungeon Loot
     public static final RegistryObject<SwordItem> ANCIENT_SWORD = ITEMS.register("ancient_sword", AncientSwordItem::new);
-    public static final RegistryObject<Item> GRAVITITE_DART_SHOOTER = ITEMS.register("gravitite_dart_shooter", () -> new GravititeDartShooterItem(AetherItems.GOLDEN_DART, (new Item.Properties().stacksTo(1).rarity(AETHER_LOOT))));
-    public static final RegistryObject<Item> STRENGTH_STONE = ITEMS.register("strength_stone", () -> new StrengthStoneItem(new Item.Properties().stacksTo(1).rarity(AETHER_LOOT)));
-    public static final RegistryObject<Item> ANCIENT_RING = ITEMS.register("ancient_ring", () -> new AncientRingItem(new Item.Properties().stacksTo(1).rarity(AETHER_LOOT)));
-    public static final RegistryObject<Item> ANCIENT_PENDANT = ITEMS.register("ancient_pendant", () -> new AncientPendantItem(new Item.Properties().stacksTo(1).rarity(AETHER_LOOT)));
-    public static final RegistryObject<Item> HEALTH_RING = ITEMS.register("health_ring", () -> new HealthRingItem(new Item.Properties().stacksTo(1).rarity(AETHER_LOOT)));
-    public static final RegistryObject<Item> HEALTH_PENDANT = ITEMS.register("health_pendant", () -> new HealthPendantItem(new Item.Properties().stacksTo(1).rarity(AETHER_LOOT)));
+    public static final RegistryObject<Item> GRAVITITE_DART_SHOOTER = ITEMS.register("gravitite_dart_shooter", () -> new GravititeDartShooterItem(AetherItems.GOLDEN_DART, (new Item.Properties().stacksTo(1))));
+    public static final RegistryObject<Item> STRENGTH_STONE = ITEMS.register("strength_stone", () -> new StrengthStoneItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> ANCIENT_RING = ITEMS.register("ancient_ring", () -> new AncientRingItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> ANCIENT_PENDANT = ITEMS.register("ancient_pendant", () -> new AncientPendantItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> HEALTH_RING = ITEMS.register("health_ring", () -> new HealthRingItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> HEALTH_PENDANT = ITEMS.register("health_pendant", () -> new HealthPendantItem(new Item.Properties().stacksTo(1)));
 
     //Signs
     public static final RegistryObject<Item> HIGHSPROOT_SIGN = ITEMS.register("highsproot_sign", () -> new SignItem(new Item.Properties().stacksTo(16), AncientAetherBlocks.HIGHSPROOT_SIGN.get(), AncientAetherBlocks.HIGHSPROOT_WALL_SIGN.get()));
@@ -56,8 +57,8 @@ public class AncientAetherItems {
     public static final RegistryObject<Item> SAKURA_HANGING_SIGN = ITEMS.register("sakura_hanging_sign", () -> new HangingSignItem(AncientAetherBlocks.SAKURA_HANGING_SIGN.get(), AncientAetherBlocks.SAKURA_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
 
     //Food
-    public static final RegistryObject<Item> GRAPES = ITEMS.register("grapes", () -> new Item(new Item.Properties().rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.6f).build())));
-    public static final RegistryObject<Item> VALKYRIE_WINE = ITEMS.register("valkyrie_wine", () -> new ValkyrieWineItem(new Item.Properties().rarity(Rarity.COMMON).stacksTo(16).food((new FoodProperties.Builder()).nutrition(0).saturationMod(0f).build())));
+    public static final RegistryObject<Item> GRAPES = ITEMS.register("grapes", () -> new Item(new Item.Properties().food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.6f).build())));
+    public static final RegistryObject<Item> VALKYRIE_WINE = ITEMS.register("valkyrie_wine", () -> new ValkyrieWineItem(new Item.Properties().stacksTo(16).food((new FoodProperties.Builder()).nutrition(0).saturationMod(0f).build())));
     public static final RegistryObject<Item> CRYSTAL_FRUIT = ITEMS.register("crystal_fruit", WhiteAppleItem::new);
 
     //Boats
