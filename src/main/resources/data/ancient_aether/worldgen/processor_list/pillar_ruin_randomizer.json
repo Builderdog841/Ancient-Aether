@@ -21,7 +21,7 @@
         },
         {
           "input_predicate": {
-            "block": "ancient_aether:holystone_vase",
+            "block": "ancient_aether:ancient_holystone_vase",
             "predicate_type": "minecraft:random_block_match",
             "probability": 0.6
           },

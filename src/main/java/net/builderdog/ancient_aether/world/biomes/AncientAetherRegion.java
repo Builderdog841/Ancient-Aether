@@ -109,7 +109,7 @@ public class AncientAetherRegion extends Region {
                 AncientAetherBiomes.MYTHICAL_FOREST);
         addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, -0.5F), Climate.Parameter.span( 0.225F, 1.5F), Climate.Parameter.span(0.34F, 1.5F), Climate.Parameter.span(0.45F, 1.5F), Climate.Parameter.span(-1.5F, 0.5F), fullRange, 0),
                 AncientAetherBiomes.MYTHICAL_CLEARING);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, -0.5F), fullRange, Climate.Parameter.span(0.34F, 1.5F), Climate.Parameter.span(0.325F, 1.5F), Climate.Parameter.span(0.5F, 1.5F), fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, -0.5F), fullRange, Climate.Parameter.span(0.34F, 1.5F), Climate.Parameter.span(0.375F, 1.5F), Climate.Parameter.span(0.5F, 1.5F), fullRange, 0),
                 AncientAetherBiomes.DIVINE_COAST);
 
         addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.5F, 0.5F), Climate.Parameter.span(-1.5F, -0.225F), Climate.Parameter.span(0.34F, 1.5F), Climate.Parameter.span(0.45F, 1.5F), fullRange, fullRange, 0),
@@ -118,7 +118,7 @@ public class AncientAetherRegion extends Region {
                 AncientAetherBiomes.MYTHICAL_FOREST);
         addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.5F, 0.5F), Climate.Parameter.span( 0.225F, 1.5F), Climate.Parameter.span(0.34F, 1.5F), Climate.Parameter.span(0.45F, 1.5F), fullRange, fullRange, 0),
                 AncientAetherBiomes.MYTHICAL_CLEARING);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, 0.575F), fullRange, Climate.Parameter.span(0.25F, 0.34F), Climate.Parameter.span(0.35F, 1.5F), fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, 0.575F), fullRange, Climate.Parameter.span(0.25F, 0.34F), Climate.Parameter.span(0.375F, 1.5F), fullRange, fullRange, 0),
                 AncientAetherBiomes.DIVINE_COAST);
 
         addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.5F, 0.575F), Climate.Parameter.span(-1.5F, -0.225F), Climate.Parameter.span(0.34F, 1.5F), Climate.Parameter.span(0.45F, 1.5F), Climate.Parameter.span(-1.5F, 0.5F), fullRange, 0),
@@ -127,16 +127,16 @@ public class AncientAetherRegion extends Region {
                 AncientAetherBiomes.MYTHICAL_FOREST);
         addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.5F, 0.575F), Climate.Parameter.span( 0.225F, 1.5F), Climate.Parameter.span(0.34F, 1.5F), Climate.Parameter.span(0.45F, 1.5F), Climate.Parameter.span(-1.5F, 0.5F), fullRange, 0),
                 AncientAetherBiomes.MYTHICAL_CLEARING);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.5F, 0.575F), fullRange, Climate.Parameter.span(0.34F, 1.5F), Climate.Parameter.span(0.325F, 1.5F), Climate.Parameter.span(0.5F, 1.5F), fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.5F, 0.575F), fullRange, Climate.Parameter.span(0.34F, 1.5F), Climate.Parameter.span(0.375F, 1.5F), Climate.Parameter.span(0.5F, 1.5F), fullRange, 0),
                 AncientAetherBiomes.DIVINE_COAST);
 
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, 0.575F), Climate.Parameter.span(-1.5F, -0.225F), Climate.Parameter.span(0.34F, 1.5F), Climate.Parameter.span(0.325F, 0.45F), Climate.Parameter.span(-1.5F, 0.5F), fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, 0.575F), Climate.Parameter.span(-1.5F, -0.225F), Climate.Parameter.span(0.34F, 1.5F), Climate.Parameter.span(0.375F, 0.45F), Climate.Parameter.span(-1.5F, 0.5F), fullRange, 0),
                 AncientAetherBiomes.MYTHICAL_CLEARING);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, 0.575F), Climate.Parameter.span(-0.225F, 0.225F), Climate.Parameter.span(0.34F, 1.5F), Climate.Parameter.span(0.325F, 0.45F), Climate.Parameter.span(-1.5F, 0.5F), fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, 0.575F), Climate.Parameter.span(-0.225F, 0.225F), Climate.Parameter.span(0.34F, 1.5F), Climate.Parameter.span(0.375F, 0.45F), Climate.Parameter.span(-1.5F, 0.5F), fullRange, 0),
                 AncientAetherBiomes.MYTHICAL_FOREST);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, 0.575F), Climate.Parameter.span( 0.225F, 1.5F), Climate.Parameter.span(0.34F, 1.5F), Climate.Parameter.span(0.325F, 0.45F), Climate.Parameter.span(-1.5F, 0.5F), fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, 0.575F), Climate.Parameter.span( 0.225F, 1.5F), Climate.Parameter.span(0.34F, 1.5F), Climate.Parameter.span(0.375F, 0.45F), Climate.Parameter.span(-1.5F, 0.5F), fullRange, 0),
                 AncientAetherBiomes.MYTHICAL_CLEARING);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, 0.575F), fullRange, Climate.Parameter.span(0.34F, 1.5F), Climate.Parameter.span(0.325F, 1.5F), Climate.Parameter.span(0.5F, 1.5F), fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, 0.575F), fullRange, Climate.Parameter.span(0.34F, 1.5F), Climate.Parameter.span(0.375F, 1.5F), Climate.Parameter.span(0.5F, 1.5F), fullRange, 0),
                 AncientAetherBiomes.DIVINE_COAST);
 
         //Sakura Jungle
