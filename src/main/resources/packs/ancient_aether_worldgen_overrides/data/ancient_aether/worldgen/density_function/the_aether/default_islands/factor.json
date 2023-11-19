@@ -18,19 +18,7 @@
         "type": "minecraft:add",
         "argument1": {
           "type": "minecraft:mul",
-          "argument1": {
-            "type": "minecraft:add",
-            "argument1": {
-              "type": "minecraft:mul",
-              "argument1": -1,
-              "argument2": "ancient_aether:the_aether/temperature"
-            },
-            "argument2": {
-              "type": "minecraft:mul",
-              "argument1": 2,
-              "argument2": "ancient_aether:the_aether/temperature"
-            }
-          },
+          "argument1": "ancient_aether:the_aether/value_transformer/type_1",
           "argument2": 10
         },
         "argument2": -4
@@ -44,15 +32,7 @@
           "type": "minecraft:add",
           "argument1": {
             "type": "minecraft:mul",
-            "argument1": {
-              "type": "minecraft:add",
-              "argument1": "ancient_aether:the_aether/temperature",
-              "argument2": {
-                "type": "minecraft:mul",
-                "argument1": -2,
-                "argument2": "ancient_aether:the_aether/temperature"
-              }
-            },
+            "argument1": "ancient_aether:the_aether/value_transformer/type_2",
             "argument2": 10
           },
           "argument2": -4
@@ -70,19 +50,7 @@
       "type": "minecraft:add",
       "argument1": {
         "type": "minecraft:mul",
-        "argument1": {
-          "type": "minecraft:add",
-          "argument1": {
-            "type": "minecraft:mul",
-            "argument1": -1,
-            "argument2": "ancient_aether:the_aether/erosion"
-          },
-          "argument2": {
-            "type": "minecraft:mul",
-            "argument1": 2,
-            "argument2": "ancient_aether:the_aether/erosion"
-          }
-        },
+        "argument1": "ancient_aether:the_aether/value_transformer/type_1",
         "argument2": 10
       },
       "argument2": -2
