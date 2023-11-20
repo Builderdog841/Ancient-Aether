@@ -24,7 +24,7 @@ public class AncientAetherRegion extends Region {
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper) {
         Climate.Parameter fullRange = Climate.Parameter.span(-1.5F, 1.5F);
         Climate.Parameter inland = Climate.Parameter.span(0.34F, 1.5F);
-        Climate.Parameter coast = Climate.Parameter.span(0.25F, 0.34F);
+        Climate.Parameter coast = Climate.Parameter.span(0.2F, 0.34F);
         Climate.Parameter inlandBlended = Climate.Parameter.span(-1.5F, 0.38F);
         Climate.Parameter coastBlended = Climate.Parameter.span(0.38F, 1.5F);
         Climate.Parameter wyndcaps1 = Climate.Parameter.span(-1.5F, -0.65F);
@@ -175,7 +175,7 @@ public class AncientAetherRegion extends Region {
                 AncientAetherBiomes.SKYROOT_JUNGLE);
 
         //Cloud Ocean
-        addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, Climate.Parameter.span(-1.5F, 0.25F), fullRange, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, Climate.Parameter.span(-1.5F, 0.2F), fullRange, fullRange, fullRange, 0),
                 AncientAetherBiomes.CLOUD_OCEAN);
     }
 }
