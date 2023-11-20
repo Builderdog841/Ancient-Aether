@@ -1,0 +1,58 @@
+{
+  "type": "minecraft:add",
+  "argument1": 0.001,
+  "argument2": {
+    "type": "minecraft:add",
+    "argument1": {
+      "type": "minecraft:mul",
+      "argument1": -0.25,
+      "argument2": "ancient_aether:the_aether/default_islands/factor"
+    },
+    "argument2": {
+      "type": "minecraft:mul",
+      "argument1": {
+        "type": "minecraft:y_clamped_gradient",
+        "from_value": 0.0,
+        "from_y": 112,
+        "to_value": 1.0,
+        "to_y": 124
+      },
+      "argument2": {
+        "type": "minecraft:add",
+        "argument1": 0.1,
+        "argument2": {
+          "type": "minecraft:add",
+          "argument1": {
+            "type": "minecraft:mul",
+            "argument1": -0.2,
+            "argument2": "ancient_aether:the_aether/default_islands/factor"
+          },
+          "argument2": {
+            "type": "minecraft:mul",
+            "argument1": {
+              "type": "minecraft:y_clamped_gradient",
+              "from_value": 1,
+              "from_y": 132,
+              "to_value": 0.0,
+              "to_y": 150
+            },
+            "argument2": {
+              "type": "add",
+              "argument1": 0.2,
+              "argument2": {
+                "type": "minecraft:add",
+                "argument1": -0.5,
+                "argument2": {
+                  "type": "minecraft:weird_scaled_sampler",
+                  "rarity_value_mapper": "type_2",
+                  "noise": "ancient_aether:amplificator",
+                  "input": "ancient_aether:the_aether/base_3d_noise"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
