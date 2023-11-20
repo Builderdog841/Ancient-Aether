@@ -41,7 +41,7 @@
               "argument1": 0.2,
               "argument2": {
                 "type": "minecraft:add",
-                "argument1": -0.09,
+                "argument1": -0.11,
                 "argument2": "ancient_aether:the_aether/continents"
               }
             }
