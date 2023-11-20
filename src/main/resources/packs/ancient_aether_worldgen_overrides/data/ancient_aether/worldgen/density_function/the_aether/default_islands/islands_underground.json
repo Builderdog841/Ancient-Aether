@@ -24,17 +24,17 @@
           "type": "minecraft:add",
           "argument1": {
             "type": "minecraft:mul",
-            "argument1": -0.2,
+            "argument1":-0.2,
             "argument2": "ancient_aether:the_aether/default_islands/factor"
-        },
+          },
           "argument2": {
             "type": "minecraft:mul",
             "argument1": {
               "type": "minecraft:y_clamped_gradient",
               "from_value": 1,
-              "from_y": 114,
+              "from_y": 112,
               "to_value": 0.0,
-              "to_y": 124
+              "to_y": 132
             },
             "argument2": {
               "type": "add",
