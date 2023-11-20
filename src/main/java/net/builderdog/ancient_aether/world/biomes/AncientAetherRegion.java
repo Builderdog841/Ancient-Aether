@@ -65,20 +65,20 @@ public class AncientAetherRegion extends Region {
 
         //Skyroot Biomes
         addBiome(mapper, new Climate.ParameterPoint(skyroot1, Climate.Parameter.span(-1.5F, -0.25F), inland, Climate.Parameter.span(-1.5F, 0.35F), inlandBlended, fullRange, 0),
-                AetherBiomes.SKYROOT_MEADOW);
+                AncientAetherBiomes.SKYROOT_FIELDS);
         addBiome(mapper, new Climate.ParameterPoint(skyroot1, Climate.Parameter.span(-0.25F, 0.25F), inland, Climate.Parameter.span(-1.5F, 0.35F), inlandBlended, fullRange, 0),
                 AetherBiomes.SKYROOT_WOODLAND);
         addBiome(mapper, new Climate.ParameterPoint(skyroot1, Climate.Parameter.span(0.25F, 1.5F), inland, Climate.Parameter.span(-1.5F, 0.35F), inlandBlended, fullRange, 0),
-                AetherBiomes.SKYROOT_MEADOW);
+                AncientAetherBiomes.SKYROOT_FIELDS);
         addBiome(mapper, new Climate.ParameterPoint(skyroot1, fullRange, inland, Climate.Parameter.span(-1.5F, 0.325F), coastBlended, fullRange, 0),
                 AncientAetherBiomes.QUICKSOIL_COAST);
 
         addBiome(mapper, new Climate.ParameterPoint(skyroot2, Climate.Parameter.span(-1.5F, -0.25F), inland, Climate.Parameter.span(-1.5F, 0.25F), fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_MEADOW);
+                AncientAetherBiomes.SKYROOT_FIELDS);
         addBiome(mapper, new Climate.ParameterPoint(skyroot2, Climate.Parameter.span(-0.25F, 0.25F), inland, Climate.Parameter.span(-1.5F, 0.25F), fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_WOODLAND);
         addBiome(mapper, new Climate.ParameterPoint(skyroot2, Climate.Parameter.span(0.25F, 1.5F), inland, Climate.Parameter.span(-1.5F, 0.25F), fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_MEADOW);
+                AncientAetherBiomes.SKYROOT_FIELDS);
 
         addBiome(mapper, new Climate.ParameterPoint(skyroot3, Climate.Parameter.span(-1.5F, -0.25F), inland, Climate.Parameter.span(-1.5F, 0.25F), fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_MEADOW);

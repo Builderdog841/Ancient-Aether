@@ -1,17 +1,9 @@
 {
   "values": [
-    "ancient_aether:cloud_ocean",
-    "ancient_aether:crystal_hollows",
-    "ancient_aether:wyndcap_taiga",
-    "ancient_aether:festive_wyndcap_taiga",
-    "ancient_aether:wyndcap_highland",
-    "ancient_aether:wyndcap_peaks",
-    "ancient_aether:sakura_jungle",
-    "ancient_aether:skyroot_jungle",
-    "ancient_aether:mythical_forest",
-    "ancient_aether:mythical_clearing",
-    "ancient_aether:quicksoil_coast",
-    "ancient_aether:divine_coast",
-    "ancient_aether:icy_coast"
+    "#ancient_aether:is_wyndcaps",
+    "#ancient_aether:is_skyroot",
+    "#ancient_aether:is_sakura",
+    "#ancient_aether:is_mythical",
+    "ancient_aether:crystal_hollows"
   ]
 }
