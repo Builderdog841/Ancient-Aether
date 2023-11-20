@@ -2,30 +2,20 @@
     "type": "minecraft:add",
     "argument1": {
         "type": "minecraft:add",
-        "argument1": {
-            "type": "minecraft:range_choice",
-            "input": "ancient_aether:the_aether/continents",
-            "min_inclusive": 0.2,
-            "max_exclusive": 1.5,
-            "when_in_range": "ancient_aether:the_aether/default_islands/islands_underground",
-            "when_out_of_range": "ancient_aether:the_aether/void"
-        },
+        "argument1": 0.2,
         "argument2": {
             "type": "minecraft:add",
-            "argument1": 0.2,
-            "argument2": {
-                "type": "minecraft:add",
-                "argument1": -0.025,
-                "argument2": "ancient_aether:the_aether/default_islands/islands_jagged"
-            }
+            "argument1": -0.09,
+            "argument2": "ancient_aether:the_aether/default_islands/islands_underground"
         }
     },
     "argument2": {
-        "type": "minecraft:range_choice",
-        "input": "ancient_aether:the_aether/continents",
-        "min_inclusive": 0.35,
-        "max_exclusive": 1.5,
-        "when_in_range": "ancient_aether:the_aether/default_islands/amplificator",
-        "when_out_of_range": "ancient_aether:the_aether/void"
+        "type": "minecraft:add",
+        "argument1": 0.2,
+        "argument2": {
+            "type": "minecraft:add",
+            "argument1": -0.09,
+            "argument2": "ancient_aether:the_aether/default_islands/islands_jagged"
+        }
     }
 }

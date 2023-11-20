@@ -5,7 +5,7 @@
     "type": "minecraft:add",
     "argument1": {
       "type": "minecraft:mul",
-      "argument1": -0.21,
+      "argument1": -0.22,
       "argument2": "ancient_aether:the_aether/default_islands/factor"
     },
     "argument2": {
@@ -15,7 +15,7 @@
         "from_value": 0.0,
         "from_y": 112,
         "to_value": 1.0,
-        "to_y": 124
+        "to_y": 120
       },
       "argument2": {
         "type": "minecraft:add",
@@ -24,7 +24,7 @@
           "type": "minecraft:add",
           "argument1": {
             "type": "minecraft:mul",
-            "argument1": -0.24,
+            "argument1": -0.25,
             "argument2": "ancient_aether:the_aether/default_islands/factor"
           },
           "argument2": {
@@ -32,16 +32,16 @@
             "argument1": {
               "type": "minecraft:y_clamped_gradient",
               "from_value": 1,
-              "from_y": 132,
+              "from_y": 124,
               "to_value": 0.0,
-              "to_y": 300
+              "to_y": 270
             },
             "argument2": {
               "type": "add",
               "argument1": 0.2,
               "argument2": {
                 "type": "minecraft:add",
-                "argument1": -0.23,
+                "argument1": -0.1,
                 "argument2": "ancient_aether:the_aether/continents_jagged"
               }
             }
