@@ -72,16 +72,16 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         itemButton(AncientAetherBlocks.SAKURA_BUTTON.get(), AncientAetherBlocks.SAKURA_PLANKS.get(), "");
         itemBlock(AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get());
 
-        itemBlock(AncientAetherBlocks.AEROTIC_STAIRS.get());
-        itemBlock(AncientAetherBlocks.AEROTIC_SLAB.get());
-        itemWallBlock(AncientAetherBlocks.AEROTIC_WALL.get(), AncientAetherBlocks.AEROTIC_STONE.get(), "");
+        itemBlock(AncientAetherBlocks.AEROGETIC_STAIRS.get());
+        itemBlock(AncientAetherBlocks.AEROGETIC_SLAB.get());
+        itemWallBlock(AncientAetherBlocks.AEROGETIC_WALL.get(), AncientAetherBlocks.AEROGETIC_STONE.get(), "");
 
         item(AncientAetherBlocks.HOLYSTONE_LANTERN.get().asItem(), "");
         item(AncientAetherBlocks.SENTRY_LANTERN.get().asItem(), "");
         item(AncientAetherBlocks.ANGELIC_LANTERN.get().asItem(), "");
         item(AncientAetherBlocks.HELLFIRE_LANTERN.get().asItem(), "");
         item(AncientAetherBlocks.GALE_LANTERN.get().asItem(), "");
-        item(AncientAetherBlocks.AEROTIC_LANTERN.get().asItem(), "");
+        item(AncientAetherBlocks.AEROGETIC_LANTERN.get().asItem(), "");
 
         item(AncientAetherBlocks.HIGHSPROOT_SIGN.get().asItem(), "");
         item(AncientAetherBlocks.SAKURA_SIGN.get().asItem(), "");

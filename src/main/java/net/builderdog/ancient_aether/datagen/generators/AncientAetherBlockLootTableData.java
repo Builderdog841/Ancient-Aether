@@ -88,6 +88,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.CRYSTAL_SAPLING.get());
 
         //Ores
+        dropSelf(AncientAetherBlocks.VALKYRUM_ORE.get());
         dropSelf(AncientAetherBlocks.VALKYRUM_BLOCK.get());
         dropDoubleWithFortune(AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), Items.QUARTZ);
 
@@ -111,13 +112,13 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         add(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get(), createDoorTable(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get()));
 
         //Dungeon Blocks
-        dropSelf(AncientAetherBlocks.AEROTIC_STONE.get());
-        dropSelf(AncientAetherBlocks.AEROTIC_STAIRS.get());
-        dropSelf(AncientAetherBlocks.AEROTIC_SLAB.get());
-        dropSelf(AncientAetherBlocks.AEROTIC_WALL.get());
-        dropSelf(AncientAetherBlocks.AEROTIC_STONE_MOSAIC.get());
-        dropSelf(AncientAetherBlocks.LIGHT_AEROTIC_STONE.get());
-        dropSelf(AncientAetherBlocks.CORRUPTED_LIGHT_AEROTIC_STONE.get());
+        dropSelf(AncientAetherBlocks.AEROGETIC_STONE.get());
+        dropSelf(AncientAetherBlocks.AEROGETIC_STAIRS.get());
+        dropSelf(AncientAetherBlocks.AEROGETIC_SLAB.get());
+        dropSelf(AncientAetherBlocks.AEROGETIC_WALL.get());
+        dropSelf(AncientAetherBlocks.AEROGETIC_STONE_MOSAIC.get());
+        dropSelf(AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get());
+        dropSelf(AncientAetherBlocks.CORRUPTED_LIGHT_AEROGETIC_STONE.get());
         dropSelf(AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get());
         dropSelf(AncientAetherBlocks.CARVED_STONE_MOSAIC.get());
         dropSelf(AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get());
@@ -130,7 +131,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.SENTRY_LANTERN.get());
         dropSelf(AncientAetherBlocks.ANGELIC_LANTERN.get());
         dropSelf(AncientAetherBlocks.HELLFIRE_LANTERN.get());
-        dropSelf(AncientAetherBlocks.AEROTIC_LANTERN.get());
+        dropSelf(AncientAetherBlocks.AEROGETIC_LANTERN.get());
         dropSelf(AncientAetherBlocks.GALE_LANTERN.get());
 
         //Redstone Blocks

@@ -78,9 +78,9 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .unlockedBy(getHasName(AetherBlocks.AMBROSIUM_TORCH.get()), has(AetherBlocks.AMBROSIUM_TORCH.get()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherBlocks.AEROTIC_LANTERN.get())
-                .define('A', AncientAetherBlocks.AEROTIC_STONE.get())
-                .define('L', AncientAetherBlocks.LIGHT_AEROTIC_STONE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherBlocks.AEROGETIC_LANTERN.get())
+                .define('A', AncientAetherBlocks.AEROGETIC_STONE.get())
+                .define('L', AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get())
                 .define('T', AetherBlocks.AMBROSIUM_TORCH.get())
                 .pattern("AAA")
                 .pattern("LTL")
@@ -186,7 +186,7 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         pressurePlateBuilder(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_STONE_MOSAIC.get(), Ingredient.of(AetherBlocks.CARVED_SLAB.get())).unlockedBy(getHasName(AetherBlocks.CARVED_SLAB.get()), has(AetherBlocks.CARVED_SLAB.get())).save(consumer);
         pressurePlateBuilder(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get(), Ingredient.of(AetherBlocks.ANGELIC_SLAB.get())).unlockedBy(getHasName(AetherBlocks.ANGELIC_SLAB.get()), has(AetherBlocks.ANGELIC_SLAB.get())).save(consumer);
         pressurePlateBuilder(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get(), Ingredient.of(AetherBlocks.HELLFIRE_SLAB.get())).unlockedBy(getHasName(AetherBlocks.HELLFIRE_SLAB.get()), has(AetherBlocks.HELLFIRE_SLAB.get())).save(consumer);
-        pressurePlateBuilder(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROTIC_STONE_MOSAIC.get(), Ingredient.of(AncientAetherBlocks.AEROTIC_SLAB.get())).unlockedBy(getHasName(AncientAetherBlocks.AEROTIC_SLAB.get()), has(AncientAetherBlocks.AEROTIC_SLAB.get())).save(consumer);
+        pressurePlateBuilder(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGETIC_STONE_MOSAIC.get(), Ingredient.of(AncientAetherBlocks.AEROGETIC_SLAB.get())).unlockedBy(getHasName(AncientAetherBlocks.AEROGETIC_SLAB.get()), has(AncientAetherBlocks.AEROGETIC_SLAB.get())).save(consumer);
 
         fence(AncientAetherBlocks.HIGHSPROOT_FENCE, AncientAetherBlocks.HIGHSPROOT_PLANKS).save(consumer);
         fenceGate(AncientAetherBlocks.HIGHSPROOT_FENCE_GATE, AncientAetherBlocks.HIGHSPROOT_PLANKS).save(consumer);
@@ -196,9 +196,9 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
 
         stairs(AncientAetherBlocks.HIGHSPROOT_STAIRS, AncientAetherBlocks.HIGHSPROOT_PLANKS).group("wooden_stairs").save(consumer);
         stairs(AncientAetherBlocks.SAKURA_STAIRS, AncientAetherBlocks.SAKURA_PLANKS).group("wooden_stairs").save(consumer);
-        stairs(AncientAetherBlocks.AEROTIC_STAIRS, AncientAetherBlocks.AEROTIC_STONE).save(consumer);
+        stairs(AncientAetherBlocks.AEROGETIC_STAIRS, AncientAetherBlocks.AEROGETIC_STONE).save(consumer);
 
-        wall(consumer, RecipeCategory.DECORATIONS, AncientAetherBlocks.AEROTIC_WALL.get(), AncientAetherBlocks.AEROTIC_STONE.get());
+        wall(consumer, RecipeCategory.DECORATIONS, AncientAetherBlocks.AEROGETIC_WALL.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
 
         oreBlockStorageRecipesRecipesWithCustomUnpacking(consumer, RecipeCategory.MISC, AncientAetherItems.VALKYRUM.get(), RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.VALKYRUM_BLOCK.get(), "valkyrum_from_valkyrum_block", "valkyrum");
 
@@ -210,7 +210,7 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .group("wooden_slab")
                 .unlockedBy(getHasName(AncientAetherBlocks.SAKURA_PLANKS.get()), has(AncientAetherBlocks.SAKURA_PLANKS.get()))
                 .save(consumer);
-        slab(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROTIC_SLAB.get(), AncientAetherBlocks.AEROTIC_STONE.get());
+        slab(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGETIC_SLAB.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGEL_GLASS.get(),8)
                 .define('A', AetherBlocks.AEROGEL.get())
@@ -308,15 +308,15 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         smeltingOreRecipe(Items.QUARTZ, AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), 0.5F).save(consumer, name("quartz_from_smelting_aether_quartz_ore"));
         blastingOreRecipe(Items.QUARTZ, AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), 0.5F).save(consumer, name("quartz_from_blasting_aether_quartz_ore"));
 
-        stonecuttingRecipe(consumer, RecipeCategory.DECORATIONS, AncientAetherBlocks.AEROTIC_WALL.get(), AncientAetherBlocks.AEROTIC_STONE.get());
-        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROTIC_STAIRS.get(), AncientAetherBlocks.AEROTIC_STONE.get());
-        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROTIC_SLAB.get(), AncientAetherBlocks.AEROTIC_STONE.get(), 2);
-        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROTIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROTIC_STONE.get());
-        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROTIC_STONE.get(), AncientAetherBlocks.CORRUPTED_LIGHT_AEROTIC_STONE.get());
-        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.LIGHT_AEROTIC_STONE.get(), AncientAetherBlocks.CORRUPTED_LIGHT_AEROTIC_STONE.get());
-        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.LIGHT_AEROTIC_STONE.get(), AncientAetherBlocks.AEROTIC_STONE.get());
-        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CORRUPTED_LIGHT_AEROTIC_STONE.get(), AncientAetherBlocks.AEROTIC_STONE.get());
-        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CORRUPTED_LIGHT_AEROTIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROTIC_STONE.get());
+        stonecuttingRecipe(consumer, RecipeCategory.DECORATIONS, AncientAetherBlocks.AEROGETIC_WALL.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
+        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGETIC_STAIRS.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
+        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGETIC_SLAB.get(), AncientAetherBlocks.AEROGETIC_STONE.get(), 2);
+        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGETIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get());
+        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGETIC_STONE.get(), AncientAetherBlocks.CORRUPTED_LIGHT_AEROGETIC_STONE.get());
+        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get(), AncientAetherBlocks.CORRUPTED_LIGHT_AEROGETIC_STONE.get());
+        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
+        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CORRUPTED_LIGHT_AEROGETIC_STONE.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
+        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CORRUPTED_LIGHT_AEROGETIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get());
 
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_STONE_MOSAIC.get(), AetherBlocks.CARVED_STONE.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AetherBlocks.CARVED_STONE.get(), AncientAetherBlocks.CARVED_STONE_MOSAIC.get());

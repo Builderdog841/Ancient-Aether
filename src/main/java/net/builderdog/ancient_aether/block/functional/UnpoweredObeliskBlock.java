@@ -56,19 +56,10 @@ public class UnpoweredObeliskBlock extends Block {
                             BlockPos checkedPos = new BlockPos(x1, y1, z1);
                             BlockState checkedState = level.getBlockState(checkedPos);
 
-                            if (checkedState.getBlock() == AncientAetherBlocks.LOCKED_AEROTIC_STONE.get()) {
-                                level.setBlockAndUpdate(checkedPos, AncientAetherBlocks.AEROTIC_STONE.get().defaultBlockState());
-                            }
-                            if (checkedState.getBlock() == AncientAetherBlocks.LOCKED_LIGHT_AEROTIC_STONE.get()) {
-                                level.setBlockAndUpdate(checkedPos, AncientAetherBlocks.LIGHT_AEROTIC_STONE.get().defaultBlockState());
-                            }
-                            if (checkedState.getBlock() == AncientAetherBlocks.LOCKED_AEROTIC_STONE_MOSAIC.get()) {
-                                level.setBlockAndUpdate(checkedPos, AncientAetherBlocks.AEROTIC_STONE_MOSAIC.get().defaultBlockState().setValue(AXIS, checkedState.getValue(AXIS)));
-                            }
-                            if (checkedState.getBlock() == AncientAetherBlocks.TREASURE_DOORWAY_AEROTIC_STONE.get()) {
+                            if (checkedState.getBlock() == AncientAetherBlocks.TREASURE_DOORWAY_AEROGETIC_STONE.get()) {
                                 level.setBlockAndUpdate(checkedPos, Blocks.AIR.defaultBlockState());
                             }
-                            if (checkedState.getBlock() == AncientAetherBlocks.TREASURE_DOORWAY_LIGHT_AEROTIC_STONE.get()) {
+                            if (checkedState.getBlock() == AncientAetherBlocks.TREASURE_DOORWAY_LIGHT_AEROGETIC_STONE.get()) {
                                 level.setBlockAndUpdate(checkedPos, Blocks.AIR.defaultBlockState());
                             }
                         }

@@ -93,21 +93,21 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         logBlock((AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get()));
         logBlock((AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get()));
         logBlock((AncientAetherBlocks.GALE_STONE_MOSAIC.get()));
-        logBlock((AncientAetherBlocks.AEROTIC_STONE_MOSAIC.get()));
+        logBlock((AncientAetherBlocks.AEROGETIC_STONE_MOSAIC.get()));
         simpleBlockItem(AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get(), models().withExistingParent("ancient_aether:holystone_brick_mosaic","minecraft:block/cube_column"));
         simpleBlockItem(AncientAetherBlocks.CARVED_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:carved_stone_mosaic","minecraft:block/cube_column"));
         simpleBlockItem(AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:angelic_stone_mosaic","minecraft:block/cube_column"));
         simpleBlockItem(AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:hellfire_stone_mosaic","minecraft:block/cube_column"));
         simpleBlockItem(AncientAetherBlocks.GALE_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:gale_stone_mosaic","minecraft:block/cube_column"));
-        simpleBlockItem(AncientAetherBlocks.AEROTIC_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:aerotic_stone_mosaic","minecraft:block/cube_column"));
+        simpleBlockItem(AncientAetherBlocks.AEROGETIC_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:aerotic_stone_mosaic","minecraft:block/cube_column"));
 
         //Aerotic Stone
-        blockWithItem(AncientAetherBlocks.AEROTIC_STONE);
-        blockWithItem(AncientAetherBlocks.LIGHT_AEROTIC_STONE);
-        blockWithItem(AncientAetherBlocks.CORRUPTED_LIGHT_AEROTIC_STONE);
-        stairs((StairBlock) AncientAetherBlocks.AEROTIC_STAIRS.get(), AncientAetherBlocks.AEROTIC_STONE.get(), "");
-        slab((SlabBlock) AncientAetherBlocks.AEROTIC_SLAB.get(), AncientAetherBlocks.AEROTIC_STONE.get(), "");
-        wallBlock((WallBlock) AncientAetherBlocks.AEROTIC_WALL.get(), AncientAetherBlocks.AEROTIC_STONE.get(), "");
+        blockWithItem(AncientAetherBlocks.AEROGETIC_STONE);
+        blockWithItem(AncientAetherBlocks.LIGHT_AEROGETIC_STONE);
+        blockWithItem(AncientAetherBlocks.CORRUPTED_LIGHT_AEROGETIC_STONE);
+        stairs((StairBlock) AncientAetherBlocks.AEROGETIC_STAIRS.get(), AncientAetherBlocks.AEROGETIC_STONE.get(), "");
+        slab((SlabBlock) AncientAetherBlocks.AEROGETIC_SLAB.get(), AncientAetherBlocks.AEROGETIC_STONE.get(), "");
+        wallBlock((WallBlock) AncientAetherBlocks.AEROGETIC_WALL.get(), AncientAetherBlocks.AEROGETIC_STONE.get(), "");
 
         //Leaves
         blockWithItem(AncientAetherBlocks.HIGHSPROOT_LEAVES);

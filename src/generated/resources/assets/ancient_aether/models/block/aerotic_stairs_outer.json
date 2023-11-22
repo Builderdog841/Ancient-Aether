@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "ancient_aether:block/aerotic_stone",
-    "side": "ancient_aether:block/aerotic_stone",
-    "top": "ancient_aether:block/aerotic_stone"
-  }
-}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "ancient_aether:aerogetic_stone"
+    },
+    "L": {
+      "item": "ancient_aether:light_aerogetic_stone"
+    },
+    "T": {
+      "item": "aether:ambrosium_torch"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "LTL",
+    "AAA"
+  ],
+  "result": {
+    "item": "ancient_aether:aerogetic_lantern"
+  },
+  "show_notification": true
+}

@@ -1,7 +1,3 @@
 {
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "ancient_aether:block/aerotic_stone_mosaic_top",
-    "side": "ancient_aether:block/aerotic_stone_mosaic"
-  }
+  "parent": "minecraft:block/cube_column"
 }

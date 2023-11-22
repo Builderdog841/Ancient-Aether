@@ -308,16 +308,16 @@ public class AncientCore extends PathfinderMob implements AetherBossMob<AncientC
     @Nullable
     @Override
     public BlockState convertBlock(BlockState state) {
-        if (state.is(AncientAetherBlocks.LOCKED_AEROTIC_STONE.get())) {
-            return AncientAetherBlocks.AEROTIC_STONE.get().defaultBlockState();
+        if (state.is(AncientAetherBlocks.LOCKED_AEROGETIC_STONE.get())) {
+            return AncientAetherBlocks.AEROGETIC_STONE.get().defaultBlockState();
         }
-        if (state.is(AncientAetherBlocks.LOCKED_CORRUPTED_LIGHT_AEROTIC_STONE.get())) {
-            return AncientAetherBlocks.CORRUPTED_LIGHT_AEROTIC_STONE.get().defaultBlockState();
+        if (state.is(AncientAetherBlocks.LOCKED_CORRUPTED_LIGHT_AEROGETIC_STONE.get())) {
+            return AncientAetherBlocks.CORRUPTED_LIGHT_AEROGETIC_STONE.get().defaultBlockState();
         }
-        if (state.is(AncientAetherBlocks.BOSS_DOORWAY_AEROTIC_STONE.get())) {
+        if (state.is(AncientAetherBlocks.BOSS_DOORWAY_AEROGETIC_STONE.get())) {
             return Blocks.AIR.defaultBlockState();
         }
-        if (state.is(AncientAetherBlocks.TREASURE_DOORWAY_AEROTIC_STONE.get())) {
+        if (state.is(AncientAetherBlocks.TREASURE_DOORWAY_AEROGETIC_STONE.get())) {
             return Blocks.AIR.defaultBlockState();
         }
         return null;

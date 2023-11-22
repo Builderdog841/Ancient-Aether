@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "ancient_aether:block/aerogetic_stone",
+    "side": "ancient_aether:block/aerogetic_stone",
+    "top": "ancient_aether:block/aerogetic_stone"
+  }
+}

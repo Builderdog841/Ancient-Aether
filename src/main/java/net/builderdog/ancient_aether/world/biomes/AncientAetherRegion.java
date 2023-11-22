@@ -40,28 +40,28 @@ public class AncientAetherRegion extends Region {
         Climate.Parameter mythicalErosion2 = Climate.Parameter.span(0.35F, 0.45F);
 
         //Wyndcaps
-        addBiome(mapper, new Climate.ParameterPoint(wyndcaps1, Climate.Parameter.span(-1.5F, 0.15F), Climate.Parameter.span(0.34F, 0.47F), fullRange, fullRange, fullRange, 0),
-                AncientAetherBiomes.WYNDCAP_TAIGA);
-        addBiome(mapper, new Climate.ParameterPoint(wyndcaps1, Climate.Parameter.span(0.15F, 1.5F), Climate.Parameter.span(0.34F, 0.47F), fullRange, fullRange, fullRange, 0),
-                AncientAetherBiomes.FESTIVE_WYNDCAP_TAIGA);
-        addBiome(mapper, new Climate.ParameterPoint(wyndcaps1, fullRange, Climate.Parameter.span(0.47F, 1.5F), fullRange, Climate.Parameter.span(0F, 1.5F), fullRange, 0),
-                AncientAetherBiomes.WYNDCAP_HIGHLAND);
-        addBiome(mapper, new Climate.ParameterPoint(wyndcaps1, fullRange, Climate.Parameter.span(0.47F, 1.5F), fullRange, Climate.Parameter.span(-1.5F, 0F), fullRange, 0),
-                AncientAetherBiomes.WYNDCAP_PEAKS);
+        //addBiome(mapper, new Climate.ParameterPoint(wyndcaps1, Climate.Parameter.span(-1.5F, 0.15F), Climate.Parameter.span(0.34F, 0.47F), fullRange, fullRange, fullRange, 0),
+        //        AncientAetherBiomes.WYNDCAP_TAIGA);
+        //addBiome(mapper, new Climate.ParameterPoint(wyndcaps1, Climate.Parameter.span(0.15F, 1.5F), Climate.Parameter.span(0.34F, 0.47F), fullRange, fullRange, fullRange, 0),
+        //        AncientAetherBiomes.FESTIVE_WYNDCAP_TAIGA);
+        //addBiome(mapper, new Climate.ParameterPoint(wyndcaps1, fullRange, Climate.Parameter.span(0.47F, 1.5F), fullRange, Climate.Parameter.span(0F, 1.5F), fullRange, 0),
+        //        AncientAetherBiomes.WYNDCAP_HIGHLAND);
+        //addBiome(mapper, new Climate.ParameterPoint(wyndcaps1, fullRange, Climate.Parameter.span(0.47F, 1.5F), fullRange, Climate.Parameter.span(-1.5F, 0F), fullRange, 0),
+        //        AncientAetherBiomes.WYNDCAP_PEAKS);
 
-        addBiome(mapper, new Climate.ParameterPoint(wyndcaps2, Climate.Parameter.span(-1.5F, 0.15F), Climate.Parameter.span(0.34F, 0.47F), fullRange, inlandBlended, fullRange, 0),
-                AncientAetherBiomes.WYNDCAP_TAIGA);
-        addBiome(mapper, new Climate.ParameterPoint(wyndcaps2, Climate.Parameter.span(0.15F, 1.5F), Climate.Parameter.span(0.34F, 0.47F), fullRange, inlandBlended, fullRange, 0),
-                AncientAetherBiomes.FESTIVE_WYNDCAP_TAIGA);
-        addBiome(mapper, new Climate.ParameterPoint(wyndcaps2, fullRange, Climate.Parameter.span(0.47F, 1.5F), fullRange, Climate.Parameter.span(0F, 0.48F), fullRange, 0),
-                AncientAetherBiomes.WYNDCAP_HIGHLAND);
-        addBiome(mapper, new Climate.ParameterPoint(wyndcaps2, fullRange, Climate.Parameter.span(0.47F, 1.5F), fullRange, Climate.Parameter.span(-1.5F, 0F), fullRange, 0),
-                AncientAetherBiomes.WYNDCAP_PEAKS);
-        addBiome(mapper, new Climate.ParameterPoint(wyndcaps2, fullRange, Climate.Parameter.span(0.34F, 1.5F), fullRange, coastBlended, fullRange, 0),
-                AncientAetherBiomes.ICY_COAST);
+        // addBiome(mapper, new Climate.ParameterPoint(wyndcaps2, Climate.Parameter.span(-1.5F, 0.15F), Climate.Parameter.span(0.34F, 0.47F), fullRange, inlandBlended, fullRange, 0),
+        //        AncientAetherBiomes.WYNDCAP_TAIGA);
+        //addBiome(mapper, new Climate.ParameterPoint(wyndcaps2, Climate.Parameter.span(0.15F, 1.5F), Climate.Parameter.span(0.34F, 0.47F), fullRange, inlandBlended, fullRange, 0),
+        //        AncientAetherBiomes.FESTIVE_WYNDCAP_TAIGA);
+        //addBiome(mapper, new Climate.ParameterPoint(wyndcaps2, fullRange, Climate.Parameter.span(0.47F, 1.5F), fullRange, Climate.Parameter.span(0F, 0.48F), fullRange, 0),
+        //        AncientAetherBiomes.WYNDCAP_HIGHLAND);
+        //addBiome(mapper, new Climate.ParameterPoint(wyndcaps2, fullRange, Climate.Parameter.span(0.47F, 1.5F), fullRange, Climate.Parameter.span(-1.5F, 0F), fullRange, 0),
+        //        AncientAetherBiomes.WYNDCAP_PEAKS);
+        //addBiome(mapper, new Climate.ParameterPoint(wyndcaps2, fullRange, Climate.Parameter.span(0.34F, 1.5F), fullRange, coastBlended, fullRange, 0),
+        //        AncientAetherBiomes.ICY_COAST);
 
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-1.5F, -0.575F), fullRange, coast, fullRange, fullRange, fullRange, 0),
-                AncientAetherBiomes.ICY_COAST);
+        //addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-1.5F, -0.575F), fullRange, coast, fullRange, fullRange, fullRange, 0),
+        //        AncientAetherBiomes.ICY_COAST);
 
         //Skyroot Biomes
         addBiome(mapper, new Climate.ParameterPoint(skyroot1, Climate.Parameter.span(-1.5F, -0.25F), inland, Climate.Parameter.span(-1.5F, 0.35F), inlandBlended, fullRange, 0),
@@ -132,47 +132,47 @@ public class AncientAetherRegion extends Region {
                 AncientAetherBiomes.QUICKSOIL_COAST);
 
         //Mythical Forests
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, -0.5F), Climate.Parameter.span(-1.5F, -0.225F), inland, mythicalErosion1, inlandBlended, fullRange, 0),
-                AncientAetherBiomes.MYTHICAL_CLEARING);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, -0.5F), Climate.Parameter.span(-0.225F, 0.225F), inland, mythicalErosion1, inlandBlended, fullRange, 0),
-                AncientAetherBiomes.MYTHICAL_FOREST);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, -0.5F), Climate.Parameter.span( 0.225F, 1.5F), inland, mythicalErosion1, inlandBlended, fullRange, 0),
-                AncientAetherBiomes.MYTHICAL_CLEARING);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, -0.5F), fullRange, inland, mythicalErosion1, coastBlended, fullRange, 0),
-                AncientAetherBiomes.DIVINE_COAST);
+        //addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, -0.5F), Climate.Parameter.span(-1.5F, -0.225F), inland, mythicalErosion1, inlandBlended, fullRange, 0),
+        //        AncientAetherBiomes.MYTHICAL_CLEARING);
+        //addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, -0.5F), Climate.Parameter.span(-0.225F, 0.225F), inland, mythicalErosion1, inlandBlended, fullRange, 0),
+        //        AncientAetherBiomes.MYTHICAL_FOREST);
+        //addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, -0.5F), Climate.Parameter.span( 0.225F, 1.5F), inland, mythicalErosion1, inlandBlended, fullRange, 0),
+        //         AncientAetherBiomes.MYTHICAL_CLEARING);
+        //addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, -0.5F), fullRange, inland, mythicalErosion1, coastBlended, fullRange, 0),
+        //        AncientAetherBiomes.DIVINE_COAST);
 
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.5F, 0.5F), Climate.Parameter.span(-1.5F, -0.225F), inland, mythicalErosion1, fullRange, fullRange, 0),
-                AncientAetherBiomes.MYTHICAL_CLEARING);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.5F, 0.5F), Climate.Parameter.span(-0.225F, 0.225F), inland, mythicalErosion1, fullRange, fullRange, 0),
-                AncientAetherBiomes.MYTHICAL_FOREST);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.5F, 0.5F), Climate.Parameter.span( 0.225F, 1.5F), inland, mythicalErosion1, fullRange, fullRange, 0),
-                AncientAetherBiomes.MYTHICAL_CLEARING);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, 0.575F), fullRange, coast, mythicalErosion1, fullRange, fullRange, 0),
-                AncientAetherBiomes.DIVINE_COAST);
+        //addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.5F, 0.5F), Climate.Parameter.span(-1.5F, -0.225F), inland, mythicalErosion1, fullRange, fullRange, 0),
+        //        AncientAetherBiomes.MYTHICAL_CLEARING);
+        //addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.5F, 0.5F), Climate.Parameter.span(-0.225F, 0.225F), inland, mythicalErosion1, fullRange, fullRange, 0),
+        //        AncientAetherBiomes.MYTHICAL_FOREST);
+        //addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.5F, 0.5F), Climate.Parameter.span( 0.225F, 1.5F), inland, mythicalErosion1, fullRange, fullRange, 0),
+        //        AncientAetherBiomes.MYTHICAL_CLEARING);
+        //addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, 0.575F), fullRange, coast, mythicalErosion1, fullRange, fullRange, 0),
+        //        AncientAetherBiomes.DIVINE_COAST);
 
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.5F, 0.575F), Climate.Parameter.span(-1.5F, -0.225F), inland, mythicalErosion1, inlandBlended, fullRange, 0),
-                AncientAetherBiomes.MYTHICAL_CLEARING);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.5F, 0.575F), Climate.Parameter.span(-0.225F, 0.225F), inland, mythicalErosion1, inlandBlended, fullRange, 0),
-                AncientAetherBiomes.MYTHICAL_FOREST);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.5F, 0.575F), Climate.Parameter.span( 0.225F, 1.5F), inland, mythicalErosion1, inlandBlended, fullRange, 0),
-                AncientAetherBiomes.MYTHICAL_CLEARING);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.5F, 0.575F), fullRange, inland, mythicalErosion1, coastBlended, fullRange, 0),
-                AncientAetherBiomes.DIVINE_COAST);
+        //addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.5F, 0.575F), Climate.Parameter.span(-1.5F, -0.225F), inland, mythicalErosion1, inlandBlended, fullRange, 0),
+        //        AncientAetherBiomes.MYTHICAL_CLEARING);
+        //addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.5F, 0.575F), Climate.Parameter.span(-0.225F, 0.225F), inland, mythicalErosion1, inlandBlended, fullRange, 0),
+        //        AncientAetherBiomes.MYTHICAL_FOREST);
+        //addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.5F, 0.575F), Climate.Parameter.span( 0.225F, 1.5F), inland, mythicalErosion1, inlandBlended, fullRange, 0),
+        //        AncientAetherBiomes.MYTHICAL_CLEARING);
+        //addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(0.5F, 0.575F), fullRange, inland, mythicalErosion1, coastBlended, fullRange, 0),
+        //        AncientAetherBiomes.DIVINE_COAST);
 
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, 0.575F), Climate.Parameter.span(-1.5F, -0.225F), inland, mythicalErosion2, inlandBlended, fullRange, 0),
-                AncientAetherBiomes.MYTHICAL_CLEARING);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, 0.575F), Climate.Parameter.span(-0.225F, 0.225F), inland, mythicalErosion2, inlandBlended, fullRange, 0),
-                AncientAetherBiomes.MYTHICAL_FOREST);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, 0.575F), Climate.Parameter.span( 0.225F, 1.5F), inland, mythicalErosion2, inlandBlended, fullRange, 0),
-                AncientAetherBiomes.MYTHICAL_CLEARING);
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, 0.575F), fullRange, inland, Climate.Parameter.span(0.35F, 1.5F), coastBlended, fullRange, 0),
-                AncientAetherBiomes.DIVINE_COAST);
+        //addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, 0.575F), Climate.Parameter.span(-1.5F, -0.225F), inland, mythicalErosion2, inlandBlended, fullRange, 0),
+        //        AncientAetherBiomes.MYTHICAL_CLEARING);
+        //addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, 0.575F), Climate.Parameter.span(-0.225F, 0.225F), inland, mythicalErosion2, inlandBlended, fullRange, 0),
+        //        AncientAetherBiomes.MYTHICAL_FOREST);
+        //addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, 0.575F), Climate.Parameter.span( 0.225F, 1.5F), inland, mythicalErosion2, inlandBlended, fullRange, 0),
+        //        AncientAetherBiomes.MYTHICAL_CLEARING);
+        //addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.575F, 0.575F), fullRange, inland, Climate.Parameter.span(0.35F, 1.5F), coastBlended, fullRange, 0),
+        //        AncientAetherBiomes.DIVINE_COAST);
 
         //Sakura Jungle
-        addBiome(mapper, new Climate.ParameterPoint(sakura, Climate.Parameter.span(-1.5F, 0.25F), Climate.Parameter.span(0.25F, 1.5F), fullRange, fullRange, fullRange, 0),
-                AncientAetherBiomes.SAKURA_JUNGLE);
-        addBiome(mapper, new Climate.ParameterPoint(sakura, Climate.Parameter.span(0.25F, 1.5F), Climate.Parameter.span(0.25F, 1.5F), fullRange, fullRange, fullRange, 0),
-                AncientAetherBiomes.SKYROOT_JUNGLE);
+        //addBiome(mapper, new Climate.ParameterPoint(sakura, Climate.Parameter.span(-1.5F, 0.25F), Climate.Parameter.span(0.25F, 1.5F), fullRange, fullRange, fullRange, 0),
+        //        AncientAetherBiomes.SAKURA_JUNGLE);
+        //addBiome(mapper, new Climate.ParameterPoint(sakura, Climate.Parameter.span(0.25F, 1.5F), Climate.Parameter.span(0.25F, 1.5F), fullRange, fullRange, fullRange, 0),
+        //        AncientAetherBiomes.SKYROOT_JUNGLE);
 
         //Cloud Ocean
         addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, Climate.Parameter.span(-1.5F, 0.2F), fullRange, fullRange, fullRange, 0),

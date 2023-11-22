@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "ancient_aether:aerotic_stone"
-  },
-  "result": "ancient_aether:aerotic_slab"
-}
