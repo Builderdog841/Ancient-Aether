@@ -13,7 +13,7 @@
                     "from_value": 0.0,
                     "from_y": 16,
                     "to_value": 1.0,
-                    "to_y": 112
+                    "to_y": 116
                 },
                 "argument2": {
                     "type": "minecraft:add",
@@ -26,9 +26,9 @@
                             "argument1": {
                                 "type": "minecraft:y_clamped_gradient",
                                 "from_value": 1.0,
-                                "from_y": 114,
+                                "from_y": 120,
                                 "to_value": 0.0,
-                                "to_y": 160
+                                "to_y": 180
                             },
                             "argument2": {
                                 "type": "add",
@@ -37,7 +37,7 @@
                                     "argument1": 0.2,
                                     "argument2": {
                                         "type": "minecraft:add",
-                                        "argument1": -0.015,
+                                        "argument1": -0.001,
                                         "argument2": "ancient_aether:the_aether/base_3d_noise"
                                     }
                                 },
