@@ -6,16 +6,29 @@
         "type": "minecraft:simple_block",
         "config": {
           "to_place": {
-            "type": "minecraft:noise_provider",
+            "type": "minecraft:dual_noise_provider",
             "noise": {
               "amplitudes": [
                 1.0
               ],
-              "firstOctave": 0
+              "firstOctave": -3
             },
-            "scale": 0.020833334,
+            "scale": 1.0,
             "seed": 2345,
+            "slow_noise": {
+              "amplitudes": [
+                1.0
+              ],
+              "firstOctave": -10
+            },
+            "slow_scale": 1.0,
             "states": [
+              {
+                "Name": "minecraft:tall_grass",
+                "Properties": {
+                  "half": "lower"
+                }
+              },
               {
                 "Name": "aether:purple_flower"
               },
@@ -24,7 +37,23 @@
               },
               {
                 "Name": "ancient_aether:highland_viola"
+              },
+              {
+                "Name": "aether:purple_flower"
+              },
+              {
+                "Name": "aether:white_flower"
+              },
+              {
+                "Name": "ancient_aether:highland_viola"
+              },
+              {
+                "Name": "minecraft:grass"
               }
+            ],
+            "variety": [
+              1,
+              3
             ]
           }
         }
