@@ -1,54 +1,57 @@
 {
     "type": "minecraft:add",
-    "argument1": 0.01,
-    "argument2": {
+    "argument1": {
         "type": "minecraft:add",
-        "argument1": -0.2,
+        "argument1": 0.01,
         "argument2": {
-            "type": "minecraft:mul",
-            "argument1": {
-                "type": "minecraft:y_clamped_gradient",
-                "from_value": 0.0,
-                "from_y": 16,
-                "to_value": 1.0,
-                "to_y": 112
-            },
+            "type": "minecraft:add",
+            "argument1": -0.2,
             "argument2": {
-                "type": "minecraft:add",
-                "argument1": 0.2,
+                "type": "minecraft:mul",
+                "argument1": {
+                    "type": "minecraft:y_clamped_gradient",
+                    "from_value": 0.0,
+                    "from_y": 16,
+                    "to_value": 1.0,
+                    "to_y": 112
+                },
                 "argument2": {
                     "type": "minecraft:add",
-                    "argument1": -0.25,
+                    "argument1": 0.2,
                     "argument2": {
-                        "type": "minecraft:mul",
-                        "argument1": {
-                            "type": "minecraft:y_clamped_gradient",
-                            "from_value": 1.0,
-                            "from_y": 112,
-                            "to_value": 0.0,
-                            "to_y": 136
-                        },
+                        "type": "minecraft:add",
+                        "argument1": -0.2,
                         "argument2": {
-                            "type": "add",
+                            "type": "minecraft:mul",
                             "argument1": {
-                                "type": "minecraft:add",
-                                "argument1": 0.2,
-                                "argument2": {
-                                    "type": "minecraft:add",
-                                    "argument1": -0.035,
-                                    "argument2": "ancient_aether:the_aether/base_3d_noise"
-                                }
+                                "type": "minecraft:y_clamped_gradient",
+                                "from_value": 1.0,
+                                "from_y": 114,
+                                "to_value": 0.0,
+                                "to_y": 160
                             },
                             "argument2": {
-                                "type": "minecraft:mul",
-                                "argument1": 1,
+                                "type": "add",
+                                "argument1": {
+                                    "type": "minecraft:add",
+                                    "argument1": 0.2,
+                                    "argument2": {
+                                        "type": "minecraft:add",
+                                        "argument1": -0.015,
+                                        "argument2": "ancient_aether:the_aether/base_3d_noise"
+                                    }
+                                },
                                 "argument2": {
-                                    "type": "minecraft:quarter_negative",
-                                    "argument": {
-                                        "type": "minecraft:noise",
-                                        "noise": "minecraft:jagged",
-                                        "xz_scale": 300,
-                                        "y_scale": 0
+                                    "type": "minecraft:mul",
+                                    "argument1": 1,
+                                    "argument2": {
+                                        "type": "minecraft:quarter_negative",
+                                        "argument": {
+                                            "type": "minecraft:noise",
+                                            "noise": "minecraft:jagged",
+                                            "xz_scale": 300,
+                                            "y_scale": 50
+                                        }
                                     }
                                 }
                             }
@@ -57,5 +60,6 @@
                 }
             }
         }
-    }
+    },
+    "argument2": "ancient_aether:the_aether/default_islands/coast_layer"
 }
