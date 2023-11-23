@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#ancient_aether:is_skyroot",
+  "features": "ancient_aether:quicksoil_coast",
+  "step": "underground_ores"
+}
