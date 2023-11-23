@@ -8,7 +8,7 @@ import net.minecraft.world.level.biome.Biome;
 
 public class AncientAetherBiomes {
 
-    public static final ResourceKey<Biome> CLOUD_OCEAN = createKey("cloud_ocean");
+    public static final ResourceKey<Biome> AERCLOUD_OCEAN = createKey("aercloud_ocean");
     public static final ResourceKey<Biome> WYNDCAP_TAIGA = createKey("wyndcap_taiga");
     public static final ResourceKey<Biome> FESTIVE_WYNDCAP_TAIGA = createKey("festive_wyndcap_taiga");
     public static final ResourceKey<Biome> WYNDCAP_HIGHLAND = createKey("wyndcap_highland");
@@ -17,7 +17,8 @@ public class AncientAetherBiomes {
     public static final ResourceKey<Biome> SAKURA_JUNGLE = createKey("sakura_jungle");
     public static final ResourceKey<Biome> MYTHICAL_FOREST = createKey("mythical_forest");
     public static final ResourceKey<Biome> MYTHICAL_CLEARING = createKey("mythical_clearing");
-    public static final ResourceKey<Biome> SKYROOT_FIELDS = createKey("skyroot_fields");
+    public static final ResourceKey<Biome> SKYROOT_GRASSLAND = createKey("skyroot_grassland");
+    public static final ResourceKey<Biome> HIGHSPROOT_FOREST = createKey("highsproot_forest");
     public static final ResourceKey<Biome> CRYSTAL_HOLLOWS = createKey("crystal_hollows");
 
     private static ResourceKey<Biome> createKey(String name) {

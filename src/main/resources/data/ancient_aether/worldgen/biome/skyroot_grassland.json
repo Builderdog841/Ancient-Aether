@@ -1,6 +1,6 @@
 {
   "carvers": {},
-  "creature_spawn_probability": 0.15,
+  "creature_spawn_probability": 0.2,
   "downfall": 0.0,
   "effects": {
     "fog_color": 9671612,
@@ -39,7 +39,7 @@
       "aether:water_spring"
     ],
     [
-      "aether:skyroot_grove_trees",
+      "ancient_aether:skyroot_grassland_trees",
       "aether:holiday_tree",
       "aether:grass_patch",
       "aether:tall_grass_patch",
