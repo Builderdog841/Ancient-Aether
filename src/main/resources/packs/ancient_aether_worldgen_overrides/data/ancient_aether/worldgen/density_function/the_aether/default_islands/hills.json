@@ -26,7 +26,7 @@
                             "from_value": 1.0,
                             "from_y": 119,
                             "to_value": 0.0,
-                            "to_y": 160
+                            "to_y": 180
                         },
                         "argument2": {
                             "type": "add",
@@ -48,7 +48,7 @@
                                         "type": "minecraft:noise",
                                         "noise": "minecraft:jagged",
                                         "xz_scale": 300,
-                                        "y_scale": 0
+                                        "y_scale": 50
                                     }
                                 }
                             }
