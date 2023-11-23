@@ -43,6 +43,21 @@
             }
           ]
         }
+      },
+      {
+        "chance": 0.2,
+        "feature": {
+          "feature": "ancient_aether:sky_blues_patch",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:air"
+              }
+            }
+          ]
+        }
       }
     ]
   }
