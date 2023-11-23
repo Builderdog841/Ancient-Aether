@@ -1,5 +1,5 @@
 {
-  "feature": "ancient_aether:quicksoil_coast_patch",
+  "feature": "ancient_aether:disk_quicksoil",
   "placement": [
     {
       "type": "minecraft:count",
@@ -7,26 +7,22 @@
         "type": "minecraft:weighted_list",
         "distribution": [
           {
-            "data": 20,
-            "weight": 2
+            "data": 12,
+            "weight": 8
           },
           {
-            "data": 25,
-            "weight": 3
+            "data": 10,
+            "weight": 1
           }
         ]
       }
-    },
-    {
-      "type": "minecraft:heightmap",
-      "heightmap": "OCEAN_FLOOR"
     },
     {
       "type": "minecraft:height_range",
       "height": {
         "type": "minecraft:uniform",
         "max_inclusive": {
-          "absolute": 116
+          "absolute": 115
         },
         "min_inclusive": {
           "absolute": 112
@@ -34,10 +30,10 @@
       }
     },
     {
-      "type": "minecraft:biome"
+      "type": "minecraft:in_square"
     },
     {
-      "type": "aether:dungeon_blacklist_filter"
+      "type": "minecraft:biome"
     }
   ]
 }
