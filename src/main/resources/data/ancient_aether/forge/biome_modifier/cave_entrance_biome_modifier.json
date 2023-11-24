@@ -1,5 +1,5 @@
 {
   "type": "ancient_aether:add_carver",
   "biomes": "#ancient_aether:has_aether_caves",
-  "carver": "ancient_aether:big_aether_cave"
+  "carver": "ancient_aether:cave_entrance"
 }
