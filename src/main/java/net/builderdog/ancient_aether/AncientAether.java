@@ -49,6 +49,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLDedicatedServerSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.resource.PathPackResources;
@@ -75,6 +76,7 @@ public class AncientAether {
 
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::clientSetup);
+        modEventBus.addListener(this::serverSetup);
         modEventBus.addListener(this::packSetup);
         modEventBus.addListener(this::dataSetup);
 
@@ -134,6 +136,12 @@ public class AncientAether {
             Regions.register(new AncientAetherRegion(new ResourceLocation(MOD_ID, "ancient_aether"), AncientAetherConfig.COMMON.ancient_aether_biome_weight.get()));
 
             SurfaceRuleManager.addSurfaceRules(AetherRuleCategory.THE_AETHER, MOD_ID, AncientAetherSurfaceData.makeRules());
+        });
+    }
+
+    private void serverSetup(FMLDedicatedServerSetupEvent event) {
+        event.enqueueWork(() -> {
+            AetherConfig.SERVER.disable_eternal_day.set(true);
         });
     }
 

@@ -16,6 +16,7 @@ import java.util.List;
 
 public class AncientAetherPlacedFeatures {
     public static final ResourceKey<PlacedFeature> AETHER_QUARTZ_ORE = createKey("aether_quartz_ore");
+    public static final ResourceKey<PlacedFeature> VALKYRUM_ORE = createKey("valkyrum_ore");
     public static final ResourceKey<PlacedFeature> AEROGEL_ORE = createKey("aerogel_blobs");
     public static final ResourceKey<PlacedFeature> DIVINE_GRAVEL_ORE = createKey("divine_gravel_ore");
     public static final ResourceKey<PlacedFeature> VIOLET_AERCLOUD = createKey("violet_aercloud");
@@ -27,6 +28,9 @@ public class AncientAetherPlacedFeatures {
         register(context, AETHER_QUARTZ_ORE, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.AETHER_QUARTZ_ORE),
                 AncientAetherPlacedFeatureBuilder.commonOrePlacement(5,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(256))));
+        register(context, VALKYRUM_ORE, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.VALKYRUM_ORE),
+                AncientAetherPlacedFeatureBuilder.commonOrePlacement(12,
+                        HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-44), VerticalAnchor.aboveBottom(64))));
         register(context, AEROGEL_ORE, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.AEROGEL_BLOBS),
                 AncientAetherPlacedFeatureBuilder.commonOrePlacement(4,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(80))));

@@ -1,6 +1,6 @@
 {
-  "type": "aether:enchanting",
-  "category": "enchanting_blocks",
+  "type": "aether:freezing",
+  "category": "freezable_blocks",
   "cookingtime": 50,
   "experience": 0.1,
   "ingredient": {

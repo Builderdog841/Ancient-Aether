@@ -69,6 +69,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
 
         //Ores
         blockWithItem(AncientAetherBlocks.VALKYRUM_BLOCK);
+        blockWithItem(AncientAetherBlocks.VALKYRUM_ORE);
         blockWithItem(AncientAetherBlocks.AETHER_QUARTZ_ORE);
 
         //Natural Blocks

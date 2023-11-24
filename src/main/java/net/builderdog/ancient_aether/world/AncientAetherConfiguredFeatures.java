@@ -36,6 +36,7 @@ import java.util.List;
 public class AncientAetherConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_QUARTZ_ORE = registerKey("aether_quartz_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> VALKYRUM_ORE = registerKey("valkyrum_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AEROGEL_BLOBS = registerKey("aerogel_blobs");
     public static final ResourceKey<ConfiguredFeature<?, ?>> DIVINE_GRAVEL_ORE = registerKey("divine_gravel_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_PINE_TREE = registerKey("skyroot_pine_tree");
@@ -59,16 +60,15 @@ public class AncientAetherConfiguredFeatures {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         //Ore Features
-        List<OreConfiguration.TargetBlockState> aetherQuartzOre = List.of(OreConfiguration.target(holystone,
-                AncientAetherBlocks.AETHER_QUARTZ_ORE.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)));
-        List<OreConfiguration.TargetBlockState> aerogelOre = List.of(OreConfiguration.target(holystone,
-                AetherBlocks.AEROGEL.get().defaultBlockState()));
-        List<OreConfiguration.TargetBlockState> divineGravelOre = List.of(OreConfiguration.target(holystone,
-                AncientAetherBlocks.DIVINE_GRAVEL.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)));
+        List<OreConfiguration.TargetBlockState> aetherQuartzOre = List.of(OreConfiguration.target(holystone, AncientAetherBlocks.AETHER_QUARTZ_ORE.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)));
+        List<OreConfiguration.TargetBlockState> aerogelOre = List.of(OreConfiguration.target(holystone, AetherBlocks.AEROGEL.get().defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> divineGravelOre = List.of(OreConfiguration.target(holystone, AncientAetherBlocks.DIVINE_GRAVEL.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)));
+        List<OreConfiguration.TargetBlockState> valkyrumOre = List.of(OreConfiguration.target(holystone, AncientAetherBlocks.VALKYRUM_ORE.get().defaultBlockState()));
 
         register(context, AETHER_QUARTZ_ORE, Feature.ORE, new OreConfiguration(aetherQuartzOre, 6, 0f));
-        register(context, AEROGEL_BLOBS, Feature.ORE, new OreConfiguration(aerogelOre, 32, 0f));
         register(context, DIVINE_GRAVEL_ORE, Feature.ORE, new OreConfiguration(divineGravelOre, 64, 0f));
+        register(context, AEROGEL_BLOBS, Feature.ORE, new OreConfiguration(aerogelOre, 32, 0f));
+        register(context, VALKYRUM_ORE, Feature.ORE, new OreConfiguration(valkyrumOre, 4, 0.5f));
 
         //Tree Features
         register(context, SKYROOT_PINE_TREE, Feature.TREE,
@@ -110,8 +110,6 @@ public class AncientAetherConfiguredFeatures {
                 NitrogenConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
                         .add(AncientAetherBlocks.SAKURA_BLOSSOMS.get().defaultBlockState(), 12)
                         .add(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get().defaultBlockState(), 3)), 64));
-
-        //Selector Features
 
         //Misc Features
         register(context, VIOLET_AERCLOUD, AetherFeatures.AERCLOUD.get(), AetherConfiguredFeatureBuilders.aercloud(16, AncientAetherBlocks.VIOLET_AERCLOUD.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)));
