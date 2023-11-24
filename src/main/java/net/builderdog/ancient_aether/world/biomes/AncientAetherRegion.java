@@ -49,10 +49,10 @@ public class AncientAetherRegion extends Region {
                 AncientAetherBiomes.SKYROOT_GRASSLAND);
 
         addBiome(mapper, new Climate.ParameterPoint(skyroot3, Climate.Parameter.span(-1.5F, -0.1F), fullRange, fullRange, fullRange, fullRange, 0),
-                AncientAetherBiomes.HIGHSPROOT_FOREST);
-        addBiome(mapper, new Climate.ParameterPoint(skyroot3, Climate.Parameter.span(-0.1F, -0.1F), fullRange, fullRange, fullRange, fullRange, 0),
+                AetherBiomes.SKYROOT_WOODLAND);
+        addBiome(mapper, new Climate.ParameterPoint(skyroot3, Climate.Parameter.span(-0.1F, 0F), fullRange, fullRange, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_MEADOW);
-        addBiome(mapper, new Climate.ParameterPoint(skyroot3, Climate.Parameter.span(-0.1F, 0.1F), fullRange, fullRange, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(skyroot3, Climate.Parameter.span( 0F, 0.1F), fullRange, fullRange, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_FOREST);
         addBiome(mapper, new Climate.ParameterPoint(skyroot3, Climate.Parameter.span(0.1F, 0.22F), fullRange, fullRange, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_GROVE);
