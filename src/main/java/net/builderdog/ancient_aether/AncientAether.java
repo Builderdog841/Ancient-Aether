@@ -149,6 +149,9 @@ public class AncientAether {
         if (ModList.get().isLoaded("lost_aether_content")) {
             setupCompatDatapack(event, "lost_content_compat", "Lost Content Compatibility", "Better Compatibility with Lost Content");
         }
+        if (ModList.get().isLoaded("aether_redux")) {
+            setupCompatDatapack(event, "aether_redux_compat", "Aether Redux Compatibility", "Better Compatibility with Aether Redux");
+        }
     }
 
     private void setupProgrammerArtPack(AddPackFindersEvent event) {
