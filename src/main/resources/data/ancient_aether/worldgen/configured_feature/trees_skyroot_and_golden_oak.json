@@ -20,7 +20,7 @@
     },
     "features": [
       {
-        "chance": 0.3,
+        "chance": 0.2,
         "feature": {
           "feature": "ancient_aether:highsproot_tree",
           "placement": [
@@ -40,7 +40,7 @@
         }
       },
       {
-        "chance": 0.2,
+        "chance": 0.1,
         "feature": {
           "feature": "ancient_aether:skyroot_pine_tree",
           "placement": [
@@ -60,7 +60,7 @@
         }
       },
       {
-        "chance": 0.1,
+        "chance": 0.02,
         "feature": {
           "feature": "ancient_aether:fancy_skyroot",
           "placement": [
