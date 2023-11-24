@@ -126,7 +126,6 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         crossBlock(AncientAetherBlocks.SAKURA_BLOSSOMS);
         crossBlock(AncientAetherBlocks.HIGHLAND_VIOLA);
         crossBlock(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS);
-        crossBlock(AncientAetherBlocks.DRIFT_WEED);
         crossBlock(AncientAetherBlocks.DIVINE_SKYROOT_SAPLING);
 
         //Potted Plants

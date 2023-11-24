@@ -20,10 +20,6 @@ public class AncientAetherBiomeModifierSerializers {
 
     static {
         BIOME_MODIFIER_SERIALIZERS = DeferredRegister.create(Keys.BIOME_MODIFIER_SERIALIZERS, "ancient_aether");
-        CARVER_CODEC = BIOME_MODIFIER_SERIALIZERS.register("add_carver", () -> {
-            return RecordCodecBuilder.create((builder) -> {
-                return builder.group(Biome.LIST_CODEC.fieldOf("biomes").forGetter(CarverModifier::biomes), ConfiguredWorldCarver.CODEC.fieldOf("carver").forGetter(CarverModifier::carver)).apply(builder, CarverModifier::new);
-            });
-        });
+        CARVER_CODEC = BIOME_MODIFIER_SERIALIZERS.register("add_carver", () -> RecordCodecBuilder.create((builder) -> builder.group(Biome.LIST_CODEC.fieldOf("biomes").forGetter(CarverModifier::biomes), ConfiguredWorldCarver.CODEC.fieldOf("carver").forGetter(CarverModifier::carver)).apply(builder, CarverModifier::new)));
     }
 }

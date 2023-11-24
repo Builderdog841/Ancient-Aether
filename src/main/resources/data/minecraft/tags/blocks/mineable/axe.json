@@ -1,5 +1,4 @@
 {
-  "replace": false,
   "values": [
     "ancient_aether:highsproot_log",
     "ancient_aether:highsproot_wood",
@@ -43,7 +42,6 @@
     "ancient_aether:highsproot_hanging_sign",
     "ancient_aether:highsproot_wall_hanging_sign",
     "ancient_aether:sakura_hanging_sign",
-    "ancient_aether:sakura_wall_hanging_sign",
-    "ancient_aether:drift_weed"
+    "ancient_aether:sakura_wall_hanging_sign"
   ]
 }

@@ -144,7 +144,6 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.HIGHLAND_VIOLA.get());
         dropSelf(AncientAetherBlocks.SAKURA_BLOSSOMS.get());
         dropOther(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get(), AncientAetherBlocks.SAKURA_BLOSSOMS.get());
-        dropWhenSilkTouch(AncientAetherBlocks.DRIFT_WEED.get());
         dropOther(AncientAetherBlocks.GROWING_CRYSTAL_FRUIT.get(), AncientAetherItems.CRYSTAL_FRUIT.get());
 
         //Potted Plants
