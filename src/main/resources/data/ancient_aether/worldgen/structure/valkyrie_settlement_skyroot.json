@@ -4,11 +4,11 @@
   "size": 10,
   "adapt_noise": true,
   "max_distance_from_center": 80,
-  "biomes": "#ancient_aether:has_structure/valkyrie_settlements",
+  "biomes": "#ancient_aether:has_structure/valkyrie_settlement_skyroot",
   "terrain_adaptation": "beard_thin",
   "step": "surface_structures",
   "start_height": {
-    "absolute": 1,
+    "absolute": 0,
     "max_inclusive": { "below_top": 128 },
     "min_inclusive": { "above_bottom": 64 }
   },
