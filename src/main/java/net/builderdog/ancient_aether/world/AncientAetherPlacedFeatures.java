@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.world;
 
+import com.aetherteam.aether.data.resources.builders.AetherPlacedFeatureBuilders;
 import net.builderdog.ancient_aether.AncientAether;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
@@ -17,21 +18,24 @@ public class AncientAetherPlacedFeatures {
     public static final ResourceKey<PlacedFeature> AETHER_QUARTZ_ORE = createKey("aether_quartz_ore");
     public static final ResourceKey<PlacedFeature> AEROGEL_ORE = createKey("aerogel_blobs");
     public static final ResourceKey<PlacedFeature> DIVINE_GRAVEL_ORE = createKey("divine_gravel_ore");
+    public static final ResourceKey<PlacedFeature> VIOLET_AERCLOUD = createKey("violet_aercloud");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
+        //Ore Features
         register(context, AETHER_QUARTZ_ORE, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.AETHER_QUARTZ_ORE),
                 AncientAetherPlacedFeatureBuilder.commonOrePlacement(5,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(256))));
-
         register(context, AEROGEL_ORE, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.AEROGEL_BLOBS),
                 AncientAetherPlacedFeatureBuilder.commonOrePlacement(4,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(80))));
-
         register(context, DIVINE_GRAVEL_ORE, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.DIVINE_GRAVEL_ORE),
                 AncientAetherPlacedFeatureBuilder.commonOrePlacement(1,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(24), VerticalAnchor.absolute(80))));
+
+        //Misc Features
+        register(context, VIOLET_AERCLOUD, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.VIOLET_AERCLOUD), AetherPlacedFeatureBuilders.aercloudPlacement(32, 224, 24));
 
     }
 
