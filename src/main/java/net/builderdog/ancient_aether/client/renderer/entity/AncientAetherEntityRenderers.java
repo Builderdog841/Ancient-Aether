@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.client.renderer;
+package net.builderdog.ancient_aether.client.renderer.entity;
 
 import com.aetherteam.aether.capability.player.AetherPlayer;
 import com.aetherteam.aether.client.renderer.accessory.PendantRenderer;

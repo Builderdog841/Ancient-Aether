@@ -6,7 +6,7 @@ import com.aetherteam.cumulus.CumulusConfig;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
-import net.builderdog.ancient_aether.client.renderer.AncientAetherEntityRenderers;
+import net.builderdog.ancient_aether.client.renderer.entity.AncientAetherEntityRenderers;
 import net.builderdog.ancient_aether.datagen.generators.AncientAetherBlockStateData;
 import net.builderdog.ancient_aether.datagen.generators.AncientAetherItemModelData;
 import net.builderdog.ancient_aether.datagen.generators.AncientAetherRecipeData;
@@ -41,6 +41,8 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.event.AddPackFindersEvent;
+import net.minecraftforge.event.server.ServerAboutToStartEvent;
+import net.minecraftforge.event.server.ServerStartedEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModList;
@@ -76,9 +78,9 @@ public class AncientAether {
 
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::clientSetup);
-        modEventBus.addListener(this::serverSetup);
         modEventBus.addListener(this::packSetup);
         modEventBus.addListener(this::dataSetup);
+        modEventBus.addListener(this::serverSetup);
 
         DeferredRegister<?>[] registers = {
 
@@ -123,9 +125,7 @@ public class AncientAether {
         });
     }
 
-    private void commonSetup(
-            final FMLCommonSetupEvent event) {
-
+    private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             AncientAetherBlocks.registerPots();
             AncientAetherBlocks.registerFlammability();
@@ -140,9 +140,7 @@ public class AncientAether {
     }
 
     private void serverSetup(FMLDedicatedServerSetupEvent event) {
-        event.enqueueWork(() -> {
             AetherConfig.SERVER.disable_eternal_day.set(true);
-        });
     }
 
     public void packSetup(AddPackFindersEvent event) {
