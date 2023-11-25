@@ -28,6 +28,7 @@
     [],
     [],
     [
+      "ancient_aether:gravity_gravel_coast",
       "aether:aether_dirt_ore",
       "aether:icestone_ore",
       "aether:ambrosium_ore",
@@ -39,7 +40,7 @@
       "aether:water_spring"
     ],
     [
-      "ancient_aether:mystic_forest_trees",
+      "ancient_aether:mystic_clearing_trees",
       "aether:holiday_tree",
       "ancient_aether:mythical_forests_grass_patch",
       "ancient_aether:mythical_forests_tall_grass_patch",
