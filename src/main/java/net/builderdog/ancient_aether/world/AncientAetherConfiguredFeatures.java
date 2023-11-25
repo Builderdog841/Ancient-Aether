@@ -68,7 +68,7 @@ public class AncientAetherConfiguredFeatures {
         register(context, AETHER_QUARTZ_ORE, Feature.ORE, new OreConfiguration(aetherQuartzOre, 6, 0f));
         register(context, DIVINE_GRAVEL_ORE, Feature.ORE, new OreConfiguration(divineGravelOre, 64, 0f));
         register(context, AEROGEL_BLOBS, Feature.ORE, new OreConfiguration(aerogelOre, 32, 0f));
-        register(context, VALKYRUM_ORE, Feature.ORE, new OreConfiguration(valkyrumOre, 4, 0.5f));
+        register(context, VALKYRUM_ORE, Feature.ORE, new OreConfiguration(valkyrumOre, 6, 0.5f));
 
         //Tree Features
         register(context, SKYROOT_PINE_TREE, Feature.TREE,
