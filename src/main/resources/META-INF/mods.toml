@@ -7,7 +7,7 @@ modId="ancient_aether"
 version="${file.jarVersion}"
 displayName="Ancient Aether"
 logoFile="ancient_aether.png"
-credits= "Contributors: TunefulTurnip, Zepalesque | Translators: unroman, taizazanek"
+credits= "Contributors: TunefulTurnip, Zepalesque | Translators: unroman, taizazanek, YuJianghan"
 authors="Builderdog"
 description='''
 An exploration Add-On that aims to completely overhaul the original mod aswell as expanding on its content.
