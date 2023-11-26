@@ -4,55 +4,11 @@
   "elements": [
     {
 
-      "weight": 4,
+      "weight": 6,
       "element": {
 
-        "location": "ancient_aether:valkyrie_settlements/settlement_1",
-        "processors": "ancient_aether:valkyrie_settlements_randomizer",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
-      }
-    },
-    {
-
-      "weight": 1,
-      "element": {
-
-        "location": "ancient_aether:valkyrie_settlements/settlement_2",
-        "processors": "ancient_aether:valkyrie_settlements_randomizer",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
-      }
-    },
-    {
-
-      "weight": 4,
-      "element": {
-
-        "location": "ancient_aether:valkyrie_settlements/settlement_3",
-        "processors": "ancient_aether:valkyrie_settlements_randomizer",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
-      }
-    },
-    {
-
-      "weight": 4,
-      "element": {
-
-        "location": "ancient_aether:valkyrie_settlements/settlement_4",
-        "processors": "ancient_aether:valkyrie_settlements_randomizer",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
-      }
-    },
-    {
-
-      "weight": 1,
-      "element": {
-
-        "location": "ancient_aether:valkyrie_settlements/settlement_5",
-        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "location": "ancient_aether:valkyrie_settlement_skyroot/berry_farm",
+        "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -62,7 +18,51 @@
       "weight": 2,
       "element": {
 
-        "location": "ancient_aether:valkyrie_settlements/settlement_6",
+        "location": "ancient_aether:valkyrie_settlement_skyroot/well",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 1,
+      "element": {
+
+        "location": "ancient_aether:valkyrie_settlement_skyroot/furnace",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 1,
+      "element": {
+
+        "location": "ancient_aether:valkyrie_settlement_skyroot/market_stall_blue",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 1,
+      "element": {
+
+        "location": "ancient_aether:valkyrie_settlement_skyroot/market_stall_golden",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 1,
+      "element": {
+
+        "location": "ancient_aether:valkyrie_settlement_skyroot/market_stall_violet",
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"

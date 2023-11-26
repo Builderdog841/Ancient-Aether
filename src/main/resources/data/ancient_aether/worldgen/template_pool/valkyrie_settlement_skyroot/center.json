@@ -1,0 +1,86 @@
+{
+  "name": "ancient_aether:valkyrie_settlement_skyroot/center",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+
+        "location": "ancient_aether:valkyrie_settlement_skyroot/center_4",
+        "processors": "ancient_aether:valkyrie_settlement_center_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+
+        "location": "ancient_aether:valkyrie_settlement_skyroot/center_3",
+        "processors": "ancient_aether:valkyrie_settlement_center_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+
+        "location": "ancient_aether:valkyrie_settlement_skyroot/center_2a",
+        "processors": "ancient_aether:valkyrie_settlement_center_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+
+        "location": "ancient_aether:valkyrie_settlement_skyroot/center_2b",
+        "processors": "ancient_aether:valkyrie_settlement_center_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+
+        "location": "ancient_aether:valkyrie_settlement_skyroot/center_secret_4",
+        "processors": "ancient_aether:valkyrie_settlement_center_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+
+        "location": "ancient_aether:valkyrie_settlement_skyroot/center_secret_3",
+        "processors": "ancient_aether:valkyrie_settlement_center_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+
+        "location": "ancient_aether:valkyrie_settlement_skyroot/center_secret_2a",
+        "processors": "ancient_aether:valkyrie_settlement_center_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+
+        "location": "ancient_aether:valkyrie_settlement_skyroot/center_secret_2b",
+        "processors": "ancient_aether:valkyrie_settlement_center_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
