@@ -32,7 +32,11 @@ public class AncientAetherRegion extends Region {
         Climate.Parameter erosionElevated = Climate.Parameter.span(0.5F, 1.5F);
 
 
-        //Skyroot Biomes
+        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, Climate.Parameter.span(-1.5F, 0.25F), fullRange, erosionDefault, fullRange, fullRange, 0),
+                AncientAetherBiomes.WYNDCAP_TAIGA);
+        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, Climate.Parameter.span(0.25F, 1.5F), fullRange, erosionDefault, fullRange, fullRange, 0),
+                AncientAetherBiomes.FESTIVE_WYNDCAP_TAIGA);
+
         addBiome(mapper, new Climate.ParameterPoint(tempSkyroot1, Climate.Parameter.span(-1.5F, -0.25F), fullRange, erosionDefault, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_MEADOW);
         addBiome(mapper, new Climate.ParameterPoint(tempSkyroot1, Climate.Parameter.span(-0.25F, 0.25F), fullRange, erosionDefault, fullRange, fullRange, 0),
@@ -68,5 +72,10 @@ public class AncientAetherRegion extends Region {
                 AncientAetherBiomes.ELEVATED_FOREST);
         addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(0.25F, 1.5F), fullRange, erosionElevated, fullRange, fullRange, 0),
                 AncientAetherBiomes.ELEVATED_CLEARING);
+
+        addBiome(mapper, new Climate.ParameterPoint(tempSakura, Climate.Parameter.span(-1.5F, 0.25F), fullRange, erosionDefault, fullRange, fullRange, 0),
+                AncientAetherBiomes.SAKURA_JUNGLE);
+        addBiome(mapper, new Climate.ParameterPoint(tempSakura, Climate.Parameter.span(0.25F, 1.5F), fullRange, erosionDefault, fullRange, fullRange, 0),
+                AncientAetherBiomes.SKYROOT_GRASSLAND);
     }
 }
