@@ -38,6 +38,7 @@ import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.event.AddPackFindersEvent;
@@ -97,6 +98,8 @@ public class AncientAether {
                 AncientAetherBiomeModifierSerializers.BIOME_MODIFIER_SERIALIZERS,
                 AncientAetherParticles.PARTICLES,
                 };
+
+        MinecraftForge.EVENT_BUS.register(this);
 
         DIRECTORY.toFile().mkdirs();
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, AncientAetherConfig.COMMON_SPEC);
