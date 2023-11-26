@@ -158,8 +158,7 @@
   "biome.ancient_aether.skyroot_jungle": "Skyroot Jungle",
   "biome.ancient_aether.mythical_forest": "Mythical Forest",
   "biome.ancient_aether.mythical_clearing": "Mythical Clearing",
-  "biome.ancient_aether.crystal_hollows": "Crystal Hollows",
-  "biome.ancient_aether.aercloud_ocean": "Aercloud Ocean",
+  "biome.ancient_aether.crystal_oasis": "Crystal Oasis",
   "biome.ancient_aether.skyroot_grassland": "Skyroot Grassland",
 
   "subtitles.ancient_aether.block.obelisk.obelisk_activation": "Obelisk activated",
@@ -191,6 +190,11 @@
   "gui.ancient_aether.obelisk_sun_spirit": "You haven't defeated the Sun Spirit yet",
   "gui.ancient_aether.ancient_guardian.title": "the Ancient Guardian",
   "gui.ancient_aether.ancient_core.title": "the Ancient Core",
+
+  "ancient_aether.pro_tips.line.aether.secret_rooms": "Some Valkyrie Settlement Houses may come with Secret Rooms.",
+  "ancient_aether.pro_tips.line.aether.gravity_gravel": "Gravity Gravel increases your Jump Height.",
+  "ancient_aether.pro_tips.line.aether.valkyrum": "Valkyrum Ore can only be mined with a Sentry Pickaxe found in Silver Dungeons or higher.",
+  "gui.ancient_aether.pro_tip": "Pro Tip [Ancient Aether]",
 
   "ancient_aether.tooltip.common": "Common",
   "ancient_aether.tooltip.rare": "Rare",

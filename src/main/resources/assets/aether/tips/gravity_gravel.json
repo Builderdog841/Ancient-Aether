@@ -1,0 +1,11 @@
+{
+  "tip": {
+    "translate": "ancient_aether.pro_tips.line.aether.gravity_gravel"
+  },
+  "title": {
+    "bold": true,
+    "color": "gold",
+    "translate": "gui.ancient_aether.pro_tip",
+    "underlined": true
+  }
+}
