@@ -44,6 +44,7 @@ import net.minecraftforge.event.AddPackFindersEvent;
 import net.minecraftforge.event.server.ServerAboutToStartEvent;
 import net.minecraftforge.event.server.ServerStartedEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -68,6 +69,7 @@ import java.util.function.UnaryOperator;
 import static com.aetherteam.aether.Aether.DIRECTORY;
 
 @Mod(AncientAether.MOD_ID)
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class AncientAether {
     public static final String MOD_ID = "ancient_aether";
 
@@ -80,7 +82,6 @@ public class AncientAether {
         modEventBus.addListener(this::clientSetup);
         modEventBus.addListener(this::packSetup);
         modEventBus.addListener(this::dataSetup);
-        modEventBus.addListener(this::serverSetup);
 
         DeferredRegister<?>[] registers = {
 
@@ -139,8 +140,9 @@ public class AncientAether {
         });
     }
 
-    private void serverSetup(FMLDedicatedServerSetupEvent event) {
-            AetherConfig.SERVER.disable_eternal_day.set(true);
+    @SubscribeEvent
+    public void serverSetup(ServerAboutToStartEvent event) {
+        AetherConfig.SERVER.disable_eternal_day.set(true);
     }
 
     public void packSetup(AddPackFindersEvent event) {
