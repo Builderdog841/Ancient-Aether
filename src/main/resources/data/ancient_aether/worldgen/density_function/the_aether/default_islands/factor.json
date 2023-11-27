@@ -26,9 +26,9 @@
             "argument2": "ancient_aether:the_aether/temperature"
           }
         },
-        "argument2": 10
+        "argument2": 20
       },
-      "argument2": -2.5
+      "argument2": -5
     },
     "when_out_of_range": {
       "type": "minecraft:range_choice",
@@ -48,9 +48,9 @@
               "argument2": "ancient_aether:the_aether/temperature"
             }
           },
-          "argument2": 10
+          "argument2": 20
         },
-        "argument2": -2.5
+        "argument2": -5
       },
       "when_out_of_range": 1
     }
