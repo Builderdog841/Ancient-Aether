@@ -58,7 +58,7 @@ public class AncientStructure extends Structure {
                 chunkpos.getMiddleBlockZ(),
                 Heightmap.Types.WORLD_SURFACE_WG,
                 context.heightAccessor(),
-                context.randomState()) > 112;
+                context.randomState()) > 120;
     }
 
     @Override
