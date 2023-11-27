@@ -7,7 +7,7 @@
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "terrain_matching"
       },
-      "weight": 3
+      "weight": 5
     },
     {
       "element": {
@@ -16,7 +16,7 @@
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "terrain_matching"
       },
-      "weight": 3
+      "weight": 5
     },
     {
       "element": {
@@ -25,7 +25,7 @@
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "terrain_matching"
       },
-      "weight": 3
+      "weight": 5
     },
     {
       "element": {
@@ -34,7 +34,7 @@
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "terrain_matching"
       },
-      "weight": 3
+      "weight": 5
     },
     {
       "element": {
@@ -43,7 +43,7 @@
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "terrain_matching"
       },
-      "weight": 3
+      "weight": 5
     },
     {
       "element": {
@@ -52,7 +52,7 @@
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "terrain_matching"
       },
-      "weight": 3
+      "weight": 5
     },
     {
       "element": {
@@ -61,7 +61,7 @@
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "terrain_matching"
       },
-      "weight": 1
+      "weight": 2
     },
     {
       "element": {
@@ -70,7 +70,7 @@
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "terrain_matching"
       },
-      "weight": 1
+      "weight": 2
     },
     {
       "element": {
@@ -79,7 +79,7 @@
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "terrain_matching"
       },
-      "weight": 1
+      "weight": 2
     },
     {
       "element": {
@@ -88,7 +88,7 @@
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "terrain_matching"
       },
-      "weight": 1
+      "weight": 2
     },
     {
       "element": {
@@ -104,7 +104,7 @@
         "element_type": "minecraft:legacy_single_pool_element",
         "location": "ancient_aether:valkyrie_settlement_skyroot/crosswalk_decorated",
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
-        "projection": "terrain_matching"
+        "projection": "rigid"
       },
       "weight": 1
     }
