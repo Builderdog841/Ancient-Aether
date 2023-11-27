@@ -3,7 +3,61 @@
     {
       "element": {
         "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:valkyrie_settlement_skyroot/long_path_1",
+        "location": "ancient_aether:valkyrie_settlement_skyroot/path_01",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "terrain_matching"
+      },
+      "weight": 3
+    },
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "ancient_aether:valkyrie_settlement_skyroot/path_02",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "terrain_matching"
+      },
+      "weight": 3
+    },
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "ancient_aether:valkyrie_settlement_skyroot/path_03",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "terrain_matching"
+      },
+      "weight": 3
+    },
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "ancient_aether:valkyrie_settlement_skyroot/path_04",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "terrain_matching"
+      },
+      "weight": 3
+    },
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "ancient_aether:valkyrie_settlement_skyroot/path_05",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "terrain_matching"
+      },
+      "weight": 3
+    },
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "ancient_aether:valkyrie_settlement_skyroot/path_06",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "terrain_matching"
+      },
+      "weight": 3
+    },
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "ancient_aether:valkyrie_settlement_skyroot/turn_left_01",
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "terrain_matching"
       },
@@ -12,7 +66,7 @@
     {
       "element": {
         "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:valkyrie_settlement_skyroot/long_path_2",
+        "location": "ancient_aether:valkyrie_settlement_skyroot/turn_left_02",
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "terrain_matching"
       },
@@ -21,7 +75,7 @@
     {
       "element": {
         "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:valkyrie_settlement_skyroot/long_path_3",
+        "location": "ancient_aether:valkyrie_settlement_skyroot/turn_right_01",
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "terrain_matching"
       },
@@ -30,7 +84,7 @@
     {
       "element": {
         "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:valkyrie_settlement_skyroot/long_path_4",
+        "location": "ancient_aether:valkyrie_settlement_skyroot/turn_right_02",
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "terrain_matching"
       },
@@ -39,7 +93,7 @@
     {
       "element": {
         "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:valkyrie_settlement_skyroot/long_path_5",
+        "location": "ancient_aether:valkyrie_settlement_skyroot/crosswalk",
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "terrain_matching"
       },
@@ -48,61 +102,7 @@
     {
       "element": {
         "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:valkyrie_settlement_skyroot/long_path_6",
-        "processors": "ancient_aether:valkyrie_settlements_randomizer",
-        "projection": "terrain_matching"
-      },
-      "weight": 1
-    },
-    {
-      "element": {
-        "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:valkyrie_settlement_skyroot/short_path_1",
-        "processors": "ancient_aether:valkyrie_settlements_randomizer",
-        "projection": "terrain_matching"
-      },
-      "weight": 1
-    },
-    {
-      "element": {
-        "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:valkyrie_settlement_skyroot/short_path_2",
-        "processors": "ancient_aether:valkyrie_settlements_randomizer",
-        "projection": "terrain_matching"
-      },
-      "weight": 1
-    },
-    {
-      "element": {
-        "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:valkyrie_settlement_skyroot/short_path_3",
-        "processors": "ancient_aether:valkyrie_settlements_randomizer",
-        "projection": "terrain_matching"
-      },
-      "weight": 1
-    },
-    {
-      "element": {
-        "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:valkyrie_settlement_skyroot/short_path_4",
-        "processors": "ancient_aether:valkyrie_settlements_randomizer",
-        "projection": "terrain_matching"
-      },
-      "weight": 1
-    },
-    {
-      "element": {
-        "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:valkyrie_settlement_skyroot/short_path_5",
-        "processors": "ancient_aether:valkyrie_settlements_randomizer",
-        "projection": "terrain_matching"
-      },
-      "weight": 1
-    },
-    {
-      "element": {
-        "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:valkyrie_settlement_skyroot/short_path_6",
+        "location": "ancient_aether:valkyrie_settlement_skyroot/crosswalk_decorated",
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "terrain_matching"
       },

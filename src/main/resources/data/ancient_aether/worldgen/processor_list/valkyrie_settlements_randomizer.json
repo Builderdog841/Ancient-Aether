@@ -5,6 +5,54 @@
       "rules": [
         {
           "input_predicate": {
+            "block": "aether:aether_grass_block",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 1
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "aether:aether_grass_block",
+            "Properties": {
+              "double_drops": "true"
+            }
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "aether:aether_dirt",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 1
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "aether:aether_dirt",
+            "Properties": {
+              "double_drops": "true"
+            }
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "aether:berry_bush_stem",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 0.5
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "aether:berry_bush",
+            "Properties": {
+              "double_drops": "true"
+            }
+          }
+        },
+        {
+          "input_predicate": {
             "block": "aether:holystone",
             "predicate_type": "minecraft:random_block_match",
             "probability": 1
@@ -37,6 +85,22 @@
         },
         {
           "input_predicate": {
+            "block": "aether:skyroot_log",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 0.3
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "aether:golden_oak_log",
+            "Properties": {
+              "double_drops": "true"
+            }
+          }
+        },
+        {
+          "input_predicate": {
             "block": "aether:holystone_bricks",
             "predicate_type": "minecraft:random_block_match",
             "probability": 0.1
@@ -53,15 +117,18 @@
         },
         {
           "input_predicate": {
-            "block": "aether:aether_grass_block",
+            "block": "aether:aether_dirt_path",
             "predicate_type": "minecraft:random_block_match",
-            "probability": 0.9
+            "probability": 0.1
           },
           "location_predicate": {
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "aether:aether_dirt_path"
+            "Name": "aether:aether_grass_block",
+            "Properties": {
+              "double_drops": "true"
+            }
           }
         },
         {
