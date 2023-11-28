@@ -3,7 +3,9 @@ package net.builderdog.ancient_aether.world.feature;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.Mth;
+import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.levelgen.XoroshiroRandomSource;
 import net.minecraft.world.level.levelgen.feature.Feature;
@@ -11,8 +13,6 @@ import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.synth.PerlinSimplexNoise;
-import net.zepalesque.redux.util.math.MathUtil;
-import net.zepalesque.redux.world.feature.config.CloudLayerConfig;
 
 import java.util.List;
 
@@ -66,6 +66,10 @@ public class CloudbedFeature extends Feature<CloudbedFeature.Config> {
     public static float costrp(float progress, float start, float end) {
         return (((-Mth.cos((float) (Math.PI * progress)) + 1F) * 0.5F) * (end - start)) + start;
     }
+
+/*    private static boolean isReduxCloudbedEnabled(WorldGenLevel level) {
+        return level.getServer().getWorldData().getDataConfiguration().dataPacks().getEnabled()
+    }*/
 
     public record Config(BlockStateProvider block, int baseHeight, double scaleXZ) implements FeatureConfiguration {
         public static final Codec<Config> CODEC = RecordCodecBuilder.create(
