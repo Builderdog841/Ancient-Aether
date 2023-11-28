@@ -9,7 +9,7 @@
             "argument2": {
                 "type": "minecraft:min",
                 "argument1": "ancient_aether:the_aether/mountainous_islands/factor",
-                "argument2": "ancient_aether:the_aether/erosion_factor"
+                "argument2": "ancient_aether:the_aether/elevated_islands/factor"
             }
         },
         "argument2": {
@@ -32,7 +32,7 @@
                         "argument2": {
                             "type": "minecraft:min",
                             "argument1": "ancient_aether:the_aether/mountainous_islands/factor",
-                            "argument2": "ancient_aether:the_aether/erosion_factor"
+                            "argument2": "ancient_aether:the_aether/elevated_islands/factor"
                         }
                     },
                     "argument2": {
@@ -42,7 +42,7 @@
                             "from_value": 1.0,
                             "from_y": 119,
                             "to_value": 0.0,
-                            "to_y": 256
+                            "to_y": 220
                         },
                         "argument2": {
                             "type": "add",
@@ -64,7 +64,7 @@
                                         "type": "minecraft:noise",
                                         "noise": "minecraft:jagged",
                                         "xz_scale": 400,
-                                        "y_scale": 50
+                                        "y_scale": 25
                                     }
                                 }
                             }
