@@ -21,6 +21,7 @@ import net.builderdog.ancient_aether.particle.AncientAetherParticles;
 import net.builderdog.ancient_aether.world.biomemodifier.AncientAetherBiomeModifierSerializers;
 import net.builderdog.ancient_aether.world.biomes.AncientAetherRegion;
 import net.builderdog.ancient_aether.world.biomes.AncientAetherSurfaceData;
+import net.builderdog.ancient_aether.world.feature.AncientAetherFeatureRegistry;
 import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherFoliagePlacerTypes;
 import net.builderdog.ancient_aether.world.structure.AncientAetherStructureTypes;
 import net.minecraft.ChatFormatting;
@@ -97,6 +98,7 @@ public class AncientAether {
                 AncientAetherEffects.EFFECTS,
                 AncientAetherBiomeModifierSerializers.BIOME_MODIFIER_SERIALIZERS,
                 AncientAetherParticles.PARTICLES,
+                AncientAetherFeatureRegistry.FEATURES
                 };
 
         MinecraftForge.EVENT_BUS.register(this);
