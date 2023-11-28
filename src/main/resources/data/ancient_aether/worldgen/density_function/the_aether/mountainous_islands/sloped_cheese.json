@@ -54,7 +54,7 @@
                                     "argument2": {
                                         "type": "minecraft:add",
                                         "argument1": -0.002,
-                                        "argument2": "ancient_aether:the_aether/base_3d_noise"
+                                        "argument2": "ancient_aether:the_aether/3d_noises/base"
                                     }
                                 },
                                 "argument2": {
@@ -65,7 +65,7 @@
                                         "argument": {
                                             "type": "minecraft:noise",
                                             "noise": "minecraft:jagged",
-                                            "xz_scale": 300,
+                                            "xz_scale": 400,
                                             "y_scale": 0
                                         }
                                     }
