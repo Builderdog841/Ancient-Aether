@@ -74,7 +74,7 @@ public class AncientAetherConfiguredFeatures {
         register(context, VALKYRUM_ORE, Feature.ORE, new OreConfiguration(valkyrumOre, 6, 0.5f));
 
         register(context, CLOUDBED, AncientAetherFeatureRegistry.CLOUDBED.get(),
-                new CloudbedFeature.Config(BlockStateProvider.simple(AetherBlocks.COLD_AERCLOUD.get()), 8, 1D));
+                new CloudbedFeature.Config(BlockStateProvider.simple(AetherBlocks.COLD_AERCLOUD.get()), 80, 1D));
 
         //Tree Features
         register(context, SKYROOT_PINE_TREE, Feature.TREE,
