@@ -13,12 +13,12 @@
         "argument1": {
           "type": "minecraft:mul",
           "argument1": -1,
-          "argument2": "ancient_aether:the_aether/temperature"
+          "argument2": "ancient_aether:the_aether/erosion"
         },
         "argument2": {
           "type": "minecraft:mul",
           "argument1": 2,
-          "argument2": "ancient_aether:the_aether/temperature"
+          "argument2": "ancient_aether:the_aether/erosion"
         }
       },
       "argument2": 10
