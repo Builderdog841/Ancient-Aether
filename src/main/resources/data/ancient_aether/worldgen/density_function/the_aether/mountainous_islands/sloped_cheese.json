@@ -8,12 +8,8 @@
             "argument1": {
                 "type": "minecraft:mul",
                 "argument1": -0.17,
-                "argument2": {
-                    "type": "minecraft:min",
-                    "argument1": "ancient_aether:the_aether/mountainous_islands/factor",
-                    "argument2": "ancient_aether:the_aether/elevated_islands/factor"
-                }
-            },
+                "argument2": "ancient_aether:the_aether/mountainous_islands/factor"
+                },
             "argument2": {
                 "type": "minecraft:mul",
                 "argument1": {
@@ -31,11 +27,7 @@
                         "argument1": {
                             "type": "minecraft:mul",
                             "argument1": -0.05,
-                            "argument2": {
-                                "type": "minecraft:min",
-                                "argument1": "ancient_aether:the_aether/mountainous_islands/factor",
-                                "argument2": "ancient_aether:the_aether/elevated_islands/factor"
-                            }
+                            "argument2": "ancient_aether:the_aether/mountainous_islands/factor"
                         },
                         "argument2": {
                             "type": "minecraft:mul",
@@ -65,7 +57,7 @@
                                         "argument": {
                                             "type": "minecraft:noise",
                                             "noise": "minecraft:jagged",
-                                            "xz_scale": 400,
+                                            "xz_scale": 300,
                                             "y_scale": 0
                                         }
                                     }
