@@ -9,6 +9,8 @@ import com.aetherteam.aether.world.feature.AetherFeatures;
 import com.aetherteam.nitrogen.data.resources.builders.NitrogenConfiguredFeatureBuilders;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
+import net.builderdog.ancient_aether.world.feature.AncientAetherFeatureRegistry;
+import net.builderdog.ancient_aether.world.feature.CloudbedFeature;
 import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherPineFoliagePlacer;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
@@ -54,6 +56,7 @@ public class AncientAetherConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_BLOSSOMS_PATCH = registerKey("sakura_blossoms_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKY_BLUES_PATCH = registerKey("sky_blues_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> VIOLET_AERCLOUD = registerKey("violet_aercloud");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CLOUDBED = registerKey("cloudbed");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest holystone = new TagMatchTest(AetherTags.Blocks.HOLYSTONE);
@@ -69,6 +72,9 @@ public class AncientAetherConfiguredFeatures {
         register(context, DIVINE_GRAVEL_ORE, Feature.ORE, new OreConfiguration(divineGravelOre, 64, 0f));
         register(context, AEROGEL_BLOBS, Feature.ORE, new OreConfiguration(aerogelOre, 32, 0f));
         register(context, VALKYRUM_ORE, Feature.ORE, new OreConfiguration(valkyrumOre, 6, 0.5f));
+
+        register(context, CLOUDBED, AncientAetherFeatureRegistry.CLOUDBED.get(),
+                new CloudbedFeature.Config(BlockStateProvider.simple(AetherBlocks.COLD_AERCLOUD.get()), 8, 1D));
 
         //Tree Features
         register(context, SKYROOT_PINE_TREE, Feature.TREE,

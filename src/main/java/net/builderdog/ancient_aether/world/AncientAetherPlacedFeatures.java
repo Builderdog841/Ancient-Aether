@@ -20,6 +20,7 @@ public class AncientAetherPlacedFeatures {
     public static final ResourceKey<PlacedFeature> AEROGEL_ORE = createKey("aerogel_blobs");
     public static final ResourceKey<PlacedFeature> DIVINE_GRAVEL_ORE = createKey("divine_gravel_ore");
     public static final ResourceKey<PlacedFeature> VIOLET_AERCLOUD = createKey("violet_aercloud");
+    public static final ResourceKey<PlacedFeature> CLOUDBED = createKey("cloudbed");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -40,7 +41,7 @@ public class AncientAetherPlacedFeatures {
 
         //Misc Features
         register(context, VIOLET_AERCLOUD, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.VIOLET_AERCLOUD), AetherPlacedFeatureBuilders.aercloudPlacement(32, 224, 24));
-
+        register(context, CLOUDBED, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.CLOUDBED), List.of());
     }
 
     private static ResourceKey<PlacedFeature> createKey(String name) {
