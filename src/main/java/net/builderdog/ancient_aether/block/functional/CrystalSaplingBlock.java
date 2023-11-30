@@ -14,6 +14,6 @@ public class CrystalSaplingBlock extends SaplingBlock {
     }
 
     protected boolean mayPlaceOn(BlockState blockState, @NotNull BlockGetter blockGetter, @NotNull BlockPos blockPos) {
-        return blockState.is(AncientAetherBlocks.DIVINE_GRAVEL.get());
+        return blockState.is(AncientAetherBlocks.GRAVITY_GRAVEL.get());
     }
 }

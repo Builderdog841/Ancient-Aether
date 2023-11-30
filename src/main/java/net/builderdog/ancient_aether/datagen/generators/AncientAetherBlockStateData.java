@@ -73,7 +73,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         blockWithItem(AncientAetherBlocks.AETHER_QUARTZ_ORE);
 
         //Natural Blocks
-        blockWithItem(AncientAetherBlocks.DIVINE_GRAVEL);
+        blockWithItem(AncientAetherBlocks.GRAVITY_GRAVEL);
         blockWithItem(AncientAetherBlocks.WYNDCAPS_ICE);
 
         //Buffalo Wool

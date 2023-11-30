@@ -40,7 +40,7 @@ public class AncientAetherConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_QUARTZ_ORE = registerKey("aether_quartz_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> VALKYRUM_ORE = registerKey("valkyrum_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AEROGEL_BLOBS = registerKey("aerogel_blobs");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> DIVINE_GRAVEL_ORE = registerKey("divine_gravel_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GRAVITY_GRAVEL_ORE = registerKey("gravity_gravel_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_PINE_TREE = registerKey("skyroot_pine_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHSPROOT_TREE = registerKey("highsproot_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHSPROOT_PINE_TREE = registerKey("highsproot_pine_tree");
@@ -65,11 +65,11 @@ public class AncientAetherConfiguredFeatures {
         //Ore Features
         List<OreConfiguration.TargetBlockState> aetherQuartzOre = List.of(OreConfiguration.target(holystone, AncientAetherBlocks.AETHER_QUARTZ_ORE.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)));
         List<OreConfiguration.TargetBlockState> aerogelOre = List.of(OreConfiguration.target(holystone, AetherBlocks.AEROGEL.get().defaultBlockState()));
-        List<OreConfiguration.TargetBlockState> divineGravelOre = List.of(OreConfiguration.target(holystone, AncientAetherBlocks.DIVINE_GRAVEL.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)));
+        List<OreConfiguration.TargetBlockState> gravityGravelOre = List.of(OreConfiguration.target(holystone, AncientAetherBlocks.GRAVITY_GRAVEL.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)));
         List<OreConfiguration.TargetBlockState> valkyrumOre = List.of(OreConfiguration.target(holystone, AncientAetherBlocks.VALKYRUM_ORE.get().defaultBlockState()));
 
         register(context, AETHER_QUARTZ_ORE, Feature.ORE, new OreConfiguration(aetherQuartzOre, 6, 0f));
-        register(context, DIVINE_GRAVEL_ORE, Feature.ORE, new OreConfiguration(divineGravelOre, 64, 0f));
+        register(context, GRAVITY_GRAVEL_ORE, Feature.ORE, new OreConfiguration(gravityGravelOre, 64, 0f));
         register(context, AEROGEL_BLOBS, Feature.ORE, new OreConfiguration(aerogelOre, 32, 0f));
         register(context, VALKYRUM_ORE, Feature.ORE, new OreConfiguration(valkyrumOre, 6, 0.5f));
 

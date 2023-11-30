@@ -18,7 +18,7 @@ public class AncientAetherPlacedFeatures {
     public static final ResourceKey<PlacedFeature> AETHER_QUARTZ_ORE = createKey("aether_quartz_ore");
     public static final ResourceKey<PlacedFeature> VALKYRUM_ORE = createKey("valkyrum_ore");
     public static final ResourceKey<PlacedFeature> AEROGEL_ORE = createKey("aerogel_blobs");
-    public static final ResourceKey<PlacedFeature> DIVINE_GRAVEL_ORE = createKey("divine_gravel_ore");
+    public static final ResourceKey<PlacedFeature> GRAVITY_GRAVEL_ORE = createKey("gravity_gravel_ore");
     public static final ResourceKey<PlacedFeature> VIOLET_AERCLOUD = createKey("violet_aercloud");
     public static final ResourceKey<PlacedFeature> CLOUDBED = createKey("cloudbed");
 
@@ -35,7 +35,7 @@ public class AncientAetherPlacedFeatures {
         register(context, AEROGEL_ORE, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.AEROGEL_BLOBS),
                 AncientAetherPlacedFeatureBuilder.commonOrePlacement(4,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(80))));
-        register(context, DIVINE_GRAVEL_ORE, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.DIVINE_GRAVEL_ORE),
+        register(context, GRAVITY_GRAVEL_ORE, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatures.GRAVITY_GRAVEL_ORE),
                 AncientAetherPlacedFeatureBuilder.commonOrePlacement(1,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(24), VerticalAnchor.absolute(80))));
 
