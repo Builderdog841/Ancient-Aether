@@ -27,6 +27,7 @@ public class AncientAetherRegion extends Region {
         Climate.Parameter tempSkyroot1 = Climate.Parameter.span(-0.5F, -0.25F);
         Climate.Parameter tempSkyroot2 = Climate.Parameter.span(-0.25F, 0.25F);
         Climate.Parameter tempSkyroot3 = Climate.Parameter.span(0.25F, 0.5F);
+        Climate.Parameter tempElevated = Climate.Parameter.span(-0.5F, 0.5F);
         Climate.Parameter tempSakura = Climate.Parameter.span(0.5F, 1.5F);
         Climate.Parameter erosionDefault = Climate.Parameter.span(-1.5F, 0.5F);
         Climate.Parameter erosionElevated = Climate.Parameter.span(0.5F, 1.5F);
@@ -70,11 +71,11 @@ public class AncientAetherRegion extends Region {
         addBiome(mapper, new Climate.ParameterPoint(tempSkyroot3, Climate.Parameter.span(0.22F, 1.5F), fullRange, erosionDefault, fullRange, fullRange, 0),
                 AncientAetherBiomes.SKYROOT_GRASSLAND);
 
-        addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(-1.5F, -0.25F), fullRange, erosionElevated, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempElevated, Climate.Parameter.span(-1.5F, -0.25F), fullRange, erosionElevated, fullRange, fullRange, 0),
                 AncientAetherBiomes.ELEVATED_CLEARING);
-        addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(-0.25F, 0.25F), fullRange, erosionElevated, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempElevated, Climate.Parameter.span(-0.25F, 0.25F), fullRange, erosionElevated, fullRange, fullRange, 0),
                 AncientAetherBiomes.ELEVATED_FOREST);
-        addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(0.25F, 1.5F), fullRange, erosionElevated, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempElevated, Climate.Parameter.span(0.25F, 1.5F), fullRange, erosionElevated, fullRange, fullRange, 0),
                 AncientAetherBiomes.ELEVATED_CLEARING);
 
         addBiome(mapper, new Climate.ParameterPoint(tempSakura, Climate.Parameter.span(-1.5F, 0.25F), fullRange, erosionDefault, fullRange, fullRange, 0),
