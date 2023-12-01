@@ -60,7 +60,7 @@
         }
       },
       {
-        "chance": 0.04,
+        "chance": 0.045,
         "feature": {
           "feature": "ancient_aether:highsproot_pine_tree",
           "placement": [
