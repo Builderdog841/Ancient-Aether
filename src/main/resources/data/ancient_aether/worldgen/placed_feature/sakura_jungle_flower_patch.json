@@ -23,9 +23,6 @@
     },
     {
       "type": "minecraft:biome"
-    },
-    {
-      "type": "aether:dungeon_blacklist_filter"
     }
   ]
 }

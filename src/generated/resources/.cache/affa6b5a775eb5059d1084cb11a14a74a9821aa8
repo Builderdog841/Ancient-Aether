@@ -1,4 +1,4 @@
-// 1.20.1	2023-11-30T17:41:03.1424403	Block States: ancient_aether
+// 1.20.1	2023-12-01T18:07:43.1099587	Block States: ancient_aether
 8ae935cffc9f0f581198b72218d9d4d66d9fa2a2 assets/ancient_aether/blockstates/aerogel_glass.json
 2bc280f754b369aa71b9442df45ae49cbfb7a38b assets/ancient_aether/blockstates/aerogel_glass_door.json
 b027044256534d118672d13f7cd3563d3bd114ef assets/ancient_aether/blockstates/aerogel_glass_pane.json
@@ -114,7 +114,6 @@ aaacf5a9506e95e65aa3677c90cf31a9aa8c887f assets/ancient_aether/models/block/aero
 ce7f8d212088bb5b6b3dbdb645c3e141fa5bda12 assets/ancient_aether/models/block/aerogetic_wall_post.json
 bd45760308a735d41be7aeae9087b84e6aa216c6 assets/ancient_aether/models/block/aerogetic_wall_side.json
 10a9a7f1387ff05b16cd560fa1b4aed6fc33a159 assets/ancient_aether/models/block/aerogetic_wall_side_tall.json
-2116603535a59d8e2015f6f41ed114c672ec0f48 assets/ancient_aether/models/block/aerotic_stone_mosaic.json
 b1ccacf783b95617cec5448b4d1890ff0c033271 assets/ancient_aether/models/block/aether_quartz_ore.json
 35e28632f66f79a9172cf888ca852ea3ab70bed4 assets/ancient_aether/models/block/angelic_stone_mosaic.json
 d85e26d2d6d077bfa1b230dd83076b51915b8979 assets/ancient_aether/models/block/angelic_stone_mosaic_horizontal.json
@@ -332,7 +331,7 @@ a5d249d2a9d5b781f9af3e4d68590fc16487d480 assets/ancient_aether/models/block/wood
 ce68ce97dcaa05ed7c8709011fc4def01c9bf387 assets/ancient_aether/models/block/wyndcaps_ice.json
 2821e5754002796c60b907b8b2a8cd4fd22ceee4 assets/ancient_aether/models/block/wynd_thistle.json
 6e75191cc2833d18de41c164ab0be477b7ce46e0 assets/ancient_aether/models/item/aerogetic_stone.json
-a9101f893ef44e2ad12d13144c47603884f30495 assets/ancient_aether/models/item/aerogetic_stone_mosaic.json
+1c468675ad6f93fad149d5edfba0d2c0979721d7 assets/ancient_aether/models/item/aerogetic_stone_mosaic.json
 f35b779c78a3421c4ec5522f1103a9be9d9e9eee assets/ancient_aether/models/item/aether_quartz_ore.json
 2b51d2699b7838a6cfc3f8020879033dff0571fa assets/ancient_aether/models/item/angelic_stone_mosaic.json
 7ab9bf2993c31e999dca70f5c6613c8a89494e3e assets/ancient_aether/models/item/buffalo_wool.json
