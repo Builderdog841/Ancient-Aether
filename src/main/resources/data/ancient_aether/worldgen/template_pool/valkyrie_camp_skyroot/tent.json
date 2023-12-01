@@ -1,0 +1,15 @@
+{
+  "name": "ancient_aether:valkyrie_camp_skyroot/tent",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:valkyrie_camp_skyroot/tent",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
