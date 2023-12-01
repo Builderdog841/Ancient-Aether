@@ -20,7 +20,7 @@
     },
     "features": [
       {
-        "chance": 0.3,
+        "chance": 0.5,
         "feature": {
           "feature": "ancient_aether:highsproot_tree",
           "placement": [
@@ -40,9 +40,9 @@
         }
       },
       {
-        "chance": 0.05,
+        "chance": 0.04,
         "feature": {
-          "feature": "ancient_aether:fancy_skyroot",
+          "feature": "ancient_aether:skyroot_pine_tree",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",
@@ -60,7 +60,27 @@
         }
       },
       {
-        "chance": 0.05,
+        "chance": 0.04,
+        "feature": {
+          "feature": "ancient_aether:highsproot_pine_tree",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:would_survive",
+                "state": {
+                  "Name": "ancient_aether:highsproot_sapling",
+                  "Properties": {
+                    "stage": "0"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chance": 0.02,
         "feature": {
           "feature": "aether:golden_oak_tree",
           "placement": [
