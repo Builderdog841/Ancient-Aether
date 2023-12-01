@@ -100,9 +100,9 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         simpleBlockItem(AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:angelic_stone_mosaic","minecraft:block/cube_column"));
         simpleBlockItem(AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:hellfire_stone_mosaic","minecraft:block/cube_column"));
         simpleBlockItem(AncientAetherBlocks.GALE_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:gale_stone_mosaic","minecraft:block/cube_column"));
-        simpleBlockItem(AncientAetherBlocks.AEROGETIC_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:aerotic_stone_mosaic","minecraft:block/cube_column"));
+        simpleBlockItem(AncientAetherBlocks.AEROGETIC_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:aerogetic_stone_mosaic","minecraft:block/cube_column"));
 
-        //Aerotic Stone
+        //Aerogetic Stone
         blockWithItem(AncientAetherBlocks.AEROGETIC_STONE);
         blockWithItem(AncientAetherBlocks.LIGHT_AEROGETIC_STONE);
         blockWithItem(AncientAetherBlocks.CORRUPTED_LIGHT_AEROGETIC_STONE);

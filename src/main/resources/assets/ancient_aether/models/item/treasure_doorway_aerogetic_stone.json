@@ -167,7 +167,7 @@
     }
   ],
   "textures": {
-    "face": "ancient_aether:block/aerotic_stone",
-    "overlay": "aether:block/dungeon/door"
+    "face": "ancient_aether:block/aerogetic_stone",
+    "overlay": "aether:block/dungeon/treasure"
   }
 }

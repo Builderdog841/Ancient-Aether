@@ -167,7 +167,7 @@
     }
   ],
   "textures": {
-    "face": "ancient_aether:block/corrupted_light_aerotic_stone",
-    "overlay": "aether:block/dungeon/exclamation"
+    "face": "ancient_aether:block/corrupted_light_aerogetic_stone",
+    "overlay": "aether:block/dungeon/treasure"
   }
 }

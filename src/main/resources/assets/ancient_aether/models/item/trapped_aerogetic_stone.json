@@ -167,7 +167,7 @@
     }
   ],
   "textures": {
-    "face": "ancient_aether:block/ancient_sentry_stone",
-    "overlay": "aether:block/dungeon/lock"
+    "face": "ancient_aether:block/aerogetic_stone",
+    "overlay": "aether:block/dungeon/exclamation"
   }
 }
