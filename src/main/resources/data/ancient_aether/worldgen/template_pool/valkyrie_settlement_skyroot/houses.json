@@ -68,7 +68,7 @@
     {
       "weight": 3,
       "element": {
-        "location": "ancient_aether:valkyrie_settlement_skyroot/library",
+        "location": "ancient_aether:valkyrie_settlement_skyroot/library_house",
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
