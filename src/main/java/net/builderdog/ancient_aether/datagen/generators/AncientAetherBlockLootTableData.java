@@ -1,10 +1,10 @@
 package net.builderdog.ancient_aether.datagen.generators;
 
+import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.data.providers.AetherBlockLootSubProvider;
 import com.aetherteam.aether.item.AetherItems;
 import com.aetherteam.aether.mixin.mixins.common.accessor.BlockLootAccessor;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
-import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
@@ -45,12 +45,6 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.HIGHSPROOT_WALL_SIGN.get());
         dropSelf(AncientAetherBlocks.HIGHSPROOT_HANGING_SIGN.get());
         dropSelf(AncientAetherBlocks.HIGHSPROOT_WALL_HANGING_SIGN.get());
-        dropSelf(AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
-        dropSelf(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get());
-        add(AncientAetherBlocks.HIGHSPROOT_LEAVES.get(),
-                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
-        add(AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES.get(),
-                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
         add(AncientAetherBlocks.HIGHSPROOT_BOOKSHELF.get(),
                 (bookshelf) -> createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantValue.exactly(3)));
 
@@ -76,9 +70,6 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.SAKURA_WALL_SIGN.get());
         dropSelf(AncientAetherBlocks.SAKURA_HANGING_SIGN.get());
         dropSelf(AncientAetherBlocks.SAKURA_WALL_HANGING_SIGN.get());
-        dropSelf(AncientAetherBlocks.SAKURA_SAPLING.get());
-        add(AncientAetherBlocks.SAKURA_LEAVES.get(),
-                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.SAKURA_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
         add(AncientAetherBlocks.SAKURA_BOOKSHELF.get(),
                 (bookshelf) -> createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantValue.exactly(3)));
 
@@ -87,18 +78,32 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.VALKYRUM_BLOCK.get());
         dropDoubleWithFortune(AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), Items.QUARTZ);
 
-        //Divine Skyroot Leaves
+        //Leaves
+        add(AncientAetherBlocks.SKYROOT_PINE_LEAVES.get(),
+                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AetherBlocks.SKYROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
+        add(AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES.get(),
+                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AetherBlocks.SKYROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
+        add(AncientAetherBlocks.HIGHSPROOT_LEAVES.get(),
+                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
+        add(AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES.get(),
+                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
         add(AncientAetherBlocks.DIVINE_SKYROOT_LEAVES.get(),
                 (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
-        dropSelf(AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.get());
+        add(AncientAetherBlocks.SAKURA_LEAVES.get(),
+                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.SAKURA_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
 
-        //Dirt
+        //Saplings
+        dropSelf(AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
+        dropSelf(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get());
+        dropSelf(AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.get());
+        dropSelf(AncientAetherBlocks.SAKURA_SAPLING.get());
+
+        //Terrain
         dropSelfDouble(AncientAetherBlocks.GRAVITY_GRAVEL.get());
+        dropWhenSilkTouch(AncientAetherBlocks.WYNDCAPS_ICE.get());
 
         //Aerclouds
         dropSelfDouble(AncientAetherBlocks.VIOLET_AERCLOUD.get());
-
-        dropWhenSilkTouch(AncientAetherBlocks.WYNDCAPS_ICE.get());
 
         //Aerogel Glass
         dropSelf(AncientAetherBlocks.AEROGEL_GLASS.get());

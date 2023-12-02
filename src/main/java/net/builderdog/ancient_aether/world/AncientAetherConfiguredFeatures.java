@@ -42,13 +42,13 @@ public class AncientAetherConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> AEROGEL_BLOBS = registerKey("aerogel_blobs");
     public static final ResourceKey<ConfiguredFeature<?, ?>> GRAVITY_GRAVEL_ORE = registerKey("gravity_gravel_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_PINE_TREE = registerKey("skyroot_pine_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CRYSTAL_SKYROOT_TREE = registerKey("crystal_skyroot_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHSPROOT_TREE = registerKey("highsproot_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHSPROOT_PINE_TREE = registerKey("highsproot_pine_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FROSTED_HIGHSPROOT_TREE = registerKey("frosted_highsproot_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_FROSTED_HIGHSPROOT_TREE = registerKey("tall_frosted_highsproot_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_TREE = registerKey("sakura_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_SAKURA_TREE = registerKey("tall_sakura_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> CRYSTAL_TREE = registerKey("crystal_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> DIVINE_SKYROOT_TREE = registerKey("divine_skyroot_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_DIVINE_SKYROOT = registerKey("fancy_divine_skyroot");
     public static final ResourceKey<ConfiguredFeature<?, ?>> WYND_THISTLE_PATCH = registerKey("wynd_thistle_patch");
@@ -74,30 +74,38 @@ public class AncientAetherConfiguredFeatures {
         register(context, VALKYRUM_ORE, Feature.ORE, new OreConfiguration(valkyrumOre, 6, 0.5f));
 
         register(context, CLOUDBED, AncientAetherFeatureRegistry.CLOUDBED.get(),
-                new CloudbedFeature.Config(BlockStateProvider.simple(AetherBlocks.COLD_AERCLOUD.get()), 80, 1D));
+                new CloudbedFeature.Config(BlockStateProvider.simple(AetherFeatureStates.COLD_AERCLOUD), 80, 1D));
 
         //Tree Features
         register(context, SKYROOT_PINE_TREE, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
                         BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LOG),
                         new StraightTrunkPlacer(5, 5, 0),
-                        BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LEAVES),
+                        BlockStateProvider.simple(AncientAetherFeatureStates.SKYROOT_PINE_LEAVES),
                         new AncientAetherPineFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
                         new TwoLayersFeatureSize(2, 0, 2)
                 ).ignoreVines().build());
+        register(context, CRYSTAL_SKYROOT_TREE, Feature.TREE,
+                new TreeConfiguration.TreeConfigurationBuilder(
+                        BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LOG),
+                        new StraightTrunkPlacer(4, 2, 0),
+                        BlockStateProvider.simple(AncientAetherFeatureStates.CRYSTAL_SKYROOT_LEAVES),
+                        new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
+                        new TwoLayersFeatureSize(1, 0, 1)
+                ).ignoreVines().build());
         register(context, HIGHSPROOT_TREE, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
-                        BlockStateProvider.simple(AncientAetherBlocks.HIGHSPROOT_LOG.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)),
+                        BlockStateProvider.simple(AncientAetherFeatureStates.HIGHSPROOT_LOG),
                         new StraightTrunkPlacer(4, 2, 0),
-                        BlockStateProvider.simple(AncientAetherBlocks.HIGHSPROOT_LEAVES.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)),
+                        BlockStateProvider.simple(AncientAetherFeatureStates.HIGHSPROOT_LEAVES),
                         new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
                         new TwoLayersFeatureSize(1, 0, 1)
                 ).ignoreVines().build());
         register(context, HIGHSPROOT_PINE_TREE, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
-                        BlockStateProvider.simple(AncientAetherBlocks.HIGHSPROOT_LOG.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)),
+                        BlockStateProvider.simple(AncientAetherFeatureStates.HIGHSPROOT_LOG),
                         new StraightTrunkPlacer(5, 2, 0),
-                        BlockStateProvider.simple(AncientAetherBlocks.HIGHSPROOT_LEAVES.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)),
+                        BlockStateProvider.simple(AncientAetherFeatureStates.HIGHSPROOT_LEAVES),
                         new AncientAetherPineFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
                         new TwoLayersFeatureSize(2, 0, 2)
                 ).ignoreVines().build());
@@ -118,7 +126,7 @@ public class AncientAetherConfiguredFeatures {
                         .add(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get().defaultBlockState(), 3)), 64));
 
         //Misc Features
-        register(context, VIOLET_AERCLOUD, AetherFeatures.AERCLOUD.get(), AetherConfiguredFeatureBuilders.aercloud(16, AncientAetherBlocks.VIOLET_AERCLOUD.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)));
+        register(context, VIOLET_AERCLOUD, AetherFeatures.AERCLOUD.get(), AetherConfiguredFeatureBuilders.aercloud(16, AncientAetherFeatureStates.VIOLET_AERCLOUD));
     }
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
         return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(AncientAether.MOD_ID, name));

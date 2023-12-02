@@ -111,6 +111,8 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         wallBlock((WallBlock) AncientAetherBlocks.AEROGETIC_WALL.get(), AncientAetherBlocks.AEROGETIC_STONE.get(), "");
 
         //Leaves
+        blockWithItem(AncientAetherBlocks.SKYROOT_PINE_LEAVES);
+        blockWithItem(AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES);
         blockWithItem(AncientAetherBlocks.HIGHSPROOT_LEAVES);
         blockWithItem(AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES);
         blockWithItem(AncientAetherBlocks.SAKURA_LEAVES);

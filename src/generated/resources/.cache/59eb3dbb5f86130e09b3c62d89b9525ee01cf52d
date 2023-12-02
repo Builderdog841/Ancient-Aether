@@ -1,4 +1,4 @@
-// 1.20.1	2023-12-02T15:38:53.1649436	Loot Tables
+// 1.20.1	2023-12-02T15:59:22.4803145	Loot Tables
 095a70e341d19e7b3548ddc32402abe48a79992a data/ancient_aether/loot_tables/blocks/aerogel_glass.json
 9fe2ea21af5246ad9f95848f680099717062eb1c data/ancient_aether/loot_tables/blocks/aerogel_glass_door.json
 0f84d5b4591633acc6c8dcc82b7c14988b545a9f data/ancient_aether/loot_tables/blocks/aerogel_glass_pane.json
@@ -20,6 +20,7 @@ f346e2fa7e1e914c323a66125f68b2ae7c3ecda5 data/ancient_aether/loot_tables/blocks/
 07e5a503893020d9852e02f7a687103c325d37a9 data/ancient_aether/loot_tables/blocks/carved_stone_mosaic.json
 afc28686ae51cf43cc96d427bbfcc851be3856ba data/ancient_aether/loot_tables/blocks/corrupted_light_aerogetic_stone.json
 503d82dd0a464d22c432cf15d95aa61860197db6 data/ancient_aether/loot_tables/blocks/cracked_slider.json
+f2b700bb8479f9e8dea3ff85110c1064c78b3867 data/ancient_aether/loot_tables/blocks/crystal_skyroot_leaves.json
 796e32d84fc574f3aaaec3e6c17bfbee9319bc4a data/ancient_aether/loot_tables/blocks/divine_skyroot_leaves.json
 c0ce53d3ca8ed6a179feb4d43c66227a3f7eb788 data/ancient_aether/loot_tables/blocks/divine_skyroot_sapling.json
 07155f19e7eb7d78e644a94801e4a5b1023d25cd data/ancient_aether/loot_tables/blocks/frosted_highsproot_leaves.json
@@ -84,6 +85,7 @@ b48879a6480e6cf1eb820d0cfd5d62e499ef43d5 data/ancient_aether/loot_tables/blocks/
 d86f344d446eb620a721cc96ea2a6b6c46eb38d8 data/ancient_aether/loot_tables/blocks/sakura_wood.json
 f68f49c7259dd2e9842d8d1337850bc60e79ebc0 data/ancient_aether/loot_tables/blocks/sakura_wood_wall.json
 492b415ca9d47e2f8c6d9c455bc45465a35c0a55 data/ancient_aether/loot_tables/blocks/sentry_lantern.json
+35ece11b709eb361a3f4605194c5a39680666c3e data/ancient_aether/loot_tables/blocks/skyroot_pine_leaves.json
 87b4ae9ba0d67451f8bd4c83688b8a909cc6ecfd data/ancient_aether/loot_tables/blocks/sky_blues.json
 e546ace1c68699bb85e0cfe7aca1b4a7e6b220c4 data/ancient_aether/loot_tables/blocks/stripped_highsproot_log.json
 6c014b6b3eb7e8ae2d7db4f46f0220be19147b71 data/ancient_aether/loot_tables/blocks/stripped_highsproot_log_wall.json
