@@ -22,7 +22,7 @@
       {
         "chance": 0.25,
         "feature": {
-          "feature": "ancient_aether:highsproot_tree",
+          "feature": "ancient_aether:crystal_skyroot_tree",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",
