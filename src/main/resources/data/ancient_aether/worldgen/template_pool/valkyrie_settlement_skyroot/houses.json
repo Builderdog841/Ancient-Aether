@@ -1,0 +1,105 @@
+{
+  "name": "ancient_aether:valkyrie_settlement_skyroot/decoration",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 6,
+      "element": {
+        "location": "ancient_aether:valkyrie_settlement_skyroot/small_house_01",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 6,
+      "element": {
+        "location": "ancient_aether:valkyrie_settlement_skyroot/small_house_02",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "ancient_aether:valkyrie_settlement_skyroot/medium_house_01",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "ancient_aether:valkyrie_settlement_skyroot/medium_house_02",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "ancient_aether:valkyrie_settlement_skyroot/big_house_01",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "ancient_aether:valkyrie_settlement_skyroot/big_house_02",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:valkyrie_settlement_skyroot/big_house_02_secret",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "ancient_aether:valkyrie_settlement_skyroot/library",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "ancient_aether:valkyrie_settlement_skyroot/shop_house_blue",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "ancient_aether:valkyrie_settlement_skyroot/shop_house_golden",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "ancient_aether:valkyrie_settlement_skyroot/shop_house_violet",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

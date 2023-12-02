@@ -135,7 +135,7 @@
           "input_predicate": {
             "block": "aether:potted_white_flower",
             "predicate_type": "minecraft:random_block_match",
-            "probability": 0.2
+            "probability": 0.15
           },
           "location_predicate": {
             "predicate_type": "minecraft:always_true"
@@ -148,7 +148,7 @@
           "input_predicate": {
             "block": "aether:potted_white_flower",
             "predicate_type": "minecraft:random_block_match",
-            "probability": 0.2
+            "probability": 0.15
           },
           "location_predicate": {
             "predicate_type": "minecraft:always_true"
@@ -161,13 +161,26 @@
           "input_predicate": {
             "block": "aether:potted_white_flower",
             "predicate_type": "minecraft:random_block_match",
-            "probability": 0.2
+            "probability": 0.15
           },
           "location_predicate": {
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
             "Name": "ancient_aether:potted_sky_blues"
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "aether:potted_white_flower",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 0.2
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "ancient_aether:potted_berry_bush"
           }
         }
       ]
