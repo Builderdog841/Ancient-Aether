@@ -106,10 +106,8 @@ public class AncientAetherCreativeModeTabs {
             event.getEntries().putAfter(new ItemStack(AetherBlocks.GRAVITITE_ORE.get()), new ItemStack(AetherBlocks.AEROGEL.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AetherBlocks.AEROGEL.get()), new ItemStack(AncientAetherBlocks.WYNDCAPS_ICE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AetherBlocks.GRAVITITE_ORE.get()), new ItemStack(AncientAetherBlocks.VALKYRUM_ORE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            if (!ModList.get().isLoaded("lost_aether_content")) {
-                event.getEntries().remove(new ItemStack(AetherBlocks.CRYSTAL_LEAVES.get()));
-                event.getEntries().remove(new ItemStack(AetherBlocks.CRYSTAL_FRUIT_LEAVES.get()));
-            }
+            event.getEntries().remove(new ItemStack(AetherBlocks.CRYSTAL_LEAVES.get()));
+            event.getEntries().remove(new ItemStack(AetherBlocks.CRYSTAL_FRUIT_LEAVES.get()));
         }
 
         if (tab == AetherCreativeTabs.AETHER_EQUIPMENT_AND_UTILITIES.get()) {
@@ -139,7 +137,6 @@ public class AncientAetherCreativeModeTabs {
         if (tab == AetherCreativeTabs.AETHER_FOOD_AND_DRINKS.get()) {
             event.getEntries().putAfter(new ItemStack(AetherItems.ENCHANTED_BERRY.get()), new ItemStack(AncientAetherItems.GRAPES.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AetherItems.SKYROOT_POISON_BUCKET.get()), new ItemStack(AncientAetherItems.VALKYRIE_WINE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().remove(new ItemStack(AetherItems.WHITE_APPLE.get()));
         }
 
         if (tab == AetherCreativeTabs.AETHER_SPAWN_EGGS.get()) {
