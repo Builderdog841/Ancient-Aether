@@ -32,7 +32,6 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         simpleItem(AncientAetherItems.HEALTH_RING);
         simpleItem(AncientAetherItems.HEALTH_PENDANT);
         simpleItem(AncientAetherItems.GRAVITITE_DART_SHOOTER);
-        simpleItem(AncientAetherItems.CRYSTAL_FRUIT);
         simpleItem(AncientAetherItems.VALKYRUM);
 
         //Boats
@@ -102,7 +101,6 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
 
         itemBlockFlat(AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get(), "");
-        itemBlockFlat(AncientAetherBlocks.CRYSTAL_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.SAKURA_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.SAKURA_BLOSSOMS.get(), "");
         itemBlockFlat(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get(), "");

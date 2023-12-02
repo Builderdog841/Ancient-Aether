@@ -82,11 +82,6 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         add(AncientAetherBlocks.SAKURA_BOOKSHELF.get(),
                 (bookshelf) -> createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantValue.exactly(3)));
 
-        //Crystal Leaves
-        add(AncientAetherBlocks.CRYSTAL_LEAVES.get(),
-                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.CRYSTAL_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
-        dropSelf(AncientAetherBlocks.CRYSTAL_SAPLING.get());
-
         //Ores
         dropSelf(AncientAetherBlocks.VALKYRUM_ORE.get());
         dropSelf(AncientAetherBlocks.VALKYRUM_BLOCK.get());
@@ -144,7 +139,6 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.HIGHLAND_VIOLA.get());
         dropSelf(AncientAetherBlocks.SAKURA_BLOSSOMS.get());
         dropOther(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get(), AncientAetherBlocks.SAKURA_BLOSSOMS.get());
-        dropOther(AncientAetherBlocks.GROWING_CRYSTAL_FRUIT.get(), AncientAetherItems.CRYSTAL_FRUIT.get());
 
         //Potted Plants
         dropPottedContents(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING.get());
@@ -154,7 +148,6 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropPottedContents(AncientAetherBlocks.POTTED_HIGHLAND_VIOLA.get());
         dropPottedContents(AncientAetherBlocks.POTTED_SAKURA_BLOSSOMS.get());
         dropPottedContents(AncientAetherBlocks.POTTED_FROSTED_HIGHSPROOT_SAPLING.get());
-        dropPottedContents(AncientAetherBlocks.POTTED_CRYSTAL_SAPLING.get());
         dropPottedContents(AncientAetherBlocks.POTTED_DIVINE_SKYROOT_SAPLING.get());
 
         //Misc
