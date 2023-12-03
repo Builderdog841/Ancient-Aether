@@ -34,7 +34,7 @@
                             "from_value": 1.0,
                             "from_y": 119,
                             "to_value": 0.0,
-                            "to_y": 172
+                            "to_y": 192
                         },
                         "argument2": {
                             "type": "add",
@@ -51,7 +51,7 @@
                                 "type": "minecraft:quarter_negative",
                                 "argument": {
                                     "type": "minecraft:noise",
-                                    "noise": "minecraft:jagged",
+                                    "noise": "ancient_aether:jagged",
                                     "xz_scale": 300,
                                     "y_scale": 25
                                 }
