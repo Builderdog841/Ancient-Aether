@@ -5,7 +5,7 @@
         "type": "minecraft:add",
         "argument1": {
             "type": "minecraft:mul",
-            "argument1": -0.25,
+            "argument1": -0.27,
             "argument2": "ancient_aether:the_aether/default_islands/factor"
         },
         "argument2": {
@@ -24,7 +24,7 @@
                     "type": "minecraft:add",
                     "argument1": {
                         "type": "minecraft:mul",
-                        "argument1": -0.25,
+                        "argument1": -0.27,
                         "argument2": "ancient_aether:the_aether/default_islands/factor"
                     },
                     "argument2": {
@@ -34,7 +34,7 @@
                             "from_value": 1.0,
                             "from_y": 119,
                             "to_value": 0.0,
-                            "to_y": 192
+                            "to_y": 172
                         },
                         "argument2": {
                             "type": "add",
@@ -53,7 +53,7 @@
                                     "type": "minecraft:noise",
                                     "noise": "ancient_aether:jagged",
                                     "xz_scale": 300,
-                                    "y_scale": 25
+                                    "y_scale": 20
                                 }
                             }
                         }

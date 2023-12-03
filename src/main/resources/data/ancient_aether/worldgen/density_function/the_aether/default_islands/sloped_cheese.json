@@ -7,7 +7,7 @@
             "type": "minecraft:add",
             "argument1": {
                 "type": "minecraft:mul",
-                "argument1": -0.17,
+                "argument1": -0.19,
                 "argument2": {
                     "type": "minecraft:min",
                     "argument1": "ancient_aether:the_aether/default_islands/factor",
@@ -30,7 +30,7 @@
                         "type": "minecraft:add",
                         "argument1": {
                             "type": "minecraft:mul",
-                            "argument1": -0.05,
+                            "argument1": -0.07,
                             "argument2": {
                                 "type": "minecraft:min",
                                 "argument1": "ancient_aether:the_aether/default_islands/factor",
