@@ -1,4 +1,4 @@
-// 1.20.1	2023-12-02T15:38:53.1619427	Item Models: ancient_aether
+// 1.20.1	2023-12-03T11:26:49.2331503	Item Models: ancient_aether
 dc22e9f245c5e59d55b0aec4ae45dec8337daa28 assets/ancient_aether/models/item/aerogel_bottle.json
 532bdb7a4f7d2a6b96d474c01c8b9e7a0d1c10b4 assets/ancient_aether/models/item/aerogel_glass.json
 87e9f8f9f807a2aa763e3057d32bacf3ee32b60f assets/ancient_aether/models/item/aerogel_glass_door.json
@@ -16,6 +16,7 @@ e33c85e0901587bf84b2a93e0f74636995731436 assets/ancient_aether/models/item/ancie
 8098bc5e17d412cb410ace5b54bf581bc079e984 assets/ancient_aether/models/item/ancient_ring.json
 7b758a31f7272894d72fc2ff7144b4d1d37b407a assets/ancient_aether/models/item/ancient_sword.json
 6f6e7ea4043b02c3002c645c7a5173a32d9cb63c assets/ancient_aether/models/item/angelic_lantern.json
+7b52703f3fe9815b27af4aa9bd01e7fe1038e779 assets/ancient_aether/models/item/crystal_skyroot_sapling.json
 4c9768d53d55d0e66343f32df90f999050ab5756 assets/ancient_aether/models/item/divine_skyroot_sapling.json
 adb8bde9f62a21d4a492e030b93e0aa3e6f9f404 assets/ancient_aether/models/item/frosted_highsproot_sapling.json
 847fb5b6aa35f5048e62d3bf76e55f05c6b41f80 assets/ancient_aether/models/item/gale_lantern.json
@@ -63,6 +64,7 @@ b5f57985ae50e92184ef2d80c666a9950a811db2 assets/ancient_aether/models/item/sakur
 bed0eab0ac3fd6ff1db0dc21b542f50f4048c2b9 assets/ancient_aether/models/item/sakura_trapdoor.json
 e6c1cf2f9b2e9f820237cd5e08913258fb06ea10 assets/ancient_aether/models/item/sakura_wood_wall.json
 1ff1dfbd020234c9d222b25637694c23914ea93a assets/ancient_aether/models/item/sentry_lantern.json
+c4c734261bf8749e898ba8bfa406a63dba5207b2 assets/ancient_aether/models/item/skyroot_pine_sapling.json
 2590d5cc1f45aacb63586ef37acbdb9fd6098d05 assets/ancient_aether/models/item/sky_blues.json
 91c8bd4c3e5f39b613322a1e535a01eb7f6d55fe assets/ancient_aether/models/item/strength_stone.json
 4a1875d25df6433044e34e5c18d5317293da832a assets/ancient_aether/models/item/stripped_highsproot_log_wall.json

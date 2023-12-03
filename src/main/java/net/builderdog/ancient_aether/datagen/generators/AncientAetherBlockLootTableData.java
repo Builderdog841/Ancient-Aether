@@ -1,6 +1,5 @@
 package net.builderdog.ancient_aether.datagen.generators;
 
-import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.data.providers.AetherBlockLootSubProvider;
 import com.aetherteam.aether.item.AetherItems;
 import com.aetherteam.aether.mixin.mixins.common.accessor.BlockLootAccessor;
@@ -80,9 +79,9 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
 
         //Leaves
         add(AncientAetherBlocks.SKYROOT_PINE_LEAVES.get(),
-                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AetherBlocks.SKYROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
+                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.SKYROOT_PINE_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
         add(AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES.get(),
-                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AetherBlocks.SKYROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
+                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
         add(AncientAetherBlocks.HIGHSPROOT_LEAVES.get(),
                 (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
         add(AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES.get(),
@@ -93,6 +92,8 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
                 (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.SAKURA_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
 
         //Saplings
+        dropSelf(AncientAetherBlocks.SKYROOT_PINE_SAPLING.get());
+        dropSelf(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get());
         dropSelf(AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
         dropSelf(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get());
         dropSelf(AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.get());
@@ -146,6 +147,8 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropOther(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get(), AncientAetherBlocks.SAKURA_BLOSSOMS.get());
 
         //Potted Plants
+        dropPottedContents(AncientAetherBlocks.POTTED_SKYROOT_PINE_SAPLING.get());
+        dropPottedContents(AncientAetherBlocks.POTTED_CRYSTAL_SKYROOT_SAPLING.get());
         dropPottedContents(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING.get());
         dropPottedContents(AncientAetherBlocks.POTTED_SAKURA_SAPLING.get());
         dropPottedContents(AncientAetherBlocks.POTTED_SKY_BLUES.get());

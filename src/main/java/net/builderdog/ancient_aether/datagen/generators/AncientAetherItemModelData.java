@@ -99,6 +99,8 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
 
         itemBlock(AncientAetherBlocks.VIOLET_AERCLOUD.get());
 
+        itemBlockFlat(AncientAetherBlocks.SKYROOT_PINE_SAPLING.get(), "");
+        itemBlockFlat(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.SAKURA_SAPLING.get(), "");
