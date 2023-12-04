@@ -32,9 +32,9 @@
                         "argument1": {
                             "type": "minecraft:y_clamped_gradient",
                             "from_value": 1.0,
-                            "from_y": 139,
+                            "from_y": 137,
                             "to_value": 0.0,
-                            "to_y": 192
+                            "to_y": 212
                         },
                         "argument2": {
                             "type": "add",
@@ -43,7 +43,7 @@
                                 "argument1": 0.2,
                                 "argument2": {
                                     "type": "minecraft:add",
-                                    "argument1": -0.01,
+                                    "argument1": -0.04,
                                     "argument2": "ancient_aether:the_aether/3d_noises/hilly"
                                 }
                             },
