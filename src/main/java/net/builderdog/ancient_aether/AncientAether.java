@@ -1,7 +1,7 @@
 package net.builderdog.ancient_aether;
 
 import com.aetherteam.aether.AetherConfig;
-//import com.mojang.logging.LogUtils;
+import com.mojang.logging.LogUtils;
 import com.aetherteam.cumulus.CumulusConfig;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
@@ -26,6 +26,7 @@ import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherFoliagePla
 import net.builderdog.ancient_aether.world.structure.AncientAetherStructureTypes;
 import net.minecraft.ChatFormatting;
 import net.minecraft.SharedConstants;
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -56,13 +57,14 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.resource.PathPackResources;
-//import org.slf4j.Logger;
+import org.slf4j.Logger;
 import teamrazor.aeroblender.AeroBlenderConfig;
 import teamrazor.aeroblender.aether.AetherRuleCategory;
 import terrablender.api.Regions;
 import terrablender.api.SurfaceRuleManager;
 
 import java.nio.file.Path;
+import java.util.Iterator;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.UnaryOperator;
 
@@ -73,7 +75,7 @@ import static com.aetherteam.aether.Aether.DIRECTORY;
 public class AncientAether {
     public static final String MOD_ID = "ancient_aether";
 
-    //private static final Logger LOGGER = LogUtils.getLogger();
+    private static final Logger LOGGER = LogUtils.getLogger();
 
     public AncientAether() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -147,6 +149,27 @@ public class AncientAether {
     public void serverSetup(ServerAboutToStartEvent event) {
         AetherConfig.SERVER.disable_eternal_day.set(true);
     }
+
+ //   public void versionRefresh() {
+  //      if (!(ReduxConfig.CLIENT.version_id.get()).equals("1.0") && ReduxConfig.CLIENT.reload_packs_after_update.get()) {
+  //          Iterator var1 = Minecraft.getInstance().getResourcePackRepository().getAvailablePacks().iterator();
+//
+   //         while(var1.hasNext()) {
+   //             Pack pack = (Pack)var1.next();
+   //             if (pack.getPackSource() == ReduxPackSources.AUTO_APPLY_RESOURCE) {
+   //                 Minecraft.getInstance().getResourcePackRepository().addPack(pack.getId());
+    //            }
+    //        }
+//
+     //       this.clientReload = true;
+     //       LOGGER.info("Aether: Redux detected version change, reloading packs ");
+     //       ReduxConfig.CLIENT.version_id.set("1.0");
+     //   } else if (!(ReduxConfig.CLIENT.version_id.get()).equals("1.0") && !(Boolean)ReduxConfig.CLIENT.reload_packs_after_update.get()) {
+    //        LOGGER.info("Aether: Redux Version ID changed after update but pack reload was disabled, ignoring");
+    //        ReduxConfig.CLIENT.version_id.set("1.0");
+    //    }
+//
+    //}
 
     public void packSetup(AddPackFindersEvent event) {
         setupProgrammerArtPack(event);
