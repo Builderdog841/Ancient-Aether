@@ -7,7 +7,6 @@ import net.builderdog.ancient_aether.entity.animals.WyndcapsAnimal;
 import net.builderdog.ancient_aether.entity.monster.boss.ancient_guardian.AncientGuardian;
 import net.builderdog.ancient_aether.entity.monster.AeronauticLeaper;
 import net.builderdog.ancient_aether.entity.monster.Roothyrn;
-import net.builderdog.ancient_aether.entity.monster.WyndZephyr;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
@@ -25,12 +24,10 @@ public class AncientAetherEvents {
         event.put(AncientAetherEntities.AERONAUTIC_LEAPER.get(), AeronauticLeaper.createMobAttributes().build());
         event.put(AncientAetherEntities.ANCIENT_GUARDIAN.get(), AncientGuardian.createMobAttributes().build());
         event.put(AncientAetherEntities.ANCIENT_CORE.get(), AncientGuardian.createMobAttributes().build());
-        event.put(AncientAetherEntities.WYND_ZEPHYR.get(), WyndZephyr.createMobAttributes().build());
     }
 
     @SubscribeEvent
     public static void registerSpawnPlacements(SpawnPlacementRegisterEvent event) {
         event.register(AncientAetherEntities.HIGHLAND_BUFFALO.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, WyndcapsAnimal::checkWyndcapsAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.OR);
-        event.register(AncientAetherEntities.WYND_ZEPHYR.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, WyndZephyr::checkWyndZephyrSpawnRules, SpawnPlacementRegisterEvent.Operation.OR);
     }
 }

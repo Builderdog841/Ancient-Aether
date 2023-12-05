@@ -108,7 +108,7 @@
     ],
     "aether_sky_monster": [
       {
-        "type": "ancient_aether:wynd_zephyr",
+        "type": "aether:zephyr",
         "maxCount": 1,
         "minCount": 1,
         "weight": 20

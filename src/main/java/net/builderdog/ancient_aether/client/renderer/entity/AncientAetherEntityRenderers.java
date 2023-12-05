@@ -5,7 +5,6 @@ import com.aetherteam.aether.client.renderer.accessory.PendantRenderer;
 import com.aetherteam.aether.client.renderer.player.layer.DartLayer;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
-import net.builderdog.ancient_aether.client.renderer.entity.*;
 import net.builderdog.ancient_aether.client.renderer.entity.layers.AncientAetherModelLayers;
 import net.builderdog.ancient_aether.client.renderer.entity.model.*;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
@@ -20,7 +19,6 @@ import net.minecraft.client.renderer.blockentity.CampfireRenderer;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
-import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.client.renderer.entity.player.PlayerRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
@@ -44,8 +42,6 @@ public class AncientAetherEntityRenderers {
         event.registerEntityRenderer(AncientAetherEntities.HIGHLAND_BUFFALO.get(), HighlandBuffaloRenderer::new);
         event.registerEntityRenderer(AncientAetherEntities.ROOTHYRN.get(), RoothyrnRenderer::new);
         event.registerEntityRenderer(AncientAetherEntities.GRAVITITE_DART.get(), GravititeDartRenderer::new);
-        event.registerEntityRenderer(AncientAetherEntities.WYND_ZEPHYR.get(), WyndZephyrRenderer::new);
-        event.registerEntityRenderer(AncientAetherEntities.WYND_ZEPHYR_SNOWBALL.get(), (context) -> new ThrownItemRenderer<>(context, 3.0F, true));
     }
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
@@ -57,8 +53,6 @@ public class AncientAetherEntityRenderers {
             event.registerLayerDefinition(AncientAetherModelLayers.HIGHLAND_BUFFALO, HighlandBuffaloModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.ROOTHYRN, RoothyrnModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.AERONAUTIC_LEAPER, AeronauticLeaperModel::createBodyLayer);
-            event.registerLayerDefinition(AncientAetherModelLayers.WYND_ZEPHYR, WyndZephyrModel::createBodyLayer);
-            event.registerLayerDefinition(AncientAetherModelLayers.WYND_ZEPHYR_TRANSPARENCY, WyndZephyrModel::createBodyLayer);
         }
     }
     @SubscribeEvent

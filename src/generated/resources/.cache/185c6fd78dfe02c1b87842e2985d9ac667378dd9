@@ -1,4 +1,4 @@
-// 1.20.1	2023-12-03T11:26:49.2331503	Item Models: ancient_aether
+// 1.20.1	2023-12-05T20:01:44.2935836	Item Models: ancient_aether
 dc22e9f245c5e59d55b0aec4ae45dec8337daa28 assets/ancient_aether/models/item/aerogel_bottle.json
 532bdb7a4f7d2a6b96d474c01c8b9e7a0d1c10b4 assets/ancient_aether/models/item/aerogel_glass.json
 87e9f8f9f807a2aa763e3057d32bacf3ee32b60f assets/ancient_aether/models/item/aerogel_glass_door.json
@@ -76,4 +76,3 @@ b2904a38ad6961e7fe7f085a71ff5c00372cddfd assets/ancient_aether/models/item/valky
 8236fd7a524a8f3a35ebaa7fa5709657cbeb5372 assets/ancient_aether/models/item/valkyrum.json
 f007777affa709dfd200d16a89d618a4a1e9c59b assets/ancient_aether/models/item/violet_aercloud.json
 98329ebaf90bee628ae611077334ab6049fd816a assets/ancient_aether/models/item/wynd_thistle.json
-63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/wynd_zephyr_spawn_egg.json

@@ -2,11 +2,8 @@ package net.builderdog.ancient_aether.client.renderer.entity;
 
 import net.builderdog.ancient_aether.client.renderer.entity.layers.AncientAetherModelLayers;
 import net.builderdog.ancient_aether.client.renderer.entity.layers.AncientCoreLayer;
-import net.builderdog.ancient_aether.client.renderer.entity.layers.AncientGuardianLayer;
 import net.builderdog.ancient_aether.client.renderer.entity.model.AncientCoreModel;
-import net.builderdog.ancient_aether.client.renderer.entity.model.AncientGuardianModel;
 import net.builderdog.ancient_aether.entity.monster.boss.ancient_core.AncientCore;
-import net.builderdog.ancient_aether.entity.monster.boss.ancient_guardian.AncientGuardian;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
