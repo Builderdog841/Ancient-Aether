@@ -17,7 +17,6 @@ import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.entity.moa.AncientAetherMoaTypes;
 import net.builderdog.ancient_aether.gui.menu.AncientAetherMenus;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
-import net.builderdog.ancient_aether.particle.AncientAetherParticles;
 import net.builderdog.ancient_aether.world.biomemodifier.AncientAetherBiomeModifierSerializers;
 import net.builderdog.ancient_aether.world.biomes.AncientAetherRegion;
 import net.builderdog.ancient_aether.world.biomes.AncientAetherSurfaceData;
@@ -26,7 +25,6 @@ import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherFoliagePla
 import net.builderdog.ancient_aether.world.structure.AncientAetherStructureTypes;
 import net.minecraft.ChatFormatting;
 import net.minecraft.SharedConstants;
-import net.minecraft.client.Minecraft;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -97,7 +95,6 @@ public class AncientAether {
                 AncientAetherSoundEvents.SOUNDS,
                 AncientAetherEffects.EFFECTS,
                 AncientAetherBiomeModifierSerializers.BIOME_MODIFIER_SERIALIZERS,
-                AncientAetherParticles.PARTICLES,
                 AncientAetherFeatureRegistry.FEATURES
                 };
 
