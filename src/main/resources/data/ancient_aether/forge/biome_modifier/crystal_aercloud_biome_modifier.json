@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#ancient_aether:has_crystal_aercloud",
+  "features": "ancient_aether:crystal_aercloud",
+  "step": "underground_ores"
+}

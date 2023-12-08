@@ -81,6 +81,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
 
         //Aerclouds
         translucentBlock(AncientAetherBlocks.VIOLET_AERCLOUD.get(),"");
+        translucentBlock(AncientAetherBlocks.CRYSTAL_AERCLOUD.get(),"");
 
         //Aerogel Glass
         translucentBlock(AncientAetherBlocks.AEROGEL_GLASS.get(), "");

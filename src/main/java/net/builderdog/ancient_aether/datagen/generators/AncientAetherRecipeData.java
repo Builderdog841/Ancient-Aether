@@ -212,6 +212,15 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .save(consumer);
         slab(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGETIC_SLAB.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.WIND_BLOWER.get())
+                .define('W', AetherBlocks.COLD_AERCLOUD.get())
+                .define('C', AncientAetherBlocks.CRYSTAL_AERCLOUD.get())
+                .pattern("WWW")
+                .pattern("WCW")
+                .pattern("WWW")
+                .unlockedBy(getHasName(AncientAetherBlocks.CRYSTAL_AERCLOUD.get()), has(AncientAetherBlocks.CRYSTAL_AERCLOUD.get()))
+                .save(consumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGEL_GLASS.get(),8)
                 .define('A', AetherBlocks.AEROGEL.get())
                 .define('P', AetherTags.Items.PLANKS_CRAFTING)

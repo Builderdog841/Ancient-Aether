@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "C": {
+      "item": "ancient_aether:crystal_aercloud"
+    },
+    "W": {
+      "item": "aether:cold_aercloud"
+    }
+  },
+  "pattern": [
+    "WWW",
+    "WCW",
+    "WWW"
+  ],
+  "result": {
+    "item": "ancient_aether:wind_blower"
+  },
+  "show_notification": true
+}

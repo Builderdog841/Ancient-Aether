@@ -105,6 +105,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
 
         //Aerclouds
         dropSelfDouble(AncientAetherBlocks.VIOLET_AERCLOUD.get());
+        dropSelfDouble(AncientAetherBlocks.CRYSTAL_AERCLOUD.get());
 
         //Aerogel Glass
         dropSelf(AncientAetherBlocks.AEROGEL_GLASS.get());

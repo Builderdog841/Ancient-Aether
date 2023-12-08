@@ -97,6 +97,7 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         itemBlock(AncientAetherBlocks.AEROGEL_GLASS_TRAPDOOR.get(), "_bottom");
 
         itemBlock(AncientAetherBlocks.VIOLET_AERCLOUD.get());
+        itemBlock(AncientAetherBlocks.CRYSTAL_AERCLOUD.get());
 
         itemBlockFlat(AncientAetherBlocks.SKYROOT_PINE_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get(), "");

@@ -55,6 +55,7 @@ public class AncientAetherConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_BLOSSOMS_PATCH = registerKey("sakura_blossoms_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKY_BLUES_PATCH = registerKey("sky_blues_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> VIOLET_AERCLOUD = registerKey("violet_aercloud");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CRYSTAL_AERCLOUD = registerKey("crystal_aercloud");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CLOUDBED = registerKey("cloudbed");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
@@ -118,6 +119,7 @@ public class AncientAetherConfiguredFeatures {
 
         //Misc Features
         register(context, VIOLET_AERCLOUD, AetherFeatures.AERCLOUD.get(), AetherConfiguredFeatureBuilders.aercloud(16, AncientAetherFeatureStates.VIOLET_AERCLOUD));
+        register(context, CRYSTAL_AERCLOUD, AetherFeatures.AERCLOUD.get(), AetherConfiguredFeatureBuilders.aercloud(16, AncientAetherFeatureStates.CRYSTAL_AERCLOUD));
     }
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
         return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(AncientAether.MOD_ID, name));

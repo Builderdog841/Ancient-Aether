@@ -10,4 +10,5 @@ public class AncientAetherFeatureStates {
     public static final BlockState HIGHSPROOT_LEAVES = AncientAetherBlocks.HIGHSPROOT_LEAVES.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true);
     public static final BlockState HIGHSPROOT_LOG = AncientAetherBlocks.HIGHSPROOT_LOG.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true);
     public static final BlockState VIOLET_AERCLOUD = AncientAetherBlocks.VIOLET_AERCLOUD.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true);
+    public static final BlockState CRYSTAL_AERCLOUD = AncientAetherBlocks.CRYSTAL_AERCLOUD.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true);
 }
