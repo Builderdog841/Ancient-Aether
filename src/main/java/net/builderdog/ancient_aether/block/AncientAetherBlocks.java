@@ -5,6 +5,7 @@ import com.aetherteam.aether.block.construction.BookshelfBlock;
 import com.aetherteam.aether.block.dungeon.DoorwayBlock;
 import com.aetherteam.aether.block.dungeon.TrappedBlock;
 import com.aetherteam.aether.block.dungeon.TreasureDoorwayBlock;
+import com.aetherteam.aether.block.natural.AercloudBlock;
 import com.aetherteam.aether.block.natural.AetherDoubleDropBlock;
 import com.aetherteam.aether.block.natural.AetherDoubleDropsLeaves;
 import com.aetherteam.aether.block.natural.AetherDoubleDropsOreBlock;
@@ -29,7 +30,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
-import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -111,7 +111,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> DIVINE_SKYROOT_SAPLING = registerBlock("divine_skyroot_sapling", () -> new SaplingBlock(new DivineSkyrootTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get()).mapColor(MapColor.LAPIS)));
 
     //Natural
-    public static final RegistryObject<Block> GRAVITY_GRAVEL = registerBlock("gravity_gravel", () -> new AetherDoubleDropBlock(Block.Properties.of().mapColor(MapColor.TERRACOTTA_PURPLE).strength(0.25F).sound(SoundType.GRAVEL)));
+    public static final RegistryObject<Block> GRAVITY_GRAVEL = registerBlock("gravity_gravel", () -> new AetherDoubleDropBlock(Block.Properties.of().mapColor(MapColor.TERRACOTTA_PURPLE).jumpFactor(2).strength(0.25F).sound(SoundType.GRAVEL)));
     public static final RegistryObject<Block> WYNDCAPS_ICE = registerBlock("wyndcaps_ice", () -> new Block(Block.Properties.copy(PACKED_ICE)));
 
     //Ores
@@ -191,6 +191,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> TRAPPED_SAKURA_BLOSSOMS = registerBlock("trapped_sakura_blossoms", () -> new TrappedFlowerBlock(AncientAetherEntities.ROOTHYRN::get, AIR::defaultBlockState, Block.Properties.copy(SAKURA_BLOSSOMS.get())));
     public static final RegistryObject<Block> AMBROSIUM_CAMPFIRE = registerBlock("ambrosium_campfire", () -> new AmbrosiumCampfireBlock(true, 1, Block.Properties.copy(Blocks.CAMPFIRE)));
     public static final RegistryObject<Block> VIOLET_AERCLOUD = registerBlock("violet_aercloud", () -> new VioletAercloudBlock(BlockBehaviour.Properties.copy(COLD_AERCLOUD.get()).mapColor(MapColor.COLOR_PURPLE)));
+    public static final RegistryObject<Block> CRYSTAL_AERCLOUD = registerBlock("crystal_aercloud", () -> new AercloudBlock(BlockBehaviour.Properties.copy(COLD_AERCLOUD.get()).mapColor(MapColor.DIAMOND)));
     public static final RegistryObject<Block> WIND_BLOWER = registerBlock("wind_blower", () -> new WindBlowerBlock(BlockBehaviour.Properties.copy(COLD_AERCLOUD.get())));
     public static final RegistryObject<Block> HOLYSTONE_VASE = registerBlock("holystone_vase", () -> new HolystoneVaseBlock(Block.Properties.of().mapColor(MapColor.COLOR_LIGHT_GRAY).instabreak().sound(SoundType.DECORATED_POT).noOcclusion().isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
     public static final RegistryObject<Block> ANCIENT_HOLYSTONE_VASE = registerBlock("ancient_holystone_vase", () -> new AncientHolystoneVaseBlock(BlockBehaviour.Properties.copy(HOLYSTONE_VASE.get())));
