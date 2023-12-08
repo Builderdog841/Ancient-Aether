@@ -111,7 +111,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> DIVINE_SKYROOT_SAPLING = registerBlock("divine_skyroot_sapling", () -> new SaplingBlock(new DivineSkyrootTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get()).mapColor(MapColor.LAPIS)));
 
     //Natural
-    public static final RegistryObject<Block> GRAVITY_GRAVEL = registerBlock("gravity_gravel", () -> new AetherDoubleDropBlock(Block.Properties.of().mapColor(MapColor.TERRACOTTA_PURPLE).jumpFactor(2).strength(0.25F).sound(SoundType.GRAVEL)));
+    public static final RegistryObject<Block> GRAVITY_GRAVEL = registerBlock("gravity_gravel", () -> new AetherDoubleDropBlock(Block.Properties.of().mapColor(MapColor.TERRACOTTA_PURPLE).jumpFactor(1.5F).strength(0.25F).sound(SoundType.GRAVEL)));
     public static final RegistryObject<Block> WYNDCAPS_ICE = registerBlock("wyndcaps_ice", () -> new Block(Block.Properties.copy(PACKED_ICE)));
 
     //Ores
