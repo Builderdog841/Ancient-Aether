@@ -7,6 +7,10 @@
     {
       "structure": "ancient_aether:valkyrie_camp_skyroot",
       "weight": 1
+    },
+    {
+      "structure": "ancient_aether:valkyrie_camp_wyndcaps",
+      "weight": 1
     }
   ],
   "placement": {
