@@ -98,15 +98,6 @@
         "projection": "terrain_matching"
       },
       "weight": 1
-    },
-    {
-      "element": {
-        "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:valkyrie_settlement_skyroot/crosswalk_decorated",
-        "processors": "ancient_aether:golden_oak_crossing_randomizer",
-        "projection": "rigid"
-      },
-      "weight": 1
     }
   ],
   "fallback": "minecraft:empty"
