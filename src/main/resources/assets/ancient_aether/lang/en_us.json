@@ -203,6 +203,9 @@
   "ancient_aether.pro_tips.line.aether.valkyrum": "Valkyrum Ore can only be mined with a Sentry Pickaxe found in Silver Dungeons or higher.",
   "gui.ancient_aether.pro_tip": "Pro Tip [Ancient Aether]",
 
+  "pack.ancient_aether.tweaks.title": "Ancient Aether Tweaks",
+  "pack.ancient_aether.tweaks.description": "Changes textures of the base-mod to be more inlined with Ancient Aether.",
+
   "ancient_aether.tooltip.common": "Common",
   "ancient_aether.tooltip.rare": "Rare",
   "ancient_aether.tooltip.epic": "Epic",

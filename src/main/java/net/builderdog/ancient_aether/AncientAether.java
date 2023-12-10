@@ -1,7 +1,6 @@
 package net.builderdog.ancient_aether;
 
 import com.aetherteam.aether.AetherConfig;
-import com.mojang.logging.LogUtils;
 import com.aetherteam.cumulus.CumulusConfig;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
@@ -37,7 +36,6 @@ import net.minecraft.server.packs.repository.PackSource;
 import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.ComposterBlock;
-import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
@@ -55,14 +53,13 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.resource.PathPackResources;
-import org.slf4j.Logger;
+import org.jetbrains.annotations.NotNull;
 import teamrazor.aeroblender.AeroBlenderConfig;
 import teamrazor.aeroblender.aether.AetherRuleCategory;
 import terrablender.api.Regions;
 import terrablender.api.SurfaceRuleManager;
 
 import java.nio.file.Path;
-import java.util.Iterator;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.UnaryOperator;
 
@@ -73,7 +70,7 @@ import static com.aetherteam.aether.Aether.DIRECTORY;
 public class AncientAether {
     public static final String MOD_ID = "ancient_aether";
 
-    private static final Logger LOGGER = LogUtils.getLogger();
+    //private static final Logger LOGGER = LogUtils.getLogger();
 
     public AncientAether() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -147,30 +144,10 @@ public class AncientAether {
         AetherConfig.SERVER.disable_eternal_day.set(true);
     }
 
- //   public void versionRefresh() {
-  //      if (!(ReduxConfig.CLIENT.version_id.get()).equals("1.0") && ReduxConfig.CLIENT.reload_packs_after_update.get()) {
-  //          Iterator var1 = Minecraft.getInstance().getResourcePackRepository().getAvailablePacks().iterator();
-//
-   //         while(var1.hasNext()) {
-   //             Pack pack = (Pack)var1.next();
-   //             if (pack.getPackSource() == ReduxPackSources.AUTO_APPLY_RESOURCE) {
-   //                 Minecraft.getInstance().getResourcePackRepository().addPack(pack.getId());
-    //            }
-    //        }
-//
-     //       this.clientReload = true;
-     //       LOGGER.info("Aether: Redux detected version change, reloading packs ");
-     //       ReduxConfig.CLIENT.version_id.set("1.0");
-     //   } else if (!(ReduxConfig.CLIENT.version_id.get()).equals("1.0") && !(Boolean)ReduxConfig.CLIENT.reload_packs_after_update.get()) {
-    //        LOGGER.info("Aether: Redux Version ID changed after update but pack reload was disabled, ignoring");
-    //        ReduxConfig.CLIENT.version_id.set("1.0");
-    //    }
-//
-    //}
 
     public void packSetup(AddPackFindersEvent event) {
         setupProgrammerArtPack(event);
-        setupOverridesPack(event);
+        setupTweaksPack(event);
         setupWorldgenOverridesDatapack(event);
         setupCompatDatapack(event, "ancient_aether_asset_overrides", "Ancient Aether Asset Overrides", "Some Tweaks to the Aether's Textures");
 
@@ -204,23 +181,23 @@ public class AncientAether {
         }
     }
 
-    private void setupOverridesPack(AddPackFindersEvent event) {
-        if (event.getPackType() == PackType.CLIENT_RESOURCES) {
-            Path resourcePath = ModList.get().getModFileById("ancient_aether").getFile().findResource("packs/ancient_aether_tweaks");
-            PathPackResources pack = new PathPackResources(ModList.get().getModFileById("ancient_aether").getFile().getFileName() + ":" + resourcePath, true, resourcePath);
-            PackMetadataSection metadata = new PackMetadataSection(Component.literal("Some tweaks to the Aether's Textures"), SharedConstants.getCurrentVersion().getPackVersion(PackType.CLIENT_RESOURCES));
-            event.addRepositorySource((packConsumer) -> {
-                packConsumer.accept(Pack.create("builtin/ancient_aether_tweaks",
-                        Component.literal("Ancient Aether Tweaks"),
+    private void setupTweaksPack(AddPackFindersEvent event) {
+        Path resourcePath = ModList.get().getModFileById(AncientAether.MOD_ID).getFile().findResource("packs/ancient_aether_tweaks");
+        PathPackResources pack = new PathPackResources(ModList.get().getModFileById(AncientAether.MOD_ID).getFile().getFileName() + ":" + resourcePath, true, resourcePath);
+        PackMetadataSection metadata = new PackMetadataSection(Component.translatable("pack.ancient_aether.tweaks.description"), SharedConstants.getCurrentVersion().getPackVersion(PackType.CLIENT_RESOURCES));
+        event.addRepositorySource((source) ->
+                source.accept(Pack.create(
+                        "builtin/ancient_aether_tweaks",
+                        Component.translatable("pack.ancient_aether.tweaks.title"),
                         false,
                         (string) -> pack,
                         new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.SERVER_DATA), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()),
                         PackType.CLIENT_RESOURCES,
                         Pack.Position.TOP,
                         false,
-                        create(decorateWithSource("built-in"), true)));
-            });
-        }
+                        PackSource.BUILT_IN)
+                )
+        );
     }
 
     private void setupCompatDatapack(AddPackFindersEvent event, String path, String displayName, String desc) {
@@ -255,7 +232,7 @@ public class AncientAether {
 
     static PackSource create(final UnaryOperator<Component> decorator, final boolean shouldAddAutomatically) {
         return new PackSource() {
-            public Component decorate(Component component) {
+            public @NotNull Component decorate(@NotNull Component component) {
                 return decorator.apply(component);
             }
 
@@ -305,8 +282,5 @@ public class AncientAether {
 
     private void addCompost(float chance, ItemLike item) {
         ComposterBlock.COMPOSTABLES.put(item.asItem(), chance);
-    }
-    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents {
     }
 }
