@@ -35,5 +35,8 @@ public class ItemHooks {
         if (stack.is(AncientAetherTags.Items.SEASONAL_LOOT)) {
             components.add(position, AncientAetherItems.SEASONAL);
         }
+        if (stack.is(AncientAetherTags.Items.WIP)) {
+            components.add(position, AncientAetherItems.WIP);
+        }
     }
 }

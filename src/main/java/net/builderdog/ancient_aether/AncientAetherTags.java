@@ -10,7 +10,6 @@ public class AncientAetherTags {
 
     public static class Blocks {
         public static final TagKey<Block> WYNDCAPS_ANIMAL_SPAWNABLE_ON = tag("wyndcaps_animals_spawnable_on");
-        public static final TagKey<Block> DRIFTWEED_PLACEABLE_ON = tag("driftweed_placeable_on");
 
         private static TagKey<Block> tag(String name) {
             return TagKey.create(Registries.BLOCK, new ResourceLocation(AncientAether.MOD_ID, name));
@@ -25,6 +24,7 @@ public class AncientAetherTags {
         public static final TagKey<Item> EPIC_LOOT = tag("epic_loot");
         public static final TagKey<Item> LEGENDARY_LOOT = tag("legendary_loot");
         public static final TagKey<Item> SEASONAL_LOOT = tag("seasonal_loot");
+        public static final TagKey<Item> WIP = tag("wip");
 
         private static TagKey<Item> tag(String name) {
             return TagKey.create(Registries.ITEM, new ResourceLocation(AncientAether.MOD_ID, name));
