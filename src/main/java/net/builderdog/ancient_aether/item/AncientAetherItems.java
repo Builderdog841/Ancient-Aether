@@ -10,10 +10,7 @@ import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.entity.moa.AncientAetherMoaTypes;
 import net.builderdog.ancient_aether.item.consumables.ValkyrieWineItem;
 import net.builderdog.ancient_aether.item.equipment.accessories.*;
-import net.builderdog.ancient_aether.item.equipment.tools.valkyrum.ValkyrumAxeItem;
-import net.builderdog.ancient_aether.item.equipment.tools.valkyrum.ValkyrumHoeItem;
-import net.builderdog.ancient_aether.item.equipment.tools.valkyrum.ValkyrumPickaxeItem;
-import net.builderdog.ancient_aether.item.equipment.tools.valkyrum.ValkyrumShovelItem;
+import net.builderdog.ancient_aether.item.equipment.tools.valkyrum.*;
 import net.builderdog.ancient_aether.item.equipment.weapons.AncientSwordItem;
 import net.builderdog.ancient_aether.item.equipment.weapons.GravititeDartShooterItem;
 import net.builderdog.ancient_aether.item.miscellaneous.AncientAetherBoatItem;
@@ -73,6 +70,8 @@ public class AncientAetherItems {
     public static final RegistryObject<Item> SAKURA_CHEST_BOAT = ITEMS.register("sakura_chest_boat", () -> new AncientAetherBoatItem(true, new Item.Properties().stacksTo(1), AncientAetherBoatEntity.Type.SAKURA));
 
     //Valkyrum
+    public static final RegistryObject<SwordItem> VALKYRUM_SWORD = ITEMS.register("valkyrum_sword", ValkyrumSwordItem::new);
+    public static final RegistryObject<SwordItem> VALKYRUM_LANCE = ITEMS.register("valkyrum_lance", ValkyrumLanceItem::new);
     public static final RegistryObject<PickaxeItem> VALKYRUM_PICKAXE = ITEMS.register("valkyrum_pickaxe", ValkyrumPickaxeItem::new);
     public static final RegistryObject<AxeItem> VALKYRUM_AXE = ITEMS.register("valkyrum_axe", ValkyrumAxeItem::new);
     public static final RegistryObject<ShovelItem> VALKYRUM_SHOVEL = ITEMS.register("valkyrum_shovel", ValkyrumShovelItem::new);

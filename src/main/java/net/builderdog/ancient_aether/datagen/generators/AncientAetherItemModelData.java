@@ -48,7 +48,13 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         eggItem(AncientAetherItems.ANCIENT_CORE_SPAWN_EGG.get());
         moaEggItem(AncientAetherItems.SAKURA_MOA_EGG.get(), "");
 
-        //Dungeon Loot
+        //Equipment
+        handheldItem(AncientAetherItems.VALKYRUM_SWORD.get(), "");
+        handheldItem(AncientAetherItems.VALKYRUM_LANCE.get(), "");
+        handheldItem(AncientAetherItems.VALKYRUM_PICKAXE.get(), "");
+        handheldItem(AncientAetherItems.VALKYRUM_AXE.get(), "");
+        handheldItem(AncientAetherItems.VALKYRUM_SHOVEL.get(), "");
+        handheldItem(AncientAetherItems.VALKYRUM_HOE.get(), "");
         handheldItem(AncientAetherItems.ANCIENT_SWORD.get(), "");
 
         //Blocks

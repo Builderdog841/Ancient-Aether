@@ -135,6 +135,17 @@ public class AncientAetherCreativeModeTabs {
             event.getEntries().putAfter(new ItemStack(AncientAetherItems.SAKURA_BOAT.get()), new ItemStack(AncientAetherItems.SAKURA_CHEST_BOAT.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AetherItems.GOLD_DUNGEON_KEY.get()), new ItemStack(AncientAetherItems.ANCIENT_DUNGEON_KEY.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AetherItems.ENCHANTED_DART_SHOOTER.get()), new ItemStack(AncientAetherItems.GRAVITITE_DART_SHOOTER.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AetherItems.GRAVITITE_HOE.get()), new ItemStack(AncientAetherItems.VALKYRUM_SWORD.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherItems.VALKYRUM_SWORD.get()), new ItemStack(AncientAetherItems.VALKYRUM_LANCE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherItems.VALKYRUM_LANCE.get()), new ItemStack(AncientAetherItems.VALKYRUM_SHOVEL.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherItems.VALKYRUM_SHOVEL.get()), new ItemStack(AncientAetherItems.VALKYRUM_PICKAXE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherItems.VALKYRUM_PICKAXE.get()), new ItemStack(AncientAetherItems.VALKYRUM_AXE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherItems.VALKYRUM_AXE.get()), new ItemStack(AncientAetherItems.VALKYRUM_HOE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().remove(new ItemStack(AetherItems.VALKYRIE_LANCE.get()));
+            event.getEntries().remove(new ItemStack(AetherItems.VALKYRIE_PICKAXE.get()));
+            event.getEntries().remove(new ItemStack(AetherItems.VALKYRIE_AXE.get()));
+            event.getEntries().remove(new ItemStack(AetherItems.VALKYRIE_SHOVEL.get()));
+            event.getEntries().remove(new ItemStack(AetherItems.VALKYRIE_HOE.get()));
         }
 
         if (tab == AetherCreativeTabs.AETHER_FOOD_AND_DRINKS.get()) {
@@ -192,6 +203,11 @@ public class AncientAetherCreativeModeTabs {
             event.getEntries().putAfter(new ItemStack(AncientAetherItems.ANCIENT_RING.get()), new ItemStack(AncientAetherItems.HEALTH_RING.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherItems.ANCIENT_PENDANT.get()), new ItemStack(AncientAetherItems.HEALTH_PENDANT.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AetherItems.IRON_BUBBLE.get()), new ItemStack(AncientAetherItems.STRENGTH_STONE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().remove(new ItemStack(AetherItems.VALKYRIE_HELMET.get()));
+            event.getEntries().remove(new ItemStack(AetherItems.VALKYRIE_CHESTPLATE.get()));
+            event.getEntries().remove(new ItemStack(AetherItems.VALKYRIE_LEGGINGS.get()));
+            event.getEntries().remove(new ItemStack(AetherItems.VALKYRIE_BOOTS.get()));
+            event.getEntries().remove(new ItemStack(AetherItems.VALKYRIE_GLOVES.get()));
         }
 
         if (tab == AetherCreativeTabs.AETHER_DUNGEON_BLOCKS.get()) {
