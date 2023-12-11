@@ -12,7 +12,6 @@ import net.builderdog.ancient_aether.item.consumables.ValkyrieWineItem;
 import net.builderdog.ancient_aether.item.equipment.accessories.*;
 import net.builderdog.ancient_aether.item.equipment.weapons.AncientSwordItem;
 import net.builderdog.ancient_aether.item.equipment.weapons.GravititeDartShooterItem;
-import net.builderdog.ancient_aether.item.loot.accessories.*;
 import net.builderdog.ancient_aether.item.misc.AncientAetherBoatItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
