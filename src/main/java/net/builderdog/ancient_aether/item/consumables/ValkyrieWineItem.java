@@ -13,13 +13,15 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.item.ItemUtils;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 
 public class ValkyrieWineItem extends Item implements ConsumableItem {
     public ValkyrieWineItem(Properties properties) {
         super(properties);
     }
+
     @Override
-    public ItemStack finishUsingItem(ItemStack itemstack, Level level, LivingEntity user) {
+    public @NotNull ItemStack finishUsingItem(@NotNull ItemStack itemstack, @NotNull Level level, @NotNull LivingEntity user) {
         ItemStack retval = new ItemStack(AncientAetherItems.AEROGEL_BOTTLE.get());
         super.finishUsingItem(itemstack, level, user);
         if (!level.isClientSide()) {
@@ -37,17 +39,17 @@ public class ValkyrieWineItem extends Item implements ConsumableItem {
     }
 
     @Override
-    public int getUseDuration(ItemStack stack) {
+    public int getUseDuration(@NotNull ItemStack stack) {
         return 32;
     }
 
     @Override
-    public UseAnim getUseAnimation(ItemStack stack) {
+    public @NotNull UseAnim getUseAnimation(@NotNull ItemStack stack) {
         return UseAnim.DRINK;
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level worldIn, Player playerIn, InteractionHand handIn) {
+    public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level worldIn, @NotNull Player playerIn, @NotNull InteractionHand handIn) {
         return ItemUtils.startUsingInstantly(worldIn, playerIn, handIn);
     }
 }

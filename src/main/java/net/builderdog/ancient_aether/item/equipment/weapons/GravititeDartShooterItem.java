@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.item.loot;
+package net.builderdog.ancient_aether.item.equipment.weapons;
 
 import com.aetherteam.aether.AetherTags;
 import com.aetherteam.aether.entity.projectile.dart.AbstractDart;

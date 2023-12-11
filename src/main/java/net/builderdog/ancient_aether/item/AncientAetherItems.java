@@ -1,7 +1,6 @@
 package net.builderdog.ancient_aether.item;
 
 import com.aetherteam.aether.item.AetherItems;
-import com.aetherteam.aether.item.food.WhiteAppleItem;
 import com.aetherteam.aether.item.miscellaneous.DungeonKeyItem;
 import com.aetherteam.aether.item.miscellaneous.MoaEggItem;
 import net.builderdog.ancient_aether.AncientAether;
@@ -10,7 +9,9 @@ import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.entity.moa.AncientAetherMoaTypes;
 import net.builderdog.ancient_aether.item.consumables.ValkyrieWineItem;
-import net.builderdog.ancient_aether.item.loot.*;
+import net.builderdog.ancient_aether.item.equipment.accessories.*;
+import net.builderdog.ancient_aether.item.equipment.weapons.AncientSwordItem;
+import net.builderdog.ancient_aether.item.equipment.weapons.GravititeDartShooterItem;
 import net.builderdog.ancient_aether.item.loot.accessories.*;
 import net.builderdog.ancient_aether.item.misc.AncientAetherBoatItem;
 import net.minecraft.ChatFormatting;

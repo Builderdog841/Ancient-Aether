@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.item.loot.accessories;
+package net.builderdog.ancient_aether.item.equipment.accessories;
 
 import com.aetherteam.aether.item.accessories.ring.RingItem;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;

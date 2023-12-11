@@ -1,0 +1,60 @@
+package net.builderdog.ancient_aether.item.equipment;
+
+import net.builderdog.ancient_aether.AncientAetherTags;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.crafting.Ingredient;
+import org.jetbrains.annotations.NotNull;
+
+import java.util.function.Supplier;
+
+public enum AncientAetherItemTiers implements Tier {
+
+    ANCIENT(3, 2031, 8.0F, 3.0F, 10, () -> Ingredient.of(AncientAetherTags.Items.ANCIENT_REPAIRING)),
+    VALKYRUM(4, 2031, 9.0F, 4.0F, 15, () -> Ingredient.of(AncientAetherTags.Items.VALKYRUM_REPAIRING));
+
+    private final int harvestLevel;
+    private final int maxUses;
+    private final float efficiency;
+    private final float attackDamage;
+    private final int enchantability;
+    private final Supplier<Ingredient> repairMaterial;
+
+    AncientAetherItemTiers(int harvestLevel, int maxUses, float efficiency, float attackDamage, int enchantability, Supplier<Ingredient> repairMaterial) {
+        this.harvestLevel = harvestLevel;
+        this.maxUses = maxUses;
+        this.efficiency = efficiency;
+        this.attackDamage = attackDamage;
+        this.enchantability = enchantability;
+        this.repairMaterial = repairMaterial;
+    }
+
+    @Override
+    public int getUses() {
+        return this.maxUses;
+    }
+
+    @Override
+    public float getSpeed() {
+        return this.efficiency;
+    }
+
+    @Override
+    public float getAttackDamageBonus() {
+        return this.attackDamage;
+    }
+
+    @Override
+    public int getLevel() {
+        return this.harvestLevel;
+    }
+
+    @Override
+    public int getEnchantmentValue() {
+        return this.enchantability;
+    }
+
+    @Override
+    public @NotNull Ingredient getRepairIngredient() {
+        return this.repairMaterial.get();
+    }
+}
