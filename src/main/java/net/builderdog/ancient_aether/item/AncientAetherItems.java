@@ -10,6 +10,10 @@ import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.entity.moa.AncientAetherMoaTypes;
 import net.builderdog.ancient_aether.item.consumables.ValkyrieWineItem;
 import net.builderdog.ancient_aether.item.equipment.accessories.*;
+import net.builderdog.ancient_aether.item.equipment.tools.valkyrum.ValkyrumAxeItem;
+import net.builderdog.ancient_aether.item.equipment.tools.valkyrum.ValkyrumHoeItem;
+import net.builderdog.ancient_aether.item.equipment.tools.valkyrum.ValkyrumPickaxeItem;
+import net.builderdog.ancient_aether.item.equipment.tools.valkyrum.ValkyrumShovelItem;
 import net.builderdog.ancient_aether.item.equipment.weapons.AncientSwordItem;
 import net.builderdog.ancient_aether.item.equipment.weapons.GravititeDartShooterItem;
 import net.builderdog.ancient_aether.item.miscellaneous.AncientAetherBoatItem;
@@ -68,6 +72,11 @@ public class AncientAetherItems {
     public static final RegistryObject<Item> SAKURA_BOAT = ITEMS.register("sakura_boat", () -> new AncientAetherBoatItem(false, new Item.Properties().stacksTo(1), AncientAetherBoatEntity.Type.SAKURA));
     public static final RegistryObject<Item> SAKURA_CHEST_BOAT = ITEMS.register("sakura_chest_boat", () -> new AncientAetherBoatItem(true, new Item.Properties().stacksTo(1), AncientAetherBoatEntity.Type.SAKURA));
 
+    //Valkyrum
+    public static final RegistryObject<PickaxeItem> VALKYRUM_PICKAXE = ITEMS.register("valkyrum_pickaxe", ValkyrumPickaxeItem::new);
+    public static final RegistryObject<AxeItem> VALKYRUM_AXE = ITEMS.register("valkyrum_axe", ValkyrumAxeItem::new);
+    public static final RegistryObject<ShovelItem> VALKYRUM_SHOVEL = ITEMS.register("valkyrum_shovel", ValkyrumShovelItem::new);
+    public static final RegistryObject<HoeItem> VALKYRUM_HOE = ITEMS.register("valkyrum_hoe", ValkyrumHoeItem::new);
 
     //Spawn Eggs
     public static final RegistryObject<SpawnEggItem> HIGHLAND_BUFFALO_SPAWN_EGG = ITEMS.register("highland_buffalo_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntities.HIGHLAND_BUFFALO, 0x4B6F89, 0x96C4D3, new Item.Properties()));
