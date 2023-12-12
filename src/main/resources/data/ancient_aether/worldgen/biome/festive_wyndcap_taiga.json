@@ -103,7 +103,7 @@
     "aether_darkness_monster": [
       {
         "type": "aether:cockatrice",
-        "maxCount": 1,
+        "maxCount": 3,
         "minCount": 1,
         "weight": 12
       }
