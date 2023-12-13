@@ -1,5 +1,5 @@
 {
-  "parent": "aether:gold_dungeon",
+  "parent": "ancient_aether:vampire_blade",
   "criteria": {
     "unlock": {
       "trigger": "minecraft:impossible"

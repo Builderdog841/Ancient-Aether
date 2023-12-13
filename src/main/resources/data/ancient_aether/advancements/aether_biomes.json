@@ -140,7 +140,7 @@
     "description": {
       "translate": "advancement.ancient_aether.aether_biomes.desc"
     },
-    "frame": "task",
+    "frame": "challenge",
     "hidden": false,
     "icon": {
       "item": "aether:sentry_boots"

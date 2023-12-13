@@ -204,6 +204,8 @@
   "advancement.ancient_aether.valkyrum.desc": "Enchant some Valkyrum Ore at an Altar",
   "advancement.ancient_aether.valkyrum_lance": "Lancin' and Dancin'",
   "advancement.ancient_aether.valkyrum_lance.desc": "Craft yourself a Valkyrum Lance",
+  "advancement.ancient_aether.vampire_blade": "Bloodlust",
+  "advancement.ancient_aether.vampire_blade.desc": "Obtain the Vampire Blade from defeating the Sun Spirit",
 
   "gui.ancient_aether.obelisk_sun_spirit": "You haven't defeated the Sun Spirit yet",
   "gui.ancient_aether.ancient_guardian.title": "the Ancient Guardian",
