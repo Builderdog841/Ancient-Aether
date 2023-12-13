@@ -5,6 +5,6 @@ import net.minecraft.world.item.PickaxeItem;
 
 public class ArkzenusPickaxeItem extends PickaxeItem {
     public ArkzenusPickaxeItem() {
-        super(AncientAetherItemTiers.ARKZENUS, 1, -3.1F, new Properties());
+        super(AncientAetherItemTiers.ARKZENUS, 1, -2.8F, new Properties());
     }
 }
