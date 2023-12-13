@@ -9,7 +9,7 @@
   },
   "display": {
     "announce_to_chat": false,
-    "background": "aether:textures/block/dungeon/angelic_stone.png",
+    "background": "aether:textures/block/natural/holystone.png",
     "description": {
       "translate": "advancement.aether.the_aether.desc"
     },
