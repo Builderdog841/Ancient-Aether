@@ -26,6 +26,7 @@ public class AncientAetherTags {
         public static final TagKey<Item> SEASONAL_LOOT = tag("seasonal_loot");
         public static final TagKey<Item> VALKYRUM_REPAIRING = tag("valkyrum_repairing");
         public static final TagKey<Item> ANCIENT_REPAIRING = tag("ancient_repairing");
+        public static final TagKey<Item> ARKZENUS_REPAIRING = tag("arkzenus_repairing");
         public static final TagKey<Item> WIP = tag("wip");
 
         private static TagKey<Item> tag(String name) {

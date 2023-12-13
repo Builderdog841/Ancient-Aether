@@ -56,6 +56,7 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         handheldItem(AncientAetherItems.VALKYRUM_SHOVEL.get(), "");
         handheldItem(AncientAetherItems.VALKYRUM_HOE.get(), "");
         handheldItem(AncientAetherItems.ANCIENT_SWORD.get(), "");
+        handheldItem(AncientAetherItems.ARKZENUS_PICKAXE.get(), "");
 
         //Blocks
         itemBlock(AncientAetherBlocks.HIGHSPROOT_STAIRS.get());
