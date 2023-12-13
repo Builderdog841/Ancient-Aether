@@ -1,12 +1,12 @@
 {
-  "parent": "aether:enchanted_gravitite",
+  "parent": "aether:silver_dungeon",
   "criteria": {
-    "cracked_slider": {
+    "arkzenus_pickaxe_loot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ancient_aether:cracked_slider"
+              "ancient_aether:arkzenus_pickaxe"
             ]
           }
         ]
@@ -17,21 +17,21 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.ancient_aether.cracked_slider.desc"
+      "translate": "advancement.ancient_aether.arkzenus_pickaxe.desc"
     },
-    "frame": "goal",
-    "hidden": true,
+    "frame": "task",
+    "hidden": false,
     "icon": {
-      "item": "ancient_aether:cracked_slider"
+      "item": "ancient_aether:arkzenus_pickaxe"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.ancient_aether.cracked_slider"
+      "translate": "advancement.ancient_aether.arkzenus_pickaxe"
     }
   },
   "requirements": [
     [
-      "cracked_slider"
+      "arkzenus_pickaxe_loot"
     ]
   ]
 }

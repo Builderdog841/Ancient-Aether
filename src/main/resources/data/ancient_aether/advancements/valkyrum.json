@@ -1,12 +1,12 @@
 {
-  "parent": "aether:enchanted_gravitite",
+  "parent": "ancient_aether:arkzenus_pickaxe",
   "criteria": {
-    "cracked_slider": {
+    "valkyrum": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ancient_aether:cracked_slider"
+              "ancient_aether:valkyrum"
             ]
           }
         ]
@@ -17,21 +17,21 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.ancient_aether.cracked_slider.desc"
+      "translate": "advancement.ancient_aether.valkyrum.desc"
     },
-    "frame": "goal",
-    "hidden": true,
+    "frame": "task",
+    "hidden": false,
     "icon": {
-      "item": "ancient_aether:cracked_slider"
+      "item": "ancient_aether:valkyrum"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.ancient_aether.cracked_slider"
+      "translate": "advancement.ancient_aether.valkyrum"
     }
   },
   "requirements": [
     [
-      "cracked_slider"
+      "valkyrum"
     ]
   ]
 }

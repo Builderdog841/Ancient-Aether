@@ -1,12 +1,12 @@
 {
-  "parent": "aether:enchanted_gravitite",
+  "parent": "ancient_aether:valkyrum",
   "criteria": {
-    "cracked_slider": {
+    "valkyrum_lance": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ancient_aether:cracked_slider"
+              "ancient_aether:valkyrum_lance"
             ]
           }
         ]
@@ -17,21 +17,21 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.ancient_aether.cracked_slider.desc"
+      "translate": "advancement.ancient_aether.valkyrum_lance.desc"
     },
-    "frame": "goal",
-    "hidden": true,
+    "frame": "task",
+    "hidden": false,
     "icon": {
-      "item": "ancient_aether:cracked_slider"
+      "item": "ancient_aether:valkyrum_lance"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.ancient_aether.cracked_slider"
+      "translate": "advancement.ancient_aether.valkyrum_lance"
     }
   },
   "requirements": [
     [
-      "cracked_slider"
+      "valkyrum_lance"
     ]
   ]
 }
