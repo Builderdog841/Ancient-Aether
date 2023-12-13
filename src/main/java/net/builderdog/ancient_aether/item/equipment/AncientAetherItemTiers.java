@@ -10,8 +10,8 @@ import java.util.function.Supplier;
 public enum AncientAetherItemTiers implements Tier {
 
     ANCIENT(3, 2031, 8.0F, 3.0F, 10, () -> Ingredient.of(AncientAetherTags.Items.ANCIENT_REPAIRING)),
-    ARKZENUS(4, 1561, 8.0F, 3.0F, 20, () -> Ingredient.of(AncientAetherTags.Items.ARKZENUS_REPAIRING)),
-    VALKYRUM(4, 2031, 9.0F, 4.0F, 15, () -> Ingredient.of(AncientAetherTags.Items.VALKYRUM_REPAIRING));
+    ARKZENUS(5, 1561, 8.0F, 3.0F, 20, () -> Ingredient.of(AncientAetherTags.Items.ARKZENUS_REPAIRING)),
+    VALKYRUM(5, 2031, 9.0F, 4.0F, 15, () -> Ingredient.of(AncientAetherTags.Items.VALKYRUM_REPAIRING));
 
     private final int harvestLevel;
     private final int maxUses;
