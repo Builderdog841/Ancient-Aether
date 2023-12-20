@@ -53,7 +53,7 @@
                                     "type": "minecraft:noise",
                                     "noise": "ancient_aether:jagged",
                                     "xz_scale": 500,
-                                    "y_scale": 40
+                                    "y_scale": 0
                                 }
                             }
                         }
