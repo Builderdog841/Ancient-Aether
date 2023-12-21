@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.world;
+package net.builderdog.ancient_aether.datagen.generators;
 
 import com.aetherteam.aether.AetherTags;
 import com.aetherteam.aether.block.AetherBlockStateProperties;
@@ -9,7 +9,8 @@ import com.aetherteam.aether.world.feature.AetherFeatures;
 import com.aetherteam.nitrogen.data.resources.builders.NitrogenConfiguredFeatureBuilders;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
-import net.builderdog.ancient_aether.world.feature.AncientAetherFeatureRegistry;
+import net.builderdog.ancient_aether.block.AncientAetherFeatureStates;
+import net.builderdog.ancient_aether.world.feature.AncientAetherFeatures;
 import net.builderdog.ancient_aether.world.feature.CloudbedFeature;
 import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherPineFoliagePlacer;
 import net.minecraft.core.HolderGetter;
@@ -35,7 +36,7 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
 import java.util.List;
 
-public class AncientAetherConfiguredFeatures {
+public class AncientAetherConfiguredFeatureData {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_QUARTZ_ORE = registerKey("aether_quartz_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> VALKYRUM_ORE = registerKey("valkyrum_ore");
@@ -73,7 +74,7 @@ public class AncientAetherConfiguredFeatures {
         register(context, AEROGEL_BLOBS, Feature.ORE, new OreConfiguration(aerogelOre, 32, 0f));
         register(context, VALKYRUM_ORE, Feature.ORE, new OreConfiguration(valkyrumOre, 6, 0.5f));
 
-        register(context, CLOUDBED, AncientAetherFeatureRegistry.CLOUDBED.get(),
+        register(context, CLOUDBED, AncientAetherFeatures.CLOUDBED.get(),
                 new CloudbedFeature.Config(BlockStateProvider.simple(AetherFeatureStates.COLD_AERCLOUD), 80, 1D));
 
         //Tree Features
@@ -90,6 +91,14 @@ public class AncientAetherConfiguredFeatures {
                         BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LOG),
                         new StraightTrunkPlacer(4, 2, 0),
                         BlockStateProvider.simple(AncientAetherFeatureStates.CRYSTAL_SKYROOT_LEAVES),
+                        new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
+                        new TwoLayersFeatureSize(1, 0, 1)
+                ).ignoreVines().build());
+        register(context, DIVINE_SKYROOT_TREE, Feature.TREE,
+                new TreeConfiguration.TreeConfigurationBuilder(
+                        BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LOG),
+                        new StraightTrunkPlacer(4, 2, 0),
+                        BlockStateProvider.simple(AncientAetherFeatureStates.DIVINE_SKYROOT_LEAVES),
                         new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
                         new TwoLayersFeatureSize(1, 0, 1)
                 ).ignoreVines().build());

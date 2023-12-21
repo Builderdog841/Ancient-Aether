@@ -1,16 +1,14 @@
 package net.builderdog.ancient_aether;
 
 import com.aetherteam.aether.AetherConfig;
-import com.aetherteam.cumulus.CumulusConfig;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
-import net.builderdog.ancient_aether.client.renderer.entity.AncientAetherEntityRenderers;
 import net.builderdog.ancient_aether.datagen.generators.AncientAetherBlockStateData;
 import net.builderdog.ancient_aether.datagen.generators.AncientAetherItemModelData;
 import net.builderdog.ancient_aether.datagen.generators.AncientAetherRecipeData;
 import net.builderdog.ancient_aether.datagen.providers.AncientAetherLootTableProvider;
-import net.builderdog.ancient_aether.datagen.resources.AncientAetherWorldGenProvider;
+import net.builderdog.ancient_aether.datagen.providers.AncientAetherWorldGenProvider;
 import net.builderdog.ancient_aether.effects.AncientAetherEffects;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.entity.moa.AncientAetherMoaTypes;
@@ -19,8 +17,8 @@ import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.builderdog.ancient_aether.world.biomemodifier.AncientAetherBiomeModifierSerializers;
 import net.builderdog.ancient_aether.world.biomes.AncientAetherRegion;
 import net.builderdog.ancient_aether.world.biomes.AncientAetherSurfaceData;
-import net.builderdog.ancient_aether.world.feature.AncientAetherFeatureRegistry;
-import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherFoliagePlacerTypes;
+import net.builderdog.ancient_aether.world.feature.AncientAetherFeatures;
+import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherFoliagePlacers;
 import net.builderdog.ancient_aether.world.structure.AncientAetherStructureTypes;
 import net.minecraft.ChatFormatting;
 import net.minecraft.SharedConstants;
@@ -48,13 +46,11 @@ import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.resource.PathPackResources;
 import org.jetbrains.annotations.NotNull;
-import teamrazor.aeroblender.AeroBlenderConfig;
 import teamrazor.aeroblender.aether.AetherRuleCategory;
 import terrablender.api.Regions;
 import terrablender.api.SurfaceRuleManager;
@@ -70,13 +66,10 @@ import static com.aetherteam.aether.Aether.DIRECTORY;
 public class AncientAether {
     public static final String MOD_ID = "ancient_aether";
 
-    //private static final Logger LOGGER = LogUtils.getLogger();
-
     public AncientAether() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         modEventBus.addListener(this::commonSetup);
-        modEventBus.addListener(this::clientSetup);
         modEventBus.addListener(this::packSetup);
         modEventBus.addListener(this::dataSetup);
 
@@ -85,14 +78,14 @@ public class AncientAether {
                 AncientAetherItems.ITEMS,
                 AncientAetherMoaTypes.MOA_TYPES,
                 AncientAetherBlocks.BLOCKS,
-                AncientAetherFoliagePlacerTypes.FOLIAGE_PLACERS,
+                AncientAetherFoliagePlacers.FOLIAGE_PLACERS,
                 AncientAetherBlockEntityTypes.BLOCK_ENTITY_TYPES,
                 AncientAetherStructureTypes.STRUCTURE_TYPES,
                 AncientAetherEntities.ENTITY_TYPES,
                 AncientAetherSoundEvents.SOUNDS,
                 AncientAetherEffects.EFFECTS,
                 AncientAetherBiomeModifierSerializers.BIOME_MODIFIER_SERIALIZERS,
-                AncientAetherFeatureRegistry.FEATURES
+                AncientAetherFeatures.FEATURES
                 };
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -110,19 +103,6 @@ public class AncientAether {
             AncientAetherMenus.MENUS.register(modEventBus);
             return true;
         }, () -> () -> false);
-    }
-
-    private void clientSetup(FMLClientSetupEvent event) {
-        event.enqueueWork(() -> {
-                AncientAetherEntityRenderers.registerCuriosRenderers();
-                AetherConfig.COMMON.add_ruined_portal_automatically.set(true);
-                AetherConfig.COMMON.add_temporary_freezing_automatically.set(true);
-                AetherConfig.CLIENT.music_backup_min_delay.set(1);
-                AetherConfig.CLIENT.music_backup_max_delay.set(2);
-                AetherConfig.CLIENT.disable_music_manager.set(false);
-                CumulusConfig.CLIENT.enable_menu_list_button.set(true);
-                AeroBlenderConfig.COMMON.vanillaAetherRegionWeight.set(0);
-        });
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

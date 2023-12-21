@@ -4,9 +4,7 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.builderdog.ancient_aether.event.hooks.ServerHooks;
 import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.Mth;
-import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.levelgen.XoroshiroRandomSource;
 import net.minecraft.world.level.levelgen.feature.Feature;
@@ -14,6 +12,7 @@ import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.synth.PerlinSimplexNoise;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
@@ -32,7 +31,7 @@ public class CloudbedFeature extends Feature<CloudbedFeature.Config> {
     }
 
     @Override
-    public boolean place(FeaturePlaceContext<Config> context) {
+    public boolean place(@NotNull FeaturePlaceContext<Config> context) {
         // Ensure that the Aether: Redux's cloudbeds are not already added
         if (ServerHooks.datapacks == null || !ServerHooks.datapacks.contains("builtin/data/cloudbed")) {
             int chunkX = context.origin().getX() - (context.origin().getX() % 16);
@@ -82,6 +81,5 @@ public class CloudbedFeature extends Feature<CloudbedFeature.Config> {
                         Codec.INT.fieldOf("base_height").forGetter(Config::baseHeight),
                         Codec.DOUBLE.fieldOf("xz_scale").forGetter(Config::scaleXZ)
                 ).apply(builder, Config::new));
-
     }
 }

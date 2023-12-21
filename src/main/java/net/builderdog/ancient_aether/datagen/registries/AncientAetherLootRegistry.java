@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.datagen.resources;
+package net.builderdog.ancient_aether.datagen.registries;
 
 import net.builderdog.ancient_aether.AncientAether;
 import net.minecraft.resources.ResourceLocation;
@@ -6,7 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 import java.util.HashSet;
 import java.util.Set;
 
-public class AncientAetherLoot {
+public class AncientAetherLootRegistry {
     private static final Set<ResourceLocation> LOOT_TABLES = new HashSet<>();
 
     public static final ResourceLocation ANCIENT_HOLYSTONE_VASE_LOOT = register();

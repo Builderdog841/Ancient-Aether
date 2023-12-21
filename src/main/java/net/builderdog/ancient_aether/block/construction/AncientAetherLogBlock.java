@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.block.building;
+package net.builderdog.ancient_aether.block.construction;
 
 import com.aetherteam.aether.block.AetherBlockStateProperties;
 import com.aetherteam.aether.block.natural.AetherLogBlock;

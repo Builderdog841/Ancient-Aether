@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.datagen.generators;
+package net.builderdog.ancient_aether.datagen.generators.loot;
 
 import com.aetherteam.aether.data.providers.AetherBlockLootSubProvider;
 import com.aetherteam.aether.item.AetherItems;

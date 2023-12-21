@@ -25,7 +25,7 @@ public class AncientAetherPineFoliagePlacer extends FoliagePlacer {
 
     @Override
     protected @NotNull FoliagePlacerType<?> type() {
-        return AncientAetherFoliagePlacerTypes.ANCIENT_AETHER_PINE_FOLIAGE_PLACER.get();
+        return AncientAetherFoliagePlacers.ANCIENT_AETHER_PINE_FOLIAGE_PLACER.get();
     }
 
     @Override

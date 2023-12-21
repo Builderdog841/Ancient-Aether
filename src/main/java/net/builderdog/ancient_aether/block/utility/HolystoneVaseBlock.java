@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.block.functional;
+package net.builderdog.ancient_aether.block.utility;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

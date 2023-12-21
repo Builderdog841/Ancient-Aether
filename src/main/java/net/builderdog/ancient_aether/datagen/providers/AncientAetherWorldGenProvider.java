@@ -1,8 +1,8 @@
-package net.builderdog.ancient_aether.datagen.resources;
+package net.builderdog.ancient_aether.datagen.providers;
 
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.world.AncientAetherConfiguredFeatures;
-import net.builderdog.ancient_aether.world.AncientAetherPlacedFeatures;
+import net.builderdog.ancient_aether.datagen.generators.AncientAetherConfiguredFeatureData;
+import net.builderdog.ancient_aether.datagen.generators.AncientAetherPlacedFeatureData;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
@@ -14,8 +14,8 @@ import java.util.concurrent.CompletableFuture;
 
 public class AncientAetherWorldGenProvider extends DatapackBuiltinEntriesProvider {
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
-            .add(Registries.CONFIGURED_FEATURE, AncientAetherConfiguredFeatures::bootstrap)
-            .add(Registries.PLACED_FEATURE, AncientAetherPlacedFeatures::bootstrap);
+            .add(Registries.CONFIGURED_FEATURE, AncientAetherConfiguredFeatureData::bootstrap)
+            .add(Registries.PLACED_FEATURE, AncientAetherPlacedFeatureData::bootstrap);
 
 
     public AncientAetherWorldGenProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {

@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.block.functional;
+package net.builderdog.ancient_aether.block.utility;
 
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;

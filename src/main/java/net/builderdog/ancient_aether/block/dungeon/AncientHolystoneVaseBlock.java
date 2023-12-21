@@ -1,8 +1,9 @@
-package net.builderdog.ancient_aether.block.functional;
+package net.builderdog.ancient_aether.block.dungeon;
 
 import com.aetherteam.aether.item.AetherItems;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
-import net.builderdog.ancient_aether.datagen.resources.AncientAetherLoot;
+import net.builderdog.ancient_aether.block.utility.HolystoneVaseBlock;
+import net.builderdog.ancient_aether.datagen.registries.AncientAetherLootRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -48,7 +49,7 @@ public class AncientHolystoneVaseBlock extends HolystoneVaseBlock {
             if (level instanceof ServerLevel serverLevel) {
 
                 LootParams parameters = new LootParams.Builder(serverLevel).withParameter(LootContextParams.BLOCK_STATE, blockstate).withParameter(LootContextParams.TOOL, player.getMainHandItem()).withParameter(LootContextParams.ORIGIN, position()).withParameter(LootContextParams.THIS_ENTITY, player).create(LootContextParamSets.BLOCK);
-                LootTable lootTable = serverLevel.getServer().getLootData().getLootTable(AncientAetherLoot.ANCIENT_HOLYSTONE_VASE_LOOT);
+                LootTable lootTable = serverLevel.getServer().getLootData().getLootTable(AncientAetherLootRegistry.ANCIENT_HOLYSTONE_VASE_LOOT);
                 List<ItemStack> list = lootTable.getRandomItems(parameters);
                 for (ItemStack itemstack : list) {
                     this.spawnAtLocation(itemstack, pos, level);

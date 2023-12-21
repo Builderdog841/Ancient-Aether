@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.block.functional;
+package net.builderdog.ancient_aether.block.dungeon;
 
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;

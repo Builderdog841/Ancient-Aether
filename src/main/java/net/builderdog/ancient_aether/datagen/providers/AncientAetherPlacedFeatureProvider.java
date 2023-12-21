@@ -1,10 +1,13 @@
-package net.builderdog.ancient_aether.world;
+package net.builderdog.ancient_aether.datagen.providers;
 
-import net.minecraft.world.level.levelgen.placement.*;
+import net.minecraft.world.level.levelgen.placement.BiomeFilter;
+import net.minecraft.world.level.levelgen.placement.CountPlacement;
+import net.minecraft.world.level.levelgen.placement.InSquarePlacement;
+import net.minecraft.world.level.levelgen.placement.PlacementModifier;
 
 import java.util.List;
 
-public class AncientAetherPlacedFeatureBuilder {
+public class AncientAetherPlacedFeatureProvider {
     public static List<PlacementModifier> orePlacement(PlacementModifier p_195347_, PlacementModifier placementModifier) {
         return List.of(p_195347_, InSquarePlacement.spread(), placementModifier, BiomeFilter.biome());
     }

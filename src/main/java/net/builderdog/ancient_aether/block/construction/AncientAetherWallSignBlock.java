@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.block.building;
+package net.builderdog.ancient_aether.block.construction;
 
 import net.builderdog.ancient_aether.blockentity.AncientAetherSignBlockEntity;
 import net.minecraft.core.BlockPos;

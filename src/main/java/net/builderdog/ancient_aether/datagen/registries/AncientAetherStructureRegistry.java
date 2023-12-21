@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.datagen.resources;
+package net.builderdog.ancient_aether.datagen.registries;
 
 import net.builderdog.ancient_aether.AncientAether;
 import net.minecraft.core.registries.Registries;
