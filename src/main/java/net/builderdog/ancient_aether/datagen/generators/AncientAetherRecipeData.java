@@ -108,23 +108,6 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .unlockedBy(getHasName(AetherBlocks.ENCHANTED_GRAVITITE.get()), has(AetherBlocks.ENCHANTED_GRAVITITE.get()))
                 .save(consumer, name("enchanting_table_from_gravitite"));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, AncientAetherItems.AEROGEL_BOTTLE.get(),3)
-                .define('A', AetherBlocks.AEROGEL.get())
-                .pattern("A A")
-                .pattern(" A ")
-                .unlockedBy(getHasName(AetherBlocks.AEROGEL.get()), has(AetherBlocks.AEROGEL.get()))
-                .save(consumer);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AncientAetherItems.VALKYRIE_WINE.get())
-                .define('B', AncientAetherItems.AEROGEL_BOTTLE.get())
-                .define('G', AncientAetherItems.GRAPES.get())
-                .define('A', AetherItems.AMBROSIUM_SHARD.get())
-                .pattern("GAG")
-                .pattern("GBG")
-                .pattern("GGG")
-                .unlockedBy(getHasName(AncientAetherItems.GRAPES.get()), has(AncientAetherItems.GRAPES.get()))
-                .save(consumer);
-
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get())
                 .define('L', ItemTags.LOGS)
                 .define('A', AetherItems.AMBROSIUM_SHARD.get())

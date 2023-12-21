@@ -162,7 +162,6 @@ public class AncientAetherCreativeModeTabs {
         }
 
         if (tab == AetherCreativeTabs.AETHER_INGREDIENTS.get()) {
-            event.getEntries().putBefore(new ItemStack(AetherItems.SKYROOT_POISON_BUCKET.get()), new ItemStack(AncientAetherItems.AEROGEL_BOTTLE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherItems.ANCIENT_RUNE.get()), new ItemStack(AncientAetherItems.ANCIENT_RUNE.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
             event.getEntries().putAfter(new ItemStack(AetherBlocks.ENCHANTED_GRAVITITE.get()), new ItemStack(AncientAetherItems.VALKYRUM.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }

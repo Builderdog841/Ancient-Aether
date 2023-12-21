@@ -22,7 +22,7 @@ public class ValkyrieWineItem extends Item implements ConsumableItem {
 
     @Override
     public @NotNull ItemStack finishUsingItem(@NotNull ItemStack itemstack, @NotNull Level level, @NotNull LivingEntity user) {
-        ItemStack retval = new ItemStack(AncientAetherItems.AEROGEL_BOTTLE.get());
+        ItemStack retval = new ItemStack(AncientAetherItems.VALKYRIE_WINE.get());
         super.finishUsingItem(itemstack, level, user);
         if (!level.isClientSide()) {
          user.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 500, 0));
