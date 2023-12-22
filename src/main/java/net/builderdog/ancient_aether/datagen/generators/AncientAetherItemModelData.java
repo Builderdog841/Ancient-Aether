@@ -57,6 +57,12 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         handheldItem(AncientAetherItems.ANCIENT_SWORD.get(), "");
         handheldItem(AncientAetherItems.ARKZENUS_PICKAXE.get(), "");
 
+        //Armor
+        item(AncientAetherItems.VALKYRUM_HELMET.get(), "");
+        item(AncientAetherItems.VALKYRUM_CHESTPLATE.get(), "");
+        item(AncientAetherItems.VALKYRUM_LEGGINGS.get(), "");
+        item(AncientAetherItems.VALKYRUM_BOOTS.get(), "");
+
         //Blocks
         itemBlock(AncientAetherBlocks.HIGHSPROOT_STAIRS.get());
         itemBlock(AncientAetherBlocks.HIGHSPROOT_SLAB.get());

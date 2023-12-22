@@ -1,7 +1,5 @@
 {
-  "block.aether.crystal_leaves": "Ancient Crystal Leaves",
-  "block.aether.crystal_fruit_leaves": "Ancient Crystal Fruit Leaves",
-  "block.lost_aether_content.crystal_sapling": "Ancient Crystal Sapling",
+  "advancement.aether.valkyrie_loot.desc": "Obtain a piece of Valkyrie armor from the Silver Dungeon",
 
   "item.aether.flaming_sword": "§fFlaming Sword",
   "item.aether.holy_sword": "§fHoly Sword",
@@ -44,5 +42,4 @@
   "item.aether.victory_medal": "§fBlue Gummy Swet",
   "item.aether.book_of_lore": "§fBook of Lore",
   "item.aether.sentry_boots": "§fSentry Boots"
-
 }

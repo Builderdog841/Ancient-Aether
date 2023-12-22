@@ -153,6 +153,11 @@
   "item.ancient_aether.valkyrum_axe": "Valkyrum Axe",
   "item.ancient_aether.valkyrum_shovel": "Valkyrum Shovel",
   "item.ancient_aether.valkyrum_hoe": "Valkyrum Hoe",
+  "item.ancient_aether.valkyrum_helmet": "Valkyrum Helmet",
+  "item.ancient_aether.valkyrum_chestplate": "Valkyrum Chestplate",
+  "item.ancient_aether.valkyrum_leggings": "Valkyrum Leggings",
+  "item.ancient_aether.valkyrum_boots": "Valkyrum Boots",
+  "item.ancient_aether.valkyrum_gloves": "Valkyrum Gloves",
   "item.ancient_aether.arkzenus_pickaxe": "Pickaxe of Arkzenus",
 
   "entity.ancient_aether.highland_buffalo": "Highland Buffalo",
