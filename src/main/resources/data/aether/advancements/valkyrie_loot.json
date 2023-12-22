@@ -65,7 +65,7 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.aether.valkyrie_loot.desc"
+      "translate": "advancement.ancient_aether.valkyrum_armor.desc"
     },
     "frame": "goal",
     "hidden": false,
