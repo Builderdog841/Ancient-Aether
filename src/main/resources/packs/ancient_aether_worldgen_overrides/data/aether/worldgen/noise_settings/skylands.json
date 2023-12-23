@@ -22,14 +22,7 @@
   },
   "noise_router": {
     "barrier": 0.0,
-    "continents": {
-      "type": "minecraft:range_choice",
-      "input": "ancient_aether:the_aether/continents_factored",
-      "min_inclusive": -1.5,
-      "max_exclusive": -0.11,
-      "when_in_range": "ancient_aether:the_aether/continents_factored",
-      "when_out_of_range": -0.11
-    },
+    "continents": 0.0,
     "depth": {
       "type": "minecraft:y_clamped_gradient",
       "from_value": 1.5,
@@ -44,7 +37,28 @@
         "type": "minecraft:interpolated",
         "argument": {
           "type": "minecraft:blend_density",
-          "argument": "ancient_aether:the_aether/islands/base_islands"
+          "argument": {
+            "type": "minecraft:range_choice",
+            "input": "ancient_aether:the_aether/temperature",
+            "min_inclusive": -1.5,
+            "max_exclusive": -0.5,
+            "when_in_range": "ancient_aether:the_aether/mountainous_islands/sloped_cheese",
+            "when_out_of_range": {
+              "type": "minecraft:range_choice",
+              "input": "ancient_aether:the_aether/temperature",
+              "min_inclusive": 0.5,
+              "max_exclusive": 1.5,
+              "when_in_range": "ancient_aether:the_aether/jagged_islands/sloped_cheese",
+              "when_out_of_range": {
+                "type": "minecraft:range_choice",
+                "input": "ancient_aether:the_aether/erosion",
+                "min_inclusive": -1.5,
+                "max_exclusive": 0.5,
+                "when_in_range": "ancient_aether:the_aether/default_islands/sloped_cheese",
+                "when_out_of_range": "ancient_aether:the_aether/elevated_islands/sloped_cheese"
+              }
+            }
+          }
         }
       }
     },

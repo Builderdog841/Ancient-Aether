@@ -4,21 +4,18 @@
     "argument2": {
         "type": "minecraft:add",
         "argument1": {
-            "type": "minecraft:range_choice",
-            "input": "ancient_aether:the_aether/continents_factored",
-            "min_inclusive": -1.5,
-            "max_exclusive": -0.11,
-            "when_in_range": "ancient_aether:the_aether/continents_factored",
-            "when_out_of_range": -0.11
+            "type": "minecraft:mul",
+            "argument1": -0.26,
+            "argument2": "ancient_aether:the_aether/elevated_islands/factor"
         },
         "argument2": {
             "type": "minecraft:mul",
             "argument1": {
                 "type": "minecraft:y_clamped_gradient",
                 "from_value": 0.0,
-                "from_y": -16,
+                "from_y": 132,
                 "to_value": 1.0,
-                "to_y": 112
+                "to_y": 135
             },
             "argument2": {
                 "type": "minecraft:add",
@@ -26,30 +23,39 @@
                 "argument2": {
                     "type": "minecraft:add",
                     "argument1": {
-                        "type": "minecraft:range_choice",
-                        "input": "ancient_aether:the_aether/continents_factored",
-                        "min_inclusive": -1.5,
-                        "max_exclusive": -0.101,
-                        "when_in_range": "ancient_aether:the_aether/continents_factored",
-                        "when_out_of_range": -0.11
+                        "type": "minecraft:mul",
+                        "argument1": -0.26,
+                        "argument2": "ancient_aether:the_aether/elevated_islands/factor"
                     },
                     "argument2": {
                         "type": "minecraft:mul",
                         "argument1": {
                             "type": "minecraft:y_clamped_gradient",
                             "from_value": 1.0,
-                            "from_y": 112,
+                            "from_y": 137,
                             "to_value": 0.0,
-                            "to_y": 124
+                            "to_y": 192
                         },
                         "argument2": {
+                            "type": "add",
+                            "argument1": {
                                 "type": "minecraft:add",
                                 "argument1": 0.2,
                                 "argument2": {
                                     "type": "minecraft:add",
-                                    "argument1": -0.002,
-                                    "argument2": "ancient_aether:the_aether/base_3d_noise"
+                                    "argument1": -0.02,
+                                    "argument2": "ancient_aether:the_aether/3d_noises/hilly"
                                 }
+                            },
+                            "argument2": {
+                                "type": "minecraft:quarter_negative",
+                                "argument": {
+                                    "type": "minecraft:noise",
+                                    "noise": "ancient_aether:jagged",
+                                    "xz_scale": 300,
+                                    "y_scale": 0
+                                }
+                            }
                         }
                     }
                 }
