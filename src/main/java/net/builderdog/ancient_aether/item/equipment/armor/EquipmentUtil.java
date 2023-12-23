@@ -1,7 +1,6 @@
 package net.builderdog.ancient_aether.item.equipment.armor;
 
 import com.aetherteam.aether.AetherConfig;
-import com.aetherteam.aether.item.AetherItems;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -20,6 +19,6 @@ public final class EquipmentUtil {
     }
 
     public static boolean hasFullValkyrumSet(LivingEntity entity) {
-        return hasArmorSet(entity, AncientAetherItems.VALKYRUM_HELMET.get(), AncientAetherItems.VALKYRUM_CHESTPLATE.get(), AncientAetherItems.VALKYRUM_LEGGINGS.get(), AncientAetherItems.VALKYRUM_BOOTS.get(), AetherItems.VALKYRIE_GLOVES.get());
+        return hasArmorSet(entity, AncientAetherItems.VALKYRUM_HELMET.get(), AncientAetherItems.VALKYRUM_CHESTPLATE.get(), AncientAetherItems.VALKYRUM_LEGGINGS.get(), AncientAetherItems.VALKYRUM_BOOTS.get(), AncientAetherItems.VALKYRUM_GLOVES.get());
     }
 }

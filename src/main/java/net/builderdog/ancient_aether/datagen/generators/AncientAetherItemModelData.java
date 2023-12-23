@@ -62,6 +62,7 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         item(AncientAetherItems.VALKYRUM_CHESTPLATE.get(), "");
         item(AncientAetherItems.VALKYRUM_LEGGINGS.get(), "");
         item(AncientAetherItems.VALKYRUM_BOOTS.get(), "");
+        item(AncientAetherItems.VALKYRUM_GLOVES.get(), "");
 
         //Blocks
         itemBlock(AncientAetherBlocks.HIGHSPROOT_STAIRS.get());
