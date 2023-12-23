@@ -44,7 +44,7 @@
                                 "argument2": {
                                     "type": "minecraft:add",
                                     "argument1": -0.02,
-                                    "argument2": "ancient_aether:the_aether/3d_noises/hilly"
+                                    "argument2": "ancient_aether:the_aether/3d_noises/jagged"
                                 }
                             },
                             "argument2": {
