@@ -22,8 +22,8 @@ public class AncientRingItem extends RingItem {
         LivingEntity livingEntity = slotContext.entity();
         AttributeInstance attackSpeed = livingEntity.getAttribute(Attributes.ATTACK_SPEED);
         if (attackSpeed != null) {
-            if (!attackSpeed.hasModifier(getdamageModifier())) {
-                attackSpeed.addTransientModifier(getdamageModifier());
+            if (!attackSpeed.hasModifier(getAttackSpeedModifier())) {
+                attackSpeed.addTransientModifier(getAttackSpeedModifier());
             }
         }
     }
@@ -32,12 +32,12 @@ public class AncientRingItem extends RingItem {
         LivingEntity livingEntity = slotContext.entity();
         AttributeInstance attackSpeed = livingEntity.getAttribute(Attributes.ATTACK_SPEED);
         if (attackSpeed != null) {
-            if (attackSpeed.hasModifier(getdamageModifier())) {
-                attackSpeed.removeModifier(getdamageModifier());
+            if (attackSpeed.hasModifier(getAttackSpeedModifier())) {
+                attackSpeed.removeModifier(getAttackSpeedModifier());
             }
         }
     }
-    public AttributeModifier getdamageModifier() {
+    public AttributeModifier getAttackSpeedModifier() {
         return new AttributeModifier(ATTACK_SPEED_UUID, "Attack Speed increase", 0.1, AttributeModifier.Operation.ADDITION);
     }
 }

@@ -1,4 +1,4 @@
-// 1.20.1	2023-12-23T20:38:22.6176214	Item Models: ancient_aether
+// 1.20.1	2023-12-24T19:46:28.8301328	Item Models: ancient_aether
 532bdb7a4f7d2a6b96d474c01c8b9e7a0d1c10b4 assets/ancient_aether/models/item/aerogel_glass.json
 87e9f8f9f807a2aa763e3057d32bacf3ee32b60f assets/ancient_aether/models/item/aerogel_glass_door.json
 d1e6ed3e334d573f31a8ce9e09885c0f43832630 assets/ancient_aether/models/item/aerogel_glass_pane.json
@@ -26,6 +26,8 @@ adb8bde9f62a21d4a492e030b93e0aa3e6f9f404 assets/ancient_aether/models/item/frost
 2726803d4e188921de701cb2dacc39c4f08b9acf assets/ancient_aether/models/item/health_pendant.json
 4f9236d35c4bf383f96a3026d37273520e4cbbf6 assets/ancient_aether/models/item/health_ring.json
 fbd830b4a955ffc654b7582bfed186176715ba49 assets/ancient_aether/models/item/hellfire_lantern.json
+44bbf91ea6b096e924ae894633545e868aec495e assets/ancient_aether/models/item/hermes_pendant.json
+e6b2cd5c6b6bd05e175521dbf0012be53e63fbe4 assets/ancient_aether/models/item/hermes_ring.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/highland_buffalo_spawn_egg.json
 686ec049e0fc08064a073c0ef953e17535bdf5af assets/ancient_aether/models/item/highland_viola.json
 cbf95b10f250b1c7368179866d5c5f431a2a6a80 assets/ancient_aether/models/item/highsproot_boat.json

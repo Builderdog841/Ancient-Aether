@@ -13,33 +13,33 @@ import top.theillusivec4.curios.api.SlotContext;
 
 import java.util.UUID;
 
-public class HealthPendantItem extends PendantItem {
-    private static final UUID HEALTH_UUID = UUID.fromString("A022E1C-E2D5-4A0B-9562-55C75FE53A1E");
+public class HermesPendantItem extends PendantItem {
+    private static final UUID MOVEMENT_SPEED_UUID = UUID.fromString("AB22E1C-E2D6-4A0B-9562-55C75FE53A1E");
 
-    public HealthPendantItem(Properties properties) {
-        super(new ResourceLocation(AncientAether.MOD_ID, "health_pendant"), AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_HEALTH_PENDANT, properties);
+    public HermesPendantItem(Properties properties) {
+        super(new ResourceLocation(AncientAether.MOD_ID, "hermes_pendant"), AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_HERMES_PENDANT, properties);
     }
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {
         LivingEntity livingEntity = slotContext.entity();
-        AttributeInstance health = livingEntity.getAttribute(Attributes.MAX_HEALTH);
+        AttributeInstance health = livingEntity.getAttribute(Attributes.MOVEMENT_SPEED);
         if (health != null) {
-            if (!health.hasModifier(getHealthModifier())) {
-                health.addTransientModifier(getHealthModifier());
+            if (!health.hasModifier(getMovementSpeedModifier())) {
+                health.addTransientModifier(getMovementSpeedModifier());
             }
         }
     }
     @Override
     public void onUnequip(SlotContext slotContext, ItemStack newStack, ItemStack stack) {
         LivingEntity livingEntity = slotContext.entity();
-        AttributeInstance health = livingEntity.getAttribute(Attributes.MAX_HEALTH);
+        AttributeInstance health = livingEntity.getAttribute(Attributes.MOVEMENT_SPEED);
         if (health != null) {
-            if (health.hasModifier(getHealthModifier())) {
-                health.removeModifier(getHealthModifier());
+            if (health.hasModifier(getMovementSpeedModifier())) {
+                health.removeModifier(getMovementSpeedModifier());
             }
         }
     }
-    public AttributeModifier getHealthModifier() {
-        return new AttributeModifier(HEALTH_UUID, "Max Health increase", 2, AttributeModifier.Operation.ADDITION);
+    public AttributeModifier getMovementSpeedModifier() {
+        return new AttributeModifier(MOVEMENT_SPEED_UUID, "Movement Speed increase", 0.05, AttributeModifier.Operation.ADDITION);
     }
 }

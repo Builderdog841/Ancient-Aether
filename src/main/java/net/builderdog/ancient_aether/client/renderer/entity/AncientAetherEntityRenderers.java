@@ -70,5 +70,6 @@ public class AncientAetherEntityRenderers {
     public static void registerCuriosRenderers() {
         CuriosRendererRegistry.register(AncientAetherItems.ANCIENT_PENDANT.get(), PendantRenderer::new);
         CuriosRendererRegistry.register(AncientAetherItems.HEALTH_PENDANT.get(), PendantRenderer::new);
+        CuriosRendererRegistry.register(AncientAetherItems.HERMES_PENDANT.get(), PendantRenderer::new);
     }
 }
