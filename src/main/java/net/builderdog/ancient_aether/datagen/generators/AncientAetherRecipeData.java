@@ -347,6 +347,18 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
 
         enchantingRecipe(RecipeCategory.MISC, AncientAetherItems.VALKYRUM.get(), AncientAetherBlocks.VALKYRUM_ORE.get(), 1.5F, 1000).save(consumer);
 
+        repairingRecipe(RecipeCategory.COMBAT, AncientAetherItems.VALKYRUM_HELMET.get(), 3000).group("altar_helmet_repair").save(consumer, name("valkyrum_helmet_repairing"));
+        repairingRecipe(RecipeCategory.COMBAT, AncientAetherItems.VALKYRUM_CHESTPLATE.get(), 3000).group("altar_chestplate_repair").save(consumer, name("valkyrum_chestplate_repairing"));
+        repairingRecipe(RecipeCategory.COMBAT, AncientAetherItems.VALKYRUM_LEGGINGS.get(), 3000).group("altar_leggings_repair").save(consumer, name("valkyrum_leggings_repairing"));
+        repairingRecipe(RecipeCategory.COMBAT, AncientAetherItems.VALKYRUM_BOOTS.get(), 3000).group("altar_boots_repair").save(consumer, name("valkyrum_boots_repairing"));
+        repairingRecipe(RecipeCategory.COMBAT, AncientAetherItems.VALKYRUM_GLOVES.get(), 3000).group("altar_gloves_repair").save(consumer, name("valkyrum_gloves_repairing"));
+        repairingRecipe(RecipeCategory.TOOLS, AncientAetherItems.VALKYRUM_PICKAXE.get(), 3000).group("altar_pickaxe_repair").save(consumer, name("valkyrum_pickaxe_repairing"));
+        repairingRecipe(RecipeCategory.TOOLS, AncientAetherItems.VALKYRUM_AXE.get(), 3000).group("altar_axe_repair").save(consumer, name("valkyrum_axe_repairing"));
+        repairingRecipe(RecipeCategory.TOOLS, AncientAetherItems.VALKYRUM_SHOVEL.get(), 3000).group("altar_shovel_repair").save(consumer, name("valkyrum_shovel_repairing"));
+        repairingRecipe(RecipeCategory.TOOLS, AncientAetherItems.VALKYRUM_HOE.get(), 3000).group("altar_hoe_repair").save(consumer, name("valkyrum_hoe_repairing"));
+        repairingRecipe(RecipeCategory.TOOLS, AncientAetherItems.VALKYRUM_SWORD.get(), 3000).group("altar_sword_repair").save(consumer, name("valkyrum_sword_repairing"));
+        repairingRecipe(RecipeCategory.TOOLS, AncientAetherItems.VALKYRUM_LANCE.get(), 3000).group("altar_sword_repair").save(consumer, name("valkyrum_lance_repairing"));
+
         moaIncubationRecipe(AetherEntityTypes.MOA.get(), AncientAetherMoaTypes.SAKURA, AncientAetherItems.SAKURA_MOA_EGG.get()).save(consumer, name("sakura_moa_incubation"));
     }
 }
