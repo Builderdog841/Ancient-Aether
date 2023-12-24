@@ -1,4 +1,4 @@
-// 1.20.1	2023-12-24T20:28:33.8639982	Item Models: ancient_aether
+// 1.20.1	2023-12-24T21:52:59.9597169	Item Models: ancient_aether
 532bdb7a4f7d2a6b96d474c01c8b9e7a0d1c10b4 assets/ancient_aether/models/item/aerogel_glass.json
 87e9f8f9f807a2aa763e3057d32bacf3ee32b60f assets/ancient_aether/models/item/aerogel_glass_door.json
 d1e6ed3e334d573f31a8ce9e09885c0f43832630 assets/ancient_aether/models/item/aerogel_glass_pane.json
@@ -87,7 +87,9 @@ f28db72c3da852e28ab50260cd58e66e4e089c72 assets/ancient_aether/models/item/valky
 bf71b70121f310e26455f939747a1ae5147225ea assets/ancient_aether/models/item/valkyrum_hoe.json
 90825ccd0a9f6e3cc5a13b05394f79282cddc848 assets/ancient_aether/models/item/valkyrum_lance.json
 cc7b05ef109da5bfcf2a71279aba9e31307c1eb5 assets/ancient_aether/models/item/valkyrum_leggings.json
+4a66fa45dd66be207426788f77822e3bb8b7f573 assets/ancient_aether/models/item/valkyrum_pendant.json
 95c1907a3a2f43a19083bc23151a3a8e15574743 assets/ancient_aether/models/item/valkyrum_pickaxe.json
+ed3211ff982713dfc1af6d23cb2620acdabe8288 assets/ancient_aether/models/item/valkyrum_ring.json
 457cfbc0958d1942ecd2739d8facd433532660f1 assets/ancient_aether/models/item/valkyrum_shovel.json
 8212919302e2c565944d61e801f202fcf8d3598b assets/ancient_aether/models/item/valkyrum_sword.json
 f007777affa709dfd200d16a89d618a4a1e9c59b assets/ancient_aether/models/item/violet_aercloud.json

@@ -185,6 +185,9 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         makeLeggings(AncientAetherItems.VALKYRUM_LEGGINGS, AncientAetherItems.VALKYRUM).save(consumer);
         makeBoots(AncientAetherItems.VALKYRUM_BOOTS, AncientAetherItems.VALKYRUM).save(consumer);
 
+        makeRing(AncientAetherItems.VALKYRUM_RING, AncientAetherItems.VALKYRUM.get()).save(consumer);
+        makePendant(AncientAetherItems.VALKYRUM_PENDANT, AncientAetherItems.VALKYRUM.get()).save(consumer);
+
         pressurePlateBuilder(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get(), Ingredient.of(AetherBlocks.HOLYSTONE_BRICK_SLAB.get())).unlockedBy(getHasName(AetherBlocks.HOLYSTONE_BRICK_SLAB.get()), has(AetherBlocks.HOLYSTONE_BRICK_SLAB.get())).save(consumer);
         pressurePlateBuilder(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_STONE_MOSAIC.get(), Ingredient.of(AetherBlocks.CARVED_SLAB.get())).unlockedBy(getHasName(AetherBlocks.CARVED_SLAB.get()), has(AetherBlocks.CARVED_SLAB.get())).save(consumer);
         pressurePlateBuilder(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get(), Ingredient.of(AetherBlocks.ANGELIC_SLAB.get())).unlockedBy(getHasName(AetherBlocks.ANGELIC_SLAB.get()), has(AetherBlocks.ANGELIC_SLAB.get())).save(consumer);

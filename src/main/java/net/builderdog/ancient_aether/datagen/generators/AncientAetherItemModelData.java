@@ -34,6 +34,8 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         simpleItem(AncientAetherItems.HERMES_PENDANT);
         simpleItem(AncientAetherItems.ARKENIUM_RING);
         simpleItem(AncientAetherItems.ARKENIUM_PENDANT);
+        simpleItem(AncientAetherItems.VALKYRUM_RING);
+        simpleItem(AncientAetherItems.VALKYRUM_PENDANT);
         simpleItem(AncientAetherItems.GRAVITITE_DART_SHOOTER);
         simpleItem(AncientAetherItems.VALKYRUM);
 

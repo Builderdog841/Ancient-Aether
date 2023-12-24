@@ -94,6 +94,8 @@ public class AncientAetherItems {
     public static final RegistryObject<Item> HERMES_PENDANT = ITEMS.register("hermes_pendant", () -> new HermesPendantItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> ARKENIUM_RING = ITEMS.register("arkenium_ring", () -> new ArkeniumRingItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> ARKENIUM_PENDANT = ITEMS.register("arkenium_pendant", () -> new ArkeniumPendantItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> VALKYRUM_RING = ITEMS.register("valkyrum_ring", () -> new ValkyrumRingItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> VALKYRUM_PENDANT = ITEMS.register("valkyrum_pendant", () -> new ValkyrumPendantItem(new Item.Properties().stacksTo(1)));
 
     //Spawn Eggs
     public static final RegistryObject<SpawnEggItem> HIGHLAND_BUFFALO_SPAWN_EGG = ITEMS.register("highland_buffalo_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntities.HIGHLAND_BUFFALO, 0x4B6F89, 0x96C4D3, new Item.Properties()));
