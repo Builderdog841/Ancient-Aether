@@ -1,0 +1,8 @@
+{
+  "type": "aether:repairing",
+  "group": "altar_hoe_repair",
+  "ingredient": {
+    "item": "ancient_aether:valkyrum_hoe"
+  },
+  "repairTime": 3000
+}
