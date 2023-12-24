@@ -1,7 +1,7 @@
 {
   "type": "minecraft:y_clamped_gradient",
   "from_value": 1,
-  "from_y": 118,
-  "to_value": 2,
-  "to_y": 256
+  "from_y": 112,
+  "to_value": 1.375,
+  "to_y": 136
 }
