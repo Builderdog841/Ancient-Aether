@@ -60,7 +60,7 @@
                                 "argument": {
                                     "type": "minecraft:noise",
                                     "noise": "ancient_aether:jagged",
-                                    "xz_scale": 250,
+                                    "xz_scale": 200,
                                     "y_scale": 0
                                 }
                             }

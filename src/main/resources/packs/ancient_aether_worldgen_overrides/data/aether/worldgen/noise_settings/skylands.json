@@ -23,13 +23,7 @@
   "noise_router": {
     "barrier": 0.0,
     "continents": 0.0,
-    "depth": {
-      "type": "minecraft:y_clamped_gradient",
-      "from_value": 1.5,
-      "from_y": 0,
-      "to_value": -1.5,
-      "to_y": 320
-    },
+    "depth": "ancient_aether:the_aether/depth",
     "erosion": "ancient_aether:the_aether/erosion",
     "final_density": {
       "type": "minecraft:squeeze",
