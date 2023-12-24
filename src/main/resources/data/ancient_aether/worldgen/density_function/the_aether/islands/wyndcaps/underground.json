@@ -7,7 +7,11 @@
             "type": "minecraft:add",
             "argument1": {
                 "type": "minecraft:mul",
-                "argument1": -0.19,
+                "argument1": {
+                    "type": "minecraft:mul",
+                    "argument1": -0.15,
+                    "argument2": "ancient_aether:the_aether/sloper_underground"
+                },
                 "argument2": 1
             },
             "argument2": {
@@ -15,9 +19,9 @@
                 "argument1": {
                     "type": "minecraft:y_clamped_gradient",
                     "from_value": 0.0,
-                    "from_y": 4,
+                    "from_y": -16,
                     "to_value": 1.0,
-                    "to_y": 132
+                    "to_y": 112
                 },
                 "argument2": {
                     "type": "minecraft:add",
@@ -26,7 +30,11 @@
                         "type": "minecraft:add",
                         "argument1": {
                             "type": "minecraft:mul",
-                            "argument1": -0.1,
+                            "argument1": {
+                                "type": "minecraft:mul",
+                                "argument1": -0.12,
+                                "argument2": "ancient_aether:the_aether/sloper_underground"
+                            },
                             "argument2": 1
                         },
                         "argument2": {
@@ -34,9 +42,9 @@
                             "argument1": {
                                 "type": "minecraft:y_clamped_gradient",
                                 "from_value": 1.0,
-                                "from_y": 132,
+                                "from_y": 112,
                                 "to_value": 0.0,
-                                "to_y": 133
+                                "to_y": 113
                             },
                             "argument2": {
                                 "type": "add",
@@ -45,8 +53,8 @@
                                     "argument1": 0.2,
                                     "argument2": {
                                         "type": "minecraft:add",
-                                        "argument1": -0.002,
-                                        "argument2": "ancient_aether:the_aether/3d_noises/base"
+                                        "argument1": -0.05,
+                                        "argument2": "ancient_aether:the_aether/base_3d_noise"
                                     }
                                 },
                                 "argument2": {
@@ -54,7 +62,7 @@
                                     "argument": {
                                         "type": "minecraft:noise",
                                         "noise": "ancient_aether:jagged",
-                                        "xz_scale": 300,
+                                        "xz_scale": 250,
                                         "y_scale": 0
                                     }
                                 }
@@ -65,5 +73,5 @@
             }
         }
     },
-    "argument2": "ancient_aether:the_aether/elevated_islands/hills"
+    "argument2": "ancient_aether:the_aether/islands/wyndcaps/surface"
 }

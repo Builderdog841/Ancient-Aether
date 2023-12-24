@@ -7,8 +7,8 @@
             "type": "minecraft:mul",
             "argument1": {
                 "type": "minecraft:mul",
-                "argument1": -0.26,
-                "argument2": "ancient_aether:the_aether/unplateauyfier"
+                "argument1": -0.22,
+                "argument2": "ancient_aether:the_aether/islands/elevated/sloper"
             },
             "argument2": 1
         },
@@ -17,9 +17,9 @@
             "argument1": {
                 "type": "minecraft:y_clamped_gradient",
                 "from_value": 0.0,
-                "from_y": 112,
+                "from_y": 132,
                 "to_value": 1.0,
-                "to_y": 115
+                "to_y": 134
             },
             "argument2": {
                 "type": "minecraft:add",
@@ -30,8 +30,8 @@
                         "type": "minecraft:mul",
                         "argument1": {
                             "type": "minecraft:mul",
-                            "argument1": -0.26,
-                            "argument2": "ancient_aether:the_aether/unplateauyfier"
+                            "argument1": -0.22,
+                            "argument2": "ancient_aether:the_aether/islands/elevated/sloper"
                         },
                         "argument2": 1
                     },
@@ -40,9 +40,9 @@
                         "argument1": {
                             "type": "minecraft:y_clamped_gradient",
                             "from_value": 1.0,
-                            "from_y": 117,
+                            "from_y": 136,
                             "to_value": 0.0,
-                            "to_y": 202
+                            "to_y": 222
                         },
                         "argument2": {
                             "type": "add",
@@ -51,8 +51,8 @@
                                 "argument1": 0.2,
                                 "argument2": {
                                     "type": "minecraft:add",
-                                    "argument1": -0.02,
-                                    "argument2": "ancient_aether:the_aether/3d_noises/jagged"
+                                    "argument1": -0.05,
+                                    "argument2": "ancient_aether:the_aether/base_3d_noise"
                                 }
                             },
                             "argument2": {
