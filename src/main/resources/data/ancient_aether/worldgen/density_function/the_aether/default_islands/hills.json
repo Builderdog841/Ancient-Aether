@@ -10,7 +10,7 @@
                 "argument1": -0.26,
                 "argument2": "ancient_aether:the_aether/unplateauyfier"
             },
-            "argument2": "ancient_aether:the_aether/default_islands/factor"
+            "argument2": 1
         },
         "argument2": {
             "type": "minecraft:mul",
@@ -33,7 +33,7 @@
                             "argument1": -0.26,
                             "argument2": "ancient_aether:the_aether/unplateauyfier"
                         },
-                        "argument2": "ancient_aether:the_aether/default_islands/factor"
+                        "argument2": 1
                     },
                     "argument2": {
                         "type": "minecraft:mul",

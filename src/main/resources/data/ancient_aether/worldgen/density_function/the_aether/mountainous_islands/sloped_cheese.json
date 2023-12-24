@@ -8,7 +8,7 @@
             "argument1": {
                 "type": "minecraft:mul",
                 "argument1": -0.19,
-                "argument2": "ancient_aether:the_aether/mountainous_islands/factor"
+                "argument2": 1
             },
             "argument2": {
                 "type": "minecraft:mul",
@@ -27,7 +27,7 @@
                         "argument1": {
                             "type": "minecraft:mul",
                             "argument1": -0.1,
-                            "argument2": "ancient_aether:the_aether/mountainous_islands/factor"
+                            "argument2": 1
                         },
                         "argument2": {
                             "type": "minecraft:mul",
