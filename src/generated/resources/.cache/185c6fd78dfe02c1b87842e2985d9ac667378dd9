@@ -1,4 +1,4 @@
-// 1.20.1	2023-12-24T19:46:28.8301328	Item Models: ancient_aether
+// 1.20.1	2023-12-24T20:28:33.8639982	Item Models: ancient_aether
 532bdb7a4f7d2a6b96d474c01c8b9e7a0d1c10b4 assets/ancient_aether/models/item/aerogel_glass.json
 87e9f8f9f807a2aa763e3057d32bacf3ee32b60f assets/ancient_aether/models/item/aerogel_glass_door.json
 d1e6ed3e334d573f31a8ce9e09885c0f43832630 assets/ancient_aether/models/item/aerogel_glass_pane.json
@@ -15,6 +15,8 @@ e33c85e0901587bf84b2a93e0f74636995731436 assets/ancient_aether/models/item/ancie
 8098bc5e17d412cb410ace5b54bf581bc079e984 assets/ancient_aether/models/item/ancient_ring.json
 7b758a31f7272894d72fc2ff7144b4d1d37b407a assets/ancient_aether/models/item/ancient_sword.json
 6f6e7ea4043b02c3002c645c7a5173a32d9cb63c assets/ancient_aether/models/item/angelic_lantern.json
+0a5433703811659f4e53f0449e46e526ff9983b0 assets/ancient_aether/models/item/arkenium_pendant.json
+65b849256685fb6479622cda358cd36b4513d85c assets/ancient_aether/models/item/arkenium_ring.json
 ecd044ce0d7231edbfbefeb82c43ce34dc933c21 assets/ancient_aether/models/item/arkzenus_pickaxe.json
 bea7d4c415a7fb295c760b4b7f2d280f9305772c assets/ancient_aether/models/item/crystal_aercloud.json
 7b52703f3fe9815b27af4aa9bd01e7fe1038e779 assets/ancient_aether/models/item/crystal_skyroot_sapling.json

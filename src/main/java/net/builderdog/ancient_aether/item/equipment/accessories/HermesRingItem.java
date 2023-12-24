@@ -20,20 +20,20 @@ public class HermesRingItem extends RingItem {
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {
         LivingEntity livingEntity = slotContext.entity();
-        AttributeInstance health = livingEntity.getAttribute(Attributes.MOVEMENT_SPEED);
-        if (health != null) {
-            if (!health.hasModifier(getMovementSpeedModifier())) {
-                health.addTransientModifier(getMovementSpeedModifier());
+        AttributeInstance speed = livingEntity.getAttribute(Attributes.MOVEMENT_SPEED);
+        if (speed != null) {
+            if (!speed.hasModifier(getMovementSpeedModifier())) {
+                speed.addTransientModifier(getMovementSpeedModifier());
             }
         }
     }
     @Override
     public void onUnequip(SlotContext slotContext, ItemStack newStack, ItemStack stack) {
         LivingEntity livingEntity = slotContext.entity();
-        AttributeInstance health = livingEntity.getAttribute(Attributes.MOVEMENT_SPEED);
-        if (health != null) {
-            if (health.hasModifier(getMovementSpeedModifier())) {
-                health.removeModifier(getMovementSpeedModifier());
+        AttributeInstance speed = livingEntity.getAttribute(Attributes.MOVEMENT_SPEED);
+        if (speed != null) {
+            if (speed.hasModifier(getMovementSpeedModifier())) {
+                speed.removeModifier(getMovementSpeedModifier());
             }
         }
     }

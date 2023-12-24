@@ -21,8 +21,8 @@ public class StrengthStoneItem extends AccessoryItem {
         LivingEntity livingEntity = slotContext.entity();
         AttributeInstance damage = livingEntity.getAttribute(Attributes.ATTACK_DAMAGE);
         if (damage != null) {
-            if (!damage.hasModifier(getdamageModifier())) {
-                damage.addTransientModifier(getdamageModifier());
+            if (!damage.hasModifier(getAttackDamageModifier())) {
+                damage.addTransientModifier(getAttackDamageModifier());
             }
         }
     }
@@ -31,12 +31,12 @@ public class StrengthStoneItem extends AccessoryItem {
         LivingEntity livingEntity = slotContext.entity();
         AttributeInstance damage = livingEntity.getAttribute(Attributes.ATTACK_DAMAGE);
         if (damage  != null) {
-            if (damage .hasModifier(getdamageModifier())) {
-                damage .removeModifier(getdamageModifier());
+            if (damage .hasModifier(getAttackDamageModifier())) {
+                damage .removeModifier(getAttackDamageModifier());
             }
         }
     }
-    public AttributeModifier getdamageModifier() {
+    public AttributeModifier getAttackDamageModifier() {
         return new AttributeModifier(DAMAGE_UUID, "Attack Damage increase", 1.25, AttributeModifier.Operation.MULTIPLY_TOTAL);
     }
 }
