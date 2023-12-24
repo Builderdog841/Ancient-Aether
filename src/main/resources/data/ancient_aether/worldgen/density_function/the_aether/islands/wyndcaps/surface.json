@@ -10,7 +10,11 @@
                 "argument1": -0.22,
                 "argument2": "ancient_aether:the_aether/islands/wyndcaps/sloper"
             },
-            "argument2": 1
+            "argument2": {
+                "type": "minecraft:mul",
+                "argument1": "ancient_aether:the_aether/islands/wyndcaps/factor_temperature",
+                "argument2": "ancient_aether:the_aether/factor_erosion"
+            }
         },
         "argument2": {
             "type": "minecraft:mul",
@@ -33,7 +37,11 @@
                             "argument1": -0.22,
                             "argument2": "ancient_aether:the_aether/islands/wyndcaps/sloper"
                         },
-                        "argument2": 1
+                        "argument2": {
+                            "type": "minecraft:mul",
+                            "argument1": "ancient_aether:the_aether/islands/wyndcaps/factor_temperature",
+                            "argument2": "ancient_aether:the_aether/factor_erosion"
+                        }
                     },
                     "argument2": {
                         "type": "minecraft:mul",

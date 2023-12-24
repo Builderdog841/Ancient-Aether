@@ -12,7 +12,7 @@
                     "argument1": -0.15,
                     "argument2": "ancient_aether:the_aether/islands/elevated/sloper_underground"
                 },
-                "argument2": 1
+                "argument2": "ancient_aether:the_aether/islands/elevated/factor_erosion"
             },
             "argument2": {
                 "type": "minecraft:mul",
@@ -35,7 +35,7 @@
                                 "argument1": -0.12,
                                 "argument2": "ancient_aether:the_aether/islands/elevated/sloper_underground"
                             },
-                            "argument2": 1
+                            "argument2": "ancient_aether:the_aether/islands/elevated/factor_erosion"
                         },
                         "argument2": {
                             "type": "minecraft:mul",
