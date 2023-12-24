@@ -1,6 +1,7 @@
 package net.builderdog.ancient_aether.client.renderer.entity;
 
 import com.aetherteam.aether.capability.player.AetherPlayer;
+import com.aetherteam.aether.client.renderer.accessory.GlovesRenderer;
 import com.aetherteam.aether.client.renderer.accessory.PendantRenderer;
 import com.aetherteam.aether.client.renderer.player.layer.DartLayer;
 import net.builderdog.ancient_aether.AncientAether;
@@ -73,5 +74,6 @@ public class AncientAetherEntityRenderers {
         CuriosRendererRegistry.register(AncientAetherItems.HERMES_PENDANT.get(), PendantRenderer::new);
         CuriosRendererRegistry.register(AncientAetherItems.ARKENIUM_PENDANT.get(), PendantRenderer::new);
         CuriosRendererRegistry.register(AncientAetherItems.VALKYRUM_PENDANT.get(), PendantRenderer::new);
+        CuriosRendererRegistry.register(AncientAetherItems.VALKYRUM_GLOVES.get(), GlovesRenderer::new);
     }
 }
