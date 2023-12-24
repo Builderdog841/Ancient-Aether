@@ -50,7 +50,7 @@
                             "from_value": 1.0,
                             "from_y": 116,
                             "to_value": 0.0,
-                            "to_y": 256
+                            "to_y": 320
                         },
                         "argument2": {
                             "type": "add",
@@ -68,7 +68,7 @@
                                 "argument": {
                                     "type": "minecraft:noise",
                                     "noise": "ancient_aether:jagged",
-                                    "xz_scale": 200,
+                                    "xz_scale": 225,
                                     "y_scale": 0
                                 }
                             }
