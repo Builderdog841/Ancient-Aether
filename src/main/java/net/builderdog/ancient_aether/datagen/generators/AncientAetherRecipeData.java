@@ -349,6 +349,7 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         freezingRecipe(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get(), AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), 0.3F, 500).save(consumer);
 
         enchantingRecipe(RecipeCategory.MISC, AncientAetherItems.VALKYRUM.get(), AncientAetherBlocks.VALKYRUM_ORE.get(), 1.5F, 1000).save(consumer);
+        enchantingRecipe(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.VIOLET_AERCLOUD.get(), AetherBlocks.BLUE_AERCLOUD.get(), 0.1F, 400).save(consumer, name("violet_aercloud_enchanting"));
 
         repairingRecipe(RecipeCategory.COMBAT, AncientAetherItems.VALKYRUM_HELMET.get(), 3000).group("altar_helmet_repair").save(consumer, name("valkyrum_helmet_repairing"));
         repairingRecipe(RecipeCategory.COMBAT, AncientAetherItems.VALKYRUM_CHESTPLATE.get(), 3000).group("altar_chestplate_repair").save(consumer, name("valkyrum_chestplate_repairing"));
