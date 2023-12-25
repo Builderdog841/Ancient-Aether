@@ -4,7 +4,6 @@ import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
 
 import java.util.List;
 

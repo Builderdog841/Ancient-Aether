@@ -1,8 +1,6 @@
 package net.builderdog.ancient_aether.event.hooks;
 
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.world.level.DataPackConfig;
-import net.royawesome.jlibnoise.module.combiner.Min;
 
 import java.util.ArrayList;
 

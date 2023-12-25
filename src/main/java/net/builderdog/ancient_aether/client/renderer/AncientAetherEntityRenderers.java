@@ -1,11 +1,13 @@
-package net.builderdog.ancient_aether.client.renderer.entity;
+package net.builderdog.ancient_aether.client.renderer;
 
 import com.aetherteam.aether.capability.player.AetherPlayer;
 import com.aetherteam.aether.client.renderer.accessory.GlovesRenderer;
 import com.aetherteam.aether.client.renderer.accessory.PendantRenderer;
+import com.aetherteam.aether.client.renderer.entity.model.ValkyrieWingsModel;
 import com.aetherteam.aether.client.renderer.player.layer.DartLayer;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
+import net.builderdog.ancient_aether.client.renderer.entity.*;
 import net.builderdog.ancient_aether.client.renderer.entity.layers.AncientAetherModelLayers;
 import net.builderdog.ancient_aether.client.renderer.entity.model.*;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
@@ -54,6 +56,7 @@ public class AncientAetherEntityRenderers {
             event.registerLayerDefinition(AncientAetherModelLayers.HIGHLAND_BUFFALO, HighlandBuffaloModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.ROOTHYRN, RoothyrnModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.AERONAUTIC_LEAPER, AeronauticLeaperModel::createBodyLayer);
+            event.registerLayerDefinition(AncientAetherModelLayers.VALKYRUM_WINGS, () -> ValkyrieWingsModel.createMainLayer(3.5F, 3.375F));
         }
     }
     @SubscribeEvent

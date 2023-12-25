@@ -9,8 +9,7 @@ public class AncientAetherModelLayers {
     public static final ModelLayerLocation HIGHLAND_BUFFALO = register("highland_buffalo");
     public static final ModelLayerLocation ROOTHYRN = register("roothyrn");
     public static final ModelLayerLocation AERONAUTIC_LEAPER = register("aeronautic_leaper");
-    public static final ModelLayerLocation WYND_ZEPHYR = register("wynd_zephyr");
-    public static final ModelLayerLocation WYND_ZEPHYR_TRANSPARENCY = register("wynd_zephyr", "transparency");
+    public static final ModelLayerLocation VALKYRUM_WINGS = register("valkyrum_wings");
 
     public AncientAetherModelLayers() {
     }

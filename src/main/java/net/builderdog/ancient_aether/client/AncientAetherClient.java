@@ -5,7 +5,7 @@ import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.cumulus.CumulusConfig;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherWoodTypes;
-import net.builderdog.ancient_aether.client.renderer.entity.AncientAetherEntityRenderers;
+import net.builderdog.ancient_aether.client.renderer.AncientAetherEntityRenderers;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.level.GrassColor;
