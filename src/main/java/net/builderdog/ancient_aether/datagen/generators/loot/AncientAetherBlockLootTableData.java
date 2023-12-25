@@ -6,7 +6,12 @@ import com.aetherteam.aether.mixin.mixins.common.accessor.BlockLootAccessor;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.predicates.BonusLevelTableCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
@@ -81,7 +86,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         add(AncientAetherBlocks.SKYROOT_PINE_LEAVES.get(),
                 (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.SKYROOT_PINE_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
         add(AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES.get(),
-                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
+                (leaves) -> droppingCrystalSkyrootLeaves(leaves, AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
         add(AncientAetherBlocks.HIGHSPROOT_LEAVES.get(),
                 (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
         add(AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES.get(),
@@ -167,6 +172,14 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         //Buffalo Wool
         dropSelf(AncientAetherBlocks.BUFFALO_WOOL.get());
         dropSelf(AncientAetherBlocks.BUFFALO_CARPET.get());
+    }
+
+    public LootTable.Builder droppingCrystalSkyrootLeaves(Block block, Block sapling, float... chances) {
+        return this.droppingWithChancesAndSkyrootSticks(block, sapling, chances)
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(BlockLootAccessor.aether$hasShearsOrSilkTouch().invert())
+                        .add(this.applyExplosionCondition(block,
+                                        LootItem.lootTableItem(AetherItems.WHITE_APPLE.get()))
+                                .when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, 0.0055F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F))));
     }
 
     @Override
