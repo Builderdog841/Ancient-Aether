@@ -72,15 +72,6 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "biome": "ancient_aether:crystal_oasis"
-              }
-            }
-          },
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "location": {
                 "biome": "ancient_aether:wyndcap_taiga"
               }
             }
