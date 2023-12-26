@@ -356,8 +356,14 @@
   "lore.item.ancient_aether.valkyrum": "A shiny metal that is used to forge the finest pieces of weaponry. It can also be used a noble trimming material",
   "lore.item.ancient_aether.valkyrum_hoe": "A noble tool forged from Valkyrum. This Hoe has an incredibly far reach, allowing you to pointlessly till dirt from a safe distance.",
   "lore.item.ancient_aether.valkyrum_lance": "A noble weapon forged from Valkyrum. This long-range weapon is very good for defeating Zephyrs and Valkyrie Queens.",
-  "lore.item.ancient_aether.valkyrum_leggings": "A noble tool forged from Valkyrum. When fully worn, you are granted temporary flight. Quite useful for getting to high places.",
   "lore.item.ancient_aether.valkyrum_pickaxe": "A noble tool forged from Valkyrum. This Pickaxe is very useful when it comes to mining blocks from under islands, as it has a very far reach, almost double the normal reach! It is also quite useful for fighting the Slider.",
   "lore.item.ancient_aether.valkyrum_shovel": "A noble tool forged from Valkyrum. This Shovel can help you reach Quicksoil from a safer distance; quite useful wouldn't you say?",
-  "lore.item.ancient_aether.valkyrum_sword": "A noble weapon forged from Valkyrum. It doesn't have as much reach as the other Valkyrum Equipment but it's better Attack Damage and Attack Speed make it a valid alternative to the Valkyrum Lance."
+  "lore.item.ancient_aether.valkyrum_sword": "A noble weapon forged from Valkyrum. It doesn't have as much reach as the other Valkyrum Equipment but it's better Attack Damage and Attack Speed make it a valid alternative to the Valkyrum Lance.",
+  "lore.item.ancient_aether.valkyrum_helmet": "A noble piece of armor forged from Valkyrum. When fully worn, you are granted temporary flight. Quite useful for getting to high places.",
+  "lore.item.ancient_aether.valkyrum_chestplate": "A noble piece of armor forged from Valkyrum. When fully worn, you are granted temporary flight. Quite useful for getting to high places.",
+  "lore.item.ancient_aether.valkyrum_leggings": "A noble piece of armor forged from Valkyrum. When fully worn, you are granted temporary flight. Quite useful for getting to high places.",
+  "lore.item.ancient_aether.valkyrum_boots": "A noble piece of armor forged from Valkyrum. When fully worn, you are granted temporary flight. Quite useful for getting to high places.",
+  "lore.item.ancient_aether.valkyrum_gloves": "A noble piece of arm wear forged from Valkyrum. The Gloves are needed to complete the armor set, which grants temporary flight.",
+  "lore.item.ancient_aether.valkyrum_ring": "A noble accessory forged from Valkyrum. This ring grants you +0.5 Blocks of Reach.",
+  "lore.item.ancient_aether.valkyrum_pendant": "A noble accessory forged from Valkyrum. This pendant grants you +1 Blocks of Reach."
 }
