@@ -43,5 +43,24 @@
   "item.aether.golden_feather": "§fGolden Feather",
   "item.aether.bronze_dungeon_key": "§fBronze Key",
   "item.aether.silver_dungeon_key": "§fSilver Key",
-  "item.aether.gold_dungeon_key": "§fGold Key"
+  "item.aether.gold_dungeon_key": "§fGold Key",
+  "item.aether.music_disc_aether_tune": "§fMusic Disc Aether Tune",
+  "item.aether.music_disc_ascending_dawn": "§fMusic Disc Ascending Dawn",
+
+  "item.lost_aether_content.music_disc_legacy": "§fDuck Music Disc",
+  "item.lost_aether_content.music_disc_sovereign_of_the_skies": "§fRoyal Music Disc",
+  "item.lost_aether_content.platinum_key": "§fPlatinum Key",
+  "item.lost_aether_content.phoenix_sword": "§fPhoenix Sword",
+  "item.lost_aether_content.phoenix_shovel": "§fPhoenix Shovel",
+  "item.lost_aether_content.phoenix_pickaxe": "§fPhoenix Pickaxe",
+  "item.lost_aether_content.phoenix_axe": "§fPhoenix Axe",
+  "item.lost_aether_content.phoenix_hoe": "§fPhoenix Hoe",
+  "item.lost_aether_content.shield_of_emile": "§fShield of Emile",
+  "item.lost_aether_content.flaming_gemstone": "§fFlaming Gemstone",
+  "item.lost_aether_content.agility_boots": "§fAgility Boots",
+  "item.lost_aether_content.invincibility_gem": "§fInvincibility Gem",
+  "item.lost_aether_content.phoenix_cape": "§fPhoenix Cape",
+  "item.lost_aether_content.sentry_shield": "§fSentry Shield",
+  "item.lost_aether_content.power_gloves": "§fPower Gloves",
+  "item.lost_aether_content.swetty_mask": "§fSwetty Mask"
 }
