@@ -332,7 +332,7 @@
   "lore.block.ancient_aether.crystal_skyroot_sapling": "These small cyan saplings will grow into Crystal Skyroot Trees. They can be grown faster with Bone Meal.",
   "lore.block.ancient_aether.wyndcaps_ice": "A block that behaves similar to Packed Ice and generates on the Coasts of Wyndcap Islands",
   "lore.block.ancient_aether.crystal_aercloud": "A crystal colored cloud found beneath the Cloudbed. This Aercloud doesn't have any special properties yet but it can be crafted into the Windblower.",
-  "lore.block.ancient_aether.windblower": "This block doesn't have any special properties yet but it can be worn.",
+  "lore.block.ancient_aether.windblower": "This block doesn't have any special properties yet but it can be worn on your head.",
 
   "lore.item.ancient_aether.grapes": "This fruit can be found in Valkyrie Settlement Chests. It doesn't have special properties yet.",
   "lore.item.ancient_aether.ancient_rune": "Obtained from Vases or Sentry Laboratories, this Rune is the key to the Ancient Dungeon. It can also be duplicated using 7 Enchanted Gravitite and a piece of Aerogel.",
@@ -353,5 +353,11 @@
   "lore.item.ancient_aether.sakura_chest_boat": "A Sakura Boat with a handy chest in the back. Helpful for transporting more items over long stretches of water, which are famously difficult to find in the Aether.",
   "lore.item.ancient_aether.sakura_moa_egg": "A very rare Moa Egg that can only be found in Ancient Dungeon Chests. Hatching this provides a Sakura Moa with 10 mid-air jumps.",
   "lore.item.ancient_aether.gravitite_dart_shooter": "A reward from defeating the Ancient Guardian. This Dart Shooter launches Mobs high up in the air similar to Gravitite Equipment. You can use any type of Dart as Ammunition.",
-  "lore.item.ancient_aether.valkyrum": "A shiny metal that is used to forge the finest pieces of weaponry. It can also be used a noble trimming material"
+  "lore.item.ancient_aether.valkyrum": "A shiny metal that is used to forge the finest pieces of weaponry. It can also be used a noble trimming material",
+  "lore.item.ancient_aether.valkyrum_hoe": "A noble tool forged from Valkyrum. This Hoe has an incredibly far reach, allowing you to pointlessly till dirt from a safe distance.",
+  "lore.item.ancient_aether.valkyrum_lance": "A noble weapon forged from Valkyrum. This long-range weapon is very good for defeating Zephyrs and Valkyrie Queens.",
+  "lore.item.ancient_aether.valkyrum_leggings": "A noble tool forged from Valkyrum. When fully worn, you are granted temporary flight. Quite useful for getting to high places.",
+  "lore.item.ancient_aether.valkyrum_pickaxe": "A noble tool forged from Valkyrum. This Pickaxe is very useful when it comes to mining blocks from under islands, as it has a very far reach, almost double the normal reach! It is also quite useful for fighting the Slider.",
+  "lore.item.ancient_aether.valkyrum_shovel": "A noble tool forged from Valkyrum. This Shovel can help you reach Quicksoil from a safer distance; quite useful wouldn't you say?",
+  "lore.item.ancient_aether.valkyrum_sword": "A noble weapon forged from Valkyrum. It doesn't have as much reach as the other Valkyrum Equipment but it's better Attack Damage and Attack Speed make it a valid alternative to the Valkyrum Lance."
 }
