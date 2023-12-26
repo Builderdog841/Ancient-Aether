@@ -49,16 +49,6 @@
         },
         {
           "type": "minecraft:item",
-          "name": "ancient_aether:arkzenus_pickaxe",
-          "weight": 3
-        },
-        {
-          "type": "minecraft:item",
-          "name": "ancient_aether:arkzenus_pickaxe",
-          "weight": 3
-        },
-        {
-          "type": "minecraft:item",
           "name": "aether:invisibility_cloak",
           "weight": 6
         },
