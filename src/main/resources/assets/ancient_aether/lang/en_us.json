@@ -333,6 +333,8 @@
   "lore.block.ancient_aether.wyndcaps_ice": "A block that behaves similar to Packed Ice and generates on the Coasts of Wyndcap Islands",
   "lore.block.ancient_aether.crystal_aercloud": "A crystal colored cloud found beneath the Cloudbed. This Aercloud doesn't have any special properties yet but it can be crafted into the Windblower.",
   "lore.block.ancient_aether.windblower": "This block doesn't have any special properties yet but it can be worn on your head.",
+  "lore.block.ancient_aether.ancient_holystone_vase": "A dusty relic found in ruins. It can be opened by right-clicking it with an Ambrosium Shard.",
+  "lore.block.ancient_aether.holystone_vase": "A nice piece of pottery to decorate your house.",
 
   "lore.item.ancient_aether.grapes": "This fruit can be found in Valkyrie Settlement Chests. It doesn't have special properties yet.",
   "lore.item.ancient_aether.ancient_rune": "Obtained from Vases or Sentry Laboratories, this Rune is the key to the Ancient Dungeon. It can also be duplicated using 7 Enchanted Gravitite and a piece of Aerogel.",
