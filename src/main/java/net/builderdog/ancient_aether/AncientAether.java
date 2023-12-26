@@ -130,9 +130,6 @@ public class AncientAether {
         if (ModList.get().isLoaded("lost_aether_content")) {
             setupCompatDatapack(event, "lost_content_compat", "Lost Content Compatibility", "Better Compatibility with Lost Content");
         }
-        if (ModList.get().isLoaded("aether_redux")) {
-            setupCompatDatapack(event, "aether_redux_compat", "Aether Redux Compatibility", "Better Compatibility with Aether Redux");
-        }
     }
 
     private void setupProgrammerArtPack(AddPackFindersEvent event) {
@@ -178,7 +175,16 @@ public class AncientAether {
             Path resourcePath = ModList.get().getModFileById("ancient_aether").getFile().findResource("packs/" + path);
             PathPackResources pack = new PathPackResources(ModList.get().getModFileById("ancient_aether").getFile().getFileName() + ":" + resourcePath, true, resourcePath);
             PackMetadataSection metadata = new PackMetadataSection(Component.translatable(desc), SharedConstants.getCurrentVersion().getPackVersion(PackType.CLIENT_RESOURCES));
-            event.addRepositorySource((packConsumer) -> packConsumer.accept(Pack.create("builtin/" + path, Component.literal(displayName), false, (string) -> pack, new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.CLIENT_RESOURCES), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()), PackType.SERVER_DATA, Pack.Position.TOP, false, PackSource.BUILT_IN)));
+            event.addRepositorySource((packConsumer) -> packConsumer.accept(Pack.create(
+                    "builtin/" + path,
+                    Component.literal(displayName),
+                    false,
+                    (string) -> pack,
+                    new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.CLIENT_RESOURCES), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()),
+                    PackType.SERVER_DATA,
+                    Pack.Position.TOP,
+                    false,
+                    create(decorateWithSource("built-in"), AncientAetherConfig.COMMON.compat_packs.get()))));
         }
     }
 
@@ -197,9 +203,7 @@ public class AncientAether {
                             PackType.SERVER_DATA,
                             Pack.Position.TOP,
                             false,
-                            create(decorateWithSource("built-in"), AncientAetherConfig.COMMON.worldgen_overrides.get()))
-                    )
-            );
+                            create(decorateWithSource("built-in"), AncientAetherConfig.COMMON.worldgen_overrides.get()))));
         }
     }
 
