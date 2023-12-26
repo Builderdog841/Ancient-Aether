@@ -19,7 +19,7 @@ import net.minecraftforge.fml.common.Mod;
         bus = Mod.EventBusSubscriber.Bus.MOD
 )
 public class AncientAetherCapabilities {
-    public static final Capability<AncientAetherPlayer> ANCIENT_AETHER_PLAYER_CAPABILITY = CapabilityManager.get(new CapabilityToken<AncientAetherPlayer>() {
+    public static final Capability<AncientAetherPlayer> ANCIENT_AETHER_PLAYER_CAPABILITY = CapabilityManager.get(new CapabilityToken<>() {
     });
 
     public AncientAetherCapabilities() {

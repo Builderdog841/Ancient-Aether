@@ -3,6 +3,7 @@ package net.builderdog.ancient_aether.capability.player;
 import com.aetherteam.aether.network.AetherPacketHandler;
 import com.aetherteam.aether.network.packet.AetherPlayerSyncPacket;
 import com.aetherteam.nitrogen.network.BasePacket;
+import net.builderdog.ancient_aether.item.equipment.armor.EquipmentUtil;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.network.simple.SimpleChannel;
@@ -15,6 +16,8 @@ import java.util.function.Supplier;
 public class AncientAetherPlayerCapability implements AncientAetherPlayer {
     private final Player player;
     private int gravititeDartCount;
+    private int wingRotationO;
+    private int wingRotation;
 
     private final Map<String, Triple<Type, Consumer<Object>, Supplier<Object>>> synchableFunctions = Map.ofEntries(
             Map.entry("setGravititeDartCount", Triple.of(Type.INT, (object) -> setGravititeDartCount((int) object), this::getGravititeDartCount))
@@ -25,8 +28,34 @@ public class AncientAetherPlayerCapability implements AncientAetherPlayer {
     }
 
     @Override
+    public void onUpdate() {
+        this.handleWingRotation();
+    }
+
+    private void handleWingRotation() {
+        if (this.getPlayer().level().isClientSide()) {
+            wingRotationO = getWingRotation();
+            if (EquipmentUtil.hasFullValkyrumSet(getPlayer())) {
+                wingRotation = getPlayer().tickCount;
+            } else {
+                wingRotation = 0;
+            }
+        }
+    }
+
+    @Override
     public Player getPlayer() {
         return this.player;
+    }
+
+    @Override
+    public int getWingRotation() {
+        return this.wingRotation;
+    }
+
+    @Override
+    public int getWingRotationO() {
+        return this.wingRotationO;
     }
 
     @Override
@@ -54,7 +83,7 @@ public class AncientAetherPlayerCapability implements AncientAetherPlayer {
 
     @Override
     public BasePacket getSyncPacket(String key, Type type, Object value) {
-        return new AetherPlayerSyncPacket(this.getPlayer().getId(), key, type, value);
+        return new AetherPlayerSyncPacket(getPlayer().getId(), key, type, value);
     }
 
     @Override

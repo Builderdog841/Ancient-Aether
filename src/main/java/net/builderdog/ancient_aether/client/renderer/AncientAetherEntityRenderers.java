@@ -9,6 +9,7 @@ import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.client.renderer.entity.*;
 import net.builderdog.ancient_aether.client.renderer.entity.layers.AncientAetherModelLayers;
+import net.builderdog.ancient_aether.client.renderer.entity.layers.ValkyrumWingsLayer;
 import net.builderdog.ancient_aether.client.renderer.entity.model.*;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
@@ -67,6 +68,7 @@ public class AncientAetherEntityRenderers {
             PlayerRenderer playerRenderer = event.getSkin(type);
             if (playerRenderer != null) {
                 playerRenderer.addLayer(new DartLayer<>(renderDispatcher, playerRenderer, (entity) -> new GravititeDart(AncientAetherEntities.GRAVITITE_DART.get(), entity.level()), AetherPlayer::getGoldenDartCount, 1.0F));
+                playerRenderer.addLayer(new ValkyrumWingsLayer<>(playerRenderer, Minecraft.getInstance().getEntityModels()));
             }
         }
     }

@@ -12,9 +12,9 @@ public interface AncientAetherPlayer extends INBTSynchable<CompoundTag> {
     static LazyOptional<AncientAetherPlayer> get(Player player) {
         return player.getCapability(AncientAetherCapabilities.ANCIENT_AETHER_PLAYER_CAPABILITY);
     }
-
-
-    void setGravititeDartCount(int var1);
-
+    int getWingRotation();
+    int getWingRotationO();
     int getGravititeDartCount();
+    void setGravititeDartCount(int var1);
+    void onUpdate();
 }
