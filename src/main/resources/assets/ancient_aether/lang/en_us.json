@@ -228,11 +228,6 @@
   "gui.ancient_aether.ancient_guardian.title": "the Ancient Guardian",
   "gui.ancient_aether.ancient_core.title": "the Ancient Core",
 
-  "ancient_aether.pro_tips.line.aether.secret_rooms": "Some Valkyrie Settlement Houses may come with Secret Rooms.",
-  "ancient_aether.pro_tips.line.aether.gravity_gravel": "Gravity Gravel increases your Jump Height.",
-  "ancient_aether.pro_tips.line.aether.valkyrum": "Valkyrum Ore can only be mined with a Sentry Pickaxe found in Silver Dungeons or higher.",
-  "gui.ancient_aether.pro_tip": "Pro Tip [Ancient Aether]",
-
   "pack.ancient_aether.tweaks.title": "Ancient Aether Tweaks",
   "pack.ancient_aether.tweaks.description": "Changes base-mod textures to be more inlined with AA",
 
@@ -241,8 +236,9 @@
   "ancient_aether.tooltip.epic": "Epic",
   "ancient_aether.tooltip.legendary": "Legendary",
   "ancient_aether.tooltip.seasonal": "Seasonal",
-
   "ancient_aether.tooltip.wip": "Use not implemented yet",
+
+  "trim_material.ancient_aether.valkyrum": "Valkyrum Material",
 
   "menu.ancient_aether.ancient_treasure_chest": "Ancient Treasure Chest",
   "ancient_aether.ancient_treasure_chest_locked": "This Treasure Chest must be unlocked with an Ancient Key",
