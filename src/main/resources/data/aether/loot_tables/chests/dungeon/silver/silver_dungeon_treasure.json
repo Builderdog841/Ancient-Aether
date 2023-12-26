@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "aether:lightning_sword",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:holy_sword",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:invisibility_cloak"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:regeneration_stone",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:strength_stone",
+          "weight": 5
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "aether:chests/dungeon/silver/silver_dungeon_treasure"
+}

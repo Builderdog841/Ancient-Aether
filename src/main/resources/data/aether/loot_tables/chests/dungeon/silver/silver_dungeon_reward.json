@@ -5,26 +5,6 @@
       "bonus_rolls": 0.0,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "ancient_aether:arkzenus_pickaxe",
-          "weight": 1
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:air",
-          "weight": 1
-        }
-      ],
-      "rolls": {
-        "type": "minecraft:uniform",
-        "max": 1.0,
-        "min": 1.0
-      }
-    },
-    {
-      "bonus_rolls": 0.0,
-      "entries": [
-        {
           "type": "minecraft:loot_table",
           "name": "aether:chests/dungeon/silver/silver_dungeon_treasure"
         }
@@ -64,6 +44,21 @@
         },
         {
           "type": "minecraft:item",
+          "name": "ancient_aether:arkzenus_pickaxe",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:arkzenus_pickaxe",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:arkzenus_pickaxe",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
           "name": "aether:invisibility_cloak",
           "weight": 6
         },
@@ -81,16 +76,6 @@
           "type": "minecraft:item",
           "name": "aether:poison_dart_shooter",
           "weight": 6
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:golden_sword",
-          "weight": 4
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:iron_sword",
-          "weight": 4
         },
         {
           "type": "minecraft:item",
@@ -175,14 +160,34 @@
           "weight": 2
         },
         {
-          "type": "minecraft:loot_table",
-          "name": "aether:chests/dungeon/silver/silver_dungeon_valkyrie",
-          "weight": 10
+          "type": "minecraft:item",
+          "name": "aether:regeneration_stone",
+          "weight": 5
         },
         {
           "type": "minecraft:item",
-          "name": "aether:regeneration_stone",
+          "name": "ancient_aether:strength_stone",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:arkenium_ring",
           "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:arkenium_pendant",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:health_ring",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:health_pendant",
+          "weight": 6
         }
       ],
       "rolls": {
