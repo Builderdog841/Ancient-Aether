@@ -42,6 +42,7 @@ public class AncientAetherClient {
 
     public static void autoApplyPacks() {
         Minecraft.getInstance().getResourcePackRepository().addPack("builtin/ancient_aether_tweaks");
+        refreshPacks = true;
     }
 
     @SubscribeEvent
