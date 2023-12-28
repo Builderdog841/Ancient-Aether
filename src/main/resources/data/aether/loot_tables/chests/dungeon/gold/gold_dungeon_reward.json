@@ -123,7 +123,7 @@
       "bonus_rolls": 0.0,
       "entries": [
         {
-          "type": "minecraft:item",
+          "type": "minecraft:loot_table",
           "name": "aether:chests/dungeon/gold/gold_dungeon_gummies",
           "weight": 3
         },
