@@ -128,54 +128,31 @@
         },
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 10.0,
-                "min": 2.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
-          "name": "aether:blue_berry",
-          "weight": 8
+          "name": "aether:regeneration_stone"
         },
         {
           "type": "minecraft:item",
-          "name": "aether:angelic_stone",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:regeneration_stone",
-          "weight": 5
-        },
-        {
-          "type": "minecraft:item",
-          "name": "ancient_aether:strength_stone",
-          "weight": 5
+          "name": "ancient_aether:strength_stone"
         },
         {
           "type": "minecraft:item",
           "name": "ancient_aether:arkenium_ring",
-          "weight": 3
-        },
-        {
-          "type": "minecraft:item",
-          "name": "ancient_aether:arkenium_pendant",
           "weight": 4
         },
         {
           "type": "minecraft:item",
+          "name": "ancient_aether:arkenium_pendant",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
           "name": "ancient_aether:health_ring",
-          "weight": 5
+          "weight": 4
         },
         {
           "type": "minecraft:item",
           "name": "ancient_aether:health_pendant",
-          "weight": 6
+          "weight": 3
         }
       ],
       "rolls": {

@@ -20,13 +20,11 @@
         },
         {
           "type": "minecraft:item",
-          "name": "aether:regeneration_stone",
-          "weight": 5
+          "name": "aether:regeneration_stone"
         },
         {
           "type": "minecraft:item",
-          "name": "ancient_aether:strength_stone",
-          "weight": 5
+          "name": "ancient_aether:strength_stone"
         }
       ],
       "rolls": 1.0
