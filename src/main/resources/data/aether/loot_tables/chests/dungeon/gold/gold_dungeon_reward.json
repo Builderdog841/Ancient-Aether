@@ -124,7 +124,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "aether:golden_gummy_swet",
+          "name": "aether:chests/dungeon/gold/gold_dungeon_gummies",
           "weight": 3
         },
         {

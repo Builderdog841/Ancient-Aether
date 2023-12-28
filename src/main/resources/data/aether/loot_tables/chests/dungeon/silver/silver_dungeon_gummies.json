@@ -17,8 +17,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "aether:golden_gummy_swet",
-          "weight": 2
+          "name": "aether:golden_gummy_swet"
         }
       ],
       "rolls": {

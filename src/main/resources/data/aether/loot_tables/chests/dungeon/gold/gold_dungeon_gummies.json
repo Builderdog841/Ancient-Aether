@@ -7,6 +7,10 @@
         {
           "type": "minecraft:item",
           "name": "aether:blue_gummy_swet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:golden_gummy_swet"
         }
       ],
       "rolls": {
@@ -16,5 +20,5 @@
       }
     }
   ],
-  "random_sequence": "aether:chests/dungeon/bronze/bronze_dungeon_gummies"
+  "random_sequence": "aether:chests/dungeon/bronze/gold_dungeon_gummies"
 }
