@@ -35,7 +35,7 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         simpleItem(AncientAetherItems.ARKENIUM_PENDANT);
         simpleItem(AncientAetherItems.VALKYRUM_RING);
         simpleItem(AncientAetherItems.VALKYRUM_PENDANT);
-        simpleItem(AncientAetherItems.GRAVITITE_DART_SHOOTER);
+        simpleItem(AncientAetherItems.AERONAUTIC_DART_SHOOTER);
         simpleItem(AncientAetherItems.VALKYRUM);
 
         //Boats

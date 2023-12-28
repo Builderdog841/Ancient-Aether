@@ -14,7 +14,7 @@ public interface AncientAetherPlayer extends INBTSynchable<CompoundTag> {
     }
     int getWingRotation();
     int getWingRotationO();
-    int getGravititeDartCount();
-    void setGravititeDartCount(int var1);
+    int getAeronauticDartCount();
+    void setAeronauticDartCount(int var1);
     void onUpdate();
 }

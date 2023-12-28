@@ -15,8 +15,8 @@ import net.builderdog.ancient_aether.item.equipment.accessories.*;
 import net.builderdog.ancient_aether.item.equipment.armor.AncientAetherArmorItem;
 import net.builderdog.ancient_aether.item.equipment.tools.arkzenus.ArkzenusPickaxeItem;
 import net.builderdog.ancient_aether.item.equipment.tools.valkyrum.*;
+import net.builderdog.ancient_aether.item.equipment.weapons.AeronauticDartShooterItem;
 import net.builderdog.ancient_aether.item.equipment.weapons.AncientSwordItem;
-import net.builderdog.ancient_aether.item.equipment.weapons.GravititeDartShooterItem;
 import net.builderdog.ancient_aether.item.miscellaneous.AncientAetherBoatItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -66,7 +66,7 @@ public class AncientAetherItems {
     public static final RegistryObject<SwordItem> VALKYRUM_SWORD = ITEMS.register("valkyrum_sword", ValkyrumSwordItem::new);
     public static final RegistryObject<SwordItem> VALKYRUM_LANCE = ITEMS.register("valkyrum_lance", ValkyrumLanceItem::new);
     public static final RegistryObject<SwordItem> ANCIENT_SWORD = ITEMS.register("ancient_sword", AncientSwordItem::new);
-    public static final RegistryObject<Item> GRAVITITE_DART_SHOOTER = ITEMS.register("gravitite_dart_shooter", () -> new GravititeDartShooterItem(AetherItems.GOLDEN_DART, (new Item.Properties().stacksTo(1))));
+    public static final RegistryObject<Item> AERONAUTIC_DART_SHOOTER = ITEMS.register("aeronautic_dart_shooter", () -> new AeronauticDartShooterItem(AetherItems.GOLDEN_DART, (new Item.Properties().stacksTo(1))));
 
     //Tools
     public static final RegistryObject<PickaxeItem> VALKYRUM_PICKAXE = ITEMS.register("valkyrum_pickaxe", ValkyrumPickaxeItem::new);

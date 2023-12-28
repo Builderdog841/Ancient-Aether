@@ -11,9 +11,9 @@ import net.builderdog.ancient_aether.client.renderer.entity.*;
 import net.builderdog.ancient_aether.client.renderer.entity.layers.AncientAetherModelLayers;
 import net.builderdog.ancient_aether.client.renderer.entity.layers.ValkyrumWingsLayer;
 import net.builderdog.ancient_aether.client.renderer.entity.model.*;
+import net.builderdog.ancient_aether.entity.misc.AeronauticDart;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
-import net.builderdog.ancient_aether.entity.misc.GravititeDart;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.BoatModel;
@@ -45,7 +45,7 @@ public class AncientAetherEntityRenderers {
         event.registerEntityRenderer(AncientAetherEntities.ANCIENT_CORE.get(), AncientCoreRenderer::new);
         event.registerEntityRenderer(AncientAetherEntities.HIGHLAND_BUFFALO.get(), HighlandBuffaloRenderer::new);
         event.registerEntityRenderer(AncientAetherEntities.ROOTHYRN.get(), RoothyrnRenderer::new);
-        event.registerEntityRenderer(AncientAetherEntities.GRAVITITE_DART.get(), GravititeDartRenderer::new);
+        event.registerEntityRenderer(AncientAetherEntities.AERONAUTIC_DART.get(), AeronauticDartRenderer::new);
     }
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
@@ -67,7 +67,7 @@ public class AncientAetherEntityRenderers {
         for (String type : types) {
             PlayerRenderer playerRenderer = event.getSkin(type);
             if (playerRenderer != null) {
-                playerRenderer.addLayer(new DartLayer<>(renderDispatcher, playerRenderer, (entity) -> new GravititeDart(AncientAetherEntities.GRAVITITE_DART.get(), entity.level()), AetherPlayer::getGoldenDartCount, 1.0F));
+                playerRenderer.addLayer(new DartLayer<>(renderDispatcher, playerRenderer, (entity) -> new AeronauticDart(AncientAetherEntities.AERONAUTIC_DART.get(), entity.level()), AetherPlayer::getGoldenDartCount, 1.0F));
                 playerRenderer.addLayer(new ValkyrumWingsLayer<>(playerRenderer, Minecraft.getInstance().getEntityModels()));
             }
         }

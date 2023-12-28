@@ -1,24 +1,18 @@
 package net.builderdog.ancient_aether.entity.misc;
 
 import com.aetherteam.aether.AetherTags;
-import com.aetherteam.aether.item.AetherItems;
-import com.aetherteam.aether.item.combat.abilities.weapon.GravititeWeapon;
 import com.aetherteam.aether.entity.projectile.dart.GoldenDart;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.minecraft.network.protocol.game.ClientboundSetEntityMotionPacket;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
-import net.minecraft.world.phys.HitResult;
 
-import javax.annotation.Nonnull;
-
-public class GravititeDart extends GoldenDart {
-    public GravititeDart(Level level) {
-        super(AncientAetherEntities.GRAVITITE_DART.get(), level);
+public class AeronauticDart extends GoldenDart {
+    public AeronauticDart(Level level) {
+        super(AncientAetherEntities.AERONAUTIC_DART.get(), level);
         this.setBaseDamage(4.0);
     }
 
@@ -35,7 +29,7 @@ public class GravititeDart extends GoldenDart {
         }
     }
 
-    public GravititeDart(EntityType<? extends GoldenDart> type, Level level) {
+    public AeronauticDart(EntityType<? extends GoldenDart> type, Level level) {
         super(type, level);
     }
 }

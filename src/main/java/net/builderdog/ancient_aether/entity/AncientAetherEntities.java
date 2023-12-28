@@ -2,11 +2,11 @@ package net.builderdog.ancient_aether.entity;
 
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.entity.animals.HighlandBuffalo;
+import net.builderdog.ancient_aether.entity.misc.AeronauticDart;
 import net.builderdog.ancient_aether.entity.monster.boss.ancient_core.AncientCore;
 import net.builderdog.ancient_aether.entity.monster.boss.ancient_guardian.AncientGuardian;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherChestBoatEntity;
-import net.builderdog.ancient_aether.entity.misc.GravititeDart;
 import net.builderdog.ancient_aether.entity.monster.AeronauticLeaper;
 import net.builderdog.ancient_aether.entity.monster.Roothyrn;
 import net.minecraft.resources.ResourceLocation;
@@ -43,8 +43,8 @@ public class AncientAetherEntities {
             () -> EntityType.Builder.<AncientAetherBoatEntity>of(AncientAetherBoatEntity::new, MobCategory.MISC).sized(1.375F, 0.5625F).clientTrackingRange(10).build("boat"));
     public static final RegistryObject<EntityType<AncientAetherChestBoatEntity>> CHEST_BOAT = ENTITY_TYPES.register("chest_boat", ()
             -> EntityType.Builder.<AncientAetherChestBoatEntity>of(AncientAetherChestBoatEntity::new, MobCategory.MISC).sized(1.375F, 0.5625F).clientTrackingRange(10).build("chest_boat"));
-    public static final RegistryObject<EntityType<GravititeDart>> GRAVITITE_DART = ENTITY_TYPES.register("gravitite_dart",
-            () -> EntityType.Builder.<GravititeDart>of(GravititeDart::new, MobCategory.MISC).sized(0.5F, 0.5F).clientTrackingRange(4).updateInterval(20).build("gravitite_dart"));
+    public static final RegistryObject<EntityType<AeronauticDart>> AERONAUTIC_DART = ENTITY_TYPES.register("aeronautic_dart",
+            () -> EntityType.Builder.<AeronauticDart>of(AeronauticDart::new, MobCategory.MISC).sized(0.5F, 0.5F).clientTrackingRange(4).updateInterval(20).build("aeronautic_dart"));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

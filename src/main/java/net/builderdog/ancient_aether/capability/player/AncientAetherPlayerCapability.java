@@ -15,12 +15,12 @@ import java.util.function.Supplier;
 
 public class AncientAetherPlayerCapability implements AncientAetherPlayer {
     private final Player player;
-    private int gravititeDartCount;
+    private int aeronauticDartCount;
     private int wingRotationO;
     private int wingRotation;
 
     private final Map<String, Triple<Type, Consumer<Object>, Supplier<Object>>> synchableFunctions = Map.ofEntries(
-            Map.entry("setGravititeDartCount", Triple.of(Type.INT, (object) -> setGravititeDartCount((int) object), this::getGravititeDartCount))
+            Map.entry("setGravititeDartCount", Triple.of(Type.INT, (object) -> setAeronauticDartCount((int) object), this::getAeronauticDartCount))
     );
 
     public AncientAetherPlayerCapability(Player player) {
@@ -72,13 +72,13 @@ public class AncientAetherPlayerCapability implements AncientAetherPlayer {
     }
 
     @Override
-    public void setGravititeDartCount(int count) {
-        gravititeDartCount = count;
+    public void setAeronauticDartCount(int count) {
+        aeronauticDartCount = count;
     }
 
     @Override
-    public int getGravititeDartCount() {
-        return gravititeDartCount;
+    public int getAeronauticDartCount() {
+        return aeronauticDartCount;
     }
 
     @Override
