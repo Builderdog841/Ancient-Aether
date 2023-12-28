@@ -191,7 +191,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "aether:sentry_stone"
+          "name": "aether:aerogel"
         }
       ],
       "rolls": {
