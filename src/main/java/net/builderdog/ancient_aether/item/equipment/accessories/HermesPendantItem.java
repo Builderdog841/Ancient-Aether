@@ -40,6 +40,6 @@ public class HermesPendantItem extends PendantItem {
         }
     }
     public AttributeModifier getMovementSpeedModifier() {
-        return new AttributeModifier(MOVEMENT_SPEED_UUID, "Movement Speed increase", 0.05, AttributeModifier.Operation.ADDITION);
+        return new AttributeModifier(MOVEMENT_SPEED_UUID, "Movement Speed increase", 0.02, AttributeModifier.Operation.ADDITION);
     }
 }

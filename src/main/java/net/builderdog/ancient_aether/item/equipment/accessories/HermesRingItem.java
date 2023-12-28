@@ -38,6 +38,6 @@ public class HermesRingItem extends RingItem {
         }
     }
     public AttributeModifier getMovementSpeedModifier() {
-        return new AttributeModifier(MOVEMENT_SPEED_UUID, "Movement Speed increase", 0.025, AttributeModifier.Operation.ADDITION);
+        return new AttributeModifier(MOVEMENT_SPEED_UUID, "Movement Speed increase", 0.015, AttributeModifier.Operation.ADDITION);
     }
 }
