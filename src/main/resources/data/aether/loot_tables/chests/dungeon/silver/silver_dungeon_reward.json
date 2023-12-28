@@ -59,13 +59,11 @@
         },
         {
           "type": "minecraft:item",
-          "name": "aether:enchanted_dart_shooter",
-          "weight": 8
+          "name": "aether:enchanted_dart_shooter"
         },
         {
           "type": "minecraft:item",
-          "name": "aether:poison_dart_shooter",
-          "weight": 6
+          "name": "aether:poison_dart_shooter"
         },
         {
           "type": "minecraft:item",
