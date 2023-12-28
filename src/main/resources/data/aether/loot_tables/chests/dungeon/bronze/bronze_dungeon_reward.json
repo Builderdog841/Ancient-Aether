@@ -141,10 +141,6 @@
         },
         {
           "type": "minecraft:item",
-          "name": "aether:valkyrie_lance"
-        },
-        {
-          "type": "minecraft:item",
           "name": "aether:hammer_of_kingbdogz"
         },
         {
