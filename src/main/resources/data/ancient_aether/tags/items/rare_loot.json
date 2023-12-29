@@ -20,6 +20,9 @@
     "aether:music_disc_aether_tune",
     "aether:music_disc_ascending_dawn",
     "aether:music_disc_chinchilla",
-    "aether:music_disc_high"
+    "aether:music_disc_high",
+    "ancient_aether:wynd_armor_trim_smithing_template",
+    "ancient_aether:whale_armor_trim_smithing_template",
+    "ancient_aether:ascended_armor_trim_smithing_template"
   ]
 }

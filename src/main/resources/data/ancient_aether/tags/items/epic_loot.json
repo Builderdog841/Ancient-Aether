@@ -14,6 +14,12 @@
     "ancient_aether:ancient_ring",
     "ancient_aether:health_pendant",
     "ancient_aether:health_ring",
-    "ancient_aether:arkzenus_pickaxe"
+    "ancient_aether:arkzenus_pickaxe",
+    "ancient_aether:mysterious_armor_trim_smithing_template",
+    "ancient_aether:mechanical_armor_trim_smithing_template",
+    "ancient_aether:mosaic_armor_trim_smithing_template",
+    "ancient_aether:royal_armor_trim_smithing_template",
+    "ancient_aether:solar_armor_trim_smithing_template",
+    "ancient_aether:energy_armor_trim_smithing_template"
   ]
 }
