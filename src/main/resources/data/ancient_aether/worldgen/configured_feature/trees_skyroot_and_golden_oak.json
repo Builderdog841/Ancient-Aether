@@ -20,7 +20,7 @@
     },
     "features": [
       {
-        "chance": 0.3,
+        "chance": 0.5,
         "feature": {
           "feature": "ancient_aether:crystal_skyroot_tree",
           "placement": [
