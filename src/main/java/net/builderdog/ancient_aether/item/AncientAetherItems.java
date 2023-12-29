@@ -24,6 +24,7 @@ import net.minecraft.network.chat.Style;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.armortrim.TrimPatterns;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -102,6 +103,17 @@ public class AncientAetherItems {
     public static final RegistryObject<SpawnEggItem> ANCIENT_GUARDIAN_SPAWN_EGG = ITEMS.register("ancient_guardian_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntities.ANCIENT_GUARDIAN, 0xB7B2FF, 0x35343D, new Item.Properties()));
     public static final RegistryObject<SpawnEggItem> ANCIENT_CORE_SPAWN_EGG = ITEMS.register("ancient_core_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntities.ANCIENT_CORE, 0xCC6C80, 0x35343D, new Item.Properties()));
     public static final RegistryObject<Item> SAKURA_MOA_EGG = ITEMS.register("sakura_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0xD09FA9, new Item.Properties()));
+
+    //Armor Trims
+    public static final RegistryObject<Item> WYND_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("wynd_armor_trim_smithing_template", () -> SmithingTemplateItem.createArmorTrimTemplate(TrimPatterns.COAST));
+    public static final RegistryObject<Item> WHALE_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("whale_armor_trim_smithing_template", () -> SmithingTemplateItem.createArmorTrimTemplate(TrimPatterns.COAST));
+    public static final RegistryObject<Item> ASCENDED_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("ascended_armor_trim_smithing_template", () -> SmithingTemplateItem.createArmorTrimTemplate(TrimPatterns.COAST));
+    public static final RegistryObject<Item> MYSTERIOUS_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("mysterious_armor_trim_smithing_template", () -> SmithingTemplateItem.createArmorTrimTemplate(TrimPatterns.COAST));
+    public static final RegistryObject<Item> MECHANICAL_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("mechanical_armor_trim_smithing_template", () -> SmithingTemplateItem.createArmorTrimTemplate(TrimPatterns.COAST));
+    public static final RegistryObject<Item> MOSAIC_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("mosaic_armor_trim_smithing_template", () -> SmithingTemplateItem.createArmorTrimTemplate(TrimPatterns.COAST));
+    public static final RegistryObject<Item> ROYAL_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("royal_armor_trim_smithing_template", () -> SmithingTemplateItem.createArmorTrimTemplate(TrimPatterns.COAST));
+    public static final RegistryObject<Item> SOLAR_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("solar_armor_trim_smithing_template", () -> SmithingTemplateItem.createArmorTrimTemplate(TrimPatterns.COAST));
+    public static final RegistryObject<Item> ENERGY_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("energy_armor_trim_smithing_template", () -> SmithingTemplateItem.createArmorTrimTemplate(TrimPatterns.COAST));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -52,6 +52,17 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         eggItem(AncientAetherItems.ANCIENT_CORE_SPAWN_EGG.get());
         moaEggItem(AncientAetherItems.SAKURA_MOA_EGG.get(), "");
 
+        //Armor Trims
+        item(AncientAetherItems.WYND_ARMOR_TRIM_SMITHING_TEMPLATE.get(), "");
+        item(AncientAetherItems.WHALE_ARMOR_TRIM_SMITHING_TEMPLATE.get(), "");
+        item(AncientAetherItems.ASCENDED_ARMOR_TRIM_SMITHING_TEMPLATE.get(), "");
+        item(AncientAetherItems.MYSTERIOUS_ARMOR_TRIM_SMITHING_TEMPLATE.get(), "");
+        item(AncientAetherItems.MECHANICAL_ARMOR_TRIM_SMITHING_TEMPLATE.get(), "");
+        item(AncientAetherItems.MOSAIC_ARMOR_TRIM_SMITHING_TEMPLATE.get(), "");
+        item(AncientAetherItems.ROYAL_ARMOR_TRIM_SMITHING_TEMPLATE.get(), "");
+        item(AncientAetherItems.SOLAR_ARMOR_TRIM_SMITHING_TEMPLATE.get(), "");
+        item(AncientAetherItems.ENERGY_ARMOR_TRIM_SMITHING_TEMPLATE.get(), "");
+
         //Equipment
         handheldItem(AncientAetherItems.VALKYRUM_SWORD.get(), "");
         handheldItem(AncientAetherItems.VALKYRUM_LANCE.get(), "");

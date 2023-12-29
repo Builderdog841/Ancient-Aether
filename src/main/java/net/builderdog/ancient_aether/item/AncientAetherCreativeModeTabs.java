@@ -161,8 +161,16 @@ public class AncientAetherCreativeModeTabs {
         }
 
         if (tab == AetherCreativeTabs.AETHER_INGREDIENTS.get()) {
-            event.getEntries().putAfter(new ItemStack(AncientAetherItems.ANCIENT_RUNE.get()), new ItemStack(AncientAetherItems.ANCIENT_RUNE.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
             event.getEntries().putAfter(new ItemStack(AetherBlocks.ENCHANTED_GRAVITITE.get()), new ItemStack(AncientAetherItems.VALKYRUM.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherItems.WYND_ARMOR_TRIM_SMITHING_TEMPLATE.get()), new ItemStack(AncientAetherItems.WYND_ARMOR_TRIM_SMITHING_TEMPLATE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherItems.WYND_ARMOR_TRIM_SMITHING_TEMPLATE.get()), new ItemStack(AncientAetherItems.WHALE_ARMOR_TRIM_SMITHING_TEMPLATE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherItems.WHALE_ARMOR_TRIM_SMITHING_TEMPLATE.get()), new ItemStack(AncientAetherItems.ASCENDED_ARMOR_TRIM_SMITHING_TEMPLATE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherItems.ASCENDED_ARMOR_TRIM_SMITHING_TEMPLATE.get()), new ItemStack(AncientAetherItems.MYSTERIOUS_ARMOR_TRIM_SMITHING_TEMPLATE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherItems.MYSTERIOUS_ARMOR_TRIM_SMITHING_TEMPLATE.get()), new ItemStack(AncientAetherItems.MECHANICAL_ARMOR_TRIM_SMITHING_TEMPLATE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherItems.MECHANICAL_ARMOR_TRIM_SMITHING_TEMPLATE.get()), new ItemStack(AncientAetherItems.MOSAIC_ARMOR_TRIM_SMITHING_TEMPLATE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherItems.MOSAIC_ARMOR_TRIM_SMITHING_TEMPLATE.get()), new ItemStack(AncientAetherItems.ROYAL_ARMOR_TRIM_SMITHING_TEMPLATE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherItems.ROYAL_ARMOR_TRIM_SMITHING_TEMPLATE.get()), new ItemStack(AncientAetherItems.SOLAR_ARMOR_TRIM_SMITHING_TEMPLATE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherItems.SOLAR_ARMOR_TRIM_SMITHING_TEMPLATE.get()), new ItemStack(AncientAetherItems.ENERGY_ARMOR_TRIM_SMITHING_TEMPLATE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
 
         if (tab == AetherCreativeTabs.AETHER_FUNCTIONAL_BLOCKS.get()) {
