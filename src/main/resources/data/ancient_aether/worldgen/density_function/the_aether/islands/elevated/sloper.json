@@ -7,5 +7,9 @@
     "to_value": 2.5,
     "to_y": 276
   },
-  "argument2": "ancient_aether:the_aether/sloping_amplifier"
+  "argument2": {
+    "type": "minecraft:add",
+    "argument1": 0.5,
+    "argument2": "ancient_aether:the_aether/sloping_amplifier"
+  }
 }
