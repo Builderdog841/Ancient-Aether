@@ -126,7 +126,7 @@ dependencies {
     implementation fg.deobf("com.aetherteam.nitrogen:nitrogen_internals:${project.nitrogen_version}")
     implementation fg.deobf("com.aetherteam.cumulus:cumulus_menus:${project.cumulus_version}")
     implementation fg.deobf("curse.maven:worldedit-225608:4586218")
-    implementation fg.deobf("curse.maven:aether-lost-content-318602:4772926")
+    implementation fg.deobf("curse.maven:aether-lost-content-318602:4927038")
     implementation fg.deobf("curse.maven:structure-gel-api-378802:4804139")
     //implementation fg.deobf("curse.maven:aether-redux-867237:4860726")
     //implementation fg.deobf("local:deep_aether:1.20.1-1.0.14")
