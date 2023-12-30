@@ -141,6 +141,11 @@
         },
         {
           "type": "minecraft:item",
+          "name": "ancient_aether:mosaic_armor_trim_smithing_template",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
           "name": "aether:hammer_of_kingbdogz"
         },
         {
