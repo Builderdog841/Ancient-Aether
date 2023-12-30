@@ -239,7 +239,15 @@
   "ancient_aether.tooltip.seasonal": "Seasonal",
   "ancient_aether.tooltip.wip": "Use not implemented yet",
 
+  "trim_pattern.ancient_aether.ascended": "Ascended Armor Trim",
+  "trim_pattern.ancient_aether.energy": "Energy Armor Trim",
+  "trim_pattern.ancient_aether.mysterious": "Mysterious Armor Trim",
+  "trim_pattern.ancient_aether.mechanical": "Mechanical Armor Trim",
+  "trim_pattern.ancient_aether.mosaic": "Mosaic Armor Trim",
   "trim_pattern.ancient_aether.royal": "Royal Armor Trim",
+  "trim_pattern.ancient_aether.solar": "Solar Armor Trim",
+  "trim_pattern.ancient_aether.wynd": "Wynd Armor Trim",
+  "trim_pattern.ancient_aether.whale": "Whale Armor Trim",
 
   "trim_material.ancient_aether.valkyrum": "Valkyrum Material",
 

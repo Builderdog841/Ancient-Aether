@@ -1,0 +1,7 @@
+{
+  "asset_id": "ancient_aether:mysterious",
+  "description": {
+    "translate": "trim_pattern.ancient_aether.mysterious"
+  },
+  "template_item": "ancient_aether:mysterious_armor_trim_smithing_template"
+}
