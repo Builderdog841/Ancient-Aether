@@ -1,11 +1,11 @@
 package net.builderdog.ancient_aether.datagen.generators;
 
-import com.aetherteam.aether.Aether;
 import com.aetherteam.aether.AetherTags;
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.data.providers.AetherRecipeProvider;
 import com.aetherteam.aether.entity.AetherEntityTypes;
 import com.aetherteam.aether.item.AetherItems;
+import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.entity.moa.AncientAetherMoaTypes;
@@ -23,7 +23,7 @@ import java.util.function.Consumer;
 
 public class AncientAetherRecipeData extends AetherRecipeProvider {
     public AncientAetherRecipeData(PackOutput output) {
-        super(output, Aether.MODID);
+        super(output, AncientAether.MOD_ID);
     }
 
     @Override
