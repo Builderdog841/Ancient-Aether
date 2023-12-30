@@ -7,6 +7,6 @@
     "tag": "minecraft:trimmable_armor"
   },
   "template": {
-    "item": "ancient_aether:mosaic_armor_trim_smithing_template"
+    "item": "ancient_aether:mysterious_armor_trim_smithing_template"
   }
 }
