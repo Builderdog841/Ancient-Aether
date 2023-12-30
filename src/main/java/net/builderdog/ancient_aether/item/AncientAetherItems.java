@@ -18,6 +18,7 @@ import net.builderdog.ancient_aether.item.equipment.tools.valkyrum.*;
 import net.builderdog.ancient_aether.item.equipment.weapons.AeronauticDartShooterItem;
 import net.builderdog.ancient_aether.item.equipment.weapons.AncientSwordItem;
 import net.builderdog.ancient_aether.item.miscellaneous.AncientAetherBoatItem;
+import net.builderdog.ancient_aether.item.trims.AncientAetherArmorTrims;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
@@ -111,7 +112,7 @@ public class AncientAetherItems {
     public static final RegistryObject<Item> MYSTERIOUS_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("mysterious_armor_trim_smithing_template", () -> SmithingTemplateItem.createArmorTrimTemplate(TrimPatterns.COAST));
     public static final RegistryObject<Item> MECHANICAL_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("mechanical_armor_trim_smithing_template", () -> SmithingTemplateItem.createArmorTrimTemplate(TrimPatterns.COAST));
     public static final RegistryObject<Item> MOSAIC_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("mosaic_armor_trim_smithing_template", () -> SmithingTemplateItem.createArmorTrimTemplate(TrimPatterns.COAST));
-    public static final RegistryObject<Item> ROYAL_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("royal_armor_trim_smithing_template", () -> SmithingTemplateItem.createArmorTrimTemplate(TrimPatterns.COAST));
+    public static final RegistryObject<Item> ROYAL_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("royal_armor_trim_smithing_template", () -> SmithingTemplateItem.createArmorTrimTemplate(AncientAetherArmorTrims.Patterns.ROYAL));
     public static final RegistryObject<Item> SOLAR_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("solar_armor_trim_smithing_template", () -> SmithingTemplateItem.createArmorTrimTemplate(TrimPatterns.COAST));
     public static final RegistryObject<Item> ENERGY_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("energy_armor_trim_smithing_template", () -> SmithingTemplateItem.createArmorTrimTemplate(TrimPatterns.COAST));
 
