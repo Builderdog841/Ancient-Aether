@@ -13,13 +13,17 @@ import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 public class AncientAetherRecipeData extends AetherRecipeProvider {
     public AncientAetherRecipeData(PackOutput output) {
@@ -91,11 +95,61 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AncientAetherItems.ANCIENT_RUNE.get(),2)
                 .define('G', AetherBlocks.ENCHANTED_GRAVITITE.get())
                 .define('R', AncientAetherItems.ANCIENT_RUNE.get())
-                .define('S', AetherBlocks.AEROGEL.get())
+                .define('A', AetherBlocks.AEROGEL.get())
                 .pattern("GRG")
-                .pattern("GSG")
+                .pattern("GAG")
                 .pattern("GGG")
                 .unlockedBy(getHasName(AncientAetherItems.ANCIENT_RUNE.get()), has(AncientAetherItems.ANCIENT_RUNE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AncientAetherItems.WYND_ARMOR_TRIM_SMITHING_TEMPLATE.get(),2)
+                .define('V', AncientAetherItems.VALKYRUM.get())
+                .define('T', AncientAetherItems.WYND_ARMOR_TRIM_SMITHING_TEMPLATE.get())
+                .define('M', AetherBlocks.HOLYSTONE.get())
+                .pattern("VTV")
+                .pattern("VMV")
+                .pattern("VVV")
+                .unlockedBy(getHasName(AncientAetherItems.WYND_ARMOR_TRIM_SMITHING_TEMPLATE.get()), has(AncientAetherItems.WYND_ARMOR_TRIM_SMITHING_TEMPLATE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AncientAetherItems.WHALE_ARMOR_TRIM_SMITHING_TEMPLATE.get(),2)
+                .define('V', AncientAetherItems.VALKYRUM.get())
+                .define('T', AncientAetherItems.WHALE_ARMOR_TRIM_SMITHING_TEMPLATE.get())
+                .define('M', AetherBlocks.HOLYSTONE.get())
+                .pattern("VTV")
+                .pattern("VMV")
+                .pattern("VVV")
+                .unlockedBy(getHasName(AncientAetherItems.WHALE_ARMOR_TRIM_SMITHING_TEMPLATE.get()), has(AncientAetherItems.WHALE_ARMOR_TRIM_SMITHING_TEMPLATE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AncientAetherItems.ASCENDED_ARMOR_TRIM_SMITHING_TEMPLATE.get(),2)
+                .define('V', AncientAetherItems.VALKYRUM.get())
+                .define('T', AncientAetherItems.ASCENDED_ARMOR_TRIM_SMITHING_TEMPLATE.get())
+                .define('M', AetherBlocks.HOLYSTONE.get())
+                .pattern("VTV")
+                .pattern("VMV")
+                .pattern("VVV")
+                .unlockedBy(getHasName(AncientAetherItems.ASCENDED_ARMOR_TRIM_SMITHING_TEMPLATE.get()), has(AncientAetherItems.ASCENDED_ARMOR_TRIM_SMITHING_TEMPLATE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AncientAetherItems.MYSTERIOUS_ARMOR_TRIM_SMITHING_TEMPLATE.get(),2)
+                .define('V', AncientAetherItems.VALKYRUM.get())
+                .define('T', AncientAetherItems.MYSTERIOUS_ARMOR_TRIM_SMITHING_TEMPLATE.get())
+                .define('M', AetherBlocks.MOSSY_HOLYSTONE.get())
+                .pattern("VTV")
+                .pattern("VMV")
+                .pattern("VVV")
+                .unlockedBy(getHasName(AncientAetherItems.MYSTERIOUS_ARMOR_TRIM_SMITHING_TEMPLATE.get()), has(AncientAetherItems.MYSTERIOUS_ARMOR_TRIM_SMITHING_TEMPLATE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AncientAetherItems.MECHANICAL_ARMOR_TRIM_SMITHING_TEMPLATE.get(),2)
+                .define('V', AncientAetherItems.VALKYRUM.get())
+                .define('T', AncientAetherItems.MECHANICAL_ARMOR_TRIM_SMITHING_TEMPLATE.get())
+                .define('M', AetherBlocks.ICESTONE.get())
+                .pattern("VTV")
+                .pattern("VMV")
+                .pattern("VVV")
+                .unlockedBy(getHasName(AncientAetherItems.MECHANICAL_ARMOR_TRIM_SMITHING_TEMPLATE.get()), has(AncientAetherItems.MECHANICAL_ARMOR_TRIM_SMITHING_TEMPLATE.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.ENCHANTING_TABLE)

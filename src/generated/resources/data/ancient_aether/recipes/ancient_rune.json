@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "A": {
+      "item": "aether:aerogel"
+    },
     "G": {
       "item": "aether:enchanted_gravitite"
     },
     "R": {
       "item": "ancient_aether:ancient_rune"
-    },
-    "S": {
-      "item": "aether:aerogel"
     }
   },
   "pattern": [
     "GRG",
-    "GSG",
+    "GAG",
     "GGG"
   ],
   "result": {
