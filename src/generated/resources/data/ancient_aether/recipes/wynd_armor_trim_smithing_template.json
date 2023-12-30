@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "aether:holystone"
+    },
+    "T": {
+      "item": "ancient_aether:wynd_armor_trim_smithing_template"
+    },
+    "V": {
+      "item": "ancient_aether:valkyrum"
+    }
+  },
+  "pattern": [
+    "VTV",
+    "VMV",
+    "VVV"
+  ],
+  "result": {
+    "count": 2,
+    "item": "ancient_aether:wynd_armor_trim_smithing_template"
+  },
+  "show_notification": true
+}
