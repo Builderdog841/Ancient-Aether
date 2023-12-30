@@ -18,7 +18,7 @@ public class AncientAetherConfig {
             ancient_aether_biome_weight = builder
                     .comment("The weighting of Ancient Aether regions in the Aether")
                     .translation("config.ancient_aether.common.worldgen.ancient_aether_region_weight")
-                    .define("Ancient Aether Region Weight", 10);
+                    .define("Ancient Aether Region Weight", 30);
             builder.pop();
 
             builder.push("Worldgen");
