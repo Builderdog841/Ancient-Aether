@@ -41,7 +41,7 @@
         {
           "type": "minecraft:item",
           "name": "ancient_aether:solar_armor_trim_smithing_template",
-          "weight": 3
+          "weight": 4
         },
         {
           "type": "minecraft:item",
