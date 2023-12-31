@@ -7,6 +7,6 @@
     "tag": "minecraft:trimmable_armor"
   },
   "template": {
-    "item": "ancient_aether:ascended_armor_trim_smithing_template"
+    "item": "ancient_aether:whale_armor_trim_smithing_template"
   }
 }
