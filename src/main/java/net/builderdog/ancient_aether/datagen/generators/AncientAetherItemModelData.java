@@ -61,7 +61,7 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         item(AncientAetherItems.MOSAIC_ARMOR_TRIM_SMITHING_TEMPLATE.get(), "");
         item(AncientAetherItems.ROYAL_ARMOR_TRIM_SMITHING_TEMPLATE.get(), "");
         item(AncientAetherItems.SOLAR_ARMOR_TRIM_SMITHING_TEMPLATE.get(), "");
-        item(AncientAetherItems.ENERGY_ARMOR_TRIM_SMITHING_TEMPLATE.get(), "");
+        item(AncientAetherItems.ANCIENT_ARMOR_TRIM_SMITHING_TEMPLATE.get(), "");
 
         //Equipment
         handheldItem(AncientAetherItems.VALKYRUM_SWORD.get(), "");

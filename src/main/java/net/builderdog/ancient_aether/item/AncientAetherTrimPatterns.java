@@ -16,7 +16,7 @@ public class AncientAetherTrimPatterns {
     public static final ResourceKey<TrimPattern> MOSAIC = createKey("mosaic");
     public static final ResourceKey<TrimPattern> ROYAL = createKey("royal");
     public static final ResourceKey<TrimPattern> SOLAR = createKey("solar");
-    public static final ResourceKey<TrimPattern> ENERGY = createKey("energy");
+    public static final ResourceKey<TrimPattern> ANCIENT = createKey("ancient");
 
     private static ResourceKey<TrimPattern> createKey(String name) {
         return ResourceKey.create(Registries.TRIM_PATTERN, new ResourceLocation(AncientAether.MOD_ID, name));

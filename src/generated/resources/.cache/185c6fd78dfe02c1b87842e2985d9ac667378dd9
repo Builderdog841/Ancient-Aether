@@ -1,4 +1,4 @@
-// 1.20.1	2023-12-29T18:40:10.6464518	Item Models: ancient_aether
+// 1.20.1	2023-12-31T15:58:25.7455954	Item Models: ancient_aether
 532bdb7a4f7d2a6b96d474c01c8b9e7a0d1c10b4 assets/ancient_aether/models/item/aerogel_glass.json
 87e9f8f9f807a2aa763e3057d32bacf3ee32b60f assets/ancient_aether/models/item/aerogel_glass_door.json
 d1e6ed3e334d573f31a8ce9e09885c0f43832630 assets/ancient_aether/models/item/aerogel_glass_pane.json
@@ -10,6 +10,7 @@ b494ecf780b3e02dc3e85a7e3662eab15a81affd assets/ancient_aether/models/item/aerog
 234cd36a171c4e833ef008f48cfb8c63456b3a85 assets/ancient_aether/models/item/aeronautic_dart_shooter.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/aeronautic_leaper_spawn_egg.json
 37ccb563fa16dca6b181b58274921d2bfce2efea assets/ancient_aether/models/item/ambrosium_campfire.json
+c52995235bbc1523ea132d2cc156d05c389e4c37 assets/ancient_aether/models/item/ancient_armor_trim_smithing_template.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/ancient_core_spawn_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/ancient_guardian_spawn_egg.json
 e33c85e0901587bf84b2a93e0f74636995731436 assets/ancient_aether/models/item/ancient_pendant.json
@@ -23,7 +24,6 @@ e39f295afb13b5e4ab726c96bd2a1f49a2c81eaf assets/ancient_aether/models/item/ascen
 bea7d4c415a7fb295c760b4b7f2d280f9305772c assets/ancient_aether/models/item/crystal_aercloud.json
 7b52703f3fe9815b27af4aa9bd01e7fe1038e779 assets/ancient_aether/models/item/crystal_skyroot_sapling.json
 4c9768d53d55d0e66343f32df90f999050ab5756 assets/ancient_aether/models/item/divine_skyroot_sapling.json
-92523a553d7ef9d7726c1efa30712177fbd83924 assets/ancient_aether/models/item/energy_armor_trim_smithing_template.json
 adb8bde9f62a21d4a492e030b93e0aa3e6f9f404 assets/ancient_aether/models/item/frosted_highsproot_sapling.json
 847fb5b6aa35f5048e62d3bf76e55f05c6b41f80 assets/ancient_aether/models/item/gale_lantern.json
 76dcbb064b6afcca77cbab1d82750b6e6c30765c assets/ancient_aether/models/item/grapes.json

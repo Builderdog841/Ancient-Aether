@@ -7,6 +7,6 @@
     "tag": "minecraft:trimmable_armor"
   },
   "template": {
-    "item": "ancient_aether:energy_armor_trim_smithing_template"
+    "item": "ancient_aether:ancient_armor_trim_smithing_template"
   }
 }

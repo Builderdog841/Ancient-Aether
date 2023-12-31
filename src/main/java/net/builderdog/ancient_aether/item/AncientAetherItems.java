@@ -112,7 +112,7 @@ public class AncientAetherItems {
     public static final RegistryObject<Item> MOSAIC_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("mosaic_armor_trim_smithing_template", () -> SmithingTemplateItem.createArmorTrimTemplate(AncientAetherTrimPatterns.MOSAIC));
     public static final RegistryObject<Item> ROYAL_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("royal_armor_trim_smithing_template", () -> SmithingTemplateItem.createArmorTrimTemplate(AncientAetherTrimPatterns.ROYAL));
     public static final RegistryObject<Item> SOLAR_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("solar_armor_trim_smithing_template", () -> SmithingTemplateItem.createArmorTrimTemplate(AncientAetherTrimPatterns.SOLAR));
-    public static final RegistryObject<Item> ENERGY_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("energy_armor_trim_smithing_template", () -> SmithingTemplateItem.createArmorTrimTemplate(AncientAetherTrimPatterns.ENERGY));
+    public static final RegistryObject<Item> ANCIENT_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("ancient_armor_trim_smithing_template", () -> SmithingTemplateItem.createArmorTrimTemplate(AncientAetherTrimPatterns.ANCIENT));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
