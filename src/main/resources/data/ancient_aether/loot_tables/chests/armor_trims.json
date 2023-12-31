@@ -6,11 +6,15 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "aether:sentry_boots"
+          "name": "ancient_aether:wynd_armor_trim_smithing_template"
         },
         {
           "type": "minecraft:item",
-          "name": "aether:hammer_of_kingbdogz"
+          "name": "ancient_aether:whale_armor_trim_smithing_template"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:ascended_armor_trim_smithing_template"
         }
       ],
       "rolls": {

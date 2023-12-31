@@ -57,6 +57,11 @@
         {
           "type": "minecraft:item",
           "name": "ancient_aether:hermes_pendant"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "ancient_aether:chests/armor_trims",
+          "weight": 2
         }
       ],
       "rolls": {

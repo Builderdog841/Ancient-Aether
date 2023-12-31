@@ -35,6 +35,11 @@
           "weight": 2
         },
         {
+          "type": "minecraft:loot_table",
+          "name": "ancient_aether:chests/armor_trims",
+          "weight": 2
+        },
+        {
           "type": "minecraft:item",
           "name": "aether:ice_pendant"
         },
@@ -84,8 +89,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "aether:zanite_gemstone",
-          "weight": 1
+          "name": "aether:zanite_gemstone"
         },
         {
           "type": "minecraft:item",
