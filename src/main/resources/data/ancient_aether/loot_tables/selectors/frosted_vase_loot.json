@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "aether:ambrosium",
+          "name": "aether:ambrosium_shard",
           "weight": 20
         },
         {
@@ -16,7 +16,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "aether:zanite",
+          "name": "aether:zanite_gemstone",
           "weight": 15
         },
         {
@@ -31,7 +31,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "aether:cloud_parachute",
+          "name": "aether:cold_parachute",
           "weight": 10
         },
         {
@@ -58,5 +58,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "ancient_aether:selectors/ancient_holystone_vase_loot"
+  "random_sequence": "ancient_aether:selectors/frosted_vase_loot"
 }

@@ -167,7 +167,6 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         //Misc
         dropOther(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get(), AetherItems.AMBROSIUM_SHARD.get());
         dropSelf(AncientAetherBlocks.HOLYSTONE_VASE.get());
-        dropSelf(AncientAetherBlocks.ANCIENT_HOLYSTONE_VASE.get());
 
         //Buffalo Wool
         dropSelf(AncientAetherBlocks.BUFFALO_WOOL.get());
