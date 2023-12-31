@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:selector",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:wynd_armor_trim_smithing_template",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:whale_armor_trim_smithing_template",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:ascended_armor_trim_smithing_template",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:ancient_rune",
+          "weight": 25
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "ancient_aether:selectors/ancient_rune_and_armor_trims"
+}

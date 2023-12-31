@@ -201,8 +201,10 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> VIOLET_AERCLOUD = registerBlock("violet_aercloud", () -> new VioletAercloudBlock(BlockBehaviour.Properties.copy(COLD_AERCLOUD.get()).mapColor(MapColor.COLOR_PURPLE)));
     public static final RegistryObject<Block> CRYSTAL_AERCLOUD = registerBlock("crystal_aercloud", () -> new AercloudBlock(BlockBehaviour.Properties.copy(COLD_AERCLOUD.get()).mapColor(MapColor.DIAMOND)));
     public static final RegistryObject<Block> WIND_BLOWER = registerBlock("wind_blower", () -> new WindBlowerBlock(BlockBehaviour.Properties.copy(COLD_AERCLOUD.get())));
+
+    //Vases
     public static final RegistryObject<Block> HOLYSTONE_VASE = registerBlock("holystone_vase", () -> new VaseBlock(Block.Properties.of().mapColor(MapColor.COLOR_LIGHT_GRAY).instabreak().sound(SoundType.DECORATED_POT).noOcclusion().isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
-    public static final RegistryObject<Block> ANCIENT_HOLYSTONE_VASE = registerBlock("ancient_holystone_vase", () -> new AncientHolystoneVaseBlock(BlockBehaviour.Properties.copy(HOLYSTONE_VASE.get())));
+    public static final RegistryObject<Block> ANCIENT_HOLYSTONE_VASE = registerBlock("ancient_holystone_vase", () -> new AncientHolystoneVaseBlock(BlockBehaviour.Properties.copy(HOLYSTONE_VASE.get()).sound(SoundType.DECORATED_POT_CRACKED)));
 
     public static void registerPots() {
         FlowerPotBlock pot = (FlowerPotBlock) Blocks.FLOWER_POT;

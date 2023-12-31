@@ -12,7 +12,7 @@ public class AncientAetherLootRegistry {
     public static final ResourceLocation ANCIENT_HOLYSTONE_VASE_LOOT = register();
 
     private static ResourceLocation register() {
-        return register(new ResourceLocation(AncientAether.MOD_ID, "selectors/ancient_holystone_vase_loot"));
+        return register(new ResourceLocation(AncientAether.MOD_ID, "selectors/holystone_vase_loot"));
     }
 
     private static ResourceLocation register(ResourceLocation id) {
