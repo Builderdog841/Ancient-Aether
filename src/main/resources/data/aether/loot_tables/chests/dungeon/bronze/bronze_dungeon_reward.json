@@ -142,7 +142,7 @@
         {
           "type": "minecraft:item",
           "name": "ancient_aether:mosaic_armor_trim_smithing_template",
-          "weight": 6
+          "weight": 8
         },
         {
           "type": "minecraft:item",
