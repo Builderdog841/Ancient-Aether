@@ -1,0 +1,77 @@
+{
+  "type": "minecraft:selector",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "aether:iron_ring",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:iron_pendant",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:gold_ring",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:gold_pendant",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_ring",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_pendant",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:ice_ring",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:ice_pendant",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:hermes_ring",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:hermes_pendant",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:music_disc_cat",
+          "weight": 15
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:music_disc_ascending_dawn",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:music_disc_aether_tune",
+          "weight": 5
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "ancient_aether:selectors/bronze_dungeon_accessories"
+}
