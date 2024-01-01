@@ -77,11 +77,6 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         add(AncientAetherBlocks.SAKURA_BOOKSHELF.get(),
                 (bookshelf) -> createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantValue.exactly(3)));
 
-        //Ores
-        dropSelf(AncientAetherBlocks.VALKYRUM_ORE.get());
-        dropSelf(AncientAetherBlocks.VALKYRUM_BLOCK.get());
-        dropDoubleWithFortune(AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), Items.QUARTZ);
-
         //Leaves
         add(AncientAetherBlocks.SKYROOT_PINE_LEAVES.get(),
                 (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.SKYROOT_PINE_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
@@ -104,7 +99,12 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.get());
         dropSelf(AncientAetherBlocks.SAKURA_SAPLING.get());
 
-        //Terrain
+        //Ores
+        dropSelf(AncientAetherBlocks.VALKYRUM_ORE.get());
+        dropSelf(AncientAetherBlocks.VALKYRUM_BLOCK.get());
+        dropDoubleWithFortune(AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), Items.QUARTZ);
+
+        //Natural
         dropSelfDouble(AncientAetherBlocks.GRAVITY_GRAVEL.get());
         dropWhenSilkTouch(AncientAetherBlocks.WYNDCAPS_ICE.get());
 
@@ -112,11 +112,14 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelfDouble(AncientAetherBlocks.VIOLET_AERCLOUD.get());
         dropSelfDouble(AncientAetherBlocks.CRYSTAL_AERCLOUD.get());
 
-        //Aerogel Glass
+        //Construction
+        dropSelf(AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get());
         dropSelf(AncientAetherBlocks.AEROGEL_GLASS.get());
         dropSelf(AncientAetherBlocks.AEROGEL_GLASS_PANE.get());
         dropSelf(AncientAetherBlocks.AEROGEL_GLASS_TRAPDOOR.get());
         add(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get(), createDoorTable(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get()));
+        dropSelf(AncientAetherBlocks.BUFFALO_WOOL.get());
+        dropSelf(AncientAetherBlocks.BUFFALO_CARPET.get());
 
         //Dungeon Blocks
         dropSelf(AncientAetherBlocks.AEROGETIC_STONE.get());
@@ -126,20 +129,20 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.AEROGETIC_STONE_MOSAIC.get());
         dropSelf(AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get());
         dropSelf(AncientAetherBlocks.CORRUPTED_LIGHT_AEROGETIC_STONE.get());
-        dropSelf(AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get());
         dropSelf(AncientAetherBlocks.CARVED_STONE_MOSAIC.get());
         dropSelf(AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get());
         dropSelf(AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get());
         dropSelf(AncientAetherBlocks.GALE_STONE_MOSAIC.get());
         dropSelf(AncientAetherBlocks.ANCIENT_OBELISK.get());
 
-        //Lanterns
+        //Lanterns and Campfires
         dropSelf(AncientAetherBlocks.HOLYSTONE_LANTERN.get());
         dropSelf(AncientAetherBlocks.SENTRY_LANTERN.get());
         dropSelf(AncientAetherBlocks.ANGELIC_LANTERN.get());
         dropSelf(AncientAetherBlocks.HELLFIRE_LANTERN.get());
         dropSelf(AncientAetherBlocks.AEROGETIC_LANTERN.get());
         dropSelf(AncientAetherBlocks.GALE_LANTERN.get());
+        dropOther(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get(), AetherItems.AMBROSIUM_SHARD.get());
 
         //Redstone Blocks
         dropSelf(AncientAetherBlocks.CRACKED_SLIDER.get());
@@ -164,13 +167,14 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropPottedContents(AncientAetherBlocks.POTTED_FROSTED_HIGHSPROOT_SAPLING.get());
         dropPottedContents(AncientAetherBlocks.POTTED_DIVINE_SKYROOT_SAPLING.get());
 
-        //Misc
-        dropOther(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get(), AetherItems.AMBROSIUM_SHARD.get());
+        //Vases
         dropSelf(AncientAetherBlocks.HOLYSTONE_VASE.get());
-
-        //Buffalo Wool
-        dropSelf(AncientAetherBlocks.BUFFALO_WOOL.get());
-        dropSelf(AncientAetherBlocks.BUFFALO_CARPET.get());
+        dropSelf(AncientAetherBlocks.MOSSY_VASE.get());
+        dropSelf(AncientAetherBlocks.FROSTED_VASE.get());
+        dropSelf(AncientAetherBlocks.SENTRY_VASE.get());
+        dropSelf(AncientAetherBlocks.ANGELIC_VASE.get());
+        dropSelf(AncientAetherBlocks.HELLFIRE_VASE.get());
+        dropSelf(AncientAetherBlocks.AERONAUTIC_VASE.get());
     }
 
     public LootTable.Builder droppingCrystalSkyrootLeaves(Block block, Block sapling, float... chances) {

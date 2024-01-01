@@ -2,7 +2,7 @@
   "parent": "ancient_aether:block/template_ancient_obelisk",
   "render_type": "minecraft:translucent",
   "textures": {
-    "1": "ancient_aether:block/unpowered_ancient_obelisk",
-    "particle": "ancient_aether:block/aerotic_stone"
+    "obelisk": "ancient_aether:block/unpowered_ancient_obelisk",
+    "particle": "ancient_aether:block/aerogetic_stone"
   }
 }

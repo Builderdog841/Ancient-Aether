@@ -2,7 +2,7 @@
   "parent": "ancient_aether:block/template_cracked_slider",
   "render_type": "minecraft:cutout_mipped",
   "textures": {
-    "2": "ancient_aether:block/activated_cracked_slider",
+    "slider": "ancient_aether:block/activated_cracked_slider",
     "particle": "aether:block/dungeon/carved_stone"
   }
 }
