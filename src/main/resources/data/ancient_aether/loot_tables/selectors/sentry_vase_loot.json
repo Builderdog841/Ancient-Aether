@@ -41,7 +41,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:saddle",
+          "name": "aether:zanite_pickaxe",
           "weight": 5
         },
         {
