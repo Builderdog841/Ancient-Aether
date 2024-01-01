@@ -2,8 +2,6 @@
   "parent": "ancient_aether:block/template_cracked_slider",
   "render_type": "minecraft:cutout_mipped",
   "textures": {
-    "slider": "ancient_aether:block/activated_cracked_slider",
-    "inside": "aether:block/dungeon/carved_stone",
-    "particle": "aether:block/dungeon/carved_stone"
+    "slider": "ancient_aether:block/activated_cracked_slider"
   }
 }

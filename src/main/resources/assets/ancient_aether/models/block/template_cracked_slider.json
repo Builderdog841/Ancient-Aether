@@ -1,6 +1,9 @@
 {
 	"credit": "Made with Blockbench",
-	"textures": {},
+	"textures": {
+		"inside": "aether:block/dungeon/carved_stone",
+		"particle": "aether:block/dungeon/carved_stone"
+	},
 	"elements": [
 		{
 			"from": [0, 0, 0],
