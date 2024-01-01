@@ -172,6 +172,25 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .unlockedBy(getHasName(AetherItems.AMBROSIUM_SHARD.get()), has(AetherItems.AMBROSIUM_SHARD.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Blocks.STONECUTTER)
+                .group("minecraft:stonecutter")
+                .define('Z', AetherItems.ZANITE_GEMSTONE.get())
+                .define('#', AetherBlocks.HOLYSTONE.get())
+                .pattern(" Z ")
+                .pattern("###")
+                .unlockedBy("has_holystone", has(AetherBlocks.HOLYSTONE.get()))
+                .save(consumer, name("holystone_stonecutter_from_zanite"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Blocks.SMITHING_TABLE, 1)
+                .group("minecraft:smithing_table")
+                .define('Z', AetherItems.ZANITE_GEMSTONE.get())
+                .define('P', AetherTags.Items.PLANKS_CRAFTING)
+                .pattern("ZZ")
+                .pattern("PP")
+                .pattern("PP")
+                .unlockedBy(getHasName(AetherItems.ZANITE_GEMSTONE.get()), has(AetherItems.ZANITE_GEMSTONE.get()))
+                .save(consumer, name("skyroot_smithing_table_from_zanite"));
+
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherItems.HIGHSPROOT_SIGN.get(), 3)
                 .group("wooden_sign")
                 .define('P', AncientAetherBlocks.HIGHSPROOT_PLANKS.get().asItem())
