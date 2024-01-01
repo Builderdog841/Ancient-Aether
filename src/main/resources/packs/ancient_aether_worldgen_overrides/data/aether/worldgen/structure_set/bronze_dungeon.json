@@ -6,8 +6,8 @@
       "other_set": "aether:silver_and_gold_dungeons"
     },
     "salt": 32146754,
-    "separation": 6,
-    "spacing": 10,
+    "separation": 12,
+    "spacing": 20,
     "spread_type": "triangular"
   },
   "structures": [
