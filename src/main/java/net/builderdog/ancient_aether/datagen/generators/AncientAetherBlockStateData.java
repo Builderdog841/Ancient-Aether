@@ -67,6 +67,22 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         hangingSignBlock(AncientAetherBlocks.HIGHSPROOT_HANGING_SIGN.get(), AncientAetherBlocks.HIGHSPROOT_WALL_HANGING_SIGN.get(), texture(name(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get()), ""));
         hangingSignBlock(AncientAetherBlocks.SAKURA_HANGING_SIGN.get(), AncientAetherBlocks.SAKURA_WALL_HANGING_SIGN.get(), texture(name(AncientAetherBlocks.STRIPPED_SAKURA_LOG.get()), ""));
 
+        //Leaves
+        blockWithItem(AncientAetherBlocks.SKYROOT_PINE_LEAVES);
+        blockWithItem(AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES);
+        blockWithItem(AncientAetherBlocks.HIGHSPROOT_LEAVES);
+        blockWithItem(AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES);
+        blockWithItem(AncientAetherBlocks.SAKURA_LEAVES);
+        blockWithItem(AncientAetherBlocks.DIVINE_SKYROOT_LEAVES);
+
+        //Saplings
+        crossBlock(AncientAetherBlocks.DIVINE_SKYROOT_SAPLING);
+        crossBlock(AncientAetherBlocks.SKYROOT_PINE_SAPLING);
+        crossBlock(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING);
+        crossBlock(AncientAetherBlocks.HIGHSPROOT_SAPLING);
+        crossBlock(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING);
+        crossBlock(AncientAetherBlocks.SAKURA_SAPLING);
+
         //Ores
         blockWithItem(AncientAetherBlocks.VALKYRUM_BLOCK);
         blockWithItem(AncientAetherBlocks.VALKYRUM_ORE);
@@ -76,21 +92,25 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         blockWithItem(AncientAetherBlocks.GRAVITY_GRAVEL);
         blockWithItem(AncientAetherBlocks.WYNDCAPS_ICE);
 
-        //Buffalo Wool
-        blockWithItem(AncientAetherBlocks.BUFFALO_WOOL);
-
         //Aerclouds
         translucentBlock(AncientAetherBlocks.VIOLET_AERCLOUD.get(),"");
         translucentBlock(AncientAetherBlocks.CRYSTAL_AERCLOUD.get(),"");
 
-        //Aerogel Glass
+        //Construction
+        logBlock((AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get()));
         translucentBlock(AncientAetherBlocks.AEROGEL_GLASS.get(), "");
         pane(AncientAetherBlocks.AEROGEL_GLASS_PANE.get(), AncientAetherBlocks.AEROGEL_GLASS.get(), "");
         translucentDoorBlock(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get(), texture(name(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get()), "", "_bottom"), texture(name(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get()), "", "_top"));
         translucentTrapdoorBlock(AncientAetherBlocks.AEROGEL_GLASS_TRAPDOOR.get(), texture(name(AncientAetherBlocks.AEROGEL_GLASS_TRAPDOOR.get()), ""), false);
+        blockWithItem(AncientAetherBlocks.BUFFALO_WOOL);
 
-        //Mosaic Blocks
-        logBlock((AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get()));
+        //Dungeon Blocks
+        blockWithItem(AncientAetherBlocks.AEROGETIC_STONE);
+        blockWithItem(AncientAetherBlocks.LIGHT_AEROGETIC_STONE);
+        blockWithItem(AncientAetherBlocks.CORRUPTED_LIGHT_AEROGETIC_STONE);
+        stairs((StairBlock) AncientAetherBlocks.AEROGETIC_STAIRS.get(), AncientAetherBlocks.AEROGETIC_STONE.get(), "");
+        slab((SlabBlock) AncientAetherBlocks.AEROGETIC_SLAB.get(), AncientAetherBlocks.AEROGETIC_STONE.get(), "");
+        wallBlock((WallBlock) AncientAetherBlocks.AEROGETIC_WALL.get(), AncientAetherBlocks.AEROGETIC_STONE.get(), "");
         logBlock((AncientAetherBlocks.CARVED_STONE_MOSAIC.get()));
         logBlock((AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get()));
         logBlock((AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get()));
@@ -103,34 +123,12 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         simpleBlockItem(AncientAetherBlocks.GALE_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:gale_stone_mosaic","minecraft:block/cube_column"));
         simpleBlockItem(AncientAetherBlocks.AEROGETIC_STONE_MOSAIC.get(), models().withExistingParent("ancient_aether:aerogetic_stone_mosaic","minecraft:block/cube_column"));
 
-        //Aerogetic Stone
-        blockWithItem(AncientAetherBlocks.AEROGETIC_STONE);
-        blockWithItem(AncientAetherBlocks.LIGHT_AEROGETIC_STONE);
-        blockWithItem(AncientAetherBlocks.CORRUPTED_LIGHT_AEROGETIC_STONE);
-        stairs((StairBlock) AncientAetherBlocks.AEROGETIC_STAIRS.get(), AncientAetherBlocks.AEROGETIC_STONE.get(), "");
-        slab((SlabBlock) AncientAetherBlocks.AEROGETIC_SLAB.get(), AncientAetherBlocks.AEROGETIC_STONE.get(), "");
-        wallBlock((WallBlock) AncientAetherBlocks.AEROGETIC_WALL.get(), AncientAetherBlocks.AEROGETIC_STONE.get(), "");
-
-        //Leaves
-        blockWithItem(AncientAetherBlocks.SKYROOT_PINE_LEAVES);
-        blockWithItem(AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES);
-        blockWithItem(AncientAetherBlocks.HIGHSPROOT_LEAVES);
-        blockWithItem(AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES);
-        blockWithItem(AncientAetherBlocks.SAKURA_LEAVES);
-        blockWithItem(AncientAetherBlocks.DIVINE_SKYROOT_LEAVES);
-
         //Plants
-        crossBlock(AncientAetherBlocks.SKYROOT_PINE_SAPLING);
-        crossBlock(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING);
-        crossBlock(AncientAetherBlocks.HIGHSPROOT_SAPLING);
-        crossBlock(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING);
-        crossBlock(AncientAetherBlocks.SAKURA_SAPLING);
         crossBlock(AncientAetherBlocks.WYND_THISTLE);
         crossBlock(AncientAetherBlocks.SKY_BLUES);
         crossBlock(AncientAetherBlocks.SAKURA_BLOSSOMS);
         crossBlock(AncientAetherBlocks.HIGHLAND_VIOLA);
         crossBlock(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS);
-        crossBlock(AncientAetherBlocks.DIVINE_SKYROOT_SAPLING);
 
         //Potted Plants
         pottedPlant(AncientAetherBlocks.POTTED_SKYROOT_PINE_SAPLING.get(), AncientAetherBlocks.SKYROOT_PINE_SAPLING.get(), "");

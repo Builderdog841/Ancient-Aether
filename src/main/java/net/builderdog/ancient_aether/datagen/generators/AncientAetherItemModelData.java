@@ -128,6 +128,14 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         itemBlock(AncientAetherBlocks.VIOLET_AERCLOUD.get());
         itemBlock(AncientAetherBlocks.CRYSTAL_AERCLOUD.get());
 
+        itemBlock(AncientAetherBlocks.HOLYSTONE_VASE.get());
+        itemBlock(AncientAetherBlocks.MOSSY_VASE.get());
+        itemBlock(AncientAetherBlocks.FROSTED_VASE.get());
+        itemBlock(AncientAetherBlocks.SENTRY_VASE.get());
+        itemBlock(AncientAetherBlocks.ANGELIC_VASE.get());
+        itemBlock(AncientAetherBlocks.HELLFIRE_VASE.get());
+        itemBlock(AncientAetherBlocks.AERONAUTIC_VASE.get());
+
         itemBlockFlat(AncientAetherBlocks.SKYROOT_PINE_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), "");
