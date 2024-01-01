@@ -289,7 +289,19 @@ public class AncientAetherBlocks {
             B block = Objects.requireNonNull(blockRegistryObject.get());
             if (block == ANCIENT_HOLYSTONE_VASE.get()) {
                 return new BlockItem(block, new Item.Properties().rarity(Rarity.UNCOMMON));
-            } else {
+            } else if (block == ANCIENT_MOSSY_HOLYSTONE_VASE.get()) {
+                return new BlockItem(block, new Item.Properties().rarity(Rarity.UNCOMMON));
+            } else if (block == ANCIENT_FROSTED_HOLYSTONE_VASE.get()) {
+                return new BlockItem(block, new Item.Properties().rarity(Rarity.UNCOMMON));
+            } else if (block == ANCIENT_SENTRY_VASE.get()) {
+                return new BlockItem(block, new Item.Properties().rarity(Rarity.UNCOMMON));
+            } else if (block == ANCIENT_ANGELIC_VASE.get()) {
+                return new BlockItem(block, new Item.Properties().rarity(Rarity.UNCOMMON));
+            } else if (block == ANCIENT_HELLFIRE_VASE.get()) {
+                return new BlockItem(block, new Item.Properties().rarity(Rarity.UNCOMMON));
+            } else if (block == ANCIENT_AEROGETIC_VASE.get()) {
+                return new BlockItem(block, new Item.Properties().rarity(Rarity.UNCOMMON));
+            }else {
                     return new BlockItem(block, new Item.Properties());
                 }
             };
