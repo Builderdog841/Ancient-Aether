@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "minecraft:smithing_table",
+  "key": {
+    "P": {
+      "tag": "aether:planks_crafting"
+    },
+    "Z": {
+      "item": "aether:zanite_gemstone"
+    }
+  },
+  "pattern": [
+    "ZZ",
+    "PP",
+    "PP"
+  ],
+  "result": {
+    "item": "minecraft:smithing_table"
+  },
+  "show_notification": true
+}
