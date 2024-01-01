@@ -75,14 +75,14 @@ public class AncientAetherMissingEntries {
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
                 .filter(mapping -> mapping.getKey().getPath().contains("enchanted_sentry_stone")).forEach(blockMapping -> blockMapping.remap(AetherBlocks.SENTRY_STONE.get()));
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
-                .filter(mapping -> mapping.getKey().getPath().contains("broken_enchanted_obelisk")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.DEACTIVATED_ANCIENT_OBELISK.get()));
+                .filter(mapping -> mapping.getKey().getPath().contains("broken_enchanted_obelisk")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get()));
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
                 .filter(mapping -> mapping.getKey().getPath().contains("enchanted_obelisk")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.ANCIENT_OBELISK.get()));
 
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
                 .filter(mapping -> mapping.getKey().getPath().contains("blighted_sentry_stone")).forEach(blockMapping -> blockMapping.remap(AetherBlocks.SENTRY_STONE.get()));
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
-                .filter(mapping -> mapping.getKey().getPath().contains("broken_blighted_obelisk")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.DEACTIVATED_ANCIENT_OBELISK.get()));
+                .filter(mapping -> mapping.getKey().getPath().contains("broken_blighted_obelisk")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get()));
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
                 .filter(mapping -> mapping.getKey().getPath().contains("blighted_obelisk")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.ANCIENT_OBELISK.get()));
 

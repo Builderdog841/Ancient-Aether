@@ -170,7 +170,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<RotatedPillarBlock> LOCKED_HELLFIRE_STONE_MOSAIC = registerBlock("locked_hellfire_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_HELLFIRE_STONE.get()).noLootTable()));
     public static final RegistryObject<RotatedPillarBlock> LOCKED_GALE_STONE_MOSAIC = registerBlock("locked_gale_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_CARVED_STONE.get()).noLootTable()));
     public static final RegistryObject<RotatedPillarBlock> LOCKED_AEROGETIC_STONE_MOSAIC = registerBlock("locked_aerogetic_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_AEROGETIC_STONE.get()).noLootTable()));
-    public static final RegistryObject<Block> DEACTIVATED_ANCIENT_OBELISK = registerBlock("unpowered_ancient_obelisk", () -> new UnpoweredObeliskBlock(BlockBehaviour.Properties.copy(STONE).sound(SoundType.STONE).lightLevel(s -> 3).noLootTable().strength(-1.0F, 3600000.0F).noOcclusion()));
+    public static final RegistryObject<Block> UNPOWERED_ANCIENT_OBELISK = registerBlock("unpowered_ancient_obelisk", () -> new UnpoweredObeliskBlock(BlockBehaviour.Properties.copy(STONE).sound(SoundType.STONE).lightLevel(s -> 3).noLootTable().strength(-1.0F, 3600000.0F).noOcclusion()));
     public static final RegistryObject<Block> ANCIENT_OBELISK = registerBlock("ancient_obelisk", () -> new Block(BlockBehaviour.Properties.copy(STONE).sound(SoundType.STONE).strength(5f).lightLevel(s -> 12).requiresCorrectToolForDrops().noOcclusion()));
 
     //Plants

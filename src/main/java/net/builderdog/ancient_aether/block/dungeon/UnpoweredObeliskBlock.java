@@ -81,7 +81,7 @@ public class UnpoweredObeliskBlock extends Block {
                         for (int z1 = Mth.floor(z - 1); z1 <= Mth.ceil(z + 1); z1++) {
                             BlockPos checkedPos = new BlockPos(x1, y1, z1);
                             BlockState checkedState = level.getBlockState(checkedPos);
-                            if (checkedState.getBlock() == AncientAetherBlocks.DEACTIVATED_ANCIENT_OBELISK.get()) {
+                            if (checkedState.getBlock() == AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get()) {
                                 level.setBlockAndUpdate(checkedPos, AncientAetherBlocks.ANCIENT_OBELISK.get().defaultBlockState());
                             }
                         }

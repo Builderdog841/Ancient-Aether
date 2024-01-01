@@ -176,8 +176,8 @@ public class AncientAetherCreativeModeTabs {
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.SENTRY_VASE.get()), new ItemStack(AncientAetherBlocks.ANGELIC_VASE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.ANGELIC_VASE.get()), new ItemStack(AncientAetherBlocks.HELLFIRE_VASE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.HELLFIRE_VASE.get()), new ItemStack(AncientAetherBlocks.AEROGETIC_VASE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.DEACTIVATED_ANCIENT_OBELISK.get()), new ItemStack(AncientAetherBlocks.DEACTIVATED_ANCIENT_OBELISK.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.DEACTIVATED_ANCIENT_OBELISK.get()), new ItemStack(AncientAetherBlocks.ANCIENT_OBELISK.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get()), new ItemStack(AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get()), new ItemStack(AncientAetherBlocks.ANCIENT_OBELISK.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
 
         if (tab == AetherCreativeTabs.AETHER_REDSTONE_BLOCKS.get()) {
