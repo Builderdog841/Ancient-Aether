@@ -3,6 +3,6 @@
   "render_type": "minecraft:cutout_mipped",
   "textures": {
     "vase": "ancient_aether:block/aerogetic_vase",
-    "particle": "aether:block/dungeon/aerogetic_stone"
+    "particle": "ancient_aether:block/aerogetic_stone"
   }
 }
