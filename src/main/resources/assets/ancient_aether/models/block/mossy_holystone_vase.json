@@ -2,7 +2,7 @@
   "parent": "ancient_aether:block/template_vase",
   "render_type": "minecraft:cutout_mipped",
   "textures": {
-    "vase": "ancient_aether:block/holystone_vase",
-    "particle": "aether:block/construction/holystone_bricks"
+    "vase": "ancient_aether:block/mossy_holystone_vase",
+    "particle": "aether:block/natural/mossy_holystone"
   }
 }

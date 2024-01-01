@@ -10,12 +10,12 @@ public class AncientAetherLootRegistry {
     private static final Set<ResourceLocation> LOOT_TABLES = new HashSet<>();
 
     public static final ResourceLocation HOLYSTONE_VASE_LOOT = register("selectors/holystone_vase_loot");
-    public static final ResourceLocation MOSSY_VASE_LOOT = register("selectors/mossy_vase_loot");
-    public static final ResourceLocation FROSTED_VASE_LOOT = register("selectors/frosted_vase_loot");
+    public static final ResourceLocation MOSSY_HOLYSTONE_VASE_LOOT = register("selectors/mossy_holystone_vase_loot");
+    public static final ResourceLocation FROSTED_HOLYSTONE_VASE_LOOT = register("selectors/frosted_holystone_vase_loot");
     public static final ResourceLocation SENTRY_VASE_LOOT = register("selectors/sentry_vase_loot");
     public static final ResourceLocation ANGELIC_VASE_LOOT = register("selectors/angelic_vase_loot");
     public static final ResourceLocation HELLFIRE_VASE_LOOT = register("selectors/hellfire_vase_loot");
-    public static final ResourceLocation AERONAUTIC_VASE_LOOT = register("selectors/aeronautic_vase_loot");
+    public static final ResourceLocation AEROGETIC_VASE_LOOT = register("selectors/aerogetic_vase_loot");
 
     private static ResourceLocation register(String id) {
         return register(new ResourceLocation(AncientAether.MOD_ID, id));

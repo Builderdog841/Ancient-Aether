@@ -169,12 +169,12 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
 
         //Vases
         dropSelf(AncientAetherBlocks.HOLYSTONE_VASE.get());
-        dropSelf(AncientAetherBlocks.MOSSY_VASE.get());
-        dropSelf(AncientAetherBlocks.FROSTED_VASE.get());
+        dropSelf(AncientAetherBlocks.MOSSY_HOLYSTONE_VASE.get());
+        dropSelf(AncientAetherBlocks.FROSTED_HOLYSTONE_VASE.get());
         dropSelf(AncientAetherBlocks.SENTRY_VASE.get());
         dropSelf(AncientAetherBlocks.ANGELIC_VASE.get());
         dropSelf(AncientAetherBlocks.HELLFIRE_VASE.get());
-        dropSelf(AncientAetherBlocks.AERONAUTIC_VASE.get());
+        dropSelf(AncientAetherBlocks.AEROGETIC_VASE.get());
     }
 
     public LootTable.Builder droppingCrystalSkyrootLeaves(Block block, Block sapling, float... chances) {

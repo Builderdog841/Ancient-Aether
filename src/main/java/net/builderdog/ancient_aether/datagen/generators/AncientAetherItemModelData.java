@@ -24,6 +24,8 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
 
         //Food
         simpleItem(AncientAetherItems.GRAPES);
+
+        //Accessories
         simpleItem(AncientAetherItems.STRENGTH_STONE);
         simpleItem(AncientAetherItems.ANCIENT_RING);
         simpleItem(AncientAetherItems.ANCIENT_PENDANT);
@@ -36,6 +38,8 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         simpleItem(AncientAetherItems.VALKYRUM_RING);
         simpleItem(AncientAetherItems.VALKYRUM_PENDANT);
         simpleItem(AncientAetherItems.AERONAUTIC_DART_SHOOTER);
+
+        //Materials
         simpleItem(AncientAetherItems.VALKYRUM);
 
         //Boats
@@ -80,7 +84,9 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         bootsItem(AncientAetherItems.VALKYRUM_BOOTS.get(), "");
         glovesItem(AncientAetherItems.VALKYRUM_GLOVES.get(), "");
 
-        //Blocks
+        //|--------------Blocks--------------|
+
+        //Highsproot
         itemBlock(AncientAetherBlocks.HIGHSPROOT_STAIRS.get());
         itemBlock(AncientAetherBlocks.HIGHSPROOT_SLAB.get());
         itemFence(AncientAetherBlocks.HIGHSPROOT_FENCE.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), "");
@@ -89,7 +95,15 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         itemBlock(AncientAetherBlocks.HIGHSPROOT_TRAPDOOR.get(), "_bottom");
         itemButton(AncientAetherBlocks.HIGHSPROOT_BUTTON.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), "");
         itemBlock(AncientAetherBlocks.HIGHSPROOT_PRESSURE_PLATE.get());
+        item(AncientAetherBlocks.HIGHSPROOT_SIGN.get().asItem(), "");
+        item(AncientAetherBlocks.HIGHSPROOT_HANGING_SIGN.get().asItem(), "");
+        itemBlock(AncientAetherBlocks.HIGHSPROOT_BOOKSHELF.get());
+        itemLogWallBlock(AncientAetherBlocks.HIGHSPROOT_LOG_WALL.get(), AncientAetherBlocks.HIGHSPROOT_LOG.get(), "", "ancient_aether");
+        itemLogWallBlock(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG_WALL.get(), AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get(), "", "ancient_aether");
+        itemWoodWallBlock(AncientAetherBlocks.HIGHSPROOT_WOOD_WALL.get(), AncientAetherBlocks.HIGHSPROOT_LOG.get(), "", "ancient_aether");
+        itemWoodWallBlock(AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD_WALL.get(), AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get(), "", "ancient_aether");
 
+        //Sakura
         itemBlock(AncientAetherBlocks.SAKURA_STAIRS.get());
         itemBlock(AncientAetherBlocks.SAKURA_SLAB.get());
         itemFence(AncientAetherBlocks.SAKURA_FENCE.get(), AncientAetherBlocks.SAKURA_PLANKS.get(), "");
@@ -98,73 +112,66 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         itemBlock(AncientAetherBlocks.SAKURA_TRAPDOOR.get(), "_bottom");
         itemButton(AncientAetherBlocks.SAKURA_BUTTON.get(), AncientAetherBlocks.SAKURA_PLANKS.get(), "");
         itemBlock(AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get());
+        item(AncientAetherBlocks.SAKURA_SIGN.get().asItem(), "");
+        item(AncientAetherBlocks.SAKURA_HANGING_SIGN.get().asItem(), "");
+        itemBlock(AncientAetherBlocks.SAKURA_BOOKSHELF.get());
+        itemLogWallBlock(AncientAetherBlocks.SAKURA_LOG_WALL.get(), AncientAetherBlocks.SAKURA_LOG.get(), "", "ancient_aether");
+        itemLogWallBlock(AncientAetherBlocks.STRIPPED_SAKURA_LOG_WALL.get(), AncientAetherBlocks.STRIPPED_SAKURA_LOG.get(), "", "ancient_aether");
+        itemWoodWallBlock(AncientAetherBlocks.SAKURA_WOOD_WALL.get(), AncientAetherBlocks.SAKURA_LOG.get(), "", "ancient_aether");
+        itemWoodWallBlock(AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL.get(), AncientAetherBlocks.STRIPPED_SAKURA_LOG.get(), "", "ancient_aether");
 
+        //Saplings
+        itemBlockFlat(AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.get(), "");
+        itemBlockFlat(AncientAetherBlocks.SKYROOT_PINE_SAPLING.get(), "");
+        itemBlockFlat(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get(), "");
+        itemBlockFlat(AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), "");
+        itemBlockFlat(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get(), "");
+        itemBlockFlat(AncientAetherBlocks.SAKURA_SAPLING.get(), "");
+
+        //Aerclouds
+        itemBlock(AncientAetherBlocks.VIOLET_AERCLOUD.get());
+        itemBlock(AncientAetherBlocks.CRYSTAL_AERCLOUD.get());
+
+        //Construction
+        itemBlock(AncientAetherBlocks.AEROGEL_GLASS.get());
+        pane(AncientAetherBlocks.AEROGEL_GLASS_PANE.get(), AncientAetherBlocks.AEROGEL_GLASS.get(), "");
+        item(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get().asItem(), "");
+        itemBlock(AncientAetherBlocks.AEROGEL_GLASS_TRAPDOOR.get(), "_bottom");
+        itemBlock(AncientAetherBlocks.BUFFALO_CARPET.get());
+
+        //Dungeon Blocks
         itemBlock(AncientAetherBlocks.AEROGETIC_STAIRS.get());
         itemBlock(AncientAetherBlocks.AEROGETIC_SLAB.get());
         itemWallBlock(AncientAetherBlocks.AEROGETIC_WALL.get(), AncientAetherBlocks.AEROGETIC_STONE.get(), "");
 
+        //Plants
+        itemBlockFlat(AncientAetherBlocks.SAKURA_BLOSSOMS.get(), "");
+        itemBlockFlat(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get(), "");
+        itemBlockFlat(AncientAetherBlocks.WYND_THISTLE.get(), "");
+        itemBlockFlat(AncientAetherBlocks.SKY_BLUES.get(), "");
+        itemBlockFlat(AncientAetherBlocks.HIGHLAND_VIOLA.get(), "");
+
+        //Lanterns and Campfires
         item(AncientAetherBlocks.HOLYSTONE_LANTERN.get().asItem(), "");
         item(AncientAetherBlocks.SENTRY_LANTERN.get().asItem(), "");
         item(AncientAetherBlocks.ANGELIC_LANTERN.get().asItem(), "");
         item(AncientAetherBlocks.HELLFIRE_LANTERN.get().asItem(), "");
         item(AncientAetherBlocks.GALE_LANTERN.get().asItem(), "");
         item(AncientAetherBlocks.AEROGETIC_LANTERN.get().asItem(), "");
-
-        item(AncientAetherBlocks.HIGHSPROOT_SIGN.get().asItem(), "");
-        item(AncientAetherBlocks.SAKURA_SIGN.get().asItem(), "");
-        item(AncientAetherBlocks.HIGHSPROOT_HANGING_SIGN.get().asItem(), "");
-        item(AncientAetherBlocks.SAKURA_HANGING_SIGN.get().asItem(), "");
-
-        itemBlock(AncientAetherBlocks.HIGHSPROOT_BOOKSHELF.get());
-        itemBlock(AncientAetherBlocks.SAKURA_BOOKSHELF.get());
-
         item(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get().asItem(), "");
 
-        itemBlock(AncientAetherBlocks.AEROGEL_GLASS.get());
-        pane(AncientAetherBlocks.AEROGEL_GLASS_PANE.get(), AncientAetherBlocks.AEROGEL_GLASS.get(), "");
-        item(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get().asItem(), "");
-        itemBlock(AncientAetherBlocks.AEROGEL_GLASS_TRAPDOOR.get(), "_bottom");
+        //Redstone
+        itemBlock(AncientAetherBlocks.CRACKED_SLIDER.get());
+        itemBlock(AncientAetherBlocks.WIND_BLOWER.get());
 
-        itemBlock(AncientAetherBlocks.VIOLET_AERCLOUD.get());
-        itemBlock(AncientAetherBlocks.CRYSTAL_AERCLOUD.get());
-
+        //Vases
         itemBlock(AncientAetherBlocks.HOLYSTONE_VASE.get());
-        itemBlock(AncientAetherBlocks.MOSSY_VASE.get());
-        itemBlock(AncientAetherBlocks.FROSTED_VASE.get());
+        itemBlock(AncientAetherBlocks.MOSSY_HOLYSTONE_VASE.get());
+        itemBlock(AncientAetherBlocks.FROSTED_HOLYSTONE_VASE.get());
         itemBlock(AncientAetherBlocks.SENTRY_VASE.get());
         itemBlock(AncientAetherBlocks.ANGELIC_VASE.get());
         itemBlock(AncientAetherBlocks.HELLFIRE_VASE.get());
-        itemBlock(AncientAetherBlocks.AERONAUTIC_VASE.get());
-
-        itemBlock(AncientAetherBlocks.ANCIENT_HOLYSTONE_VASE.get());
-        itemBlock(AncientAetherBlocks.ANCIENT_MOSSY_VASE.get());
-        itemBlock(AncientAetherBlocks.ANCIENT_FROSTED_VASE.get());
-        itemBlock(AncientAetherBlocks.ANCIENT_SENTRY_VASE.get());
-        itemBlock(AncientAetherBlocks.ANCIENT_ANGELIC_VASE.get());
-        itemBlock(AncientAetherBlocks.ANCIENT_HELLFIRE_VASE.get());
-        itemBlock(AncientAetherBlocks.ANCIENT_AERONAUTIC_VASE.get());
-
-        itemBlockFlat(AncientAetherBlocks.SKYROOT_PINE_SAPLING.get(), "");
-        itemBlockFlat(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get(), "");
-        itemBlockFlat(AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), "");
-        itemBlockFlat(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get(), "");
-        itemBlockFlat(AncientAetherBlocks.SAKURA_SAPLING.get(), "");
-        itemBlockFlat(AncientAetherBlocks.SAKURA_BLOSSOMS.get(), "");
-        itemBlockFlat(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get(), "");
-        itemBlockFlat(AncientAetherBlocks.WYND_THISTLE.get(), "");
-        itemBlockFlat(AncientAetherBlocks.SKY_BLUES.get(), "");
-        itemBlockFlat(AncientAetherBlocks.HIGHLAND_VIOLA.get(), "");
-        itemBlockFlat(AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.get(), "");
-
-        itemLogWallBlock(AncientAetherBlocks.HIGHSPROOT_LOG_WALL.get(), AncientAetherBlocks.HIGHSPROOT_LOG.get(), "", "ancient_aether");
-        itemLogWallBlock(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG_WALL.get(), AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get(), "", "ancient_aether");
-        itemWoodWallBlock(AncientAetherBlocks.HIGHSPROOT_WOOD_WALL.get(), AncientAetherBlocks.HIGHSPROOT_LOG.get(), "", "ancient_aether");
-        itemWoodWallBlock(AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD_WALL.get(), AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get(), "", "ancient_aether");
-
-        itemLogWallBlock(AncientAetherBlocks.SAKURA_LOG_WALL.get(), AncientAetherBlocks.SAKURA_LOG.get(), "", "ancient_aether");
-        itemLogWallBlock(AncientAetherBlocks.STRIPPED_SAKURA_LOG_WALL.get(), AncientAetherBlocks.STRIPPED_SAKURA_LOG.get(), "", "ancient_aether");
-        itemWoodWallBlock(AncientAetherBlocks.SAKURA_WOOD_WALL.get(), AncientAetherBlocks.SAKURA_LOG.get(), "", "ancient_aether");
-        itemWoodWallBlock(AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL.get(), AncientAetherBlocks.STRIPPED_SAKURA_LOG.get(), "", "ancient_aether");
+        itemBlock(AncientAetherBlocks.AEROGETIC_VASE.get());
     }
 
     public String itemName(Item item) {

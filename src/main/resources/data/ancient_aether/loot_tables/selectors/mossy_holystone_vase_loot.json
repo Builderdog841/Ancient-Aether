@@ -41,7 +41,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "name": "ancient_aether:selectors/ancient_rune_and_mechanical_armor_trim",
+          "name": "ancient_aether:selectors/ancient_rune_and_mysterious_armor_trim",
           "weight": 5
         },
         {
@@ -58,5 +58,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "ancient_aether:selectors/frosted_vase_loot"
+  "random_sequence": "ancient_aether:selectors/mossy_holystone_vase_loot"
 }
