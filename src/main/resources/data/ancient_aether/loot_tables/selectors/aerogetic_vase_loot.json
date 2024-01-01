@@ -36,7 +36,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "name": "ancient_aether:selectors/silver_dungeon_accessories",
+          "name": "ancient_aether:selectors/ancient_dungeon_accessories",
           "weight": 15
         },
         {
