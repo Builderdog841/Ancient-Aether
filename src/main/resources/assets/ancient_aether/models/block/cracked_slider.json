@@ -3,6 +3,7 @@
   "render_type": "minecraft:cutout_mipped",
   "textures": {
     "slider": "ancient_aether:block/cracked_slider",
+    "inside": "aether:block/dungeon/carved_stone",
     "particle": "aether:block/dungeon/carved_stone"
   }
 }
