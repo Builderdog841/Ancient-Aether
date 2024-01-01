@@ -3,7 +3,9 @@ package net.builderdog.ancient_aether.block.dungeon;
 import net.builderdog.ancient_aether.block.utility.VaseBlock;
 import net.builderdog.ancient_aether.datagen.registries.AncientAetherLootRegistry;
 import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -19,18 +21,21 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 import java.util.List;
+import java.util.function.Supplier;
 
-public class AncientHolystoneVaseBlock extends VaseBlock {
+public class AncientVaseBlock extends VaseBlock {
+    private final ResourceLocation vaseLootTable;
 
-    public AncientHolystoneVaseBlock(Properties properties) {
+    public AncientVaseBlock(ResourceLocation vaseLootTable, Properties properties) {
         super(properties);
+        this.vaseLootTable = vaseLootTable;
     }
 
     public void playerDestroy(@NotNull Level level, @NotNull Player player, @NotNull BlockPos pos, @NotNull BlockState state, @Nullable BlockEntity blockEntity, @NotNull ItemStack tool) {
         super.playerDestroy(level, player, pos, state, blockEntity, tool);
             if (level instanceof ServerLevel serverLevel) {
                 LootParams parameters = new LootParams.Builder(serverLevel).withParameter(LootContextParams.BLOCK_STATE, state).withParameter(LootContextParams.TOOL, player.getMainHandItem()).withParameter(LootContextParams.ORIGIN, position()).withParameter(LootContextParams.THIS_ENTITY, player).create(LootContextParamSets.BLOCK);
-                LootTable lootTable = serverLevel.getServer().getLootData().getLootTable(AncientAetherLootRegistry.ANCIENT_HOLYSTONE_VASE_LOOT);
+                LootTable lootTable = serverLevel.getServer().getLootData().getLootTable(this.vaseLootTable);
                 List<ItemStack> list = lootTable.getRandomItems(parameters);
                 for (ItemStack itemstack : list) {
                     spawnAtLocation(itemstack, pos, level);
