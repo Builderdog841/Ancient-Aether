@@ -9,10 +9,12 @@ import java.util.Set;
 public class AncientAetherLootRegistry {
     private static final Set<ResourceLocation> LOOT_TABLES = new HashSet<>();
 
-    public static final ResourceLocation ANCIENT_HOLYSTONE_VASE_LOOT = register();
+    public static final ResourceLocation HOLYSTONE_VASE_LOOT = register("selectors/holystone_vase_loot");
+    public static final ResourceLocation MOSSY_VASE_LOOT = register("selectors/mossy_vase_loot");
+    public static final ResourceLocation FROSTED_VASE_LOOT = register("selectors/frosted_vase_loot");
 
-    private static ResourceLocation register() {
-        return register(new ResourceLocation(AncientAether.MOD_ID, "selectors/holystone_vase_loot"));
+    private static ResourceLocation register(String id) {
+        return register(new ResourceLocation(AncientAether.MOD_ID, id));
     }
 
     private static ResourceLocation register(ResourceLocation id) {
