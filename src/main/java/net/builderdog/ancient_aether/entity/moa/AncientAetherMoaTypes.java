@@ -8,12 +8,10 @@ import net.minecraftforge.registries.*;
 
 public class AncientAetherMoaTypes {
     public static final DeferredRegister<MoaType> MOA_TYPES = DeferredRegister.create(AetherMoaTypes.MOA_TYPE_REGISTRY_KEY, AncientAether.MOD_ID);
+
     public static final RegistryObject<MoaType> SAKURA = MOA_TYPES.register("sakura",
             () -> new MoaType((new MoaType.Properties())
                     .egg(AncientAetherItems.SAKURA_MOA_EGG)
                     .maxJumps(10).speed(0.155F).spawnChance(0)
                     .texture("textures/entity/mob/moa/sakura_moa.png")));
-
-
-
 }

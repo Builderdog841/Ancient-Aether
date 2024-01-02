@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.item;
 
+import com.aetherteam.aether.api.AetherMoaTypes;
 import com.aetherteam.aether.client.AetherSoundEvents;
 import com.aetherteam.aether.item.AetherItems;
 import com.aetherteam.aether.item.accessories.gloves.GlovesItem;
