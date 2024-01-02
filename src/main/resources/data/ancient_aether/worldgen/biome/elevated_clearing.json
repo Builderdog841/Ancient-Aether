@@ -1,5 +1,11 @@
 {
-  "carvers": {},
+  "carvers": {
+    "air": [
+      "ancient_aether:elevated_islands_cave",
+      "ancient_aether:elevated_islands_cave_entrance",
+      "ancient_aether:elevated_islands_canyon"
+    ]
+  },
   "creature_spawn_probability": 0.1,
   "downfall": 0.0,
   "effects": {
@@ -32,8 +38,10 @@
       "aether:aether_dirt_ore",
       "aether:icestone_ore",
       "aether:ambrosium_ore",
-      "aether:zanite_ore",
-      "aether:gravitite_ore"
+      "ancient_aether:elevated_islands_zanite_ore",
+      "ancient_aether:elevated_islands_gravitite_ore",
+      "ancient_aether:elevated_islands_gravitite_ore_buried",
+      "ancient_aether:elevated_islands_valkyrum_ore"
     ],
     [],
     [

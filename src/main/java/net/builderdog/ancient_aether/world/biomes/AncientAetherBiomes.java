@@ -17,7 +17,7 @@ public class AncientAetherBiomes {
     public static final ResourceKey<Biome> ELEVATED_FOREST = createKey("elevated_forest");
     public static final ResourceKey<Biome> ELEVATED_CLEARING = createKey("elevated_clearing");
     public static final ResourceKey<Biome> SKYROOT_GRASSLAND = createKey("skyroot_grassland");
-    public static final ResourceKey<Biome> CRYSTAL_OASIS = createKey("crystal_oasis");
+    public static final ResourceKey<Biome> CRYSTAL_GROTTO = createKey("crystal_grotto");
 
     private static ResourceKey<Biome> createKey(String name) {
         return ResourceKey.create(Registries.BIOME, new ResourceLocation(AncientAether.MOD_ID, name));

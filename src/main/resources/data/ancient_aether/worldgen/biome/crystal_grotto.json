@@ -1,8 +1,6 @@
 {
   "carvers": {
-  "air": [
-    "ancient_aether:crystal_hollows_cave"
-  ]
+  "air": []
 },
   "creature_spawn_probability": 0.01,
   "downfall": 0.0,
