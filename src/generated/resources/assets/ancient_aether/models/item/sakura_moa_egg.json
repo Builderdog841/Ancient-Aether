@@ -1,7 +1,7 @@
 {
-  "parent": "minecraft:item/generated",
+  "parent": "ancient_aether:item/untinted_moa_egg",
   "textures": {
-    "layer0": "ancient_aether:item/moa_egg",
-    "layer1": "ancient_aether:item/moa_egg_spot"
+    "egg": "ancient_aether:item/sakura_moa_egg",
+    "particle": "ancient_aether:item/sakura_moa_egg"
   }
 }
