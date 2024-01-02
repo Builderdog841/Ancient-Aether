@@ -44,8 +44,10 @@
   "item.aether.bronze_dungeon_key": "§fBronze Key",
   "item.aether.silver_dungeon_key": "§fSilver Key",
   "item.aether.gold_dungeon_key": "§fGold Key",
-  "item.aether.music_disc_aether_tune": "§fMusic Disc Aether Tune",
-  "item.aether.music_disc_ascending_dawn": "§fMusic Disc Ascending Dawn",
+  "item.aether.music_disc_aether_tune": "§fBlue Music Disc",
+  "item.aether.music_disc_ascending_dawn": "§fValkyrie Music Disc",
+  "item.aether.music_disc_chinchilla": "§fSepia Music Disc",
+  "item.aether.music_disc_high": "§fSuper Music Disc",
 
   "item.lost_aether_content.music_disc_legacy": "§fDuck Music Disc",
   "item.lost_aether_content.music_disc_sovereign_of_the_skies": "§fRoyal Music Disc",
