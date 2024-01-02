@@ -1,6 +1,5 @@
 package net.builderdog.ancient_aether.item;
 
-import com.aetherteam.aether.api.AetherMoaTypes;
 import com.aetherteam.aether.client.AetherSoundEvents;
 import com.aetherteam.aether.item.AetherItems;
 import com.aetherteam.aether.item.accessories.gloves.GlovesItem;
@@ -96,13 +95,23 @@ public class AncientAetherItems {
     public static final RegistryObject<Item> VALKYRUM_RING = ITEMS.register("valkyrum_ring", () -> new ValkyrumRingItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> VALKYRUM_PENDANT = ITEMS.register("valkyrum_pendant", () -> new ValkyrumPendantItem(new Item.Properties().stacksTo(1)));
 
+    //Moa Eggs
+    public static final RegistryObject<Item> BURGUNDY_MOA_EGG = ITEMS.register("burgundy_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0x965C62, new Item.Properties()));
+    public static final RegistryObject<Item> CORAL_RED_MOA_EGG = ITEMS.register("coral_red_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0xF8B5A3, new Item.Properties()));
+    public static final RegistryObject<Item> SUN_YELLOW_MOA_EGG = ITEMS.register("sun_yellow_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0xFFF5CC, new Item.Properties()));
+    public static final RegistryObject<Item> VERDE_MOA_EGG = ITEMS.register("verde_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0xD2DDB3, new Item.Properties()));
+    public static final RegistryObject<Item> TEAL_MOA_EGG = ITEMS.register("teal_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0x85A3A5, new Item.Properties()));
+    public static final RegistryObject<Item> SKY_BLUE_MOA_EGG = ITEMS.register("sky_blue_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0xABD1DA, new Item.Properties()));
+    public static final RegistryObject<Item> LAVENDER_MOA_EGG = ITEMS.register("lavender_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0xBAAED0, new Item.Properties()));
+    public static final RegistryObject<Item> SAKURA_MOA_EGG = ITEMS.register("sakura_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0xD09FA9, new Item.Properties()));
+    public static final RegistryObject<Item> VIOLET_MOA_EGG = ITEMS.register("violet_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0x6C5A7F, new Item.Properties()));
+
     //Spawn Eggs
     public static final RegistryObject<SpawnEggItem> HIGHLAND_BUFFALO_SPAWN_EGG = ITEMS.register("highland_buffalo_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntities.HIGHLAND_BUFFALO, 0x4B6F89, 0x96C4D3, new Item.Properties()));
     public static final RegistryObject<SpawnEggItem> ROOTHYRN_SPAWN_EGG = ITEMS.register("roothyrn_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntities.ROOTHYRN, 0x737558, 0x6FA871, new Item.Properties()));
     public static final RegistryObject<SpawnEggItem> AERONAUTIC_LEAPER_SPAWN_EGG = ITEMS.register("aeronautic_leaper_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntities.AERONAUTIC_LEAPER, 0x35343D, 0xB7B2FF, new Item.Properties()));
     public static final RegistryObject<SpawnEggItem> ANCIENT_GUARDIAN_SPAWN_EGG = ITEMS.register("ancient_guardian_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntities.ANCIENT_GUARDIAN, 0xB7B2FF, 0x35343D, new Item.Properties()));
     public static final RegistryObject<SpawnEggItem> ANCIENT_CORE_SPAWN_EGG = ITEMS.register("ancient_core_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntities.ANCIENT_CORE, 0xCC6C80, 0x35343D, new Item.Properties()));
-    public static final RegistryObject<Item> SAKURA_MOA_EGG = ITEMS.register("sakura_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0xD09FA9, new Item.Properties()));
 
     //Armor Trims
     public static final RegistryObject<Item> WYND_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("wynd_armor_trim_smithing_template", () -> SmithingTemplateItem.createArmorTrimTemplate(AncientAetherTrimPatterns.WYND));

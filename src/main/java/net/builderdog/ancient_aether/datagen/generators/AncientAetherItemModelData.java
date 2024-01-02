@@ -48,13 +48,23 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         item(AncientAetherItems.SAKURA_BOAT.get(), "");
         item(AncientAetherItems.SAKURA_CHEST_BOAT.get(), "");
 
+        //Moa Eggs
+        untintedMoaEggItem(AncientAetherItems.BURGUNDY_MOA_EGG.get());
+        untintedMoaEggItem(AncientAetherItems.CORAL_RED_MOA_EGG.get());
+        untintedMoaEggItem(AncientAetherItems.SUN_YELLOW_MOA_EGG.get());
+        untintedMoaEggItem(AncientAetherItems.VERDE_MOA_EGG.get());
+        untintedMoaEggItem(AncientAetherItems.TEAL_MOA_EGG.get());
+        untintedMoaEggItem(AncientAetherItems.SKY_BLUE_MOA_EGG.get());
+        untintedMoaEggItem(AncientAetherItems.LAVENDER_MOA_EGG.get());
+        untintedMoaEggItem(AncientAetherItems.SAKURA_MOA_EGG.get());
+        untintedMoaEggItem(AncientAetherItems.VIOLET_MOA_EGG.get());
+
         //Spawn Eggs
         eggItem(AncientAetherItems.HIGHLAND_BUFFALO_SPAWN_EGG.get());
         eggItem(AncientAetherItems.ROOTHYRN_SPAWN_EGG.get());
         eggItem(AncientAetherItems.AERONAUTIC_LEAPER_SPAWN_EGG.get());
         eggItem(AncientAetherItems.ANCIENT_GUARDIAN_SPAWN_EGG.get());
         eggItem(AncientAetherItems.ANCIENT_CORE_SPAWN_EGG.get());
-        untintedMoaEggItem(AncientAetherItems.SAKURA_MOA_EGG.get());
 
         //Armor Trims
         item(AncientAetherItems.WYND_ARMOR_TRIM_SMITHING_TEMPLATE.get(), "");
