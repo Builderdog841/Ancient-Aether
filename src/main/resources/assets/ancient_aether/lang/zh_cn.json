@@ -97,9 +97,7 @@
   "block.ancient_aether.divine_skyroot_sapling": "神圣天根树苗",
   "block.ancient_aether.violet_aercloud": "槿紫境云",
 
-  "item.ancient_aether.gravitite_dart_shooter": "引力之箭射手",
   "item.ancient_aether.grapes": "葡萄",
-  "item.ancient_aether.valkyrie_wine": "女武神之酒",
   "item.ancient_aether.highland_buffalo_spawn_egg": "高地水牛生成蛋",
   "item.ancient_aether.roothyrn_spawn_egg": "树精生成蛋",
   "item.ancient_aether.aeronautic_leaper_spawn_egg": "航空腾跃者生成蛋",
@@ -135,7 +133,6 @@
   "biome.ancient_aether.skyroot_jungle": "天根丛林",
   "biome.ancient_aether.mythical_forest": "神秘森林",
   "biome.ancient_aether.mythical_clearing": "神秘空地",
-  "biome.ancient_aether.crystal_oasis": "水晶洞穴",
 
   "subtitles.ancient_aether.block.obelisk.obelisk_activation": "方尖碑：激活",
   "subtitles.ancient_aether.entity.highland_buffalo.hurt": "高地水牛：受伤",
@@ -250,6 +247,5 @@
   "lore.item.ancient_aether.sakura_boat": "虽然天境没有很多大型水域，但船在穿越冰面上的大距离时偶尔会是一个有用的工具！",
   "lore.item.ancient_aether.highsproot_chest_boat": "在后部带有方便的储物箱的高喷木船。在穿越天境中著名的难以找到的长距离水域时非常有用。",
   "lore.item.ancient_aether.sakura_chest_boat": "在后部带有方便的储物箱的天境樱花木船。在穿越天境中著名的难以找到的长距离水域时非常有用。",
-  "lore.item.ancient_aether.sakura_moa_egg": "一枚非常罕见的恐鸟蛋，只能在古代地牢的箱子中找到。孵化后可以获得一只带有10次空中跳跃的天境樱花恐鸟。",
-  "lore.item.ancient_aether.gravitite_dart_shooter": "击败古代守卫的奖励。这个吹箭筒吹出镖箭可以将生物高高抛起，类似于重力晶工具。您可以使用任何类型的镖箭作为弹药。"
+  "lore.item.ancient_aether.sakura_moa_egg": "一枚非常罕见的恐鸟蛋，只能在古代地牢的箱子中找到。孵化后可以获得一只带有10次空中跳跃的天境樱花恐鸟。"
 }

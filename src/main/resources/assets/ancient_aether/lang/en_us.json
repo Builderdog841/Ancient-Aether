@@ -139,7 +139,6 @@
 
   "item.ancient_aether.aeronautic_dart_shooter": "Aeronautic Dart Shooter",
   "item.ancient_aether.grapes": "Grapes",
-  "item.ancient_aether.valkyrie_wine": "Valkyrie Wine",
   "item.ancient_aether.highland_buffalo_spawn_egg": "Highland Buffalo Spawn Egg",
   "item.ancient_aether.roothyrn_spawn_egg": "Roothyrn Spawn Egg",
   "item.ancient_aether.aeronautic_leaper_spawn_egg": "Aeronautic Leaper Spawn Egg",
@@ -195,7 +194,7 @@
   "biome.ancient_aether.skyroot_jungle": "Skyroot Jungle",
   "biome.ancient_aether.mythical_forest": "Mythical Forest",
   "biome.ancient_aether.mythical_clearing": "Mythical Clearing",
-  "biome.ancient_aether.crystal_oasis": "Crystal Oasis",
+  "biome.ancient_aether.crystal_grotto": "Crystal Grotto",
   "biome.ancient_aether.skyroot_grassland": "Skyroot Grassland",
 
   "subtitles.ancient_aether.block.obelisk.obelisk_activation": "Obelisk activated",
