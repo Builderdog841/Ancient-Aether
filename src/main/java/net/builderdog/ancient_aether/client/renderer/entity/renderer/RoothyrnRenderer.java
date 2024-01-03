@@ -1,6 +1,6 @@
-package net.builderdog.ancient_aether.client.renderer.entity;
+package net.builderdog.ancient_aether.client.renderer.entity.renderer;
 
-import net.builderdog.ancient_aether.client.renderer.entity.layers.AncientAetherModelLayers;
+import net.builderdog.ancient_aether.client.renderer.AncientAetherModelLayers;
 import net.builderdog.ancient_aether.client.renderer.entity.model.RoothyrnModel;
 import net.builderdog.ancient_aether.entity.monster.Roothyrn;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;

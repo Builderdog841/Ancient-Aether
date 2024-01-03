@@ -6,6 +6,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.capability.player.AncientAetherPlayer;
+import net.builderdog.ancient_aether.client.renderer.AncientAetherModelLayers;
 import net.builderdog.ancient_aether.item.equipment.armor.EquipmentUtil;
 import net.minecraft.client.model.PlayerModel;
 import net.minecraft.client.model.geom.EntityModelSet;

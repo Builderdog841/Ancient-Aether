@@ -1,5 +1,7 @@
 package net.builderdog.ancient_aether.entity;
 
+import com.aetherteam.aether.data.resources.AetherMobCategory;
+import com.aetherteam.aether.entity.monster.Swet;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.entity.animals.HighlandBuffalo;
 import net.builderdog.ancient_aether.entity.misc.AeronauticDart;
@@ -27,6 +29,8 @@ public class AncientAetherEntities {
             () -> EntityType.Builder.of(HighlandBuffalo::new, MobCategory.CREATURE).sized(1.5f, 1.75f).clientTrackingRange(10).build(new ResourceLocation(AncientAether.MOD_ID, "highland_buffalo").toString()));
 
     // Monster
+    public static final RegistryObject<EntityType<Swet>> FESTIVE_SWET = ENTITY_TYPES.register("festive_swet",
+            () -> EntityType.Builder.of(Swet::new, AetherMobCategory.AETHER_SURFACE_MONSTER).sized(0.9F, 0.95F).clientTrackingRange(10).build("festive_swet"));
     public static final RegistryObject<EntityType<Roothyrn>> ROOTHYRN = ENTITY_TYPES.register("roothyrn",
             () -> EntityType.Builder.of(Roothyrn::new, MobCategory.MONSTER).sized(0.7f, 0.7f).clientTrackingRange(16).build(new ResourceLocation(AncientAether.MOD_ID, "roothyrn").toString()));
     public static final RegistryObject<EntityType<AeronauticLeaper>> AERONAUTIC_LEAPER = ENTITY_TYPES.register("aeronautic_leaper",

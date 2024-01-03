@@ -7,10 +7,9 @@ import com.aetherteam.aether.client.renderer.entity.model.ValkyrieWingsModel;
 import com.aetherteam.aether.client.renderer.player.layer.DartLayer;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
-import net.builderdog.ancient_aether.client.renderer.entity.*;
-import net.builderdog.ancient_aether.client.renderer.entity.layers.AncientAetherModelLayers;
 import net.builderdog.ancient_aether.client.renderer.entity.layers.ValkyrumWingsLayer;
 import net.builderdog.ancient_aether.client.renderer.entity.model.*;
+import net.builderdog.ancient_aether.client.renderer.entity.renderer.*;
 import net.builderdog.ancient_aether.entity.misc.AeronauticDart;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
@@ -46,6 +45,7 @@ public class AncientAetherEntityRenderers {
         event.registerEntityRenderer(AncientAetherEntities.HIGHLAND_BUFFALO.get(), HighlandBuffaloRenderer::new);
         event.registerEntityRenderer(AncientAetherEntities.ROOTHYRN.get(), RoothyrnRenderer::new);
         event.registerEntityRenderer(AncientAetherEntities.AERONAUTIC_DART.get(), AeronauticDartRenderer::new);
+        event.registerEntityRenderer(AncientAetherEntities.FESTIVE_SWET.get(), FestiveSwetRenderer::new);
     }
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
@@ -58,6 +58,8 @@ public class AncientAetherEntityRenderers {
             event.registerLayerDefinition(AncientAetherModelLayers.ROOTHYRN, RoothyrnModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.AERONAUTIC_LEAPER, AeronauticLeaperModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.VALKYRUM_WINGS, () -> ValkyrieWingsModel.createMainLayer(3.5F, 3.375F));
+            event.registerLayerDefinition(AncientAetherModelLayers.FESTIVE_SWET, FestiveSwetModel::createInnerBodyLayer);
+            event.registerLayerDefinition(AncientAetherModelLayers.FESTIVE_SWET_OUTER, FestiveSwetModel::createOuterBodyLayer);
         }
     }
     @SubscribeEvent

@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.client.renderer.entity.layers;
+package net.builderdog.ancient_aether.client.renderer;
 
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.resources.ResourceLocation;
@@ -10,6 +10,8 @@ public class AncientAetherModelLayers {
     public static final ModelLayerLocation ROOTHYRN = register("roothyrn");
     public static final ModelLayerLocation AERONAUTIC_LEAPER = register("aeronautic_leaper");
     public static final ModelLayerLocation VALKYRUM_WINGS = register("valkyrum_wings");
+    public static final ModelLayerLocation FESTIVE_SWET = register("festive_swet");
+    public static final ModelLayerLocation FESTIVE_SWET_OUTER = register("festive_swet","outer");
 
     public AncientAetherModelLayers() {
     }

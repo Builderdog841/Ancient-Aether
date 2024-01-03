@@ -67,10 +67,6 @@
       "charge": 0.5,
       "energy_budget": 0.11
     },
-    "aether:blue_swet": {
-      "charge": 0.5,
-      "energy_budget": 0.1
-    },
     "aether:cockatrice": {
       "charge": 0.4,
       "energy_budget": 0.2
@@ -79,7 +75,7 @@
       "charge": 0.4,
       "energy_budget": 0.1
     },
-    "aether:golden_swet": {
+    "ancient_aether:festive_swet": {
       "charge": 0.5,
       "energy_budget": 0.1
     },
@@ -125,16 +121,10 @@
         "weight": 7
       },
       {
-        "type": "aether:blue_swet",
+        "type": "ancient_aether:festive_swet",
         "maxCount": 1,
         "minCount": 1,
-        "weight": 6
-      },
-      {
-        "type": "aether:golden_swet",
-        "maxCount": 1,
-        "minCount": 1,
-        "weight": 6
+        "weight": 12
       },
       {
         "type": "aether:whirlwind",

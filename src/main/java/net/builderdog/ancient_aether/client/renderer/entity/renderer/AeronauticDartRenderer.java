@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.client.renderer.entity.model;
+package net.builderdog.ancient_aether.client.renderer.entity.renderer;
 
 import net.builderdog.ancient_aether.entity.misc.AeronauticDart;
 import net.minecraft.client.renderer.entity.ArrowRenderer;

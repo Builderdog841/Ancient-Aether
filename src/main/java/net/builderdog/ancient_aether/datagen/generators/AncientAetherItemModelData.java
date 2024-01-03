@@ -63,6 +63,7 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         eggItem(AncientAetherItems.AERONAUTIC_LEAPER_SPAWN_EGG.get());
         eggItem(AncientAetherItems.ANCIENT_GUARDIAN_SPAWN_EGG.get());
         eggItem(AncientAetherItems.ANCIENT_CORE_SPAWN_EGG.get());
+        eggItem(AncientAetherItems.FESTIVE_SWET_SPAWN_EGG.get());
 
         //Armor Trims
         item(AncientAetherItems.WYND_ARMOR_TRIM_SMITHING_TEMPLATE.get(), "");

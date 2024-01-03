@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.event;
 
+import com.aetherteam.aether.entity.monster.Swet;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.entity.animals.HighlandBuffalo;
@@ -24,10 +25,12 @@ public class AncientAetherEvents {
         event.put(AncientAetherEntities.AERONAUTIC_LEAPER.get(), AeronauticLeaper.createMobAttributes().build());
         event.put(AncientAetherEntities.ANCIENT_GUARDIAN.get(), AncientGuardian.createMobAttributes().build());
         event.put(AncientAetherEntities.ANCIENT_CORE.get(), AncientGuardian.createMobAttributes().build());
+        event.put(AncientAetherEntities.FESTIVE_SWET.get(), Swet.createMobAttributes().build());
     }
 
     @SubscribeEvent
     public static void registerSpawnPlacements(SpawnPlacementRegisterEvent event) {
         event.register(AncientAetherEntities.HIGHLAND_BUFFALO.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, WyndcapsAnimal::checkWyndcapsAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.OR);
+        event.register(AncientAetherEntities.FESTIVE_SWET.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Swet::checkSwetSpawnRules, SpawnPlacementRegisterEvent.Operation.OR);
     }
 }
