@@ -97,9 +97,7 @@ public class AncientAetherItems {
 
     //Moa Eggs
     public static final RegistryObject<Item> BURGUNDY_MOA_EGG = ITEMS.register("burgundy_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0x965C62, new Item.Properties()));
-    public static final RegistryObject<Item> CORAL_RED_MOA_EGG = ITEMS.register("coral_red_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0xF8B5A3, new Item.Properties()));
-    public static final RegistryObject<Item> SUN_YELLOW_MOA_EGG = ITEMS.register("sun_yellow_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0xFFF5CC, new Item.Properties()));
-    public static final RegistryObject<Item> VERDE_MOA_EGG = ITEMS.register("verde_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0xD2DDB3, new Item.Properties()));
+    public static final RegistryObject<Item> TURQUOISE_MOA_EGG = ITEMS.register("turquoise_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0xD2DDB3, new Item.Properties()));
     public static final RegistryObject<Item> TEAL_MOA_EGG = ITEMS.register("teal_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0x85A3A5, new Item.Properties()));
     public static final RegistryObject<Item> SKY_BLUE_MOA_EGG = ITEMS.register("sky_blue_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0xABD1DA, new Item.Properties()));
     public static final RegistryObject<Item> LAVENDER_MOA_EGG = ITEMS.register("lavender_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0xBAAED0, new Item.Properties()));

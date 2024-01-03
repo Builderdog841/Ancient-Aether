@@ -49,15 +49,13 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         item(AncientAetherItems.SAKURA_CHEST_BOAT.get(), "");
 
         //Moa Eggs
-        untintedMoaEggItem(AncientAetherItems.BURGUNDY_MOA_EGG.get());
-        untintedMoaEggItem(AncientAetherItems.CORAL_RED_MOA_EGG.get());
-        untintedMoaEggItem(AncientAetherItems.SUN_YELLOW_MOA_EGG.get());
-        untintedMoaEggItem(AncientAetherItems.VERDE_MOA_EGG.get());
+        untintedMoaEggItem(AncientAetherItems.TURQUOISE_MOA_EGG.get());
         untintedMoaEggItem(AncientAetherItems.TEAL_MOA_EGG.get());
         untintedMoaEggItem(AncientAetherItems.SKY_BLUE_MOA_EGG.get());
         untintedMoaEggItem(AncientAetherItems.LAVENDER_MOA_EGG.get());
         untintedMoaEggItem(AncientAetherItems.SAKURA_MOA_EGG.get());
         untintedMoaEggItem(AncientAetherItems.VIOLET_MOA_EGG.get());
+        untintedMoaEggItem(AncientAetherItems.BURGUNDY_MOA_EGG.get());
 
         //Spawn Eggs
         eggItem(AncientAetherItems.HIGHLAND_BUFFALO_SPAWN_EGG.get());

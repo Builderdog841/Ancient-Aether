@@ -1,0 +1,7 @@
+{
+  "parent": "ancient_aether:item/untinted_moa_egg",
+  "textures": {
+    "egg": "ancient_aether:item/lavender_moa_egg",
+    "particle": "ancient_aether:item/lavender_moa_egg"
+  }
+}
