@@ -18,6 +18,6 @@ public class ItemListener {
     public static void onTooltipAdd(ItemTooltipEvent event) {
         ItemStack itemStack = event.getItemStack();
         List<Component> itemTooltips = event.getToolTip();
-        ItemHooks.addDungeonTooltips(itemTooltips, itemStack);
+        ItemHooks.addTooltips(itemTooltips, itemStack);
     }
 }
