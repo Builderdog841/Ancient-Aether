@@ -73,8 +73,8 @@ public class ItemHooks {
             components.add(position + 1, Component.literal("Fast " + "Speed").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
         }
         if (stack.is(AncientAetherItems.BURGUNDY_MOA_EGG.get())) {
-            components.add(position, Component.literal("12 " + "Mid-Air Jumps").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
-            components.add(position + 1, Component.literal("Very Slow " + "Speed").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+            components.add(position, Component.literal("9 " + "Mid-Air Jumps").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+            components.add(position + 1, Component.literal("Normal " + "Speed").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
         }
         if (stack.is(AncientAetherItems.LAVENDER_MOA_EGG.get())) {
             components.add(position, Component.literal("2 " + "Mid-Air Jumps").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
