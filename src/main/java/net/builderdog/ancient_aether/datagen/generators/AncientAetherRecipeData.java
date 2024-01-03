@@ -13,17 +13,13 @@ import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
-import java.util.function.Supplier;
 
 public class AncientAetherRecipeData extends AetherRecipeProvider {
     public AncientAetherRecipeData(PackOutput output) {
@@ -447,5 +443,6 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         repairingRecipe(RecipeCategory.TOOLS, AncientAetherItems.VALKYRUM_LANCE.get(), 3000).group("altar_sword_repair").save(consumer, name("valkyrum_lance_repairing"));
 
         moaIncubationRecipe(AetherEntityTypes.MOA.get(), AncientAetherMoaTypes.SAKURA, AncientAetherItems.SAKURA_MOA_EGG.get()).save(consumer, name("sakura_moa_incubation"));
+        moaIncubationRecipe(AetherEntityTypes.MOA.get(), AncientAetherMoaTypes.BURGUNDY, AncientAetherItems.BURGUNDY_MOA_EGG.get()).save(consumer, name("burgundy_moa_incubation"));
     }
 }
