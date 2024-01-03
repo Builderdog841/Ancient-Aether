@@ -12,6 +12,12 @@ public class AncientAetherMoaTypes {
     public static final RegistryObject<MoaType> SAKURA = MOA_TYPES.register("sakura",
             () -> new MoaType((new MoaType.Properties())
                     .egg(AncientAetherItems.SAKURA_MOA_EGG)
-                    .maxJumps(10).speed(0.155F).spawnChance(0)
+                    .maxJumps(10).speed(0.14F).spawnChance(10)
                     .texture("textures/entity/mob/moa/sakura_moa.png")));
+
+    public static final RegistryObject<MoaType> BURGUNDY = MOA_TYPES.register("burgundy",
+            () -> new MoaType((new MoaType.Properties())
+                    .egg(AncientAetherItems.BURGUNDY_MOA_EGG)
+                    .maxJumps(7).speed(0.155F).spawnChance(30)
+                    .texture("textures/entity/mob/moa/burgundy_moa.png")));
 }

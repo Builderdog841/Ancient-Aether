@@ -96,7 +96,7 @@ public class AncientAetherItems {
     public static final RegistryObject<Item> VALKYRUM_PENDANT = ITEMS.register("valkyrum_pendant", () -> new ValkyrumPendantItem(new Item.Properties().stacksTo(1)));
 
     //Moa Eggs
-    public static final RegistryObject<Item> BURGUNDY_MOA_EGG = ITEMS.register("burgundy_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0x965C62, new Item.Properties()));
+    public static final RegistryObject<Item> BURGUNDY_MOA_EGG = ITEMS.register("burgundy_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.BURGUNDY, 0x965C62, new Item.Properties()));
     public static final RegistryObject<Item> TURQUOISE_MOA_EGG = ITEMS.register("turquoise_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0xD2DDB3, new Item.Properties()));
     public static final RegistryObject<Item> TEAL_MOA_EGG = ITEMS.register("teal_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0x85A3A5, new Item.Properties()));
     public static final RegistryObject<Item> SKY_BLUE_MOA_EGG = ITEMS.register("sky_blue_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0xABD1DA, new Item.Properties()));
