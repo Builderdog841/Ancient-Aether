@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "ancient_aether:highsproot_leaves",
+    "ancient_aether:frosted_highsproot_leaves",
     "ancient_aether:highsproot_sapling",
     "ancient_aether:ambrosium_campfire",
     "ancient_aether:highsproot_log",
@@ -46,12 +47,23 @@
     "ancient_aether:hellfire_stone_mosaic",
     "ancient_aether:gale_stone_mosaic",
     "ancient_aether:ancient_obelisk",
-    "#ancient_aether:aerotic_blocks",
+    "#ancient_aether:aerogetic_blocks",
     "#ancient_aether:aether_lanterns",
     "#ancient_aether:ancient_aether_log_walls",
     "ancient_aether:highsproot_hanging_sign",
     "ancient_aether:highsproot_wall_hanging_sign",
     "ancient_aether:sakura_hanging_sign",
-    "ancient_aether:sakura_wall_hanging_sign"
+    "ancient_aether:sakura_wall_hanging_sign",
+    "ancient_aether:wyndcaps_ice",
+    "ancient_aether:valkyrum_ore",
+    "ancient_aether:valkyrum_block",
+    "ancient_aether:buffalo_wool",
+    "ancient_aether:buffalo_carpet",
+    "ancient_aether:aerogel_glass",
+    "ancient_aether:aerogel_glass_pane",
+    "ancient_aether:aerogel_glass_door",
+    "ancient_aether:aerogel_glass_trapdoor",
+    "ancient_aether:skyroot_pine_leaves",
+    "ancient_aether:crystal_skyroot_leaves"
   ]
 }
