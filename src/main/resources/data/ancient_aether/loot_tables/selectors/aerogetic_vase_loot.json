@@ -21,13 +21,8 @@
         },
         {
           "type": "minecraft:item",
-          "name": "aether:golden_gummy_swet",
-          "weight": 10
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:blue_gummy_swet",
-          "weight": 10
+          "name": "ancient_aether:festive_gummy_swet",
+          "weight": 20
         },
         {
           "type": "minecraft:item",

@@ -253,6 +253,7 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         makeChestplate(AncientAetherItems.VALKYRUM_CHESTPLATE, AncientAetherItems.VALKYRUM).save(consumer);
         makeLeggings(AncientAetherItems.VALKYRUM_LEGGINGS, AncientAetherItems.VALKYRUM).save(consumer);
         makeBoots(AncientAetherItems.VALKYRUM_BOOTS, AncientAetherItems.VALKYRUM).save(consumer);
+        makeGloves(AncientAetherItems.VALKYRUM_GLOVES, AncientAetherItems.VALKYRUM).save(consumer);
 
         makeRing(AncientAetherItems.VALKYRUM_RING, AncientAetherItems.VALKYRUM.get()).save(consumer);
         makePendant(AncientAetherItems.VALKYRUM_PENDANT, AncientAetherItems.VALKYRUM.get()).save(consumer);
