@@ -1,4 +1,4 @@
-// 1.20.1	2024-01-04T13:34:31.6564754	Item Models: ancient_aether
+// 1.20.1	2024-01-04T13:50:24.7064885	Item Models: ancient_aether
 532bdb7a4f7d2a6b96d474c01c8b9e7a0d1c10b4 assets/ancient_aether/models/item/aerogel_glass.json
 87e9f8f9f807a2aa763e3057d32bacf3ee32b60f assets/ancient_aether/models/item/aerogel_glass_door.json
 d1e6ed3e334d573f31a8ce9e09885c0f43832630 assets/ancient_aether/models/item/aerogel_glass_pane.json
@@ -12,7 +12,6 @@ b494ecf780b3e02dc3e85a7e3662eab15a81affd assets/ancient_aether/models/item/aerog
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/aeronautic_leaper_spawn_egg.json
 37ccb563fa16dca6b181b58274921d2bfce2efea assets/ancient_aether/models/item/ambrosium_campfire.json
 c52995235bbc1523ea132d2cc156d05c389e4c37 assets/ancient_aether/models/item/ancient_armor_trim_smithing_template.json
-63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/ancient_core_spawn_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/ancient_guardian_spawn_egg.json
 e37cf47e8fb3fe02e31753d143532582b333dc0e assets/ancient_aether/models/item/ancient_obelisk.json
 e33c85e0901587bf84b2a93e0f74636995731436 assets/ancient_aether/models/item/ancient_pendant.json

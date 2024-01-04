@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.entity.monster;
+package net.builderdog.ancient_aether.entity.monster.dungeon;
 
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.client.AetherSoundEvents;

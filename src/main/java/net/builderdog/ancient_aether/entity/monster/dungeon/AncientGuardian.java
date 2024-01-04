@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.entity.monster.boss.ancient_guardian;
+package net.builderdog.ancient_aether.entity.monster.dungeon;
 
 import com.aetherteam.aether.Aether;
 import com.aetherteam.aether.entity.AetherBossMob;
@@ -7,7 +7,7 @@ import com.aetherteam.nitrogen.entity.BossRoomTracker;
 import com.aetherteam.aether.entity.ai.goal.ContinuousMeleeAttackGoal;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.datagen.registries.AncientAetherStructureRegistry;
-import net.builderdog.ancient_aether.entity.monster.boss.AncientAetherBossNameGenerator;
+import net.builderdog.ancient_aether.entity.AncientAetherBossNameGenerator;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;

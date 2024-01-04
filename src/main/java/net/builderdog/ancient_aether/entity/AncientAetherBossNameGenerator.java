@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.entity.monster.boss;
+package net.builderdog.ancient_aether.entity;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -9,9 +9,6 @@ public final class AncientAetherBossNameGenerator {
     public static final String[] guardianNameFirst = { "Arkzenus", "Chro", "Ere", "Anu", "Ark", "Nim", "Celci", "Tera" };
     public static final String[] guardianNameLast = { "nos", "bus", "bis", "nor", ""};
 
-    public static final String[] coreNameFirst = { "Aeronor", "Gra", "Pla", "Si", "Go", "Au", "Stra", "Rubi" };
-    public static final String[] coreNameMiddle = { "v", "m", "n", "t", "r", "d"};
-    public static final String[] coreNameLast = { "ium", "ite", "on", "us", "or"};
 
     public static MutableComponent generateAncientGuardian(RandomSource random) {
         String result = "";
@@ -22,17 +19,5 @@ public final class AncientAetherBossNameGenerator {
         }
         result += ", ";
         return Component.literal(result).append(Component.translatable("gui.ancient_aether.ancient_guardian.title"));
-    }
-
-    public static MutableComponent generateAncientCore(RandomSource random) {
-        String result = "";
-        int index = random.nextInt(coreNameFirst.length);
-        result += coreNameFirst[index];
-        if (index != 0) {
-            result += coreNameMiddle[random.nextInt(coreNameMiddle.length)];
-            result += coreNameLast[random.nextInt(coreNameLast.length)];
-        }
-        result += ", ";
-        return Component.literal(result).append(Component.translatable("gui.ancient_aether.ancient_core.title"));
     }
 }

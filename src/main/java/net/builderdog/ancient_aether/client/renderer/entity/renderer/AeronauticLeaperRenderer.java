@@ -3,7 +3,7 @@ package net.builderdog.ancient_aether.client.renderer.entity.renderer;
 
 import net.builderdog.ancient_aether.client.renderer.AncientAetherModelLayers;
 import net.builderdog.ancient_aether.client.renderer.entity.model.AeronauticLeaperModel;
-import net.builderdog.ancient_aether.entity.monster.AeronauticLeaper;
+import net.builderdog.ancient_aether.entity.monster.dungeon.AeronauticLeaper;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;

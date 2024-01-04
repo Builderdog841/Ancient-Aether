@@ -41,7 +41,6 @@ public class AncientAetherEntityRenderers {
         event.registerEntityRenderer(AncientAetherEntities.CHEST_BOAT.get(), context -> new AncientAetherBoatRenderer<>(context, true));
         event.registerEntityRenderer(AncientAetherEntities.AERONAUTIC_LEAPER.get(), AeronauticLeaperRenderer::new);
         event.registerEntityRenderer(AncientAetherEntities.ANCIENT_GUARDIAN.get(), AncientGuardianRenderer::new);
-        event.registerEntityRenderer(AncientAetherEntities.ANCIENT_CORE.get(), AncientCoreRenderer::new);
         event.registerEntityRenderer(AncientAetherEntities.HIGHLAND_BUFFALO.get(), HighlandBuffaloRenderer::new);
         event.registerEntityRenderer(AncientAetherEntities.ROOTHYRN.get(), RoothyrnRenderer::new);
         event.registerEntityRenderer(AncientAetherEntities.AERONAUTIC_DART.get(), AeronauticDartRenderer::new);
@@ -53,7 +52,6 @@ public class AncientAetherEntityRenderers {
             event.registerLayerDefinition(new ModelLayerLocation(new ResourceLocation(AncientAether.MOD_ID, type.getModelLocation()), "main"), BoatModel::createBodyModel);
             event.registerLayerDefinition(new ModelLayerLocation(new ResourceLocation(AncientAether.MOD_ID, type.getChestModelLocation()), "main"), ChestBoatModel::createBodyModel);
             event.registerLayerDefinition(AncientAetherModelLayers.ANCIENT_GUARDIAN, AncientGuardianModel::createBodyLayer);
-            event.registerLayerDefinition(AncientAetherModelLayers.ANCIENT_CORE, AncientCoreModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.HIGHLAND_BUFFALO, HighlandBuffaloModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.ROOTHYRN, RoothyrnModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.AERONAUTIC_LEAPER, AeronauticLeaperModel::createBodyLayer);

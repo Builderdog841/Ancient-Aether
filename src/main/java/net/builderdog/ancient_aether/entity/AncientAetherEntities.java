@@ -5,11 +5,10 @@ import com.aetherteam.aether.entity.monster.Swet;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.entity.animals.HighlandBuffalo;
 import net.builderdog.ancient_aether.entity.misc.AeronauticDart;
-import net.builderdog.ancient_aether.entity.monster.boss.ancient_core.AncientCore;
-import net.builderdog.ancient_aether.entity.monster.boss.ancient_guardian.AncientGuardian;
+import net.builderdog.ancient_aether.entity.monster.dungeon.AncientGuardian;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherChestBoatEntity;
-import net.builderdog.ancient_aether.entity.monster.AeronauticLeaper;
+import net.builderdog.ancient_aether.entity.monster.dungeon.AeronauticLeaper;
 import net.builderdog.ancient_aether.entity.monster.Roothyrn;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -39,8 +38,6 @@ public class AncientAetherEntities {
     // Boss
     public static final RegistryObject<EntityType<AncientGuardian>> ANCIENT_GUARDIAN = ENTITY_TYPES.register("ancient_guardian", ()
             -> EntityType.Builder.of(AncientGuardian::new, MobCategory.MONSTER).sized(2f, 4f).clientTrackingRange(64).build(new ResourceLocation(AncientAether.MOD_ID, "ancient_guardian").toString()));
-    public static final RegistryObject<EntityType<AncientCore>> ANCIENT_CORE = ENTITY_TYPES.register("ancient_core", ()
-            -> EntityType.Builder.of(AncientCore::new, MobCategory.MONSTER).sized(2f, 4f).clientTrackingRange(64).build(new ResourceLocation(AncientAether.MOD_ID, "ancient_core").toString()));
 
     // Misc
     public static final RegistryObject<EntityType<AncientAetherBoatEntity>> BOAT = ENTITY_TYPES.register("boat",

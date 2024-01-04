@@ -114,7 +114,6 @@
 
   "entity.ancient_aether.highland_buffalo": "空島バッファロー",
   "entity.ancient_aether.ancient_guardian": "エンシェントガーディアン",
-  "entity.ancient_aether.ancient_core": "エンシェントコア",
   "entity.ancient_aether.roothyrn": "ルーシリン",
   "entity.ancient_aether.boat": "ボート",
   "entity.ancient_aether.chest_boat": "チェスト付きのボート",
@@ -135,7 +134,6 @@
 
   "gui.ancient_aether.obelisk_sun_spirit": "まだ太陽の精霊を倒していない",
   "gui.ancient_aether.ancient_guardian.title": "エンシェントガーディアン",
-  "gui.ancient_aether.ancient_core.title": "エンシェントコア",
 
   "menu.ancient_aether.ancient_treasure_chest": "古代の宝箱",
   "ancient_aether.ancient_treasure_chest_locked": "この宝箱を開けるには古代の鍵が必要です。",
