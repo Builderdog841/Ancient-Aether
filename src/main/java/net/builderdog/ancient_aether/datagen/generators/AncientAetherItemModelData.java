@@ -24,6 +24,7 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
 
         //Food
         simpleItem(AncientAetherItems.GRAPES);
+        simpleItem(AncientAetherItems.FESTIVE_GUMMY_SWET);
 
         //Accessories
         simpleItem(AncientAetherItems.STRENGTH_STONE);
