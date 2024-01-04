@@ -98,12 +98,12 @@ public class AncientAetherItems {
 
     //Moa Eggs
     public static final RegistryObject<Item> BURGUNDY_MOA_EGG = ITEMS.register("burgundy_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.BURGUNDY, 0x965C62, new Item.Properties()));
-    public static final RegistryObject<Item> TURQUOISE_MOA_EGG = ITEMS.register("turquoise_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0xD2DDB3, new Item.Properties()));
-    public static final RegistryObject<Item> TEAL_MOA_EGG = ITEMS.register("teal_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0x85A3A5, new Item.Properties()));
-    public static final RegistryObject<Item> SKY_BLUE_MOA_EGG = ITEMS.register("sky_blue_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0xABD1DA, new Item.Properties()));
-    public static final RegistryObject<Item> LAVENDER_MOA_EGG = ITEMS.register("lavender_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0xBAAED0, new Item.Properties()));
+    public static final RegistryObject<Item> TURQUOISE_MOA_EGG = ITEMS.register("turquoise_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.TURQUOISE, 0xD2DDB3, new Item.Properties()));
+    public static final RegistryObject<Item> TEAL_MOA_EGG = ITEMS.register("teal_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.TEAL, 0x85A3A5, new Item.Properties()));
+    public static final RegistryObject<Item> SKY_BLUE_MOA_EGG = ITEMS.register("sky_blue_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SKY_BLUE, 0xABD1DA, new Item.Properties()));
+    public static final RegistryObject<Item> LAVENDER_MOA_EGG = ITEMS.register("lavender_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.LAVENDER, 0xBAAED0, new Item.Properties()));
     public static final RegistryObject<Item> SAKURA_MOA_EGG = ITEMS.register("sakura_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0xD09FA9, new Item.Properties()));
-    public static final RegistryObject<Item> VIOLET_MOA_EGG = ITEMS.register("violet_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.SAKURA, 0x6C5A7F, new Item.Properties()));
+    public static final RegistryObject<Item> VIOLET_MOA_EGG = ITEMS.register("violet_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.VIOLET, 0x6C5A7F, new Item.Properties()));
 
     //Spawn Eggs
     public static final RegistryObject<SpawnEggItem> FESTIVE_SWET_SPAWN_EGG = ITEMS.register("festive_swet_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntities.FESTIVE_SWET, 0x29405B, 0xFF6363, new Item.Properties()));
