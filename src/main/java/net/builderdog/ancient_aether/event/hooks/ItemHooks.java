@@ -54,31 +54,31 @@ public class ItemHooks {
             components.add(position + 1, Component.literal("Normal " + "Speed").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
         }
         if (stack.is(AncientAetherItems.SAKURA_MOA_EGG.get())) {
-            components.add(position, Component.literal("10 " + "Mid-Air Jumps").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+            components.add(position, Component.literal("12 " + "Mid-Air Jumps").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
             components.add(position + 1, Component.literal("Slow " + "Speed").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
         }
         if (stack.is(AncientAetherItems.TURQUOISE_MOA_EGG.get())) {
-            components.add(position, Component.literal("6 " + "Mid-Air Jumps").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
-            components.add(position + 1, Component.literal("Normal " + "Speed").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
-        }
-        if (stack.is(AncientAetherItems.SKY_BLUE_MOA_EGG.get())) {
-            components.add(position, Component.literal("3 " + "Mid-Air Jumps").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
-            components.add(position + 1, Component.literal("Fast " + "Speed").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
-        }
-        if (stack.is(AncientAetherItems.TEAL_MOA_EGG.get())) {
-            components.add(position, Component.literal("5 " + "Mid-Air Jumps").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
-            components.add(position + 1, Component.literal("Fast " + "Speed").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
-        }
-        if (stack.is(AncientAetherItems.BURGUNDY_MOA_EGG.get())) {
             components.add(position, Component.literal("7 " + "Mid-Air Jumps").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
             components.add(position + 1, Component.literal("Normal " + "Speed").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
         }
+        if (stack.is(AncientAetherItems.SKY_BLUE_MOA_EGG.get())) {
+            components.add(position, Component.literal("5 " + "Mid-Air Jumps").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+            components.add(position + 1, Component.literal("Fast " + "Speed").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+        }
+        if (stack.is(AncientAetherItems.TEAL_MOA_EGG.get())) {
+            components.add(position, Component.literal("6 " + "Mid-Air Jumps").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+            components.add(position + 1, Component.literal("Fast " + "Speed").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+        }
+        if (stack.is(AncientAetherItems.BURGUNDY_MOA_EGG.get())) {
+            components.add(position, Component.literal("10 " + "Mid-Air Jumps").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+            components.add(position + 1, Component.literal("Normal " + "Speed").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+        }
         if (stack.is(AncientAetherItems.LAVENDER_MOA_EGG.get())) {
-            components.add(position, Component.literal("2 " + "Mid-Air Jumps").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+            components.add(position, Component.literal("3 " + "Mid-Air Jumps").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
             components.add(position + 1, Component.literal("Very Fast " + "Speed").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
         }
         if (stack.is(AncientAetherItems.VIOLET_MOA_EGG.get())) {
-            components.add(position, Component.literal("3 " + "Mid-Air Jumps").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+            components.add(position, Component.literal("4 " + "Mid-Air Jumps").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
             components.add(position + 1, Component.literal("Very Fast " + "Speed").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
         }
     }
