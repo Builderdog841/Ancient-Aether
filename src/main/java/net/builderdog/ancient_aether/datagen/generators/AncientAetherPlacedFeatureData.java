@@ -31,10 +31,10 @@ public class AncientAetherPlacedFeatureData {
 
         //Ore Features
         register(context, AETHER_QUARTZ_ORE, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatureData.AETHER_QUARTZ_ORE),
-                AncientAetherPlacedFeatureProvider.commonOrePlacement(5,
+                AncientAetherPlacedFeatureProvider.commonOrePlacement(4,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(256))));
         register(context, VALKYRUM_ORE, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatureData.VALKYRUM_ORE),
-                AncientAetherPlacedFeatureProvider.commonOrePlacement(12,
+                AncientAetherPlacedFeatureProvider.commonOrePlacement(15,
                         HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(0), VerticalAnchor.aboveBottom(64))));
         register(context, AEROGEL_ORE, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatureData.AEROGEL_BLOBS),
                 AncientAetherPlacedFeatureProvider.commonOrePlacement(4,
