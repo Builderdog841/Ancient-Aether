@@ -395,7 +395,6 @@
   "lore.item.ancient_aether.sakura_boat": "While the Aether does not have many large bodies of water, a boat can occasionally be a useful tool for crossing large distances over ice!",
   "lore.item.ancient_aether.highsproot_chest_boat": "A Highsproot Boat with a handy chest in the back. Helpful for transporting more items over long stretches of water, which are famously difficult to find in the Aether.",
   "lore.item.ancient_aether.sakura_chest_boat": "A Sakura Boat with a handy chest in the back. Helpful for transporting more items over long stretches of water, which are famously difficult to find in the Aether.",
-  "lore.item.ancient_aether.sakura_moa_egg": "A very rare Moa Egg that can only be found in Ancient Dungeon Chests. Hatching this provides a Sakura Moa with 10 mid-air jumps.",
   "lore.item.ancient_aether.aeronautic_dart_shooter": "A reward from defeating the Ancient Guardian. This Dart Shooter launches Mobs high up in the air similar to Gravitite Equipment. You can use any type of Dart as Ammunition.",
   "lore.item.ancient_aether.valkyrum": "A shiny metal that is used to forge the finest pieces of weaponry. It can also be used a noble trimming material",
   "lore.item.ancient_aether.valkyrum_hoe": "A noble tool forged from Valkyrum. This Hoe has an incredibly far reach, allowing you to pointlessly till dirt from a safe distance.",
@@ -416,5 +415,12 @@
   "lore.item.ancient_aether.mosaic_armor_trim_smithing_template": "A stylish upgrade for your armor, gained by defeating the Slider.",
   "lore.item.ancient_aether.royal_armor_trim_smithing_template": "A stylish upgrade for your armor, gained by defeating the Valkyrie Queen.",
   "lore.item.ancient_aether.hellfire_armor_trim_smithing_template": "A stylish upgrade for your armor, gained by defeating the Sun Spirit.",
-  "lore.item.ancient_aether.aerogetic_armor_trim_smithing_template": "A stylish upgrade for your armor, gained by defeating the Ancient Guardian and rarely found in Aerogetic Vases."
+  "lore.item.ancient_aether.aerogetic_armor_trim_smithing_template": "A stylish upgrade for your armor, gained by defeating the Ancient Guardian and rarely found in Aerogetic Vases.",
+  "lore.item.ancient_aether.turquoise_moa_egg": "An egg laid by a Turquoise Moa. Hatching this provides a Turquoise Moa with 7 mid-air jumps.",
+  "lore.item.ancient_aether.teal_moa_egg": "An egg laid by a Teal Moa. Hatching this provides a Teal Moa with 6 mid-air jumps and a faster flying speed.",
+  "lore.item.ancient_aether.sky_blue_moa_egg": "An egg laid by a Sky Blue Moa. Hatching this provides a Sky Blue Moa with 5 mid-air jumps and a faster flying speed.",
+  "lore.item.ancient_aether.lavender_moa_egg": "An egg laid by a Lavender Moa. Hatching this provides a Lavender Moa with 3 mid-air jumps. These moas have been given a very fast a flying speed as a compensation.",
+  "lore.item.ancient_aether.sakura_moa_egg": "An egg laid by a Sakura Moa. Hatching this provides a Sakura Moa with 12 mid-air jumps. Because of their high amount mid-air jumps, their flying speed isn't that great",
+  "lore.item.ancient_aether.violet_moa_egg": "An egg laid by a Violet Moa. Hatching this provides a Violet Moa with 4 mid-air jumps. These moas have been given a very fast a flying speed as a compensation.",
+  "lore.item.ancient_aether.burgundy_moa_egg": "An egg laid by a Burgundy Moa. Hatching this provides a Burgundy Moa with 10 mid-air jumps."
 }
