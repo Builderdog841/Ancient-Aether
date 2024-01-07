@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_highsproot_sapling": {
+    "has_frosted_highsproot_leaves": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ancient_aether:highsproot_sapling"
+              "ancient_aether:frosted_highsproot_leaves"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ancient_aether:frosted_highsproot_sapling"
+        "recipe": "aether:holiday_leaves"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_highsproot_sapling",
+      "has_frosted_highsproot_leaves",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "ancient_aether:frosted_highsproot_sapling"
+      "aether:holiday_leaves"
     ]
   },
   "sends_telemetry_event": true
