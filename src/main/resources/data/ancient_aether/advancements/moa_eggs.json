@@ -1,0 +1,83 @@
+{
+  "parent": "aether:obtain_egg",
+  "criteria": {
+    "moa_eggs": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "aether:white_moa_egg"
+            ]
+          },
+          {
+            "items": [
+              "ancient_aether:turquoise_moa_egg"
+            ]
+          },
+          {
+            "items": [
+              "ancient_aether:teal_moa_egg"
+            ]
+          },
+          {
+            "items": [
+              "ancient_aether:sky_blue_moa_egg"
+            ]
+          },
+          {
+            "items": [
+              "aether:blue_moa_egg"
+            ]
+          },
+          {
+            "items": [
+              "ancient_aether:lavender_moa_egg"
+            ]
+          },
+          {
+            "items": [
+              "ancient_aether:sakura_moa_egg"
+            ]
+          },
+          {
+            "items": [
+              "ancient_aether:violet_moa_egg"
+            ]
+          },
+          {
+            "items": [
+              "ancient_aether:burgundy_moa_egg"
+            ]
+          },
+          {
+            "items": [
+              "aether:black_moa_egg"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.ancient_aether.moa_eggs.desc"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "ancient_aether:burgundy_moa_egg"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.ancient_aether.moa_eggs"
+    }
+  },
+  "requirements": [
+    [
+      "moa_eggs"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -443,7 +443,12 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         repairingRecipe(RecipeCategory.TOOLS, AncientAetherItems.VALKYRUM_SWORD.get(), 3000).group("altar_sword_repair").save(consumer, name("valkyrum_sword_repairing"));
         repairingRecipe(RecipeCategory.TOOLS, AncientAetherItems.VALKYRUM_LANCE.get(), 3000).group("altar_sword_repair").save(consumer, name("valkyrum_lance_repairing"));
 
+        moaIncubationRecipe(AetherEntityTypes.MOA.get(), AncientAetherMoaTypes.TURQUOISE, AncientAetherItems.TURQUOISE_MOA_EGG.get()).save(consumer, name("turquoise_moa_incubation"));
+        moaIncubationRecipe(AetherEntityTypes.MOA.get(), AncientAetherMoaTypes.TEAL, AncientAetherItems.TEAL_MOA_EGG.get()).save(consumer, name("teal_moa_incubation"));
+        moaIncubationRecipe(AetherEntityTypes.MOA.get(), AncientAetherMoaTypes.SKY_BLUE, AncientAetherItems.SKY_BLUE_MOA_EGG.get()).save(consumer, name("sky_blue_moa_incubation"));
+        moaIncubationRecipe(AetherEntityTypes.MOA.get(), AncientAetherMoaTypes.LAVENDER, AncientAetherItems.LAVENDER_MOA_EGG.get()).save(consumer, name("lavender_moa_incubation"));
         moaIncubationRecipe(AetherEntityTypes.MOA.get(), AncientAetherMoaTypes.SAKURA, AncientAetherItems.SAKURA_MOA_EGG.get()).save(consumer, name("sakura_moa_incubation"));
         moaIncubationRecipe(AetherEntityTypes.MOA.get(), AncientAetherMoaTypes.BURGUNDY, AncientAetherItems.BURGUNDY_MOA_EGG.get()).save(consumer, name("burgundy_moa_incubation"));
+        moaIncubationRecipe(AetherEntityTypes.MOA.get(), AncientAetherMoaTypes.VIOLET, AncientAetherItems.VIOLET_MOA_EGG.get()).save(consumer, name("violet_moa_incubation"));
     }
 }
