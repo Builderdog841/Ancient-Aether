@@ -49,7 +49,7 @@
                 "min_inclusive": 0.5,
                 "max_exclusive": 1.5,
                 "when_in_range": "ancient_aether:the_aether/islands/sakura/underground",
-                "when_out_of_range": "ancient_aether:the_aether/islands/highlands/islands"
+                "when_out_of_range": "ancient_aether:the_aether/islands/highlands/underground"
               }
             }
           }
