@@ -122,6 +122,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.BUFFALO_CARPET.get());
 
         //Dungeon Blocks
+        dropSelf(AncientAetherBlocks.CARVED_TILES.get());
         dropSelf(AncientAetherBlocks.AEROGETIC_STONE.get());
         dropSelf(AncientAetherBlocks.AEROGETIC_STAIRS.get());
         add(AncientAetherBlocks.AEROGETIC_SLAB.get(), this::createSlabItemTable);

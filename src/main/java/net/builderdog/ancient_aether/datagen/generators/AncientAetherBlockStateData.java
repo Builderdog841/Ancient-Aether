@@ -105,6 +105,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         blockWithItem(AncientAetherBlocks.BUFFALO_WOOL);
 
         //Dungeon Blocks
+        blockWithItem(AncientAetherBlocks.CARVED_TILES);
         blockWithItem(AncientAetherBlocks.AEROGETIC_STONE);
         blockWithItem(AncientAetherBlocks.LIGHT_AEROGETIC_STONE);
         blockWithItem(AncientAetherBlocks.CORRUPTED_LIGHT_AEROGETIC_STONE);
