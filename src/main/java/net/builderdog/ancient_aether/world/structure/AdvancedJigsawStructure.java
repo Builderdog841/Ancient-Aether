@@ -17,31 +17,34 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Optional;
 
-public class AncientStructure extends Structure {
+public class AdvancedJigsawStructure extends Structure {
 
-    public static final Codec<AncientStructure> CODEC = RecordCodecBuilder.<AncientStructure>mapCodec(instance ->
-            instance.group(AncientStructure.settingsCodec(instance),
+    public static final Codec<AdvancedJigsawStructure> CODEC = RecordCodecBuilder.<AdvancedJigsawStructure>mapCodec(instance ->
+            instance.group(AdvancedJigsawStructure.settingsCodec(instance),
                     StructureTemplatePool.CODEC.fieldOf("start_pool").forGetter(structure -> structure.startPool),
                     ResourceLocation.CODEC.optionalFieldOf("start_jigsaw_name").forGetter(structure -> structure.startJigsawName),
                     Codec.intRange(0, 30).fieldOf("size").forGetter(structure -> structure.size),
                     HeightProvider.CODEC.fieldOf("start_height").forGetter(structure -> structure.startHeight),
                     Heightmap.Types.CODEC.optionalFieldOf("project_start_to_heightmap").forGetter(structure -> structure.projectStartToHeightmap),
-                    Codec.intRange(1, 128).fieldOf("max_distance_from_center").forGetter(structure -> structure.maxDistanceFromCenter)
-            ).apply(instance, AncientStructure::new)).codec();
+                    Codec.intRange(1, 128).fieldOf("max_distance_from_center").forGetter(structure -> structure.maxDistanceFromCenter),
+                    Codec.intRange(-4096, 4096).fieldOf("min_spawn_height").forGetter(structure -> structure.minSpawnHeight)
+            ).apply(instance, AdvancedJigsawStructure::new)).codec();
     private final Holder<StructureTemplatePool> startPool;
     private final Optional<ResourceLocation> startJigsawName;
     private final int size;
     private final HeightProvider startHeight;
     private final Optional<Heightmap.Types> projectStartToHeightmap;
     private final int maxDistanceFromCenter;
+    private final int minSpawnHeight;
 
-    public AncientStructure(StructureSettings config,
-                            Holder<StructureTemplatePool> startPool,
-                            Optional<ResourceLocation> startJigsawName,
-                            int size,
-                            HeightProvider startHeight,
-                            Optional<Heightmap.Types> projectStartToHeightmap,
-                            int maxDistanceFromCenter)
+    public AdvancedJigsawStructure(StructureSettings config,
+                                   Holder<StructureTemplatePool> startPool,
+                                   Optional<ResourceLocation> startJigsawName,
+                                   int size,
+                                   HeightProvider startHeight,
+                                   Optional<Heightmap.Types> projectStartToHeightmap,
+                                   int maxDistanceFromCenter,
+                                   int minSpawnHeight)
     {
         super(config);
         this.startPool = startPool;
@@ -50,40 +53,41 @@ public class AncientStructure extends Structure {
         this.startHeight = startHeight;
         this.projectStartToHeightmap = projectStartToHeightmap;
         this.maxDistanceFromCenter = maxDistanceFromCenter;
+        this.minSpawnHeight = minSpawnHeight;
     }
-    private static boolean extraSpawningChecks(GenerationContext context) {
+    private boolean extraSpawningChecks(GenerationContext context) {
         ChunkPos chunkpos = context.chunkPos();
         return context.chunkGenerator().getFirstOccupiedHeight(
                 chunkpos.getMiddleBlockX(),
                 chunkpos.getMiddleBlockZ(),
                 Heightmap.Types.WORLD_SURFACE_WG,
                 context.heightAccessor(),
-                context.randomState()) > 120;
+                context.randomState()) > minSpawnHeight;
     }
 
     @Override
     public @NotNull Optional<GenerationStub> findGenerationPoint(@NotNull GenerationContext context) {
-        if (!AncientStructure.extraSpawningChecks(context)) {
+        if (!extraSpawningChecks(context)) {
             return Optional.empty();
         }
-        int startY = this.startHeight.sample(context.random(), new WorldGenerationContext(context.chunkGenerator(), context.heightAccessor()));
+        int startY = startHeight.sample(context.random(), new WorldGenerationContext(context.chunkGenerator(), context.heightAccessor()));
 
         ChunkPos chunkPos = context.chunkPos();
         BlockPos blockPos = new BlockPos(chunkPos.getMiddleBlockX(), startY, chunkPos.getMiddleBlockZ());
 
         return JigsawPlacement.addPieces(
                 context,
-                this.startPool,
-                this.startJigsawName,
-                this.size,
+                startPool,
+                startJigsawName,
+                size,
                 blockPos,
                 false,
-                this.projectStartToHeightmap,
-                this.maxDistanceFromCenter);
+                projectStartToHeightmap,
+                maxDistanceFromCenter);
     }
 
     @Override
     public @NotNull StructureType<?> type() {
-        return AncientAetherStructureTypes.ANCIENT_STRUCTURE.get();
+        return AncientAetherStructureTypes.ADVANCED_JIGSAW_STRUCTURE.get();
     }
 }
