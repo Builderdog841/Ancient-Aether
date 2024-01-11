@@ -1,4 +1,4 @@
-// 1.20.1	2024-01-08T21:38:32.8715924	Loot Tables
+// 1.20.1	2024-01-11T20:58:51.7803337	Loot Tables
 095a70e341d19e7b3548ddc32402abe48a79992a data/ancient_aether/loot_tables/blocks/aerogel_glass.json
 9fe2ea21af5246ad9f95848f680099717062eb1c data/ancient_aether/loot_tables/blocks/aerogel_glass_door.json
 0f84d5b4591633acc6c8dcc82b7c14988b545a9f data/ancient_aether/loot_tables/blocks/aerogel_glass_pane.json
@@ -98,6 +98,7 @@ d34c8b8dbf32fef1208a43bc22a02b026956c437 data/ancient_aether/loot_tables/blocks/
 7c5da3bd0a4e2162fb84e97f7a3a1abe0ccefb84 data/ancient_aether/loot_tables/blocks/skyroot_pine_leaves.json
 7dc9917632da38337d8db64da82744521c0b4d52 data/ancient_aether/loot_tables/blocks/skyroot_pine_sapling.json
 87b4ae9ba0d67451f8bd4c83688b8a909cc6ecfd data/ancient_aether/loot_tables/blocks/sky_blues.json
+16f7061bcd1a71ab20ab4fdfb24d4eeaa3252509 data/ancient_aether/loot_tables/blocks/sky_grass.json
 e546ace1c68699bb85e0cfe7aca1b4a7e6b220c4 data/ancient_aether/loot_tables/blocks/stripped_highsproot_log.json
 6c014b6b3eb7e8ae2d7db4f46f0220be19147b71 data/ancient_aether/loot_tables/blocks/stripped_highsproot_log_wall.json
 49d8c4f01cd5525d7ee0b82c45748ebf29945ac9 data/ancient_aether/loot_tables/blocks/stripped_highsproot_wood.json

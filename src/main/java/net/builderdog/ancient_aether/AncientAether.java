@@ -185,7 +185,7 @@ public class AncientAether {
                     PackType.SERVER_DATA,
                     Pack.Position.TOP,
                     false,
-                    create(decorateWithSource("built-in"), AncientAetherConfig.COMMON.compat_packs.get()))));
+                    create(decorateWithSource("built-in"), false))));
         }
     }
 
