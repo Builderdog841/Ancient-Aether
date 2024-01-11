@@ -150,6 +150,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.WIND_BLOWER.get());
 
         //Plants
+        dropNone(AncientAetherBlocks.SKY_GRASS.get());
         dropSelf(AncientAetherBlocks.SKY_BLUES.get());
         dropSelf(AncientAetherBlocks.WYND_THISTLE.get());
         dropSelf(AncientAetherBlocks.HIGHLAND_VIOLA.get());

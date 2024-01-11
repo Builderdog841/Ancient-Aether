@@ -13,6 +13,7 @@ import com.aetherteam.aether.mixin.mixins.common.accessor.FireBlockAccessor;
 import net.builderdog.ancient_aether.block.construction.*;
 import net.builderdog.ancient_aether.block.dungeon.AncientVaseBlock;
 import net.builderdog.ancient_aether.block.dungeon.UnpoweredObeliskBlock;
+import net.builderdog.ancient_aether.block.natural.SkyGrassBlock;
 import net.builderdog.ancient_aether.block.natural.TrappedFlowerBlock;
 import net.builderdog.ancient_aether.block.natural.ValkyrumBlock;
 import net.builderdog.ancient_aether.block.natural.VioletAercloudBlock;
@@ -175,6 +176,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> CARVED_TILES = registerBlock("carved_tiles", () -> new Block(Block.Properties.copy(CARVED_STONE.get())));
 
     //Plants
+    public static final RegistryObject<Block> SKY_GRASS = registerBlock("sky_grass", () -> new SkyGrassBlock(Block.Properties.copy(GRASS)));
     public static final RegistryObject<Block> HIGHLAND_VIOLA = registerBlock("highland_viola", () -> new FlowerBlock(() -> MobEffects.REGENERATION, 4, Block.Properties.copy(WHITE_FLOWER.get())));
     public static final RegistryObject<Block> SKY_BLUES = registerBlock("sky_blues", () -> new FlowerBlock(() -> MobEffects.POISON, 4, Block.Properties.copy(WHITE_FLOWER.get())));
     public static final RegistryObject<Block> WYND_THISTLE = registerBlock("wynd_thistle", () -> new FlowerBlock(() -> MobEffects.HARM, 4, Block.Properties.copy(WHITE_FLOWER.get())));

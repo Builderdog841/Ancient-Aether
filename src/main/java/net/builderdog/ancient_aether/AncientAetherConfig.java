@@ -11,7 +11,7 @@ public class AncientAetherConfig {
 
         public final ConfigValue<Integer> ancient_aether_biome_weight;
         public final ConfigValue<Boolean> worldgen_overrides;
-        public final ConfigValue<Boolean> compat_packs;
+
         public Common(ForgeConfigSpec.Builder builder) {
 
             builder.push("Worldgen");
@@ -27,15 +27,8 @@ public class AncientAetherConfig {
                     .translation("config.ancient_aether.common.worldgen.new_worldgen_datapack")
                     .define("Enables New Worldgen by default", true);
             builder.pop();
-
-            builder.push("Compatibility");
-            compat_packs = builder
-                    .comment("Automatically activates Compatibility Datapacks")
-                    .translation("config.ancient_aether.common.compatibility.compat_packs")
-                    .define("Automatically activates Compatibility Datapacks", true);
-            builder.pop();
         }
-}
+    }
 
     public static final ForgeConfigSpec COMMON_SPEC;
     public static final Common COMMON;
