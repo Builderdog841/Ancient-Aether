@@ -2,6 +2,6 @@
   "parent": "minecraft:block/cross",
   "render_type": "minecraft:cutout_mipped",
   "textures": {
-    "cross": "ancient_aether:block/sky_grass_short"
+    "cross": "ancient_aether:block/sky_grass_medium"
   }
 }
