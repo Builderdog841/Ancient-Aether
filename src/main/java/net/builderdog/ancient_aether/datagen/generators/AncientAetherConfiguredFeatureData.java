@@ -82,6 +82,8 @@ public class AncientAetherConfiguredFeatureData {
                 new CloudbedFeature.Config(BlockStateProvider.simple(AetherFeatureStates.COLD_AERCLOUD), 80, 1D));
 
         //Tree Features
+        register(context, CRYSTAL_SKYROOT_TREE, Feature.TREE, createStraightSkyrootBlobTree(AncientAetherFeatureStates.CRYSTAL_SKYROOT_LEAVES).build());
+        register(context, DIVINE_SKYROOT_TREE, Feature.TREE, createStraightSkyrootBlobTree(AncientAetherFeatureStates.DIVINE_SKYROOT_LEAVES).build());
         register(context, SKYROOT_PINE_TREE, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
                         BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LOG),
@@ -90,8 +92,6 @@ public class AncientAetherConfiguredFeatureData {
                         new AncientAetherPineFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
                         new TwoLayersFeatureSize(2, 0, 2)
                 ).ignoreVines().build());
-        register(context, CRYSTAL_SKYROOT_TREE, Feature.TREE, createStraightSkyrootBlobTree(AncientAetherFeatureStates.CRYSTAL_SKYROOT_LEAVES).build());
-        register(context, DIVINE_SKYROOT_TREE, Feature.TREE, createStraightSkyrootBlobTree(AncientAetherFeatureStates.DIVINE_SKYROOT_LEAVES).build());
         register(context, HIGHSPROOT_PINE_TREE, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
                         BlockStateProvider.simple(AncientAetherFeatureStates.HIGHSPROOT_LOG),
