@@ -24,27 +24,25 @@
             "slow_scale": 1.0,
             "states": [
               {
-                "Name": "minecraft:tall_grass",
+                "Name": "aether:purple_flower"
+              },
+              {
+                "Name": "aether:white_flower"
+              },
+              {
+                "Name": "ancient_aether:highland_viola"
+              },
+              {
+                "Name": "aether:purple_flower"
+              },
+              {
+                "Name": "ancient_aether:sky_grass",
                 "Properties": {
-                  "half": "lower"
+                  "type": "normal",
+                  "length": "short"
                 }
               },
               {
-                "Name": "aether:purple_flower"
-              },
-              {
-                "Name": "aether:white_flower"
-              },
-              {
-                "Name": "ancient_aether:highland_viola"
-              },
-              {
-                "Name": "aether:purple_flower"
-              },
-              {
-                "Name": "minecraft:grass"
-              },
-              {
                 "Name": "aether:white_flower"
               },
               {
@@ -60,7 +58,11 @@
                 "Name": "ancient_aether:sky_blues"
               },
               {
-                "Name": "minecraft:grass"
+                "Name": "ancient_aether:sky_grass",
+                "Properties": {
+                  "type": "normal",
+                  "length": "medium"
+                }
               }
             ],
             "variety": [
