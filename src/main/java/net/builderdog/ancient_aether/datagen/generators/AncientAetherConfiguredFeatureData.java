@@ -61,15 +61,7 @@ public class AncientAetherConfiguredFeatureData {
     public static final ResourceKey<ConfiguredFeature<?, ?>> CLOUDBED = registerKey("cloudbed");
 
     private static TreeConfiguration.TreeConfigurationBuilder createStraightSkyrootBlobTree(BlockState p_195148_) {
-        return new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LOG), new StraightTrunkPlacer(4, 2, 0), BlockStateProvider.simple(p_195148_), new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3), new TwoLayersFeatureSize(1, 0, 1));
-    }
-
-    private static TreeConfiguration.TreeConfigurationBuilder createCrystalSkyroot() {
-        return createStraightSkyrootBlobTree(AncientAetherFeatureStates.CRYSTAL_SKYROOT_LEAVES).ignoreVines();
-    }
-
-    private static TreeConfiguration.TreeConfigurationBuilder createDivineSkyroot() {
-        return createStraightSkyrootBlobTree(AncientAetherFeatureStates.DIVINE_SKYROOT_LEAVES).ignoreVines();
+        return new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LOG), new StraightTrunkPlacer(4, 2, 0), BlockStateProvider.simple(p_195148_), new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3), new TwoLayersFeatureSize(1, 0, 1)).ignoreVines();
     }
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
@@ -98,8 +90,8 @@ public class AncientAetherConfiguredFeatureData {
                         new AncientAetherPineFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
                         new TwoLayersFeatureSize(2, 0, 2)
                 ).ignoreVines().build());
-        register(context, CRYSTAL_SKYROOT_TREE, Feature.TREE, createCrystalSkyroot().build());
-        register(context, DIVINE_SKYROOT_TREE, Feature.TREE, createDivineSkyroot().build());
+        register(context, CRYSTAL_SKYROOT_TREE, Feature.TREE, createStraightSkyrootBlobTree(AncientAetherFeatureStates.CRYSTAL_SKYROOT_LEAVES).build());
+        register(context, DIVINE_SKYROOT_TREE, Feature.TREE, createStraightSkyrootBlobTree(AncientAetherFeatureStates.DIVINE_SKYROOT_LEAVES).build());
         register(context, HIGHSPROOT_PINE_TREE, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
                         BlockStateProvider.simple(AncientAetherFeatureStates.HIGHSPROOT_LOG),
