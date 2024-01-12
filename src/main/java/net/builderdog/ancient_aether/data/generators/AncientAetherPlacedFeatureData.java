@@ -1,8 +1,8 @@
-package net.builderdog.ancient_aether.datagen.generators;
+package net.builderdog.ancient_aether.data.generators;
 
 import com.aetherteam.aether.data.resources.builders.AetherPlacedFeatureBuilders;
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.datagen.providers.AncientAetherPlacedFeatureProvider;
+import net.builderdog.ancient_aether.data.providers.AncientAetherPlacedFeatureProvider;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;

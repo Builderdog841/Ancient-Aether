@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.datagen.providers;
+package net.builderdog.ancient_aether.data.providers;
 
 import com.aetherteam.aether.data.providers.AetherBlockStateProvider;
 import net.minecraft.core.Direction;

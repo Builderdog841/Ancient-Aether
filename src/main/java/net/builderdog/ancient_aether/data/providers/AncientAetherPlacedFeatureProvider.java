@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.datagen.providers;
+package net.builderdog.ancient_aether.data.providers;
 
 import net.minecraft.world.level.levelgen.placement.BiomeFilter;
 import net.minecraft.world.level.levelgen.placement.CountPlacement;

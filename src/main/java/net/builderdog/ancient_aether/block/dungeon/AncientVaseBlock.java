@@ -1,11 +1,9 @@
 package net.builderdog.ancient_aether.block.dungeon;
 
 import net.builderdog.ancient_aether.block.utility.VaseBlock;
-import net.builderdog.ancient_aether.datagen.registries.AncientAetherLootRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -21,7 +19,6 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 import java.util.List;
-import java.util.function.Supplier;
 
 public class AncientVaseBlock extends VaseBlock {
     private final ResourceLocation vaseLootTable;

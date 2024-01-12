@@ -1,8 +1,8 @@
-package net.builderdog.ancient_aether.datagen.generators;
+package net.builderdog.ancient_aether.data.generators;
 
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
-import net.builderdog.ancient_aether.datagen.providers.AncientAetherBlockStateProvider;
+import net.builderdog.ancient_aether.data.providers.AncientAetherBlockStateProvider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;

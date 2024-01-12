@@ -21,7 +21,7 @@ import net.builderdog.ancient_aether.block.utility.AmbrosiumCampfireBlock;
 import net.builderdog.ancient_aether.block.utility.CrackedSliderBlock;
 import net.builderdog.ancient_aether.block.utility.VaseBlock;
 import net.builderdog.ancient_aether.block.utility.WindBlowerBlock;
-import net.builderdog.ancient_aether.datagen.registries.AncientAetherLootRegistry;
+import net.builderdog.ancient_aether.data.registries.AncientAetherLootRegistry;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.builderdog.ancient_aether.world.tree.*;
