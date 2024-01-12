@@ -6,7 +6,8 @@ import org.jetbrains.annotations.NotNull;
 public enum AetherGrassType implements StringRepresentable {
     NORMAL("normal"),
     FROZEN("frozen"),
-    PALE("pale");
+    PALE("pale"),
+    ENCHANTED("enchanted");
 
     private final String name;
 
