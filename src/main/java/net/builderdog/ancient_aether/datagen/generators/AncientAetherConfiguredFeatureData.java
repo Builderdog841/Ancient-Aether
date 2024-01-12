@@ -13,7 +13,6 @@ import net.builderdog.ancient_aether.block.AncientAetherFeatureStates;
 import net.builderdog.ancient_aether.world.feature.AncientAetherFeatures;
 import net.builderdog.ancient_aether.world.feature.CloudbedFeature;
 import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherPineFoliagePlacer;
-import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
@@ -61,9 +60,20 @@ public class AncientAetherConfiguredFeatureData {
     public static final ResourceKey<ConfiguredFeature<?, ?>> CRYSTAL_AERCLOUD = registerKey("crystal_aercloud");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CLOUDBED = registerKey("cloudbed");
 
+    private static TreeConfiguration.TreeConfigurationBuilder createStraightSkyrootBlobTree(BlockState p_195148_) {
+        return new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LOG), new StraightTrunkPlacer(4, 2, 0), BlockStateProvider.simple(p_195148_), new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3), new TwoLayersFeatureSize(1, 0, 1));
+    }
+
+    private static TreeConfiguration.TreeConfigurationBuilder createCrystalSkyroot() {
+        return createStraightSkyrootBlobTree(AncientAetherFeatureStates.CRYSTAL_SKYROOT_LEAVES).ignoreVines();
+    }
+
+    private static TreeConfiguration.TreeConfigurationBuilder createDivineSkyroot() {
+        return createStraightSkyrootBlobTree(AncientAetherFeatureStates.DIVINE_SKYROOT_LEAVES).ignoreVines();
+    }
+
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest holystone = new TagMatchTest(AetherTags.Blocks.HOLYSTONE);
-        HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         //Ore Features
         List<OreConfiguration.TargetBlockState> aetherQuartzOre = List.of(OreConfiguration.target(holystone, AncientAetherBlocks.AETHER_QUARTZ_ORE.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true)));
@@ -88,22 +98,8 @@ public class AncientAetherConfiguredFeatureData {
                         new AncientAetherPineFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
                         new TwoLayersFeatureSize(2, 0, 2)
                 ).ignoreVines().build());
-        register(context, CRYSTAL_SKYROOT_TREE, Feature.TREE,
-                new TreeConfiguration.TreeConfigurationBuilder(
-                        BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LOG),
-                        new StraightTrunkPlacer(4, 2, 0),
-                        BlockStateProvider.simple(AncientAetherFeatureStates.CRYSTAL_SKYROOT_LEAVES),
-                        new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
-                        new TwoLayersFeatureSize(1, 0, 1)
-                ).ignoreVines().build());
-        register(context, DIVINE_SKYROOT_TREE, Feature.TREE,
-                new TreeConfiguration.TreeConfigurationBuilder(
-                        BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LOG),
-                        new StraightTrunkPlacer(4, 2, 0),
-                        BlockStateProvider.simple(AncientAetherFeatureStates.DIVINE_SKYROOT_LEAVES),
-                        new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
-                        new TwoLayersFeatureSize(1, 0, 1)
-                ).ignoreVines().build());
+        register(context, CRYSTAL_SKYROOT_TREE, Feature.TREE, createCrystalSkyroot().build());
+        register(context, DIVINE_SKYROOT_TREE, Feature.TREE, createDivineSkyroot().build());
         register(context, HIGHSPROOT_PINE_TREE, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
                         BlockStateProvider.simple(AncientAetherFeatureStates.HIGHSPROOT_LOG),
@@ -149,4 +145,3 @@ public class AncientAetherConfiguredFeatureData {
         context.register(key, new ConfiguredFeature<>(feature, configuration));
     }
 }
-
