@@ -1,0 +1,89 @@
+{
+  "variants": {
+    "snowy=false,type=normal": [
+      {
+        "model": "aether:block/aether_grass_block"
+      },
+      {
+        "model": "aether:block/aether_grass_block",
+        "y": 90
+      },
+      {
+        "model": "aether:block/aether_grass_block",
+        "y": 180
+      },
+      {
+        "model": "aether:block/aether_grass_block",
+        "y": 270
+      }
+    ],
+    "snowy=false,type=frozen": [
+      {
+        "model": "ancient_aether:block/aether_grass_block_frozen"
+      },
+      {
+        "model": "ancient_aether:block/aether_grass_block_frozen",
+        "y": 90
+      },
+      {
+        "model": "ancient_aether:block/aether_grass_block_frozen",
+        "y": 180
+      },
+      {
+        "model": "ancient_aether:block/aether_grass_block_frozen",
+        "y": 270
+      }
+    ],
+    "snowy=false,type=pale": [
+      {
+        "model": "ancient_aether:block/aether_grass_block_pale"
+      },
+      {
+        "model": "ancient_aether:block/aether_grass_block_pale",
+        "y": 90
+      },
+      {
+        "model": "ancient_aether:block/aether_grass_block_pale",
+        "y": 180
+      },
+      {
+        "model": "ancient_aether:block/aether_grass_block_pale",
+        "y": 270
+      }
+    ],
+    "snowy=false,type=enchanted": [
+      {
+        "model": "aether:block/enchanted_aether_grass_block"
+      },
+      {
+        "model": "aether:block/enchanted_aether_grass_block",
+        "y": 90
+      },
+      {
+        "model": "aether:block/enchanted_aether_grass_block",
+        "y": 180
+      },
+      {
+        "model": "aether:block/enchanted_aether_grass_block",
+        "y": 270
+      }
+    ],
+    "snowy=true": [
+      {
+        "model": "aether:block/aether_grass_block_snow"
+      },
+      {
+        "model": "aether:block/aether_grass_block_snow",
+        "y": 90
+      },
+      {
+        "model": "aether:block/aether_grass_block_snow",
+        "y": 180
+      },
+      {
+        "model": "aether:block/aether_grass_block_snow",
+        "y": 270
+      }
+    ]
+  }
+}
