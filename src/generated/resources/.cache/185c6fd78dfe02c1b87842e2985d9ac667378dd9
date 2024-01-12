@@ -1,4 +1,4 @@
-// 1.20.1	2024-01-04T13:50:24.7064885	Item Models: ancient_aether
+// 1.20.1	2024-01-12T10:04:19.6349437	Item Models: ancient_aether
 532bdb7a4f7d2a6b96d474c01c8b9e7a0d1c10b4 assets/ancient_aether/models/item/aerogel_glass.json
 87e9f8f9f807a2aa763e3057d32bacf3ee32b60f assets/ancient_aether/models/item/aerogel_glass_door.json
 d1e6ed3e334d573f31a8ce9e09885c0f43832630 assets/ancient_aether/models/item/aerogel_glass_pane.json
@@ -25,6 +25,9 @@ ecd044ce0d7231edbfbefeb82c43ce34dc933c21 assets/ancient_aether/models/item/arkze
 e39f295afb13b5e4ab726c96bd2a1f49a2c81eaf assets/ancient_aether/models/item/ascended_armor_trim_smithing_template.json
 a7c5161f98f8546c7b36ce365fb2e08414f03bdf assets/ancient_aether/models/item/buffalo_carpet.json
 5ec73861c83b17bb59407b6565c835b02ef97193 assets/ancient_aether/models/item/burgundy_moa_egg.json
+cd934ca7d5f49796545bba2ddfdf7fe3974cc0f8 assets/ancient_aether/models/item/carved_tile_slab.json
+84b9f399c138287b162ca40e96686669b1b62680 assets/ancient_aether/models/item/carved_tile_stairs.json
+fa8bd5568190029f1de3db6712aa40d74447da80 assets/ancient_aether/models/item/carved_tile_wall.json
 d1c40b01fe5c62e33d048c638067476b3cab2bb6 assets/ancient_aether/models/item/cracked_slider.json
 bea7d4c415a7fb295c760b4b7f2d280f9305772c assets/ancient_aether/models/item/crystal_aercloud.json
 7b52703f3fe9815b27af4aa9bd01e7fe1038e779 assets/ancient_aether/models/item/crystal_skyroot_sapling.json

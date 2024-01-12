@@ -1,4 +1,4 @@
-// 1.20.1	2024-01-11T20:58:51.7803337	Loot Tables
+// 1.20.1	2024-01-12T10:04:19.6422997	Loot Tables
 095a70e341d19e7b3548ddc32402abe48a79992a data/ancient_aether/loot_tables/blocks/aerogel_glass.json
 9fe2ea21af5246ad9f95848f680099717062eb1c data/ancient_aether/loot_tables/blocks/aerogel_glass_door.json
 0f84d5b4591633acc6c8dcc82b7c14988b545a9f data/ancient_aether/loot_tables/blocks/aerogel_glass_pane.json
@@ -20,6 +20,9 @@ f346e2fa7e1e914c323a66125f68b2ae7c3ecda5 data/ancient_aether/loot_tables/blocks/
 87d5b2abeaae1c56486e3d4bad809f597509ae8f data/ancient_aether/loot_tables/blocks/buffalo_wool.json
 07e5a503893020d9852e02f7a687103c325d37a9 data/ancient_aether/loot_tables/blocks/carved_stone_mosaic.json
 24eae9742dcffbe67d5c5077fc6c8355134d78ee data/ancient_aether/loot_tables/blocks/carved_tiles.json
+1749bc7d17fa71e129f60cff6eb1b5d99dcec84e data/ancient_aether/loot_tables/blocks/carved_tile_slab.json
+8766de6d5a470ac29986b4ea7537f4fda6b58b45 data/ancient_aether/loot_tables/blocks/carved_tile_stairs.json
+0028608a47c8d9239602d02f2ace778a97f9aadf data/ancient_aether/loot_tables/blocks/carved_tile_wall.json
 afc28686ae51cf43cc96d427bbfcc851be3856ba data/ancient_aether/loot_tables/blocks/corrupted_light_aerogetic_stone.json
 503d82dd0a464d22c432cf15d95aa61860197db6 data/ancient_aether/loot_tables/blocks/cracked_slider.json
 72c3913c8374f22066ee72b8bddcedcefe743c47 data/ancient_aether/loot_tables/blocks/crystal_aercloud.json

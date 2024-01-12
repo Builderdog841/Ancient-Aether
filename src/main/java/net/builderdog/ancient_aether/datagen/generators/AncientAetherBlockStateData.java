@@ -106,6 +106,9 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
 
         //Dungeon Blocks
         blockWithItem(AncientAetherBlocks.CARVED_TILES);
+        stairs((StairBlock) AncientAetherBlocks.CARVED_TILE_STAIRS.get(), AncientAetherBlocks.CARVED_TILES.get(), "");
+        slab((SlabBlock) AncientAetherBlocks.CARVED_TILE_SLAB.get(), AncientAetherBlocks.CARVED_TILES.get(), "");
+        wallBlock((WallBlock) AncientAetherBlocks.CARVED_TILE_WALL.get(), AncientAetherBlocks.CARVED_TILES.get(), "");
         blockWithItem(AncientAetherBlocks.AEROGETIC_STONE);
         blockWithItem(AncientAetherBlocks.LIGHT_AEROGETIC_STONE);
         blockWithItem(AncientAetherBlocks.CORRUPTED_LIGHT_AEROGETIC_STONE);

@@ -1,7 +1,8 @@
 {
   "values": [
+    "ancient_aether:aerogetic_slab",
+    "ancient_aether:carved_tile_slab",
     "ancient_aether:highsproot_slab",
-    "ancient_aether:sakura_slab",
-    "ancient_aether:aerogetic_slab"
+    "ancient_aether:sakura_slab"
   ]
 }

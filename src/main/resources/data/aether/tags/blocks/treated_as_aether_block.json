@@ -64,6 +64,10 @@
     "ancient_aether:aerogel_glass_door",
     "ancient_aether:aerogel_glass_trapdoor",
     "ancient_aether:skyroot_pine_leaves",
-    "ancient_aether:crystal_skyroot_leaves"
+    "ancient_aether:crystal_skyroot_leaves",
+    "ancient_aether:carved_tiles",
+    "ancient_aether:carved_tile_stairs",
+    "ancient_aether:carved_tile_slab",
+    "ancient_aether:carved_tile_wall"
   ]
 }

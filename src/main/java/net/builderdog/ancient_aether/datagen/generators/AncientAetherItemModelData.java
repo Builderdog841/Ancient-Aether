@@ -149,6 +149,9 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         itemBlock(AncientAetherBlocks.BUFFALO_CARPET.get());
 
         //Dungeon Blocks
+        itemBlock(AncientAetherBlocks.CARVED_TILE_STAIRS.get());
+        itemBlock(AncientAetherBlocks.CARVED_TILE_SLAB.get());
+        itemWallBlock(AncientAetherBlocks.CARVED_TILE_WALL.get(), AncientAetherBlocks.CARVED_TILES.get(), "");
         itemBlock(AncientAetherBlocks.AEROGETIC_STAIRS.get());
         itemBlock(AncientAetherBlocks.AEROGETIC_SLAB.get());
         itemWallBlock(AncientAetherBlocks.AEROGETIC_WALL.get(), AncientAetherBlocks.AEROGETIC_STONE.get(), "");

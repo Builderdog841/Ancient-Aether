@@ -1,7 +1,8 @@
 {
   "values": [
+    "ancient_aether:aerogetic_stairs",
+    "ancient_aether:carved_tile_stairs",
     "ancient_aether:highsproot_stairs",
-    "ancient_aether:sakura_stairs",
-    "ancient_aether:aerogetic_stairs"
+    "ancient_aether:sakura_stairs"
   ]
 }
