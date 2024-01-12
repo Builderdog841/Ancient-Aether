@@ -40,10 +40,6 @@ public class TrappedFlowerBlock extends BushBlock {
         this.defaultStateSupplier = defaultStateSupplier;
     }
 
-    public BlockState getFacadeBlock() {
-        return this.defaultStateSupplier.get();
-    }
-
     @Override
     public void entityInside(@NotNull BlockState blockState, @NotNull Level level, @NotNull BlockPos blockPos, @NotNull Entity entity) {
         if (entity instanceof Player player && AetherEventDispatch.onTriggerTrap(player, level, blockPos, blockState)) {

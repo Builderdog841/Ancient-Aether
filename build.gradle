@@ -147,6 +147,11 @@ jar {
     }
 }
 
+mixin {
+    config "${project.mod_id}.mixins.json"
+    add sourceSets.main, "${project.mod_id}.refmap.json"
+}
+
 jar.finalizedBy('reobfJar')
 
 publishing {
