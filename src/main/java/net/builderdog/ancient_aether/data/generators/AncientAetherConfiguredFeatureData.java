@@ -50,6 +50,7 @@ public class AncientAetherConfiguredFeatureData {
     public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_FROSTED_HIGHSPROOT_TREE = registerKey("tall_frosted_highsproot_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_TREE = registerKey("sakura_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_SAKURA_TREE = registerKey("tall_sakura_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_JUNGLE_TREE = registerKey("skyroot_jungle_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> DIVINE_SKYROOT_TREE = registerKey("divine_skyroot_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_DIVINE_SKYROOT = registerKey("fancy_divine_skyroot");
     public static final ResourceKey<ConfiguredFeature<?, ?>> WYND_THISTLE_PATCH = registerKey("wynd_thistle_patch");
@@ -105,6 +106,22 @@ public class AncientAetherConfiguredFeatureData {
                         BlockStateProvider.simple(AncientAetherFeatureStates.SAKURA_LOG),
                         new CherryTrunkPlacer(7, 7, 0, new WeightedListInt(SimpleWeightedRandomList.<IntProvider>builder().add(ConstantInt.of(1), 1).add(ConstantInt.of(2), 1).add(ConstantInt.of(3), 1).build()), UniformInt.of(2, 3), UniformInt.of(-6, -4), UniformInt.of(-1, 0)),
                         BlockStateProvider.simple(AncientAetherFeatureStates.SAKURA_LEAVES),
+                        new CherryFoliagePlacer(ConstantInt.of(4), ConstantInt.of(0), ConstantInt.of(4), 0.25F, 0.25F, 0.16666667F, 0.66666667F),
+                        new TwoLayersFeatureSize(1, 0, 2)
+                ).ignoreVines().build());
+        register(context, TALL_SAKURA_TREE, Feature.TREE,
+                new TreeConfiguration.TreeConfigurationBuilder(
+                        BlockStateProvider.simple(AncientAetherFeatureStates.SAKURA_LOG),
+                        new CherryTrunkPlacer(12, 10, 0, new WeightedListInt(SimpleWeightedRandomList.<IntProvider>builder().add(ConstantInt.of(1), 1).add(ConstantInt.of(2), 1).add(ConstantInt.of(3), 1).build()), UniformInt.of(2, 3), UniformInt.of(-6, -4), UniformInt.of(-1, 0)),
+                        BlockStateProvider.simple(AncientAetherFeatureStates.SAKURA_LEAVES),
+                        new CherryFoliagePlacer(ConstantInt.of(4), ConstantInt.of(0), ConstantInt.of(4), 0.25F, 0.25F, 0.16666667F, 0.66666667F),
+                        new TwoLayersFeatureSize(1, 0, 2)
+                ).ignoreVines().build());
+        register(context, SKYROOT_JUNGLE_TREE, Feature.TREE,
+                new TreeConfiguration.TreeConfigurationBuilder(
+                        BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LOG),
+                        new CherryTrunkPlacer(7, 7, 0, new WeightedListInt(SimpleWeightedRandomList.<IntProvider>builder().add(ConstantInt.of(1), 1).add(ConstantInt.of(2), 1).add(ConstantInt.of(3), 1).build()), UniformInt.of(2, 3), UniformInt.of(-6, -4), UniformInt.of(-1, 0)),
+                        BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LEAVES),
                         new CherryFoliagePlacer(ConstantInt.of(4), ConstantInt.of(0), ConstantInt.of(4), 0.25F, 0.25F, 0.16666667F, 0.66666667F),
                         new TwoLayersFeatureSize(1, 0, 2)
                 ).ignoreVines().build());
