@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "ancient_aether:block/carved_tiles",
+    "side": "ancient_aether:block/carved_tiles",
+    "top": "ancient_aether:block/carved_tiles"
+  }
+}
