@@ -1,5 +1,5 @@
 {
-  "feature": "aether:grass_patch",
+  "feature": "ancient_aether:aether_grass_patch",
   "placement": [
     {
       "type": "minecraft:noise_threshold_count",

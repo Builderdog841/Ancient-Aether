@@ -1,10 +1,10 @@
 {
-  "feature": "ancient_aether:wyndcaps_grass_patch",
+  "feature": "ancient_aether:frozen_aether_grass_patch",
   "placement": [
     {
       "type": "minecraft:noise_threshold_count",
-      "above_noise": 10,
-      "below_noise": 5,
+      "above_noise": 20,
+      "below_noise": 10,
       "noise_level": -0.8
     },
     {

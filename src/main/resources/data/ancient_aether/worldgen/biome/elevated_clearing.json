@@ -23,9 +23,7 @@
     "water_fog_color": 329011
   },
   "features": [
-    [
-      "aether:quicksoil_shelf"
-    ],
+    [],
     [
       "aether:water_lake"
     ],
@@ -50,8 +48,7 @@
     [
       "ancient_aether:elevated_clearing_trees",
       "aether:holiday_tree",
-      "ancient_aether:mythical_forests_grass_patch",
-      "ancient_aether:mythical_forests_tall_grass_patch",
+      "ancient_aether:elevated_islands_grass_patch",
       "ancient_aether:forest_flower_patch",
       "aether:berry_bush_patch"
     ],

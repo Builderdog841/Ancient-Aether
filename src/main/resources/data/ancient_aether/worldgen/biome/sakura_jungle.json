@@ -18,9 +18,7 @@
     }
   },
   "features": [
-    [
-      "aether:quicksoil_shelf"
-    ],
+    [],
     [
       "aether:water_lake"
     ],
@@ -45,8 +43,7 @@
       "ancient_aether:sakura_jungle_trees",
       "ancient_aether:sakura_jungle_bush",
       "aether:holiday_tree",
-      "ancient_aether:patch_grass_sakura_jungle",
-      "aether:tall_grass_patch",
+      "ancient_aether:sakura_jungle_patch_grass",
       "ancient_aether:overgrown_caverns_leaf_vines",
       "ancient_aether:short_overgrown_caverns_leaf_vines",
       "ancient_aether:overgrown_caverns_vines",
