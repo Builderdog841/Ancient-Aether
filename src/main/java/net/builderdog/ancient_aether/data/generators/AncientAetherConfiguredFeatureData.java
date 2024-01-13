@@ -6,6 +6,7 @@ import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.data.resources.AetherFeatureStates;
 import com.aetherteam.aether.data.resources.builders.AetherConfiguredFeatureBuilders;
 import com.aetherteam.aether.world.feature.AetherFeatures;
+import com.aetherteam.aether.world.foliageplacer.CrystalFoliagePlacer;
 import com.aetherteam.nitrogen.data.resources.builders.NitrogenConfiguredFeatureBuilders;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
@@ -62,15 +63,42 @@ public class AncientAetherConfiguredFeatureData {
     public static final ResourceKey<ConfiguredFeature<?, ?>> CLOUDBED = registerKey("cloudbed");
 
     private static TreeConfiguration.TreeConfigurationBuilder createStraightSkyrootBlobTree(BlockState leaves) {
-        return new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LOG), new StraightTrunkPlacer(4, 2, 0), BlockStateProvider.simple(leaves), new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3), new TwoLayersFeatureSize(1, 0, 1)).ignoreVines();
+        return new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LOG),
+                new StraightTrunkPlacer(4, 2, 0), BlockStateProvider.simple(leaves),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1))
+                .ignoreVines();
     }
 
     private static TreeConfiguration.TreeConfigurationBuilder createAetherPineTree(BlockState log, BlockState leaves, int heightRandA) {
-        return new  TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(log), new StraightTrunkPlacer(5, heightRandA, 0), BlockStateProvider.simple(leaves), new AncientAetherPineFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)), new TwoLayersFeatureSize(2, 0, 2)).ignoreVines();
+        return new  TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(log),
+                new StraightTrunkPlacer(5, heightRandA, 0), BlockStateProvider.simple(leaves),
+                new AncientAetherPineFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
+                new TwoLayersFeatureSize(2, 0, 2))
+                .ignoreVines();
+    }
+
+    private static TreeConfiguration.TreeConfigurationBuilder createWyndcapsPineTree(int baseHeight, int heightRandA, int trunkHeight) {
+        return new  TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(AncientAetherFeatureStates.HIGHSPROOT_LOG),
+                new StraightTrunkPlacer(baseHeight, heightRandA, 1),
+                BlockStateProvider.simple(AncientAetherFeatureStates.FROSTED_HIGHSPROOT_LEAVES),
+                new CrystalFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0), ConstantInt.of(trunkHeight)),
+                new TwoLayersFeatureSize(2, 0, 2))
+                .ignoreVines();
     }
 
     private static TreeConfiguration.TreeConfigurationBuilder createSakuraJungleTree(BlockState log, BlockState leaves, int baseHeight, int heightRandA) {
-        return new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(log), new CherryTrunkPlacer(baseHeight, heightRandA, 0, new WeightedListInt(SimpleWeightedRandomList.<IntProvider>builder().add(ConstantInt.of(1), 1).add(ConstantInt.of(2), 1).add(ConstantInt.of(3), 1).build()), UniformInt.of(2, 3), UniformInt.of(-6, -4), UniformInt.of(-1, 0)), BlockStateProvider.simple(leaves), new CherryFoliagePlacer(ConstantInt.of(4), ConstantInt.of(0), ConstantInt.of(4), 0.25F, 0.25F, 0.16666667F, 0.66666667F), new TwoLayersFeatureSize(1, 0, 2)).ignoreVines();
+        return new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(log),
+                new CherryTrunkPlacer(baseHeight, heightRandA, 0,
+                new WeightedListInt(SimpleWeightedRandomList.<IntProvider>builder().add(ConstantInt.of(1), 1).add(ConstantInt.of(2), 1).add(ConstantInt.of(3), 1).build()), UniformInt.of(2, 3), UniformInt.of(-6, -4), UniformInt.of(-1, 0)),
+                BlockStateProvider.simple(leaves),
+                new CherryFoliagePlacer(ConstantInt.of(4), ConstantInt.of(0), ConstantInt.of(4), 0.25F, 0.25F, 0.16666667F, 0.66666667F),
+                new TwoLayersFeatureSize(1, 0, 2))
+                .ignoreVines();
     }
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
@@ -95,6 +123,8 @@ public class AncientAetherConfiguredFeatureData {
         register(context, SAKURA_TREE, Feature.TREE, createSakuraJungleTree(AncientAetherFeatureStates.SAKURA_LOG, AncientAetherFeatureStates.SAKURA_LEAVES, 7, 7).build());
         register(context, TALL_SAKURA_TREE, Feature.TREE, createSakuraJungleTree(AncientAetherFeatureStates.SAKURA_LOG, AncientAetherFeatureStates.SAKURA_LEAVES, 12, 10).build());
         register(context, SKYROOT_JUNGLE_TREE, Feature.TREE, createSakuraJungleTree(AetherFeatureStates.SKYROOT_LOG, AetherFeatureStates.SKYROOT_LEAVES, 7, 7).build());
+        register(context, FROSTED_HIGHSPROOT_TREE, Feature.TREE, createWyndcapsPineTree(6, 2, 8).build());
+        register(context, TALL_FROSTED_HIGHSPROOT_TREE, Feature.TREE, createWyndcapsPineTree(8, 4, 16).build());
 
         //Patch Features
         register(context, WYND_THISTLE_PATCH, Feature.FLOWER,
