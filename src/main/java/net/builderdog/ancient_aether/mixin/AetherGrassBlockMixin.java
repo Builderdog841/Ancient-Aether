@@ -61,7 +61,7 @@ public class AetherGrassBlockMixin extends GrassBlock {
         } else {
             if (!level.isAreaLoaded(pos, 3)) return;
             if (level.getMaxLocalRawBrightness(pos.above()) >= 9) {
-                BlockState blockstate = defaultBlockState();
+                BlockState blockstate = defaultBlockState().setValue(AncientAetherBlockStateProperties.TYPE, state.getValue(AncientAetherBlockStateProperties.TYPE));
                 for(int i = 0; i < 4; ++i) {
                     BlockPos blockpos = pos.offset(random.nextInt(3) - 1, random.nextInt(5) - 3, random.nextInt(3) - 1);
                     if (level.getBlockState(blockpos).is(AetherBlocks.AETHER_DIRT.get()) && SpreadingSnowyDirtBlockAccessor.callCanPropagate(blockstate, level, blockpos)) {
