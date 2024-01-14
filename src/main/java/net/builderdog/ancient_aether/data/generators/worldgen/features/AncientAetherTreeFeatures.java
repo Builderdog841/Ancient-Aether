@@ -2,6 +2,7 @@ package net.builderdog.ancient_aether.data.generators.worldgen.features;
 
 import com.aetherteam.aether.data.resources.AetherFeatureStates;
 import com.aetherteam.aether.world.foliageplacer.CrystalFoliagePlacer;
+import com.aetherteam.aether.world.foliageplacer.HolidayFoliagePlacer;
 import net.builderdog.ancient_aether.block.AncientAetherFeatureStates;
 import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherPineFoliagePlacer;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -20,6 +21,7 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlac
 import net.minecraft.world.level.levelgen.feature.foliageplacers.CherryFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FancyFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.CherryTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.FancyTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
@@ -39,6 +41,7 @@ public class AncientAetherTreeFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_SKYROOT_TREE = AncientAetherFeatureUtil.registerKey("fancy_skyroot_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_CRYSTAL_SKYROOT_TREE = AncientAetherFeatureUtil.registerKey("fancy_crystal_skyroot_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_DIVINE_SKYROOT_TREE = AncientAetherFeatureUtil.registerKey("fancy_divine_skyroot_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WYNDCAPS_HOLIDAY_TREE = AncientAetherFeatureUtil.registerKey("wyndcaps_holiday_tree");
 
     private static TreeConfiguration.TreeConfigurationBuilder createStraightSkyrootBlobTree(BlockState leaves) {
         return new TreeConfiguration.TreeConfigurationBuilder(
@@ -102,5 +105,14 @@ public class AncientAetherTreeFeatures {
         AncientAetherFeatureUtil.register(context, FANCY_SKYROOT_TREE, Feature.TREE, createFancySkyrootTree(AetherFeatureStates.SKYROOT_LEAVES).build());
         AncientAetherFeatureUtil.register(context, FANCY_CRYSTAL_SKYROOT_TREE, Feature.TREE, createFancySkyrootTree(AncientAetherFeatureStates.CRYSTAL_SKYROOT_LEAVES).build());
         AncientAetherFeatureUtil.register(context, FANCY_DIVINE_SKYROOT_TREE, Feature.TREE, createFancySkyrootTree(AncientAetherFeatureStates.DIVINE_SKYROOT_LEAVES).build());
+        AncientAetherFeatureUtil.register(context, WYNDCAPS_HOLIDAY_TREE, Feature.TREE,
+                new TreeConfiguration.TreeConfigurationBuilder(
+                        BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LOG),
+                        new StraightTrunkPlacer(9, 0, 0),
+                        new WeightedStateProvider(new SimpleWeightedRandomList.Builder<BlockState>().add(AetherFeatureStates.HOLIDAY_LEAVES, 4).add(AetherFeatureStates.DECORATED_HOLIDAY_LEAVES, 1).build()),
+                        new HolidayFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0), ConstantInt.of(8)),
+                        new TwoLayersFeatureSize(1, 0, 1))
+                        .ignoreVines()
+                        .build());
     }
 }
