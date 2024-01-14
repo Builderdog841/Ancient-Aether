@@ -26,7 +26,7 @@ public class AncientAetherFeatureUtil {
         context.register(key, new ConfiguredFeature<>(feature, configuration));
     }
 
-    public static void register(BootstapContext<ConfiguredFeature<?, ?>> p_256637_, ResourceKey<ConfiguredFeature<?, ?>> p_256555_, Feature<NoneFeatureConfiguration> p_255921_) {
-        register(p_256637_, p_256555_, p_255921_, FeatureConfiguration.NONE);
+    public static void register(BootstapContext<ConfiguredFeature<?, ?>> bootstapContext, ResourceKey<ConfiguredFeature<?, ?>> resourceKey, Feature<NoneFeatureConfiguration> feature) {
+        register(bootstapContext, resourceKey, feature, FeatureConfiguration.NONE);
     }
 }
