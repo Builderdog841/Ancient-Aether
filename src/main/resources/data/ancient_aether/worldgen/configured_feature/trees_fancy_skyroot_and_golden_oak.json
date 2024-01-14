@@ -2,7 +2,7 @@
   "type": "minecraft:random_selector",
   "config": {
     "default": {
-      "feature": "ancient_aether:fancy_skyroot",
+      "feature": "ancient_aether:fancy_skyroot_tree",
       "placement": [
         {
           "type": "minecraft:block_predicate_filter",
