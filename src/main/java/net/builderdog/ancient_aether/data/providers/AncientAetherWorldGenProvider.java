@@ -14,7 +14,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class AncientAetherWorldGenProvider extends DatapackBuiltinEntriesProvider {
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
-            .add(Registries.CONFIGURED_FEATURE, AncientAetherConfiguredFeatureData::bootstrap)
+            .add(Registries.CONFIGURED_FEATURE, AncientAetherFeatureUtil::bootstrap)
             .add(Registries.PLACED_FEATURE, AncientAetherPlacedFeatureData::bootstrap);
 
     public AncientAetherWorldGenProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {

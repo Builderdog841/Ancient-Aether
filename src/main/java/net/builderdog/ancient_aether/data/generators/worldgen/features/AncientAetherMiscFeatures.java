@@ -15,15 +15,15 @@ import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvi
 
 public class AncientAetherMiscFeatures {
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> VIOLET_AERCLOUD = AncientAetherConfiguredFeatureData.registerKey("violet_aercloud");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> CRYSTAL_AERCLOUD = AncientAetherConfiguredFeatureData.registerKey("crystal_aercloud");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> CLOUDBED = AncientAetherConfiguredFeatureData.registerKey("cloudbed");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> ICESTONE_FOREST_ROCK = AncientAetherConfiguredFeatureData.registerKey("icestone_forest_rock");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> VIOLET_AERCLOUD = AncientAetherFeatureUtil.registerKey("violet_aercloud");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CRYSTAL_AERCLOUD = AncientAetherFeatureUtil.registerKey("crystal_aercloud");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CLOUDBED = AncientAetherFeatureUtil.registerKey("cloudbed");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ICESTONE_FOREST_ROCK = AncientAetherFeatureUtil.registerKey("icestone_forest_rock");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
-        AncientAetherConfiguredFeatureData.register(context, VIOLET_AERCLOUD, AetherFeatures.AERCLOUD.get(), AetherConfiguredFeatureBuilders.aercloud(16, AncientAetherFeatureStates.VIOLET_AERCLOUD));
-        AncientAetherConfiguredFeatureData.register(context, CRYSTAL_AERCLOUD, AetherFeatures.AERCLOUD.get(), AetherConfiguredFeatureBuilders.aercloud(16, AncientAetherFeatureStates.CRYSTAL_AERCLOUD));
-        AncientAetherConfiguredFeatureData.register(context, CLOUDBED, AncientAetherFeatures.CLOUDBED.get(), new CloudbedFeature.Config(BlockStateProvider.simple(AetherFeatureStates.COLD_AERCLOUD), 80, 1D));
-        AncientAetherConfiguredFeatureData.register(context, ICESTONE_FOREST_ROCK, Feature.FOREST_ROCK, new BlockStateConfiguration(AetherFeatureStates.ICESTONE));
+        AncientAetherFeatureUtil.register(context, VIOLET_AERCLOUD, AetherFeatures.AERCLOUD.get(), AetherConfiguredFeatureBuilders.aercloud(16, AncientAetherFeatureStates.VIOLET_AERCLOUD));
+        AncientAetherFeatureUtil.register(context, CRYSTAL_AERCLOUD, AetherFeatures.AERCLOUD.get(), AetherConfiguredFeatureBuilders.aercloud(16, AncientAetherFeatureStates.CRYSTAL_AERCLOUD));
+        AncientAetherFeatureUtil.register(context, CLOUDBED, AncientAetherFeatures.CLOUDBED.get(), new CloudbedFeature.Config(BlockStateProvider.simple(AetherFeatureStates.COLD_AERCLOUD), 80, 1D));
+        AncientAetherFeatureUtil.register(context, ICESTONE_FOREST_ROCK, Feature.FOREST_ROCK, new BlockStateConfiguration(AetherFeatureStates.ICESTONE));
     }
 }
