@@ -1,4 +1,4 @@
-// 1.20.1	2024-01-14T15:31:22.20965	Registries
+// 1.20.1	2024-01-14T15:37:10.0536523	Registries
 2cf08e50ac74f6af67fe26f51cd18f7d83b169bc data/ancient_aether/worldgen/configured_feature/aerogel_blobs.json
 344034581163b955acca307272aa62dfa56193dd data/ancient_aether/worldgen/configured_feature/aether_quartz_ore.json
 2cec6f2f2bdfbaa27848881254e65076dcaf1662 data/ancient_aether/worldgen/configured_feature/cloudbed.json
@@ -14,6 +14,7 @@ c7e075b607a72f97aba833180a6d28b09d31205b data/ancient_aether/worldgen/configured
 cb503849924e63c1a260f4df4e3ef0f3cbe5f419 data/ancient_aether/worldgen/configured_feature/highsproot_pine_tree.json
 908b54006768c1c554e357e62ce079e3e8e99064 data/ancient_aether/worldgen/configured_feature/icestone_forest_rock.json
 14455d592bd1344ec61a12d706109f9acdddafcd data/ancient_aether/worldgen/configured_feature/sakura_blossoms_patch.json
+03e68c3dcea09f3b0f5ace9ebd44f45e7a4cec9a data/ancient_aether/worldgen/configured_feature/sakura_jungle_bush.json
 d116c88c19e0917bb2a6c575faea8255a0b4d357 data/ancient_aether/worldgen/configured_feature/sakura_tree.json
 7613efb0d7c68ade8b3e964c6ddcc4f3ab9f4d52 data/ancient_aether/worldgen/configured_feature/skyroot_jungle_tree.json
 1af3ba8aff0ee853278877022e83dfdcaf2eb1a0 data/ancient_aether/worldgen/configured_feature/skyroot_pine_tree.json
