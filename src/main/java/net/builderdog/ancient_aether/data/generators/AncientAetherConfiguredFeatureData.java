@@ -5,6 +5,7 @@ import com.aetherteam.aether.block.AetherBlockStateProperties;
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.data.resources.AetherFeatureStates;
 import com.aetherteam.aether.data.resources.builders.AetherConfiguredFeatureBuilders;
+import com.aetherteam.aether.data.resources.registries.AetherConfiguredFeatures;
 import com.aetherteam.aether.world.feature.AetherFeatures;
 import com.aetherteam.aether.world.foliageplacer.CrystalFoliagePlacer;
 import com.aetherteam.nitrogen.data.resources.builders.NitrogenConfiguredFeatureBuilders;
@@ -45,9 +46,6 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 import java.util.List;
 import java.util.OptionalInt;
 
-import static com.aetherteam.aether.data.resources.registries.AetherConfiguredFeatures.GOLDEN_OAK_TREE_CONFIGURATION;
-import static com.aetherteam.aether.data.resources.registries.AetherConfiguredFeatures.SKYROOT_TREE_CONFIGURATION;
-
 public class AncientAetherConfiguredFeatureData {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_QUARTZ_ORE = registerKey("aether_quartz_ore");
@@ -66,10 +64,6 @@ public class AncientAetherConfiguredFeatureData {
     public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_SKYROOT_TREE = registerKey("fancy_skyroot_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_CRYSTAL_SKYROOT_TREE = registerKey("fancy_crystal_skyroot_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_DIVINE_SKYROOT_TREE = registerKey("fancy_divine_skyroot_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> TREES_SKYROOT_AND_GOLDEN_OAK = registerKey("trees_skyroot_and_golden_oak");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> TREES_SKYROOT_PINE_AND_GOLDEN_OAK = registerKey("trees_skyroot_pine_and_golden_oak");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> TREES_FANCY_SKYROOT_AND_GOLDEN_OAK = registerKey("trees_fancy_skyroot_and_golden_oak");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> TREES_DIVINE_SKYROOT_AND_GOLDEN_OAK = registerKey("trees_divine_skyroot_and_golden_oak");
     public static final ResourceKey<ConfiguredFeature<?, ?>> WYND_THISTLE_PATCH = registerKey("wynd_thistle_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHLAND_VIOLA_PATCH = registerKey("highland_viola_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_BLOSSOMS_PATCH = registerKey("sakura_blossoms_patch");
@@ -155,14 +149,6 @@ public class AncientAetherConfiguredFeatureData {
         register(context, FANCY_SKYROOT_TREE, Feature.TREE, createFancySkyrootTree(AetherFeatureStates.SKYROOT_LEAVES).build());
         register(context, FANCY_CRYSTAL_SKYROOT_TREE, Feature.TREE, createFancySkyrootTree(AncientAetherFeatureStates.CRYSTAL_SKYROOT_LEAVES).build());
         register(context, FANCY_DIVINE_SKYROOT_TREE, Feature.TREE, createFancySkyrootTree(AncientAetherFeatureStates.DIVINE_SKYROOT_LEAVES).build());
-
-        //Tree Selector Features
-        register(context, TREES_SKYROOT_AND_GOLDEN_OAK, Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(
-                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(CRYSTAL_SKYROOT_TREE), PlacementUtils.filteredByBlockSurvival(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get())), 0.5F),
-                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(SKYROOT_PINE_TREE), PlacementUtils.filteredByBlockSurvival(AetherBlocks.SKYROOT_SAPLING.get())), 0.2F),
-                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(FANCY_SKYROOT_TREE), PlacementUtils.filteredByBlockSurvival(AetherBlocks.SKYROOT_SAPLING.get())), 0.05F),
-                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(GOLDEN_OAK_TREE_CONFIGURATION), PlacementUtils.filteredByBlockSurvival(AetherBlocks.GOLDEN_OAK_SAPLING.get())), 0.01F)),
-                PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(SKYROOT_TREE_CONFIGURATION), PlacementUtils.filteredByBlockSurvival(AetherBlocks.SKYROOT_SAPLING.get()))));
 
         //Patch Features
         register(context, WYND_THISTLE_PATCH, Feature.FLOWER,
