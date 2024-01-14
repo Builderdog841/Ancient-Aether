@@ -1,7 +1,9 @@
-package net.builderdog.ancient_aether.data.generators;
+package net.builderdog.ancient_aether.data.generators.worldgen.placement;
 
 import com.aetherteam.aether.data.resources.builders.AetherPlacedFeatureBuilders;
 import net.builderdog.ancient_aether.AncientAether;
+import net.builderdog.ancient_aether.data.generators.worldgen.features.AncientAetherMiscFeatures;
+import net.builderdog.ancient_aether.data.generators.worldgen.features.AncientAetherOreFeatures;
 import net.builderdog.ancient_aether.data.providers.AncientAetherPlacedFeatureProvider;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
@@ -30,23 +32,23 @@ public class AncientAetherPlacedFeatureData {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         //Ore Features
-        register(context, AETHER_QUARTZ_ORE, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatureData.AETHER_QUARTZ_ORE),
+        register(context, AETHER_QUARTZ_ORE, configuredFeatures.getOrThrow(AncientAetherOreFeatures.AETHER_QUARTZ_ORE),
                 AncientAetherPlacedFeatureProvider.commonOrePlacement(4,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(256))));
-        register(context, VALKYRUM_ORE, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatureData.VALKYRUM_ORE),
+        register(context, VALKYRUM_ORE, configuredFeatures.getOrThrow(AncientAetherOreFeatures.VALKYRUM_ORE),
                 AncientAetherPlacedFeatureProvider.commonOrePlacement(15,
                         HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(0), VerticalAnchor.aboveBottom(64))));
-        register(context, AEROGEL_ORE, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatureData.AEROGEL_BLOBS),
+        register(context, AEROGEL_ORE, configuredFeatures.getOrThrow(AncientAetherOreFeatures.AEROGEL_BLOBS),
                 AncientAetherPlacedFeatureProvider.commonOrePlacement(4,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(80))));
-        register(context, GRAVITY_GRAVEL_ORE, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatureData.GRAVITY_GRAVEL_ORE),
+        register(context, GRAVITY_GRAVEL_ORE, configuredFeatures.getOrThrow(AncientAetherOreFeatures.GRAVITY_GRAVEL_ORE),
                 AncientAetherPlacedFeatureProvider.commonOrePlacement(1,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(24), VerticalAnchor.absolute(80))));
 
         //Misc Features
-        register(context, VIOLET_AERCLOUD, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatureData.VIOLET_AERCLOUD), AetherPlacedFeatureBuilders.aercloudPlacement(32, 224, 24));
-        register(context, CRYSTAL_AERCLOUD, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatureData.CRYSTAL_AERCLOUD), AetherPlacedFeatureBuilders.aercloudPlacement(16, 72, 25));
-        register(context, CLOUDBED, configuredFeatures.getOrThrow(AncientAetherConfiguredFeatureData.CLOUDBED), List.of());
+        register(context, VIOLET_AERCLOUD, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.VIOLET_AERCLOUD), AetherPlacedFeatureBuilders.aercloudPlacement(32, 224, 24));
+        register(context, CRYSTAL_AERCLOUD, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.CRYSTAL_AERCLOUD), AetherPlacedFeatureBuilders.aercloudPlacement(16, 72, 25));
+        register(context, CLOUDBED, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.CLOUDBED), List.of());
     }
 
     private static ResourceKey<PlacedFeature> createKey(String name) {

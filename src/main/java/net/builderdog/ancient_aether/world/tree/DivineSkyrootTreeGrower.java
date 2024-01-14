@@ -1,6 +1,6 @@
 package net.builderdog.ancient_aether.world.tree;
 
-import net.builderdog.ancient_aether.data.generators.AncientAetherConfiguredFeatureData;
+import net.builderdog.ancient_aether.data.generators.worldgen.features.AncientAetherTreeFeatures;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.grower.AbstractTreeGrower;
@@ -12,9 +12,9 @@ public class DivineSkyrootTreeGrower extends AbstractTreeGrower {
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource random, boolean largeHive) {
         if (random.nextInt(10) == 0) {
-            return AncientAetherConfiguredFeatureData.FANCY_DIVINE_SKYROOT_TREE;
+            return AncientAetherTreeFeatures.FANCY_DIVINE_SKYROOT_TREE;
         } else {
-            return AncientAetherConfiguredFeatureData.DIVINE_SKYROOT_TREE;
+            return AncientAetherTreeFeatures.DIVINE_SKYROOT_TREE;
         }
     }
 }

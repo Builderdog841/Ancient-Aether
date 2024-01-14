@@ -2,6 +2,7 @@ package net.builderdog.ancient_aether.world.biomes;
 
 import com.aetherteam.aether.data.resources.registries.AetherBiomes;
 import com.mojang.datafixers.util.Pair;
+import net.builderdog.ancient_aether.data.registries.AncientAetherBiomeRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -32,13 +33,13 @@ public class AncientAetherRegion extends Region {
         Climate.Parameter erosionElevated = Climate.Parameter.span(0.5F, 1.5F);
 
         addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, Climate.Parameter.span(-1.5F, 0.25F), fullRange, erosionDefault, Climate.Parameter.span(0.05F, 1.5F), fullRange, 0),
-                AncientAetherBiomes.WYNDCAP_TAIGA);
+                AncientAetherBiomeRegistry.WYNDCAP_TAIGA);
         addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, Climate.Parameter.span(0.25F, 1.5F), fullRange, erosionDefault, Climate.Parameter.span(0.05F, 1.5F), fullRange, 0),
-                AncientAetherBiomes.FESTIVE_WYNDCAP_TAIGA);
+                AncientAetherBiomeRegistry.FESTIVE_WYNDCAP_TAIGA);
         addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, fullRange, fullRange, erosionDefault, Climate.Parameter.span(-0.15F, 0.05F), fullRange, 0),
-                AncientAetherBiomes.WYNDCAP_HIGHLAND);
+                AncientAetherBiomeRegistry.WYNDCAP_HIGHLAND);
         addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, fullRange, fullRange, erosionDefault, Climate.Parameter.span(-1.5F, -0.15F), fullRange, 0),
-                AncientAetherBiomes.WYNDCAP_PEAKS);
+                AncientAetherBiomeRegistry.WYNDCAP_PEAKS);
 
         addBiome(mapper, new Climate.ParameterPoint(tempSkyroot1, Climate.Parameter.span(-1.5F, -0.25F), fullRange, erosionDefault, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_MEADOW);
@@ -48,7 +49,7 @@ public class AncientAetherRegion extends Region {
                 AetherBiomes.SKYROOT_MEADOW);
 
         addBiome(mapper, new Climate.ParameterPoint(tempSkyroot2, Climate.Parameter.span(-1.5F, -0.2F), fullRange, erosionDefault, fullRange, fullRange, 0),
-                AncientAetherBiomes.SKYROOT_GRASSLAND);
+                AetherBiomes.SKYROOT_FOREST);
         addBiome(mapper, new Climate.ParameterPoint(tempSkyroot2, Climate.Parameter.span(-0.2F, 0.1F), fullRange, erosionDefault, fullRange, fullRange, 0),
                 AetherBiomes.SKYROOT_FOREST);
         addBiome(mapper, new Climate.ParameterPoint(tempSkyroot2, Climate.Parameter.span(0.1F, 0.2F), fullRange, erosionDefault, fullRange, fullRange, 0),
@@ -64,15 +65,15 @@ public class AncientAetherRegion extends Region {
                 AetherBiomes.SKYROOT_MEADOW);
 
         addBiome(mapper, new Climate.ParameterPoint(tempSakura, Climate.Parameter.span(-1.5F, 0.25F), fullRange, erosionDefault, fullRange, fullRange, 0),
-                AncientAetherBiomes.SAKURA_JUNGLE);
+                AncientAetherBiomeRegistry.SAKURA_JUNGLE);
         addBiome(mapper, new Climate.ParameterPoint(tempSakura, Climate.Parameter.span(0.25F, 1.5F), fullRange, erosionDefault, fullRange, fullRange, 0),
-                AncientAetherBiomes.SKYROOT_JUNGLE);
+                AncientAetherBiomeRegistry.SKYROOT_JUNGLE);
 
         addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(-1.5F, -0.25F), fullRange, erosionElevated, fullRange, fullRange, 0),
-                AncientAetherBiomes.ELEVATED_CLEARING);
+                AncientAetherBiomeRegistry.ELEVATED_CLEARING);
         addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(-0.25F, 0.25F), fullRange, erosionElevated, fullRange, fullRange, 0),
-                AncientAetherBiomes.ELEVATED_FOREST);
+                AncientAetherBiomeRegistry.ELEVATED_FOREST);
         addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(0.25F, 1.5F), fullRange, erosionElevated, fullRange, fullRange, 0),
-                AncientAetherBiomes.ELEVATED_CLEARING);
+                AncientAetherBiomeRegistry.ELEVATED_CLEARING);
     }
 }

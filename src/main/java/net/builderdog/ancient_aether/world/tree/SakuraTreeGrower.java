@@ -1,6 +1,6 @@
 package net.builderdog.ancient_aether.world.tree;
 
-import net.builderdog.ancient_aether.data.generators.AncientAetherConfiguredFeatureData;
+import net.builderdog.ancient_aether.data.generators.worldgen.features.AncientAetherTreeFeatures;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.grower.AbstractTreeGrower;
@@ -12,9 +12,9 @@ public class SakuraTreeGrower extends AbstractTreeGrower {
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource random, boolean largeHive) {
         if (random.nextInt(10) == 0) {
-            return AncientAetherConfiguredFeatureData.SAKURA_TREE;
+            return AncientAetherTreeFeatures.SAKURA_TREE;
         } else {
-            return AncientAetherConfiguredFeatureData.TALL_SAKURA_TREE;
+            return AncientAetherTreeFeatures.TALL_SAKURA_TREE;
         }
     }
 }
