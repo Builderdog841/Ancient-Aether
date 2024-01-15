@@ -6,7 +6,6 @@ import org.apache.commons.lang3.tuple.Pair;
 
 public class AncientAetherConfig {
 
-
     public static class Common {
 
         public final ConfigValue<Integer> ancient_aether_biome_weight;
