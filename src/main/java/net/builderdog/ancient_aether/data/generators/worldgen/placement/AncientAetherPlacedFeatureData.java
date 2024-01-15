@@ -25,7 +25,6 @@ public class AncientAetherPlacedFeatureData {
     public static final ResourceKey<PlacedFeature> AEROGEL_ORE = createKey("aerogel_blobs");
     public static final ResourceKey<PlacedFeature> GRAVITY_GRAVEL_ORE = createKey("gravity_gravel_ore");
     public static final ResourceKey<PlacedFeature> VIOLET_AERCLOUD = createKey("violet_aercloud");
-    public static final ResourceKey<PlacedFeature> CRYSTAL_AERCLOUD = createKey("crystal_aercloud");
     public static final ResourceKey<PlacedFeature> CLOUDBED = createKey("cloudbed");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
@@ -47,7 +46,6 @@ public class AncientAetherPlacedFeatureData {
 
         //Misc Features
         register(context, VIOLET_AERCLOUD, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.VIOLET_AERCLOUD), AetherPlacedFeatureBuilders.aercloudPlacement(32, 224, 24));
-        register(context, CRYSTAL_AERCLOUD, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.CRYSTAL_AERCLOUD), AetherPlacedFeatureBuilders.aercloudPlacement(16, 72, 25));
         register(context, CLOUDBED, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.CLOUDBED), List.of());
     }
 

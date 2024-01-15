@@ -130,7 +130,7 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         itemWoodWallBlock(AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL.get(), AncientAetherBlocks.STRIPPED_SAKURA_LOG.get(), "", "ancient_aether");
 
         //Saplings
-        itemBlockFlat(AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.get(), "");
+        itemBlockFlat(AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.SKYROOT_PINE_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), "");
@@ -139,7 +139,6 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
 
         //Aerclouds
         itemBlock(AncientAetherBlocks.VIOLET_AERCLOUD.get());
-        itemBlock(AncientAetherBlocks.CRYSTAL_AERCLOUD.get());
 
         //Construction
         itemBlock(AncientAetherBlocks.AEROGEL_GLASS.get());

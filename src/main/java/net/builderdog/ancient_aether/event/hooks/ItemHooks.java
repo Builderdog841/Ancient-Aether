@@ -36,9 +36,6 @@ public class ItemHooks {
         if (stack.is(AncientAetherTags.Items.LEGENDARY_LOOT)) {
             components.add(position, AncientAetherItems.LEGENDARY);
         }
-        if (stack.is(AncientAetherTags.Items.WIP)) {
-            components.add(position, AncientAetherItems.WIP);
-        }
 
         //Moa Eggs
         if (stack.is(AetherItems.BLUE_MOA_EGG.get())) {

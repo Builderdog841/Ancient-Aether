@@ -73,10 +73,10 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         blockWithItem(AncientAetherBlocks.HIGHSPROOT_LEAVES);
         blockWithItem(AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES);
         blockWithItem(AncientAetherBlocks.SAKURA_LEAVES);
-        blockWithItem(AncientAetherBlocks.DIVINE_SKYROOT_LEAVES);
+        blockWithItem(AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES);
 
         //Saplings
-        crossBlock(AncientAetherBlocks.DIVINE_SKYROOT_SAPLING);
+        crossBlock(AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING);
         crossBlock(AncientAetherBlocks.SKYROOT_PINE_SAPLING);
         crossBlock(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING);
         crossBlock(AncientAetherBlocks.HIGHSPROOT_SAPLING);
@@ -90,11 +90,10 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
 
         //Natural Blocks
         blockWithItem(AncientAetherBlocks.GRAVITY_GRAVEL);
-        blockWithItem(AncientAetherBlocks.WYNDCAPS_ICE);
+        blockWithItem(AncientAetherBlocks.WYND_ICE);
 
         //Aerclouds
         translucentBlock(AncientAetherBlocks.VIOLET_AERCLOUD.get(),"");
-        translucentBlock(AncientAetherBlocks.CRYSTAL_AERCLOUD.get(),"");
 
         //Construction
         logBlock((AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get()));
@@ -144,7 +143,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         pottedPlant(AncientAetherBlocks.POTTED_HIGHLAND_VIOLA.get(), AncientAetherBlocks.HIGHLAND_VIOLA.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_SKY_BLUES.get(), AncientAetherBlocks.SKY_BLUES.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_FROSTED_HIGHSPROOT_SAPLING.get(), AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get(), "");
-        pottedPlant(AncientAetherBlocks.POTTED_DIVINE_SKYROOT_SAPLING.get(), AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.get(), "");
+        pottedPlant(AncientAetherBlocks.POTTED_ENCHANTED_SKYROOT_SAPLING.get(), AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get(), "");
 
         makeLogWalls();
     }

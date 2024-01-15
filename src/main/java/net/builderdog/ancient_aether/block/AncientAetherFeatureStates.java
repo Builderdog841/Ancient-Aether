@@ -9,14 +9,13 @@ import net.minecraft.world.level.block.state.BlockState;
 public class AncientAetherFeatureStates {
     public static final BlockState SKYROOT_PINE_LEAVES = AncientAetherBlocks.SKYROOT_PINE_LEAVES.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true);
     public static final BlockState CRYSTAL_SKYROOT_LEAVES = AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true);
-    public static final BlockState DIVINE_SKYROOT_LEAVES = AncientAetherBlocks.DIVINE_SKYROOT_LEAVES.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true);
+    public static final BlockState ENCHANTED_SKYROOT_LEAVES = AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true);
     public static final BlockState HIGHSPROOT_LEAVES = AncientAetherBlocks.HIGHSPROOT_LEAVES.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true);
     public static final BlockState FROSTED_HIGHSPROOT_LEAVES = AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true);
     public static final BlockState SAKURA_LEAVES = AncientAetherBlocks.SAKURA_LEAVES.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true);
     public static final BlockState HIGHSPROOT_LOG = AncientAetherBlocks.HIGHSPROOT_LOG.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true);
     public static final BlockState SAKURA_LOG = AncientAetherBlocks.SAKURA_LOG.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true);
     public static final BlockState VIOLET_AERCLOUD = AncientAetherBlocks.VIOLET_AERCLOUD.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true);
-    public static final BlockState CRYSTAL_AERCLOUD = AncientAetherBlocks.CRYSTAL_AERCLOUD.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true);
     public static final BlockState SKY_GRASS_VERY_SHORT = AncientAetherBlocks.SKY_GRASS.get().defaultBlockState().setValue(AncientAetherBlockStateProperties.LENGTH, AetherTallGrassLength.VERY_SHORT);
     public static final BlockState SKY_GRASS_SHORT = AncientAetherBlocks.SKY_GRASS.get().defaultBlockState().setValue(AncientAetherBlockStateProperties.LENGTH, AetherTallGrassLength.SHORT);
     public static final BlockState SKY_GRASS_MEDIUM = AncientAetherBlocks.SKY_GRASS.get().defaultBlockState().setValue(AncientAetherBlockStateProperties.LENGTH, AetherTallGrassLength.MEDIUM);

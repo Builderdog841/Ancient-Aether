@@ -294,11 +294,11 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.WIND_BLOWER.get())
                 .define('W', AetherBlocks.COLD_AERCLOUD.get())
-                .define('C', AncientAetherBlocks.CRYSTAL_AERCLOUD.get())
+                .define('C', AncientAetherTags.Items.WINDBLOWER_INGREDIENT)
                 .pattern("WWW")
                 .pattern("WCW")
                 .pattern("WWW")
-                .unlockedBy(getHasName(AncientAetherBlocks.CRYSTAL_AERCLOUD.get()), has(AncientAetherBlocks.CRYSTAL_AERCLOUD.get()))
+                .unlockedBy("ancient_aether:windblower_ingredient", has(AncientAetherTags.Items.WINDBLOWER_INGREDIENT))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGEL_GLASS.get(),8)

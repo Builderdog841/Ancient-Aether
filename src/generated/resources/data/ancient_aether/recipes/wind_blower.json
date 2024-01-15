@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "C": {
-      "item": "ancient_aether:crystal_aercloud"
+      "tag": "ancient_aether:windblower_ingredient"
     },
     "W": {
       "item": "aether:cold_aercloud"

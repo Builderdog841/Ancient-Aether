@@ -86,8 +86,8 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
                 (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
         add(AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES.get(),
                 (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
-        add(AncientAetherBlocks.DIVINE_SKYROOT_LEAVES.get(),
-                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
+        add(AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES.get(),
+                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
         add(AncientAetherBlocks.SAKURA_LEAVES.get(),
                 (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.SAKURA_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
 
@@ -96,7 +96,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get());
         dropSelf(AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
         dropSelf(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get());
-        dropSelf(AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.get());
+        dropSelf(AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get());
         dropSelf(AncientAetherBlocks.SAKURA_SAPLING.get());
 
         //Ores
@@ -106,11 +106,10 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
 
         //Natural
         dropSelfDouble(AncientAetherBlocks.GRAVITY_GRAVEL.get());
-        dropWhenSilkTouch(AncientAetherBlocks.WYNDCAPS_ICE.get());
+        dropWhenSilkTouch(AncientAetherBlocks.WYND_ICE.get());
 
         //Aerclouds
         dropSelfDouble(AncientAetherBlocks.VIOLET_AERCLOUD.get());
-        dropSelfDouble(AncientAetherBlocks.CRYSTAL_AERCLOUD.get());
 
         //Construction
         dropSelf(AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get());
@@ -170,7 +169,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropPottedContents(AncientAetherBlocks.POTTED_HIGHLAND_VIOLA.get());
         dropPottedContents(AncientAetherBlocks.POTTED_SAKURA_BLOSSOMS.get());
         dropPottedContents(AncientAetherBlocks.POTTED_FROSTED_HIGHSPROOT_SAPLING.get());
-        dropPottedContents(AncientAetherBlocks.POTTED_DIVINE_SKYROOT_SAPLING.get());
+        dropPottedContents(AncientAetherBlocks.POTTED_ENCHANTED_SKYROOT_SAPLING.get());
 
         //Vases
         dropSelf(AncientAetherBlocks.HOLYSTONE_VASE.get());

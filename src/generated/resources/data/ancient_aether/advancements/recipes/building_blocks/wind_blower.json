@@ -1,13 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_crystal_aercloud": {
+    "ancient_aether:windblower_ingredient": {
       "conditions": {
         "items": [
           {
-            "items": [
-              "ancient_aether:crystal_aercloud"
-            ]
+            "tag": "ancient_aether:windblower_ingredient"
           }
         ]
       },
@@ -22,7 +20,7 @@
   },
   "requirements": [
     [
-      "has_crystal_aercloud",
+      "ancient_aether:windblower_ingredient",
       "has_the_recipe"
     ]
   ],
