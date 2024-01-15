@@ -62,7 +62,7 @@
     "lava": 0.0,
     "ridges": {
       "type": "minecraft:shifted_noise",
-      "noise": "ancient_aether:forest_vegetation",
+      "noise": "ancient_aether:forest_distribution",
       "shift_x": "minecraft:shift_x",
       "shift_y": 0.0,
       "shift_z": "minecraft:shift_z",
