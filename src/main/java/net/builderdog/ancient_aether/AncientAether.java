@@ -98,7 +98,6 @@ public class AncientAether {
         }
     }
 
-
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             AncientAetherBlocks.registerPots();
