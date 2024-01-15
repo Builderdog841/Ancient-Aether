@@ -46,7 +46,7 @@ public class AncientAetherTreeFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_ENCHANTED_SKYROOT_TREE = AncientAetherFeatureUtil.registerKey("fancy_enchanted_skyroot_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> WYNDCAPS_HOLIDAY_TREE = AncientAetherFeatureUtil.registerKey("wyndcaps_holiday_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_JUNGLE_BUSH = AncientAetherFeatureUtil.registerKey("sakura_jungle_bush");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SUPER_GOLDEN_OAK = AncientAetherFeatureUtil.registerKey("super_golden_oak");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SUPER_GOLDEN_OAK_TREE = AncientAetherFeatureUtil.registerKey("super_golden_oak_tree");
 
     private static TreeConfiguration.TreeConfigurationBuilder createStraightSkyrootBlobTree(BlockState leaves) {
         return new TreeConfiguration.TreeConfigurationBuilder(
@@ -126,7 +126,7 @@ public class AncientAetherTreeFeatures {
                         new BushFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), 2),
                         new TwoLayersFeatureSize(0, 0, 0))
                         .ignoreVines().build());
-        AncientAetherFeatureUtil.register(context, SUPER_GOLDEN_OAK, Feature.TREE,
+        AncientAetherFeatureUtil.register(context, SUPER_GOLDEN_OAK_TREE, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
                         new WeightedStateProvider(new SimpleWeightedRandomList.Builder<BlockState>().add(AetherFeatureStates.GOLDEN_OAK_LOG, 3).add(AetherFeatureStates.SKYROOT_LOG, 2).build()),
                         new GoldenOakTrunkPlacer(12, 16, 0),

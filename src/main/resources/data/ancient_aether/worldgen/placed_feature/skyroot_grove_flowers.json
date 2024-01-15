@@ -1,5 +1,5 @@
 {
-  "feature": "ancient_aether:sakura_jungle_flower_patch",
+  "feature": "ancient_aether:aether_flower_patch",
   "placement": [
     {
       "type": "minecraft:rarity_filter",
@@ -23,6 +23,9 @@
     },
     {
       "type": "minecraft:biome"
+    },
+    {
+      "type": "aether:dungeon_blacklist_filter"
     }
   ]
 }

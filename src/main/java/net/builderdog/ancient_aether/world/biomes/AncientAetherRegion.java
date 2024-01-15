@@ -24,14 +24,23 @@ public class AncientAetherRegion extends Region {
     @Override
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper) {
         Climate.Parameter fullRange = Climate.Parameter.span(-1.5F, 1.5F);
+
         Climate.Parameter tempWyndcaps = Climate.Parameter.span(-1.5F, -0.5F);
-        Climate.Parameter tempSkyroot1 = Climate.Parameter.span(-0.5F, -0.25F);
-        Climate.Parameter tempSkyroot2 = Climate.Parameter.span(-0.25F, 0.25F);
-        Climate.Parameter tempSkyroot3 = Climate.Parameter.span(0.25F, 0.5F);
+        Climate.Parameter tempSkyroot = Climate.Parameter.span(-0.5F, -0.25F);
         Climate.Parameter tempSakura = Climate.Parameter.span(0.5F, 1.5F);
+
         Climate.Parameter erosionDefault = Climate.Parameter.span(-1.5F, 0.5F);
         Climate.Parameter erosionElevated = Climate.Parameter.span(0.5F, 1.5F);
 
+        Climate.Parameter forestDistCrystal1 = Climate.Parameter.span(-1.5F, -0.4F);
+        Climate.Parameter forestDistCrystal2 = Climate.Parameter.span(-0.4F, -0.3F);
+        Climate.Parameter forestDistSkyroot1 = Climate.Parameter.span(-0.3F, 0.0F);
+        Climate.Parameter forestDistSkyroot2 = Climate.Parameter.span(0.0F, 0.3F);
+        Climate.Parameter forestDistGolden1 = Climate.Parameter.span(0.3F, 0.4F);
+        Climate.Parameter forestDistGolden2 = Climate.Parameter.span(0.4F, 0.6F);
+        Climate.Parameter forestDistGolden3 = Climate.Parameter.span(0.6F, 1.5F);
+
+        //Wyndcaps
         addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, Climate.Parameter.span(-1.5F, 0.25F), fullRange, erosionDefault, Climate.Parameter.span(0.05F, 1.5F), fullRange, 0),
                 AncientAetherBiomeRegistry.WYNDCAP_TAIGA);
         addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, Climate.Parameter.span(0.25F, 1.5F), fullRange, erosionDefault, Climate.Parameter.span(0.05F, 1.5F), fullRange, 0),
@@ -41,34 +50,67 @@ public class AncientAetherRegion extends Region {
         addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, fullRange, fullRange, erosionDefault, Climate.Parameter.span(-1.5F, -0.15F), fullRange, 0),
                 AncientAetherBiomeRegistry.WYNDCAP_PEAKS);
 
-        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot1, Climate.Parameter.span(-1.5F, -0.25F), fullRange, erosionDefault, fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_MEADOW);
-        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot1, Climate.Parameter.span(-0.25F, 0.25F), fullRange, erosionDefault, fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_WOODLAND);
-        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot1, Climate.Parameter.span(0.25F, 1.5F), fullRange, erosionDefault, fullRange, fullRange, 0),
+        //Skyroot Forests
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-1.5F, -0.25F), fullRange, erosionDefault, fullRange, forestDistCrystal1, 0),
+                AncientAetherBiomeRegistry.CRYSTAL_SKYROOT_GROVE);
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-0.25F, 0.35F), fullRange, erosionDefault, fullRange, forestDistCrystal1, 0),
+                AncientAetherBiomeRegistry.CRYSTAL_SKYROOT_FOREST);
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(0.35F, 1.5F), fullRange, erosionDefault, fullRange, forestDistCrystal1, 0),
                 AetherBiomes.SKYROOT_MEADOW);
 
-        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot2, Climate.Parameter.span(-1.5F, -0.2F), fullRange, erosionDefault, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-1.5F, -0.35F), fullRange, erosionDefault, fullRange, forestDistCrystal2, 0),
+                AetherBiomes.SKYROOT_MEADOW);
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-0.35F, 0.45F), fullRange, erosionDefault, fullRange, forestDistCrystal2, 0),
+                AncientAetherBiomeRegistry.CRYSTAL_SKYROOT_FOREST);
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(0.45F, 1.5F), fullRange, erosionDefault, fullRange, forestDistCrystal2, 0),
+                AetherBiomes.SKYROOT_WOODLAND);
+
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-1.5F, -0.3F), fullRange, erosionDefault, fullRange, forestDistSkyroot1, 0),
                 AetherBiomes.SKYROOT_FOREST);
-        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot2, Climate.Parameter.span(-0.2F, 0.1F), fullRange, erosionDefault, fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_FOREST);
-        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot2, Climate.Parameter.span(0.1F, 0.2F), fullRange, erosionDefault, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-0.3F, -0.15F), fullRange, erosionDefault, fullRange, forestDistSkyroot1, 0),
+                AetherBiomes.SKYROOT_MEADOW);
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-0.15F, 0.3F), fullRange, erosionDefault, fullRange, forestDistSkyroot1, 0),
+                AetherBiomes.SKYROOT_WOODLAND);
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(0.3F, 1.5F), fullRange, erosionDefault, fullRange, forestDistSkyroot1, 0),
                 AetherBiomes.SKYROOT_GROVE);
-        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot2, Climate.Parameter.span(0.2F, 1.5F), fullRange, erosionDefault, fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_MEADOW);
 
-        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot3, Climate.Parameter.span(-1.5F, -0.1F), fullRange, erosionDefault, fullRange, fullRange, 0),
-                AetherBiomes.SKYROOT_WOODLAND);
-        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot3, Climate.Parameter.span(-0.1F, 0.2F), fullRange, erosionDefault, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-1.5F, -0.2F), fullRange, erosionDefault, fullRange, forestDistSkyroot2, 0),
                 AetherBiomes.SKYROOT_FOREST);
-        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot3, Climate.Parameter.span(0.2F, 1.5F), fullRange, erosionDefault, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-0.2F, -0.15F), fullRange, erosionDefault, fullRange, forestDistSkyroot2, 0),
+                AetherBiomes.SKYROOT_MEADOW);
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-0.15F, 0.25F), fullRange, erosionDefault, fullRange, forestDistSkyroot2, 0),
+                AetherBiomes.SKYROOT_FOREST);
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(0.25F, 1.5F), fullRange, erosionDefault, fullRange, forestDistSkyroot2, 0),
+                AetherBiomes.SKYROOT_GROVE);
+
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-1.5F, -0.2F), fullRange, erosionDefault, fullRange, forestDistGolden1, 0),
+                AncientAetherBiomeRegistry.GOLDEN_SKYROOT_FOREST);
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-0.2F, 0.0F), fullRange, erosionDefault, fullRange, forestDistGolden1, 0),
+                AetherBiomes.SKYROOT_MEADOW);
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(0.0F, 1.5F), fullRange, erosionDefault, fullRange, forestDistGolden1, 0),
+                AncientAetherBiomeRegistry.GOLDEN_SKYROOT_FOREST);
+
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-1.5F, -0.25F), fullRange, erosionDefault, fullRange, forestDistGolden2, 0),
+                AncientAetherBiomeRegistry.GOLDEN_SKYROOT_GROVE);
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-0.25F, 0.35F), fullRange, erosionDefault, fullRange, forestDistGolden2, 0),
+                AncientAetherBiomeRegistry.GOLDEN_SKYROOT_FOREST);
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(0.35F, 1.5F), fullRange, erosionDefault, fullRange, forestDistGolden2, 0),
                 AetherBiomes.SKYROOT_MEADOW);
 
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-1.5F, -0.25F), fullRange, erosionDefault, fullRange, forestDistGolden2, 0),
+                AncientAetherBiomeRegistry.GOLDEN_SKYROOT_GROVE);
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-0.25F, 0.3F), fullRange, erosionDefault, fullRange, forestDistGolden2, 0),
+                AncientAetherBiomeRegistry.GOLDEN_THICKET);
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(0.3F, 1.5F), fullRange, erosionDefault, fullRange, forestDistGolden2, 0),
+                AetherBiomes.SKYROOT_MEADOW);
+
+        //Sakura Jungle
         addBiome(mapper, new Climate.ParameterPoint(tempSakura, Climate.Parameter.span(-1.5F, 0.25F), fullRange, erosionDefault, fullRange, fullRange, 0),
                 AncientAetherBiomeRegistry.SAKURA_JUNGLE);
         addBiome(mapper, new Climate.ParameterPoint(tempSakura, Climate.Parameter.span(0.25F, 1.5F), fullRange, erosionDefault, fullRange, fullRange, 0),
                 AncientAetherBiomeRegistry.SKYROOT_JUNGLE);
 
+        //Elevated Islands
         addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(-1.5F, -0.25F), fullRange, erosionElevated, fullRange, fullRange, 0),
                 AncientAetherBiomeRegistry.ELEVATED_CLEARING);
         addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(-0.25F, 0.25F), fullRange, erosionElevated, fullRange, fullRange, 0),

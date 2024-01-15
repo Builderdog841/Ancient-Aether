@@ -22,7 +22,7 @@ public class AncientAetherNoiseData {
     public static void bootstrap(BootstapContext<NormalNoise.NoiseParameters> context) {
         register(context, AMPLIFIED, -7, 1.0, 2.0, 1.0, 0.0, 0.0, 0.0, 0.0);
         register(context, EROSION, -9, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
-        register(context, FOREST_DISTRIBUTION, -8, 2.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0);
+        register(context, FOREST_DISTRIBUTION, -8, 1.25, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0);
         register(context, JAGGED, -16, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0);
         register(context, TEMPERATURE, -9, 1.5, 0.0, 1.0, 0.0, 0.0, 0.0);
         register(context, VEGETATION, -8, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0);

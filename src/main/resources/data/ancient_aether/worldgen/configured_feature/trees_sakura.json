@@ -22,7 +22,7 @@
       {
         "chance": 0.3,
         "feature": {
-          "feature": "ancient_aether:trees_jungle_skyroot",
+          "feature": "ancient_aether:trees_skyroot_jungle",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",
