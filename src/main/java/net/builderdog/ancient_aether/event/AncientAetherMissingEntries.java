@@ -106,5 +106,17 @@ public class AncientAetherMissingEntries {
 
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
                 .filter(mapping -> mapping.getKey().getPath().contains("divine_gravel")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.GRAVITY_GRAVEL.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("divine_skyroot_leaves")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("divine_skyroot_sapling")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("potted_divine_skyroot_sapling")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.POTTED_ENCHANTED_SKYROOT_SAPLING.get()));
+
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("wyndcaps_ice")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.WYND_ICE.get()));
+
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("crystal_aercloud")).forEach(blockMapping -> blockMapping.remap(AetherBlocks.COLD_AERCLOUD.get()));
     }
 }
