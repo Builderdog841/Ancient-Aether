@@ -1,6 +1,6 @@
 {
   "carvers": {},
-  "creature_spawn_probability": 0.08,
+  "creature_spawn_probability": 0.1,
   "downfall": 0.0,
   "effects": {
     "fog_color": 9671612,
@@ -17,9 +17,7 @@
     "water_fog_color": 329011
   },
   "features": [
-    [
-      "aether:quicksoil_shelf"
-    ],
+    [],
     [
       "aether:water_lake"
     ],
@@ -42,7 +40,6 @@
       "aether:skyroot_grove_trees",
       "aether:holiday_tree",
       "aether:grass_patch",
-      "aether:tall_grass_patch",
       "ancient_aether:skyroot_grassland_flowers",
       "aether:berry_bush_patch"
     ],

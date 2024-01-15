@@ -60,11 +60,19 @@
     "fluid_level_spread": 0.0,
     "initial_density_without_jaggedness": 0.0,
     "lava": 0.0,
-    "ridges": 0.0,
+    "ridges": {
+      "type": "minecraft:shifted_noise",
+      "noise": "ancient_aether:forest_vegetation",
+      "shift_x": "minecraft:shift_x",
+      "shift_y": 0.0,
+      "shift_z": "minecraft:shift_z",
+      "xz_scale": 0.25,
+      "y_scale": 0.0
+    },
     "temperature": "ancient_aether:the_aether/temperature",
     "vegetation": {
       "type": "minecraft:shifted_noise",
-      "noise": "aether:vegetation",
+      "noise": "ancient_aether:vegetation",
       "shift_x": "minecraft:shift_x",
       "shift_y": 0.0,
       "shift_z": "minecraft:shift_z",

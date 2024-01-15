@@ -1,4 +1,4 @@
-// 1.20.1	2024-01-15T20:20:43.5854426	Registries
+// 1.20.1	2024-01-15T20:52:54.2225253	Registries
 2cf08e50ac74f6af67fe26f51cd18f7d83b169bc data/ancient_aether/worldgen/configured_feature/aerogel_blobs.json
 50792a08ce6f6861b14a3d48604ea14c92fbec23 data/ancient_aether/worldgen/configured_feature/aether_grass_patch.json
 344034581163b955acca307272aa62dfa56193dd data/ancient_aether/worldgen/configured_feature/aether_quartz_ore.json
@@ -31,6 +31,7 @@ a16f2bf0287e952eeff598a946a3ff74f2b68c45 data/ancient_aether/worldgen/configured
 f62e1503ccaebdd26bcb6ce62143eb7986ce5dd3 data/ancient_aether/worldgen/configured_feature/wynd_thistle_patch.json
 02494c1f1168e7d1007d6bc2c0c68808cc4b6fcf data/ancient_aether/worldgen/noise/amplified.json
 052b7c655b3a82cbf15c33f958e0072f88d7b9d3 data/ancient_aether/worldgen/noise/erosion.json
+4831bf5c5656c6583c10ce711aa01d5cf9e206b2 data/ancient_aether/worldgen/noise/forest_distribution.json
 22f4b5f6690126b078167740af0939ccec9ca7b5 data/ancient_aether/worldgen/noise/jagged.json
 e9951c1e43a8e47e424565851e1786e9dbe41a7a data/ancient_aether/worldgen/noise/temperature.json
 1cba2b2f5a213dbfe1af9a7082dc1a1f186a0195 data/ancient_aether/worldgen/placed_feature/aerogel_blobs.json

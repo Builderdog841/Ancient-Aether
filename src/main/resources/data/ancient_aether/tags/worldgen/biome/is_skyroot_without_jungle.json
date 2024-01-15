@@ -2,6 +2,9 @@
   "values": [
     "#ancient_aether:is_barren_skyroot_biome",
     "aether:skyroot_forest",
-    "aether:skyroot_woodland"
+    "aether:skyroot_woodland",
+    "ancient_aether:golden_skyroot_forest",
+    "ancient_aether:crystal_skyroot_forest",
+    "ancient_aether:golden_thicket"
   ]
 }
