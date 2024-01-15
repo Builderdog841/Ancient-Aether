@@ -97,11 +97,11 @@ public class AncientAetherRegion extends Region {
         addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(0.35F, 1.5F), fullRange, erosionDefault, fullRange, forestDistGolden2, 0),
                 AetherBiomes.SKYROOT_MEADOW);
 
-        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-1.5F, -0.25F), fullRange, erosionDefault, fullRange, forestDistGolden2, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-1.5F, -0.25F), fullRange, erosionDefault, fullRange, forestDistGolden3, 0),
                 AncientAetherBiomeRegistry.GOLDEN_SKYROOT_GROVE);
-        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-0.25F, 0.3F), fullRange, erosionDefault, fullRange, forestDistGolden2, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-0.25F, 0.3F), fullRange, erosionDefault, fullRange, forestDistGolden3, 0),
                 AncientAetherBiomeRegistry.GOLDEN_THICKET);
-        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(0.3F, 1.5F), fullRange, erosionDefault, fullRange, forestDistGolden2, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(0.3F, 1.5F), fullRange, erosionDefault, fullRange, forestDistGolden3, 0),
                 AetherBiomes.SKYROOT_MEADOW);
 
         //Sakura Jungle
