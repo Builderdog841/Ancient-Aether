@@ -37,8 +37,8 @@ public class AncientAetherRegion extends Region {
         Climate.Parameter forestDistSkyroot1 = Climate.Parameter.span(-0.3F, 0.0F);
         Climate.Parameter forestDistSkyroot2 = Climate.Parameter.span(0.0F, 0.3F);
         Climate.Parameter forestDistGolden1 = Climate.Parameter.span(0.3F, 0.4F);
-        Climate.Parameter forestDistGolden2 = Climate.Parameter.span(0.4F, 0.6F);
-        Climate.Parameter forestDistGolden3 = Climate.Parameter.span(0.6F, 1.5F);
+        Climate.Parameter forestDistGolden2 = Climate.Parameter.span(0.4F, 0.65F);
+        Climate.Parameter forestDistGolden3 = Climate.Parameter.span(0.65F, 1.5F);
 
         //Wyndcaps
         addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, Climate.Parameter.span(-1.5F, 0.25F), fullRange, erosionDefault, Climate.Parameter.span(0.05F, 1.5F), fullRange, 0),
@@ -99,7 +99,9 @@ public class AncientAetherRegion extends Region {
 
         addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-1.5F, -0.25F), fullRange, erosionDefault, fullRange, forestDistGolden3, 0),
                 AncientAetherBiomeRegistry.GOLDEN_SKYROOT_GROVE);
-        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-0.25F, 0.3F), fullRange, erosionDefault, fullRange, forestDistGolden3, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-0.25F, 0.1F), fullRange, erosionDefault, fullRange, forestDistGolden3, 0),
+                AncientAetherBiomeRegistry.GOLDEN_SKYROOT_FOREST);
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(0.1F, 0.3F), fullRange, erosionDefault, fullRange, forestDistGolden3, 0),
                 AncientAetherBiomeRegistry.GOLDEN_THICKET);
         addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(0.3F, 1.5F), fullRange, erosionDefault, fullRange, forestDistGolden3, 0),
                 AetherBiomes.SKYROOT_MEADOW);
