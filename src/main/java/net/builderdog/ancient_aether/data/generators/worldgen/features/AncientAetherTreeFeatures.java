@@ -129,7 +129,7 @@ public class AncientAetherTreeFeatures {
         AncientAetherFeatureUtil.register(context, SUPER_GOLDEN_OAK_TREE, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
                         new WeightedStateProvider(new SimpleWeightedRandomList.Builder<BlockState>().add(AetherFeatureStates.GOLDEN_OAK_LOG, 3).add(AetherFeatureStates.SKYROOT_LOG, 2).build()),
-                        new StraightTrunkPlacer(12, 16, 0),
+                        new StraightTrunkPlacer(10, 6, 0),
                         BlockStateProvider.simple(AetherFeatureStates.GOLDEN_OAK_LEAVES),
                         new GoldenOakFoliagePlacer(ConstantInt.of(3), ConstantInt.of(1), ConstantInt.of(7)),
                         new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(10))
