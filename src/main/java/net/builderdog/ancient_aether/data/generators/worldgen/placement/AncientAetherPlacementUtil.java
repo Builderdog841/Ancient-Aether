@@ -15,6 +15,7 @@ public class AncientAetherPlacementUtil {
 
     public static void bootstrap(BootstapContext<PlacedFeature> placedFeature) {
         AncientAetherOrePlacements.bootstrap(placedFeature);
+        AncientAetherVegetationPlacements.bootstrap(placedFeature);
         AncientAetherMiscPlacements.bootstrap(placedFeature);
     }
 
@@ -22,11 +23,8 @@ public class AncientAetherPlacementUtil {
         return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(AncientAether.MOD_ID, name));
     }
 
-    public static void register(BootstapContext<PlacedFeature> p_255872_, ResourceKey<PlacedFeature> p_255820_, Holder<ConfiguredFeature<?, ?>> p_255813_, List<PlacementModifier> p_256042_) {
-        p_255872_.register(p_255820_, new PlacedFeature(p_255813_, List.copyOf(p_256042_)));
-    }
-
-    public static void register(BootstapContext<PlacedFeature> p_256241_, ResourceKey<PlacedFeature> p_256614_, Holder<ConfiguredFeature<?, ?>> p_255855_, PlacementModifier... p_256413_) {
-        register(p_256241_, p_256614_, p_255855_, List.of(p_256413_));
+    public static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration,
+                                 List<PlacementModifier> modifiers) {
+        context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
     }
 }

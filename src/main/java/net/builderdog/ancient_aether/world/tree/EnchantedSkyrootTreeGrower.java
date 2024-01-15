@@ -7,14 +7,14 @@ import net.minecraft.world.level.block.grower.AbstractTreeGrower;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import org.jetbrains.annotations.Nullable;
 
-public class DivineSkyrootTreeGrower extends AbstractTreeGrower {
+public class EnchantedSkyrootTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource random, boolean largeHive) {
         if (random.nextInt(10) == 0) {
-            return AncientAetherTreeFeatures.FANCY_DIVINE_SKYROOT_TREE;
+            return AncientAetherTreeFeatures.FANCY_ENCHANTED_SKYROOT_TREE;
         } else {
-            return AncientAetherTreeFeatures.DIVINE_SKYROOT_TREE;
+            return AncientAetherTreeFeatures.ENCHANTED_SKYROOT_TREE;
         }
     }
 }
