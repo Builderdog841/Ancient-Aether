@@ -15,7 +15,6 @@ public class AncientAetherPlacementUtil {
 
     public static void bootstrap(BootstapContext<PlacedFeature> placedFeature) {
         AncientAetherOrePlacements.bootstrap(placedFeature);
-        AncientAetherVegetationPlacements.bootstrap(placedFeature);
         AncientAetherMiscPlacements.bootstrap(placedFeature);
     }
 

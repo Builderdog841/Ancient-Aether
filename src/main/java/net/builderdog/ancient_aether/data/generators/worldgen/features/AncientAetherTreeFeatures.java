@@ -47,14 +47,6 @@ public class AncientAetherTreeFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> WYNDCAPS_HOLIDAY_TREE = AncientAetherFeatureUtil.registerKey("wyndcaps_holiday_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_JUNGLE_BUSH = AncientAetherFeatureUtil.registerKey("sakura_jungle_bush");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SUPER_GOLDEN_OAK = AncientAetherFeatureUtil.registerKey("super_golden_oak");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> TREES_GOLDEN_SKYROOT = AncientAetherFeatureUtil.registerKey("trees_golden_skyroot");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> TREES_CRYSTAL_SKYROOT = AncientAetherFeatureUtil.registerKey("trees_crystal_skyroot");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> TREES_GOLDEN_THICKET = AncientAetherFeatureUtil.registerKey("trees_golden_thicket");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> TREES_WYNDCAPS = AncientAetherFeatureUtil.registerKey("trees_wyndcaps");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> TREES_FESTIVE_WYNDCAPS = AncientAetherFeatureUtil.registerKey("trees_festive_wyndcaps");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> TREES_SKYROOT_JUNGLE = AncientAetherFeatureUtil.registerKey("trees_skyroot_jungle");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> TREES_SAKURA_JUNGLE = AncientAetherFeatureUtil.registerKey("trees_sakura");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> TREES_ELEVATED_ISLANDS = AncientAetherFeatureUtil.registerKey("trees_elevated_islands");
 
     private static TreeConfiguration.TreeConfigurationBuilder createStraightSkyrootBlobTree(BlockState leaves) {
         return new TreeConfiguration.TreeConfigurationBuilder(
