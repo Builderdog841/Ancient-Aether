@@ -7,7 +7,7 @@
     "ground_state": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "ancient_aether:wyndcaps_ice"
+        "Name": "ancient_aether:wynd_ice"
       }
     },
     "replaceable": "#ancient_aether:coast_replaceable",
