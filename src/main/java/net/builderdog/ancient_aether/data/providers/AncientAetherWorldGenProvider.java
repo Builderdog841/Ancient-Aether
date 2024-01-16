@@ -1,6 +1,7 @@
 package net.builderdog.ancient_aether.data.providers;
 
 import net.builderdog.ancient_aether.AncientAether;
+import net.builderdog.ancient_aether.data.generators.worldgen.AncientAetherBiomeModifierData;
 import net.builderdog.ancient_aether.data.generators.worldgen.AncientAetherNoiseData;
 import net.builderdog.ancient_aether.data.generators.worldgen.features.*;
 import net.builderdog.ancient_aether.data.generators.worldgen.placement.AncientAetherPlacementUtil;
@@ -9,6 +10,7 @@ import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.DatapackBuiltinEntriesProvider;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
@@ -17,6 +19,7 @@ public class AncientAetherWorldGenProvider extends DatapackBuiltinEntriesProvide
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
             .add(Registries.CONFIGURED_FEATURE, AncientAetherFeatureUtil::bootstrap)
             .add(Registries.PLACED_FEATURE, AncientAetherPlacementUtil::bootstrap)
+            .add(ForgeRegistries.Keys.BIOME_MODIFIERS, AncientAetherBiomeModifierData::bootstrap)
             .add(Registries.NOISE, AncientAetherNoiseData::bootstrap);
 
     public AncientAetherWorldGenProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {

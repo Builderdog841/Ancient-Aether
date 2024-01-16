@@ -4,6 +4,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 
 public class AncientAetherTags {
@@ -28,9 +29,17 @@ public class AncientAetherTags {
         public static final TagKey<Item> ANCIENT_REPAIRING = tag("ancient_repairing");
         public static final TagKey<Item> ARKZENUS_REPAIRING = tag("arkzenus_repairing");
 
-
         private static TagKey<Item> tag(String name) {
             return TagKey.create(Registries.ITEM, new ResourceLocation(AncientAether.MOD_ID, name));
+        }
+    }
+
+    public static class Biomes {
+        public static final TagKey<Biome> HAS_AEROGEL_BLOBS = tag("has_aerogel_blobs");
+        public static final TagKey<Biome> HAS_AETHER_QUARTZ_ORE = tag("has_aether_quartz_ore");
+
+        private static TagKey<Biome> tag(String name) {
+            return TagKey.create(Registries.BIOME, new ResourceLocation(AncientAether.MOD_ID, name));
         }
     }
 }
