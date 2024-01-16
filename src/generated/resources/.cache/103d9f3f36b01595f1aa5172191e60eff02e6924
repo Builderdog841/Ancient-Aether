@@ -1,4 +1,4 @@
-// 1.20.1	2024-01-16T13:48:54.9878669	Registries
+// 1.20.1	2024-01-16T18:06:49.8198218	Registries
 8e6af76a39d38a0e170afc6642ebcf1d2c876c9a data/ancient_aether/forge/biome_modifier/aerogel_blobs_biome_modifier.json
 07b956d5f90c0976644d29a2d6ea44af48b2cb86 data/ancient_aether/forge/biome_modifier/aether_quartz_ore_biome_modifier.json
 f07ae52579b96fe273a35a9a1bf5ea0631522e67 data/ancient_aether/forge/biome_modifier/cloudbed_biome_modifier.json
@@ -36,7 +36,7 @@ a16f2bf0287e952eeff598a946a3ff74f2b68c45 data/ancient_aether/worldgen/configured
 f62e1503ccaebdd26bcb6ce62143eb7986ce5dd3 data/ancient_aether/worldgen/configured_feature/wynd_thistle_patch.json
 02494c1f1168e7d1007d6bc2c0c68808cc4b6fcf data/ancient_aether/worldgen/noise/amplified.json
 052b7c655b3a82cbf15c33f958e0072f88d7b9d3 data/ancient_aether/worldgen/noise/erosion.json
-6856df3a6f68dea3ec3882b45f00137dffdd4e1d data/ancient_aether/worldgen/noise/forest_distribution.json
+dabbcb13353df9671de1511b22ee27195485c955 data/ancient_aether/worldgen/noise/forest_distribution.json
 22f4b5f6690126b078167740af0939ccec9ca7b5 data/ancient_aether/worldgen/noise/jagged.json
 e9951c1e43a8e47e424565851e1786e9dbe41a7a data/ancient_aether/worldgen/noise/temperature.json
 144e6875c7c48ab4b4a0717436536cc121dc62da data/ancient_aether/worldgen/noise/vegetation.json

@@ -32,13 +32,13 @@ public class AncientAetherRegion extends Region {
         Climate.Parameter erosionDefault = Climate.Parameter.span(-1.5F, 0.5F);
         Climate.Parameter erosionElevated = Climate.Parameter.span(0.5F, 1.5F);
 
-        Climate.Parameter forestDistCrystal1 = Climate.Parameter.span(-1.5F, -0.4F);
-        Climate.Parameter forestDistCrystal2 = Climate.Parameter.span(-0.4F, -0.3F);
-        Climate.Parameter forestDistSkyroot1 = Climate.Parameter.span(-0.3F, 0.0F);
-        Climate.Parameter forestDistSkyroot2 = Climate.Parameter.span(0.0F, 0.3F);
-        Climate.Parameter forestDistGolden1 = Climate.Parameter.span(0.3F, 0.4F);
-        Climate.Parameter forestDistGolden2 = Climate.Parameter.span(0.4F, 0.65F);
-        Climate.Parameter forestDistGolden3 = Climate.Parameter.span(0.65F, 1.5F);
+        Climate.Parameter forestDistCrystal1 = Climate.Parameter.span(-1.5F, -0.5F);
+        Climate.Parameter forestDistCrystal2 = Climate.Parameter.span(-0.5F, -0.35F);
+        Climate.Parameter forestDistSkyroot1 = Climate.Parameter.span(-0.35F, 0.0F);
+        Climate.Parameter forestDistSkyroot2 = Climate.Parameter.span(0.0F, 0.35F);
+        Climate.Parameter forestDistGolden1 = Climate.Parameter.span(0.35F, 0.5F);
+        Climate.Parameter forestDistGolden2 = Climate.Parameter.span(0.5F, 0.7F);
+        Climate.Parameter forestDistGolden3 = Climate.Parameter.span(0.7F, 1.5F);
 
         //Wyndcaps
         addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, Climate.Parameter.span(-1.5F, 0.25F), fullRange, erosionDefault, Climate.Parameter.span(0.05F, 1.5F), fullRange, 0),
