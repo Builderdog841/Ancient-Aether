@@ -37,6 +37,9 @@ public class AncientAetherTags {
     public static class Biomes {
         public static final TagKey<Biome> HAS_AEROGEL_BLOBS = tag("has_aerogel_blobs");
         public static final TagKey<Biome> HAS_AETHER_QUARTZ_ORE = tag("has_aether_quartz_ore");
+        public static final TagKey<Biome> HAS_VALKYRUM_ORE = tag("has_valkyrum_ore");
+        public static final TagKey<Biome> HAS_VIOLET_AERCLOUD = tag("has_violet_aercloud");
+        public static final TagKey<Biome> HAS_CLOUDBED = tag("has_cloudbed");
 
         private static TagKey<Biome> tag(String name) {
             return TagKey.create(Registries.BIOME, new ResourceLocation(AncientAether.MOD_ID, name));

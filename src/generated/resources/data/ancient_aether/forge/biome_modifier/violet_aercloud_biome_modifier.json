@@ -2,5 +2,5 @@
   "type": "forge:add_features",
   "biomes": "#ancient_aether:has_violet_aercloud",
   "features": "ancient_aether:violet_aercloud",
-  "step": "underground_ores"
+  "step": "top_layer_modification"
 }

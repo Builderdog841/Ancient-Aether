@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
-  "biomes": "#aether:is_aether",
+  "biomes": "#ancient_aether:has_cloudbed",
   "features": "ancient_aether:cloudbed",
   "step": "raw_generation"
 }
