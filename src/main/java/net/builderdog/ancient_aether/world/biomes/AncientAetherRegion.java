@@ -29,14 +29,16 @@ public class AncientAetherRegion extends Region {
         Climate.Parameter tempSkyroot = Climate.Parameter.span(-0.5F, 0.5F);
         Climate.Parameter tempSakura = Climate.Parameter.span(0.5F, 1.5F);
 
-        Climate.Parameter erosionDefault = Climate.Parameter.span(-1.5F, 0.5F);
+        Climate.Parameter erosionEnchanted = Climate.Parameter.span(-1.4F, -0.35F);
+        Climate.Parameter erosionSkyroot = Climate.Parameter.span(-0.35F, 0.5F);
+        Climate.Parameter erosionDefault = Climate.Parameter.span(-0.35F, 0.5F);
         Climate.Parameter erosionElevated = Climate.Parameter.span(0.5F, 1.5F);
 
         Climate.Parameter forestDistCrystal1 = Climate.Parameter.span(-1.5F, -0.5F);
-        Climate.Parameter forestDistCrystal2 = Climate.Parameter.span(-0.5F, -0.35F);
-        Climate.Parameter forestDistSkyroot1 = Climate.Parameter.span(-0.35F, 0.0F);
-        Climate.Parameter forestDistSkyroot2 = Climate.Parameter.span(0.0F, 0.35F);
-        Climate.Parameter forestDistGolden1 = Climate.Parameter.span(0.35F, 0.5F);
+        Climate.Parameter forestDistCrystal2 = Climate.Parameter.span(-0.5F, -0.325F);
+        Climate.Parameter forestDistSkyroot1 = Climate.Parameter.span(-0.325F, 0.0F);
+        Climate.Parameter forestDistSkyroot2 = Climate.Parameter.span(0.0F, 0.325F);
+        Climate.Parameter forestDistGolden1 = Climate.Parameter.span(0.325F, 0.5F);
         Climate.Parameter forestDistGolden2 = Climate.Parameter.span(0.5F, 0.7F);
         Climate.Parameter forestDistGolden3 = Climate.Parameter.span(0.7F, 1.5F);
 
