@@ -40,7 +40,7 @@
         }
       },
       {
-        "chance": 0.05,
+        "chance": 0.1,
         "feature": {
           "feature": "aether:skyroot_tree",
           "placement": [

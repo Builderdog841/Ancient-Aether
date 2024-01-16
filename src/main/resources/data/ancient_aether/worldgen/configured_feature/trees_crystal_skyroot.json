@@ -60,7 +60,7 @@
         }
       },
       {
-        "chance": 0.1,
+        "chance": 0.2,
         "feature": {
           "feature": "ancient_aether:enchanted_skyroot_tree",
           "placement": [
