@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.data.generators.models;
+package net.builderdog.ancient_aether.data.generators;
 
 import com.aetherteam.aether.data.providers.AetherItemModelProvider;
 import net.builderdog.ancient_aether.AncientAether;

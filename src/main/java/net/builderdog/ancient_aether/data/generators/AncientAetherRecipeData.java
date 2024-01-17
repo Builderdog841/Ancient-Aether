@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.data.generators.recipes;
+package net.builderdog.ancient_aether.data.generators;
 
 import com.aetherteam.aether.AetherTags;
 import com.aetherteam.aether.block.AetherBlocks;

@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.data.generators.models;
+package net.builderdog.ancient_aether.data.generators;
 
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
