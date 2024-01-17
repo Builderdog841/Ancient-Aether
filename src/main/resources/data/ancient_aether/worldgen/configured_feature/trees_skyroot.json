@@ -49,7 +49,7 @@
               "predicate": {
                 "type": "minecraft:would_survive",
                 "state": {
-                  "Name": "ancient_aether:highsproot_sapling",
+                  "Name": "ancient_aether:crystal_skyroot_sapling",
                   "Properties": {
                     "stage": "0"
                   }
