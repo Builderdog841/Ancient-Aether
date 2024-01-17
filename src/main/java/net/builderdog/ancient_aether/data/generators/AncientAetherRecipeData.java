@@ -177,7 +177,7 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .unlockedBy("has_holystone", has(AetherBlocks.HOLYSTONE.get()))
                 .save(consumer, name("holystone_stonecutter_from_zanite"));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Blocks.SMITHING_TABLE, 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Blocks.SMITHING_TABLE)
                 .group("minecraft:smithing_table")
                 .define('Z', AetherItems.ZANITE_GEMSTONE.get())
                 .define('P', AetherTags.Items.PLANKS_CRAFTING)
@@ -186,6 +186,15 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .pattern("PP")
                 .unlockedBy(getHasName(AetherItems.ZANITE_GEMSTONE.get()), has(AetherItems.ZANITE_GEMSTONE.get()))
                 .save(consumer, name("skyroot_smithing_table_from_zanite"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Blocks.ANVIL)
+                .define('B', AetherBlocks.ZANITE_BLOCK.get())
+                .define('Z', AetherItems.ZANITE_GEMSTONE.get())
+                .pattern("BBB")
+                .pattern(" Z ")
+                .pattern("ZZZ")
+                .unlockedBy(getHasName(AetherBlocks.ZANITE_BLOCK.get()), has(AetherBlocks.ZANITE_BLOCK.get()))
+                .save(consumer, name("anvil_from_zanite"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherItems.HIGHSPROOT_SIGN.get(), 3)
                 .group("wooden_sign")
