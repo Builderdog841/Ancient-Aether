@@ -7,14 +7,17 @@
     "ground_state": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "ancient_aether:wynd_ice"
+        "Name": "aether:quicksoil",
+        "Properties": {
+          "double_drops": "true"
+        }
       }
     },
     "replaceable": "#ancient_aether:coast_replaceable",
     "surface": "floor",
     "vegetation_chance": 0.0,
     "vegetation_feature": {
-      "feature": "aether:grass_patch",
+      "feature": "ancient_aether:aether_grass_patch",
       "placement": []
     },
     "vertical_range": 1,

@@ -26,4 +26,6 @@ public class AncientAetherFeatureStates {
     public static final BlockState SKY_GRASS_MEDIUM_FROZEN = AncientAetherBlocks.SKY_GRASS.get().defaultBlockState().setValue(AncientAetherBlockStateProperties.LENGTH, AetherTallGrassLength.MEDIUM).setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.FROZEN);
     public static final BlockState SKY_GRASS_VERY_SHORT_PALE = AncientAetherBlocks.SKY_GRASS.get().defaultBlockState().setValue(AncientAetherBlockStateProperties.LENGTH, AetherTallGrassLength.VERY_SHORT).setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.PALE);
     public static final BlockState SKY_GRASS_SHORT_PALE = AncientAetherBlocks.SKY_GRASS.get().defaultBlockState().setValue(AncientAetherBlockStateProperties.LENGTH, AetherTallGrassLength.SHORT).setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.PALE);
+    public static final BlockState GRAVITY_GRAVEL = AncientAetherBlocks.GRAVITY_GRAVEL.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true);
+    public static final BlockState WYND_ICE = AncientAetherBlocks.WYND_ICE.get().defaultBlockState();
 }

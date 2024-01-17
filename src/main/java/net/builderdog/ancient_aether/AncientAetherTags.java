@@ -11,6 +11,7 @@ public class AncientAetherTags {
 
     public static class Blocks {
         public static final TagKey<Block> WYNDCAPS_ANIMAL_SPAWNABLE_ON = tag("wyndcaps_animals_spawnable_on");
+        public static final TagKey<Block> COAST_REPLACEABLE = tag("coast_replaceable");
 
         private static TagKey<Block> tag(String name) {
             return TagKey.create(Registries.BLOCK, new ResourceLocation(AncientAether.MOD_ID, name));
