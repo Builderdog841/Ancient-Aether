@@ -40,16 +40,16 @@
         }
       },
       {
-        "chance": 0.1,
+        "chance": 0.25,
         "feature": {
-          "feature": "ancient_aether:fancy_skyroot_tree",
+          "feature": "ancient_aether:fancy_crystal_skyroot_tree",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",
               "predicate": {
                 "type": "minecraft:would_survive",
                 "state": {
-                  "Name": "aether:skyroot_sapling",
+                  "Name": "ancient_aether:crystal_skyroot_sapling",
                   "Properties": {
                     "stage": "0"
                   }
@@ -60,16 +60,36 @@
         }
       },
       {
-        "chance": 0.1,
+        "chance": 0.2,
         "feature": {
-          "feature": "aether:golden_oak_tree",
+          "feature": "ancient_aether:enchanted_skyroot_tree",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",
               "predicate": {
                 "type": "minecraft:would_survive",
                 "state": {
-                  "Name": "aether:golden_oak_sapling",
+                  "Name": "ancient_aether:enchanted_skyroot_sapling",
+                  "Properties": {
+                    "stage": "0"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chance": 0.05,
+        "feature": {
+          "feature": "ancient_aether:skyroot_pine_tree",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:would_survive",
+                "state": {
+                  "Name": "ancient_aether:skyroot_pine_sapling",
                   "Properties": {
                     "stage": "0"
                   }
