@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_frosted_highsproot_leaves": {
+    "has_highsproot_leaves": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ancient_aether:frosted_highsproot_leaves"
+              "ancient_aether:highsproot_leaves"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_frosted_highsproot_leaves",
+      "has_highsproot_leaves",
       "has_the_recipe"
     ]
   ],

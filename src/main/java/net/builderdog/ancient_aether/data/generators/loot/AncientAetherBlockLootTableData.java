@@ -84,8 +84,8 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
                 (leaves) -> droppingCrystalSkyrootLeaves(leaves, AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
         add(AncientAetherBlocks.HIGHSPROOT_LEAVES.get(),
                 (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
-        add(AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES.get(),
-                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.FROSTED_HIGHSPROOT_LEAVES.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
+        add(AncientAetherBlocks.HIGHSPROOT_LEAVES.get(),
+                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.HIGHSPROOT_LEAVES.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
         add(AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES.get(),
                 (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
         add(AncientAetherBlocks.SAKURA_LEAVES.get(),
@@ -95,7 +95,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.SKYROOT_PINE_SAPLING.get());
         dropSelf(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get());
         dropSelf(AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
-        dropSelf(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get());
+        dropSelf(AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
         dropSelf(AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get());
         dropSelf(AncientAetherBlocks.SAKURA_SAPLING.get());
 
@@ -168,7 +168,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropPottedContents(AncientAetherBlocks.POTTED_WYND_THISTLE.get());
         dropPottedContents(AncientAetherBlocks.POTTED_HIGHLAND_VIOLA.get());
         dropPottedContents(AncientAetherBlocks.POTTED_SAKURA_BLOSSOMS.get());
-        dropPottedContents(AncientAetherBlocks.POTTED_FROSTED_HIGHSPROOT_SAPLING.get());
+        dropPottedContents(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING.get());
         dropPottedContents(AncientAetherBlocks.POTTED_ENCHANTED_SKYROOT_SAPLING.get());
 
         //Vases
@@ -184,7 +184,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
     public LootTable.Builder droppingCrystalSkyrootLeaves(Block block, Block sapling, float... chances) {
         return this.droppingWithChancesAndSkyrootSticks(block, sapling, chances)
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(BlockLootAccessor.aether$hasShearsOrSilkTouch().invert())
-                        .add(this.applyExplosionCondition(block,
+                        .add(applyExplosionCondition(block,
                                         LootItem.lootTableItem(AetherItems.WHITE_APPLE.get()))
                                 .when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, 0.0055F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F))));
     }

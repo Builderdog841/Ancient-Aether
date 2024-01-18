@@ -20,7 +20,6 @@ public class AncientAetherOreFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> AEROGEL_BLOBS = AncientAetherFeatureUtils.registerKey("aerogel_blobs");
     public static final ResourceKey<ConfiguredFeature<?, ?>> GRAVITY_GRAVEL_ORE = AncientAetherFeatureUtils.registerKey("gravity_gravel_ore");
 
-
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest holystone = new TagMatchTest(AetherTags.Blocks.HOLYSTONE);
 

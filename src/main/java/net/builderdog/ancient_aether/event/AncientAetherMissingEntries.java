@@ -8,7 +8,8 @@ import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.*;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.MissingMappingsEvent;
 
 @Mod.EventBusSubscriber(modid = AncientAether.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class AncientAetherMissingEntries {
@@ -115,8 +116,11 @@ public class AncientAetherMissingEntries {
 
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
                 .filter(mapping -> mapping.getKey().getPath().contains("wyndcaps_ice")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.WYND_ICE.get()));
-
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
                 .filter(mapping -> mapping.getKey().getPath().contains("crystal_aercloud")).forEach(blockMapping -> blockMapping.remap(AetherBlocks.COLD_AERCLOUD.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("frosted_highsproot_leaves")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.HIGHSPROOT_LEAVES.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("frosted_highsproot_sapling")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.HIGHSPROOT_SAPLING.get()));
     }
 }

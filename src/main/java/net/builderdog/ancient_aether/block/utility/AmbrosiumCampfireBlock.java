@@ -1,8 +1,5 @@
 package net.builderdog.ancient_aether.block.utility;
 
-import java.util.Optional;
-import javax.annotation.Nullable;
-
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.blockentity.AncientAetherCampfireBlockEntity;
 import net.minecraft.core.BlockPos;
@@ -49,6 +46,9 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
+import javax.annotation.Nullable;
+import java.util.Optional;
+
 public class AmbrosiumCampfireBlock extends BaseEntityBlock implements SimpleWaterloggedBlock {
     protected static final VoxelShape SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 7.0D, 16.0D);
     public static final BooleanProperty LIT = BlockStateProperties.LIT;
@@ -66,7 +66,6 @@ public class AmbrosiumCampfireBlock extends BaseEntityBlock implements SimpleWat
         fireDamage = p_51237_;
         registerDefaultState(stateDefinition.any().setValue(LIT, Boolean.TRUE).setValue(SIGNAL_FIRE, Boolean.FALSE).setValue(WATERLOGGED, Boolean.FALSE).setValue(FACING, Direction.NORTH));
     }
-
     public @NotNull InteractionResult use(@NotNull BlockState p_51274_, Level p_51275_, @NotNull BlockPos p_51276_, @NotNull Player p_51277_, @NotNull InteractionHand p_51278_, @NotNull BlockHitResult p_51279_) {
         BlockEntity blockentity = p_51275_.getBlockEntity(p_51276_);
         if (blockentity instanceof AncientAetherCampfireBlockEntity campfireBlockEntity) {

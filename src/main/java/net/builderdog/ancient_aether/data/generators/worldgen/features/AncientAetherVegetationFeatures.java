@@ -168,13 +168,13 @@ public class AncientAetherVegetationFeatures {
         ), PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherTreeFeatures.SUPER_GOLDEN_OAK_TREE), PlacementUtils.filteredByBlockSurvival(AetherBlocks.GOLDEN_OAK_SAPLING.get()))));
 
         AncientAetherFeatureUtils.register(context, TREES_WYNDCAPS, Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(
-                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherTreeFeatures.HIGHSPROOT_PINE_TREE), PlacementUtils.filteredByBlockSurvival(AncientAetherBlocks.HIGHSPROOT_SAPLING.get())), 0.1F),
-                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherTreeFeatures.TALL_FROSTED_HIGHSPROOT_TREE), PlacementUtils.filteredByBlockSurvival(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get())), 0.05F)
-        ), PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherTreeFeatures.FROSTED_HIGHSPROOT_TREE), PlacementUtils.filteredByBlockSurvival(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get()))));
+                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherTreeFeatures.TALL_HIGHSPROOT_TREE), PlacementUtils.filteredByBlockSurvival(AncientAetherBlocks.HIGHSPROOT_SAPLING.get())), 0.1F),
+                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherTreeFeatures.CRYSTAL_SKYROOT_TREE), PlacementUtils.filteredByBlockSurvival(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get())), 0.05F)
+        ), PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherTreeFeatures.HIGHSPROOT_TREE), PlacementUtils.filteredByBlockSurvival(AncientAetherBlocks.HIGHSPROOT_SAPLING.get()))));
 
         AncientAetherFeatureUtils.register(context, TREES_FESTIVE_WYNDCAPS, Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(
                 new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherTreeFeatures.WYNDCAPS_HOLIDAY_TREE), PlacementUtils.filteredByBlockSurvival(AetherBlocks.SKYROOT_SAPLING.get())), 0.3F)
-        ), PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_WYNDCAPS), PlacementUtils.filteredByBlockSurvival(AncientAetherBlocks.FROSTED_HIGHSPROOT_SAPLING.get()))));
+        ), PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_WYNDCAPS), PlacementUtils.filteredByBlockSurvival(AncientAetherBlocks.HIGHSPROOT_SAPLING.get()))));
 
         AncientAetherFeatureUtils.register(context, TREES_SKYROOT_JUNGLE, Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(
                 new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AetherConfiguredFeatures.SKYROOT_TREE_CONFIGURATION), PlacementUtils.filteredByBlockSurvival(AetherBlocks.SKYROOT_SAPLING.get())), 0.2F),

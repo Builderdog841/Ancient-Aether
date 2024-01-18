@@ -33,9 +33,7 @@
   "block.ancient_aether.stripped_highsproot_wood_wall": "去皮高喷木墙",
   "block.ancient_aether.highsproot_planks": "高喷木板",
   "block.ancient_aether.highsproot_leaves": "高喷树叶",
-  "block.ancient_aether.frosted_highsproot_leaves": "寒霜高喷树叶",
   "block.ancient_aether.highsproot_sapling": "高喷树苗",
-  "block.ancient_aether.frosted_highsproot_sapling": "寒霜高喷树苗",
   "block.ancient_aether.sakura_log": "天境樱花原木",
   "block.ancient_aether.sakura_wood": "天境樱花木",
   "block.ancient_aether.stripped_sakura_log": "去皮天境樱花原木",
@@ -93,8 +91,6 @@
   "block.ancient_aether.locked_ancient_sentry_stone": "固锁古代岗哨石",
   "block.ancient_aether.highsproot_bookshelf": "高喷木书架",
   "block.ancient_aether.sakura_bookshelf": "天境樱花木书架",
-  "block.ancient_aether.divine_skyroot_leaves": "神圣天根树叶",
-  "block.ancient_aether.divine_skyroot_sapling": "神圣天根树苗",
   "block.ancient_aether.violet_aercloud": "槿紫境云",
 
   "item.ancient_aether.grapes": "葡萄",
@@ -227,7 +223,6 @@
   "lore.block.ancient_aether.aerogetic_wall": "由气凝石制作。可用于装饰性围栏和防御。防止讨厌的侵入者！",
   "lore.block.ancient_aether.light_aerogetic_stone": "气凝石的轻量化版本。比气凝石更不常见，但作为装饰方块看起来非常漂亮。",
   "lore.block.ancient_aether.corrupted_light_aerogetic_stone": "流光气凝石的变种。在古代地牢中，一旦古代守卫进入最后阶段，它就会出现。",
-  "lore.block.ancient_aether.divine_skyroot_sapling": "这些小巧的蓝色树苗将长成天根树的一种变种，即神圣天根树。可以用骨粉更快地生长。",
   "lore.block.ancient_aether.violet_aercloud": "靠近地面的一片紫色云。这个境云与天蓝境云相反，因为它将玩家和其他实体向下推。",
 
   "lore.item.ancient_aether.grapes": "它们有时可以在女武神定居点的田野上找到，因为这是女武神最喜欢的水果。可以用来制作女武神葡萄酒。",
