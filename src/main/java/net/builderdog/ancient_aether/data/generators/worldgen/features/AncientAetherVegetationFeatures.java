@@ -31,6 +31,9 @@ public class AncientAetherVegetationFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> JUNGLE_AETHER_GRASS_PATCH = AncientAetherFeatureUtil.registerKey("jungle_aether_grass_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> PALE_AETHER_GRASS_PATCH = AncientAetherFeatureUtil.registerKey("pale_aether_grass_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> TREES_SKYROOT = AncientAetherFeatureUtil.registerKey("trees_skyroot");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> TREES_ENCHANTED_SKYROOT = AncientAetherFeatureUtil.registerKey("trees_enchanted_skyroot");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> TREES_CRYSTAL_SKYROOT = AncientAetherFeatureUtil.registerKey("trees_crystal_skyroot");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> TREES_GOLDEN_SKYROOT = AncientAetherFeatureUtil.registerKey("trees_golden_skyroot");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -76,12 +79,29 @@ public class AncientAetherVegetationFeatures {
                                 .add(AncientAetherFeatureStates.SKY_GRASS_SHORT_PALE, 1)),
                         64));
 
-        AncientAetherFeatureUtil.register(context, TREES_SKYROOT, Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(
-                List.of(
-                        new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherTreeFeatures.FANCY_SKYROOT_TREE), PlacementUtils.filteredByBlockSurvival(AetherBlocks.SKYROOT_SAPLING.get())), 0.5F),
-                        new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherTreeFeatures.CRYSTAL_SKYROOT_TREE), PlacementUtils.filteredByBlockSurvival(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get())), 0.25F),
-                        new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherTreeFeatures.SKYROOT_PINE_TREE), PlacementUtils.filteredByBlockSurvival(AncientAetherBlocks.SKYROOT_PINE_SAPLING.get())), 0.025F),
-                        new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AetherConfiguredFeatures.GOLDEN_OAK_TREE_CONFIGURATION), PlacementUtils.filteredByBlockSurvival(AetherBlocks.GOLDEN_OAK_SAPLING.get())), 0.01F)
-                ), PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AetherConfiguredFeatures.SKYROOT_TREE_CONFIGURATION), PlacementUtils.filteredByBlockSurvival(AetherBlocks.SKYROOT_SAPLING.get()))));
+        AncientAetherFeatureUtil.register(context, TREES_SKYROOT, Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(
+                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherTreeFeatures.FANCY_SKYROOT_TREE), PlacementUtils.filteredByBlockSurvival(AetherBlocks.SKYROOT_SAPLING.get())), 0.5F),
+                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherTreeFeatures.CRYSTAL_SKYROOT_TREE), PlacementUtils.filteredByBlockSurvival(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get())), 0.25F),
+                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherTreeFeatures.SKYROOT_PINE_TREE), PlacementUtils.filteredByBlockSurvival(AncientAetherBlocks.SKYROOT_PINE_SAPLING.get())), 0.025F),
+                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AetherConfiguredFeatures.GOLDEN_OAK_TREE_CONFIGURATION), PlacementUtils.filteredByBlockSurvival(AetherBlocks.GOLDEN_OAK_SAPLING.get())), 0.01F)
+        ), PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AetherConfiguredFeatures.SKYROOT_TREE_CONFIGURATION), PlacementUtils.filteredByBlockSurvival(AetherBlocks.SKYROOT_SAPLING.get()))));
+
+        AncientAetherFeatureUtil.register(context, TREES_ENCHANTED_SKYROOT, Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(
+                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherTreeFeatures.ENCHANTED_SKYROOT_TREE), PlacementUtils.filteredByBlockSurvival(AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get())), 0.3F),
+                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherTreeFeatures.FANCY_SKYROOT_TREE), PlacementUtils.filteredByBlockSurvival(AetherBlocks.SKYROOT_SAPLING.get())), 0.1F),
+                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AetherConfiguredFeatures.GOLDEN_OAK_TREE_CONFIGURATION), PlacementUtils.filteredByBlockSurvival(AetherBlocks.GOLDEN_OAK_SAPLING.get())), 0.1F)
+        ), PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AetherConfiguredFeatures.SKYROOT_TREE_CONFIGURATION), PlacementUtils.filteredByBlockSurvival(AetherBlocks.SKYROOT_SAPLING.get()))));
+
+        AncientAetherFeatureUtil.register(context, TREES_CRYSTAL_SKYROOT, Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(
+                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AetherConfiguredFeatures.SKYROOT_TREE_CONFIGURATION), PlacementUtils.filteredByBlockSurvival(AetherBlocks.SKYROOT_SAPLING.get())), 0.3F),
+                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherTreeFeatures.FANCY_SKYROOT_TREE), PlacementUtils.filteredByBlockSurvival(AetherBlocks.SKYROOT_SAPLING.get())), 0.1F),
+                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AetherConfiguredFeatures.GOLDEN_OAK_TREE_CONFIGURATION), PlacementUtils.filteredByBlockSurvival(AetherBlocks.GOLDEN_OAK_SAPLING.get())), 0.1F)
+        ), PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherTreeFeatures.CRYSTAL_SKYROOT_TREE), PlacementUtils.filteredByBlockSurvival(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get()))));
+
+        AncientAetherFeatureUtil.register(context, TREES_GOLDEN_SKYROOT, Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(
+                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AetherConfiguredFeatures.GOLDEN_OAK_TREE_CONFIGURATION), PlacementUtils.filteredByBlockSurvival(AetherBlocks.GOLDEN_OAK_SAPLING.get())), 0.01F),
+                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherTreeFeatures.FANCY_SKYROOT_TREE), PlacementUtils.filteredByBlockSurvival(AetherBlocks.SKYROOT_SAPLING.get())), 0.3F),
+                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherTreeFeatures.CRYSTAL_SKYROOT_TREE), PlacementUtils.filteredByBlockSurvival(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get())), 0.25F)
+        ), PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AetherConfiguredFeatures.SKYROOT_TREE_CONFIGURATION), PlacementUtils.filteredByBlockSurvival(AetherBlocks.SKYROOT_SAPLING.get()))));
     }
 }
