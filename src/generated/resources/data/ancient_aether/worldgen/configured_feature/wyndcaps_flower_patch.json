@@ -2,20 +2,20 @@
   "type": "minecraft:random_selector",
   "config": {
     "default": {
-      "feature": "ancient_aether:sakura_blossoms_patch",
-        "placement": [
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:matching_blocks",
-              "blocks": "minecraft:air"
-            }
+      "feature": "ancient_aether:wynd_thistle_patch",
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:air"
           }
-        ]
+        }
+      ]
     },
     "features": [
       {
-        "chance": 0.75,
+        "chance": 0.5,
         "feature": {
           "feature": "ancient_aether:aether_flower_patch",
           "placement": [

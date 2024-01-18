@@ -7,11 +7,12 @@ import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.placement.*;
+import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+import net.minecraft.world.level.levelgen.placement.PlacementModifier;
 
 import java.util.List;
 
-public class AncientAetherPlacementUtil {
+public class AncientAetherPlacementUtils {
 
     public static void bootstrap(BootstapContext<PlacedFeature> placedFeature) {
         AncientAetherOrePlacements.bootstrap(placedFeature);

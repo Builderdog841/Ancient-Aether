@@ -3,15 +3,15 @@
   "config": {
     "default": {
       "feature": "aether:white_flower_patch",
-        "placement": [
-          {
-            "type": "minecraft:block_predicate_filter",
-            "predicate": {
-              "type": "minecraft:matching_blocks",
-              "blocks": "minecraft:air"
-            }
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:air"
           }
-        ]
+        }
+      ]
     },
     "features": [
       {

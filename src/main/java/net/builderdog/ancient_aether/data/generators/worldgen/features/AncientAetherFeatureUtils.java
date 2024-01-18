@@ -10,7 +10,7 @@ import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 
-public class AncientAetherFeatureUtil {
+public class AncientAetherFeatureUtils {
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> configuredFeature) {
         AncientAetherOreFeatures.bootstrap(configuredFeature);
         AncientAetherMiscFeatures.bootstrap(configuredFeature);

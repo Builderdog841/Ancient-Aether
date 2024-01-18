@@ -31,21 +31,21 @@ import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlac
 import java.util.OptionalInt;
 
 public class AncientAetherTreeFeatures {
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_PINE_TREE = AncientAetherFeatureUtil.registerKey("skyroot_pine_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> CRYSTAL_SKYROOT_TREE = AncientAetherFeatureUtil.registerKey("crystal_skyroot_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHSPROOT_PINE_TREE = AncientAetherFeatureUtil.registerKey("highsproot_pine_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> FROSTED_HIGHSPROOT_TREE = AncientAetherFeatureUtil.registerKey("frosted_highsproot_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_FROSTED_HIGHSPROOT_TREE = AncientAetherFeatureUtil.registerKey("tall_frosted_highsproot_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_TREE = AncientAetherFeatureUtil.registerKey("sakura_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_SAKURA_TREE = AncientAetherFeatureUtil.registerKey("tall_sakura_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_JUNGLE_TREE = AncientAetherFeatureUtil.registerKey("skyroot_jungle_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> ENCHANTED_SKYROOT_TREE = AncientAetherFeatureUtil.registerKey("enchanted_skyroot_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_SKYROOT_TREE = AncientAetherFeatureUtil.registerKey("fancy_skyroot_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_CRYSTAL_SKYROOT_TREE = AncientAetherFeatureUtil.registerKey("fancy_crystal_skyroot_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_ENCHANTED_SKYROOT_TREE = AncientAetherFeatureUtil.registerKey("fancy_enchanted_skyroot_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> WYNDCAPS_HOLIDAY_TREE = AncientAetherFeatureUtil.registerKey("wyndcaps_holiday_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_JUNGLE_BUSH = AncientAetherFeatureUtil.registerKey("sakura_jungle_bush");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SUPER_GOLDEN_OAK_TREE = AncientAetherFeatureUtil.registerKey("super_golden_oak_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_PINE_TREE = AncientAetherFeatureUtils.registerKey("skyroot_pine_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CRYSTAL_SKYROOT_TREE = AncientAetherFeatureUtils.registerKey("crystal_skyroot_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHSPROOT_PINE_TREE = AncientAetherFeatureUtils.registerKey("highsproot_pine_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FROSTED_HIGHSPROOT_TREE = AncientAetherFeatureUtils.registerKey("frosted_highsproot_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_FROSTED_HIGHSPROOT_TREE = AncientAetherFeatureUtils.registerKey("tall_frosted_highsproot_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_TREE = AncientAetherFeatureUtils.registerKey("sakura_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_SAKURA_TREE = AncientAetherFeatureUtils.registerKey("tall_sakura_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_JUNGLE_TREE = AncientAetherFeatureUtils.registerKey("skyroot_jungle_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ENCHANTED_SKYROOT_TREE = AncientAetherFeatureUtils.registerKey("enchanted_skyroot_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_SKYROOT_TREE = AncientAetherFeatureUtils.registerKey("fancy_skyroot_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_CRYSTAL_SKYROOT_TREE = AncientAetherFeatureUtils.registerKey("fancy_crystal_skyroot_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_ENCHANTED_SKYROOT_TREE = AncientAetherFeatureUtils.registerKey("fancy_enchanted_skyroot_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WYNDCAPS_HOLIDAY_TREE = AncientAetherFeatureUtils.registerKey("wyndcaps_holiday_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_JUNGLE_BUSH = AncientAetherFeatureUtils.registerKey("sakura_jungle_bush");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SUPER_GOLDEN_OAK_TREE = AncientAetherFeatureUtils.registerKey("super_golden_oak_tree");
 
     private static TreeConfiguration.TreeConfigurationBuilder createStraightSkyrootBlobTree(BlockState leaves) {
         return new TreeConfiguration.TreeConfigurationBuilder(
@@ -97,19 +97,19 @@ public class AncientAetherTreeFeatures {
     }
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
-        AncientAetherFeatureUtil.register(context, CRYSTAL_SKYROOT_TREE, Feature.TREE, createStraightSkyrootBlobTree(AncientAetherFeatureStates.CRYSTAL_SKYROOT_LEAVES).build());
-        AncientAetherFeatureUtil.register(context, ENCHANTED_SKYROOT_TREE, Feature.TREE, createStraightSkyrootBlobTree(AncientAetherFeatureStates.ENCHANTED_SKYROOT_LEAVES).build());
-        AncientAetherFeatureUtil.register(context, SKYROOT_PINE_TREE, Feature.TREE, createAetherPineTree(AetherFeatureStates.SKYROOT_LOG, AncientAetherFeatureStates.SKYROOT_PINE_LEAVES, 5).build());
-        AncientAetherFeatureUtil.register(context, HIGHSPROOT_PINE_TREE, Feature.TREE, createAetherPineTree(AncientAetherFeatureStates.HIGHSPROOT_LOG, AncientAetherFeatureStates.HIGHSPROOT_LEAVES, 2).build());
-        AncientAetherFeatureUtil.register(context, SAKURA_TREE, Feature.TREE, createSakuraJungleTree(AncientAetherFeatureStates.SAKURA_LOG, AncientAetherFeatureStates.SAKURA_LEAVES, 7, 7).build());
-        AncientAetherFeatureUtil.register(context, TALL_SAKURA_TREE, Feature.TREE, createSakuraJungleTree(AncientAetherFeatureStates.SAKURA_LOG, AncientAetherFeatureStates.SAKURA_LEAVES, 12, 10).build());
-        AncientAetherFeatureUtil.register(context, SKYROOT_JUNGLE_TREE, Feature.TREE, createSakuraJungleTree(AetherFeatureStates.SKYROOT_LOG, AetherFeatureStates.SKYROOT_LEAVES, 7, 7).build());
-        AncientAetherFeatureUtil.register(context, FROSTED_HIGHSPROOT_TREE, Feature.TREE, createWyndcapsPineTree(6, 2, 8).build());
-        AncientAetherFeatureUtil.register(context, TALL_FROSTED_HIGHSPROOT_TREE, Feature.TREE, createWyndcapsPineTree(8, 4, 16).build());
-        AncientAetherFeatureUtil.register(context, FANCY_SKYROOT_TREE, Feature.TREE, createFancySkyrootTree(AetherFeatureStates.SKYROOT_LEAVES).build());
-        AncientAetherFeatureUtil.register(context, FANCY_CRYSTAL_SKYROOT_TREE, Feature.TREE, createFancySkyrootTree(AncientAetherFeatureStates.CRYSTAL_SKYROOT_LEAVES).build());
-        AncientAetherFeatureUtil.register(context, FANCY_ENCHANTED_SKYROOT_TREE, Feature.TREE, createFancySkyrootTree(AncientAetherFeatureStates.ENCHANTED_SKYROOT_LEAVES).build());
-        AncientAetherFeatureUtil.register(context, WYNDCAPS_HOLIDAY_TREE, Feature.TREE,
+        AncientAetherFeatureUtils.register(context, CRYSTAL_SKYROOT_TREE, Feature.TREE, createStraightSkyrootBlobTree(AncientAetherFeatureStates.CRYSTAL_SKYROOT_LEAVES).build());
+        AncientAetherFeatureUtils.register(context, ENCHANTED_SKYROOT_TREE, Feature.TREE, createStraightSkyrootBlobTree(AncientAetherFeatureStates.ENCHANTED_SKYROOT_LEAVES).build());
+        AncientAetherFeatureUtils.register(context, SKYROOT_PINE_TREE, Feature.TREE, createAetherPineTree(AetherFeatureStates.SKYROOT_LOG, AncientAetherFeatureStates.SKYROOT_PINE_LEAVES, 5).build());
+        AncientAetherFeatureUtils.register(context, HIGHSPROOT_PINE_TREE, Feature.TREE, createAetherPineTree(AncientAetherFeatureStates.HIGHSPROOT_LOG, AncientAetherFeatureStates.HIGHSPROOT_LEAVES, 2).build());
+        AncientAetherFeatureUtils.register(context, SAKURA_TREE, Feature.TREE, createSakuraJungleTree(AncientAetherFeatureStates.SAKURA_LOG, AncientAetherFeatureStates.SAKURA_LEAVES, 7, 7).build());
+        AncientAetherFeatureUtils.register(context, TALL_SAKURA_TREE, Feature.TREE, createSakuraJungleTree(AncientAetherFeatureStates.SAKURA_LOG, AncientAetherFeatureStates.SAKURA_LEAVES, 12, 10).build());
+        AncientAetherFeatureUtils.register(context, SKYROOT_JUNGLE_TREE, Feature.TREE, createSakuraJungleTree(AetherFeatureStates.SKYROOT_LOG, AetherFeatureStates.SKYROOT_LEAVES, 7, 7).build());
+        AncientAetherFeatureUtils.register(context, FROSTED_HIGHSPROOT_TREE, Feature.TREE, createWyndcapsPineTree(6, 2, 8).build());
+        AncientAetherFeatureUtils.register(context, TALL_FROSTED_HIGHSPROOT_TREE, Feature.TREE, createWyndcapsPineTree(8, 4, 16).build());
+        AncientAetherFeatureUtils.register(context, FANCY_SKYROOT_TREE, Feature.TREE, createFancySkyrootTree(AetherFeatureStates.SKYROOT_LEAVES).build());
+        AncientAetherFeatureUtils.register(context, FANCY_CRYSTAL_SKYROOT_TREE, Feature.TREE, createFancySkyrootTree(AncientAetherFeatureStates.CRYSTAL_SKYROOT_LEAVES).build());
+        AncientAetherFeatureUtils.register(context, FANCY_ENCHANTED_SKYROOT_TREE, Feature.TREE, createFancySkyrootTree(AncientAetherFeatureStates.ENCHANTED_SKYROOT_LEAVES).build());
+        AncientAetherFeatureUtils.register(context, WYNDCAPS_HOLIDAY_TREE, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
                         BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LOG),
                         new StraightTrunkPlacer(9, 0, 0),
@@ -117,7 +117,7 @@ public class AncientAetherTreeFeatures {
                         new HolidayFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0), ConstantInt.of(8)),
                         new TwoLayersFeatureSize(1, 0, 1))
                         .ignoreVines().build());
-        AncientAetherFeatureUtil.register(context, SAKURA_JUNGLE_BUSH, Feature.TREE,
+        AncientAetherFeatureUtils.register(context, SAKURA_JUNGLE_BUSH, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
                         BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LOG),
                         new StraightTrunkPlacer(1, 0, 0),
@@ -125,7 +125,7 @@ public class AncientAetherTreeFeatures {
                         new BushFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), 2),
                         new TwoLayersFeatureSize(0, 0, 0))
                         .ignoreVines().build());
-        AncientAetherFeatureUtil.register(context, SUPER_GOLDEN_OAK_TREE, Feature.TREE,
+        AncientAetherFeatureUtils.register(context, SUPER_GOLDEN_OAK_TREE, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
                         new WeightedStateProvider(new SimpleWeightedRandomList.Builder<BlockState>().add(AetherFeatureStates.GOLDEN_OAK_LOG, 3).add(AetherFeatureStates.SKYROOT_LOG, 2).build()),
                         new StraightTrunkPlacer(10, 6, 0),

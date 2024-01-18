@@ -28,4 +28,9 @@ public class AncientAetherFeatureStates {
     public static final BlockState SKY_GRASS_SHORT_PALE = AncientAetherBlocks.SKY_GRASS.get().defaultBlockState().setValue(AncientAetherBlockStateProperties.LENGTH, AetherTallGrassLength.SHORT).setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.PALE);
     public static final BlockState GRAVITY_GRAVEL = AncientAetherBlocks.GRAVITY_GRAVEL.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true);
     public static final BlockState WYND_ICE = AncientAetherBlocks.WYND_ICE.get().defaultBlockState();
+    public static final BlockState HIGHLAND_VIOLA = AncientAetherBlocks.HIGHLAND_VIOLA.get().defaultBlockState();
+    public static final BlockState SKY_BLUES = AncientAetherBlocks.SKY_BLUES.get().defaultBlockState();
+    public static final BlockState WYND_THISTLE = AncientAetherBlocks.WYND_THISTLE.get().defaultBlockState();
+    public static final BlockState SAKURA_BLOSSOMS = AncientAetherBlocks.SAKURA_BLOSSOMS.get().defaultBlockState();
+    public static final BlockState TRAPPED_SAKURA_BLOSSOMS = AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get().defaultBlockState();
 }

@@ -7,8 +7,8 @@ import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.data.generators.AncientAetherBlockStateData;
 import net.builderdog.ancient_aether.data.generators.AncientAetherItemModelData;
 import net.builderdog.ancient_aether.data.generators.AncientAetherRecipeData;
+import net.builderdog.ancient_aether.data.generators.AncientAetherRegistrySets;
 import net.builderdog.ancient_aether.data.providers.AncientAetherLootTableProvider;
-import net.builderdog.ancient_aether.data.providers.AncientAetherWorldGenProvider;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.entity.moa.AncientAetherMoaTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
@@ -234,7 +234,7 @@ public class AncientAether {
         generator.addProvider(true, new AncientAetherBlockStateData(packOutput, fileHelper));
         generator.addProvider(true, new AncientAetherRecipeData(packOutput));
         generator.addProvider(true, new AncientAetherItemModelData(packOutput, fileHelper));
-        generator.addProvider(event.includeServer(), new AncientAetherWorldGenProvider(packOutput, lookupProvider));
+        generator.addProvider(event.includeServer(), new AncientAetherRegistrySets(packOutput, lookupProvider));
     }
 
     private void registerComposting() {
