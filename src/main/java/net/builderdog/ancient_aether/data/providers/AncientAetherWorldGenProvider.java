@@ -3,20 +3,42 @@ package net.builderdog.ancient_aether.data.providers;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.data.generators.worldgen.AncientAetherBiomeModifierData;
 import net.builderdog.ancient_aether.data.generators.worldgen.AncientAetherNoiseData;
-import net.builderdog.ancient_aether.data.generators.worldgen.features.*;
+import net.builderdog.ancient_aether.data.generators.worldgen.features.AncientAetherFeatureUtil;
 import net.builderdog.ancient_aether.data.generators.worldgen.placement.AncientAetherPlacementUtil;
+import net.builderdog.ancient_aether.mixin.accessor.RegistrySetBuilderAccessor;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.Registry;
+import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceKey;
 import net.minecraftforge.common.data.DatapackBuiltinEntriesProvider;
 import net.minecraftforge.registries.ForgeRegistries;
+import org.jetbrains.annotations.NotNull;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
+import java.util.stream.Stream;
 
 public class AncientAetherWorldGenProvider extends DatapackBuiltinEntriesProvider {
-    public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
+    public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder() {
+        public HolderLookup.@NotNull Provider buildPatch(@NotNull RegistryAccess registries, HolderLookup.@NotNull Provider lookup) {
+            RegistrySetBuilder setBuilder = this;
+            RegistrySetBuilder.BuildState state = ((RegistrySetBuilderAccessor) setBuilder).callCreateState(registries);
+            Map<ResourceKey<? extends Registry<?>>, RegistryContents<?>> map = new HashMap<>();
+            state.collectReferencedRegistries().forEach((element) -> map.put(element.key(), element));
+            ((RegistrySetBuilderAccessor) setBuilder).ancient_aether$getEntries().stream().map((RegistryStub<?> stub) -> stub.collectChanges(state)).forEach((contents) -> map.put(contents.key(), contents));
+            Stream<HolderLookup.RegistryLookup<?>> stream = registries.registries().map((entry) -> entry.value().asLookup());
+            HolderLookup.Provider provider = HolderLookup.Provider.create(Stream.concat(stream, map.values().stream().map(RegistrySetBuilder.RegistryContents::buildAsLookup).peek(state::addOwner)));
+            state.fillMissingHolders(lookup);
+            state.throwOnError();
+            return provider;
+        }
+    }
+
             .add(Registries.CONFIGURED_FEATURE, AncientAetherFeatureUtil::bootstrap)
             .add(Registries.PLACED_FEATURE, AncientAetherPlacementUtil::bootstrap)
             .add(ForgeRegistries.Keys.BIOME_MODIFIERS, AncientAetherBiomeModifierData::bootstrap)

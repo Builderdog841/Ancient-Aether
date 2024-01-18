@@ -5,7 +5,8 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "ancient_aether.refmap.json",
   "mixins": [
-    "AetherGrassBlockMixin"
+    "AetherGrassBlockMixin",
+    "accessor.RegistrySetBuilderAccessor"
   ],
   "client": [
   ],

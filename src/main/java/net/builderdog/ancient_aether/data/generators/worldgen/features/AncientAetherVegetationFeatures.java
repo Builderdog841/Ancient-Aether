@@ -1,15 +1,24 @@
 package net.builderdog.ancient_aether.data.generators.worldgen.features;
 
+import com.aetherteam.aether.block.AetherBlocks;
+import com.aetherteam.aether.data.resources.registries.AetherConfiguredFeatures;
 import com.aetherteam.nitrogen.data.resources.builders.NitrogenConfiguredFeatureBuilders;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.block.AncientAetherFeatureStates;
+import net.minecraft.core.HolderGetter;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.random.SimpleWeightedRandomList;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
+import net.minecraft.world.level.levelgen.feature.configurations.RandomFeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
+
+import java.util.List;
 
 public class AncientAetherVegetationFeatures {
 
@@ -21,8 +30,10 @@ public class AncientAetherVegetationFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> FROZEN_AETHER_GRASS_PATCH = AncientAetherFeatureUtil.registerKey("frozen_aether_grass_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> JUNGLE_AETHER_GRASS_PATCH = AncientAetherFeatureUtil.registerKey("jungle_aether_grass_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> PALE_AETHER_GRASS_PATCH = AncientAetherFeatureUtil.registerKey("pale_aether_grass_patch");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> TREES_SKYROOT = AncientAetherFeatureUtil.registerKey("trees_skyroot");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
+        HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
         AncientAetherFeatureUtil.register(context, WYND_THISTLE_PATCH, Feature.FLOWER,
                 NitrogenConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
                         .add(AncientAetherBlocks.WYND_THISTLE.get().defaultBlockState(), 3)),
@@ -64,5 +75,13 @@ public class AncientAetherVegetationFeatures {
                                 .add(AncientAetherFeatureStates.SKY_GRASS_VERY_SHORT_PALE, 2)
                                 .add(AncientAetherFeatureStates.SKY_GRASS_SHORT_PALE, 1)),
                         64));
+
+        AncientAetherFeatureUtil.register(context, TREES_SKYROOT, Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(
+                List.of(
+                        new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherTreeFeatures.FANCY_SKYROOT_TREE), PlacementUtils.filteredByBlockSurvival(AetherBlocks.SKYROOT_SAPLING.get())), 0.5F),
+                        new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherTreeFeatures.CRYSTAL_SKYROOT_TREE), PlacementUtils.filteredByBlockSurvival(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get())), 0.25F),
+                        new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherTreeFeatures.SKYROOT_PINE_TREE), PlacementUtils.filteredByBlockSurvival(AncientAetherBlocks.SKYROOT_PINE_SAPLING.get())), 0.025F),
+                        new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AetherConfiguredFeatures.GOLDEN_OAK_TREE_CONFIGURATION), PlacementUtils.filteredByBlockSurvival(AetherBlocks.GOLDEN_OAK_SAPLING.get())), 0.01F)
+                ), PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AetherConfiguredFeatures.SKYROOT_TREE_CONFIGURATION), PlacementUtils.filteredByBlockSurvival(AetherBlocks.SKYROOT_SAPLING.get()))));
     }
 }
