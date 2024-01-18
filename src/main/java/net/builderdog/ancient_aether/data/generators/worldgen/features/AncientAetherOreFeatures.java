@@ -15,7 +15,6 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 import java.util.List;
 
 public class AncientAetherOreFeatures {
-
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_QUARTZ_ORE = AncientAetherFeatureUtil.registerKey("aether_quartz_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> VALKYRUM_ORE = AncientAetherFeatureUtil.registerKey("valkyrum_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AEROGEL_BLOBS = AncientAetherFeatureUtil.registerKey("aerogel_blobs");

@@ -15,7 +15,7 @@
               "data": {
                 "type": "minecraft:uniform",
                 "value": {
-                  "max_inclusive": 12,
+                  "max_inclusive": 4,
                   "min_inclusive": 1
                 }
               },
@@ -48,8 +48,10 @@
           "state": {
             "Name": "aether:skyroot_leaves",
             "Properties": {
-              "layers": "1",
-              "persistent": "true"
+              "distance": "7",
+              "double_drops": "true",
+              "persistent": "false",
+              "waterlogged": "false"
             }
           }
         }

@@ -4,7 +4,6 @@ import com.aetherteam.aether.data.resources.AetherFeatureStates;
 import com.aetherteam.aether.world.foliageplacer.CrystalFoliagePlacer;
 import com.aetherteam.aether.world.foliageplacer.GoldenOakFoliagePlacer;
 import com.aetherteam.aether.world.foliageplacer.HolidayFoliagePlacer;
-import com.aetherteam.aether.world.trunkplacer.GoldenOakTrunkPlacer;
 import net.builderdog.ancient_aether.block.AncientAetherFeatureStates;
 import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherPineFoliagePlacer;
 import net.minecraft.data.worldgen.BootstapContext;
