@@ -6,12 +6,11 @@ import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver;
 import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries.Keys;
+import net.minecraftforge.registries.RegistryObject;
 
 public class AncientAetherBiomeModifierSerializers {
 
-    //Credit for this code goes to Zepalesque
     public static final DeferredRegister<Codec<? extends BiomeModifier>> BIOME_MODIFIER_SERIALIZERS;
     static RegistryObject<Codec<CarverModifier>> CARVER_CODEC;
 

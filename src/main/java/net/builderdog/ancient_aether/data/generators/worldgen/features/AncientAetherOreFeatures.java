@@ -1,9 +1,6 @@
 package net.builderdog.ancient_aether.data.generators.worldgen.features;
 
 import com.aetherteam.aether.AetherTags;
-import com.aetherteam.aether.block.AetherBlockStateProperties;
-import com.aetherteam.aether.block.AetherBlocks;
-import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.block.AncientAetherFeatureStates;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
@@ -31,7 +28,7 @@ public class AncientAetherOreFeatures {
 
         AncientAetherFeatureUtils.register(context, AEROGEL_BLOBS, Feature.ORE, new OreConfiguration(aerogelBlobs, 32, 0f));
         AncientAetherFeatureUtils.register(context, WYND_ICE_BLOBS, Feature.ORE, new OreConfiguration(wyndIceBlobs, 64, 0f));
-        AncientAetherFeatureUtils.register(context, AETHER_QUARTZ_ORE, Feature.ORE, new OreConfiguration(aetherQuartzOre, 6, 0f));
+        AncientAetherFeatureUtils.register(context, AETHER_QUARTZ_ORE, Feature.ORE, new OreConfiguration(aetherQuartzOre, 16, 0f));
         AncientAetherFeatureUtils.register(context, VALKYRUM_ORE, Feature.ORE, new OreConfiguration(valkyrumOre, 6, 0.5f));
     }
 }

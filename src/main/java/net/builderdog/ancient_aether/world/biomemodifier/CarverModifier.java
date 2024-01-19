@@ -8,19 +8,17 @@ import net.minecraft.world.level.levelgen.GenerationStep.Carving;
 import net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver;
 import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ModifiableBiomeInfo;
-import net.minecraftforge.common.world.BiomeModifier.Phase;
 
 public record CarverModifier(HolderSet<Biome> biomes, Holder<ConfiguredWorldCarver<?>> carver) implements BiomeModifier {
 
-    //Credit for this code goes to Zepalesque
     public CarverModifier(HolderSet<Biome> biomes, Holder<ConfiguredWorldCarver<?>> carver) {
         this.biomes = biomes;
         this.carver = carver;
     }
 
     public void modify(Holder<Biome> biome, BiomeModifier.Phase phase, ModifiableBiomeInfo.BiomeInfo.Builder builder) {
-        if (phase == Phase.AFTER_EVERYTHING && this.biomes.contains(biome)) {
-            builder.getGenerationSettings().addCarver(Carving.AIR, this.carver);
+        if (phase == Phase.AFTER_EVERYTHING && biomes.contains(biome)) {
+            builder.getGenerationSettings().addCarver(Carving.AIR, carver);
         }
 
     }
@@ -30,10 +28,10 @@ public record CarverModifier(HolderSet<Biome> biomes, Holder<ConfiguredWorldCarv
     }
 
     public HolderSet<Biome> biomes() {
-        return this.biomes;
+        return biomes;
     }
 
     public Holder<ConfiguredWorldCarver<?>> carver() {
-        return this.carver;
+        return carver;
     }
 }

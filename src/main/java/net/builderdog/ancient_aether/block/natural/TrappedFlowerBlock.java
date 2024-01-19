@@ -43,7 +43,7 @@ public class TrappedFlowerBlock extends BushBlock {
     @Override
     public void entityInside(@NotNull BlockState blockState, @NotNull Level level, @NotNull BlockPos blockPos, @NotNull Entity entity) {
         if (entity instanceof Player player && AetherEventDispatch.onTriggerTrap(player, level, blockPos, blockState)) {
-            level.setBlockAndUpdate(blockPos, this.defaultStateSupplier.get());
+            level.setBlockAndUpdate(blockPos, defaultStateSupplier.get());
             if (level instanceof ServerLevel serverLevel) {
                 float yRot = player.getYRot() * Mth.DEG_TO_RAD;
                 Vec3 targetVec = new Vec3(blockPos.getX() + 0.5 - Mth.sin(yRot) * 3, blockPos.getY() + 1, blockPos.getZ() + 0.5 + Mth.cos(yRot) * 3);
@@ -62,7 +62,7 @@ public class TrappedFlowerBlock extends BushBlock {
                             _player.getAdvancements().award(_adv, criteria);
                     }
                 }
-                this.spawnableEntityTypeSupplier.get().spawn(serverLevel, spawnPos, MobSpawnType.TRIGGERED);
+                spawnableEntityTypeSupplier.get().spawn(serverLevel, spawnPos, MobSpawnType.TRIGGERED);
                 serverLevel.playSound(null, blockPos, AncientAetherSoundEvents.ROOTHYRN_EMERGES.get(), SoundSource.BLOCKS, 0.5F, level.getRandom().nextFloat() * 0.1F + 0.9F);
             }
         }
