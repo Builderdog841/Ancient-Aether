@@ -6,10 +6,7 @@
     "targets": [
       {
         "state": {
-          "Name": "ancient_aether:gravity_gravel",
-          "Properties": {
-            "double_drops": "true"
-          }
+          "Name": "ancient_aether:wynd_ice"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",

@@ -18,6 +18,7 @@ public class AncientAetherBiomeModifierData {
     public static final ResourceKey<BiomeModifier> AEROGEL_BLOBS_BIOME_MODIFIER = createKey("aerogel_blobs_biome_modifier");
     public static final ResourceKey<BiomeModifier> AETHER_QUARTZ_ORE_BIOME_MODIFIER = createKey("aether_quartz_ore_biome_modifier");
     public static final ResourceKey<BiomeModifier> VALKYRUM_ORE_BIOME_MODIFIER = createKey("valkyrum_ore_biome_modifier");
+    public static final ResourceKey<BiomeModifier> QUICKSOIL_COAST_BIOME_MODIFIER = createKey("quicksoil_coast_biome_modifier");
     public static final ResourceKey<BiomeModifier> VIOLET_AERCLOUD_BIOME_MODIFIER = createKey("violet_aercloud_biome_modifier");
     public static final ResourceKey<BiomeModifier> CLOUDBED_BIOME_MODIFIER = createKey("cloudbed_biome_modifier");
 
@@ -28,7 +29,7 @@ public class AncientAetherBiomeModifierData {
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         context.register(AEROGEL_BLOBS_BIOME_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 context.lookup(Registries.BIOME).getOrThrow(AncientAetherTags.Biomes.HAS_AEROGEL_BLOBS),
-                HolderSet.direct(context.lookup(Registries.PLACED_FEATURE).getOrThrow(AncientAetherOrePlacements.AEROGEL_ORE)),
+                HolderSet.direct(context.lookup(Registries.PLACED_FEATURE).getOrThrow(AncientAetherOrePlacements.AEROGEL_BLOBS)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));
         context.register(AETHER_QUARTZ_ORE_BIOME_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
@@ -41,6 +42,11 @@ public class AncientAetherBiomeModifierData {
                 HolderSet.direct(context.lookup(Registries.PLACED_FEATURE).getOrThrow(AncientAetherOrePlacements.VALKYRUM_ORE)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));
+        //context.register(QUICKSOIL_COAST_BIOME_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        //        context.lookup(Registries.BIOME).getOrThrow(AncientAetherTags.Biomes.IS_SKYROOT_WITHOUT_JUNGLE),
+        //        HolderSet.direct(context.lookup(Registries.PLACED_FEATURE).getOrThrow(AncientAetherMisc)),
+        //        GenerationStep.Decoration.RAW_GENERATION
+        //));
         context.register(VIOLET_AERCLOUD_BIOME_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 context.lookup(Registries.BIOME).getOrThrow(AncientAetherTags.Biomes.HAS_VIOLET_AERCLOUD),
                 HolderSet.direct(context.lookup(Registries.PLACED_FEATURE).getOrThrow(AncientAetherMiscPlacements.VIOLET_AERCLOUD)),

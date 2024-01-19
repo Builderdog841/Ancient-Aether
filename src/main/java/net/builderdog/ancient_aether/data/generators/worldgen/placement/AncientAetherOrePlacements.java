@@ -12,25 +12,25 @@ import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 public class AncientAetherOrePlacements {
+    public static final ResourceKey<PlacedFeature> AEROGEL_BLOBS = AncientAetherPlacementUtils.createKey("aerogel_blobs");
+    public static final ResourceKey<PlacedFeature> WYND_ICE_BLOBS = AncientAetherPlacementUtils.createKey("wynd_ice_blobs");
     public static final ResourceKey<PlacedFeature> AETHER_QUARTZ_ORE = AncientAetherPlacementUtils.createKey("aether_quartz_ore");
     public static final ResourceKey<PlacedFeature> VALKYRUM_ORE = AncientAetherPlacementUtils.createKey("valkyrum_ore");
-    public static final ResourceKey<PlacedFeature> AEROGEL_ORE = AncientAetherPlacementUtils.createKey("aerogel_blobs");
-    public static final ResourceKey<PlacedFeature> GRAVITY_GRAVEL_ORE = AncientAetherPlacementUtils.createKey("gravity_gravel_ore");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
+        AncientAetherPlacementUtils.register(context, AEROGEL_BLOBS, configuredFeatures.getOrThrow(AncientAetherOreFeatures.AEROGEL_BLOBS),
+                NitrogenPlacedFeatureBuilders.commonOrePlacement(4,
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(80))));
+        AncientAetherPlacementUtils.register(context, WYND_ICE_BLOBS, configuredFeatures.getOrThrow(AncientAetherOreFeatures.WYND_ICE_BLOBS),
+                NitrogenPlacedFeatureBuilders.commonOrePlacement(1,
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(112))));
         AncientAetherPlacementUtils.register(context, AETHER_QUARTZ_ORE, configuredFeatures.getOrThrow(AncientAetherOreFeatures.AETHER_QUARTZ_ORE),
                 NitrogenPlacedFeatureBuilders.commonOrePlacement(4,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(256))));
         AncientAetherPlacementUtils.register(context, VALKYRUM_ORE, configuredFeatures.getOrThrow(AncientAetherOreFeatures.VALKYRUM_ORE),
                 NitrogenPlacedFeatureBuilders.commonOrePlacement(15,
                         HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(0), VerticalAnchor.aboveBottom(64))));
-        AncientAetherPlacementUtils.register(context, AEROGEL_ORE, configuredFeatures.getOrThrow(AncientAetherOreFeatures.AEROGEL_BLOBS),
-                NitrogenPlacedFeatureBuilders.commonOrePlacement(4,
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(80))));
-        AncientAetherPlacementUtils.register(context, GRAVITY_GRAVEL_ORE, configuredFeatures.getOrThrow(AncientAetherOreFeatures.GRAVITY_GRAVEL_ORE),
-                NitrogenPlacedFeatureBuilders.commonOrePlacement(1,
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(24), VerticalAnchor.absolute(80))));
     }
 }

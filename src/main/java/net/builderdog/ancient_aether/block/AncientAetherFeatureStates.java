@@ -1,6 +1,7 @@
 package net.builderdog.ancient_aether.block;
 
 import com.aetherteam.aether.block.AetherBlockStateProperties;
+import com.aetherteam.aether.block.AetherBlocks;
 import net.builderdog.ancient_aether.block.blockstate.AetherGrassType;
 import net.builderdog.ancient_aether.block.blockstate.AetherTallGrassLength;
 import net.builderdog.ancient_aether.block.blockstate.AncientAetherBlockStateProperties;
@@ -27,6 +28,9 @@ public class AncientAetherFeatureStates {
     public static final BlockState SKY_GRASS_SHORT_PALE = AncientAetherBlocks.SKY_GRASS.get().defaultBlockState().setValue(AncientAetherBlockStateProperties.LENGTH, AetherTallGrassLength.SHORT).setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.PALE);
     public static final BlockState GRAVITY_GRAVEL = AncientAetherBlocks.GRAVITY_GRAVEL.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true);
     public static final BlockState WYND_ICE = AncientAetherBlocks.WYND_ICE.get().defaultBlockState();
+    public static final BlockState AEROGEL = AetherBlocks.AEROGEL.get().defaultBlockState();
+    public static final BlockState AETHER_QUARTZ_ORE = AncientAetherBlocks.AETHER_QUARTZ_ORE.get().defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, true);
+    public static final BlockState VALKYRUM_ORE = AncientAetherBlocks.VALKYRUM_ORE.get().defaultBlockState();
     public static final BlockState HIGHLAND_VIOLA = AncientAetherBlocks.HIGHLAND_VIOLA.get().defaultBlockState();
     public static final BlockState SKY_BLUES = AncientAetherBlocks.SKY_BLUES.get().defaultBlockState();
     public static final BlockState WYND_THISTLE = AncientAetherBlocks.WYND_THISTLE.get().defaultBlockState();

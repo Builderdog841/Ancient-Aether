@@ -16,8 +16,11 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
@@ -27,6 +30,18 @@ import java.util.function.Consumer;
 public class AncientAetherRecipeData extends AetherRecipeProvider {
     public AncientAetherRecipeData(PackOutput output) {
         super(output, AncientAether.MOD_ID);
+    }
+
+    protected static void copyAetherSmithingTemplate(Consumer<FinishedRecipe> consumer, ItemLike material, ItemLike template, TagKey<Item> block) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, template, 2)
+                .define('#', material)
+                .define('C', block)
+                .define('S', template)
+                .pattern("#S#")
+                .pattern("#C#")
+                .pattern("###")
+                .unlockedBy(getHasName(template), has(template))
+                .save(consumer);
     }
 
     @Override

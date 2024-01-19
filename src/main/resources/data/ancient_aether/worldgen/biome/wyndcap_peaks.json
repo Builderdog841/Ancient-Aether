@@ -17,7 +17,9 @@
     }
   },
   "features": [
-    [],
+    [
+      "ancient_aether:wynd_ice_coast"
+    ],
     [
       "aether:water_lake"
     ],
@@ -26,7 +28,7 @@
     [],
     [],
     [
-      "ancient_aether:wynd_ice_coast",
+      "ancient_aether:wynd_ice_blobs",
       "aether:aether_dirt_ore",
       "aether:icestone_ore",
       "aether:ambrosium_ore",
