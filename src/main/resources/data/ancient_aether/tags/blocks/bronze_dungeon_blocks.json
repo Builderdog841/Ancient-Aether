@@ -1,6 +1,7 @@
 {
   "values": [
     "minecraft:chest",
+    "minecraft:spawner",
     "aether:holystone",
     "aether:carved_stone",
     "aether:skyroot_slab",
