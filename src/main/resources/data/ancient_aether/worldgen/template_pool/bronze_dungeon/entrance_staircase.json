@@ -1,11 +1,11 @@
 {
-  "name": "ancient_aether:bronze_dungeon/shaft",
+  "name": "ancient_aether:bronze_dungeon/entrance_staircase",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
-        "location": "ancient_aether:bronze_dungeon/shaft",
+        "location": "ancient_aether:bronze_dungeon/entrance_staircase",
         "processors": "ancient_aether:bronze_dungeon_entrance",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
