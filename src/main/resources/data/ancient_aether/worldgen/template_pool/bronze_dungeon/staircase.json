@@ -6,7 +6,7 @@
       "weight": 1,
       "element": {
         "location": "ancient_aether:bronze_dungeon/staircase_01",
-        "processors": "ancient_aether:bronze_dungeon_room",
+        "processors": "ancient_aether:bronze_dungeon_tunnel",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
