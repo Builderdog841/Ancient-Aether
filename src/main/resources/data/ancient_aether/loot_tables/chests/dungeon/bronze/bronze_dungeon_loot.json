@@ -5,6 +5,11 @@
       "bonus_rolls": 0.0,
       "entries": [
         {
+          "type": "minecraft:loot_table",
+          "name": "ancient_aether:chests/dungeon/bronze/bronze_dungeon_capes",
+          "weight": 3
+        },
+        {
           "type": "minecraft:item",
           "name": "aether:zanite_pickaxe",
           "weight": 4
@@ -17,17 +22,12 @@
         {
           "type": "minecraft:item",
           "name": "aether:zanite_sword",
-          "weight": 3
+          "weight": 2
         },
         {
           "type": "minecraft:item",
           "name": "aether:blue_gummy_swet",
           "weight": 2
-        },
-        {
-          "type": "minecraft:loot_table",
-          "name": "ancient_aether:chests/dungeon/bronze/bronze_dungeon_capes",
-          "weight": 3
         },
         {
           "type": "minecraft:loot_table",

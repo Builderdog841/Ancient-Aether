@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "aether:red_cape",
+          "name": "aether:white_cape",
           "weight": 2
         },
         {
@@ -16,12 +16,17 @@
         },
         {
           "type": "minecraft:item",
-          "name": "aether:blue_cape",
+          "name": "aether:red_cape",
           "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "aether:white_cape",
+          "name": "ancient_aether:pink_cape",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:blue_cape",
           "weight": 2
         },
         {

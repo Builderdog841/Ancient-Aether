@@ -27,7 +27,6 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         simpleItem(AncientAetherItems.FESTIVE_GUMMY_SWET);
 
         //Accessories
-        simpleItem(AncientAetherItems.STRENGTH_STONE);
         simpleItem(AncientAetherItems.ANCIENT_RING);
         simpleItem(AncientAetherItems.ANCIENT_PENDANT);
         simpleItem(AncientAetherItems.HEALTH_RING);
@@ -38,7 +37,8 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         simpleItem(AncientAetherItems.ARKENIUM_PENDANT);
         simpleItem(AncientAetherItems.VALKYRUM_RING);
         simpleItem(AncientAetherItems.VALKYRUM_PENDANT);
-        simpleItem(AncientAetherItems.AERONAUTIC_DART_SHOOTER);
+        simpleItem(AncientAetherItems.STRENGTH_STONE);
+        simpleItem(AncientAetherItems.PINK_CAPE);
 
         //Materials
         simpleItem(AncientAetherItems.VALKYRUM);
@@ -85,6 +85,7 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         handheldItem(AncientAetherItems.VALKYRUM_HOE.get(), "");
         handheldItem(AncientAetherItems.ANCIENT_SWORD.get(), "");
         handheldItem(AncientAetherItems.ARKZENUS_PICKAXE.get(), "");
+        simpleItem(AncientAetherItems.AERONAUTIC_DART_SHOOTER);
 
         //Armor
         helmetItem(AncientAetherItems.VALKYRUM_HELMET.get(), "");
