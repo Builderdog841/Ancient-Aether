@@ -1,6 +1,8 @@
 {
+  "replace": true,
   "values": [
-    "ancient_aether:ancient_dungeon",
+    "ancient_aether:silver_dungeon",
+    "ancient_aether:gold_dungeon",
     "ancient_aether:valkyrie_settlement_skyroot",
     "ancient_aether:valkyrie_camp_skyroot",
     "ancient_aether:valkyrie_camp_wyndcaps"
