@@ -25,14 +25,9 @@
           "weight": 2
         },
         {
-          "type": "minecraft:item",
-          "name": "aether:swet_cape",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:agility_cape",
-          "weight": 2
+          "type": "minecraft:loot_table",
+          "name": "ancient_aether:chests/dungeon/bronze/bronze_dungeon_capes",
+          "weight": 3
         },
         {
           "type": "minecraft:loot_table",

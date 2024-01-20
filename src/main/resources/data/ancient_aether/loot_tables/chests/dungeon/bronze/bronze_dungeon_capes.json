@@ -1,0 +1,44 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "aether:red_cape",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:yellow_cape",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:blue_cape",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:white_cape",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:swet_cape"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:agility_cape"
+        }
+      ],
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 1.0,
+        "min": 1.0
+      }
+    }
+  ],
+  "random_sequence": "ancient_aether:chests/dungeon/bronze/bronze_dungeon_capes"
+}
