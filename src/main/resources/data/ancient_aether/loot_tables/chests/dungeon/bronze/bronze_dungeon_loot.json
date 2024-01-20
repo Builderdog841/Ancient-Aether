@@ -192,5 +192,5 @@
       }
     }
   ],
-  "random_sequence": "aether:chests/dungeon/bronze/bronze_dungeon_loot"
+  "random_sequence": "ancient_aether:chests/dungeon/bronze/bronze_dungeon_loot"
 }

@@ -1,0 +1,42 @@
+{
+  "name": "ancient_aether:bronze_dungeon/entrance",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:bronze_dungeon/room_01",
+        "processors": "ancient_aether:bronze_dungeon_room",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:bronze_dungeon/room_02",
+        "processors": "ancient_aether:bronze_dungeon_room",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:bronze_dungeon/room_03",
+        "processors": "ancient_aether:bronze_dungeon_room",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:bronze_dungeon/room_04",
+        "processors": "ancient_aether:bronze_dungeon_room",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

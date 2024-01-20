@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "aether:chests/dungeon/bronze/bronze_dungeon_neptune"
+          "name": "ancient_aether:chests/dungeon/bronze/bronze_dungeon_neptune"
         }
       ],
       "rolls": {
@@ -20,7 +20,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "aether:chests/dungeon/bronze/bronze_dungeon_treasure"
+          "name": "ancient_aether:chests/dungeon/bronze/bronze_dungeon_treasure"
         }
       ],
       "rolls": {
@@ -34,7 +34,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "aether:chests/dungeon/bronze/bronze_dungeon_gummies"
+          "name": "ancient_aether:chests/dungeon/bronze/bronze_dungeon_gummies"
         }
       ],
       "rolls": {
@@ -150,7 +150,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "name": "aether:chests/dungeon/bronze/bronze_dungeon_neptune",
+          "name": "ancient_aether:chests/dungeon/bronze/bronze_dungeon_neptune",
           "weight": 8
         },
         {
@@ -198,5 +198,5 @@
       }
     }
   ],
-  "random_sequence": "aether:chests/dungeon/bronze/bronze_dungeon_reward"
+  "random_sequence": "ancient_aether:chests/dungeon/bronze/bronze_dungeon_reward"
 }

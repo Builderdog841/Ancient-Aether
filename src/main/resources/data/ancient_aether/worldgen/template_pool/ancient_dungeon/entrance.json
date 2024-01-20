@@ -5,7 +5,6 @@
     {
       "weight": 1,
       "element": {
-
         "location": "ancient_aether:ancient_dungeon/entrance",
         "processors": "ancient_aether:ancient_dungeon_randomizer",
         "projection": "rigid",
