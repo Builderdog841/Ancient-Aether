@@ -209,14 +209,14 @@ public class AncientAetherBlocks {
     //Vases
     public static final RegistryObject<Block> HOLYSTONE_VASE = registerBlock("holystone_vase", () -> new VaseBlock(Block.Properties.of().mapColor(MapColor.COLOR_LIGHT_GRAY).instabreak().sound(SoundType.DECORATED_POT).noOcclusion().isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
     public static final RegistryObject<Block> MOSSY_HOLYSTONE_VASE = registerBlock("mossy_holystone_vase", () -> new VaseBlock(BlockBehaviour.Properties.copy(HOLYSTONE_VASE.get())));
-    public static final RegistryObject<Block> FROSTED_HOLYSTONE_VASE = registerBlock("frosted_holystone_vase", () -> new VaseBlock(BlockBehaviour.Properties.copy(HOLYSTONE_VASE.get())));
+    public static final RegistryObject<Block> FROZEN_HOLYSTONE_VASE = registerBlock("frozen_holystone_vase", () -> new VaseBlock(BlockBehaviour.Properties.copy(HOLYSTONE_VASE.get())));
     public static final RegistryObject<Block> SENTRY_VASE = registerBlock("sentry_vase", () -> new VaseBlock(BlockBehaviour.Properties.copy(HOLYSTONE_VASE.get())));
     public static final RegistryObject<Block> ANGELIC_VASE = registerBlock("angelic_vase", () -> new VaseBlock(BlockBehaviour.Properties.copy(HOLYSTONE_VASE.get())));
     public static final RegistryObject<Block> HELLFIRE_VASE = registerBlock("hellfire_vase", () -> new VaseBlock(BlockBehaviour.Properties.copy(HOLYSTONE_VASE.get())));
     public static final RegistryObject<Block> AEROGETIC_VASE = registerBlock("aerogetic_vase", () -> new VaseBlock(BlockBehaviour.Properties.copy(HOLYSTONE_VASE.get())));
     public static final RegistryObject<Block> ANCIENT_HOLYSTONE_VASE = registerBlock("ancient_holystone_vase", () -> new AncientVaseBlock(AncientAetherLootRegistry.HOLYSTONE_VASE_LOOT, BlockBehaviour.Properties.copy(HOLYSTONE_VASE.get()).sound(SoundType.DECORATED_POT_CRACKED).noLootTable()));
     public static final RegistryObject<Block> ANCIENT_MOSSY_HOLYSTONE_VASE = registerBlock("ancient_mossy_holystone_vase", () -> new AncientVaseBlock(AncientAetherLootRegistry.MOSSY_HOLYSTONE_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
-    public static final RegistryObject<Block> ANCIENT_FROSTED_HOLYSTONE_VASE = registerBlock("ancient_frosted_holystone_vase", () -> new AncientVaseBlock(AncientAetherLootRegistry.FROSTED_HOLYSTONE_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
+    public static final RegistryObject<Block> ANCIENT_FROZEN_HOLYSTONE_VASE = registerBlock("ancient_frozen_holystone_vase", () -> new AncientVaseBlock(AncientAetherLootRegistry.FROZEN_HOLYSTONE_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
     public static final RegistryObject<Block> ANCIENT_SENTRY_VASE = registerBlock("ancient_sentry_vase", () -> new AncientVaseBlock(AncientAetherLootRegistry.SENTRY_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
     public static final RegistryObject<Block> ANCIENT_ANGELIC_VASE = registerBlock("ancient_angelic_vase", () -> new AncientVaseBlock(AncientAetherLootRegistry.ANGELIC_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
     public static final RegistryObject<Block> ANCIENT_HELLFIRE_VASE = registerBlock("ancient_hellfire_vase", () -> new AncientVaseBlock(AncientAetherLootRegistry.HELLFIRE_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
@@ -289,7 +289,7 @@ public class AncientAetherBlocks {
                 return new BlockItem(block, new Item.Properties().rarity(Rarity.UNCOMMON));
             } else if (block == ANCIENT_MOSSY_HOLYSTONE_VASE.get()) {
                 return new BlockItem(block, new Item.Properties().rarity(Rarity.UNCOMMON));
-            } else if (block == ANCIENT_FROSTED_HOLYSTONE_VASE.get()) {
+            } else if (block == ANCIENT_FROZEN_HOLYSTONE_VASE.get()) {
                 return new BlockItem(block, new Item.Properties().rarity(Rarity.UNCOMMON));
             } else if (block == ANCIENT_SENTRY_VASE.get()) {
                 return new BlockItem(block, new Item.Properties().rarity(Rarity.UNCOMMON));

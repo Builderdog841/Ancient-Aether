@@ -122,5 +122,9 @@ public class AncientAetherMissingEntries {
                 .filter(mapping -> mapping.getKey().getPath().contains("frosted_highsproot_leaves")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.HIGHSPROOT_LEAVES.get()));
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
                 .filter(mapping -> mapping.getKey().getPath().contains("frosted_highsproot_sapling")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.HIGHSPROOT_SAPLING.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("frosted_holystone_vase")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.FROZEN_HOLYSTONE_VASE.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("ancient_frosted_holystone_vase")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.ANCIENT_HOLYSTONE_VASE.get()));
     }
 }

@@ -11,7 +11,7 @@ public class AncientAetherLootRegistry {
 
     public static final ResourceLocation HOLYSTONE_VASE_LOOT = register("selectors/holystone_vase_loot");
     public static final ResourceLocation MOSSY_HOLYSTONE_VASE_LOOT = register("selectors/mossy_holystone_vase_loot");
-    public static final ResourceLocation FROSTED_HOLYSTONE_VASE_LOOT = register("selectors/frosted_holystone_vase_loot");
+    public static final ResourceLocation FROZEN_HOLYSTONE_VASE_LOOT = register("selectors/frozen_holystone_vase_loot");
     public static final ResourceLocation SENTRY_VASE_LOOT = register("selectors/sentry_vase_loot");
     public static final ResourceLocation ANGELIC_VASE_LOOT = register("selectors/angelic_vase_loot");
     public static final ResourceLocation HELLFIRE_VASE_LOOT = register("selectors/hellfire_vase_loot");

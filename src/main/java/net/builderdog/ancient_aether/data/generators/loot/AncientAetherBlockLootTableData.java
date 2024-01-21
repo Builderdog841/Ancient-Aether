@@ -174,7 +174,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         //Vases
         dropSelf(AncientAetherBlocks.HOLYSTONE_VASE.get());
         dropSelf(AncientAetherBlocks.MOSSY_HOLYSTONE_VASE.get());
-        dropSelf(AncientAetherBlocks.FROSTED_HOLYSTONE_VASE.get());
+        dropSelf(AncientAetherBlocks.FROZEN_HOLYSTONE_VASE.get());
         dropSelf(AncientAetherBlocks.SENTRY_VASE.get());
         dropSelf(AncientAetherBlocks.ANGELIC_VASE.get());
         dropSelf(AncientAetherBlocks.HELLFIRE_VASE.get());

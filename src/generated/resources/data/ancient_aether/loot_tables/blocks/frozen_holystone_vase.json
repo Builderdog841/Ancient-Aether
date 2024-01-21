@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ancient_aether:frosted_holystone_vase"
+          "name": "ancient_aether:frozen_holystone_vase"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "ancient_aether:blocks/frosted_holystone_vase"
+  "random_sequence": "ancient_aether:blocks/frozen_holystone_vase"
 }

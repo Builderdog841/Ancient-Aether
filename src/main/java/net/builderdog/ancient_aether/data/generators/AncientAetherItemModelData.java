@@ -180,7 +180,7 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         //Vases
         itemBlock(AncientAetherBlocks.HOLYSTONE_VASE.get());
         itemBlock(AncientAetherBlocks.MOSSY_HOLYSTONE_VASE.get());
-        itemBlock(AncientAetherBlocks.FROSTED_HOLYSTONE_VASE.get());
+        itemBlock(AncientAetherBlocks.FROZEN_HOLYSTONE_VASE.get());
         itemBlock(AncientAetherBlocks.SENTRY_VASE.get());
         itemBlock(AncientAetherBlocks.ANGELIC_VASE.get());
         itemBlock(AncientAetherBlocks.HELLFIRE_VASE.get());

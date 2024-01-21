@@ -464,7 +464,7 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.HELLFIRE_VASE.get(), AetherBlocks.HELLFIRE_STONE.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGETIC_VASE.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
 
-        freezingRecipe(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.FROSTED_HOLYSTONE_VASE.get(), AncientAetherBlocks.HOLYSTONE_VASE.get(), 0.2F, 100).save(consumer);
+        freezingRecipe(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.FROZEN_HOLYSTONE_VASE.get(), AncientAetherBlocks.HOLYSTONE_VASE.get(), 0.2F, 100).save(consumer);
 
         freezingRecipe(RecipeCategory.BUILDING_BLOCKS, AetherBlocks.HOLIDAY_LEAVES.get(), AncientAetherBlocks.HIGHSPROOT_LEAVES.get(), 0.1F, 50).save(consumer);
 

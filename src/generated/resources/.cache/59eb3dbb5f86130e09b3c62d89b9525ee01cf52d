@@ -1,4 +1,4 @@
-// 1.20.1	2024-01-18T21:43:23.9317335	Loot Tables
+// 1.20.1	2024-01-21T20:23:43.8848964	Loot Tables
 095a70e341d19e7b3548ddc32402abe48a79992a data/ancient_aether/loot_tables/blocks/aerogel_glass.json
 9fe2ea21af5246ad9f95848f680099717062eb1c data/ancient_aether/loot_tables/blocks/aerogel_glass_door.json
 0f84d5b4591633acc6c8dcc82b7c14988b545a9f data/ancient_aether/loot_tables/blocks/aerogel_glass_pane.json
@@ -29,7 +29,7 @@ c737df83b589dd9c81bedfd91f94b948fd786eff data/ancient_aether/loot_tables/blocks/
 a93b4f337f62686363c24527cb2e2fd8c05c2edb data/ancient_aether/loot_tables/blocks/crystal_skyroot_sapling.json
 57fc1bb7f567bba57456b1dd4e1a852c3a399fa3 data/ancient_aether/loot_tables/blocks/enchanted_skyroot_leaves.json
 b23565ef948eb4bd69efd04df7a51de3f539a22e data/ancient_aether/loot_tables/blocks/enchanted_skyroot_sapling.json
-997c6d695ddf1dabe74eadf585be1c4a877a727d data/ancient_aether/loot_tables/blocks/frosted_holystone_vase.json
+e1cd12fc0fe5fbd9f2dfe521628cbca9bad97399 data/ancient_aether/loot_tables/blocks/frozen_holystone_vase.json
 68ae82a00f438e7a97944585e600c87c81233b7f data/ancient_aether/loot_tables/blocks/gale_lantern.json
 635f68f8ca5307f47168c7f5b52976fd9f9ab554 data/ancient_aether/loot_tables/blocks/gale_stone_mosaic.json
 1d57a449c273261b271dfc0fab10e553bcb60a2a data/ancient_aether/loot_tables/blocks/gravity_gravel.json

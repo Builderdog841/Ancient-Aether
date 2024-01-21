@@ -1,23 +1,18 @@
 package net.builderdog.ancient_aether.client;
 
 import com.aetherteam.aether.AetherConfig;
-import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.cumulus.CumulusConfig;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherWoodTypes;
 import net.builderdog.ancient_aether.client.renderer.AncientAetherEntityRenderers;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.Sheets;
-import net.minecraft.world.level.GrassColor;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import teamrazor.aeroblender.AeroBlenderConfig;
-
-import static net.minecraft.client.renderer.BiomeColors.getAverageGrassColor;
 
 @Mod.EventBusSubscriber(modid = AncientAether.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class AncientAetherClient {
@@ -29,8 +24,6 @@ public class AncientAetherClient {
             AncientAetherEntityRenderers.registerCuriosRenderers();
             AetherConfig.COMMON.add_ruined_portal_automatically.set(true);
             AetherConfig.COMMON.add_temporary_freezing_automatically.set(true);
-            AetherConfig.CLIENT.music_backup_min_delay.set(1);
-            AetherConfig.CLIENT.music_backup_max_delay.set(2);
             AetherConfig.CLIENT.disable_music_manager.set(false);
             CumulusConfig.CLIENT.enable_menu_list_button.set(true);
             AeroBlenderConfig.COMMON.vanillaAetherRegionWeight.set(0);
