@@ -6,7 +6,10 @@
     "aether:holystone",
     "aether:carved_stone",
     "aether:skyroot_slab",
+    "aether:skyroot_stairs",
+    "aether:skyroot_bookshelf",
     "ancient_aether:carved_tiles",
+    "ancient_aether:carved_tile_wall",
     "ancient_aether:carved_stone_mosaic",
     "ancient_aether:ancient_sentry_vase"
   ]
