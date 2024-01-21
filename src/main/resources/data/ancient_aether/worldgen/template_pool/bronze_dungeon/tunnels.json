@@ -30,7 +30,7 @@
       }
     },
     {
-      "weight": 3,
+      "weight": 2,
       "element": {
         "location": "ancient_aether:bronze_dungeon/tunnel_04",
         "processors": "ancient_aether:bronze_dungeon_tunnel",

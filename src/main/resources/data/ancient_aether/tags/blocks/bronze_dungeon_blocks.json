@@ -1,5 +1,6 @@
 {
   "values": [
+    "minecraft:water",
     "minecraft:chest",
     "minecraft:spawner",
     "aether:holystone",

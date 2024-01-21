@@ -57,7 +57,7 @@
       }
     },
     {
-      "weight": 2,
+      "weight": 1,
       "element": {
         "location": "ancient_aether:bronze_dungeon/large_room_03",
         "processors": "ancient_aether:bronze_dungeon_room",
@@ -66,7 +66,7 @@
       }
     },
     {
-      "weight": 2,
+      "weight": 1,
       "element": {
         "location": "ancient_aether:bronze_dungeon/large_room_04",
         "processors": "ancient_aether:bronze_dungeon_room",

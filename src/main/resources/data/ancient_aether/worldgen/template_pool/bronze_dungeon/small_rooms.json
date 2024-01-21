@@ -30,7 +30,7 @@
       }
     },
     {
-      "weight": 2,
+      "weight": 1,
       "element": {
         "location": "ancient_aether:bronze_dungeon/small_room_04",
         "processors": "ancient_aether:bronze_dungeon_room",
