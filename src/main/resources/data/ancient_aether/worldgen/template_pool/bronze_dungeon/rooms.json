@@ -57,7 +57,7 @@
       }
     },
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "location": "ancient_aether:bronze_dungeon/large_room_03",
         "processors": "ancient_aether:bronze_dungeon_room",
@@ -96,6 +96,15 @@
       "weight": 1,
       "element": {
         "location": "ancient_aether:bronze_dungeon/hall_02",
+        "processors": "ancient_aether:bronze_dungeon_room",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:bronze_dungeon/hall_03",
         "processors": "ancient_aether:bronze_dungeon_room",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
