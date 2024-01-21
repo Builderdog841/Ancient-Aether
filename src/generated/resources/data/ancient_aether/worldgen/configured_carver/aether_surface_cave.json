@@ -1,30 +1,6 @@
 {
   "type": "minecraft:cave",
   "config": {
-    "debug_settings": {
-      "air_state": {
-        "Name": "minecraft:crimson_button",
-        "Properties": {
-          "face": "wall",
-          "facing": "north",
-          "powered": "false"
-        }
-      },
-      "barrier_state": {
-        "Name": "minecraft:glass"
-      },
-      "lava_state": {
-        "Name": "minecraft:orange_stained_glass"
-      },
-      "water_state": {
-        "Name": "minecraft:candle",
-        "Properties": {
-          "candles": "1",
-          "lit": "false",
-          "waterlogged": "false"
-        }
-      }
-    },
     "floor_level": {
       "type": "minecraft:uniform",
       "value": {
@@ -42,7 +18,7 @@
     "lava_level": {
       "above_bottom": -64
     },
-    "probability": 0.1,
+    "probability": 0.2,
     "replaceable": "#ancient_aether:aether_carver_replaceables",
     "vertical_radius_multiplier": {
       "type": "minecraft:uniform",
@@ -57,7 +33,7 @@
         "absolute": 256
       },
       "min_inclusive": {
-        "above_bottom": 0
+        "absolute": 0
       }
     },
     "yScale": {

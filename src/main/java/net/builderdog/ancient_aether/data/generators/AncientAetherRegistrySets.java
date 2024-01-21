@@ -2,6 +2,7 @@ package net.builderdog.ancient_aether.data.generators;
 
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.data.generators.worldgen.AncientAetherBiomeModifierData;
+import net.builderdog.ancient_aether.data.generators.worldgen.AncientAetherConfiguredCarverData;
 import net.builderdog.ancient_aether.data.generators.worldgen.AncientAetherNoiseData;
 import net.builderdog.ancient_aether.data.generators.worldgen.features.AncientAetherFeatureUtils;
 import net.builderdog.ancient_aether.data.generators.worldgen.placement.AncientAetherPlacementUtils;
@@ -41,7 +42,8 @@ public class AncientAetherRegistrySets extends DatapackBuiltinEntriesProvider {
             .add(Registries.CONFIGURED_FEATURE, AncientAetherFeatureUtils::bootstrap)
             .add(Registries.PLACED_FEATURE, AncientAetherPlacementUtils::bootstrap)
             .add(ForgeRegistries.Keys.BIOME_MODIFIERS, AncientAetherBiomeModifierData::bootstrap)
-            .add(Registries.NOISE, AncientAetherNoiseData::bootstrap);
+            .add(Registries.NOISE, AncientAetherNoiseData::bootstrap)
+            .add(Registries.CONFIGURED_CARVER, AncientAetherConfiguredCarverData::bootstrap);
 
     public AncientAetherRegistrySets(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(AncientAether.MOD_ID));

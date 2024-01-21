@@ -12,6 +12,7 @@ public class AncientAetherTags {
     public static class Blocks {
         public static final TagKey<Block> WYNDCAPS_ANIMAL_SPAWNABLE_ON = tag("wyndcaps_animals_spawnable_on");
         public static final TagKey<Block> COAST_REPLACEABLE = tag("coast_replaceable");
+        public static final TagKey<Block> AETHER_CARVER_REPLACEABLES = tag("aether_carver_replaceables");
 
         private static TagKey<Block> tag(String name) {
             return TagKey.create(Registries.BLOCK, new ResourceLocation(AncientAether.MOD_ID, name));
@@ -41,7 +42,6 @@ public class AncientAetherTags {
         public static final TagKey<Biome> HAS_VALKYRUM_ORE = tag("has_valkyrum_ore");
         public static final TagKey<Biome> HAS_VIOLET_AERCLOUD = tag("has_violet_aercloud");
         public static final TagKey<Biome> HAS_CLOUDBED = tag("has_cloudbed");
-        public static final TagKey<Biome> IS_SKYROOT_WITHOUT_JUNGLE = tag("is_skyroot_without_jungle");
 
         private static TagKey<Biome> tag(String name) {
             return TagKey.create(Registries.BIOME, new ResourceLocation(AncientAether.MOD_ID, name));
