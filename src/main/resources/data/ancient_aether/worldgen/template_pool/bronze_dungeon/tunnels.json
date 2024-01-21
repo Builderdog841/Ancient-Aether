@@ -64,6 +64,15 @@
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "ancient_aether:bronze_dungeon/tunnel_intersection",
+        "processors": "ancient_aether:bronze_dungeon_tunnel",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
     }
   ]
 }
