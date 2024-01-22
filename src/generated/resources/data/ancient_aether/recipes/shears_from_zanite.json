@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "Z": {
+      "item": "aether:zanite_gemstone"
+    }
+  },
+  "pattern": [
+    " Z",
+    "Z "
+  ],
+  "result": {
+    "item": "minecraft:shears"
+  },
+  "show_notification": true
+}

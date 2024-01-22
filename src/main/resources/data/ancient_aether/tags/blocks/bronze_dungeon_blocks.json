@@ -1,5 +1,6 @@
 {
   "values": [
+    "minecraft:air",
     "minecraft:water",
     "minecraft:chest",
     "minecraft:spawner",

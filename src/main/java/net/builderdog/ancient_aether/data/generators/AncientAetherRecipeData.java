@@ -213,6 +213,13 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .unlockedBy(getHasName(AetherBlocks.ZANITE_BLOCK.get()), has(AetherBlocks.ZANITE_BLOCK.get()))
                 .save(consumer, name("anvil_from_zanite"));
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Items.SHEARS)
+                .define('Z', AetherItems.ZANITE_GEMSTONE.get())
+                .pattern(" Z")
+                .pattern("Z ")
+                .unlockedBy(getHasName(AetherItems.ZANITE_GEMSTONE.get()), has(AetherItems.ZANITE_GEMSTONE.get()))
+                .save(consumer, name("shears_from_zanite"));
+
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherItems.HIGHSPROOT_SIGN.get(), 3)
                 .group("wooden_sign")
                 .define('P', AncientAetherBlocks.HIGHSPROOT_PLANKS.get().asItem())
