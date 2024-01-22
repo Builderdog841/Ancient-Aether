@@ -7,7 +7,7 @@
           "input_predicate": {
             "block": "aether:carved_stone",
             "predicate_type": "minecraft:random_block_match",
-            "probability": 0.05
+            "probability": 0.01
           },
           "location_predicate": {
             "predicate_type": "minecraft:always_true"
