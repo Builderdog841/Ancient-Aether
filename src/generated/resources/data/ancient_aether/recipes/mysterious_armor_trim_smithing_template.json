@@ -2,20 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "M": {
+    "#": {
+      "item": "ancient_aether:valkyrum"
+    },
+    "C": {
       "item": "aether:mossy_holystone"
     },
-    "T": {
+    "S": {
       "item": "ancient_aether:mysterious_armor_trim_smithing_template"
-    },
-    "V": {
-      "item": "ancient_aether:valkyrum"
     }
   },
   "pattern": [
-    "VTV",
-    "VMV",
-    "VVV"
+    "#S#",
+    "#C#",
+    "###"
   ],
   "result": {
     "count": 2,
