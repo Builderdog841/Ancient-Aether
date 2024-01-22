@@ -11,11 +11,10 @@ import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.entity.moa.AncientAetherMoaTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.ShapedRecipeBuilder;
-import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
@@ -49,6 +48,14 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .pattern("#")
                 .unlockedBy(getHasName(slab), has(slab))
                 .save(consumer);
+    }
+
+    protected void aetherSmithingTrimRecipe(Consumer<FinishedRecipe> consumer, Item armorTrim) {
+        SmithingTrimRecipeBuilder.smithingTrim(Ingredient.of(armorTrim),
+                Ingredient.of(ItemTags.TRIMMABLE_ARMOR),
+                Ingredient.of(ItemTags.TRIM_MATERIALS), RecipeCategory.MISC)
+                .unlocks("smithing_templates",
+                has(armorTrim)).save(consumer, new ResourceLocation(id, getItemName(armorTrim) + "_smithing_trim"));
     }
 
     @Override
@@ -127,6 +134,16 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         copyAetherSmithingTemplate(consumer, AncientAetherItems.ASCENDED_ARMOR_TRIM_SMITHING_TEMPLATE.get(), AetherBlocks.HOLYSTONE.get());
         copyAetherSmithingTemplate(consumer, AncientAetherItems.MYSTERIOUS_ARMOR_TRIM_SMITHING_TEMPLATE.get(), AetherBlocks.MOSSY_HOLYSTONE.get());
         copyAetherSmithingTemplate(consumer, AncientAetherItems.MECHANICAL_ARMOR_TRIM_SMITHING_TEMPLATE.get(), AetherBlocks.ICESTONE.get());
+
+        aetherSmithingTrimRecipe(consumer, AncientAetherItems.WYND_ARMOR_TRIM_SMITHING_TEMPLATE.get());
+        aetherSmithingTrimRecipe(consumer, AncientAetherItems.WHALE_ARMOR_TRIM_SMITHING_TEMPLATE.get());
+        aetherSmithingTrimRecipe(consumer, AncientAetherItems.ASCENDED_ARMOR_TRIM_SMITHING_TEMPLATE.get());
+        aetherSmithingTrimRecipe(consumer, AncientAetherItems.MYSTERIOUS_ARMOR_TRIM_SMITHING_TEMPLATE.get());
+        aetherSmithingTrimRecipe(consumer, AncientAetherItems.MECHANICAL_ARMOR_TRIM_SMITHING_TEMPLATE.get());
+        aetherSmithingTrimRecipe(consumer, AncientAetherItems.MOSAIC_ARMOR_TRIM_SMITHING_TEMPLATE.get());
+        aetherSmithingTrimRecipe(consumer, AncientAetherItems.ROYAL_ARMOR_TRIM_SMITHING_TEMPLATE.get());
+        aetherSmithingTrimRecipe(consumer, AncientAetherItems.SOLAR_ARMOR_TRIM_SMITHING_TEMPLATE.get());
+        aetherSmithingTrimRecipe(consumer, AncientAetherItems.ANCIENT_ARMOR_TRIM_SMITHING_TEMPLATE.get());
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.ENCHANTING_TABLE)
                 .define('G', AetherBlocks.ENCHANTED_GRAVITITE.get())
