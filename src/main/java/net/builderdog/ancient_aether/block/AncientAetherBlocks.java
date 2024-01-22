@@ -8,6 +8,7 @@ import com.aetherteam.aether.block.dungeon.TreasureDoorwayBlock;
 import com.aetherteam.aether.block.natural.AetherDoubleDropBlock;
 import com.aetherteam.aether.block.natural.AetherDoubleDropsLeaves;
 import com.aetherteam.aether.block.natural.AetherDoubleDropsOreBlock;
+import com.aetherteam.aether.entity.AetherEntityTypes;
 import com.aetherteam.aether.mixin.mixins.common.accessor.FireBlockAccessor;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.construction.*;
@@ -173,6 +174,8 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> CARVED_TILE_STAIRS = registerBlock("carved_tile_stairs", () -> new StairBlock(() -> CARVED_TILES.get().defaultBlockState(), (Block.Properties.copy(CARVED_TILES.get()))));
     public static final RegistryObject<Block> CARVED_TILE_SLAB = registerBlock("carved_tile_slab", () -> new SlabBlock(Block.Properties.copy(CARVED_TILES.get())));
     public static final RegistryObject<Block> CARVED_TILE_WALL = registerBlock("carved_tile_wall", () -> new WallBlock(Block.Properties.copy(CARVED_TILES.get())));
+    public static final RegistryObject<Block> LOCKED_CARVED_TILES = registerBlock("locked_carved_tiles", () -> new Block(Block.Properties.copy(CARVED_TILES.get()).strength(-1.0F, 3600000.0F).noLootTable()));
+    public static final RegistryObject<Block> TRAPPED_CARVED_TILES = registerBlock("trapped_carved_tiles", () -> new TrappedBlock(AetherEntityTypes.SENTRY::get, () -> CARVED_TILES.get().defaultBlockState(), Block.Properties.copy(CARVED_TILES.get()).noLootTable()));
 
     //Plants
     public static final RegistryObject<Block> SKY_GRASS = registerBlock("sky_grass", () -> new SkyGrassBlock(Block.Properties.copy(GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));

@@ -111,6 +111,15 @@
       }
     },
     {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:bronze_dungeon/bridge_room",
+        "processors": "ancient_aether:bronze_dungeon_room",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
       "weight": 5,
       "element": {
         "location": "ancient_aether:bronze_dungeon/staircase_top_01",
