@@ -6,7 +6,7 @@
   "max_distance_from_center": 128,
   "biomes": "#aether:has_bronze_dungeon",
   "step": "surface_structures",
-  "min_spawn_height": 136,
+  "min_spawn_height": 144,
   "start_height": {
     "absolute": -24
   },

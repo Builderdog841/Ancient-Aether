@@ -33,14 +33,14 @@
       "bonus_rolls": 0.0,
       "entries": [
         {
-          "type": "minecraft:loot_table",
-          "name": "ancient_aether:chests/dungeon/bronze/bronze_dungeon_gummies"
+          "type": "minecraft:item",
+          "name": "aether:blue_gummy_swet"
         }
       ],
       "rolls": {
         "type": "minecraft:uniform",
-        "max": 2.0,
-        "min": 1.0
+        "max": 8.0,
+        "min": 2.0
       }
     },
     {
