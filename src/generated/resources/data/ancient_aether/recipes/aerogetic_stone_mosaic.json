@@ -7,7 +7,8 @@
     }
   },
   "pattern": [
-    "##"
+    "#",
+    "#"
   ],
   "result": {
     "item": "ancient_aether:aerogetic_stone_mosaic"
