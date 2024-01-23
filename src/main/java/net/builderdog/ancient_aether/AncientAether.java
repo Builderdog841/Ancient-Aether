@@ -18,18 +18,15 @@ import net.builderdog.ancient_aether.world.biomes.AncientAetherSurfaceData;
 import net.builderdog.ancient_aether.world.feature.AncientAetherFeatures;
 import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherFoliagePlacers;
 import net.builderdog.ancient_aether.world.structure.AncientAetherStructureTypes;
-import net.minecraft.ChatFormatting;
-import net.minecraft.SharedConstants;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
-import net.minecraft.server.packs.metadata.pack.PackMetadataSection;
+import net.minecraft.server.packs.PathPackResources;
 import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
-import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.ComposterBlock;
@@ -47,29 +44,25 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.FMLPaths;
 import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.resource.PathPackResources;
-import org.jetbrains.annotations.NotNull;
 import teamrazor.aeroblender.aether.AetherRuleCategory;
 import terrablender.api.Regions;
 import terrablender.api.SurfaceRuleManager;
 
 import java.nio.file.Path;
 import java.util.concurrent.CompletableFuture;
-import java.util.function.UnaryOperator;
-
-import static com.aetherteam.aether.Aether.DIRECTORY;
 
 @Mod(AncientAether.MOD_ID)
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class AncientAether {
     public static final String MOD_ID = "ancient_aether";
+    public static final Path DIRECTORY = FMLPaths.CONFIGDIR.get().resolve(MOD_ID);
 
     public AncientAether() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         modEventBus.addListener(this::commonSetup);
-        modEventBus.addListener(this::packSetup);
         modEventBus.addListener(this::dataSetup);
 
         DeferredRegister<?>[] registers = {
@@ -117,111 +110,49 @@ public class AncientAether {
         AetherConfig.SERVER.disable_eternal_day.set(true);
     }
 
-
-    public void packSetup(AddPackFindersEvent event) {
-        setupProgrammerArtPack(event);
-        setupTweaksPack(event);
-        setupWorldgenOverridesDatapack(event);
-        setupCompatDatapack(event, "ancient_aether_asset_overrides", "Ancient Aether Asset Overrides", "Some Tweaks to the Aether's Textures");
-
-        if (ModList.get().isLoaded("aether_genesis")) {
-            setupCompatDatapack(event, "aether_genesis_compat", "Aether Genesis Compatibility", "Better Compatibility with Aether Genesis");
-        }
-        if (ModList.get().isLoaded("lost_aether_content")) {
-            setupCompatDatapack(event, "lost_content_compat", "Lost Content Compatibility", "Better Compatibility with Lost Content");
-        }
-    }
-
-    private void setupProgrammerArtPack(AddPackFindersEvent event) {
+    @SubscribeEvent
+    public static void addPacks(AddPackFindersEvent event) {
         if (event.getPackType() == PackType.CLIENT_RESOURCES) {
-            Path resourcePath = ModList.get().getModFileById("ancient_aether").getFile().findResource("packs/ancient_aether_programmer_art");
-            PathPackResources pack = new PathPackResources(ModList.get().getModFileById("ancient_aether").getFile().getFileName() + ":" + resourcePath, true, resourcePath);
-            PackMetadataSection metadata = new PackMetadataSection(Component.literal("Changes the textures to the classic art style"), SharedConstants.getCurrentVersion().getPackVersion(PackType.CLIENT_RESOURCES));
-            event.addRepositorySource((packConsumer) -> {
-                packConsumer.accept(Pack.create("builtin/ancient_aether_programmer_art",
-                        Component.literal("Ancient Aether Programmer Art"),
-                        false,
-                        (string) -> pack,
-                        new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.SERVER_DATA), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()),
-                        PackType.CLIENT_RESOURCES,
-                        Pack.Position.TOP,
-                        false,
-                        create(decorateWithSource("built-in"), false)));
-            });
+            var resourcePath = ModList.get().getModFileById(AncientAether.MOD_ID).getFile().findResource("packs/ancient_aether_texture_tweaks");
+            var pack = Pack.readMetaAndCreate("builtin/ancient_aether_texture_tweaks", Component.literal("Ancient Aether Texture Tweaks"), true,
+                    path -> new PathPackResources(path, resourcePath, true), PackType.CLIENT_RESOURCES, Pack.Position.TOP, PackSource.BUILT_IN);
+            event.addRepositorySource(consumer -> consumer.accept(pack));
         }
-    }
 
-    private void setupTweaksPack(AddPackFindersEvent event) {
-        Path resourcePath = ModList.get().getModFileById(AncientAether.MOD_ID).getFile().findResource("packs/ancient_aether_tweaks");
-        PathPackResources pack = new PathPackResources(ModList.get().getModFileById(AncientAether.MOD_ID).getFile().getFileName() + ":" + resourcePath, true, resourcePath);
-        PackMetadataSection metadata = new PackMetadataSection(Component.translatable("pack.ancient_aether.tweaks.description"), SharedConstants.getCurrentVersion().getPackVersion(PackType.CLIENT_RESOURCES));
-        event.addRepositorySource((source) ->
-                source.accept(Pack.create(
-                        "builtin/ancient_aether_tweaks",
-                        Component.translatable("pack.ancient_aether.tweaks.title"),
-                        false,
-                        (string) -> pack,
-                        new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.SERVER_DATA), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()),
-                        PackType.CLIENT_RESOURCES,
-                        Pack.Position.TOP,
-                        false,
-                        PackSource.BUILT_IN)
-                )
-        );
-    }
+        if (event.getPackType() == PackType.CLIENT_RESOURCES) {
+            var resourcePath = ModList.get().getModFileById(AncientAether.MOD_ID).getFile().findResource("packs/ancient_aether_programmer_art");
+            var pack = Pack.readMetaAndCreate("builtin/ancient_aether_programmer_art", Component.literal("Ancient Aether Programmer Art"), false,
+                    path -> new PathPackResources(path, resourcePath, true), PackType.CLIENT_RESOURCES, Pack.Position.TOP, PackSource.BUILT_IN);
+            event.addRepositorySource(consumer -> consumer.accept(pack));
+        }
 
-    private void setupCompatDatapack(AddPackFindersEvent event, String path, String displayName, String desc) {
         if (event.getPackType() == PackType.SERVER_DATA) {
-            Path resourcePath = ModList.get().getModFileById("ancient_aether").getFile().findResource("packs/" + path);
-            PathPackResources pack = new PathPackResources(ModList.get().getModFileById("ancient_aether").getFile().getFileName() + ":" + resourcePath, true, resourcePath);
-            PackMetadataSection metadata = new PackMetadataSection(Component.translatable(desc), SharedConstants.getCurrentVersion().getPackVersion(PackType.CLIENT_RESOURCES));
-            event.addRepositorySource((packConsumer) -> packConsumer.accept(Pack.create(
-                    "builtin/" + path,
-                    Component.literal(displayName),
-                    false,
-                    (string) -> pack,
-                    new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.CLIENT_RESOURCES), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()),
-                    PackType.SERVER_DATA,
-                    Pack.Position.TOP,
-                    false,
-                    create(decorateWithSource("built-in"), false))));
+            var resourcePath = ModList.get().getModFileById(AncientAether.MOD_ID).getFile().findResource("packs/ancient_aether_worldgen_overrides");
+            var pack = Pack.readMetaAndCreate("builtin/ancient_aether_worldgen_overrides", Component.literal("Ancient Aether Worldgen Overrides"), true,
+                    path -> new PathPackResources(path, resourcePath, true), PackType.SERVER_DATA, Pack.Position.TOP, PackSource.SERVER);
+
+            event.addRepositorySource(consumer -> consumer.accept(pack));
         }
-    }
 
-    private void setupWorldgenOverridesDatapack(AddPackFindersEvent event) {
-        if (event.getPackType() == PackType.SERVER_DATA) {
-            Path resourcePath = ModList.get().getModFileById(AncientAether.MOD_ID).getFile().findResource("packs/ancient_aether_worldgen_overrides");
-            PathPackResources pack = new PathPackResources(ModList.get().getModFileById(AncientAether.MOD_ID).getFile().getFileName() + ":" + resourcePath, true, resourcePath);
-            PackMetadataSection metadata = new PackMetadataSection(Component.translatable("pack.ancient_aether.ancient_aether_worldgen_overrides.description"), SharedConstants.getCurrentVersion().getPackVersion(PackType.SERVER_DATA));
-            event.addRepositorySource((source) ->
-                    source.accept(Pack.create(
-                            "packs/ancient_aether_worldgen_overrides",
-                            Component.translatable("pack.ancient_aether.ancient_aether_worldgen_overrides.title"),
-                            false,
-                            (string) -> pack,
-                            new Pack.Info(metadata.getDescription(), metadata.getPackFormat(PackType.SERVER_DATA), metadata.getPackFormat(PackType.CLIENT_RESOURCES), FeatureFlagSet.of(), pack.isHidden()),
-                            PackType.SERVER_DATA,
-                            Pack.Position.TOP,
-                            false,
-                            create(decorateWithSource("built-in"), AncientAetherConfig.COMMON.worldgen_overrides.get()))));
+        if(ModList.get().isLoaded("aether_genesis") && event.getPackType() == PackType.SERVER_DATA) {
+            if (event.getPackType() == PackType.SERVER_DATA) {
+                var resourcePath = ModList.get().getModFileById(AncientAether.MOD_ID).getFile().findResource("packs/aether_genesis_compat");
+                var pack = Pack.readMetaAndCreate("builtin/aether_genesis_compat", Component.literal("Aether Genesis Compatibility"), true,
+                        path -> new PathPackResources(path, resourcePath, true), PackType.SERVER_DATA, Pack.Position.TOP, PackSource.SERVER);
+
+                event.addRepositorySource(consumer -> consumer.accept(pack));
+            }
         }
-    }
 
-    static PackSource create(final UnaryOperator<Component> decorator, final boolean shouldAddAutomatically) {
-        return new PackSource() {
-            public @NotNull Component decorate(@NotNull Component component) {
-                return decorator.apply(component);
+        if(ModList.get().isLoaded("lost_aether_content") && event.getPackType() == PackType.SERVER_DATA) {
+            if (event.getPackType() == PackType.SERVER_DATA) {
+                var resourcePath = ModList.get().getModFileById(AncientAether.MOD_ID).getFile().findResource("packs/lost_content_compat");
+                var pack = Pack.readMetaAndCreate("builtin/lost_content_compat", Component.literal("Lost Content Compatibility"), true,
+                        path -> new PathPackResources(path, resourcePath, true), PackType.SERVER_DATA, Pack.Position.TOP, PackSource.SERVER);
+
+                event.addRepositorySource(consumer -> consumer.accept(pack));
             }
-
-            public boolean shouldAddAutomatically() {
-                return shouldAddAutomatically;
-            }
-        };
-    }
-
-    private static UnaryOperator<Component> decorateWithSource(String translationKey) {
-        Component component = Component.translatable(translationKey);
-        return (name) -> Component.translatable("pack.nameAndSource", name, component).withStyle(ChatFormatting.GRAY);
+        }
     }
 
     public void dataSetup(GatherDataEvent event) {
