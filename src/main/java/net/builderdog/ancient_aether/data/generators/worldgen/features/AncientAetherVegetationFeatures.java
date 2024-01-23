@@ -73,25 +73,25 @@ public class AncientAetherVegetationFeatures {
                                 .add(AncientAetherFeatureStates.TRAPPED_SAKURA_BLOSSOMS, 3)),
                         64));
 
-        AncientAetherFeatureUtils.register(context, AETHER_GRASS_PATCH, Feature.FLOWER,
+        AncientAetherFeatureUtils.register(context, AETHER_GRASS_PATCH, Feature.RANDOM_PATCH,
                 NitrogenConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
                                 .add(AncientAetherFeatureStates.SKY_GRASS_VERY_SHORT, 1)
                                 .add(AncientAetherFeatureStates.SKY_GRASS_SHORT, 2)
                                 .add(AncientAetherFeatureStates.SKY_GRASS_MEDIUM, 3)),
                         64));
-        AncientAetherFeatureUtils.register(context, FROZEN_AETHER_GRASS_PATCH, Feature.FLOWER,
+        AncientAetherFeatureUtils.register(context, FROZEN_AETHER_GRASS_PATCH, Feature.RANDOM_PATCH,
                 NitrogenConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
                                 .add(AncientAetherFeatureStates.SKY_GRASS_VERY_SHORT_FROZEN, 1)
                                 .add(AncientAetherFeatureStates.SKY_GRASS_SHORT_FROZEN, 2)
                                 .add(AncientAetherFeatureStates.SKY_GRASS_MEDIUM_FROZEN, 2)),
                         64));
-        AncientAetherFeatureUtils.register(context, JUNGLE_AETHER_GRASS_PATCH, Feature.FLOWER,
+        AncientAetherFeatureUtils.register(context, JUNGLE_AETHER_GRASS_PATCH, Feature.RANDOM_PATCH,
                 NitrogenConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
                                 .add(AncientAetherFeatureStates.SKY_GRASS_MEDIUM, 1)
                                 .add(AncientAetherFeatureStates.SKY_GRASS_TALL, 2)
                                 .add(AncientAetherFeatureStates.SKY_GRASS_VERY_TALL, 3)),
                         64));
-        AncientAetherFeatureUtils.register(context, PALE_AETHER_GRASS_PATCH, Feature.FLOWER,
+        AncientAetherFeatureUtils.register(context, PALE_AETHER_GRASS_PATCH, Feature.RANDOM_PATCH,
                 NitrogenConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
                                 .add(AncientAetherFeatureStates.SKY_GRASS_VERY_SHORT_PALE, 2)
                                 .add(AncientAetherFeatureStates.SKY_GRASS_SHORT_PALE, 1)),
