@@ -38,11 +38,11 @@ public class AncientAetherConfiguredCarverData {
     }
 
     private static ConfiguredWorldCarver<?> createAetherCave(HolderGetter<Block> blocks, int maxY) {
-        return createBaseAetherCave(blocks, 0.15F, maxY, 0.1F, 0.6F, 1.75F, 3.5F, 1.0F, 1.5F);
+        return createBaseAetherCave(blocks, 0.1F, maxY, 0.1F, 0.6F, 1.75F, 3.5F, 1.0F, 1.5F);
     }
 
     private static ConfiguredWorldCarver<?> createAetherSurfaceCave(HolderGetter<Block> blocks) {
-        return createBaseAetherCave(blocks, 0.2F,256, 0.4F, 0.9F, 0.75F, 2.5F, 0.25F, 1.0F);
+        return createBaseAetherCave(blocks, 0.15F,256, 0.4F, 0.9F, 0.75F, 2.5F, 0.25F, 1.0F);
     }
 
     public static void bootstrap(BootstapContext<ConfiguredWorldCarver<?>> context) {
