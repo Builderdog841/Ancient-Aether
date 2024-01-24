@@ -1,9 +1,7 @@
 package net.builderdog.ancient_aether.world.biomes;
 
-import com.aetherteam.aether.data.resources.AetherFeatureStates;
-import net.builderdog.ancient_aether.block.blockstate.AetherGrassType;
-import net.builderdog.ancient_aether.block.blockstate.AncientAetherBlockStateProperties;
 import net.builderdog.ancient_aether.data.registries.AncientAetherBiomeRegistry;
+import net.builderdog.ancient_aether.world.AncientAetherFeatureStates;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.Noises;
 import net.minecraft.world.level.levelgen.SurfaceRules;
@@ -23,10 +21,10 @@ public class AncientAetherSurfaceData {
                         SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(Blocks.SNOW_BLOCK.defaultBlockState()))
                 ),
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomeRegistry.WYNDCAP_TAIGA, AncientAetherBiomeRegistry.FESTIVE_WYNDCAP_TAIGA, AncientAetherBiomeRegistry.WYNDCAP_HIGHLAND),
-                        SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(AetherFeatureStates.AETHER_GRASS_BLOCK.setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.FROZEN)))
+                        SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(AncientAetherFeatureStates.FROZEN_AETHER_GRASS_BLOCK))
                 ),
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomeRegistry.ELEVATED_FOREST, AncientAetherBiomeRegistry.ELEVATED_CLEARING),
-                        SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(AetherFeatureStates.AETHER_GRASS_BLOCK.setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.PALE)))
+                        SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(AncientAetherFeatureStates.PALE_AETHER_GRASS_BLOCK))
                 )
          );
     }

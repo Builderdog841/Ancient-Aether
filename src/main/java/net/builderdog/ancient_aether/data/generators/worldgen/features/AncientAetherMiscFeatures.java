@@ -4,7 +4,7 @@ import com.aetherteam.aether.data.resources.AetherFeatureStates;
 import com.aetherteam.aether.data.resources.builders.AetherConfiguredFeatureBuilders;
 import com.aetherteam.aether.world.feature.AetherFeatures;
 import net.builderdog.ancient_aether.AncientAetherTags;
-import net.builderdog.ancient_aether.block.AncientAetherFeatureStates;
+import net.builderdog.ancient_aether.world.AncientAetherFeatureStates;
 import net.builderdog.ancient_aether.world.feature.AncientAetherFeatures;
 import net.builderdog.ancient_aether.world.feature.CloudbedFeature;
 import net.minecraft.core.Direction;

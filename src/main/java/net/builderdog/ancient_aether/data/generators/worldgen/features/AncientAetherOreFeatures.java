@@ -1,7 +1,7 @@
 package net.builderdog.ancient_aether.data.generators.worldgen.features;
 
 import com.aetherteam.aether.AetherTags;
-import net.builderdog.ancient_aether.block.AncientAetherFeatureStates;
+import net.builderdog.ancient_aether.world.AncientAetherFeatureStates;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;

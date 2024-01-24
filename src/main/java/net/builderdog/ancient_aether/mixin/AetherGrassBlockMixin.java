@@ -76,7 +76,10 @@ public class AetherGrassBlockMixin extends GrassBlock {
     public void performBonemeal(ServerLevel level, @NotNull RandomSource random, BlockPos pos, @NotNull BlockState state) {
         BlockPos abovePos = pos.above();
         Block grass = AetherBlocks.AETHER_GRASS_BLOCK.get();
-        Optional<Holder.Reference<PlacedFeature>> grassFeatureOptional = level.registryAccess().registryOrThrow(Registries.PLACED_FEATURE).getHolder(AncientAetherVegetationPlacements.AETHER_GRASS_PATCH);
+
+        Optional<Holder.Reference<PlacedFeature>> grassFeatureOptional = level.registryAccess().registryOrThrow(Registries.PLACED_FEATURE).getHolder(AncientAetherVegetationPlacements.AETHER_GRASS_BONEMEAL);
+        //Optional<Holder.Reference<PlacedFeature>> frozenGrassFeatureOptional = level.registryAccess().registryOrThrow(Registries.PLACED_FEATURE).getHolder(AncientAetherVegetationPlacements.AETHER_GRASS_BONEMEAL);
+        //Optional<Holder.Reference<PlacedFeature>> paleGrassFeatureOptional = level.registryAccess().registryOrThrow(Registries.PLACED_FEATURE).getHolder(AncientAetherVegetationPlacements.AETHER_GRASS_BONEMEAL);
 
         start:
         for (int i = 0; i < 128; ++i) {

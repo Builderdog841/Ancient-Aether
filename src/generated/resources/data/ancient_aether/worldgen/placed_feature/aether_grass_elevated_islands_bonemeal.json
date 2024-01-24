@@ -1,0 +1,12 @@
+{
+  "feature": "ancient_aether:single_piece_of_pale_sky_grass",
+  "placement": [
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": "minecraft:air"
+      }
+    }
+  ]
+}
