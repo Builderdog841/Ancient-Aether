@@ -1,10 +1,10 @@
 package net.builderdog.ancient_aether.block.natural;
 
-import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.block.blockstate.AetherGrassType;
 import net.builderdog.ancient_aether.block.blockstate.AncientAetherBlockStateProperties;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.TallGrassBlock;
@@ -21,8 +21,13 @@ public class SkyGrassBlock extends TallGrassBlock {
         super(properties);
     }
 
-    public void performBonemeal(@NotNull ServerLevel serverLevel, @NotNull RandomSource randomSource, @NotNull BlockPos blockPos, BlockState blockState) {
-        AncientAetherBlocks.SKY_GRASS.get().defaultBlockState().setValue(LENGTH, blockState.getValue(LENGTH) + 1).setValue(TYPE, blockState.getValue(TYPE));
+    public void performBonemeal(ServerLevel serverLevel, @NotNull RandomSource randomSource, @NotNull BlockPos blockPos, BlockState blockState) {
+        int i = Math.min(5, blockState.getValue(LENGTH) + Mth.nextInt(serverLevel.random, 1, 3));
+        BlockState blockstate = blockState.setValue(LENGTH, i);
+        serverLevel.setBlock(blockPos, blockstate, 2);
+        if (i == 5) {
+            blockstate.randomTick(serverLevel, blockPos, serverLevel.random);
+        }
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockBlockStateBuilder) {
