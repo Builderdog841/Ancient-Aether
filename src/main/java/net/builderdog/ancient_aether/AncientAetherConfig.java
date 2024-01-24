@@ -7,9 +7,7 @@ import org.apache.commons.lang3.tuple.Pair;
 public class AncientAetherConfig {
 
     public static class Common {
-
         public final ConfigValue<Integer> ancient_aether_biome_weight;
-        public final ConfigValue<Boolean> worldgen_overrides;
 
         public Common(ForgeConfigSpec.Builder builder) {
 
@@ -18,13 +16,6 @@ public class AncientAetherConfig {
                     .comment("The weighting of Ancient Aether regions in the Aether")
                     .translation("config.ancient_aether.common.worldgen.ancient_aether_region_weight")
                     .define("Ancient Aether Region Weight", 30);
-            builder.pop();
-
-            builder.push("Worldgen");
-            worldgen_overrides = builder
-                    .comment("Enables the New Worldgen Datapack by default")
-                    .translation("config.ancient_aether.common.worldgen.new_worldgen_datapack")
-                    .define("Enables New Worldgen by default", true);
             builder.pop();
         }
     }

@@ -27,5 +27,4 @@ public class AncientAetherClient {
             Sheets.addWoodType(AncientAetherWoodTypes.SAKURA);
         });
     }
-    //@SubscribeEvent public static void blockColorLoad(RegisterColorHandlersEvent.Block event) {event.getBlockColors().register((bs, world, pos, index) -> world != null && pos != null ? getAverageGrassColor(world, pos) : GrassColor.get(0.5D, 1.0D), AetherBlocks.AETHER_GRASS_BLOCK.get());}
 }
