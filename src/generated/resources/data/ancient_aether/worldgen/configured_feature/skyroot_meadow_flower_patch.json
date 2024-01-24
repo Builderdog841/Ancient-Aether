@@ -39,7 +39,7 @@
                 "Name": "ancient_aether:sky_grass",
                 "Properties": {
                   "type": "normal",
-                  "length": "short"
+                  "length": "2"
                 }
               },
               {
@@ -61,7 +61,7 @@
                 "Name": "ancient_aether:sky_grass",
                 "Properties": {
                   "type": "normal",
-                  "length": "medium"
+                  "length": "3"
                 }
               }
             ],

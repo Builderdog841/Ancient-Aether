@@ -13,7 +13,7 @@
                   "Name": "ancient_aether:sky_grass",
                   "Properties": {
                     "type": "pale",
-                    "length": "very_short"
+                    "length": "1"
                   }
                 },
                 "weight": 2
@@ -23,7 +23,7 @@
                   "Name": "ancient_aether:sky_grass",
                   "Properties": {
                     "type": "pale",
-                    "length": "short"
+                    "length": "2"
                   }
                 },
                 "weight": 1

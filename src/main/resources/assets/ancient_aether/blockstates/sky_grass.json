@@ -1,63 +1,63 @@
 {
   "variants": {
-    "type=normal,length=very_short": {
+    "type=normal,length=1": {
       "model": "ancient_aether:block/sky_grass_very_short"
     },
-    "type=normal,length=short": {
+    "type=normal,length=2": {
       "model": "ancient_aether:block/sky_grass_short"
     },
-    "type=normal,length=medium": {
+    "type=normal,length=3": {
       "model": "ancient_aether:block/sky_grass_medium"
     },
-    "type=normal,length=tall": {
+    "type=normal,length=4": {
       "model": "ancient_aether:block/sky_grass_tall"
     },
-    "type=normal,length=very_tall": {
+    "type=normal,length=5": {
       "model": "ancient_aether:block/sky_grass_very_tall"
     },
-    "type=frozen,length=very_short": {
+    "type=frozen,length=1": {
       "model": "ancient_aether:block/sky_grass_very_short_frozen"
     },
-    "type=frozen,length=short": {
+    "type=frozen,length=2": {
       "model": "ancient_aether:block/sky_grass_short_frozen"
     },
-    "type=frozen,length=medium": {
+    "type=frozen,length=3": {
       "model": "ancient_aether:block/sky_grass_medium_frozen"
     },
-    "type=frozen,length=tall": {
+    "type=frozen,length=4": {
       "model": "ancient_aether:block/sky_grass_tall_frozen"
     },
-    "type=frozen,length=very_tall": {
+    "type=frozen,length=5": {
       "model": "ancient_aether:block/sky_grass_very_tall_frozen"
     },
-    "type=pale,length=very_short": {
+    "type=pale,length=1": {
       "model": "ancient_aether:block/sky_grass_very_short_pale"
     },
-    "type=pale,length=short": {
+    "type=pale,length=2": {
       "model": "ancient_aether:block/sky_grass_short_pale"
     },
-    "type=pale,length=medium": {
+    "type=pale,length=3": {
       "model": "ancient_aether:block/sky_grass_medium_pale"
     },
-    "type=pale,length=tall": {
+    "type=pale,length=4": {
       "model": "ancient_aether:block/sky_grass_tall_pale"
     },
-    "type=pale,length=very_tall": {
+    "type=pale,length=5": {
       "model": "ancient_aether:block/sky_grass_very_tall_pale"
     },
-    "type=enchanted,length=very_short": {
+    "type=enchanted,length=1": {
       "model": "ancient_aether:block/sky_grass_very_short_enchanted"
     },
-    "type=enchanted,length=short": {
+    "type=enchanted,length=2": {
       "model": "ancient_aether:block/sky_grass_short_enchanted"
     },
-    "type=enchanted,length=medium": {
+    "type=enchanted,length=3": {
       "model": "ancient_aether:block/sky_grass_medium_enchanted"
     },
-    "type=enchanted,length=tall": {
+    "type=enchanted,length=4": {
       "model": "ancient_aether:block/sky_grass_tall_enchanted"
     },
-    "type=enchanted,length=very_tall": {
+    "type=enchanted,length=5": {
       "model": "ancient_aether:block/sky_grass_very_tall_enchanted"
     }
   }
