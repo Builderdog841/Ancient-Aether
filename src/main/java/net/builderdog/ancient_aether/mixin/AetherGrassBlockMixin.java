@@ -4,6 +4,7 @@ import com.aetherteam.aether.block.AetherBlockStateProperties;
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.block.natural.AetherGrassBlock;
 import com.aetherteam.aether.mixin.mixins.common.accessor.SpreadingSnowyDirtBlockAccessor;
+import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.block.blockstate.AetherGrassType;
 import net.builderdog.ancient_aether.block.blockstate.AncientAetherBlockStateProperties;
 import net.builderdog.ancient_aether.data.generators.worldgen.placement.AncientAetherVegetationPlacements;
@@ -12,7 +13,9 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.BonemealableBlock;
@@ -72,14 +75,20 @@ public class AetherGrassBlockMixin extends GrassBlock {
         }
     }
 
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
+        Holder<Biome> biome = context.getLevel().getBiome(context.getClickedPos());
+        if (biome.is(AncientAetherTags.Biomes.IS_WYNDCAPS)) {
+            return defaultBlockState().setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.FROZEN);
+        } else if (biome.is(AncientAetherTags.Biomes.IS_ELEVATED)) {
+            return defaultBlockState().setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.PALE);
+        } else return defaultBlockState().setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.NORMAL);
+    }
+
     @Override
     public void performBonemeal(ServerLevel level, @NotNull RandomSource random, BlockPos pos, @NotNull BlockState state) {
         BlockPos abovePos = pos.above();
         Block grass = AetherBlocks.AETHER_GRASS_BLOCK.get();
-
         Optional<Holder.Reference<PlacedFeature>> grassFeatureOptional = level.registryAccess().registryOrThrow(Registries.PLACED_FEATURE).getHolder(AncientAetherVegetationPlacements.AETHER_GRASS_BONEMEAL);
-        //Optional<Holder.Reference<PlacedFeature>> frozenGrassFeatureOptional = level.registryAccess().registryOrThrow(Registries.PLACED_FEATURE).getHolder(AncientAetherVegetationPlacements.AETHER_GRASS_BONEMEAL);
-        //Optional<Holder.Reference<PlacedFeature>> paleGrassFeatureOptional = level.registryAccess().registryOrThrow(Registries.PLACED_FEATURE).getHolder(AncientAetherVegetationPlacements.AETHER_GRASS_BONEMEAL);
 
         start:
         for (int i = 0; i < 128; ++i) {

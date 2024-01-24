@@ -32,9 +32,6 @@ public class AncientAetherVegetationFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_BLOSSOMS_PATCH = AncientAetherFeatureUtils.registerKey("sakura_blossoms_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKY_BLUES_PATCH = AncientAetherFeatureUtils.registerKey("sky_blues_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SINGLE_PIECE_OF_SKY_GRASS = AncientAetherFeatureUtils.registerKey("single_piece_of_sky_grass");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SINGLE_PIECE_OF_FROZEN_SKY_GRASS = AncientAetherFeatureUtils.registerKey("single_piece_of_frozen_sky_grass");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SINGLE_PIECE_OF_JUNGLE_SKY_GRASS = AncientAetherFeatureUtils.registerKey("single_piece_of_jungle_sky_grass");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SINGLE_PIECE_OF_PALE_SKY_GRASS = AncientAetherFeatureUtils.registerKey("single_piece_of_pale_sky_grass");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_GRASS_PATCH = AncientAetherFeatureUtils.registerKey("aether_grass_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FROZEN_AETHER_GRASS_PATCH = AncientAetherFeatureUtils.registerKey("frozen_aether_grass_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> JUNGLE_AETHER_GRASS_PATCH = AncientAetherFeatureUtils.registerKey("jungle_aether_grass_patch");
@@ -81,20 +78,6 @@ public class AncientAetherVegetationFeatures {
                 .add(AncientAetherFeatureStates.SKY_GRASS_VERY_SHORT, 1)
                 .add(AncientAetherFeatureStates.SKY_GRASS_SHORT, 2)
                 .add(AncientAetherFeatureStates.SKY_GRASS_MEDIUM, 3))));
-
-        AncientAetherFeatureUtils.register(context, SINGLE_PIECE_OF_FROZEN_SKY_GRASS, Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
-                .add(AncientAetherFeatureStates.SKY_GRASS_VERY_SHORT_FROZEN, 1)
-                .add(AncientAetherFeatureStates.SKY_GRASS_SHORT_FROZEN, 2)
-                .add(AncientAetherFeatureStates.SKY_GRASS_MEDIUM_FROZEN, 2))));
-
-        AncientAetherFeatureUtils.register(context, SINGLE_PIECE_OF_JUNGLE_SKY_GRASS, Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
-                .add(AncientAetherFeatureStates.SKY_GRASS_MEDIUM, 1)
-                .add(AncientAetherFeatureStates.SKY_GRASS_TALL, 2)
-                .add(AncientAetherFeatureStates.SKY_GRASS_VERY_TALL, 3))));
-
-        AncientAetherFeatureUtils.register(context, SINGLE_PIECE_OF_PALE_SKY_GRASS, Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
-                .add(AncientAetherFeatureStates.SKY_GRASS_VERY_SHORT_PALE, 2)
-                .add(AncientAetherFeatureStates.SKY_GRASS_SHORT_PALE, 1))));
 
         AncientAetherFeatureUtils.register(context, AETHER_GRASS_PATCH, Feature.RANDOM_PATCH,
                 NitrogenConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()

@@ -35,7 +35,7 @@ public class SkyGrassBlock extends TallGrassBlock {
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         BlockState blockstate = context.getLevel().getBlockState(context.getClickedPos().below());
         if (blockstate.getBlock() == AetherBlocks.AETHER_GRASS_BLOCK.get()) {
-            return this.defaultBlockState().setValue(TYPE, blockstate.getValue(TYPE));
+            return defaultBlockState().setValue(TYPE, blockstate.getValue(TYPE));
         }
         return null;
     }
