@@ -1,10 +1,10 @@
 package net.builderdog.ancient_aether.block.natural;
 
+import com.aetherteam.aether.block.AetherBlocks;
 import net.builderdog.ancient_aether.block.blockstate.AetherGrassType;
 import net.builderdog.ancient_aether.block.blockstate.AncientAetherBlockStateProperties;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -34,7 +34,10 @@ public class SkyGrassBlock extends TallGrassBlock {
 
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         BlockState blockstate = context.getLevel().getBlockState(context.getClickedPos().below());
-        return this.defaultBlockState().setValue(TYPE, blockstate.getValue(TYPE));
+        if (blockstate.getBlock() == AetherBlocks.AETHER_GRASS_BLOCK.get()) {
+            return this.defaultBlockState().setValue(TYPE, blockstate.getValue(TYPE));
+        }
+        return null;
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockBlockStateBuilder) {
