@@ -50,7 +50,7 @@
             "Properties": {
               "distance": "7",
               "double_drops": "true",
-              "persistent": "false",
+              "persistent": "true",
               "waterlogged": "false"
             }
           }

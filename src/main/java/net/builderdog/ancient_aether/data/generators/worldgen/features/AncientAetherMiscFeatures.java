@@ -18,6 +18,7 @@ import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.IntProvider;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.util.valueproviders.WeightedListInt;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
@@ -46,7 +47,7 @@ public class AncientAetherMiscFeatures {
                         .add(UniformInt.of(1, length), 2)
                         .add(UniformInt.of(1, 2), 3)
                         .add(UniformInt.of(1, 6), 10)
-                        .build()), BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LEAVES))),
+                        .build()), BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LEAVES.setValue(BlockStateProperties.PERSISTENT, true)))),
                 Direction.DOWN,
                 BlockPredicate.ONLY_IN_AIR_PREDICATE,
                 true);
