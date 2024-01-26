@@ -1,40 +1,5 @@
 {
   "values": [
-    {
-      "id": "ancient_aether:wyndcap_taiga",
-      "required": false
-    },
-    {
-      "id": "ancient_aether:wyndcap_highland",
-      "required": false
-    },
-    {
-      "id": "ancient_aether:festive_wyndcap_taiga",
-      "required": false
-    },
-    {
-      "id": "ancient_aether:wyndcap_peaks",
-      "required": false
-    },
-    {
-      "id": "ancient_aether:sakura_jungle",
-      "required": false
-    },
-    {
-      "id": "ancient_aether:skyroot_jungle",
-      "required": false
-    },
-    {
-      "id": "ancient_aether:skyroot_pine_taiga",
-      "required": false
-    },
-    {
-      "id": "ancient_aether:aerogel_caves",
-      "required": false
-    },
-    {
-      "id": "ancient_aether:overgrown_caverns",
-      "required": false
-    }
+    "#ancient_aether:is_ancient_aether_biome"
   ]
 }
