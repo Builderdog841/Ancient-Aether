@@ -29,6 +29,14 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         add(block, createSilkTouchDispatchTable(block, applyExplosionDecay(itemLike, LootItem.lootTableItem(itemLike).apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F))))));
     }
 
+    public LootTable.Builder droppingCrystalSkyrootLeaves(Block block, Block sapling, float... chances) {
+        return droppingWithChancesAndSkyrootSticks(block, sapling, chances)
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(BlockLootAccessor.aether$hasShearsOrSilkTouch().invert())
+                        .add(applyExplosionCondition(block,
+                                LootItem.lootTableItem(AetherItems.WHITE_APPLE.get()))
+                                .when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, 0.0055F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F))));
+    }
+
     @Override
     protected void generate() {
 
@@ -185,14 +193,6 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.ANGELIC_VASE.get());
         dropSelf(AncientAetherBlocks.HELLFIRE_VASE.get());
         dropSelf(AncientAetherBlocks.AEROGETIC_VASE.get());
-    }
-
-    public LootTable.Builder droppingCrystalSkyrootLeaves(Block block, Block sapling, float... chances) {
-        return this.droppingWithChancesAndSkyrootSticks(block, sapling, chances)
-                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(BlockLootAccessor.aether$hasShearsOrSilkTouch().invert())
-                        .add(applyExplosionCondition(block,
-                                        LootItem.lootTableItem(AetherItems.WHITE_APPLE.get()))
-                                .when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, 0.0055F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F))));
     }
 
     @Override
