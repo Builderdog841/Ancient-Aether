@@ -8,8 +8,16 @@
             "argument1": -0.2,
             "argument2": {
                 "type": "minecraft:mul",
-                "argument1": "ancient_aether:the_aether/islands/sakura/factor_temperature",
-                "argument2": "ancient_aether:the_aether/factor_erosion"
+                "argument1": {
+                    "type": "minecraft:mul",
+                    "argument1": "ancient_aether:the_aether/islands/sakura/factor_temperature",
+                    "argument2": "ancient_aether:the_aether/factor_erosion"
+                },
+                "argument2": {
+                    "type": "minecraft:add",
+                    "argument1": 0.75,
+                    "argument2": "ancient_aether:the_aether/sloping_amplifier"
+                }
             }
         },
         "argument2": {
@@ -31,8 +39,16 @@
                         "argument1": -0.2,
                         "argument2": {
                             "type": "minecraft:mul",
-                            "argument1": "ancient_aether:the_aether/islands/sakura/factor_temperature",
-                            "argument2": "ancient_aether:the_aether/factor_erosion"
+                            "argument1": {
+                                "type": "minecraft:mul",
+                                "argument1": "ancient_aether:the_aether/islands/sakura/factor_temperature",
+                                "argument2": "ancient_aether:the_aether/factor_erosion"
+                            },
+                            "argument2": {
+                                "type": "minecraft:add",
+                                "argument1": 0.75,
+                                "argument2": "ancient_aether:the_aether/sloping_amplifier"
+                            }
                         }
                     },
                     "argument2": {
@@ -42,7 +58,7 @@
                             "from_value": 1.0,
                             "from_y": 140,
                             "to_value": 0.0,
-                            "to_y": 172
+                            "to_y": 200
                         },
                         "argument2": {
                             "type": "add",

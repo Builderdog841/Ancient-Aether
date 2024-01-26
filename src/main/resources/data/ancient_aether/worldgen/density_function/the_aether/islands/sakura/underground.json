@@ -10,8 +10,16 @@
                 "argument1": -0.15,
                 "argument2": {
                     "type": "minecraft:mul",
-                    "argument1": "ancient_aether:the_aether/islands/sakura/factor_temperature",
-                    "argument2": "ancient_aether:the_aether/factor_erosion"
+                    "argument1": {
+                        "type": "minecraft:mul",
+                        "argument1": "ancient_aether:the_aether/islands/sakura/factor_temperature",
+                        "argument2": "ancient_aether:the_aether/factor_erosion"
+                    },
+                    "argument2": {
+                        "type": "minecraft:add",
+                        "argument1": 0.75,
+                        "argument2": "ancient_aether:the_aether/sloping_amplifier"
+                    }
                 }
             },
             "argument2": {
@@ -33,8 +41,16 @@
                             "argument1": -0.1,
                             "argument2": {
                                 "type": "minecraft:mul",
-                                "argument1": "ancient_aether:the_aether/islands/sakura/factor_temperature",
-                                "argument2": "ancient_aether:the_aether/factor_erosion"
+                                "argument1": {
+                                    "type": "minecraft:mul",
+                                    "argument1": "ancient_aether:the_aether/islands/sakura/factor_temperature",
+                                    "argument2": "ancient_aether:the_aether/factor_erosion"
+                                },
+                                "argument2": {
+                                    "type": "minecraft:add",
+                                    "argument1": 0.75,
+                                    "argument2": "ancient_aether:the_aether/sloping_amplifier"
+                                }
                             }
                         },
                         "argument2": {
@@ -53,7 +69,7 @@
                                     "argument1": 0.2,
                                     "argument2": {
                                         "type": "minecraft:add",
-                                        "argument1": -0.05,
+                                        "argument1": -0.03,
                                         "argument2": "ancient_aether:the_aether/base_3d_noise"
                                     }
                                 },
@@ -63,7 +79,7 @@
                                         "type": "minecraft:noise",
                                         "noise": "ancient_aether:jagged",
                                         "xz_scale": 300,
-                                        "y_scale": 100
+                                        "y_scale": 200
                                     }
                                 }
                             }
