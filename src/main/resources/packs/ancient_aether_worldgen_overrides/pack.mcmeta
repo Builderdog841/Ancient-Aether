@@ -1,6 +1,6 @@
 {
   "pack": {
-    "description": "Mandatory Pack for Ancient Aether",
+    "description": "pack.ancient_aether.worldgen_overrides.description"  ,
     "pack_format": 15
   }
 }

@@ -114,21 +114,21 @@ public class AncientAether {
     public static void addPacks(AddPackFindersEvent event) {
         if (event.getPackType() == PackType.CLIENT_RESOURCES) {
             var resourcePath = ModList.get().getModFileById(AncientAether.MOD_ID).getFile().findResource("packs/ancient_aether_texture_tweaks");
-            var pack = Pack.readMetaAndCreate("builtin/ancient_aether_texture_tweaks", Component.literal("Ancient Aether Texture Tweaks"), true,
+            var pack = Pack.readMetaAndCreate("builtin/ancient_aether_texture_tweaks", Component.translatable("pack.ancient_aether.texture_tweaks.title"), true,
                     path -> new PathPackResources(path, resourcePath, true), PackType.CLIENT_RESOURCES, Pack.Position.TOP, PackSource.BUILT_IN);
             event.addRepositorySource(consumer -> consumer.accept(pack));
         }
 
         if (event.getPackType() == PackType.CLIENT_RESOURCES) {
             var resourcePath = ModList.get().getModFileById(AncientAether.MOD_ID).getFile().findResource("packs/ancient_aether_programmer_art");
-            var pack = Pack.readMetaAndCreate("builtin/ancient_aether_programmer_art", Component.literal("Ancient Aether Programmer Art"), false,
+            var pack = Pack.readMetaAndCreate("builtin/ancient_aether_programmer_art", Component.translatable("pack.ancient_aether.programmer_art.title"), false,
                     path -> new PathPackResources(path, resourcePath, true), PackType.CLIENT_RESOURCES, Pack.Position.TOP, PackSource.BUILT_IN);
             event.addRepositorySource(consumer -> consumer.accept(pack));
         }
 
         if (event.getPackType() == PackType.SERVER_DATA) {
             var resourcePath = ModList.get().getModFileById(AncientAether.MOD_ID).getFile().findResource("packs/ancient_aether_worldgen_overrides");
-            var pack = Pack.readMetaAndCreate("builtin/ancient_aether_worldgen_overrides", Component.literal("Ancient Aether Worldgen Overrides"), true,
+            var pack = Pack.readMetaAndCreate("builtin/ancient_aether_worldgen_overrides", Component.translatable("pack.ancient_aether.worldgen_overrides.title"), true,
                     path -> new PathPackResources(path, resourcePath, true), PackType.SERVER_DATA, Pack.Position.TOP, PackSource.SERVER);
 
             event.addRepositorySource(consumer -> consumer.accept(pack));
@@ -137,7 +137,7 @@ public class AncientAether {
         if(ModList.get().isLoaded("aether_genesis") && event.getPackType() == PackType.SERVER_DATA) {
             if (event.getPackType() == PackType.SERVER_DATA) {
                 var resourcePath = ModList.get().getModFileById(AncientAether.MOD_ID).getFile().findResource("packs/aether_genesis_compat");
-                var pack = Pack.readMetaAndCreate("builtin/aether_genesis_compat", Component.literal("Aether Genesis Compatibility"), true,
+                var pack = Pack.readMetaAndCreate("builtin/aether_genesis_compat", Component.translatable("pack.ancient_aether.aether_genesis_compat.title"), true,
                         path -> new PathPackResources(path, resourcePath, true), PackType.SERVER_DATA, Pack.Position.TOP, PackSource.SERVER);
 
                 event.addRepositorySource(consumer -> consumer.accept(pack));
@@ -147,7 +147,7 @@ public class AncientAether {
         if(ModList.get().isLoaded("lost_aether_content") && event.getPackType() == PackType.SERVER_DATA) {
             if (event.getPackType() == PackType.SERVER_DATA) {
                 var resourcePath = ModList.get().getModFileById(AncientAether.MOD_ID).getFile().findResource("packs/lost_content_compat");
-                var pack = Pack.readMetaAndCreate("builtin/lost_content_compat", Component.literal("Lost Content Compatibility"), true,
+                var pack = Pack.readMetaAndCreate("builtin/lost_content_compat", Component.translatable("pack.ancient_aether.lost_content_compat.title"), true,
                         path -> new PathPackResources(path, resourcePath, true), PackType.SERVER_DATA, Pack.Position.TOP, PackSource.SERVER);
 
                 event.addRepositorySource(consumer -> consumer.accept(pack));
