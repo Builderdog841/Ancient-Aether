@@ -7,10 +7,12 @@ import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.BonusLevelTableCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraftforge.registries.RegistryObject;
@@ -21,6 +23,10 @@ import java.util.Set;
 public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider {
     public AncientAetherBlockLootTableData() {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags());
+    }
+
+    protected void dropOtherTwice(Block block, ItemLike itemLike) {
+        add(block, createSilkTouchDispatchTable(block, applyExplosionDecay(itemLike, LootItem.lootTableItem(itemLike).apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F))))));
     }
 
     @Override
@@ -145,7 +151,7 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropSelf(AncientAetherBlocks.HELLFIRE_LANTERN.get());
         dropSelf(AncientAetherBlocks.AEROGETIC_LANTERN.get());
         dropSelf(AncientAetherBlocks.GALE_LANTERN.get());
-        dropOther(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get(), AetherItems.AMBROSIUM_SHARD.get());
+        dropOtherTwice(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get(), AetherItems.AMBROSIUM_SHARD.get());
 
         //Redstone Blocks
         dropSelf(AncientAetherBlocks.CRACKED_SLIDER.get());
