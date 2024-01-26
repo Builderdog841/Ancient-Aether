@@ -1,6 +1,6 @@
 {
   "pack": {
-    "description": "pack.ancient_aether.lost_content_compat.description",
+    "description": "Improves compatibility between AA and Lost Content",
     "pack_format": 15
   }
 }

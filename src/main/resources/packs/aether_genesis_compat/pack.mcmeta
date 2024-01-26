@@ -1,6 +1,6 @@
 {
   "pack": {
-    "description": "pack.ancient_aether.aether_genesis_compat.description",
+    "description": "Improves compatibility between AA and Aether Genesis",
     "pack_format": 15
   }
 }
