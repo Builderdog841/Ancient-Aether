@@ -77,10 +77,12 @@ public class AetherGrassBlockMixin extends GrassBlock {
 
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         Holder<Biome> biome = context.getLevel().getBiome(context.getClickedPos());
-        if (biome.is(AncientAetherTags.Biomes.IS_WYNDCAPS)) {
+        if (biome.is(AncientAetherTags.Biomes.HAS_FROZEN_AETHER_GRASS)) {
             return defaultBlockState().setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.FROZEN);
-        } else if (biome.is(AncientAetherTags.Biomes.IS_ELEVATED)) {
+        } else if (biome.is(AncientAetherTags.Biomes.HAS_PALE_AETHER_GRASS)) {
             return defaultBlockState().setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.PALE);
+        } else if (biome.is(AncientAetherTags.Biomes.HAS_ENCHANTED_AETHER_GRASS)) {
+            return defaultBlockState().setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.ENCHANTED);
         } else return defaultBlockState().setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.NORMAL);
     }
 
