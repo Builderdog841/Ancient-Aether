@@ -3,10 +3,8 @@
   "fallback": "minecraft:empty",
   "elements": [
     {
-
       "weight": 1,
       "element": {
-
         "location": "ancient_aether:valkyrie_settlement_skyroot/portal_room",
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "rigid",

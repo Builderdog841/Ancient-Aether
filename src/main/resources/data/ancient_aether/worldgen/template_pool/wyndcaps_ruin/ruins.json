@@ -5,7 +5,6 @@
     {
       "weight": 1,
       "element": {
-
         "location": "ancient_aether:wyndcaps_ruin/temple_ruin",
         "processors": "ancient_aether:temple_ruin_randomizer",
         "projection": "rigid",

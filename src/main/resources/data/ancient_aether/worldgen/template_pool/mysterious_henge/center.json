@@ -5,7 +5,6 @@
     {
       "weight": 1,
       "element": {
-
         "location": "ancient_aether:mysterious_henge/center",
         "processors": "ancient_aether:mysterious_henge_randomizer",
         "projection": "rigid",

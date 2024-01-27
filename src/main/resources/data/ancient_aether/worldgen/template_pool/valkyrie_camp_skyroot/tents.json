@@ -5,7 +5,34 @@
     {
       "weight": 1,
       "element": {
-        "location": "ancient_aether:valkyrie_camp_skyroot/tent",
+        "location": "ancient_aether:valkyrie_camp_skyroot/tent_01",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:valkyrie_camp_skyroot/tent_02",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:valkyrie_camp_skyroot/tent_03",
+        "processors": "ancient_aether:valkyrie_settlements_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:valkyrie_camp_skyroot/tent_04",
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"

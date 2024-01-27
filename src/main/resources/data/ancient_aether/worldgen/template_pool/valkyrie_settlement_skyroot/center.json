@@ -5,7 +5,6 @@
     {
       "weight": 1,
       "element": {
-
         "location": "ancient_aether:valkyrie_settlement_skyroot/center_4",
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "rigid",
@@ -15,7 +14,6 @@
     {
       "weight": 1,
       "element": {
-
         "location": "ancient_aether:valkyrie_settlement_skyroot/center_3",
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "rigid",
@@ -25,7 +23,6 @@
     {
       "weight": 1,
       "element": {
-
         "location": "ancient_aether:valkyrie_settlement_skyroot/center_2a",
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "rigid",
@@ -35,7 +32,6 @@
     {
       "weight": 1,
       "element": {
-
         "location": "ancient_aether:valkyrie_settlement_skyroot/center_2b",
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "rigid",
@@ -45,7 +41,6 @@
     {
       "weight": 1,
       "element": {
-
         "location": "ancient_aether:valkyrie_settlement_skyroot/center_secret_4",
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "rigid",
@@ -55,7 +50,6 @@
     {
       "weight": 1,
       "element": {
-
         "location": "ancient_aether:valkyrie_settlement_skyroot/center_secret_3",
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "rigid",
@@ -65,7 +59,6 @@
     {
       "weight": 1,
       "element": {
-
         "location": "ancient_aether:valkyrie_settlement_skyroot/center_secret_2a",
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "rigid",
@@ -75,7 +68,6 @@
     {
       "weight": 1,
       "element": {
-
         "location": "ancient_aether:valkyrie_settlement_skyroot/center_secret_2b",
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "rigid",

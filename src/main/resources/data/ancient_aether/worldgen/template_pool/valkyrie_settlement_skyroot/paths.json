@@ -1,4 +1,6 @@
 {
+  "name": "ancient_aether:valkyrie_settlement_skyroot/paths",
+  "fallback": "minecraft:empty",
   "elements": [
     {
       "element": {
@@ -99,6 +101,5 @@
       },
       "weight": 1
     }
-  ],
-  "fallback": "minecraft:empty"
+  ]
 }

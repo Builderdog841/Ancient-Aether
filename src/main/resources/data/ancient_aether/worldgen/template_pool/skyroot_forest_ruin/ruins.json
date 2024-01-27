@@ -5,7 +5,6 @@
     {
       "weight": 1,
       "element": {
-
         "location": "ancient_aether:skyroot_forest_ruin/pillar_ruin",
         "processors": "ancient_aether:pillar_ruin_randomizer",
         "projection": "rigid",
@@ -15,7 +14,6 @@
     {
       "weight": 1,
       "element": {
-
         "location": "ancient_aether:skyroot_forest_ruin/podium_ruin",
         "processors": "ancient_aether:skyroot_forest_ruin_randomizer",
         "projection": "rigid",
@@ -25,7 +23,6 @@
     {
       "weight": 1,
       "element": {
-
         "location": "ancient_aether:skyroot_forest_ruin/theater_ruin_above",
         "processors": "ancient_aether:skyroot_forest_ruin_randomizer",
         "projection": "rigid",

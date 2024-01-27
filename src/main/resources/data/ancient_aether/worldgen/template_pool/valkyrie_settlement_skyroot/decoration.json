@@ -5,7 +5,6 @@
     {
       "weight": 3,
       "element": {
-
         "location": "ancient_aether:valkyrie_settlement_skyroot/farm",
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "rigid",
@@ -15,7 +14,6 @@
     {
       "weight": 2,
       "element": {
-
         "location": "ancient_aether:valkyrie_settlement_skyroot/well",
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "rigid",
@@ -25,7 +23,6 @@
     {
       "weight": 1,
       "element": {
-
         "location": "ancient_aether:valkyrie_settlement_skyroot/oven",
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "rigid",

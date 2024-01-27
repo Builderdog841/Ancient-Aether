@@ -5,7 +5,6 @@
     {
       "weight": 1,
       "element": {
-
         "location": "ancient_aether:valkyrie_camp_wyndcaps/campfire_3",
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "rigid",
@@ -15,7 +14,6 @@
     {
       "weight": 1,
       "element": {
-
         "location": "ancient_aether:valkyrie_camp_wyndcaps/campfire_2a",
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "rigid",
@@ -25,7 +23,6 @@
     {
       "weight": 1,
       "element": {
-
         "location": "ancient_aether:valkyrie_camp_wyndcaps/campfire_2b",
         "processors": "ancient_aether:valkyrie_settlements_randomizer",
         "projection": "rigid",

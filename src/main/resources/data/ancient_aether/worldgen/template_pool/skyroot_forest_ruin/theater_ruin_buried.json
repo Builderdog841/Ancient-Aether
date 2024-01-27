@@ -5,7 +5,6 @@
     {
       "weight": 1,
       "element": {
-
         "location": "ancient_aether:skyroot_forest_ruin/theater_ruin_buried",
         "processors": "ancient_aether:skyroot_forest_ruin_randomizer",
         "projection": "rigid",

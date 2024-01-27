@@ -5,7 +5,6 @@
     {
       "weight": 6,
       "element": {
-
         "location": "ancient_aether:mysterious_henge/gate",
         "processors": "ancient_aether:mysterious_henge_randomizer",
         "projection": "rigid",
@@ -15,7 +14,6 @@
     {
       "weight": 1,
       "element": {
-
         "location": "ancient_aether:mysterious_henge/gate_broken_1",
         "processors": "ancient_aether:mysterious_henge_randomizer",
         "projection": "rigid",
@@ -25,7 +23,6 @@
     {
       "weight": 1,
       "element": {
-
         "location": "ancient_aether:mysterious_henge/gate_broken_2",
         "processors": "ancient_aether:mysterious_henge_randomizer",
         "projection": "rigid",

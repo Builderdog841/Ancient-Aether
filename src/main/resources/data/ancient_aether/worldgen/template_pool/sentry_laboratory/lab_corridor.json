@@ -5,7 +5,6 @@
     {
       "weight": 1,
       "element": {
-
         "location": "ancient_aether:sentry_laboratory/lab_corridor_1",
         "processors": "ancient_aether:sentry_laboratory_randomizer",
         "projection": "rigid",
@@ -15,7 +14,6 @@
     {
       "weight": 1,
       "element": {
-
         "location": "ancient_aether:sentry_laboratory/lab_corridor_2",
         "processors": "ancient_aether:sentry_laboratory_randomizer",
         "projection": "rigid",
