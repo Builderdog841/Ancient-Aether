@@ -1,15 +1,14 @@
 {
   "type": "ancient_aether:advanced_jigsaw_structure",
-  "start_pool": "ancient_aether:wyndcaps_ruin/ruins",
+  "start_pool": "ancient_aether:wyndcaps_monument/monument",
   "size": 10,
   "adapt_noise": true,
   "max_distance_from_center": 80,
-  "biomes": "#ancient_aether:has_structure/wyndcaps_ruin",
-  "terrain_adaptation": "beard_thin",
+  "biomes": "#ancient_aether:has_structure/wyndcaps_monument",
   "step": "surface_structures",
-  "min_spawn_height": 120,
+  "min_spawn_height": 180,
   "start_height": {
-    "absolute": 0
+    "absolute": -3
   },
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
   "use_expansion_hack": false,

@@ -1,12 +1,12 @@
 {
-  "name": "ancient_aether:wyndcaps/ruins",
+  "name": "ancient_aether:wyndcaps_monument/monument",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
-        "location": "ancient_aether:wyndcaps_ruin/temple_ruin",
-        "processors": "ancient_aether:temple_ruin_randomizer",
+        "location": "ancient_aether:wyndcaps_monument/wyndcaps_monument",
+        "processors": "ancient_aether:wyndcaps_monument",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
