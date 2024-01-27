@@ -129,9 +129,27 @@
       }
     },
     {
-      "weight": 6,
+      "weight": 2,
       "element": {
-        "location": "ancient_aether:bronze_dungeon/staircase_top_01",
+        "location": "ancient_aether:bronze_dungeon/staircase_01",
+        "processors": "ancient_aether:bronze_dungeon_tunnel",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "ancient_aether:bronze_dungeon/staircase_02",
+        "processors": "ancient_aether:bronze_dungeon_tunnel",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "ancient_aether:bronze_dungeon/staircase_03",
         "processors": "ancient_aether:bronze_dungeon_tunnel",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
