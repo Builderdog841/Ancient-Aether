@@ -4,7 +4,7 @@
   "size": 16,
   "adapt_noise": true,
   "max_distance_from_center": 128,
-  "biomes": "#ancient_aether:bronze_dungeon_elevated_islands",
+  "biomes": "#ancient_aether:has_structure/bronze_dungeon_elevated_islands",
   "step": "surface_structures",
   "min_spawn_height": 164,
   "start_height": {
