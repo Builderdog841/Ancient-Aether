@@ -15,10 +15,7 @@ import net.builderdog.ancient_aether.block.construction.*;
 import net.builderdog.ancient_aether.block.dungeon.AncientVaseBlock;
 import net.builderdog.ancient_aether.block.dungeon.UnpoweredObeliskBlock;
 import net.builderdog.ancient_aether.block.natural.*;
-import net.builderdog.ancient_aether.block.utility.AmbrosiumCampfireBlock;
-import net.builderdog.ancient_aether.block.utility.CrackedSliderBlock;
-import net.builderdog.ancient_aether.block.utility.VaseBlock;
-import net.builderdog.ancient_aether.block.utility.WindBlowerBlock;
+import net.builderdog.ancient_aether.block.utility.*;
 import net.builderdog.ancient_aether.data.registries.AncientAetherLootRegistry;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
@@ -205,6 +202,7 @@ public class AncientAetherBlocks {
     //Redstone
     public static final RegistryObject<Block> CRACKED_SLIDER = registerBlock("cracked_slider", () -> new CrackedSliderBlock(BlockBehaviour.Properties.copy(STONE).strength(5f).requiresCorrectToolForDrops().noOcclusion().lightLevel((state) -> state.getValue(RedstoneLampBlock.LIT) ? 15 : 0)));
     public static final RegistryObject<Block> WIND_BLOWER = registerBlock("wind_blower", () -> new WindBlowerBlock(BlockBehaviour.Properties.copy(COLD_AERCLOUD.get())));
+    public static final RegistryObject<Block> GRAVITITE_LAUNCHER = registerBlock("gravitite_launcher", () -> new GravititeLauncherBlock(BlockBehaviour.Properties.copy(STONE).mapColor(MapColor.COLOR_PINK).strength(5.0F, 6.0F).requiresCorrectToolForDrops()));
 
     //Vases
     public static final RegistryObject<Block> HOLYSTONE_VASE = registerBlock("holystone_vase", () -> new VaseBlock(Block.Properties.of().mapColor(MapColor.COLOR_LIGHT_GRAY).instabreak().sound(SoundType.DECORATED_POT).noOcclusion().isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));

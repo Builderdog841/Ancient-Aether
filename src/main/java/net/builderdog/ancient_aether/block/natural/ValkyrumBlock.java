@@ -19,4 +19,3 @@ public class ValkyrumBlock extends Block {
         return false;
     }
 }
-
