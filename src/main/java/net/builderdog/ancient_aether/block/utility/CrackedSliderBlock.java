@@ -15,10 +15,10 @@ public class CrackedSliderBlock extends RedstoneLampBlock {
     public static final BooleanProperty LIT = RedstoneTorchBlock.LIT;
     public CrackedSliderBlock(BlockBehaviour.Properties properties) {
         super(properties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(LIT, Boolean.FALSE));
+        registerDefaultState(stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(LIT, Boolean.FALSE));
     }
     public BlockState getStateForPlacement(BlockPlaceContext p_48689_) {
-        return this.defaultBlockState().setValue(FACING, p_48689_.getHorizontalDirection().getOpposite());
+        return defaultBlockState().setValue(FACING, p_48689_.getHorizontalDirection().getOpposite());
     }
     public @NotNull RenderShape getRenderShape(@NotNull BlockState p_48727_) {
         return RenderShape.MODEL;
@@ -29,7 +29,7 @@ public class CrackedSliderBlock extends RedstoneLampBlock {
     public @NotNull BlockState mirror(BlockState blockState, Mirror mirror) {
         return blockState.rotate(mirror.getRotation(blockState.getValue(FACING)));
     }
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> p_48725_) {
-        p_48725_.add(FACING, LIT);
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockStateBuilder) {
+        blockStateBuilder.add(FACING, LIT);
     }
 }

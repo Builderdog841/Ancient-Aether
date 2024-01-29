@@ -32,7 +32,7 @@ public class AncientVaseBlock extends VaseBlock {
         super.playerDestroy(level, player, pos, state, blockEntity, tool);
             if (level instanceof ServerLevel serverLevel) {
                 LootParams parameters = new LootParams.Builder(serverLevel).withParameter(LootContextParams.BLOCK_STATE, state).withParameter(LootContextParams.TOOL, player.getMainHandItem()).withParameter(LootContextParams.ORIGIN, position()).withParameter(LootContextParams.THIS_ENTITY, player).create(LootContextParamSets.BLOCK);
-                LootTable lootTable = serverLevel.getServer().getLootData().getLootTable(this.vaseLootTable);
+                LootTable lootTable = serverLevel.getServer().getLootData().getLootTable(vaseLootTable);
                 List<ItemStack> list = lootTable.getRandomItems(parameters);
                 for (ItemStack itemstack : list) {
                     spawnAtLocation(itemstack, pos, level);
