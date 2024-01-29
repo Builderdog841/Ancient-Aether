@@ -1,4 +1,4 @@
-// 1.20.1	2024-01-29T19:35:21.9518873	Item Models: ancient_aether
+// 1.20.1	2024-01-29T21:32:47.4126691	Item Models: ancient_aether
 532bdb7a4f7d2a6b96d474c01c8b9e7a0d1c10b4 assets/ancient_aether/models/item/aerogel_glass.json
 87e9f8f9f807a2aa763e3057d32bacf3ee32b60f assets/ancient_aether/models/item/aerogel_glass_door.json
 d1e6ed3e334d573f31a8ce9e09885c0f43832630 assets/ancient_aether/models/item/aerogel_glass_pane.json
@@ -90,6 +90,7 @@ b5f57985ae50e92184ef2d80c666a9950a811db2 assets/ancient_aether/models/item/sakur
 bed0eab0ac3fd6ff1db0dc21b542f50f4048c2b9 assets/ancient_aether/models/item/sakura_trapdoor.json
 e6c1cf2f9b2e9f820237cd5e08913258fb06ea10 assets/ancient_aether/models/item/sakura_wood_wall.json
 1ff1dfbd020234c9d222b25637694c23914ea93a assets/ancient_aether/models/item/sentry_lantern.json
+cb2c3e866e8fd12d8beaab0b18f6dd72e991db1b assets/ancient_aether/models/item/sentry_launcher.json
 b4a0560047587794c5b0a7048514a5d470b1c31f assets/ancient_aether/models/item/sentry_vase.json
 c4c734261bf8749e898ba8bfa406a63dba5207b2 assets/ancient_aether/models/item/skyroot_pine_sapling.json
 2590d5cc1f45aacb63586ef37acbdb9fd6098d05 assets/ancient_aether/models/item/sky_blues.json

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "aether:block/dungeon/carved_stone",
+    "side": "ancient_aether:block/sentry_launcher_side_triggered",
+    "top": "ancient_aether:block/sentry_launcher_triggered"
+  }
+}

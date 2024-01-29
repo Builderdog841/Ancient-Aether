@@ -156,6 +156,7 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         itemWallBlock(AncientAetherBlocks.AEROGETIC_WALL.get(), AncientAetherBlocks.AEROGETIC_STONE.get(), "");
         itemBlock(AncientAetherBlocks.ANCIENT_OBELISK.get());
         itemBlock(AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get());
+        itemBlock(AncientAetherBlocks.SENTRY_LAUNCHER.get());
 
         //Plants
         itemBlockFlat(AncientAetherBlocks.SAKURA_BLOSSOMS.get(), "");

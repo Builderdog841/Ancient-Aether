@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "triggered=false": {
+      "model": "ancient_aether:block/sentry_launcher"
+    },
+    "triggered=true": {
+      "model": "ancient_aether:block/triggered_sentry_launcher"
+    }
+  }
+}
