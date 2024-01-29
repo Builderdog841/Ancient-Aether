@@ -174,8 +174,9 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         item(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get().asItem(), "");
 
         //Redstone
-        itemBlock(AncientAetherBlocks.CRACKED_SLIDER.get());
         itemBlock(AncientAetherBlocks.WIND_BLOWER.get());
+        itemBlock(AncientAetherBlocks.GRAVITITE_LAUNCHER.get());
+        itemBlock(AncientAetherBlocks.CRACKED_SLIDER.get());
 
         //Vases
         itemBlock(AncientAetherBlocks.HOLYSTONE_VASE.get());

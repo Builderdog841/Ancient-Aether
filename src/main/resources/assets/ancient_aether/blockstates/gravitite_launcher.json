@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,triggered=false": {
+      "model": "ancient_aether:block/gravitite_launcher"
+    },
+    "facing=north,triggered=true": {
+      "model": "ancient_aether:block/triggered_gravitite_launcher"
+    },
+    "facing=east,triggered=false": {
+      "model": "ancient_aether:block/gravitite_launcher",
+      "y": 90
+    },
+    "facing=east,triggered=true": {
+      "model": "ancient_aether:block/triggered_gravitite_launcher",
+      "y": 90
+    },
+    "facing=south,triggered=false": {
+      "model": "ancient_aether:block/gravitite_launcher",
+      "y": 180
+    },
+    "facing=south,triggered=true": {
+      "model": "ancient_aether:block/triggered_gravitite_launcher",
+      "y": 180
+    },
+    "facing=west,triggered=false": {
+      "model": "ancient_aether:block/gravitite_launcher",
+      "y": 270
+    },
+    "facing=west,triggered=true": {
+      "model": "ancient_aether:block/triggered_gravitite_launcher",
+      "y": 270
+    }
+  }
+}
