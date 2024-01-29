@@ -162,8 +162,9 @@ public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider 
         dropOtherTwice(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get(), AetherItems.AMBROSIUM_SHARD.get());
 
         //Redstone Blocks
-        dropSelf(AncientAetherBlocks.CRACKED_SLIDER.get());
         dropSelf(AncientAetherBlocks.WIND_BLOWER.get());
+        dropSelf(AncientAetherBlocks.GRAVITITE_LAUNCHER.get());
+        dropSelf(AncientAetherBlocks.CRACKED_SLIDER.get());
 
         //Plants
         dropNone(AncientAetherBlocks.SKY_GRASS.get());

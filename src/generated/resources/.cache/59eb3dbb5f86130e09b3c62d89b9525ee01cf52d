@@ -1,4 +1,4 @@
-// 1.20.1	2024-01-26T12:42:37.0673592	Loot Tables
+// 1.20.1	2024-01-29T18:44:41.5379934	Loot Tables
 095a70e341d19e7b3548ddc32402abe48a79992a data/ancient_aether/loot_tables/blocks/aerogel_glass.json
 9fe2ea21af5246ad9f95848f680099717062eb1c data/ancient_aether/loot_tables/blocks/aerogel_glass_door.json
 0f84d5b4591633acc6c8dcc82b7c14988b545a9f data/ancient_aether/loot_tables/blocks/aerogel_glass_pane.json
@@ -32,6 +32,7 @@ b23565ef948eb4bd69efd04df7a51de3f539a22e data/ancient_aether/loot_tables/blocks/
 e1cd12fc0fe5fbd9f2dfe521628cbca9bad97399 data/ancient_aether/loot_tables/blocks/frozen_holystone_vase.json
 68ae82a00f438e7a97944585e600c87c81233b7f data/ancient_aether/loot_tables/blocks/gale_lantern.json
 635f68f8ca5307f47168c7f5b52976fd9f9ab554 data/ancient_aether/loot_tables/blocks/gale_stone_mosaic.json
+9583559b8a35d5ed4b30768daeb46b7106294d1d data/ancient_aether/loot_tables/blocks/gravitite_launcher.json
 1d57a449c273261b271dfc0fab10e553bcb60a2a data/ancient_aether/loot_tables/blocks/gravity_gravel.json
 25fca881098381656caa29580b138882f0b08a66 data/ancient_aether/loot_tables/blocks/hellfire_lantern.json
 9bf27f3c15a22dc4722b1325e91d31c9f7ed4ea7 data/ancient_aether/loot_tables/blocks/hellfire_stone_mosaic.json
