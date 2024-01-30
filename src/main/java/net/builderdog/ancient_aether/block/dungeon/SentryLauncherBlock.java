@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.block.dungeon;
 
+import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.block.blockstate.AncientAetherBlockStateProperties;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -30,12 +31,20 @@ public class SentryLauncherBlock extends Block {
 
     public void stepOn(@NotNull Level level, @NotNull BlockPos pos, @NotNull BlockState state, @NotNull Entity entity) {
             entity.setDeltaMovement(entity.getDeltaMovement().x(), 1.5, entity.getDeltaMovement().z());
-            defaultBlockState().setValue(TRIGGERED, true);
+            level.setBlockAndUpdate(pos, AncientAetherBlocks.SENTRY_LAUNCHER.get().defaultBlockState().setValue(TRIGGERED, true));
     }
 
-    public void tick(BlockState state, @NotNull ServerLevel level, @NotNull BlockPos pos, @NotNull RandomSource random) {
-        if (state.getValue(TRIGGERED)) {
-            level.setBlock(pos, state.cycle(TRIGGERED), 4);
+    public void tick(@NotNull BlockState state, @NotNull ServerLevel level, @NotNull BlockPos pos, @NotNull RandomSource random) {
+        if (!level.isClientSide) {
+            boolean flag = state.getValue(TRIGGERED);
+            if (flag != level.hasNeighborSignal(pos)) {
+                if (flag) {
+                    level.scheduleTick(pos, this, 4);
+                } else {
+                    level.setBlock(pos, state.cycle(TRIGGERED), 2);
+                }
+            }
+
         }
     }
 
