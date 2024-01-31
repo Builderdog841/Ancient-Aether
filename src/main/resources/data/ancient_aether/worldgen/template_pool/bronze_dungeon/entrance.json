@@ -3,9 +3,18 @@
   "fallback": "minecraft:empty",
   "elements": [
     {
+      "weight": 2,
+      "element": {
+        "location": "ancient_aether:bronze_dungeon/entrance",
+        "processors": "ancient_aether:bronze_dungeon_entrance",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
       "weight": 1,
       "element": {
-        "location": "ancient_aether:bronze_dungeon/entrance_01",
+        "location": "ancient_aether:bronze_dungeon/entrance_tall",
         "processors": "ancient_aether:bronze_dungeon_entrance",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"

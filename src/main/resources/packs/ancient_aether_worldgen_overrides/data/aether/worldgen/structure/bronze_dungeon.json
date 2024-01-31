@@ -8,7 +8,7 @@
   "step": "surface_structures",
   "min_spawn_height": 144,
   "start_height": {
-    "absolute": -24
+    "absolute": -16
   },
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
   "use_expansion_hack": false,
