@@ -129,15 +129,6 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .unlockedBy(getHasName(AncientAetherItems.ANCIENT_RUNE.get()), has(AncientAetherItems.ANCIENT_RUNE.get()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AncientAetherBlocks.GRAVITITE_LAUNCHER.get())
-                .define('H', AetherBlocks.HOLYSTONE.get())
-                .define('G', AetherBlocks.ENCHANTED_GRAVITITE.get())
-                .pattern("HHH")
-                .pattern("HGH")
-                .pattern("HHH")
-                .unlockedBy(getHasName(AetherBlocks.ENCHANTED_GRAVITITE.get()), has(AetherBlocks.ENCHANTED_GRAVITITE.get()))
-                .save(consumer);
-
         copyAetherSmithingTemplate(consumer, AncientAetherItems.WYND_ARMOR_TRIM_SMITHING_TEMPLATE.get(), AetherBlocks.HOLYSTONE.get());
         copyAetherSmithingTemplate(consumer, AncientAetherItems.WHALE_ARMOR_TRIM_SMITHING_TEMPLATE.get(), AetherBlocks.HOLYSTONE.get());
         copyAetherSmithingTemplate(consumer, AncientAetherItems.ASCENDED_ARMOR_TRIM_SMITHING_TEMPLATE.get(), AetherBlocks.HOLYSTONE.get());

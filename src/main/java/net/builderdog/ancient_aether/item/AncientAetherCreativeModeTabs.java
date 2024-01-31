@@ -79,7 +79,6 @@ public class AncientAetherCreativeModeTabs {
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.CARVED_TILE_SLAB.get()), new ItemStack(AncientAetherBlocks.CARVED_TILE_WALL.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.CARVED_TILE_WALL.get()), new ItemStack(AncientAetherBlocks.CARVED_STONE_MOSAIC.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.CARVED_STONE_MOSAIC.get()), new ItemStack(AncientAetherBlocks.LOCKED_CARVED_STONE_MOSAIC.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(new ItemStack(AetherBlocks.TREASURE_DOORWAY_SENTRY_STONE.get()), new ItemStack(AncientAetherBlocks.SENTRY_LAUNCHER.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AetherBlocks.ANGELIC_WALL.get()), new ItemStack(AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get()), new ItemStack(AncientAetherBlocks.LOCKED_ANGELIC_STONE_MOSAIC.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AetherBlocks.HELLFIRE_WALL.get()), new ItemStack(AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -181,8 +180,7 @@ public class AncientAetherCreativeModeTabs {
         if (tab == AetherCreativeTabs.AETHER_REDSTONE_BLOCKS.get()) {
             event.getEntries().putAfter(new ItemStack(AetherBlocks.INCUBATOR.get()), new ItemStack(AncientAetherBlocks.WIND_BLOWER.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putBefore(new ItemStack(AetherBlocks.ALTAR.get()), new ItemStack(AncientAetherBlocks.BUFFALO_WOOL.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(new ItemStack(AetherBlocks.ENCHANTED_GRAVITITE.get()), new ItemStack(AncientAetherBlocks.GRAVITITE_LAUNCHER.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.GRAVITITE_LAUNCHER.get()), new ItemStack(AncientAetherBlocks.CRACKED_SLIDER.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
+            event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.CRACKED_SLIDER.get()), new ItemStack(AncientAetherBlocks.CRACKED_SLIDER.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
         }
 
         if (tab == AetherCreativeTabs.AETHER_EQUIPMENT_AND_UTILITIES.get()) {

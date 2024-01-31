@@ -7,7 +7,6 @@
     "ancient_aether:carved_tile_slab",
     "ancient_aether:carved_tile_wall",
     "ancient_aether:locked_carved_tiles",
-    "ancient_aether:trapped_carved_tiles",
-    "ancient_aether:sentry_launcher"
+    "ancient_aether:trapped_carved_tiles"
   ]
 }
