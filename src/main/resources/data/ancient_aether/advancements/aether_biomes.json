@@ -36,24 +36,6 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "biome": "ancient_aether:enchanted_skyroot_grove"
-              }
-            }
-          },
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "location": {
-                "biome": "ancient_aether:enchanted_skyroot_forest"
-              }
-            }
-          },
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "location": {
                 "biome": "ancient_aether:crystal_skyroot_grove"
               }
             }

@@ -10,10 +10,8 @@ public class AncientAetherBiomeRegistry {
 
     public static final ResourceKey<Biome> GOLDEN_SKYROOT_GROVE = createKey("golden_skyroot_grove");
     public static final ResourceKey<Biome> CRYSTAL_SKYROOT_GROVE = createKey("crystal_skyroot_grove");
-    public static final ResourceKey<Biome> ENCHANTED_SKYROOT_GROVE = createKey("enchanted_skyroot_grove");
     public static final ResourceKey<Biome> GOLDEN_SKYROOT_FOREST = createKey("golden_skyroot_forest");
     public static final ResourceKey<Biome> CRYSTAL_SKYROOT_FOREST = createKey("crystal_skyroot_forest");
-    public static final ResourceKey<Biome> ENCHANTED_SKYROOT_FOREST = createKey("enchanted_skyroot_forest");
     public static final ResourceKey<Biome> GOLDEN_THICKET = createKey("golden_thicket");
     public static final ResourceKey<Biome> WYNDCAP_TAIGA = createKey("wyndcap_taiga");
     public static final ResourceKey<Biome> FESTIVE_WYNDCAP_TAIGA = createKey("festive_wyndcap_taiga");
