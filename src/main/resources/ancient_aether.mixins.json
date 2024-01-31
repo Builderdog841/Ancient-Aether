@@ -6,6 +6,7 @@
   "refmap": "ancient_aether.refmap.json",
   "mixins": [
     "AetherGrassBlockMixin",
+    "SliderMixin",
     "accessor.RegistrySetBuilderAccessor"
   ],
   "client": [

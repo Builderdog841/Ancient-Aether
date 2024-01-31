@@ -12,7 +12,7 @@ import org.jetbrains.annotations.Nullable;
 public class AncientAetherLogBlock extends AetherLogBlock {
     public AncientAetherLogBlock(Properties properties) {
         super(properties);
-        this.registerDefaultState(this.defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, false));
+        registerDefaultState(defaultBlockState().setValue(AetherBlockStateProperties.DOUBLE_DROPS, false));
     }
 
     @Override
