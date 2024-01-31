@@ -49,6 +49,6 @@ public class AncientAetherConfiguredCarverData {
         HolderGetter<Block> blocks = context.lookup(Registries.BLOCK);
         context.register(AETHER_CAVE, createAetherCave(blocks, 96));
         context.register(AETHER_SURFACE_CAVE, createAetherSurfaceCave(blocks));
-        context.register(ELEVATED_ISLANDS_CAVE, createAetherCave(blocks, 116));
+        context.register(ELEVATED_ISLANDS_CAVE, createAetherCave(blocks, 106));
     }
 }
