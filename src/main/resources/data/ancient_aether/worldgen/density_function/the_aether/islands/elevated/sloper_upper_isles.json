@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:add",
+  "argument1": 0.5,
+  "argument2": "ancient_aether:the_aether/sloping_amplifier"
+}
