@@ -17,5 +17,8 @@ public class SliderMixin {
         if (state.is(AncientAetherBlocks.LOCKED_CARVED_STONE_MOSAIC.get())) {
             cir.setReturnValue(AncientAetherBlocks.CARVED_STONE_MOSAIC.get().defaultBlockState().setValue(BlockStateProperties.AXIS, state.getValue(BlockStateProperties.AXIS)));
         }
+        if (state.is(AncientAetherBlocks.LOCKED_CARVED_TILES.get())) {
+            cir.setReturnValue(AncientAetherBlocks.CARVED_TILES.get().defaultBlockState());
+        }
     }
 }
