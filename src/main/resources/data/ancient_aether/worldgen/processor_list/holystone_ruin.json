@@ -23,7 +23,7 @@
           "input_predicate": {
             "block": "ancient_aether:ancient_holystone_vase",
             "predicate_type": "minecraft:random_block_match",
-            "probability": 0.5
+            "probability": 0.25
           },
           "location_predicate": {
             "predicate_type": "minecraft:always_true"
@@ -70,21 +70,14 @@
           "output_state": {
             "Name": "aether:holystone_bricks"
           }
-        },
-        {
-          "input_predicate": {
-            "block": "ancient_aether:holystone_brick_mosaic",
-            "predicate_type": "minecraft:random_block_match",
-            "probability": 0.03
-          },
-          "location_predicate": {
-            "predicate_type": "minecraft:always_true"
-          },
-          "output_state": {
-            "Name": "air"
-          }
         }
       ]
+    },
+    {
+      "processor_type": "aether:double_drops"
+    },
+    {
+      "processor_type": "aether:surface_rule"
     }
   ]
 }

@@ -1,12 +1,12 @@
 {
-  "name": "ancient_aether:wyndcaps_monument/monument",
+  "name": "ancient_aether:holystone_ruin/theater_ruin_buried",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
-        "location": "ancient_aether:wyndcaps_monument/wyndcaps_monument",
-        "processors": "ancient_aether:wyndcaps_monument",
+        "location": "ancient_aether:holystone_ruin/theater_ruin_buried",
+        "processors": "ancient_aether:holystone_ruin",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
