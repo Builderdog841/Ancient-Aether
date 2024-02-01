@@ -361,6 +361,7 @@
   "lore.block.ancient_aether.light_aerogetic_stone": "The light version of Aerogetic Stone. It is less common than Aerogetic Stone, but it looks really nice as a decorative block.",
   "lore.block.ancient_aether.corrupted_light_aerogetic_stone": "A variant of Light Aerogetic Stone. It appears in the Ancient Dungeon once the Ancient Guardian is in its final phase.",
   "lore.block.ancient_aether.gravity_gravel": "Stepping on this block increases your jump height. It spawns on the coasts of Elevated Islands and doesn't fall down unlike its overworld counterpart.",
+  "lore.block.ancient_aether.enchanted_skyroot_leaves": "These leaves generate with Enchanted Skyroot Trees. They can drop Enchanted Skyroot Saplings when decaying.",
   "lore.block.ancient_aether.enchanted_skyroot_sapling": "These small blue saplings will grow into a variant of the Skyroot Tree, the Enchanted Skyroot. They can be grown faster with Bone Meal.",
   "lore.block.ancient_aether.violet_aercloud": "A violet cloud found close to the ground. This Aercloud acts as an opposite to the Blue Aercloud since it pushes players and other entities downwards.",
   "lore.block.ancient_aether.valkyrum_ore": "A very rare ore that can only be mined by the Pickaxe of Arkzenus or higher. It can be enchanted into Valkyrum using an Altar.",
