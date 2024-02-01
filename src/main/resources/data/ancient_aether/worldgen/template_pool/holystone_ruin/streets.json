@@ -1,0 +1,51 @@
+{
+  "name": "ancient_aether:holystone_ruin/streets",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 2,
+      "element": {
+        "location": "ancient_aether:holystone_ruin/street_01",
+        "processors": "ancient_aether:holystone_ruin",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:holystone_ruin/street_02",
+        "processors": "ancient_aether:holystone_ruin",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:holystone_ruin/street_03",
+        "processors": "ancient_aether:holystone_ruin",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:holystone_ruin/street_04",
+        "processors": "ancient_aether:holystone_ruin",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:holystone_ruin/street_05",
+        "processors": "ancient_aether:holystone_ruin",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
