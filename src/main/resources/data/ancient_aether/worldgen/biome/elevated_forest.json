@@ -35,10 +35,10 @@
       "aether:aether_dirt_ore",
       "aether:icestone_ore",
       "aether:ambrosium_ore",
-      "ancient_aether:elevated_islands_zanite_ore",
-      "ancient_aether:elevated_islands_gravitite_ore_buried",
-      "ancient_aether:elevated_islands_gravitite_ore",
-      "ancient_aether:elevated_islands_valkyrum_ore"
+      "aether:zanite_ore",
+      "aether:gravitite_ore_buried",
+      "aether:gravitite_ore",
+      "ancient_aether:bonus_gravitite_ore"
     ],
     [],
     [

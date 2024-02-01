@@ -1,5 +1,5 @@
 {
-  "feature": "aether:gravitite_ore",
+  "feature": "aether:gravitite_ore_buried",
   "placement": [
     {
       "type": "minecraft:count",
@@ -11,12 +11,12 @@
     {
       "type": "minecraft:height_range",
       "height": {
-        "type": "minecraft:trapezoid",
+        "type": "minecraft:uniform",
         "max_inclusive": {
-          "above_bottom": 82
+          "above_bottom": 256
         },
         "min_inclusive": {
-          "above_bottom": -34
+          "above_bottom": 0
         }
       }
     },
