@@ -391,6 +391,10 @@
   "lore.block.ancient_aether.angelic_vase": "A piece of pottery crafted from Angelic Stone.",
   "lore.block.ancient_aether.hellfire_vase": "A piece of pottery crafted from Hellfire Stone.",
   "lore.block.ancient_aether.aerogetic_vase": "A piece of pottery crafted from Aerogetic Stone.",
+  "lore.block.ancient_aether.carved_tiles": "A variant of Carved Stone that can be used as a decoration block. It also generates in Bronze Dungeons, primarily as an accent block to regular Carved Stone.",
+  "lore.block.ancient_aether.carved_tile_slab": "Crafted from Carved Tiles. Slabs are half blocks, versatile for decoration and smooth slopes. Try adding some to a building's roofing!",
+  "lore.block.ancient_aether.carved_tile_stairs": "Crafted from Carved Tiles. Stairs are useful for adding verticality to builds and are often used for decoration too!",
+  "lore.block.ancient_aether.carved_tile_wall": "Crafted from Carved Tiles. Can be used for decorative enclosures and defenses. Great for keeping nasty intruders away!",
 
   "lore.item.ancient_aether.grapes": "This fruit can be found in Valkyrie Settlement Chests. It doesn't have special properties yet.",
   "lore.item.ancient_aether.ancient_rune": "Obtained from Vases or Sentry Laboratories, this Rune is the key to the Ancient Dungeon. It can also be duplicated using 7 Enchanted Gravitite and a piece of Aerogel.",
@@ -436,5 +440,6 @@
   "lore.item.ancient_aether.lavender_moa_egg": "An egg laid by a Lavender Moa. Hatching this provides a Lavender Moa with 3 mid-air jumps. These moas have been given a very fast a flying speed as a compensation.",
   "lore.item.ancient_aether.sakura_moa_egg": "An egg laid by a Sakura Moa. Hatching this provides a Sakura Moa with 12 mid-air jumps. Because of their high amount mid-air jumps, their flying speed isn't that great",
   "lore.item.ancient_aether.violet_moa_egg": "An egg laid by a Violet Moa. Hatching this provides a Violet Moa with 4 mid-air jumps. These moas have been given a very fast a flying speed as a compensation.",
-  "lore.item.ancient_aether.burgundy_moa_egg": "An egg laid by a Burgundy Moa. Hatching this provides a Burgundy Moa with 10 mid-air jumps."
+  "lore.item.ancient_aether.burgundy_moa_egg": "An egg laid by a Burgundy Moa. Hatching this provides a Burgundy Moa with 10 mid-air jumps.",
+  "lore.item.ancient_aether.pink_cape": "A very fancy Cape that is crafted using Pink Wool."
 }
