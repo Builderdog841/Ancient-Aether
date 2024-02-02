@@ -80,7 +80,7 @@
         }
       },
       {
-        "chance": 0.01,
+        "chance": 0.001,
         "feature": {
           "feature": "aether:golden_oak_tree",
           "placement": [
