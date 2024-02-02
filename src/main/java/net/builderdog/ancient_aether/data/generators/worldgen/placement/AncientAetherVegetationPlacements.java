@@ -22,6 +22,9 @@ import net.minecraft.world.level.levelgen.placement.RarityFilter;
 public class AncientAetherVegetationPlacements {
     public static final ResourceKey<PlacedFeature> AETHER_GRASS_BONEMEAL = AncientAetherPlacementUtils.createKey("aether_grass_bonemeal");
     public static final ResourceKey<PlacedFeature> AETHER_GRASS_PATCH = AncientAetherPlacementUtils.createKey("aether_grass_patch");
+    public static final ResourceKey<PlacedFeature> WYNDCAPS_GRASS_PATCH = AncientAetherPlacementUtils.createKey("wyndcaps_grass_patch");
+    public static final ResourceKey<PlacedFeature> SAKURA_JUNGLE_GRASS_PATCH = AncientAetherPlacementUtils.createKey("sakura_jungle_grass_patch");
+    public static final ResourceKey<PlacedFeature> ELEVATED_ISLANDS_GRASS_PATCH = AncientAetherPlacementUtils.createKey("elevated_islands_grass_patch");
     public static final ResourceKey<PlacedFeature> BONUS_BERRY_BUSH_PATCH = AncientAetherPlacementUtils.createKey("bonus_berry_bush_patch");
     public static final ResourceKey<PlacedFeature> CRYSTAL_SKYROOT_GROVE_TREES = AncientAetherPlacementUtils.createKey("crystal_skyroot_grove_trees");
     public static final ResourceKey<PlacedFeature> CRYSTAL_SKYROOT_FOREST_TREES = AncientAetherPlacementUtils.createKey("crystal_skyroot_forest_trees");
@@ -42,6 +45,21 @@ public class AncientAetherVegetationPlacements {
         AncientAetherPlacementUtils.register(context, AETHER_GRASS_BONEMEAL, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.SINGLE_PIECE_OF_SKY_GRASS), PlacementUtils.isEmpty());
 
         AncientAetherPlacementUtils.register(context, AETHER_GRASS_PATCH, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_GRASS_PATCH),
+                NoiseThresholdCountPlacement.of(-0.8, 10, 20),
+                ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
+                BiomeFilter.biome(),
+                new ConfigFilter(AetherConfig.SERVER.generate_tall_grass));
+        AncientAetherPlacementUtils.register(context, WYNDCAPS_GRASS_PATCH, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.FROZEN_AETHER_GRASS_PATCH),
+                NoiseThresholdCountPlacement.of(-0.8, 10, 20),
+                ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
+                BiomeFilter.biome(),
+                new ConfigFilter(AetherConfig.SERVER.generate_tall_grass));
+        AncientAetherPlacementUtils.register(context, SAKURA_JUNGLE_GRASS_PATCH, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.JUNGLE_AETHER_GRASS_PATCH),
+                NoiseThresholdCountPlacement.of(-0.8, 15, 25),
+                ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
+                BiomeFilter.biome(),
+                new ConfigFilter(AetherConfig.SERVER.generate_tall_grass));
+        AncientAetherPlacementUtils.register(context, ELEVATED_ISLANDS_GRASS_PATCH, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.PALE_AETHER_GRASS_PATCH),
                 NoiseThresholdCountPlacement.of(-0.8, 10, 20),
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome(),
