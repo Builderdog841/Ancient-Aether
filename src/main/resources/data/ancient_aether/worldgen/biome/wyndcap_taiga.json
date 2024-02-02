@@ -179,6 +179,12 @@
         "maxCount": 3,
         "minCount": 1,
         "weight": 8
+      },
+      {
+        "type": "ancient_aether:highland_buffalo",
+        "maxCount": 5,
+        "minCount": 2,
+        "weight": 16
       }
     ],
     "misc": [],
