@@ -1,0 +1,33 @@
+{
+  "name": "ancient_aether:wyndcaps_monument/decoration",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:wyndcaps_monument/arch_decoration",
+        "processors": "ancient_aether:wyndcaps_monument",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:wyndcaps_monument/campfire_beacon_decoration_01",
+        "processors": "ancient_aether:wyndcaps_monument",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:wyndcaps_monument/campfire_beacon_decoration_02",
+        "processors": "ancient_aether:wyndcaps_monument",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

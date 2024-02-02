@@ -3,7 +3,7 @@
   "start_pool": "ancient_aether:valkyrie_camp_wyndcaps/campfire",
   "size": 10,
   "adapt_noise": true,
-  "max_distance_from_center": 28,
+  "max_distance_from_center": 80,
   "biomes": "#ancient_aether:has_structure/valkyrie_camp_wyndcaps",
   "terrain_adaptation": "beard_thin",
   "step": "surface_structures",
