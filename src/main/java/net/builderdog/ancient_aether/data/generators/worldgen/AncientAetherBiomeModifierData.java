@@ -25,6 +25,7 @@ public class AncientAetherBiomeModifierData {
     public static final ResourceKey<BiomeModifier> AETHER_QUARTZ_ORE_BIOME_MODIFIER = createKey("aether_quartz_ore_biome_modifier");
     public static final ResourceKey<BiomeModifier> VALKYRUM_ORE_BIOME_MODIFIER = createKey("valkyrum_ore_biome_modifier");
     public static final ResourceKey<BiomeModifier> QUICKSOIL_COAST_BIOME_MODIFIER = createKey("quicksoil_coast_biome_modifier");
+    public static final ResourceKey<BiomeModifier> AETHER_GRASS_PATCH_MODIFIER = createKey("aether_grass_patch_biome_modifier");
     public static final ResourceKey<BiomeModifier> BONUS_BERRY_BUSH_PATCH_MODIFIER = createKey("bonus_berry_bush_patch_biome_modifier");
     public static final ResourceKey<BiomeModifier> VIOLET_AERCLOUD_BIOME_MODIFIER = createKey("violet_aercloud_biome_modifier");
     public static final ResourceKey<BiomeModifier> CLOUDBED_BIOME_MODIFIER = createKey("cloudbed_biome_modifier");
@@ -60,6 +61,11 @@ public class AncientAetherBiomeModifierData {
                 biome.getOrThrow(AncientAetherTags.Biomes.HAS_QUICKSOIL_COASTS),
                 HolderSet.direct(placement.getOrThrow(AncientAetherMiscPlacements.QUICKSOIL_COAST)),
                 GenerationStep.Decoration.RAW_GENERATION
+        ));
+        context.register(AETHER_GRASS_PATCH_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_AETHER_GRASS_PATCHES),
+                HolderSet.direct(placement.getOrThrow(AncientAetherVegetationPlacements.AETHER_GRASS_PATCH)),
+                GenerationStep.Decoration.VEGETAL_DECORATION
         ));
         context.register(BONUS_BERRY_BUSH_PATCH_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biome.getOrThrow(AncientAetherTags.Biomes.IS_SKYROOT_FOREST),

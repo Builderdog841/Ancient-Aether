@@ -1,6 +1,7 @@
-// 1.20.1	2024-02-02T15:33:41.1853158	Registries
+// 1.20.1	2024-02-02T15:38:49.2297096	Registries
 8e6af76a39d38a0e170afc6642ebcf1d2c876c9a data/ancient_aether/forge/biome_modifier/aerogel_blobs_biome_modifier.json
 c66669dd031745a1bae16fc47547c896a814e8e6 data/ancient_aether/forge/biome_modifier/aether_cave_biome_modifier.json
+be0b3cb10e1bb6717346cc0224b71d8b9cb17509 data/ancient_aether/forge/biome_modifier/aether_grass_patch_biome_modifier.json
 07b956d5f90c0976644d29a2d6ea44af48b2cb86 data/ancient_aether/forge/biome_modifier/aether_quartz_ore_biome_modifier.json
 1e2acc49f7d8bb2bb45a111282dc1c7dd6b4550b data/ancient_aether/forge/biome_modifier/aether_surface_cave_biome_modifier.json
 9e8cf3dcded8c65c2bf8b577af597a625ca1a313 data/ancient_aether/forge/biome_modifier/bonus_berry_bush_patch_biome_modifier.json

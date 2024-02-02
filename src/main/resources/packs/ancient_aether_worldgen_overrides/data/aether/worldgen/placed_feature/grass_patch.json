@@ -1,10 +1,10 @@
 {
-  "feature": "ancient_aether:aether_grass_patch",
+  "feature": "aether:grass_patch",
   "placement": [
     {
       "type": "minecraft:noise_threshold_count",
-      "above_noise": 20,
-      "below_noise": 10,
+      "above_noise": 0,
+      "below_noise": 0,
       "noise_level": -0.8
     },
     {

@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#ancient_aether:has_aether_grass_patches",
+  "features": "ancient_aether:aether_grass_patch",
+  "step": "vegetal_decoration"
+}
