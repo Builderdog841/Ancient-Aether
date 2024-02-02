@@ -42,6 +42,7 @@ public class AncientAetherTags {
         public static final TagKey<Biome> HAS_VALKYRUM_ORE = tag("has_valkyrum_ore");
         public static final TagKey<Biome> HAS_VIOLET_AERCLOUD = tag("has_violet_aercloud");
         public static final TagKey<Biome> HAS_CLOUDBED = tag("has_cloudbed");
+        public static final TagKey<Biome> HAS_WATER_LAKE_UNDERGROUND = tag("has_water_lake_underground");
         public static final TagKey<Biome> HAS_FROZEN_AETHER_GRASS = tag("has_frozen_aether_grass");
         public static final TagKey<Biome> HAS_PALE_AETHER_GRASS = tag("has_pale_aether_grass");
         public static final TagKey<Biome> HAS_ENCHANTED_AETHER_GRASS = tag("has_enchanted_aether_grass");

@@ -28,6 +28,7 @@ public class AncientAetherBiomeModifierData {
     public static final ResourceKey<BiomeModifier> BONUS_BERRY_BUSH_PATCH_MODIFIER = createKey("bonus_berry_bush_patch_biome_modifier");
     public static final ResourceKey<BiomeModifier> VIOLET_AERCLOUD_BIOME_MODIFIER = createKey("violet_aercloud_biome_modifier");
     public static final ResourceKey<BiomeModifier> CLOUDBED_BIOME_MODIFIER = createKey("cloudbed_biome_modifier");
+    public static final ResourceKey<BiomeModifier> WATER_LAKE_UNDERGROUND_BIOME_MODIFIER = createKey("water_lake_underground_biome_modifier");
     public static final ResourceKey<BiomeModifier> AETHER_CAVE_BIOME_MODIFIER = createKey("aether_cave_biome_modifier");
     public static final ResourceKey<BiomeModifier> AETHER_SURFACE_CAVE_BIOME_MODIFIER = createKey("aether_surface_cave_biome_modifier");
 
@@ -74,6 +75,11 @@ public class AncientAetherBiomeModifierData {
                 biome.getOrThrow(AncientAetherTags.Biomes.HAS_CLOUDBED),
                 HolderSet.direct(placement.getOrThrow(AncientAetherMiscPlacements.CLOUDBED)),
                 GenerationStep.Decoration.RAW_GENERATION
+        ));
+        context.register(WATER_LAKE_UNDERGROUND_BIOME_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_WATER_LAKE_UNDERGROUND),
+                HolderSet.direct(placement.getOrThrow(AncientAetherMiscPlacements.WATER_LAKE_UNDERGROUND)),
+                GenerationStep.Decoration.LAKES
         ));
 
         context.register(AETHER_CAVE_BIOME_MODIFIER, new CarverModifier(
