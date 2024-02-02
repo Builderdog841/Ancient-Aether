@@ -20,6 +20,9 @@ import net.minecraft.world.level.levelgen.placement.*;
 import java.util.List;
 
 public class AncientAetherMiscPlacements {
+    public static final ResourceKey<PlacedFeature> QUICKSOIL_COAST = AncientAetherPlacementUtils.createKey("quicksoil_coast");
+    public static final ResourceKey<PlacedFeature> GRAVITY_GRAVEL_COAST = AncientAetherPlacementUtils.createKey("gravity_gravel_coast");
+    public static final ResourceKey<PlacedFeature> WYND_ICE_COAST = AncientAetherPlacementUtils.createKey("wynd_ice_coast");
     public static final ResourceKey<PlacedFeature> VIOLET_AERCLOUD = AncientAetherPlacementUtils.createKey("violet_aercloud");
     public static final ResourceKey<PlacedFeature> CLOUDBED = AncientAetherPlacementUtils.createKey("cloudbed");
     public static final ResourceKey<PlacedFeature> WATER_LAKE_UNDERGROUND = AncientAetherPlacementUtils.createKey("water_lake_underground");
@@ -35,6 +38,22 @@ public class AncientAetherMiscPlacements {
                 HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.absolute(0), VerticalAnchor.top())),
                 EnvironmentScanPlacement.scanningFor(Direction.DOWN, BlockPredicate.allOf(BlockPredicate.not(BlockPredicate.ONLY_IN_AIR_PREDICATE), BlockPredicate.insideWorld(new BlockPos(0, -5, 0))), 16),
                 SurfaceRelativeThresholdFilter.of(Heightmap.Types.OCEAN_FLOOR_WG, Integer.MIN_VALUE, -5),
+                BiomeFilter.biome());
+
+        AncientAetherPlacementUtils.register(context, QUICKSOIL_COAST, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.COAST_QUICKSOIL),
+                PlacementUtils.countExtra(20, 0.1F, 16),
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(110), VerticalAnchor.absolute(115)),
+                InSquarePlacement.spread(),
+                BiomeFilter.biome());
+        AncientAetherPlacementUtils.register(context, GRAVITY_GRAVEL_COAST, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.COAST_QUICKSOIL),
+                PlacementUtils.countExtra(20, 0.1F, 16),
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(120), VerticalAnchor.absolute(125)),
+                InSquarePlacement.spread(),
+                BiomeFilter.biome());
+        AncientAetherPlacementUtils.register(context, WYND_ICE_COAST, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.COAST_QUICKSOIL),
+                PlacementUtils.countExtra(20, 0.1F, 16),
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(110), VerticalAnchor.absolute(115)),
+                InSquarePlacement.spread(),
                 BiomeFilter.biome());
     }
 }

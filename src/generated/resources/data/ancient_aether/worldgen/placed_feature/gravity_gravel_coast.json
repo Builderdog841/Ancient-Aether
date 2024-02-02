@@ -1,5 +1,5 @@
 {
-  "feature": "ancient_aether:coast_gravity_gravel",
+  "feature": "ancient_aether:coast_quicksoil",
   "placement": [
     {
       "type": "minecraft:count",
@@ -7,11 +7,11 @@
         "type": "minecraft:weighted_list",
         "distribution": [
           {
-            "data": 12,
-            "weight": 8
+            "data": 20,
+            "weight": 9
           },
           {
-            "data": 10,
+            "data": 36,
             "weight": 1
           }
         ]
@@ -25,7 +25,7 @@
           "absolute": 125
         },
         "min_inclusive": {
-          "absolute": 122
+          "absolute": 120
         }
       }
     },
