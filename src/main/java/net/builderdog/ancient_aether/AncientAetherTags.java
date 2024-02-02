@@ -45,6 +45,8 @@ public class AncientAetherTags {
         public static final TagKey<Biome> HAS_FROZEN_AETHER_GRASS = tag("has_frozen_aether_grass");
         public static final TagKey<Biome> HAS_PALE_AETHER_GRASS = tag("has_pale_aether_grass");
         public static final TagKey<Biome> HAS_ENCHANTED_AETHER_GRASS = tag("has_enchanted_aether_grass");
+        public static final TagKey<Biome> HAS_AETHER_CAVES = tag("has_aether_caves");
+        public static final TagKey<Biome> IS_SKYROOT_FOREST = tag("is_skyroot_forest");
 
         private static TagKey<Biome> tag(String name) {
             return TagKey.create(Registries.BIOME, new ResourceLocation(AncientAether.MOD_ID, name));

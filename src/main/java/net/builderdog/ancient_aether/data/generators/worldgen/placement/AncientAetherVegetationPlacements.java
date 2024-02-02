@@ -1,6 +1,7 @@
 package net.builderdog.ancient_aether.data.generators.worldgen.placement;
 
 import com.aetherteam.aether.AetherConfig;
+import com.aetherteam.aether.data.resources.registries.AetherConfiguredFeatures;
 import com.aetherteam.aether.world.placementmodifier.ConfigFilter;
 import com.aetherteam.aether.world.placementmodifier.ImprovedLayerPlacementModifier;
 import net.builderdog.ancient_aether.data.generators.worldgen.features.AncientAetherVegetationFeatures;
@@ -15,10 +16,12 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.BiomeFilter;
 import net.minecraft.world.level.levelgen.placement.NoiseThresholdCountPlacement;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+import net.minecraft.world.level.levelgen.placement.RarityFilter;
 
 public class AncientAetherVegetationPlacements {
     public static final ResourceKey<PlacedFeature> AETHER_GRASS_BONEMEAL = AncientAetherPlacementUtils.createKey("aether_grass_bonemeal");
     public static final ResourceKey<PlacedFeature> AETHER_GRASS_PATCH = AncientAetherPlacementUtils.createKey("aether_grass_patch");
+    public static final ResourceKey<PlacedFeature> BONUS_BERRY_BUSH_PATCH = AncientAetherPlacementUtils.createKey("bonus_berry_bush_patch");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -30,5 +33,10 @@ public class AncientAetherVegetationPlacements {
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome(),
                 new ConfigFilter(AetherConfig.SERVER.generate_tall_grass));
+
+        AncientAetherPlacementUtils.register(context, BONUS_BERRY_BUSH_PATCH, configuredFeatures.getOrThrow(AetherConfiguredFeatures.BERRY_BUSH_PATCH_CONFIGURATION),
+                RarityFilter.onAverageOnceEvery(6),
+                ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
+                BiomeFilter.biome());
     }
 }
