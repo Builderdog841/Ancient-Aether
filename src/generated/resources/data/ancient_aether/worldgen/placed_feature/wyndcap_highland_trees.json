@@ -1,21 +1,9 @@
 {
-  "feature": "ancient_aether:trees_sakura",
+  "feature": "ancient_aether:trees_wyndcaps",
   "placement": [
     {
-      "type": "minecraft:count",
-      "count": {
-        "type": "minecraft:weighted_list",
-        "distribution": [
-          {
-            "data": 16,
-            "weight": 3
-          },
-          {
-            "data": 20,
-            "weight": 1
-          }
-        ]
-      }
+      "type": "minecraft:rarity_filter",
+      "chance": 3
     },
     {
       "type": "minecraft:surface_water_depth_filter",
@@ -35,6 +23,9 @@
     },
     {
       "type": "minecraft:biome"
+    },
+    {
+      "type": "aether:dungeon_blacklist_filter"
     }
   ]
 }

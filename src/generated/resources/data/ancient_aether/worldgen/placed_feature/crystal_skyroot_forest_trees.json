@@ -1,5 +1,5 @@
 {
-  "feature": "ancient_aether:trees_skyroot_jungle",
+  "feature": "ancient_aether:trees_crystal_skyroot",
   "placement": [
     {
       "type": "minecraft:count",
@@ -7,11 +7,11 @@
         "type": "minecraft:weighted_list",
         "distribution": [
           {
-            "data": 12,
-            "weight": 3
+            "data": 16,
+            "weight": 9
           },
           {
-            "data": 16,
+            "data": 17,
             "weight": 1
           }
         ]
@@ -35,6 +35,9 @@
     },
     {
       "type": "minecraft:biome"
+    },
+    {
+      "type": "aether:dungeon_blacklist_filter"
     }
   ]
 }

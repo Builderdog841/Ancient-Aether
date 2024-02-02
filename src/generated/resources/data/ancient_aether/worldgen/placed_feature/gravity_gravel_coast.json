@@ -1,5 +1,5 @@
 {
-  "feature": "ancient_aether:coast_quicksoil",
+  "feature": "ancient_aether:coast_gravity_gravel",
   "placement": [
     {
       "type": "minecraft:count",
@@ -11,7 +11,7 @@
             "weight": 9
           },
           {
-            "data": 36,
+            "data": 21,
             "weight": 1
           }
         ]

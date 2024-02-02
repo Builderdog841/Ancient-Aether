@@ -41,17 +41,17 @@ public class AncientAetherMiscPlacements {
                 BiomeFilter.biome());
 
         AncientAetherPlacementUtils.register(context, QUICKSOIL_COAST, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.COAST_QUICKSOIL),
-                PlacementUtils.countExtra(20, 0.1F, 16),
+                PlacementUtils.countExtra(20, 0.1F, 1),
                 HeightRangePlacement.uniform(VerticalAnchor.absolute(110), VerticalAnchor.absolute(115)),
                 InSquarePlacement.spread(),
                 BiomeFilter.biome());
-        AncientAetherPlacementUtils.register(context, GRAVITY_GRAVEL_COAST, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.COAST_QUICKSOIL),
-                PlacementUtils.countExtra(20, 0.1F, 16),
+        AncientAetherPlacementUtils.register(context, GRAVITY_GRAVEL_COAST, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.COAST_GRAVITY_GRAVEL),
+                PlacementUtils.countExtra(20, 0.1F, 1),
                 HeightRangePlacement.uniform(VerticalAnchor.absolute(120), VerticalAnchor.absolute(125)),
                 InSquarePlacement.spread(),
                 BiomeFilter.biome());
-        AncientAetherPlacementUtils.register(context, WYND_ICE_COAST, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.COAST_QUICKSOIL),
-                PlacementUtils.countExtra(20, 0.1F, 16),
+        AncientAetherPlacementUtils.register(context, WYND_ICE_COAST, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.COAST_WYND_ICE),
+                PlacementUtils.countExtra(20, 0.1F, 1),
                 HeightRangePlacement.uniform(VerticalAnchor.absolute(110), VerticalAnchor.absolute(115)),
                 InSquarePlacement.spread(),
                 BiomeFilter.biome());

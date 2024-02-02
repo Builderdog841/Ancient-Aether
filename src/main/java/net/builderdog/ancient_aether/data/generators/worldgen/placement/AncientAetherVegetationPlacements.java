@@ -1,6 +1,7 @@
 package net.builderdog.ancient_aether.data.generators.worldgen.placement;
 
 import com.aetherteam.aether.AetherConfig;
+import com.aetherteam.aether.data.resources.builders.AetherPlacedFeatureBuilders;
 import com.aetherteam.aether.data.resources.registries.AetherConfiguredFeatures;
 import com.aetherteam.aether.world.placementmodifier.ConfigFilter;
 import com.aetherteam.aether.world.placementmodifier.ImprovedLayerPlacementModifier;
@@ -22,6 +23,18 @@ public class AncientAetherVegetationPlacements {
     public static final ResourceKey<PlacedFeature> AETHER_GRASS_BONEMEAL = AncientAetherPlacementUtils.createKey("aether_grass_bonemeal");
     public static final ResourceKey<PlacedFeature> AETHER_GRASS_PATCH = AncientAetherPlacementUtils.createKey("aether_grass_patch");
     public static final ResourceKey<PlacedFeature> BONUS_BERRY_BUSH_PATCH = AncientAetherPlacementUtils.createKey("bonus_berry_bush_patch");
+    public static final ResourceKey<PlacedFeature> CRYSTAL_SKYROOT_GROVE_TREES = AncientAetherPlacementUtils.createKey("crystal_skyroot_grove_trees");
+    public static final ResourceKey<PlacedFeature> CRYSTAL_SKYROOT_FOREST_TREES = AncientAetherPlacementUtils.createKey("crystal_skyroot_forest_trees");
+    public static final ResourceKey<PlacedFeature> GOLDEN_SKYROOT_GROVE_TREES = AncientAetherPlacementUtils.createKey("golden_skyroot_grove_trees");
+    public static final ResourceKey<PlacedFeature> GOLDEN_SKYROOT_FOREST_TREES = AncientAetherPlacementUtils.createKey("golden_skyroot_forest_trees");
+    public static final ResourceKey<PlacedFeature> GOLDEN_THICKET_TREES = AncientAetherPlacementUtils.createKey("golden_thicket_trees");
+    public static final ResourceKey<PlacedFeature> WYNDCAP_TAIGA_TREES = AncientAetherPlacementUtils.createKey("wyndcap_taiga_trees");
+    public static final ResourceKey<PlacedFeature> FESTIVE_WYNDCAP_TAIGA_TREES = AncientAetherPlacementUtils.createKey("festive_wyndcap_taiga_trees");
+    public static final ResourceKey<PlacedFeature> WYNDCAP_HIGHLAND_TREES = AncientAetherPlacementUtils.createKey("wyndcap_highland_trees");
+    public static final ResourceKey<PlacedFeature> SKYROOT_JUNGLE_TREES = AncientAetherPlacementUtils.createKey("skyroot_jungle_trees");
+    public static final ResourceKey<PlacedFeature> SAKURA_JUNGLE_TREES = AncientAetherPlacementUtils.createKey("sakura_jungle_trees");
+    public static final ResourceKey<PlacedFeature> ELEVATED_CLEARING_TREES = AncientAetherPlacementUtils.createKey("elevated_clearing_trees");
+    public static final ResourceKey<PlacedFeature> ELEVATED_FOREST_TREES = AncientAetherPlacementUtils.createKey("elevated_forest_trees");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -38,5 +51,30 @@ public class AncientAetherVegetationPlacements {
                 RarityFilter.onAverageOnceEvery(6),
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome());
+
+        AncientAetherPlacementUtils.register(context, CRYSTAL_SKYROOT_GROVE_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_CRYSTAL_SKYROOT),
+                AetherPlacedFeatureBuilders.treePlacement(PlacementUtils.countExtra(2, 0.1F, 1)));
+        AncientAetherPlacementUtils.register(context, CRYSTAL_SKYROOT_FOREST_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_CRYSTAL_SKYROOT),
+                AetherPlacedFeatureBuilders.treePlacement(PlacementUtils.countExtra(16, 0.1F, 1)));
+        AncientAetherPlacementUtils.register(context, GOLDEN_SKYROOT_GROVE_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_GOLDEN_SKYROOT),
+                AetherPlacedFeatureBuilders.treePlacement(PlacementUtils.countExtra(2, 0.1F, 1)));
+        AncientAetherPlacementUtils.register(context, GOLDEN_SKYROOT_FOREST_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_GOLDEN_SKYROOT),
+                AetherPlacedFeatureBuilders.treePlacement(PlacementUtils.countExtra(16, 0.1F, 1)));
+        AncientAetherPlacementUtils.register(context, GOLDEN_THICKET_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_GOLDEN_THICKET),
+                AetherPlacedFeatureBuilders.treePlacement(PlacementUtils.countExtra(20, 0.1F, 1)));
+        AncientAetherPlacementUtils.register(context, WYNDCAP_TAIGA_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_WYNDCAPS),
+                AetherPlacedFeatureBuilders.treePlacement(PlacementUtils.countExtra(16, 0.1F, 1)));
+        AncientAetherPlacementUtils.register(context, FESTIVE_WYNDCAP_TAIGA_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_FESTIVE_WYNDCAPS),
+                AetherPlacedFeatureBuilders.treePlacement(PlacementUtils.countExtra(16, 0.1F, 1)));
+        AncientAetherPlacementUtils.register(context, WYNDCAP_HIGHLAND_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_WYNDCAPS),
+                AetherPlacedFeatureBuilders.treePlacement(RarityFilter.onAverageOnceEvery(3)));
+        AncientAetherPlacementUtils.register(context, SKYROOT_JUNGLE_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_SKYROOT_JUNGLE),
+                AetherPlacedFeatureBuilders.treePlacement(PlacementUtils.countExtra(20, 0.1F, 1)));
+        AncientAetherPlacementUtils.register(context, SAKURA_JUNGLE_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_SAKURA),
+                AetherPlacedFeatureBuilders.treePlacement(PlacementUtils.countExtra(20, 0.1F, 1)));
+        AncientAetherPlacementUtils.register(context, ELEVATED_CLEARING_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_ELEVATED_ISLANDS),
+                AetherPlacedFeatureBuilders.treePlacement(RarityFilter.onAverageOnceEvery(3)));
+        AncientAetherPlacementUtils.register(context, ELEVATED_FOREST_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_ELEVATED_ISLANDS),
+                AetherPlacedFeatureBuilders.treePlacement(PlacementUtils.countExtra(12, 0.1F, 1)));
     }
 }
