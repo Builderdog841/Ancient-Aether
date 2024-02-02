@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.data.generators.worldgen.placement;
 
+import com.aetherteam.aether.data.resources.registries.AetherConfiguredFeatures;
 import com.aetherteam.nitrogen.data.resources.builders.NitrogenPlacedFeatureBuilders;
 import net.builderdog.ancient_aether.data.generators.worldgen.features.AncientAetherOreFeatures;
 import net.minecraft.core.HolderGetter;
@@ -16,6 +17,8 @@ public class AncientAetherOrePlacements {
     public static final ResourceKey<PlacedFeature> WYND_ICE_BLOBS = AncientAetherPlacementUtils.createKey("wynd_ice_blobs");
     public static final ResourceKey<PlacedFeature> AETHER_QUARTZ_ORE = AncientAetherPlacementUtils.createKey("aether_quartz_ore");
     public static final ResourceKey<PlacedFeature> VALKYRUM_ORE = AncientAetherPlacementUtils.createKey("valkyrum_ore");
+    public static final ResourceKey<PlacedFeature> BONUS_AMBROSIUM_ORE = AncientAetherPlacementUtils.createKey("bonus_ambrosium_ore");
+    public static final ResourceKey<PlacedFeature> BONUS_GRAVITITE_ORE = AncientAetherPlacementUtils.createKey("bonus_gravitite_ore");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -32,5 +35,11 @@ public class AncientAetherOrePlacements {
         AncientAetherPlacementUtils.register(context, VALKYRUM_ORE, configuredFeatures.getOrThrow(AncientAetherOreFeatures.VALKYRUM_ORE),
                 NitrogenPlacedFeatureBuilders.commonOrePlacement(15,
                         HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(0), VerticalAnchor.aboveBottom(64))));
+        AncientAetherPlacementUtils.register(context, BONUS_AMBROSIUM_ORE, configuredFeatures.getOrThrow(AetherConfiguredFeatures.ORE_AMBROSIUM_CONFIGURATION),
+                NitrogenPlacedFeatureBuilders.commonOrePlacement(10,
+                        HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(0), VerticalAnchor.aboveBottom(96))));
+        AncientAetherPlacementUtils.register(context, BONUS_GRAVITITE_ORE, configuredFeatures.getOrThrow(AetherConfiguredFeatures.ORE_GRAVITITE_BURIED_CONFIGURATION),
+                NitrogenPlacedFeatureBuilders.commonOrePlacement(7,
+                        HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(0), VerticalAnchor.aboveBottom(256))));
     }
 }
