@@ -3,11 +3,7 @@
   "placement": [
     {
       "type": "minecraft:rarity_filter",
-      "chance": 1
-    },
-    {
-      "type": "minecraft:surface_water_depth_filter",
-      "max_water_depth": 0
+      "chance": 2
     },
     {
       "type": "aether:improved_layer_placement",
@@ -18,7 +14,7 @@
           "min_inclusive": 0
         }
       },
-      "heightmap": "OCEAN_FLOOR",
+      "heightmap": "MOTION_BLOCKING",
       "verticalBounds": 4
     },
     {

@@ -39,7 +39,7 @@ public class AncientAetherVegetationFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_FLOWER_PATCH = AncientAetherFeatureUtils.registerKey("aether_flower_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> WYNDCAPS_FLOWER_PATCH = AncientAetherFeatureUtils.registerKey("wyndcaps_flower_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_JUNGLE_FLOWER_PATCH = AncientAetherFeatureUtils.registerKey("sakura_jungle_flower_patch");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_MEADOW_PATCH = AncientAetherFeatureUtils.registerKey("skyroot_meadow_flower_patch");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_MEADOW_FLOWER_PATCH = AncientAetherFeatureUtils.registerKey("skyroot_meadow_flower_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> TREES_SKYROOT = AncientAetherFeatureUtils.registerKey("trees_skyroot");
     public static final ResourceKey<ConfiguredFeature<?, ?>> TREES_CRYSTAL_SKYROOT = AncientAetherFeatureUtils.registerKey("trees_crystal_skyroot");
     public static final ResourceKey<ConfiguredFeature<?, ?>> TREES_GOLDEN_SKYROOT = AncientAetherFeatureUtils.registerKey("trees_golden_skyroot");
@@ -116,7 +116,7 @@ public class AncientAetherVegetationFeatures {
                 new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH), PlacementUtils.isEmpty()), 0.25F)
         ), PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.SAKURA_BLOSSOMS_PATCH), PlacementUtils.isEmpty())));
 
-        AncientAetherFeatureUtils.register(context, SKYROOT_MEADOW_PATCH, Feature.FLOWER,
+        AncientAetherFeatureUtils.register(context, SKYROOT_MEADOW_FLOWER_PATCH, Feature.FLOWER,
                 new RandomPatchConfiguration(56, 6, 2,
                         PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new DualNoiseProvider(
                                 new InclusiveRange<>(1, 3),

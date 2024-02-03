@@ -1,0 +1,36 @@
+{
+  "feature": "ancient_aether:skyroot_meadow_flower_patch",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:weighted_list",
+        "distribution": [
+          {
+            "data": 14,
+            "weight": 9
+          },
+          {
+            "data": 15,
+            "weight": 1
+          }
+        ]
+      }
+    },
+    {
+      "type": "aether:improved_layer_placement",
+      "count": {
+        "type": "minecraft:uniform",
+        "value": {
+          "max_inclusive": 1,
+          "min_inclusive": 0
+        }
+      },
+      "heightmap": "MOTION_BLOCKING",
+      "verticalBounds": 4
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}
