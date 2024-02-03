@@ -20,10 +20,7 @@ import java.util.List;
  * Directly based on the Aether: Redux's CloudLayerFeature, with a few small tweaks to it
  */
 public class CloudbedFeature extends Feature<CloudbedFeature.Config> {
-
-    // Noise used to calculate the shape of the clouds
     public static final PerlinSimplexNoise base_noise = new PerlinSimplexNoise(new XoroshiroRandomSource(42), List.of(0, 1, 2, 3, 4));
-    // Noise used to calculate a subtle rolling effect for the clouds
     public static final PerlinSimplexNoise y_offset = new PerlinSimplexNoise(new XoroshiroRandomSource(95), List.of(0, 1));
 
     public CloudbedFeature(Codec<Config> codec) {
@@ -32,7 +29,6 @@ public class CloudbedFeature extends Feature<CloudbedFeature.Config> {
 
     @Override
     public boolean place(@NotNull FeaturePlaceContext<Config> context) {
-        // Ensure that the Aether: Redux's cloudbeds are not already added
         if (ServerHooks.datapacks == null || !ServerHooks.datapacks.contains("builtin/data/cloudbed")) {
             int chunkX = context.origin().getX() - (context.origin().getX() % 16);
             int chunkZ = context.origin().getZ() - (context.origin().getZ() % 16);
@@ -69,10 +65,6 @@ public class CloudbedFeature extends Feature<CloudbedFeature.Config> {
     public static float costrp(float progress, float start, float end) {
         return (((-Mth.cos((float) (Math.PI * progress)) + 1F) * 0.5F) * (end - start)) + start;
     }
-
-/*    private static boolean isReduxCloudbedEnabled(WorldGenLevel level) {
-        return level.getServer().getWorldData().getDataConfiguration().dataPacks().getEnabled()
-    }*/
 
     public record Config(BlockStateProvider block, int baseHeight, double scaleXZ) implements FeatureConfiguration {
         public static final Codec<Config> CODEC = RecordCodecBuilder.create(
