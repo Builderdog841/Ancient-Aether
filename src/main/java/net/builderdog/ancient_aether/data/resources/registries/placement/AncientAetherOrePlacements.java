@@ -1,8 +1,8 @@
-package net.builderdog.ancient_aether.data.generators.worldgen.placement;
+package net.builderdog.ancient_aether.data.resources.registries.placement;
 
 import com.aetherteam.aether.data.resources.registries.AetherConfiguredFeatures;
 import com.aetherteam.nitrogen.data.resources.builders.NitrogenPlacedFeatureBuilders;
-import net.builderdog.ancient_aether.data.generators.worldgen.features.AncientAetherOreFeatures;
+import net.builderdog.ancient_aether.data.resources.registries.features.AncientAetherOreFeatures;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;

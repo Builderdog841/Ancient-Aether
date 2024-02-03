@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.data.generators.worldgen;
+package net.builderdog.ancient_aether.data.resources.registries;
 
 import net.builderdog.ancient_aether.AncientAether;
 import net.minecraft.core.registries.Registries;
@@ -7,7 +7,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.synth.NormalNoise;
 
-public class AncientAetherNoiseData {
+public class AncientAetherNoises {
     public static final ResourceKey<NormalNoise.NoiseParameters> AMPLIFIED = createKey("amplified");
     public static final ResourceKey<NormalNoise.NoiseParameters> EROSION = createKey("erosion");
     public static final ResourceKey<NormalNoise.NoiseParameters> FOREST_DISTRIBUTION = createKey("forest_distribution");

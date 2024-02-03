@@ -1,10 +1,10 @@
-package net.builderdog.ancient_aether.data.generators.worldgen;
+package net.builderdog.ancient_aether.data.resources.registries;
 
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.AncientAetherTags;
-import net.builderdog.ancient_aether.data.generators.worldgen.placement.AncientAetherMiscPlacements;
-import net.builderdog.ancient_aether.data.generators.worldgen.placement.AncientAetherOrePlacements;
-import net.builderdog.ancient_aether.data.generators.worldgen.placement.AncientAetherVegetationPlacements;
+import net.builderdog.ancient_aether.data.resources.registries.placement.AncientAetherMiscPlacements;
+import net.builderdog.ancient_aether.data.resources.registries.placement.AncientAetherOrePlacements;
+import net.builderdog.ancient_aether.data.resources.registries.placement.AncientAetherVegetationPlacements;
 import net.builderdog.ancient_aether.world.biomemodifier.CarverModifier;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderSet;
@@ -20,7 +20,7 @@ import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ForgeBiomeModifiers;
 import net.minecraftforge.registries.ForgeRegistries;
 
-public class AncientAetherBiomeModifierData {
+public class AncientAetherBiomeModifiers {
     public static final ResourceKey<BiomeModifier> AEROGEL_BLOBS_BIOME_MODIFIER = createKey("aerogel_blobs_biome_modifier");
     public static final ResourceKey<BiomeModifier> AETHER_QUARTZ_ORE_BIOME_MODIFIER = createKey("aether_quartz_ore_biome_modifier");
     public static final ResourceKey<BiomeModifier> VALKYRUM_ORE_BIOME_MODIFIER = createKey("valkyrum_ore_biome_modifier");
@@ -90,11 +90,11 @@ public class AncientAetherBiomeModifierData {
 
         context.register(AETHER_CAVE_BIOME_MODIFIER, new CarverModifier(
                 biome.getOrThrow(AncientAetherTags.Biomes.HAS_AETHER_CAVES),
-                carver.getOrThrow(AncientAetherConfiguredCarverData.AETHER_CAVE)
+                carver.getOrThrow(AncientAetherConfiguredCarvers.AETHER_CAVE)
         ));
         context.register(AETHER_SURFACE_CAVE_BIOME_MODIFIER, new CarverModifier(
                 biome.getOrThrow(AncientAetherTags.Biomes.HAS_AETHER_CAVES),
-                carver.getOrThrow(AncientAetherConfiguredCarverData.AETHER_SURFACE_CAVE)
+                carver.getOrThrow(AncientAetherConfiguredCarvers.AETHER_SURFACE_CAVE)
         ));
     }
 }

@@ -7,7 +7,7 @@ import com.aetherteam.aether.mixin.mixins.common.accessor.SpreadingSnowyDirtBloc
 import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.block.blockstate.AetherGrassType;
 import net.builderdog.ancient_aether.block.blockstate.AncientAetherBlockStateProperties;
-import net.builderdog.ancient_aether.data.generators.worldgen.placement.AncientAetherVegetationPlacements;
+import net.builderdog.ancient_aether.data.resources.registries.placement.AncientAetherVegetationPlacements;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;

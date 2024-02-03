@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.world;
+package net.builderdog.ancient_aether.data.resources;
 
 import com.aetherteam.aether.block.AetherBlockStateProperties;
 import com.aetherteam.aether.block.AetherBlocks;

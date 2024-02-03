@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.data.generators.worldgen;
+package net.builderdog.ancient_aether.data.resources.registries;
 
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.AncientAetherTags;
@@ -15,7 +15,7 @@ import net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver;
 import net.minecraft.world.level.levelgen.carver.WorldCarver;
 import net.minecraft.world.level.levelgen.heightproviders.UniformHeight;
 
-public class AncientAetherConfiguredCarverData {
+public class AncientAetherConfiguredCarvers {
     public static final ResourceKey<ConfiguredWorldCarver<?>> AETHER_CAVE = createKey("aether_cave");
     public static final ResourceKey<ConfiguredWorldCarver<?>> AETHER_SURFACE_CAVE = createKey("aether_surface_cave");
     public static final ResourceKey<ConfiguredWorldCarver<?>> ELEVATED_ISLANDS_CAVE = createKey("elevated_islands_cave");

@@ -1,6 +1,6 @@
 package net.builderdog.ancient_aether.world.tree;
 
-import net.builderdog.ancient_aether.data.generators.worldgen.features.AncientAetherTreeFeatures;
+import net.builderdog.ancient_aether.data.resources.registries.features.AncientAetherTreeFeatures;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.grower.AbstractTreeGrower;

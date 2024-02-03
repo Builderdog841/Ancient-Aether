@@ -1,11 +1,11 @@
-package net.builderdog.ancient_aether.data.generators.worldgen.placement;
+package net.builderdog.ancient_aether.data.resources.registries.placement;
 
 import com.aetherteam.aether.AetherConfig;
 import com.aetherteam.aether.data.resources.builders.AetherPlacedFeatureBuilders;
 import com.aetherteam.aether.data.resources.registries.AetherConfiguredFeatures;
 import com.aetherteam.aether.world.placementmodifier.ConfigFilter;
 import com.aetherteam.aether.world.placementmodifier.ImprovedLayerPlacementModifier;
-import net.builderdog.ancient_aether.data.generators.worldgen.features.AncientAetherVegetationFeatures;
+import net.builderdog.ancient_aether.data.resources.registries.features.AncientAetherVegetationFeatures;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;

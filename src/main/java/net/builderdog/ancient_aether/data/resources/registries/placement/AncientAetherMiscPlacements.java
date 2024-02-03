@@ -1,8 +1,8 @@
-package net.builderdog.ancient_aether.data.generators.worldgen.placement;
+package net.builderdog.ancient_aether.data.resources.registries.placement;
 
 import com.aetherteam.aether.data.resources.builders.AetherPlacedFeatureBuilders;
 import com.aetherteam.aether.data.resources.registries.AetherConfiguredFeatures;
-import net.builderdog.ancient_aether.data.generators.worldgen.features.AncientAetherMiscFeatures;
+import net.builderdog.ancient_aether.data.resources.registries.features.AncientAetherMiscFeatures;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderGetter;

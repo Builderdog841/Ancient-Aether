@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.data.generators.worldgen.placement;
+package net.builderdog.ancient_aether.data.resources.registries.placement;
 
 import net.builderdog.ancient_aether.AncientAether;
 import net.minecraft.core.Holder;

@@ -1,11 +1,11 @@
-package net.builderdog.ancient_aether.data.generators.worldgen.features;
+package net.builderdog.ancient_aether.data.resources.registries.features;
 
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.data.resources.AetherFeatureStates;
 import com.aetherteam.aether.data.resources.registries.AetherConfiguredFeatures;
 import com.aetherteam.nitrogen.data.resources.builders.NitrogenConfiguredFeatureBuilders;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
-import net.builderdog.ancient_aether.world.AncientAetherFeatureStates;
+import net.builderdog.ancient_aether.data.resources.AncientAetherFeatureStates;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;

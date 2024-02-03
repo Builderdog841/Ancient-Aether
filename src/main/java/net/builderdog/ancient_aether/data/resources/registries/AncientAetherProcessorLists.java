@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.data.generators.worldgen;
+package net.builderdog.ancient_aether.data.resources.registries;
 
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;

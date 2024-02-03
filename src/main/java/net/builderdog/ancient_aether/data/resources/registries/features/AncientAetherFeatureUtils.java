@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.data.generators.worldgen.features;
+package net.builderdog.ancient_aether.data.resources.registries.features;
 
 import net.builderdog.ancient_aether.AncientAether;
 import net.minecraft.core.registries.Registries;

@@ -3,10 +3,10 @@ package net.builderdog.ancient_aether.entity.monster.dungeon;
 import com.aetherteam.aether.Aether;
 import com.aetherteam.aether.entity.AetherBossMob;
 import com.aetherteam.aether.entity.ai.AetherBlockPathTypes;
-import com.aetherteam.nitrogen.entity.BossRoomTracker;
 import com.aetherteam.aether.entity.ai.goal.ContinuousMeleeAttackGoal;
+import com.aetherteam.nitrogen.entity.BossRoomTracker;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
-import net.builderdog.ancient_aether.data.registries.AncientAetherStructureRegistry;
+import net.builderdog.ancient_aether.data.resources.registries.AncientAetherStructures;
 import net.builderdog.ancient_aether.entity.AncientAetherBossNameGenerator;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
@@ -28,7 +28,9 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.goal.*;
+import net.minecraft.world.entity.ai.goal.Goal;
+import net.minecraft.world.entity.ai.goal.MoveTowardsRestrictionGoal;
+import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Enemy;
@@ -57,14 +59,13 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     private static final EntityDataAccessor<Boolean> DATA_IS_READY = SynchedEntityData.defineId(AncientGuardian.class, EntityDataSerializers.BOOLEAN);
     private static final EntityDataAccessor<Component> DATA_BOSS_NAME = SynchedEntityData.defineId(AncientGuardian.class, EntityDataSerializers.COMPONENT);
     public static final EntityDataAccessor<Boolean> DATA_AWAKE_ID = SynchedEntityData.defineId(AncientGuardian.class, EntityDataSerializers.BOOLEAN);
-    private final ServerBossEvent bossFight;
 
     @Nullable
     private AABB dungeonBounds;
 
     public AncientGuardian(EntityType<? extends PathfinderMob> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
-        bossFight = new ServerBossEvent(this.getBossName(), BossEvent.BossBarColor.RED, BossEvent.BossBarOverlay.PROGRESS);
+        ServerBossEvent bossFight = new ServerBossEvent(getBossName(), BossEvent.BossBarColor.RED, BossEvent.BossBarOverlay.PROGRESS);
         bossFight.setVisible(false);
         xpReward = 0;
         setPathfindingMalus(AetherBlockPathTypes.BOSS_DOORWAY, -1.0F);
@@ -92,17 +93,17 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     @Override
     @SuppressWarnings("deprecation")
     public SpawnGroupData finalizeSpawn(@NotNull ServerLevelAccessor level, @NotNull DifficultyInstance difficulty, @NotNull MobSpawnType reason, @Nullable SpawnGroupData spawnData, @Nullable CompoundTag tag) {
-        this.setBossName(AncientAetherBossNameGenerator.generateAncientGuardian(this.getRandom()));
+        this.setBossName(AncientAetherBossNameGenerator.generateAncientGuardian(getRandom()));
         if (tag != null && tag.contains("Dungeon")) {
             StructureManager manager = level.getLevel().structureManager();
             manager.registryAccess().registry(Registries.STRUCTURE).ifPresent(registry -> {
-                        Structure structure = registry.get(AncientAetherStructureRegistry.ANCIENT_DUNGEON);
+                        Structure structure = registry.get(AncientAetherStructures.ANCIENT_DUNGEON);
                         if (structure != null) {
-                            StructureStart start = manager.getStructureAt(this.blockPosition(), structure);
+                            StructureStart start = manager.getStructureAt(blockPosition(), structure);
                             if (start != StructureStart.INVALID_START) {
                                 BoundingBox box = start.getBoundingBox();
                                 AABB dungeonBounds = new AABB(box.minX(), box.minY(), box.minZ(), box.maxX() + 1, box.maxY() + 1, box.maxZ() + 1);
-                                this.setDungeonBounds(dungeonBounds);
+                                setDungeonBounds(dungeonBounds);
                             }
                         }
                     }
@@ -127,7 +128,7 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
 
     @Override
     public boolean canBeCollidedWith() {
-        return !this.isAwake();
+        return this.isAwake();
     }
 
     @Override
@@ -137,12 +138,12 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
 
     @Override
     public boolean isNoGravity() {
-        return !isAwake();
+        return isAwake();
     }
 
     @Override
     public boolean shouldDiscardFriction() {
-        return !isAwake();
+        return isAwake();
     }
 
     protected float getJumpPower() {
@@ -155,20 +156,20 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
             return super.hurt(source, amount);
         }
         if (this.isReady()) {
-            if (source.getDirectEntity() instanceof LivingEntity attacker && this.level().getDifficulty() != Difficulty.PEACEFUL) {
-                if (this.getDungeon() == null || this.getDungeon().isPlayerWithinRoomInterior(attacker)) {
-                    if (super.hurt(source, amount) && this.getHealth() > 0) {
-                        if (!this.level().isClientSide() && !this.isBossFight()) {
-                            this.setBossFight(true);
-                            if (this.getDungeon() != null) {
-                                this.closeRoom();
+            if (source.getDirectEntity() instanceof LivingEntity attacker && level().getDifficulty() != Difficulty.PEACEFUL) {
+                if (getDungeon() == null || getDungeon().isPlayerWithinRoomInterior(attacker)) {
+                    if (super.hurt(source, amount) && getHealth() > 0) {
+                        if (!level().isClientSide() && !isBossFight()) {
+                            setBossFight(true);
+                            if (getDungeon() != null) {
+                                closeRoom();
                             }
                         }
                         return true;
                     }
                 } else {
-                    if (!this.level().isClientSide() && attacker instanceof Player player) {
-                        this.displayTooFarMessage(player);
+                    if (!level().isClientSide() && attacker instanceof Player player) {
+                        displayTooFarMessage(player);
                         return false;
                     }
                 }
@@ -276,11 +277,11 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     @Override
     public void tearDownRoom() {
         assert this.dungeonBounds != null;
-        for (BlockPos pos : BlockPos.betweenClosed((int) this.dungeonBounds.minX, (int) this.dungeonBounds.minY, (int) this.dungeonBounds.minZ, (int) this.dungeonBounds.maxX, (int) this.dungeonBounds.maxY, (int) this.dungeonBounds.maxZ)) {
-            BlockState state = this.level().getBlockState(pos);
-            BlockState newState = this.convertBlock(state);
+        for (BlockPos pos : BlockPos.betweenClosed((int) dungeonBounds.minX, (int) dungeonBounds.minY, (int) dungeonBounds.minZ, (int) dungeonBounds.maxX, (int) dungeonBounds.maxY, (int) dungeonBounds.maxZ)) {
+            BlockState state = level().getBlockState(pos);
+            BlockState newState = convertBlock(state);
             if (newState != null) {
-                this.level().setBlock(pos, newState, 1 | 2);
+                level().setBlock(pos, newState, 1 | 2);
             }
         }
     }
@@ -307,23 +308,23 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     public void addAdditionalSaveData(@NotNull CompoundTag tag) {
         super.addAdditionalSaveData(tag);
         this.addBossSaveData(tag);
-        if (this.dungeonBounds != null) {
-            tag.putDouble("DungeonBoundsMinX", this.dungeonBounds.minX);
-            tag.putDouble("DungeonBoundsMinY", this.dungeonBounds.minY);
-            tag.putDouble("DungeonBoundsMinZ", this.dungeonBounds.minZ);
-            tag.putDouble("DungeonBoundsMaxX", this.dungeonBounds.maxX);
-            tag.putDouble("DungeonBoundsMaxY", this.dungeonBounds.maxY);
-            tag.putDouble("DungeonBoundsMaxZ", this.dungeonBounds.maxZ);
+        if (dungeonBounds != null) {
+            tag.putDouble("DungeonBoundsMinX", dungeonBounds.minX);
+            tag.putDouble("DungeonBoundsMinY", dungeonBounds.minY);
+            tag.putDouble("DungeonBoundsMinZ", dungeonBounds.minZ);
+            tag.putDouble("DungeonBoundsMaxX", dungeonBounds.maxX);
+            tag.putDouble("DungeonBoundsMaxY", dungeonBounds.maxY);
+            tag.putDouble("DungeonBoundsMaxZ", dungeonBounds.maxZ);
         }
-        tag.putBoolean("Ready", this.isReady());
+        tag.putBoolean("Ready", isReady());
     }
 
     public boolean isReady() {
-        return this.getEntityData().get(DATA_IS_READY);
+        return getEntityData().get(DATA_IS_READY);
     }
 
     public void setReady(boolean ready) {
-        this.getEntityData().set(DATA_IS_READY, ready);
+        getEntityData().set(DATA_IS_READY, ready);
     }
 
     @Override
@@ -340,14 +341,14 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
             this.dungeonBounds = new AABB(minX, minY, minZ, maxX, maxY, maxZ);
         }
         if (tag.contains("Ready")) {
-            this.setReady(tag.getBoolean("Ready"));
+            setReady(tag.getBoolean("Ready"));
         }
     }
 
     @Override
     public void writeSpawnData(FriendlyByteBuf buffer) {
         CompoundTag tag = new CompoundTag();
-        this.addBossSaveData(tag);
+        addBossSaveData(tag);
         buffer.writeNbt(tag);
     }
 
@@ -355,7 +356,7 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     public void readSpawnData(FriendlyByteBuf additionalData) {
         CompoundTag tag = additionalData.readNbt();
         if (tag != null) {
-            this.readBossSaveData(tag);
+            readBossSaveData(tag);
         }
     }
 
@@ -365,7 +366,7 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     }
 
     public boolean isAwake() {
-        return this.entityData.get(DATA_AWAKE_ID);
+        return entityData.get(DATA_AWAKE_ID);
     }
 
 

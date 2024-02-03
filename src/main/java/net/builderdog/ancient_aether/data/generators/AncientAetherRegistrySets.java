@@ -1,12 +1,12 @@
 package net.builderdog.ancient_aether.data.generators;
 
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.data.generators.worldgen.AncientAetherBiomeModifierData;
-import net.builderdog.ancient_aether.data.generators.worldgen.AncientAetherConfiguredCarverData;
-import net.builderdog.ancient_aether.data.generators.worldgen.AncientAetherNoiseData;
-import net.builderdog.ancient_aether.data.generators.worldgen.AncientAetherProcessorLists;
-import net.builderdog.ancient_aether.data.generators.worldgen.features.AncientAetherFeatureUtils;
-import net.builderdog.ancient_aether.data.generators.worldgen.placement.AncientAetherPlacementUtils;
+import net.builderdog.ancient_aether.data.resources.registries.AncientAetherBiomeModifiers;
+import net.builderdog.ancient_aether.data.resources.registries.AncientAetherConfiguredCarvers;
+import net.builderdog.ancient_aether.data.resources.registries.AncientAetherNoises;
+import net.builderdog.ancient_aether.data.resources.registries.AncientAetherProcessorLists;
+import net.builderdog.ancient_aether.data.resources.registries.features.AncientAetherFeatureUtils;
+import net.builderdog.ancient_aether.data.resources.registries.placement.AncientAetherPlacementUtils;
 import net.builderdog.ancient_aether.mixin.accessor.RegistrySetBuilderAccessor;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.Registry;
@@ -42,10 +42,10 @@ public class AncientAetherRegistrySets extends DatapackBuiltinEntriesProvider {
     }
             .add(Registries.CONFIGURED_FEATURE, AncientAetherFeatureUtils::bootstrap)
             .add(Registries.PLACED_FEATURE, AncientAetherPlacementUtils::bootstrap)
-            .add(ForgeRegistries.Keys.BIOME_MODIFIERS, AncientAetherBiomeModifierData::bootstrap)
-            .add(Registries.NOISE, AncientAetherNoiseData::bootstrap)
+            .add(ForgeRegistries.Keys.BIOME_MODIFIERS, AncientAetherBiomeModifiers::bootstrap)
+            .add(Registries.NOISE, AncientAetherNoises::bootstrap)
             .add(Registries.PROCESSOR_LIST, AncientAetherProcessorLists::bootstrap)
-            .add(Registries.CONFIGURED_CARVER, AncientAetherConfiguredCarverData::bootstrap);
+            .add(Registries.CONFIGURED_CARVER, AncientAetherConfiguredCarvers::bootstrap);
 
     public AncientAetherRegistrySets(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(AncientAether.MOD_ID));

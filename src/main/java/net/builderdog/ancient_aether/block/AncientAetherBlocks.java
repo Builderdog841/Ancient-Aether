@@ -19,7 +19,7 @@ import net.builderdog.ancient_aether.block.utility.AmbrosiumCampfireBlock;
 import net.builderdog.ancient_aether.block.utility.CrackedSliderBlock;
 import net.builderdog.ancient_aether.block.utility.VaseBlock;
 import net.builderdog.ancient_aether.block.utility.WindBlowerBlock;
-import net.builderdog.ancient_aether.data.registries.AncientAetherLootRegistry;
+import net.builderdog.ancient_aether.data.generators.loot.AncientAetherSelectorLoot;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.builderdog.ancient_aether.world.tree.*;
@@ -214,13 +214,13 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> ANGELIC_VASE = registerBlock("angelic_vase", () -> new VaseBlock(BlockBehaviour.Properties.copy(HOLYSTONE_VASE.get())));
     public static final RegistryObject<Block> HELLFIRE_VASE = registerBlock("hellfire_vase", () -> new VaseBlock(BlockBehaviour.Properties.copy(HOLYSTONE_VASE.get())));
     public static final RegistryObject<Block> AEROGETIC_VASE = registerBlock("aerogetic_vase", () -> new VaseBlock(BlockBehaviour.Properties.copy(HOLYSTONE_VASE.get())));
-    public static final RegistryObject<Block> ANCIENT_HOLYSTONE_VASE = registerBlock("ancient_holystone_vase", () -> new AncientVaseBlock(AncientAetherLootRegistry.HOLYSTONE_VASE_LOOT, BlockBehaviour.Properties.copy(HOLYSTONE_VASE.get()).sound(SoundType.DECORATED_POT_CRACKED).noLootTable()));
-    public static final RegistryObject<Block> ANCIENT_MOSSY_HOLYSTONE_VASE = registerBlock("ancient_mossy_holystone_vase", () -> new AncientVaseBlock(AncientAetherLootRegistry.MOSSY_HOLYSTONE_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
-    public static final RegistryObject<Block> ANCIENT_FROZEN_HOLYSTONE_VASE = registerBlock("ancient_frozen_holystone_vase", () -> new AncientVaseBlock(AncientAetherLootRegistry.FROZEN_HOLYSTONE_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
-    public static final RegistryObject<Block> ANCIENT_SENTRY_VASE = registerBlock("ancient_sentry_vase", () -> new AncientVaseBlock(AncientAetherLootRegistry.SENTRY_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
-    public static final RegistryObject<Block> ANCIENT_ANGELIC_VASE = registerBlock("ancient_angelic_vase", () -> new AncientVaseBlock(AncientAetherLootRegistry.ANGELIC_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
-    public static final RegistryObject<Block> ANCIENT_HELLFIRE_VASE = registerBlock("ancient_hellfire_vase", () -> new AncientVaseBlock(AncientAetherLootRegistry.HELLFIRE_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
-    public static final RegistryObject<Block> ANCIENT_AEROGETIC_VASE = registerBlock("ancient_aerogetic_vase", () -> new AncientVaseBlock(AncientAetherLootRegistry.AEROGETIC_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
+    public static final RegistryObject<Block> ANCIENT_HOLYSTONE_VASE = registerBlock("ancient_holystone_vase", () -> new AncientVaseBlock(AncientAetherSelectorLoot.HOLYSTONE_VASE_LOOT, BlockBehaviour.Properties.copy(HOLYSTONE_VASE.get()).sound(SoundType.DECORATED_POT_CRACKED).noLootTable()));
+    public static final RegistryObject<Block> ANCIENT_MOSSY_HOLYSTONE_VASE = registerBlock("ancient_mossy_holystone_vase", () -> new AncientVaseBlock(AncientAetherSelectorLoot.MOSSY_HOLYSTONE_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
+    public static final RegistryObject<Block> ANCIENT_FROZEN_HOLYSTONE_VASE = registerBlock("ancient_frozen_holystone_vase", () -> new AncientVaseBlock(AncientAetherSelectorLoot.FROZEN_HOLYSTONE_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
+    public static final RegistryObject<Block> ANCIENT_SENTRY_VASE = registerBlock("ancient_sentry_vase", () -> new AncientVaseBlock(AncientAetherSelectorLoot.SENTRY_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
+    public static final RegistryObject<Block> ANCIENT_ANGELIC_VASE = registerBlock("ancient_angelic_vase", () -> new AncientVaseBlock(AncientAetherSelectorLoot.ANGELIC_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
+    public static final RegistryObject<Block> ANCIENT_HELLFIRE_VASE = registerBlock("ancient_hellfire_vase", () -> new AncientVaseBlock(AncientAetherSelectorLoot.HELLFIRE_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
+    public static final RegistryObject<Block> ANCIENT_AEROGETIC_VASE = registerBlock("ancient_aerogetic_vase", () -> new AncientVaseBlock(AncientAetherSelectorLoot.AEROGETIC_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
 
     public static void registerPots() {
         FlowerPotBlock pot = (FlowerPotBlock) Blocks.FLOWER_POT;

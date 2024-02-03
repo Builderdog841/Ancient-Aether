@@ -4,11 +4,7 @@ import com.aetherteam.aether.AetherConfig;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
-import net.builderdog.ancient_aether.data.generators.AncientAetherBlockStateData;
-import net.builderdog.ancient_aether.data.generators.AncientAetherItemModelData;
-import net.builderdog.ancient_aether.data.generators.AncientAetherRecipeData;
-import net.builderdog.ancient_aether.data.generators.AncientAetherRegistrySets;
-import net.builderdog.ancient_aether.data.providers.AncientAetherLootTableProvider;
+import net.builderdog.ancient_aether.data.AncientAetherData;
 import net.builderdog.ancient_aether.entity.AncientAetherEntities;
 import net.builderdog.ancient_aether.entity.moa.AncientAetherMoaTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
@@ -18,9 +14,6 @@ import net.builderdog.ancient_aether.world.biomes.AncientAetherSurfaceData;
 import net.builderdog.ancient_aether.world.feature.AncientAetherFeatures;
 import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherFoliagePlacers;
 import net.builderdog.ancient_aether.world.structure.AncientAetherStructureTypes;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.PackOutput;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
@@ -31,8 +24,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.event.AddPackFindersEvent;
 import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent;
 import net.minecraftforge.event.server.ServerAboutToStartEvent;
@@ -51,7 +42,6 @@ import terrablender.api.Regions;
 import terrablender.api.SurfaceRuleManager;
 
 import java.nio.file.Path;
-import java.util.concurrent.CompletableFuture;
 
 @Mod(AncientAether.MOD_ID)
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -63,7 +53,7 @@ public class AncientAether {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         modEventBus.addListener(this::commonSetup);
-        modEventBus.addListener(this::dataSetup);
+        modEventBus.addListener(AncientAetherData::dataSetup);
 
         DeferredRegister<?>[] registers = {
 
@@ -163,19 +153,6 @@ public class AncientAether {
                 event.addRepositorySource(consumer -> consumer.accept(pack));
             }
         }
-    }
-
-    public void dataSetup(GatherDataEvent event) {
-        DataGenerator generator = event.getGenerator();
-        ExistingFileHelper fileHelper = event.getExistingFileHelper();
-        CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
-        PackOutput packOutput = generator.getPackOutput();
-
-        generator.addProvider(true, AncientAetherLootTableProvider.create(packOutput));
-        generator.addProvider(true, new AncientAetherBlockStateData(packOutput, fileHelper));
-        generator.addProvider(true, new AncientAetherRecipeData(packOutput));
-        generator.addProvider(true, new AncientAetherItemModelData(packOutput, fileHelper));
-        generator.addProvider(event.includeServer(), new AncientAetherRegistrySets(packOutput, lookupProvider));
     }
 
     private void registerComposting() {

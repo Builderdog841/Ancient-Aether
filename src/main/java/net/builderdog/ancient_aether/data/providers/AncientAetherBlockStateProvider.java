@@ -4,15 +4,14 @@ import com.aetherteam.aether.data.providers.AetherBlockStateProvider;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WallBlock;
-import net.minecraft.world.level.block.state.properties.WallSide;
-import net.minecraftforge.client.model.generators.BlockModelBuilder;
-import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.client.model.generators.MultiPartBlockStateBuilder;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.block.state.properties.WallSide;
 import net.minecraftforge.client.model.generators.*;
+import net.minecraftforge.common.data.ExistingFileHelper;
 
 import java.util.Map;
 
@@ -83,29 +82,24 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
 
     public void logWallBlock(MultiPartBlockStateBuilder builder, ModelFile postShort, ModelFile postTall, ModelFile side, ModelFile sideAlt, ModelFile sideTall, ModelFile sideTallAlt) {
         builder
-                // Smaller post when West & East are both short while North & South being none
                 .part().modelFile(postShort).addModel()
                 .nestedGroup().condition(WallBlock.UP, false).condition(WallBlock.EAST_WALL, WallSide.LOW).condition(WallBlock.WEST_WALL, WallSide.LOW).end().end()
-                // Taller thinner post when West & East are both tall while North & South being none
                 .part().modelFile(postTall).addModel()
                 .nestedGroup().condition(WallBlock.UP, false).condition(WallBlock.EAST_WALL, WallSide.TALL).condition(WallBlock.WEST_WALL, WallSide.TALL).end().end()
-                // Rotated small post when West & East are both none while North & South are short
                 .part().modelFile(postShort).rotationY(90).addModel()
                 .nestedGroup().condition(WallBlock.UP, false).condition(WallBlock.EAST_WALL, WallSide.NONE).condition(WallBlock.NORTH_WALL, WallSide.LOW).condition(WallBlock.WEST_WALL, WallSide.NONE).condition(WallBlock.SOUTH_WALL, WallSide.LOW).end().end()
-                // Rotated small post when West & East are both none while North & South are tall
                 .part().modelFile(postTall).rotationY(90).addModel()
                 .nestedGroup().condition(WallBlock.UP, false).condition(WallBlock.EAST_WALL, WallSide.NONE).condition(WallBlock.NORTH_WALL, WallSide.TALL).condition(WallBlock.WEST_WALL, WallSide.NONE).condition(WallBlock.SOUTH_WALL, WallSide.TALL).end().end();
         WALL_PROPS.entrySet().stream()
                 .filter(e -> e.getKey().getAxis().isHorizontal())
                 .forEach(e -> {
-                    this.logWallSidePart(builder, side, sideAlt, e, WallSide.LOW, false);
-                    this.logWallSidePart(builder, sideTall, sideTallAlt, e, WallSide.TALL, false);
+                    logWallSidePart(builder, side, sideAlt, e, WallSide.LOW, false);
+                    logWallSidePart(builder, sideTall, sideTallAlt, e, WallSide.TALL, false);
                 });
     }
 
     public void logWallBlockWithPost(MultiPartBlockStateBuilder builder, ModelFile postBig, ModelFile side, ModelFile sideAlt, ModelFile sideTall, ModelFile sideTallAlt) {
         builder
-                // Big post for connections, typically including angled
                 .part().modelFile(postBig).addModel()
                 .condition(WallBlock.UP, true).end();
         WALL_PROPS.entrySet().stream()

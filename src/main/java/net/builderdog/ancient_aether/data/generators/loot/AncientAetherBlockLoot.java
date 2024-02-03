@@ -20,8 +20,8 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Set;
 
-public class AncientAetherBlockLootTableData extends AetherBlockLootSubProvider {
-    public AncientAetherBlockLootTableData() {
+public class AncientAetherBlockLoot extends AetherBlockLootSubProvider {
+    public AncientAetherBlockLoot() {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags());
     }
 
