@@ -3,19 +3,7 @@
   "placement": [
     {
       "type": "minecraft:count",
-      "count": {
-        "type": "minecraft:weighted_list",
-        "distribution": [
-          {
-            "data": 20,
-            "weight": 9
-          },
-          {
-            "data": 21,
-            "weight": 1
-          }
-        ]
-      }
+      "count": 16
     },
     {
       "type": "minecraft:height_range",
