@@ -5,7 +5,6 @@ import com.aetherteam.aether.data.resources.builders.AetherPlacedFeatureBuilders
 import com.aetherteam.aether.data.resources.registries.AetherConfiguredFeatures;
 import com.aetherteam.aether.world.placementmodifier.ConfigFilter;
 import com.aetherteam.aether.world.placementmodifier.ImprovedLayerPlacementModifier;
-import net.builderdog.ancient_aether.data.resources.registries.features.AncientAetherTreeFeatures;
 import net.builderdog.ancient_aether.data.resources.registries.features.AncientAetherVegetationFeatures;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
@@ -45,7 +44,6 @@ public class AncientAetherVegetationPlacements {
     public static final ResourceKey<PlacedFeature> SAKURA_JUNGLE_TREES = AncientAetherPlacementUtils.createKey("sakura_jungle_trees");
     public static final ResourceKey<PlacedFeature> ELEVATED_CLEARING_TREES = AncientAetherPlacementUtils.createKey("elevated_clearing_trees");
     public static final ResourceKey<PlacedFeature> ELEVATED_FOREST_TREES = AncientAetherPlacementUtils.createKey("elevated_forest_trees");
-    public static final ResourceKey<PlacedFeature> SAKURA_JUNGLE_BUSH = AncientAetherPlacementUtils.createKey("sakura_jungle_bush");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -148,10 +146,6 @@ public class AncientAetherVegetationPlacements {
         );
         AncientAetherPlacementUtils.register(context, ELEVATED_FOREST_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_ELEVATED_ISLANDS),
                 AetherPlacedFeatureBuilders.treePlacement(PlacementUtils.countExtra(12, 0.1F, 1))
-        );
-
-        AncientAetherPlacementUtils.register(context, SAKURA_JUNGLE_BUSH, configuredFeatures.getOrThrow(AncientAetherTreeFeatures.SAKURA_JUNGLE_BUSH),
-                AetherPlacedFeatureBuilders.treePlacement(PlacementUtils.countExtra(4, 0.1F, 1))
         );
     }
 }

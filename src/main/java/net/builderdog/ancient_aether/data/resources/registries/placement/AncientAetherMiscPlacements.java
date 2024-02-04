@@ -1,6 +1,5 @@
 package net.builderdog.ancient_aether.data.resources.registries.placement;
 
-import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.data.resources.builders.AetherPlacedFeatureBuilders;
 import com.aetherteam.aether.data.resources.registries.AetherConfiguredFeatures;
 import net.builderdog.ancient_aether.AncientAetherTags;
@@ -26,7 +25,6 @@ public class AncientAetherMiscPlacements {
     public static final ResourceKey<PlacedFeature> QUICKSOIL_COAST = AncientAetherPlacementUtils.createKey("quicksoil_coast");
     public static final ResourceKey<PlacedFeature> GRAVITY_GRAVEL_COAST = AncientAetherPlacementUtils.createKey("gravity_gravel_coast");
     public static final ResourceKey<PlacedFeature> WYND_ICE_COAST = AncientAetherPlacementUtils.createKey("wynd_ice_coast");
-    public static final ResourceKey<PlacedFeature> ICESTONE_FOREST_ROCK = AncientAetherPlacementUtils.createKey("icestone_forest_rock");
     public static final ResourceKey<PlacedFeature> SKYROOT_LEAF_VINES = AncientAetherPlacementUtils.createKey("skyroot_leaf_vines");
     public static final ResourceKey<PlacedFeature> SHORT_SKYROOT_LEAF_VINES = AncientAetherPlacementUtils.createKey("short_skyroot_leaf_vines");
     public static final ResourceKey<PlacedFeature> VIOLET_AERCLOUD = AncientAetherPlacementUtils.createKey("violet_aercloud");
@@ -52,14 +50,6 @@ public class AncientAetherMiscPlacements {
                 CountPlacement.of(16),
                 HeightRangePlacement.uniform(VerticalAnchor.absolute(110), VerticalAnchor.absolute(115)),
                 InSquarePlacement.spread(),
-                BiomeFilter.biome()
-        );
-
-        AncientAetherPlacementUtils.register(context, ICESTONE_FOREST_ROCK, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.ICESTONE_FOREST_ROCK),
-                RarityFilter.onAverageOnceEvery(3),
-                InSquarePlacement.spread(),
-                PlacementUtils.HEIGHTMAP,
-                BlockPredicateFilter.forPredicate(BlockPredicate.matchesBlocks(Direction.DOWN.getNormal(), AetherBlocks.AETHER_GRASS_BLOCK.get())),
                 BiomeFilter.biome()
         );
 
