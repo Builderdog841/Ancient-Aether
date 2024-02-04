@@ -1,5 +1,5 @@
 {
-  "feature": "ancient_aether:short_skyroot_leaf_vine",
+  "feature": "ancient_aether:skyroot_leaf_vine",
   "placement": [
     {
       "type": "minecraft:count",
@@ -29,9 +29,17 @@
       "direction_of_search": "up",
       "max_steps": 12,
       "target_condition": {
-        "type": "minecraft:matching_blocks",
-        "blocks": "#ancient_aether:leaf_vine_can_spawn_on",
-        "direction": "down"
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:has_sturdy_face",
+            "direction": "down"
+          },
+          {
+            "type": "minecraft:matching_block_tag",
+            "tag": "ancient_aether:leaf_vine_can_spawn_on"
+          }
+        ]
       }
     },
     {
