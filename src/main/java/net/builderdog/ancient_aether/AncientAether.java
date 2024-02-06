@@ -67,7 +67,7 @@ public class AncientAether {
                 AncientAetherSoundEvents.SOUNDS,
                 AncientAetherBiomeModifierSerializers.BIOME_MODIFIER_SERIALIZERS,
                 AncientAetherFeatures.FEATURES
-                };
+        };
 
         MinecraftForge.EVENT_BUS.register(this);
 

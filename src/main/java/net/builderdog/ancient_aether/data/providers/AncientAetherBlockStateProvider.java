@@ -21,11 +21,11 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
     }
 
     public void translucentDoorBlock(DoorBlock block, ResourceLocation bottom, ResourceLocation top) {
-        this.doorBlockWithRenderType(block, bottom, top, "translucent");
+        doorBlockWithRenderType(block, bottom, top, "translucent");
     }
 
     public void translucentTrapdoorBlock(TrapDoorBlock block, ResourceLocation texture, boolean orientable) {
-        this.trapdoorBlockWithRenderType(block, texture, orientable, "translucent");
+        trapdoorBlockWithRenderType(block, texture, orientable, "translucent");
     }
 
     protected BlockModelBuilder makeWallPostModel(int width, int height, String name) {
@@ -70,8 +70,8 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
                 models().getBuilder(baseName + "_side_tall_alt").parent(sideTallAlt).texture("particle", texture).texture("top", texture).texture("side", texture)
         );
 
-        this.logWallBlockWithPost(
-                this.getMultipartBuilder(block),
+        logWallBlockWithPost(
+                getMultipartBuilder(block),
                 models().getBuilder(baseName + "_post").parent(postBig).texture("particle", texture).texture("top", postUsesTop ? (texture + "_top") : texture.toString()).texture("side", texture),
                 models().getBuilder(baseName + "_side_short").parent(sideShort).texture("particle", texture).texture("top", texture).texture("side", texture),
                 models().getBuilder(baseName + "_side_alt_short").parent(sideAltShort).texture("particle", texture).texture("top", texture).texture("side", texture),
