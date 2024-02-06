@@ -3,6 +3,18 @@
     "aether:skyroot_meadow",
     "aether:skyroot_grove",
     "ancient_aether:golden_skyroot_grove",
-    "ancient_aether:crystal_skyroot_grove"
+    "ancient_aether:crystal_skyroot_grove",
+    {
+      "id": "deep_aether:aerlavender_fields",
+      "required": false
+    },
+    {
+      "id": "deep_aether:golden_heights",
+      "required": false
+    },
+    {
+      "id": "aether_redux:gilded_grasslands",
+      "required": false
+    }
   ]
 }

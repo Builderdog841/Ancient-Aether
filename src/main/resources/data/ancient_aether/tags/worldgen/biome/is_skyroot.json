@@ -1,6 +1,6 @@
 {
   "values": [
-    "#ancient_aether:is_skyroot_without_jungle",
-    "ancient_aether:skyroot_jungle"
+    "#ancient_aether:is_skyroot_forest",
+    "#ancient_aether:is_barren_skyroot_biome"
   ]
 }

@@ -1,6 +1,18 @@
 {
   "values": [
     "ancient_aether:elevated_forest",
-    "ancient_aether:elevated_clearing"
+    "ancient_aether:elevated_clearing",
+    {
+      "id": "deep_aether:blue_aerglow_forest",
+      "required": false
+    },
+    {
+      "id": "deep_aether:mystic_aerglow_forest",
+      "required": false
+    },
+    {
+      "id": "deep_aether:aerglow_forest",
+      "required": false
+    }
   ]
 }

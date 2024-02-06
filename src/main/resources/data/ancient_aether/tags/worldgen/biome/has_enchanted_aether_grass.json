@@ -1,7 +1,11 @@
 {
   "values": [
     {
-      "id": "aether_redux:gilded_grove",
+      "id": "aether_redux:gilded_groves",
+      "required": false
+    },
+    {
+      "id": "aether_redux:gilded_grasslands",
       "required": false
     }
   ]
