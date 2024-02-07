@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.entity.animals;
+package net.builderdog.ancient_aether.entity.passive;
 
 import com.aetherteam.aether.entity.ai.goal.FallingRandomStrollGoal;
 import com.aetherteam.aether.entity.passive.AetherAnimal;
@@ -29,9 +29,9 @@ import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
 
-public class HighlandBuffalo extends WyndcapsAnimal {
+public class Fluffalo extends WyndcapsAnimal {
 
-    public HighlandBuffalo(EntityType<? extends AetherAnimal> entityType, Level level) {
+    public Fluffalo(EntityType<? extends AetherAnimal> entityType, Level level) {
         super(entityType, level);
     }
 
@@ -70,18 +70,18 @@ public class HighlandBuffalo extends WyndcapsAnimal {
     @Nullable
     @Override
     protected SoundEvent getAmbientSound() {
-        return AncientAetherSoundEvents.HIGHLAND_BUFFALO_AMBIENT.get();
+        return AncientAetherSoundEvents.FLUFFALO_AMBIENT.get();
     }
 
     @Nullable
     @Override
-    protected SoundEvent getHurtSound(@Nonnull DamageSource damageSource) { return AncientAetherSoundEvents.HIGHLAND_BUFFALO_HURT.get();}
+    protected SoundEvent getHurtSound(@Nonnull DamageSource damageSource) { return AncientAetherSoundEvents.FLUFFALO_HURT.get();}
 
     @Nonnull
     public InteractionResult mobInteract(Player playerEntity, @Nonnull InteractionHand hand) {
         ItemStack itemStack = playerEntity.getItemInHand(hand);
         if (itemStack.is(Items.BUCKET) && !isBaby()) {
-            playerEntity.playSound( AncientAetherSoundEvents.ENTITY_HIGHLAND_BUFFALO_MILK.get(), 1.0F, 1.0F);
+            playerEntity.playSound( AncientAetherSoundEvents.FLUFFALO_MILK.get(), 1.0F, 1.0F);
             ItemStack itemStack1 = ItemUtils.createFilledResult(itemStack, playerEntity, Items.MILK_BUCKET.getDefaultInstance());
             playerEntity.setItemInHand(hand, itemStack1);
             return InteractionResult.sidedSuccess(level().isClientSide);
@@ -93,7 +93,7 @@ public class HighlandBuffalo extends WyndcapsAnimal {
     @Nullable
     @Override
     protected SoundEvent getDeathSound() {
-        return AncientAetherSoundEvents.HIGHLAND_BUFFALO_DEATH.get();
+        return AncientAetherSoundEvents.FLUFFALO_DEATH.get();
     }
 
     @Override
@@ -104,6 +104,6 @@ public class HighlandBuffalo extends WyndcapsAnimal {
     @Nullable
     @Override
     public AgeableMob getBreedOffspring(@NotNull ServerLevel level, @NotNull AgeableMob ageableMob) {
-        return AncientAetherEntities.HIGHLAND_BUFFALO.get().create(level);
+        return AncientAetherEntities.FLUFFALO.get().create(level);
     }
 }

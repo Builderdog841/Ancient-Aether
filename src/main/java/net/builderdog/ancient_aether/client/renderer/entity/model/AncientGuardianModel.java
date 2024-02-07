@@ -2,7 +2,7 @@ package net.builderdog.ancient_aether.client.renderer.entity.model;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import net.builderdog.ancient_aether.entity.monster.dungeon.AncientGuardian;
+import net.builderdog.ancient_aether.entity.monster.dungeon.boss.AncientGuardian;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;

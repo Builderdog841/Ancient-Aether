@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.entity.monster.dungeon;
+package net.builderdog.ancient_aether.entity.monster.dungeon.boss;
 
 import com.aetherteam.aether.Aether;
 import com.aetherteam.aether.entity.AetherBossMob;

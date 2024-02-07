@@ -2,7 +2,7 @@ package net.builderdog.ancient_aether.client.renderer.entity.model;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import net.builderdog.ancient_aether.entity.animals.HighlandBuffalo;
+import net.builderdog.ancient_aether.entity.passive.Fluffalo;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
@@ -13,7 +13,7 @@ import net.minecraft.util.Mth;
 
 import javax.annotation.Nonnull;
 
-public class HighlandBuffaloModel<T extends HighlandBuffalo> extends EntityModel<T> {
+public class FluffaloModel<T extends Fluffalo> extends EntityModel<T> {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("ancient_aether", "highland_buffalo"), "main");
 
     private final ModelPart leftFrontLeg;
@@ -23,7 +23,7 @@ public class HighlandBuffaloModel<T extends HighlandBuffalo> extends EntityModel
     private final ModelPart head;
     private final ModelPart buffalo;
 
-    public HighlandBuffaloModel(ModelPart root) {
+    public FluffaloModel(ModelPart root) {
         buffalo = root.getChild("buffalo");
         head = buffalo.getChild("head");
         leftFrontLeg = buffalo.getChild("left_front_leg");
@@ -68,7 +68,7 @@ public class HighlandBuffaloModel<T extends HighlandBuffalo> extends EntityModel
     }
 
     @Override
-    public void setupAnim(@Nonnull HighlandBuffalo buffalo, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+    public void setupAnim(@Nonnull Fluffalo buffalo, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         rightHindLeg.xRot = Mth.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
         leftHindLeg.xRot = Mth.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
         rightFrontLeg.xRot = Mth.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;

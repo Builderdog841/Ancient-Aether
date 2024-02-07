@@ -1,10 +1,11 @@
-package net.builderdog.ancient_aether.entity.moa;
+package net.builderdog.ancient_aether.entity.passive.moa;
 
 import com.aetherteam.aether.api.AetherMoaTypes;
 import com.aetherteam.aether.api.registers.MoaType;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
-import net.minecraftforge.registries.*;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
 
 public class AncientAetherMoaTypes {
     public static final DeferredRegister<MoaType> MOA_TYPES = DeferredRegister.create(AetherMoaTypes.MOA_TYPE_REGISTRY_KEY, AncientAether.MOD_ID);

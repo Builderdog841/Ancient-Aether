@@ -145,7 +145,7 @@
 
   "item.ancient_aether.aeronautic_dart_shooter": "Aeronautic Dart Shooter",
   "item.ancient_aether.grapes": "Grapes",
-  "item.ancient_aether.highland_buffalo_spawn_egg": "Highland Buffalo Spawn Egg",
+  "item.ancient_aether.fluffalo_spawn_egg": "Fluffalo Spawn Egg",
   "item.ancient_aether.roothyrn_spawn_egg": "Roothyrn Spawn Egg",
   "item.ancient_aether.aeronautic_leaper_spawn_egg": "Aeronautic Leaper Spawn Egg",
   "item.ancient_aether.ancient_guardian_spawn_egg": "Ancient Guardian Spawn Egg",
@@ -191,7 +191,7 @@
   "item.ancient_aether.valkyrum_pendant": "Valkyrum Pendant",
   "item.ancient_aether.festive_gummy_swet": "Festive Gummy Swet",
 
-  "entity.ancient_aether.highland_buffalo": "Highland Buffalo",
+  "entity.ancient_aether.fluffalo": "Fluffalo",
   "entity.ancient_aether.aeronautic_leaper": "Aeronautic Leaper",
   "entity.ancient_aether.ancient_guardian": "Ancient Guardian",
   "entity.ancient_aether.roothyrn": "Roothyrn",
@@ -216,10 +216,10 @@
   "biome.ancient_aether.crystal_grotto": "Crystal Grotto",
 
   "subtitles.ancient_aether.block.obelisk.obelisk_activation": "Obelisk activated",
-  "subtitles.ancient_aether.entity.highland_buffalo.hurt": "Highland Buffalo hurts",
-  "subtitles.ancient_aether.entity.highland_buffalo.milk": "Highland Buffalo gets milked",
-  "subtitles.ancient_aether.entity.highland_buffalo.ambient": "Highland Buffalo moos",
-  "subtitles.ancient_aether.entity.highland_buffalo.death": "Highland Buffalo dies",
+  "subtitles.ancient_aether.entity.fluffalo.hurt": "Fluffalo hurts",
+  "subtitles.ancient_aether.entity.fluffalo.milk": "Fluffalo gets milked",
+  "subtitles.ancient_aether.entity.fluffalo.ambient": "Fluffalo moos",
+  "subtitles.ancient_aether.entity.fluffalo.death": "Fluffalo dies",
   "subtitles.ancient_aether.entity.roothyrn.hurt": "Roothyrn hurts",
   "subtitles.ancient_aether.entity.roothyrn.death": "Roothyrn dies",
   "subtitles.ancient_aether.block.roothyrn_trap.trigger": "Roothyrn emerges",

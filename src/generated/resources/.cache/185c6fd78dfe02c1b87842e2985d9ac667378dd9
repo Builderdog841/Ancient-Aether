@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-02T14:53:34.9121445	Item Models: ancient_aether
+// 1.20.1	2024-02-07T22:42:14.9014183	Item Models: ancient_aether
 532bdb7a4f7d2a6b96d474c01c8b9e7a0d1c10b4 assets/ancient_aether/models/item/aerogel_glass.json
 87e9f8f9f807a2aa763e3057d32bacf3ee32b60f assets/ancient_aether/models/item/aerogel_glass_door.json
 d1e6ed3e334d573f31a8ce9e09885c0f43832630 assets/ancient_aether/models/item/aerogel_glass_pane.json
@@ -33,6 +33,7 @@ d1c40b01fe5c62e33d048c638067476b3cab2bb6 assets/ancient_aether/models/item/crack
 3ed4423266c04d98cb709c5554860a7c438d000b assets/ancient_aether/models/item/enchanted_skyroot_sapling.json
 c07f677db47ad94c4781284f111fa87556aea4c9 assets/ancient_aether/models/item/festive_gummy_swet.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/festive_swet_spawn_egg.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/fluffalo_spawn_egg.json
 8955230a8e802eb86a46730865c7d223995f9054 assets/ancient_aether/models/item/frozen_holystone_vase.json
 847fb5b6aa35f5048e62d3bf76e55f05c6b41f80 assets/ancient_aether/models/item/gale_lantern.json
 76dcbb064b6afcca77cbab1d82750b6e6c30765c assets/ancient_aether/models/item/grapes.json
@@ -42,7 +43,6 @@ fbd830b4a955ffc654b7582bfed186176715ba49 assets/ancient_aether/models/item/hellf
 a19fd3410a3d3fa3edd421ddd80e5f9babfda7ff assets/ancient_aether/models/item/hellfire_vase.json
 44bbf91ea6b096e924ae894633545e868aec495e assets/ancient_aether/models/item/hermes_pendant.json
 e6b2cd5c6b6bd05e175521dbf0012be53e63fbe4 assets/ancient_aether/models/item/hermes_ring.json
-63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/highland_buffalo_spawn_egg.json
 686ec049e0fc08064a073c0ef953e17535bdf5af assets/ancient_aether/models/item/highland_viola.json
 cbf95b10f250b1c7368179866d5c5f431a2a6a80 assets/ancient_aether/models/item/highsproot_boat.json
 befbd64363614d0071c8ef07a1c295928d483119 assets/ancient_aether/models/item/highsproot_bookshelf.json

@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.entity.animals;
+package net.builderdog.ancient_aether.entity.passive;
 
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.entity.passive.AetherAnimal;

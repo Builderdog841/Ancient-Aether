@@ -11,10 +11,10 @@ public class AncientAetherSoundEvents {
     public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, AncientAether.MOD_ID);
 
     public static final RegistryObject<SoundEvent> OBELISK_ACTIVATION = register("block.obelisk.obelisk_activation");
-    public static final RegistryObject<SoundEvent> HIGHLAND_BUFFALO_AMBIENT = register("entity.highland_buffalo.ambient");
-    public static final RegistryObject<SoundEvent> HIGHLAND_BUFFALO_HURT = register("entity.highland_buffalo.hurt");
-    public static final RegistryObject<SoundEvent> HIGHLAND_BUFFALO_DEATH = register("entity.highland_buffalo.death");
-    public static final RegistryObject<SoundEvent> ENTITY_HIGHLAND_BUFFALO_MILK = register("entity.highland_buffalo.milk");
+    public static final RegistryObject<SoundEvent> FLUFFALO_AMBIENT = register("entity.fluffalo.ambient");
+    public static final RegistryObject<SoundEvent> FLUFFALO_HURT = register("entity.fluffalo.hurt");
+    public static final RegistryObject<SoundEvent> FLUFFALO_DEATH = register("entity.fluffalo.death");
+    public static final RegistryObject<SoundEvent> FLUFFALO_MILK = register("entity.fluffalo.milk");
     public static final RegistryObject<SoundEvent> ROOTHYRN_HURT = register("entity.roothyrn.hurt");
     public static final RegistryObject<SoundEvent> ROOTHYRN_DEATH = register("entity.roothyrn.death");
     public static final RegistryObject<SoundEvent> ROOTHYRN_EMERGES = register("block.roothyrn_trap.trigger");

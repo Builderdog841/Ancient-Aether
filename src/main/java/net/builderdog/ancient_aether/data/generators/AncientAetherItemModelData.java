@@ -59,7 +59,7 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         untintedMoaEggItem(AncientAetherItems.BURGUNDY_MOA_EGG.get());
 
         //Spawn Eggs
-        eggItem(AncientAetherItems.HIGHLAND_BUFFALO_SPAWN_EGG.get());
+        eggItem(AncientAetherItems.FLUFFALO_SPAWN_EGG.get());
         eggItem(AncientAetherItems.ROOTHYRN_SPAWN_EGG.get());
         eggItem(AncientAetherItems.AERONAUTIC_LEAPER_SPAWN_EGG.get());
         eggItem(AncientAetherItems.ANCIENT_GUARDIAN_SPAWN_EGG.get());

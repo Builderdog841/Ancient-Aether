@@ -2,7 +2,7 @@ package net.builderdog.ancient_aether.client.renderer.entity.layers;
 
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.client.renderer.entity.model.AncientGuardianModel;
-import net.builderdog.ancient_aether.entity.monster.dungeon.AncientGuardian;
+import net.builderdog.ancient_aether.entity.monster.dungeon.boss.AncientGuardian;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.RenderLayerParent;
 import net.minecraft.client.renderer.entity.layers.EyesLayer;
