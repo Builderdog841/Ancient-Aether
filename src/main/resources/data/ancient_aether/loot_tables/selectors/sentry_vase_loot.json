@@ -12,22 +12,12 @@
         {
           "type": "minecraft:item",
           "name": "aether:golden_dart",
-          "weight": 20
+          "weight": 15
         },
         {
           "type": "minecraft:item",
           "name": "aether:enchanted_berry",
           "weight": 13
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:healing_stone",
-          "weight": 10
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:white_apple",
-          "weight": 10
         },
         {
           "type": "minecraft:item",
@@ -37,7 +27,12 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:arrow",
-          "weight": 20
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:healing_stone",
+          "weight": 8
         },
         {
           "type": "minecraft:item",
@@ -55,11 +50,6 @@
           "weight": 5
         },
         {
-          "type": "minecraft:loot_table",
-          "name": "ancient_aether:selectors/bronze_dungeon_accessories",
-          "weight": 5
-        },
-        {
           "type": "minecraft:item",
           "name": "aether:ambrosium_block",
           "weight": 3
@@ -67,6 +57,11 @@
         {
           "type": "minecraft:item",
           "name": "aether:blue_gummy_swet",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "ancient_aether:selectors/bronze_dungeon_accessories",
           "weight": 2
         },
         {

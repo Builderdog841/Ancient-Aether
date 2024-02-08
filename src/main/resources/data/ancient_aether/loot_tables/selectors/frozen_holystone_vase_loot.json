@@ -11,52 +11,77 @@
         },
         {
           "type": "minecraft:item",
-          "name": "aether:healing_stone",
-          "weight": 17
+          "name": "aether:poison_dart",
+          "weight": 20
         },
         {
           "type": "minecraft:item",
-          "name": "aether:zanite_gemstone",
-          "weight": 15
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:golden_amber",
+          "name": "aether:white_apple",
           "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:aechor_petal",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:healing_stone",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:gingerbread_man",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:candy_cane",
+          "weight": 6
         },
         {
           "type": "minecraft:item",
           "name": "aether:icestone",
-          "weight": 10
+          "weight": 5
         },
         {
           "type": "minecraft:item",
-          "name": "aether:cold_parachute",
-          "weight": 10
+          "name": "aether:zanite_gemstone",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:poison_dart_shooter",
+          "weight": 3
         },
         {
           "type": "minecraft:loot_table",
           "name": "ancient_aether:selectors/rings",
-          "weight": 6
-        },
-        {
-          "type": "minecraft:loot_table",
-          "name": "ancient_aether:selectors/ancient_rune_and_mechanical_armor_trim",
-          "weight": 5
-        },
-        {
-          "type": "minecraft:loot_table",
-          "name": "ancient_aether:selectors/pendants",
-          "weight": 4
+          "weight": 2
         },
         {
           "type": "minecraft:item",
           "name": "aether:ambrosium_block",
-          "weight": 3
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:festive_gummy_swet",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "ancient_aether:selectors/pendants",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "ancient_aether:selectors/ancient_rune_and_armor_trims",
+          "weight": 1
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "ancient_aether:selectors/frosted_holystone_vase_loot"
+  "random_sequence": "ancient_aether:selectors/frozen_holystone_vase_loot"
 }
