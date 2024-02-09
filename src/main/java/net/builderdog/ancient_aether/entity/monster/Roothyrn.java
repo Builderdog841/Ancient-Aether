@@ -38,19 +38,19 @@ public class Roothyrn extends Monster {
     @Override
     protected void registerGoals() {
         super.registerGoals();
-        this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
+        goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
             @Override
             protected double getAttackReachSqr(@NotNull LivingEntity entity) {
-                return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
+                return mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
             }
         });
-        this.goalSelector.addGoal(1, new FloatGoal(this));
-        this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2D, false));
-        this.goalSelector.addGoal(3, new FallingRandomStrollGoal(this, 1.0));
-        this.goalSelector.addGoal(4, new LookAtPlayerGoal(this, Player.class, 6.0F));
-        this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
+        goalSelector.addGoal(1, new FloatGoal(this));
+        goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2D, false));
+        goalSelector.addGoal(3, new FallingRandomStrollGoal(this, 1.0));
+        goalSelector.addGoal(4, new LookAtPlayerGoal(this, Player.class, 6.0F));
+        goalSelector.addGoal(5, new RandomLookAroundGoal(this));
 
-        this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
+        targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
     }
     @Nullable
     @Override

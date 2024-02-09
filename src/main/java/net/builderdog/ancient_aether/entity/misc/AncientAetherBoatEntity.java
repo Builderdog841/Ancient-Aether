@@ -2,7 +2,7 @@ package net.builderdog.ancient_aether.entity.misc;
 
 import com.aetherteam.aether.entity.miscellaneous.SkyrootBoatBehavior;
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.entity.AncientAetherEntities;
+import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.Packet;
@@ -25,47 +25,47 @@ public class AncientAetherBoatEntity extends Boat implements SkyrootBoatBehavior
 
     public AncientAetherBoatEntity(EntityType<? extends Boat> type, Level level) {
         super(type, level);
-        this.blocksBuilding = true;
+        blocksBuilding = true;
     }
 
     public AncientAetherBoatEntity(Level level, double x, double y, double z) {
-        this(AncientAetherEntities.BOAT.get(), level);
-        this.setPos(x, y, z);
-        this.xo = x;
-        this.yo = y;
-        this.zo = z;
+        this(AncientAetherEntityTypes.BOAT.get(), level);
+        setPos(x, y, z);
+        xo = x;
+        yo = y;
+        zo = z;
     }
 
     @Override
     protected void defineSynchedData() {
         super.defineSynchedData();
-        this.entityData.define(WOOD_TYPE, 0);
+        entityData.define(WOOD_TYPE, 0);
     }
 
     @Override
     protected void readAdditionalSaveData(CompoundTag pCompound) {
         if (pCompound.contains("Type", 8)) {
-            this.setWoodType(Type.byName(pCompound.getString("Type")));
+            setWoodType(Type.byName(pCompound.getString("Type")));
         }
     }
 
     @Override
     protected void addAdditionalSaveData(@NotNull CompoundTag pCompound) {
         super.addAdditionalSaveData(pCompound);
-        pCompound.putString("Type", this.getWoodType().getName());
+        pCompound.putString("Type", getWoodType().getName());
     }
 
     public Type getWoodType() {
-        return Type.byId(this.entityData.get(WOOD_TYPE));
+        return Type.byId(entityData.get(WOOD_TYPE));
     }
 
     public void setWoodType(Type type) {
-        this.entityData.set(WOOD_TYPE, type.ordinal());
+        entityData.set(WOOD_TYPE, type.ordinal());
     }
 
     @Override
     public @NotNull Item getDropItem() {
-        return this.getWoodType().getItem().get();
+        return getWoodType().getItem().get();
     }
 
     @Override
@@ -103,7 +103,7 @@ public class AncientAetherBoatEntity extends Boat implements SkyrootBoatBehavior
         }
 
         public String getName() {
-            return this.name;
+            return name;
         }
 
         public Supplier<Item> getItem() {

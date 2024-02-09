@@ -9,7 +9,7 @@ import com.aetherteam.aether.item.miscellaneous.DungeonKeyItem;
 import com.aetherteam.aether.item.miscellaneous.MoaEggItem;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
-import net.builderdog.ancient_aether.entity.AncientAetherEntities;
+import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.passive.moa.AncientAetherMoaTypes;
 import net.builderdog.ancient_aether.item.equipment.AncientAetherArmorTiers;
@@ -107,11 +107,11 @@ public class AncientAetherItems {
     public static final RegistryObject<Item> VIOLET_MOA_EGG = ITEMS.register("violet_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.VIOLET, 0x6C5A7F, new Item.Properties()));
 
     //Spawn Eggs
-    public static final RegistryObject<SpawnEggItem> FESTIVE_SWET_SPAWN_EGG = ITEMS.register("festive_swet_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntities.FESTIVE_SWET, 0x29405B, 0xFF6363, new Item.Properties()));
-    public static final RegistryObject<SpawnEggItem> FLUFFALO_SPAWN_EGG = ITEMS.register("fluffalo_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntities.FLUFFALO, 0x697B9E, 0xC0CAF7, new Item.Properties()));
-    public static final RegistryObject<SpawnEggItem> ROOTHYRN_SPAWN_EGG = ITEMS.register("roothyrn_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntities.ROOTHYRN, 0x737558, 0x6FA871, new Item.Properties()));
-    public static final RegistryObject<SpawnEggItem> AERONAUTIC_LEAPER_SPAWN_EGG = ITEMS.register("aeronautic_leaper_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntities.AERONAUTIC_LEAPER, 0x35343D, 0xB7B2FF, new Item.Properties()));
-    public static final RegistryObject<SpawnEggItem> ANCIENT_GUARDIAN_SPAWN_EGG = ITEMS.register("ancient_guardian_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntities.ANCIENT_GUARDIAN, 0xB7B2FF, 0x35343D, new Item.Properties()));
+    public static final RegistryObject<SpawnEggItem> FESTIVE_SWET_SPAWN_EGG = ITEMS.register("festive_swet_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntityTypes.FESTIVE_SWET, 0x29405B, 0xFF6363, new Item.Properties()));
+    public static final RegistryObject<SpawnEggItem> FLUFFALO_SPAWN_EGG = ITEMS.register("fluffalo_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntityTypes.FLUFFALO, 0x697B9E, 0xC0CAF7, new Item.Properties()));
+    public static final RegistryObject<SpawnEggItem> ROOTHYRN_SPAWN_EGG = ITEMS.register("roothyrn_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntityTypes.ROOTHYRN, 0x737558, 0x6FA871, new Item.Properties()));
+    public static final RegistryObject<SpawnEggItem> AERONAUTIC_LEAPER_SPAWN_EGG = ITEMS.register("aeronautic_leaper_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntityTypes.AERONAUTIC_LEAPER, 0x35343D, 0xB7B2FF, new Item.Properties()));
+    public static final RegistryObject<SpawnEggItem> ANCIENT_GUARDIAN_SPAWN_EGG = ITEMS.register("ancient_guardian_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntityTypes.ANCIENT_GUARDIAN, 0xB7B2FF, 0x35343D, new Item.Properties()));
 
     //Armor Trims
     public static final RegistryObject<Item> WYND_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("wynd_armor_trim_smithing_template", () -> SmithingTemplateItem.createArmorTrimTemplate(AncientAetherTrimPatterns.WYND));

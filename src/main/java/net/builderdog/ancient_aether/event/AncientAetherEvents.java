@@ -2,7 +2,7 @@ package net.builderdog.ancient_aether.event;
 
 import com.aetherteam.aether.entity.monster.Swet;
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.entity.AncientAetherEntities;
+import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.builderdog.ancient_aether.entity.monster.Roothyrn;
 import net.builderdog.ancient_aether.entity.monster.dungeon.AeronauticLeaper;
 import net.builderdog.ancient_aether.entity.monster.dungeon.boss.AncientGuardian;
@@ -20,16 +20,16 @@ public class AncientAetherEvents {
 
     @SubscribeEvent
     public static void registerEntityAttributes(EntityAttributeCreationEvent event) {
-        event.put(AncientAetherEntities.FLUFFALO.get(), Fluffalo.createMobAttributes().build());
-        event.put(AncientAetherEntities.ROOTHYRN.get(), Roothyrn.createMobAttributes().build());
-        event.put(AncientAetherEntities.AERONAUTIC_LEAPER.get(), AeronauticLeaper.createMobAttributes().build());
-        event.put(AncientAetherEntities.ANCIENT_GUARDIAN.get(), AncientGuardian.createMobAttributes().build());
-        event.put(AncientAetherEntities.FESTIVE_SWET.get(), Swet.createMobAttributes().build());
+        event.put(AncientAetherEntityTypes.FLUFFALO.get(), Fluffalo.createMobAttributes().build());
+        event.put(AncientAetherEntityTypes.ROOTHYRN.get(), Roothyrn.createMobAttributes().build());
+        event.put(AncientAetherEntityTypes.AERONAUTIC_LEAPER.get(), AeronauticLeaper.createMobAttributes().build());
+        event.put(AncientAetherEntityTypes.ANCIENT_GUARDIAN.get(), AncientGuardian.createMobAttributes().build());
+        event.put(AncientAetherEntityTypes.FESTIVE_SWET.get(), Swet.createMobAttributes().build());
     }
 
     @SubscribeEvent
     public static void registerSpawnPlacements(SpawnPlacementRegisterEvent event) {
-        event.register(AncientAetherEntities.FLUFFALO.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, WyndcapsAnimal::checkWyndcapsAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.OR);
-        event.register(AncientAetherEntities.FESTIVE_SWET.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Swet::checkSwetSpawnRules, SpawnPlacementRegisterEvent.Operation.OR);
+        event.register(AncientAetherEntityTypes.FLUFFALO.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, WyndcapsAnimal::checkWyndcapsAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.OR);
+        event.register(AncientAetherEntityTypes.FESTIVE_SWET.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Swet::checkSwetSpawnRules, SpawnPlacementRegisterEvent.Operation.OR);
     }
 }

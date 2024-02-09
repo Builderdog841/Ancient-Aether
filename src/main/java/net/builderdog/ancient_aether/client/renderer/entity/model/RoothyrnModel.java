@@ -10,19 +10,18 @@ import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nonnull;
 
 public class RoothyrnModel<T extends Roothyrn> extends EntityModel<T> {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("ancient_aether", "roothyrn"), "main");
     private final ModelPart body;
-    private final ModelPart legs;
     private final ModelPart leftLeg;
     private final ModelPart rightLeg;
 
     public RoothyrnModel(ModelPart root) {
         body = root.getChild("body");
-        legs = body.getChild("legs");
         leftLeg = body.getChild("left_leg");
         rightLeg = body.getChild("right_leg");
     }
@@ -47,7 +46,7 @@ public class RoothyrnModel<T extends Roothyrn> extends EntityModel<T> {
     }
 
     @Override
-    public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
+    public void renderToBuffer(@NotNull PoseStack poseStack, @NotNull VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
         body.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
     }
 }

@@ -1,6 +1,6 @@
 package net.builderdog.ancient_aether.entity.misc;
 
-import net.builderdog.ancient_aether.entity.AncientAetherEntities;
+import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
@@ -38,11 +38,11 @@ public class AncientAetherChestBoatEntity extends AncientAetherBoatEntity implem
     }
 
     public AncientAetherChestBoatEntity(Level level, double x, double y, double z) {
-        this(AncientAetherEntities.CHEST_BOAT.get(), level);
-        this.setPos(x, y, z);
-        this.xo = x;
-        this.yo = y;
-        this.zo = z;
+        this(AncientAetherEntityTypes.CHEST_BOAT.get(), level);
+        setPos(x, y, z);
+        xo = x;
+        yo = y;
+        zo = z;
     }
 
     @Override
@@ -58,33 +58,32 @@ public class AncientAetherChestBoatEntity extends AncientAetherBoatEntity implem
     @Override
     protected void addAdditionalSaveData(@NotNull CompoundTag pCompound) {
         super.addAdditionalSaveData(pCompound);
-        this.addChestVehicleSaveData(pCompound);
+        addChestVehicleSaveData(pCompound);
     }
 
     @Override
     protected void readAdditionalSaveData(CompoundTag pCompound) {
         super.readAdditionalSaveData(pCompound);
-        this.readChestVehicleSaveData(pCompound);
+        readChestVehicleSaveData(pCompound);
     }
 
     @Override
-    public void destroy(DamageSource source) {
+    public void destroy(@NotNull DamageSource source) {
         super.destroy(source);
-        this.chestVehicleDestroyed(source, level(), this);
+        chestVehicleDestroyed(source, level(), this);
     }
 
     @Override
-    public void remove(RemovalReason pReason) {
+    public void remove(@NotNull RemovalReason pReason) {
         if (!level().isClientSide && pReason.shouldDestroy()) {
             Containers.dropContents(level(), this, this);
         }
-
         super.remove(pReason);
     }
 
     @Override
-    public InteractionResult interact(Player pPlayer, InteractionHand pHand) {
-        return this.canAddPassenger(pPlayer) && !pPlayer.isSecondaryUseActive() ? super.interact(pPlayer, pHand) : this.interactWithContainerVehicle(pPlayer);
+    public @NotNull InteractionResult interact(@NotNull Player pPlayer, @NotNull InteractionHand pHand) {
+        return canAddPassenger(pPlayer) && !pPlayer.isSecondaryUseActive() ? super.interact(pPlayer, pHand) : this.interactWithContainerVehicle(pPlayer);
     }
 
     @Override
@@ -99,12 +98,12 @@ public class AncientAetherChestBoatEntity extends AncientAetherBoatEntity implem
 
     @Override
     public @NotNull Item getDropItem() {
-        return this.getWoodType().getChestItem().get();
+        return getWoodType().getChestItem().get();
     }
 
     @Override
     public void clearContent() {
-        this.clearChestVehicleContent();
+        clearChestVehicleContent();
     }
 
     @Override
@@ -113,28 +112,28 @@ public class AncientAetherChestBoatEntity extends AncientAetherBoatEntity implem
     }
 
     @Override
-    public ItemStack getItem(int pIndex) {
-        return this.getChestVehicleItem(pIndex);
+    public @NotNull ItemStack getItem(int pIndex) {
+        return getChestVehicleItem(pIndex);
     }
 
     @Override
-    public ItemStack removeItem(int pIndex, int pCount) {
-        return this.removeChestVehicleItem(pIndex, pCount);
+    public @NotNull ItemStack removeItem(int pIndex, int pCount) {
+        return removeChestVehicleItem(pIndex, pCount);
     }
 
     @Override
-    public ItemStack removeItemNoUpdate(int pIndex) {
-        return this.removeChestVehicleItemNoUpdate(pIndex);
+    public @NotNull ItemStack removeItemNoUpdate(int pIndex) {
+        return removeChestVehicleItemNoUpdate(pIndex);
     }
 
     @Override
-    public void setItem(int pIndex, ItemStack pStack) {
-        this.setChestVehicleItem(pIndex, pStack);
+    public void setItem(int pIndex, @NotNull ItemStack pStack) {
+        setChestVehicleItem(pIndex, pStack);
     }
 
     @Override
-    public SlotAccess getSlot(int pSlot) {
-        return this.getChestVehicleSlot(pSlot);
+    public @NotNull SlotAccess getSlot(int pSlot) {
+        return getChestVehicleSlot(pSlot);
     }
 
     @Override
@@ -143,50 +142,50 @@ public class AncientAetherChestBoatEntity extends AncientAetherBoatEntity implem
 
     @Override
     public boolean stillValid(@NotNull Player pPlayer) {
-        return this.isChestVehicleStillValid(pPlayer);
+        return isChestVehicleStillValid(pPlayer);
     }
 
     @Nullable
     public AbstractContainerMenu createMenu(int pContainerId, @NotNull Inventory pInventory, @NotNull Player pPlayer) {
-        if (this.lootTable != null && pPlayer.isSpectator()) {
+        if (lootTable != null && pPlayer.isSpectator()) {
             return null;
         } else {
-            this.unpackLootTable(pInventory.player);
+            unpackLootTable(pInventory.player);
             return ChestMenu.threeRows(pContainerId, pInventory, this);
         }
     }
 
     public void unpackLootTable(@Nullable Player player) {
-        this.unpackChestVehicleLootTable(player);
+        unpackChestVehicleLootTable(player);
     }
 
     @Nullable
     public ResourceLocation getLootTable() {
-        return this.lootTable;
+        return lootTable;
     }
 
     @Override
     public void setLootTable(@Nullable ResourceLocation location) {
-        this.lootTable = location;
+        lootTable = location;
     }
 
     @Override
     public long getLootTableSeed() {
-        return this.lootTableSeed;
+        return lootTableSeed;
     }
 
     @Override
     public void setLootTableSeed(long seed) {
-        this.lootTableSeed = seed;
+        lootTableSeed = seed;
     }
 
     @Override
-    public NonNullList<ItemStack> getItemStacks() {
-        return this.itemStacks;
+    public @NotNull NonNullList<ItemStack> getItemStacks() {
+        return itemStacks;
     }
 
     @Override
     public void clearItemStacks() {
-        this.itemStacks = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
+        itemStacks = NonNullList.withSize(getContainerSize(), ItemStack.EMPTY);
     }
 }

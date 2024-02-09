@@ -4,7 +4,7 @@ import com.aetherteam.aether.entity.ai.goal.FallingRandomStrollGoal;
 import com.aetherteam.aether.entity.passive.AetherAnimal;
 import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
-import net.builderdog.ancient_aether.entity.AncientAetherEntities;
+import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.InteractionHand;
@@ -52,7 +52,7 @@ public class Fluffalo extends WyndcapsAnimal {
     @Override
     protected void registerGoals() {
         super.registerGoals();
-        this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
+        goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
             @Override
             protected double getAttackReachSqr(@NotNull LivingEntity entity) {
                 return mob.getBbWidth() * mob.getBbWidth() + entity.getBbWidth();
@@ -104,6 +104,6 @@ public class Fluffalo extends WyndcapsAnimal {
     @Nullable
     @Override
     public AgeableMob getBreedOffspring(@NotNull ServerLevel level, @NotNull AgeableMob ageableMob) {
-        return AncientAetherEntities.FLUFFALO.get().create(level);
+        return AncientAetherEntityTypes.FLUFFALO.get().create(level);
     }
 }

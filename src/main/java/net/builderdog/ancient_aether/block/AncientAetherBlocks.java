@@ -20,7 +20,7 @@ import net.builderdog.ancient_aether.block.utility.CrackedSliderBlock;
 import net.builderdog.ancient_aether.block.utility.VaseBlock;
 import net.builderdog.ancient_aether.block.utility.WindBlowerBlock;
 import net.builderdog.ancient_aether.data.generators.loot.AncientAetherSelectorLoot;
-import net.builderdog.ancient_aether.entity.AncientAetherEntities;
+import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.builderdog.ancient_aether.world.tree.*;
 import net.minecraft.core.BlockPos;
@@ -146,12 +146,12 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> LOCKED_AEROGETIC_STONE = registerBlock("locked_aerogetic_stone", () -> new Block(Block.Properties.copy(AEROGETIC_STONE.get()).strength(-1.0F, 3600000.0F).noLootTable()));
     public static final RegistryObject<Block> LOCKED_LIGHT_AEROGETIC_STONE = registerBlock("locked_light_aerogetic_stone", () -> new Block(Block.Properties.copy(LOCKED_AEROGETIC_STONE.get()).lightLevel(s -> 11).noLootTable()));
     public static final RegistryObject<Block> LOCKED_CORRUPTED_LIGHT_AEROGETIC_STONE = registerBlock("locked_corrupted_light_aerogetic_stone", () -> new Block(Block.Properties.copy(LOCKED_LIGHT_AEROGETIC_STONE.get()).noLootTable()));
-    public static final RegistryObject<Block> TRAPPED_AEROGETIC_STONE = registerBlock("trapped_aerogetic_stone", () -> new TrappedBlock(AncientAetherEntities.AERONAUTIC_LEAPER::get, () -> AEROGETIC_STONE.get().defaultBlockState(), Block.Properties.copy(AEROGETIC_STONE.get()).noLootTable()));
-    public static final RegistryObject<Block> TRAPPED_LIGHT_AEROGETIC_STONE = registerBlock("trapped_light_aerogetic_stone", () -> new TrappedBlock(AncientAetherEntities.AERONAUTIC_LEAPER::get, () -> LIGHT_AEROGETIC_STONE.get().defaultBlockState(), Block.Properties.copy(LIGHT_AEROGETIC_STONE.get()).noLootTable()));
-    public static final RegistryObject<Block> TRAPPED_CORRUPTED_LIGHT_AEROGETIC_STONE = registerBlock("trapped_corrupted_light_aerogetic_stone", () -> new TrappedBlock(AncientAetherEntities.AERONAUTIC_LEAPER::get, () -> CORRUPTED_LIGHT_AEROGETIC_STONE.get().defaultBlockState(), Block.Properties.copy(CORRUPTED_LIGHT_AEROGETIC_STONE.get()).noLootTable()));
-    public static final RegistryObject<Block> BOSS_DOORWAY_AEROGETIC_STONE = registerBlock("boss_doorway_aerogetic_stone", () -> new DoorwayBlock(AncientAetherEntities.ANCIENT_GUARDIAN::get, BlockBehaviour.Properties.copy(LOCKED_AEROGETIC_STONE.get()).noLootTable()));
-    public static final RegistryObject<Block> BOSS_DOORWAY_LIGHT_AEROGETIC_STONE = registerBlock("boss_doorway_light_aerogetic_stone", () -> new DoorwayBlock(AncientAetherEntities.ANCIENT_GUARDIAN::get, BlockBehaviour.Properties.copy(LOCKED_LIGHT_AEROGETIC_STONE.get()).noLootTable()));
-    public static final RegistryObject<Block> BOSS_DOORWAY_CORRUPTED_LIGHT_AEROGETIC_STONE = registerBlock("boss_doorway_corrupted_light_aerogetic_stone", () -> new DoorwayBlock(AncientAetherEntities.ANCIENT_GUARDIAN::get, BlockBehaviour.Properties.copy(LOCKED_CORRUPTED_LIGHT_AEROGETIC_STONE.get()).noLootTable()));
+    public static final RegistryObject<Block> TRAPPED_AEROGETIC_STONE = registerBlock("trapped_aerogetic_stone", () -> new TrappedBlock(AncientAetherEntityTypes.AERONAUTIC_LEAPER::get, () -> AEROGETIC_STONE.get().defaultBlockState(), Block.Properties.copy(AEROGETIC_STONE.get()).noLootTable()));
+    public static final RegistryObject<Block> TRAPPED_LIGHT_AEROGETIC_STONE = registerBlock("trapped_light_aerogetic_stone", () -> new TrappedBlock(AncientAetherEntityTypes.AERONAUTIC_LEAPER::get, () -> LIGHT_AEROGETIC_STONE.get().defaultBlockState(), Block.Properties.copy(LIGHT_AEROGETIC_STONE.get()).noLootTable()));
+    public static final RegistryObject<Block> TRAPPED_CORRUPTED_LIGHT_AEROGETIC_STONE = registerBlock("trapped_corrupted_light_aerogetic_stone", () -> new TrappedBlock(AncientAetherEntityTypes.AERONAUTIC_LEAPER::get, () -> CORRUPTED_LIGHT_AEROGETIC_STONE.get().defaultBlockState(), Block.Properties.copy(CORRUPTED_LIGHT_AEROGETIC_STONE.get()).noLootTable()));
+    public static final RegistryObject<Block> BOSS_DOORWAY_AEROGETIC_STONE = registerBlock("boss_doorway_aerogetic_stone", () -> new DoorwayBlock(AncientAetherEntityTypes.ANCIENT_GUARDIAN::get, BlockBehaviour.Properties.copy(LOCKED_AEROGETIC_STONE.get()).noLootTable()));
+    public static final RegistryObject<Block> BOSS_DOORWAY_LIGHT_AEROGETIC_STONE = registerBlock("boss_doorway_light_aerogetic_stone", () -> new DoorwayBlock(AncientAetherEntityTypes.ANCIENT_GUARDIAN::get, BlockBehaviour.Properties.copy(LOCKED_LIGHT_AEROGETIC_STONE.get()).noLootTable()));
+    public static final RegistryObject<Block> BOSS_DOORWAY_CORRUPTED_LIGHT_AEROGETIC_STONE = registerBlock("boss_doorway_corrupted_light_aerogetic_stone", () -> new DoorwayBlock(AncientAetherEntityTypes.ANCIENT_GUARDIAN::get, BlockBehaviour.Properties.copy(LOCKED_CORRUPTED_LIGHT_AEROGETIC_STONE.get()).noLootTable()));
     public static final RegistryObject<Block> TREASURE_DOORWAY_AEROGETIC_STONE = registerBlock("treasure_doorway_aerogetic_stone", () -> new TreasureDoorwayBlock(BlockBehaviour.Properties.copy(LOCKED_AEROGETIC_STONE.get()).noLootTable()));
     public static final RegistryObject<Block> TREASURE_DOORWAY_LIGHT_AEROGETIC_STONE = registerBlock("treasure_doorway_light_aerogetic_stone", () -> new TreasureDoorwayBlock(BlockBehaviour.Properties.copy(LOCKED_LIGHT_AEROGETIC_STONE.get()).noLootTable()));
     public static final RegistryObject<Block> TREASURE_DOORWAY_CORRUPTED_LIGHT_AEROGETIC_STONE = registerBlock("treasure_doorway_corrupted_light_aerogetic_stone", () -> new TreasureDoorwayBlock(BlockBehaviour.Properties.copy(LOCKED_CORRUPTED_LIGHT_AEROGETIC_STONE.get()).noLootTable()));
@@ -180,7 +180,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> SKY_BLUES = registerBlock("sky_blues", () -> new FlowerBlock(() -> MobEffects.POISON, 4, Block.Properties.copy(WHITE_FLOWER.get())));
     public static final RegistryObject<Block> WYND_THISTLE = registerBlock("wynd_thistle", () -> new FlowerBlock(() -> MobEffects.HARM, 4, Block.Properties.copy(WHITE_FLOWER.get())));
     public static final RegistryObject<Block> SAKURA_BLOSSOMS = registerBlock("sakura_blossoms", () -> new FlowerBlock(() -> MobEffects.HEALTH_BOOST, 4, Block.Properties.copy(WHITE_FLOWER.get())));
-    public static final RegistryObject<Block> TRAPPED_SAKURA_BLOSSOMS = registerBlock("trapped_sakura_blossoms", () -> new TrappedFlowerBlock(AncientAetherEntities.ROOTHYRN::get, AIR::defaultBlockState, Block.Properties.copy(SAKURA_BLOSSOMS.get())));
+    public static final RegistryObject<Block> TRAPPED_SAKURA_BLOSSOMS = registerBlock("trapped_sakura_blossoms", () -> new TrappedFlowerBlock(AncientAetherEntityTypes.ROOTHYRN::get, AIR::defaultBlockState, Block.Properties.copy(SAKURA_BLOSSOMS.get())));
 
     //Potted Plants
     public static final RegistryObject<FlowerPotBlock> POTTED_HIGHLAND_VIOLA = BLOCKS.register("potted_highland_viola", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SKY_BLUES, Block.Properties.copy(Blocks.FLOWER_POT)));

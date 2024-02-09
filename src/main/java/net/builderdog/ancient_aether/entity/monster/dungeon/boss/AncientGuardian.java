@@ -115,9 +115,9 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     @Override
     public void defineSynchedData() {
         super.defineSynchedData();
-        this.getEntityData().define(DATA_IS_READY, false);
-        this.getEntityData().define(DATA_AWAKE_ID, false);
-        this.getEntityData().define(DATA_BOSS_NAME, Component.literal("Ancient Guardian"));
+        getEntityData().define(DATA_IS_READY, false);
+        getEntityData().define(DATA_AWAKE_ID, false);
+        getEntityData().define(DATA_BOSS_NAME, Component.literal("Ancient Guardian"));
     }
 
 
@@ -153,12 +153,12 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     @Override
     public boolean hurt(DamageSource source, float amount) {
         if (source.is(DamageTypeTags.BYPASSES_INVULNERABILITY)) {
-            return super.hurt(source, amount);
+            return hurt(source, amount);
         }
         if (this.isReady()) {
             if (source.getDirectEntity() instanceof LivingEntity attacker && level().getDifficulty() != Difficulty.PEACEFUL) {
                 if (getDungeon() == null || getDungeon().isPlayerWithinRoomInterior(attacker)) {
-                    if (super.hurt(source, amount) && getHealth() > 0) {
+                    if (hurt(source, amount) && getHealth() > 0) {
                         if (!level().isClientSide() && !isBossFight()) {
                             setBossFight(true);
                             if (getDungeon() != null) {
@@ -276,7 +276,7 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
 
     @Override
     public void tearDownRoom() {
-        assert this.dungeonBounds != null;
+        assert dungeonBounds != null;
         for (BlockPos pos : BlockPos.betweenClosed((int) dungeonBounds.minX, (int) dungeonBounds.minY, (int) dungeonBounds.minZ, (int) dungeonBounds.maxX, (int) dungeonBounds.maxY, (int) dungeonBounds.maxZ)) {
             BlockState state = level().getBlockState(pos);
             BlockState newState = convertBlock(state);
@@ -338,7 +338,7 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
             double maxX = tag.getDouble("DungeonBoundsMaxX");
             double maxY = tag.getDouble("DungeonBoundsMaxY");
             double maxZ = tag.getDouble("DungeonBoundsMaxZ");
-            this.dungeonBounds = new AABB(minX, minY, minZ, maxX, maxY, maxZ);
+            dungeonBounds = new AABB(minX, minY, minZ, maxX, maxY, maxZ);
         }
         if (tag.contains("Ready")) {
             setReady(tag.getBoolean("Ready"));
@@ -375,7 +375,7 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
 
         public DoNothingGoal(AncientGuardian ancientGuardian) {
             this.ancientGuardian = ancientGuardian;
-            this.setFlags(EnumSet.of(Flag.MOVE, Flag.JUMP));
+            setFlags(EnumSet.of(Flag.MOVE, Flag.JUMP));
         }
 
         public boolean canUse() {

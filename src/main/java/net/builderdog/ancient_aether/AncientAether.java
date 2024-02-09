@@ -5,7 +5,7 @@ import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.data.AncientAetherData;
-import net.builderdog.ancient_aether.entity.AncientAetherEntities;
+import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.builderdog.ancient_aether.entity.passive.moa.AncientAetherMoaTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.builderdog.ancient_aether.world.biomemodifier.AncientAetherBiomeModifierSerializers;
@@ -63,7 +63,7 @@ public class AncientAether {
                 AncientAetherFoliagePlacers.FOLIAGE_PLACERS,
                 AncientAetherBlockEntityTypes.BLOCK_ENTITY_TYPES,
                 AncientAetherStructureTypes.STRUCTURE_TYPES,
-                AncientAetherEntities.ENTITY_TYPES,
+                AncientAetherEntityTypes.ENTITY_TYPES,
                 AncientAetherSoundEvents.SOUNDS,
                 AncientAetherBiomeModifierSerializers.BIOME_MODIFIER_SERIALIZERS,
                 AncientAetherFeatures.FEATURES

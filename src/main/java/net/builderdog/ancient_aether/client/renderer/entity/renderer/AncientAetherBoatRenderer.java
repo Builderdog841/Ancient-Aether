@@ -62,7 +62,7 @@ public class AncientAetherBoatRenderer<T extends AncientAetherBoatEntity> extend
         if (!Mth.equal(h = entity.getBubbleAngle(partialTicks), 0.0f)) {
             matrixStack.mulPose(new Quaternionf().setAngleAxis(entity.getBubbleAngle(partialTicks) * ((float) Math.PI / 180), 1.0f, 0.0f, 1.0f));
         }
-        Pair<ResourceLocation, ListModel<Boat>> pair = this.boatResources.get(entity.getWoodType());
+        Pair<ResourceLocation, ListModel<Boat>> pair = boatResources.get(entity.getWoodType());
         ResourceLocation resourceLocation = pair.getFirst();
         ListModel<Boat> listModel = pair.getSecond();
         matrixStack.scale(-1.0f, -1.0f, 1.0f);

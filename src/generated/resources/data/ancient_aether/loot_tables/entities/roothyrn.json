@@ -11,8 +11,8 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 3.0,
-                "min": 1.0
+                "max": 4.0,
+                "min": 2.0
               },
               "function": "minecraft:set_count"
             },
@@ -25,7 +25,7 @@
               "function": "minecraft:looting_enchant"
             }
           ],
-          "name": "ancient_aether:fluffalo_wool"
+          "name": "aether:skyroot_stick"
         }
       ],
       "rolls": 1.0
@@ -40,24 +40,10 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 3.0,
+                "max": 1.0,
                 "min": 1.0
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "conditions": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "flags": {
-                      "is_on_fire": true
-                    }
-                  }
-                }
-              ],
-              "function": "minecraft:furnace_smelt"
             },
             {
               "count": {
@@ -68,10 +54,11 @@
               "function": "minecraft:looting_enchant"
             }
           ],
-          "name": "beef"
+          "name": "ancient_aether:sakura_blossoms"
         }
       ],
       "rolls": 1.0
     }
-  ]
+  ],
+  "random_sequence": "ancient_aether:entities/roothyrn"
 }

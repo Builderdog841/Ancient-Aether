@@ -10,7 +10,7 @@ import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.client.renderer.entity.layers.ValkyrumWingsLayer;
 import net.builderdog.ancient_aether.client.renderer.entity.model.*;
 import net.builderdog.ancient_aether.client.renderer.entity.renderer.*;
-import net.builderdog.ancient_aether.entity.AncientAetherEntities;
+import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.builderdog.ancient_aether.entity.misc.AeronauticDart;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
@@ -37,14 +37,14 @@ public class AncientAetherEntityRenderers {
         event.registerBlockEntityRenderer(AncientAetherBlockEntityTypes.SIGN.get(), SignRenderer::new);
         event.registerBlockEntityRenderer(AncientAetherBlockEntityTypes.HANGING_SIGN.get(), HangingSignRenderer::new);
         event.registerBlockEntityRenderer(AncientAetherBlockEntityTypes.CAMPFIRE.get(), CampfireRenderer::new);
-        event.registerEntityRenderer(AncientAetherEntities.BOAT.get(), context -> new AncientAetherBoatRenderer<>(context, false));
-        event.registerEntityRenderer(AncientAetherEntities.CHEST_BOAT.get(), context -> new AncientAetherBoatRenderer<>(context, true));
-        event.registerEntityRenderer(AncientAetherEntities.AERONAUTIC_LEAPER.get(), AeronauticLeaperRenderer::new);
-        event.registerEntityRenderer(AncientAetherEntities.ANCIENT_GUARDIAN.get(), AncientGuardianRenderer::new);
-        event.registerEntityRenderer(AncientAetherEntities.FLUFFALO.get(), FluffaloRenderer::new);
-        event.registerEntityRenderer(AncientAetherEntities.ROOTHYRN.get(), RoothyrnRenderer::new);
-        event.registerEntityRenderer(AncientAetherEntities.AERONAUTIC_DART.get(), AeronauticDartRenderer::new);
-        event.registerEntityRenderer(AncientAetherEntities.FESTIVE_SWET.get(), FestiveSwetRenderer::new);
+        event.registerEntityRenderer(AncientAetherEntityTypes.BOAT.get(), context -> new AncientAetherBoatRenderer<>(context, false));
+        event.registerEntityRenderer(AncientAetherEntityTypes.CHEST_BOAT.get(), context -> new AncientAetherBoatRenderer<>(context, true));
+        event.registerEntityRenderer(AncientAetherEntityTypes.AERONAUTIC_LEAPER.get(), AeronauticLeaperRenderer::new);
+        event.registerEntityRenderer(AncientAetherEntityTypes.ANCIENT_GUARDIAN.get(), AncientGuardianRenderer::new);
+        event.registerEntityRenderer(AncientAetherEntityTypes.FLUFFALO.get(), FluffaloRenderer::new);
+        event.registerEntityRenderer(AncientAetherEntityTypes.ROOTHYRN.get(), RoothyrnRenderer::new);
+        event.registerEntityRenderer(AncientAetherEntityTypes.AERONAUTIC_DART.get(), AeronauticDartRenderer::new);
+        event.registerEntityRenderer(AncientAetherEntityTypes.FESTIVE_SWET.get(), FestiveSwetRenderer::new);
     }
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
@@ -67,7 +67,7 @@ public class AncientAetherEntityRenderers {
         for (String type : types) {
             PlayerRenderer playerRenderer = event.getSkin(type);
             if (playerRenderer != null) {
-                playerRenderer.addLayer(new DartLayer<>(renderDispatcher, playerRenderer, (entity) -> new AeronauticDart(AncientAetherEntities.AERONAUTIC_DART.get(), entity.level()), AetherPlayer::getGoldenDartCount, 1.0F));
+                playerRenderer.addLayer(new DartLayer<>(renderDispatcher, playerRenderer, (entity) -> new AeronauticDart(AncientAetherEntityTypes.AERONAUTIC_DART.get(), entity.level()), AetherPlayer::getGoldenDartCount, 1.0F));
                 playerRenderer.addLayer(new ValkyrumWingsLayer<>(playerRenderer, Minecraft.getInstance().getEntityModels()));
             }
         }
