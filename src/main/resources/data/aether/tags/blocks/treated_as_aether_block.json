@@ -54,8 +54,8 @@
     "ancient_aether:wynd_ice",
     "ancient_aether:valkyrum_ore",
     "ancient_aether:valkyrum_block",
-    "ancient_aether:buffalo_wool",
-    "ancient_aether:buffalo_carpet",
+    "ancient_aether:fluffalo_wool",
+    "ancient_aether:fluffalo_carpet",
     "ancient_aether:aerogel_glass",
     "ancient_aether:aerogel_glass_pane",
     "ancient_aether:aerogel_glass_door",
@@ -65,7 +65,6 @@
     "ancient_aether:carved_tiles",
     "ancient_aether:carved_tile_stairs",
     "ancient_aether:carved_tile_slab",
-    "ancient_aether:carved_tile_wall",
-    "ancient_aether:gravitite_launcher"
+    "ancient_aether:carved_tile_wall"
   ]
 }
