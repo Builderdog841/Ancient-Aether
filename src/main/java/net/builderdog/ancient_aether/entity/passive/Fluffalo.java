@@ -46,7 +46,7 @@ public class Fluffalo extends WyndcapsAnimal {
     }
     @Override
     public boolean isFood(ItemStack stack) {
-        return stack.is(AncientAetherTags.Items.HIGHLAND_BUFFALO_TEMPTATION_ITEMS);
+        return stack.is(AncientAetherTags.Items.FLUFFALO_TEMPTATION_ITEMS);
     }
 
     @Override
@@ -61,7 +61,7 @@ public class Fluffalo extends WyndcapsAnimal {
         goalSelector.addGoal(0, new FloatGoal(this));
         targetSelector.addGoal(1, new HurtByTargetGoal(this));
         goalSelector.addGoal(2, new BreedGoal(this, 1.0));
-        goalSelector.addGoal(3, new TemptGoal(this, 1.25, Ingredient.of(AncientAetherTags.Items.HIGHLAND_BUFFALO_TEMPTATION_ITEMS), false));
+        goalSelector.addGoal(3, new TemptGoal(this, 1.25, Ingredient.of(AncientAetherTags.Items.FLUFFALO_TEMPTATION_ITEMS), false));
         goalSelector.addGoal(4, new FollowParentGoal(this, 1.25));
         goalSelector.addGoal(5, new FallingRandomStrollGoal(this, 1.0));
         goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 6.0F));

@@ -23,7 +23,7 @@ public class AncientAetherTags {
         public static final TagKey<Item> WINDBLOWER_INGREDIENT = tag("windblower_ingredient");
         public static final TagKey<Item> CRAFTS_HIGHSPROOT_PLANKS = tag("crafts_highsproot_planks");
         public static final TagKey<Item> CRAFTS_SAKURA_PLANKS = tag("crafts_sakura_planks");
-        public static final TagKey<Item> HIGHLAND_BUFFALO_TEMPTATION_ITEMS = tag("highland_buffalo_temptation_items");
+        public static final TagKey<Item> FLUFFALO_TEMPTATION_ITEMS = tag("fluffalo_temptation_items");
         public static final TagKey<Item> COMMON_LOOT = tag("common_loot");
         public static final TagKey<Item> RARE_LOOT = tag("rare_loot");
         public static final TagKey<Item> EPIC_LOOT = tag("epic_loot");
@@ -42,6 +42,8 @@ public class AncientAetherTags {
         public static final TagKey<Biome> HAS_AETHER_QUARTZ_ORE = tag("has_aether_quartz_ore");
         public static final TagKey<Biome> HAS_VALKYRUM_ORE = tag("has_valkyrum_ore");
         public static final TagKey<Biome> HAS_QUICKSOIL_COASTS = tag("has_quicksoil_coasts");
+        public static final TagKey<Biome> HAS_GRAVITY_GRAVEL_COASTS = tag("has_gravity_gravel_coasts");
+        public static final TagKey<Biome> HAS_WYND_ICE_COASTS = tag("has_wynd_ice_coasts");
         public static final TagKey<Biome> HAS_AETHER_GRASS_PATCHES = tag("has_aether_grass_patches");
         public static final TagKey<Biome> HAS_VIOLET_AERCLOUD = tag("has_violet_aercloud");
         public static final TagKey<Biome> HAS_CLOUDBED = tag("has_cloudbed");

@@ -17,9 +17,7 @@
     }
   },
   "features": [
-    [
-      "ancient_aether:wynd_ice_coast"
-    ],
+    [],
     [
       "aether:water_lake"
     ],
