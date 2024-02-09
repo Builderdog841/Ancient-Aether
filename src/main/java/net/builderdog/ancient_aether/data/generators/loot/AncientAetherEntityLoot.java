@@ -110,7 +110,6 @@ public class AncientAetherEntityLoot extends EntityLootSubProvider {
         );
     }
 
-
     @Override
     public @NotNull Stream<EntityType<?>> getKnownEntityTypes() {
         return AncientAetherEntityTypes.ENTITY_TYPES.getEntries().stream().flatMap(entityType -> Stream.of(entityType.get()));

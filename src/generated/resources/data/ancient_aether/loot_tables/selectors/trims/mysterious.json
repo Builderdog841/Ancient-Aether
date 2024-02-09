@@ -6,17 +6,16 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ancient_aether:mechanical_armor_trim_smithing_template",
-          "weight": 75
+          "name": "ancient_aether:ancient_rune"
         },
         {
           "type": "minecraft:item",
-          "name": "ancient_aether:ancient_rune",
-          "weight": 25
+          "name": "ancient_aether:mysterious_armor_trim_smithing_template",
+          "weight": 9
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "ancient_aether:selectors/ancient_rune_and_armor_trims"
+  "random_sequence": "ancient_aether:selectors/trims/mysterious"
 }
