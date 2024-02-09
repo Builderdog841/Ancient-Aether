@@ -10,6 +10,15 @@
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:bronze_dungeon/library_02",
+        "processors": "ancient_aether:bronze_dungeon_room",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
     }
   ]
 }
