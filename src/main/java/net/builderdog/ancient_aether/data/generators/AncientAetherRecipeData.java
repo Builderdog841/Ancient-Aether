@@ -240,11 +240,11 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .unlockedBy("has_stripped_logs", has(AncientAetherBlocks.STRIPPED_SAKURA_LOG.get()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.BUFFALO_CARPET.get(), 3)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.FLUFFALO_CARPET.get(), 3)
                 .group("carpet")
-                .define('#', AncientAetherBlocks.BUFFALO_WOOL.get())
+                .define('#', AncientAetherBlocks.FLUFFALO_WOOL.get())
                 .pattern("##")
-                .unlockedBy(getHasName(AncientAetherBlocks.BUFFALO_WOOL.get()), has(AncientAetherBlocks.BUFFALO_WOOL.get()))
+                .unlockedBy(getHasName(AncientAetherBlocks.FLUFFALO_WOOL.get()), has(AncientAetherBlocks.FLUFFALO_WOOL.get()))
                 .save(consumer);
 
         makePickaxe(AncientAetherItems.VALKYRUM_PICKAXE, AncientAetherItems.VALKYRUM).save(consumer);

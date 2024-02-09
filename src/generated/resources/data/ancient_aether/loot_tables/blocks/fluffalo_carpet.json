@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ancient_aether:buffalo_carpet"
+          "name": "ancient_aether:fluffalo_carpet"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "ancient_aether:blocks/buffalo_carpet"
+  "random_sequence": "ancient_aether:blocks/fluffalo_carpet"
 }

@@ -145,7 +145,7 @@ public class AncientAetherItemModelData extends AetherItemModelProvider {
         pane(AncientAetherBlocks.AEROGEL_GLASS_PANE.get(), AncientAetherBlocks.AEROGEL_GLASS.get(), "");
         item(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get().asItem(), "");
         itemBlock(AncientAetherBlocks.AEROGEL_GLASS_TRAPDOOR.get(), "_bottom");
-        itemBlock(AncientAetherBlocks.BUFFALO_CARPET.get());
+        itemBlock(AncientAetherBlocks.FLUFFALO_CARPET.get());
 
         //Dungeon Blocks
         itemBlock(AncientAetherBlocks.CARVED_TILE_STAIRS.get());

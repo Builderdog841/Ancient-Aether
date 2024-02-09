@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_buffalo_wool": {
+    "has_fluffalo_wool": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ancient_aether:buffalo_wool"
+              "ancient_aether:fluffalo_wool"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ancient_aether:buffalo_carpet"
+        "recipe": "ancient_aether:fluffalo_carpet"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_buffalo_wool",
+      "has_fluffalo_wool",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "ancient_aether:buffalo_carpet"
+      "ancient_aether:fluffalo_carpet"
     ]
   },
   "sends_telemetry_event": false

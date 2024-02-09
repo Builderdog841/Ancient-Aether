@@ -99,7 +99,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         pane(AncientAetherBlocks.AEROGEL_GLASS_PANE.get(), AncientAetherBlocks.AEROGEL_GLASS.get(), "");
         translucentDoorBlock(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get(), texture(name(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get()), "", "_bottom"), texture(name(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get()), "", "_top"));
         translucentTrapdoorBlock(AncientAetherBlocks.AEROGEL_GLASS_TRAPDOOR.get(), texture(name(AncientAetherBlocks.AEROGEL_GLASS_TRAPDOOR.get()), ""), false);
-        blockWithItem(AncientAetherBlocks.BUFFALO_WOOL);
+        blockWithItem(AncientAetherBlocks.FLUFFALO_WOOL);
 
         //Dungeon Blocks
         blockWithItem(AncientAetherBlocks.CARVED_TILES);

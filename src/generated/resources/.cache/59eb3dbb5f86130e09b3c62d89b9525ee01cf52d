@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-02T14:53:34.9181428	Loot Tables
+// 1.20.1	2024-02-09T11:02:35.3367236	Loot Tables
 095a70e341d19e7b3548ddc32402abe48a79992a data/ancient_aether/loot_tables/blocks/aerogel_glass.json
 9fe2ea21af5246ad9f95848f680099717062eb1c data/ancient_aether/loot_tables/blocks/aerogel_glass_door.json
 0f84d5b4591633acc6c8dcc82b7c14988b545a9f data/ancient_aether/loot_tables/blocks/aerogel_glass_pane.json
@@ -16,8 +16,6 @@ d01deb85be8d8d62bc23667fe63fbb627346a8e7 data/ancient_aether/loot_tables/blocks/
 f346e2fa7e1e914c323a66125f68b2ae7c3ecda5 data/ancient_aether/loot_tables/blocks/angelic_lantern.json
 50401c0d72532e1255e3c534f66b3b7b9e656a43 data/ancient_aether/loot_tables/blocks/angelic_stone_mosaic.json
 91126c83880d2251b1f209827e7f2fb17fdd7373 data/ancient_aether/loot_tables/blocks/angelic_vase.json
-76bcd4d20275a5cb65a7d334ff157a3917011a9e data/ancient_aether/loot_tables/blocks/buffalo_carpet.json
-87d5b2abeaae1c56486e3d4bad809f597509ae8f data/ancient_aether/loot_tables/blocks/buffalo_wool.json
 07e5a503893020d9852e02f7a687103c325d37a9 data/ancient_aether/loot_tables/blocks/carved_stone_mosaic.json
 24eae9742dcffbe67d5c5077fc6c8355134d78ee data/ancient_aether/loot_tables/blocks/carved_tiles.json
 1749bc7d17fa71e129f60cff6eb1b5d99dcec84e data/ancient_aether/loot_tables/blocks/carved_tile_slab.json
@@ -29,6 +27,8 @@ c737df83b589dd9c81bedfd91f94b948fd786eff data/ancient_aether/loot_tables/blocks/
 a93b4f337f62686363c24527cb2e2fd8c05c2edb data/ancient_aether/loot_tables/blocks/crystal_skyroot_sapling.json
 57fc1bb7f567bba57456b1dd4e1a852c3a399fa3 data/ancient_aether/loot_tables/blocks/enchanted_skyroot_leaves.json
 b23565ef948eb4bd69efd04df7a51de3f539a22e data/ancient_aether/loot_tables/blocks/enchanted_skyroot_sapling.json
+07c4af1d559074e7b5725f3b93d93bbe7fc3ed9b data/ancient_aether/loot_tables/blocks/fluffalo_carpet.json
+7f5abb3037bdd5badc2bdd1fb10427c9f627f879 data/ancient_aether/loot_tables/blocks/fluffalo_wool.json
 e1cd12fc0fe5fbd9f2dfe521628cbca9bad97399 data/ancient_aether/loot_tables/blocks/frozen_holystone_vase.json
 68ae82a00f438e7a97944585e600c87c81233b7f data/ancient_aether/loot_tables/blocks/gale_lantern.json
 635f68f8ca5307f47168c7f5b52976fd9f9ab554 data/ancient_aether/loot_tables/blocks/gale_stone_mosaic.json

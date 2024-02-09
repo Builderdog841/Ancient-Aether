@@ -4,7 +4,7 @@
   "group": "carpet",
   "key": {
     "#": {
-      "item": "ancient_aether:buffalo_wool"
+      "item": "ancient_aether:fluffalo_wool"
     }
   },
   "pattern": [
@@ -12,7 +12,7 @@
   ],
   "result": {
     "count": 3,
-    "item": "ancient_aether:buffalo_carpet"
+    "item": "ancient_aether:fluffalo_carpet"
   },
   "show_notification": true
 }

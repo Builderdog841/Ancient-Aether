@@ -131,8 +131,8 @@ public class AncientAetherBlockLoot extends AetherBlockLootSubProvider {
         dropSelf(AncientAetherBlocks.AEROGEL_GLASS_PANE.get());
         dropSelf(AncientAetherBlocks.AEROGEL_GLASS_TRAPDOOR.get());
         add(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get(), createDoorTable(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get()));
-        dropSelf(AncientAetherBlocks.BUFFALO_WOOL.get());
-        dropSelf(AncientAetherBlocks.BUFFALO_CARPET.get());
+        dropSelf(AncientAetherBlocks.FLUFFALO_WOOL.get());
+        dropSelf(AncientAetherBlocks.FLUFFALO_CARPET.get());
 
         //Dungeon Blocks
         dropSelf(AncientAetherBlocks.CARVED_TILES.get());

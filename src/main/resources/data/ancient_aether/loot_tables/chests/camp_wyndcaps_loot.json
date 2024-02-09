@@ -15,7 +15,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ancient_aether:buffalo_wool",
+          "name": "ancient_aether:fluffalo_wool",
           "weight": 1,
           "functions": [
             {

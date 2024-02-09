@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "ancient_aether:block/buffalo_wool"
+    "all": "ancient_aether:block/fluffalo_wool"
   }
 }

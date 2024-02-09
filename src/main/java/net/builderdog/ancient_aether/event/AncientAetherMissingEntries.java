@@ -126,5 +126,10 @@ public class AncientAetherMissingEntries {
                 .filter(mapping -> mapping.getKey().getPath().contains("frosted_holystone_vase")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.FROZEN_HOLYSTONE_VASE.get()));
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
                 .filter(mapping -> mapping.getKey().getPath().contains("ancient_frosted_holystone_vase")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.ANCIENT_HOLYSTONE_VASE.get()));
+
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("buffalo_wool")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.FLUFFALO_WOOL.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("buffalo_carpet")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.FLUFFALO_CARPET.get()));
     }
 }

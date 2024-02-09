@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-07T22:42:14.9014183	Item Models: ancient_aether
+// 1.20.1	2024-02-09T11:02:35.3327222	Item Models: ancient_aether
 532bdb7a4f7d2a6b96d474c01c8b9e7a0d1c10b4 assets/ancient_aether/models/item/aerogel_glass.json
 87e9f8f9f807a2aa763e3057d32bacf3ee32b60f assets/ancient_aether/models/item/aerogel_glass_door.json
 d1e6ed3e334d573f31a8ce9e09885c0f43832630 assets/ancient_aether/models/item/aerogel_glass_pane.json
@@ -23,7 +23,6 @@ ed179b3ef576a4cfe5ef1282c7007bdf56c9e7a4 assets/ancient_aether/models/item/angel
 65b849256685fb6479622cda358cd36b4513d85c assets/ancient_aether/models/item/arkenium_ring.json
 ecd044ce0d7231edbfbefeb82c43ce34dc933c21 assets/ancient_aether/models/item/arkzenus_pickaxe.json
 e39f295afb13b5e4ab726c96bd2a1f49a2c81eaf assets/ancient_aether/models/item/ascended_armor_trim_smithing_template.json
-a7c5161f98f8546c7b36ce365fb2e08414f03bdf assets/ancient_aether/models/item/buffalo_carpet.json
 5ec73861c83b17bb59407b6565c835b02ef97193 assets/ancient_aether/models/item/burgundy_moa_egg.json
 cd934ca7d5f49796545bba2ddfdf7fe3974cc0f8 assets/ancient_aether/models/item/carved_tile_slab.json
 84b9f399c138287b162ca40e96686669b1b62680 assets/ancient_aether/models/item/carved_tile_stairs.json
@@ -33,6 +32,7 @@ d1c40b01fe5c62e33d048c638067476b3cab2bb6 assets/ancient_aether/models/item/crack
 3ed4423266c04d98cb709c5554860a7c438d000b assets/ancient_aether/models/item/enchanted_skyroot_sapling.json
 c07f677db47ad94c4781284f111fa87556aea4c9 assets/ancient_aether/models/item/festive_gummy_swet.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/festive_swet_spawn_egg.json
+30e95cf53e3322ded03a4fa8fc9632923f5dc1db assets/ancient_aether/models/item/fluffalo_carpet.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/fluffalo_spawn_egg.json
 8955230a8e802eb86a46730865c7d223995f9054 assets/ancient_aether/models/item/frozen_holystone_vase.json
 847fb5b6aa35f5048e62d3bf76e55f05c6b41f80 assets/ancient_aether/models/item/gale_lantern.json
