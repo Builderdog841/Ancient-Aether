@@ -37,7 +37,7 @@
         {
           "type": "minecraft:item",
           "name": "aether:zanite_gemstone",
-          "weight": 5
+          "weight": 7
         },
         {
           "type": "minecraft:item",
@@ -47,7 +47,7 @@
         {
           "type": "minecraft:item",
           "name": "aether:skyroot_remedy_bucket",
-          "weight": 3
+          "weight": 2
         },
         {
           "type": "minecraft:loot_table",

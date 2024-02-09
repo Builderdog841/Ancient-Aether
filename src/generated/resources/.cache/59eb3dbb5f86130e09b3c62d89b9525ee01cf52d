@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-09T17:33:29.678942	Loot Tables
+// 1.20.1	2024-02-09T17:43:11.8471793	Loot Tables
 095a70e341d19e7b3548ddc32402abe48a79992a data/ancient_aether/loot_tables/blocks/aerogel_glass.json
 9fe2ea21af5246ad9f95848f680099717062eb1c data/ancient_aether/loot_tables/blocks/aerogel_glass_door.json
 0f84d5b4591633acc6c8dcc82b7c14988b545a9f data/ancient_aether/loot_tables/blocks/aerogel_glass_pane.json
@@ -128,7 +128,7 @@ bd1f5f6922835a7f516e100d070c178255fc355a data/ancient_aether/loot_tables/selecto
 ac8b3d706a81b45f864d65e42465c9cf3e2025ab data/ancient_aether/loot_tables/selectors/angelic_vase_loot.json
 5f61d277535efd6812bf30280143acb80deaa267 data/ancient_aether/loot_tables/selectors/frozen_holystone_vase_loot.json
 cb75e1a21ce6329f674851505b4b383c4a17c47a data/ancient_aether/loot_tables/selectors/hellfire_vase_loot.json
-72bef514e63a09c2ba71a6479ccc86f5ac313c32 data/ancient_aether/loot_tables/selectors/holystone_vase_loot.json
+2dceb93bea541d252e882f6a2a373d167363e65d data/ancient_aether/loot_tables/selectors/holystone_vase_loot.json
 eb5e226542941bda7f30e3f5f8cec83c40eb9eca data/ancient_aether/loot_tables/selectors/mossy_holystone_vase_loot.json
 5cbb13dfa3a1389f3f8ccfb79eef81bfb35fba00 data/ancient_aether/loot_tables/selectors/sentry_vase_loot.json
 039a3ee40a4a41378038e2630d7e9e28a9a437e5 data/ancient_aether/loot_tables/selectors/trims/generic.json

@@ -26,9 +26,9 @@ public class AncientAetherSelectorLoot implements LootTableSubProvider {
                         .add(LootItem.lootTableItem(AetherBlocks.ICESTONE.get()).setWeight(7))
                         .add(LootItem.lootTableItem(AetherItems.GOLDEN_AMBER.get()).setWeight(7))
                         .add(LootItem.lootTableItem(AncientAetherItems.GRAPES.get()).setWeight(7))
-                        .add(LootItem.lootTableItem(AetherItems.ZANITE_GEMSTONE.get()).setWeight(5))
+                        .add(LootItem.lootTableItem(AetherItems.ZANITE_GEMSTONE.get()).setWeight(7))
                         .add(LootItem.lootTableItem(Items.STRING).setWeight(5))
-                        .add(LootItem.lootTableItem(AetherItems.SKYROOT_REMEDY_BUCKET.get()).setWeight(3))
+                        .add(LootItem.lootTableItem(AetherItems.SKYROOT_REMEDY_BUCKET.get()).setWeight(2))
                         .add(LootTableReference.lootTableReference(AncientAetherLoot.ACCESSORIES_GENERIC).setWeight(3))
                         .add(LootTableReference.lootTableReference(AncientAetherLoot.TRIMS_GENERIC).setWeight(1))
                 ));
