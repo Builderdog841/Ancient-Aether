@@ -36,6 +36,6 @@ public class FestiveSwetRenderer extends MobRenderer<Swet, FestiveSwetModel<Swet
 
         poseStack.scale(width * scale, height * scale, width * scale);
         poseStack.scale(swet.getScale(), swet.getScale(), swet.getScale());
-        this.shadowRadius = 0.3F * width;
+        shadowRadius = 0.3F * width;
     }
 }

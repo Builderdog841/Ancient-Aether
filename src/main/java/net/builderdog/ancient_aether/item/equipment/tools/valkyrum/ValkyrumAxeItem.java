@@ -17,6 +17,6 @@ public class ValkyrumAxeItem extends AxeItem implements ValkyrieTool {
 
     @Override
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlot slot, ItemStack stack) {
-        return this.extendReachModifier(super.getAttributeModifiers(slot, stack), slot);
+        return extendReachModifier(super.getAttributeModifiers(slot, stack), slot);
     }
 }

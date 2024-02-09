@@ -32,9 +32,9 @@ public class AncientAetherBoatRenderer<T extends AncientAetherBoatEntity> extend
 
     public AncientAetherBoatRenderer(EntityRendererProvider.Context renderer, boolean hasChest) {
         super(renderer);
-        this.shadowRadius = 0.8f;
-        this.boatResources = Stream.of(AncientAetherBoatEntity.Type.values()).collect(ImmutableMap.toImmutableMap(type -> type, type ->
-                Pair.of(type.getTexture(hasChest), this.createBoatModel(renderer, type, hasChest))));
+        shadowRadius = 0.8f;
+        boatResources = Stream.of(AncientAetherBoatEntity.Type.values()).collect(ImmutableMap.toImmutableMap(type -> type, type ->
+                Pair.of(type.getTexture(hasChest), createBoatModel(renderer, type, hasChest))));
     }
 
     private ListModel<Boat> createBoatModel(EntityRendererProvider.Context renderer, AncientAetherBoatEntity.Type type, boolean hasChest) {
@@ -47,7 +47,6 @@ public class AncientAetherBoatRenderer<T extends AncientAetherBoatEntity> extend
 
     @Override
     public void render(T entity, float entityYaw, float partialTicks, PoseStack matrixStack, @NotNull MultiBufferSource buffer, int packedLight) {
-        float h;
         matrixStack.pushPose();
         matrixStack.translate(0.0f, 0.375f, 0.0f);
         matrixStack.mulPose(Axis.YP.rotationDegrees(180.0f - entityYaw));
@@ -59,7 +58,7 @@ public class AncientAetherBoatRenderer<T extends AncientAetherBoatEntity> extend
         if (f > 0.0f) {
             matrixStack.mulPose(Axis.XP.rotationDegrees(Mth.sin(f) * f * g / 10.0f * (float) entity.getHurtDir()));
         }
-        if (!Mth.equal(h = entity.getBubbleAngle(partialTicks), 0.0f)) {
+        if (!Mth.equal(entity.getBubbleAngle(partialTicks), 0.0f)) {
             matrixStack.mulPose(new Quaternionf().setAngleAxis(entity.getBubbleAngle(partialTicks) * ((float) Math.PI / 180), 1.0f, 0.0f, 1.0f));
         }
         Pair<ResourceLocation, ListModel<Boat>> pair = boatResources.get(entity.getWoodType());

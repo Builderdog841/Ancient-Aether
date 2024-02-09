@@ -4,18 +4,15 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.builderdog.ancient_aether.entity.monster.dungeon.boss.AncientGuardian;
 import net.minecraft.client.model.EntityModel;
-import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
-import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
 
 public class AncientGuardianModel<T extends AncientGuardian> extends EntityModel<T> {
-    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("ancient_aether", "ancient_guardian"), "main");
     private final ModelPart bone;
     public AncientGuardianModel(ModelPart root) {
-        this.bone = root.getChild("bone");
+        bone = root.getChild("bone");
     }
 
     public static LayerDefinition createBodyLayer() {

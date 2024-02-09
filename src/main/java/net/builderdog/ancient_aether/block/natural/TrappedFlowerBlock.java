@@ -40,6 +40,7 @@ public class TrappedFlowerBlock extends BushBlock {
         this.defaultStateSupplier = defaultStateSupplier;
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public void entityInside(@NotNull BlockState blockState, @NotNull Level level, @NotNull BlockPos blockPos, @NotNull Entity entity) {
         if (entity instanceof Player player && AetherEventDispatch.onTriggerTrap(player, level, blockPos, blockState)) {
@@ -63,10 +64,12 @@ public class TrappedFlowerBlock extends BushBlock {
                     }
                 }
                 spawnableEntityTypeSupplier.get().spawn(serverLevel, spawnPos, MobSpawnType.TRIGGERED);
-                serverLevel.playSound(null, blockPos, AncientAetherSoundEvents.ROOTHYRN_EMERGES.get(), SoundSource.BLOCKS, 0.5F, level.getRandom().nextFloat() * 0.1F + 0.9F);
+                serverLevel.playSound(null, blockPos, AncientAetherSoundEvents.BLOCK_ROOTHYRN_TRAP_TRIGGER.get(), SoundSource.BLOCKS, 0.5F, level.getRandom().nextFloat() * 0.1F + 0.9F);
             }
         }
     }
+
+    @SuppressWarnings("deprecation")
     public @NotNull VoxelShape getShape(BlockState p_53517_, @NotNull BlockGetter p_53518_, @NotNull BlockPos p_53519_, @NotNull CollisionContext p_53520_) {
         Vec3 vec3 = p_53517_.getOffset(p_53518_, p_53519_);
         return SHAPE.move(vec3.x, vec3.y, vec3.z);

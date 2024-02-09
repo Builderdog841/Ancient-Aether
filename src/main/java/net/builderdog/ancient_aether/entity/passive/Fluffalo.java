@@ -35,15 +35,6 @@ public class Fluffalo extends WyndcapsAnimal {
         super(entityType, level);
     }
 
-    @Nonnull
-    public static AttributeSupplier.Builder createMobAttributes() {
-        return Animal.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 20D)
-                .add(Attributes.ATTACK_DAMAGE, 4.0f)
-                .add(Attributes.ATTACK_SPEED, 1.0f)
-                .add(Attributes.MOVEMENT_SPEED, 0.2f)
-                .add(Attributes.ATTACK_KNOCKBACK, 2f);
-    }
     @Override
     public boolean isFood(ItemStack stack) {
         return stack.is(AncientAetherTags.Items.FLUFFALO_TEMPTATION_ITEMS);
@@ -67,21 +58,22 @@ public class Fluffalo extends WyndcapsAnimal {
         goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 6.0F));
         goalSelector.addGoal(7, new RandomLookAroundGoal(this));
     }
-    @Nullable
-    @Override
-    protected SoundEvent getAmbientSound() {
-        return AncientAetherSoundEvents.FLUFFALO_AMBIENT.get();
-    }
 
-    @Nullable
-    @Override
-    protected SoundEvent getHurtSound(@Nonnull DamageSource damageSource) { return AncientAetherSoundEvents.FLUFFALO_HURT.get();}
+    @Nonnull
+    public static AttributeSupplier.Builder createMobAttributes() {
+        return Animal.createMobAttributes()
+                .add(Attributes.MAX_HEALTH, 20D)
+                .add(Attributes.ATTACK_DAMAGE, 4.0f)
+                .add(Attributes.ATTACK_SPEED, 1.0f)
+                .add(Attributes.MOVEMENT_SPEED, 0.2f)
+                .add(Attributes.ATTACK_KNOCKBACK, 2f);
+    }
 
     @Nonnull
     public InteractionResult mobInteract(Player playerEntity, @Nonnull InteractionHand hand) {
         ItemStack itemStack = playerEntity.getItemInHand(hand);
         if (itemStack.is(Items.BUCKET) && !isBaby()) {
-            playerEntity.playSound( AncientAetherSoundEvents.FLUFFALO_MILK.get(), 1.0F, 1.0F);
+            playerEntity.playSound( AncientAetherSoundEvents.ENTITY_FLUFFALO_MILK.get(), 1.0F, 1.0F);
             ItemStack itemStack1 = ItemUtils.createFilledResult(itemStack, playerEntity, Items.MILK_BUCKET.getDefaultInstance());
             playerEntity.setItemInHand(hand, itemStack1);
             return InteractionResult.sidedSuccess(level().isClientSide);
@@ -92,18 +84,30 @@ public class Fluffalo extends WyndcapsAnimal {
 
     @Nullable
     @Override
+    public AgeableMob getBreedOffspring(@NotNull ServerLevel level, @NotNull AgeableMob ageableMob) {
+        return AncientAetherEntityTypes.FLUFFALO.get().create(level);
+    }
+
+    @Nullable
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return AncientAetherSoundEvents.ENTITY_FLUFFALO_AMBIENT.get();
+    }
+
+    @Nullable
+    @Override
+    protected SoundEvent getHurtSound(@Nonnull DamageSource damage) {
+        return AncientAetherSoundEvents.ENTITY_FLUFFALO_HURT.get();
+    }
+
+    @Nullable
+    @Override
     protected SoundEvent getDeathSound() {
-        return AncientAetherSoundEvents.FLUFFALO_DEATH.get();
+        return AncientAetherSoundEvents.ENTITY_FLUFFALO_DEATH.get();
     }
 
     @Override
     protected float getSoundVolume() {
         return 0.4F;
-    }
-
-    @Nullable
-    @Override
-    public AgeableMob getBreedOffspring(@NotNull ServerLevel level, @NotNull AgeableMob ageableMob) {
-        return AncientAetherEntityTypes.FLUFFALO.get().create(level);
     }
 }

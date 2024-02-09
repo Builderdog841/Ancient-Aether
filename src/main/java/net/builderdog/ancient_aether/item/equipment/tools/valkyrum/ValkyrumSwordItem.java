@@ -14,6 +14,6 @@ public class ValkyrumSwordItem extends SwordItem implements ValkyrumSwordRange {
     }
 
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlot slot, ItemStack stack) {
-        return this.extendReachModifier(super.getAttributeModifiers(slot, stack), slot);
+        return extendReachModifier(super.getAttributeModifiers(slot, stack), slot);
     }
 }

@@ -1,8 +1,5 @@
 {
   "values": [
-    "#ancient_aether:is_skyroot",
-    "#ancient_aether:is_sakura",
-    "#ancient_aether:is_wyndcaps",
-    "#ancient_aether:is_elevated"
+    "#ancient_aether:is_ancient_aether_biome"
   ]
 }

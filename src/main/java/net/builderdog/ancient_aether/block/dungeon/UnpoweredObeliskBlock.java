@@ -27,13 +27,12 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
-import static net.minecraft.world.level.block.RotatedPillarBlock.AXIS;
-
 public class UnpoweredObeliskBlock extends Block {
     public UnpoweredObeliskBlock(Properties properties) {
         super(properties);
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public @NotNull InteractionResult use(@NotNull BlockState blockstate, @NotNull Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
         super.use(blockstate, level, pos, player, hand, hit);
@@ -100,7 +99,7 @@ public class UnpoweredObeliskBlock extends Block {
             if (!level.isClientSide) {
                 player.displayClientMessage(Component.translatable("gui.ancient_aether.obelisk_sun_spirit").withStyle(ChatFormatting.RED), true);
             } else {
-                level.playSound(player, pos, AncientAetherSoundEvents.OBELISK_ACTIVATION.get(), SoundSource.BLOCKS, 0.8f,
+                level.playSound(player, pos, AncientAetherSoundEvents.BLOCK_OBELISK_ACTIVATION.get(), SoundSource.BLOCKS, 0.8f,
                         0.5f + (((float) (Math.pow(level.random.nextDouble(), 2.5))) * 0.5f));
                 return InteractionResult.sidedSuccess(true);
             }

@@ -48,38 +48,38 @@ public enum AncientAetherArmorTiers implements ArmorMaterial {
 
     @Override
     public int getDurabilityForType(ArmorItem.@NotNull Type type) {
-        return DURABILITY_MAP.get(type) * this.maxDamageFactor;
+        return DURABILITY_MAP.get(type) * maxDamageFactor;
     }
 
     @Override
     public int getDefenseForType(ArmorItem.@NotNull Type type) {
-        return this.protectionAmountMap.get(type);
+        return protectionAmountMap.get(type);
     }
 
     @Override
     public int getEnchantmentValue() {
-        return this.enchantability;
+        return enchantability;
     }
 
     @Override
     public @NotNull SoundEvent getEquipSound() {
-        return this.soundEvent.get();
+        return soundEvent.get();
     }
 
     @Override
     public @NotNull Ingredient getRepairIngredient() {
-        return this.repairMaterial.get();
+        return repairMaterial.get();
     }
 
     @Override
     @OnlyIn(Dist.CLIENT)
     public @NotNull String getName() {
-        return this.name;
+        return name;
     }
 
     @Override
     public float getToughness() {
-        return this.toughness;
+        return toughness;
     }
 
     @Override

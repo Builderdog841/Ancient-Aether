@@ -1,7 +1,7 @@
 package net.builderdog.ancient_aether.entity.monster.dungeon;
 
 import com.aetherteam.aether.block.AetherBlocks;
-import com.aetherteam.aether.client.AetherSoundEvents;
+import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
@@ -53,13 +53,13 @@ public class AeronauticLeaper extends Slime {
 				.add(Attributes.MAX_HEALTH, 10.0)
 				.add(Attributes.MOVEMENT_SPEED, 0.8)
 				.add(Attributes.ATTACK_DAMAGE, 8.0)
-			    .add(ForgeMod.ENTITY_GRAVITY.get(), 0.025);
+				.add(ForgeMod.ENTITY_GRAVITY.get(), 0.025);
 	}
 
 	@Override
 	protected void defineSynchedData() {
 		super.defineSynchedData();
-		entityData.define(DATA_AWAKE_ID, false);
+		this.entityData.define(DATA_AWAKE_ID, false);
 	}
 
 	@Override
@@ -67,32 +67,32 @@ public class AeronauticLeaper extends Slime {
 
 	@Override
 	public void remove(@Nonnull Entity.RemovalReason reason) {
-		setRemoved(reason);
+		this.setRemoved(reason);
 		if (reason == Entity.RemovalReason.KILLED) {
-			gameEvent(GameEvent.ENTITY_DIE);
+			this.gameEvent(GameEvent.ENTITY_DIE);
 		}
-		invalidateCaps();
+		this.invalidateCaps();
 	}
 
 	public boolean isAwake() {
-		return entityData.get(DATA_AWAKE_ID);
+		return this.entityData.get(DATA_AWAKE_ID);
 	}
 
 	public void setAwake(boolean awake) {
-		entityData.set(DATA_AWAKE_ID, awake);
+		this.entityData.set(DATA_AWAKE_ID, awake);
 	}
 
 	@Override
 	public void tick() {
-		if (level().getNearestPlayer(getX(), getY(), getZ(), 8.0, EntitySelector.NO_SPECTATORS) != null) {
-			if (!isAwake()) {
-				if (timeSpotted >= 24) {
-					setAwake(true);
+		if (this.level().getNearestPlayer(this.getX(), this.getY(), this.getZ(), 8.0, EntitySelector.NO_SPECTATORS) != null) {
+			if (!this.isAwake()) {
+				if (this.timeSpotted >= 24) {
+					this.setAwake(true);
 				}
-				timeSpotted++;
+				this.timeSpotted++;
 			}
 		} else {
-			setAwake(false);
+			this.setAwake(false);
 		}
 		super.tick();
 	}
@@ -100,41 +100,41 @@ public class AeronauticLeaper extends Slime {
 	@Override
 	public @Nullable
 	SpawnGroupData finalizeSpawn(@Nonnull ServerLevelAccessor level, @Nonnull DifficultyInstance difficulty, @Nonnull MobSpawnType reason, @Nullable SpawnGroupData spawnData, @Nullable CompoundTag tag) {
-		setSize(1, true);
-		setLeftHanded(false);
+		this.setSize(1, true);
+		this.setLeftHanded(false);
 		return spawnData;
 	}
 
 	@Nonnull
 	@Override
 	protected ResourceLocation getDefaultLootTable() {
-		return getType().getDefaultLootTable();
+		return this.getType().getDefaultLootTable();
 	}
 
 	@Override
 	protected SoundEvent getHurtSound(@Nonnull DamageSource damageSource) {
-		return AetherSoundEvents.ENTITY_SENTRY_HURT.get();
+		return AncientAetherSoundEvents.ENTITY_AERONAUTIC_LEAPER_HURT.get();
 	}
 
 	@Override
 	protected SoundEvent getDeathSound() {
-		return AetherSoundEvents.ENTITY_SENTRY_DEATH.get();
+		return AncientAetherSoundEvents.ENTITY_AERONAUTIC_LEAPER_DEATH.get();
 	}
 
 	protected boolean isDealsDamage() {
-		return isEffectiveAi();
+		return this.isEffectiveAi();
 	}
 
 	@Nonnull
 	@Override
 	protected SoundEvent getSquishSound() {
-		return AetherSoundEvents.ENTITY_SENTRY_JUMP.get();
+		return AncientAetherSoundEvents.ENTITY_AERONAUTIC_LEAPER_JUMP.get();
 	}
 
 	@Nonnull
 	@Override
 	protected SoundEvent getJumpSound() {
-		return AetherSoundEvents.ENTITY_SENTRY_JUMP.get();
+		return AncientAetherSoundEvents.ENTITY_AERONAUTIC_LEAPER_JUMP.get();
 	}
 
 	@Nonnull
@@ -163,9 +163,9 @@ public class AeronauticLeaper extends Slime {
 
 	protected void jumpFromGround() {
 		if(isAwake()) {
-			Vec3 vec3 = getDeltaMovement();
-			setDeltaMovement(vec3.x, 0.25, vec3.z);
-			hasImpulse = true;
+			Vec3 vec3 = this.getDeltaMovement();
+			this.setDeltaMovement(vec3.x, 0.25, vec3.z);
+			this.hasImpulse = true;
 		}
 	}
 
@@ -174,17 +174,17 @@ public class AeronauticLeaper extends Slime {
 
 		public AttackGoal(AeronauticLeaper sentryIn) {
 			super(sentryIn);
-			sentry = sentryIn;
+			this.sentry = sentryIn;
 		}
 
 		@Override
 		public boolean canUse() {
-			return sentry.isAwake() && canUse();
+			return this.sentry.isAwake() && super.canUse();
 		}
 
 		@Override
 		public boolean canContinueToUse() {
-			return sentry.isAwake() && canContinueToUse();
+			return this.sentry.isAwake() && super.canContinueToUse();
 		}
 	}
 
@@ -193,17 +193,17 @@ public class AeronauticLeaper extends Slime {
 
 		public FloatGoal(AeronauticLeaper sentryIn) {
 			super(sentryIn);
-			sentry = sentryIn;
+			this.sentry = sentryIn;
 		}
 
 		@Override
 		public boolean canUse() {
-			return sentry.isAwake() && canUse();
+			return this.sentry.isAwake() && super.canUse();
 		}
 
 		@Override
 		public boolean canContinueToUse() {
-			return sentry.isAwake() && canContinueToUse();
+			return this.sentry.isAwake() && super.canContinueToUse();
 		}
 	}
 
@@ -212,17 +212,17 @@ public class AeronauticLeaper extends Slime {
 
 		public KeepOnJumpingGoal(AeronauticLeaper sentryIn) {
 			super(sentryIn);
-			sentry = sentryIn;
+			this.sentry = sentryIn;
 		}
 
 		@Override
 		public boolean canUse() {
-			return sentry.isAwake() && canUse();
+			return this.sentry.isAwake() && super.canUse();
 		}
 
 		@Override
 		public boolean canContinueToUse() {
-			return sentry.isAwake() && canContinueToUse();
+			return this.sentry.isAwake() && super.canContinueToUse();
 		}
 	}
 
@@ -231,17 +231,17 @@ public class AeronauticLeaper extends Slime {
 
 		public RandomDirectionGoal(AeronauticLeaper sentryIn) {
 			super(sentryIn);
-			sentry = sentryIn;
+			this.sentry = sentryIn;
 		}
 
 		@Override
 		public boolean canUse() {
-			return sentry.isAwake() && canUse();
+			return this.sentry.isAwake() && super.canUse();
 		}
 
 		@Override
 		public boolean canContinueToUse() {
-			return sentry.isAwake() && canContinueToUse();
+			return this.sentry.isAwake() && super.canContinueToUse();
 		}
 	}
 }

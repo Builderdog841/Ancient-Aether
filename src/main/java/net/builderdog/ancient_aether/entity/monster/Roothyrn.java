@@ -27,6 +27,23 @@ public class Roothyrn extends Monster {
         super(entityType, level);
     }
 
+    @Override
+    protected void registerGoals() {
+        super.registerGoals();
+        goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
+            @Override
+            protected double getAttackReachSqr(@NotNull LivingEntity entity) {
+                return mob.getBbWidth() * mob.getBbWidth() + entity.getBbWidth();
+            }
+        });
+        targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
+        goalSelector.addGoal(2, new FloatGoal(this));
+        goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2D, false));
+        goalSelector.addGoal(4, new FallingRandomStrollGoal(this, 1.0));
+        goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class, 6.0F));
+        goalSelector.addGoal(6, new RandomLookAroundGoal(this));
+    }
+
     @Nonnull
     public static AttributeSupplier.Builder createMobAttributes() {
         return Animal.createMobAttributes()
@@ -35,31 +52,17 @@ public class Roothyrn extends Monster {
                 .add(Attributes.ATTACK_SPEED, 1.2f)
                 .add(Attributes.MOVEMENT_SPEED, 0.3f);
     }
-    @Override
-    protected void registerGoals() {
-        super.registerGoals();
-        goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
-            @Override
-            protected double getAttackReachSqr(@NotNull LivingEntity entity) {
-                return mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
-            }
-        });
-        goalSelector.addGoal(1, new FloatGoal(this));
-        goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2D, false));
-        goalSelector.addGoal(3, new FallingRandomStrollGoal(this, 1.0));
-        goalSelector.addGoal(4, new LookAtPlayerGoal(this, Player.class, 6.0F));
-        goalSelector.addGoal(5, new RandomLookAroundGoal(this));
 
-        targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
-    }
     @Nullable
     @Override
-    protected SoundEvent getHurtSound(@Nonnull DamageSource damageSource) { return AncientAetherSoundEvents.ROOTHYRN_HURT.get();}
+    protected SoundEvent getHurtSound(@Nonnull DamageSource damageSource) {
+        return AncientAetherSoundEvents.ENTITY_ROOTHYRN_HURT.get();
+    }
 
     @Nullable
     @Override
     protected SoundEvent getDeathSound() {
-        return AncientAetherSoundEvents.ROOTHYRN_DEATH.get();
+        return AncientAetherSoundEvents.ENTITY_ROOTHYRN_DEATH.get();
     }
     @Override
     protected float getSoundVolume() {

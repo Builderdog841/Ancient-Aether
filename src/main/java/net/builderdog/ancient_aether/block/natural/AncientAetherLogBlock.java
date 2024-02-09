@@ -16,21 +16,21 @@ public class AncientAetherLogBlock extends AetherLogBlock {
     }
 
     @Override
-    public @Nullable BlockState getToolModifiedState(BlockState blockState, UseOnContext context, ToolAction toolAction, boolean simulate) {
+    public @Nullable BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction action, boolean simulate) {
         if(context.getItemInHand().getItem() instanceof AxeItem) {
-            if(blockState.is(AncientAetherBlocks.HIGHSPROOT_LOG.get())) {
-                return  AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get().defaultBlockState().setValue(AXIS, blockState.getValue(AXIS));
+            if(state.is(AncientAetherBlocks.HIGHSPROOT_LOG.get())) {
+                return  AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
-            if(blockState.is(AncientAetherBlocks.HIGHSPROOT_WOOD.get())) {
-                return  AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD.get().defaultBlockState().setValue(AXIS, blockState.getValue(AXIS));
+            if(state.is(AncientAetherBlocks.HIGHSPROOT_WOOD.get())) {
+                return  AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
-            if(blockState.is(AncientAetherBlocks.SAKURA_LOG.get())) {
-                return  AncientAetherBlocks.STRIPPED_SAKURA_LOG.get().defaultBlockState().setValue(AXIS, blockState.getValue(AXIS));
+            if(state.is(AncientAetherBlocks.SAKURA_LOG.get())) {
+                return  AncientAetherBlocks.STRIPPED_SAKURA_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
-            if(blockState.is(AncientAetherBlocks.SAKURA_WOOD.get())) {
-                return  AncientAetherBlocks.STRIPPED_SAKURA_WOOD.get().defaultBlockState().setValue(AXIS, blockState.getValue(AXIS));
+            if(state.is(AncientAetherBlocks.SAKURA_WOOD.get())) {
+                return  AncientAetherBlocks.STRIPPED_SAKURA_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
         }
-        return super.getToolModifiedState(blockState, context, toolAction, simulate);
+        return getToolModifiedState(state, context, action, simulate);
     }
 }

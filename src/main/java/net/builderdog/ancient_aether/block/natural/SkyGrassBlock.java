@@ -23,12 +23,12 @@ public class SkyGrassBlock extends TallGrassBlock {
         super(properties);
     }
 
-    public void performBonemeal(ServerLevel serverLevel, @NotNull RandomSource randomSource, @NotNull BlockPos blockPos, BlockState blockState) {
-        int i = Math.min(5, blockState.getValue(LENGTH) + Mth.nextInt(serverLevel.random, 1, 3));
-        BlockState blockstate = blockState.setValue(LENGTH, i);
-        serverLevel.setBlock(blockPos, blockstate, 2);
+    public void performBonemeal(ServerLevel level, @NotNull RandomSource random, @NotNull BlockPos pos, BlockState state) {
+        int i = Math.min(5, state.getValue(LENGTH) + Mth.nextInt(level.random, 1, 3));
+        BlockState blockstate = state.setValue(LENGTH, i);
+        level.setBlock(pos, blockstate, 2);
         if (i == 5) {
-            blockstate.randomTick(serverLevel, blockPos, serverLevel.random);
+            blockstate.randomTick(level, pos, level.random);
         }
     }
 
