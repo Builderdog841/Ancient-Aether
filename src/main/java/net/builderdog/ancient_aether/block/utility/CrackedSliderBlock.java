@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import org.jetbrains.annotations.NotNull;
 
+@SuppressWarnings("deprecation")
 public class CrackedSliderBlock extends RedstoneLampBlock {
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
     public static final BooleanProperty LIT = RedstoneTorchBlock.LIT;
@@ -21,17 +22,14 @@ public class CrackedSliderBlock extends RedstoneLampBlock {
         return defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
     }
 
-    @SuppressWarnings("deprecation")
     public @NotNull RenderShape getRenderShape(@NotNull BlockState p_48727_) {
         return RenderShape.MODEL;
     }
 
-    @SuppressWarnings("deprecation")
     public @NotNull BlockState rotate(BlockState state, Rotation rotation) {
         return state.setValue(FACING, rotation.rotate(state.getValue(FACING)));
     }
 
-    @SuppressWarnings("deprecation")
     public @NotNull BlockState mirror(BlockState blockState, Mirror mirror) {
         return blockState.rotate(mirror.getRotation(blockState.getValue(FACING)));
     }

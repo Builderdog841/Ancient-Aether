@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-09T17:43:11.8471793	Loot Tables
+// 1.20.1	2024-02-10T16:53:55.7289826	Loot Tables
 095a70e341d19e7b3548ddc32402abe48a79992a data/ancient_aether/loot_tables/blocks/aerogel_glass.json
 9fe2ea21af5246ad9f95848f680099717062eb1c data/ancient_aether/loot_tables/blocks/aerogel_glass_door.json
 0f84d5b4591633acc6c8dcc82b7c14988b545a9f data/ancient_aether/loot_tables/blocks/aerogel_glass_pane.json
@@ -117,6 +117,7 @@ a0270dbfd4228fdef2b289af9c417cbc2850fa95 data/ancient_aether/loot_tables/entitie
 caf49ebe9fa25a127a86870ae7f1d09b1c168faa data/ancient_aether/loot_tables/entities/ancient_guardian.json
 366087803747c08a12a0c6afe56553d532918312 data/ancient_aether/loot_tables/entities/festive_swet.json
 9a722b0f381b21102762c08d58bea10e326e9b36 data/ancient_aether/loot_tables/entities/fluffalo.json
+658b560944d60a3a507d93c801b60fb845feb2c3 data/ancient_aether/loot_tables/entities/fluffalo_sheared.json
 aa81dca25d61ea438d310bc1e8f83b191402310e data/ancient_aether/loot_tables/entities/roothyrn.json
 606f2a0217be5d126c19a3c710f039e8ba230e60 data/ancient_aether/loot_tables/selectors/accessories/ancient_dungeon.json
 bc97402bcb5b7b2805260294ec92624a5c75b9ea data/ancient_aether/loot_tables/selectors/accessories/bronze_dungeon.json

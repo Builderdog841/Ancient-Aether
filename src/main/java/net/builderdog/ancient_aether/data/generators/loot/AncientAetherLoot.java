@@ -25,6 +25,7 @@ public class AncientAetherLoot {
     public static final ResourceLocation TRIMS_GENERIC = register("selectors/trims/generic");
     public static final ResourceLocation TRIMS_MYSTERIOUS = register("selectors/trims/mysterious");
     public static final ResourceLocation TRIMS_MECHANICAL = register("selectors/trims/mechanical");
+    public static final ResourceLocation ENTITIES_FLUFFALO_SHEARED = register("entities/fluffalo_sheared");
 
     private static ResourceLocation register(String id) {
         return register(new ResourceLocation(AncientAether.MOD_ID, id));

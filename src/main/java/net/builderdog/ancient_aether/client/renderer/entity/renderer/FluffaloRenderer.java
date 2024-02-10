@@ -13,23 +13,22 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nonnull;
 
 public class FluffaloRenderer extends MobRenderer<Fluffalo, FluffaloModel<Fluffalo>> {
-    private static final ResourceLocation HIGHLAND_BUFFALO_TEXTURE = new ResourceLocation("ancient_aether", "textures/entity/highland_buffalo.png");
+    private static final ResourceLocation FLUFFALO_TEXTURE = new ResourceLocation("ancient_aether", "textures/entity/fluffalo/fluffalo.png");
+    private static final ResourceLocation FLUFFALO_SHEARED_TEXTURE = new ResourceLocation("ancient_aether", "textures/entity/fluffalo/fluffalo_sheared.png");
 
     public FluffaloRenderer(EntityRendererProvider.Context context) {
         super(context, new FluffaloModel<>(context.bakeLayer(AncientAetherModelLayers.FLUFFALO)), 0.7F);
     }
 
     @Nonnull
-    public ResourceLocation getTextureLocation(@Nonnull Fluffalo buffalo) {
-        return HIGHLAND_BUFFALO_TEXTURE;
+    public ResourceLocation getTextureLocation(@Nonnull Fluffalo fluffalo) {
+        return fluffalo.isSheared() ? FLUFFALO_SHEARED_TEXTURE : FLUFFALO_TEXTURE;
     }
     @Override
-    public void render(Fluffalo entity, float entityYaw, float partialTick, @NotNull PoseStack poseStack,
-                       @NotNull MultiBufferSource bufferSource, int packedLight) {
-        if(entity.isBaby()) {
+    public void render(Fluffalo fluffalo, float entityYaw, float partialTick, @NotNull PoseStack poseStack, @NotNull MultiBufferSource bufferSource, int packedLight) {
+        if(fluffalo.isBaby()) {
             poseStack.scale(0.4f, 0.4f, 0.4f);
         }
-
-        super.render(entity, entityYaw, partialTick, poseStack, bufferSource, packedLight);
+        super.render(fluffalo, entityYaw, partialTick, poseStack, bufferSource, packedLight);
     }
 }

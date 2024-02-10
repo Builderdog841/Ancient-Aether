@@ -45,6 +45,8 @@ public class AncientAetherEntityLoot extends EntityLootSubProvider {
                         )
                 )
         );
+        add(AncientAetherEntityTypes.FLUFFALO.get(), AncientAetherLoot.ENTITIES_FLUFFALO_SHEARED, LootTable.lootTable()
+                .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(3.0F, 6.0F)).add(LootItem.lootTableItem(AncientAetherBlocks.FLUFFALO_WOOL.get()))));
 
         add(AncientAetherEntityTypes.FESTIVE_SWET.get(), LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
