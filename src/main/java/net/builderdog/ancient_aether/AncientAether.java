@@ -2,6 +2,7 @@ package net.builderdog.ancient_aether;
 
 import com.aetherteam.aether.AetherConfig;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
+import net.builderdog.ancient_aether.block.dispenser.DispenseAncientAetherBoatBehaviour;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.data.AncientAetherData;
@@ -23,6 +24,7 @@ import net.minecraft.server.packs.repository.PackSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.ComposterBlock;
+import net.minecraft.world.level.block.DispenserBlock;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.AddPackFindersEvent;
 import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent;
@@ -86,6 +88,7 @@ public class AncientAether {
             AncientAetherBlocks.registerPots();
             AncientAetherBlocks.registerFlammability();
             registerComposting();
+            registerDispenserBehaviors();
         });
 
         event.enqueueWork(() -> {
@@ -153,6 +156,13 @@ public class AncientAether {
                 event.addRepositorySource(consumer -> consumer.accept(pack));
             }
         }
+    }
+
+    private void registerDispenserBehaviors() {
+        DispenserBlock.registerBehavior(AncientAetherItems.HIGHSPROOT_BOAT.get(), new DispenseAncientAetherBoatBehaviour());
+        DispenserBlock.registerBehavior(AncientAetherItems.HIGHSPROOT_CHEST_BOAT.get(), new DispenseAncientAetherBoatBehaviour(true));
+        DispenserBlock.registerBehavior(AncientAetherItems.SAKURA_BOAT.get(), new DispenseAncientAetherBoatBehaviour());
+        DispenserBlock.registerBehavior(AncientAetherItems.SAKURA_CHEST_BOAT.get(), new DispenseAncientAetherBoatBehaviour(true));
     }
 
     private void registerComposting() {
