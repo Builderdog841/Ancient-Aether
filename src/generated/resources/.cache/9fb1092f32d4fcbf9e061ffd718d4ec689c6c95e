@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-11T18:18:03.7999883	Recipes
+// 1.20.1	2024-02-11T21:04:25.300279	Recipes
 80fcf482f4a115d6058352efc822bde4344b7726 data/aether/advancements/recipes/building_blocks/holiday_leaves.json
 b5865c7f00b06818982b889af9a3ece8ec9d48b0 data/aether/recipes/holiday_leaves.json
 56e3e5de228181a076581addd3cb59475c11fcaf data/ancient_aether/advancements/recipes/building_blocks/aerogel_glass.json
@@ -62,6 +62,7 @@ ea6049527e33497f1778e13864a56b588294c34b data/ancient_aether/advancements/recipe
 8d9c07252e5c9364014822d22b47bc24666d4ab2 data/ancient_aether/advancements/recipes/building_blocks/valkyrum_block.json
 f81d5386d5fd2f54b5ee2bd6d91c9ca3186253cf data/ancient_aether/advancements/recipes/building_blocks/violet_aercloud_enchanting.json
 fba0864ff4e5a2c5a22b5750b40138de410dd9aa data/ancient_aether/advancements/recipes/building_blocks/wind_blower.json
+93a527f6a6f838b7432237e41b1d3f6229f42a44 data/ancient_aether/advancements/recipes/building_blocks/wynd_sentry_stone.json
 a4ec5220349f891b024868f0ec140e3b0075423c data/ancient_aether/advancements/recipes/combat/pink_cape.json
 df9474d0bf47581a0e98f5fbc7032e6b9a0657a9 data/ancient_aether/advancements/recipes/combat/valkyrum_boots.json
 32f752cd129f4a2a128926a2efc958fcea80a344 data/ancient_aether/advancements/recipes/combat/valkyrum_boots_repairing.json
@@ -298,4 +299,5 @@ cefb8fdae3b6445ca5250c2f65b102f29a2acddc data/ancient_aether/recipes/violet_aerc
 f2091cc0fa48e4fa8403404f31417e7c6ed79c64 data/ancient_aether/recipes/wynd_armor_trim_smithing_template.json
 1809d511a339c1b4840e5e51d96cb7fe6037f675 data/ancient_aether/recipes/wynd_armor_trim_smithing_template_smithing_trim.json
 f87638a0e6fcc76179fcfcb34f66b8e6dec9973f data/ancient_aether/recipes/wynd_lantern.json
+8960db5cf09e2c0e3f78909a756a78fa12f91601 data/ancient_aether/recipes/wynd_sentry_stone.json
 6b1ef1486fa31719ea28d20dd0d3c496d48f620f data/ancient_aether/recipes/wynd_thistle_to_light_blue_dye.json

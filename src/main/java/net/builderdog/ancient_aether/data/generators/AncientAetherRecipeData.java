@@ -430,9 +430,9 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.HELLFIRE_VASE.get(), AetherBlocks.HELLFIRE_STONE.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGETIC_VASE.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
 
-        freezingRecipe(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.FROZEN_HOLYSTONE_VASE.get(), AncientAetherBlocks.HOLYSTONE_VASE.get(), 0.2F, 100).save(consumer);
-
         freezingRecipe(RecipeCategory.BUILDING_BLOCKS, AetherBlocks.HOLIDAY_LEAVES.get(), AncientAetherBlocks.HIGHSPROOT_LEAVES.get(), 0.1F, 50).save(consumer);
+        freezingRecipe(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.WYND_SENTRY_STONE.get(), AetherBlocks.SENTRY_STONE.get(), 0.2F, 100).save(consumer);
+        freezingRecipe(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.FROZEN_HOLYSTONE_VASE.get(), AncientAetherBlocks.HOLYSTONE_VASE.get(), 0.2F, 100).save(consumer);
 
         enchantingRecipe(RecipeCategory.MISC, AncientAetherItems.VALKYRUM.get(), AncientAetherBlocks.VALKYRUM_ORE.get(), 1.5F, 1000).save(consumer);
         enchantingRecipe(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.VIOLET_AERCLOUD.get(), AetherBlocks.BLUE_AERCLOUD.get(), 0.1F, 400).save(consumer, name("violet_aercloud_enchanting"));
