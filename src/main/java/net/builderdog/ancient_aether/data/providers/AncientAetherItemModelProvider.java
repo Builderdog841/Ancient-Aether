@@ -33,7 +33,7 @@ public abstract class AncientAetherItemModelProvider extends AetherItemModelProv
     }
 
     public void untintedMoaEggItem(Item item) {
-        (withExistingParent(itemName(item), modLoc("item/untinted_moa_egg")))
+        (withExistingParent(itemName(item), modLoc("item/template_untinted_moa_egg")))
                 .texture("egg", modLoc( "item/" + itemName(item)))
                 .texture("particle", modLoc( "item/" + itemName(item)));
     }

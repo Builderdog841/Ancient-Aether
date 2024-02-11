@@ -1,10 +1,6 @@
 {
 	"gui_light": "front",
 	"credit": "Made with Blockbench",
-	"textures": {
-		"egg": "blue_moa_egg",
-		"particle": "blue_moa_egg"
-	},
 	"elements": [
 		{
 			"from": [11, 2, 7.5],
