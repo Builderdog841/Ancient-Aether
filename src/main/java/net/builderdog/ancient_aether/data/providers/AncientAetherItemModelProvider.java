@@ -39,22 +39,22 @@ public abstract class AncientAetherItemModelProvider extends AetherItemModelProv
     }
 
     public void AAItemLockedDungeonBlock(Block block, Block baseBlock) {
-        itemOverlayDungeonBlock(block, baseBlock, "lock");
+        AAItemOverlayDungeonBlock(block, baseBlock, "lock");
     }
 
     public void AAItemTrappedDungeonBlock(Block block, Block baseBlock) {
-        itemOverlayDungeonBlock(block, baseBlock, "exclamation");
+        AAItemOverlayDungeonBlock(block, baseBlock, "exclamation");
     }
 
     public void AAItemBossDoorwayDungeonBlock(Block block, Block baseBlock) {
-        itemOverlayDungeonBlock(block, baseBlock, "door");
+        AAItemOverlayDungeonBlock(block, baseBlock, "door");
     }
 
     public void AAItemTreasureDoorwayDungeonBlock(Block block, Block baseBlock) {
-        itemOverlayDungeonBlock(block, baseBlock, "treasure");
+        AAItemOverlayDungeonBlock(block, baseBlock, "treasure");
     }
 
-    public void itemOverlayDungeonBlock(Block block, Block baseBlock, String overlay) {
+    public void AAItemOverlayDungeonBlock(Block block, Block baseBlock, String overlay) {
         withExistingParent(blockName(block), mcLoc("block/cube"))
                 .texture("overlay", new ResourceLocation(Aether.MODID, "block/dungeon/" + overlay)).texture("face", texture(blockName(baseBlock)))
                 .element().from(0.0F, 0.0F, 0.0F).to(16.0F, 16.0F, 16.0F).allFaces((direction, builder) -> builder.texture("#face").cullface(direction).end()).end()
