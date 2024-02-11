@@ -101,27 +101,27 @@
       "faces": {
         "down": {
           "cullface": "down",
-          "texture": "#end"
+          "texture": "#face"
         },
         "east": {
           "cullface": "east",
-          "texture": "#side"
+          "texture": "#face"
         },
         "north": {
           "cullface": "north",
-          "texture": "#side"
+          "texture": "#face"
         },
         "south": {
           "cullface": "south",
-          "texture": "#side"
+          "texture": "#face"
         },
         "up": {
           "cullface": "up",
-          "texture": "#end"
+          "texture": "#face"
         },
         "west": {
           "cullface": "west",
-          "texture": "#side"
+          "texture": "#face"
         }
       },
       "from": [
@@ -167,8 +167,7 @@
     }
   ],
   "textures": {
-    "end": "ancient_aether:block/hellfire_stone_mosaic_top",
-    "side": "ancient_aether:block/hellfire_stone_mosaic",
+    "face": "ancient_aether:block/wynd_sentry_stone",
     "overlay": "aether:block/dungeon/lock"
   }
 }

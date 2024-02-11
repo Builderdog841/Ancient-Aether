@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.data.providers;
 
+import com.aetherteam.aether.Aether;
 import com.aetherteam.aether.data.providers.AetherItemModelProvider;
 import net.builderdog.ancient_aether.AncientAether;
 import net.minecraft.core.Direction;
@@ -35,6 +36,38 @@ public abstract class AncientAetherItemModelProvider extends AetherItemModelProv
         (withExistingParent(itemName(item), modLoc("item/untinted_moa_egg")))
                 .texture("egg", modLoc( "item/" + itemName(item)))
                 .texture("particle", modLoc( "item/" + itemName(item)));
+    }
+
+    public void AAItemLockedDungeonBlock(Block block, Block baseBlock) {
+        itemOverlayDungeonBlock(block, baseBlock, "lock");
+    }
+
+    public void AAItemTrappedDungeonBlock(Block block, Block baseBlock) {
+        itemOverlayDungeonBlock(block, baseBlock, "exclamation");
+    }
+
+    public void AAItemBossDoorwayDungeonBlock(Block block, Block baseBlock) {
+        itemOverlayDungeonBlock(block, baseBlock, "door");
+    }
+
+    public void AAItemTreasureDoorwayDungeonBlock(Block block, Block baseBlock) {
+        itemOverlayDungeonBlock(block, baseBlock, "treasure");
+    }
+
+    public void itemOverlayDungeonBlock(Block block, Block baseBlock, String overlay) {
+        withExistingParent(blockName(block), mcLoc("block/cube"))
+                .texture("overlay", new ResourceLocation(Aether.MODID, "block/dungeon/" + overlay)).texture("face", texture(blockName(baseBlock)))
+                .element().from(0.0F, 0.0F, 0.0F).to(16.0F, 16.0F, 16.0F).allFaces((direction, builder) -> builder.texture("#face").cullface(direction).end()).end()
+                .element().from(0.0F, 0.0F, -0.1F).to(16.0F, 16.0F, -0.1F).rotation().angle(0.0F).axis(Direction.Axis.Y).origin(8.0F, 8.0F, 6.9F).end().face(Direction.NORTH).texture("#overlay").emissivity(15, 15).end().end()
+                .transforms()
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND).rotation(75.0F, 45.0F, 0.0F).translation(0.0F, 2.5F, 0.0F).scale(0.375F, 0.375F, 0.375F).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND).rotation(75.0F, 45.0F, 0.0F).translation(0.0F, 2.5F, 0.0F).scale(0.375F, 0.375F, 0.375F).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND).rotation(-90.0F, -180.0F, -45.0F).scale(0.4F, 0.4F, 0.4F).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND).rotation(-90.0F, -180.0F, -45.0F).scale(0.4F, 0.4F, 0.4F).end()
+                .transform(ItemDisplayContext.GROUND).rotation(90.0F, 0.0F, 0.0F).translation(0.0F, 3.0F, 0.0F).scale(0.25F, 0.25F, 0.25F).end()
+                .transform(ItemDisplayContext.GUI).rotation(30.0F, 135.0F, 0.0F).scale(0.625F, 0.625F, 0.625F).end()
+                .transform(ItemDisplayContext.FIXED).scale(0.5F, 0.5F, 0.5F).end()
+                .end();
     }
 
     public void itemLogWallBlock(Block block, Block baseBlock, String location, String modid) {

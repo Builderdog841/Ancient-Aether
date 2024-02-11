@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.data.providers;
 
+import com.aetherteam.aether.block.dungeon.DoorwayBlock;
 import com.aetherteam.aether.data.providers.AetherBlockStateProvider;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
@@ -43,6 +44,17 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
     public void AABookshelf(Block block, Block endBlock) {
         ModelFile bookshelf = models().cubeColumn(name(block), texture(name(block)), texture(name(endBlock)));
         getVariantBuilder(block).partialState().addModels(new ConfiguredModel(bookshelf));
+    }
+
+    public void AADungeonBlock(Block block, Block baseBlock) {
+        ConfiguredModel dungeonBlock = new ConfiguredModel(models().cubeAll(name(baseBlock), texture(name(baseBlock))));
+        getVariantBuilder(block).partialState().setModels(dungeonBlock);
+    }
+
+    public void AAInvisibleBlock(Block block, Block baseBlock) {
+        ModelFile visible = models().cubeAll(name(baseBlock), texture(name(baseBlock)));
+        ModelFile invisible = models().getBuilder(name(block));
+        getVariantBuilder(block).forAllStatesExcept((state) -> !(Boolean)state.getValue(DoorwayBlock.INVISIBLE) ? ConfiguredModel.builder().modelFile(visible).build() : ConfiguredModel.builder().modelFile(invisible).build());
     }
 
     protected BlockModelBuilder makeWallPostModel(int width, int height, String name) {
