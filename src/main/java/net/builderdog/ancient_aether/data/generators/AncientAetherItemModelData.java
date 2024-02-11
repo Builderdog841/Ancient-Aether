@@ -153,6 +153,8 @@ public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
 
         pane(AncientAetherBlocks.AEROGEL_GLASS_PANE.get(), AncientAetherBlocks.AEROGEL_GLASS.get(), "");
 
+        skyGrassItem(AncientAetherBlocks.SKY_GRASS.get());
+
         AAItemLockedDungeonBlock(AncientAetherBlocks.LOCKED_CARVED_TILES.get(), AncientAetherBlocks.CARVED_TILES.get());
         AAItemLockedDungeonBlock(AncientAetherBlocks.LOCKED_WYND_SENTRY_STONE.get(), AncientAetherBlocks.WYND_SENTRY_STONE.get());
         AAItemLockedDungeonBlock(AncientAetherBlocks.LOCKED_AEROGETIC_STONE.get(), AncientAetherBlocks.AEROGETIC_STONE.get());

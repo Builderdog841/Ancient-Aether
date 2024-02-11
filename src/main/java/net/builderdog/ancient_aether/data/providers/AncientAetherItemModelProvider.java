@@ -42,10 +42,15 @@ public abstract class AncientAetherItemModelProvider extends AetherItemModelProv
     public void ancientRuneItem(Item item) {
         withExistingParent(itemName(item), mcLoc("item/generated"))
                 .texture("layer1", "item/" + (itemName(item)))
-                .texture("layer0", "item/"+ (itemName(item) + "_eye"))
+                .texture("layer0", "item/" + (itemName(item) + "_eye"))
                 .customLoader((itemModelBuilder, existingFileHelper) -> ItemLayerModelBuilder
                         .begin(itemModelBuilder, existingFileHelper)
                         .emissive(15, 15, 0)).end();
+    }
+
+    public void skyGrassItem(Block block) {
+        withExistingParent(blockName(block), mcLoc("item/generated"))
+                .texture("layer0", texture(blockName(block) + "_medium"));
     }
 
     public void AAItemLockedDungeonBlock(Block block, Block baseBlock) {
