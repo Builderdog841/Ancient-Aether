@@ -1,0 +1,24 @@
+{
+  "values": [
+    "minecraft:air",
+    "minecraft:chest",
+    "minecraft:spawner",
+    "aether:holystone",
+    "aether:holystone_bricks",
+    "aether:holystone_brick_stairs",
+    "aether:holystone_pressure_plate",
+    "aether:carved_stone",
+    "aether:aerogel",
+    "aether:aerogel_stairs",
+    "aether:aerogel_slab",
+    "aether:aerogel_wall",
+    "aether:aether_grass_block",
+    "aether:skyroot_planks",
+    "aether:skyroot_bookshelf",
+    "aether:quicksoil_glass_pane",
+    "ancient_aether:carved_stone_mosaic",
+    "ancient_aether:ancient_frozen_holystone_vase",
+    "ancient_aether:holystone_brick_mosaic",
+    "ancient_aether:cracked_slider"
+  ]
+}
