@@ -84,8 +84,7 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
     }
 
     private void logWallBlockInternal(WallBlock block, String baseName, ResourceLocation texture, boolean postUsesTop, ModelFile postBig, ModelFile postShort, ModelFile postTall, ModelFile side, ModelFile sideAlt, ModelFile sideTall, ModelFile sideTallAlt, ModelFile sideShort, ModelFile sideAltShort, ModelFile sideTallShort, ModelFile sideTallAltShort) {
-        logWallBlock(
-                getMultipartBuilder(block),
+        logWallBlock(getMultipartBuilder(block),
                 models().getBuilder(baseName + "_post_short").parent(postShort).texture("particle", texture).texture("top", texture).texture("side", texture),
                 models().getBuilder(baseName + "_post_tall").parent(postTall).texture("particle", texture).texture("top", texture).texture("side", texture),
                 models().getBuilder(baseName + "_side").parent(side).texture("particle", texture).texture("top", texture).texture("side", texture),
@@ -93,9 +92,7 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
                 models().getBuilder(baseName + "_side_tall").parent(sideTall).texture("particle", texture).texture("top", texture).texture("side", texture),
                 models().getBuilder(baseName + "_side_tall_alt").parent(sideTallAlt).texture("particle", texture).texture("top", texture).texture("side", texture)
         );
-
-        logWallBlockWithPost(
-                getMultipartBuilder(block),
+        logWallBlockWithPost(getMultipartBuilder(block),
                 models().getBuilder(baseName + "_post").parent(postBig).texture("particle", texture).texture("top", postUsesTop ? (texture + "_top") : texture.toString()).texture("side", texture),
                 models().getBuilder(baseName + "_side_short").parent(sideShort).texture("particle", texture).texture("top", texture).texture("side", texture),
                 models().getBuilder(baseName + "_side_alt_short").parent(sideAltShort).texture("particle", texture).texture("top", texture).texture("side", texture),
@@ -105,8 +102,7 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
     }
 
     public void logWallBlock(MultiPartBlockStateBuilder builder, ModelFile postShort, ModelFile postTall, ModelFile side, ModelFile sideAlt, ModelFile sideTall, ModelFile sideTallAlt) {
-        builder
-                .part().modelFile(postShort).addModel()
+        builder.part().modelFile(postShort).addModel()
                 .nestedGroup().condition(WallBlock.UP, false).condition(WallBlock.EAST_WALL, WallSide.LOW).condition(WallBlock.WEST_WALL, WallSide.LOW).end().end()
                 .part().modelFile(postTall).addModel()
                 .nestedGroup().condition(WallBlock.UP, false).condition(WallBlock.EAST_WALL, WallSide.TALL).condition(WallBlock.WEST_WALL, WallSide.TALL).end().end()
@@ -123,10 +119,8 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
     }
 
     public void logWallBlockWithPost(MultiPartBlockStateBuilder builder, ModelFile postBig, ModelFile side, ModelFile sideAlt, ModelFile sideTall, ModelFile sideTallAlt) {
-        builder
-                .part().modelFile(postBig).addModel()
-                .condition(WallBlock.UP, true).end();
-        WALL_PROPS.entrySet().stream()
+        builder.part().modelFile(postBig).addModel()
+                .condition(WallBlock.UP, true).end();WALL_PROPS.entrySet().stream()
                 .filter(e -> e.getKey().getAxis().isHorizontal())
                 .forEach(e -> {
                     logWallSidePart(builder, side, sideAlt, e, WallSide.LOW, true);

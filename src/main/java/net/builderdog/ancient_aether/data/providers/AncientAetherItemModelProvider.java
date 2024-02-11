@@ -9,6 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.client.model.generators.loaders.ItemLayerModelBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -34,8 +35,17 @@ public abstract class AncientAetherItemModelProvider extends AetherItemModelProv
 
     public void untintedMoaEggItem(Item item) {
         (withExistingParent(itemName(item), modLoc("item/template_untinted_moa_egg")))
-                .texture("egg", modLoc( "item/" + itemName(item)))
-                .texture("particle", modLoc( "item/" + itemName(item)));
+                .texture("egg", modLoc("item/" + itemName(item)))
+                .texture("particle", modLoc("item/" + itemName(item)));
+    }
+
+    public void ancientRuneItem(Item item) {
+        withExistingParent(itemName(item), mcLoc("item/generated"))
+                .texture("layer1", "item/" + (itemName(item)))
+                .texture("layer0", "item/"+ (itemName(item) + "_eye"))
+                .customLoader((itemModelBuilder, existingFileHelper) -> ItemLayerModelBuilder
+                        .begin(itemModelBuilder, existingFileHelper)
+                        .emissive(15, 15, 0)).end();
     }
 
     public void AAItemLockedDungeonBlock(Block block, Block baseBlock) {

@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-11T19:17:29.2050365	Item Models: ancient_aether
+// 1.20.1	2024-02-11T19:58:00.4235014	Item Models: ancient_aether
 532bdb7a4f7d2a6b96d474c01c8b9e7a0d1c10b4 assets/ancient_aether/models/item/aerogel_glass.json
 87e9f8f9f807a2aa763e3057d32bacf3ee32b60f assets/ancient_aether/models/item/aerogel_glass_door.json
 d1e6ed3e334d573f31a8ce9e09885c0f43832630 assets/ancient_aether/models/item/aerogel_glass_pane.json
@@ -17,6 +17,7 @@ c52995235bbc1523ea132d2cc156d05c389e4c37 assets/ancient_aether/models/item/ancie
 e37cf47e8fb3fe02e31753d143532582b333dc0e assets/ancient_aether/models/item/ancient_obelisk.json
 e33c85e0901587bf84b2a93e0f74636995731436 assets/ancient_aether/models/item/ancient_pendant.json
 8098bc5e17d412cb410ace5b54bf581bc079e984 assets/ancient_aether/models/item/ancient_ring.json
+b0d7cb9315807de83a30f396ac7611611e086577 assets/ancient_aether/models/item/ancient_rune.json
 7b758a31f7272894d72fc2ff7144b4d1d37b407a assets/ancient_aether/models/item/ancient_sword.json
 ed179b3ef576a4cfe5ef1282c7007bdf56c9e7a4 assets/ancient_aether/models/item/angelic_vase.json
 0a5433703811659f4e53f0449e46e526ff9983b0 assets/ancient_aether/models/item/arkenium_pendant.json

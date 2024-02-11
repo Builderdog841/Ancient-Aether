@@ -43,7 +43,7 @@ public class AncientAetherItems {
     public static final Component LEGENDARY = Component.translatable("ancient_aether.tooltip.legendary").withStyle(Style.EMPTY.withItalic(true).withColor(ChatFormatting.GOLD));
 
     //Misc
-    public static final RegistryObject<Item> ANCIENT_RUNE = ITEMS.register("ancient_rune", () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> ANCIENT_RUNE = ITEMS.register("ancient_rune", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ANCIENT_DUNGEON_KEY = ITEMS.register("ancient_dungeon_key", () -> new DungeonKeyItem(new ResourceLocation(AncientAether.MOD_ID, "ancient"), new Item.Properties().stacksTo(1).fireResistant()));
     public static final RegistryObject<Item> VALKYRUM = ITEMS.register("valkyrum", () -> new Item(new Item.Properties()));
 

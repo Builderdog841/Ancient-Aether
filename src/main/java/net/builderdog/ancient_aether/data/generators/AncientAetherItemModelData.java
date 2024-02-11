@@ -87,6 +87,8 @@ public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
 
         rotatedItem(AncientAetherItems.ANCIENT_DUNGEON_KEY.get(), "");
 
+        ancientRuneItem(AncientAetherItems.ANCIENT_RUNE.get());
+
         itemBlock(AncientAetherBlocks.HIGHSPROOT_STAIRS.get());
         itemBlock(AncientAetherBlocks.SAKURA_STAIRS.get());
         itemBlock(AncientAetherBlocks.CARVED_TILE_STAIRS.get());
