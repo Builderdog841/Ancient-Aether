@@ -12,12 +12,24 @@ import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.WallSide;
 import net.minecraftforge.client.model.generators.*;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Map;
+import java.util.Objects;
 
 public abstract class AncientAetherBlockStateProvider extends AetherBlockStateProvider {
     public AncientAetherBlockStateProvider(PackOutput output, String id, ExistingFileHelper helper) {
         super(output, id, helper);
+    }
+
+    public void blockWithItem(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    }
+
+    public void crossBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get())).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 
     public void translucentDoorBlock(DoorBlock block, ResourceLocation bottom, ResourceLocation top) {
@@ -26,6 +38,11 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
 
     public void translucentTrapdoorBlock(TrapDoorBlock block, ResourceLocation texture, boolean orientable) {
         trapdoorBlockWithRenderType(block, texture, orientable, "translucent");
+    }
+
+    public void AABookshelf(Block block, Block endBlock) {
+        ModelFile bookshelf = models().cubeColumn(name(block), texture(name(block)), texture(name(endBlock)));
+        getVariantBuilder(block).partialState().addModels(new ConfiguredModel(bookshelf));
     }
 
     protected BlockModelBuilder makeWallPostModel(int width, int height, String name) {
@@ -48,11 +65,6 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
                 .face(Direction.SOUTH).texture("#side").end()
                 .face(Direction.WEST).texture("#side").end()
                 .face(Direction.EAST).texture("#side").end().end();
-    }
-
-    public void aabookshelf(Block block, Block endBlock) {
-        ModelFile bookshelf = models().cubeColumn(name(block), texture(name(block)), texture(name(endBlock)));
-        getVariantBuilder(block).partialState().addModels(new ConfiguredModel(bookshelf));
     }
 
     public void logWallBlock(WallBlock block, Block baseBlock, String location, String modid, boolean postUsesTop, ModelFile postBig, ModelFile postShort, ModelFile postTall, ModelFile side, ModelFile sideAlt, ModelFile sideTall, ModelFile sideTallAlt, ModelFile sideShort, ModelFile sideAltShort, ModelFile sideTallShort, ModelFile sideTallAltShort) {
