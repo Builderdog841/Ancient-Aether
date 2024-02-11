@@ -13,12 +13,12 @@
     }
   },
   "pattern": [
-    "HHH",
+    "SHS",
     "STS",
-    "HHH"
+    "SHS"
   ],
   "result": {
-    "item": "ancient_aether:holystone_lantern"
+    "item": "ancient_aether:ambrosium_lantern"
   },
   "show_notification": true
 }

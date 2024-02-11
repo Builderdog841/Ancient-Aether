@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_ambrosium_torch": {
+    "has_light_hellfire_stone": {
       "conditions": {
         "items": [
           {
             "items": [
-              "aether:ambrosium_torch"
+              "aether:light_hellfire_stone"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ancient_aether:angelic_lantern"
+        "recipe": "ancient_aether:sun_lantern"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_ambrosium_torch",
+      "has_light_hellfire_stone",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "ancient_aether:angelic_lantern"
+      "ancient_aether:sun_lantern"
     ]
   },
   "sends_telemetry_event": false

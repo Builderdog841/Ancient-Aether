@@ -42,5 +42,17 @@ public class AncientAetherMissingMappings {
                 .filter(mapping -> mapping.getKey().getPath().contains("buffalo_wool")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.FLUFFALO_WOOL.get()));
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
                 .filter(mapping -> mapping.getKey().getPath().contains("buffalo_carpet")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.FLUFFALO_CARPET.get()));
+
+        //v0.8.9
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("holystone_lantern")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.AMBROSIUM_LANTERN.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("sentry_lantern")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.AMBROSIUM_LANTERN.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("angelic_lantern")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.AMBROSIUM_LANTERN.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("hellfire_lantern")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.SUN_LANTERN.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MOD_ID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("gale_lantern")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.AMBROSIUM_LANTERN.get()));
     }
 }

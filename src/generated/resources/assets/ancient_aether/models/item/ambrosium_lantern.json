@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "ancient_aether:item/sentry_lantern"
+    "layer0": "ancient_aether:item/ambrosium_lantern"
   }
 }

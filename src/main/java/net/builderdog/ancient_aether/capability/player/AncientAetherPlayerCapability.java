@@ -33,7 +33,7 @@ public class AncientAetherPlayerCapability implements AncientAetherPlayer {
     }
 
     private void handleWingRotation() {
-        if (this.getPlayer().level().isClientSide()) {
+        if (getPlayer().level().isClientSide()) {
             wingRotationO = getWingRotation();
             if (EquipmentUtil.hasFullValkyrumSet(getPlayer())) {
                 wingRotation = getPlayer().tickCount;
@@ -45,17 +45,17 @@ public class AncientAetherPlayerCapability implements AncientAetherPlayer {
 
     @Override
     public Player getPlayer() {
-        return this.player;
+        return player;
     }
 
     @Override
     public int getWingRotation() {
-        return this.wingRotation;
+        return wingRotation;
     }
 
     @Override
     public int getWingRotationO() {
-        return this.wingRotationO;
+        return wingRotationO;
     }
 
     @Override
@@ -68,7 +68,7 @@ public class AncientAetherPlayerCapability implements AncientAetherPlayer {
 
     @Override
     public Map<String, Triple<Type, Consumer<Object>, Supplier<Object>>> getSynchableFunctions() {
-        return this.synchableFunctions;
+        return synchableFunctions;
     }
 
     @Override

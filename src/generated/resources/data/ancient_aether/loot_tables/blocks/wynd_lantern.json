@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ancient_aether:aerogetic_lantern"
+          "name": "ancient_aether:wynd_lantern"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "ancient_aether:blocks/aerogetic_lantern"
+  "random_sequence": "ancient_aether:blocks/wynd_lantern"
 }

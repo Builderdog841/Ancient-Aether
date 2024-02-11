@@ -69,54 +69,26 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         woodFromLogs(consumer, AncientAetherBlocks.STRIPPED_SAKURA_WOOD.get(), AncientAetherBlocks.STRIPPED_SAKURA_LOG.get());
         planksFromLogs(consumer, AncientAetherBlocks.SAKURA_PLANKS.get(), AncientAetherTags.Items.CRAFTS_SAKURA_PLANKS, 4);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherBlocks.HOLYSTONE_LANTERN.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherBlocks.AMBROSIUM_LANTERN.get())
                 .define('H', AetherBlocks.HOLYSTONE.get())
                 .define('S', Tags.Items.RODS_WOODEN)
                 .define('T', AetherBlocks.AMBROSIUM_TORCH.get())
-                .pattern("HHH")
+                .pattern("SHS")
                 .pattern("STS")
-                .pattern("HHH")
+                .pattern("SHS")
                 .unlockedBy(getHasName(AetherBlocks.AMBROSIUM_TORCH.get()), has(AetherBlocks.AMBROSIUM_TORCH.get()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherBlocks.SENTRY_LANTERN.get())
-                .define('C', AetherBlocks.CARVED_STONE.get())
-                .define('S', AetherBlocks.SENTRY_STONE.get())
-                .define('T', AetherBlocks.AMBROSIUM_TORCH.get())
-                .pattern("CCC")
-                .pattern("STS")
-                .pattern("CCC")
-                .unlockedBy(getHasName(AetherBlocks.AMBROSIUM_TORCH.get()), has(AetherBlocks.AMBROSIUM_TORCH.get()))
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, AncientAetherBlocks.WYND_LANTERN.get())
+                .requires(AncientAetherBlocks.AMBROSIUM_LANTERN.get())
+                .requires(AncientAetherBlocks.WYND_SENTRY_STONE.get())
+                .unlockedBy(getHasName(AncientAetherBlocks.WYND_SENTRY_STONE.get()), has(AncientAetherBlocks.WYND_SENTRY_STONE.get()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherBlocks.ANGELIC_LANTERN.get())
-                .define('A', AetherBlocks.ANGELIC_STONE.get())
-                .define('L', AetherBlocks.LIGHT_ANGELIC_STONE.get())
-                .define('T', AetherBlocks.AMBROSIUM_TORCH.get())
-                .pattern("AAA")
-                .pattern("LTL")
-                .pattern("AAA")
-                .unlockedBy(getHasName(AetherBlocks.AMBROSIUM_TORCH.get()), has(AetherBlocks.AMBROSIUM_TORCH.get()))
-                .save(consumer);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherBlocks.HELLFIRE_LANTERN.get())
-                .define('H', AetherBlocks.HELLFIRE_STONE.get())
-                .define('L', AetherBlocks.LIGHT_HELLFIRE_STONE.get())
-                .define('T', AetherBlocks.AMBROSIUM_TORCH.get())
-                .pattern("HHH")
-                .pattern("LTL")
-                .pattern("HHH")
-                .unlockedBy(getHasName(AetherBlocks.AMBROSIUM_TORCH.get()), has(AetherBlocks.AMBROSIUM_TORCH.get()))
-                .save(consumer);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherBlocks.AEROGETIC_LANTERN.get())
-                .define('A', AncientAetherBlocks.AEROGETIC_STONE.get())
-                .define('L', AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get())
-                .define('T', AetherBlocks.AMBROSIUM_TORCH.get())
-                .pattern("AAA")
-                .pattern("LTL")
-                .pattern("AAA")
-                .unlockedBy(getHasName(AetherBlocks.AMBROSIUM_TORCH.get()), has(AetherBlocks.AMBROSIUM_TORCH.get()))
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, AncientAetherBlocks.SUN_LANTERN.get())
+                .requires(AncientAetherBlocks.AMBROSIUM_LANTERN.get())
+                .requires(AetherBlocks.LIGHT_HELLFIRE_STONE.get())
+                .unlockedBy(getHasName(AetherBlocks.LIGHT_HELLFIRE_STONE.get()), has(AetherBlocks.LIGHT_HELLFIRE_STONE.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AncientAetherItems.ANCIENT_RUNE.get(),2)

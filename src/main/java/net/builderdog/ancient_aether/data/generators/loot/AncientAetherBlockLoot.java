@@ -139,6 +139,7 @@ public class AncientAetherBlockLoot extends AetherBlockLootSubProvider {
         dropSelf(AncientAetherBlocks.CARVED_TILE_STAIRS.get());
         dropSelf(AncientAetherBlocks.CARVED_TILE_SLAB.get());
         dropSelf(AncientAetherBlocks.CARVED_TILE_WALL.get());
+        dropSelf(AncientAetherBlocks.WYND_SENTRY_STONE.get());
         dropSelf(AncientAetherBlocks.AEROGETIC_STONE.get());
         dropSelf(AncientAetherBlocks.AEROGETIC_STAIRS.get());
         add(AncientAetherBlocks.AEROGETIC_SLAB.get(), this::createSlabItemTable);
@@ -153,12 +154,9 @@ public class AncientAetherBlockLoot extends AetherBlockLootSubProvider {
         dropSelf(AncientAetherBlocks.ANCIENT_OBELISK.get());
 
         //Lanterns and Campfires
-        dropSelf(AncientAetherBlocks.HOLYSTONE_LANTERN.get());
-        dropSelf(AncientAetherBlocks.SENTRY_LANTERN.get());
-        dropSelf(AncientAetherBlocks.ANGELIC_LANTERN.get());
-        dropSelf(AncientAetherBlocks.HELLFIRE_LANTERN.get());
-        dropSelf(AncientAetherBlocks.AEROGETIC_LANTERN.get());
-        dropSelf(AncientAetherBlocks.GALE_LANTERN.get());
+        dropSelf(AncientAetherBlocks.AMBROSIUM_LANTERN.get());
+        dropSelf(AncientAetherBlocks.WYND_LANTERN.get());
+        dropSelf(AncientAetherBlocks.SUN_LANTERN.get());
         dropOtherTwice(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get(), AetherItems.AMBROSIUM_SHARD.get());
 
         //Redstone Blocks

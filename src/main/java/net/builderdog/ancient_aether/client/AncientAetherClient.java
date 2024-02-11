@@ -3,7 +3,7 @@ package net.builderdog.ancient_aether.client;
 import com.aetherteam.aether.AetherConfig;
 import com.aetherteam.cumulus.CumulusConfig;
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.block.AncientAetherWoodTypes;
+import net.builderdog.ancient_aether.block.AncientAetherBlockSets;
 import net.builderdog.ancient_aether.client.renderer.AncientAetherEntityRenderers;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraftforge.api.distmarker.Dist;
@@ -23,8 +23,8 @@ public class AncientAetherClient {
             AetherConfig.COMMON.add_temporary_freezing_automatically.set(true);
             CumulusConfig.CLIENT.enable_menu_list_button.set(true);
             AeroBlenderConfig.COMMON.vanillaAetherRegionWeight.set(0);
-            Sheets.addWoodType(AncientAetherWoodTypes.HIGHSPROOT);
-            Sheets.addWoodType(AncientAetherWoodTypes.SAKURA);
+            Sheets.addWoodType(AncientAetherBlockSets.HIGHSPROOT);
+            Sheets.addWoodType(AncientAetherBlockSets.SAKURA);
         });
     }
 }

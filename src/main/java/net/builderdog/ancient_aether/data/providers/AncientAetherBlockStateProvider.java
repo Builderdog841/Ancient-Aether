@@ -51,8 +51,8 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
     }
 
     public void aabookshelf(Block block, Block endBlock) {
-        ModelFile bookshelf = models().cubeColumn(name(block), this.texture(name(block)), texture(name(endBlock)));
-        this.getVariantBuilder(block).partialState().addModels(new ConfiguredModel(bookshelf));
+        ModelFile bookshelf = models().cubeColumn(name(block), texture(name(block)), texture(name(endBlock)));
+        getVariantBuilder(block).partialState().addModels(new ConfiguredModel(bookshelf));
     }
 
     public void logWallBlock(WallBlock block, Block baseBlock, String location, String modid, boolean postUsesTop, ModelFile postBig, ModelFile postShort, ModelFile postTall, ModelFile side, ModelFile sideAlt, ModelFile sideTall, ModelFile sideTallAlt, ModelFile sideShort, ModelFile sideAltShort, ModelFile sideTallShort, ModelFile sideTallAltShort) {

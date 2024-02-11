@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ancient_aether:hellfire_lantern"
+          "name": "ancient_aether:wynd_sentry_stone"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "ancient_aether:blocks/hellfire_lantern"
+  "random_sequence": "ancient_aether:blocks/wynd_sentry_stone"
 }
