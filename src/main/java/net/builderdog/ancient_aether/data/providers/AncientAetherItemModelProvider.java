@@ -11,7 +11,6 @@ import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.loaders.ItemLayerModelBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public abstract class AncientAetherItemModelProvider extends AetherItemModelProvider {
@@ -19,18 +18,14 @@ public abstract class AncientAetherItemModelProvider extends AetherItemModelProv
         super(output, id, helper);
     }
 
-    public String itemName(Item item) {
-        ResourceLocation location = ForgeRegistries.ITEMS.getKey(item);
-        if (location != null) {
-            return location.getPath();
-        } else {
-            throw new IllegalStateException("Unknown item: " + item.toString());
-        }
-    }
     public void simpleItem(RegistryObject<Item> item) {
         withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated"))
                 .texture("layer0", new ResourceLocation(AncientAether.MOD_ID, "item/" + item.getId().getPath()));
+    }
+
+    public void itemBlockCopy(Block block, Block blockCopy) {
+        withExistingParent(blockName(block), modLoc(blockName(blockCopy)));
     }
 
     public void untintedMoaEggItem(Item item) {
