@@ -5,10 +5,7 @@ import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.data.providers.AncientAetherBlockStateProvider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
-import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.ModelBuilder;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -121,6 +118,9 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
 
         pressurePlateBlock(AncientAetherBlocks.HIGHSPROOT_PRESSURE_PLATE.get(), texture(name(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()), ""));
         pressurePlateBlock(AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get(), texture(name(AncientAetherBlocks.SAKURA_PLANKS.get()), ""));
+
+        signBlock((StandingSignBlock) AncientAetherBlocks.HIGHSPROOT_SIGN.get(), (WallSignBlock) AncientAetherBlocks.HIGHSPROOT_WALL_SIGN.get(), texture(name(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()), ""));
+        signBlock((StandingSignBlock) AncientAetherBlocks.SAKURA_SIGN.get(), (WallSignBlock) AncientAetherBlocks.SAKURA_WALL_SIGN.get(), texture(name(AncientAetherBlocks.SAKURA_PLANKS.get()), ""));
 
         hangingSignBlock(AncientAetherBlocks.HIGHSPROOT_HANGING_SIGN.get(), AncientAetherBlocks.HIGHSPROOT_WALL_HANGING_SIGN.get(), texture(name(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get()), ""));
         hangingSignBlock(AncientAetherBlocks.SAKURA_HANGING_SIGN.get(), AncientAetherBlocks.SAKURA_WALL_HANGING_SIGN.get(), texture(name(AncientAetherBlocks.STRIPPED_SAKURA_LOG.get()), ""));
