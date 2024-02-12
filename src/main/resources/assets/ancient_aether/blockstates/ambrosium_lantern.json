@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "ancient_aether:block/ambrosium_lantern"
+    },
+    "hanging=true": {
+      "model": "ancient_aether:block/ambrosium_lantern_hanging"
+    }
+  }
+}
