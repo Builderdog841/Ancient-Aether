@@ -1,15 +1,28 @@
 {
-  "type": "mul",
-  "argument1": {
-    "type": "minecraft:y_clamped_gradient",
-    "from_value": 1,
-    "from_y": 112,
-    "to_value": 2.5,
-    "to_y": 256
-  },
+    "type": "mul",
+    "argument1": {
+      "type": "minecraft:range_choice",
+      "input": "minecraft:y",
+      "min_inclusive": 100,
+      "max_exclusive": 4062,
+      "when_in_range": {
+        "type": "minecraft:y_clamped_gradient",
+        "from_value": 1,
+        "from_y": 100,
+        "to_value": 2.5,
+        "to_y": 200
+      },
+      "when_out_of_range": 1
+    },
   "argument2": {
     "type": "minecraft:add",
-    "argument1": 0.5,
+    "argument1": {
+      "type": "minecraft:y_clamped_gradient",
+      "from_value": 2,
+      "from_y": 70,
+      "to_value": 0.5,
+      "to_y": 180
+    },
     "argument2": "ancient_aether:the_aether/sloping_amplifier"
   }
 }

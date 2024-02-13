@@ -7,12 +7,12 @@
       "type": "minecraft:mul",
       "argument1": {
         "type": "minecraft:mul",
-        "argument1": -0.15,
-        "argument2": "ancient_aether:the_aether/sloper_underground"
+        "argument1": -0.20,
+        "argument2": "ancient_aether:the_aether/islands/skyroot/sloper"
       },
       "argument2": {
         "type": "minecraft:mul",
-        "argument1": "ancient_aether:the_aether/islands/skyroot/factor_temperature",
+        "argument1": "ancient_aether:the_aether/islands/highlands/factor_temperature",
         "argument2": "ancient_aether:the_aether/factor_erosion"
       }
     },
@@ -21,9 +21,9 @@
       "argument1": {
         "type": "minecraft:y_clamped_gradient",
         "from_value": 0.0,
-        "from_y": -64,
+        "from_y": -16,
         "to_value": 1.0,
-        "to_y": 112
+        "to_y": 100
       },
       "argument2": {
         "type": "minecraft:add",
@@ -34,12 +34,12 @@
             "type": "minecraft:mul",
             "argument1": {
               "type": "minecraft:mul",
-              "argument1": -0.12,
+              "argument1": -0.20,
               "argument2": "ancient_aether:the_aether/islands/skyroot/sloper"
             },
             "argument2": {
               "type": "minecraft:mul",
-              "argument1": "ancient_aether:the_aether/islands/skyroot/factor_temperature",
+              "argument1": "ancient_aether:the_aether/islands/highlands/factor_temperature",
               "argument2": "ancient_aether:the_aether/factor_erosion"
             }
           },
@@ -48,9 +48,9 @@
             "argument1": {
               "type": "minecraft:y_clamped_gradient",
               "from_value": 1.0,
-              "from_y": 112,
+              "from_y": 100,
               "to_value": 0.0,
-              "to_y": 156
+              "to_y": 180
             },
             "argument2": {
               "type": "add",
@@ -68,7 +68,7 @@
                 "argument": {
                   "type": "minecraft:noise",
                   "noise": "ancient_aether:jagged",
-                  "xz_scale": 500,
+                  "xz_scale": 250,
                   "y_scale": 0
                 }
               }
