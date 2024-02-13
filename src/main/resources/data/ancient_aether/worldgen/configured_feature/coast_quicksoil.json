@@ -10,7 +10,8 @@
         }
       }
     },
-    "radius": 6.9282032,
+    "radius": 6.6641016,
+    "radius2": 4.6641016,
     "valid_blocks": "aether:aether_grass_block",
     "y_range": {
       "max_inclusive": 136,
