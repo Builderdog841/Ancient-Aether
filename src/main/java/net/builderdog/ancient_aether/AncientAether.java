@@ -119,12 +119,12 @@ public class AncientAether {
             event.addRepositorySource(consumer -> consumer.accept(pack));
         }
 
-        //if (event.getPackType() == PackType.CLIENT_RESOURCES) {
-        //    var resourcePath = ModList.get().getModFileById(AncientAether.MOD_ID).getFile().findResource("packs/aether_emissivity_compat");
-        //    var pack = Pack.readMetaAndCreate("builtin/aether_emissivity_compat", Component.translatable("pack.ancient_aether.aether_emissivity_compat.title"), true,
-        //            path -> new PathPackResources(path, resourcePath, true), PackType.CLIENT_RESOURCES, Pack.Position.TOP, PackSource.BUILT_IN);
-        //    event.addRepositorySource(consumer -> consumer.accept(pack));
-        //}
+        if (ModList.get().isLoaded("aether_emissivity") && event.getPackType() == PackType.CLIENT_RESOURCES) {
+            var resourcePath = ModList.get().getModFileById(AncientAether.MOD_ID).getFile().findResource("packs/aether_emissivity_compat");
+            var pack = Pack.readMetaAndCreate("builtin/aether_emissivity_compat", Component.translatable("pack.ancient_aether.aether_emissivity_compat.title"), true,
+                    path -> new PathPackResources(path, resourcePath, true), PackType.CLIENT_RESOURCES, Pack.Position.TOP, PackSource.BUILT_IN);
+            event.addRepositorySource(consumer -> consumer.accept(pack));
+        }
 
         if (event.getPackType() == PackType.SERVER_DATA) {
             var resourcePath = ModList.get().getModFileById(AncientAether.MOD_ID).getFile().findResource("packs/ancient_aether_worldgen_overrides");
