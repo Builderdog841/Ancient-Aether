@@ -49,7 +49,6 @@ public class AncientAetherBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, AncientAether.MOD_ID);
 
-    //Highsproot Wood
     public static final RegistryObject<Block> HIGHSPROOT_LOG = registerBlock("highsproot_log", () -> new AncientAetherLogBlock(BlockBehaviour.Properties.copy(SKYROOT_LOG.get())));
     public static final RegistryObject<Block> HIGHSPROOT_WOOD = registerBlock("highsproot_wood", () -> new AncientAetherLogBlock(BlockBehaviour.Properties.copy(SKYROOT_WOOD.get())));
     public static final RegistryObject<Block> STRIPPED_HIGHSPROOT_LOG = registerBlock("stripped_highsproot_log", () -> new AncientAetherLogBlock(BlockBehaviour.Properties.copy(STRIPPED_SKYROOT_LOG.get())));
@@ -73,7 +72,6 @@ public class AncientAetherBlocks {
     public static final RegistryObject<WallHangingSignBlock> HIGHSPROOT_WALL_HANGING_SIGN = BLOCKS.register("highsproot_wall_hanging_sign", () -> new AncientAetherWallHangingSignBlock(BlockBehaviour.Properties.copy(SKYROOT_WALL_HANGING_SIGN.get()), AncientAetherBlockSets.HIGHSPROOT));
     public static final RegistryObject<Block> HIGHSPROOT_BOOKSHELF = registerBlock("highsproot_bookshelf", () -> new BookshelfBlock(Block.Properties.copy(SKYROOT_BOOKSHELF.get())));
 
-    //Sakura Wood
     public static final RegistryObject<Block> SAKURA_LOG = registerBlock("sakura_log", () -> new AncientAetherLogBlock(BlockBehaviour.Properties.copy(SKYROOT_LOG.get())));
     public static final RegistryObject<Block> SAKURA_WOOD = registerBlock("sakura_wood", () -> new AncientAetherLogBlock(BlockBehaviour.Properties.copy(SKYROOT_WOOD.get())));
     public static final RegistryObject<Block> STRIPPED_SAKURA_LOG = registerBlock("stripped_sakura_log", () -> new AncientAetherLogBlock(BlockBehaviour.Properties.copy(STRIPPED_SKYROOT_LOG.get())));
@@ -97,21 +95,18 @@ public class AncientAetherBlocks {
     public static final RegistryObject<WallHangingSignBlock> SAKURA_WALL_HANGING_SIGN = BLOCKS.register("sakura_wall_hanging_sign", () -> new AncientAetherWallHangingSignBlock(BlockBehaviour.Properties.copy(SKYROOT_WALL_HANGING_SIGN.get()), AncientAetherBlockSets.SAKURA));
     public static final RegistryObject<Block> SAKURA_BOOKSHELF = registerBlock("sakura_bookshelf", () -> new BookshelfBlock(Block.Properties.copy(SKYROOT_BOOKSHELF.get())));
 
-    //Leaves
     public static final RegistryObject<Block> SKYROOT_PINE_LEAVES = registerBlock("skyroot_pine_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(SKYROOT_LEAVES.get())));
     public static final RegistryObject<Block> CRYSTAL_SKYROOT_LEAVES = registerBlock("crystal_skyroot_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(CRYSTAL_LEAVES.get())));
     public static final RegistryObject<Block> HIGHSPROOT_LEAVES = registerBlock("highsproot_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(SKYROOT_LEAVES.get()).mapColor(MapColor.TERRACOTTA_BLUE).isValidSpawn(AncientAetherBlocks::ocelotOrParrot).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
     public static final RegistryObject<Block> SAKURA_LEAVES = registerBlock("sakura_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(SKYROOT_LEAVES.get()).sound(SoundType.CHERRY_LEAVES).mapColor(MapColor.COLOR_PINK).isValidSpawn(AncientAetherBlocks::ocelotOrParrot).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
     public static final RegistryObject<Block> ENCHANTED_SKYROOT_LEAVES = registerBlock("enchanted_skyroot_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(SKYROOT_LEAVES.get()).mapColor(MapColor.LAPIS).isValidSpawn(AncientAetherBlocks::ocelotOrParrot).isRedstoneConductor(AncientAetherBlocks::never).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
 
-    //Saplings
     public static final RegistryObject<Block> SKYROOT_PINE_SAPLING = registerBlock("skyroot_pine_sapling", () -> new SaplingBlock(new SkyrootPineTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get())));
     public static final RegistryObject<Block> CRYSTAL_SKYROOT_SAPLING = registerBlock("crystal_skyroot_sapling", () -> new SaplingBlock(new CrystalSkyrootTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get()).mapColor(MapColor.DIAMOND)));
     public static final RegistryObject<Block> HIGHSPROOT_SAPLING = registerBlock("highsproot_sapling", () -> new SaplingBlock(new HighsprootTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get()).mapColor(MapColor.TERRACOTTA_BLUE)));
     public static final RegistryObject<Block> SAKURA_SAPLING = registerBlock("sakura_sapling", () -> new SaplingBlock(new SakuraTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get()).mapColor(MapColor.COLOR_PINK)));
     public static final RegistryObject<Block> ENCHANTED_SKYROOT_SAPLING = registerBlock("enchanted_skyroot_sapling", () -> new SaplingBlock(new EnchantedSkyrootTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get()).mapColor(MapColor.LAPIS)));
 
-    //Plants
     public static final RegistryObject<Block> SKY_GRASS = registerBlock("sky_grass", () -> new SkyGrassBlock(Block.Properties.copy(GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
     public static final RegistryObject<Block> HIGHLAND_VIOLA = registerBlock("highland_viola", () -> new FlowerBlock(() -> MobEffects.REGENERATION, 4, Block.Properties.copy(WHITE_FLOWER.get())));
     public static final RegistryObject<Block> SKY_BLUES = registerBlock("sky_blues", () -> new FlowerBlock(() -> MobEffects.POISON, 4, Block.Properties.copy(WHITE_FLOWER.get())));
@@ -119,14 +114,12 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> SAKURA_BLOSSOMS = registerBlock("sakura_blossoms", () -> new FlowerBlock(() -> MobEffects.HEALTH_BOOST, 4, Block.Properties.copy(WHITE_FLOWER.get())));
     public static final RegistryObject<Block> TRAPPED_SAKURA_BLOSSOMS = registerBlock("trapped_sakura_blossoms", () -> new TrappedFlowerBlock(AncientAetherEntityTypes.ROOTHYRN::get, AIR::defaultBlockState, Block.Properties.copy(SAKURA_BLOSSOMS.get())));
 
-    //Natural
     public static final RegistryObject<Block> GRAVITY_GRAVEL = registerBlock("gravity_gravel", () -> new AetherDoubleDropBlock(Block.Properties.of().mapColor(MapColor.TERRACOTTA_PURPLE).jumpFactor(1.5F).strength(0.25F).sound(SoundType.GRAVEL)));
     public static final RegistryObject<Block> WYND_ICE = registerBlock("wynd_ice", () -> new Block(Block.Properties.copy(PACKED_ICE)));
     public static final RegistryObject<Block> AETHER_QUARTZ_ORE = registerBlock("aether_quartz_ore", () -> new AetherDoubleDropsOreBlock(Block.Properties.copy(NETHER_QUARTZ_ORE), UniformInt.of(2, 5)));
     public static final RegistryObject<Block> VALKYRUM_ORE = registerBlock("valkyrum_ore", () -> new ValkyrumBlock(Block.Properties.of().strength(4.0F, 4.0F).requiresCorrectToolForDrops().mapColor(MapColor.QUARTZ)));
     public static final RegistryObject<Block> VIOLET_AERCLOUD = registerBlock("violet_aercloud", () -> new VioletAercloudBlock(BlockBehaviour.Properties.copy(COLD_AERCLOUD.get()).mapColor(MapColor.COLOR_PURPLE)));
 
-    //Construction
     public static final RegistryObject<RotatedPillarBlock> HOLYSTONE_BRICK_MOSAIC = registerBlock("holystone_brick_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.HOLYSTONE_BRICKS.get())));
     public static final RegistryObject<GlassBlock> AEROGEL_GLASS = registerBlock("aerogel_glass", () -> new GlassBlock(Block.Properties.copy(AEROGEL.get()).isRedstoneConductor(AncientAetherBlocks::never).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
     public static final RegistryObject<IronBarsBlock> AEROGEL_GLASS_PANE = registerBlock("aerogel_glass_pane", () -> new IronBarsBlock(Block.Properties.copy(AEROGEL_GLASS.get())));
@@ -136,7 +129,6 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> FLUFFALO_CARPET = registerBlock("fluffalo_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.copy(FLUFFALO_WOOL.get())));
     public static final RegistryObject<Block> VALKYRUM_BLOCK = registerBlock("valkyrum_block", () -> new ValkyrumBlock(Block.Properties.copy(ZANITE_BLOCK.get()).strength(6.0F, 8.0F).mapColor(MapColor.QUARTZ)));
 
-    //Dungeon Blocks
     public static final RegistryObject<Block> CARVED_TILES = registerBlock("carved_tiles", () -> new Block(Block.Properties.copy(CARVED_STONE.get())));
     public static final RegistryObject<Block> CARVED_TILE_STAIRS = registerBlock("carved_tile_stairs", () -> new StairBlock(() -> CARVED_TILES.get().defaultBlockState(), (Block.Properties.copy(CARVED_TILES.get()))));
     public static final RegistryObject<Block> CARVED_TILE_SLAB = registerBlock("carved_tile_slab", () -> new SlabBlock(Block.Properties.copy(CARVED_TILES.get())));
@@ -176,7 +168,6 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> UNPOWERED_ANCIENT_OBELISK = registerBlock("unpowered_ancient_obelisk", () -> new UnpoweredObeliskBlock(BlockBehaviour.Properties.copy(STONE).sound(SoundType.STONE).lightLevel(s -> 3).noLootTable().strength(-1.0F, 3600000.0F).noOcclusion()));
     public static final RegistryObject<Block> ANCIENT_OBELISK = registerBlock("ancient_obelisk", () -> new Block(BlockBehaviour.Properties.copy(AEROGETIC_STONE.get()).strength(5f).lightLevel(s -> 12).noOcclusion()));
 
-    //Potted Plants
     public static final RegistryObject<FlowerPotBlock> POTTED_HIGHLAND_VIOLA = BLOCKS.register("potted_highland_viola", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SKY_BLUES, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_SKY_BLUES = BLOCKS.register("potted_sky_blues", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SKY_BLUES, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_WYND_THISTLE = BLOCKS.register("potted_wynd_thistle", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, WYND_THISTLE, Block.Properties.copy(Blocks.FLOWER_POT)));
@@ -187,17 +178,14 @@ public class AncientAetherBlocks {
     public static final RegistryObject<FlowerPotBlock> POTTED_SAKURA_SAPLING = BLOCKS.register("potted_sakura_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SAKURA_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_ENCHANTED_SKYROOT_SAPLING = BLOCKS.register("potted_enchanted_skyroot_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ENCHANTED_SKYROOT_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
 
-    //Lanterns and Campfires
     public static final RegistryObject<Block> AMBROSIUM_LANTERN = registerBlock("ambrosium_lantern", () -> new LanternBlock(BlockBehaviour.Properties.copy(LANTERN).lightLevel(s -> 15)));
     public static final RegistryObject<Block> WYND_LANTERN = registerBlock("wynd_lantern", () -> new LanternBlock(BlockBehaviour.Properties.copy(LANTERN).lightLevel(s -> 7)));
     public static final RegistryObject<Block> SUN_LANTERN = registerBlock("sun_lantern", () -> new LanternBlock(BlockBehaviour.Properties.copy(LANTERN).lightLevel(s -> 12)));
     public static final RegistryObject<Block> AMBROSIUM_CAMPFIRE = registerBlock("ambrosium_campfire", () -> new AmbrosiumCampfireBlock(true, 1, Block.Properties.copy(Blocks.CAMPFIRE)));
 
-    //Redstone
     public static final RegistryObject<Block> CRACKED_SLIDER = registerBlock("cracked_slider", () -> new CrackedSliderBlock(BlockBehaviour.Properties.copy(CARVED_STONE.get()).strength(5f).noOcclusion().lightLevel((state) -> state.getValue(RedstoneLampBlock.LIT) ? 15 : 0)));
     public static final RegistryObject<Block> WIND_BLOWER = registerBlock("wind_blower", () -> new WindBlowerBlock(BlockBehaviour.Properties.copy(COLD_AERCLOUD.get())));
 
-    //Vases
     public static final RegistryObject<Block> HOLYSTONE_VASE = registerBlock("holystone_vase", () -> new VaseBlock(Block.Properties.of().mapColor(MapColor.COLOR_LIGHT_GRAY).instabreak().sound(SoundType.DECORATED_POT).noOcclusion().isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
     public static final RegistryObject<Block> MOSSY_HOLYSTONE_VASE = registerBlock("mossy_holystone_vase", () -> new VaseBlock(BlockBehaviour.Properties.copy(HOLYSTONE_VASE.get())));
     public static final RegistryObject<Block> FROZEN_HOLYSTONE_VASE = registerBlock("frozen_holystone_vase", () -> new VaseBlock(BlockBehaviour.Properties.copy(HOLYSTONE_VASE.get())));
