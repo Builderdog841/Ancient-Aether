@@ -1,0 +1,16 @@
+{
+  "parent": "minecraft:item/generated",
+  "loader": "forge:item_layers",
+  "textures": {
+    "layer0": "ancient_aether:item/ancient_sword",
+    "layer1": "ancient_aether:item/ancient_sword_overlay"
+  },
+  "forge_data": {
+    "layers": {
+      "1": {
+        "block_light": 15,
+        "sky_light": 15
+      }
+    }
+  }
+}

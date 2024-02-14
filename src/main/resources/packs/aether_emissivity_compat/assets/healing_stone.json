@@ -1,0 +1,16 @@
+{
+  "parent": "minecraft:item/generated",
+  "loader": "forge:item_layers",
+  "textures": {
+    "layer0": "aether:item/food/healing_stone",
+    "layer1": "aether_emissivity:item/food/healing_stone_overlay"
+  },
+  "forge_data": {
+    "layers": {
+      "1": {
+        "block_light": 15,
+        "sky_light": 15
+      }
+    }
+  }
+}
