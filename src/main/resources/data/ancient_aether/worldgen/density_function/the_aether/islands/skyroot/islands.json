@@ -7,8 +7,8 @@
       "type": "minecraft:mul",
       "argument1": {
         "type": "minecraft:mul",
-        "argument1": -0.20,
-        "argument2": "ancient_aether:the_aether/islands/skyroot/sloper"
+        "argument1": -0.15,
+        "argument2": "ancient_aether:the_aether/sloper_underground"
       },
       "argument2": {
         "type": "minecraft:mul",
@@ -21,9 +21,9 @@
       "argument1": {
         "type": "minecraft:y_clamped_gradient",
         "from_value": 0.0,
-        "from_y": -16,
+        "from_y": -64,
         "to_value": 1.0,
-        "to_y": 100
+        "to_y": 112
       },
       "argument2": {
         "type": "minecraft:add",
@@ -34,8 +34,8 @@
             "type": "minecraft:mul",
             "argument1": {
               "type": "minecraft:mul",
-              "argument1": -0.20,
-              "argument2": "ancient_aether:the_aether/islands/skyroot/sloper"
+              "argument1": -0.12,
+              "argument2": "ancient_aether:the_aether/sloper_underground"
             },
             "argument2": {
               "type": "minecraft:mul",
@@ -48,9 +48,9 @@
             "argument1": {
               "type": "minecraft:y_clamped_gradient",
               "from_value": 1.0,
-              "from_y": 100,
+              "from_y": 112,
               "to_value": 0.0,
-              "to_y": 180
+              "to_y": 120
             },
             "argument2": {
               "type": "add",
@@ -59,7 +59,7 @@
                 "argument1": 0.2,
                 "argument2": {
                   "type": "minecraft:add",
-                  "argument1": -0.05,
+                  "argument1": -0.13,
                   "argument2": "ancient_aether:the_aether/base_3d_noise"
                 }
               },
@@ -68,7 +68,7 @@
                 "argument": {
                   "type": "minecraft:noise",
                   "noise": "ancient_aether:jagged",
-                  "xz_scale": 250,
+                  "xz_scale": 300,
                   "y_scale": 0
                 }
               }
