@@ -10,12 +10,12 @@
                 "argument1": {
                     "type": "minecraft:mul",
                     "argument1": -0.15,
-                    "argument2": "ancient_aether:the_aether/sloper_underground"
+                    "argument2": "ancient_aether:sloper_underground"
                 },
                 "argument2": {
                     "type": "minecraft:mul",
-                    "argument1": "ancient_aether:the_aether/islands/wyndcaps/factor_temperature",
-                    "argument2": "ancient_aether:the_aether/factor_erosion"
+                    "argument1": "ancient_aether:islands/wyndcaps/factor_temperature",
+                    "argument2": "ancient_aether:factor_erosion"
                 }
             },
             "argument2": {
@@ -37,12 +37,12 @@
                             "argument1": {
                                 "type": "minecraft:mul",
                                 "argument1": -0.12,
-                                "argument2": "ancient_aether:the_aether/sloper_underground"
+                                "argument2": "ancient_aether:sloper_underground"
                             },
                             "argument2": {
                                 "type": "minecraft:mul",
-                                "argument1": "ancient_aether:the_aether/islands/wyndcaps/factor_temperature",
-                                "argument2": "ancient_aether:the_aether/factor_erosion"
+                                "argument1": "ancient_aether:islands/wyndcaps/factor_temperature",
+                                "argument2": "ancient_aether:factor_erosion"
                             }
                         },
                         "argument2": {
@@ -62,7 +62,7 @@
                                     "argument2": {
                                         "type": "minecraft:add",
                                         "argument1": -0.05,
-                                        "argument2": "ancient_aether:the_aether/base_3d_noise"
+                                        "argument2": "ancient_aether:base_3d_noise"
                                     }
                                 },
                                 "argument2": {
@@ -81,5 +81,5 @@
             }
         }
     },
-    "argument2": "ancient_aether:the_aether/islands/wyndcaps/surface"
+    "argument2": "ancient_aether:islands/wyndcaps/surface"
 }

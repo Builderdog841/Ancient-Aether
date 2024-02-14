@@ -10,6 +10,6 @@
   "argument2": {
     "type": "minecraft:add",
     "argument1": 0.8,
-    "argument2": "ancient_aether:the_aether/sloping_amplifier"
+    "argument2": "ancient_aether:sloping_amplifier"
   }
 }

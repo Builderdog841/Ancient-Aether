@@ -5,29 +5,21 @@
         "type": "minecraft:add",
         "argument1": {
             "type": "minecraft:mul",
-            "argument1": -0.2,
-            "argument2": {
+            "argument1": {
                 "type": "minecraft:mul",
-                "argument1": {
-                    "type": "minecraft:mul",
-                    "argument1": "ancient_aether:the_aether/islands/sakura/factor_temperature",
-                    "argument2": "ancient_aether:the_aether/factor_erosion"
-                },
-                "argument2": {
-                    "type": "minecraft:add",
-                    "argument1": 0.75,
-                    "argument2": "ancient_aether:the_aether/sloping_amplifier"
-                }
-            }
+                "argument1": -0.22,
+                "argument2": "ancient_aether:islands/elevated/sloper"
+            },
+            "argument2": "ancient_aether:islands/elevated/factor_erosion"
         },
         "argument2": {
             "type": "minecraft:mul",
             "argument1": {
                 "type": "minecraft:y_clamped_gradient",
                 "from_value": 0.0,
-                "from_y": 96,
+                "from_y": 122,
                 "to_value": 1.0,
-                "to_y": 136
+                "to_y": 123
             },
             "argument2": {
                 "type": "minecraft:add",
@@ -36,29 +28,21 @@
                     "type": "minecraft:add",
                     "argument1": {
                         "type": "minecraft:mul",
-                        "argument1": -0.2,
-                        "argument2": {
+                        "argument1": {
                             "type": "minecraft:mul",
-                            "argument1": {
-                                "type": "minecraft:mul",
-                                "argument1": "ancient_aether:the_aether/islands/sakura/factor_temperature",
-                                "argument2": "ancient_aether:the_aether/factor_erosion"
-                            },
-                            "argument2": {
-                                "type": "minecraft:add",
-                                "argument1": 0.75,
-                                "argument2": "ancient_aether:the_aether/sloping_amplifier"
-                            }
-                        }
+                            "argument1": -0.22,
+                            "argument2": "ancient_aether:islands/elevated/sloper"
+                        },
+                        "argument2": "ancient_aether:islands/elevated/factor_erosion"
                     },
                     "argument2": {
                         "type": "minecraft:mul",
                         "argument1": {
                             "type": "minecraft:y_clamped_gradient",
                             "from_value": 1.0,
-                            "from_y": 140,
+                            "from_y": 124,
                             "to_value": 0.0,
-                            "to_y": 200
+                            "to_y": 212
                         },
                         "argument2": {
                             "type": "add",
@@ -67,8 +51,8 @@
                                 "argument1": 0.2,
                                 "argument2": {
                                     "type": "minecraft:add",
-                                    "argument1": -0.02,
-                                    "argument2": "ancient_aether:the_aether/base_3d_noise"
+                                    "argument1": -0.025,
+                                    "argument2": "ancient_aether:base_3d_noise"
                                 }
                             },
                             "argument2": {
@@ -76,8 +60,8 @@
                                 "argument": {
                                     "type": "minecraft:noise",
                                     "noise": "ancient_aether:jagged",
-                                    "xz_scale": 300,
-                                    "y_scale": 100
+                                    "xz_scale": 250,
+                                    "y_scale": 0
                                 }
                             }
                         }
