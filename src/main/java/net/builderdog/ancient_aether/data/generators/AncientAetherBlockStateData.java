@@ -132,6 +132,16 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         lantern(AncientAetherBlocks.WYND_LANTERN.get());
         lantern(AncientAetherBlocks.SUN_LANTERN.get());
 
+        vase(AncientAetherBlocks.HOLYSTONE_VASE.get());
+        vase(AncientAetherBlocks.MOSSY_HOLYSTONE_VASE.get());
+        vase(AncientAetherBlocks.FROZEN_HOLYSTONE_VASE.get());
+        vase(AncientAetherBlocks.SENTRY_VASE.get());
+        vase(AncientAetherBlocks.ANGELIC_VASE.get());
+        vase(AncientAetherBlocks.HELLFIRE_VASE.get());
+        vase(AncientAetherBlocks.AEROGETIC_VASE.get());
+
+        carpet(AncientAetherBlocks.FLUFFALO_CARPET.get(), AncientAetherBlocks.FLUFFALO_WOOL.get());
+
         AADungeonBlock(AncientAetherBlocks.LOCKED_CARVED_TILES.get(), AncientAetherBlocks.CARVED_TILES.get());
         AADungeonBlock(AncientAetherBlocks.LOCKED_WYND_SENTRY_STONE.get(), AncientAetherBlocks.WYND_SENTRY_STONE.get());
         AADungeonBlock(AncientAetherBlocks.LOCKED_AEROGETIC_STONE.get(), AncientAetherBlocks.AEROGETIC_STONE.get());

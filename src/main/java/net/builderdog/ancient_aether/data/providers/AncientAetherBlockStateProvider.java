@@ -51,6 +51,16 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
         getVariantBuilder(block).forAllStates((state -> ConfiguredModel.builder().modelFile(state.getValue(LanternBlock.HANGING) ? hangingLantern : lantern).build()));
     }
 
+    public void vase(Block vase) {
+        ModelFile model = models().withExistingParent(name(vase), modLoc("block/template_vase"))
+                .texture("vase", texture(name(vase)));
+        getVariantBuilder(vase).forAllStates((state -> ConfiguredModel.builder().modelFile(model).build()));
+    }
+
+    public void carpet(Block block, Block baseBlock) {
+        simpleBlock(block, models().singleTexture(name(block), mcLoc("block/carpet"), "wool", texture(name(baseBlock))));
+    }
+
     public void AADungeonBlock(Block block, Block baseBlock) {
         ConfiguredModel dungeonBlock = new ConfiguredModel(models().cubeAll(name(baseBlock), texture(name(baseBlock))));
         getVariantBuilder(block).partialState().setModels(dungeonBlock);

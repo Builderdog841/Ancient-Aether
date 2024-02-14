@@ -31,31 +31,31 @@ public enum AncientAetherItemTiers implements Tier {
 
     @Override
     public int getUses() {
-        return this.maxUses;
+        return maxUses;
     }
 
     @Override
     public float getSpeed() {
-        return this.efficiency;
+        return efficiency;
     }
 
     @Override
     public float getAttackDamageBonus() {
-        return this.attackDamage;
+        return attackDamage;
     }
 
     @Override
     public int getLevel() {
-        return this.harvestLevel;
+        return harvestLevel;
     }
 
     @Override
     public int getEnchantmentValue() {
-        return this.enchantability;
+        return enchantability;
     }
 
     @Override
     public @NotNull Ingredient getRepairIngredient() {
-        return this.repairMaterial.get();
+        return repairMaterial.get();
     }
 }

@@ -1,8 +1,0 @@
-{
-  "parent": "ancient_aether:block/template_vase",
-  "render_type": "minecraft:cutout_mipped",
-  "textures": {
-    "vase": "ancient_aether:block/aerogetic_vase",
-    "particle": "ancient_aether:block/aerogetic_stone"
-  }
-}
