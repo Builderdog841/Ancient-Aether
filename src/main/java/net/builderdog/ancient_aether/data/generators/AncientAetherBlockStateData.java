@@ -128,6 +128,10 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         AABookshelf(AncientAetherBlocks.HIGHSPROOT_BOOKSHELF.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get());
         AABookshelf(AncientAetherBlocks.SAKURA_BOOKSHELF.get(), AncientAetherBlocks.SAKURA_PLANKS.get());
 
+        lantern(AncientAetherBlocks.AMBROSIUM_LANTERN.get());
+        lantern(AncientAetherBlocks.WYND_LANTERN.get());
+        lantern(AncientAetherBlocks.SUN_LANTERN.get());
+
         AADungeonBlock(AncientAetherBlocks.LOCKED_CARVED_TILES.get(), AncientAetherBlocks.CARVED_TILES.get());
         AADungeonBlock(AncientAetherBlocks.LOCKED_WYND_SENTRY_STONE.get(), AncientAetherBlocks.WYND_SENTRY_STONE.get());
         AADungeonBlock(AncientAetherBlocks.LOCKED_AEROGETIC_STONE.get(), AncientAetherBlocks.AEROGETIC_STONE.get());

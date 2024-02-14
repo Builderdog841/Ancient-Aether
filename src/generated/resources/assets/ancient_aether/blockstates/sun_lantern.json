@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "hanging=false,waterlogged=false": {
+      "model": "ancient_aether:block/sun_lantern"
+    },
+    "hanging=false,waterlogged=true": {
+      "model": "ancient_aether:block/sun_lantern"
+    },
+    "hanging=true,waterlogged=false": {
+      "model": "ancient_aether:block/hanging_sun_lantern"
+    },
+    "hanging=true,waterlogged=true": {
+      "model": "ancient_aether:block/hanging_sun_lantern"
+    }
+  }
+}

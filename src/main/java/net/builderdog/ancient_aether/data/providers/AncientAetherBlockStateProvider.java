@@ -5,10 +5,7 @@ import com.aetherteam.aether.data.providers.AetherBlockStateProvider;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DoorBlock;
-import net.minecraft.world.level.block.TrapDoorBlock;
-import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.WallSide;
 import net.minecraftforge.client.model.generators.*;
@@ -44,6 +41,14 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
     public void AABookshelf(Block block, Block endBlock) {
         ModelFile bookshelf = models().cubeColumn(name(block), texture(name(block)), texture(name(endBlock)));
         getVariantBuilder(block).partialState().addModels(new ConfiguredModel(bookshelf));
+    }
+
+    public void lantern(Block block) {
+        BlockModelBuilder lantern = models().withExistingParent(name(block), mcLoc("template_lantern"))
+                .texture("lantern", texture(name(block))).renderType("cutout");
+        BlockModelBuilder hangingLantern = models().withExistingParent("hanging_" + name(block), mcLoc("template_hanging_lantern"))
+                .texture("lantern", texture(name(block))).renderType("cutout");
+        getVariantBuilder(block).forAllStates((state -> ConfiguredModel.builder().modelFile(state.getValue(LanternBlock.HANGING) ? hangingLantern : lantern).build()));
     }
 
     public void AADungeonBlock(Block block, Block baseBlock) {
