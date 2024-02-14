@@ -3,7 +3,6 @@
   "render_type": "minecraft:translucent",
   "textures": {
     "side": "ancient_aether:block/wind_blower_side",
-
     "down": "ancient_aether:block/wind_blower_bottom",
     "east": "ancient_aether:block/wind_blower_side_left",
     "north": "ancient_aether:block/wind_blower_front",

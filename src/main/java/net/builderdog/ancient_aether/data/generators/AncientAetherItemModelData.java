@@ -85,6 +85,7 @@ public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
         bootsItem(AncientAetherItems.VALKYRUM_BOOTS.get(), "");
         glovesItem(AncientAetherItems.VALKYRUM_GLOVES.get(), "");
 
+        rotatedItem(AncientAetherItems.LABORATORY_DUNGEON_KEY.get(), "");
         rotatedItem(AncientAetherItems.ANCIENT_DUNGEON_KEY.get(), "");
 
         ancientRuneItem(AncientAetherItems.ANCIENT_RUNE.get());
