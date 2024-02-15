@@ -105,7 +105,7 @@ public class AncientAetherCreativeModeTabs {
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.LOCKED_CORRUPTED_LIGHT_AEROGETIC_STONE.get()), new ItemStack(AncientAetherBlocks.TRAPPED_CORRUPTED_LIGHT_AEROGETIC_STONE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.TRAPPED_CORRUPTED_LIGHT_AEROGETIC_STONE.get()), new ItemStack(AncientAetherBlocks.BOSS_DOORWAY_CORRUPTED_LIGHT_AEROGETIC_STONE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.BOSS_DOORWAY_CORRUPTED_LIGHT_AEROGETIC_STONE.get()), new ItemStack(AncientAetherBlocks.TREASURE_DOORWAY_CORRUPTED_LIGHT_AEROGETIC_STONE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.ANCIENT_HOLYSTONE_VASE.get()), new ItemStack(AncientAetherBlocks.ANCIENT_HOLYSTONE_VASE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putAfter(new ItemStack(AetherBlocks.CHEST_MIMIC.get()), new ItemStack(AncientAetherBlocks.ANCIENT_HOLYSTONE_VASE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.ANCIENT_HOLYSTONE_VASE.get()), new ItemStack(AncientAetherBlocks.ANCIENT_MOSSY_HOLYSTONE_VASE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.ANCIENT_MOSSY_HOLYSTONE_VASE.get()), new ItemStack(AncientAetherBlocks.ANCIENT_FROZEN_HOLYSTONE_VASE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.ANCIENT_FROZEN_HOLYSTONE_VASE.get()), new ItemStack(AncientAetherBlocks.ANCIENT_SENTRY_VASE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -113,7 +113,7 @@ public class AncientAetherCreativeModeTabs {
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.ANCIENT_ANGELIC_VASE.get()), new ItemStack(AncientAetherBlocks.ANCIENT_HELLFIRE_VASE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.ANCIENT_HELLFIRE_VASE.get()), new ItemStack(AncientAetherBlocks.ANCIENT_AEROGETIC_VASE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             if (ModList.get().isLoaded("lost_aether_content")) {
-                event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.GALE_STONE_MOSAIC.get()), new ItemStack(AncientAetherBlocks.GALE_STONE_MOSAIC.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putBefore(new ItemStack(AetherBlocks.TREASURE_CHEST.get()), new ItemStack(AncientAetherBlocks.GALE_STONE_MOSAIC.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.GALE_STONE_MOSAIC.get()), new ItemStack(AncientAetherBlocks.LOCKED_GALE_STONE_MOSAIC.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.ANCIENT_AEROGETIC_VASE.get()), new ItemStack(AncientAetherBlocks.ANCIENT_GALE_VASE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             }
