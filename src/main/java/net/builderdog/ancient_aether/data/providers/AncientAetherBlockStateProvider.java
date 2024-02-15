@@ -53,7 +53,7 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
 
     public void vase(Block vase) {
         ModelFile model = models().withExistingParent(name(vase), modLoc("block/template_vase"))
-                .texture("vase", texture(name(vase)));
+                .texture("vase", texture(name(vase))).renderType("cutout");
         getVariantBuilder(vase).forAllStates((state -> ConfiguredModel.builder().modelFile(model).build()));
     }
 

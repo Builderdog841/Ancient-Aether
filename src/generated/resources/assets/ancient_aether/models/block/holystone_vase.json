@@ -1,5 +1,6 @@
 {
   "parent": "ancient_aether:block/template_vase",
+  "render_type": "minecraft:cutout",
   "textures": {
     "vase": "ancient_aether:block/holystone_vase"
   }
