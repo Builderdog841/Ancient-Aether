@@ -443,5 +443,7 @@
   "lore.item.ancient_aether.sakura_moa_egg": "An egg laid by a Sakura Moa. Hatching this provides a Sakura Moa with 12 mid-air jumps. Because of their high amount mid-air jumps, their flying speed isn't that great",
   "lore.item.ancient_aether.violet_moa_egg": "An egg laid by a Violet Moa. Hatching this provides a Violet Moa with 4 mid-air jumps. These moas have been given a very fast a flying speed as a compensation.",
   "lore.item.ancient_aether.burgundy_moa_egg": "An egg laid by a Burgundy Moa. Hatching this provides a Burgundy Moa with 10 mid-air jumps.",
-  "lore.item.ancient_aether.pink_cape": "A very fancy Cape that is crafted using Pink Wool."
+  "lore.item.ancient_aether.pink_cape": "A very fancy Cape that is crafted using Pink Wool.",
+  "lore.item.ancient_aether.ancient_dungeon_key": "A key shimmering an ancient blue. It is dropped by the Ancient Dungeon's Final Boss and is used to unlock the Ancient Treasure Chest!",
+  "lore.item.ancient_aether.laboratory_dungeon_key": "Obtained from the Mutated Aechor Plant, the final boss of the Sentry Laboratory, this bitter cold key can be used to unlock the treasure this lab beholds."
 }
