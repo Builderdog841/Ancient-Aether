@@ -22,7 +22,7 @@ public class CrackedSliderBlock extends RedstoneLampBlock {
         return defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
     }
 
-    public @NotNull RenderShape getRenderShape(@NotNull BlockState p_48727_) {
+    public @NotNull RenderShape getRenderShape(@NotNull BlockState state) {
         return RenderShape.MODEL;
     }
 
