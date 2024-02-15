@@ -119,6 +119,7 @@ public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
         itemBlock(AncientAetherBlocks.ANGELIC_VASE.get());
         itemBlock(AncientAetherBlocks.HELLFIRE_VASE.get());
         itemBlock(AncientAetherBlocks.AEROGETIC_VASE.get());
+        itemBlock(AncientAetherBlocks.GALE_VASE.get());
         itemBlock(AncientAetherBlocks.ANCIENT_OBELISK.get());
         itemBlock(AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get());
 
@@ -129,6 +130,7 @@ public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
         itemBlockCopy(AncientAetherBlocks.ANCIENT_ANGELIC_VASE.get(), AncientAetherBlocks.ANGELIC_VASE.get());
         itemBlockCopy(AncientAetherBlocks.ANCIENT_HELLFIRE_VASE.get(), AncientAetherBlocks.HELLFIRE_VASE.get());
         itemBlockCopy(AncientAetherBlocks.ANCIENT_AEROGETIC_VASE.get(), AncientAetherBlocks.AEROGETIC_VASE.get());
+        itemBlockCopy(AncientAetherBlocks.ANCIENT_GALE_VASE.get(), AncientAetherBlocks.GALE_VASE.get());
 
         itemBlockFlat(AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.SKYROOT_PINE_SAPLING.get(), "");

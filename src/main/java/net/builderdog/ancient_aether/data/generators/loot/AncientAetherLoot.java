@@ -16,6 +16,7 @@ public class AncientAetherLoot {
     public static final ResourceLocation ANGELIC_VASE_LOOT = register("selectors/angelic_vase_loot");
     public static final ResourceLocation HELLFIRE_VASE_LOOT = register("selectors/hellfire_vase_loot");
     public static final ResourceLocation AEROGETIC_VASE_LOOT = register("selectors/aerogetic_vase_loot");
+    public static final ResourceLocation GALE_VASE_LOOT = register("selectors/gale_vase_loot");
     public static final ResourceLocation ACCESSORIES_GENERIC = register("selectors/accessories/generic");
     public static final ResourceLocation ACCESSORIES_BRONZE_DUNGEON = register("selectors/accessories/bronze_dungeon");
     public static final ResourceLocation ACCESSORIES_SILVER_DUNGEON = register("selectors/accessories/silver_dungeon");

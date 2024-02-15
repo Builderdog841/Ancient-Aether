@@ -200,6 +200,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> ANGELIC_VASE = registerBlock("angelic_vase", () -> new VaseBlock(BlockBehaviour.Properties.copy(HOLYSTONE_VASE.get())));
     public static final RegistryObject<Block> HELLFIRE_VASE = registerBlock("hellfire_vase", () -> new VaseBlock(BlockBehaviour.Properties.copy(HOLYSTONE_VASE.get())));
     public static final RegistryObject<Block> AEROGETIC_VASE = registerBlock("aerogetic_vase", () -> new VaseBlock(BlockBehaviour.Properties.copy(HOLYSTONE_VASE.get())));
+    public static final RegistryObject<Block> GALE_VASE = registerBlock("gale_vase", () -> new VaseBlock(BlockBehaviour.Properties.copy(HOLYSTONE_VASE.get())));
     public static final RegistryObject<Block> ANCIENT_HOLYSTONE_VASE = registerBlock("ancient_holystone_vase", () -> new AncientVaseBlock(AncientAetherLoot.HOLYSTONE_VASE_LOOT, BlockBehaviour.Properties.copy(HOLYSTONE_VASE.get()).sound(SoundType.DECORATED_POT_CRACKED).noLootTable()));
     public static final RegistryObject<Block> ANCIENT_MOSSY_HOLYSTONE_VASE = registerBlock("ancient_mossy_holystone_vase", () -> new AncientVaseBlock(AncientAetherLoot.MOSSY_HOLYSTONE_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
     public static final RegistryObject<Block> ANCIENT_FROZEN_HOLYSTONE_VASE = registerBlock("ancient_frozen_holystone_vase", () -> new AncientVaseBlock(AncientAetherLoot.FROZEN_HOLYSTONE_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
@@ -207,6 +208,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> ANCIENT_ANGELIC_VASE = registerBlock("ancient_angelic_vase", () -> new AncientVaseBlock(AncientAetherLoot.ANGELIC_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
     public static final RegistryObject<Block> ANCIENT_HELLFIRE_VASE = registerBlock("ancient_hellfire_vase", () -> new AncientVaseBlock(AncientAetherLoot.HELLFIRE_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
     public static final RegistryObject<Block> ANCIENT_AEROGETIC_VASE = registerBlock("ancient_aerogetic_vase", () -> new AncientVaseBlock(AncientAetherLoot.AEROGETIC_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
+    public static final RegistryObject<Block> ANCIENT_GALE_VASE = registerBlock("ancient_gale_vase", () -> new AncientVaseBlock(AncientAetherLoot.GALE_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
 
     public static void registerPots() {
         FlowerPotBlock pot = (FlowerPotBlock) Blocks.FLOWER_POT;

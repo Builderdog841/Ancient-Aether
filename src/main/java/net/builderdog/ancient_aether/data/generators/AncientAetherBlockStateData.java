@@ -139,6 +139,16 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         vase(AncientAetherBlocks.ANGELIC_VASE.get());
         vase(AncientAetherBlocks.HELLFIRE_VASE.get());
         vase(AncientAetherBlocks.AEROGETIC_VASE.get());
+        vase(AncientAetherBlocks.GALE_VASE.get());
+
+        ancientVase(AncientAetherBlocks.ANCIENT_HOLYSTONE_VASE.get(), AncientAetherBlocks.HOLYSTONE_VASE.get());
+        ancientVase(AncientAetherBlocks.ANCIENT_MOSSY_HOLYSTONE_VASE.get(), AncientAetherBlocks.MOSSY_HOLYSTONE_VASE.get());
+        ancientVase(AncientAetherBlocks.ANCIENT_FROZEN_HOLYSTONE_VASE.get(), AncientAetherBlocks.FROZEN_HOLYSTONE_VASE.get());
+        ancientVase(AncientAetherBlocks.ANCIENT_SENTRY_VASE.get(), AncientAetherBlocks.SENTRY_VASE.get());
+        ancientVase(AncientAetherBlocks.ANCIENT_ANGELIC_VASE.get(), AncientAetherBlocks.ANGELIC_VASE.get());
+        ancientVase(AncientAetherBlocks.ANCIENT_HELLFIRE_VASE.get(), AncientAetherBlocks.HELLFIRE_VASE.get());
+        ancientVase(AncientAetherBlocks.ANCIENT_AEROGETIC_VASE.get(), AncientAetherBlocks.AEROGETIC_VASE.get());
+        ancientVase(AncientAetherBlocks.ANCIENT_GALE_VASE.get(), AncientAetherBlocks.GALE_VASE.get());
 
         carpet(AncientAetherBlocks.FLUFFALO_CARPET.get(), AncientAetherBlocks.FLUFFALO_WOOL.get());
 

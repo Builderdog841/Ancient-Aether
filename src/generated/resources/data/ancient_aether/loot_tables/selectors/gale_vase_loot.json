@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:selector",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "aether:white_apple",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:enchanted_dart",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:arrow",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_gemstone",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:enchanted_dart_shooter"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:white_cape"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "ancient_aether:selectors/gale_vase_loot"
+}

@@ -57,6 +57,12 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
         getVariantBuilder(vase).forAllStates((state -> ConfiguredModel.builder().modelFile(model).build()));
     }
 
+    public void ancientVase(Block vase, Block vaseCopy) {
+        ModelFile model = models().withExistingParent(name(vase), modLoc("block/template_vase"))
+                .texture("vase", texture(name(vaseCopy))).renderType("cutout");
+        getVariantBuilder(vase).forAllStates((state -> ConfiguredModel.builder().modelFile(model).build()));
+    }
+
     public void carpet(Block block, Block baseBlock) {
         simpleBlock(block, models().singleTexture(name(block), mcLoc("block/carpet"), "wool", texture(name(baseBlock))));
     }
