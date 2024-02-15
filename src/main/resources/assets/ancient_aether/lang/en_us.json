@@ -290,7 +290,10 @@
   "trim_material.ancient_aether.valkyrum": "Valkyrum Material",
 
   "menu.ancient_aether.ancient_treasure_chest": "Ancient Treasure Chest",
+  "menu.ancient_aether.laboratory_treasure_chest": "Laboratory Treasure Chest",
+
   "ancient_aether.ancient_treasure_chest_locked": "This Treasure Chest must be unlocked with an Ancient Key",
+  "ancient_aether.laboratory_treasure_chest_locked": "This Treasure Chest must be unlocked with an Laboratory Key",
 
   "pack.ancient_aether.ancient_aether_worldgen_overrides.title": "Ancient Aether Worldgen Overrides",
   "pack.ancient_aether.ancient_aether_worldgen_overrides.description": "Should only be disabled if you know what you are doing.",

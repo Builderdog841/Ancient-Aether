@@ -40,7 +40,7 @@ public class DispenseAncientAetherBoatBehaviour extends DefaultDispenseItemBehav
             yOffset = 1.0D;
         } else {
             if (!level.getBlockState(blockpos).isAir() || !boat.canBoatInFluid(level.getFluidState(blockpos.below()))) {
-                return this.defaultDispenseItemBehavior.dispense(source, stack);
+                return defaultDispenseItemBehavior.dispense(source, stack);
             }
             yOffset = 0.0D;
         }
