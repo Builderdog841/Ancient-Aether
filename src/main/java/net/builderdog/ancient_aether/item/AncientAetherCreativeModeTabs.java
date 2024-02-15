@@ -244,7 +244,9 @@ public class AncientAetherCreativeModeTabs {
             event.getEntries().putAfter(new ItemStack(AncientAetherItems.VALKYRUM_LEGGINGS.get()), new ItemStack(AncientAetherItems.VALKYRUM_BOOTS.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherItems.VALKYRUM_BOOTS.get()), new ItemStack(AncientAetherItems.VALKYRUM_GLOVES.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AetherItems.VALKYRIE_CAPE.get()), new ItemStack(AetherItems.INVISIBILITY_CLOAK.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(new ItemStack(AetherItems.RED_CAPE.get()), new ItemStack(AncientAetherItems.PINK_CAPE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            if (!ModList.get().isLoaded("aether_genesis")) {
+                event.getEntries().putAfter(new ItemStack(AetherItems.RED_CAPE.get()), new ItemStack(AncientAetherItems.PINK_CAPE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            }
             event.getEntries().remove(new ItemStack(AetherItems.VALKYRIE_HELMET.get()));
             event.getEntries().remove(new ItemStack(AetherItems.VALKYRIE_CHESTPLATE.get()));
             event.getEntries().remove(new ItemStack(AetherItems.VALKYRIE_LEGGINGS.get()));
