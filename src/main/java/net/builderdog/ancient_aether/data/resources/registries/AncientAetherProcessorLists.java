@@ -31,21 +31,13 @@ public class AncientAetherProcessorLists {
     public static final ResourceKey<StructureProcessorList> BRONZE_DUNGEON_BOSS_ROOM = createKey("bronze_dungeon_boss_room");
     public static final ResourceKey<StructureProcessorList> ANCIENT_DUNGEON = createKey("ancient_dungeon");
 
-    private static ResourceKey<StructureProcessorList> createKey(String name) {
-        return ResourceKey.create(Registries.PROCESSOR_LIST, new ResourceLocation(AncientAether.MOD_ID, name));
-    }
-
-    private static void register(BootstapContext<StructureProcessorList> context, ResourceKey<StructureProcessorList> resourceKey, List<StructureProcessor> list) {
-        context.register(resourceKey, new StructureProcessorList(list));
-    }
-
     public static void bootstrap(BootstapContext<StructureProcessorList> context) {
         register(context, HOLYSTONE_RUIN, ImmutableList.of(
                 new RuleProcessor(ImmutableList.of(
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.HOLYSTONE_BRICKS.get(), 0.05F), AlwaysTrueTest.INSTANCE, AetherFeatureStates.HOLYSTONE),
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.HOLYSTONE.get(), 0.4F), AlwaysTrueTest.INSTANCE, AncientAetherFeatureStates.MOSSY_HOLYSTONE),
                         new ProcessorRule(new RandomBlockMatchTest(AncientAetherBlocks.ANCIENT_HOLYSTONE_VASE.get(), 0.25F), AlwaysTrueTest.INSTANCE, Blocks.AIR.defaultBlockState()),
-        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.AETHER_GRASS_BLOCK.get(), 0.5F), AlwaysTrueTest.INSTANCE, AetherBlocks.HOLYSTONE_BRICKS.get().defaultBlockState())
+                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.AETHER_GRASS_BLOCK.get(), 0.5F), AlwaysTrueTest.INSTANCE, AetherBlocks.HOLYSTONE_BRICKS.get().defaultBlockState())
                 )),
                 new DoubleDropsProcessor(),
                 new SurfaceRuleProcessor()
@@ -97,11 +89,25 @@ public class AncientAetherProcessorLists {
                 new DoubleDropsProcessor(),
                 new SurfaceRuleProcessor()
         ));
+        register(context, BRONZE_DUNGEON_ENTRANCE, ImmutableList.of(
+                new RuleProcessor(ImmutableList.of(
+                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.CARVED_STONE.get(), 0.01F), AlwaysTrueTest.INSTANCE, AetherBlocks.SENTRY_STONE.get().defaultBlockState()),
+                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.HOLYSTONE.get(), 0.4F), AlwaysTrueTest.INSTANCE, AncientAetherFeatureStates.MOSSY_HOLYSTONE),
+                        new ProcessorRule(new RandomBlockMatchTest(AncientAetherBlocks.ANCIENT_SENTRY_VASE.get(), 0.75F), AlwaysTrueTest.INSTANCE, Blocks.AIR.defaultBlockState())
+                ))));
         register(context, ANCIENT_DUNGEON, ImmutableList.of(
                 new RuleProcessor(ImmutableList.of(
                         new ProcessorRule(new RandomBlockMatchTest(AncientAetherBlocks.LOCKED_AEROGETIC_STONE.get(), 0.05F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get().defaultBlockState()),
                         new ProcessorRule(new RandomBlockMatchTest(AncientAetherBlocks.TREASURE_DOORWAY_AEROGETIC_STONE.get(), 0.05F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.TREASURE_DOORWAY_AEROGETIC_STONE.get().defaultBlockState()),
                         new ProcessorRule(new RandomBlockMatchTest(Blocks.VINE, 0.9F), AlwaysTrueTest.INSTANCE, Blocks.AIR.defaultBlockState())
                 ))));
+    }
+
+    private static ResourceKey<StructureProcessorList> createKey(String name) {
+        return ResourceKey.create(Registries.PROCESSOR_LIST, new ResourceLocation(AncientAether.MOD_ID, name));
+    }
+
+    private static void register(BootstapContext<StructureProcessorList> context, ResourceKey<StructureProcessorList> resourceKey, List<StructureProcessor> list) {
+        context.register(resourceKey, new StructureProcessorList(list));
     }
 }

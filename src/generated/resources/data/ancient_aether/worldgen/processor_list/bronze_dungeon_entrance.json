@@ -18,19 +18,6 @@
         },
         {
           "input_predicate": {
-            "block": "ancient_aether:ancient_sentry_vase",
-            "predicate_type": "minecraft:random_block_match",
-            "probability": 0.75
-          },
-          "location_predicate": {
-            "predicate_type": "minecraft:always_true"
-          },
-          "output_state": {
-            "Name": "minecraft:air"
-          }
-        },
-        {
-          "input_predicate": {
             "block": "aether:holystone",
             "predicate_type": "minecraft:random_block_match",
             "probability": 0.4
@@ -44,11 +31,21 @@
               "double_drops": "true"
             }
           }
+        },
+        {
+          "input_predicate": {
+            "block": "ancient_aether:ancient_sentry_vase",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 0.75
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "minecraft:air"
+          }
         }
       ]
-    },
-    {
-      "processor_type": "aether:double_drops"
     }
   ]
 }
