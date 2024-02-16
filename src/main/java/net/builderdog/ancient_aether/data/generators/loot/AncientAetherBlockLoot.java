@@ -160,8 +160,6 @@ public class AncientAetherBlockLoot extends AetherBlockLootSubProvider {
                 (leaves) -> droppingCrystalSkyrootLeaves(leaves, AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
         add(AncientAetherBlocks.HIGHSPROOT_LEAVES.get(),
                 (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
-        add(AncientAetherBlocks.HIGHSPROOT_LEAVES.get(),
-                (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.HIGHSPROOT_LEAVES.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
         add(AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES.get(),
                 (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
         add(AncientAetherBlocks.SAKURA_LEAVES.get(),
