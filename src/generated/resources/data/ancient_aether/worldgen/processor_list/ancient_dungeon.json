@@ -13,7 +13,7 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "ancient_aether:locked_light_aerogetic_stone"
+            "Name": "ancient_aether:light_aerogetic_stone"
           }
         },
         {
@@ -26,7 +26,10 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "ancient_aether:treasure_doorway_light_aerogetic_stone"
+            "Name": "ancient_aether:treasure_doorway_aerogetic_stone",
+            "Properties": {
+              "facing": "north"
+            }
           }
         },
         {
@@ -40,19 +43,6 @@
           },
           "output_state": {
             "Name": "minecraft:air"
-            }
-          },
-        {
-          "input_predicate": {
-            "block": "minecraft:chest",
-            "predicate_type": "minecraft:random_block_match",
-            "probability": 0.25
-          },
-          "location_predicate": {
-            "predicate_type": "minecraft:always_true"
-          },
-          "output_state": {
-            "Name": "aether:chest_mimic"
           }
         }
       ]

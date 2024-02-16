@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-14T17:20:00.3553315	Registries
+// 1.20.1	2024-02-16T14:37:27.933074	Registries
 8e6af76a39d38a0e170afc6642ebcf1d2c876c9a data/ancient_aether/forge/biome_modifier/aerogel_blobs_biome_modifier.json
 c66669dd031745a1bae16fc47547c896a814e8e6 data/ancient_aether/forge/biome_modifier/aether_cave_biome_modifier.json
 be0b3cb10e1bb6717346cc0224b71d8b9cb17509 data/ancient_aether/forge/biome_modifier/aether_grass_patch_biome_modifier.json
@@ -106,3 +106,4 @@ b9b18f4449b68a4b7e72ecf4f0bd2fdd6d6c9ff0 data/ancient_aether/worldgen/placed_fea
 b76b704d1f03589ba6a5610788ea2cd52913da44 data/ancient_aether/worldgen/placed_feature/wyndcap_taiga_trees.json
 9768e70ec5ce6c548c4906e2cec38a33be517042 data/ancient_aether/worldgen/placed_feature/wynd_ice_blobs.json
 e30bedec8394259bbeb610a874252a0fd213ea1b data/ancient_aether/worldgen/placed_feature/wynd_ice_coast.json
+6d706d93cf0b16c1608b8f0cd82eab77cfc42fae data/ancient_aether/worldgen/processor_list/ancient_dungeon.json
