@@ -33,6 +33,8 @@ public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
         simpleItem(AncientAetherItems.VALKYRUM_PENDANT);
         simpleItem(AncientAetherItems.STRENGTH_STONE);
         simpleItem(AncientAetherItems.PINK_CAPE);
+        simpleItem(AncientAetherItems.SHIELD_OF_INEBRIATION);
+        simpleItem(AncientAetherItems.SHIELD_OF_REMEDIATION);
         simpleItem(AncientAetherItems.AERONAUTIC_DART_SHOOTER);
         simpleItem(AncientAetherItems.WYND_ARMOR_TRIM_SMITHING_TEMPLATE);
         simpleItem(AncientAetherItems.WHALE_ARMOR_TRIM_SMITHING_TEMPLATE);

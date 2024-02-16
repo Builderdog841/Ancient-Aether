@@ -17,7 +17,8 @@ public class AncientAetherProcessorLists {
     public static final ResourceKey<StructureProcessorList> VALKYRIE_CAMP_SKYROOT = createKey("valkyrie_camp_skyroot");
     public static final ResourceKey<StructureProcessorList> VALKYRIE_CAMP_WYNDCAPS = createKey("valkyrie_camp_wyndcaps");
     public static final ResourceKey<StructureProcessorList> VALKYRIE_SETTLEMENT_SKYROOT = createKey("valkyrie_settlement_skyroot");
-    public static final ResourceKey<StructureProcessorList> SENTRY_LABORATORY = createKey("mysterious_henge");
+    public static final ResourceKey<StructureProcessorList> SENTRY_LABORATORY_ENTRANCE = createKey("sentry_laboratory_entrance");
+    public static final ResourceKey<StructureProcessorList> SENTRY_LABORATORY = createKey("sentry_laboratory");
     public static final ResourceKey<StructureProcessorList> BRONZE_DUNGEON_ENTRANCE = createKey("bronze_dungeon_entrance");
     public static final ResourceKey<StructureProcessorList> BRONZE_DUNGEON_TUNNEL = createKey("bronze_dungeon_tunnel");
     public static final ResourceKey<StructureProcessorList> BRONZE_DUNGEON_ROOM = createKey("bronze_dungeon_room");

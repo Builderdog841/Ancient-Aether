@@ -4,6 +4,7 @@ import com.aetherteam.aether.client.AetherSoundEvents;
 import com.aetherteam.aether.item.AetherItems;
 import com.aetherteam.aether.item.accessories.cape.CapeItem;
 import com.aetherteam.aether.item.accessories.gloves.GlovesItem;
+import com.aetherteam.aether.item.accessories.miscellaneous.ShieldOfRepulsionItem;
 import com.aetherteam.aether.item.food.GummySwetItem;
 import com.aetherteam.aether.item.miscellaneous.DungeonKeyItem;
 import com.aetherteam.aether.item.miscellaneous.MoaEggItem;
@@ -87,6 +88,8 @@ public class AncientAetherItems {
     public static final RegistryObject<Item> VALKYRUM_PENDANT = ITEMS.register("valkyrum_pendant", () -> new ValkyrumPendantItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> STRENGTH_STONE = ITEMS.register("strength_stone", () -> new StrengthStoneItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> PINK_CAPE = ITEMS.register("pink_cape", () -> new CapeItem("pink_cape", new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SHIELD_OF_INEBRIATION = ITEMS.register("shield_of_inebriation", () -> new ShieldOfRepulsionItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SHIELD_OF_REMEDIATION = ITEMS.register("shield_of_remediation", () -> new ShieldOfRepulsionItem(new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> BURGUNDY_MOA_EGG = ITEMS.register("burgundy_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.BURGUNDY, 0x965C62, new Item.Properties()));
     public static final RegistryObject<Item> TURQUOISE_MOA_EGG = ITEMS.register("turquoise_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.TURQUOISE, 0xD2DDB3, new Item.Properties()));
