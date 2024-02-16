@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.entity;
+package net.builderdog.ancient_aether.entity.monster.dungeon.boss;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;

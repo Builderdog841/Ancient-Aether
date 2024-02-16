@@ -7,7 +7,6 @@ import com.aetherteam.aether.entity.ai.goal.ContinuousMeleeAttackGoal;
 import com.aetherteam.nitrogen.entity.BossRoomTracker;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.data.resources.registries.AncientAetherStructures;
-import net.builderdog.ancient_aether.entity.AncientAetherBossNameGenerator;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
