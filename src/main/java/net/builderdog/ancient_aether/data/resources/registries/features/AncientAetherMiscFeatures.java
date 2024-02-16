@@ -35,7 +35,6 @@ public class AncientAetherMiscFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> COAST_WYND_ICE = AncientAetherFeatureUtils.registerKey("coast_wynd_ice");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_LEAF_VINE = AncientAetherFeatureUtils.registerKey("skyroot_leaf_vine");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SHORT_SKYROOT_LEAF_VINE = AncientAetherFeatureUtils.registerKey("short_skyroot_leaf_vine");
-
     public static final ResourceKey<ConfiguredFeature<?, ?>> VIOLET_AERCLOUD = AncientAetherFeatureUtils.registerKey("violet_aercloud");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CLOUDBED = AncientAetherFeatureUtils.registerKey("cloudbed");
 
@@ -53,7 +52,7 @@ public class AncientAetherMiscFeatures {
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         HolderGetter<ConfiguredFeature<?, ?>> holdergetter = context.lookup(Registries.CONFIGURED_FEATURE);
-        AncientAetherFeatureUtils.register(context, COAST_QUICKSOIL, Feature.VEGETATION_PATCH, new VegetationPatchConfiguration(AncientAetherTags.Blocks.COAST_REPLACEABLE, BlockStateProvider.simple(AetherFeatureStates.QUICKSOIL), PlacementUtils.inlinePlaced(holdergetter.getOrThrow(AncientAetherVegetationFeatures.AETHER_GRASS_PATCH)), CaveSurface.FLOOR, ConstantInt.of(2), 0.0F, 1, 0.0F, UniformInt.of(16, 16), 0.0F));
+        //AncientAetherFeatureUtils.register(context, COAST_QUICKSOIL, Feature.VEGETATION_PATCH, new VegetationPatchConfiguration(AncientAetherTags.Blocks.COAST_REPLACEABLE, BlockStateProvider.simple(AetherFeatureStates.QUICKSOIL), PlacementUtils.inlinePlaced(holdergetter.getOrThrow(AncientAetherVegetationFeatures.AETHER_GRASS_PATCH)), CaveSurface.FLOOR, ConstantInt.of(2), 0.0F, 1, 0.0F, UniformInt.of(16, 16), 0.0F));
         AncientAetherFeatureUtils.register(context, COAST_GRAVITY_GRAVEL, Feature.VEGETATION_PATCH, new VegetationPatchConfiguration(AncientAetherTags.Blocks.COAST_REPLACEABLE, BlockStateProvider.simple(AncientAetherFeatureStates.GRAVITY_GRAVEL), PlacementUtils.inlinePlaced(holdergetter.getOrThrow(AncientAetherVegetationFeatures.AETHER_GRASS_PATCH)), CaveSurface.FLOOR, ConstantInt.of(2), 0.0F, 1, 0.0F, UniformInt.of(16, 16), 0.0F));
         AncientAetherFeatureUtils.register(context, COAST_WYND_ICE, Feature.VEGETATION_PATCH, new VegetationPatchConfiguration(AncientAetherTags.Blocks.COAST_REPLACEABLE, BlockStateProvider.simple(AncientAetherFeatureStates.WYND_ICE), PlacementUtils.inlinePlaced(holdergetter.getOrThrow(AncientAetherVegetationFeatures.AETHER_GRASS_PATCH)), CaveSurface.FLOOR, ConstantInt.of(2), 0.0F, 1, 0.0F, UniformInt.of(16, 16), 0.0F));
         AncientAetherFeatureUtils.register(context, SKYROOT_LEAF_VINE, Feature.BLOCK_COLUMN, createSkyrootLeafVine(12));

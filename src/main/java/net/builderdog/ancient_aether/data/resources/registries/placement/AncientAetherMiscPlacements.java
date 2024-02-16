@@ -34,12 +34,12 @@ public class AncientAetherMiscPlacements {
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
-        AncientAetherPlacementUtils.register(context, QUICKSOIL_COAST, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.COAST_QUICKSOIL),
-                CountPlacement.of(16),
-                HeightRangePlacement.uniform(VerticalAnchor.absolute(110), VerticalAnchor.absolute(115)),
-                InSquarePlacement.spread(),
-                BiomeFilter.biome()
-        );
+        //AncientAetherPlacementUtils.register(context, QUICKSOIL_COAST, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.COAST_QUICKSOIL),
+        //        CountPlacement.of(16),
+        //        HeightRangePlacement.uniform(VerticalAnchor.absolute(110), VerticalAnchor.absolute(115)),
+        //        InSquarePlacement.spread(),
+        //        BiomeFilter.biome()
+        //);
         AncientAetherPlacementUtils.register(context, GRAVITY_GRAVEL_COAST, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.COAST_GRAVITY_GRAVEL),
                 CountPlacement.of(16),
                 HeightRangePlacement.uniform(VerticalAnchor.absolute(120), VerticalAnchor.absolute(125)),
