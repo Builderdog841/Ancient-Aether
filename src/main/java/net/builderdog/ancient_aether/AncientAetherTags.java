@@ -31,6 +31,8 @@ public class AncientAetherTags {
         public static final TagKey<Item> VALKYRUM_REPAIRING = tag("valkyrum_repairing");
         public static final TagKey<Item> ANCIENT_REPAIRING = tag("ancient_repairing");
         public static final TagKey<Item> ARKZENUS_REPAIRING = tag("arkzenus_repairing");
+        public static final TagKey<Item> COMPAT_ORANGE_MOA_EGG = tag("compat/orange_moa_egg");
+        public static final TagKey<Item> COMPAT_BROWN_MOA_EGG = tag("compat/brown_moa_egg");
 
         private static TagKey<Item> tag(String name) {
             return TagKey.create(Registries.ITEM, new ResourceLocation(AncientAether.MOD_ID, name));

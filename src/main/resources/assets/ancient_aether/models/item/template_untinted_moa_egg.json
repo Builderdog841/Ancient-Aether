@@ -1,6 +1,7 @@
 {
 	"gui_light": "front",
 	"credit": "Made with Blockbench",
+	"particle": "#egg",
 	"elements": [
 		{
 			"from": [11, 2, 7.5],
