@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-16T15:00:53.9688483	Registries
+// 1.20.1	2024-02-16T15:07:17.3541235	Registries
 8e6af76a39d38a0e170afc6642ebcf1d2c876c9a data/ancient_aether/forge/biome_modifier/aerogel_blobs_biome_modifier.json
 c66669dd031745a1bae16fc47547c896a814e8e6 data/ancient_aether/forge/biome_modifier/aether_cave_biome_modifier.json
 be0b3cb10e1bb6717346cc0224b71d8b9cb17509 data/ancient_aether/forge/biome_modifier/aether_grass_patch_biome_modifier.json
@@ -111,3 +111,4 @@ e30bedec8394259bbeb610a874252a0fd213ea1b data/ancient_aether/worldgen/placed_fea
 317dd7838d372ed49913fef2c8931ce464c2b10e data/ancient_aether/worldgen/processor_list/mysterious_henge.json
 8c02ec8070f1a34efe8ed083fd88615543a0a3e3 data/ancient_aether/worldgen/processor_list/valkyrie_camp_skyroot.json
 a719af4e82821eb07935c398ab8e1fa7453dc599 data/ancient_aether/worldgen/processor_list/valkyrie_camp_wyndcaps.json
+3b55eb26d1b1369a7d9cccbc6c50515e7fd5e9c6 data/ancient_aether/worldgen/processor_list/valkyrie_settlement_skyroot.json
