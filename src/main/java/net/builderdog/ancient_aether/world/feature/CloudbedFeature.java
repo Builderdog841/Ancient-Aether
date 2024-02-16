@@ -16,9 +16,6 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-/**
- * Directly based on the Aether: Redux's CloudLayerFeature, with a few small tweaks to it
- */
 public class CloudbedFeature extends Feature<CloudbedFeature.Config> {
     public static final PerlinSimplexNoise base_noise = new PerlinSimplexNoise(new XoroshiroRandomSource(42), List.of(0, 1, 2, 3, 4));
     public static final PerlinSimplexNoise y_offset = new PerlinSimplexNoise(new XoroshiroRandomSource(95), List.of(0, 1));
@@ -61,7 +58,6 @@ public class CloudbedFeature extends Feature<CloudbedFeature.Config> {
         return false;
     }
 
-    /** Cosine interpolation from the Aether: Redux's MathUtil class, used to interpolate the cloud for a more rolling surface, like waves in the ocean */
     public static float costrp(float progress, float start, float end) {
         return (((-Mth.cos((float) (Math.PI * progress)) + 1F) * 0.5F) * (end - start)) + start;
     }

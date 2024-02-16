@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:squeeze",
+  "argument": {
+    "type": "minecraft:interpolated",
+    "argument": {
+      "type": "minecraft:blend_density",
+      "argument": {
+        "type": "minecraft:range_choice",
+        "input": "ancient_aether:erosion",
+        "min_inclusive": 0.5,
+        "max_exclusive": 1.5,
+        "when_in_range": "ancient_aether:islands/elevated/underground",
+        "when_out_of_range": {
+          "type": "minecraft:range_choice",
+          "input": "ancient_aether:temperature",
+          "min_inclusive": -1.5,
+          "max_exclusive": -0.5,
+          "when_in_range": "ancient_aether:islands/wyndcaps/underground",
+          "when_out_of_range": {
+            "type": "minecraft:range_choice",
+            "input": "ancient_aether:temperature",
+            "min_inclusive": 0.5,
+            "max_exclusive": 1.5,
+            "when_in_range": "ancient_aether:islands/sakura/underground",
+            "when_out_of_range": "ancient_aether:experiments/skyroot/islands"
+          }
+        }
+      }
+    }
+  }
+}
