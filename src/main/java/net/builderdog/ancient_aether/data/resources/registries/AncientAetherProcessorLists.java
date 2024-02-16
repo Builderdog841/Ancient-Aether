@@ -1,8 +1,13 @@
 package net.builderdog.ancient_aether.data.resources.registries;
 
+import com.aetherteam.aether.block.AetherBlocks;
+import com.aetherteam.aether.data.resources.AetherFeatureStates;
+import com.aetherteam.aether.world.processor.DoubleDropsProcessor;
+import com.aetherteam.aether.world.processor.SurfaceRuleProcessor;
 import com.google.common.collect.ImmutableList;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
+import net.builderdog.ancient_aether.data.resources.AncientAetherFeatureStates;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
@@ -35,6 +40,49 @@ public class AncientAetherProcessorLists {
     }
 
     public static void bootstrap(BootstapContext<StructureProcessorList> context) {
+        register(context, HOLYSTONE_RUIN, ImmutableList.of(
+                new RuleProcessor(ImmutableList.of(
+                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.HOLYSTONE_BRICKS.get(), 0.05F), AlwaysTrueTest.INSTANCE, AetherFeatureStates.HOLYSTONE),
+                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.HOLYSTONE.get(), 0.4F), AlwaysTrueTest.INSTANCE, AncientAetherFeatureStates.MOSSY_HOLYSTONE),
+                        new ProcessorRule(new RandomBlockMatchTest(AncientAetherBlocks.ANCIENT_HOLYSTONE_VASE.get(), 0.25F), AlwaysTrueTest.INSTANCE, Blocks.AIR.defaultBlockState()),
+        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.AETHER_GRASS_BLOCK.get(), 0.5F), AlwaysTrueTest.INSTANCE, AetherBlocks.HOLYSTONE_BRICKS.get().defaultBlockState())
+                )),
+                new DoubleDropsProcessor(),
+                new SurfaceRuleProcessor()
+        ));
+        register(context, MYSTERIOUS_HENGE, ImmutableList.of(
+                new RuleProcessor(ImmutableList.of(
+                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.HOLYSTONE.get(), 0.2F), AlwaysTrueTest.INSTANCE, AncientAetherFeatureStates.MOSSY_HOLYSTONE),
+                        new ProcessorRule(new RandomBlockMatchTest(AncientAetherBlocks.ANCIENT_MOSSY_HOLYSTONE_VASE.get(), 0.5F), AlwaysTrueTest.INSTANCE, Blocks.AIR.defaultBlockState()),
+                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.AETHER_GRASS_BLOCK.get(), 0.2F), AlwaysTrueTest.INSTANCE, AetherFeatureStates.HOLYSTONE),
+                        new ProcessorRule(new RandomBlockMatchTest(Blocks.ORANGE_WOOL, 0.25F), AlwaysTrueTest.INSTANCE, AetherFeatureStates.HOLYSTONE),
+                        new ProcessorRule(new RandomBlockMatchTest(Blocks.ORANGE_WOOL, 1.0F), AlwaysTrueTest.INSTANCE, Blocks.AIR.defaultBlockState())
+                )),
+                new DoubleDropsProcessor(),
+                new SurfaceRuleProcessor()
+        ));
+        register(context, VALKYRIE_CAMP_SKYROOT, ImmutableList.of(
+                new RuleProcessor(ImmutableList.of(
+                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.AETHER_GRASS_BLOCK.get(), 0.75F), AlwaysTrueTest.INSTANCE, AetherBlocks.AETHER_DIRT_PATH.get().defaultBlockState()),
+                        new ProcessorRule(new RandomBlockMatchTest(Blocks.CHEST, 0.25F), AlwaysTrueTest.INSTANCE, Blocks.AIR.defaultBlockState()),
+                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.POTTED_WHITE_FLOWER.get(), 0.15F), AlwaysTrueTest.INSTANCE, AetherBlocks.POTTED_PURPLE_FLOWER.get().defaultBlockState()),
+                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.POTTED_WHITE_FLOWER.get(), 0.15F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.POTTED_HIGHLAND_VIOLA.get().defaultBlockState()),
+                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.POTTED_WHITE_FLOWER.get(), 0.15F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.POTTED_SKY_BLUES.get().defaultBlockState()),
+                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.POTTED_WHITE_FLOWER.get(), 0.2F), AlwaysTrueTest.INSTANCE, AetherBlocks.POTTED_BERRY_BUSH.get().defaultBlockState())
+                )),
+                new DoubleDropsProcessor(),
+                new SurfaceRuleProcessor()
+        ));
+        register(context, VALKYRIE_CAMP_WYNDCAPS, ImmutableList.of(
+                new RuleProcessor(ImmutableList.of(
+                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.AETHER_GRASS_BLOCK.get(), 0.75F), AlwaysTrueTest.INSTANCE, AetherBlocks.AETHER_DIRT_PATH.get().defaultBlockState()),
+                        new ProcessorRule(new RandomBlockMatchTest(Blocks.CHEST, 0.25F), AlwaysTrueTest.INSTANCE, Blocks.AIR.defaultBlockState()),
+                        new ProcessorRule(new RandomBlockMatchTest(AncientAetherBlocks.POTTED_WYND_THISTLE.get(), 0.3F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.POTTED_SKY_BLUES.get().defaultBlockState()),
+                        new ProcessorRule(new RandomBlockMatchTest(AncientAetherBlocks.POTTED_WYND_THISTLE.get(), 0.2F), AlwaysTrueTest.INSTANCE, AetherBlocks.POTTED_BERRY_BUSH.get().defaultBlockState())
+                )),
+                new DoubleDropsProcessor(),
+                new SurfaceRuleProcessor()
+        ));
         register(context, ANCIENT_DUNGEON, ImmutableList.of(
                 new RuleProcessor(ImmutableList.of(
                         new ProcessorRule(new RandomBlockMatchTest(AncientAetherBlocks.LOCKED_AEROGETIC_STONE.get(), 0.05F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get().defaultBlockState()),

@@ -14,6 +14,7 @@ public class AncientAetherFeatureStates {
     public static final BooleanProperty DOUBLE_DROPS = AetherBlockStateProperties.DOUBLE_DROPS;
     public static final IntegerProperty LENGTH = AncientAetherBlockStateProperties.LENGTH;
     public static final EnumProperty<AetherGrassType> TYPE = AncientAetherBlockStateProperties.TYPE;
+
     public static final BlockState SKYROOT_PINE_LEAVES = AncientAetherBlocks.SKYROOT_PINE_LEAVES.get().defaultBlockState().setValue(DOUBLE_DROPS, true);
     public static final BlockState CRYSTAL_SKYROOT_LEAVES = AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES.get().defaultBlockState().setValue(DOUBLE_DROPS, true);
     public static final BlockState ENCHANTED_SKYROOT_LEAVES = AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES.get().defaultBlockState().setValue(DOUBLE_DROPS, true);
@@ -35,6 +36,7 @@ public class AncientAetherFeatureStates {
     public static final BlockState GRAVITY_GRAVEL = AncientAetherBlocks.GRAVITY_GRAVEL.get().defaultBlockState().setValue(DOUBLE_DROPS, true);
     public static final BlockState WYND_ICE = AncientAetherBlocks.WYND_ICE.get().defaultBlockState();
     public static final BlockState AEROGEL = AetherBlocks.AEROGEL.get().defaultBlockState();
+    public static final BlockState MOSSY_HOLYSTONE = AetherBlocks.MOSSY_HOLYSTONE.get().defaultBlockState().setValue(DOUBLE_DROPS, true);
     public static final BlockState AETHER_QUARTZ_ORE = AncientAetherBlocks.AETHER_QUARTZ_ORE.get().defaultBlockState().setValue(DOUBLE_DROPS, true);
     public static final BlockState VALKYRUM_ORE = AncientAetherBlocks.VALKYRUM_ORE.get().defaultBlockState();
     public static final BlockState HIGHLAND_VIOLA = AncientAetherBlocks.HIGHLAND_VIOLA.get().defaultBlockState();
