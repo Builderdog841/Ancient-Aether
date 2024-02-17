@@ -1,14 +1,13 @@
 {
   "values": [
     "ancient_aether:potted_highsproot_sapling",
-    "ancient_aether:potted_frosted_highsproot_sapling",
+    "ancient_aether:potted_enchanted_skyroot_sapling",
     "ancient_aether:potted_skyroot_pine_sapling",
     "ancient_aether:potted_crystal_skyroot_sapling",
     "ancient_aether:potted_sakura_sapling",
     "ancient_aether:potted_highland_viola",
     "ancient_aether:potted_sky_blues",
     "ancient_aether:potted_wynd_thistle",
-    "ancient_aether:potted_sakura_blossoms",
-    "ancient_aether:potted_divine_skyroot_sapling"
+    "ancient_aether:potted_sakura_blossoms"
   ]
 }

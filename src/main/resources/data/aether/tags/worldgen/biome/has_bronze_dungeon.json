@@ -2,6 +2,8 @@
   "replace": true,
   "values": [
     "#ancient_aether:is_skyroot",
-    "ancient_aether:crystal_grotto"
+    "ancient_aether:holystone_caverns",
+    "ancient_aether:frozen_caverns",
+    "ancient_aether:atmosine_grotto"
   ]
 }

@@ -1,6 +1,8 @@
 {
   "carvers": {
-  "air": []
+    "air": [
+      "ancient_aether:aether_grotto_cave"
+  ]
 },
   "creature_spawn_probability": 0.01,
   "downfall": 0.0,
