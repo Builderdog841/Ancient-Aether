@@ -67,7 +67,7 @@
                                 "argument1": 0.2,
                                 "argument2": {
                                     "type": "minecraft:add",
-                                    "argument1": -0.02,
+                                    "argument1": -0.035,
                                     "argument2": "ancient_aether:base_3d_noise"
                                 }
                             },
