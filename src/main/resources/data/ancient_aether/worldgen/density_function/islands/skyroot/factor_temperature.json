@@ -14,8 +14,17 @@
       "argument1": {
         "type": "minecraft:mul",
         "argument1": {
-          "type": "minecraft:abs",
-          "argument": "ancient_aether:temperature"
+          "type": "minecraft:add",
+          "argument1": {
+            "type": "minecraft:mul",
+            "argument1": -1,
+            "argument2": "ancient_aether:temperature"
+          },
+          "argument2": {
+            "type": "minecraft:mul",
+            "argument1": 2,
+            "argument2": "ancient_aether:temperature"
+          }
         },
         "argument2": 20
       },
