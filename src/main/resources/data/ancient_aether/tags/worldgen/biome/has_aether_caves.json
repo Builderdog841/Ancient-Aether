@@ -2,6 +2,8 @@
   "values": [
     "#ancient_aether:is_wyndcaps",
     "#ancient_aether:is_skyroot",
-    "#ancient_aether:is_sakura"
+    "#ancient_aether:is_sakura",
+    "ancient_aether:holystone_caverns",
+    "ancient_aether:elevated_caverns"
   ]
 }
