@@ -21,7 +21,7 @@ public class AncientAetherNoises {
     }
 
     public static void bootstrap(BootstapContext<NormalNoise.NoiseParameters> context) {
-        register(context, AMPLIFICATION_FACTOR, -8, 1.5, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
+        register(context, AMPLIFICATION_FACTOR, -8, 2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
         register(context, AMPLIFIED, -7, 1.0, 2.0, 1.0, 0.0, 0.0, 0.0, 0.0);
         register(context, EROSION, -9, 1.5, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
         register(context, FOREST_DISTRIBUTION, -9, 1.0, 1.5, 1.0, 0.0, 0.0, 0.0, 0.0);
