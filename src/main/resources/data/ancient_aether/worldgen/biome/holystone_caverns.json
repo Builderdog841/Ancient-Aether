@@ -52,6 +52,10 @@
       "charge": 0.5,
       "energy_budget": 0.11
     },
+    "aether:cockatrice": {
+      "charge": 0.4,
+      "energy_budget": 0.2
+    },
     "aether:zephyr": {
       "charge": 0.6,
       "energy_budget": 0.16
@@ -64,6 +68,14 @@
         "maxCount": 1,
         "minCount": 1,
         "weight": 10
+      }
+    ],
+    "aether_darkness_monster": [
+      {
+        "type": "aether:cockatrice",
+        "maxCount": 3,
+        "minCount": 1,
+        "weight": 12
       }
     ],
     "aether_sky_monster": [

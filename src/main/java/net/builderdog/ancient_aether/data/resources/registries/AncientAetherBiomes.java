@@ -21,8 +21,8 @@ public class AncientAetherBiomes {
     public static final ResourceKey<Biome> ELEVATED_CLEARING = createKey("elevated_clearing");
     public static final ResourceKey<Biome> ELEVATED_FOREST = createKey("elevated_forest");
     public static final ResourceKey<Biome> HOLYSTONE_CAVERNS = createKey("holystone_caverns");
+    public static final ResourceKey<Biome> ELEVATED_CAVERNS = createKey("elevated_caverns");
     public static final ResourceKey<Biome> CRYSTAL_GROTTO = createKey("crystal_grotto");
-    public static final ResourceKey<Biome> AETHER_VOID = createKey("aether_void");
 
     private static ResourceKey<Biome> createKey(String name) {
         return ResourceKey.create(Registries.BIOME, new ResourceLocation(AncientAether.MOD_ID, name));

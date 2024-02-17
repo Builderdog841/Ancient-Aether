@@ -32,6 +32,10 @@ public class AncientAetherRegion extends Region {
         Climate.Parameter erosionDefault = Climate.Parameter.span(0F, 0.5F);
         Climate.Parameter erosionElevated = Climate.Parameter.span(0.5F, 1.5F);
 
+        Climate.Parameter depthSurface = Climate.Parameter.span(-1.5F, 0.55F);
+        Climate.Parameter depthUnderground = Climate.Parameter.span(0.55F, 1.5F);
+        Climate.Parameter depthElevated = Climate.Parameter.span(-1.5F, 0.4F);
+
         Climate.Parameter forestDistCrystal1 = Climate.Parameter.span(-1.5F, -0.5F);
         Climate.Parameter forestDistCrystal2 = Climate.Parameter.span(-0.5F, -0.325F);
         Climate.Parameter forestDistSkyroot1 = Climate.Parameter.span(-0.325F, 0.0F);
@@ -39,9 +43,6 @@ public class AncientAetherRegion extends Region {
         Climate.Parameter forestDistGolden1 = Climate.Parameter.span(0.325F, 0.5F);
         Climate.Parameter forestDistGolden2 = Climate.Parameter.span(0.5F, 0.7F);
         Climate.Parameter forestDistGolden3 = Climate.Parameter.span(0.7F, 1.5F);
-
-        Climate.Parameter depthSurface = Climate.Parameter.span(-1.5F, 0.55F);
-        Climate.Parameter depthUnderground = Climate.Parameter.span(0.55F, 1.5F);
 
         //Wyndcaps
         addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, Climate.Parameter.span(-1.5F, 0.25F), fullRange, erosionDefault, Climate.Parameter.span(0.05F, 1.5F), fullRange, 0),
@@ -119,11 +120,14 @@ public class AncientAetherRegion extends Region {
                 AncientAetherBiomes.SKYROOT_JUNGLE);
 
         //Elevated Islands
-        addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(-1.5F, -0.25F), fullRange, erosionElevated, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(-1.5F, -0.25F), fullRange, erosionElevated, depthElevated, fullRange, 0),
                 AncientAetherBiomes.ELEVATED_CLEARING);
-        addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(-0.25F, 0.25F), fullRange, erosionElevated, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(-0.25F, 0.25F), fullRange, erosionElevated, depthElevated, fullRange, 0),
                 AncientAetherBiomes.ELEVATED_FOREST);
-        addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(0.25F, 1.5F), fullRange, erosionElevated, fullRange, fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(0.25F, 1.5F), fullRange, erosionElevated, depthElevated, fullRange, 0),
                 AncientAetherBiomes.ELEVATED_CLEARING);
+
+        addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, fullRange, erosionElevated, Climate.Parameter.span(0.4F, 1.5F), fullRange, 0),
+                AncientAetherBiomes.ELEVATED_CAVERNS);
     }
 }
