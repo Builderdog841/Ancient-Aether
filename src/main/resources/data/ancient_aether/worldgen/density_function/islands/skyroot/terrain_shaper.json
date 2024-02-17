@@ -14,7 +14,7 @@
     },
     "argument2": {
       "type": "minecraft:add",
-      "argument1": 0.5,
+      "argument1": "ancient_aether:amplification_factor",
       "argument2": "ancient_aether:sloping_amplifier"
     }
   },
@@ -29,7 +29,7 @@
     },
     "argument2": {
       "type": "minecraft:add",
-      "argument1": 0.5,
+      "argument1": "ancient_aether:amplification_factor",
       "argument2": "ancient_aether:sloping_amplifier"
     }
   }
