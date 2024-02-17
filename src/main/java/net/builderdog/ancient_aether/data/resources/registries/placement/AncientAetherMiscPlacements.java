@@ -37,12 +37,14 @@ public class AncientAetherMiscPlacements {
         AncientAetherPlacementUtils.register(context, QUICKSOIL_COAST, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.COAST_QUICKSOIL),
                 CountPlacement.of(127),
                 HeightRangePlacement.triangle(VerticalAnchor.absolute(96), VerticalAnchor.absolute(128)),
+                EnvironmentScanPlacement.scanningFor(Direction.UP, BlockPredicate.hasSturdyFace(Direction.DOWN), BlockPredicate.ONLY_IN_AIR_PREDICATE, 16),
                 InSquarePlacement.spread(),
                 BiomeFilter.biome()
         );
         AncientAetherPlacementUtils.register(context, GRAVITY_GRAVEL_COAST, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.COAST_GRAVITY_GRAVEL),
                 CountPlacement.of(127),
                 HeightRangePlacement.triangle(VerticalAnchor.absolute(112), VerticalAnchor.absolute(144)),
+                EnvironmentScanPlacement.scanningFor(Direction.UP, BlockPredicate.hasSturdyFace(Direction.DOWN), BlockPredicate.ONLY_IN_AIR_PREDICATE, 16),
                 InSquarePlacement.spread(),
                 BiomeFilter.biome()
         );
@@ -55,17 +57,19 @@ public class AncientAetherMiscPlacements {
 
         AncientAetherPlacementUtils.register(context, SKYROOT_LEAF_VINES, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.SKYROOT_LEAF_VINE),
                 CountPlacement.of(255),
-                InSquarePlacement.spread(),
                 PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT,
                 EnvironmentScanPlacement.scanningFor(Direction.UP, BlockPredicate.allOf(BlockPredicate.hasSturdyFace(Direction.DOWN), BlockPredicate.matchesTag(AncientAetherTags.Blocks.LEAF_VINE_CAN_SPAWN_ON)), BlockPredicate.ONLY_IN_AIR_PREDICATE, 12),
-                RandomOffsetPlacement.vertical(ConstantInt.of(-1)), BiomeFilter.biome()
+                RandomOffsetPlacement.vertical(ConstantInt.of(-1)),
+                InSquarePlacement.spread(),
+                BiomeFilter.biome()
         );
         AncientAetherPlacementUtils.register(context, SHORT_SKYROOT_LEAF_VINES, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.SHORT_SKYROOT_LEAF_VINE),
                 CountPlacement.of(255),
-                InSquarePlacement.spread(),
                 PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT,
                 EnvironmentScanPlacement.scanningFor(Direction.UP, BlockPredicate.allOf(BlockPredicate.hasSturdyFace(Direction.DOWN), BlockPredicate.matchesTag(AncientAetherTags.Blocks.LEAF_VINE_CAN_SPAWN_ON)), BlockPredicate.ONLY_IN_AIR_PREDICATE, 12),
-                RandomOffsetPlacement.vertical(ConstantInt.of(-1)), BiomeFilter.biome()
+                RandomOffsetPlacement.vertical(ConstantInt.of(-1)),
+                InSquarePlacement.spread(),
+                BiomeFilter.biome()
         );
 
         AncientAetherPlacementUtils.register(context, VIOLET_AERCLOUD, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.VIOLET_AERCLOUD), AetherPlacedFeatureBuilders.aercloudPlacement(32, 224, 24));
@@ -73,10 +77,10 @@ public class AncientAetherMiscPlacements {
 
         AncientAetherPlacementUtils.register(context, WATER_LAKE_UNDERGROUND, configuredFeatures.getOrThrow(AetherConfiguredFeatures.WATER_LAKE_CONFIGURATION),
                 RarityFilter.onAverageOnceEvery(15),
-                InSquarePlacement.spread(),
                 HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.absolute(0), VerticalAnchor.top())),
                 EnvironmentScanPlacement.scanningFor(Direction.DOWN, BlockPredicate.allOf(BlockPredicate.not(BlockPredicate.ONLY_IN_AIR_PREDICATE), BlockPredicate.insideWorld(new BlockPos(0, -5, 0))), 16),
                 SurfaceRelativeThresholdFilter.of(Heightmap.Types.OCEAN_FLOOR_WG, Integer.MIN_VALUE, -5),
+                InSquarePlacement.spread(),
                 BiomeFilter.biome());
     }
 }
