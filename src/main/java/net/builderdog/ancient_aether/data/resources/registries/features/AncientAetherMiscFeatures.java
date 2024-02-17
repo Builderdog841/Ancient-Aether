@@ -7,6 +7,7 @@ import com.aetherteam.aether.world.feature.AetherFeatures;
 import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.data.resources.AncientAetherFeatureStates;
 import net.builderdog.ancient_aether.world.configuration.CoastConfiguration;
+import net.builderdog.ancient_aether.world.configuration.CrystalIslandConfiguration;
 import net.builderdog.ancient_aether.world.feature.AncientAetherFeatures;
 import net.builderdog.ancient_aether.world.feature.CloudbedFeature;
 import net.minecraft.core.Direction;
@@ -40,6 +41,8 @@ public class AncientAetherMiscFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> SHORT_SKYROOT_LEAF_VINE = AncientAetherFeatureUtils.registerKey("short_skyroot_leaf_vine");
     public static final ResourceKey<ConfiguredFeature<?, ?>> VIOLET_AERCLOUD = AncientAetherFeatureUtils.registerKey("violet_aercloud");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CLOUDBED = AncientAetherFeatureUtils.registerKey("cloudbed");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CRYSTAL_ISLAND_FROZEN = AncientAetherFeatureUtils.registerKey("crystal_island_frozen");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CRYSTAL_ISLAND_PALE = AncientAetherFeatureUtils.registerKey("crystal_island_pale");
 
     private static BlockColumnConfiguration createSkyrootLeafVine(int length) {
         return new BlockColumnConfiguration(List.of(
@@ -72,5 +75,7 @@ public class AncientAetherMiscFeatures {
         AncientAetherFeatureUtils.register(context, SHORT_SKYROOT_LEAF_VINE, Feature.BLOCK_COLUMN, createSkyrootLeafVine(4));
         AncientAetherFeatureUtils.register(context, VIOLET_AERCLOUD, AetherFeatures.AERCLOUD.get(), AetherConfiguredFeatureBuilders.aercloud(16, AncientAetherFeatureStates.VIOLET_AERCLOUD));
         AncientAetherFeatureUtils.register(context, CLOUDBED, AncientAetherFeatures.CLOUDBED.get(), new CloudbedFeature.Config(BlockStateProvider.simple(AetherFeatureStates.COLD_AERCLOUD), 80, 1D));
+        AncientAetherFeatureUtils.register(context, CRYSTAL_ISLAND_FROZEN, AncientAetherFeatures.CONFIGURABLE_CRYSTAL_ISLAND.get(), new CrystalIslandConfiguration(AncientAetherFeatureStates.FROZEN_AETHER_GRASS_BLOCK, AetherFeatureStates.HOLYSTONE));
+        AncientAetherFeatureUtils.register(context, CRYSTAL_ISLAND_PALE, AncientAetherFeatures.CONFIGURABLE_CRYSTAL_ISLAND.get(), new CrystalIslandConfiguration(AncientAetherFeatureStates.PALE_AETHER_GRASS_BLOCK, AetherFeatureStates.HOLYSTONE));
     }
 }

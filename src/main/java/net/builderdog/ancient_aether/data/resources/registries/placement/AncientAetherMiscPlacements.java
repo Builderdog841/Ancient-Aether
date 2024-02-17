@@ -2,6 +2,7 @@ package net.builderdog.ancient_aether.data.resources.registries.placement;
 
 import com.aetherteam.aether.data.resources.builders.AetherPlacedFeatureBuilders;
 import com.aetherteam.aether.data.resources.registries.AetherConfiguredFeatures;
+import com.aetherteam.aether.world.placementmodifier.DungeonBlacklistFilter;
 import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.data.resources.registries.features.AncientAetherMiscFeatures;
 import net.minecraft.core.BlockPos;
@@ -30,6 +31,9 @@ public class AncientAetherMiscPlacements {
     public static final ResourceKey<PlacedFeature> VIOLET_AERCLOUD = AncientAetherPlacementUtils.createKey("violet_aercloud");
     public static final ResourceKey<PlacedFeature> CLOUDBED = AncientAetherPlacementUtils.createKey("cloudbed");
     public static final ResourceKey<PlacedFeature> WATER_LAKE_UNDERGROUND = AncientAetherPlacementUtils.createKey("water_lake_underground");
+    public static final ResourceKey<PlacedFeature> CRYSTAL_ISLAND = AncientAetherPlacementUtils.createKey("crystal_island");
+    public static final ResourceKey<PlacedFeature> WYNDCAPS_CRYSTAL_ISLAND = AncientAetherPlacementUtils.createKey("wyndcaps_crystal_island");
+    public static final ResourceKey<PlacedFeature> ELEVATED_CRYSTAL_ISLAND = AncientAetherPlacementUtils.createKey("elevated_crystal_island");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -82,5 +86,27 @@ public class AncientAetherMiscPlacements {
                 SurfaceRelativeThresholdFilter.of(Heightmap.Types.OCEAN_FLOOR_WG, Integer.MIN_VALUE, -5),
                 InSquarePlacement.spread(),
                 BiomeFilter.biome());
+
+        AncientAetherPlacementUtils.register(context, CRYSTAL_ISLAND, configuredFeatures.getOrThrow(AetherConfiguredFeatures.CRYSTAL_ISLAND_CONFIGURATION),
+                RarityFilter.onAverageOnceEvery(127),
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(32), VerticalAnchor.absolute(128)),
+                InSquarePlacement.spread(),
+                new DungeonBlacklistFilter(),
+                BiomeFilter.biome()
+        );
+        AncientAetherPlacementUtils.register(context, WYNDCAPS_CRYSTAL_ISLAND, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.CRYSTAL_ISLAND_FROZEN),
+                RarityFilter.onAverageOnceEvery(127),
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(32), VerticalAnchor.absolute(128)),
+                InSquarePlacement.spread(),
+                new DungeonBlacklistFilter(),
+                BiomeFilter.biome()
+        );
+        AncientAetherPlacementUtils.register(context, ELEVATED_CRYSTAL_ISLAND, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.CRYSTAL_ISLAND_PALE),
+                RarityFilter.onAverageOnceEvery(127),
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(32), VerticalAnchor.absolute(128)),
+                InSquarePlacement.spread(),
+                new DungeonBlacklistFilter(),
+                BiomeFilter.biome()
+        );
     }
 }

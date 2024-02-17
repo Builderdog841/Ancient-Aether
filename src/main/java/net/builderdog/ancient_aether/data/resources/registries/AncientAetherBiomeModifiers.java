@@ -36,6 +36,9 @@ public class AncientAetherBiomeModifiers {
     public static final ResourceKey<BiomeModifier> VIOLET_AERCLOUD_BIOME_MODIFIER = createKey("violet_aercloud_biome_modifier");
     public static final ResourceKey<BiomeModifier> CLOUDBED_BIOME_MODIFIER = createKey("cloudbed_biome_modifier");
     public static final ResourceKey<BiomeModifier> WATER_LAKE_UNDERGROUND_BIOME_MODIFIER = createKey("water_lake_underground_biome_modifier");
+    public static final ResourceKey<BiomeModifier> CRYSTAL_ISLAND_BIOME_MODIFIER = createKey("crystal_island_biome_modifier");
+    public static final ResourceKey<BiomeModifier> WYNDCAPS_CRYSTAL_ISLAND_BIOME_MODIFIER = createKey("wyndcaps_crystal_island_biome_modifier");
+    public static final ResourceKey<BiomeModifier> ELEVATED_CRYSTAL_ISLAND_BIOME_MODIFIER = createKey("elevated_crystal_island_biome_modifier");
     public static final ResourceKey<BiomeModifier> REMOVE_QUICKSOIL_SHELF_BIOME_MODIFIER = createKey("remove_quicksoil_shelf_biome_modifier");
     public static final ResourceKey<BiomeModifier> REMOVE_GRASS_PATCH_BIOME_MODIFIER = createKey("remove_grass_patch_biome_modifier");
     public static final ResourceKey<BiomeModifier> REMOVE_TALL_GRASS_PATCH_BIOME_MODIFIER = createKey("remove_tall_grass_patch_biome_modifier");
@@ -108,6 +111,21 @@ public class AncientAetherBiomeModifiers {
                 biome.getOrThrow(AncientAetherTags.Biomes.HAS_WATER_LAKE_UNDERGROUND),
                 HolderSet.direct(placement.getOrThrow(AncientAetherMiscPlacements.WATER_LAKE_UNDERGROUND)),
                 GenerationStep.Decoration.LAKES
+        ));
+        context.register(CRYSTAL_ISLAND_BIOME_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_CRYSTAL_ISLANDS),
+                HolderSet.direct(placement.getOrThrow(AncientAetherMiscPlacements.CRYSTAL_ISLAND)),
+                GenerationStep.Decoration.TOP_LAYER_MODIFICATION
+        ));
+        context.register(WYNDCAPS_CRYSTAL_ISLAND_BIOME_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_WYNDCAPS_CRYSTAL_ISLANDS),
+                HolderSet.direct(placement.getOrThrow(AncientAetherMiscPlacements.WYNDCAPS_CRYSTAL_ISLAND)),
+                GenerationStep.Decoration.TOP_LAYER_MODIFICATION
+        ));
+        context.register(ELEVATED_CRYSTAL_ISLAND_BIOME_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_ELEVATED_CRYSTAL_ISLANDS),
+                HolderSet.direct(placement.getOrThrow(AncientAetherMiscPlacements.ELEVATED_CRYSTAL_ISLAND)),
+                GenerationStep.Decoration.TOP_LAYER_MODIFICATION
         ));
 
         context.register(REMOVE_QUICKSOIL_SHELF_BIOME_MODIFIER, new ForgeBiomeModifiers.RemoveFeaturesBiomeModifier(

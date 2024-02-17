@@ -21,6 +21,7 @@ public class AncientAetherBiomes {
     public static final ResourceKey<Biome> ELEVATED_CLEARING = createKey("elevated_clearing");
     public static final ResourceKey<Biome> ELEVATED_FOREST = createKey("elevated_forest");
     public static final ResourceKey<Biome> HOLYSTONE_CAVERNS = createKey("holystone_caverns");
+    public static final ResourceKey<Biome> FROZEN_CAVERNS = createKey("frozen_caverns");
     public static final ResourceKey<Biome> ELEVATED_CAVERNS = createKey("elevated_caverns");
     public static final ResourceKey<Biome> ATMOSINE_GROTTO = createKey("atmosine_grotto");
 

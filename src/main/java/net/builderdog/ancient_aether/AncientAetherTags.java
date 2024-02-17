@@ -54,6 +54,9 @@ public class AncientAetherTags {
         public static final TagKey<Biome> HAS_PALE_AETHER_GRASS = tag("has_pale_aether_grass");
         public static final TagKey<Biome> HAS_ENCHANTED_AETHER_GRASS = tag("has_enchanted_aether_grass");
         public static final TagKey<Biome> HAS_AETHER_CAVES = tag("has_aether_caves");
+        public static final TagKey<Biome> HAS_CRYSTAL_ISLANDS = tag("has_crystal_islands");
+        public static final TagKey<Biome> HAS_WYNDCAPS_CRYSTAL_ISLANDS = tag("has_wyndcaps_crystal_islands");
+        public static final TagKey<Biome> HAS_ELEVATED_CRYSTAL_ISLANDS = tag("has_elevated_crystal_islands");
         public static final TagKey<Biome> IS_SKYROOT_FOREST = tag("is_skyroot_forest");
 
         private static TagKey<Biome> tag(String name) {
