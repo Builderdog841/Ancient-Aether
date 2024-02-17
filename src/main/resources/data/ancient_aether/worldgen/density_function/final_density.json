@@ -21,7 +21,7 @@
             "input": "ancient_aether:temperature",
             "min_inclusive": 0.5,
             "max_exclusive": 1.5,
-            "when_in_range": "ancient_aether:islands/sakura/upper_island_layer",
+            "when_in_range": "ancient_aether:islands/sakura/lower_island_layer",
             "when_out_of_range": "ancient_aether:islands/skyroot/islands"
           }
         }
