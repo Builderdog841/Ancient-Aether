@@ -156,6 +156,24 @@
                 "biome": "ancient_aether:sakura_jungle"
               }
             }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biome": "ancient_aether:holystone_caverns"
+              }
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biome": "ancient_aether:elevated_caverns"
+              }
+            }
           }
         ]
       },
