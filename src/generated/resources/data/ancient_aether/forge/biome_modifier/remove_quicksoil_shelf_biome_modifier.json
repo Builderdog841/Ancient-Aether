@@ -1,0 +1,5 @@
+{
+  "type": "forge:remove_features",
+  "biomes": "#aether:is_aether",
+  "features": "aether:quicksoil_shelf"
+}

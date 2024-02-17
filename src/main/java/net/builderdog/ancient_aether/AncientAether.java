@@ -12,6 +12,7 @@ import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.builderdog.ancient_aether.world.biomemodifier.AncientAetherBiomeModifierSerializers;
 import net.builderdog.ancient_aether.world.biomes.AncientAetherRegion;
 import net.builderdog.ancient_aether.world.biomes.AncientAetherSurfaceData;
+import net.builderdog.ancient_aether.world.carver.AncientAetherCarvers;
 import net.builderdog.ancient_aether.world.feature.AncientAetherFeatures;
 import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherFoliagePlacers;
 import net.builderdog.ancient_aether.world.structure.AncientAetherStructureTypes;
@@ -68,7 +69,8 @@ public class AncientAether {
                 AncientAetherEntityTypes.ENTITY_TYPES,
                 AncientAetherSoundEvents.SOUNDS,
                 AncientAetherBiomeModifierSerializers.BIOME_MODIFIER_SERIALIZERS,
-                AncientAetherFeatures.FEATURES
+                AncientAetherFeatures.FEATURES,
+                AncientAetherCarvers.CARVERS
         };
 
         MinecraftForge.EVENT_BUS.register(this);

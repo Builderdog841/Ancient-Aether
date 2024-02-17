@@ -1,5 +1,7 @@
 package net.builderdog.ancient_aether.data.resources.registries;
 
+import com.aetherteam.aether.AetherTags;
+import com.aetherteam.aether.data.resources.registries.AetherPlacedFeatures;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.data.resources.registries.placement.AncientAetherMiscPlacements;
@@ -20,6 +22,8 @@ import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ForgeBiomeModifiers;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import java.util.Set;
+
 public class AncientAetherBiomeModifiers {
     public static final ResourceKey<BiomeModifier> AEROGEL_BLOBS_BIOME_MODIFIER = createKey("aerogel_blobs_biome_modifier");
     public static final ResourceKey<BiomeModifier> AETHER_QUARTZ_ORE_BIOME_MODIFIER = createKey("aether_quartz_ore_biome_modifier");
@@ -32,6 +36,12 @@ public class AncientAetherBiomeModifiers {
     public static final ResourceKey<BiomeModifier> VIOLET_AERCLOUD_BIOME_MODIFIER = createKey("violet_aercloud_biome_modifier");
     public static final ResourceKey<BiomeModifier> CLOUDBED_BIOME_MODIFIER = createKey("cloudbed_biome_modifier");
     public static final ResourceKey<BiomeModifier> WATER_LAKE_UNDERGROUND_BIOME_MODIFIER = createKey("water_lake_underground_biome_modifier");
+    public static final ResourceKey<BiomeModifier> REMOVE_QUICKSOIL_SHELF_BIOME_MODIFIER = createKey("remove_quicksoil_shelf_biome_modifier");
+    public static final ResourceKey<BiomeModifier> REMOVE_GRASS_PATCH_BIOME_MODIFIER = createKey("remove_grass_patch_biome_modifier");
+    public static final ResourceKey<BiomeModifier> REMOVE_TALL_GRASS_PATCH_BIOME_MODIFIER = createKey("remove_tall_grass_patch_biome_modifier");
+    public static final ResourceKey<BiomeModifier> REMOVE_WHITE_FLOWER_PATCH_BIOME_MODIFIER = createKey("remove_white_flower_patch_biome_modifier");
+    public static final ResourceKey<BiomeModifier> REMOVE_PURPLE_FLOWER_PATCH_BIOME_MODIFIER = createKey("remove_purple_flower_patch_biome_modifier");
+    public static final ResourceKey<BiomeModifier> REMOVE_CRYSTAL_ISLAND_BIOME_MODIFIER = createKey("remove_crystal_island_biome_modifier");
     public static final ResourceKey<BiomeModifier> AETHER_CAVE_BIOME_MODIFIER = createKey("aether_cave_biome_modifier");
     public static final ResourceKey<BiomeModifier> AETHER_SURFACE_CAVE_BIOME_MODIFIER = createKey("aether_surface_cave_biome_modifier");
 
@@ -98,6 +108,37 @@ public class AncientAetherBiomeModifiers {
                 biome.getOrThrow(AncientAetherTags.Biomes.HAS_WATER_LAKE_UNDERGROUND),
                 HolderSet.direct(placement.getOrThrow(AncientAetherMiscPlacements.WATER_LAKE_UNDERGROUND)),
                 GenerationStep.Decoration.LAKES
+        ));
+
+        context.register(REMOVE_QUICKSOIL_SHELF_BIOME_MODIFIER, new ForgeBiomeModifiers.RemoveFeaturesBiomeModifier(
+                biome.getOrThrow(AetherTags.Biomes.IS_AETHER),
+                HolderSet.direct(placement.getOrThrow(AetherPlacedFeatures.QUICKSOIL_SHELF_PLACEMENT)),
+                Set.of(GenerationStep.Decoration.values())
+        ));
+        context.register(REMOVE_GRASS_PATCH_BIOME_MODIFIER, new ForgeBiomeModifiers.RemoveFeaturesBiomeModifier(
+                biome.getOrThrow(AetherTags.Biomes.IS_AETHER),
+                HolderSet.direct(placement.getOrThrow(AetherPlacedFeatures.GRASS_PATCH_PLACEMENT)),
+                Set.of(GenerationStep.Decoration.values())
+        ));
+        context.register(REMOVE_TALL_GRASS_PATCH_BIOME_MODIFIER, new ForgeBiomeModifiers.RemoveFeaturesBiomeModifier(
+                biome.getOrThrow(AetherTags.Biomes.IS_AETHER),
+                HolderSet.direct(placement.getOrThrow(AetherPlacedFeatures.TALL_GRASS_PATCH_PLACEMENT)),
+                Set.of(GenerationStep.Decoration.values())
+        ));
+        context.register(REMOVE_WHITE_FLOWER_PATCH_BIOME_MODIFIER, new ForgeBiomeModifiers.RemoveFeaturesBiomeModifier(
+                biome.getOrThrow(AetherTags.Biomes.IS_AETHER),
+                HolderSet.direct(placement.getOrThrow(AetherPlacedFeatures.WHITE_FLOWER_PATCH_PLACEMENT)),
+                Set.of(GenerationStep.Decoration.values())
+        ));
+        context.register(REMOVE_PURPLE_FLOWER_PATCH_BIOME_MODIFIER, new ForgeBiomeModifiers.RemoveFeaturesBiomeModifier(
+                biome.getOrThrow(AetherTags.Biomes.IS_AETHER),
+                HolderSet.direct(placement.getOrThrow(AetherPlacedFeatures.PURPLE_FLOWER_PATCH_PLACEMENT)),
+                Set.of(GenerationStep.Decoration.values())
+        ));
+        context.register(REMOVE_CRYSTAL_ISLAND_BIOME_MODIFIER, new ForgeBiomeModifiers.RemoveFeaturesBiomeModifier(
+                biome.getOrThrow(AetherTags.Biomes.IS_AETHER),
+                HolderSet.direct(placement.getOrThrow(AetherPlacedFeatures.CRYSTAL_ISLAND_PLACEMENT)),
+                Set.of(GenerationStep.Decoration.values())
         ));
 
         context.register(AETHER_CAVE_BIOME_MODIFIER, new CarverModifier(

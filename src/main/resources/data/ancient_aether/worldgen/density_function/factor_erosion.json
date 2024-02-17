@@ -15,8 +15,17 @@
       "argument1": {
         "type": "minecraft:mul",
         "argument1": {
-          "type": "minecraft:abs",
-          "argument": "ancient_aether:erosion"
+          "type": "minecraft:add",
+          "argument1": {
+            "type": "minecraft:mul",
+            "argument1": -1,
+            "argument2": "ancient_aether:erosion"
+          },
+          "argument2": {
+            "type": "minecraft:mul",
+            "argument1": 2,
+            "argument2": "ancient_aether:erosion"
+          }
         },
         "argument2": 20
       },

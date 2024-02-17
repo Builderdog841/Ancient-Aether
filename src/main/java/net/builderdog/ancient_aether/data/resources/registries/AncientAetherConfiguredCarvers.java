@@ -2,6 +2,7 @@ package net.builderdog.ancient_aether.data.resources.registries;
 
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.AncientAetherTags;
+import net.builderdog.ancient_aether.world.carver.AncientAetherCarvers;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -12,7 +13,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.carver.CaveCarverConfiguration;
 import net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver;
-import net.minecraft.world.level.levelgen.carver.WorldCarver;
 import net.minecraft.world.level.levelgen.heightproviders.UniformHeight;
 
 public class AncientAetherConfiguredCarvers {
@@ -34,7 +34,7 @@ public class AncientAetherConfiguredCarvers {
                 UniformFloat.of(minHorizontal, maxHorizontal),
                 UniformFloat.of(minVertical, maxVertical),
                 UniformFloat.of(-0.8F, -0.4F));
-        return new ConfiguredWorldCarver<>(WorldCarver.CAVE, config);
+        return new ConfiguredWorldCarver<>(AncientAetherCarvers.SKYLANDS_CAVE.get(), config);
     }
 
     private static ConfiguredWorldCarver<?> createAetherCave(HolderGetter<Block> blocks, int maxY) {

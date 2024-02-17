@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:cave",
+  "type": "ancient_aether:skylands_cave",
   "config": {
     "floor_level": {
       "type": "minecraft:uniform",
