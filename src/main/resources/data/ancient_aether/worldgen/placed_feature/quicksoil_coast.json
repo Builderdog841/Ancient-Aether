@@ -6,6 +6,18 @@
       "count": 127
     },
     {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:trapezoid",
+        "max_inclusive": {
+          "above_bottom": 128
+        },
+        "min_inclusive": {
+          "above_bottom": 96
+        }
+      }
+    },
+    {
       "type": "minecraft:in_square"
     },
     {
