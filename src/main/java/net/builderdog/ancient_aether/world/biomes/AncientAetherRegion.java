@@ -49,9 +49,9 @@ public class AncientAetherRegion extends Region {
         Climate.Parameter forestDistGolden3 = Climate.Parameter.span(0.7F, 1.5F);
 
         //Wyndcaps
-        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, Climate.Parameter.span(-1.5F, 0.25F), continentDefault, erosionDefault, Climate.Parameter.span(0.05F, 1.5F), fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, Climate.Parameter.span(-1.5F, 0.25F), continentDefault, erosionDefault, Climate.Parameter.span(0.05F, 0.55F), fullRange, 0),
                 AncientAetherBiomes.WYNDCAP_TAIGA);
-        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, Climate.Parameter.span(0.25F, 1.5F), continentDefault, erosionDefault, Climate.Parameter.span(0.05F, 1.5F), fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, Climate.Parameter.span(0.25F, 1.5F), continentDefault, erosionDefault, Climate.Parameter.span(0.05F, 0.55F), fullRange, 0),
                 AncientAetherBiomes.FESTIVE_WYNDCAP_TAIGA);
         addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, fullRange, continentDefault, erosionDefault, Climate.Parameter.span(-0.15F, 0.05F), fullRange, 0),
                 AncientAetherBiomes.WYNDCAP_HIGHLAND);
@@ -133,6 +133,8 @@ public class AncientAetherRegion extends Region {
                 AncientAetherBiomes.HOLYSTONE_CAVERNS);
         addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, continentDefault, erosionElevated, Climate.Parameter.span(0.4F, 1.5F), fullRange, 0),
                 AncientAetherBiomes.ELEVATED_CAVERNS);
+        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, fullRange, continentDefault, erosionDefault, depthUnderground, fullRange, 0),
+                AncientAetherBiomes.FROZEN_CAVERNS);
         addBiome(mapper, new Climate.ParameterPoint(tempAtmosine, fullRange, continentAtmosine, erosionDefault, fullRange, fullRange, 0),
                 AncientAetherBiomes.ATMOSINE_GROTTO);
     }

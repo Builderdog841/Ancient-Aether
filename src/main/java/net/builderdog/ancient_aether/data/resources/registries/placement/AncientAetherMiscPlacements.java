@@ -53,8 +53,9 @@ public class AncientAetherMiscPlacements {
                 BiomeFilter.biome()
         );
         AncientAetherPlacementUtils.register(context, WYND_ICE_COAST, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.COAST_WYND_ICE),
-                CountPlacement.of(16),
-                HeightRangePlacement.uniform(VerticalAnchor.absolute(110), VerticalAnchor.absolute(115)),
+                CountPlacement.of(127),
+                HeightRangePlacement.triangle(VerticalAnchor.absolute(112), VerticalAnchor.absolute(144)),
+                EnvironmentScanPlacement.scanningFor(Direction.UP, BlockPredicate.hasSturdyFace(Direction.DOWN), BlockPredicate.ONLY_IN_AIR_PREDICATE, 16),
                 InSquarePlacement.spread(),
                 BiomeFilter.biome()
         );

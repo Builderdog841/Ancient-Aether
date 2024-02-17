@@ -15,7 +15,7 @@
           "input": "ancient_aether:temperature",
           "min_inclusive": -1.5,
           "max_exclusive": -0.5,
-          "when_in_range": "ancient_aether:islands/wyndcaps/underground",
+          "when_in_range": "ancient_aether:islands/wyndcaps/islands",
           "when_out_of_range": {
             "type": "minecraft:range_choice",
             "input": "ancient_aether:temperature",

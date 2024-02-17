@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:clamp",
+  "input": {
+    "type": "minecraft:y_clamped_gradient",
+    "from_value": 0.5,
+    "from_y": 128,
+    "to_value": 1,
+    "to_y": 180
+  },
+  "min": 0.5,
+  "max": 1
+}
