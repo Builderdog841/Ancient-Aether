@@ -62,19 +62,17 @@ public class AncientAetherMiscPlacements {
 
         AncientAetherPlacementUtils.register(context, SKYROOT_LEAF_VINES, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.SKYROOT_LEAF_VINE),
                 CountPlacement.of(255),
+                InSquarePlacement.spread(),
                 PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT,
                 EnvironmentScanPlacement.scanningFor(Direction.UP, BlockPredicate.allOf(BlockPredicate.hasSturdyFace(Direction.DOWN), BlockPredicate.matchesTag(AncientAetherTags.Blocks.LEAF_VINE_CAN_SPAWN_ON)), BlockPredicate.ONLY_IN_AIR_PREDICATE, 12),
-                RandomOffsetPlacement.vertical(ConstantInt.of(-1)),
-                InSquarePlacement.spread(),
-                BiomeFilter.biome()
+                RandomOffsetPlacement.vertical(ConstantInt.of(-1)), BiomeFilter.biome()
         );
         AncientAetherPlacementUtils.register(context, SHORT_SKYROOT_LEAF_VINES, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.SHORT_SKYROOT_LEAF_VINE),
                 CountPlacement.of(255),
+                InSquarePlacement.spread(),
                 PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT,
                 EnvironmentScanPlacement.scanningFor(Direction.UP, BlockPredicate.allOf(BlockPredicate.hasSturdyFace(Direction.DOWN), BlockPredicate.matchesTag(AncientAetherTags.Blocks.LEAF_VINE_CAN_SPAWN_ON)), BlockPredicate.ONLY_IN_AIR_PREDICATE, 12),
-                RandomOffsetPlacement.vertical(ConstantInt.of(-1)),
-                InSquarePlacement.spread(),
-                BiomeFilter.biome()
+                RandomOffsetPlacement.vertical(ConstantInt.of(-1)), BiomeFilter.biome()
         );
 
         AncientAetherPlacementUtils.register(context, VIOLET_AERCLOUD, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.VIOLET_AERCLOUD), AetherPlacedFeatureBuilders.aercloudPlacement(32, 224, 24));
