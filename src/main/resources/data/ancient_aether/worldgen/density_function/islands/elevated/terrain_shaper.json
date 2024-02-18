@@ -14,11 +14,7 @@
     },
     "argument2": {
       "type": "minecraft:add",
-      "argument1": {
-        "type": "minecraft:add",
-        "argument1": 0.25,
-        "argument2": "ancient_aether:amplification_factor"
-      },
+      "argument1": "ancient_aether:amplification_factor",
       "argument2": "ancient_aether:sloping_amplifier"
     }
   },
@@ -28,16 +24,12 @@
       "type": "minecraft:y_clamped_gradient",
       "from_value": 1,
       "from_y": 128,
-      "to_value": 5,
+      "to_value": 6,
       "to_y": 272
     },
     "argument2": {
       "type": "minecraft:add",
-      "argument1": {
-        "type": "minecraft:add",
-        "argument1": 0.25,
-        "argument2": "ancient_aether:amplification_factor"
-      },
+      "argument1": "ancient_aether:amplification_factor",
       "argument2": "ancient_aether:sloping_amplifier"
     }
   }
