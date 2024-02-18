@@ -26,7 +26,10 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "aether:treasure_doorway_sentry_stone"
+            "Name": "aether:treasure_doorway_sentry_stone",
+            "Properties": {
+              "facing": "north"
+            }
           }
         }
       ]

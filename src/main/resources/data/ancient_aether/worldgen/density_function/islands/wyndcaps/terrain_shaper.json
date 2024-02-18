@@ -4,17 +4,25 @@
   "min_inclusive": -4064,
   "max_exclusive": 112,
   "when_in_range": {
-    "type": "minecraft:y_clamped_gradient",
-    "from_value": 2,
-    "from_y": 0,
-    "to_value": 1,
-    "to_y": 112
+    "type": "mul",
+    "argument1": {
+      "type": "minecraft:y_clamped_gradient",
+      "from_value": 2,
+      "from_y": 0,
+      "to_value": 1,
+      "to_y": 112
+    },
+    "argument2": "ancient_aether:vertical_amplification_factor"
   },
   "when_out_of_range": {
-    "type": "minecraft:y_clamped_gradient",
-    "from_value": 1,
-    "from_y": 112,
-    "to_value": 2,
-    "to_y": 320
+    "type": "mul",
+    "argument1": {
+      "type": "minecraft:y_clamped_gradient",
+      "from_value": 1,
+      "from_y": 112,
+      "to_value": 0.5,
+      "to_y": 256
+    },
+    "argument2": "ancient_aether:vertical_amplification_factor"
   }
 }

@@ -2,6 +2,7 @@ package net.builderdog.ancient_aether.data.resources.registries;
 
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.data.resources.AetherFeatureStates;
+import com.aetherteam.aether.world.processor.BossRoomProcessor;
 import com.aetherteam.aether.world.processor.DoubleDropsProcessor;
 import com.aetherteam.aether.world.processor.SurfaceRuleProcessor;
 import com.google.common.collect.ImmutableList;
@@ -95,6 +96,13 @@ public class AncientAetherProcessorLists {
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.HOLYSTONE.get(), 0.4F), AlwaysTrueTest.INSTANCE, AncientAetherFeatureStates.MOSSY_HOLYSTONE),
                         new ProcessorRule(new RandomBlockMatchTest(AncientAetherBlocks.ANCIENT_SENTRY_VASE.get(), 0.75F), AlwaysTrueTest.INSTANCE, Blocks.AIR.defaultBlockState())
                 ))));
+        register(context, BRONZE_DUNGEON_BOSS_ROOM, ImmutableList.of(
+                new RuleProcessor(ImmutableList.of(
+                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.LOCKED_CARVED_STONE.get(), 0.01F), AlwaysTrueTest.INSTANCE, AetherBlocks.LOCKED_SENTRY_STONE.get().defaultBlockState()),
+                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.TREASURE_DOORWAY_CARVED_STONE.get(), 0.01F), AlwaysTrueTest.INSTANCE, AetherBlocks.TREASURE_DOORWAY_SENTRY_STONE.get().defaultBlockState())
+                )),
+                new BossRoomProcessor()
+        ));
         register(context, ANCIENT_DUNGEON, ImmutableList.of(
                 new RuleProcessor(ImmutableList.of(
                         new ProcessorRule(new RandomBlockMatchTest(AncientAetherBlocks.LOCKED_AEROGETIC_STONE.get(), 0.05F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get().defaultBlockState()),
