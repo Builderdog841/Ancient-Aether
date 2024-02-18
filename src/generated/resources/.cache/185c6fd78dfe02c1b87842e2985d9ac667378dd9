@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-17T21:54:11.1787977	Item Models: ancient_aether
+// 1.20.1	2024-02-18T21:25:17.4476283	Item Models: ancient_aether
 532bdb7a4f7d2a6b96d474c01c8b9e7a0d1c10b4 assets/ancient_aether/models/item/aerogel_glass.json
 87e9f8f9f807a2aa763e3057d32bacf3ee32b60f assets/ancient_aether/models/item/aerogel_glass_door.json
 d1e6ed3e334d573f31a8ce9e09885c0f43832630 assets/ancient_aether/models/item/aerogel_glass_pane.json
@@ -87,6 +87,7 @@ e328d0cead08bf6470a346660cdc137184bbbc41 assets/ancient_aether/models/item/locke
 2f4fd5d952901a7b41d714ab0147150d7383ddd5 assets/ancient_aether/models/item/mechanical_armor_trim_smithing_template.json
 13e8a434558a702e66ee3b6e0cf01e82171543fd assets/ancient_aether/models/item/mosaic_armor_trim_smithing_template.json
 87d3b179797f503e5554eb6dfe4033eb893432ce assets/ancient_aether/models/item/mossy_holystone_vase.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/mutated_aechor_plant_spawn_egg.json
 b1eafdbefc14f48a0970fa9a63764b5ff46e93ed assets/ancient_aether/models/item/mysterious_armor_trim_smithing_template.json
 9771655c71206c2d022aac127af800f28a8ffb8f assets/ancient_aether/models/item/pink_cape.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/roothyrn_spawn_egg.json

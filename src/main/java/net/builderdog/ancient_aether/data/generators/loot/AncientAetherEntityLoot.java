@@ -110,6 +110,14 @@ public class AncientAetherEntityLoot extends EntityLootSubProvider {
                         )
                 )
         );
+
+        add(AncientAetherEntityTypes.MUTATED_AECHOR_PLANT.get(), LootTable.lootTable()
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
+                        .add(LootItem.lootTableItem(AncientAetherItems.LABORATORY_DUNGEON_KEY.get())
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1)))
+                        )
+                )
+        );
     }
 
     @Override
