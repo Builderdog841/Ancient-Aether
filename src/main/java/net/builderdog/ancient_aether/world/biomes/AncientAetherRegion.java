@@ -105,9 +105,9 @@ public class AncientAetherRegion extends Region {
         addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(0.35F, 1.5F), continentDefault, erosionDefault, depthSurface, forestDistGolden2, 0),
                 AetherBiomes.SKYROOT_MEADOW);
 
-        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-1.5F, 0.1F), continentDefault, erosionDefault, depthSurface, forestDistGolden3, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-1.5F, -0.1F), continentDefault, erosionDefault, depthSurface, forestDistGolden3, 0),
                 AncientAetherBiomes.GOLDEN_SKYROOT_FOREST);
-        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(0.1F, 0.0F), continentDefault, erosionDefault, depthSurface, forestDistGolden3, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-0.1F, 0.0F), continentDefault, erosionDefault, depthSurface, forestDistGolden3, 0),
                 AetherBiomes.SKYROOT_MEADOW);
         addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(0.0F, 1.5F), continentDefault, erosionDefault, depthSurface, forestDistGolden3, 0),
                 AncientAetherBiomes.GOLDEN_THICKET);
