@@ -5,6 +5,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public class AncientAetherModelLayers {
     public static final ModelLayerLocation ANCIENT_GUARDIAN = register("ancient_guardian");
+    public static final ModelLayerLocation MUTATED_AECHOR_PLANT = register("mutated_aechor_plant");
     public static final ModelLayerLocation FLUFFALO = register("fluffalo");
     public static final ModelLayerLocation ROOTHYRN = register("roothyrn");
     public static final ModelLayerLocation AERONAUTIC_LEAPER = register("aeronautic_leaper");

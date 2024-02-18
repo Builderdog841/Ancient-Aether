@@ -9,6 +9,7 @@ import net.builderdog.ancient_aether.entity.misc.AncientAetherChestBoatEntity;
 import net.builderdog.ancient_aether.entity.monster.Roothyrn;
 import net.builderdog.ancient_aether.entity.monster.dungeon.AeronauticLeaper;
 import net.builderdog.ancient_aether.entity.monster.dungeon.boss.AncientGuardian;
+import net.builderdog.ancient_aether.entity.monster.dungeon.boss.MutatedAechorPlant;
 import net.builderdog.ancient_aether.entity.passive.Fluffalo;
 import net.builderdog.ancient_aether.entity.passive.WyndcapsAnimal;
 import net.minecraft.resources.ResourceLocation;
@@ -44,8 +45,10 @@ public class AncientAetherEntityTypes {
             () -> EntityType.Builder.of(AeronauticLeaper::new, MobCategory.MONSTER).sized(2.0F, 2.0F).clientTrackingRange(10).build("aeronautic_leaper"));
 
     //Boss
+    public static final RegistryObject<EntityType<MutatedAechorPlant>> MUTATED_AECHOR_PLANT = ENTITY_TYPES.register("mutated_aechor_plant",
+            () -> EntityType.Builder.of(MutatedAechorPlant::new, MobCategory.MONSTER).sized(5.0F, 5.0F).clientTrackingRange(8).build("mutated_aechor_plant"));
     public static final RegistryObject<EntityType<AncientGuardian>> ANCIENT_GUARDIAN = ENTITY_TYPES.register("ancient_guardian", ()
-            -> EntityType.Builder.of(AncientGuardian::new, MobCategory.MONSTER).sized(2f, 4f).clientTrackingRange(64).build(new ResourceLocation(AncientAether.MOD_ID, "ancient_guardian").toString()));
+            -> EntityType.Builder.of(AncientGuardian::new, MobCategory.MONSTER).sized(2.0f, 4.0f).clientTrackingRange(64).build(new ResourceLocation(AncientAether.MOD_ID, "ancient_guardian").toString()));
 
     //Misc
     public static final RegistryObject<EntityType<AncientAetherBoatEntity>> BOAT = ENTITY_TYPES.register("boat",
@@ -61,6 +64,7 @@ public class AncientAetherEntityTypes {
         event.put(AncientAetherEntityTypes.ROOTHYRN.get(), Roothyrn.createMobAttributes().build());
         event.put(AncientAetherEntityTypes.AERONAUTIC_LEAPER.get(), AeronauticLeaper.createMobAttributes().build());
         event.put(AncientAetherEntityTypes.ANCIENT_GUARDIAN.get(), AncientGuardian.createMobAttributes().build());
+        event.put(AncientAetherEntityTypes.MUTATED_AECHOR_PLANT.get(), MutatedAechorPlant.createMobAttributes().build());
         event.put(AncientAetherEntityTypes.FESTIVE_SWET.get(), Swet.createMobAttributes().build());
     }
 

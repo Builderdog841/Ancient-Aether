@@ -40,7 +40,7 @@ public class AncientAetherEntityRenderers {
         event.registerEntityRenderer(AncientAetherEntityTypes.BOAT.get(), context -> new AncientAetherBoatRenderer<>(context, false));
         event.registerEntityRenderer(AncientAetherEntityTypes.CHEST_BOAT.get(), context -> new AncientAetherBoatRenderer<>(context, true));
         event.registerEntityRenderer(AncientAetherEntityTypes.AERONAUTIC_LEAPER.get(), AeronauticLeaperRenderer::new);
-        event.registerEntityRenderer(AncientAetherEntityTypes.ANCIENT_GUARDIAN.get(), AncientGuardianRenderer::new);
+        event.registerEntityRenderer(AncientAetherEntityTypes.MUTATED_AECHOR_PLANT.get(), MutatedAechorPlantRenderer::new);
         event.registerEntityRenderer(AncientAetherEntityTypes.FLUFFALO.get(), FluffaloRenderer::new);
         event.registerEntityRenderer(AncientAetherEntityTypes.ROOTHYRN.get(), RoothyrnRenderer::new);
         event.registerEntityRenderer(AncientAetherEntityTypes.AERONAUTIC_DART.get(), AeronauticDartRenderer::new);
@@ -52,6 +52,7 @@ public class AncientAetherEntityRenderers {
             event.registerLayerDefinition(new ModelLayerLocation(new ResourceLocation(AncientAether.MOD_ID, type.getModelLocation()), "main"), BoatModel::createBodyModel);
             event.registerLayerDefinition(new ModelLayerLocation(new ResourceLocation(AncientAether.MOD_ID, type.getChestModelLocation()), "main"), ChestBoatModel::createBodyModel);
             event.registerLayerDefinition(AncientAetherModelLayers.ANCIENT_GUARDIAN, AncientGuardianModel::createBodyLayer);
+            event.registerLayerDefinition(AncientAetherModelLayers.MUTATED_AECHOR_PLANT, MutatedAechorPlantModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.FLUFFALO, FluffaloModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.ROOTHYRN, RoothyrnModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.AERONAUTIC_LEAPER, AeronauticLeaperModel::createBodyLayer);
