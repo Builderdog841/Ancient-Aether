@@ -1,6 +1,5 @@
 package net.builderdog.ancient_aether.entity.monster.dungeon.boss;
 
-import com.aetherteam.aether.AetherTags;
 import com.aetherteam.aether.client.AetherSoundEvents;
 import com.aetherteam.aether.effect.AetherEffects;
 import com.aetherteam.aether.entity.projectile.PoisonNeedle;
@@ -39,7 +38,7 @@ public class MutatedAechorPlant extends PathfinderMob implements RangedAttackMob
 
     public MutatedAechorPlant(EntityType<? extends MutatedAechorPlant> type, Level level) {
         super(type, level);
-        xpReward = 5;
+        xpReward = 100;
         setPoisonRemaining(2);
         if (level.isClientSide()) {
             sinage = getRandom().nextFloat() * 6.0F;
@@ -87,9 +86,6 @@ public class MutatedAechorPlant extends PathfinderMob implements RangedAttackMob
     @Override
     public void tick() {
         super.tick();
-        if (!level().getBlockState(blockPosition().below()).is(AetherTags.Blocks.AECHOR_PLANT_SPAWNABLE_ON) && !this.isPassenger()) {
-            kill();
-        }
         if (!level().isClientSide()) {
             if (getTarget() != null) {
                 setTargetingEntity(true);
@@ -118,10 +114,12 @@ public class MutatedAechorPlant extends PathfinderMob implements RangedAttackMob
     }
 
     @Override
-    public void push(double x, double y, double z) { }
+    public void push(double x, double y, double z) {
+    }
 
     @Override
-    protected void jumpFromGround() { }
+    protected void jumpFromGround() {
+    }
 
     @Override
     public boolean canBeLeashed(@NotNull Player player) {
