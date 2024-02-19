@@ -1,28 +1,32 @@
 {
-  "type": "minecraft:range_choice",
-  "input": "minecraft:y",
-  "min_inclusive": -4064,
-  "max_exclusive": 112,
-  "when_in_range": {
-    "type": "mul",
-    "argument1": {
-      "type": "minecraft:y_clamped_gradient",
-      "from_value": 2,
-      "from_y": 16,
-      "to_value": 1,
-      "to_y": 128
+  "type": "minecraft:mul",
+  "argument1": {
+    "type": "minecraft:range_choice",
+    "input": "minecraft:y",
+    "min_inclusive": -4064,
+    "max_exclusive": 112,
+    "when_in_range": {
+      "type": "mul",
+      "argument1": {
+        "type": "minecraft:y_clamped_gradient",
+        "from_value": 2,
+        "from_y": 16,
+        "to_value": 1,
+        "to_y": 128
+      },
+      "argument2": "ancient_aether:amplification_factor"
     },
-    "argument2": "ancient_aether:amplification_factor"
+    "when_out_of_range": {
+      "type": "mul",
+      "argument1": {
+        "type": "minecraft:y_clamped_gradient",
+        "from_value": 1,
+        "from_y": 128,
+        "to_value": 6,
+        "to_y": 272
+      },
+      "argument2": "ancient_aether:amplification_factor"
+    }
   },
-  "when_out_of_range": {
-    "type": "mul",
-    "argument1": {
-      "type": "minecraft:y_clamped_gradient",
-      "from_value": 1,
-      "from_y": 128,
-      "to_value": 6,
-      "to_y": 272
-    },
-    "argument2": "ancient_aether:amplification_factor"
-  }
+  "argument2": "ancient_aether:islands/elevated/factor_erosion"
 }
