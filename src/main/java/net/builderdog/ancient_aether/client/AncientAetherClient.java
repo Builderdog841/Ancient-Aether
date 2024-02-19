@@ -4,7 +4,7 @@ import com.aetherteam.aether.AetherConfig;
 import com.aetherteam.cumulus.CumulusConfig;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlockSets;
-import net.builderdog.ancient_aether.client.renderer.AncientAetherEntityRenderers;
+import net.builderdog.ancient_aether.client.renderer.AncientAetherRenderers;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -18,7 +18,7 @@ public class AncientAetherClient {
     @SubscribeEvent
     public static void clientSetup(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
-            AncientAetherEntityRenderers.registerCuriosRenderers();
+            AncientAetherRenderers.registerCuriosRenderers();
             AetherConfig.COMMON.add_ruined_portal_automatically.set(true);
             AetherConfig.COMMON.add_temporary_freezing_automatically.set(true);
             CumulusConfig.CLIENT.enable_menu_list_button.set(true);
