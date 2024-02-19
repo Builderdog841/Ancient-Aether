@@ -54,6 +54,8 @@ import javax.annotation.Nonnull;
 import java.util.EnumSet;
 import java.util.function.Predicate;
 
+//Placeholder Code, this class will be cleaned-up later
+
 public class AncientGuardian extends PathfinderMob implements AetherBossMob<AncientGuardian>, Enemy, IEntityAdditionalSpawnData {
     private static final EntityDataAccessor<Boolean> DATA_IS_READY = SynchedEntityData.defineId(AncientGuardian.class, EntityDataSerializers.BOOLEAN);
     private static final EntityDataAccessor<Component> DATA_BOSS_NAME = SynchedEntityData.defineId(AncientGuardian.class, EntityDataSerializers.COMPONENT);
@@ -92,7 +94,7 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     @Override
     @SuppressWarnings("deprecation")
     public SpawnGroupData finalizeSpawn(@NotNull ServerLevelAccessor level, @NotNull DifficultyInstance difficulty, @NotNull MobSpawnType reason, @Nullable SpawnGroupData spawnData, @Nullable CompoundTag tag) {
-        this.setBossName(AncientAetherBossNameGenerator.generateAncientGuardian(getRandom()));
+        setBossName(AncientAetherBossNameGenerator.generateAncientGuardianName(getRandom()));
         if (tag != null && tag.contains("Dungeon")) {
             StructureManager manager = level.getLevel().structureManager();
             manager.registryAccess().registry(Registries.STRUCTURE).ifPresent(registry -> {
@@ -154,7 +156,7 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
         if (source.is(DamageTypeTags.BYPASSES_INVULNERABILITY)) {
             return hurt(source, amount);
         }
-        if (this.isReady()) {
+        if (isReady()) {
             if (source.getDirectEntity() instanceof LivingEntity attacker && level().getDifficulty() != Difficulty.PEACEFUL) {
                 if (getDungeon() == null || getDungeon().isPlayerWithinRoomInterior(attacker)) {
                     if (hurt(source, amount) && getHealth() > 0) {
@@ -306,15 +308,7 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     @Override
     public void addAdditionalSaveData(@NotNull CompoundTag tag) {
         super.addAdditionalSaveData(tag);
-        this.addBossSaveData(tag);
-        if (dungeonBounds != null) {
-            tag.putDouble("DungeonBoundsMinX", dungeonBounds.minX);
-            tag.putDouble("DungeonBoundsMinY", dungeonBounds.minY);
-            tag.putDouble("DungeonBoundsMinZ", dungeonBounds.minZ);
-            tag.putDouble("DungeonBoundsMaxX", dungeonBounds.maxX);
-            tag.putDouble("DungeonBoundsMaxY", dungeonBounds.maxY);
-            tag.putDouble("DungeonBoundsMaxZ", dungeonBounds.maxZ);
-        }
+        addBossSaveData(tag);
         tag.putBoolean("Ready", isReady());
     }
 
@@ -329,16 +323,7 @@ public class AncientGuardian extends PathfinderMob implements AetherBossMob<Anci
     @Override
     public void readAdditionalSaveData(@NotNull CompoundTag tag) {
         super.readAdditionalSaveData(tag);
-        this.readBossSaveData(tag);
-        if (tag.contains("DungeonBoundsMinX")) {
-            double minX = tag.getDouble("DungeonBoundsMinX");
-            double minY = tag.getDouble("DungeonBoundsMinY");
-            double minZ = tag.getDouble("DungeonBoundsMinZ");
-            double maxX = tag.getDouble("DungeonBoundsMaxX");
-            double maxY = tag.getDouble("DungeonBoundsMaxY");
-            double maxZ = tag.getDouble("DungeonBoundsMaxZ");
-            dungeonBounds = new AABB(minX, minY, minZ, maxX, maxY, maxZ);
-        }
+        readBossSaveData(tag);
         if (tag.contains("Ready")) {
             setReady(tag.getBoolean("Ready"));
         }
