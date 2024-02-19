@@ -46,7 +46,7 @@ public class AncientAetherEntityTypes {
 
     //Boss
     public static final RegistryObject<EntityType<MutatedAechorPlant>> MUTATED_AECHOR_PLANT = ENTITY_TYPES.register("mutated_aechor_plant",
-            () -> EntityType.Builder.of(MutatedAechorPlant::new, MobCategory.MONSTER).sized(2.0F, 2.0F).clientTrackingRange(64).build("mutated_aechor_plant"));
+            () -> EntityType.Builder.of(MutatedAechorPlant::new, MobCategory.MONSTER).sized(1.0F, 1.0F).clientTrackingRange(64).build("mutated_aechor_plant"));
     public static final RegistryObject<EntityType<AncientGuardian>> ANCIENT_GUARDIAN = ENTITY_TYPES.register("ancient_guardian", ()
             -> EntityType.Builder.of(AncientGuardian::new, MobCategory.MONSTER).sized(2.0F, 4.0F).clientTrackingRange(64).build(new ResourceLocation(AncientAether.MOD_ID, "ancient_guardian").toString()));
 

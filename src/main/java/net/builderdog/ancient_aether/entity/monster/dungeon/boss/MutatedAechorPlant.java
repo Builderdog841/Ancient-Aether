@@ -17,6 +17,8 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -25,7 +27,6 @@ import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.util.Mth;
 import net.minecraft.world.BossEvent;
 import net.minecraft.world.Difficulty;
@@ -47,6 +48,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.entity.IEntityAdditionalSpawnData;
+import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -113,6 +115,16 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         return false;
     }
 
+    @Override
+    public boolean canAttack(LivingEntity target) {
+        return target.canBeSeenAsEnemy();
+    }
+
+    @Override
+    protected boolean canRide(@NotNull Entity vehicle) {
+        return false;
+    }
+
     //---------------------[Parameter Methods]---------------------\\
 
     public int getSize() {
@@ -155,6 +167,14 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     @Override
     public double getMyRidingOffset() {
         return getVehicle() != null && getVehicle().isCrouching() ? 0.1 : 0.275;
+    }
+
+    @Override
+    public void checkDespawn() { }
+
+    @Override
+    public @NotNull Packet<ClientGamePacketListener> getAddEntityPacket() {
+        return NetworkHooks.getEntitySpawningPacket(this);
     }
 
     //---------------------[General Methods]---------------------\\
@@ -203,32 +223,31 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
 
     @Override
     public boolean hurt(@NotNull DamageSource source, float amount) {
-            if (source.is(DamageTypeTags.BYPASSES_INVULNERABILITY)) {
-                super.hurt(source, amount);
-                if (!level().isClientSide() && source.getEntity() instanceof LivingEntity living) {
-                    mostDamageTargetGoal.addAggro(living, amount);
-                }
-            } else if (source.getDirectEntity() instanceof LivingEntity attacker && level().getDifficulty() != Difficulty.PEACEFUL) {
-                if (getDungeon() == null || getDungeon().isPlayerWithinRoomInterior(attacker)) {
-                        if (super.hurt(source, amount) && getHealth() > 0) {
-                            if (!isBossFight()) {
-                                start();
-                            }
-                            if (hurtTime == 0) {
-                                for (int i = 0; i < 8; ++i) {
-                                    double d1 = getX() + (getRandom().nextFloat() - getRandom().nextFloat()) * 0.5;
-                                    double d2 = getY() + 0.25 + (getRandom().nextFloat() - getRandom().nextFloat()) * 0.5;
-                                    double d3 = getZ() + (getRandom().nextFloat() - getRandom().nextFloat()) * 0.5;
-                                    double d4 = (getRandom().nextFloat() - getRandom().nextFloat()) * 0.5;
-                                    double d5 = (getRandom().nextFloat() - getRandom().nextFloat()) * 0.5;
-                                    level().addParticle(ParticleTypes.PORTAL, d1, d2, d3, d4, 0.25, d5);
-                                }
-                            }
-                            return super.hurt(source, amount);
+        super.hurt(source, amount);
+        if (!level().isClientSide() && source.getEntity() instanceof LivingEntity living) {
+            mostDamageTargetGoal.addAggro(living, amount);
+        }
+        if (source.getDirectEntity() instanceof LivingEntity attacker && level().getDifficulty() != Difficulty.PEACEFUL) {
+            if (getDungeon() == null || getDungeon().isPlayerWithinRoomInterior(attacker)) {
+                if (super.hurt(source, amount) && getHealth() > 0) {
+                    if (!isBossFight()) {
+                        start();
+                    }
+                    if (hurtTime == 0) {
+                        for (int i = 0; i < 8; ++i) {
+                            double d1 = getX() + (getRandom().nextFloat() - getRandom().nextFloat()) * 0.5;
+                            double d2 = getY() + 0.25 + (getRandom().nextFloat() - getRandom().nextFloat()) * 0.5;
+                            double d3 = getZ() + (getRandom().nextFloat() - getRandom().nextFloat()) * 0.5;
+                            double d4 = (getRandom().nextFloat() - getRandom().nextFloat()) * 0.5;
+                            double d5 = (getRandom().nextFloat() - getRandom().nextFloat()) * 0.5;
+                            level().addParticle(ParticleTypes.PORTAL, d1, d2, d3, d4, 0.25, d5);
                         }
                     }
+                    return super.hurt(source, amount);
                 }
-            return false;
+            }
+        }
+        return false;
     }
 
     @Override
@@ -266,8 +285,8 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
 
     @Override
     public @NotNull EntityDimensions getDimensions(@NotNull Pose pose) {
-        float width = 0.75F + getSize() * 0.125F;
-        float height = 0.5F + getSize() * 0.075F;
+        float width = 3.0F + getSize() * 0.125F;
+        float height = 2.0F + getSize() * 0.075F;
         return EntityDimensions.fixed(width, height);
     }
 
@@ -344,6 +363,12 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     @Override
     public int getDeathScore() {
         return deathScore;
+    }
+
+    @Override
+    public void setCustomName(@Nullable Component name) {
+        super.setCustomName(name);
+        setBossName(name);
     }
 
     @Override
