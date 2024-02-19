@@ -25,7 +25,7 @@
       "item/armor/equip_chain5",
       "item/armor/equip_chain6"
     ],
-    "subtitle": "subtitles.aether.item.accessory.equip_ancient_pendant"
+    "subtitle": "subtitles.ancient_aether.item.accessory.equip_ancient_pendant"
   },
   "item.accessory.equip_ancient_ring": {
     "sounds": [
@@ -36,7 +36,7 @@
       "item/armor/equip_chain5",
       "item/armor/equip_chain6"
     ],
-    "subtitle": "subtitles.aether.item.accessory.equip_ancient_ring"
+    "subtitle": "subtitles.ancient_aether.item.accessory.equip_ancient_ring"
   },
   "item.accessory.equip_health_pendant": {
     "sounds": [
@@ -47,7 +47,7 @@
       "item/armor/equip_chain5",
       "item/armor/equip_chain6"
     ],
-    "subtitle": "subtitles.aether.item.accessory.equip_health_pendant"
+    "subtitle": "subtitles.ancient_aether.item.accessory.equip_health_pendant"
   },
   "item.accessory.equip_health_ring": {
     "sounds": [
@@ -58,7 +58,7 @@
       "item/armor/equip_chain5",
       "item/armor/equip_chain6"
     ],
-    "subtitle": "subtitles.aether.item.accessory.equip_health_ring"
+    "subtitle": "subtitles.ancient_aether.item.accessory.equip_health_ring"
   },
   "item.accessory.equip_hermes_ring": {
     "sounds": [
@@ -69,7 +69,7 @@
       "item/armor/equip_chain5",
       "item/armor/equip_chain6"
     ],
-    "subtitle": "subtitles.aether.item.accessory.equip_hermes_ring"
+    "subtitle": "subtitles.ancient_aether.item.accessory.equip_hermes_ring"
   },
   "item.accessory.equip_hermes_pendant": {
     "sounds": [
@@ -80,7 +80,7 @@
       "item/armor/equip_chain5",
       "item/armor/equip_chain6"
     ],
-    "subtitle": "subtitles.aether.item.accessory.equip_hermes_pendant"
+    "subtitle": "subtitles.ancient_aether.item.accessory.equip_hermes_pendant"
   },
   "item.accessory.equip_arkenium_ring": {
     "sounds": [
@@ -91,7 +91,7 @@
       "item/armor/equip_chain5",
       "item/armor/equip_chain6"
     ],
-    "subtitle": "subtitles.aether.item.accessory.equip_arkenium_ring"
+    "subtitle": "subtitles.ancient_aether.item.accessory.equip_arkenium_ring"
   },
   "item.accessory.equip_arkenium_pendant": {
     "sounds": [
@@ -102,7 +102,7 @@
       "item/armor/equip_chain5",
       "item/armor/equip_chain6"
     ],
-    "subtitle": "subtitles.aether.item.accessory.equip_arkenium_pendant"
+    "subtitle": "subtitles.ancient_aether.item.accessory.equip_arkenium_pendant"
   },
   "item.accessory.equip_valkyrum_ring": {
     "sounds": [
@@ -113,7 +113,7 @@
       "item/armor/equip_chain5",
       "item/armor/equip_chain6"
     ],
-    "subtitle": "subtitles.aether.item.accessory.equip_valkyrum_ring"
+    "subtitle": "subtitles.ancient_aether.item.accessory.equip_valkyrum_ring"
   },
   "item.accessory.equip_valkyrum_pendant": {
     "sounds": [
@@ -124,7 +124,7 @@
       "item/armor/equip_chain5",
       "item/armor/equip_chain6"
     ],
-    "subtitle": "subtitles.aether.item.accessory.equip_valkyrum_pendant"
+    "subtitle": "subtitles.ancient_aether.item.accessory.equip_valkyrum_pendant"
   },
   "entity.fluffalo.ambient": {
     "sounds": [
