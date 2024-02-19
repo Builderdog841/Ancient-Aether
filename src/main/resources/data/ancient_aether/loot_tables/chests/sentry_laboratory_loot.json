@@ -78,19 +78,6 @@
         },
         {
           "type": "minecraft:item",
-          "name": "ancient_aether:crystal_aercloud",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 2,
-                "max": 4
-              }
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
           "name": "ancient_aether:wind_blower",
           "functions": [
             {
