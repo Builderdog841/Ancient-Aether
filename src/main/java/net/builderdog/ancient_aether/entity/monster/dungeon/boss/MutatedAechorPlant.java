@@ -66,7 +66,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
 
     public MutatedAechorPlant(EntityType<? extends MutatedAechorPlant> type, Level level) {
         super(type, level);
-        xpReward = 100;
+        xpReward = XP_REWARD_BOSS;
         bossFight = new ServerBossEvent(getBossName(), BossEvent.BossBarColor.RED, BossEvent.BossBarOverlay.PROGRESS);
         setPoisonRemaining(2);
         if (level.isClientSide()) {
@@ -87,7 +87,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
 
     public static AttributeSupplier.@NotNull Builder createMobAttributes() {
         return Mob.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 300.0)
+                .add(Attributes.MAX_HEALTH, 400.0)
                 .add(Attributes.MOVEMENT_SPEED, 0.0)
                 .add(Attributes.KNOCKBACK_RESISTANCE, 1.0);
     }
@@ -276,6 +276,13 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         return effect.getEffect() != AetherEffects.INEBRIATION.get() && super.canBeAffected(effect);
     }
 
+    @Override
+    public void customServerAiStep() {
+        super.customServerAiStep();
+        bossFight.setProgress(getHealth() / getMaxHealth());
+        trackDungeon();
+    }
+
     //---------------------[Boss Methods]---------------------\\
 
     public boolean isActive() {
@@ -368,6 +375,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     }
 
     private void start() {
+        setActive(true);
         setBossFight(true);
         if (getDungeon() != null) {
             closeRoom();
@@ -375,12 +383,13 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         AetherEventDispatch.onBossFightStart(this, getDungeon());
     }
 
-    @Override
     public void reset() {
+        setActive(false);
         setBossFight(false);
         setTarget(null);
         setHealth(getMaxHealth());
-        if (laboratoryDungeon != null) {
+        if (getDungeon() != null) {
+            setPos(getDungeon().originCoordinates());
             openRoom();
         }
         AetherEventDispatch.onBossFightStop(this, getDungeon());
