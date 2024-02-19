@@ -55,7 +55,7 @@ public class MutatedAechorPlant extends PathfinderMob implements RangedAttackMob
 
     public static AttributeSupplier.@NotNull Builder createMobAttributes() {
         return Mob.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 500.0)
+                .add(Attributes.MAX_HEALTH, 300.0)
                 .add(Attributes.MOVEMENT_SPEED, 0.0)
                 .add(Attributes.KNOCKBACK_RESISTANCE, 1.0);
     }
