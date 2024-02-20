@@ -219,6 +219,12 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .unlockedBy(getHasName(AncientAetherBlocks.FLUFFALO_WOOL.get()), has(AncientAetherBlocks.FLUFFALO_WOOL.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.PAPER, 3)
+                .define('#', AetherItems.AECHOR_PETAL.get())
+                .pattern("###")
+                .unlockedBy(getHasName(AetherItems.AECHOR_PETAL.get()), has(AetherItems.AECHOR_PETAL.get()))
+                .save(consumer);
+
         makePickaxe(AncientAetherItems.VALKYRUM_PICKAXE, AncientAetherItems.VALKYRUM).save(consumer);
         makeAxe(AncientAetherItems.VALKYRUM_AXE, AncientAetherItems.VALKYRUM).save(consumer);
         makeShovel(AncientAetherItems.VALKYRUM_SHOVEL, AncientAetherItems.VALKYRUM).save(consumer);
