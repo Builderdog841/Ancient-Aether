@@ -67,8 +67,7 @@
         {
           "input_predicate": {
             "block": "minecraft:orange_wool",
-            "predicate_type": "minecraft:random_block_match",
-            "probability": 1.0
+            "predicate_type": "minecraft:block_match"
           },
           "location_predicate": {
             "predicate_type": "minecraft:always_true"

@@ -168,10 +168,12 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         AADungeonBlock(AncientAetherBlocks.TRAPPED_LIGHT_AEROGETIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get());
         AADungeonBlock(AncientAetherBlocks.TRAPPED_CORRUPTED_LIGHT_AEROGETIC_STONE.get(), AncientAetherBlocks.CORRUPTED_LIGHT_AEROGETIC_STONE.get());
 
+        AAInvisibleBlock(AncientAetherBlocks.BOSS_DOORWAY_WYND_SENTRY_STONE.get(), AncientAetherBlocks.WYND_SENTRY_STONE.get());
         AAInvisibleBlock(AncientAetherBlocks.BOSS_DOORWAY_AEROGETIC_STONE.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
         AAInvisibleBlock(AncientAetherBlocks.BOSS_DOORWAY_LIGHT_AEROGETIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get());
         AAInvisibleBlock(AncientAetherBlocks.BOSS_DOORWAY_CORRUPTED_LIGHT_AEROGETIC_STONE.get(), AncientAetherBlocks.CORRUPTED_LIGHT_AEROGETIC_STONE.get());
 
+        AADungeonBlock(AncientAetherBlocks.TREASURE_DOORWAY_WYND_SENTRY_STONE.get(), AncientAetherBlocks.WYND_SENTRY_STONE.get());
         AADungeonBlock(AncientAetherBlocks.TREASURE_DOORWAY_AEROGETIC_STONE.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
         AADungeonBlock(AncientAetherBlocks.TREASURE_DOORWAY_LIGHT_AEROGETIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get());
         AADungeonBlock(AncientAetherBlocks.TREASURE_DOORWAY_CORRUPTED_LIGHT_AEROGETIC_STONE.get(), AncientAetherBlocks.CORRUPTED_LIGHT_AEROGETIC_STONE.get());

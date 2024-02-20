@@ -6,7 +6,7 @@
       "weight": 2,
       "element": {
         "location": "ancient_aether:bronze_dungeon/room_01",
-        "processors": "ancient_aether:bronze_dungeon_room",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -15,7 +15,7 @@
       "weight": 2,
       "element": {
         "location": "ancient_aether:bronze_dungeon/room_02",
-        "processors": "ancient_aether:bronze_dungeon_room",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -24,7 +24,7 @@
       "weight": 2,
       "element": {
         "location": "ancient_aether:bronze_dungeon/room_03",
-        "processors": "ancient_aether:bronze_dungeon_room",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -33,7 +33,7 @@
       "weight": 2,
       "element": {
         "location": "ancient_aether:bronze_dungeon/room_04",
-        "processors": "ancient_aether:bronze_dungeon_room",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -42,7 +42,7 @@
       "weight": 2,
       "element": {
         "location": "ancient_aether:bronze_dungeon/large_room_01",
-        "processors": "ancient_aether:bronze_dungeon_room",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -51,7 +51,7 @@
       "weight": 2,
       "element": {
         "location": "ancient_aether:bronze_dungeon/large_room_02",
-        "processors": "ancient_aether:bronze_dungeon_room",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -60,7 +60,7 @@
       "weight": 2,
       "element": {
         "location": "ancient_aether:bronze_dungeon/large_room_03",
-        "processors": "ancient_aether:bronze_dungeon_room",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -69,7 +69,7 @@
       "weight": 1,
       "element": {
         "location": "ancient_aether:bronze_dungeon/large_room_04",
-        "processors": "ancient_aether:bronze_dungeon_room",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -78,7 +78,7 @@
       "weight": 2,
       "element": {
         "location": "ancient_aether:bronze_dungeon/large_room_05",
-        "processors": "ancient_aether:bronze_dungeon_room",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -87,7 +87,7 @@
       "weight": 2,
       "element": {
         "location": "ancient_aether:bronze_dungeon/large_room_crossing",
-        "processors": "ancient_aether:bronze_dungeon_room",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -96,7 +96,7 @@
       "weight": 1,
       "element": {
         "location": "ancient_aether:bronze_dungeon/hall_01",
-        "processors": "ancient_aether:bronze_dungeon_room",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -105,7 +105,7 @@
       "weight": 1,
       "element": {
         "location": "ancient_aether:bronze_dungeon/hall_02",
-        "processors": "ancient_aether:bronze_dungeon_room",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -114,7 +114,7 @@
       "weight": 1,
       "element": {
         "location": "ancient_aether:bronze_dungeon/hall_03",
-        "processors": "ancient_aether:bronze_dungeon_room",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -123,7 +123,7 @@
       "weight": 1,
       "element": {
         "location": "ancient_aether:bronze_dungeon/bridge_room",
-        "processors": "ancient_aether:bronze_dungeon_room",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -132,7 +132,7 @@
       "weight": 2,
       "element": {
         "location": "ancient_aether:bronze_dungeon/staircase_01",
-        "processors": "ancient_aether:bronze_dungeon_tunnel",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -141,7 +141,7 @@
       "weight": 2,
       "element": {
         "location": "ancient_aether:bronze_dungeon/staircase_02",
-        "processors": "ancient_aether:bronze_dungeon_tunnel",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -150,7 +150,7 @@
       "weight": 2,
       "element": {
         "location": "ancient_aether:bronze_dungeon/staircase_03",
-        "processors": "ancient_aether:bronze_dungeon_tunnel",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }

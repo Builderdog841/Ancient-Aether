@@ -443,6 +443,9 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         if (state.is(AetherBlocks.BOSS_DOORWAY_CARVED_STONE.get()) || state.is(AetherBlocks.TREASURE_DOORWAY_CARVED_STONE.get())) {
             return Blocks.AIR.defaultBlockState();
         }
+        if (state.is(AncientAetherBlocks.BOSS_DOORWAY_WYND_SENTRY_STONE.get()) || state.is(AncientAetherBlocks.TREASURE_DOORWAY_WYND_SENTRY_STONE.get())) {
+            return Blocks.AIR.defaultBlockState();
+        }
         return null;
     }
 

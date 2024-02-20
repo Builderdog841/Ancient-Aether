@@ -6,7 +6,7 @@
       "weight": 1,
       "element": {
         "location": "ancient_aether:bronze_dungeon/tunnel_01",
-        "processors": "ancient_aether:bronze_dungeon_tunnel",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -15,7 +15,7 @@
       "weight": 1,
       "element": {
         "location": "ancient_aether:bronze_dungeon/tunnel_02",
-        "processors": "ancient_aether:bronze_dungeon_tunnel",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -24,7 +24,7 @@
       "weight": 1,
       "element": {
         "location": "ancient_aether:bronze_dungeon/tunnel_03",
-        "processors": "ancient_aether:bronze_dungeon_tunnel",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -33,7 +33,7 @@
       "weight": 2,
       "element": {
         "location": "ancient_aether:bronze_dungeon/tunnel_04",
-        "processors": "ancient_aether:bronze_dungeon_tunnel",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -42,7 +42,7 @@
       "weight": 1,
       "element": {
         "location": "ancient_aether:bronze_dungeon/tunnel_05",
-        "processors": "ancient_aether:bronze_dungeon_tunnel",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -51,7 +51,7 @@
       "weight": 2,
       "element": {
         "location": "ancient_aether:bronze_dungeon/tunnel_06",
-        "processors": "ancient_aether:bronze_dungeon_tunnel",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -60,7 +60,7 @@
       "weight": 2,
       "element": {
         "location": "ancient_aether:bronze_dungeon/tunnel_07",
-        "processors": "ancient_aether:bronze_dungeon_tunnel",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -69,7 +69,7 @@
       "weight": 2,
       "element": {
         "location": "ancient_aether:bronze_dungeon/tunnel_intersection",
-        "processors": "ancient_aether:bronze_dungeon_tunnel",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
