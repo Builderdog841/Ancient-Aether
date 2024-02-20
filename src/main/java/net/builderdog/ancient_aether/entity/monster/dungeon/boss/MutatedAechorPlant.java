@@ -13,6 +13,7 @@ import com.aetherteam.nitrogen.entity.BossRoomTracker;
 import com.aetherteam.nitrogen.network.PacketRelay;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
@@ -293,6 +294,11 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     @Override
     public boolean canBeAffected(MobEffectInstance effect) {
         return effect.getEffect() != AetherEffects.INEBRIATION.get() && super.canBeAffected(effect);
+    }
+
+    @Override
+    public void evaporateEffects(MutatedAechorPlant entity, BlockPos pos) {
+        AetherBossMob.super.evaporateEffects(entity, pos);
     }
 
     @Override
