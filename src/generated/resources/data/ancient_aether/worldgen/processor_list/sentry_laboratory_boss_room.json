@@ -1,0 +1,41 @@
+{
+  "processors": [
+    {
+      "processor_type": "minecraft:rule",
+      "rules": [
+        {
+          "input_predicate": {
+            "block": "aether:locked_carved_stone",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 0.01
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "ancient_aether:locked_wynd_sentry_stone"
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "aether:treasure_doorway_carved_stone",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 0.01
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "ancient_aether:treasure_doorway_wynd_sentry_stone",
+            "Properties": {
+              "facing": "north"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "processor_type": "aether:boss_room"
+    }
+  ]
+}
