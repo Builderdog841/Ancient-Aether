@@ -14,6 +14,7 @@ public class AncientAetherTags {
         public static final TagKey<Block> AETHER_CARVER_REPLACEABLES = tag("aether_carver_replaceables");
         public static final TagKey<Block> LEAF_VINE_CAN_SPAWN_ON = tag("leaf_vine_can_spawn_on");
         public static final TagKey<Block> BRONZE_DUNGEON_BLOCKS = tag("bronze_dungeon_blocks");
+        public static final TagKey<Block> SENTRY_LABORATORY_BLOCKS = tag("sentry_laboratory_blocks");
 
         private static TagKey<Block> tag(String name) {
             return TagKey.create(Registries.BLOCK, new ResourceLocation(AncientAether.MOD_ID, name));
