@@ -1,0 +1,80 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"particle": "aether:block/dungeon/carved_stone"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [32, 32, 16],
+			"faces": {
+				"north": {"uv": [4, 0, 8, 8], "texture": "#slider"},
+				"east": {"uv": [14, 0, 16, 8], "texture": "#slider"},
+				"south": {"uv": [0, 8, 4, 16], "texture": "#slider"},
+				"west": {"uv": [4, 0, 6, 8], "texture": "#slider"},
+				"up": {"uv": [8, 0, 12, 4], "texture": "#slider"},
+				"down": {"uv": [0, 4, 4, 8], "texture": "#slider"}
+			}
+		},
+		{
+			"from": [0, 0, 16],
+			"to": [16, 32, 32],
+			"faces": {
+				"north": {"uv": [4, 8, 8, 16], "texture": "#slider"},
+				"east": {"uv": [0, 8, 2, 16], "texture": "#slider"},
+				"south": {"uv": [12, 0, 14, 8], "texture": "#slider"},
+				"west": {"uv": [6, 0, 8, 8], "texture": "#slider"},
+				"up": {"uv": [8, 4, 10, 8], "texture": "#slider"},
+				"down": {"uv": [0, 0, 2, 4], "texture": "#slider"}
+			}
+		},
+		{
+			"from": [16, 0, 16],
+			"to": [32, 16, 32],
+			"faces": {
+				"north": {"uv": [4, 12, 6, 16], "texture": "#slider"},
+				"east": {"uv": [12, 4, 13.875, 8], "texture": "#slider"},
+				"south": {"uv": [13.875, 4, 16, 8], "texture": "#slider"},
+				"west": {"uv": [2, 12, 4, 16], "texture": "#slider"},
+				"up": {"uv": [2, 12, 4, 16], "texture": "#slider"},
+				"down": {"uv": [1.875, 0, 4, 4], "texture": "#slider"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 45, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 225, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"gui": {
+			"rotation": [30, 225, 0],
+			"translation": [3.75, -2.25, 0],
+			"scale": [0.325, 0.325, 0.325]
+		},
+		"head": {
+			"translation": [-7.75, 0, -8.25]
+		},
+		"fixed": {
+			"translation": [-4, -4, 0],
+			"scale": [0.5, 0.5, 0.5]
+		}
+	}
+}
