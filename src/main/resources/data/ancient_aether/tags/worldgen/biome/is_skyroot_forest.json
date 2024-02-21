@@ -12,6 +12,14 @@
     {
       "id": "aether_redux:gilded_groves",
       "required": false
+    },
+    {
+      "id": "aether_genesis:vibrant_forest",
+      "required": false
+    },
+    {
+      "id": "aether_genesis:vibrant_woodland",
+      "required": false
     }
   ]
 }

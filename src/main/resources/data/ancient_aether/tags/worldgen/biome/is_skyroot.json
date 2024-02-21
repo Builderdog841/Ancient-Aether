@@ -1,6 +1,14 @@
 {
   "values": [
     "#ancient_aether:is_skyroot_forest",
-    "#ancient_aether:is_barren_skyroot_biome"
+    "#ancient_aether:is_barren_skyroot_biome",
+    {
+      "id": "aether_genesis:vibrant_meadow",
+      "required": false
+    },
+    {
+      "id": "aether_genesis:vibrant_grove",
+      "required": false
+    }
   ]
 }
