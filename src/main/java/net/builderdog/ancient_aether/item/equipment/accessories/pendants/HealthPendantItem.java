@@ -19,6 +19,7 @@ public class HealthPendantItem extends PendantItem {
     public HealthPendantItem(Properties properties) {
         super(new ResourceLocation(AncientAether.MOD_ID, "health_pendant"), AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_HEALTH_PENDANT, properties);
     }
+
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {
         LivingEntity livingEntity = slotContext.entity();
@@ -29,6 +30,7 @@ public class HealthPendantItem extends PendantItem {
             }
         }
     }
+
     @Override
     public void onUnequip(SlotContext slotContext, ItemStack newStack, ItemStack stack) {
         LivingEntity livingEntity = slotContext.entity();
@@ -39,6 +41,7 @@ public class HealthPendantItem extends PendantItem {
             }
         }
     }
+
     public AttributeModifier getHealthModifier() {
         return new AttributeModifier(HEALTH_UUID, "Max Health increase", 2, AttributeModifier.Operation.ADDITION);
     }
