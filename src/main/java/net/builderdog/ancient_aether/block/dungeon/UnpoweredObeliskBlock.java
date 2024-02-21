@@ -34,8 +34,8 @@ public class UnpoweredObeliskBlock extends Block {
 
     @SuppressWarnings("deprecation")
     @Override
-    public @NotNull InteractionResult use(@NotNull BlockState blockstate, @NotNull Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
-        super.use(blockstate, level, pos, player, hand, hit);
+    public @NotNull InteractionResult use(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
+        super.use(state, level, pos, player, hand, hit);
         int x = pos.getX();
         int y = pos.getY();
         int z = pos.getZ();
@@ -107,4 +107,3 @@ public class UnpoweredObeliskBlock extends Block {
         return InteractionResult.SUCCESS;
     }
 }
-

@@ -3,9 +3,7 @@ package net.builderdog.ancient_aether.event.hooks;
 import com.google.common.collect.ImmutableMap;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.item.equipment.armor.EquipmentUtil;
-import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.ToolAction;
@@ -33,7 +31,7 @@ public class AbilityHooks {
                 .put(AncientAetherBlocks.SAKURA_WOOD_WALL.get(), AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL.get())
                 .build();
 
-        public static BlockState setupToolActions(LevelAccessor accessor, BlockPos pos, BlockState old, ToolAction action) {
+        public static BlockState setupToolActions(BlockState old, ToolAction action) {
             Block oldBlock = old.getBlock();
             if (action == ToolActions.AXE_STRIP) {
                 if (STRIPPABLES.containsKey(oldBlock)) {
