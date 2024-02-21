@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.item.equipment.accessories;
+package net.builderdog.ancient_aether.item.equipment.accessories.pendants;
 
 import com.aetherteam.aether.item.accessories.pendant.PendantItem;
 import net.builderdog.ancient_aether.AncientAether;

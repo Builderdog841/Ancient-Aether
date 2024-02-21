@@ -1,9 +1,7 @@
-package net.builderdog.ancient_aether.item.equipment.accessories;
+package net.builderdog.ancient_aether.item.equipment.accessories.rings;
 
-import com.aetherteam.aether.item.accessories.pendant.PendantItem;
-import net.builderdog.ancient_aether.AncientAether;
+import com.aetherteam.aether.item.accessories.ring.RingItem;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -13,11 +11,11 @@ import top.theillusivec4.curios.api.SlotContext;
 
 import java.util.UUID;
 
-public class ArkeniumPendantItem extends PendantItem {
+public class ArkeniumRingItem extends RingItem {
     private static final UUID ARMOR_TOUGHNESS_UUID = UUID.fromString("CB33E1C-E2D6-4A0B-9562-55C25FE53A1E");
 
-    public ArkeniumPendantItem(Properties properties) {
-        super(new ResourceLocation(AncientAether.MOD_ID, "arkenium_pendant"), AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_ARKENIUM_PENDANT, properties);
+    public ArkeniumRingItem(Properties properties) {
+        super(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_ARKENIUM_RING, properties);
     }
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {
@@ -40,6 +38,6 @@ public class ArkeniumPendantItem extends PendantItem {
         }
     }
     public AttributeModifier getArmorToughnessModifier() {
-        return new AttributeModifier(ARMOR_TOUGHNESS_UUID, "Armor Toughness increase", 2, AttributeModifier.Operation.ADDITION);
+        return new AttributeModifier(ARMOR_TOUGHNESS_UUID, "Armor Toughness increase", 1, AttributeModifier.Operation.ADDITION);
     }
 }

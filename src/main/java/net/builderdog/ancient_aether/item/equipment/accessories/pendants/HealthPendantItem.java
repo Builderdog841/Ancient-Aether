@@ -1,7 +1,9 @@
-package net.builderdog.ancient_aether.item.equipment.accessories;
+package net.builderdog.ancient_aether.item.equipment.accessories.pendants;
 
-import com.aetherteam.aether.item.accessories.ring.RingItem;
+import com.aetherteam.aether.item.accessories.pendant.PendantItem;
+import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -11,11 +13,11 @@ import top.theillusivec4.curios.api.SlotContext;
 
 import java.util.UUID;
 
-public class HealthRingItem extends RingItem {
-    private static final UUID HEALTH_UUID = UUID.fromString("AA22E1C-E2D5-4A0B-9562-55C75FE53A1E");
+public class HealthPendantItem extends PendantItem {
+    private static final UUID HEALTH_UUID = UUID.fromString("A022E1C-E2D5-4A0B-9562-55C75FE53A1E");
 
-    public HealthRingItem(Properties properties) {
-        super(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_HEALTH_RING, properties);
+    public HealthPendantItem(Properties properties) {
+        super(new ResourceLocation(AncientAether.MOD_ID, "health_pendant"), AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_HEALTH_PENDANT, properties);
     }
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {
@@ -38,6 +40,6 @@ public class HealthRingItem extends RingItem {
         }
     }
     public AttributeModifier getHealthModifier() {
-        return new AttributeModifier(HEALTH_UUID, "Max Health increase", 1, AttributeModifier.Operation.ADDITION);
+        return new AttributeModifier(HEALTH_UUID, "Max Health increase", 2, AttributeModifier.Operation.ADDITION);
     }
 }

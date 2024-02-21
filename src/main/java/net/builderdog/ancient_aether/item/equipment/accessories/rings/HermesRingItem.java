@@ -1,9 +1,7 @@
-package net.builderdog.ancient_aether.item.equipment.accessories;
+package net.builderdog.ancient_aether.item.equipment.accessories.rings;
 
-import com.aetherteam.aether.item.accessories.pendant.PendantItem;
-import net.builderdog.ancient_aether.AncientAether;
+import com.aetherteam.aether.item.accessories.ring.RingItem;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -13,11 +11,11 @@ import top.theillusivec4.curios.api.SlotContext;
 
 import java.util.UUID;
 
-public class HermesPendantItem extends PendantItem {
+public class HermesRingItem extends RingItem {
     private static final UUID MOVEMENT_SPEED_UUID = UUID.fromString("AB22E1C-E2D6-4A0B-9562-55C75FE53A1E");
 
-    public HermesPendantItem(Properties properties) {
-        super(new ResourceLocation(AncientAether.MOD_ID, "hermes_pendant"), AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_HERMES_PENDANT, properties);
+    public HermesRingItem(Properties properties) {
+        super(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_HERMES_RING, properties);
     }
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {
@@ -40,6 +38,6 @@ public class HermesPendantItem extends PendantItem {
         }
     }
     public AttributeModifier getMovementSpeedModifier() {
-        return new AttributeModifier(MOVEMENT_SPEED_UUID, "Movement Speed increase", 0.02, AttributeModifier.Operation.ADDITION);
+        return new AttributeModifier(MOVEMENT_SPEED_UUID, "Movement Speed increase", 0.015, AttributeModifier.Operation.ADDITION);
     }
 }
