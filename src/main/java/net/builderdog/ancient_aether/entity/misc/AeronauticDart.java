@@ -13,7 +13,7 @@ import net.minecraft.world.phys.EntityHitResult;
 public class AeronauticDart extends GoldenDart {
     public AeronauticDart(Level level) {
         super(AncientAetherEntityTypes.AERONAUTIC_DART.get(), level);
-        this.setBaseDamage(4.0);
+        setBaseDamage(4.0);
     }
 
     protected void onHitEntity(EntityHitResult entityHitResult) {

@@ -72,6 +72,8 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         xpReward = XP_REWARD_BOSS;
         bossFight = new ServerBossEvent(getBossName(), BossEvent.BossBarColor.RED, BossEvent.BossBarOverlay.PROGRESS);
         setPoisonRemaining(2);
+        setBossFight(false);
+        setPersistenceRequired();
         if (level.isClientSide()) {
             sinage = getRandom().nextFloat() * 6.0F;
         }
@@ -225,26 +227,34 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     @Override
     public boolean hurt(@NotNull DamageSource source, float amount) {
         super.hurt(source, amount);
-        if (!level().isClientSide() && source.getEntity() instanceof LivingEntity living) {
-            mostDamageTargetGoal.addAggro(living, amount);
+
+        if (hurtTime == 0) {
+            for (int i = 0; i < 8; ++i) {
+                double d1 = getX() + (getRandom().nextFloat() - getRandom().nextFloat()) * 0.5;
+                double d2 = getY() + 0.25 + (getRandom().nextFloat() - getRandom().nextFloat()) * 0.5;
+                double d3 = getZ() + (getRandom().nextFloat() - getRandom().nextFloat()) * 0.5;
+                double d4 = (getRandom().nextFloat() - getRandom().nextFloat()) * 0.5;
+                double d5 = (getRandom().nextFloat() - getRandom().nextFloat()) * 0.5;
+                level().addParticle(ParticleTypes.PORTAL, d1, d2, d3, d4, 0.25, d5);
+            }
         }
         if (source.getDirectEntity() instanceof LivingEntity attacker && level().getDifficulty() != Difficulty.PEACEFUL) {
             if (getDungeon() == null || getDungeon().isPlayerWithinRoomInterior(attacker)) {
                 if (super.hurt(source, amount) && getHealth() > 0) {
-                    if (!isBossFight()) {
-                        start();
-                    }
-                    if (hurtTime == 0) {
-                        for (int i = 0; i < 8; ++i) {
-                            double d1 = getX() + (getRandom().nextFloat() - getRandom().nextFloat()) * 0.5;
-                            double d2 = getY() + 0.25 + (getRandom().nextFloat() - getRandom().nextFloat()) * 0.5;
-                            double d3 = getZ() + (getRandom().nextFloat() - getRandom().nextFloat()) * 0.5;
-                            double d4 = (getRandom().nextFloat() - getRandom().nextFloat()) * 0.5;
-                            double d5 = (getRandom().nextFloat() - getRandom().nextFloat()) * 0.5;
-                            level().addParticle(ParticleTypes.PORTAL, d1, d2, d3, d4, 0.25, d5);
+                    if (!level().isClientSide() && !isBossFight()) {
+                        setActive(true);
+                        setBossFight(true);
+                        if (getDungeon() != null) {
+                            closeRoom();
                         }
+                        AetherEventDispatch.onBossFightStart(this, getDungeon());
                     }
-                    return super.hurt(source, amount);
+                    return true;
+                }
+            } else {
+                if (!level().isClientSide() && attacker instanceof Player player) {
+                    displayTooFarMessage(player);
+                    return false;
                 }
             }
         }
@@ -409,15 +419,6 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
             bossFight.removePlayer(serverPlayer);
             AetherEventDispatch.onBossFightPlayerRemove(this, getDungeon(), serverPlayer);
         }
-    }
-
-    private void start() {
-        setActive(true);
-        setBossFight(true);
-        if (getDungeon() != null) {
-            closeRoom();
-        }
-        AetherEventDispatch.onBossFightStart(this, getDungeon());
     }
 
     public void reset() {
