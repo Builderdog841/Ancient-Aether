@@ -64,7 +64,7 @@ public abstract class AncientAetherItemModelProvider extends AetherItemModelProv
     }
 
     public void AAItemOverlayDungeonBlock(Block block, Block baseBlock, String overlay) {
-        withExistingParent(blockName(block), mcLoc("block/cube"))
+        withExistingParent(blockName(block), modLoc(blockName(baseBlock)))
                 .texture("overlay", new ResourceLocation(Aether.MODID, "block/dungeon/" + overlay)).texture("face", texture(blockName(baseBlock)))
                 .element().from(0.0F, 0.0F, 0.0F).to(16.0F, 16.0F, 16.0F).allFaces((direction, builder) -> builder.texture("#face").cullface(direction).end()).end()
                 .element().from(0.0F, 0.0F, -0.1F).to(16.0F, 16.0F, -0.1F).rotation().angle(0.0F).axis(Direction.Axis.Y).origin(8.0F, 8.0F, 6.9F).end().face(Direction.NORTH).texture("#overlay").emissivity(15, 15).end().end()
