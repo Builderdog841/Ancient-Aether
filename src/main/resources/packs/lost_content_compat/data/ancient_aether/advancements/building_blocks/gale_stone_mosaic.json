@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gale_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "lost_aether_content:gale_slab"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ancient_aether:gale_stone_mosaic"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_gale_slab",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ancient_aether:gale_stone_mosaic"
+    ]
+  },
+  "sends_telemetry_event": false
+}
