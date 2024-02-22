@@ -52,8 +52,8 @@ public class AncientAetherBoatItem extends BoatItem {
                 }
             }
             if (hitresult.getType() == HitResult.Type.BLOCK) {
-                AncientAetherBoatEntity boat = this.getBoat(pLevel, hitresult);
-                boat.setWoodType(this.woodType);
+                AncientAetherBoatEntity boat = getBoat(pLevel, hitresult);
+                boat.setWoodType(woodType);
                 boat.setYRot(pPlayer.getYRot());
                 if (!pLevel.noCollision(boat, boat.getBoundingBox())) {
                     return InteractionResultHolder.fail(itemstack);
@@ -75,7 +75,7 @@ public class AncientAetherBoatItem extends BoatItem {
         }
     }
     private AncientAetherBoatEntity getBoat(Level level, HitResult hitResult) {
-        return this.hasChest ? new AncientAetherChestBoatEntity(level, hitResult.getLocation().x, hitResult.getLocation().y, hitResult.getLocation().z) : new AncientAetherBoatEntity(level, hitResult.getLocation().x, hitResult.getLocation().y, hitResult.getLocation().z);
+        return hasChest ? new AncientAetherChestBoatEntity(level, hitResult.getLocation().x, hitResult.getLocation().y, hitResult.getLocation().z) : new AncientAetherBoatEntity(level, hitResult.getLocation().x, hitResult.getLocation().y, hitResult.getLocation().z);
 
     }
 }

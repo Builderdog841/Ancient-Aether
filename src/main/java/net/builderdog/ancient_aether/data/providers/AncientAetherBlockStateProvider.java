@@ -72,6 +72,10 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
         getVariantBuilder(block).partialState().setModels(dungeonBlock);
     }
 
+    public void dungeonAxisBlock(RotatedPillarBlock block, RotatedPillarBlock baseBlock) {
+        axisBlock(block, blockTexture(baseBlock));
+    }
+
     public void AAInvisibleBlock(Block block, Block baseBlock) {
         ModelFile visible = models().cubeAll(name(baseBlock), texture(name(baseBlock)));
         ModelFile invisible = models().getBuilder(name(block));

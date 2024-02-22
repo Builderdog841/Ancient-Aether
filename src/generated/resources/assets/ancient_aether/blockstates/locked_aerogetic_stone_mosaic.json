@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
-      "model": "ancient_aether:block/aerogetic_stone_mosaic"
+    "axis=x": {
+      "model": "ancient_aether:block/locked_aerogetic_stone_mosaic_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "ancient_aether:block/locked_aerogetic_stone_mosaic"
+    },
+    "axis=z": {
+      "model": "ancient_aether:block/locked_aerogetic_stone_mosaic_horizontal",
+      "x": 90
     }
   }
 }
