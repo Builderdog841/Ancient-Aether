@@ -42,21 +42,18 @@ public class AncientAetherMiscPlacements {
                 CountPlacement.of(127),
                 HeightRangePlacement.triangle(VerticalAnchor.absolute(96), VerticalAnchor.absolute(128)),
                 EnvironmentScanPlacement.scanningFor(Direction.UP, BlockPredicate.hasSturdyFace(Direction.DOWN), BlockPredicate.ONLY_IN_AIR_PREDICATE, 16),
-                InSquarePlacement.spread(),
                 BiomeFilter.biome()
         );
         AncientAetherPlacementUtils.register(context, GRAVITY_GRAVEL_COAST, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.COAST_GRAVITY_GRAVEL),
                 CountPlacement.of(127),
                 HeightRangePlacement.triangle(VerticalAnchor.absolute(112), VerticalAnchor.absolute(144)),
                 EnvironmentScanPlacement.scanningFor(Direction.UP, BlockPredicate.hasSturdyFace(Direction.DOWN), BlockPredicate.ONLY_IN_AIR_PREDICATE, 16),
-                InSquarePlacement.spread(),
                 BiomeFilter.biome()
         );
         AncientAetherPlacementUtils.register(context, WYND_ICE_COAST, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.COAST_WYND_ICE),
                 CountPlacement.of(127),
                 HeightRangePlacement.triangle(VerticalAnchor.absolute(112), VerticalAnchor.absolute(144)),
                 EnvironmentScanPlacement.scanningFor(Direction.UP, BlockPredicate.hasSturdyFace(Direction.DOWN), BlockPredicate.ONLY_IN_AIR_PREDICATE, 16),
-                InSquarePlacement.spread(),
                 BiomeFilter.biome()
         );
 
