@@ -64,7 +64,7 @@ public abstract class AncientAetherItemModelProvider extends AetherItemModelProv
     }
 
     public void AAItemOverlayDungeonBlock(Block block, Block baseBlock, String overlay) {
-        withExistingParent(blockName(block), modLoc(blockName(baseBlock)))
+        withExistingParent(blockName(block), mcLoc("block/cube"))
                 .texture("overlay", new ResourceLocation(Aether.MODID, "block/dungeon/" + overlay)).texture("face", texture(blockName(baseBlock)))
                 .element().from(0.0F, 0.0F, 0.0F).to(16.0F, 16.0F, 16.0F).allFaces((direction, builder) -> builder.texture("#face").cullface(direction).end()).end()
                 .element().from(0.0F, 0.0F, -0.1F).to(16.0F, 16.0F, -0.1F).rotation().angle(0.0F).axis(Direction.Axis.Y).origin(8.0F, 8.0F, 6.9F).end().face(Direction.NORTH).texture("#overlay").emissivity(15, 15).end().end()
@@ -77,6 +77,12 @@ public abstract class AncientAetherItemModelProvider extends AetherItemModelProv
                 .transform(ItemDisplayContext.GUI).rotation(30.0F, 135.0F, 0.0F).scale(0.625F, 0.625F, 0.625F).end()
                 .transform(ItemDisplayContext.FIXED).scale(0.5F, 0.5F, 0.5F).end()
                 .end();
+    }
+
+    public void itemLockedMosaicBlock(Block block, Block baseBlock) {
+        (withExistingParent(blockName(block), modLoc("item/template_item_locked_mosaic_block")))
+                .texture("#end", modLoc("block/" + blockName(baseBlock) + "_top"))
+                .texture("#side", modLoc("block/" + blockName(baseBlock)));
     }
 
     public void itemLogWallBlock(Block block, Block baseBlock, String location, String modid) {

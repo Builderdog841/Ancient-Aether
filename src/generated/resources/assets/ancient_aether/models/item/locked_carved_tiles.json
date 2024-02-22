@@ -1,5 +1,5 @@
 {
-  "parent": "ancient_aether:item/carved_tiles",
+  "parent": "minecraft:block/cube",
   "display": {
     "firstperson_lefthand": {
       "rotation": [

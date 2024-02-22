@@ -101,27 +101,27 @@
       "faces": {
         "down": {
           "cullface": "down",
-          "texture": "#face"
+          "texture": "#end"
         },
         "east": {
           "cullface": "east",
-          "texture": "#face"
+          "texture": "#side"
         },
         "north": {
           "cullface": "north",
-          "texture": "#face"
+          "texture": "#side"
         },
         "south": {
           "cullface": "south",
-          "texture": "#face"
+          "texture": "#side"
         },
         "up": {
           "cullface": "up",
-          "texture": "#face"
+          "texture": "#end"
         },
         "west": {
           "cullface": "west",
-          "texture": "#face"
+          "texture": "#side"
         }
       },
       "from": [
@@ -167,7 +167,6 @@
     }
   ],
   "textures": {
-    "face": "ancient_aether:block/aerogetic_stone",
-    "overlay": "aether:block/dungeon/treasure"
+    "overlay": "aether:block/dungeon/lock"
   }
 }

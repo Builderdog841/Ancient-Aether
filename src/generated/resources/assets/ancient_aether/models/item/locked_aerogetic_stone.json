@@ -1,5 +1,5 @@
 {
-  "parent": "ancient_aether:item/aerogetic_stone",
+  "parent": "minecraft:block/cube",
   "display": {
     "firstperson_lefthand": {
       "rotation": [
