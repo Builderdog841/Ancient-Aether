@@ -223,7 +223,16 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .define('#', AetherItems.AECHOR_PETAL.get())
                 .pattern("###")
                 .unlockedBy(getHasName(AetherItems.AECHOR_PETAL.get()), has(AetherItems.AECHOR_PETAL.get()))
-                .save(consumer);
+                .save(consumer, name("paper_from_aechor_petals"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Items.ARMOR_STAND)
+                .define('/', Tags.Items.RODS_WOODEN)
+                .define('#', AetherBlocks.HOLYSTONE_SLAB.get())
+                .pattern("///")
+                .pattern(" / ")
+                .pattern("/#/")
+                .unlockedBy(getHasName(AetherBlocks.HOLYSTONE_SLAB.get()), has(AetherBlocks.HOLYSTONE_SLAB.get()))
+                .save(consumer, name("armor_stand_from_holystone"));
 
         makePickaxe(AncientAetherItems.VALKYRUM_PICKAXE, AncientAetherItems.VALKYRUM).save(consumer);
         makeAxe(AncientAetherItems.VALKYRUM_AXE, AncientAetherItems.VALKYRUM).save(consumer);
@@ -232,11 +241,11 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
         makeSword(AncientAetherItems.VALKYRUM_SWORD, AncientAetherItems.VALKYRUM).save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherItems.VALKYRUM_LANCE.get())
-                .define('S', Tags.Items.RODS_WOODEN)
+                .define('/', Tags.Items.RODS_WOODEN)
                 .define('V', AncientAetherItems.VALKYRUM.get())
                 .pattern("V  ")
                 .pattern(" V ")
-                .pattern("  S")
+                .pattern("  /")
                 .unlockedBy(getHasName(AncientAetherItems.VALKYRUM.get()), has(AncientAetherItems.VALKYRUM.get()))
                 .save(consumer);
 
