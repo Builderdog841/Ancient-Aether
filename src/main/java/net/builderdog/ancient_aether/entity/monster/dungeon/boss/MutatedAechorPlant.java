@@ -378,16 +378,6 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     }
 
     @Override
-    public void onDungeonPlayerAdded(@Nullable Player player) {
-        AetherBossMob.super.onDungeonPlayerAdded(player);
-    }
-
-    @Override
-    public void onDungeonPlayerRemoved(@Nullable Player player) {
-        AetherBossMob.super.onDungeonPlayerRemoved(player);
-    }
-
-    @Override
     public void startSeenByPlayer(@NotNull ServerPlayer player) {
         super.startSeenByPlayer(player);
         PacketRelay.sendToPlayer(AetherPacketHandler.INSTANCE, new BossInfoPacket.Display(bossFight.getId(), getId()), player);
@@ -403,6 +393,22 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         PacketRelay.sendToPlayer(AetherPacketHandler.INSTANCE, new BossInfoPacket.Remove(bossFight.getId(), getId()), player);
         bossFight.removePlayer(player);
         AetherEventDispatch.onBossFightPlayerRemove(this, getDungeon(), player);
+    }
+
+    @Override
+    public void onDungeonPlayerAdded(@Nullable Player player) {
+        if (player instanceof ServerPlayer serverPlayer) {
+            bossFight.addPlayer(serverPlayer);
+            AetherEventDispatch.onBossFightPlayerAdd(this, getDungeon(), serverPlayer);
+        }
+    }
+
+    @Override
+    public void onDungeonPlayerRemoved(@Nullable Player player) {
+        if (player instanceof ServerPlayer serverPlayer) {
+            bossFight.removePlayer(serverPlayer);
+            AetherEventDispatch.onBossFightPlayerRemove(this, getDungeon(), serverPlayer);
+        }
     }
 
     private void start() {
@@ -503,10 +509,17 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
 
     @Override
     public void writeSpawnData(FriendlyByteBuf buffer) {
+        CompoundTag tag = new CompoundTag();
+        addBossSaveData(tag);
+        buffer.writeNbt(tag);
     }
 
     @Override
     public void readSpawnData(FriendlyByteBuf additionalData) {
+        CompoundTag tag = additionalData.readNbt();
+        if (tag != null) {
+            readBossSaveData(tag);
+        }
     }
 
     //---------------------[Sound Methods]---------------------\\
