@@ -1,12 +1,12 @@
 {
-  "name": "ancient_aether:sentry_laboratory/slider_lab",
+  "name": "ancient_aether:sentry_laboratory/boss_room",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
-        "location": "ancient_aether:sentry_laboratory/slider_lab",
-        "processors": "ancient_aether:sentry_laboratory",
+        "location": "ancient_aether:sentry_laboratory/boss_room",
+        "processors": "ancient_aether:sentry_laboratory_boss_room",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }

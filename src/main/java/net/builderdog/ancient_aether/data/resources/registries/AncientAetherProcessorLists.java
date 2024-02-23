@@ -119,7 +119,7 @@ public class AncientAetherProcessorLists {
         ));
         register(context, SENTRY_LABORATORY_ENTRANCE, ImmutableList.of(
                 new RuleProcessor(ImmutableList.of(
-                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.CARVED_STONE.get(), 0.01F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.WYND_SENTRY_STONE.get().defaultBlockState()),
+                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.CARVED_STONE.get(), 0.025F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.WYND_SENTRY_STONE.get().defaultBlockState()),
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.HOLYSTONE_BRICKS.get(), 0.05F), AlwaysTrueTest.INSTANCE, AetherFeatureStates.HOLYSTONE),
                         new ProcessorRule(new RandomBlockMatchTest(AncientAetherBlocks.FROZEN_HOLYSTONE_VASE.get(), 0.75F), AlwaysTrueTest.INSTANCE, Blocks.AIR.defaultBlockState())
                 )),
@@ -129,7 +129,7 @@ public class AncientAetherProcessorLists {
                 new RuleProcessor(ImmutableList.of(
                         new ProcessorRule(new TagMatchTest(AncientAetherTags.Blocks.SENTRY_LABORATORY_BLOCKS), new BlockMatchTest(Blocks.AIR), Blocks.AIR.defaultBlockState()),
                         new ProcessorRule(new TagMatchTest(AncientAetherTags.Blocks.SENTRY_LABORATORY_BLOCKS), new BlockMatchTest(AetherBlocks.COLD_AERCLOUD.get()), AetherBlocks.COLD_AERCLOUD.get().defaultBlockState()),
-                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.CARVED_STONE.get(), 0.01F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.WYND_SENTRY_STONE.get().defaultBlockState()),
+                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.CARVED_STONE.get(), 0.025F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.WYND_SENTRY_STONE.get().defaultBlockState()),
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.HOLYSTONE_BRICKS.get(), 0.05F), AlwaysTrueTest.INSTANCE, AetherFeatureStates.HOLYSTONE),
                         new ProcessorRule(new RandomBlockMatchTest(AncientAetherBlocks.FROZEN_HOLYSTONE_VASE.get(), 0.75F), AlwaysTrueTest.INSTANCE, Blocks.AIR.defaultBlockState())
                 )),
@@ -137,8 +137,8 @@ public class AncientAetherProcessorLists {
         ));
         register(context, SENTRY_LABORATORY_BOSS_ROOM, ImmutableList.of(
                 new RuleProcessor(ImmutableList.of(
-                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.LOCKED_CARVED_STONE.get(), 0.01F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.LOCKED_WYND_SENTRY_STONE.get().defaultBlockState()),
-                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.TREASURE_DOORWAY_CARVED_STONE.get(), 0.01F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.TREASURE_DOORWAY_WYND_SENTRY_STONE.get().defaultBlockState())
+                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.LOCKED_CARVED_STONE.get(), 0.025F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.LOCKED_WYND_SENTRY_STONE.get().defaultBlockState()),
+                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.TREASURE_DOORWAY_CARVED_STONE.get(), 0.025F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.TREASURE_DOORWAY_WYND_SENTRY_STONE.get().defaultBlockState())
                 )),
                 new BossRoomProcessor()
         ));
