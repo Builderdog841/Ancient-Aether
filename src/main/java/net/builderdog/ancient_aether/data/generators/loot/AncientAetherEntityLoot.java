@@ -103,14 +103,6 @@ public class AncientAetherEntityLoot extends EntityLootSubProvider {
                 )
         );
 
-        add(AncientAetherEntityTypes.ANCIENT_GUARDIAN.get(), LootTable.lootTable()
-                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
-                        .add(LootItem.lootTableItem(AncientAetherItems.ANCIENT_DUNGEON_KEY.get())
-                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1)))
-                        )
-                )
-        );
-
         add(AncientAetherEntityTypes.MUTATED_AECHOR_PLANT.get(), LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
                         .add(LootItem.lootTableItem(AncientAetherItems.LABORATORY_DUNGEON_KEY.get())

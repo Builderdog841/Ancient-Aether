@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-18T21:25:17.4506283	Loot Tables
+// 1.20.1	2024-02-23T13:06:36.5358923	Loot Tables
 095a70e341d19e7b3548ddc32402abe48a79992a data/ancient_aether/loot_tables/blocks/aerogel_glass.json
 9fe2ea21af5246ad9f95848f680099717062eb1c data/ancient_aether/loot_tables/blocks/aerogel_glass_door.json
 0f84d5b4591633acc6c8dcc82b7c14988b545a9f data/ancient_aether/loot_tables/blocks/aerogel_glass_pane.json
@@ -113,7 +113,6 @@ c06266a31b2f4b3bffc54f9bb1495cb01842587e data/ancient_aether/loot_tables/blocks/
 b460d0d625f6ad7ce0e873543d6d82e6954a0b8b data/ancient_aether/loot_tables/blocks/wynd_sentry_stone.json
 7086ddb174886eadfd6c106d545ade54c4259a90 data/ancient_aether/loot_tables/blocks/wynd_thistle.json
 a0270dbfd4228fdef2b289af9c417cbc2850fa95 data/ancient_aether/loot_tables/entities/aeronautic_leaper.json
-caf49ebe9fa25a127a86870ae7f1d09b1c168faa data/ancient_aether/loot_tables/entities/ancient_guardian.json
 366087803747c08a12a0c6afe56553d532918312 data/ancient_aether/loot_tables/entities/festive_swet.json
 9a722b0f381b21102762c08d58bea10e326e9b36 data/ancient_aether/loot_tables/entities/fluffalo.json
 658b560944d60a3a507d93c801b60fb845feb2c3 data/ancient_aether/loot_tables/entities/fluffalo_sheared.json

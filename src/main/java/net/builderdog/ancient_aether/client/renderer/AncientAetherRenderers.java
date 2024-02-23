@@ -43,7 +43,6 @@ public class AncientAetherRenderers {
         event.registerEntityRenderer(AncientAetherEntityTypes.FESTIVE_SWET.get(), FestiveSwetRenderer::new);
         event.registerEntityRenderer(AncientAetherEntityTypes.ROOTHYRN.get(), RoothyrnRenderer::new);
         event.registerEntityRenderer(AncientAetherEntityTypes.AERONAUTIC_LEAPER.get(), AeronauticLeaperRenderer::new);
-        event.registerEntityRenderer(AncientAetherEntityTypes.ANCIENT_GUARDIAN.get(), AncientGuardianRenderer::new);
         event.registerEntityRenderer(AncientAetherEntityTypes.MUTATED_AECHOR_PLANT.get(), MutatedAechorPlantRenderer::new);
         event.registerEntityRenderer(AncientAetherEntityTypes.AERONAUTIC_DART.get(), AeronauticDartRenderer::new);
     }
@@ -57,7 +56,6 @@ public class AncientAetherRenderers {
             event.registerLayerDefinition(AncientAetherModelLayers.FESTIVE_SWET_OUTER, FestiveSwetModel::createOuterBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.ROOTHYRN, RoothyrnModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.AERONAUTIC_LEAPER, AeronauticLeaperModel::createBodyLayer);
-            event.registerLayerDefinition(AncientAetherModelLayers.ANCIENT_GUARDIAN, AncientGuardianModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.MUTATED_AECHOR_PLANT, MutatedAechorPlantModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.VALKYRUM_WINGS, () -> ValkyrieWingsModel.createMainLayer(3.5F, 3.375F));
         }

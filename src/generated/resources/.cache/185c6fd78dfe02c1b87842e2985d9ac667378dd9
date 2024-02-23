@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-22T21:53:19.3411688	Item Models: ancient_aether
+// 1.20.1	2024-02-23T13:06:36.5288954	Item Models: ancient_aether
 532bdb7a4f7d2a6b96d474c01c8b9e7a0d1c10b4 assets/ancient_aether/models/item/aerogel_glass.json
 87e9f8f9f807a2aa763e3057d32bacf3ee32b60f assets/ancient_aether/models/item/aerogel_glass_door.json
 d1e6ed3e334d573f31a8ce9e09885c0f43832630 assets/ancient_aether/models/item/aerogel_glass_pane.json
@@ -17,7 +17,6 @@ c52995235bbc1523ea132d2cc156d05c389e4c37 assets/ancient_aether/models/item/ancie
 04791ef74a08d6ccc8dd349cf50e121f197a8157 assets/ancient_aether/models/item/ancient_dungeon_key.json
 5f21dcb5dcd1c5c748b211d7ccbe588d7120ce6b assets/ancient_aether/models/item/ancient_frozen_holystone_vase.json
 76574227b398b53f58a1c14100231f1891bd7be7 assets/ancient_aether/models/item/ancient_gale_vase.json
-63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/ancient_guardian_spawn_egg.json
 a48dd02f12013bb7b5375e5e211037c23d9fc7f2 assets/ancient_aether/models/item/ancient_hellfire_vase.json
 528e520d5e87035cc14d10cb3d11445e2d291255 assets/ancient_aether/models/item/ancient_holystone_vase.json
 4ee55d1a08109445c08c69f15912dcb5c77c1847 assets/ancient_aether/models/item/ancient_mossy_holystone_vase.json
