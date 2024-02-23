@@ -63,7 +63,6 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     private float sinage;
     private float sinageAdd;
     private final ServerBossEvent bossFight;
-    private MostDamageTargetGoal mostDamageTargetGoal;
     @Nullable
     private BossRoomTracker<MutatedAechorPlant> laboratoryDungeon;
 
@@ -84,7 +83,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         goalSelector.addGoal(0,  new RangedAttackGoal(this, 1.0, 60, 10.0F));
         targetSelector.addGoal(1, new HurtByTargetGoal(this));
         targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
-        mostDamageTargetGoal = new MostDamageTargetGoal(this);
+        MostDamageTargetGoal mostDamageTargetGoal = new MostDamageTargetGoal(this);
         targetSelector.addGoal(1, mostDamageTargetGoal);
     }
 

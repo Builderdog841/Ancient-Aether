@@ -20,10 +20,10 @@ public class MutatedAechorPlantRenderer extends MobRenderer<MutatedAechorPlant, 
 
     @Override
     protected void scale(MutatedAechorPlant aechorPlant, PoseStack poseStack, float partialTicks) {
-        float f2 = 4.0F + aechorPlant.getSize() / 6.0F;
+        float f2 = 6.0F + aechorPlant.getSize() / 6.0F;
         poseStack.scale(f2, f2, f2);
         poseStack.translate(0.0, 1.2, 0.0);
-        shadowRadius = f2 - 4.0F;
+        shadowRadius = f2 - 6.0F;
     }
 
     @Override
