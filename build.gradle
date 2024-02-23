@@ -127,6 +127,7 @@ dependencies {
     implementation fg.deobf("com.aetherteam.cumulus:cumulus_menus:${project.cumulus_version}")
     implementation fg.deobf("curse.maven:worldedit-225608:4586218")
     implementation fg.deobf("curse.maven:aether-emissivity-916028:4765812")
+    compileOnly fg.deobf("local:aether_genesis:1.20.1-0.0.1-neoforge")
     runtimeOnly fg.deobf("local:aether_genesis:1.20.1-0.0.1-neoforge")
     //implementation fg.deobf("curse.maven:deep-aether-852465:5076616")
     //implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.20.1:4.2.2')

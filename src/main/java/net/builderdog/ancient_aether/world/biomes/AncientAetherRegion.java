@@ -30,8 +30,8 @@ public class AncientAetherRegion extends Region {
         Climate.Parameter tempSakura = Climate.Parameter.span(0.5F, 1.5F);
         Climate.Parameter tempAtmosine = Climate.Parameter.span(-1.5F, 0.5F);
 
-        Climate.Parameter continentDefault = Climate.Parameter.span(-1.5F, 0.2F);
-        Climate.Parameter continentAtmosine = Climate.Parameter.span(0.2F, 1.5F);
+        Climate.Parameter continentDefault = Climate.Parameter.span(-1.5F, 0.23F);
+        Climate.Parameter continentAtmosine = Climate.Parameter.span(0.3F, 1.5F);
 
         Climate.Parameter erosionDefault = Climate.Parameter.span(0F, 0.5F);
         Climate.Parameter erosionElevated = Climate.Parameter.span(0.5F, 1.5F);
