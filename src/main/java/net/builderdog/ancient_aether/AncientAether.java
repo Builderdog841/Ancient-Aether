@@ -101,11 +101,6 @@ public class AncientAether {
     }
 
     @SubscribeEvent
-    public void serverSetup(ServerAboutToStartEvent event) {
-        AetherConfig.SERVER.disable_eternal_day.set(true);
-    }
-
-    @SubscribeEvent
     public static void addPacks(AddPackFindersEvent event) {
         if (event.getPackType() == PackType.CLIENT_RESOURCES) {
             var resourcePath = ModList.get().getModFileById(AncientAether.MOD_ID).getFile().findResource("packs/ancient_aether_texture_tweaks");
@@ -124,6 +119,13 @@ public class AncientAether {
         if (ModList.get().isLoaded("aether_emissivity") && event.getPackType() == PackType.CLIENT_RESOURCES) {
             var resourcePath = ModList.get().getModFileById(AncientAether.MOD_ID).getFile().findResource("packs/aether_emissivity_compat");
             var pack = Pack.readMetaAndCreate("builtin/aether_emissivity_compat", Component.translatable("pack.ancient_aether.aether_emissivity_compat.title"), true,
+                    path -> new PathPackResources(path, resourcePath, true), PackType.CLIENT_RESOURCES, Pack.Position.TOP, PackSource.BUILT_IN);
+            event.addRepositorySource(consumer -> consumer.accept(pack));
+        }
+
+        if (ModList.get().isLoaded("deep_aether") && event.getPackType() == PackType.CLIENT_RESOURCES) {
+            var resourcePath = ModList.get().getModFileById(AncientAether.MOD_ID).getFile().findResource("packs/deep_aether_asset_compat");
+            var pack = Pack.readMetaAndCreate("builtin/deep_aether_asset_compat", Component.translatable("pack.ancient_aether.deep_aether_asset_compat.title"), true,
                     path -> new PathPackResources(path, resourcePath, true), PackType.CLIENT_RESOURCES, Pack.Position.TOP, PackSource.BUILT_IN);
             event.addRepositorySource(consumer -> consumer.accept(pack));
         }
@@ -175,6 +177,11 @@ public class AncientAether {
                 event.addRepositorySource(consumer -> consumer.accept(pack));
             }
         }
+    }
+
+    @SubscribeEvent
+    public void serverSetup(ServerAboutToStartEvent event) {
+        AetherConfig.SERVER.disable_eternal_day.set(true);
     }
 
     private void registerDispenserBehaviors() {

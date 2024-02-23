@@ -73,7 +73,11 @@
         "zanite": "aether:trims/color_palettes/zanite",
         "gravitite": "aether:trims/color_palettes/gravitite",
         "golden_amber": "aether:trims/color_palettes/golden_amber",
-        "valkyrum": "ancient_aether:trims/color_palettes/valkyrum"
+        "valkyrum": "ancient_aether:trims/color_palettes/valkyrum",
+        "skyjade": "deep_aether:trims/color_palettes/skyjade",
+        "skyjade_darker": "deep_aether:trims/color_palettes/skyjade_darker",
+        "stratus": "deep_aether:trims/color_palettes/stratus",
+        "stratus_darker": "deep_aether:trims/color_palettes/stratus_darker"
       }
     }
   ]
