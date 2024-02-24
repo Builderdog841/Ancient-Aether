@@ -18,10 +18,9 @@ import java.util.function.Consumer;
 
 @Pseudo
 @Mixin(value = GenesisRegion.class, remap = false)
-public class GenesisRegionMixin extends Region{
+public class GenesisRegionMixin extends Region {
 
-    public GenesisRegionMixin(ResourceLocation name, int weight)
-    {
+    public GenesisRegionMixin(ResourceLocation name, int weight) {
         super(name, AetherRegionType.THE_AETHER, weight);
     }
 

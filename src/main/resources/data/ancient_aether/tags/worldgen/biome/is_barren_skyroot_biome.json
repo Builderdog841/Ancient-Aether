@@ -13,7 +13,19 @@
       "required": false
     },
     {
+      "id": "aether_genesis:vibrant_meadow",
+      "required": false
+    },
+    {
+      "id": "aether_genesis:vibrant_grove",
+      "required": false
+    },
+    {
       "id": "aether_redux:gilded_grasslands",
+      "required": false
+    },
+    {
+      "id": "aether_redux:skyfields",
       "required": false
     }
   ]
