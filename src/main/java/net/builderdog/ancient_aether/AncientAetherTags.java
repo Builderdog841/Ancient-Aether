@@ -41,6 +41,14 @@ public class AncientAetherTags {
     }
 
     public static class Biomes {
+        public static final TagKey<Biome> HAS_STRUCTURE_HOLYSTONE_RUIN = tag("has_structure/holystone_ruin");
+        public static final TagKey<Biome> HAS_STRUCTURE_MYSTERIOUS_HENGE = tag("has_structure/mysterious_henge");
+        public static final TagKey<Biome> HAS_STRUCTURE_VALKYRIE_CAMP_SKYROOT = tag("has_structure/valkyrie_camp_skyroot");
+        public static final TagKey<Biome> HAS_STRUCTURE_VALKYRIE_CAMP_WYNDCAPS = tag("has_structure/valkyrie_camp_wyndcaps");
+        public static final TagKey<Biome> HAS_STRUCTURE_VALKYRIE_SETTLEMENT_SKYROOT = tag("has_structure/valkyrie_settlement_skyroot");
+        public static final TagKey<Biome> HAS_STRUCTURE_BRONZE_DUNGEON_WYNDCAPS = tag("has_structure/bronze_dungeon_wyndcaps");
+        public static final TagKey<Biome> HAS_STRUCTURE_SENTRY_LABORATORY = tag("has_structure/sentry_laboratory");
+        public static final TagKey<Biome> HAS_STRUCTURE_ANCIENT_DUNGEON = tag("has_structure/ancient_dungeon");
         public static final TagKey<Biome> HAS_AEROGEL_BLOBS = tag("has_aerogel_blobs");
         public static final TagKey<Biome> HAS_AETHER_QUARTZ_ORE = tag("has_aether_quartz_ore");
         public static final TagKey<Biome> HAS_VALKYRUM_ORE = tag("has_valkyrum_ore");

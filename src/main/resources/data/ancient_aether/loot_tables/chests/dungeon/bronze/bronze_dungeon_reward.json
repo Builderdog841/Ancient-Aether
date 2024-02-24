@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "ancient_aether:chests/dungeon/bronze/bronze_dungeon_neptune"
+          "name": "aether:chests/dungeon/bronze/bronze_dungeon_neptune"
         }
       ],
       "rolls": {
