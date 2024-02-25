@@ -8,6 +8,7 @@
     "AetherGrassBlockMixin",
     "SliderMixin",
     "accessor.RegistrySetBuilderAccessor",
+    "compat.DARegionMixin",
     "compat.GenesisRegionMixin",
     "compat.ReduxRegionMixin"
   ],

@@ -132,9 +132,9 @@ dependencies {
     compileOnly fg.deobf('software.bernie.geckolib:geckolib-forge-1.20.1:4.2.2')
     compileOnly fg.deobf("local:aether-redux:2.0-pre6-1.20.1-neoforge")
     //runtimeOnly fg.deobf("local:aether_genesis:1.20.1-0.0.1-neoforge")
-    //runtimeOnly fg.deobf("curse.maven:deep-aether-852465:5076616")
+    runtimeOnly fg.deobf("curse.maven:deep-aether-852465:5076616")
     runtimeOnly fg.deobf('software.bernie.geckolib:geckolib-forge-1.20.1:4.2.2')
-    runtimeOnly fg.deobf("locadeobfl:aether-redux:2.0-pre6-1.20.1-neoforge")
+    //runtimeOnly fg.deobf("locadeobfl:aether-redux:2.0-pre6-1.20.1-neoforge")
     //implementation fg.("curse.maven:aether-lost-content-318602:4927038")
     //implementation fg.deobf("curse.maven:structure-gel-api-378802:4975615")
 }
