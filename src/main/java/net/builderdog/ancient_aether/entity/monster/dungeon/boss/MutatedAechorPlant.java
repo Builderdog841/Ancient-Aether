@@ -200,9 +200,6 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
                 setTargetingEntity(false);
             }
         }
-        if (!isActive() || (getTarget() instanceof Player player && (player.isCreative() || player.isSpectator()))) {
-            setTarget(null);
-        }
     }
 
     @Override
@@ -484,7 +481,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         super.defineSynchedData();
         getEntityData().define(DATA_ACTIVE_ID, false);
         getEntityData().define(DATA_BOSS_NAME_ID, Component.literal("Mutated Aechor Plant"));
-        getEntityData().define(DATA_SIZE_ID, 5);
+        getEntityData().define(DATA_SIZE_ID, 0);
         getEntityData().define(DATA_POISON_REMAINING_ID, 0);
         getEntityData().define(DATA_TARGETING_ENTITY_ID, false);
     }
