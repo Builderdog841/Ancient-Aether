@@ -3,7 +3,7 @@ package net.builderdog.ancient_aether.client.renderer.entity.model;
 import com.google.common.collect.ImmutableList;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import net.builderdog.ancient_aether.entity.monster.dungeon.boss.MutatedAechorPlant;
+import net.builderdog.ancient_aether.entity.monster.boss.MutatedAechorPlant;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;

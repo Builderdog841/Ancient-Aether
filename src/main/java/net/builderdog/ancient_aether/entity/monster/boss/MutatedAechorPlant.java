@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.entity.monster.dungeon.boss;
+package net.builderdog.ancient_aether.entity.monster.boss;
 
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.client.AetherSoundEvents;
@@ -13,6 +13,7 @@ import com.aetherteam.nitrogen.entity.BossRoomTracker;
 import com.aetherteam.nitrogen.network.PacketRelay;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
+import net.builderdog.ancient_aether.entity.misc.MutatedAechorNeedle;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
@@ -193,11 +194,13 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     @Override
     public void tick() {
         super.tick();
-        if (!level().isClientSide()) {
-            if (getTarget() != null) {
-                setTargetingEntity(true);
-            } else if (getTarget() == null && getTargetingEntity()) {
-                setTargetingEntity(false);
+        if (isActive() || (getTarget() instanceof Player player && (!player.isCreative() || !player.isSpectator()))) {
+            if (!level().isClientSide()) {
+                if (getTarget() != null) {
+                    setTargetingEntity(true);
+                } else if (getTarget() == null && getTargetingEntity()) {
+                    setTargetingEntity(false);
+                }
             }
         }
     }
@@ -223,7 +226,6 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     @Override
     public boolean hurt(@NotNull DamageSource source, float amount) {
         super.hurt(source, amount);
-
         if (hurtTime == 0) {
             for (int i = 0; i < 8; ++i) {
                 double d1 = getX() + (getRandom().nextFloat() - getRandom().nextFloat()) * 0.5;
@@ -272,7 +274,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
 
     @Override
     public void performRangedAttack(LivingEntity target, float distanceFactor) {
-        PoisonNeedle needle = new PoisonNeedle(level(), this);
+        MutatedAechorNeedle needle = new MutatedAechorNeedle(level(), this);
         double x = target.getX() - getX();
         double z = target.getZ() - getZ();
         double sqrt = Math.sqrt(x * x + z * z + 0.1);

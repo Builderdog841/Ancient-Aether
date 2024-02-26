@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.entity.monster.dungeon;
+package net.builderdog.ancient_aether.entity.monster;
 
 import com.aetherteam.aether.block.AetherBlocks;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
@@ -67,7 +67,7 @@ public class AeronauticLeaper extends Slime {
 
 	@Override
 	public void remove(@Nonnull Entity.RemovalReason reason) {
-		this.setRemoved(reason);
+		setRemoved(reason);
 		if (reason == Entity.RemovalReason.KILLED) {
 			gameEvent(GameEvent.ENTITY_DIE);
 		}

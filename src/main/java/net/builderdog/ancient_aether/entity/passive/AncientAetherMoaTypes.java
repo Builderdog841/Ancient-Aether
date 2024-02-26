@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.entity.passive.moa;
+package net.builderdog.ancient_aether.entity.passive;
 
 import com.aetherteam.aether.api.AetherMoaTypes;
 import com.aetherteam.aether.api.registers.MoaType;

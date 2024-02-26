@@ -11,7 +11,7 @@ import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
-import net.builderdog.ancient_aether.entity.passive.moa.AncientAetherMoaTypes;
+import net.builderdog.ancient_aether.entity.passive.AncientAetherMoaTypes;
 import net.builderdog.ancient_aether.item.equipment.AncientAetherArmorTiers;
 import net.builderdog.ancient_aether.item.equipment.accessories.miscellaneous.StrengthStoneItem;
 import net.builderdog.ancient_aether.item.equipment.accessories.pendants.*;
