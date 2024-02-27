@@ -36,6 +36,5 @@ public class FestiveSwetOuterLayer extends RenderLayer<Swet, FestiveSwetModel<Sw
             outer.setupAnim(swet, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
             outer.renderToBuffer(poseStack, consumer, packedLight, LivingEntityRenderer.getOverlayCoords(swet, 0.0F), 1.0F, 1.0F, 1.0F, 1.0F);
         }
-
     }
 }

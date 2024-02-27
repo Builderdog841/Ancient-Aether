@@ -89,9 +89,9 @@ public class AncientAetherBoatEntity extends Boat implements SkyrootBoatBehavior
 
         public ResourceLocation getTexture(boolean hasChest) {
             if (hasChest) {
-                return new ResourceLocation(AncientAether.MOD_ID, "textures/entity/chest_boat/" + name + ".png");
+                return new ResourceLocation(AncientAether.MOD_ID, "textures/entity/miscellaneous/chest_boat/" + name + ".png");
             }
-            return new ResourceLocation(AncientAether.MOD_ID, "textures/entity/boat/" + name + ".png");
+            return new ResourceLocation(AncientAether.MOD_ID, "textures/entity/miscellaneous/boat/" + name + ".png");
         }
 
         public String getModelLocation() {

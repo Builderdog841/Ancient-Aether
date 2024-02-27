@@ -29,7 +29,7 @@ import net.builderdog.ancient_aether.block.utility.WindBlowerBlock;
 import net.builderdog.ancient_aether.data.generators.loot.AncientAetherLoot;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
-import net.builderdog.ancient_aether.world.tree.*;
+import net.builderdog.ancient_aether.world.treegrower.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
