@@ -244,6 +244,9 @@
   "subtitles.ancient_aether.entity.aeronautic_leaper.hurt": "Aeronautic Leaper hurts",
   "subtitles.ancient_aether.entity.aeronautic_leaper.death": "Aeronautic Leaper dies",
   "subtitles.ancient_aether.entity.aeronautic_leaper.jump": "Aeronautic Leaper leaps",
+  "subtitles.ancient_aether.entity.mutated_aechor_plant.shoot": "Mutated Aechor Plant shoots",
+  "subtitles.ancient_aether.entity.mutated_aechor_plant.hurt": "Mutated Aechor Plant hurts",
+  "subtitles.ancient_aether.entity.mutated_aechor_plant.death": "Mutated Aechor Plant dies",
 
   "advancement.ancient_aether.aether_biomes": "Aerospace Traveller",
   "advancement.ancient_aether.aether_biomes.desc": "Find all Aether biomes \n§6- Ancient Aether -",

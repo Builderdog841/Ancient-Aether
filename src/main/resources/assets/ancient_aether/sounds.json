@@ -190,5 +190,25 @@
       "mob/slime/big4"
     ],
     "subtitle": "subtitles.ancient_aether.entity.aeronautic_leaper.jump"
+  },
+  "entity.mutated_aechor_plant.death": {
+    "sounds": [
+      "damage/fallbig"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.mutated_aechor_plant.death"
+  },
+  "entity.mutated_aechor_plant.hurt": {
+    "sounds": [
+      "damage/hit1",
+      "damage/hit2",
+      "damage/hit3"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.mutated_aechor_plant.hurt"
+  },
+  "entity.mutated_aechor_plant.shoot": {
+    "sounds": [
+      "random/bow"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.mutated_aechor_plant.shoot"
   }
 }

@@ -71,7 +71,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         xpReward = XP_REWARD_BOSS;
         bossFight = new ServerBossEvent(getBossName(), BossEvent.BossBarColor.RED, BossEvent.BossBarOverlay.PROGRESS);
         setPoisonRemaining(2);
-        setActive(false);
+        setBossFight(false);
         setPersistenceRequired();
         if (level.isClientSide()) {
             sinage = getRandom().nextFloat() * 6.0F;
