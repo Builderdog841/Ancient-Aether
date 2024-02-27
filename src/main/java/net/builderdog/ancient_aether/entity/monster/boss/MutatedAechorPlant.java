@@ -1,11 +1,9 @@
 package net.builderdog.ancient_aether.entity.monster.boss;
 
 import com.aetherteam.aether.block.AetherBlocks;
-import com.aetherteam.aether.client.AetherSoundEvents;
 import com.aetherteam.aether.effect.AetherEffects;
 import com.aetherteam.aether.entity.AetherBossMob;
 import com.aetherteam.aether.entity.ai.goal.MostDamageTargetGoal;
-import com.aetherteam.aether.entity.projectile.PoisonNeedle;
 import com.aetherteam.aether.event.AetherEventDispatch;
 import com.aetherteam.aether.network.AetherPacketHandler;
 import com.aetherteam.aether.network.packet.serverbound.BossInfoPacket;
@@ -13,6 +11,7 @@ import com.aetherteam.nitrogen.entity.BossRoomTracker;
 import com.aetherteam.nitrogen.network.PacketRelay;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
+import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.entity.misc.MutatedAechorNeedle;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
@@ -72,7 +71,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         xpReward = XP_REWARD_BOSS;
         bossFight = new ServerBossEvent(getBossName(), BossEvent.BossBarColor.RED, BossEvent.BossBarOverlay.PROGRESS);
         setPoisonRemaining(2);
-        setBossFight(false);
+        setActive(false);
         setPersistenceRequired();
         if (level.isClientSide()) {
             sinage = getRandom().nextFloat() * 6.0F;
@@ -283,7 +282,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         x *= distance;
         z *= distance;
         needle.shoot(x, y + 0.5F, z, 0.285F + (float) y * 0.08F, 1.0F);
-        playSound(AetherSoundEvents.ENTITY_AECHOR_PLANT_SHOOT.get(), 2.0F, 1.0F / (getRandom().nextFloat() * 0.4F + 0.8F));
+        playSound(AncientAetherSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_SHOOT.get(), 2.0F, 1.0F / (getRandom().nextFloat() * 0.4F + 0.8F));
         level().addFreshEntity(needle);
     }
 
@@ -497,16 +496,6 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     }
 
     @Override
-    public void addBossSaveData(CompoundTag tag) {
-        AetherBossMob.super.addBossSaveData(tag);
-    }
-
-    @Override
-    public void readBossSaveData(CompoundTag tag) {
-        AetherBossMob.super.readBossSaveData(tag);
-    }
-
-    @Override
     public void writeSpawnData(FriendlyByteBuf buffer) {
         CompoundTag tag = new CompoundTag();
         addBossSaveData(tag);
@@ -525,11 +514,11 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
 
     @Override
     protected SoundEvent getHurtSound(@NotNull DamageSource damageSource) {
-        return AetherSoundEvents.ENTITY_AECHOR_PLANT_HURT.get();
+        return AncientAetherSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_HURT.get();
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return AetherSoundEvents.ENTITY_AECHOR_PLANT_DEATH.get();
+        return AncientAetherSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_DEATH.get();
     }
 }
