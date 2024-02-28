@@ -1,15 +1,11 @@
 package net.builderdog.ancient_aether.client.renderer.entity.layers;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.client.renderer.entity.model.MutatedAechorPlantModel;
 import net.builderdog.ancient_aether.entity.monster.boss.MutatedAechorPlant;
-import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.RenderLayerParent;
 import net.minecraft.client.renderer.entity.layers.EyesLayer;
-import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
 

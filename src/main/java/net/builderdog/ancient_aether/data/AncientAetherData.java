@@ -1,9 +1,6 @@
 package net.builderdog.ancient_aether.data;
 
-import net.builderdog.ancient_aether.data.generators.AncientAetherBlockStateData;
-import net.builderdog.ancient_aether.data.generators.AncientAetherItemModelData;
-import net.builderdog.ancient_aether.data.generators.AncientAetherRecipeData;
-import net.builderdog.ancient_aether.data.generators.AncientAetherRegistrySets;
+import net.builderdog.ancient_aether.data.generators.*;
 import net.builderdog.ancient_aether.data.providers.AncientAetherLootTableProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -24,6 +21,7 @@ public class AncientAetherData {
         generator.addProvider(true, new AncientAetherBlockStateData(packOutput, fileHelper));
         generator.addProvider(true, new AncientAetherRecipeData(packOutput));
         generator.addProvider(true, new AncientAetherItemModelData(packOutput, fileHelper));
+        generator.addProvider(event.includeClient(), new AncientAetherSoundData(packOutput, fileHelper));
         generator.addProvider(event.includeServer(), new AncientAetherRegistrySets(packOutput, lookupProvider));
     }
 }
