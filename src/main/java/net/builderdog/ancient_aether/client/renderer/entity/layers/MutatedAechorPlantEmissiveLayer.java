@@ -21,12 +21,6 @@ public class MutatedAechorPlantEmissiveLayer extends EyesLayer<MutatedAechorPlan
     }
 
     @Override
-    public void render(@NotNull PoseStack poseStack, MultiBufferSource buffer, int packedLight, @NotNull MutatedAechorPlant mutatedAechorPlant, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
-        VertexConsumer consumer = buffer.getBuffer(renderType());
-        getParentModel().renderToBuffer(poseStack, consumer, 15728640, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
-    }
-
-    @Override
     public @NotNull RenderType renderType() {
         return MUTATED_AECHOR_PLANT_EMISSIVE;
     }

@@ -1,6 +1,5 @@
 package net.builderdog.ancient_aether.data.generators.loot;
 
-import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.item.AetherItems;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
@@ -92,13 +91,9 @@ public class AncientAetherEntityLoot extends EntityLootSubProvider {
 
         add(AncientAetherEntityTypes.AERONAUTIC_LEAPER.get(), LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
-                        .add(LootItem.lootTableItem(AncientAetherBlocks.AEROGETIC_STONE.get()).setWeight(4)
+                        .add(LootItem.lootTableItem(AncientAetherBlocks.CORRUPTED_LIGHT_AEROGETIC_STONE.get()).setWeight(4)
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 1.0F)))
-                                .apply(LootingEnchantFunction.lootingMultiplier(UniformGenerator.between(0.0F, 1.0F)))
-                        )
-                        .add(LootItem.lootTableItem(AetherBlocks.AEROGEL.get()).setWeight(1)
-                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 1.0F)))
-                                .apply(LootingEnchantFunction.lootingMultiplier(UniformGenerator.between(0.0F, 1.0F)))
+                                .apply(LootingEnchantFunction.lootingMultiplier(UniformGenerator.between(1.0F, 3.0F)))
                         )
                 )
         );

@@ -19,37 +19,14 @@
             {
               "count": {
                 "type": "minecraft:uniform",
-                "max": 1.0,
-                "min": 0.0
-              },
-              "function": "minecraft:looting_enchant"
-            }
-          ],
-          "name": "ancient_aether:aerogetic_stone",
-          "weight": 4
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 1.0,
+                "max": 3.0,
                 "min": 1.0
               },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 1.0,
-                "min": 0.0
-              },
               "function": "minecraft:looting_enchant"
             }
           ],
-          "name": "aether:aerogel"
+          "name": "ancient_aether:corrupted_light_aerogetic_stone",
+          "weight": 4
         }
       ],
       "rolls": 1.0
