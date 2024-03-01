@@ -1,19 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "group": "wooden_sign",
+  "group": "sign",
   "key": {
-    "/": {
-      "tag": "forge:rods/wooden"
-    },
-    "P": {
+    "#": {
       "item": "ancient_aether:sakura_planks"
+    },
+    "X": {
+      "tag": "forge:rods/wooden"
     }
   },
   "pattern": [
-    "PPP",
-    "PPP",
-    " / "
+    "###",
+    "###",
+    " X "
   ],
   "result": {
     "count": 3,

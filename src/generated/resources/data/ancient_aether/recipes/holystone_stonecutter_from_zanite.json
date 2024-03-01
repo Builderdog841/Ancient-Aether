@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "group": "minecraft:stonecutter",
+  "group": "stonecutter",
   "key": {
     "#": {
       "item": "aether:holystone"

@@ -2,83 +2,35 @@ package net.builderdog.ancient_aether.data.generators;
 
 import com.aetherteam.aether.AetherTags;
 import com.aetherteam.aether.block.AetherBlocks;
-import com.aetherteam.aether.data.providers.AetherRecipeProvider;
 import com.aetherteam.aether.entity.AetherEntityTypes;
 import com.aetherteam.aether.item.AetherItems;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
+import net.builderdog.ancient_aether.data.providers.AncientAetherRecipeProvider;
 import net.builderdog.ancient_aether.entity.passive.AncientAetherMoaTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.*;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
 
-public class AncientAetherRecipeData extends AetherRecipeProvider {
+public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
     public AncientAetherRecipeData(PackOutput output) {
         super(output, AncientAether.MOD_ID);
     }
 
-    protected static void copyAetherSmithingTemplate(Consumer<FinishedRecipe> consumer, ItemLike template, ItemLike block) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, template, 2)
-                .define('#', AncientAetherItems.VALKYRUM.get())
-                .define('C', block)
-                .define('S', template)
-                .pattern("#S#")
-                .pattern("#C#")
-                .pattern("###")
-                .unlockedBy(getHasName(template), has(template))
-                .save(consumer);
-    }
-
-    protected static void mosaicBlock(Consumer<FinishedRecipe> consumer, ItemLike mosaic, ItemLike slab) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, mosaic)
-                .define('#', slab)
-                .pattern("#")
-                .pattern("#")
-                .unlockedBy(getHasName(slab), has(slab))
-                .save(consumer);
-    }
-
-    protected void aetherSmithingTrimRecipe(Consumer<FinishedRecipe> consumer, Item armorTrim) {
-        SmithingTrimRecipeBuilder.smithingTrim(Ingredient.of(armorTrim),
-                Ingredient.of(ItemTags.TRIMMABLE_ARMOR),
-                Ingredient.of(ItemTags.TRIM_MATERIALS), RecipeCategory.MISC)
-                .unlocks("smithing_templates",
-                has(armorTrim)).save(consumer, new ResourceLocation(id, getItemName(armorTrim) + "_smithing_trim"));
-    }
-
     @Override
     protected void buildRecipes(@NotNull Consumer<FinishedRecipe> consumer) {
-
-        woodFromLogs(consumer, AncientAetherBlocks.HIGHSPROOT_WOOD.get(), AncientAetherBlocks.HIGHSPROOT_LOG.get());
-        woodFromLogs(consumer, AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD.get(), AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get());
-        planksFromLogs(consumer, AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), AncientAetherTags.Items.CRAFTS_HIGHSPROOT_PLANKS, 4);
-
-        woodFromLogs(consumer, AncientAetherBlocks.SAKURA_WOOD.get(), AncientAetherBlocks.SAKURA_LOG.get());
-        woodFromLogs(consumer, AncientAetherBlocks.STRIPPED_SAKURA_WOOD.get(), AncientAetherBlocks.STRIPPED_SAKURA_LOG.get());
-        planksFromLogs(consumer, AncientAetherBlocks.SAKURA_PLANKS.get(), AncientAetherTags.Items.CRAFTS_SAKURA_PLANKS, 4);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherBlocks.AMBROSIUM_LANTERN.get())
-                .define('H', AetherBlocks.HOLYSTONE.get())
-                .define('S', Tags.Items.RODS_WOODEN)
-                .define('T', AetherBlocks.AMBROSIUM_TORCH.get())
-                .pattern("SHS")
-                .pattern("STS")
-                .pattern("SHS")
-                .unlockedBy(getHasName(AetherBlocks.AMBROSIUM_TORCH.get()), has(AetherBlocks.AMBROSIUM_TORCH.get()))
-                .save(consumer);
-
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, AncientAetherBlocks.WYND_LANTERN.get())
                 .requires(AncientAetherBlocks.AMBROSIUM_LANTERN.get())
                 .requires(AncientAetherBlocks.WYND_SENTRY_STONE.get())
@@ -89,244 +41,6 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .requires(AncientAetherBlocks.AMBROSIUM_LANTERN.get())
                 .requires(AetherBlocks.LIGHT_HELLFIRE_STONE.get())
                 .unlockedBy(getHasName(AetherBlocks.LIGHT_HELLFIRE_STONE.get()), has(AetherBlocks.LIGHT_HELLFIRE_STONE.get()))
-                .save(consumer);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AncientAetherItems.ANCIENT_RUNE.get(),2)
-                .define('G', AetherBlocks.ENCHANTED_GRAVITITE.get())
-                .define('R', AncientAetherItems.ANCIENT_RUNE.get())
-                .define('A', AetherBlocks.AEROGEL.get())
-                .pattern("GRG")
-                .pattern("GAG")
-                .pattern("GGG")
-                .unlockedBy(getHasName(AncientAetherItems.ANCIENT_RUNE.get()), has(AncientAetherItems.ANCIENT_RUNE.get()))
-                .save(consumer);
-
-        copyAetherSmithingTemplate(consumer, AncientAetherItems.WYND_ARMOR_TRIM_SMITHING_TEMPLATE.get(), AetherBlocks.HOLYSTONE.get());
-        copyAetherSmithingTemplate(consumer, AncientAetherItems.WHALE_ARMOR_TRIM_SMITHING_TEMPLATE.get(), AetherBlocks.HOLYSTONE.get());
-        copyAetherSmithingTemplate(consumer, AncientAetherItems.ASCENDED_ARMOR_TRIM_SMITHING_TEMPLATE.get(), AetherBlocks.HOLYSTONE.get());
-        copyAetherSmithingTemplate(consumer, AncientAetherItems.MYSTERIOUS_ARMOR_TRIM_SMITHING_TEMPLATE.get(), AetherBlocks.MOSSY_HOLYSTONE.get());
-        copyAetherSmithingTemplate(consumer, AncientAetherItems.MECHANICAL_ARMOR_TRIM_SMITHING_TEMPLATE.get(), AetherBlocks.ICESTONE.get());
-
-        aetherSmithingTrimRecipe(consumer, AncientAetherItems.WYND_ARMOR_TRIM_SMITHING_TEMPLATE.get());
-        aetherSmithingTrimRecipe(consumer, AncientAetherItems.WHALE_ARMOR_TRIM_SMITHING_TEMPLATE.get());
-        aetherSmithingTrimRecipe(consumer, AncientAetherItems.ASCENDED_ARMOR_TRIM_SMITHING_TEMPLATE.get());
-        aetherSmithingTrimRecipe(consumer, AncientAetherItems.MYSTERIOUS_ARMOR_TRIM_SMITHING_TEMPLATE.get());
-        aetherSmithingTrimRecipe(consumer, AncientAetherItems.MECHANICAL_ARMOR_TRIM_SMITHING_TEMPLATE.get());
-        aetherSmithingTrimRecipe(consumer, AncientAetherItems.MOSAIC_ARMOR_TRIM_SMITHING_TEMPLATE.get());
-        aetherSmithingTrimRecipe(consumer, AncientAetherItems.ROYAL_ARMOR_TRIM_SMITHING_TEMPLATE.get());
-        aetherSmithingTrimRecipe(consumer, AncientAetherItems.SOLAR_ARMOR_TRIM_SMITHING_TEMPLATE.get());
-        aetherSmithingTrimRecipe(consumer, AncientAetherItems.ANCIENT_ARMOR_TRIM_SMITHING_TEMPLATE.get());
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.ENCHANTING_TABLE)
-                .define('G', AetherBlocks.ENCHANTED_GRAVITITE.get())
-                .define('O', Blocks.OBSIDIAN)
-                .define('B', Items.BOOK)
-                .pattern(" B ")
-                .pattern("GOG")
-                .pattern("OOO")
-                .unlockedBy(getHasName(AetherBlocks.ENCHANTED_GRAVITITE.get()), has(AetherBlocks.ENCHANTED_GRAVITITE.get()))
-                .save(consumer, name("enchanting_table_from_gravitite"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get())
-                .define('L', ItemTags.LOGS)
-                .define('A', AetherItems.AMBROSIUM_SHARD.get())
-                .define('S', Tags.Items.RODS_WOODEN)
-                .pattern(" S ")
-                .pattern("SAS")
-                .pattern("LLL")
-                .unlockedBy(getHasName(AetherItems.AMBROSIUM_SHARD.get()), has(AetherItems.AMBROSIUM_SHARD.get()))
-                .save(consumer);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Blocks.STONECUTTER)
-                .group("minecraft:stonecutter")
-                .define('Z', AetherItems.ZANITE_GEMSTONE.get())
-                .define('#', AetherBlocks.HOLYSTONE.get())
-                .pattern(" Z ")
-                .pattern("###")
-                .unlockedBy("has_holystone", has(AetherBlocks.HOLYSTONE.get()))
-                .save(consumer, name("holystone_stonecutter_from_zanite"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Blocks.SMITHING_TABLE)
-                .group("minecraft:smithing_table")
-                .define('Z', AetherItems.ZANITE_GEMSTONE.get())
-                .define('P', AetherTags.Items.PLANKS_CRAFTING)
-                .pattern("ZZ")
-                .pattern("PP")
-                .pattern("PP")
-                .unlockedBy(getHasName(AetherItems.ZANITE_GEMSTONE.get()), has(AetherItems.ZANITE_GEMSTONE.get()))
-                .save(consumer, name("skyroot_smithing_table_from_zanite"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Blocks.ANVIL)
-                .define('B', AetherBlocks.ZANITE_BLOCK.get())
-                .define('Z', AetherItems.ZANITE_GEMSTONE.get())
-                .pattern("BBB")
-                .pattern(" Z ")
-                .pattern("ZZZ")
-                .unlockedBy(getHasName(AetherBlocks.ZANITE_BLOCK.get()), has(AetherBlocks.ZANITE_BLOCK.get()))
-                .save(consumer, name("anvil_from_zanite"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Items.SHEARS)
-                .define('Z', AetherItems.ZANITE_GEMSTONE.get())
-                .pattern(" Z")
-                .pattern("Z ")
-                .unlockedBy(getHasName(AetherItems.ZANITE_GEMSTONE.get()), has(AetherItems.ZANITE_GEMSTONE.get()))
-                .save(consumer, name("shears_from_zanite"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherItems.HIGHSPROOT_SIGN.get(), 3)
-                .group("wooden_sign")
-                .define('P', AncientAetherBlocks.HIGHSPROOT_PLANKS.get().asItem())
-                .define('/', Tags.Items.RODS_WOODEN)
-                .pattern("PPP")
-                .pattern("PPP")
-                .pattern(" / ")
-                .unlockedBy(getHasName(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()), has(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()))
-                .save(consumer);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherItems.SAKURA_SIGN.get(), 3)
-                .group("wooden_sign")
-                .define('P', AncientAetherBlocks.SAKURA_PLANKS.get().asItem())
-                .define('/', Tags.Items.RODS_WOODEN)
-                .pattern("PPP")
-                .pattern("PPP")
-                .pattern(" / ")
-                .unlockedBy(getHasName(AncientAetherBlocks.SAKURA_PLANKS.get()), has(AncientAetherBlocks.SAKURA_PLANKS.get()))
-                .save(consumer);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherBlocks.HIGHSPROOT_HANGING_SIGN.get(), 6)
-                .group("hanging_sign")
-                .define('#', AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get())
-                .define('X', Items.CHAIN)
-                .pattern("X X")
-                .pattern("###")
-                .pattern("###")
-                .unlockedBy("has_stripped_logs", has(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get()))
-                .save(consumer);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherBlocks.SAKURA_HANGING_SIGN.get(), 6)
-                .group("hanging_sign")
-                .define('#', AncientAetherBlocks.STRIPPED_SAKURA_LOG.get())
-                .define('X', Items.CHAIN)
-                .pattern("X X")
-                .pattern("###")
-                .pattern("###")
-                .unlockedBy("has_stripped_logs", has(AncientAetherBlocks.STRIPPED_SAKURA_LOG.get()))
-                .save(consumer);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.FLUFFALO_CARPET.get(), 3)
-                .group("carpet")
-                .define('#', AncientAetherBlocks.FLUFFALO_WOOL.get())
-                .pattern("##")
-                .unlockedBy(getHasName(AncientAetherBlocks.FLUFFALO_WOOL.get()), has(AncientAetherBlocks.FLUFFALO_WOOL.get()))
-                .save(consumer);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.PAPER, 3)
-                .define('#', AetherItems.AECHOR_PETAL.get())
-                .pattern("###")
-                .unlockedBy(getHasName(AetherItems.AECHOR_PETAL.get()), has(AetherItems.AECHOR_PETAL.get()))
-                .save(consumer, name("paper_from_aechor_petals"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Items.ARMOR_STAND)
-                .define('/', Tags.Items.RODS_WOODEN)
-                .define('#', AetherBlocks.HOLYSTONE_SLAB.get())
-                .pattern("///")
-                .pattern(" / ")
-                .pattern("/#/")
-                .unlockedBy(getHasName(AetherBlocks.HOLYSTONE_SLAB.get()), has(AetherBlocks.HOLYSTONE_SLAB.get()))
-                .save(consumer, name("armor_stand_from_holystone"));
-
-        makePickaxe(AncientAetherItems.VALKYRUM_PICKAXE, AncientAetherItems.VALKYRUM).save(consumer);
-        makeAxe(AncientAetherItems.VALKYRUM_AXE, AncientAetherItems.VALKYRUM).save(consumer);
-        makeShovel(AncientAetherItems.VALKYRUM_SHOVEL, AncientAetherItems.VALKYRUM).save(consumer);
-        makeHoe(AncientAetherItems.VALKYRUM_HOE, AncientAetherItems.VALKYRUM).save(consumer);
-        makeSword(AncientAetherItems.VALKYRUM_SWORD, AncientAetherItems.VALKYRUM).save(consumer);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherItems.VALKYRUM_LANCE.get())
-                .define('/', Tags.Items.RODS_WOODEN)
-                .define('V', AncientAetherItems.VALKYRUM.get())
-                .pattern("V  ")
-                .pattern(" V ")
-                .pattern("  /")
-                .unlockedBy(getHasName(AncientAetherItems.VALKYRUM.get()), has(AncientAetherItems.VALKYRUM.get()))
-                .save(consumer);
-
-        makeHelmet(AncientAetherItems.VALKYRUM_HELMET, AncientAetherItems.VALKYRUM).save(consumer);
-        makeChestplate(AncientAetherItems.VALKYRUM_CHESTPLATE, AncientAetherItems.VALKYRUM).save(consumer);
-        makeLeggings(AncientAetherItems.VALKYRUM_LEGGINGS, AncientAetherItems.VALKYRUM).save(consumer);
-        makeBoots(AncientAetherItems.VALKYRUM_BOOTS, AncientAetherItems.VALKYRUM).save(consumer);
-        makeGloves(AncientAetherItems.VALKYRUM_GLOVES, AncientAetherItems.VALKYRUM).save(consumer);
-
-        makeRing(AncientAetherItems.VALKYRUM_RING, AncientAetherItems.VALKYRUM.get()).save(consumer);
-        makePendant(AncientAetherItems.VALKYRUM_PENDANT, AncientAetherItems.VALKYRUM.get()).save(consumer);
-        makeCape(AncientAetherItems.PINK_CAPE, Blocks.PINK_WOOL.asItem()).save(consumer);
-
-        mosaicBlock(consumer, AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get(), AetherBlocks.HOLYSTONE_BRICK_SLAB.get());
-        mosaicBlock(consumer, AncientAetherBlocks.CARVED_STONE_MOSAIC.get(), AetherBlocks.CARVED_SLAB.get());
-        mosaicBlock(consumer, AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get(), AetherBlocks.ANGELIC_SLAB.get());
-        mosaicBlock(consumer, AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get(), AetherBlocks.HELLFIRE_SLAB.get());
-        mosaicBlock(consumer, AncientAetherBlocks.AEROGETIC_STONE_MOSAIC.get(), AncientAetherBlocks.AEROGETIC_SLAB.get());
-
-        fence(AncientAetherBlocks.HIGHSPROOT_FENCE, AncientAetherBlocks.HIGHSPROOT_PLANKS).save(consumer);
-        fenceGate(AncientAetherBlocks.HIGHSPROOT_FENCE_GATE, AncientAetherBlocks.HIGHSPROOT_PLANKS).save(consumer);
-
-        fence(AncientAetherBlocks.SAKURA_FENCE, AncientAetherBlocks.SAKURA_PLANKS).save(consumer);
-        fenceGate(AncientAetherBlocks.SAKURA_FENCE_GATE, AncientAetherBlocks.SAKURA_PLANKS).save(consumer);
-
-        stairs(AncientAetherBlocks.HIGHSPROOT_STAIRS, AncientAetherBlocks.HIGHSPROOT_PLANKS).group("wooden_stairs").save(consumer);
-        stairs(AncientAetherBlocks.SAKURA_STAIRS, AncientAetherBlocks.SAKURA_PLANKS).group("wooden_stairs").save(consumer);
-        stairs(AncientAetherBlocks.CARVED_TILE_STAIRS, AncientAetherBlocks.CARVED_TILES).save(consumer);
-        stairs(AncientAetherBlocks.AEROGETIC_STAIRS, AncientAetherBlocks.AEROGETIC_STONE).save(consumer);
-
-        wall(consumer, RecipeCategory.DECORATIONS, AncientAetherBlocks.CARVED_TILE_WALL.get(), AncientAetherBlocks.CARVED_TILES.get());
-        wall(consumer, RecipeCategory.DECORATIONS, AncientAetherBlocks.AEROGETIC_WALL.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
-
-        oreBlockStorageRecipesRecipesWithCustomUnpacking(consumer, RecipeCategory.MISC, AncientAetherItems.VALKYRUM.get(), RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.VALKYRUM_BLOCK.get(), "valkyrum_from_valkyrum_block", "valkyrum");
-
-        slabBuilder(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.HIGHSPROOT_SLAB.get(), Ingredient.of(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()))
-                .group("wooden_slab")
-                .unlockedBy(getHasName(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()), has(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()))
-                .save(consumer);
-        slabBuilder(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.SAKURA_SLAB.get(), Ingredient.of(AncientAetherBlocks.SAKURA_PLANKS.get()))
-                .group("wooden_slab")
-                .unlockedBy(getHasName(AncientAetherBlocks.SAKURA_PLANKS.get()), has(AncientAetherBlocks.SAKURA_PLANKS.get()))
-                .save(consumer);
-
-        slab(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_TILE_SLAB.get(), AncientAetherBlocks.CARVED_TILES.get());
-        slab(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGETIC_SLAB.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.WIND_BLOWER.get())
-                .define('W', AetherBlocks.COLD_AERCLOUD.get())
-                .define('C', AncientAetherTags.Items.WINDBLOWER_INGREDIENT)
-                .pattern("WWW")
-                .pattern("WCW")
-                .pattern("WWW")
-                .unlockedBy("ancient_aether:windblower_ingredient", has(AncientAetherTags.Items.WINDBLOWER_INGREDIENT))
-                .save(consumer);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGEL_GLASS.get(),8)
-                .define('A', AetherBlocks.AEROGEL.get())
-                .define('P', AetherTags.Items.PLANKS_CRAFTING)
-                .pattern("AAA")
-                .pattern("APA")
-                .pattern("AAA")
-                .unlockedBy(getHasName(AetherBlocks.AEROGEL.get()), has(AetherBlocks.AEROGEL.get()))
-                .save(consumer);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.HIGHSPROOT_BOOKSHELF.get())
-                .define('P', AncientAetherBlocks.HIGHSPROOT_PLANKS.get())
-                .define('B', Items.BOOK)
-                .pattern("PPP")
-                .pattern("BBB")
-                .pattern("PPP")
-                .unlockedBy(getHasName(Items.BOOK), has(Items.BOOK))
-                .save(consumer);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.SAKURA_BOOKSHELF.get())
-                .define('P', AncientAetherBlocks.SAKURA_PLANKS.get())
-                .define('B', Items.BOOK)
-                .pattern("PPP")
-                .pattern("BBB")
-                .pattern("PPP")
-                .unlockedBy(getHasName(Items.BOOK), has(Items.BOOK))
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.MAGENTA_DYE)
@@ -353,7 +67,6 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .unlockedBy(getHasName(AncientAetherBlocks.SAKURA_BLOSSOMS.get()), has(AncientAetherBlocks.SAKURA_BLOSSOMS.get()))
                 .save(consumer, name("sakura_blossom_to_pink_dye"));
 
-        woodenBoat(consumer, AncientAetherItems.HIGHSPROOT_BOAT.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get());
         ShapelessRecipeBuilder.shapeless(RecipeCategory.TRANSPORTATION, AncientAetherItems.HIGHSPROOT_CHEST_BOAT.get())
                 .group("chest_boat")
                 .requires(Tags.Items.CHESTS_WOODEN)
@@ -361,7 +74,6 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .unlockedBy("has_boat", has(ItemTags.BOATS))
                 .save(consumer);
 
-        woodenBoat(consumer, AncientAetherItems.SAKURA_BOAT.get(), AncientAetherBlocks.SAKURA_PLANKS.get());
         ShapelessRecipeBuilder.shapeless(RecipeCategory.TRANSPORTATION, AncientAetherItems.SAKURA_CHEST_BOAT.get())
                 .group("chest_boat")
                 .requires(Tags.Items.CHESTS_WOODEN)
@@ -369,17 +81,14 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .unlockedBy("has_boat", has(ItemTags.BOATS))
                 .save(consumer);
 
-        doorBuilder(AncientAetherBlocks.HIGHSPROOT_DOOR.get(), Ingredient.of(AncientAetherBlocks.HIGHSPROOT_PLANKS.get())).unlockedBy(getHasName(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()), has(AncientAetherBlocks.HIGHSPROOT_PLANKS.get())).group("wooden_door").save(consumer);
-        trapdoorBuilder(AncientAetherBlocks.HIGHSPROOT_TRAPDOOR.get(), Ingredient.of(AncientAetherBlocks.HIGHSPROOT_PLANKS.get())).unlockedBy(getHasName(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()), has(AncientAetherBlocks.HIGHSPROOT_PLANKS.get())).group("wooden_trapdoor").save(consumer);
-        buttonBuilder(AncientAetherBlocks.HIGHSPROOT_BUTTON.get(), Ingredient.of(AncientAetherBlocks.HIGHSPROOT_PLANKS.get())).unlockedBy(getHasName(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()), has(AncientAetherBlocks.HIGHSPROOT_PLANKS.get())).group("wooden_button").save(consumer);
-        pressurePlateBuilder(RecipeCategory.REDSTONE, AncientAetherBlocks.HIGHSPROOT_PRESSURE_PLATE.get(), Ingredient.of(AncientAetherBlocks.HIGHSPROOT_PLANKS.get())).unlockedBy(getHasName(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()), has(AncientAetherBlocks.HIGHSPROOT_PLANKS.get())).group("wooden_pressure_plate").save(consumer);
-
-        doorBuilder(AncientAetherBlocks.SAKURA_DOOR.get(), Ingredient.of(AncientAetherBlocks.SAKURA_PLANKS.get())).unlockedBy(getHasName(AncientAetherBlocks.SAKURA_PLANKS.get()), has(AncientAetherBlocks.SAKURA_PLANKS.get())).group("wooden_door").save(consumer);
-        trapdoorBuilder(AncientAetherBlocks.SAKURA_TRAPDOOR.get(), Ingredient.of(AncientAetherBlocks.SAKURA_PLANKS.get())).unlockedBy(getHasName(AncientAetherBlocks.SAKURA_PLANKS.get()), has(AncientAetherBlocks.SAKURA_PLANKS.get())).group("wooden_trapdoor").save(consumer);
-        buttonBuilder(AncientAetherBlocks.SAKURA_BUTTON.get(), Ingredient.of(AncientAetherBlocks.SAKURA_PLANKS.get())).unlockedBy(getHasName(AncientAetherBlocks.SAKURA_PLANKS.get()), has(AncientAetherBlocks.SAKURA_PLANKS.get())).group("wooden_button").save(consumer);
-        pressurePlateBuilder(RecipeCategory.REDSTONE, AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get(), Ingredient.of(AncientAetherBlocks.SAKURA_PLANKS.get())).unlockedBy(getHasName(AncientAetherBlocks.SAKURA_PLANKS.get()), has(AncientAetherBlocks.SAKURA_PLANKS.get())).group("wooden_pressure_plate").save(consumer);
-
-        doorBuilder(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get(), Ingredient.of(AncientAetherBlocks.AEROGEL_GLASS.get())).unlockedBy(getHasName(AncientAetherBlocks.AEROGEL_GLASS.get()), has(AncientAetherBlocks.AEROGEL_GLASS.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGEL_GLASS.get(),8)
+                .define('A', AetherBlocks.AEROGEL.get())
+                .define('P', AetherTags.Items.PLANKS_CRAFTING)
+                .pattern("AAA")
+                .pattern("APA")
+                .pattern("AAA")
+                .unlockedBy(getHasName(AetherBlocks.AEROGEL.get()), has(AetherBlocks.AEROGEL.get()))
+                .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGEL_GLASS_PANE.get(),16)
                 .define('#', AncientAetherBlocks.AEROGEL_GLASS.get())
@@ -395,48 +104,245 @@ public class AncientAetherRecipeData extends AetherRecipeProvider {
                 .unlockedBy(getHasName(AncientAetherBlocks.AEROGEL_GLASS.get()), has(AncientAetherBlocks.AEROGEL_GLASS.get()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_TILES.get(),4)
-                    .define('#', AetherBlocks.CARVED_STONE.get())
-                .pattern("##")
-                .pattern("##")
-                .unlockedBy(getHasName(AncientAetherBlocks.CARVED_TILES.get()), has(AncientAetherBlocks.CARVED_TILES.get()))
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherBlocks.AMBROSIUM_LANTERN.get())
+                .define('H', AetherBlocks.HOLYSTONE.get())
+                .define('S', Tags.Items.RODS_WOODEN)
+                .define('T', AetherBlocks.AMBROSIUM_TORCH.get())
+                .pattern("SHS")
+                .pattern("STS")
+                .pattern("SHS")
+                .unlockedBy(getHasName(AetherBlocks.AMBROSIUM_TORCH.get()), has(AetherBlocks.AMBROSIUM_TORCH.get()))
                 .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get())
+                .define('L', ItemTags.LOGS)
+                .define('A', AetherItems.AMBROSIUM_SHARD.get())
+                .define('S', Tags.Items.RODS_WOODEN)
+                .pattern(" S ")
+                .pattern("SAS")
+                .pattern("LLL")
+                .unlockedBy(getHasName(AetherItems.AMBROSIUM_SHARD.get()), has(AetherItems.AMBROSIUM_SHARD.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Blocks.STONECUTTER)
+                .group("stonecutter")
+                .define('Z', AetherItems.ZANITE_GEMSTONE.get())
+                .define('#', AetherBlocks.HOLYSTONE.get())
+                .pattern(" Z ")
+                .pattern("###")
+                .unlockedBy("has_holystone", has(AetherBlocks.HOLYSTONE.get()))
+                .save(consumer, name("holystone_stonecutter_from_zanite"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Blocks.SMITHING_TABLE)
+                .group("smithing_table")
+                .define('Z', AetherItems.ZANITE_GEMSTONE.get())
+                .define('P', AetherTags.Items.PLANKS_CRAFTING)
+                .pattern("ZZ")
+                .pattern("PP")
+                .pattern("PP")
+                .unlockedBy(getHasName(AetherItems.ZANITE_GEMSTONE.get()), has(AetherItems.ZANITE_GEMSTONE.get()))
+                .save(consumer, name("skyroot_smithing_table_from_zanite"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Blocks.ANVIL)
+                .define('B', AetherBlocks.ZANITE_BLOCK.get())
+                .define('Z', AetherItems.ZANITE_GEMSTONE.get())
+                .pattern("BBB")
+                .pattern(" Z ")
+                .pattern("ZZZ")
+                .unlockedBy(getHasName(AetherBlocks.ZANITE_BLOCK.get()), has(AetherBlocks.ZANITE_BLOCK.get()))
+                .save(consumer, name("anvil_from_zanite"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.ENCHANTING_TABLE)
+                .define('G', AetherBlocks.ENCHANTED_GRAVITITE.get())
+                .define('O', Blocks.OBSIDIAN)
+                .define('B', Items.BOOK)
+                .pattern(" B ")
+                .pattern("GOG")
+                .pattern("OOO")
+                .unlockedBy(getHasName(AetherBlocks.ENCHANTED_GRAVITITE.get()), has(AetherBlocks.ENCHANTED_GRAVITITE.get()))
+                .save(consumer, name("enchanting_table_from_gravitite"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.WIND_BLOWER.get())
+                .define('W', AetherBlocks.COLD_AERCLOUD.get())
+                .define('C', AncientAetherTags.Items.WINDBLOWER_INGREDIENT)
+                .pattern("WWW")
+                .pattern("WCW")
+                .pattern("WWW")
+                .unlockedBy("ancient_aether:windblower_ingredient", has(AncientAetherTags.Items.WINDBLOWER_INGREDIENT))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Items.ARMOR_STAND)
+                .define('/', Tags.Items.RODS_WOODEN)
+                .define('#', AetherBlocks.HOLYSTONE_SLAB.get())
+                .pattern("///")
+                .pattern(" / ")
+                .pattern("/#/")
+                .unlockedBy(getHasName(AetherBlocks.HOLYSTONE_SLAB.get()), has(AetherBlocks.HOLYSTONE_SLAB.get()))
+                .save(consumer, name("armor_stand_from_holystone"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AncientAetherItems.ANCIENT_RUNE.get(),2)
+                .define('G', AetherBlocks.ENCHANTED_GRAVITITE.get())
+                .define('R', AncientAetherItems.ANCIENT_RUNE.get())
+                .define('A', AetherBlocks.AEROGEL.get())
+                .pattern("GRG")
+                .pattern("GAG")
+                .pattern("GGG")
+                .unlockedBy(getHasName(AncientAetherItems.ANCIENT_RUNE.get()), has(AncientAetherItems.ANCIENT_RUNE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherItems.VALKYRUM_LANCE.get())
+                .define('/', Tags.Items.RODS_WOODEN)
+                .define('V', AncientAetherItems.VALKYRUM.get())
+                .pattern("V  ")
+                .pattern(" V ")
+                .pattern("  /")
+                .unlockedBy(getHasName(AncientAetherItems.VALKYRUM.get()), has(AncientAetherItems.VALKYRUM.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Items.SHEARS)
+                .define('Z', AetherItems.ZANITE_GEMSTONE.get())
+                .pattern(" Z")
+                .pattern("Z ")
+                .unlockedBy(getHasName(AetherItems.ZANITE_GEMSTONE.get()), has(AetherItems.ZANITE_GEMSTONE.get()))
+                .save(consumer, name("shears_from_zanite"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.PAPER, 3)
+                .define('#', AetherItems.AECHOR_PETAL.get())
+                .pattern("###")
+                .unlockedBy(getHasName(AetherItems.AECHOR_PETAL.get()), has(AetherItems.AECHOR_PETAL.get()))
+                .save(consumer, name("paper_from_aechor_petals"));
+
+        woodFromLogs(consumer, AncientAetherBlocks.HIGHSPROOT_WOOD.get(), AncientAetherBlocks.HIGHSPROOT_LOG.get());
+        woodFromLogs(consumer, AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD.get(), AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get());
+        woodFromLogs(consumer, AncientAetherBlocks.SAKURA_WOOD.get(), AncientAetherBlocks.SAKURA_LOG.get());
+        woodFromLogs(consumer, AncientAetherBlocks.STRIPPED_SAKURA_WOOD.get(), AncientAetherBlocks.STRIPPED_SAKURA_LOG.get());
+
+        planksFromLogs(consumer, AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), AncientAetherTags.Items.CRAFTS_HIGHSPROOT_PLANKS, 4);
+        planksFromLogs(consumer, AncientAetherBlocks.SAKURA_PLANKS.get(), AncientAetherTags.Items.CRAFTS_SAKURA_PLANKS, 4);
+
+        stairs(AncientAetherBlocks.HIGHSPROOT_STAIRS, AncientAetherBlocks.HIGHSPROOT_PLANKS).group("wooden_stairs").save(consumer);
+        stairs(AncientAetherBlocks.SAKURA_STAIRS, AncientAetherBlocks.SAKURA_PLANKS).group("wooden_stairs").save(consumer);
+        stairs(AncientAetherBlocks.CARVED_TILE_STAIRS, AncientAetherBlocks.CARVED_TILES).save(consumer);
+        stairs(AncientAetherBlocks.AEROGETIC_STAIRS, AncientAetherBlocks.AEROGETIC_STONE).save(consumer);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.HIGHSPROOT_SLAB.get(), Ingredient.of(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()))
+                .group("wooden_slab")
+                .unlockedBy(getHasName(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()), has(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()))
+                .save(consumer);
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.SAKURA_SLAB.get(), Ingredient.of(AncientAetherBlocks.SAKURA_PLANKS.get()))
+                .group("wooden_slab")
+                .unlockedBy(getHasName(AncientAetherBlocks.SAKURA_PLANKS.get()), has(AncientAetherBlocks.SAKURA_PLANKS.get()))
+                .save(consumer);
+
+        slab(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_TILE_SLAB.get(), AncientAetherBlocks.CARVED_TILES.get());
+        slab(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGETIC_SLAB.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
+
+        fence(AncientAetherBlocks.HIGHSPROOT_FENCE, AncientAetherBlocks.HIGHSPROOT_PLANKS).save(consumer);
+        fence(AncientAetherBlocks.SAKURA_FENCE, AncientAetherBlocks.SAKURA_PLANKS).save(consumer);
+
+        fenceGate(AncientAetherBlocks.HIGHSPROOT_FENCE_GATE, AncientAetherBlocks.HIGHSPROOT_PLANKS).save(consumer);
+        fenceGate(AncientAetherBlocks.SAKURA_FENCE_GATE, AncientAetherBlocks.SAKURA_PLANKS).save(consumer);
+
+        wall(consumer, RecipeCategory.DECORATIONS, AncientAetherBlocks.CARVED_TILE_WALL.get(), AncientAetherBlocks.CARVED_TILES.get());
+        wall(consumer, RecipeCategory.DECORATIONS, AncientAetherBlocks.AEROGETIC_WALL.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
+
+        doorBuilder(AncientAetherBlocks.HIGHSPROOT_DOOR.get(), Ingredient.of(AncientAetherBlocks.HIGHSPROOT_PLANKS.get())).unlockedBy(getHasName(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()), has(AncientAetherBlocks.HIGHSPROOT_PLANKS.get())).group("wooden_door").save(consumer);
+        doorBuilder(AncientAetherBlocks.SAKURA_DOOR.get(), Ingredient.of(AncientAetherBlocks.SAKURA_PLANKS.get())).unlockedBy(getHasName(AncientAetherBlocks.SAKURA_PLANKS.get()), has(AncientAetherBlocks.SAKURA_PLANKS.get())).group("wooden_door").save(consumer);
+        doorBuilder(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get(), Ingredient.of(AncientAetherBlocks.AEROGEL_GLASS.get())).unlockedBy(getHasName(AncientAetherBlocks.AEROGEL_GLASS.get()), has(AncientAetherBlocks.AEROGEL_GLASS.get())).save(consumer);
+
+        trapdoorBuilder(AncientAetherBlocks.HIGHSPROOT_TRAPDOOR.get(), Ingredient.of(AncientAetherBlocks.HIGHSPROOT_PLANKS.get())).unlockedBy(getHasName(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()), has(AncientAetherBlocks.HIGHSPROOT_PLANKS.get())).group("wooden_trapdoor").save(consumer);
+        trapdoorBuilder(AncientAetherBlocks.SAKURA_TRAPDOOR.get(), Ingredient.of(AncientAetherBlocks.SAKURA_PLANKS.get())).unlockedBy(getHasName(AncientAetherBlocks.SAKURA_PLANKS.get()), has(AncientAetherBlocks.SAKURA_PLANKS.get())).group("wooden_trapdoor").save(consumer);
+
+        pressurePlateBuilder(RecipeCategory.REDSTONE, AncientAetherBlocks.HIGHSPROOT_PRESSURE_PLATE.get(), Ingredient.of(AncientAetherBlocks.HIGHSPROOT_PLANKS.get())).unlockedBy(getHasName(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()), has(AncientAetherBlocks.HIGHSPROOT_PLANKS.get())).group("wooden_pressure_plate").save(consumer);
+        pressurePlateBuilder(RecipeCategory.REDSTONE, AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get(), Ingredient.of(AncientAetherBlocks.SAKURA_PLANKS.get())).unlockedBy(getHasName(AncientAetherBlocks.SAKURA_PLANKS.get()), has(AncientAetherBlocks.SAKURA_PLANKS.get())).group("wooden_pressure_plate").save(consumer);
+
+        buttonBuilder(AncientAetherBlocks.HIGHSPROOT_BUTTON.get(), Ingredient.of(AncientAetherBlocks.HIGHSPROOT_PLANKS.get())).unlockedBy(getHasName(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()), has(AncientAetherBlocks.HIGHSPROOT_PLANKS.get())).group("wooden_button").save(consumer);
+        buttonBuilder(AncientAetherBlocks.SAKURA_BUTTON.get(), Ingredient.of(AncientAetherBlocks.SAKURA_PLANKS.get())).unlockedBy(getHasName(AncientAetherBlocks.SAKURA_PLANKS.get()), has(AncientAetherBlocks.SAKURA_PLANKS.get())).group("wooden_button").save(consumer);
+
+        sign(consumer, AncientAetherItems.HIGHSPROOT_SIGN.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get());
+        sign(consumer, AncientAetherItems.SAKURA_SIGN.get(), AncientAetherBlocks.SAKURA_PLANKS.get());
+
+        hangingSign(consumer, AncientAetherItems.HIGHSPROOT_HANGING_SIGN.get(), AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get());
+        hangingSign(consumer, AncientAetherItems.SAKURA_HANGING_SIGN.get(), AncientAetherBlocks.STRIPPED_SAKURA_LOG.get());
+
+        bookshelf(consumer, AncientAetherBlocks.HIGHSPROOT_BOOKSHELF.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get());
+        bookshelf(consumer, AncientAetherBlocks.SAKURA_BOOKSHELF.get(), AncientAetherBlocks.SAKURA_PLANKS.get());
+
+        chiseled(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get(), AetherBlocks.HOLYSTONE_BRICK_SLAB.get());
+        chiseled(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_STONE_MOSAIC.get(), AetherBlocks.CARVED_SLAB.get());
+        chiseled(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get(), AetherBlocks.ANGELIC_SLAB.get());
+        chiseled(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get(), AetherBlocks.HELLFIRE_SLAB.get());
+        chiseled(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGETIC_STONE_MOSAIC.get(), AncientAetherBlocks.AEROGETIC_SLAB.get());
+
+        polished(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_TILES.get(), AetherBlocks.CARVED_STONE.get());
+
+        carpet(consumer, AncientAetherBlocks.FLUFFALO_CARPET.get(), AncientAetherBlocks.FLUFFALO_WOOL.get());
+
+        oreBlockStorageRecipesRecipesWithCustomUnpacking(consumer, RecipeCategory.MISC, AncientAetherItems.VALKYRUM.get(), RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.VALKYRUM_BLOCK.get(), "valkyrum_from_valkyrum_block", "valkyrum");
+
+        makePickaxe(AncientAetherItems.VALKYRUM_PICKAXE, AncientAetherItems.VALKYRUM).save(consumer);
+        makeAxe(AncientAetherItems.VALKYRUM_AXE, AncientAetherItems.VALKYRUM).save(consumer);
+        makeShovel(AncientAetherItems.VALKYRUM_SHOVEL, AncientAetherItems.VALKYRUM).save(consumer);
+        makeHoe(AncientAetherItems.VALKYRUM_HOE, AncientAetherItems.VALKYRUM).save(consumer);
+        makeSword(AncientAetherItems.VALKYRUM_SWORD, AncientAetherItems.VALKYRUM).save(consumer);
+
+        makeHelmet(AncientAetherItems.VALKYRUM_HELMET, AncientAetherItems.VALKYRUM).save(consumer);
+        makeChestplate(AncientAetherItems.VALKYRUM_CHESTPLATE, AncientAetherItems.VALKYRUM).save(consumer);
+        makeLeggings(AncientAetherItems.VALKYRUM_LEGGINGS, AncientAetherItems.VALKYRUM).save(consumer);
+        makeBoots(AncientAetherItems.VALKYRUM_BOOTS, AncientAetherItems.VALKYRUM).save(consumer);
+        makeGloves(AncientAetherItems.VALKYRUM_GLOVES, AncientAetherItems.VALKYRUM).save(consumer);
+
+        makeRing(AncientAetherItems.VALKYRUM_RING, AncientAetherItems.VALKYRUM.get()).save(consumer);
+        makePendant(AncientAetherItems.VALKYRUM_PENDANT, AncientAetherItems.VALKYRUM.get()).save(consumer);
+        makeCape(AncientAetherItems.PINK_CAPE, Blocks.PINK_WOOL.asItem()).save(consumer);
+
+        copyAetherSmithingTemplate(consumer, AncientAetherItems.WYND_ARMOR_TRIM_SMITHING_TEMPLATE.get(), AetherBlocks.HOLYSTONE.get());
+        copyAetherSmithingTemplate(consumer, AncientAetherItems.WHALE_ARMOR_TRIM_SMITHING_TEMPLATE.get(), AetherBlocks.HOLYSTONE.get());
+        copyAetherSmithingTemplate(consumer, AncientAetherItems.ASCENDED_ARMOR_TRIM_SMITHING_TEMPLATE.get(), AetherBlocks.HOLYSTONE.get());
+        copyAetherSmithingTemplate(consumer, AncientAetherItems.MYSTERIOUS_ARMOR_TRIM_SMITHING_TEMPLATE.get(), AetherBlocks.MOSSY_HOLYSTONE.get());
+        copyAetherSmithingTemplate(consumer, AncientAetherItems.MECHANICAL_ARMOR_TRIM_SMITHING_TEMPLATE.get(), AetherBlocks.ICESTONE.get());
+
+        aetherSmithingTrimRecipe(consumer, AncientAetherItems.WYND_ARMOR_TRIM_SMITHING_TEMPLATE.get());
+        aetherSmithingTrimRecipe(consumer, AncientAetherItems.WHALE_ARMOR_TRIM_SMITHING_TEMPLATE.get());
+        aetherSmithingTrimRecipe(consumer, AncientAetherItems.ASCENDED_ARMOR_TRIM_SMITHING_TEMPLATE.get());
+        aetherSmithingTrimRecipe(consumer, AncientAetherItems.MYSTERIOUS_ARMOR_TRIM_SMITHING_TEMPLATE.get());
+        aetherSmithingTrimRecipe(consumer, AncientAetherItems.MECHANICAL_ARMOR_TRIM_SMITHING_TEMPLATE.get());
+        aetherSmithingTrimRecipe(consumer, AncientAetherItems.MOSAIC_ARMOR_TRIM_SMITHING_TEMPLATE.get());
+        aetherSmithingTrimRecipe(consumer, AncientAetherItems.ROYAL_ARMOR_TRIM_SMITHING_TEMPLATE.get());
+        aetherSmithingTrimRecipe(consumer, AncientAetherItems.SOLAR_ARMOR_TRIM_SMITHING_TEMPLATE.get());
+        aetherSmithingTrimRecipe(consumer, AncientAetherItems.ANCIENT_ARMOR_TRIM_SMITHING_TEMPLATE.get());
+
+        woodenBoat(consumer, AncientAetherItems.HIGHSPROOT_BOAT.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get());
+        woodenBoat(consumer, AncientAetherItems.SAKURA_BOAT.get(), AncientAetherBlocks.SAKURA_PLANKS.get());
 
         smeltingOreRecipe(Items.QUARTZ, AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), 0.5F).save(consumer, name("quartz_from_smelting_aether_quartz_ore"));
         blastingOreRecipe(Items.QUARTZ, AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), 0.5F).save(consumer, name("quartz_from_blasting_aether_quartz_ore"));
 
-        stonecuttingRecipe(consumer, RecipeCategory.DECORATIONS, AncientAetherBlocks.AEROGETIC_WALL.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGETIC_STAIRS.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGETIC_SLAB.get(), AncientAetherBlocks.AEROGETIC_STONE.get(), 2);
+        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGETIC_WALL.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGETIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGETIC_STONE.get(), AncientAetherBlocks.CORRUPTED_LIGHT_AEROGETIC_STONE.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get(), AncientAetherBlocks.CORRUPTED_LIGHT_AEROGETIC_STONE.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CORRUPTED_LIGHT_AEROGETIC_STONE.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CORRUPTED_LIGHT_AEROGETIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get());
-
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_STONE_MOSAIC.get(), AetherBlocks.CARVED_STONE.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_TILES.get(), AetherBlocks.CARVED_STONE.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AetherBlocks.CARVED_STONE.get(), AncientAetherBlocks.CARVED_STONE_MOSAIC.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AetherBlocks.CARVED_STONE.get(), AncientAetherBlocks.CARVED_TILES.get());
-
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_TILE_STAIRS.get(), AetherBlocks.CARVED_STONE.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_TILE_SLAB.get(), AetherBlocks.CARVED_STONE.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_TILE_WALL.get(), AetherBlocks.CARVED_STONE.get());
-
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_TILE_STAIRS.get(), AncientAetherBlocks.CARVED_TILES.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_TILE_SLAB.get(), AncientAetherBlocks.CARVED_TILES.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_TILE_WALL.get(), AncientAetherBlocks.CARVED_TILES.get());
-
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get(), AetherBlocks.ANGELIC_STONE.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AetherBlocks.ANGELIC_STONE.get(), AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get());
-
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get(), AetherBlocks.HELLFIRE_STONE.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AetherBlocks.HELLFIRE_STONE.get(), AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get());
-
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get(), AetherBlocks.HOLYSTONE_BRICKS.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AetherBlocks.HOLYSTONE_BRICKS.get(), AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get());
-
         stonecuttingRecipe(consumer, RecipeCategory.DECORATIONS, AncientAetherBlocks.HOLYSTONE_VASE.get(),  AetherBlocks.HOLYSTONE.get());
         stonecuttingRecipe(consumer, RecipeCategory.DECORATIONS, AncientAetherBlocks.HOLYSTONE_VASE.get(), AetherBlocks.HOLYSTONE_BRICKS.get());
         stonecuttingRecipe(consumer, RecipeCategory.DECORATIONS, AncientAetherBlocks.MOSSY_HOLYSTONE_VASE.get(), AetherBlocks.MOSSY_HOLYSTONE.get());
