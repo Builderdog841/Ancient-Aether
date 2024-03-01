@@ -27,6 +27,7 @@ import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.util.Mth;
 import net.minecraft.world.BossEvent;
@@ -498,5 +499,10 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     @Override
     protected SoundEvent getDeathSound() {
         return AncientAetherSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_DEATH.get();
+    }
+
+    @Override
+    public @NotNull SoundSource getSoundSource() {
+        return SoundSource.HOSTILE;
     }
 }
