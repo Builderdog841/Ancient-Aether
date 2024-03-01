@@ -1,16 +1,39 @@
 {
-  "variants": {
-    "facing=east": {
-      "model": "ancient_aether:block/angelic_vase"
+  "multipart": [
+    {
+      "apply": {
+        "model": "ancient_aether:block/angelic_vase"
+      },
+      "when": {
+        "facing": "north"
+      }
     },
-    "facing=north": {
-      "model": "ancient_aether:block/angelic_vase"
+    {
+      "apply": {
+        "model": "ancient_aether:block/angelic_vase",
+        "y": 90
+      },
+      "when": {
+        "facing": "east"
+      }
     },
-    "facing=south": {
-      "model": "ancient_aether:block/angelic_vase"
+    {
+      "apply": {
+        "model": "ancient_aether:block/angelic_vase",
+        "y": 180
+      },
+      "when": {
+        "facing": "south"
+      }
     },
-    "facing=west": {
-      "model": "ancient_aether:block/angelic_vase"
+    {
+      "apply": {
+        "model": "ancient_aether:block/angelic_vase",
+        "y": 270
+      },
+      "when": {
+        "facing": "west"
+      }
     }
-  }
+  ]
 }

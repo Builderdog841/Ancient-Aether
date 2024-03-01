@@ -2,6 +2,8 @@ package net.builderdog.ancient_aether.data.providers;
 
 import com.aetherteam.aether.block.dungeon.DoorwayBlock;
 import com.aetherteam.aether.data.providers.AetherBlockStateProvider;
+import net.builderdog.ancient_aether.block.dungeon.AncientVaseBlock;
+import net.builderdog.ancient_aether.block.utility.VaseBlock;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -54,13 +56,19 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
     public void vase(Block vase) {
         ModelFile model = models().withExistingParent(name(vase), modLoc("block/template_vase"))
                 .texture("vase", texture(name(vase))).renderType("cutout");
-        getVariantBuilder(vase).forAllStates((state -> ConfiguredModel.builder().modelFile(model).build()));
+        getMultipartBuilder(vase).part().modelFile(model).rotationY(0).addModel().condition(VaseBlock.FACING, Direction.NORTH).end();
+        getMultipartBuilder(vase).part().modelFile(model).rotationY(90).addModel().condition(VaseBlock.FACING, Direction.EAST).end();
+        getMultipartBuilder(vase).part().modelFile(model).rotationY(180).addModel().condition(VaseBlock.FACING, Direction.SOUTH).end();
+        getMultipartBuilder(vase).part().modelFile(model).rotationY(270).addModel().condition(VaseBlock.FACING, Direction.WEST).end();
     }
 
     public void ancientVase(Block vase, Block vaseCopy) {
         ModelFile model = models().withExistingParent(name(vase), modLoc("block/template_vase"))
                 .texture("vase", texture(name(vaseCopy))).renderType("cutout");
-        getVariantBuilder(vase).forAllStates((state -> ConfiguredModel.builder().modelFile(model).build()));
+        getMultipartBuilder(vase).part().modelFile(model).rotationY(0).addModel().condition(AncientVaseBlock.FACING, Direction.NORTH).end();
+        getMultipartBuilder(vase).part().modelFile(model).rotationY(90).addModel().condition(AncientVaseBlock.FACING, Direction.EAST).end();
+        getMultipartBuilder(vase).part().modelFile(model).rotationY(180).addModel().condition(AncientVaseBlock.FACING, Direction.SOUTH).end();
+        getMultipartBuilder(vase).part().modelFile(model).rotationY(270).addModel().condition(AncientVaseBlock.FACING, Direction.WEST).end();
     }
 
     public void carpet(Block block, Block baseBlock) {
