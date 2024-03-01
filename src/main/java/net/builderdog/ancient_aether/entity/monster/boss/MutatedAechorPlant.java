@@ -27,6 +27,7 @@ import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.util.Mth;
 import net.minecraft.world.BossEvent;
 import net.minecraft.world.Difficulty;
@@ -61,6 +62,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     private float sinage;
     private float sinageAdd;
     private final ServerBossEvent bossFight;
+    private MostDamageTargetGoal mostDamageTargetGoal;
     @Nullable
     private BossRoomTracker<MutatedAechorPlant> laboratoryDungeon;
 
@@ -79,9 +81,9 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     protected void registerGoals() {
         goalSelector.addGoal(0,  new RangedAttackGoal(this, 1.0, 60, 10.0F));
         targetSelector.addGoal(1, new HurtByTargetGoal(this));
-        targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
-        MostDamageTargetGoal mostDamageTargetGoal = new MostDamageTargetGoal(this);
+        mostDamageTargetGoal = new MostDamageTargetGoal(this);
         targetSelector.addGoal(1, mostDamageTargetGoal);
+        targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, false));
     }
 
     //---------------------[Attribute Methods]---------------------\\
@@ -174,7 +176,6 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     @Override
     public SpawnGroupData finalizeSpawn(@NotNull ServerLevelAccessor level, @NotNull DifficultyInstance difficulty, @NotNull MobSpawnType reason, @Nullable SpawnGroupData spawnData, @Nullable CompoundTag tag) {
         setBossName(AncientAetherBossNameGenerator.generateMutatedAechorName(getRandom()));
-        setSize(getRandom().nextInt(4) + 1);
         setPos(Vec3.atBottomCenterOf(blockPosition()));
         return spawnData;
     }
@@ -213,22 +214,29 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
 
     @Override
     public boolean hurt(@NotNull DamageSource source, float amount) {
-        super.hurt(source, amount);
-        if (source.getDirectEntity() instanceof LivingEntity attacker && level().getDifficulty() != Difficulty.PEACEFUL) {
-            if (getDungeon() == null || getDungeon().isPlayerWithinRoomInterior(attacker)) {
-                if (super.hurt(source, amount) && getHealth() > 0) {
-                    if (!level().isClientSide() && !isBossFight()) {
-                        start();
+        if (source.is(DamageTypeTags.BYPASSES_INVULNERABILITY)) {
+            super.hurt(source, amount);
+            if (!level().isClientSide() && source.getEntity() instanceof LivingEntity living) {
+                mostDamageTargetGoal.addAggro(living, amount);
+            }
+        } else if (source.getDirectEntity() instanceof LivingEntity attacker && level().getDifficulty() != Difficulty.PEACEFUL) {
+                if (getDungeon() == null || getDungeon().isPlayerWithinRoomInterior(attacker)) {
+                    if (super.hurt(source, amount) && getHealth() > 0) {
+                        if (!isBossFight()) {
+                            start();
+                        }
+                        if (!level().isClientSide() && source.getEntity() instanceof LivingEntity living) {
+                            mostDamageTargetGoal.addAggro(living, amount);
+                        }
+                        return true;
                     }
-                    return true;
-                }
-            } else {
-                if (!level().isClientSide() && attacker instanceof Player player) {
-                    displayTooFarMessage(player);
-                    return false;
+                } else {
+                    if (!level().isClientSide() && attacker instanceof Player player) {
+                        displayTooFarMessage(player);
+                        return false;
+                    }
                 }
             }
-        }
         return false;
     }
 
@@ -297,8 +305,8 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         return getEntityData().get(DATA_ACTIVE_ID);
     }
 
-    public void setActive(boolean awake) {
-        getEntityData().set(DATA_ACTIVE_ID, awake);
+    public void setActive(boolean active) {
+        getEntityData().set(DATA_ACTIVE_ID, active);
     }
 
     @Nullable
