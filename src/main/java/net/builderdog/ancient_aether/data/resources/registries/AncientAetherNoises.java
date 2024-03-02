@@ -17,7 +17,7 @@ public class AncientAetherNoises {
     public static final ResourceKey<NormalNoise.NoiseParameters> VEGETATION = createKey("vegetation");
 
     private static ResourceKey<NormalNoise.NoiseParameters> createKey(String name) {
-        return ResourceKey.create(Registries.NOISE, new ResourceLocation(AncientAether.MOD_ID, name));
+        return ResourceKey.create(Registries.NOISE, new ResourceLocation(AncientAether.MODID, name));
     }
 
     public static void bootstrap(BootstapContext<NormalNoise.NoiseParameters> context) {

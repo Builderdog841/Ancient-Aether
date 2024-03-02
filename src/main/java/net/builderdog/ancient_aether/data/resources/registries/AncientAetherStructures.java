@@ -21,7 +21,7 @@ public class AncientAetherStructures {
     public static final ResourceKey<Structure> ANCIENT_DUNGEON = createKey("ancient_dungeon");
 
     private static ResourceKey<Structure> createKey(String name) {
-        return ResourceKey.create(Registries.STRUCTURE, new ResourceLocation(AncientAether.MOD_ID, name));
+        return ResourceKey.create(Registries.STRUCTURE, new ResourceLocation(AncientAether.MODID, name));
     }
 
     public static void bootstrap(BootstapContext<Structure> context) {

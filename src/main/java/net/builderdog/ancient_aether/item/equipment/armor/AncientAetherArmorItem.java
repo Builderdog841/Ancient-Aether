@@ -17,6 +17,6 @@ public class AncientAetherArmorItem extends ArmorItem {
     @Nullable
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-        return String.format("%s:textures/models/armor/%s_layer_%s.png", AncientAether.MOD_ID, getMaterial().getName(), slot == EquipmentSlot.LEGS ? 2 : 1);
+        return String.format("%s:textures/models/armor/%s_layer_%s.png", AncientAether.MODID, getMaterial().getName(), slot == EquipmentSlot.LEGS ? 2 : 1);
     }
 }

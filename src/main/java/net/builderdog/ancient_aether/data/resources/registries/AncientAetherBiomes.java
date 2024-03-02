@@ -26,6 +26,6 @@ public class AncientAetherBiomes {
     public static final ResourceKey<Biome> ATMOSINE_GROTTO = createKey("atmosine_grotto");
 
     private static ResourceKey<Biome> createKey(String name) {
-        return ResourceKey.create(Registries.BIOME, new ResourceLocation(AncientAether.MOD_ID, name));
+        return ResourceKey.create(Registries.BIOME, new ResourceLocation(AncientAether.MODID, name));
     }
 }

@@ -17,7 +17,7 @@ public class ValkyrumPendantItem extends PendantItem {
     private static final UUID REACH_UUID = UUID.fromString("AB22E1C-E2D6-4A0B-9562-55C75FE53A1D");
 
     public ValkyrumPendantItem(Properties properties) {
-        super(new ResourceLocation(AncientAether.MOD_ID, "valkyrum_pendant"), AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_VALKYRUM_PENDANT, properties);
+        super(new ResourceLocation(AncientAether.MODID, "valkyrum_pendant"), AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_VALKYRUM_PENDANT, properties);
     }
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {

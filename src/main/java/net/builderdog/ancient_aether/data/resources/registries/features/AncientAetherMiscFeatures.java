@@ -1,36 +1,20 @@
 package net.builderdog.ancient_aether.data.resources.registries.features;
 
-import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.data.resources.AetherFeatureStates;
 import com.aetherteam.aether.data.resources.builders.AetherConfiguredFeatureBuilders;
 import com.aetherteam.aether.world.feature.AetherFeatures;
+import net.builderdog.ancient_aether.data.providers.AncientAetherFeatureProvider;
 import net.builderdog.ancient_aether.data.resources.AncientAetherFeatureStates;
-import net.builderdog.ancient_aether.world.configuration.CoastConfiguration;
 import net.builderdog.ancient_aether.world.configuration.CrystalIslandConfiguration;
 import net.builderdog.ancient_aether.world.feature.AncientAetherFeatures;
 import net.builderdog.ancient_aether.world.feature.CloudbedFeature;
-import net.minecraft.core.Direction;
-import net.minecraft.core.HolderSet;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.util.random.SimpleWeightedRandomList;
-import net.minecraft.util.valueproviders.ConstantFloat;
-import net.minecraft.util.valueproviders.IntProvider;
-import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.util.valueproviders.WeightedListInt;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.BlockColumnConfiguration;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 
-import java.util.List;
-
-@SuppressWarnings("deprecation")
-public class AncientAetherMiscFeatures {
+public class AncientAetherMiscFeatures extends AncientAetherFeatureProvider {
     public static final ResourceKey<ConfiguredFeature<?, ?>> COAST_QUICKSOIL = AncientAetherFeatureUtils.registerKey("coast_quicksoil");
     public static final ResourceKey<ConfiguredFeature<?, ?>> COAST_GRAVITY_GRAVEL = AncientAetherFeatureUtils.registerKey("coast_gravity_gravel");
     public static final ResourceKey<ConfiguredFeature<?, ?>> COAST_WYND_ICE = AncientAetherFeatureUtils.registerKey("coast_wynd_ice");
@@ -40,28 +24,6 @@ public class AncientAetherMiscFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> CLOUDBED = AncientAetherFeatureUtils.registerKey("cloudbed");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CRYSTAL_ISLAND_FROZEN = AncientAetherFeatureUtils.registerKey("crystal_island_frozen");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CRYSTAL_ISLAND_PALE = AncientAetherFeatureUtils.registerKey("crystal_island_pale");
-
-    private static BlockColumnConfiguration createSkyrootLeafVine(int length) {
-        return new BlockColumnConfiguration(List.of(
-                BlockColumnConfiguration.layer(new WeightedListInt(SimpleWeightedRandomList.<IntProvider>builder()
-                        .add(UniformInt.of(1, length), 2)
-                        .add(UniformInt.of(1, 2), 3)
-                        .add(UniformInt.of(1, 6), 10)
-                        .build()), BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LEAVES.setValue(BlockStateProperties.PERSISTENT, true)))),
-                Direction.DOWN,
-                BlockPredicate.ONLY_IN_AIR_PREDICATE,
-                true);
-    }
-
-    private static CoastConfiguration createCoast(BlockState coastState, int minHeight, int maxHeight) {
-        return new CoastConfiguration(
-                BlockStateProvider.simple(coastState),
-                ConstantFloat.of(6.6282032F),
-                ConstantFloat.of(4.4641016F),
-                UniformInt.of(minHeight, maxHeight),
-                HolderSet.direct(Block::builtInRegistryHolder, AetherBlocks.AETHER_GRASS_BLOCK.get())
-        );
-    }
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         AncientAetherFeatureUtils.register(context, COAST_QUICKSOIL, AncientAetherFeatures.COAST.get(), createCoast(AetherFeatureStates.QUICKSOIL, 96, 128));

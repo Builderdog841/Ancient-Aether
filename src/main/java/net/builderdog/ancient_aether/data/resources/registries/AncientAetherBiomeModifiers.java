@@ -49,7 +49,7 @@ public class AncientAetherBiomeModifiers {
     public static final ResourceKey<BiomeModifier> AETHER_SURFACE_CAVE_BIOME_MODIFIER = createKey("aether_surface_cave_biome_modifier");
 
     private static ResourceKey<BiomeModifier> createKey(String name) {
-        return ResourceKey.create(ForgeRegistries.Keys.BIOME_MODIFIERS, new ResourceLocation(AncientAether.MOD_ID, name));
+        return ResourceKey.create(ForgeRegistries.Keys.BIOME_MODIFIERS, new ResourceLocation(AncientAether.MODID, name));
     }
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {

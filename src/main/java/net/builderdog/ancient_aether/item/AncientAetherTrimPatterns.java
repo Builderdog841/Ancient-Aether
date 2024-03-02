@@ -19,6 +19,6 @@ public class AncientAetherTrimPatterns {
     public static final ResourceKey<TrimPattern> ANCIENT = createKey("ancient");
 
     private static ResourceKey<TrimPattern> createKey(String name) {
-        return ResourceKey.create(Registries.TRIM_PATTERN, new ResourceLocation(AncientAether.MOD_ID, name));
+        return ResourceKey.create(Registries.TRIM_PATTERN, new ResourceLocation(AncientAether.MODID, name));
     }
 }

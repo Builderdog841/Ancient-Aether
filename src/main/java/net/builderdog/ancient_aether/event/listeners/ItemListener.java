@@ -11,7 +11,7 @@ import net.minecraftforge.fml.common.Mod;
 
 import java.util.List;
 
-@Mod.EventBusSubscriber(modid = AncientAether.MOD_ID)
+@Mod.EventBusSubscriber(modid = AncientAether.MODID)
 public class ItemListener {
 
     @SubscribeEvent(priority = EventPriority.LOWEST)

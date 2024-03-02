@@ -7,8 +7,8 @@ import net.builderdog.ancient_aether.entity.misc.AeronauticDart;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherChestBoatEntity;
 import net.builderdog.ancient_aether.entity.misc.MutatedAechorNeedle;
-import net.builderdog.ancient_aether.entity.monster.Roothyrn;
 import net.builderdog.ancient_aether.entity.monster.AeronauticLeaper;
+import net.builderdog.ancient_aether.entity.monster.Roothyrn;
 import net.builderdog.ancient_aether.entity.monster.boss.MutatedAechorPlant;
 import net.builderdog.ancient_aether.entity.passive.Fluffalo;
 import net.builderdog.ancient_aether.entity.passive.WyndcapsAnimal;
@@ -26,18 +26,18 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-@Mod.EventBusSubscriber(modid = AncientAether.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = AncientAether.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class AncientAetherEntityTypes {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
-            DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, AncientAether.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, AncientAether.MODID);
 
     public static final RegistryObject<EntityType<Fluffalo>> FLUFFALO = ENTITY_TYPES.register("fluffalo",
-            () -> EntityType.Builder.of(Fluffalo::new, MobCategory.CREATURE).sized(1.5F, 1.75F).clientTrackingRange(10).build(new ResourceLocation(AncientAether.MOD_ID, "fluffalo").toString()));
+            () -> EntityType.Builder.of(Fluffalo::new, MobCategory.CREATURE).sized(1.5F, 1.75F).clientTrackingRange(10).build(new ResourceLocation(AncientAether.MODID, "fluffalo").toString()));
 
     public static final RegistryObject<EntityType<Swet>> FESTIVE_SWET = ENTITY_TYPES.register("festive_swet",
             () -> EntityType.Builder.of(Swet::new, AetherMobCategory.AETHER_SURFACE_MONSTER).sized(0.9F, 0.95F).clientTrackingRange(10).build("festive_swet"));
     public static final RegistryObject<EntityType<Roothyrn>> ROOTHYRN = ENTITY_TYPES.register("roothyrn",
-            () -> EntityType.Builder.of(Roothyrn::new, MobCategory.MONSTER).sized(0.7F, 0.7F).clientTrackingRange(16).build(new ResourceLocation(AncientAether.MOD_ID, "roothyrn").toString()));
+            () -> EntityType.Builder.of(Roothyrn::new, MobCategory.MONSTER).sized(0.7F, 0.7F).clientTrackingRange(16).build(new ResourceLocation(AncientAether.MODID, "roothyrn").toString()));
     public static final RegistryObject<EntityType<AeronauticLeaper>> AERONAUTIC_LEAPER = ENTITY_TYPES.register("aeronautic_leaper",
             () -> EntityType.Builder.of(AeronauticLeaper::new, MobCategory.MONSTER).sized(2.0F, 2.0F).clientTrackingRange(10).build("aeronautic_leaper"));
 

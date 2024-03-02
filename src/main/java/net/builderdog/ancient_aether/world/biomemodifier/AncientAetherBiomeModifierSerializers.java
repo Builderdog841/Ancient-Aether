@@ -11,7 +11,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class AncientAetherBiomeModifierSerializers {
-    public static final DeferredRegister<Codec<? extends BiomeModifier>> BIOME_MODIFIER_SERIALIZERS = DeferredRegister.create(ForgeRegistries.Keys.BIOME_MODIFIER_SERIALIZERS, AncientAether.MOD_ID);
+    public static final DeferredRegister<Codec<? extends BiomeModifier>> BIOME_MODIFIER_SERIALIZERS = DeferredRegister.create(ForgeRegistries.Keys.BIOME_MODIFIER_SERIALIZERS, AncientAether.MODID);
 
     static RegistryObject<Codec<CarverModifier>> CARVER_CODEC = BIOME_MODIFIER_SERIALIZERS.register("add_carver", () ->
             RecordCodecBuilder.create(builder -> builder.group(

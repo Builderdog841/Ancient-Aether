@@ -151,7 +151,7 @@ public class AncientAetherProcessorLists {
     }
 
     private static ResourceKey<StructureProcessorList> createKey(String name) {
-        return ResourceKey.create(Registries.PROCESSOR_LIST, new ResourceLocation(AncientAether.MOD_ID, name));
+        return ResourceKey.create(Registries.PROCESSOR_LIST, new ResourceLocation(AncientAether.MODID, name));
     }
 
     private static void register(BootstapContext<StructureProcessorList> context, ResourceKey<StructureProcessorList> resourceKey, List<StructureProcessor> list) {

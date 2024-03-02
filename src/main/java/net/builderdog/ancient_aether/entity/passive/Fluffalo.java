@@ -6,7 +6,7 @@ import com.aetherteam.aether.entity.passive.AetherAnimal;
 import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
-import net.builderdog.ancient_aether.data.generators.loot.AncientAetherLoot;
+import net.builderdog.ancient_aether.data.resources.AncientAetherLoot;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;

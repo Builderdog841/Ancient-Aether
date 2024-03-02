@@ -2,6 +2,7 @@ package net.builderdog.ancient_aether.data.generators.loot;
 
 import com.aetherteam.aether.item.AetherItems;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
+import net.builderdog.ancient_aether.data.resources.AncientAetherLoot;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.data.loot.EntityLootSubProvider;

@@ -21,7 +21,7 @@ public abstract class AncientAetherItemModelProvider extends AetherItemModelProv
     public void simpleItem(RegistryObject<Item> item) {
         withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated"))
-                .texture("layer0", new ResourceLocation(AncientAether.MOD_ID, "item/" + item.getId().getPath()));
+                .texture("layer0", new ResourceLocation(AncientAether.MODID, "item/" + item.getId().getPath()));
     }
 
     public void itemBlockCopy(Block block, Block blockCopy) {

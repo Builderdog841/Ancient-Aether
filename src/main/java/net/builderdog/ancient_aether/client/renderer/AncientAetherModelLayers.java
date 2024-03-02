@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.client.renderer.entity;
+package net.builderdog.ancient_aether.client.renderer;
 
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.resources.ResourceLocation;

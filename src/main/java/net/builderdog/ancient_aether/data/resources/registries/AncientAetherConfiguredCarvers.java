@@ -22,7 +22,7 @@ public class AncientAetherConfiguredCarvers {
     public static final ResourceKey<ConfiguredWorldCarver<?>> AETHER_GROTTO_CAVE = createKey("aether_grotto_cave");
 
     private static ResourceKey<ConfiguredWorldCarver<?>> createKey(String name) {
-        return ResourceKey.create(Registries.CONFIGURED_CARVER, new ResourceLocation(AncientAether.MOD_ID, name));
+        return ResourceKey.create(Registries.CONFIGURED_CARVER, new ResourceLocation(AncientAether.MODID, name));
     }
 
     private static ConfiguredWorldCarver<?> createBaseAetherCave(HolderGetter<Block> blocks, float probability, int maxY, float minYScale, float maxYScale, float minHorizontal, float maxHorizontal, float minVertical, float maxVertical) {

@@ -7,6 +7,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
 public class AncientAetherStructureTypes {
-    public static final DeferredRegister<StructureType<?>> STRUCTURE_TYPES = DeferredRegister.create(Registries.STRUCTURE_TYPE, AncientAether.MOD_ID);
+    public static final DeferredRegister<StructureType<?>> STRUCTURE_TYPES = DeferredRegister.create(Registries.STRUCTURE_TYPE, AncientAether.MODID);
     public static final RegistryObject<StructureType<AdvancedJigsawStructure>> ADVANCED_JIGSAW_STRUCTURE = STRUCTURE_TYPES.register("advanced_jigsaw_structure", () -> () -> AdvancedJigsawStructure.CODEC);
 }

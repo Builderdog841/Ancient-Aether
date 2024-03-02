@@ -1,12 +1,14 @@
 package net.builderdog.ancient_aether.event.hooks;
 
 import com.aetherteam.aether.item.AetherItems;
+import com.legacy.lost_aether.registry.LCItems;
 import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.fml.ModList;
 
 import java.util.List;
 
@@ -78,13 +80,15 @@ public class ItemHooks {
             components.add(position, Component.literal("4 " + "Mid-Air Jumps").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
             components.add(position + 1, Component.literal("Very Fast " + "Speed").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
         }
-        if (stack.is(AncientAetherTags.Items.COMPAT_ORANGE_MOA_EGG)) {
-            components.add(position, Component.literal("2 " + "Mid-Air Jumps").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
-            components.add(position + 1, Component.literal("Hyper Fast " + "Speed").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
-        }
-        if (stack.is(AncientAetherTags.Items.COMPAT_BROWN_MOA_EGG)) {
-            components.add(position, Component.literal("3 " + "Mid-Air Jumps").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
-            components.add(position + 1, Component.literal("Very Fast " + "Speed").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+        if(ModList.get().isLoaded("lost_aether_content")) {
+            if (stack.is(LCItems.orange_moa_egg)) {
+                components.add(position, Component.literal("2 " + "Mid-Air Jumps").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+                components.add(position + 1, Component.literal("Hyper Fast " + "Speed").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+            }
+            if (stack.is(LCItems.brown_moa_egg)) {
+                components.add(position, Component.literal("3 " + "Mid-Air Jumps").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+                components.add(position + 1, Component.literal("Very Fast " + "Speed").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+            }
         }
     }
 }

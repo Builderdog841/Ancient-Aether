@@ -17,7 +17,7 @@ public class AncientPendantItem extends PendantItem {
     private static final UUID ATTACK_SPEED_UUID = UUID.fromString("B022E1C-E2D5-4A0B-9562-55C75FE53A1E");
 
     public AncientPendantItem(Properties properties) {
-        super(new ResourceLocation(AncientAether.MOD_ID, "ancient_pendant"), AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_ANCIENT_PENDANT, properties);
+        super(new ResourceLocation(AncientAether.MODID, "ancient_pendant"), AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_ANCIENT_PENDANT, properties);
     }
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {

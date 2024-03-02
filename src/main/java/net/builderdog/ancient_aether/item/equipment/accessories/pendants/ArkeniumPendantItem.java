@@ -17,7 +17,7 @@ public class ArkeniumPendantItem extends PendantItem {
     private static final UUID ARMOR_TOUGHNESS_UUID = UUID.fromString("CB33E1C-E2D6-4A0B-9562-55C25FE53A1E");
 
     public ArkeniumPendantItem(Properties properties) {
-        super(new ResourceLocation(AncientAether.MOD_ID, "arkenium_pendant"), AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_ARKENIUM_PENDANT, properties);
+        super(new ResourceLocation(AncientAether.MODID, "arkenium_pendant"), AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_ARKENIUM_PENDANT, properties);
     }
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {

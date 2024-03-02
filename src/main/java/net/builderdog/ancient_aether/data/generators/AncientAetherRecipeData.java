@@ -8,7 +8,7 @@ import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.data.providers.AncientAetherRecipeProvider;
-import net.builderdog.ancient_aether.entity.passive.AncientAetherMoaTypes;
+import net.builderdog.ancient_aether.entity.AncientAetherMoaTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -26,7 +26,7 @@ import java.util.function.Consumer;
 
 public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
     public AncientAetherRecipeData(PackOutput output) {
-        super(output, AncientAether.MOD_ID);
+        super(output, AncientAether.MODID);
     }
 
     @Override

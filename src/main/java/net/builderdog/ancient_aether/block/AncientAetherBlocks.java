@@ -26,7 +26,7 @@ import net.builderdog.ancient_aether.block.utility.AmbrosiumCampfireBlock;
 import net.builderdog.ancient_aether.block.utility.CrackedSliderBlock;
 import net.builderdog.ancient_aether.block.utility.VaseBlock;
 import net.builderdog.ancient_aether.block.utility.WindBlowerBlock;
-import net.builderdog.ancient_aether.data.generators.loot.AncientAetherLoot;
+import net.builderdog.ancient_aether.data.resources.AncientAetherLoot;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.builderdog.ancient_aether.world.treegrower.*;
@@ -54,7 +54,7 @@ import static net.minecraft.world.level.block.Blocks.*;
 
 public class AncientAetherBlocks {
     public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS, AncientAether.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.BLOCKS, AncientAether.MODID);
 
     public static final RegistryObject<Block> HIGHSPROOT_LOG = registerBlock("highsproot_log", () -> new AetherLogBlock(BlockBehaviour.Properties.copy(SKYROOT_LOG.get())));
     public static final RegistryObject<Block> HIGHSPROOT_WOOD = registerBlock("highsproot_wood", () -> new AetherLogBlock(BlockBehaviour.Properties.copy(SKYROOT_WOOD.get())));

@@ -12,8 +12,8 @@ import net.minecraftforge.common.ToolActions;
 import java.util.Map;
 
 public class AbilityHooks {
-    public static class ArmorHooks {
 
+    public static class ArmorHooks {
         public static boolean fallCancellation(LivingEntity entity) {
             return EquipmentUtil.hasFullValkyrumSet(entity);
         }

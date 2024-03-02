@@ -17,7 +17,7 @@ public class AncientAetherTags {
         public static final TagKey<Block> SENTRY_LABORATORY_BLOCKS = tag("sentry_laboratory_blocks");
 
         private static TagKey<Block> tag(String name) {
-            return TagKey.create(Registries.BLOCK, new ResourceLocation(AncientAether.MOD_ID, name));
+            return TagKey.create(Registries.BLOCK, new ResourceLocation(AncientAether.MODID, name));
         }
     }
     public static class Items {
@@ -32,11 +32,9 @@ public class AncientAetherTags {
         public static final TagKey<Item> VALKYRUM_REPAIRING = tag("valkyrum_repairing");
         public static final TagKey<Item> ANCIENT_REPAIRING = tag("ancient_repairing");
         public static final TagKey<Item> ARKZENUS_REPAIRING = tag("arkzenus_repairing");
-        public static final TagKey<Item> COMPAT_ORANGE_MOA_EGG = tag("compat/orange_moa_egg");
-        public static final TagKey<Item> COMPAT_BROWN_MOA_EGG = tag("compat/brown_moa_egg");
 
         private static TagKey<Item> tag(String name) {
-            return TagKey.create(Registries.ITEM, new ResourceLocation(AncientAether.MOD_ID, name));
+            return TagKey.create(Registries.ITEM, new ResourceLocation(AncientAether.MODID, name));
         }
     }
 
@@ -69,7 +67,7 @@ public class AncientAetherTags {
         public static final TagKey<Biome> IS_SKYROOT_FOREST = tag("is_skyroot_forest");
 
         private static TagKey<Biome> tag(String name) {
-            return TagKey.create(Registries.BIOME, new ResourceLocation(AncientAether.MOD_ID, name));
+            return TagKey.create(Registries.BIOME, new ResourceLocation(AncientAether.MODID, name));
         }
     }
 }

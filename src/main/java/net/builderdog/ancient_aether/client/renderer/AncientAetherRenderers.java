@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.client.renderer.entity;
+package net.builderdog.ancient_aether.client.renderer;
 
 import com.aetherteam.aether.capability.player.AetherPlayer;
 import com.aetherteam.aether.client.renderer.accessory.GlovesRenderer;
@@ -7,6 +7,7 @@ import com.aetherteam.aether.client.renderer.entity.model.ValkyrieWingsModel;
 import com.aetherteam.aether.client.renderer.player.layer.DartLayer;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
+import net.builderdog.ancient_aether.client.renderer.entity.*;
 import net.builderdog.ancient_aether.client.renderer.entity.model.*;
 import net.builderdog.ancient_aether.client.renderer.player.layer.ValkyrumWingsLayer;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
@@ -49,8 +50,8 @@ public class AncientAetherRenderers {
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
         for (AncientAetherBoatEntity.Type type : AncientAetherBoatEntity.Type.values()) {
-            event.registerLayerDefinition(new ModelLayerLocation(new ResourceLocation(AncientAether.MOD_ID, type.getModelLocation()), "main"), BoatModel::createBodyModel);
-            event.registerLayerDefinition(new ModelLayerLocation(new ResourceLocation(AncientAether.MOD_ID, type.getChestModelLocation()), "main"), ChestBoatModel::createBodyModel);
+            event.registerLayerDefinition(new ModelLayerLocation(new ResourceLocation(AncientAether.MODID, type.getModelLocation()), "main"), BoatModel::createBodyModel);
+            event.registerLayerDefinition(new ModelLayerLocation(new ResourceLocation(AncientAether.MODID, type.getChestModelLocation()), "main"), ChestBoatModel::createBodyModel);
             event.registerLayerDefinition(AncientAetherModelLayers.FLUFFALO, FluffaloModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.FESTIVE_SWET, FestiveSwetModel::createInnerBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.FESTIVE_SWET_OUTER, FestiveSwetModel::createOuterBodyLayer);

@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.entity.passive;
+package net.builderdog.ancient_aether.entity;
 
 import com.aetherteam.aether.api.AetherMoaTypes;
 import com.aetherteam.aether.api.registers.MoaType;
@@ -8,7 +8,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
 public class AncientAetherMoaTypes {
-    public static final DeferredRegister<MoaType> MOA_TYPES = DeferredRegister.create(AetherMoaTypes.MOA_TYPE_REGISTRY_KEY, AncientAether.MOD_ID);
+    public static final DeferredRegister<MoaType> MOA_TYPES = DeferredRegister.create(AetherMoaTypes.MOA_TYPE_REGISTRY_KEY, AncientAether.MODID);
 
     public static final RegistryObject<MoaType> TURQUOISE = MOA_TYPES.register("turquoise",
             () -> new MoaType((new MoaType.Properties())

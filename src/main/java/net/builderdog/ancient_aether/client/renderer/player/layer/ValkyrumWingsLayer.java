@@ -3,10 +3,9 @@ package net.builderdog.ancient_aether.client.renderer.player.layer;
 import com.aetherteam.aether.client.renderer.entity.model.ValkyrieWingsModel;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.capability.player.AncientAetherPlayer;
-import net.builderdog.ancient_aether.client.renderer.entity.AncientAetherModelLayers;
+import net.builderdog.ancient_aether.client.renderer.AncientAetherModelLayers;
 import net.builderdog.ancient_aether.item.equipment.armor.EquipmentUtil;
 import net.minecraft.client.model.PlayerModel;
 import net.minecraft.client.model.geom.EntityModelSet;
@@ -21,7 +20,7 @@ import net.minecraft.world.entity.player.Player;
 import org.jetbrains.annotations.NotNull;
 
 public class ValkyrumWingsLayer<T extends Player, M extends PlayerModel<T>> extends RenderLayer<T, M> {
-    private static final ResourceLocation WINGS_TEXTURE = new ResourceLocation(AncientAether.MOD_ID, "textures/models/valkyrum_wings.png");
+    private static final ResourceLocation WINGS_TEXTURE = new ResourceLocation(AncientAether.MODID, "textures/models/valkyrum_wings.png");
     private final ValkyrieWingsModel<Player> wings;
 
     public ValkyrumWingsLayer(RenderLayerParent<T, M> entityRenderer, EntityModelSet modelSet) {

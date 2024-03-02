@@ -7,7 +7,7 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = AncientAether.MOD_ID)
+@Mod.EventBusSubscriber(modid = AncientAether.MODID)
 public class CapabilityListener {
 
     @SubscribeEvent

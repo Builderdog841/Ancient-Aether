@@ -39,8 +39,8 @@ public class AncientAetherBoatRenderer<T extends AncientAetherBoatEntity> extend
 
     private ListModel<Boat> createBoatModel(EntityRendererProvider.Context renderer, AncientAetherBoatEntity.Type type, boolean hasChest) {
         ModelLayerLocation modelLayerLocation = hasChest ?
-                new ModelLayerLocation(new ResourceLocation(AncientAether.MOD_ID, type.getChestModelLocation()), "main")
-                : new ModelLayerLocation(new ResourceLocation(AncientAether.MOD_ID, type.getModelLocation()), "main");
+                new ModelLayerLocation(new ResourceLocation(AncientAether.MODID, type.getChestModelLocation()), "main")
+                : new ModelLayerLocation(new ResourceLocation(AncientAether.MODID, type.getModelLocation()), "main");
         ModelPart modelPart = renderer.bakeLayer(modelLayerLocation);
         return hasChest ? new ChestBoatModel(modelPart) : new BoatModel(modelPart);
     }

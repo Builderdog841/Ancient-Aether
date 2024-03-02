@@ -48,6 +48,6 @@ public class AncientAetherRegistrySets extends DatapackBuiltinEntriesProvider {
             .add(Registries.CONFIGURED_CARVER, AncientAetherConfiguredCarvers::bootstrap);
 
     public AncientAetherRegistrySets(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, registries, BUILDER, Set.of(AncientAether.MOD_ID));
+        super(output, registries, BUILDER, Set.of(AncientAether.MODID));
     }
 }

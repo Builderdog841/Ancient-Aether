@@ -9,7 +9,7 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
     public AncientAetherItemModelData(PackOutput output, ExistingFileHelper existingFileHelper) {
-        super(output, AncientAether.MOD_ID, existingFileHelper);
+        super(output, AncientAether.MODID, existingFileHelper);
     }
 
     @Override

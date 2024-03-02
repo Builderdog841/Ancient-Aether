@@ -9,7 +9,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class AncientAetherCarvers {
 
-    public static final DeferredRegister<WorldCarver<?>> CARVERS = DeferredRegister.create(Registries.CARVER, AncientAether.MOD_ID);
+    public static final DeferredRegister<WorldCarver<?>> CARVERS = DeferredRegister.create(Registries.CARVER, AncientAether.MODID);
 
     public static RegistryObject<WorldCarver<CaveCarverConfiguration>> SKYLANDS_CAVE = CARVERS.register("skylands_cave", () -> new SkylandsCarver(CaveCarverConfiguration.CODEC));
 }

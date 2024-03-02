@@ -8,7 +8,7 @@ import net.minecraftforge.common.data.SoundDefinitionsProvider;
 
 public class AncientAetherSoundData extends SoundDefinitionsProvider {
     public AncientAetherSoundData(PackOutput output, ExistingFileHelper helper) {
-        super(output, AncientAether.MOD_ID, helper);
+        super(output, AncientAether.MODID, helper);
     }
 
     @Override

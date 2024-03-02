@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.data.generators.loot;
+package net.builderdog.ancient_aether.data.resources;
 
 import net.builderdog.ancient_aether.AncientAether;
 import net.minecraft.resources.ResourceLocation;
@@ -29,7 +29,7 @@ public class AncientAetherLoot {
     public static final ResourceLocation ENTITIES_FLUFFALO_SHEARED = register("entities/fluffalo_sheared");
 
     private static ResourceLocation register(String id) {
-        return register(new ResourceLocation(AncientAether.MOD_ID, id));
+        return register(new ResourceLocation(AncientAether.MODID, id));
     }
 
     private static ResourceLocation register(ResourceLocation id) {

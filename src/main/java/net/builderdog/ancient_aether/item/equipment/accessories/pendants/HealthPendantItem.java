@@ -17,7 +17,7 @@ public class HealthPendantItem extends PendantItem {
     private static final UUID HEALTH_UUID = UUID.fromString("A022E1C-E2D5-4A0B-9562-55C75FE53A1E");
 
     public HealthPendantItem(Properties properties) {
-        super(new ResourceLocation(AncientAether.MOD_ID, "health_pendant"), AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_HEALTH_PENDANT, properties);
+        super(new ResourceLocation(AncientAether.MODID, "health_pendant"), AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_HEALTH_PENDANT, properties);
     }
 
     @Override

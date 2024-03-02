@@ -10,8 +10,8 @@ import com.aetherteam.aether.item.miscellaneous.MoaEggItem;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
+import net.builderdog.ancient_aether.entity.AncientAetherMoaTypes;
 import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
-import net.builderdog.ancient_aether.entity.passive.AncientAetherMoaTypes;
 import net.builderdog.ancient_aether.item.equipment.AncientAetherArmorTiers;
 import net.builderdog.ancient_aether.item.equipment.accessories.miscellaneous.StrengthStoneItem;
 import net.builderdog.ancient_aether.item.equipment.accessories.pendants.*;
@@ -38,7 +38,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class AncientAetherItems {
     public static final DeferredRegister<Item> ITEMS =
-           DeferredRegister.create(ForgeRegistries.ITEMS, AncientAether.MOD_ID);
+           DeferredRegister.create(ForgeRegistries.ITEMS, AncientAether.MODID);
     public static final Component COMMON = Component.translatable("ancient_aether.tooltip.common").withStyle(Style.EMPTY.withItalic(true).withColor(ChatFormatting.GRAY));
     public static final Component RARE = Component.translatable("ancient_aether.tooltip.rare").withStyle(Style.EMPTY.withItalic(true).withColor(ChatFormatting.AQUA));
     public static final Component EPIC = Component.translatable("ancient_aether.tooltip.epic").withStyle(Style.EMPTY.withItalic(true).withColor(ChatFormatting.DARK_PURPLE));
@@ -46,8 +46,8 @@ public class AncientAetherItems {
 
     public static final RegistryObject<Item> VALKYRUM = ITEMS.register("valkyrum", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ANCIENT_RUNE = ITEMS.register("ancient_rune", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> LABORATORY_DUNGEON_KEY = ITEMS.register("laboratory_dungeon_key", () -> new DungeonKeyItem(new ResourceLocation(AncientAether.MOD_ID, "laboratory"), new Item.Properties().stacksTo(1).fireResistant()));
-    public static final RegistryObject<Item> ANCIENT_DUNGEON_KEY = ITEMS.register("ancient_dungeon_key", () -> new DungeonKeyItem(new ResourceLocation(AncientAether.MOD_ID, "ancient"), new Item.Properties().stacksTo(1).fireResistant()));
+    public static final RegistryObject<Item> LABORATORY_DUNGEON_KEY = ITEMS.register("laboratory_dungeon_key", () -> new DungeonKeyItem(new ResourceLocation(AncientAether.MODID, "laboratory"), new Item.Properties().stacksTo(1).fireResistant()));
+    public static final RegistryObject<Item> ANCIENT_DUNGEON_KEY = ITEMS.register("ancient_dungeon_key", () -> new DungeonKeyItem(new ResourceLocation(AncientAether.MODID, "ancient"), new Item.Properties().stacksTo(1).fireResistant()));
 
     public static final RegistryObject<Item> HIGHSPROOT_SIGN = ITEMS.register("highsproot_sign", () -> new SignItem(new Item.Properties().stacksTo(16), AncientAetherBlocks.HIGHSPROOT_SIGN.get(), AncientAetherBlocks.HIGHSPROOT_WALL_SIGN.get()));
     public static final RegistryObject<Item> SAKURA_SIGN = ITEMS.register("sakura_sign", () -> new SignItem(new Item.Properties().stacksTo(16), AncientAetherBlocks.SAKURA_SIGN.get(), AncientAetherBlocks.SAKURA_WALL_SIGN.get()));

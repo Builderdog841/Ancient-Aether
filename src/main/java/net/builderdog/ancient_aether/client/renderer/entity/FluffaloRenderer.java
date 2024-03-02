@@ -1,6 +1,7 @@
 package net.builderdog.ancient_aether.client.renderer.entity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
+import net.builderdog.ancient_aether.client.renderer.AncientAetherModelLayers;
 import net.builderdog.ancient_aether.client.renderer.entity.model.FluffaloModel;
 import net.builderdog.ancient_aether.entity.passive.Fluffalo;
 import net.minecraft.client.renderer.MultiBufferSource;

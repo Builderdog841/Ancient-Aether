@@ -8,7 +8,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class AncientAetherSoundEvents {
-    public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, AncientAether.MOD_ID);
+    public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, AncientAether.MODID);
 
     public static final RegistryObject<SoundEvent> BLOCK_ROOTHYRN_TRAP_TRIGGER = register("block.roothyrn_trap.trigger");
     public static final RegistryObject<SoundEvent> BLOCK_OBELISK_ACTIVATION = register("block.obelisk.activation");
@@ -36,6 +36,6 @@ public class AncientAetherSoundEvents {
     public static final RegistryObject<SoundEvent> ENTITY_MUTATED_AECHOR_PLANT_DEATH = register("entity.mutated_aechor_plant.death");
 
     private static RegistryObject<SoundEvent> register(String name) {
-        return SOUNDS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(AncientAether.MOD_ID, name)));
+        return SOUNDS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(AncientAether.MODID, name)));
     }
 }

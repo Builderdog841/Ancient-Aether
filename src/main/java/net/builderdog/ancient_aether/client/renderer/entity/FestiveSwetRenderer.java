@@ -2,6 +2,7 @@ package net.builderdog.ancient_aether.client.renderer.entity;
 
 import com.aetherteam.aether.entity.monster.Swet;
 import com.mojang.blaze3d.vertex.PoseStack;
+import net.builderdog.ancient_aether.client.renderer.AncientAetherModelLayers;
 import net.builderdog.ancient_aether.client.renderer.entity.layers.FestiveSwetOuterLayer;
 import net.builderdog.ancient_aether.client.renderer.entity.model.FestiveSwetModel;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
