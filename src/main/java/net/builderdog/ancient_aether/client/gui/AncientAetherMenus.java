@@ -19,8 +19,8 @@ public class AncientAetherMenus {
     private static final ResourceLocation ANCIENT_AETHER_ICON = new ResourceLocation(AncientAether.MODID, "textures/gui/menu_api/menu_icon_ancient_aether.png");
     private static final Component ANCIENT_AETHER_NAME = Component.translatable("ancient_aether.menu_title.ancient_aether");
 
-    private static final ResourceLocation ANCIENT_AETHER_REGULAR_BACKGROUND = new ResourceLocation(Aether.MODID, "textures/gui/title/options_background.png");
-    private static final ResourceLocation ANCIENT_AETHER_DARK_BACKGROUND = new ResourceLocation(Aether.MODID, "textures/gui/title/light_sentry_background.png");
+    private static final ResourceLocation ANCIENT_AETHER_REGULAR_BACKGROUND = new ResourceLocation(AncientAether.MODID, "textures/gui/title/options_background.png");
+    private static final ResourceLocation ANCIENT_AETHER_DARK_BACKGROUND = new ResourceLocation(AncientAether.MODID, "textures/gui/title/dark_options_background.png");
     private static final ResourceLocation ANCIENT_AETHER_HEADER_SEPARATOR = new ResourceLocation(Aether.MODID, "textures/gui/title/header_separator.png");
     private static final ResourceLocation ANCIENT_AETHER_FOOTER_SEPARATOR = new ResourceLocation(Aether.MODID, "textures/gui/title/footer_separator.png");
     private static final ResourceLocation ANCIENT_AETHER_TAB_BUTTON = new ResourceLocation(Aether.MODID, "textures/gui/title/tab_button.png");
