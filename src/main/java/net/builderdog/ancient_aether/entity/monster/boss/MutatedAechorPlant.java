@@ -221,23 +221,23 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
                 mostDamageTargetGoal.addAggro(living, amount);
             }
         } else if (source.getDirectEntity() instanceof LivingEntity attacker && level().getDifficulty() != Difficulty.PEACEFUL) {
-                if (getDungeon() == null || getDungeon().isPlayerWithinRoomInterior(attacker)) {
-                    if (super.hurt(source, amount) && getHealth() > 0) {
-                        if (!isBossFight()) {
-                            start();
-                        }
-                        if (!level().isClientSide() && source.getEntity() instanceof LivingEntity living) {
-                            mostDamageTargetGoal.addAggro(living, amount);
-                        }
-                        return true;
+            if (getDungeon() == null || getDungeon().isPlayerWithinRoomInterior(attacker)) {
+                if (super.hurt(source, amount) && getHealth() > 0) {
+                    if (!isBossFight()) {
+                        start();
                     }
-                } else {
-                    if (!level().isClientSide() && attacker instanceof Player player) {
-                        displayTooFarMessage(player);
-                        return false;
+                    if (!level().isClientSide() && source.getEntity() instanceof LivingEntity living) {
+                        mostDamageTargetGoal.addAggro(living, amount);
                     }
+                    return true;
+                }
+            } else {
+                if (!level().isClientSide() && attacker instanceof Player player) {
+                    displayTooFarMessage(player);
+                    return false;
                 }
             }
+        }
         return false;
     }
 
