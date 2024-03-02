@@ -139,6 +139,8 @@ dependencies {
     //runtimeOnly fg.deobf("locadeobfl:aether-redux:2.0-pre9.1-1.20.1-neoforge")
     //runtimeOnly fg.("curse.maven:aether-lost-content-318602:4927038")
     //runtimeOnly fg.deobf("curse.maven:structure-gel-api-378802:4975615")
+    implementation fg.deobf("curse.maven:panoramica-426082:4019292")
+    implementation fg.deobf("curse.maven:konkrete-410295:5028413")
 }
 
 jar {

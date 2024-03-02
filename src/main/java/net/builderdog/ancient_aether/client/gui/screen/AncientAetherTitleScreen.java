@@ -1,6 +1,5 @@
 package net.builderdog.ancient_aether.client.gui.screen;
 
-import com.aetherteam.aether.Aether;
 import com.aetherteam.aether.AetherConfig;
 import com.aetherteam.aether.client.AetherSoundEvents;
 import com.aetherteam.aether.client.gui.component.menu.DynamicMenuButton;
@@ -35,7 +34,7 @@ public class AncientAetherTitleScreen extends TitleScreen implements TitleScreen
     private static final ResourceLocation PANORAMA_OVERLAY = new ResourceLocation("textures/gui/title/background/panorama_overlay.png");
     private static final ResourceLocation ANCIENT_AETHER_LOGO = new ResourceLocation(AncientAether.MODID, "textures/gui/title/ancient_aether.png");
     public static final Music MENU = new Music(AetherSoundEvents.MUSIC_MENU.getHolder().orElseThrow(), 20, 600, true);
-    private final PanoramaRenderer panorama = new PanoramaRenderer(new CubeMap(new ResourceLocation(Aether.MODID, "textures/gui/title/panorama/panorama")));
+    private final PanoramaRenderer panorama = new PanoramaRenderer(new CubeMap(new ResourceLocation(AncientAether.MODID, "textures/gui/title/panorama/panorama")));
     private AncientAetherModUpdateIndicator modUpdateNotification;
     private boolean alignedLeft;
     private int rows;
