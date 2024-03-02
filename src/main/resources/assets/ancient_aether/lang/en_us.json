@@ -313,8 +313,7 @@
   "ancient_aether.ancient_treasure_chest_locked": "This Treasure Chest must be unlocked with an Ancient Key",
   "ancient_aether.laboratory_treasure_chest_locked": "This Treasure Chest must be unlocked with an Laboratory Key",
 
-  "pack.ancient_aether.ancient_aether_worldgen_overrides.title": "Ancient Aether Worldgen Overrides",
-  "pack.ancient_aether.ancient_aether_worldgen_overrides.description": "Should only be disabled if you know what you are doing.",
+  "ancient_aether.menu_title.ancient_aether": "Ancient Aether",
 
   "lore.block.ancient_aether.holystone_brick_mosaic": "A fancy Holystone Brick variant that can be rotated in various different directions.",
   "lore.block.ancient_aether.carved_stone_mosaic": "A fancy Carved Stone variant that can be rotated in various different directions.",

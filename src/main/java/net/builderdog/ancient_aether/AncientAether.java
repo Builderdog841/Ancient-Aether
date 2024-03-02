@@ -4,6 +4,7 @@ import com.aetherteam.aether.AetherConfig;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.block.dispenser.DispenseAncientAetherBoatBehaviour;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
+import net.builderdog.ancient_aether.client.AncientAetherMenus;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.data.AncientAetherData;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
@@ -32,6 +33,7 @@ import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent;
 import net.minecraftforge.event.server.ServerAboutToStartEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -75,14 +77,19 @@ public class AncientAether {
 
         MinecraftForge.EVENT_BUS.register(this);
 
+        for (DeferredRegister<?> register : registers) {
+            register.register(modEventBus);
+        }
+
+        DistExecutor.unsafeRunForDist(() -> () -> {
+            AncientAetherMenus.MENUS.register(modEventBus);
+            return true;
+        }, () -> () -> false);
+
         DIRECTORY.toFile().mkdirs();
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, AncientAetherConfig.COMMON_SPEC);
 
         AncientAetherBlocks.registerWoodTypes();
-
-        for (DeferredRegister<?> register : registers) {
-            register.register(modEventBus);
-        }
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
