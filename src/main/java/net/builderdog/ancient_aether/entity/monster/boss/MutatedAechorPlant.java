@@ -277,13 +277,6 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     }
 
     @Override
-    public @NotNull EntityDimensions getDimensions(@NotNull Pose pose) {
-        float width = 3.0F + getSize() * 0.125F;
-        float height = 2.0F + getSize() * 0.075F;
-        return EntityDimensions.fixed(width, height);
-    }
-
-    @Override
     public boolean canBeAffected(MobEffectInstance effect) {
         return effect.getEffect() != AetherEffects.INEBRIATION.get() && super.canBeAffected(effect);
     }

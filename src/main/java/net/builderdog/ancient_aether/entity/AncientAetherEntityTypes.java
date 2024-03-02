@@ -42,7 +42,7 @@ public class AncientAetherEntityTypes {
             () -> EntityType.Builder.of(AeronauticLeaper::new, MobCategory.MONSTER).sized(2.0F, 2.0F).clientTrackingRange(10).build("aeronautic_leaper"));
 
     public static final RegistryObject<EntityType<MutatedAechorPlant>> MUTATED_AECHOR_PLANT = ENTITY_TYPES.register("mutated_aechor_plant",
-            () -> EntityType.Builder.of(MutatedAechorPlant::new, MobCategory.MONSTER).sized(1.0F, 1.0F).clientTrackingRange(64).build("mutated_aechor_plant"));
+            () -> EntityType.Builder.of(MutatedAechorPlant::new, MobCategory.MONSTER).sized(3.0F, 2.0F).clientTrackingRange(64).build("mutated_aechor_plant"));
 
     public static final RegistryObject<EntityType<AncientAetherBoatEntity>> BOAT = ENTITY_TYPES.register("boat",
             () -> EntityType.Builder.<AncientAetherBoatEntity>of(AncientAetherBoatEntity::new, MobCategory.MISC).sized(1.375F, 0.5625F).clientTrackingRange(10).build("boat"));
