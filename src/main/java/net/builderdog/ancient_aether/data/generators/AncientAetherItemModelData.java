@@ -47,7 +47,6 @@ public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
         simpleItem(AncientAetherItems.ANCIENT_ARMOR_TRIM_SMITHING_TEMPLATE);
 
         handheldItem(AncientAetherItems.VALKYRUM_SWORD.get(), "");
-        handheldItem(AncientAetherItems.VALKYRUM_LANCE.get(), "");
         handheldItem(AncientAetherItems.VALKYRUM_PICKAXE.get(), "");
         handheldItem(AncientAetherItems.VALKYRUM_AXE.get(), "");
         handheldItem(AncientAetherItems.VALKYRUM_SHOVEL.get(), "");
@@ -86,6 +85,8 @@ public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
         leggingsItem(AncientAetherItems.VALKYRUM_LEGGINGS.get(), "");
         bootsItem(AncientAetherItems.VALKYRUM_BOOTS.get(), "");
         glovesItem(AncientAetherItems.VALKYRUM_GLOVES.get(), "");
+
+        lanceItem(AncientAetherItems.VALKYRUM_LANCE.get(), "");
 
         rotatedItem(AncientAetherItems.LABORATORY_DUNGEON_KEY.get(), "");
         rotatedItem(AncientAetherItems.ANCIENT_DUNGEON_KEY.get(), "");
