@@ -101,11 +101,7 @@ public class AncientAetherMenuButton extends Button {
     }
 
     public int getTextColor(int mouseX, int mouseY) {
-        if (!serverButton) {
-            return isMouseOver(mouseX, mouseY) ? 11842776 : 13948116;
-        } else {
-            return isMouseOver(mouseX, mouseY) ? 13746759 : 15457113;
-        }
+        return isMouseOver(mouseX, mouseY) ? 16043927 : 11711154;
     }
 
     public static int totalHeightRange(int buttonCount, float scale) {

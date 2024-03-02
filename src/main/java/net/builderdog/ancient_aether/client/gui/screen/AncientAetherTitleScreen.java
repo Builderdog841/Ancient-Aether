@@ -113,7 +113,7 @@ public class AncientAetherTitleScreen extends TitleScreen implements TitleScreen
                     float textSize = 1.8F - Mth.abs(Mth.sin((float) (Util.getMillis() % 1000L) / 1000.0F * Mth.TWO_PI) * 0.1F);
                     textSize = textSize * (200.0F / scale) / (AncientAetherTitleScreen.this.font.width(splashRendererAccessor.cumulus$getSplash()) + (64 / scale));
                     poseStack.scale(textSize, textSize, textSize);
-                    guiGraphics.drawCenteredString(AncientAetherTitleScreen.this.font, splashRendererAccessor.cumulus$getSplash(), 0, (int) (-16 / scale), 16776960 | roundedFadeAmount);
+                    guiGraphics.drawCenteredString(AncientAetherTitleScreen.this.font, splashRendererAccessor.cumulus$getSplash(), 0, (int) (-16 / scale), 16043927 | roundedFadeAmount);
                     poseStack.popPose();
                 }
             }
