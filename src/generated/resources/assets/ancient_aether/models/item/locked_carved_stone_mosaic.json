@@ -1,7 +1,7 @@
 {
   "parent": "ancient_aether:item/template_item_locked_mosaic_block",
   "textures": {
-    "#end": "ancient_aether:block/carved_stone_mosaic_top",
-    "#side": "ancient_aether:block/carved_stone_mosaic"
+    "end": "ancient_aether:block/carved_stone_mosaic_top",
+    "side": "ancient_aether:block/carved_stone_mosaic"
   }
 }

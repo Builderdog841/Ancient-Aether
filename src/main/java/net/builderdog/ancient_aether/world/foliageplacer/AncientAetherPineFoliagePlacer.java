@@ -20,7 +20,7 @@ public class AncientAetherPineFoliagePlacer extends FoliagePlacer {
 
     public AncientAetherPineFoliagePlacer(IntProvider radius, IntProvider offset, IntProvider height) {
         super(radius, offset);
-        this.trunkHeight = height;
+        trunkHeight = height;
     }
 
     @Override

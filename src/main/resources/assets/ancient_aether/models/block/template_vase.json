@@ -1,7 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
-	"particle": "#vase",
+	"textures": {
+		"particle": "vase"
+	},
 	"elements": [
 		{
 			"from": [5, 0, 5],
@@ -98,4 +100,4 @@
 			"scale": [0.5, 0.5, 0.5]
 		}
 	}
-}
+},

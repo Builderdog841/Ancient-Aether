@@ -81,10 +81,8 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
     }
 
     public void dungeonAxisBlock(RotatedPillarBlock block, RotatedPillarBlock baseBlock) {
-        ConfiguredModel dungeonBlock =
-                new ConfiguredModel(models().cubeColumn(name(baseBlock), texture(name(baseBlock)), texture(name(baseBlock) + "_top")));
-        ConfiguredModel dungeonBlockHorizontal =
-                new ConfiguredModel(models().cubeColumn(name(baseBlock) + "_horizontal", texture(name(baseBlock)), texture(name(baseBlock) + "_top")));
+        ConfiguredModel dungeonBlock = new ConfiguredModel(models().cubeColumn(name(baseBlock), texture(name(baseBlock)), texture(name(baseBlock) + "_top")));
+        ConfiguredModel dungeonBlockHorizontal = new ConfiguredModel(models().cubeColumn(name(baseBlock) + "_horizontal", texture(name(baseBlock)), texture(name(baseBlock) + "_top")));
         getVariantBuilder(block).partialState().setModels(dungeonBlock, dungeonBlockHorizontal);
     }
 

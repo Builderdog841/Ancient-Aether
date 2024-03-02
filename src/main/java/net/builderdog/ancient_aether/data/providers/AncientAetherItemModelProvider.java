@@ -81,8 +81,8 @@ public abstract class AncientAetherItemModelProvider extends AetherItemModelProv
 
     public void itemLockedMosaicBlock(Block block, Block baseBlock) {
         (withExistingParent(blockName(block), modLoc("item/template_item_locked_mosaic_block")))
-                .texture("#end", modLoc("block/" + blockName(baseBlock) + "_top"))
-                .texture("#side", modLoc("block/" + blockName(baseBlock)));
+                .texture("end", modLoc("block/" + blockName(baseBlock) + "_top"))
+                .texture("side", modLoc("block/" + blockName(baseBlock)));
     }
 
     public void itemLogWallBlock(Block block, Block baseBlock, String location, String modid) {

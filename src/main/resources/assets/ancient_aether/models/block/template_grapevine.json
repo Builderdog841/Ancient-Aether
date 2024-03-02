@@ -1,7 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
-	"particle": "#grapevine",
+	"textures": {
+		"particle": "grapevine"
+	},
 	"elements": [
 		{
 			"from": [0, 15, 0],
@@ -103,4 +105,4 @@
 			"children": [0, 1, 2, 3, 4, 5, 6]
 		}
 	]
-}
+},
