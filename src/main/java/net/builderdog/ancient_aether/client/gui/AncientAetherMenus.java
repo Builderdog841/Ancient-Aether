@@ -1,7 +1,6 @@
 package net.builderdog.ancient_aether.client.gui;
 
 import com.aetherteam.aether.Aether;
-import com.aetherteam.aether.client.gui.screen.menu.AetherTitleScreen;
 import com.aetherteam.cumulus.Cumulus;
 import com.aetherteam.cumulus.CumulusConfig;
 import com.aetherteam.cumulus.api.Menu;
@@ -34,5 +33,5 @@ public class AncientAetherMenus {
 
     private static final BooleanSupplier ANCIENT_AETHER_CONDITION = () -> CumulusConfig.CLIENT.active_menu.get().equals("ancient_aether:ancient_aether");
 
-    public static final RegistryObject<Menu> ANCIENT_AETHER = MENUS.register("ancient_aether", () -> new Menu(ANCIENT_AETHER_ICON, ANCIENT_AETHER_NAME, new AncientAetherTitleScreen(true), ANCIENT_AETHER_CONDITION, new Menu.Properties().music(AetherTitleScreen.MENU).background(ANCIENT_AETHER_BACKGROUND)));
+    public static final RegistryObject<Menu> ANCIENT_AETHER = MENUS.register("ancient_aether", () -> new Menu(ANCIENT_AETHER_ICON, ANCIENT_AETHER_NAME, new AncientAetherTitleScreen(true), ANCIENT_AETHER_CONDITION, new Menu.Properties().music(AncientAetherTitleScreen.MENU).background(ANCIENT_AETHER_BACKGROUND)));
 }
