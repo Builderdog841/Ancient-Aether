@@ -1,6 +1,5 @@
 package net.builderdog.ancient_aether.client.gui;
 
-import com.aetherteam.aether.Aether;
 import com.aetherteam.cumulus.Cumulus;
 import com.aetherteam.cumulus.CumulusConfig;
 import com.aetherteam.cumulus.api.Menu;
@@ -21,9 +20,9 @@ public class AncientAetherMenus {
 
     private static final ResourceLocation ANCIENT_AETHER_REGULAR_BACKGROUND = new ResourceLocation(AncientAether.MODID, "textures/gui/title/options_background.png");
     private static final ResourceLocation ANCIENT_AETHER_DARK_BACKGROUND = new ResourceLocation(AncientAether.MODID, "textures/gui/title/dark_options_background.png");
-    private static final ResourceLocation ANCIENT_AETHER_HEADER_SEPARATOR = new ResourceLocation(Aether.MODID, "textures/gui/title/header_separator.png");
-    private static final ResourceLocation ANCIENT_AETHER_FOOTER_SEPARATOR = new ResourceLocation(Aether.MODID, "textures/gui/title/footer_separator.png");
-    private static final ResourceLocation ANCIENT_AETHER_TAB_BUTTON = new ResourceLocation(Aether.MODID, "textures/gui/title/tab_button.png");
+    private static final ResourceLocation ANCIENT_AETHER_HEADER_SEPARATOR = new ResourceLocation(AncientAether.MODID, "textures/gui/title/header_separator.png");
+    private static final ResourceLocation ANCIENT_AETHER_FOOTER_SEPARATOR = new ResourceLocation(AncientAether.MODID, "textures/gui/title/footer_separator.png");
+    private static final ResourceLocation ANCIENT_AETHER_TAB_BUTTON = new ResourceLocation(AncientAether.MODID, "textures/gui/title/tab_button.png");
     private static final Menu.Background ANCIENT_AETHER_BACKGROUND = new Menu.Background()
             .regularBackground(ANCIENT_AETHER_REGULAR_BACKGROUND)
             .darkBackground(ANCIENT_AETHER_DARK_BACKGROUND)
