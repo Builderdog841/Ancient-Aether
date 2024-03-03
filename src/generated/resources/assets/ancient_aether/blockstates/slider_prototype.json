@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "critical=false,facing=east,lit=false": {
+      "model": "ancient_aether:block/slider_prototype",
+      "y": 90
+    },
+    "critical=false,facing=east,lit=true": {
+      "model": "ancient_aether:block/slider_prototype_lit",
+      "y": 90
+    },
+    "critical=false,facing=north,lit=false": {
+      "model": "ancient_aether:block/slider_prototype"
+    },
+    "critical=false,facing=north,lit=true": {
+      "model": "ancient_aether:block/slider_prototype_lit"
+    },
+    "critical=false,facing=south,lit=false": {
+      "model": "ancient_aether:block/slider_prototype",
+      "y": 180
+    },
+    "critical=false,facing=south,lit=true": {
+      "model": "ancient_aether:block/slider_prototype_lit",
+      "y": 180
+    },
+    "critical=false,facing=west,lit=false": {
+      "model": "ancient_aether:block/slider_prototype",
+      "y": 270
+    },
+    "critical=false,facing=west,lit=true": {
+      "model": "ancient_aether:block/slider_prototype_lit",
+      "y": 270
+    },
+    "critical=true,facing=east,lit=false": {
+      "model": "ancient_aether:block/slider_prototype_critical",
+      "y": 90
+    },
+    "critical=true,facing=east,lit=true": {
+      "model": "ancient_aether:block/slider_prototype_critical",
+      "y": 90
+    },
+    "critical=true,facing=north,lit=false": {
+      "model": "ancient_aether:block/slider_prototype_critical"
+    },
+    "critical=true,facing=north,lit=true": {
+      "model": "ancient_aether:block/slider_prototype_critical"
+    },
+    "critical=true,facing=south,lit=false": {
+      "model": "ancient_aether:block/slider_prototype_critical",
+      "y": 180
+    },
+    "critical=true,facing=south,lit=true": {
+      "model": "ancient_aether:block/slider_prototype_critical",
+      "y": 180
+    },
+    "critical=true,facing=west,lit=false": {
+      "model": "ancient_aether:block/slider_prototype_critical",
+      "y": 270
+    },
+    "critical=true,facing=west,lit=true": {
+      "model": "ancient_aether:block/slider_prototype_critical",
+      "y": 270
+    }
+  }
+}

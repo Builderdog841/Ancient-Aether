@@ -54,5 +54,7 @@ public class AncientAetherMissingMappings {
                 .filter(mapping -> mapping.getKey().getPath().contains("hellfire_lantern")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.SUN_LANTERN.get()));
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MODID).stream()
                 .filter(mapping -> mapping.getKey().getPath().contains("gale_lantern")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.AMBROSIUM_LANTERN.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MODID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("cracked_slider")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.SLIDER_PROTOTYPE.get()));
     }
 }

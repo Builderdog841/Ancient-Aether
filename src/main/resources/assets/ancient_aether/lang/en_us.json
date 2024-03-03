@@ -250,8 +250,8 @@
 
   "advancement.ancient_aether.aether_biomes": "Aerospace Traveller",
   "advancement.ancient_aether.aether_biomes.desc": "Find all Aether biomes \n§6- Ancient Aether -",
-  "advancement.ancient_aether.cracked_slider": "Out of Order",
-  "advancement.ancient_aether.cracked_slider.desc": "Mine a Cracked Slider with a Gravitite Pickaxe \n§6- Ancient Aether -",
+  "advancement.ancient_aether.slider_prototype": "Out of Order",
+  "advancement.ancient_aether.slider_prototype.desc": "Mine a Slider Prototype with a Gravitite Pickaxe \n§6- Ancient Aether -",
   "advancement.ancient_aether.unlock_ancient_dungeon": "Ancient Forces",
   "advancement.ancient_aether.unlock_ancient_dungeon.desc": "Enter the Ancient Dungeon by activating its Obelisk with an Ancient Rune \n§6- Ancient Aether -",
   "advancement.ancient_aether.ancient_dungeon": "Shut-Down",

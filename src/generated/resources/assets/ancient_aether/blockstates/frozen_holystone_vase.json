@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "ancient_aether:block/frozen_holystone_vase",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "ancient_aether:block/frozen_holystone_vase"
+    },
+    "facing=south": {
+      "model": "ancient_aether:block/frozen_holystone_vase",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ancient_aether:block/frozen_holystone_vase",
+      "y": 270
+    }
+  }
+}

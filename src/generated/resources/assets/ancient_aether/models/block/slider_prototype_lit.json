@@ -1,0 +1,6 @@
+{
+  "parent": "ancient_aether:block/template_slider_prototype",
+  "textures": {
+    "slider": "ancient_aether:block/slider_prototype_lit"
+  }
+}
