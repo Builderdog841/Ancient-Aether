@@ -10,20 +10,18 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("deprecation")
 public class SliderPrototypeBlock extends Block {
-    public static final BooleanProperty LIT = BlockStateProperties.LIT;
     public static final BooleanProperty CRITICAL = AncientAetherBlockStateProperties.CRITICAL;
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
     public SliderPrototypeBlock(Properties properties) {
         super(properties);
-        registerDefaultState(stateDefinition.any().setValue(LIT, Boolean.FALSE).setValue(CRITICAL, Boolean.FALSE).setValue(FACING, Direction.NORTH));
+        registerDefaultState(stateDefinition.any().setValue(CRITICAL, Boolean.FALSE).setValue(FACING, Direction.NORTH));
     }
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return defaultBlockState().setValue(CRITICAL, context.getLevel().hasNeighborSignal(context.getClickedPos())).setValue(FACING, context.getHorizontalDirection().getOpposite());
@@ -58,23 +56,9 @@ public class SliderPrototypeBlock extends Block {
         if (state.getValue(CRITICAL) && !level.hasNeighborSignal(pos)) {
             level.setBlock(pos, state.cycle(CRITICAL), 2);
         }
-        if (state.getValue(LIT)) {
-            level.setBlock(pos, state.cycle(LIT), 4);
-        }
-    }
-
-
-    public boolean isRandomlyTicking(BlockState state) {
-        return !state.getValue(LIT);
-    }
-
-    public void randomTick(BlockState state, @NotNull ServerLevel level, @NotNull BlockPos pos, @NotNull RandomSource random) {
-        if (!state.getValue(LIT)) {
-            level.setBlock(pos, state.cycle(LIT), 0);
-        }
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockStateBuilder) {
-        blockStateBuilder.add(LIT, CRITICAL, FACING);
+        blockStateBuilder.add(CRITICAL, FACING);
     }
 }

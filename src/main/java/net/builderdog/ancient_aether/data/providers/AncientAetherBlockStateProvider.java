@@ -108,8 +108,6 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
         ResourceLocation template = modLoc("block/template_slider_prototype");
         ModelFile normal = models().withExistingParent(name(block), template).texture("slider", texture(name(block)));
         ModelFile critical = models().withExistingParent(name(block) + "_critical", template).texture("slider", texture(name(block) + "_critical"));
-        ModelFile lit = models().withExistingParent(name(block) + "_lit", template).texture("slider", texture(name(block) + "_lit"));
-        ModelFile critical_lit = models().withExistingParent(name(block) + "_critical_lit", template).texture("slider", texture(name(block) + "_critical_lit"));
 
         getVariantBuilder(block).forAllStatesExcept((state) -> {
             Direction direction = state.getValue(SliderPrototypeBlock.FACING);
@@ -126,36 +124,6 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
                     }
                     case WEST -> {
                         return ConfiguredModel.builder().modelFile(critical).rotationY(270).build();
-                    }
-                }
-            else if (state.getValue(SliderPrototypeBlock.LIT))
-                switch (direction) {
-                    case NORTH -> {
-                        return ConfiguredModel.builder().modelFile(lit).build();
-                    }
-                    case EAST -> {
-                        return ConfiguredModel.builder().modelFile(lit).rotationY(90).build();
-                    }
-                    case SOUTH -> {
-                        return ConfiguredModel.builder().modelFile(lit).rotationY(180).build();
-                    }
-                    case WEST -> {
-                        return ConfiguredModel.builder().modelFile(lit).rotationY(270).build();
-                    }
-                }
-            else if (state.getValue(SliderPrototypeBlock.CRITICAL) && state.getValue(SliderPrototypeBlock.LIT))
-                switch (direction) {
-                    case NORTH -> {
-                        return ConfiguredModel.builder().modelFile(critical_lit).build();
-                    }
-                    case EAST -> {
-                        return ConfiguredModel.builder().modelFile(critical_lit).rotationY(90).build();
-                    }
-                    case SOUTH -> {
-                        return ConfiguredModel.builder().modelFile(critical_lit).rotationY(180).build();
-                    }
-                    case WEST -> {
-                        return ConfiguredModel.builder().modelFile(critical_lit).rotationY(270).build();
                     }
                 }
             else
