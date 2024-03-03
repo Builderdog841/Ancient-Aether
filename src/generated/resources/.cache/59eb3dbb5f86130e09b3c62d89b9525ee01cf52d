@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-28T19:23:53.7945812	Loot Tables
+// 1.20.1	2024-03-03T16:43:23.268093	Loot Tables
 095a70e341d19e7b3548ddc32402abe48a79992a data/ancient_aether/loot_tables/blocks/aerogel_glass.json
 9fe2ea21af5246ad9f95848f680099717062eb1c data/ancient_aether/loot_tables/blocks/aerogel_glass_door.json
 0f84d5b4591633acc6c8dcc82b7c14988b545a9f data/ancient_aether/loot_tables/blocks/aerogel_glass_pane.json
@@ -21,7 +21,6 @@ d01deb85be8d8d62bc23667fe63fbb627346a8e7 data/ancient_aether/loot_tables/blocks/
 8766de6d5a470ac29986b4ea7537f4fda6b58b45 data/ancient_aether/loot_tables/blocks/carved_tile_stairs.json
 0028608a47c8d9239602d02f2ace778a97f9aadf data/ancient_aether/loot_tables/blocks/carved_tile_wall.json
 afc28686ae51cf43cc96d427bbfcc851be3856ba data/ancient_aether/loot_tables/blocks/corrupted_light_aerogetic_stone.json
-503d82dd0a464d22c432cf15d95aa61860197db6 data/ancient_aether/loot_tables/blocks/cracked_slider.json
 c737df83b589dd9c81bedfd91f94b948fd786eff data/ancient_aether/loot_tables/blocks/crystal_skyroot_leaves.json
 a93b4f337f62686363c24527cb2e2fd8c05c2edb data/ancient_aether/loot_tables/blocks/crystal_skyroot_sapling.json
 57fc1bb7f567bba57456b1dd4e1a852c3a399fa3 data/ancient_aether/loot_tables/blocks/enchanted_skyroot_leaves.json
@@ -94,6 +93,7 @@ d34c8b8dbf32fef1208a43bc22a02b026956c437 data/ancient_aether/loot_tables/blocks/
 7dc9917632da38337d8db64da82744521c0b4d52 data/ancient_aether/loot_tables/blocks/skyroot_pine_sapling.json
 87b4ae9ba0d67451f8bd4c83688b8a909cc6ecfd data/ancient_aether/loot_tables/blocks/sky_blues.json
 3e2c881c0fa0bfc26b3af0882d7c5d7af22a88ab data/ancient_aether/loot_tables/blocks/sky_grass.json
+2e42f4788980687462d535fbaee53490af604ca1 data/ancient_aether/loot_tables/blocks/slider_prototype.json
 e546ace1c68699bb85e0cfe7aca1b4a7e6b220c4 data/ancient_aether/loot_tables/blocks/stripped_highsproot_log.json
 6c014b6b3eb7e8ae2d7db4f46f0220be19147b71 data/ancient_aether/loot_tables/blocks/stripped_highsproot_log_wall.json
 49d8c4f01cd5525d7ee0b82c45748ebf29945ac9 data/ancient_aether/loot_tables/blocks/stripped_highsproot_wood.json

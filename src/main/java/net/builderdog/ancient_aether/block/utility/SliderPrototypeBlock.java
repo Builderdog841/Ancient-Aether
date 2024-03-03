@@ -7,10 +7,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Mirror;
-import net.minecraft.world.level.block.RenderShape;
-import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -22,7 +19,7 @@ import org.jetbrains.annotations.NotNull;
 public class SliderPrototypeBlock extends Block {
     public static final BooleanProperty LIT = BlockStateProperties.LIT;
     public static final BooleanProperty CRITICAL = AncientAetherBlockStateProperties.CRITICAL;
-    public static final DirectionProperty FACING = BlockStateProperties.FACING;
+    public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
     public SliderPrototypeBlock(Properties properties) {
         super(properties);

@@ -52,6 +52,10 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
         getVariantBuilder(block).forAllStates((state -> ConfiguredModel.builder().modelFile(state.getValue(LanternBlock.HANGING) ? hangingLantern : lantern).build()));
     }
 
+    public void carpet(Block block, Block baseBlock) {
+        simpleBlock(block, models().singleTexture(name(block), mcLoc("block/carpet"), "wool", texture(name(baseBlock))));
+    }
+
     public void vase(Block block) {
         ModelFile vase = models().withExistingParent(name(block), modLoc("block/template_vase")).texture("vase", texture(name(block))).renderType("cutout");
 
@@ -82,16 +86,14 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
         });
     }
 
-    public void carpet(Block block, Block baseBlock) {
-        simpleBlock(block, models().singleTexture(name(block), mcLoc("block/carpet"), "wool", texture(name(baseBlock))));
-    }
 
     public void sliderPrototype(Block block) {
+        String blockName = name(block);
         ResourceLocation template = modLoc("block/template_slider_prototype");
-        ModelFile normal = models().withExistingParent(name(block), template).texture("slider", texture(name(block)));
-        ModelFile critical = models().withExistingParent(name(block) + "_critical", template).texture("slider", texture(name(block)));
-        ModelFile lit = models().withExistingParent(name(block) + "_lit", template).texture("slider", texture(name(block)));
-        ModelFile critical_lit = models().withExistingParent(name(block) + "_critical_lit", template).texture("slider", texture(name(block)));
+        ModelFile normal = models().withExistingParent(blockName, template).texture("slider", texture(name(block)));
+        ModelFile critical = models().withExistingParent(blockName + "_critical", template).texture("slider", texture(name(block)));
+        ModelFile lit = models().withExistingParent(blockName + "_lit", template).texture("slider", texture(name(block)));
+        ModelFile critical_lit = models().withExistingParent(blockName + "_critical_lit", template).texture("slider", texture(name(block)));
 
         getVariantBuilder(block).forAllStatesExcept((state) -> {
             Direction direction = state.getValue(SliderPrototypeBlock.FACING);
@@ -102,12 +104,13 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
                 case SOUTH -> ConfiguredModel.builder().modelFile(critical).rotationY(180).build();
                 case WEST -> ConfiguredModel.builder().modelFile(critical).rotationY(270).build();
             }
-            else if (state.getValue(SliderPrototypeBlock.LIT))
+            else if (state.getValue(SliderPrototypeBlock.LIT)) {
                 switch (direction) {
-                case NORTH -> ConfiguredModel.builder().modelFile(lit).build();
-                case EAST -> ConfiguredModel.builder().modelFile(lit).rotationY(90).build();
-                case SOUTH -> ConfiguredModel.builder().modelFile(lit).rotationY(180).build();
-                case WEST -> ConfiguredModel.builder().modelFile(lit).rotationY(270).build();
+                    case NORTH -> ConfiguredModel.builder().modelFile(lit).build();
+                    case EAST -> ConfiguredModel.builder().modelFile(lit).rotationY(90).build();
+                    case SOUTH -> ConfiguredModel.builder().modelFile(lit).rotationY(180).build();
+                    case WEST -> ConfiguredModel.builder().modelFile(lit).rotationY(270).build();
+                }
             }
             else if (state.getValue(SliderPrototypeBlock.CRITICAL) || state.getValue(SliderPrototypeBlock.LIT))
                 switch (direction) {
