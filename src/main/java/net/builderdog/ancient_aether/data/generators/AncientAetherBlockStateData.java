@@ -150,6 +150,9 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         ancientVase(AncientAetherBlocks.ANCIENT_AEROGETIC_VASE.get(), AncientAetherBlocks.AEROGETIC_VASE.get());
         ancientVase(AncientAetherBlocks.ANCIENT_GALE_VASE.get(), AncientAetherBlocks.GALE_VASE.get());
 
+        obelisk(AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get());
+        obelisk(AncientAetherBlocks.ANCIENT_OBELISK.get());
+
         carpet(AncientAetherBlocks.FLUFFALO_CARPET.get(), AncientAetherBlocks.FLUFFALO_WOOL.get());
 
         AADungeonBlock(AncientAetherBlocks.LOCKED_CARVED_TILES.get(), AncientAetherBlocks.CARVED_TILES.get());

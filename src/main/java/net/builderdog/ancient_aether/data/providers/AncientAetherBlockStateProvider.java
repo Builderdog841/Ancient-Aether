@@ -53,46 +53,46 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
         getVariantBuilder(block).forAllStates((state -> ConfiguredModel.builder().modelFile(state.getValue(LanternBlock.HANGING) ? hangingLantern : lantern).build()));
     }
 
-    public void vase(Block vase) {
-        ModelFile model = models().withExistingParent(name(vase), modLoc("block/template_vase"))
-                .texture("vase", texture(name(vase))).renderType("cutout");
-        getVariantBuilder(vase).forAllStatesExcept((state) -> {
+    public void vase(Block block) {
+        ModelFile vase = models().withExistingParent(name(block), modLoc("block/template_vase"))
+                .texture("vase", texture(name(block))).renderType("cutout");
+        getVariantBuilder(block).forAllStatesExcept((state) -> {
             Direction direction = state.getValue(VaseBlock.FACING);
             switch (direction) {
                 case NORTH -> {
-                    return ConfiguredModel.builder().modelFile(model).build();
+                    return ConfiguredModel.builder().modelFile(vase).build();
                 }
                 case EAST -> {
-                    return ConfiguredModel.builder().modelFile(model).rotationY(90).build();
+                    return ConfiguredModel.builder().modelFile(vase).rotationY(90).build();
                 }
                 case SOUTH -> {
-                    return ConfiguredModel.builder().modelFile(model).rotationY(180).build();
+                    return ConfiguredModel.builder().modelFile(vase).rotationY(180).build();
                 }
                 case WEST -> {
-                    return ConfiguredModel.builder().modelFile(model).rotationY(270).build();
+                    return ConfiguredModel.builder().modelFile(vase).rotationY(270).build();
                 }
             }
             return ConfiguredModel.builder().build();
         });
     }
 
-    public void ancientVase(Block vase, Block vaseCopy) {
-        ModelFile model = models().withExistingParent(name(vase), modLoc("block/template_vase"))
-                .texture("vase", texture(name(vaseCopy))).renderType("cutout");
-        getVariantBuilder(vase).forAllStatesExcept((state) -> {
+    public void ancientVase(Block block, Block blockCopy) {
+        ModelFile ancientVase = models().withExistingParent(name(block), modLoc("block/template_vase"))
+                .texture("vase", texture(name(blockCopy))).renderType("cutout");
+        getVariantBuilder(block).forAllStatesExcept((state) -> {
             Direction direction = state.getValue(AncientVaseBlock.FACING);
             switch (direction) {
                 case NORTH -> {
-                    return ConfiguredModel.builder().modelFile(model).build();
+                    return ConfiguredModel.builder().modelFile(ancientVase).build();
                 }
                 case EAST -> {
-                    return ConfiguredModel.builder().modelFile(model).rotationY(90).build();
+                    return ConfiguredModel.builder().modelFile(ancientVase).rotationY(90).build();
                 }
                 case SOUTH -> {
-                    return ConfiguredModel.builder().modelFile(model).rotationY(180).build();
+                    return ConfiguredModel.builder().modelFile(ancientVase).rotationY(180).build();
                 }
                 case WEST -> {
-                    return ConfiguredModel.builder().modelFile(model).rotationY(270).build();
+                    return ConfiguredModel.builder().modelFile(ancientVase).rotationY(270).build();
                 }
             }
             return ConfiguredModel.builder().build();
@@ -101,6 +101,12 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
 
     public void carpet(Block block, Block baseBlock) {
         simpleBlock(block, models().singleTexture(name(block), mcLoc("block/carpet"), "wool", texture(name(baseBlock))));
+    }
+
+    public void obelisk(Block block) {
+        ModelFile obelisk = models().withExistingParent(name(block), modLoc("block/template_obelisk"))
+                .texture("obelisk", texture(name(block))).renderType("translucent");
+        getVariantBuilder(block).partialState().addModels(new ConfiguredModel(obelisk));
     }
 
     public void AADungeonBlock(Block block, Block baseBlock) {
