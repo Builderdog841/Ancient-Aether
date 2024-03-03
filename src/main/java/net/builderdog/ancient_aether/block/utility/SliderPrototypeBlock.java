@@ -58,6 +58,20 @@ public class SliderPrototypeBlock extends Block {
         if (state.getValue(CRITICAL) && !level.hasNeighborSignal(pos)) {
             level.setBlock(pos, state.cycle(CRITICAL), 2);
         }
+        if (state.getValue(LIT)) {
+            level.setBlock(pos, state.cycle(LIT), 4);
+        }
+    }
+
+
+    public boolean isRandomlyTicking(BlockState state) {
+        return !state.getValue(LIT);
+    }
+
+    public void randomTick(BlockState state, @NotNull ServerLevel level, @NotNull BlockPos pos, @NotNull RandomSource random) {
+        if (!state.getValue(LIT)) {
+            level.setBlock(pos, state.cycle(LIT), 0);
+        }
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockStateBuilder) {

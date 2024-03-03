@@ -143,7 +143,7 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
                         return ConfiguredModel.builder().modelFile(lit).rotationY(270).build();
                     }
                 }
-            else if (state.getValue(SliderPrototypeBlock.CRITICAL) || state.getValue(SliderPrototypeBlock.LIT))
+            else if (state.getValue(SliderPrototypeBlock.CRITICAL) && state.getValue(SliderPrototypeBlock.LIT))
                 switch (direction) {
                     case NORTH -> {
                         return ConfiguredModel.builder().modelFile(critical_lit).build();
