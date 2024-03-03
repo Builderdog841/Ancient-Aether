@@ -2,5 +2,8 @@
   "values": [
     "aether_genesis:purple_aercloud",
     "aether_genesis:green_aercloud"
+  ],
+  "remove": [
+    "ancient_aether:violet_aercloud"
   ]
 }
