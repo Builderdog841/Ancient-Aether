@@ -56,19 +56,47 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
     public void vase(Block vase) {
         ModelFile model = models().withExistingParent(name(vase), modLoc("block/template_vase"))
                 .texture("vase", texture(name(vase))).renderType("cutout");
-        getMultipartBuilder(vase).part().modelFile(model).rotationY(0).addModel().condition(VaseBlock.FACING, Direction.NORTH).end();
-        getMultipartBuilder(vase).part().modelFile(model).rotationY(90).addModel().condition(VaseBlock.FACING, Direction.EAST).end();
-        getMultipartBuilder(vase).part().modelFile(model).rotationY(180).addModel().condition(VaseBlock.FACING, Direction.SOUTH).end();
-        getMultipartBuilder(vase).part().modelFile(model).rotationY(270).addModel().condition(VaseBlock.FACING, Direction.WEST).end();
+        getVariantBuilder(vase).forAllStatesExcept((state) -> {
+            Direction direction = state.getValue(VaseBlock.FACING);
+            switch (direction) {
+                case NORTH -> {
+                    return ConfiguredModel.builder().modelFile(model).build();
+                }
+                case EAST -> {
+                    return ConfiguredModel.builder().modelFile(model).rotationY(90).build();
+                }
+                case SOUTH -> {
+                    return ConfiguredModel.builder().modelFile(model).rotationY(180).build();
+                }
+                case WEST -> {
+                    return ConfiguredModel.builder().modelFile(model).rotationY(270).build();
+                }
+            }
+            return ConfiguredModel.builder().build();
+        });
     }
 
     public void ancientVase(Block vase, Block vaseCopy) {
         ModelFile model = models().withExistingParent(name(vase), modLoc("block/template_vase"))
                 .texture("vase", texture(name(vaseCopy))).renderType("cutout");
-        getMultipartBuilder(vase).part().modelFile(model).rotationY(0).addModel().condition(AncientVaseBlock.FACING, Direction.NORTH).end();
-        getMultipartBuilder(vase).part().modelFile(model).rotationY(90).addModel().condition(AncientVaseBlock.FACING, Direction.EAST).end();
-        getMultipartBuilder(vase).part().modelFile(model).rotationY(180).addModel().condition(AncientVaseBlock.FACING, Direction.SOUTH).end();
-        getMultipartBuilder(vase).part().modelFile(model).rotationY(270).addModel().condition(AncientVaseBlock.FACING, Direction.WEST).end();
+        getVariantBuilder(vase).forAllStatesExcept((state) -> {
+            Direction direction = state.getValue(AncientVaseBlock.FACING);
+            switch (direction) {
+                case NORTH -> {
+                    return ConfiguredModel.builder().modelFile(model).build();
+                }
+                case EAST -> {
+                    return ConfiguredModel.builder().modelFile(model).rotationY(90).build();
+                }
+                case SOUTH -> {
+                    return ConfiguredModel.builder().modelFile(model).rotationY(180).build();
+                }
+                case WEST -> {
+                    return ConfiguredModel.builder().modelFile(model).rotationY(270).build();
+                }
+            }
+            return ConfiguredModel.builder().build();
+        });
     }
 
     public void carpet(Block block, Block baseBlock) {
