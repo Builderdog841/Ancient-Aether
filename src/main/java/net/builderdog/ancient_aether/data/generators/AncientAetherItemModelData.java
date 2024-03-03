@@ -114,7 +114,7 @@ public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
         itemBlock(AncientAetherBlocks.AEROGEL_GLASS.get());
         itemBlock(AncientAetherBlocks.FLUFFALO_CARPET.get());
         itemBlock(AncientAetherBlocks.WIND_BLOWER.get());
-        itemBlock(AncientAetherBlocks.CRACKED_SLIDER.get());
+        itemBlock(AncientAetherBlocks.SLIDER_PROTOTYPE.get());
         itemBlock(AncientAetherBlocks.HOLYSTONE_VASE.get());
         itemBlock(AncientAetherBlocks.MOSSY_HOLYSTONE_VASE.get());
         itemBlock(AncientAetherBlocks.FROZEN_HOLYSTONE_VASE.get());

@@ -110,7 +110,7 @@ public class AncientAetherBlockLoot extends AetherBlockLootSubProvider {
         dropSelf(AncientAetherBlocks.WYND_LANTERN.get());
         dropSelf(AncientAetherBlocks.SUN_LANTERN.get());
         dropSelf(AncientAetherBlocks.WIND_BLOWER.get());
-        dropSelf(AncientAetherBlocks.CRACKED_SLIDER.get());
+        dropSelf(AncientAetherBlocks.SLIDER_PROTOTYPE.get());
         dropSelf(AncientAetherBlocks.SKY_BLUES.get());
         dropSelf(AncientAetherBlocks.WYND_THISTLE.get());
         dropSelf(AncientAetherBlocks.HIGHLAND_VIOLA.get());

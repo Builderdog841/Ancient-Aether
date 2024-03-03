@@ -1,7 +1,0 @@
-{
-  "parent": "ancient_aether:block/template_slider_prototype",
-  "render_type": "minecraft:cutout_mipped",
-  "textures": {
-    "slider": "ancient_aether:block/activated_cracked_slider"
-  }
-}

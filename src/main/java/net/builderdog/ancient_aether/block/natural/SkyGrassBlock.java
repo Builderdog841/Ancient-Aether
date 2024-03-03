@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 public class SkyGrassBlock extends TallGrassBlock {
     public static final IntegerProperty LENGTH = AncientAetherBlockStateProperties.LENGTH;
     public static final EnumProperty<AetherGrassType> TYPE = AncientAetherBlockStateProperties.TYPE;
+
     public SkyGrassBlock(Properties properties) {
         super(properties);
     }

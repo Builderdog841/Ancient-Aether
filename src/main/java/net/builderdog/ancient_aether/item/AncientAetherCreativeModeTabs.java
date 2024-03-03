@@ -170,7 +170,7 @@ public class AncientAetherCreativeModeTabs {
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.HELLFIRE_VASE.get()), new ItemStack(AncientAetherBlocks.AEROGETIC_VASE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get()), new ItemStack(AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get()), new ItemStack(AncientAetherBlocks.ANCIENT_OBELISK.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.ANCIENT_OBELISK.get()), new ItemStack(AncientAetherBlocks.CRACKED_SLIDER.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.ANCIENT_OBELISK.get()), new ItemStack(AncientAetherBlocks.SLIDER_PROTOTYPE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             if (ModList.get().isLoaded("lost_aether_content")) {
                 event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.AEROGETIC_VASE.get()), new ItemStack(AncientAetherBlocks.GALE_VASE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             }
@@ -179,7 +179,7 @@ public class AncientAetherCreativeModeTabs {
         if (tab == AetherCreativeTabs.AETHER_REDSTONE_BLOCKS.get()) {
             event.getEntries().putAfter(new ItemStack(AetherBlocks.INCUBATOR.get()), new ItemStack(AncientAetherBlocks.WIND_BLOWER.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putBefore(new ItemStack(AetherBlocks.ALTAR.get()), new ItemStack(AncientAetherBlocks.FLUFFALO_WOOL.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.CRACKED_SLIDER.get()), new ItemStack(AncientAetherBlocks.CRACKED_SLIDER.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
+            event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.SLIDER_PROTOTYPE.get()), new ItemStack(AncientAetherBlocks.SLIDER_PROTOTYPE.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
         }
 
         if (tab == AetherCreativeTabs.AETHER_EQUIPMENT_AND_UTILITIES.get()) {

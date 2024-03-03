@@ -15,8 +15,8 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nullable;
 
 public class AmbrosiumCampfireBlock extends CampfireBlock {
-    public AmbrosiumCampfireBlock(boolean pSpawnParticles, int pFireDamage, BlockBehaviour.Properties pProperties) {
-        super(pSpawnParticles, pFireDamage, pProperties);
+    public AmbrosiumCampfireBlock(boolean spawnParticles, int fireDamage, BlockBehaviour.Properties properties) {
+        super(spawnParticles, fireDamage, properties);
     }
 
     public BlockEntity newBlockEntity(@NotNull BlockPos pos, @NotNull BlockState state) {

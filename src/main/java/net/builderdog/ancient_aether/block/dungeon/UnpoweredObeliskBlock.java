@@ -27,12 +27,12 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
+@SuppressWarnings("deprecation")
 public class UnpoweredObeliskBlock extends Block {
     public UnpoweredObeliskBlock(Properties properties) {
         super(properties);
     }
 
-    @SuppressWarnings("deprecation")
     @Override
     public @NotNull InteractionResult use(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
         super.use(state, level, pos, player, hand, hit);

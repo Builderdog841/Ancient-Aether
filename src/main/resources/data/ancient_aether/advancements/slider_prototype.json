@@ -1,12 +1,12 @@
 {
   "parent": "ancient_aether:find_sentry_laboratory",
   "criteria": {
-    "cracked_slider": {
+    "slider_prototype": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ancient_aether:cracked_slider"
+              "ancient_aether:slider_prototype"
             ]
           }
         ]
@@ -17,21 +17,21 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.ancient_aether.cracked_slider.desc"
+      "translate": "advancement.ancient_aether.slider_prototype.desc"
     },
     "frame": "goal",
     "hidden": true,
     "icon": {
-      "item": "ancient_aether:cracked_slider"
+      "item": "ancient_aether:slider_prototype"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.ancient_aether.cracked_slider"
+      "translate": "advancement.ancient_aether.slider_prototype"
     }
   },
   "requirements": [
     [
-      "cracked_slider"
+      "slider_prototype"
     ]
   ]
 }

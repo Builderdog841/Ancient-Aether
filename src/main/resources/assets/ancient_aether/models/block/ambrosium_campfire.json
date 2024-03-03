@@ -1,10 +1,7 @@
 {
   "parent": "ancient_aether:block/template_ambrosium_campfire",
-  "render_type": "minecraft:cutout_mipped",
   "textures": {
     "fire": "ancient_aether:block/ambrosium_campfire_fire",
-    "log": "ancient_aether:block/ambrosium_campfire_log",
-    "lit_log": "ancient_aether:block/ambrosium_campfire_log_lit",
-    "particle": "ancient_aether:block/ambrosium_campfire_log"
+    "lit_log": "ancient_aether:block/ambrosium_campfire_log_lit"
   }
 }

@@ -150,6 +150,8 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         ancientVase(AncientAetherBlocks.ANCIENT_AEROGETIC_VASE.get(), AncientAetherBlocks.AEROGETIC_VASE.get());
         ancientVase(AncientAetherBlocks.ANCIENT_GALE_VASE.get(), AncientAetherBlocks.GALE_VASE.get());
 
+        sliderPrototype(AncientAetherBlocks.SLIDER_PROTOTYPE.get());
+
         obelisk(AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get());
         obelisk(AncientAetherBlocks.ANCIENT_OBELISK.get());
 

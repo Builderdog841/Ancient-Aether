@@ -3,6 +3,7 @@ package net.builderdog.ancient_aether.data.providers;
 import com.aetherteam.aether.block.dungeon.DoorwayBlock;
 import com.aetherteam.aether.data.providers.AetherBlockStateProvider;
 import net.builderdog.ancient_aether.block.dungeon.AncientVaseBlock;
+import net.builderdog.ancient_aether.block.utility.SliderPrototypeBlock;
 import net.builderdog.ancient_aether.block.utility.VaseBlock;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
@@ -46,54 +47,36 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
     }
 
     public void lantern(Block block) {
-        BlockModelBuilder lantern = models().withExistingParent(name(block), mcLoc("template_lantern"))
-                .texture("lantern", texture(name(block))).renderType("cutout");
-        BlockModelBuilder hangingLantern = models().withExistingParent("hanging_" + name(block), mcLoc("template_hanging_lantern"))
-                .texture("lantern", texture(name(block))).renderType("cutout");
+        BlockModelBuilder lantern = models().withExistingParent(name(block), mcLoc("template_lantern")).texture("lantern", texture(name(block))).renderType("cutout");
+        BlockModelBuilder hangingLantern = models().withExistingParent("hanging_" + name(block), mcLoc("template_hanging_lantern")).texture("lantern", texture(name(block))).renderType("cutout");
         getVariantBuilder(block).forAllStates((state -> ConfiguredModel.builder().modelFile(state.getValue(LanternBlock.HANGING) ? hangingLantern : lantern).build()));
     }
 
     public void vase(Block block) {
-        ModelFile vase = models().withExistingParent(name(block), modLoc("block/template_vase"))
-                .texture("vase", texture(name(block))).renderType("cutout");
+        ModelFile vase = models().withExistingParent(name(block), modLoc("block/template_vase")).texture("vase", texture(name(block))).renderType("cutout");
+
         getVariantBuilder(block).forAllStatesExcept((state) -> {
             Direction direction = state.getValue(VaseBlock.FACING);
             switch (direction) {
-                case NORTH -> {
-                    return ConfiguredModel.builder().modelFile(vase).build();
-                }
-                case EAST -> {
-                    return ConfiguredModel.builder().modelFile(vase).rotationY(90).build();
-                }
-                case SOUTH -> {
-                    return ConfiguredModel.builder().modelFile(vase).rotationY(180).build();
-                }
-                case WEST -> {
-                    return ConfiguredModel.builder().modelFile(vase).rotationY(270).build();
-                }
+                case NORTH -> ConfiguredModel.builder().modelFile(vase).build();
+                case EAST -> ConfiguredModel.builder().modelFile(vase).rotationY(90).build();
+                case SOUTH -> ConfiguredModel.builder().modelFile(vase).rotationY(180).build();
+                case WEST -> ConfiguredModel.builder().modelFile(vase).rotationY(270).build();
             }
             return ConfiguredModel.builder().build();
         });
     }
 
     public void ancientVase(Block block, Block blockCopy) {
-        ModelFile ancientVase = models().withExistingParent(name(block), modLoc("block/template_vase"))
-                .texture("vase", texture(name(blockCopy))).renderType("cutout");
+        ModelFile ancientVase = models().withExistingParent(name(block), modLoc("block/template_vase")).texture("vase", texture(name(blockCopy))).renderType("cutout");
+
         getVariantBuilder(block).forAllStatesExcept((state) -> {
             Direction direction = state.getValue(AncientVaseBlock.FACING);
             switch (direction) {
-                case NORTH -> {
-                    return ConfiguredModel.builder().modelFile(ancientVase).build();
-                }
-                case EAST -> {
-                    return ConfiguredModel.builder().modelFile(ancientVase).rotationY(90).build();
-                }
-                case SOUTH -> {
-                    return ConfiguredModel.builder().modelFile(ancientVase).rotationY(180).build();
-                }
-                case WEST -> {
-                    return ConfiguredModel.builder().modelFile(ancientVase).rotationY(270).build();
-                }
+                case NORTH -> ConfiguredModel.builder().modelFile(ancientVase).build();
+                case EAST -> ConfiguredModel.builder().modelFile(ancientVase).rotationY(90).build();
+                case SOUTH -> ConfiguredModel.builder().modelFile(ancientVase).rotationY(180).build();
+                case WEST -> ConfiguredModel.builder().modelFile(ancientVase).rotationY(270).build();
             }
             return ConfiguredModel.builder().build();
         });
@@ -101,6 +84,47 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
 
     public void carpet(Block block, Block baseBlock) {
         simpleBlock(block, models().singleTexture(name(block), mcLoc("block/carpet"), "wool", texture(name(baseBlock))));
+    }
+
+    public void sliderPrototype(Block block) {
+        ResourceLocation template = modLoc("block/template_slider_prototype");
+        ModelFile normal = models().withExistingParent(name(block), template).texture("slider", texture(name(block)));
+        ModelFile critical = models().withExistingParent(name(block) + "_critical", template).texture("slider", texture(name(block)));
+        ModelFile lit = models().withExistingParent(name(block) + "_lit", template).texture("slider", texture(name(block)));
+        ModelFile critical_lit = models().withExistingParent(name(block) + "_critical_lit", template).texture("slider", texture(name(block)));
+
+        getVariantBuilder(block).forAllStatesExcept((state) -> {
+            Direction direction = state.getValue(SliderPrototypeBlock.FACING);
+            if (state.getValue(SliderPrototypeBlock.CRITICAL))
+                switch (direction) {
+                case NORTH -> ConfiguredModel.builder().modelFile(critical).build();
+                case EAST -> ConfiguredModel.builder().modelFile(critical).rotationY(90).build();
+                case SOUTH -> ConfiguredModel.builder().modelFile(critical).rotationY(180).build();
+                case WEST -> ConfiguredModel.builder().modelFile(critical).rotationY(270).build();
+            }
+            else if (state.getValue(SliderPrototypeBlock.LIT))
+                switch (direction) {
+                case NORTH -> ConfiguredModel.builder().modelFile(lit).build();
+                case EAST -> ConfiguredModel.builder().modelFile(lit).rotationY(90).build();
+                case SOUTH -> ConfiguredModel.builder().modelFile(lit).rotationY(180).build();
+                case WEST -> ConfiguredModel.builder().modelFile(lit).rotationY(270).build();
+            }
+            else if (state.getValue(SliderPrototypeBlock.CRITICAL) || state.getValue(SliderPrototypeBlock.LIT))
+                switch (direction) {
+                case NORTH -> ConfiguredModel.builder().modelFile(critical_lit).build();
+                case EAST -> ConfiguredModel.builder().modelFile(critical_lit).rotationY(90).build();
+                case SOUTH -> ConfiguredModel.builder().modelFile(critical_lit).rotationY(180).build();
+                case WEST -> ConfiguredModel.builder().modelFile(critical_lit).rotationY(270).build();
+            }
+            else
+                switch (direction) {
+                case NORTH -> ConfiguredModel.builder().modelFile(normal).build();
+                case EAST -> ConfiguredModel.builder().modelFile(normal).rotationY(90).build();
+                case SOUTH -> ConfiguredModel.builder().modelFile(normal).rotationY(180).build();
+                case WEST -> ConfiguredModel.builder().modelFile(normal).rotationY(270).build();
+            }
+            return ConfiguredModel.builder().build();
+        });
     }
 
     public void obelisk(Block block) {

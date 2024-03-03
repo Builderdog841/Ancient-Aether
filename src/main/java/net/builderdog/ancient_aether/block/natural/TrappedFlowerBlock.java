@@ -29,6 +29,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Supplier;
 
+@SuppressWarnings("deprecation")
 public class TrappedFlowerBlock extends BushBlock {
     private final Supplier<EntityType<?>> spawnableEntityTypeSupplier;
     private final Supplier<? extends BlockState> defaultStateSupplier;
@@ -40,7 +41,6 @@ public class TrappedFlowerBlock extends BushBlock {
         this.defaultStateSupplier = defaultStateSupplier;
     }
 
-    @SuppressWarnings("deprecation")
     @Override
     public void entityInside(@NotNull BlockState blockState, @NotNull Level level, @NotNull BlockPos blockPos, @NotNull Entity entity) {
         if (entity instanceof Player player && AetherEventDispatch.onTriggerTrap(player, level, blockPos, blockState)) {
@@ -69,7 +69,6 @@ public class TrappedFlowerBlock extends BushBlock {
         }
     }
 
-    @SuppressWarnings("deprecation")
     public @NotNull VoxelShape getShape(BlockState p_53517_, @NotNull BlockGetter p_53518_, @NotNull BlockPos p_53519_, @NotNull CollisionContext p_53520_) {
         Vec3 vec3 = p_53517_.getOffset(p_53518_, p_53519_);
         return SHAPE.move(vec3.x, vec3.y, vec3.z);

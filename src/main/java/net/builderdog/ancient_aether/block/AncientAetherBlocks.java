@@ -23,7 +23,7 @@ import net.builderdog.ancient_aether.block.natural.TrappedFlowerBlock;
 import net.builderdog.ancient_aether.block.natural.ValkyrumBlock;
 import net.builderdog.ancient_aether.block.natural.VioletAercloudBlock;
 import net.builderdog.ancient_aether.block.utility.AmbrosiumCampfireBlock;
-import net.builderdog.ancient_aether.block.utility.CrackedSliderBlock;
+import net.builderdog.ancient_aether.block.utility.SliderPrototypeBlock;
 import net.builderdog.ancient_aether.block.utility.VaseBlock;
 import net.builderdog.ancient_aether.block.utility.WindBlowerBlock;
 import net.builderdog.ancient_aether.data.resources.AncientAetherLoot;
@@ -192,7 +192,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> SUN_LANTERN = registerBlock("sun_lantern", () -> new LanternBlock(BlockBehaviour.Properties.copy(LANTERN).lightLevel(s -> 12)));
     public static final RegistryObject<Block> AMBROSIUM_CAMPFIRE = registerBlock("ambrosium_campfire", () -> new AmbrosiumCampfireBlock(true, 1, Block.Properties.copy(Blocks.CAMPFIRE)));
 
-    public static final RegistryObject<Block> CRACKED_SLIDER = registerBlock("cracked_slider", () -> new CrackedSliderBlock(BlockBehaviour.Properties.copy(CARVED_STONE.get()).strength(5f).noOcclusion().lightLevel((state) -> state.getValue(RedstoneLampBlock.LIT) ? 15 : 0)));
+    public static final RegistryObject<Block> SLIDER_PROTOTYPE = registerBlock("slider_prototype", () -> new SliderPrototypeBlock(BlockBehaviour.Properties.copy(CARVED_STONE.get()).strength(5f).noOcclusion().lightLevel((state) -> state.getValue(SliderPrototypeBlock.LIT) ? 15 : 0)));
     public static final RegistryObject<Block> WIND_BLOWER = registerBlock("wind_blower", () -> new WindBlowerBlock(BlockBehaviour.Properties.copy(COLD_AERCLOUD.get())));
 
     public static final RegistryObject<Block> HOLYSTONE_VASE = registerBlock("holystone_vase", () -> new VaseBlock(Block.Properties.of().mapColor(MapColor.COLOR_LIGHT_GRAY).instabreak().sound(SoundType.DECORATED_POT).noOcclusion().isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
