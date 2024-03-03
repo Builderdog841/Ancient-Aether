@@ -109,7 +109,7 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
         ModelFile normal = models().withExistingParent(name(block), template).texture("slider", texture(name(block)));
         ModelFile critical = models().withExistingParent(name(block) + "_critical", template).texture("slider", texture(name(block) + "_critical"));
         ModelFile lit = models().withExistingParent(name(block) + "_lit", template).texture("slider", texture(name(block) + "_lit"));
-        ModelFile critical_lit = models().withExistingParent(name(block) + "_critical_lit", template).texture("slider", texture(name(block) + "_critical_it"));
+        ModelFile critical_lit = models().withExistingParent(name(block) + "_critical_lit", template).texture("slider", texture(name(block) + "_critical_lit"));
 
         getVariantBuilder(block).forAllStatesExcept((state) -> {
             Direction direction = state.getValue(SliderPrototypeBlock.FACING);

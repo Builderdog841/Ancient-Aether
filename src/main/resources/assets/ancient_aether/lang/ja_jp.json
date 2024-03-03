@@ -70,7 +70,6 @@
   "block.ancient_aether.sakura_blossoms": "天界サクラの花",
   "block.ancient_aether.trapped_sakura_blossoms": "トラップ天界サクラの花",
   "block.ancient_aether.sky_blues": "スカイブルー",
-  "block.ancient_aether.cracked_slider": "ひび割れたスライダー",
   "block.ancient_aether.holystone_brick_mosaic": "モザイク画の聖石レンガ",
   "block.ancient_aether.carved_stone_mosaic": "モザイク画の刻印石",
   "block.ancient_aether.angelic_stone_mosaic": "モザイク画の神聖石",
@@ -88,7 +87,6 @@
 
   "item.ancient_aether.grapes": "天空ブドウ",
   "item.ancient_aether.roothyrn_spawn_egg": "ルーシリンのスポーンエッグ",
-  "item.ancient_aether.ancient_guardian_spawn_egg": "エンシェントガーディアンのスポーンエッグ",
   "item.ancient_aether.sakura_moa_egg": "サクラモアの卵",
   "item.ancient_aether.highsproot_boat": "ハイスプルートのボート",
   "item.ancient_aether.highsproot_chest_boat": "ハイスプルートのチェスト付きのボート",
@@ -103,7 +101,6 @@
   "item.ancient_aether.health_ring": "体力のリング",
   "item.ancient_aether.strength_stone": "力の石",
 
-  "entity.ancient_aether.ancient_guardian": "エンシェントガーディアン",
   "entity.ancient_aether.roothyrn": "ルーシリン",
   "entity.ancient_aether.boat": "ボート",
   "entity.ancient_aether.chest_boat": "チェスト付きのボート",
@@ -115,8 +112,7 @@
   "biome.ancient_aether.sakura_jungle": "天界サクラのジャングル",
   "biome.ancient_aether.skyroot_jungle": "スカイルートのジャングル",
 
-  "advancement.ancient_aether.cracked_slider": "故障中",
-  "advancement.ancient_aether.cracked_slider.desc": "グラビタイトのツルハシでひび割れたスライダーを採掘する",
+  "advancement.ancient_aether.slider_prototype": "故障中",
   "advancement.ancient_aether.unlock_ancient_dungeon": "ジャングルの中で、偉大なジャングルで",
   "advancement.ancient_aether.unlock_ancient_dungeon.desc": "セントリー研究所にある「古代のセントリーのルーン」を持つ壊れたセントリーのオベリスクをクリックしてエンシェントダンジョンに入る。",
   "gui.ancient_aether.obelisk_sun_spirit": "まだ太陽の精霊を倒していない",
@@ -178,7 +174,6 @@
   "lore.block.ancient_aether.sakura_stairs": "天界サクラの板材からクラフトされる。階段は建物に垂直性を足す以外にも、装飾に使えるぞ！",
   "lore.block.ancient_aether.sakura_trapdoor": "天界サクラの板材からクラフトされる。一ブロック分の大きさの入り口を塞ぐのに使えるトラップドア。階段のセキュリティを増強したいあなたに。",
   "lore.block.ancient_aether.sakura_sign": "天界サクラの板材とスカイルートの棒からクラフトされる。メッセージや道案内を書くのにぴったりな看板。",
-  "lore.block.ancient_aether.cracked_slider": "古代のワルキューレの失敗作で、グラビタイト以上のツルハシでしか採掘できない。レッドストーンに関する機能もある。",
   "lore.block.ancient_aether.unpowered_ancient_obelisk": "エンシェントダンジョンの入り口にあるこのブロックは、古代のルーンによって解除することができる。",
   "lore.block.ancient_aether.ancient_obelisk": "グラビタイト以上のツルハシでないと採掘できない業火な装飾ブロック。",
   "lore.block.aether.highsproot_bookshelf": "ハイスプルートの板材と本からクラフトされる。本棚はエンチャントテーブルのエンチャント能力を強化するために使える。",
