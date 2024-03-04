@@ -5,20 +5,20 @@
     "ancient_aether:aerogetic_slab",
     "ancient_aether:aerogetic_wall",
     "ancient_aether:light_aerogetic_stone",
-    "ancient_aether:corrupted_light_aerogetic_stone",
+    "ancient_aether:corrupted_aerogetic_stone",
     "ancient_aether:aerogetic_stone_mosaic",
     "ancient_aether:boss_doorway_aerogetic_stone",
     "ancient_aether:boss_doorway_light_aerogetic_stone",
-    "ancient_aether:boss_doorway_corrupted_light_aerogetic_stone",
+    "ancient_aether:boss_doorway_corrupted_aerogetic_stone",
     "ancient_aether:locked_aerogetic_stone_mosaic",
     "ancient_aether:locked_aerogetic_stone",
     "ancient_aether:locked_light_aerogetic_stone",
-    "ancient_aether:locked_corrupted_light_aerogetic_stone",
+    "ancient_aether:locked_corrupted_aerogetic_stone",
     "ancient_aether:trapped_aerogetic_stone",
     "ancient_aether:trapped_light_aerogetic_stone",
-    "ancient_aether:trapped_corrupted_light_aerogetic_stone",
+    "ancient_aether:trapped_corrupted_aerogetic_stone",
     "ancient_aether:treasure_doorway_aerogetic_stone",
     "ancient_aether:treasure_doorway_light_aerogetic_stone",
-    "ancient_aether:treasure_doorway_corrupted_light_aerogetic_stone"
+    "ancient_aether:treasure_doorway_corrupted_aerogetic_stone"
   ]
 }
