@@ -1,29 +1,33 @@
 package net.builderdog.ancient_aether.block.utility;
 
+import net.builderdog.ancient_aether.block.blockstate.AncientAetherBlockStateProperties;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.Equipable;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("deprecation")
 public class WindBlowerBlock extends Block implements Equipable {
-    public static final BooleanProperty POWERED = BlockStateProperties.POWERED;
+    public static final BooleanProperty CHARGED = AncientAetherBlockStateProperties.CHARGED;
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
     public WindBlowerBlock(Properties properties) {
         super(properties);
-        registerDefaultState(stateDefinition.any().setValue(POWERED, false).setValue(FACING, Direction.NORTH));
+        registerDefaultState(stateDefinition.any().setValue(CHARGED, false).setValue(FACING, Direction.NORTH));
     }
 
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+        return defaultBlockState().setValue(CHARGED, context.getLevel().hasNeighborSignal(context.getClickedPos())).setValue(FACING, context.getHorizontalDirection().getOpposite());
     }
 
     public @NotNull RenderShape getRenderShape(@NotNull BlockState state) {
@@ -38,8 +42,27 @@ public class WindBlowerBlock extends Block implements Equipable {
         return state.rotate(mirror.getRotation(state.getValue(FACING)));
     }
 
+    public void neighborChanged(@NotNull BlockState state, Level level, @NotNull BlockPos pos, @NotNull Block block, @NotNull BlockPos neighborPos, boolean bool) {
+        if (!level.isClientSide) {
+            boolean flag = state.getValue(CHARGED);
+            if (flag != level.hasNeighborSignal(pos)) {
+                if (flag) {
+                    level.scheduleTick(pos, this, 4);
+                } else {
+                    level.setBlock(pos, state.cycle(CHARGED), 2);
+                }
+            }
+        }
+    }
+
+    public void tick(BlockState state, @NotNull ServerLevel level, @NotNull BlockPos pos, @NotNull RandomSource random) {
+        if (state.getValue(CHARGED) && !level.hasNeighborSignal(pos)) {
+            level.setBlock(pos, state.cycle(CHARGED), 2);
+        }
+    }
+
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, POWERED);
+        builder.add(FACING, CHARGED);
     }
 
     public @NotNull EquipmentSlot getEquipmentSlot() {

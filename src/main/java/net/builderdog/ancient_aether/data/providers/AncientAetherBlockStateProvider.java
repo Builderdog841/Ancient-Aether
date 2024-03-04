@@ -5,6 +5,7 @@ import com.aetherteam.aether.data.providers.AetherBlockStateProvider;
 import net.builderdog.ancient_aether.block.dungeon.AncientVaseBlock;
 import net.builderdog.ancient_aether.block.utility.SliderPrototypeBlock;
 import net.builderdog.ancient_aether.block.utility.VaseBlock;
+import net.builderdog.ancient_aether.block.utility.WindBlowerBlock;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -99,6 +100,61 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
                     return ConfiguredModel.builder().modelFile(ancientVase).rotationY(270).build();
                 }
             }
+            return ConfiguredModel.builder().build();
+        });
+    }
+
+    public void windBlower(Block block) {
+        String blockName = name(block);
+        ResourceLocation down =  extend(texture(name(block)), "_bottom");
+        ResourceLocation up =  extend(texture(name(block)), "_top");
+        ResourceLocation north =  extend(texture(name(block)), "_front");
+        ResourceLocation south =  extend(texture(name(block)), "_back");
+        ResourceLocation east =  extend(texture(name(block)), "_side_left");
+        ResourceLocation west =  extend(texture(name(block)), "_side_right");
+        ResourceLocation down_charged =  extend(texture(name(block)), "_bottom_charged");
+        ResourceLocation up_charged =  extend(texture(name(block)), "_top_charged");
+        ResourceLocation north_charged =  extend(texture(name(block)), "_front_charged");
+        ResourceLocation south_charged =  extend(texture(name(block)), "_back_charged");
+        ResourceLocation east_charged =  extend(texture(name(block)), "_side_left_charged");
+        ResourceLocation west_charged =  extend(texture(name(block)), "_side_right_charged");
+
+        ModelFile normal = models().cube(blockName, down, up, north, south, east, west).renderType("translucent")
+                .texture("particle", extend(texture(name(block)), "_front"));
+        ModelFile charged = models().cube(blockName + "_charged", down_charged, up_charged, north_charged, south_charged, east_charged, west_charged).renderType("translucent")
+                .texture("particle", extend(texture(name(block)), "_front_charged"));
+        getVariantBuilder(block).forAllStatesExcept((state) -> {
+            Direction direction = state.getValue(WindBlowerBlock.FACING);
+            if (state.getValue(WindBlowerBlock.CHARGED))
+                switch (direction) {
+                    case NORTH -> {
+                        return ConfiguredModel.builder().modelFile(charged).build();
+                    }
+                    case SOUTH -> {
+                        return ConfiguredModel.builder().modelFile(charged).rotationY(180).build();
+                    }
+                    case WEST -> {
+                        return ConfiguredModel.builder().modelFile(charged).rotationY(270).build();
+                    }
+                    case EAST -> {
+                        return ConfiguredModel.builder().modelFile(charged).rotationY(90).build();
+                    }
+                }
+            else
+                switch (direction) {
+                    case NORTH -> {
+                        return ConfiguredModel.builder().modelFile(normal).build();
+                    }
+                    case SOUTH -> {
+                        return ConfiguredModel.builder().modelFile(normal).rotationY(180).build();
+                    }
+                    case WEST -> {
+                        return ConfiguredModel.builder().modelFile(normal).rotationY(270).build();
+                    }
+                    case EAST -> {
+                        return ConfiguredModel.builder().modelFile(normal).rotationY(90).build();
+                    }
+                }
             return ConfiguredModel.builder().build();
         });
     }
