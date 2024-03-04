@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "ancient_aether:light_aerogetic_stone"
+  },
+  "result": "ancient_aether:corrupted_aerogetic_stone"
+}
