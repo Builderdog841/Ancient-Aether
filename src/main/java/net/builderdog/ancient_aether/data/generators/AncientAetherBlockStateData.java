@@ -154,6 +154,8 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
 
         sliderPrototype(AncientAetherBlocks.SLIDER_PROTOTYPE.get());
 
+        grapeVine(AncientAetherBlocks.GRAPE_VINE.get());
+
         obelisk(AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get());
         obelisk(AncientAetherBlocks.ANCIENT_OBELISK.get());
 

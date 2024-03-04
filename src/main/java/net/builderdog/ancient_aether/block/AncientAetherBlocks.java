@@ -18,10 +18,7 @@ import net.builderdog.ancient_aether.block.construction.AncientAetherWallHanging
 import net.builderdog.ancient_aether.block.construction.AncientAetherWallSignBlock;
 import net.builderdog.ancient_aether.block.dungeon.AncientVaseBlock;
 import net.builderdog.ancient_aether.block.dungeon.UnpoweredObeliskBlock;
-import net.builderdog.ancient_aether.block.natural.SkyGrassBlock;
-import net.builderdog.ancient_aether.block.natural.TrappedFlowerBlock;
-import net.builderdog.ancient_aether.block.natural.ValkyrumBlock;
-import net.builderdog.ancient_aether.block.natural.VioletAercloudBlock;
+import net.builderdog.ancient_aether.block.natural.*;
 import net.builderdog.ancient_aether.block.utility.AmbrosiumCampfireBlock;
 import net.builderdog.ancient_aether.block.utility.SliderPrototypeBlock;
 import net.builderdog.ancient_aether.block.utility.VaseBlock;
@@ -120,6 +117,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> WYND_THISTLE = registerBlock("wynd_thistle", () -> new FlowerBlock(() -> MobEffects.HARM, 4, Block.Properties.copy(WHITE_FLOWER.get())));
     public static final RegistryObject<Block> SAKURA_BLOSSOMS = registerBlock("sakura_blossoms", () -> new FlowerBlock(() -> MobEffects.HEALTH_BOOST, 4, Block.Properties.copy(WHITE_FLOWER.get())));
     public static final RegistryObject<Block> TRAPPED_SAKURA_BLOSSOMS = registerBlock("trapped_sakura_blossoms", () -> new TrappedFlowerBlock(AncientAetherEntityTypes.ROOTHYRN::get, AIR::defaultBlockState, Block.Properties.copy(SAKURA_BLOSSOMS.get())));
+    public static final RegistryObject<Block> GRAPE_VINE = BLOCKS.register("grape_vine", () -> new GrapeVineBlock(Block.Properties.copy(VINE).noLootTable()));
 
     public static final RegistryObject<Block> GRAVITY_GRAVEL = registerBlock("gravity_gravel", () -> new AetherDoubleDropBlock(Block.Properties.of().mapColor(MapColor.TERRACOTTA_PURPLE).jumpFactor(1.5F).strength(0.25F).sound(SoundType.GRAVEL)));
     public static final RegistryObject<Block> WYND_ICE = registerBlock("wynd_ice", () -> new Block(Block.Properties.copy(PACKED_ICE)));

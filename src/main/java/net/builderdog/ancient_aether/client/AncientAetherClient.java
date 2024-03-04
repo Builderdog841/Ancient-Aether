@@ -22,9 +22,10 @@ public class AncientAetherClient {
             Sheets.addWoodType(AncientAetherBlockSets.HIGHSPROOT);
             Sheets.addWoodType(AncientAetherBlockSets.SAKURA);
             AetherConfig.CLIENT.enable_aether_menu_button.set(false);
-            CumulusConfig.CLIENT.enable_menu_list_button.set(true);
+            AetherConfig.CLIENT.disable_music_manager.set(false);
             AetherConfig.COMMON.add_ruined_portal_automatically.set(true);
             AetherConfig.COMMON.add_temporary_freezing_automatically.set(true);
+            CumulusConfig.CLIENT.enable_menu_list_button.set(true);
             AeroBlenderConfig.COMMON.vanillaAetherRegionWeight.set(0);
         });
     }

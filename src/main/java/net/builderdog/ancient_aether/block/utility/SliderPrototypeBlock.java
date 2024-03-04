@@ -58,7 +58,7 @@ public class SliderPrototypeBlock extends Block {
         }
     }
 
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockStateBuilder) {
-        blockStateBuilder.add(CRITICAL, FACING);
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(CRITICAL, FACING);
     }
 }

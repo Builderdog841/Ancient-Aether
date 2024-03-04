@@ -3,6 +3,7 @@ package net.builderdog.ancient_aether.data.providers;
 import com.aetherteam.aether.block.dungeon.DoorwayBlock;
 import com.aetherteam.aether.data.providers.AetherBlockStateProvider;
 import net.builderdog.ancient_aether.block.dungeon.AncientVaseBlock;
+import net.builderdog.ancient_aether.block.natural.GrapeVineBlock;
 import net.builderdog.ancient_aether.block.utility.SliderPrototypeBlock;
 import net.builderdog.ancient_aether.block.utility.VaseBlock;
 import net.builderdog.ancient_aether.block.utility.WindBlowerBlock;
@@ -201,9 +202,21 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
         });
     }
 
+    public void grapeVine(Block block) {
+        getVariantBuilder(block).forAllStatesExcept((state) -> {
+            int age = state.getValue(GrapeVineBlock.AGE);
+            ModelFile vine = models().withExistingParent(name(block) + "_stage" + age, modLoc("block/template_grape_vine"))
+                    .texture("vine", texture(name(block) + "_stage" + age)).renderType("cutout_mipped");
+
+            Direction direction = state.getValue(GrapeVineBlock.FACING);
+            return ConfiguredModel.builder().modelFile(vine).rotationY((int) (direction.toYRot() + 180) % 360).build();
+        });
+    }
+
     public void obelisk(Block block) {
         ModelFile obelisk = models().withExistingParent(name(block), modLoc("block/template_obelisk"))
                 .texture("obelisk", texture(name(block))).renderType("translucent");
+
         getVariantBuilder(block).partialState().addModels(new ConfiguredModel(obelisk));
     }
 
