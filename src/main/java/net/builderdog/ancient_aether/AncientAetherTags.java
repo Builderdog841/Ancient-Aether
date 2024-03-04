@@ -31,7 +31,7 @@ public class AncientAetherTags {
         public static final TagKey<Item> LEGENDARY_LOOT = tag("legendary_loot");
         public static final TagKey<Item> VALKYRUM_REPAIRING = tag("valkyrum_repairing");
         public static final TagKey<Item> ANCIENT_REPAIRING = tag("ancient_repairing");
-        public static final TagKey<Item> ARKZENUS_REPAIRING = tag("arkzenus_repairing");
+        public static final TagKey<Item> ARKENZUS_REPAIRING = tag("arkenzus_repairing");
 
         private static TagKey<Item> tag(String name) {
             return TagKey.create(Registries.ITEM, new ResourceLocation(AncientAether.MODID, name));

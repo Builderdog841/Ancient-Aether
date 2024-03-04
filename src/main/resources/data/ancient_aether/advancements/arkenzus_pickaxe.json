@@ -1,12 +1,12 @@
 {
   "parent": "aether:silver_dungeon",
   "criteria": {
-    "arkzenus_pickaxe_loot": {
+    "arkenzus_pickaxe_loot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ancient_aether:arkzenus_pickaxe"
+              "ancient_aether:arkenzus_pickaxe"
             ]
           }
         ]
@@ -17,7 +17,7 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.ancient_aether.arkzenus_pickaxe.desc"
+      "translate": "advancement.ancient_aether.arkenzus_pickaxe.desc"
     },
     "frame": "task",
     "hidden": false,
@@ -26,12 +26,12 @@
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.ancient_aether.arkzenus_pickaxe"
+      "translate": "advancement.ancient_aether.arkenzus_pickaxe"
     }
   },
   "requirements": [
     [
-      "arkzenus_pickaxe_loot"
+      "arkenzus_pickaxe_loot"
     ]
   ]
 }

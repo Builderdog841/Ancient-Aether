@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-03T17:24:45.43682	Item Models: ancient_aether
+// 1.20.1	2024-03-04T10:11:40.0556106	Item Models: ancient_aether
 532bdb7a4f7d2a6b96d474c01c8b9e7a0d1c10b4 assets/ancient_aether/models/item/aerogel_glass.json
 87e9f8f9f807a2aa763e3057d32bacf3ee32b60f assets/ancient_aether/models/item/aerogel_glass_door.json
 d1e6ed3e334d573f31a8ce9e09885c0f43832630 assets/ancient_aether/models/item/aerogel_glass_pane.json
@@ -29,7 +29,7 @@ b0d7cb9315807de83a30f396ac7611611e086577 assets/ancient_aether/models/item/ancie
 ed179b3ef576a4cfe5ef1282c7007bdf56c9e7a4 assets/ancient_aether/models/item/angelic_vase.json
 0a5433703811659f4e53f0449e46e526ff9983b0 assets/ancient_aether/models/item/arkenium_pendant.json
 65b849256685fb6479622cda358cd36b4513d85c assets/ancient_aether/models/item/arkenium_ring.json
-ecd044ce0d7231edbfbefeb82c43ce34dc933c21 assets/ancient_aether/models/item/arkzenus_pickaxe.json
+9358856c5100dc99b284680e78f678b1c5a7d6b1 assets/ancient_aether/models/item/arkenzus_pickaxe.json
 e39f295afb13b5e4ab726c96bd2a1f49a2c81eaf assets/ancient_aether/models/item/ascended_armor_trim_smithing_template.json
 d34af8d58248509acc7c0f4418c7533e7067a85c assets/ancient_aether/models/item/boss_doorway_aerogetic_stone.json
 3abbb0a62ac8a309490133977f4ea75fe41f671d assets/ancient_aether/models/item/boss_doorway_corrupted_light_aerogetic_stone.json

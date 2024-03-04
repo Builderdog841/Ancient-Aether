@@ -19,7 +19,7 @@ import net.builderdog.ancient_aether.item.equipment.accessories.rings.*;
 import net.builderdog.ancient_aether.item.equipment.accessories.shields.ShieldOfInebriationItem;
 import net.builderdog.ancient_aether.item.equipment.accessories.shields.ShieldOfRemediationItem;
 import net.builderdog.ancient_aether.item.equipment.armor.AncientAetherArmorItem;
-import net.builderdog.ancient_aether.item.equipment.tools.arkzenus.ArkzenusPickaxeItem;
+import net.builderdog.ancient_aether.item.equipment.tools.arkenzus.ArkenzusPickaxeItem;
 import net.builderdog.ancient_aether.item.equipment.tools.valkyrum.*;
 import net.builderdog.ancient_aether.item.equipment.weapons.AeronauticDartShooterItem;
 import net.builderdog.ancient_aether.item.equipment.weapons.AncientSwordItem;
@@ -71,7 +71,7 @@ public class AncientAetherItems {
     public static final RegistryObject<AxeItem> VALKYRUM_AXE = ITEMS.register("valkyrum_axe", ValkyrumAxeItem::new);
     public static final RegistryObject<ShovelItem> VALKYRUM_SHOVEL = ITEMS.register("valkyrum_shovel", ValkyrumShovelItem::new);
     public static final RegistryObject<HoeItem> VALKYRUM_HOE = ITEMS.register("valkyrum_hoe", ValkyrumHoeItem::new);
-    public static final RegistryObject<PickaxeItem> ARKZENUS_PICKAXE = ITEMS.register("arkzenus_pickaxe", ArkzenusPickaxeItem::new);
+    public static final RegistryObject<PickaxeItem> ARKENZUS_PICKAXE = ITEMS.register("arkenzus_pickaxe", ArkenzusPickaxeItem::new);
 
     public static final RegistryObject<Item> VALKYRUM_HELMET = ITEMS.register("valkyrum_helmet", () -> new AncientAetherArmorItem(AncientAetherArmorTiers.VALKYRUM, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> VALKYRUM_CHESTPLATE = ITEMS.register("valkyrum_chestplate", () -> new AncientAetherArmorItem(AncientAetherArmorTiers.VALKYRUM, ArmorItem.Type.CHESTPLATE, new Item.Properties()));

@@ -3,6 +3,7 @@ package net.builderdog.ancient_aether.event;
 import com.aetherteam.aether.block.AetherBlocks;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
+import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -56,5 +57,7 @@ public class AncientAetherMissingMappings {
                 .filter(mapping -> mapping.getKey().getPath().contains("gale_lantern")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.AMBROSIUM_LANTERN.get()));
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MODID).stream()
                 .filter(mapping -> mapping.getKey().getPath().contains("cracked_slider")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.SLIDER_PROTOTYPE.get()));
+        event.getMappings(ForgeRegistries.Keys.ITEMS, AncientAether.MODID).stream()
+                .filter(mapping -> mapping.getKey().getPath().contains("arkzenus_pickaxe")).forEach(blockMapping -> blockMapping.remap(AncientAetherItems.ARKENZUS_PICKAXE.get()));
     }
 }
