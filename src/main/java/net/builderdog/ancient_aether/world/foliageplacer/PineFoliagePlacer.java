@@ -11,21 +11,21 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerType;
 import org.jetbrains.annotations.NotNull;
 
-public class AncientAetherPineFoliagePlacer extends FoliagePlacer {
+public class PineFoliagePlacer extends FoliagePlacer {
 
-    public static final Codec<AncientAetherPineFoliagePlacer> CODEC = RecordCodecBuilder.create((codec) -> foliagePlacerParts(codec)
+    public static final Codec<PineFoliagePlacer> CODEC = RecordCodecBuilder.create((codec) -> foliagePlacerParts(codec)
             .and(IntProvider.codec(0, 24).fieldOf("trunk_height").forGetter((placer) -> placer.trunkHeight))
-            .apply(codec, AncientAetherPineFoliagePlacer::new));
+            .apply(codec, PineFoliagePlacer::new));
     private final IntProvider trunkHeight;
 
-    public AncientAetherPineFoliagePlacer(IntProvider radius, IntProvider offset, IntProvider height) {
+    public PineFoliagePlacer(IntProvider radius, IntProvider offset, IntProvider height) {
         super(radius, offset);
         trunkHeight = height;
     }
 
     @Override
     protected @NotNull FoliagePlacerType<?> type() {
-        return AncientAetherFoliagePlacers.ANCIENT_AETHER_PINE_FOLIAGE_PLACER.get();
+        return AncientAetherFoliagePlacers.PINE_FOLIAGE_PLACER.get();
     }
 
     @Override
@@ -40,19 +40,17 @@ public class AncientAetherPineFoliagePlacer extends FoliagePlacer {
         }
 
         for (int l = offset; l >= -foliageHeight; --l) {
-            this.placeLeavesRow(level, setter, random, configuration, blockpos, i, l, attachment.doubleTrunk());
+            placeLeavesRow(level, setter, random, configuration, blockpos, i, l, attachment.doubleTrunk());
             if (i >= j) {
                 i = k;
                 j = Math.min(j + 1, foliageRadius + attachment.radiusOffset());
-            } else {
-                ++i;
-            }
+            } else ++i;
         }
     }
 
     @Override
     public int foliageHeight(@NotNull RandomSource random, int height, @NotNull TreeConfiguration configuration) {
-        int value = height - this.trunkHeight.sample(random);
+        int value = height - trunkHeight.sample(random);
         return Math.max(3, value);
     }
 

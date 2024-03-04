@@ -5,7 +5,7 @@ import com.aetherteam.aether.world.foliageplacer.GoldenOakFoliagePlacer;
 import com.aetherteam.aether.world.foliageplacer.HolidayFoliagePlacer;
 import net.builderdog.ancient_aether.data.providers.AncientAetherFeatureProvider;
 import net.builderdog.ancient_aether.data.resources.AncientAetherFeatureStates;
-import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherPineFoliagePlacer;
+import net.builderdog.ancient_aether.world.foliageplacer.PineFoliagePlacer;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.random.SimpleWeightedRandomList;
@@ -42,7 +42,7 @@ public class AncientAetherTreeFeatures extends AncientAetherFeatureProvider {
         AncientAetherFeatureUtils.register(context, SKYROOT_PINE_TREE, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LOG),
                 new StraightTrunkPlacer(5, 5, 0), BlockStateProvider.simple(AncientAetherFeatureStates.SKYROOT_PINE_LEAVES),
-                new AncientAetherPineFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
+                new PineFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
                 new TwoLayersFeatureSize(2, 0, 2))
                 .ignoreVines().build());
         AncientAetherFeatureUtils.register(context, SAKURA_TREE, Feature.TREE, createSakuraJungleTree(AncientAetherFeatureStates.SAKURA_LOG, AncientAetherFeatureStates.SAKURA_LEAVES, 7, 7).build());
