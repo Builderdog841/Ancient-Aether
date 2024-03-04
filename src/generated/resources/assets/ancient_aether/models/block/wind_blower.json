@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/cube",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "down": "ancient_aether:block/wind_blower_bottom",
+    "east": "ancient_aether:block/wind_blower_side_left",
+    "north": "ancient_aether:block/wind_blower_front",
+    "particle": "ancient_aether:block/wind_blower_front",
+    "south": "ancient_aether:block/wind_blower_back",
+    "up": "ancient_aether:block/wind_blower_top",
+    "west": "ancient_aether:block/wind_blower_side_right"
+  }
+}
