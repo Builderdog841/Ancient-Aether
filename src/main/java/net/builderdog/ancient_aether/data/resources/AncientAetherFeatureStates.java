@@ -46,4 +46,5 @@ public class AncientAetherFeatureStates {
     public static final BlockState TRAPPED_SAKURA_BLOSSOMS = AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get().defaultBlockState();
     public static final BlockState FROZEN_AETHER_GRASS_BLOCK = AetherBlocks.AETHER_GRASS_BLOCK.get().defaultBlockState().setValue(DOUBLE_DROPS, true).setValue(TYPE, AetherGrassType.FROZEN);
     public static final BlockState PALE_AETHER_GRASS_BLOCK = AetherBlocks.AETHER_GRASS_BLOCK.get().defaultBlockState().setValue(DOUBLE_DROPS, true).setValue(TYPE, AetherGrassType.PALE);
+    public static final BlockState GRAPE_VINE = AncientAetherBlocks.GRAPE_VINE.get().defaultBlockState();
 }

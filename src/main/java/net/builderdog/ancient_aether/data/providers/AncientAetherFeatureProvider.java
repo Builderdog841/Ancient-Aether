@@ -5,6 +5,7 @@ import com.aetherteam.aether.data.resources.AetherFeatureStates;
 import com.aetherteam.aether.world.foliageplacer.CrystalFoliagePlacer;
 import net.builderdog.ancient_aether.data.resources.AncientAetherFeatureStates;
 import net.builderdog.ancient_aether.world.configuration.CoastConfiguration;
+import net.builderdog.ancient_aether.world.foliageplacer.PineFoliagePlacer;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderSet;
 import net.minecraft.util.random.SimpleWeightedRandomList;
@@ -37,6 +38,15 @@ public class AncientAetherFeatureProvider {
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1))
                 .ignoreVines();
+    }
+
+        public static TreeConfiguration.TreeConfigurationBuilder createSkyrootPineTree() {
+            return new TreeConfiguration.TreeConfigurationBuilder(
+                    BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LOG),
+                    new StraightTrunkPlacer(5, 5, 0), BlockStateProvider.simple(AncientAetherFeatureStates.SKYROOT_PINE_LEAVES),
+                    new PineFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
+                    new TwoLayersFeatureSize(2, 0, 2))
+                    .ignoreVines();
     }
 
     public static TreeConfiguration.TreeConfigurationBuilder createFancySkyrootTree(BlockState leaves) {
