@@ -13,13 +13,12 @@ import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.placement.BiomeFilter;
-import net.minecraft.world.level.levelgen.placement.NoiseThresholdCountPlacement;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraft.world.level.levelgen.placement.RarityFilter;
+import net.minecraft.world.level.levelgen.placement.*;
 
 public class AncientAetherVegetationPlacements {
+    public static final ResourceKey<PlacedFeature> GRAPE_VINES = AncientAetherPlacementUtils.createKey("grape_vines");
     public static final ResourceKey<PlacedFeature> AETHER_GRASS_BONEMEAL = AncientAetherPlacementUtils.createKey("aether_grass_bonemeal");
     public static final ResourceKey<PlacedFeature> AETHER_GRASS_PATCH = AncientAetherPlacementUtils.createKey("aether_grass_patch");
     public static final ResourceKey<PlacedFeature> WYNDCAPS_GRASS_PATCH = AncientAetherPlacementUtils.createKey("wyndcaps_grass_patch");
@@ -47,6 +46,12 @@ public class AncientAetherVegetationPlacements {
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
+
+        AncientAetherPlacementUtils.register(context, GRAPE_VINES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.GRAPE_VINES),
+                CountPlacement.of(UniformInt.of(96, 112)),
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(112), VerticalAnchor.absolute(256)),
+                InSquarePlacement.spread(),
+                BiomeFilter.biome());
 
         AncientAetherPlacementUtils.register(context, AETHER_GRASS_BONEMEAL, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.SINGLE_PIECE_OF_SKY_GRASS), PlacementUtils.isEmpty());
 

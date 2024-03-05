@@ -4,6 +4,7 @@ import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.world.configuration.CoastConfiguration;
 import net.builderdog.ancient_aether.world.configuration.CrystalIslandConfiguration;
 import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -11,6 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class AncientAetherFeatures {
     public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES, AncientAether.MODID);
 
+    public static RegistryObject<Feature<NoneFeatureConfiguration>> GRAPE_VINES = FEATURES.register("grape_vines", () -> new GrapeVinesFeature(NoneFeatureConfiguration.CODEC));
     public static RegistryObject<Feature<CoastConfiguration>> COAST = FEATURES.register("coast", () -> new CoastFeature(CoastConfiguration.CODEC));
     public static RegistryObject<Feature<CloudbedFeature.Config>> CLOUDBED = FEATURES.register("cloudbed", () -> new CloudbedFeature(CloudbedFeature.Config.CODEC));
     public static RegistryObject<Feature<CrystalIslandConfiguration>> CONFIGURABLE_CRYSTAL_ISLAND = FEATURES.register("configurable_crystal_island", () -> new ConfigurableCrystalIslandFeature(CrystalIslandConfiguration.CODEC));

@@ -31,6 +31,7 @@ public class AncientAetherBiomeModifiers {
     public static final ResourceKey<BiomeModifier> QUICKSOIL_COAST_BIOME_MODIFIER = createKey("quicksoil_coast_biome_modifier");
     public static final ResourceKey<BiomeModifier> GRAVITY_GRAVEL_COAST_BIOME_MODIFIER = createKey("gravity_gravel_coast_biome_modifier");
     public static final ResourceKey<BiomeModifier> WYND_ICE_COAST_BIOME_MODIFIER = createKey("wynd_ice_coast_biome_modifier");
+    public static final ResourceKey<BiomeModifier> GRAPE_VINES_BIOME_MODIFIER = createKey("grape_vines_biome_modifier");
     public static final ResourceKey<BiomeModifier> AETHER_GRASS_PATCH_MODIFIER = createKey("aether_grass_patch_biome_modifier");
     public static final ResourceKey<BiomeModifier> BONUS_BERRY_BUSH_PATCH_MODIFIER = createKey("bonus_berry_bush_patch_biome_modifier");
     public static final ResourceKey<BiomeModifier> VIOLET_AERCLOUD_BIOME_MODIFIER = createKey("violet_aercloud_biome_modifier");
@@ -86,6 +87,11 @@ public class AncientAetherBiomeModifiers {
                 biome.getOrThrow(AncientAetherTags.Biomes.HAS_WYND_ICE_COASTS),
                 HolderSet.direct(placement.getOrThrow(AncientAetherMiscPlacements.WYND_ICE_COAST)),
                 GenerationStep.Decoration.RAW_GENERATION
+        ));
+        context.register(GRAPE_VINES_BIOME_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_GRAPE_VINES),
+                HolderSet.direct(placement.getOrThrow(AncientAetherVegetationPlacements.GRAPE_VINES)),
+                GenerationStep.Decoration.TOP_LAYER_MODIFICATION
         ));
         context.register(AETHER_GRASS_PATCH_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biome.getOrThrow(AncientAetherTags.Biomes.HAS_AETHER_GRASS_PATCHES),

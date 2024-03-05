@@ -3,6 +3,7 @@
     "ancient_aether:wyndcap_highland",
     "ancient_aether:wyndcap_taiga",
     "ancient_aether:festive_wyndcap_taiga",
+    "ancient_aether:frozen_caverns",
     {
       "id": "aether_redux:frosted_tundra",
       "required": false
