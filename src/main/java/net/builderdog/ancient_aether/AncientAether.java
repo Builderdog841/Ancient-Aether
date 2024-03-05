@@ -17,6 +17,7 @@ import net.builderdog.ancient_aether.world.carver.AncientAetherCarvers;
 import net.builderdog.ancient_aether.world.feature.AncientAetherFeatures;
 import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherFoliagePlacers;
 import net.builderdog.ancient_aether.world.structure.AncientAetherStructureTypes;
+import net.builderdog.ancient_aether.world.treedecorator.AncientAetherTreeDecoratorTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
@@ -62,17 +63,18 @@ public class AncientAether {
 
         DeferredRegister<?>[] registers = {
 
-                AncientAetherItems.ITEMS,
-                AncientAetherMoaTypes.MOA_TYPES,
                 AncientAetherBlocks.BLOCKS,
-                AncientAetherFoliagePlacers.FOLIAGE_PLACERS,
+                AncientAetherItems.ITEMS,
                 AncientAetherBlockEntityTypes.BLOCK_ENTITY_TYPES,
-                AncientAetherStructureTypes.STRUCTURE_TYPES,
                 AncientAetherEntityTypes.ENTITY_TYPES,
-                AncientAetherSoundEvents.SOUNDS,
-                AncientAetherBiomeModifierSerializers.BIOME_MODIFIER_SERIALIZERS,
+                AncientAetherMoaTypes.MOA_TYPES,
                 AncientAetherFeatures.FEATURES,
-                AncientAetherCarvers.CARVERS
+                AncientAetherFoliagePlacers.FOLIAGE_PLACERS,
+                AncientAetherTreeDecoratorTypes.TREE_DECORATORS,
+                AncientAetherCarvers.CARVERS,
+                AncientAetherBiomeModifierSerializers.BIOME_MODIFIER_SERIALIZERS,
+                AncientAetherStructureTypes.STRUCTURE_TYPES,
+                AncientAetherSoundEvents.SOUNDS,
         };
 
         MinecraftForge.EVENT_BUS.register(this);

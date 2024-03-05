@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#ancient_aether:has_grape_vines",
-  "features": "ancient_aether:grape_vines",
-  "step": "top_layer_modification"
-}

@@ -6,7 +6,6 @@ import com.aetherteam.aether.data.resources.registries.AetherConfiguredFeatures;
 import com.aetherteam.nitrogen.data.resources.builders.NitrogenConfiguredFeatureBuilders;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.data.resources.AncientAetherFeatureStates;
-import net.builderdog.ancient_aether.world.feature.AncientAetherFeatures;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -28,7 +27,6 @@ import net.minecraft.world.level.levelgen.synth.NormalNoise;
 import java.util.List;
 
 public class AncientAetherVegetationFeatures {
-    public static final ResourceKey<ConfiguredFeature<?, ?>> GRAPE_VINES = AncientAetherFeatureUtils.registerKey("grape_vines");
     public static final ResourceKey<ConfiguredFeature<?, ?>> WYND_THISTLE_PATCH = AncientAetherFeatureUtils.registerKey("wynd_thistle_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHLAND_VIOLA_PATCH = AncientAetherFeatureUtils.registerKey("highland_viola_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_BLOSSOMS_PATCH = AncientAetherFeatureUtils.registerKey("sakura_blossoms_patch");
@@ -55,8 +53,6 @@ public class AncientAetherVegetationFeatures {
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
-
-        AncientAetherFeatureUtils.register(context, GRAPE_VINES, AncientAetherFeatures.GRAPE_VINES.get());
 
         AncientAetherFeatureUtils.register(context, HIGHLAND_VIOLA_PATCH, Feature.FLOWER,
                 NitrogenConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()

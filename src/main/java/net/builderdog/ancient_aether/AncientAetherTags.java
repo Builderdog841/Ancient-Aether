@@ -12,7 +12,6 @@ public class AncientAetherTags {
     public static class Blocks {
         public static final TagKey<Block> WYNDCAPS_ANIMAL_SPAWNABLE_ON = tag("wyndcaps_animals_spawnable_on");
         public static final TagKey<Block> AETHER_CARVER_REPLACEABLES = tag("aether_carver_replaceables");
-        public static final TagKey<Block> GRAPE_VINE_CAN_SPAWN_ON = tag("grape_vine_can_spawn_on");
         public static final TagKey<Block> LEAF_VINE_CAN_SPAWN_ON = tag("leaf_vine_can_spawn_on");
         public static final TagKey<Block> BRONZE_DUNGEON_BLOCKS = tag("bronze_dungeon_blocks");
         public static final TagKey<Block> SENTRY_LABORATORY_BLOCKS = tag("sentry_laboratory_blocks");
@@ -54,7 +53,6 @@ public class AncientAetherTags {
         public static final TagKey<Biome> HAS_QUICKSOIL_COASTS = tag("has_quicksoil_coasts");
         public static final TagKey<Biome> HAS_GRAVITY_GRAVEL_COASTS = tag("has_gravity_gravel_coasts");
         public static final TagKey<Biome> HAS_WYND_ICE_COASTS = tag("has_wynd_ice_coasts");
-        public static final TagKey<Biome> HAS_GRAPE_VINES = tag("has_grape_vines");
         public static final TagKey<Biome> HAS_AETHER_GRASS_PATCHES = tag("has_aether_grass_patches");
         public static final TagKey<Biome> HAS_VIOLET_AERCLOUD = tag("has_violet_aercloud");
         public static final TagKey<Biome> HAS_CLOUDBED = tag("has_cloudbed");
