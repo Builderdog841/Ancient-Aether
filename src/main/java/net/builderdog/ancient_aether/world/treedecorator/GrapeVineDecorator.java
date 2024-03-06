@@ -25,36 +25,36 @@ public class GrapeVineDecorator extends TreeDecorator {
     }
 
     public void placeGrapeVine(Context context, BlockPos pos, BlockState state) {
-        context.setBlock(pos, state);
+        RandomSource random = context.random();
+        int age = random.nextIntBetweenInclusive(0, 2);
+        context.setBlock(pos, state.setValue(GrapeVineBlock.AGE, age).setValue(GrapeVineBlock.WATERLOGGED, false));
     }
 
     public void place(Context context) {
         RandomSource random = context.random();
-        int age = random.nextIntBetweenInclusive(1, 3);
-
         context.logs().forEach((pos) -> {
             if (random.nextInt(3) > 0) {
                 BlockPos pos1 = pos.north();
                 if (context.isAir(pos1)) {
-                    placeGrapeVine(context, pos1, state.setValue(GrapeVineBlock.FACING, Direction.NORTH).setValue(GrapeVineBlock.AGE, age));
+                    placeGrapeVine(context, pos1, state.setValue(GrapeVineBlock.FACING, Direction.NORTH));
                 }
             }
             if (random.nextInt(3) > 0) {
                 BlockPos pos2 = pos.east();
                 if (context.isAir(pos2)) {
-                    placeGrapeVine(context, pos2, state.setValue(GrapeVineBlock.FACING, Direction.EAST).setValue(GrapeVineBlock.AGE, age));
+                    placeGrapeVine(context, pos2, state.setValue(GrapeVineBlock.FACING, Direction.EAST));
                 }
             }
             if (random.nextInt(3) > 0) {
                 BlockPos pos3 = pos.south();
                 if (context.isAir(pos3)) {
-                    placeGrapeVine(context, pos3, state.setValue(GrapeVineBlock.FACING, Direction.SOUTH).setValue(GrapeVineBlock.AGE, age));
+                    placeGrapeVine(context, pos3, state.setValue(GrapeVineBlock.FACING, Direction.SOUTH));
                 }
             }
             if (random.nextInt(3) > 0) {
                 BlockPos pos4 = pos.west();
                 if (context.isAir(pos4)) {
-                    placeGrapeVine(context, pos4, state.setValue(GrapeVineBlock.FACING, Direction.WEST).setValue(GrapeVineBlock.AGE, age));
+                    placeGrapeVine(context, pos4, state.setValue(GrapeVineBlock.FACING, Direction.WEST));
                 }
             }
         });

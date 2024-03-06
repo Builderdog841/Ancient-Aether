@@ -22,7 +22,7 @@
       {
         "chance": 0.2,
         "feature": {
-          "feature": "aether:skyroot_tree",
+          "feature": "ancient_aether:skyroot_tree_variants",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",
@@ -42,7 +42,7 @@
       {
         "chance": 0.2,
         "feature": {
-          "feature": "ancient_aether:skyroot_pine_tree",
+          "feature": "ancient_aether:skyroot_pine_tree_variants",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",
@@ -82,7 +82,7 @@
       {
         "chance": 0.02,
         "feature": {
-          "feature": "ancient_aether:fancy_skyroot_tree",
+          "feature": "ancient_aether:fancy_skyroot_tree_variants",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",
