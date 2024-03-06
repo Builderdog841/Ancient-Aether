@@ -2,6 +2,7 @@ package net.builderdog.ancient_aether.block.natural;
 
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -11,31 +12,92 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.LadderBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.common.ForgeHooks;
 import org.jetbrains.annotations.NotNull;
 
+import javax.annotation.Nullable;
+
 @SuppressWarnings("deprecation")
-public class GrapeVineBlock extends LadderBlock implements BonemealableBlock {
+public class GrapeVineBlock extends Block implements BonemealableBlock {
     public static final DirectionProperty FACING = LadderBlock.FACING;
-    public static final BooleanProperty WATERLOGGED = LadderBlock.WATERLOGGED;
     public static final IntegerProperty AGE = BlockStateProperties.AGE_2;
+    protected static final VoxelShape EAST_AABB = Block.box(0.0D, 0.0D, 0.0D, 3.0D, 16.0D, 16.0D);
+    protected static final VoxelShape WEST_AABB = Block.box(13.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
+    protected static final VoxelShape SOUTH_AABB = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 3.0D);
+    protected static final VoxelShape NORTH_AABB = Block.box(0.0D, 0.0D, 13.0D, 16.0D, 16.0D, 16.0D);
+
     public GrapeVineBlock(Properties properties) {
         super(properties);
         registerDefaultState(stateDefinition.any().setValue(AGE, 0));
+    }
+
+    public @NotNull VoxelShape getShape(BlockState state, @NotNull BlockGetter getter, @NotNull BlockPos pos, @NotNull CollisionContext context) {
+        return switch (state.getValue(FACING)) {
+            case NORTH -> NORTH_AABB;
+            case SOUTH -> SOUTH_AABB;
+            case WEST -> WEST_AABB;
+            default -> EAST_AABB;
+        };
+    }
+
+    private boolean canAttachTo(BlockGetter getter, BlockPos pos, Direction direction) {
+        BlockState blockstate = getter.getBlockState(pos);
+        return blockstate.isFaceSturdy(getter, pos, direction);
+    }
+
+    public boolean canSurvive(BlockState state, @NotNull LevelReader level, BlockPos pos) {
+        Direction direction = state.getValue(FACING);
+        return canAttachTo(level, pos.relative(direction.getOpposite()), direction);
+    }
+
+    public @NotNull BlockState updateShape(BlockState thisState, Direction direction, @NotNull BlockState state, @NotNull LevelAccessor accessor, @NotNull BlockPos thisPos, @NotNull BlockPos pos) {
+        if (direction.getOpposite() == thisState.getValue(FACING) && !thisState.canSurvive(accessor, thisPos)) {
+            return Blocks.AIR.defaultBlockState();
+        }
+        return super.updateShape(thisState, direction, state, accessor, thisPos, pos);
+    }
+
+    @Nullable
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
+        if (!context.replacingClickedOnBlock()) {
+            BlockState blockstate = context.getLevel().getBlockState(context.getClickedPos().relative(context.getClickedFace().getOpposite()));
+            if (blockstate.is(this) && blockstate.getValue(FACING) == context.getClickedFace()) {
+                return null;
+            }
+        }
+
+        BlockState state = defaultBlockState();
+        LevelReader level = context.getLevel();
+        BlockPos pos = context.getClickedPos();
+
+        for(Direction direction : context.getNearestLookingDirections()) {
+            if (direction.getAxis().isHorizontal()) {
+                state = state.setValue(FACING, direction.getOpposite());
+                if (state.canSurvive(level, pos)) {
+                    return state;
+                }
+            }
+        }
+
+        return null;
     }
 
     public boolean isRandomlyTicking(BlockState state) {
@@ -87,6 +149,6 @@ public class GrapeVineBlock extends LadderBlock implements BonemealableBlock {
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(AGE).add(FACING).add(WATERLOGGED);
+        builder.add(AGE).add(FACING);
     }
 }

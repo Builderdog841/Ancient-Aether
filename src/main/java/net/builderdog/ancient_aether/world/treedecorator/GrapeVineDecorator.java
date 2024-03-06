@@ -27,7 +27,7 @@ public class GrapeVineDecorator extends TreeDecorator {
     public void placeGrapeVine(Context context, BlockPos pos, BlockState state) {
         RandomSource random = context.random();
         int age = random.nextIntBetweenInclusive(0, 2);
-        context.setBlock(pos, state.setValue(GrapeVineBlock.AGE, age).setValue(GrapeVineBlock.WATERLOGGED, false));
+        context.setBlock(pos, state.setValue(GrapeVineBlock.AGE, age));
     }
 
     public void place(Context context) {
