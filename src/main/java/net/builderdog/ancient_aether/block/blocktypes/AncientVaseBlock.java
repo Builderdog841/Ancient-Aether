@@ -1,6 +1,5 @@
-package net.builderdog.ancient_aether.block.dungeon;
+package net.builderdog.ancient_aether.block.blocktypes;
 
-import net.builderdog.ancient_aether.block.utility.VaseBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;

@@ -1,7 +1,7 @@
 package net.builderdog.ancient_aether.world.treedecorator;
 
 import com.mojang.serialization.Codec;
-import net.builderdog.ancient_aether.block.natural.GrapeVineBlock;
+import net.builderdog.ancient_aether.block.blocktypes.GrapeVineBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;

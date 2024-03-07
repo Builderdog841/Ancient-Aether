@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.block.natural;
+package net.builderdog.ancient_aether.block.blocktypes;
 
 import com.aetherteam.aether.block.natural.AercloudBlock;
 import net.minecraft.core.BlockPos;

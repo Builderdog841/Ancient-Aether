@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.block.utility;
+package net.builderdog.ancient_aether.block.blocktypes;
 
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.blockentity.AncientAetherCampfireBlockEntity;

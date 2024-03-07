@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.block.natural;
+package net.builderdog.ancient_aether.block.blocktypes;
 
 import net.builderdog.ancient_aether.block.blockstate.AncientAetherBlockStateProperties;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
@@ -125,13 +125,6 @@ public class GrapeVineBlock extends Block implements BonemealableBlock {
         int i = state.getValue(AGE);
         boolean flag = i == 2;
         if (!flag && player.getItemInHand(hand).is(Items.BONE_MEAL)) {
-            if (!player.getItemInHand(hand).is(Items.SHEARS)) {
-                return InteractionResult.PASS;
-            } else {
-                BlockState blockstate = state.setValue(CUT, true);
-                level.setBlock(pos, blockstate, 2);
-                level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, blockstate));
-            }
             return InteractionResult.SUCCESS;
         } else if (i > 1) {
             int j = 1 + level.random.nextInt(2);

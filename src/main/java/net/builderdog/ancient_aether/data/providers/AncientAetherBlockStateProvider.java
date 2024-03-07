@@ -2,11 +2,7 @@ package net.builderdog.ancient_aether.data.providers;
 
 import com.aetherteam.aether.block.dungeon.DoorwayBlock;
 import com.aetherteam.aether.data.providers.AetherBlockStateProvider;
-import net.builderdog.ancient_aether.block.dungeon.AncientVaseBlock;
-import net.builderdog.ancient_aether.block.natural.GrapeVineBlock;
-import net.builderdog.ancient_aether.block.utility.SliderPrototypeBlock;
-import net.builderdog.ancient_aether.block.utility.VaseBlock;
-import net.builderdog.ancient_aether.block.utility.WindBlowerBlock;
+import net.builderdog.ancient_aether.block.blocktypes.*;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;

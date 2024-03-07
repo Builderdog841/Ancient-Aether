@@ -1,10 +1,12 @@
-package net.builderdog.ancient_aether.block.utility;
+package net.builderdog.ancient_aether.block.blocktypes;
 
 import net.builderdog.ancient_aether.block.blockstate.AncientAetherBlockStateProperties;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.Equipable;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
@@ -15,16 +17,17 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("deprecation")
-public class SliderPrototypeBlock extends Block {
-    public static final BooleanProperty CRITICAL = AncientAetherBlockStateProperties.CRITICAL;
+public class WindBlowerBlock extends Block implements Equipable {
+    public static final BooleanProperty CHARGED = AncientAetherBlockStateProperties.CHARGED;
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
-    public SliderPrototypeBlock(Properties properties) {
+    public WindBlowerBlock(Properties properties) {
         super(properties);
-        registerDefaultState(stateDefinition.any().setValue(CRITICAL, Boolean.FALSE).setValue(FACING, Direction.NORTH));
+        registerDefaultState(stateDefinition.any().setValue(CHARGED, false).setValue(FACING, Direction.NORTH));
     }
+
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return defaultBlockState().setValue(CRITICAL, context.getLevel().hasNeighborSignal(context.getClickedPos())).setValue(FACING, context.getHorizontalDirection().getOpposite());
+        return defaultBlockState().setValue(CHARGED, context.getLevel().hasNeighborSignal(context.getClickedPos())).setValue(FACING, context.getHorizontalDirection().getOpposite());
     }
 
     public @NotNull RenderShape getRenderShape(@NotNull BlockState state) {
@@ -35,30 +38,34 @@ public class SliderPrototypeBlock extends Block {
         return state.setValue(FACING, rotation.rotate(state.getValue(FACING)));
     }
 
-    public @NotNull BlockState mirror(BlockState blockState, Mirror mirror) {
-        return blockState.rotate(mirror.getRotation(blockState.getValue(FACING)));
+    public @NotNull BlockState mirror(BlockState state, Mirror mirror) {
+        return state.rotate(mirror.getRotation(state.getValue(FACING)));
     }
 
     public void neighborChanged(@NotNull BlockState state, Level level, @NotNull BlockPos pos, @NotNull Block block, @NotNull BlockPos neighborPos, boolean bool) {
         if (!level.isClientSide) {
-            boolean flag = state.getValue(CRITICAL);
+            boolean flag = state.getValue(CHARGED);
             if (flag != level.hasNeighborSignal(pos)) {
                 if (flag) {
                     level.scheduleTick(pos, this, 4);
                 } else {
-                    level.setBlock(pos, state.cycle(CRITICAL), 2);
+                    level.setBlock(pos, state.cycle(CHARGED), 2);
                 }
             }
         }
     }
 
     public void tick(BlockState state, @NotNull ServerLevel level, @NotNull BlockPos pos, @NotNull RandomSource random) {
-        if (state.getValue(CRITICAL) && !level.hasNeighborSignal(pos)) {
-            level.setBlock(pos, state.cycle(CRITICAL), 2);
+        if (state.getValue(CHARGED) && !level.hasNeighborSignal(pos)) {
+            level.setBlock(pos, state.cycle(CHARGED), 2);
         }
     }
 
+    public @NotNull EquipmentSlot getEquipmentSlot() {
+        return EquipmentSlot.HEAD;
+    }
+
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(CRITICAL, FACING);
+        builder.add(FACING, CHARGED);
     }
 }

@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.block.natural;
+package net.builderdog.ancient_aether.block.blocktypes;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Player;
