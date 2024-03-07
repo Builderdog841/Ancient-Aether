@@ -119,7 +119,7 @@ dependencies {
     minecraft "net.neoforged:forge:${project.mc_version}-${project.neoforge_version}"
 
     implementation fg.deobf("com.aetherteam.aether:aether:${project.aether_version}")
-    implementation fg.deobf('local:aeroblender:1.20.1-1.0-neoforge')
+    implementation fg.deobf("curse.maven:aeroblender-879879:4789008")
     implementation fg.deobf("com.github.glitchfiend:TerraBlender-forge:${project.terrablender_version}")
     implementation fg.deobf("com.aetherteam.nitrogen:nitrogen_internals:${project.nitrogen_version}")
     implementation fg.deobf("com.aetherteam.cumulus:cumulus_menus:${project.cumulus_version}")
@@ -131,15 +131,16 @@ dependencies {
     compileOnly fg.deobf("local:aether_genesis:1.20.1-0.0.1-neoforge")
     compileOnly fg.deobf("curse.maven:deep-aether-852465:5076616")
     compileOnly fg.deobf('software.bernie.geckolib:geckolib-forge-1.20.1:4.2.2')
-    compileOnly fg.deobf("local:aether-redux:2.0-pre9.1-1.20.1-neoforge")
+    compileOnly fg.deobf("curse.maven:aether-redux-867237:5165359")
     compileOnly fg.deobf("curse.maven:aether-lost-content-318602:4927038")
     compileOnly fg.deobf("curse.maven:structure-gel-api-378802:4975615")
 
     runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:${project.curios_version}")
     //runtimeOnly fg.deobf("local:aether_genesis:1.20.1-0.0.1-neoforge")
     //runtimeOnly fg.deobf("curse.maven:deep-aether-852465:5076616")
-    //runtimeOnly fg.deobf('software.bernie.geckolib:geckolib-forge-1.20.1:4.2.2')
+    runtimeOnly fg.deobf('software.bernie.geckolib:geckolib-forge-1.20.1:4.2.2')
     //runtimeOnly fg.deobf("locadeobfl:aether-redux:2.0-pre9.1-1.20.1-neoforge")
+    runtimeOnly fg.deobf("curse.maven:aether-redux-867237:5165359")
     //runtimeOnly fg.("curse.maven:aether-lost-content-318602:4927038")
     //runtimeOnly fg.deobf("curse.maven:structure-gel-api-378802:4975615")
 }
