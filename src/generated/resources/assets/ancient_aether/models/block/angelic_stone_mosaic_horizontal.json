@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/cube_column",
+  "parent": "minecraft:block/cube_column_horizontal",
   "textures": {
     "end": "ancient_aether:block/angelic_stone_mosaic_top",
     "side": "ancient_aether:block/angelic_stone_mosaic"

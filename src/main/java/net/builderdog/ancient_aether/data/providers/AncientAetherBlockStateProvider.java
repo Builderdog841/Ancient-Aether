@@ -225,10 +225,25 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
         getVariantBuilder(block).partialState().setModels(dungeonBlock);
     }
 
-    public void dungeonAxisBlock(RotatedPillarBlock block, RotatedPillarBlock baseBlock) {
-        ConfiguredModel dungeonBlock = new ConfiguredModel(models().cubeColumn(name(baseBlock), texture(name(baseBlock)), texture(name(baseBlock) + "_top")));
-        ConfiguredModel dungeonBlockHorizontal = new ConfiguredModel(models().cubeColumn(name(baseBlock) + "_horizontal", texture(name(baseBlock)), texture(name(baseBlock) + "_top")));
-        getVariantBuilder(block).partialState().setModels(dungeonBlock, dungeonBlockHorizontal);
+    public void lockedMosaicBlock(RotatedPillarBlock block, RotatedPillarBlock baseBlock) {
+        ModelFile mosaicBlock = models().getExistingFile(modLoc("block/" + name(baseBlock)));
+        ModelFile mosaicBlockHorizontal = models().getExistingFile(modLoc("block/" + name(baseBlock) + "_horizontal"));
+
+        getVariantBuilder(block).forAllStatesExcept((state) -> {
+            Direction.Axis axis = state.getValue(RotatedPillarBlock.AXIS);
+            switch (axis) {
+                case X -> {
+                    return ConfiguredModel.builder().modelFile(mosaicBlockHorizontal).rotationX(90).rotationY(90).build();
+                }
+                case Y -> {
+                    return ConfiguredModel.builder().modelFile(mosaicBlock).build();
+                }
+                case Z -> {
+                    return ConfiguredModel.builder().modelFile(mosaicBlockHorizontal).rotationX(90).build();
+                }
+            }
+            return ConfiguredModel.builder().build();
+        });
     }
 
     public void AAInvisibleBlock(Block block, Block baseBlock) {

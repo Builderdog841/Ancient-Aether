@@ -1,47 +1,92 @@
 {
   "variants": {
-    "age=0,facing=east": {
+    "age=0,cut=false,facing=east": {
       "model": "ancient_aether:block/grape_vine_stage0",
       "y": 90
     },
-    "age=0,facing=north": {
+    "age=0,cut=false,facing=north": {
       "model": "ancient_aether:block/grape_vine_stage0"
     },
-    "age=0,facing=south": {
+    "age=0,cut=false,facing=south": {
       "model": "ancient_aether:block/grape_vine_stage0",
       "y": 180
     },
-    "age=0,facing=west": {
+    "age=0,cut=false,facing=west": {
       "model": "ancient_aether:block/grape_vine_stage0",
       "y": 270
     },
-    "age=1,facing=east": {
+    "age=0,cut=true,facing=east": {
+      "model": "ancient_aether:block/grape_vine_stage0",
+      "y": 90
+    },
+    "age=0,cut=true,facing=north": {
+      "model": "ancient_aether:block/grape_vine_stage0"
+    },
+    "age=0,cut=true,facing=south": {
+      "model": "ancient_aether:block/grape_vine_stage0",
+      "y": 180
+    },
+    "age=0,cut=true,facing=west": {
+      "model": "ancient_aether:block/grape_vine_stage0",
+      "y": 270
+    },
+    "age=1,cut=false,facing=east": {
       "model": "ancient_aether:block/grape_vine_stage1",
       "y": 90
     },
-    "age=1,facing=north": {
+    "age=1,cut=false,facing=north": {
       "model": "ancient_aether:block/grape_vine_stage1"
     },
-    "age=1,facing=south": {
+    "age=1,cut=false,facing=south": {
       "model": "ancient_aether:block/grape_vine_stage1",
       "y": 180
     },
-    "age=1,facing=west": {
+    "age=1,cut=false,facing=west": {
       "model": "ancient_aether:block/grape_vine_stage1",
       "y": 270
     },
-    "age=2,facing=east": {
+    "age=1,cut=true,facing=east": {
+      "model": "ancient_aether:block/grape_vine_stage1",
+      "y": 90
+    },
+    "age=1,cut=true,facing=north": {
+      "model": "ancient_aether:block/grape_vine_stage1"
+    },
+    "age=1,cut=true,facing=south": {
+      "model": "ancient_aether:block/grape_vine_stage1",
+      "y": 180
+    },
+    "age=1,cut=true,facing=west": {
+      "model": "ancient_aether:block/grape_vine_stage1",
+      "y": 270
+    },
+    "age=2,cut=false,facing=east": {
       "model": "ancient_aether:block/grape_vine_stage2",
       "y": 90
     },
-    "age=2,facing=north": {
+    "age=2,cut=false,facing=north": {
       "model": "ancient_aether:block/grape_vine_stage2"
     },
-    "age=2,facing=south": {
+    "age=2,cut=false,facing=south": {
       "model": "ancient_aether:block/grape_vine_stage2",
       "y": 180
     },
-    "age=2,facing=west": {
+    "age=2,cut=false,facing=west": {
+      "model": "ancient_aether:block/grape_vine_stage2",
+      "y": 270
+    },
+    "age=2,cut=true,facing=east": {
+      "model": "ancient_aether:block/grape_vine_stage2",
+      "y": 90
+    },
+    "age=2,cut=true,facing=north": {
+      "model": "ancient_aether:block/grape_vine_stage2"
+    },
+    "age=2,cut=true,facing=south": {
+      "model": "ancient_aether:block/grape_vine_stage2",
+      "y": 180
+    },
+    "age=2,cut=true,facing=west": {
       "model": "ancient_aether:block/grape_vine_stage2",
       "y": 270
     }
