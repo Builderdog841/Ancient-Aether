@@ -83,8 +83,8 @@ public class GrapeVineBlock extends Block implements BonemealableBlock {
     @Nullable
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         if (!context.replacingClickedOnBlock()) {
-            BlockState blockstate = context.getLevel().getBlockState(context.getClickedPos().relative(context.getClickedFace().getOpposite()));
-            if (blockstate.is(this) && blockstate.getValue(FACING) == context.getClickedFace()) {
+            BlockState state = context.getLevel().getBlockState(context.getClickedPos().relative(context.getClickedFace().getOpposite()));
+            if (state.is(this) && state.getValue(FACING) == context.getClickedFace()) {
                 return null;
             }
         }
@@ -133,9 +133,9 @@ public class GrapeVineBlock extends Block implements BonemealableBlock {
             int j = 1 + level.random.nextInt(2);
             popResource(level, pos, new ItemStack(AncientAetherItems.GRAPES.get(), j + (flag ? 1 : 0)));
             level.playSound(null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
-            BlockState blockstate = state.setValue(AGE, 1);
-            level.setBlock(pos, blockstate, 2);
-            level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, blockstate));
+            BlockState age = state.setValue(AGE, 1);
+            level.setBlock(pos, age, 2);
+            level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, age));
             return InteractionResult.sidedSuccess(level.isClientSide);
         }
         if (player.getItemInHand(hand).canPerformAction(ToolActions.SHEARS_CARVE)) {
