@@ -1,7 +1,14 @@
 {
+  "block.grape_vine.pick_grapes": {
+    "sounds": [
+      "item/sweet_berries/pick_from_bush1",
+      "item/sweet_berries/pick_from_bush2"
+    ],
+    "subtitle": "subtitles.ancient_aether.block.grape_vine.pick_grapes"
+  },
   "block.obelisk.activation": {
     "sounds": [
-      "ancient_aether:block/obelisk/obelisk_activation"
+      "ancient_aether:block/obelisk_activation"
     ],
     "subtitle": "subtitles.ancient_aether.block.obelisk.activation"
   },

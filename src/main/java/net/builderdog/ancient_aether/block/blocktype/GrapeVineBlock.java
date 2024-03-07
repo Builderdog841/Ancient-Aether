@@ -1,6 +1,7 @@
 package net.builderdog.ancient_aether.block.blocktype;
 
 import net.builderdog.ancient_aether.block.blockstate.AncientAetherBlockStateProperties;
+import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -41,7 +42,7 @@ import javax.annotation.Nullable;
 
 @SuppressWarnings("deprecation")
 public class GrapeVineBlock extends Block implements BonemealableBlock {
-    public static final BooleanProperty CUT = AncientAetherBlockStateProperties.CUT;
+    public static final BooleanProperty CROPPED = AncientAetherBlockStateProperties.CROPPED;
     public static final IntegerProperty AGE = BlockStateProperties.AGE_2;
     public static final DirectionProperty FACING = LadderBlock.FACING;
     protected static final VoxelShape EAST_AABB = Block.box(0.0D, 0.0D, 0.0D, 3.0D, 16.0D, 16.0D);
@@ -51,7 +52,7 @@ public class GrapeVineBlock extends Block implements BonemealableBlock {
 
     public GrapeVineBlock(Properties properties) {
         super(properties);
-        registerDefaultState(stateDefinition.any().setValue(CUT, false).setValue(AGE, 0));
+        registerDefaultState(stateDefinition.any().setValue(CROPPED, false).setValue(AGE, 0));
     }
 
     public @NotNull VoxelShape getShape(BlockState state, @NotNull BlockGetter getter, @NotNull BlockPos pos, @NotNull CollisionContext context) {
@@ -105,7 +106,7 @@ public class GrapeVineBlock extends Block implements BonemealableBlock {
     }
 
     public boolean isRandomlyTicking(BlockState state) {
-        return state.getValue(AGE) < 2 && !state.getValue(CUT);
+        return state.getValue(AGE) < 2 && !state.getValue(CROPPED);
     }
 
     public @NotNull ItemStack getCloneItemStack(@NotNull BlockGetter getter, @NotNull BlockPos pos, @NotNull BlockState state) {
@@ -131,19 +132,20 @@ public class GrapeVineBlock extends Block implements BonemealableBlock {
         if (i > 1) {
             int j = 1 + level.random.nextInt(2);
             popResource(level, pos, new ItemStack(AncientAetherItems.GRAPES.get(), j + (flag ? 1 : 0)));
-            level.playSound(null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
             BlockState age = state.setValue(AGE, 1);
             level.setBlock(pos, age, 2);
             level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, age));
+            level.playSound(null, pos, AncientAetherSoundEvents.BLOCK_GRAPE_VINE_PICK_GRAPES.get(), SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
             return InteractionResult.sidedSuccess(level.isClientSide);
         }
         if (player.getItemInHand(hand).canPerformAction(ToolActions.SHEARS_CARVE)) {
-            if (!state.getValue(CUT)) {
+            if (!state.getValue(CROPPED)) {
                 level.gameEvent(player, GameEvent.SHEAR, pos);
                 player.awardStat(Stats.ITEM_USED.get(Items.SHEARS));
-                BlockState cut = state.setValue(CUT, true);
+                BlockState cut = state.setValue(CROPPED, true);
                 level.setBlock(pos, cut, 2);
                 level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, cut));
+                level.playSound(null, pos, SoundEvents.GROWING_PLANT_CROP, SoundSource.BLOCKS, 1.0F, 1.0F);
                 return InteractionResult.sidedSuccess(level.isClientSide);
             }
         }
@@ -164,6 +166,6 @@ public class GrapeVineBlock extends Block implements BonemealableBlock {
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(CUT).add(AGE).add(FACING);
+        builder.add(CROPPED).add(AGE).add(FACING);
     }
 }

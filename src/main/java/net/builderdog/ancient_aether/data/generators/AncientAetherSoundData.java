@@ -13,99 +13,105 @@ public class AncientAetherSoundData extends SoundDefinitionsProvider {
 
     @Override
     public void registerSounds() {
+        add(AncientAetherSoundEvents.BLOCK_GRAPE_VINE_PICK_GRAPES, definition().with(
+                        sound("item/sweet_berries/pick_from_bush1"),
+                        sound("item/sweet_berries/pick_from_bush2"))
+                .subtitle("subtitles.ancient_aether.block.grape_vine.pick_grapes")
+        );
+
         add(AncientAetherSoundEvents.BLOCK_OBELISK_ACTIVATION, definition().with(
-                sound("ancient_aether:block/obelisk/obelisk_activation"))
+                        sound("ancient_aether:block/obelisk_activation"))
                 .subtitle("subtitles.ancient_aether.block.obelisk.activation")
         );
 
         add(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_VALKYRUM_RING, definition().with(
-                sound("minecraft:item/armor/equip_chain1"),
-                sound("minecraft:item/armor/equip_chain2"),
-                sound("minecraft:item/armor/equip_chain3"),
-                sound("minecraft:item/armor/equip_chain4"),
-                sound("minecraft:item/armor/equip_chain5"),
-                sound("minecraft:item/armor/equip_chain6"))
+                        sound("item/armor/equip_chain1"),
+                        sound("item/armor/equip_chain2"),
+                        sound("item/armor/equip_chain3"),
+                        sound("item/armor/equip_chain4"),
+                        sound("item/armor/equip_chain5"),
+                        sound("item/armor/equip_chain6"))
                 .subtitle("subtitles.ancient_aether.item.accessory.equip_valkyrum_ring")
         );
         add(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_HERMES_RING, definition().with(
-                sound("minecraft:item/armor/equip_chain1"),
-                sound("minecraft:item/armor/equip_chain2"),
-                sound("minecraft:item/armor/equip_chain3"),
-                sound("minecraft:item/armor/equip_chain4"),
-                sound("minecraft:item/armor/equip_chain5"),
-                sound("minecraft:item/armor/equip_chain6"))
+                        sound("item/armor/equip_chain1"),
+                        sound("item/armor/equip_chain2"),
+                        sound("item/armor/equip_chain3"),
+                        sound("item/armor/equip_chain4"),
+                        sound("item/armor/equip_chain5"),
+                        sound("item/armor/equip_chain6"))
                 .subtitle("subtitles.ancient_aether.item.accessory.equip_hermes_ring")
         );
         add(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_ARKENIUM_RING, definition().with(
-                sound("minecraft:item/armor/equip_chain1"),
-                sound("minecraft:item/armor/equip_chain2"),
-                sound("minecraft:item/armor/equip_chain3"),
-                sound("minecraft:item/armor/equip_chain4"),
-                sound("minecraft:item/armor/equip_chain5"),
-                sound("minecraft:item/armor/equip_chain6"))
+                        sound("item/armor/equip_chain1"),
+                        sound("item/armor/equip_chain2"),
+                        sound("item/armor/equip_chain3"),
+                        sound("item/armor/equip_chain4"),
+                        sound("item/armor/equip_chain5"),
+                        sound("item/armor/equip_chain6"))
                 .subtitle("subtitles.ancient_aether.item.accessory.equip_arkenium_ring")
         );
         add(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_HEALTH_RING, definition().with(
-                sound("minecraft:item/armor/equip_chain1"),
-                sound("minecraft:item/armor/equip_chain2"),
-                sound("minecraft:item/armor/equip_chain3"),
-                sound("minecraft:item/armor/equip_chain4"),
-                sound("minecraft:item/armor/equip_chain5"),
-                sound("minecraft:item/armor/equip_chain6"))
+                        sound("item/armor/equip_chain1"),
+                        sound("item/armor/equip_chain2"),
+                        sound("item/armor/equip_chain3"),
+                        sound("item/armor/equip_chain4"),
+                        sound("item/armor/equip_chain5"),
+                        sound("item/armor/equip_chain6"))
                 .subtitle("subtitles.ancient_aether.item.accessory.equip_health_ring")
         );
         add(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_ANCIENT_RING, definition().with(
-                sound("minecraft:item/armor/equip_chain1"),
-                sound("minecraft:item/armor/equip_chain2"),
-                sound("minecraft:item/armor/equip_chain3"),
-                sound("minecraft:item/armor/equip_chain4"),
-                sound("minecraft:item/armor/equip_chain5"),
-                sound("minecraft:item/armor/equip_chain6"))
+                        sound("item/armor/equip_chain1"),
+                        sound("item/armor/equip_chain2"),
+                        sound("item/armor/equip_chain3"),
+                        sound("item/armor/equip_chain4"),
+                        sound("item/armor/equip_chain5"),
+                        sound("item/armor/equip_chain6"))
                 .subtitle("subtitles.ancient_aether.item.accessory.equip_ancient_ring")
         );
         add(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_VALKYRUM_PENDANT, definition().with(
-                sound("minecraft:item/armor/equip_chain1"),
-                sound("minecraft:item/armor/equip_chain2"),
-                sound("minecraft:item/armor/equip_chain3"),
-                sound("minecraft:item/armor/equip_chain4"),
-                sound("minecraft:item/armor/equip_chain5"),
-                sound("minecraft:item/armor/equip_chain6"))
+                        sound("item/armor/equip_chain1"),
+                        sound("item/armor/equip_chain2"),
+                        sound("item/armor/equip_chain3"),
+                        sound("item/armor/equip_chain4"),
+                        sound("item/armor/equip_chain5"),
+                        sound("item/armor/equip_chain6"))
                 .subtitle("subtitles.ancient_aether.item.accessory.equip_valkyrum_pendant")
         );
         add(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_HERMES_PENDANT, definition().with(
-                sound("minecraft:item/armor/equip_chain1"),
-                sound("minecraft:item/armor/equip_chain2"),
-                sound("minecraft:item/armor/equip_chain3"),
-                sound("minecraft:item/armor/equip_chain4"),
-                sound("minecraft:item/armor/equip_chain5"),
-                sound("minecraft:item/armor/equip_chain6"))
+                        sound("item/armor/equip_chain1"),
+                        sound("item/armor/equip_chain2"),
+                        sound("item/armor/equip_chain3"),
+                        sound("item/armor/equip_chain4"),
+                        sound("item/armor/equip_chain5"),
+                        sound("item/armor/equip_chain6"))
                 .subtitle("subtitles.ancient_aether.item.accessory.equip_hermes_pendant")
         );
         add(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_ARKENIUM_PENDANT, definition().with(
-                sound("minecraft:item/armor/equip_chain1"),
-                sound("minecraft:item/armor/equip_chain2"),
-                sound("minecraft:item/armor/equip_chain3"),
-                sound("minecraft:item/armor/equip_chain4"),
-                sound("minecraft:item/armor/equip_chain5"),
-                sound("minecraft:item/armor/equip_chain6"))
+                        sound("item/armor/equip_chain1"),
+                        sound("item/armor/equip_chain2"),
+                        sound("item/armor/equip_chain3"),
+                        sound("item/armor/equip_chain4"),
+                        sound("item/armor/equip_chain5"),
+                        sound("item/armor/equip_chain6"))
                 .subtitle("subtitles.ancient_aether.item.accessory.equip_arkenium_pendant")
         );
         add(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_HEALTH_PENDANT, definition().with(
-                sound("minecraft:item/armor/equip_chain1"),
-                sound("minecraft:item/armor/equip_chain2"),
-                sound("minecraft:item/armor/equip_chain3"),
-                sound("minecraft:item/armor/equip_chain4"),
-                sound("minecraft:item/armor/equip_chain5"),
-                sound("minecraft:item/armor/equip_chain6"))
+                        sound("item/armor/equip_chain1"),
+                        sound("item/armor/equip_chain2"),
+                        sound("item/armor/equip_chain3"),
+                        sound("item/armor/equip_chain4"),
+                        sound("item/armor/equip_chain5"),
+                        sound("item/armor/equip_chain6"))
                 .subtitle("subtitles.ancient_aether.item.accessory.equip_health_pendant")
         );
         add(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_ANCIENT_PENDANT, definition().with(
-                sound("minecraft:item/armor/equip_chain1"),
-                sound("minecraft:item/armor/equip_chain2"),
-                sound("minecraft:item/armor/equip_chain3"),
-                sound("minecraft:item/armor/equip_chain4"),
-                sound("minecraft:item/armor/equip_chain5"),
-                sound("minecraft:item/armor/equip_chain6"))
+                        sound("item/armor/equip_chain1"),
+                        sound("item/armor/equip_chain2"),
+                        sound("item/armor/equip_chain3"),
+                        sound("item/armor/equip_chain4"),
+                        sound("item/armor/equip_chain5"),
+                        sound("item/armor/equip_chain6"))
                 .subtitle("subtitles.ancient_aether.item.accessory.equip_ancient_pendant")
         );
 
@@ -114,17 +120,17 @@ public class AncientAetherSoundData extends SoundDefinitionsProvider {
                 .subtitle("subtitles.ancient_aether.entity.fluffalo.ambient")
         );
         add(AncientAetherSoundEvents.ENTITY_FLUFFALO_MILK, definition().with(
-                sound("minecraft:entity/cow/milk1"),
-                sound("minecraft:entity/cow/milk2"),
-                sound("minecraft:entity/cow/milk3"))
+                        sound("entity/cow/milk1"),
+                        sound("entity/cow/milk2"),
+                        sound("entity/cow/milk3"))
                 .subtitle("subtitles.ancient_aether.entity.fluffalo.milk")
         );
         add(AncientAetherSoundEvents.ENTITY_FLUFFALO_HURT, definition().with(
-                sound("ancient_aether:entity/fluffalo/fluffalo_hurt"))
+                        sound("ancient_aether:entity/fluffalo/fluffalo_hurt"))
                 .subtitle("subtitles.ancient_aether.entity.fluffalo.hurt")
         );
         add(AncientAetherSoundEvents.ENTITY_FLUFFALO_DEATH, definition().with(
-                sound("ancient_aether:entity/fluffalo/fluffalo_hurt"))
+                        sound("ancient_aether:entity/fluffalo/fluffalo_hurt"))
                 .subtitle("subtitles.ancient_aether.entity.fluffalo.death")
         );
         add(AncientAetherSoundEvents.ENTITY_ROOTHYRN_HURT, definition().with(
@@ -136,38 +142,38 @@ public class AncientAetherSoundData extends SoundDefinitionsProvider {
                 .subtitle("subtitles.ancient_aether.entity.roothyrn.death")
         );
         add(AncientAetherSoundEvents.ENTITY_AERONAUTIC_LEAPER_DEATH, definition().with(
-                sound("minecraft:mob/slime/big1"),
-                sound("minecraft:mob/slime/big2"),
-                sound("minecraft:mob/slime/big3"),
-                sound("minecraft:mob/slime/big4"))
+                        sound("mob/slime/big1"),
+                        sound("mob/slime/big2"),
+                        sound("mob/slime/big3"),
+                        sound("mob/slime/big4"))
                 .subtitle("subtitles.ancient_aether.entity.aeronautic_leaper.death")
         );
         add(AncientAetherSoundEvents.ENTITY_AERONAUTIC_LEAPER_HURT, definition().with(
-                sound("minecraft:mob/slime/big1"),
-                sound("minecraft:mob/slime/big2"),
-                sound("minecraft:mob/slime/big3"),
-                sound("minecraft:mob/slime/big4"))
+                        sound("mob/slime/big1"),
+                        sound("mob/slime/big2"),
+                        sound("mob/slime/big3"),
+                        sound("mob/slime/big4"))
                 .subtitle("subtitles.ancient_aether.entity.aeronautic_leaper.hurt")
         );
         add(AncientAetherSoundEvents.ENTITY_AERONAUTIC_LEAPER_JUMP, definition().with(
-                sound("minecraft:mob/slime/big1"),
-                sound("minecraft:mob/slime/big2"),
-                sound("minecraft:mob/slime/big3"),
-                sound("minecraft:mob/slime/big4"))
+                        sound("mob/slime/big1"),
+                        sound("mob/slime/big2"),
+                        sound("mob/slime/big3"),
+                        sound("mob/slime/big4"))
                 .subtitle("subtitles.ancient_aether.entity.aeronautic_leaper.jump")
         );
         add(AncientAetherSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_SHOOT, definition().with(
-                sound("minecraft:random/bow"))
+                        sound("random/bow"))
                 .subtitle("subtitles.ancient_aether.entity.mutated_aechor_plant.shoot")
         );
         add(AncientAetherSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_HURT, definition().with(
-                sound("minecraft:damage/hit1"),
-                sound("minecraft:damage/hit2"),
-                sound("minecraft:damage/hit3")
-                ).subtitle("subtitles.ancient_aether.entity.mutated_aechor_plant.hurt")
+                        sound("damage/hit1"),
+                        sound("damage/hit2"),
+                        sound("damage/hit3"))
+                .subtitle("subtitles.ancient_aether.entity.mutated_aechor_plant.hurt")
         );
         add(AncientAetherSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_DEATH, definition().with(
-                sound("minecraft:damage/fallbig"))
+                        sound("damage/fallbig"))
                 .subtitle("subtitles.ancient_aether.entity.mutated_aechor_plant.death")
         );
     }

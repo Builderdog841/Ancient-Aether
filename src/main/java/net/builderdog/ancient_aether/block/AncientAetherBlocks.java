@@ -39,6 +39,7 @@ import java.util.function.Supplier;
 import static com.aetherteam.aether.block.AetherBlocks.*;
 import static net.minecraft.world.level.block.Blocks.*;
 
+@SuppressWarnings("deprecation")
 public class AncientAetherBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, AncientAether.MODID);

@@ -1,14 +1,12 @@
 package net.builderdog.ancient_aether.block.blocktype;
 
 import com.aetherteam.aether.event.AetherEventDispatch;
-import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -29,7 +27,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Supplier;
 
-@SuppressWarnings("deprecation")
+@Deprecated
 public class TrappedFlowerBlock extends BushBlock {
     private final Supplier<EntityType<?>> spawnableEntityTypeSupplier;
     private final Supplier<? extends BlockState> defaultStateSupplier;
@@ -64,7 +62,6 @@ public class TrappedFlowerBlock extends BushBlock {
                     }
                 }
                 spawnableEntityTypeSupplier.get().spawn(serverLevel, spawnPos, MobSpawnType.TRIGGERED);
-                serverLevel.playSound(null, blockPos, AncientAetherSoundEvents.BLOCK_ROOTHYRN_TRAP_TRIGGER.get(), SoundSource.BLOCKS, 0.5F, level.getRandom().nextFloat() * 0.1F + 0.9F);
             }
         }
     }

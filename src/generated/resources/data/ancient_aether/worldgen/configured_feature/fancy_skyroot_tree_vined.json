@@ -8,7 +8,7 @@
           "Name": "ancient_aether:grape_vine",
           "Properties": {
             "age": "0",
-            "cut": "false",
+            "cropped": "false",
             "facing": "north"
           }
         }

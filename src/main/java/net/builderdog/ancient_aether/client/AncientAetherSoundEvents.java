@@ -10,7 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class AncientAetherSoundEvents {
     public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, AncientAether.MODID);
 
-    public static final RegistryObject<SoundEvent> BLOCK_ROOTHYRN_TRAP_TRIGGER = register("block.roothyrn_trap.trigger");
+    public static final RegistryObject<SoundEvent> BLOCK_GRAPE_VINE_PICK_GRAPES = register("block.grape_vine.pick_grapes");
     public static final RegistryObject<SoundEvent> BLOCK_OBELISK_ACTIVATION = register("block.obelisk.activation");
     public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_VALKYRUM_RING = register("item.accessory.equip_valkyrum_ring");
     public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_HERMES_RING = register("item.accessory.equip_hermes_ring");
