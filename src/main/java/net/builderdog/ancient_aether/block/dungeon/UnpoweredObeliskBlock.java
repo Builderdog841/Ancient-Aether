@@ -49,9 +49,9 @@ public class UnpoweredObeliskBlock extends Block {
                     player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
                     stack.shrink(1);
                 }
-                for (int x1 = Mth.floor(x -44); x1 <= Mth.ceil(x + 44); x1++) {
-                    for (int y1 = Mth.floor(y - 60); y1 <= Mth.ceil(y + 20); y1++) {
-                        for (int z1 = Mth.floor(z - 44); z1 <= Mth.ceil(z + 44); z1++) {
+                for (int x1 = Mth.floor(x -8); x1 <= Mth.ceil(x + 8); x1++) {
+                    for (int y1 = Mth.floor(y - 10); y1 <= Mth.ceil(y + 18); y1++) {
+                        for (int z1 = Mth.floor(z - 8); z1 <= Mth.ceil(z + 8); z1++) {
                             BlockPos checkedPos = new BlockPos(x1, y1, z1);
                             BlockState checkedState = level.getBlockState(checkedPos);
 
@@ -64,27 +64,8 @@ public class UnpoweredObeliskBlock extends Block {
                         }
                     }
                 }
-                for (int x1 = Mth.floor(x -72); x1 <= Mth.ceil(x + 72); x1++) {
-                    for (int y1 = Mth.floor(y - 60); y1 <= Mth.ceil(y + 20); y1++) {
-                        for (int z1 = Mth.floor(z - 72); z1 <= Mth.ceil(z + 72); z1++) {
-                            BlockPos checkedPos = new BlockPos(x1, y1, z1);
-                            BlockState checkedState = level.getBlockState(checkedPos);
-                            if (checkedState.getBlock() == Blocks.VINE) {
-                                level.setBlockAndUpdate(checkedPos, Blocks.AIR.defaultBlockState());
-                            }
-                        }
-                    }
-                }
-                for (int x1 = Mth.floor(x -1); x1 <= Mth.ceil(x + 1); x1++) {
-                    for (int y1 = Mth.floor(y - 1); y1 <= Mth.ceil(y + 1); y1++) {
-                        for (int z1 = Mth.floor(z - 1); z1 <= Mth.ceil(z + 1); z1++) {
-                            BlockPos checkedPos = new BlockPos(x1, y1, z1);
-                            BlockState checkedState = level.getBlockState(checkedPos);
-                            if (checkedState.getBlock() == AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get()) {
-                                level.setBlockAndUpdate(checkedPos, AncientAetherBlocks.ANCIENT_OBELISK.get().defaultBlockState());
-                            }
-                        }
-                    }
+                if (state.getBlock() == AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get()) {
+                    level.setBlockAndUpdate(pos, AncientAetherBlocks.ANCIENT_OBELISK.get().defaultBlockState());
                 }
                 ServerPlayer _player = (ServerPlayer) player;
                 Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("ancient_aether:unlock_ancient_dungeon"));
