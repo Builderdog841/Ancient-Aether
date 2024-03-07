@@ -28,8 +28,8 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Objects;
 
 @SuppressWarnings("deprecation")
-public class UnpoweredObeliskBlock extends Block {
-    public UnpoweredObeliskBlock(Properties properties) {
+public class ObeliskBlock extends Block {
+    public ObeliskBlock(Properties properties) {
         super(properties);
     }
 
@@ -59,6 +59,9 @@ public class UnpoweredObeliskBlock extends Block {
                                 level.setBlockAndUpdate(checkedPos, Blocks.AIR.defaultBlockState());
                             }
                             if (checkedState.getBlock() == AncientAetherBlocks.TREASURE_DOORWAY_LIGHT_AEROGETIC_STONE.get()) {
+                                level.setBlockAndUpdate(checkedPos, Blocks.AIR.defaultBlockState());
+                            }
+                            if (checkedState.getBlock() == Blocks.VINE) {
                                 level.setBlockAndUpdate(checkedPos, Blocks.AIR.defaultBlockState());
                             }
                         }
