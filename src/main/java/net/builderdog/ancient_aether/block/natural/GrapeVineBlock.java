@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.block.natural;
 
+import net.builderdog.ancient_aether.block.blockstate.AncientAetherBlockStateProperties;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -24,6 +25,7 @@ import net.minecraft.world.level.block.LadderBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.gameevent.GameEvent;
@@ -37,8 +39,9 @@ import javax.annotation.Nullable;
 
 @SuppressWarnings("deprecation")
 public class GrapeVineBlock extends Block implements BonemealableBlock {
-    public static final DirectionProperty FACING = LadderBlock.FACING;
+    public static final BooleanProperty CUT = AncientAetherBlockStateProperties.CUT;
     public static final IntegerProperty AGE = BlockStateProperties.AGE_2;
+    public static final DirectionProperty FACING = LadderBlock.FACING;
     protected static final VoxelShape EAST_AABB = Block.box(0.0D, 0.0D, 0.0D, 3.0D, 16.0D, 16.0D);
     protected static final VoxelShape WEST_AABB = Block.box(13.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
     protected static final VoxelShape SOUTH_AABB = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 3.0D);
@@ -46,7 +49,7 @@ public class GrapeVineBlock extends Block implements BonemealableBlock {
 
     public GrapeVineBlock(Properties properties) {
         super(properties);
-        registerDefaultState(stateDefinition.any().setValue(AGE, 0));
+        registerDefaultState(stateDefinition.any().setValue(CUT, false).setValue(AGE, 0));
     }
 
     public @NotNull VoxelShape getShape(BlockState state, @NotNull BlockGetter getter, @NotNull BlockPos pos, @NotNull CollisionContext context) {
@@ -101,7 +104,7 @@ public class GrapeVineBlock extends Block implements BonemealableBlock {
     }
 
     public boolean isRandomlyTicking(BlockState state) {
-        return state.getValue(AGE) < 2;
+        return state.getValue(AGE) < 2 && !state.getValue(CUT);
     }
 
     public @NotNull ItemStack getCloneItemStack(@NotNull BlockGetter getter, @NotNull BlockPos pos, @NotNull BlockState state) {
@@ -122,7 +125,14 @@ public class GrapeVineBlock extends Block implements BonemealableBlock {
         int i = state.getValue(AGE);
         boolean flag = i == 2;
         if (!flag && player.getItemInHand(hand).is(Items.BONE_MEAL)) {
-            return InteractionResult.PASS;
+            if (!player.getItemInHand(hand).is(Items.SHEARS)) {
+                return InteractionResult.PASS;
+            } else {
+                BlockState blockstate = state.setValue(CUT, true);
+                level.setBlock(pos, blockstate, 2);
+                level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, blockstate));
+            }
+            return InteractionResult.SUCCESS;
         } else if (i > 1) {
             int j = 1 + level.random.nextInt(2);
             popResource(level, pos, new ItemStack(AncientAetherItems.GRAPES.get(), j + (flag ? 1 : 0)));
@@ -149,6 +159,6 @@ public class GrapeVineBlock extends Block implements BonemealableBlock {
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(AGE).add(FACING);
+        builder.add(CUT).add(AGE).add(FACING);
     }
 }
