@@ -101,7 +101,6 @@ public class GrapeVineBlock extends Block implements BonemealableBlock {
                 }
             }
         }
-
         return null;
     }
 
