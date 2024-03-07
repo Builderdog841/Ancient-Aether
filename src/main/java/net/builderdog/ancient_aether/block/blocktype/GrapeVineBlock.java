@@ -7,6 +7,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.stats.Stats;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -33,6 +34,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.common.ForgeHooks;
+import net.minecraftforge.common.ToolActions;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
@@ -81,8 +83,8 @@ public class GrapeVineBlock extends Block implements BonemealableBlock {
     @Nullable
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         if (!context.replacingClickedOnBlock()) {
-            BlockState blockstate = context.getLevel().getBlockState(context.getClickedPos().relative(context.getClickedFace().getOpposite()));
-            if (blockstate.is(this) && blockstate.getValue(FACING) == context.getClickedFace()) {
+            BlockState state = context.getLevel().getBlockState(context.getClickedPos().relative(context.getClickedFace().getOpposite()));
+            if (state.is(this) && state.getValue(FACING) == context.getClickedFace()) {
                 return null;
             }
         }
@@ -124,18 +126,27 @@ public class GrapeVineBlock extends Block implements BonemealableBlock {
     public @NotNull InteractionResult use(BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hitResult) {
         int i = state.getValue(AGE);
         boolean flag = i == 2;
-        if (!flag && player.getItemInHand(hand).is(Items.BONE_MEAL)) {
+        if (!flag && player.getItemInHand(hand).is(Items.BONE_MEAL) && player.getItemInHand(hand).canPerformAction(ToolActions.SHEARS_CARVE)) {
             return InteractionResult.SUCCESS;
-        } else if (i > 1) {
+        }
+        if (!state.getValue(CUT)) {
+            level.gameEvent(player, GameEvent.SHEAR, pos);
+            player.awardStat(Stats.ITEM_USED.get(Items.SHEARS));
+            BlockState cut = state.setValue(CUT, true);
+            level.setBlock(pos, cut, 2);
+            level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, cut));
+            return InteractionResult.sidedSuccess(level.isClientSide);
+        }
+        if (i > 1) {
             int j = 1 + level.random.nextInt(2);
             popResource(level, pos, new ItemStack(AncientAetherItems.GRAPES.get(), j + (flag ? 1 : 0)));
             level.playSound(null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
-            BlockState blockstate = state.setValue(AGE, 1);
-            level.setBlock(pos, blockstate, 2);
-            level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, blockstate));
+            BlockState age = state.setValue(AGE, 1);
+            level.setBlock(pos, age, 2);
+            level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, age));
             return InteractionResult.sidedSuccess(level.isClientSide);
         }
-        else return super.use(state, level, pos, player, hand, hitResult);
+        return super.use(state, level, pos, player, hand, hitResult);
     }
 
     public boolean isValidBonemealTarget(@NotNull LevelReader reader, @NotNull BlockPos pos, BlockState state, boolean p_57263_) {

@@ -31,7 +31,6 @@ public class AbilityHooks {
                 .put(AncientAetherBlocks.SAKURA_WOOD_WALL.get(), AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL.get())
                 .build();
 
-
         public static BlockState setupToolActions(BlockState old, ToolAction action) {
             Block oldBlock = old.getBlock();
             if (action == ToolActions.AXE_STRIP) {
