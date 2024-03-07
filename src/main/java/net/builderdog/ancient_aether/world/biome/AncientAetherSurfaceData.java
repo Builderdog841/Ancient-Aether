@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.world.biomes;
+package net.builderdog.ancient_aether.world.biome;
 
 import com.aetherteam.aether.data.resources.AetherFeatureStates;
 import net.builderdog.ancient_aether.data.resources.AncientAetherFeatureStates;

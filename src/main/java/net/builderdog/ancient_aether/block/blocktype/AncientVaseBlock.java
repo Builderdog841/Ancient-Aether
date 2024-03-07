@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.block.blocktypes;
+package net.builderdog.ancient_aether.block.blocktype;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;

@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.block.blocktypes;
+package net.builderdog.ancient_aether.block.blocktype;
 
 import com.aetherteam.aether.block.AetherBlocks;
 import net.builderdog.ancient_aether.block.blockstate.AetherGrassType;

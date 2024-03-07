@@ -12,7 +12,7 @@ import com.aetherteam.aether.block.natural.AetherLogBlock;
 import com.aetherteam.aether.entity.AetherEntityTypes;
 import com.aetherteam.aether.mixin.mixins.common.accessor.FireBlockAccessor;
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.block.blocktypes.*;
+import net.builderdog.ancient_aether.block.blocktype.*;
 import net.builderdog.ancient_aether.data.resources.AncientAetherLoot;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
