@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "ancient_aether:windblower_ingredient": {
+    "ancient_aether:velocity_aerclouds": {
       "conditions": {
         "items": [
           {
-            "tag": "ancient_aether:windblower_ingredient"
+            "tag": "ancient_aether:velocity_aerclouds"
           }
         ]
       },
@@ -20,7 +20,7 @@
   },
   "requirements": [
     [
-      "ancient_aether:windblower_ingredient",
+      "ancient_aether:velocity_aerclouds",
       "has_the_recipe"
     ]
   ],

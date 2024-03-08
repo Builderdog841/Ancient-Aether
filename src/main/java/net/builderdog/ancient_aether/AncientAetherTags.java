@@ -21,7 +21,7 @@ public class AncientAetherTags {
         }
     }
     public static class Items {
-        public static final TagKey<Item> WINDBLOWER_INGREDIENT = tag("windblower_ingredient");
+        public static final TagKey<Item> VELOCITY_AERCLOUDS = tag("velocity_aerclouds");
         public static final TagKey<Item> CRAFTS_HIGHSPROOT_PLANKS = tag("crafts_highsproot_planks");
         public static final TagKey<Item> CRAFTS_SAKURA_PLANKS = tag("crafts_sakura_planks");
         public static final TagKey<Item> FLUFFALO_TEMPTATION_ITEMS = tag("fluffalo_temptation_items");
