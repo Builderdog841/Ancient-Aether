@@ -1,5 +1,7 @@
 package net.builderdog.ancient_aether.block.blocktype;
 
+import com.aetherteam.aether.entity.AetherEntityTypes;
+import com.aetherteam.aether.entity.projectile.ZephyrSnowball;
 import net.builderdog.ancient_aether.block.blockstate.AncientAetherBlockStateProperties;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -43,15 +45,22 @@ public class WindBlowerBlock extends Block implements Equipable {
     }
 
     public void neighborChanged(@NotNull BlockState state, Level level, @NotNull BlockPos pos, @NotNull Block block, @NotNull BlockPos neighborPos, boolean bool) {
+        boolean flag = state.getValue(CHARGED);
         if (!level.isClientSide) {
-            boolean flag = state.getValue(CHARGED);
             if (flag != level.hasNeighborSignal(pos)) {
                 if (flag) {
                     level.scheduleTick(pos, this, 4);
-                } else {
-                    level.setBlock(pos, state.cycle(CHARGED), 2);
-                }
+                } else level.setBlock(pos, state.cycle(CHARGED), 2);
             }
+        }
+        if (flag && level.hasNeighborSignal(pos)) {
+            Direction direction = state.getValue(FACING);
+            ZephyrSnowball blow = new ZephyrSnowball(AetherEntityTypes.ZEPHYR_SNOWBALL.get(), level);
+            blow.setPos(
+                    pos.getX() + 0.7D * (double) direction.getStepX(),
+                    pos.getY() + 0.7D * (double) direction.getStepY(),
+                    pos.getZ() + 0.7D * (double) direction.getStepZ());
+            level.addFreshEntity(blow);
         }
     }
 
