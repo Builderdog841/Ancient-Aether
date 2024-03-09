@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ancient_aether:sakura_blossom_to_pink_dye"
+        "recipe": "ancient_aether:sakura_blossoms_to_pink_dye"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "ancient_aether:sakura_blossom_to_pink_dye"
+      "ancient_aether:sakura_blossoms_to_pink_dye"
     ]
   },
   "sends_telemetry_event": false

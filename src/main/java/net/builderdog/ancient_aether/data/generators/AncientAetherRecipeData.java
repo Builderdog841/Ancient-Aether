@@ -43,53 +43,6 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
                 .unlockedBy(getHasName(AetherBlocks.LIGHT_HELLFIRE_STONE.get()), has(AetherBlocks.LIGHT_HELLFIRE_STONE.get()))
                 .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.MAGENTA_DYE)
-                .group("magenta_dye")
-                .requires(AncientAetherBlocks.HIGHLAND_VIOLA.get())
-                .unlockedBy(getHasName(AncientAetherBlocks.HIGHLAND_VIOLA.get()), has(AncientAetherBlocks.HIGHLAND_VIOLA.get()))
-                .save(consumer, name("highland_viola_to_magenta_dye"));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.CYAN_DYE)
-                .group("cyan_dye")
-                .requires(AncientAetherBlocks.SKY_BLUES.get())
-                .unlockedBy(getHasName(AncientAetherBlocks.SKY_BLUES.get()), has(AncientAetherBlocks.SKY_BLUES.get()))
-                .save(consumer, name("sky_blues_to_cyan_dye"));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.LIGHT_BLUE_DYE)
-                .group("light_blue_dye")
-                .requires(AncientAetherBlocks.WYND_THISTLE.get())
-                .unlockedBy(getHasName(AncientAetherBlocks.WYND_THISTLE.get()), has(AncientAetherBlocks.WYND_THISTLE.get()))
-                .save(consumer, name("wynd_thistle_to_light_blue_dye"));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.PINK_DYE)
-                .group("pink_dye")
-                .requires(AncientAetherBlocks.SAKURA_BLOSSOMS.get())
-                .unlockedBy(getHasName(AncientAetherBlocks.SAKURA_BLOSSOMS.get()), has(AncientAetherBlocks.SAKURA_BLOSSOMS.get()))
-                .save(consumer, name("sakura_blossom_to_pink_dye"));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.TRANSPORTATION, AncientAetherItems.HIGHSPROOT_CHEST_BOAT.get())
-                .group("chest_boat")
-                .requires(Tags.Items.CHESTS_WOODEN)
-                .requires(AncientAetherItems.HIGHSPROOT_BOAT.get())
-                .unlockedBy("has_boat", has(ItemTags.BOATS))
-                .save(consumer);
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.TRANSPORTATION, AncientAetherItems.SAKURA_CHEST_BOAT.get())
-                .group("chest_boat")
-                .requires(Tags.Items.CHESTS_WOODEN)
-                .requires(AncientAetherItems.SAKURA_BOAT.get())
-                .unlockedBy("has_boat", has(ItemTags.BOATS))
-                .save(consumer);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGEL_GLASS.get(),8)
-                .define('A', AetherBlocks.AEROGEL.get())
-                .define('P', AetherTags.Items.PLANKS_CRAFTING)
-                .pattern("AAA")
-                .pattern("APA")
-                .pattern("AAA")
-                .unlockedBy(getHasName(AetherBlocks.AEROGEL.get()), has(AetherBlocks.AEROGEL.get()))
-                .save(consumer);
-
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGEL_GLASS_PANE.get(),16)
                 .define('#', AncientAetherBlocks.AEROGEL_GLASS.get())
                 .pattern("###")
@@ -268,6 +221,11 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
         bookshelf(consumer, AncientAetherBlocks.HIGHSPROOT_BOOKSHELF.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get());
         bookshelf(consumer, AncientAetherBlocks.SAKURA_BOOKSHELF.get(), AncientAetherBlocks.SAKURA_PLANKS.get());
 
+        flowerToDye(consumer, Items.MAGENTA_DYE, AncientAetherBlocks.HIGHLAND_VIOLA.get(), "magenta");
+        flowerToDye(consumer, Items.CYAN_DYE, AncientAetherBlocks.SKY_BLUES.get(), "cyan");
+        flowerToDye(consumer, Items.LIGHT_BLUE_DYE, AncientAetherBlocks.WYND_THISTLE.get(), "light_blue");
+        flowerToDye(consumer, Items.PINK_DYE, AncientAetherBlocks.SAKURA_BLOSSOMS.get(), "pink");
+
         chiseled(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get(), AetherBlocks.HOLYSTONE_BRICK_SLAB.get());
         chiseled(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_STONE_MOSAIC.get(), AetherBlocks.CARVED_SLAB.get());
         chiseled(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get(), AetherBlocks.ANGELIC_SLAB.get());
@@ -275,10 +233,11 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
         chiseled(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGETIC_STONE_MOSAIC.get(), AncientAetherBlocks.AEROGETIC_SLAB.get());
 
         polished(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_TILES.get(), AetherBlocks.CARVED_STONE.get());
-
         carpet(consumer, AncientAetherBlocks.FLUFFALO_CARPET.get(), AncientAetherBlocks.FLUFFALO_WOOL.get());
-
         oreBlockStorageRecipesRecipesWithCustomUnpacking(consumer, RecipeCategory.MISC, AncientAetherItems.VALKYRUM.get(), RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.VALKYRUM_BLOCK.get(), "valkyrum_from_valkyrum_block", "valkyrum");
+
+        fullWithMiddle(consumer, AncientAetherBlocks.GRAVITY_GRAVEL.get(), AetherBlocks.QUICKSOIL.get(), AncientAetherBlocks.ATMOSINE_CRYSTAL.get(), AncientAetherBlocks.ATMOSINE_CRYSTAL.get());
+        fullWithMiddle(consumer, AncientAetherBlocks.AEROGEL_GLASS.get(), AetherBlocks.AEROGEL.get(), AetherBlocks.SKYROOT_PLANKS.get(), AetherBlocks.AEROGEL.get());
 
         makePickaxe(AncientAetherItems.VALKYRUM_PICKAXE, AncientAetherItems.VALKYRUM).save(consumer);
         makeAxe(AncientAetherItems.VALKYRUM_AXE, AncientAetherItems.VALKYRUM).save(consumer);
@@ -314,6 +273,8 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
 
         woodenBoat(consumer, AncientAetherItems.HIGHSPROOT_BOAT.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get());
         woodenBoat(consumer, AncientAetherItems.SAKURA_BOAT.get(), AncientAetherBlocks.SAKURA_PLANKS.get());
+        woodenChestBoat(consumer, AncientAetherItems.HIGHSPROOT_CHEST_BOAT.get(), AncientAetherItems.HIGHSPROOT_BOAT.get());
+        woodenChestBoat(consumer, AncientAetherItems.SAKURA_CHEST_BOAT.get(), AncientAetherItems.SAKURA_BOAT.get());
 
         smeltingOreRecipe(Items.QUARTZ, AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), 0.5F).save(consumer, name("quartz_from_smelting_aether_quartz_ore"));
         blastingOreRecipe(Items.QUARTZ, AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), 0.5F).save(consumer, name("quartz_from_blasting_aether_quartz_ore"));

@@ -3,10 +3,10 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "aether:aerogel"
+      "item": "aether:quicksoil"
     },
     "X": {
-      "item": "aether:skyroot_planks"
+      "item": "ancient_aether:atmosine_crystal"
     }
   },
   "pattern": [
@@ -16,7 +16,7 @@
   ],
   "result": {
     "count": 8,
-    "item": "ancient_aether:aerogel_glass"
+    "item": "ancient_aether:gravity_gravel"
   },
   "show_notification": true
 }
