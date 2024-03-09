@@ -2,8 +2,8 @@
   "parent": "ancient_aether:vampire_blade",
   "criteria": {
     "unlock": {
-      "trigger": "minecraft:impossible"
-  }
+      "trigger": "ancient_aether:obelisk_trigger"
+    }
   },
   "display": {
     "announce_to_chat": true,

@@ -1,6 +1,7 @@
 package net.builderdog.ancient_aether;
 
 import com.aetherteam.aether.AetherConfig;
+import net.builderdog.ancient_aether.advancement.AncientAetherAdvancementTriggers;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.block.dispenser.DispenseAncientAetherBoatBehaviour;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
@@ -93,13 +94,13 @@ public class AncientAether {
             AncientAetherBlocks.registerFuels();
             AncientAetherBlocks.registerPots();
             AncientAetherBlocks.registerFlammability();
+
             registerComposting();
             registerDispenserBehaviors();
-        });
 
-        event.enqueueWork(() -> {
+            AncientAetherAdvancementTriggers.init();
+
             Regions.register(new AncientAetherRegion(new ResourceLocation(MODID, "ancient_aether"), AncientAetherConfig.COMMON.ancient_aether_region_weight.get()));
-
             SurfaceRuleManager.addSurfaceRules(AetherRuleCategory.THE_AETHER, MODID, AncientAetherSurfaceData.makeRules());
         });
     }

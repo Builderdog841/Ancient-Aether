@@ -1,12 +1,8 @@
 package net.builderdog.ancient_aether.block.blocktype;
 
 import com.aetherteam.aether.event.AetherEventDispatch;
-import net.minecraft.advancements.Advancement;
-import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.core.BlockPos;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -51,15 +47,6 @@ public class TrappedFlowerBlock extends BushBlock {
                 BlockPos spawnPos = hitResult.getBlockPos();
                 if (hitResult.getType() == HitResult.Type.BLOCK) {
                     spawnPos = spawnPos.relative(hitResult.getDirection());
-                }
-                if (entity instanceof ServerPlayer _player) {
-                    Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("ancient_aether:roothyrn_trap"));
-                    assert _adv != null;
-                    AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-                    if (!_ap.isDone()) {
-                        for (String criteria : _ap.getRemainingCriteria())
-                            _player.getAdvancements().award(_adv, criteria);
-                    }
                 }
                 spawnableEntityTypeSupplier.get().spawn(serverLevel, spawnPos, MobSpawnType.TRIGGERED);
             }

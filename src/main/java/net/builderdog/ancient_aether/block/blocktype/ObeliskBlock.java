@@ -1,11 +1,10 @@
 package net.builderdog.ancient_aether.block.blocktype;
 
+import net.builderdog.ancient_aether.advancement.ObeliskTrigger;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.ChatFormatting;
-import net.minecraft.advancements.Advancement;
-import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -44,6 +43,7 @@ public class ObeliskBlock extends Block {
                 && serverPlayer.getAdvancements().getOrStartProgress(Objects.requireNonNull(serverPlayer.server.getAdvancements().getAdvancement(new ResourceLocation("aether:gold_dungeon")))).isDone()) {
             if (serverPlayer.getMainHandItem().getItem() == AncientAetherItems.ANCIENT_RUNE.get()) {
                 ItemStack stack = player.getMainHandItem();
+                ObeliskTrigger.INSTANCE.trigger(serverPlayer, stack);
                 if (!serverPlayer.getAbilities().instabuild) {
                     player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
                     stack.shrink(1);
@@ -69,18 +69,13 @@ public class ObeliskBlock extends Block {
                 if (state.getBlock() == AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get()) {
                     level.setBlockAndUpdate(pos, AncientAetherBlocks.ANCIENT_OBELISK.get().defaultBlockState());
                 }
-                Advancement advancement = serverPlayer.server.getAdvancements().getAdvancement(new ResourceLocation("ancient_aether:unlock_ancient_dungeon"));
-                assert advancement != null;
-                AdvancementProgress progress = serverPlayer.getAdvancements().getOrStartProgress(advancement);
-                if (!progress.isDone()) {
-                    for (String criteria : progress.getRemainingCriteria())
-                        serverPlayer.getAdvancements().award(advancement, criteria);
-                }
             }
-        } else {
+        }
+        else {
             if (!level.isClientSide) {
                 player.displayClientMessage(Component.translatable("gui.ancient_aether.obelisk.requirement").withStyle(ChatFormatting.RED), true);
-            } else {
+            }
+            else {
                 level.playSound(player, pos, AncientAetherSoundEvents.BLOCK_OBELISK_ACTIVATION.get(), SoundSource.BLOCKS, 0.8f, 0.5f + (
                         ((float) (Math.pow(level.random.nextDouble(), 2.5))) * 0.5f));
                 return InteractionResult.sidedSuccess(true);
