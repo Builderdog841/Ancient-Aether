@@ -60,6 +60,7 @@ public class WindBlowerBlock extends Block implements Equipable {
                     pos.getX() + 0.7D * (double) direction.getStepX(),
                     pos.getY() + 0.7D * (double) direction.getStepY(),
                     pos.getZ() + 0.7D * (double) direction.getStepZ());
+            blow.shoot(direction.getStepX(), direction.getStepY(), direction.getStepZ(), 1.1F, 0.0F);
             level.addFreshEntity(blow);
         }
     }
