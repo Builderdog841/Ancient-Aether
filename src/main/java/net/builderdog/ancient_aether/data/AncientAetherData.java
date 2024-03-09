@@ -19,6 +19,7 @@ public class AncientAetherData {
 
         generator.addProvider(true, new AncientAetherBlockStateData(packOutput, fileHelper));
         generator.addProvider(true, new AncientAetherItemModelData(packOutput, fileHelper));
+        generator.addProvider(event.includeClient(), new AncientAetherLanguageData(packOutput));
         generator.addProvider(event.includeClient(), new AncientAetherSoundData(packOutput, fileHelper));
 
         generator.addProvider(true, AncientAetherLootTableProvider.create(packOutput));
