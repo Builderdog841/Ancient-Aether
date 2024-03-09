@@ -2,13 +2,17 @@ package net.builderdog.ancient_aether.data.providers;
 
 import com.aetherteam.aether.Aether;
 import com.aetherteam.aether.data.providers.AetherItemModelProvider;
+import com.aetherteam.nitrogen.data.providers.NitrogenItemModelProvider;
 import net.builderdog.ancient_aether.AncientAether;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemDisplayContext;
+import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.loaders.ItemLayerModelBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
@@ -26,6 +30,20 @@ public abstract class AncientAetherItemModelProvider extends AetherItemModelProv
 
     public void itemBlockCopy(Block block, Block blockCopy) {
         withExistingParent(blockName(block), modLoc(blockName(blockCopy)));
+    }
+
+    public void AAGlovesItem(Item item, String location) {
+        ItemModelBuilder builder = withExistingParent(itemName(item), mcLoc("item/generated")).texture("layer0", modLoc("item/" + location + itemName(item)));
+        double index = 0.1;
+        for (ResourceKey<TrimMaterial> trimMaterial : NitrogenItemModelProvider.VANILLA_TRIM_MATERIALS) {
+            String material = trimMaterial.location().getPath();
+            String name = itemName(item) + "_" + material + "_trim";
+            withExistingParent(name, mcLoc("item/generated"))
+                    .texture("layer0", modLoc("item/" + location + itemName(item)))
+                    .texture("layer1", new ResourceLocation(Aether.MODID, "trims/items/gloves_trim_" + material));
+            builder.override().predicate(new ResourceLocation("trim_type"), (float) index).model(getExistingFile(modLoc("item/" + name))).end();
+            index += 0.1;
+        }
     }
 
     public void untintedMoaEggItem(Item item) {
