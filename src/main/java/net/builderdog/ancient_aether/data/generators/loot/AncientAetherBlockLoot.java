@@ -79,7 +79,6 @@ public class AncientAetherBlockLoot extends AetherBlockLootSubProvider {
         dropSelf(AncientAetherBlocks.SKYROOT_PINE_SAPLING.get());
         dropSelf(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get());
         dropSelf(AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
-        dropSelf(AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
         dropSelf(AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get());
         dropSelf(AncientAetherBlocks.SAKURA_SAPLING.get());
         dropSelf(AncientAetherBlocks.VALKYRUM_ORE.get());
@@ -123,6 +122,7 @@ public class AncientAetherBlockLoot extends AetherBlockLootSubProvider {
         dropSelf(AncientAetherBlocks.HELLFIRE_VASE.get());
         dropSelf(AncientAetherBlocks.AEROGETIC_VASE.get());
         dropSelf(AncientAetherBlocks.GALE_VASE.get());
+        dropSelf(AncientAetherBlocks.ATMOSINE_CRYSTAL.get());
 
         dropSelfDouble(AncientAetherBlocks.HIGHSPROOT_LOG.get());
         dropSelfDouble(AncientAetherBlocks.SAKURA_LOG.get());

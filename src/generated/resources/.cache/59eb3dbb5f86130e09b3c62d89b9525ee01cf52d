@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-04T10:54:36.0303187	Loot Tables
+// 1.20.1	2024-03-09T14:26:32.4234818	Loot Tables
 095a70e341d19e7b3548ddc32402abe48a79992a data/ancient_aether/loot_tables/blocks/aerogel_glass.json
 9fe2ea21af5246ad9f95848f680099717062eb1c data/ancient_aether/loot_tables/blocks/aerogel_glass_door.json
 0f84d5b4591633acc6c8dcc82b7c14988b545a9f data/ancient_aether/loot_tables/blocks/aerogel_glass_pane.json
@@ -15,6 +15,7 @@ d01deb85be8d8d62bc23667fe63fbb627346a8e7 data/ancient_aether/loot_tables/blocks/
 31e24a624d606ca0cfed9b28e6aa09536aecfd9a data/ancient_aether/loot_tables/blocks/ancient_obelisk.json
 50401c0d72532e1255e3c534f66b3b7b9e656a43 data/ancient_aether/loot_tables/blocks/angelic_stone_mosaic.json
 91126c83880d2251b1f209827e7f2fb17fdd7373 data/ancient_aether/loot_tables/blocks/angelic_vase.json
+0d3bd5919e0ca00320518a8fd38f5086eb1e53ba data/ancient_aether/loot_tables/blocks/atmosine_crystal.json
 07e5a503893020d9852e02f7a687103c325d37a9 data/ancient_aether/loot_tables/blocks/carved_stone_mosaic.json
 24eae9742dcffbe67d5c5077fc6c8355134d78ee data/ancient_aether/loot_tables/blocks/carved_tiles.json
 1749bc7d17fa71e129f60cff6eb1b5d99dcec84e data/ancient_aether/loot_tables/blocks/carved_tile_slab.json

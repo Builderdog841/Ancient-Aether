@@ -65,6 +65,7 @@ public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
         item(AncientAetherBlocks.WYND_LANTERN.get().asItem(), "");
         item(AncientAetherBlocks.SUN_LANTERN.get().asItem(), "");
         item(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get().asItem(), "");
+        item(AncientAetherBlocks.ATMOSINE_CRYSTAL.get().asItem(), "");
 
         eggItem(AncientAetherItems.FLUFFALO_SPAWN_EGG.get());
         eggItem(AncientAetherItems.ROOTHYRN_SPAWN_EGG.get());

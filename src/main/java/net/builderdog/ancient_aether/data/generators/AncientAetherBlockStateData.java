@@ -75,6 +75,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
 
         pane(AncientAetherBlocks.AEROGEL_GLASS_PANE.get(), AncientAetherBlocks.AEROGEL_GLASS.get(), "");
 
+        crossBlock(AncientAetherBlocks.ATMOSINE_CRYSTAL);
         crossBlock(AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING);
         crossBlock(AncientAetherBlocks.SKYROOT_PINE_SAPLING);
         crossBlock(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING);
