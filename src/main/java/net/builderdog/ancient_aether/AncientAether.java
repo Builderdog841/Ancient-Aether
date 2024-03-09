@@ -88,6 +88,7 @@ public class AncientAether {
 
         DIRECTORY.toFile().mkdirs();
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, AncientAetherConfig.COMMON_SPEC);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, AncientAetherConfig.CLIENT_SPEC);
 
         AncientAetherBlocks.registerWoodTypes();
     }
