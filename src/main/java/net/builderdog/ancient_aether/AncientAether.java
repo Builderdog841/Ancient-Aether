@@ -40,19 +40,15 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.loading.FMLPaths;
 import net.minecraftforge.registries.DeferredRegister;
 import teamrazor.aeroblender.aether.AetherRuleCategory;
 import terrablender.api.Regions;
 import terrablender.api.SurfaceRuleManager;
 
-import java.nio.file.Path;
-
 @Mod(AncientAether.MODID)
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class AncientAether {
     public static final String MODID = "ancient_aether";
-    public static final Path DIRECTORY = FMLPaths.CONFIGDIR.get().resolve(MODID);
 
     public AncientAether() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -86,7 +82,6 @@ public class AncientAether {
             return true;
         }, () -> () -> false);
 
-        DIRECTORY.toFile().mkdirs();
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, AncientAetherConfig.COMMON_SPEC);
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, AncientAetherConfig.CLIENT_SPEC);
 
