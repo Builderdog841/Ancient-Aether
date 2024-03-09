@@ -309,6 +309,11 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addTrimPattern("solar", "Solar");
         addTrimPattern("ancient", "Ancient");
 
+        addTooltip("common", "Common");
+        addTooltip("rare", "Rare");
+        addTooltip("epic", "Epic");
+        addTooltip("mythic", "Mythic");
+
         add("item.minecraft.quartz", "Quartz");
     }
 }

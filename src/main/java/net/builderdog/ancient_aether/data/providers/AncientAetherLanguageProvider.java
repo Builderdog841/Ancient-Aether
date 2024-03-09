@@ -11,4 +11,8 @@ public abstract class AncientAetherLanguageProvider extends AetherLanguageProvid
     public void addTrimPattern(String key, String name) {
         add("trim_pattern." + id + "." + key, name + " Armor Trim");
     }
+
+    public void addTooltip(String key, String name) {
+        add("tooltip." + id + "." + key, name);
+    }
 }

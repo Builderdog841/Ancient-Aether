@@ -28,7 +28,7 @@ public class AncientAetherTags {
         public static final TagKey<Item> COMMON_LOOT = tag("common_loot");
         public static final TagKey<Item> RARE_LOOT = tag("rare_loot");
         public static final TagKey<Item> EPIC_LOOT = tag("epic_loot");
-        public static final TagKey<Item> LEGENDARY_LOOT = tag("legendary_loot");
+        public static final TagKey<Item> MYTHIC_LOOT = tag("mythic_loot");
         public static final TagKey<Item> VALKYRUM_REPAIRING = tag("valkyrum_repairing");
         public static final TagKey<Item> ANCIENT_REPAIRING = tag("ancient_repairing");
         public static final TagKey<Item> ARKENZUS_REPAIRING = tag("arkenzus_repairing");

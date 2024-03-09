@@ -36,8 +36,8 @@ public class ItemHooks {
             if (stack.is(AncientAetherTags.Items.EPIC_LOOT)) {
                 components.add(position, AncientAetherItems.EPIC);
             }
-            if (stack.is(AncientAetherTags.Items.LEGENDARY_LOOT)) {
-                components.add(position, AncientAetherItems.LEGENDARY);
+            if (stack.is(AncientAetherTags.Items.MYTHIC_LOOT)) {
+                components.add(position, AncientAetherItems.MYTHIC);
             }
         }
 
