@@ -314,8 +314,53 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addTooltip("epic", "Epic");
         addTooltip("mythic", "Mythic");
 
+        addLore(AncientAetherBlocks.AETHER_QUARTZ_ORE, "A source of Quartz in the Aether.");
+        addLore(AncientAetherBlocks.AMBROSIUM_CAMPFIRE, "A campfire that works in the Aether. It's a good Furnace alternative if you don't have a lot of Ambrosium.");
+
+        addLore(AncientAetherItems.GRAPES, "Often found growing on the logs of Skyroot Trees in Forests. This delicious fruit can be turned into Valkyrie Wine");
+
+        addMosaicLore(AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC, "Holystone Brick");
+        addMosaicLore(AncientAetherBlocks.CARVED_STONE_MOSAIC, "Carved Stone");
+        addMosaicLore(AncientAetherBlocks.ANGELIC_STONE_MOSAIC, "Angelic Stone");
+        addMosaicLore(AncientAetherBlocks.HELLFIRE_STONE_MOSAIC, "Hellfire Stone");
+        addMosaicLore(AncientAetherBlocks.AEROGETIC_STONE_MOSAIC, "Aerogetic Stone");
+        addMosaicLore(AncientAetherBlocks.GALE_STONE_MOSAIC, "Gale Stone");
+
+        addSubtitle("block", "grape_vine.pick_grapes", "Grapes pop");
+        addSubtitle("block", "obelisk.activation", "Obelisk activated");
+
+        addAccessorySubtitle("valkyrum_ring", "Valkyrum Ring");
+        addAccessorySubtitle("hermes_ring", "Hermes Ring");
+        addAccessorySubtitle("arkenium_ring", "Arkenium Ring");
+        addAccessorySubtitle("health_ring", "Health Ring");
+        addAccessorySubtitle("ancient_ring", "Ancient Ring");
+        addAccessorySubtitle("valkyrum_pendant", "Valkyrum Pendant");
+        addAccessorySubtitle("hermes_pendant", "Hermes Pendant");
+        addAccessorySubtitle("arkenium_pendant", "Arkenium Pendant");
+        addAccessorySubtitle("health_pendant", "Health Pendant");
+        addAccessorySubtitle("ancient_pendant", "Ancient Pendant");
+
+        addSubtitle("entity", "fluffalo.ambient", "Fluffalo moos");
+        addSubtitle("entity", "fluffalo.milk", "Fluffalo gets milked");
+        addSubtitle("entity", "fluffalo.hurt", "Fluffalo hurts");
+        addSubtitle("entity", "fluffalo.death", "Fluffalo dies");
+        addSubtitle("entity", "roothyrn.hurt", "Roothyrn hurts");
+        addSubtitle("entity", "roothyrn.death", "Roothyrn dies");
+        addSubtitle("entity", "aeronautic_leaper.jump", "Aeronautic Leaper leaps");
+        addSubtitle("entity", "aeronautic_leaper.hurt", "Aeronautic Leaper hurts");
+        addSubtitle("entity", "aeronautic_leaper.death", "Aeronautic Leaper dies");
+        addSubtitle("entity", "mutated_aechor_plant.shoot", "Mutated Aechor Plant shoots");
+        addSubtitle("entity", "mutated_aechor_plant.hurt", "Mutated Aechor Plant hurts");
+        addSubtitle("entity", "mutated_aechor_plant.death", "Mutated Aechor Plant dies");
+
         addMenuText("laboratory_treasure_chest", "Laboratory Treasure Chest");
         addMenuText("ancient_treasure_chest", "Ancient Treasure Chest");
+
+        addGuiText("obelisk.requirement", "You have not defeated the Sun Spirit yet");
+        addGuiText("mutated_aechor_plant.title", "the Mutated Aechor Plant");
+
+        addGeneric("laboratory_treasure_chest_locked", "This Treasure Chest must be unlocked with a Laboratory Key");
+        addGeneric("ancient_treasure_chest_locked", "This Treasure Chest must be unlocked with an Ancient Key");
 
         addPackTitle("texture_tweaks", "Ancient Aether Texture Tweaks");
         addPackTitle("programmer_art", "Ancient Aether Programmer Art");

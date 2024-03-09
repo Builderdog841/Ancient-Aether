@@ -36,6 +36,15 @@
             "entity": "this",
             "predicate": {
               "location": {
+                "biome": "aether:skyroot_woodland"
+              }
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
                 "biome": "ancient_aether:crystal_skyroot_grove"
               }
             }
@@ -64,15 +73,6 @@
             "predicate": {
               "location": {
                 "biome": "ancient_aether:golden_skyroot_forest"
-              }
-            }
-          },
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "location": {
-                "biome": "aether:skyroot_woodland"
               }
             }
           },
