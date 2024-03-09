@@ -9,6 +9,7 @@ import com.aetherteam.aether.block.natural.AetherDoubleDropBlock;
 import com.aetherteam.aether.block.natural.AetherDoubleDropsLeaves;
 import com.aetherteam.aether.block.natural.AetherDoubleDropsOreBlock;
 import com.aetherteam.aether.block.natural.AetherLogBlock;
+import com.aetherteam.aether.blockentity.AltarBlockEntity;
 import com.aetherteam.aether.entity.AetherEntityTypes;
 import com.aetherteam.aether.mixin.mixins.common.accessor.FireBlockAccessor;
 import net.builderdog.ancient_aether.AncientAether;
@@ -201,6 +202,10 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> ANCIENT_HELLFIRE_VASE = registerBlock("ancient_hellfire_vase", () -> new AncientVaseBlock(AncientAetherLoot.HELLFIRE_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
     public static final RegistryObject<Block> ANCIENT_AEROGETIC_VASE = registerBlock("ancient_aerogetic_vase", () -> new AncientVaseBlock(AncientAetherLoot.AEROGETIC_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
     public static final RegistryObject<Block> ANCIENT_GALE_VASE = registerBlock("ancient_gale_vase", () -> new AncientVaseBlock(AncientAetherLoot.GALE_VASE_LOOT, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
+
+    public static void registerFuels() {
+        AltarBlockEntity.addItemEnchantingTime(AncientAetherBlocks.ATMOSINE_CRYSTAL.get(), 500);
+    }
 
     public static void registerPots() {
         FlowerPotBlock pot = (FlowerPotBlock) Blocks.FLOWER_POT;

@@ -94,6 +94,7 @@ public class AncientAether {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
+            AncientAetherBlocks.registerFuels();
             AncientAetherBlocks.registerPots();
             AncientAetherBlocks.registerFlammability();
             registerComposting();
@@ -224,26 +225,16 @@ public class AncientAether {
         @SubscribeEvent
         public static void furnaceFuelBurnTimeEvent(FurnaceFuelBurnTimeEvent event) {
             ItemStack itemstack = event.getItemStack();
-            if (itemstack.getItem() == AncientAetherBlocks.HIGHSPROOT_PLANKS.get().asItem())
-                event.setBurnTime(300);
-            else if (itemstack.getItem() == AncientAetherBlocks.SAKURA_PLANKS.get().asItem())
-                event.setBurnTime(300);
-            else if (itemstack.getItem() == AncientAetherBlocks.HIGHSPROOT_LOG_WALL.get().asItem())
-                event.setBurnTime(300);
-            else if (itemstack.getItem() == AncientAetherBlocks.HIGHSPROOT_WOOD_WALL.get().asItem())
-                event.setBurnTime(300);
-            else if (itemstack.getItem() == AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG_WALL.get().asItem())
-                event.setBurnTime(300);
-            else if (itemstack.getItem() == AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD_WALL.get().asItem())
-                event.setBurnTime(300);
-            else if (itemstack.getItem() == AncientAetherBlocks.SAKURA_LOG_WALL.get().asItem())
-                event.setBurnTime(300);
-            else if (itemstack.getItem() == AncientAetherBlocks.SAKURA_WOOD_WALL.get().asItem())
-                event.setBurnTime(300);
-            else if (itemstack.getItem() == AncientAetherBlocks.STRIPPED_SAKURA_LOG_WALL.get().asItem())
-                event.setBurnTime(300);
-            else if (itemstack.getItem() == AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL.get().asItem())
-                event.setBurnTime(300);
+            if (itemstack.getItem() == AncientAetherBlocks.HIGHSPROOT_PLANKS.get().asItem()) event.setBurnTime(300);
+            if (itemstack.getItem() == AncientAetherBlocks.SAKURA_PLANKS.get().asItem()) event.setBurnTime(300);
+            if (itemstack.getItem() == AncientAetherBlocks.HIGHSPROOT_LOG_WALL.get().asItem()) event.setBurnTime(300);
+            if (itemstack.getItem() == AncientAetherBlocks.HIGHSPROOT_WOOD_WALL.get().asItem()) event.setBurnTime(300);
+            if (itemstack.getItem() == AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG_WALL.get().asItem()) event.setBurnTime(300);
+            if (itemstack.getItem() == AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD_WALL.get().asItem()) event.setBurnTime(300);
+            if (itemstack.getItem() == AncientAetherBlocks.SAKURA_LOG_WALL.get().asItem()) event.setBurnTime(300);
+            if (itemstack.getItem() == AncientAetherBlocks.SAKURA_WOOD_WALL.get().asItem()) event.setBurnTime(300);
+            if (itemstack.getItem() == AncientAetherBlocks.STRIPPED_SAKURA_LOG_WALL.get().asItem()) event.setBurnTime(300);
+            if (itemstack.getItem() == AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL.get().asItem()) event.setBurnTime(300);
         }
     }
 }
