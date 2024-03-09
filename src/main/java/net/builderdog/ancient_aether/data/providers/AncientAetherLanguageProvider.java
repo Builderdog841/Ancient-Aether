@@ -15,4 +15,8 @@ public abstract class AncientAetherLanguageProvider extends AetherLanguageProvid
     public void addTooltip(String key, String name) {
         add("tooltip." + id + "." + key, name);
     }
+
+    public void addCompatPackTitle(String packName, String description) {
+        add("pack." + id + "." + packName + "_compat.title", description + " Compatibility");
+    }
 }

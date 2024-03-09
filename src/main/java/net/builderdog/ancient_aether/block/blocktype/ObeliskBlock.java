@@ -44,8 +44,7 @@ public class ObeliskBlock extends Block {
                 && serverPlayer.getAdvancements().getOrStartProgress(Objects.requireNonNull(serverPlayer.server.getAdvancements().getAdvancement(new ResourceLocation("aether:gold_dungeon")))).isDone()) {
             if (serverPlayer.getMainHandItem().getItem() == AncientAetherItems.ANCIENT_RUNE.get()) {
                 ItemStack stack = player.getMainHandItem();
-                ServerPlayer livingEntity = (ServerPlayer) player;
-                if (!livingEntity.getAbilities().instabuild) {
+                if (!serverPlayer.getAbilities().instabuild) {
                     player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
                     stack.shrink(1);
                 }
@@ -70,21 +69,20 @@ public class ObeliskBlock extends Block {
                 if (state.getBlock() == AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get()) {
                     level.setBlockAndUpdate(pos, AncientAetherBlocks.ANCIENT_OBELISK.get().defaultBlockState());
                 }
-                ServerPlayer _player = (ServerPlayer) player;
-                Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("ancient_aether:unlock_ancient_dungeon"));
-                assert _adv != null;
-                AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-                if (!_ap.isDone()) {
-                    for (String criteria : _ap.getRemainingCriteria())
-                        _player.getAdvancements().award(_adv, criteria);
+                Advancement advancement = serverPlayer.server.getAdvancements().getAdvancement(new ResourceLocation("ancient_aether:unlock_ancient_dungeon"));
+                assert advancement != null;
+                AdvancementProgress progress = serverPlayer.getAdvancements().getOrStartProgress(advancement);
+                if (!progress.isDone()) {
+                    for (String criteria : progress.getRemainingCriteria())
+                        serverPlayer.getAdvancements().award(advancement, criteria);
                 }
             }
         } else {
             if (!level.isClientSide) {
-                player.displayClientMessage(Component.translatable("gui.ancient_aether.obelisk_sun_spirit").withStyle(ChatFormatting.RED), true);
+                player.displayClientMessage(Component.translatable("gui.ancient_aether.obelisk.requirement").withStyle(ChatFormatting.RED), true);
             } else {
-                level.playSound(player, pos, AncientAetherSoundEvents.BLOCK_OBELISK_ACTIVATION.get(), SoundSource.BLOCKS, 0.8f,
-                        0.5f + (((float) (Math.pow(level.random.nextDouble(), 2.5))) * 0.5f));
+                level.playSound(player, pos, AncientAetherSoundEvents.BLOCK_OBELISK_ACTIVATION.get(), SoundSource.BLOCKS, 0.8f, 0.5f + (
+                        ((float) (Math.pow(level.random.nextDouble(), 2.5))) * 0.5f));
                 return InteractionResult.sidedSuccess(true);
             }
         }

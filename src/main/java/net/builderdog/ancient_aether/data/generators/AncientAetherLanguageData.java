@@ -314,6 +314,22 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addTooltip("epic", "Epic");
         addTooltip("mythic", "Mythic");
 
+        addMenuText("laboratory_treasure_chest", "Laboratory Treasure Chest");
+        addMenuText("ancient_treasure_chest", "Ancient Treasure Chest");
+
+        addPackTitle("texture_tweaks", "Ancient Aether Texture Tweaks");
+        addPackTitle("programmer_art", "Ancient Aether Programmer Art");
+        addPackTitle("worldgen_overrides", "Ancient Aether Worldgen Overrides");
+
+        addCompatPackTitle("aether_genesis", "Aether Genesis");
+        addCompatPackTitle("aether_emissivity", "Aether Emissivity");
+        addCompatPackTitle("lost_content", "Lost Content");
+        addCompatPackTitle("aether_redux", "Aether Redux");
+        addCompatPackTitle("deep_aether", "Deep Aether");
+        addCompatPackTitle("deep_aether_asset", "Deep Aether Asset");
+
+        addMenuTitle("ancient_aether", "Ancient Aether");
+
         add("item.minecraft.quartz", "Quartz");
     }
 }
