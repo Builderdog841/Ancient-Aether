@@ -37,6 +37,14 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.HIGHSPROOT_SAPLING, "Highsproot Sapling");
         addBlock(AncientAetherBlocks.SAKURA_SAPLING, "Sakura Sapling");
 
+        addBlock(AncientAetherBlocks.SKY_GRASS, "Sky Grass");
+        addBlock(AncientAetherBlocks.HIGHLAND_VIOLA, "Highland Viola");
+        addBlock(AncientAetherBlocks.SKY_BLUES, "Sky Blues");
+        addBlock(AncientAetherBlocks.WYND_THISTLE, "Wynd Thistle");
+        addBlock(AncientAetherBlocks.SAKURA_BLOSSOMS, "Sakura Blossoms");
+        addBlock(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS, "Trapped Sakura Blossoms");
+        addBlock(AncientAetherBlocks.GRAPE_VINE, "Grape Vine");
+
         addBlock(AncientAetherBlocks.HIGHSPROOT_LOG, "Highsproot Log");
         addBlock(AncientAetherBlocks.HIGHSPROOT_WOOD, "Highsproot Wood");
         addBlock(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG, "Stripped Highsproot Log");
@@ -55,14 +63,6 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.STRIPPED_SAKURA_LOG_WALL, "Stripped Sakura Log Wall");
         addBlock(AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL, "Stripped Sakura Log Wall");
 
-        addBlock(AncientAetherBlocks.SKY_GRASS, "Sky Grass");
-        addBlock(AncientAetherBlocks.HIGHLAND_VIOLA, "Highland Viola");
-        addBlock(AncientAetherBlocks.SKY_BLUES, "Sky Blues");
-        addBlock(AncientAetherBlocks.WYND_THISTLE, "Wynd Thistle");
-        addBlock(AncientAetherBlocks.SAKURA_BLOSSOMS, "Sakura Blossoms");
-        addBlock(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS, "Trapped Sakura Blossoms");
-        addBlock(AncientAetherBlocks.GRAPE_VINE, "Grape Vine");
-
         addBlock(AncientAetherBlocks.HIGHSPROOT_PLANKS, "Highsproot Planks");
         addBlock(AncientAetherBlocks.HIGHSPROOT_STAIRS, "Highsproot Stairs");
         addBlock(AncientAetherBlocks.HIGHSPROOT_SLAB, "Highsproot Slab");
@@ -70,8 +70,8 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.HIGHSPROOT_FENCE_GATE, "Highsproot Fence Gate");
         addBlock(AncientAetherBlocks.HIGHSPROOT_DOOR, "Highsproot Door");
         addBlock(AncientAetherBlocks.HIGHSPROOT_TRAPDOOR, "Highsproot Trapdoor");
-        addBlock(AncientAetherBlocks.HIGHSPROOT_BUTTON, "Highsproot Button");
         addBlock(AncientAetherBlocks.HIGHSPROOT_PRESSURE_PLATE, "Highsproot Pressure Plate");
+        addBlock(AncientAetherBlocks.HIGHSPROOT_BUTTON, "Highsproot Button");
         addBlock(AncientAetherBlocks.HIGHSPROOT_SIGN, "Highsproot Sign");
         addBlock(AncientAetherBlocks.HIGHSPROOT_HANGING_SIGN, "Highsproot Hanging Sign");
         addBlock(AncientAetherBlocks.HIGHSPROOT_BOOKSHELF, "Highsproot Bookshelf");
@@ -83,8 +83,8 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.SAKURA_FENCE_GATE, "Sakura Fence Gate");
         addBlock(AncientAetherBlocks.SAKURA_DOOR, "Sakura Door");
         addBlock(AncientAetherBlocks.SAKURA_TRAPDOOR, "Sakura Trapdoor");
-        addBlock(AncientAetherBlocks.SAKURA_BUTTON, "Sakura Button");
         addBlock(AncientAetherBlocks.SAKURA_PRESSURE_PLATE, "Sakura Pressure Plate");
+        addBlock(AncientAetherBlocks.SAKURA_BUTTON, "Sakura Button");
         addBlock(AncientAetherBlocks.SAKURA_SIGN, "Sakura Sign");
         addBlock(AncientAetherBlocks.SAKURA_HANGING_SIGN, "Sakura Hanging Sign");
         addBlock(AncientAetherBlocks.SAKURA_BOOKSHELF, "Sakura Bookshelf");
@@ -103,6 +103,12 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.HELLFIRE_STONE_MOSAIC, "Hellfire Stone Mosaic");
         addBlock(AncientAetherBlocks.AEROGETIC_STONE_MOSAIC, "Aerogetic Stone Mosaic");
         addBlock(AncientAetherBlocks.GALE_STONE_MOSAIC, "Gale Stone Mosaic");
+
+        addBlock(AncientAetherBlocks.LOCKED_CARVED_STONE_MOSAIC, "Locked Carved Stone Mosaic");
+        addBlock(AncientAetherBlocks.LOCKED_ANGELIC_STONE_MOSAIC, "Locked Angelic Stone Mosaic");
+        addBlock(AncientAetherBlocks.LOCKED_HELLFIRE_STONE_MOSAIC, "Locked Hellfire Stone Mosaic");
+        addBlock(AncientAetherBlocks.LOCKED_AEROGETIC_STONE_MOSAIC, "Locked Aerogetic Stone Mosaic");
+        addBlock(AncientAetherBlocks.LOCKED_GALE_STONE_MOSAIC, "Locked Gale Stone Mosaic");
 
         addBlock(AncientAetherBlocks.CARVED_TILES, "Carved Tiles");
         addBlock(AncientAetherBlocks.WYND_SENTRY_STONE, "Wynd Sentry Stone");
@@ -210,10 +216,10 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addItem(AncientAetherItems.HEALTH_PENDANT, "Health Pendant");
         addItem(AncientAetherItems.ANCIENT_PENDANT, "Ancient Pendant");
 
-        addItem(AncientAetherItems.STRENGTH_STONE, "Strength Stone");
         addItem(AncientAetherItems.PINK_CAPE, "Pink Cape");
         addItem(AncientAetherItems.SHIELD_OF_INEBRIATION, "Shield of Inebriation");
         addItem(AncientAetherItems.SHIELD_OF_REMEDIATION, "Shield of Remediation");
+        addItem(AncientAetherItems.STRENGTH_STONE, "Strength Stone");
 
         addItem(AncientAetherItems.ANCIENT_RUNE, "Ancient Rune");
         addItem(AncientAetherItems.LABORATORY_DUNGEON_KEY, "Laboratory Key");
@@ -314,18 +320,6 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addTooltip("epic", "Epic");
         addTooltip("mythic", "Mythic");
 
-        addLore(AncientAetherBlocks.AETHER_QUARTZ_ORE, "A source of Quartz in the Aether.");
-        addLore(AncientAetherBlocks.AMBROSIUM_CAMPFIRE, "A campfire that works in the Aether. It's a good Furnace alternative if you don't have a lot of Ambrosium.");
-
-        addLore(AncientAetherItems.GRAPES, "Often found growing on the logs of Skyroot Trees in Forests. This delicious fruit can be turned into Valkyrie Wine");
-
-        addMosaicLore(AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC, "Holystone Brick");
-        addMosaicLore(AncientAetherBlocks.CARVED_STONE_MOSAIC, "Carved Stone");
-        addMosaicLore(AncientAetherBlocks.ANGELIC_STONE_MOSAIC, "Angelic Stone");
-        addMosaicLore(AncientAetherBlocks.HELLFIRE_STONE_MOSAIC, "Hellfire Stone");
-        addMosaicLore(AncientAetherBlocks.AEROGETIC_STONE_MOSAIC, "Aerogetic Stone");
-        addMosaicLore(AncientAetherBlocks.GALE_STONE_MOSAIC, "Gale Stone");
-
         addSubtitle("block", "grape_vine.pick_grapes", "Grapes pop");
         addSubtitle("block", "obelisk.activation", "Obelisk activated");
 
@@ -376,5 +370,196 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addMenuTitle("ancient_aether", "Ancient Aether");
 
         add("item.minecraft.quartz", "Quartz");
+
+        addLore(AncientAetherBlocks.GRAVITY_GRAVEL, "Stepping on this block increases your jump height. It spawns on the coasts of Elevated Islands and doesn't fall unlike its Overworld counterpart.");
+        addLore(AncientAetherBlocks.WYND_ICE, "A block that behaves similar to Packed Ice that generates on the Coasts of Wyndcap Islands.");
+        addLore(AncientAetherBlocks.AETHER_QUARTZ_ORE, "A source of Quartz in the Aether.");
+        addLore(AncientAetherBlocks.VALKYRUM_ORE, "A very rare ore that can only be mined with a Pickaxe of Arkzenus or higher. It can be enchanted into Valkyrum using an Altar.");
+        addLore(AncientAetherBlocks.ATMOSINE_CRYSTAL, "A shiny Crystal found in the Atmosine Grotto. It floats upwards similarly to Gravitite and has various different crafting uses. It is also a good fuel source for the Altar.");
+        addLore(AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES, "These leaves generate with Crystal Skyroot Trees. They can drop Crystal Skyroot Saplings as well as White Apples when decaying.");
+        addLore(AncientAetherBlocks.SKY_GRASS, "The main grass type of the Aether. It can come in different lengths and colors depending on its surroundings.");
+        addLore(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS, "It may look like Sakura Blossoms but if you get closer you notice, it's a decoy.");
+        addLore(AncientAetherBlocks.VALKYRUM_BLOCK, "A block compacted from Valkyrum. They can power beacons and have a noble look to them.");
+        addLore(AncientAetherBlocks.AEROGEL_GLASS, "A clearer version of Aerogel crafted from 8 pieces of Aerogel and one planks in the middle. It can be crafted into all kinds of variants. Unlike regular glass, it doesn't break when mined. Mining it also doesn't require a pickaxe.");
+        addLore(AncientAetherBlocks.AEROGEL_GLASS_PANE, "A decoration block crafted from Aerogel Glass. Unlike regular glass panes, it doesn't break when mined. Mining it also doesn't require a pickaxe.");
+        addLore(AncientAetherBlocks.FLUFFALO_WOOL, "A very thick piece of wool obtained from Fluffalos. Its density causes it to not be flammable making it an ideal block for roofs.");
+        addLore(AncientAetherBlocks.FLUFFALO_CARPET, "A cozy decoration block crafted from Fluffalo Wool.");
+        addLore(AncientAetherBlocks.CARVED_TILES, "A variant of Carved Stone that can be used as a decoration block. It also generates in Bronze Dungeons, primarily as an accent block to regular Carved Stone.");
+        addLore(AncientAetherBlocks.WYND_SENTRY_STONE, "A rare Sentry Stone variant exclusive to the Sentry Laboratory. It emits a dimmer light than regular Sentry Stone and can also be made in the Freezer.");
+        addLore(AncientAetherBlocks.AEROGETIC_STONE, "The stone found in Ancient Dungeons. This stone has a dark metal color to it and can be mined as a decorative block.");
+        addLore(AncientAetherBlocks.LIGHT_AEROGETIC_STONE, "The light version of Aerogetic Stone. It is less common than Aerogetic Stone, but it looks really nice as a decorative block.");
+        addLore(AncientAetherBlocks.CORRUPTED_AEROGETIC_STONE, "A spooky variant of Light Aerogetic Stone.");
+        addLore(AncientAetherBlocks.AMBROSIUM_LANTERN, "A decoration block that is crafted from Holystone, Skyroot Sticks and an Ambrosium Torch. This Lantern works in the Aether unlike its Overworld counterpart.");
+        addLore(AncientAetherBlocks.WYND_LANTERN, "A rather dim lantern found in Sentry Laboratories. It can also be crafted using an Ambrosium Lantern and a piece of Wynd Sentry Stone.");
+        addLore(AncientAetherBlocks.SUN_LANTERN, "A fancy lantern found in Gold Dungeons. It can also be crafted using an Ambrosium Lantern and a piece of Light Hellfire Stone.");
+        addLore(AncientAetherBlocks.AMBROSIUM_CAMPFIRE, "A campfire that works in the Aether. It's a good Furnace alternative if you don't have a lot of Ambrosium.");
+        addLore(AncientAetherBlocks.VIOLET_AERCLOUD, "A violet cloud found close to the ground. This Aercloud acts as an opposite to the Blue Aercloud since it pushes players and other entities downwards.");
+        addLore(AncientAetherBlocks.WIND_BLOWER, "A way of transmitting Redstone Signals in the Aether. Activating one makes it release a Wind Blow that would activate another one if it gets hit, which causes a chain reaction. If a Windblower is active, it will emit a Redstone Signal. It can also be worn on your head if you want to look extra fancy.");
+        addLore(AncientAetherBlocks.SLIDER_PROTOTYPE, "A failed experiment of the Ancient Valkyries that can only be mined with a Gravitite Pickaxes or higher. Activating it with Redstone might have spooky consequences.");
+        addLore(AncientAetherBlocks.ANCIENT_OBELISK, "A futuristic decoration block that can only be mined with a Gravitite Pickaxe or higher.");
+        addLore(AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK, "Found at the entrances of Ancient Dungeons and can be unlocked with Ancient Runes.");
+        addLore(AncientAetherBlocks.FROZEN_HOLYSTONE_VASE, "A piece of pottery crafted by freezing regular Holystone Vases.");
+        addLore(AncientAetherBlocks.ANCIENT_MOSSY_HOLYSTONE_VASE, "An overgrown relic found in Mysterious Henges. Breaking it can yield you some shiny treasures.");
+        addLore(AncientAetherBlocks.ANCIENT_FROZEN_HOLYSTONE_VASE, "A frosted relic found in Sentry Laboratories. Breaking it can yield you some shiny treasures.");
+
+        addLore(AncientAetherItems.VALKYRUM, "A shiny metal that is used to forge the finest pieces of weaponry. It can also be used a noble trimming material.");
+        addLore(AncientAetherItems.GRAPES, "Often found growing on the logs of Skyroot Trees in Skyroot Forests. This delicious fruit can be turned into Valkyrie Wine.");
+        addLore(AncientAetherItems.ANCIENT_SWORD, "This Sword is a reward for defeating the Ancient Dungeon Boss. It's very powerful due to its high Attack Speed.");
+        addLore(AncientAetherItems.PINK_CAPE, "An extravagant Cape, crafted from Pink Wool.");
+        addLore(AncientAetherItems.ANCIENT_RUNE, "Obtained from Vases or Chests in Dungeons, this Rune is the key to the Ancient Dungeon. You can duplicate it using 7 Enchanted Gravitite and one piece of Aerogel.");
+        addLore(AncientAetherItems.LABORATORY_DUNGEON_KEY, "Obtained from the Mutated Aechor Plant, the final boss of the Sentry Laboratory, this frozen key can be used to unlock the treasure this lab beholds.");
+        addLore(AncientAetherItems.ANCIENT_DUNGEON_KEY, "A key shimmering in an ancient blue. It is dropped by the Ancient Dungeon's Final Boss and is used to unlock the Ancient Treasure Chest!");
+
+        addLeavesLore(AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES, "Enchanted Skyroot");
+        addLeavesLore(AncientAetherBlocks.SKYROOT_PINE_LEAVES, "Skyroot Pine");
+        addLeavesLore(AncientAetherBlocks.HIGHSPROOT_LEAVES, "Highsproot");
+        addLeavesLore(AncientAetherBlocks.SAKURA_LEAVES, "Sakura");
+
+        addSaplingLore(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING, "Crystal Skyroot", "blue");
+        addSaplingLore(AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING, "Enchanted Skyroot", "indigo");
+        addSaplingLore(AncientAetherBlocks.SKYROOT_PINE_SAPLING, "Skyroot Pine", "green");
+        addSaplingLore(AncientAetherBlocks.HIGHSPROOT_SAPLING, "Highsproot", "blue");
+        addSaplingLore(AncientAetherBlocks.SAKURA_SAPLING, "Sakura", "pink");
+
+        addFlowerLore(AncientAetherBlocks.HIGHLAND_VIOLA, "Magenta", "small", "all around the Aether");
+        addFlowerLore(AncientAetherBlocks.SKY_BLUES, "Cyan", "small", "all around the Aether");
+        addFlowerLore(AncientAetherBlocks.WYND_THISTLE, "Light Blue", "spiky", "in the Wyndcaps");
+        addFlowerLore(AncientAetherBlocks.SAKURA_BLOSSOMS, "Pink", "soft", "in the Sakura Jungle");
+
+        addWoodBlockLore(AncientAetherBlocks.HIGHSPROOT_LOG, "Highsproot", "The log of a tree found in the Wyndcaps Region");
+        addWoodBlockLore(AncientAetherBlocks.HIGHSPROOT_WOOD, "Highsproot", "Highsproot Logs crafted to be smooth on all sides");
+        addWoodBlockLore(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG, "Highsproot", "A Highsproot Log that has had its bark stripped away with an Axe");
+        addWoodBlockLore(AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD, "Highsproot", "Stripped Highsproot Logs crafted to be smooth on all sides");
+        addWoodBlockLore(AncientAetherBlocks.SAKURA_LOG, "Sakura", "The log of a tree found in the Sakura Jungle Region");
+        addWoodBlockLore(AncientAetherBlocks.SAKURA_WOOD, "Sakura", "Sakura Logs crafted to be smooth on all sides");
+        addWoodBlockLore(AncientAetherBlocks.STRIPPED_SAKURA_LOG, "Sakura", "A Sakura Log that has had its bark stripped away with an Axe");
+        addWoodBlockLore(AncientAetherBlocks.STRIPPED_SAKURA_WOOD, "Sakura", "Stripped Sakura Logs crafted to be smooth on all sides");
+
+        addPlanksLore(AncientAetherBlocks.HIGHSPROOT_PLANKS, "Highsproot");
+        addPlanksLore(AncientAetherBlocks.SAKURA_PLANKS, "Sakura");
+
+        addStairsLore(AncientAetherBlocks.HIGHSPROOT_STAIRS, "Highsproot Planks");
+        addStairsLore(AncientAetherBlocks.SAKURA_STAIRS, "Sakura Planks");
+        addStairsLore(AncientAetherBlocks.CARVED_TILE_STAIRS, "Carved Tiles");
+        addStairsLore(AncientAetherBlocks.AEROGETIC_STAIRS, "Aerogetic Stone");
+
+        addSlabLore(AncientAetherBlocks.HIGHSPROOT_SLAB, "Highsproot Planks");
+        addSlabLore(AncientAetherBlocks.SAKURA_SLAB, "Sakura Planks");
+        addSlabLore(AncientAetherBlocks.CARVED_TILE_SLAB, "Carved Tiles");
+        addSlabLore(AncientAetherBlocks.AEROGETIC_SLAB, "Aerogetic Stone");
+
+        addWallLore(AncientAetherBlocks.HIGHSPROOT_LOG_WALL, "Highsproot Logs");
+        addWallLore(AncientAetherBlocks.HIGHSPROOT_WOOD_WALL, "Highsproot Wood");
+        addWallLore(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG_WALL, "Stripped Highsproot Logs");
+        addWallLore(AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD_WALL, "Stripped Highsproot Wood");
+        addWallLore(AncientAetherBlocks.SAKURA_LOG_WALL, "Sakura Logs");
+        addWallLore(AncientAetherBlocks.SAKURA_WOOD_WALL, "Sakura Wood");
+        addWallLore(AncientAetherBlocks.STRIPPED_SAKURA_LOG_WALL, "Stripped Sakura Logs");
+        addWallLore(AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL, "Stripped Sakura Wood");
+        addWallLore(AncientAetherBlocks.CARVED_TILE_WALL, "Carved Tiles");
+        addWallLore(AncientAetherBlocks.AEROGETIC_WALL, "Aerogetic Stone");
+
+        addFenceLore(AncientAetherBlocks.HIGHSPROOT_FENCE, "Highsproot");
+        addFenceLore(AncientAetherBlocks.SAKURA_FENCE, "Sakura");
+
+        addFenceGateLore(AncientAetherBlocks.HIGHSPROOT_FENCE_GATE, "Highsproot");
+        addFenceGateLore(AncientAetherBlocks.SAKURA_FENCE_GATE, "Sakura");
+
+        addDoorLore(AncientAetherBlocks.HIGHSPROOT_DOOR, "Highsproot Planks");
+        addDoorLore(AncientAetherBlocks.SAKURA_DOOR, "Sakura Planks");
+        addDoorLore(AncientAetherBlocks.AEROGEL_GLASS_DOOR, "Aerogel Glass");
+
+        addTrapdoorLore(AncientAetherBlocks.HIGHSPROOT_TRAPDOOR, "Highsproot Planks");
+        addTrapdoorLore(AncientAetherBlocks.SAKURA_TRAPDOOR, "Sakura Planks");
+        addTrapdoorLore(AncientAetherBlocks.AEROGEL_GLASS_TRAPDOOR, "Aerogel Glass");
+
+        addPressurePlateLore(AncientAetherBlocks.HIGHSPROOT_PRESSURE_PLATE, "Highsproot");
+        addPressurePlateLore(AncientAetherBlocks.SAKURA_PRESSURE_PLATE, "Sakura");
+
+        addButtonLore(AncientAetherBlocks.HIGHSPROOT_BUTTON, "Highsproot");
+        addButtonLore(AncientAetherBlocks.SAKURA_BUTTON, "Sakura");
+
+        addSignLore(AncientAetherBlocks.HIGHSPROOT_SIGN, "Highsproot");
+        addSignLore(AncientAetherBlocks.SAKURA_SIGN, "Sakura");
+
+        addHangingSignLore(AncientAetherBlocks.HIGHSPROOT_HANGING_SIGN, "Highsproot");
+        addHangingSignLore(AncientAetherBlocks.SAKURA_HANGING_SIGN, "Sakura");
+
+        addBookshelfLore(AncientAetherBlocks.HIGHSPROOT_BOOKSHELF, "Highsproot");
+        addBookshelfLore(AncientAetherBlocks.SAKURA_BOOKSHELF, "Sakura");
+
+        addMosaicLore(AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC, "Holystone Brick");
+        addMosaicLore(AncientAetherBlocks.CARVED_STONE_MOSAIC, "Carved Stone");
+        addMosaicLore(AncientAetherBlocks.ANGELIC_STONE_MOSAIC, "Angelic Stone");
+        addMosaicLore(AncientAetherBlocks.HELLFIRE_STONE_MOSAIC, "Hellfire Stone");
+        addMosaicLore(AncientAetherBlocks.AEROGETIC_STONE_MOSAIC, "Aerogetic Stone");
+        addMosaicLore(AncientAetherBlocks.GALE_STONE_MOSAIC, "Gale Stone");
+
+        addVaseLore(AncientAetherBlocks.HOLYSTONE_VASE, "Holystone Bricks");
+        addVaseLore(AncientAetherBlocks.MOSSY_HOLYSTONE_VASE, "Mossy Holystone");
+        addVaseLore(AncientAetherBlocks.SENTRY_VASE, "Carved Stone");
+        addVaseLore(AncientAetherBlocks.ANGELIC_VASE, "Angelic Stone");
+        addVaseLore(AncientAetherBlocks.HELLFIRE_VASE, "Hellfire Stone");
+        addVaseLore(AncientAetherBlocks.AEROGETIC_VASE, "Aerogetic Stone");
+        addVaseLore(AncientAetherBlocks.GALE_VASE, "Gale Stone");
+
+        addAncientVaseLore(AncientAetherBlocks.ANCIENT_HOLYSTONE_VASE, "Holystone Ruins");
+        addAncientVaseLore(AncientAetherBlocks.ANCIENT_SENTRY_VASE, "Bronze Dungeons");
+        addAncientVaseLore(AncientAetherBlocks.ANCIENT_ANGELIC_VASE, "Silver Dungeons");
+        addAncientVaseLore(AncientAetherBlocks.ANCIENT_HELLFIRE_VASE, "Gold Dungeons");
+        addAncientVaseLore(AncientAetherBlocks.ANCIENT_AEROGETIC_VASE, "Ancient Dungeons");
+        addAncientVaseLore(AncientAetherBlocks.ANCIENT_GALE_VASE, "Platinum Dungeons");
+
+        addValkyrumItemLore(AncientAetherItems.VALKYRUM_SWORD, "weapon", "It doesn't have as much reach as the other Valkyrum Equipment but it's better Attack Damage and Attack Speed make it a valid alternative to the Valkyrum Lance.");
+        addValkyrumItemLore(AncientAetherItems.VALKYRUM_LANCE, "weapon", "A noble weapon forged from Valkyrum. This long-range weapon is very good for defeating Zephyrs and Valkyrie Queens.");
+        addValkyrumItemLore(AncientAetherItems.VALKYRUM_SHOVEL, "tool", "This Shovel can help you reach Quicksoil from a safer distance; quite useful wouldn't you say?");
+        addValkyrumItemLore(AncientAetherItems.VALKYRUM_PICKAXE, "tool", "This Pickaxe is very useful when it comes to mining blocks from under islands, as it has a very far reach, almost double the normal reach! It is also quite useful for fighting the Slider.");
+        addValkyrumItemLore(AncientAetherItems.VALKYRUM_AXE, "tool", "This Axe has a very far reach and very high attack power. You can use this to your advantage, but be warned, the attack cooldown is very high");
+        addValkyrumItemLore(AncientAetherItems.VALKYRUM_HOE, "tool", "This Hoe has an incredibly far reach, allowing you to pointlessly till dirt from a safe distance.");
+        addValkyrumItemLore(AncientAetherItems.VALKYRUM_HELMET, "piece of armor", "When fully worn, you are granted temporary flight. Quite useful for getting to high places.");
+        addValkyrumItemLore(AncientAetherItems.VALKYRUM_CHESTPLATE, "piece of armor", "When fully worn, you are granted temporary flight. Quite useful for getting to high places.");
+        addValkyrumItemLore(AncientAetherItems.VALKYRUM_LEGGINGS, "piece of armor", "When fully worn, you are granted temporary flight. Quite useful for getting to high places.");
+        addValkyrumItemLore(AncientAetherItems.VALKYRUM_BOOTS, "piece of armor", "When fully worn, you are granted temporary flight. Quite useful for getting to high places.");
+        addValkyrumItemLore(AncientAetherItems.VALKYRUM_GLOVES, "piece of arm wear", "The Gloves are needed to complete the armor set, which grants temporary flight.");
+        addValkyrumItemLore(AncientAetherItems.VALKYRUM_RING, "accessory", "A noble accessory forged from Valkyrum. This ring grants you +0.5 Blocks of Reach.");
+        addValkyrumItemLore(AncientAetherItems.VALKYRUM_PENDANT, "accessory", "A noble accessory forged from Valkyrum. This pendant grants you +1 Blocks of Reach.");
+
+        addRewardLore(AncientAetherItems.ARKENZUS_PICKAXE, "the Valkyrie Queen", "pickaxe is strong enough to mine Valkyrum Ore");
+        addRewardLore(AncientAetherItems.AERONAUTIC_DART_SHOOTER, "the Ancient Dungeon Boss", "dart shooter launches mobs high up in the air similar to Gravitite Equipment. You can use any type of dart as ammunition");
+        addRewardLore(AncientAetherItems.HERMES_RING, "Dungeons", "ring grants you +0.015 Movement Speed");
+        addRewardLore(AncientAetherItems.HERMES_PENDANT, "Dungeons", "pendant grants you +0.02 Movement Speed");
+        addRewardLore(AncientAetherItems.ARKENIUM_RING, "Dungeons", "ring grants you +1 Armor Toughness");
+        addRewardLore(AncientAetherItems.ARKENIUM_PENDANT, "Dungeons", "pendant grants you +2 Armor Toughness");
+        addRewardLore(AncientAetherItems.HEALTH_RING, "the Valkyrie Queen", "ring grants you +1 Health Point");
+        addRewardLore(AncientAetherItems.HEALTH_PENDANT, "the Valkyrie Queen", "pendant grants you +2 Health Points");
+        addRewardLore(AncientAetherItems.ANCIENT_RING, "the Ancient Dungeon Boss", "ring grants you +0.1 Attack Speed");
+        addRewardLore(AncientAetherItems.ANCIENT_PENDANT, "the Ancient Dungeon Boss", "pendant grants you +0.2 Attack Speed");
+        addRewardLore(AncientAetherItems.STRENGTH_STONE, "the Valkyrie Queen", "accessory increases your total damage by 25%");
+
+
+        addTemplateLore("wynd", "vases and dungeon chests");
+        addTemplateLore("whale", "vases and dungeon chests");
+        addTemplateLore("ascended", "vases and dungeon chests");
+        addTemplateLore("mysterious", "Mysterious Henges");
+
+        addBossTemplateLore("mosaic", "Slider");
+        addBossTemplateLore("royal", "Valkyrie Queen");
+        addBossTemplateLore("solar", "Sun Spirit");
+        addBossTemplateLore("mechanical", "Mutated Aechor Plant");
+        addBossTemplateLore("ancient", "Ancient Dungeon Boss");
+
+        addBoatLore(AncientAetherItems.HIGHSPROOT_BOAT);
+        addBoatLore(AncientAetherItems.SAKURA_BOAT);
+
+        addChestBoatLore(AncientAetherItems.HIGHSPROOT_CHEST_BOAT, "Highsproot");
+        addChestBoatLore(AncientAetherItems.SAKURA_CHEST_BOAT, "Sakura");
+
+        addMoaEggLore(AncientAetherItems.TURQUOISE_MOA_EGG, "Turquoise", "7", ".");
+        addMoaEggLore(AncientAetherItems.TEAL_MOA_EGG, "Teal", "6", " and a faster flying speed.");
+        addMoaEggLore(AncientAetherItems.SKY_BLUE_MOA_EGG, "Sky Blue", "5", " and a faster flying speed.");
+        addMoaEggLore(AncientAetherItems.LAVENDER_MOA_EGG, "Lavender", "3", ". These moas have been given a very fast a flying speed as a compensation.");
+        addMoaEggLore(AncientAetherItems.SAKURA_MOA_EGG, "Sakura", "12", ". While they have an insane amount of mid-air jumps, their flying speed isn't the best.");
+        addMoaEggLore(AncientAetherItems.VIOLET_MOA_EGG, "Violet", "4", ". These moas have been given a very fast a flying speed as a compensation.");
+        addMoaEggLore(AncientAetherItems.BURGUNDY_MOA_EGG, "Burgundy", "10", ".");
     }
 }

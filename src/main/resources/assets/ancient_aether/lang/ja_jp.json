@@ -115,8 +115,7 @@
   "advancement.ancient_aether.slider_prototype": "故障中",
   "advancement.ancient_aether.unlock_ancient_dungeon": "ジャングルの中で、偉大なジャングルで",
   "advancement.ancient_aether.unlock_ancient_dungeon.desc": "セントリー研究所にある「古代のセントリーのルーン」を持つ壊れたセントリーのオベリスクをクリックしてエンシェントダンジョンに入る。",
-  "gui.ancient_aether.obelisk_sun_spirit": "まだ太陽の精霊を倒していない",
-  "gui.ancient_aether.ancient_guardian.title": "エンシェントガーディアン",
+  "gui.ancient_aether.obelisk.requirement": "まだ太陽の精霊を倒していない",
 
   "menu.ancient_aether.ancient_treasure_chest": "古代の宝箱",
   "ancient_aether.ancient_treasure_chest_locked": "この宝箱を開けるには古代の鍵が必要です。",
