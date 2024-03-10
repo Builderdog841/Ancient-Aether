@@ -23,6 +23,10 @@ public abstract class AncientAetherLanguageProvider extends AetherLanguageProvid
         add("subtitles." + id + ".item.accessory.equip_" + key, name + " jingles");
     }
 
+    public void addMenu(String key, String name) {
+        add("menu." + id + "." + key, name);
+    }
+
     public void addCompatPackTitle(String packName, String description) {
         add("pack." + id + "." + packName + "_compat.title", description + " Compatibility");
     }

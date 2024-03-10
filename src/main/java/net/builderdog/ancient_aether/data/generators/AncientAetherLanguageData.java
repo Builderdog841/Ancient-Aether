@@ -347,8 +347,8 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addSubtitle("entity", "mutated_aechor_plant.hurt", "Mutated Aechor Plant hurts");
         addSubtitle("entity", "mutated_aechor_plant.death", "Mutated Aechor Plant dies");
 
-        addMenuText("laboratory_treasure_chest", "Laboratory Treasure Chest");
-        addMenuText("ancient_treasure_chest", "Ancient Treasure Chest");
+        addMenu("laboratory_treasure_chest", "Laboratory Treasure Chest");
+        addMenu("ancient_treasure_chest", "Ancient Treasure Chest");
 
         addGuiText("obelisk.requirement", "You have not defeated the Sun Spirit yet");
         addGuiText("mutated_aechor_plant.title", "the Mutated Aechor Plant");
@@ -535,7 +535,6 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addRewardLore(AncientAetherItems.ANCIENT_RING, "the Ancient Dungeon Boss", "ring grants you +0.1 Attack Speed");
         addRewardLore(AncientAetherItems.ANCIENT_PENDANT, "the Ancient Dungeon Boss", "pendant grants you +0.2 Attack Speed");
         addRewardLore(AncientAetherItems.STRENGTH_STONE, "the Valkyrie Queen", "accessory increases your total damage by 25%");
-
 
         addTemplateLore("wynd", "vases and dungeon chests");
         addTemplateLore("whale", "vases and dungeon chests");

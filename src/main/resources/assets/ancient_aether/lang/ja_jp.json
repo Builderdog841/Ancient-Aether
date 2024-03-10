@@ -81,7 +81,6 @@
   "block.ancient_aether.locked_angelic_stone_mosaic": "鍵のかかったモザイク画の神聖石",
   "block.ancient_aether.locked_hellfire_stone_mosaic": "鍵のかかったモザイク画の業火石",
   "block.ancient_aether.locked_gale_stone_mosaic": "鍵のかかったモザイク画の疾風石",
-  "block.ancient_aether.locked_ancient_sentry_stone": "鍵のかかった古代の刻印石",
   "block.ancient_aether.highsproot_bookshelf": "ハイスプルートの本棚",
   "block.ancient_aether.sakura_bookshelf": "天界サクラの本棚",
 
@@ -175,26 +174,12 @@
   "lore.block.ancient_aether.sakura_sign": "天界サクラの板材とスカイルートの棒からクラフトされる。メッセージや道案内を書くのにぴったりな看板。",
   "lore.block.ancient_aether.unpowered_ancient_obelisk": "エンシェントダンジョンの入り口にあるこのブロックは、古代のルーンによって解除することができる。",
   "lore.block.ancient_aether.ancient_obelisk": "グラビタイト以上のツルハシでないと採掘できない業火な装飾ブロック。",
-  "lore.block.aether.highsproot_bookshelf": "ハイスプルートの板材と本からクラフトされる。本棚はエンチャントテーブルのエンチャント能力を強化するために使える。",
-  "lore.block.aether.sakura_bookshelf": "天界サクラの板材と本からクラフトされる。本棚はエンチャントテーブルのエンチャント能力を強化するために使える。",
+  "lore.block.ancient_aether.highsproot_bookshelf": "ハイスプルートの板材と本からクラフトされる。本棚はエンチャントテーブルのエンチャント能力を強化するために使える。",
+  "lore.block.ancient_aether.sakura_bookshelf": "天界サクラの板材と本からクラフトされる。本棚はエンチャントテーブルのエンチャント能力を強化するために使える。",
   "lore.block.ancient_aether.aerogetic_slab": "空石からクラフトされる。ハーフブロックは様々な飾りや、滑らかなスロープを作るのに便利だ。建物の屋根に使ってみよう！",
   "lore.block.ancient_aether.aerogetic_stairs": "空石からクラフトされる。階段は建物に垂直性を足す以外にも、装飾に使えるぞ！",
   "lore.block.ancient_aether.aerogetic_stone": "エンシェントダンジョンで見つかる石。濃いメタリックカラーで、装飾用のブロックとして回収できる。",
   "lore.block.ancient_aether.aerogetic_wall": "空石からクラフトされる。装飾的な囲いや防御塀に使える。嫌な侵入者を防ぐのに最適だ！",
   "lore.block.ancient_aether.light_aerogetic_stone": "光を放つ空石。空石より数は少ないが、装飾ブロックとして使うととても素敵。",
-  "lore.block.ancient_aether.corrupted_aerogetic_stone": "光る空石の亜種。エンシェントガーディアンが最終形態になるとエンシェントダンジョンに出現する。",
-
-  "lore.item.ancient_aether.grapes": "ワルキューレたちが好んで食べる果物なので、ワルキューレの居住区の野原で見かけることもある。ワルキューレワインに加工することもできる。",
-  "lore.item.ancient_aether.ancient_rune": "セントリー研究所で発見されたこのルーンは、壊れたセントリーのオベリスクを開くするエンシェントダンジョンの鍵である。また、7個のエンチャントされたグラビタイトと1個の古代の哨兵石を使えば複製することもできる。",
-  "lore.item.ancient_aether.ancient_sword": "エンシェントガーディアンを倒した戦利品。攻撃速度が速く、非常に強力だ。",
-  "lore.item.ancient_aether.strength_stone": "エンシェントガーディアンを倒した戦利品。この宝石はダメージを1.25倍にする。",
-  "lore.item.ancient_aether.ancient_ring": "エンシェントガーディアンを倒した戦利品。このリングは攻撃速度を0.1増加させる。",
-  "lore.item.ancient_aether.ancient_pendant": "エンシェントガーディアンを倒した戦利品。このペンダントは攻撃速度を0.2増加させる。",
-  "lore.item.ancient_aether.health_ring": "エンシェントガーディアンを倒した戦利品。このリングは体力を1増加させる。",
-  "lore.item.ancient_aether.health_pendant": "エンシェントガーディアンを倒した戦利品。このペンダントは体力を2増加させる。",
-  "lore.item.ancient_aether.highsproot_boat": "エーテルには大きな水域はあまりないが、氷の上を長距離横断する際にはボートが役に立つことがあるぞ！",
-  "lore.item.ancient_aether.sakura_boat": "エーテルには大きな水域はあまりないが、氷の上を長距離横断する際にはボートが役に立つことがあるぞ！",
-  "lore.item.ancient_aether.highsproot_chest_boat": "後部に便利なチェストが付いたハイスプルートのボート。エーテルでは見つけるのが難しいと言われる、長い水路により多くのアイテムを運ぶのに役立つ。",
-  "lore.item.ancient_aether.sakura_chest_boat": "後部に便利なチェストが付いた天界サクラのボート。エーテルでは見つけるのが難しいと言われる、長い水路により多くのアイテムを運ぶのに役立つ。",
-  "lore.item.ancient_aether.sakura_moa_egg": "エンシェントダンジョンの宝箱にしか入っていない、非常にレアなモアの卵。孵化させると10回空中ジャンプできるサクラモアが生まれる。"
+  "lore.block.ancient_aether.corrupted_aerogetic_stone": "光る空石の亜種。エンシェントガーディアンが最終形態になるとエンシェントダンジョンに出現する。"
 }
