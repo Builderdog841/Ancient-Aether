@@ -1,8 +1,8 @@
 package net.builderdog.ancient_aether.block.blocktype;
 
-import com.aetherteam.aether.entity.AetherEntityTypes;
-import com.aetherteam.aether.entity.projectile.ZephyrSnowball;
 import net.builderdog.ancient_aether.block.blockstate.AncientAetherBlockStateProperties;
+import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
+import net.builderdog.ancient_aether.entity.projectile.WindBlow;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -55,7 +55,7 @@ public class WindBlowerBlock extends Block implements Equipable {
         }
         if (flag && level.hasNeighborSignal(pos)) {
             Direction direction = state.getValue(FACING);
-            ZephyrSnowball blow = new ZephyrSnowball(AetherEntityTypes.ZEPHYR_SNOWBALL.get(), level);
+            WindBlow blow = new WindBlow(AncientAetherEntityTypes.WIND_BLOW.get(), level);
             blow.setPos(
                     pos.getX() + 0.7D * (double) direction.getStepX(),
                     pos.getY() + 0.7D * (double) direction.getStepY(),

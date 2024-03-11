@@ -3,7 +3,7 @@ package net.builderdog.ancient_aether.item.equipment.weapons;
 import com.aetherteam.aether.AetherTags;
 import com.aetherteam.aether.entity.projectile.dart.AbstractDart;
 import com.aetherteam.aether.item.combat.DartShooterItem;
-import net.builderdog.ancient_aether.entity.misc.AeronauticDart;
+import net.builderdog.ancient_aether.entity.projectile.AeronauticDart;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 

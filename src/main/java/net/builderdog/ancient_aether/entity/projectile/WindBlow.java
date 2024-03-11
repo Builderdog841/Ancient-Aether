@@ -1,12 +1,13 @@
-package net.builderdog.ancient_aether.entity.misc;
+package net.builderdog.ancient_aether.entity.projectile;
 
 import com.aetherteam.aether.client.particle.AetherParticleTypes;
-import com.aetherteam.aether.entity.AetherEntityTypes;
 import com.aetherteam.aether.item.EquipmentUtil;
 import com.aetherteam.aether.mixin.mixins.common.accessor.PlayerAccessor;
 import com.aetherteam.aether.network.AetherPacketHandler;
 import com.aetherteam.aether.network.packet.clientbound.ZephyrSnowballHitPacket;
 import com.aetherteam.nitrogen.network.PacketRelay;
+import net.builderdog.ancient_aether.block.blocktype.WindBlowerBlock;
+import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
@@ -20,7 +21,11 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Fireball;
 import net.minecraft.world.entity.projectile.ItemSupplier;
 import net.minecraft.world.entity.projectile.ProjectileUtil;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
@@ -38,7 +43,7 @@ public class WindBlow extends Fireball implements ItemSupplier {
     }
 
     public WindBlow(Level level, LivingEntity shooter, double accelX, double accelY, double accelZ) {
-        super(AetherEntityTypes.ZEPHYR_SNOWBALL.get(), shooter, accelX, accelY, accelZ, level);
+        super(AncientAetherEntityTypes.WIND_BLOW.get(), shooter, accelX, accelY, accelZ, level);
         setNoGravity(true);
     }
 
@@ -47,7 +52,7 @@ public class WindBlow extends Fireball implements ItemSupplier {
         if (!onGround()) {
             ++ticksInAir;
         }
-        if (this.ticksInAir > 50) {
+        if (ticksInAir > 50) {
             if (!level().isClientSide()) {
                 discard();
             }
@@ -86,6 +91,15 @@ public class WindBlow extends Fireball implements ItemSupplier {
     }
 
     @Override
+    protected void onHitBlock(@NotNull BlockHitResult result) {
+        BlockState state = level().getBlockState(result.getBlockPos());
+
+        if (!state.getValue(WindBlowerBlock.CHARGED)) {
+            state.setValue(WindBlowerBlock.CHARGED, true);
+        }
+    }
+
+    @Override
     protected void onHitEntity(EntityHitResult result) {
         Entity entity = result.getEntity();
         if (entity instanceof LivingEntity livingEntity && !EquipmentUtil.hasSentryBoots(livingEntity)) {
@@ -94,10 +108,10 @@ public class WindBlow extends Fireball implements ItemSupplier {
                 playerAccessor.callHurtCurrentlyUsedShield(3.0F);
             } else {
                 entity.setDeltaMovement(entity.getDeltaMovement().x(), entity.getDeltaMovement().y() + 0.5, entity.getDeltaMovement().z());
-                entity.setDeltaMovement(entity.getDeltaMovement().x() + (getDeltaMovement().x() * 1.5), entity.getDeltaMovement().y(), entity.getDeltaMovement().z() + (this.getDeltaMovement().z() * 1.5));
+                entity.setDeltaMovement(entity.getDeltaMovement().x() + (getDeltaMovement().x() * 1.5), entity.getDeltaMovement().y(), entity.getDeltaMovement().z() + (getDeltaMovement().z() * 1.5));
                 if (livingEntity instanceof ServerPlayer player) {
                     if (!level().isClientSide()) {
-                        PacketRelay.sendToPlayer(AetherPacketHandler.INSTANCE, new ZephyrSnowballHitPacket(livingEntity.getId(), this.getDeltaMovement().x(), this.getDeltaMovement().z()), player);
+                        PacketRelay.sendToPlayer(AetherPacketHandler.INSTANCE, new ZephyrSnowballHitPacket(livingEntity.getId(), getDeltaMovement().x(), getDeltaMovement().z()), player);
                     }
                 }
             }
@@ -112,6 +126,11 @@ public class WindBlow extends Fireball implements ItemSupplier {
     @Override
     protected @NotNull ParticleOptions getTrailParticle() {
         return AetherParticleTypes.ZEPHYR_SNOWFLAKE.get();
+    }
+
+    @Override
+    public @NotNull ItemStack getItem() {
+        return new ItemStack(Items.SNOWBALL);
     }
 
     @Override

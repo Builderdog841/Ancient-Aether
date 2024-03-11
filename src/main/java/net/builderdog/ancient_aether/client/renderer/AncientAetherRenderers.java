@@ -11,8 +11,8 @@ import net.builderdog.ancient_aether.client.renderer.entity.*;
 import net.builderdog.ancient_aether.client.renderer.entity.model.*;
 import net.builderdog.ancient_aether.client.renderer.player.layer.ValkyrumWingsLayer;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
-import net.builderdog.ancient_aether.entity.misc.AeronauticDart;
-import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
+import net.builderdog.ancient_aether.entity.miscellaneous.AncientAetherBoatEntity;
+import net.builderdog.ancient_aether.entity.projectile.AeronauticDart;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.BoatModel;
@@ -22,6 +22,7 @@ import net.minecraft.client.renderer.blockentity.CampfireRenderer;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.client.renderer.entity.player.PlayerRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
@@ -46,6 +47,7 @@ public class AncientAetherRenderers {
         event.registerEntityRenderer(AncientAetherEntityTypes.MUTATED_AECHOR_PLANT.get(), MutatedAechorPlantRenderer::new);
         event.registerEntityRenderer(AncientAetherEntityTypes.AERONAUTIC_DART.get(), AeronauticDartRenderer::new);
         event.registerEntityRenderer(AncientAetherEntityTypes.MUTATED_AECHOR_NEEDLE.get(), MutatedAechorNeedleRenderer::new);
+        event.registerEntityRenderer(AncientAetherEntityTypes.WIND_BLOW.get(), (context) -> new ThrownItemRenderer<>(context, 2.0F, true));
     }
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {

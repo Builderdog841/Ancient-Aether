@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.entity.misc;
+package net.builderdog.ancient_aether.entity.projectile;
 
 import com.aetherteam.aether.effect.AetherEffects;
 import com.aetherteam.aether.entity.projectile.dart.AbstractDart;

@@ -1,7 +1,7 @@
 package net.builderdog.ancient_aether.block.dispenser;
 
-import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
-import net.builderdog.ancient_aether.entity.misc.AncientAetherChestBoatEntity;
+import net.builderdog.ancient_aether.entity.miscellaneous.AncientAetherBoatEntity;
+import net.builderdog.ancient_aether.entity.miscellaneous.AncientAetherChestBoatEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.BlockSource;
 import net.minecraft.core.Direction;

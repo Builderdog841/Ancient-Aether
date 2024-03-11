@@ -252,6 +252,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
 
         addEntityType(AncientAetherEntityTypes.BOAT, "Boat");
         addEntityType(AncientAetherEntityTypes.CHEST_BOAT, "Chest Boat");
+        addEntityType(AncientAetherEntityTypes.WIND_BLOW, "Wind Blow");
         addEntityType(AncientAetherEntityTypes.AERONAUTIC_DART, "Aeronautic Dart");
         addEntityType(AncientAetherEntityTypes.MUTATED_AECHOR_NEEDLE, "Mutated Aechor Needle");
 

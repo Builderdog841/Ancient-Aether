@@ -1,7 +1,7 @@
 package net.builderdog.ancient_aether.item.miscellaneous;
 
-import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
-import net.builderdog.ancient_aether.entity.misc.AncientAetherChestBoatEntity;
+import net.builderdog.ancient_aether.entity.miscellaneous.AncientAetherBoatEntity;
+import net.builderdog.ancient_aether.entity.miscellaneous.AncientAetherChestBoatEntity;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;

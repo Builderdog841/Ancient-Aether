@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.entity.misc;
+package net.builderdog.ancient_aether.entity.miscellaneous;
 
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.minecraft.core.NonNullList;
