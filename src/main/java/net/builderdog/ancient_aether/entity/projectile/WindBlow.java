@@ -6,7 +6,6 @@ import com.aetherteam.aether.mixin.mixins.common.accessor.PlayerAccessor;
 import com.aetherteam.aether.network.AetherPacketHandler;
 import com.aetherteam.aether.network.packet.clientbound.ZephyrSnowballHitPacket;
 import com.aetherteam.nitrogen.network.PacketRelay;
-import net.builderdog.ancient_aether.block.blocktype.WindBlowerBlock;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
@@ -24,8 +23,6 @@ import net.minecraft.world.entity.projectile.ProjectileUtil;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
@@ -87,15 +84,6 @@ public class WindBlow extends Fireball implements ItemSupplier {
         super.onHit(result);
         if (!level().isClientSide()) {
             discard();
-        }
-    }
-
-    @Override
-    protected void onHitBlock(@NotNull BlockHitResult result) {
-        BlockState state = level().getBlockState(result.getBlockPos());
-
-        if (!state.getValue(WindBlowerBlock.CHARGED)) {
-            state.setValue(WindBlowerBlock.CHARGED, true);
         }
     }
 
