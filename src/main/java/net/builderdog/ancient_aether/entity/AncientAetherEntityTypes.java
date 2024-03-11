@@ -3,10 +3,7 @@ package net.builderdog.ancient_aether.entity;
 import com.aetherteam.aether.data.resources.AetherMobCategory;
 import com.aetherteam.aether.entity.monster.Swet;
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.entity.misc.AeronauticDart;
-import net.builderdog.ancient_aether.entity.misc.AncientAetherBoatEntity;
-import net.builderdog.ancient_aether.entity.misc.AncientAetherChestBoatEntity;
-import net.builderdog.ancient_aether.entity.misc.MutatedAechorNeedle;
+import net.builderdog.ancient_aether.entity.misc.*;
 import net.builderdog.ancient_aether.entity.monster.AeronauticLeaper;
 import net.builderdog.ancient_aether.entity.monster.Roothyrn;
 import net.builderdog.ancient_aether.entity.monster.boss.MutatedAechorPlant;
@@ -48,6 +45,8 @@ public class AncientAetherEntityTypes {
             () -> EntityType.Builder.<AncientAetherBoatEntity>of(AncientAetherBoatEntity::new, MobCategory.MISC).sized(1.375F, 0.5625F).clientTrackingRange(10).build("boat"));
     public static final RegistryObject<EntityType<AncientAetherChestBoatEntity>> CHEST_BOAT = ENTITY_TYPES.register("chest_boat", ()
             -> EntityType.Builder.<AncientAetherChestBoatEntity>of(AncientAetherChestBoatEntity::new, MobCategory.MISC).sized(1.375F, 0.5625F).clientTrackingRange(10).build("chest_boat"));
+    public static final RegistryObject<EntityType<WindBlow>> WIND_BLOW = ENTITY_TYPES.register("wind_blow",
+            () -> EntityType.Builder.<WindBlow>of(WindBlow::new, MobCategory.MISC).sized(0.5F, 0.5F).clientTrackingRange(4).updateInterval(20).build("wind_blow"));
     public static final RegistryObject<EntityType<AeronauticDart>> AERONAUTIC_DART = ENTITY_TYPES.register("aeronautic_dart",
             () -> EntityType.Builder.<AeronauticDart>of(AeronauticDart::new, MobCategory.MISC).sized(0.5F, 0.5F).clientTrackingRange(4).updateInterval(20).build("aeronautic_dart"));
     public static final RegistryObject<EntityType<MutatedAechorNeedle>> MUTATED_AECHOR_NEEDLE = ENTITY_TYPES.register("mutated_aechor_needle",
