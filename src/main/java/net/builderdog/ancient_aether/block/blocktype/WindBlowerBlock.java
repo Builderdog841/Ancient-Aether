@@ -8,8 +8,8 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.Equipable;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
@@ -18,6 +18,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("deprecation")
@@ -56,30 +57,21 @@ public class WindBlowerBlock extends Block implements Equipable {
             }
         }
         if (flag && level.hasNeighborSignal(pos)) {
-            spawnProjectile(state, level, pos);
+            Direction direction = state.getValue(FACING);
+            WindBlow blow = new WindBlow(AncientAetherEntityTypes.WIND_BLOW.get(), level);
+            blow.setPos(
+                    pos.getX() + 0.7D * (double) direction.getStepX(),
+                    pos.getY() + 0.7D * (double) direction.getStepY(),
+                    pos.getZ() + 0.7D * (double) direction.getStepZ());
+            blow.shoot(direction.getStepX(), direction.getStepY(), direction.getStepZ(), 1.1F, 0.0F);
+            level.addFreshEntity(blow);
         }
     }
 
-    public void entityInside(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull Entity entity) {
-        if (entity.getType().is(AncientAetherTags.EntityTypes.ACTIVATES_WIND_BLOWER) && !level.isClientSide && !state.getValue(CHARGED)) {
-            level.setBlockAndUpdate(pos, state.cycle(CHARGED));
-            spawnProjectile(state, level, pos);
-        }
-    }
-
-    public void spawnProjectile(@NotNull BlockState state, Level level, @NotNull BlockPos pos) {
-        Direction direction = state.getValue(FACING);
-        WindBlow blow = new WindBlow(AncientAetherEntityTypes.WIND_BLOW.get(), level);
-        blow.setPos(
-                pos.getX() + 0.7D * (double) direction.getStepX(),
-                pos.getY() + 0.7D * (double) direction.getStepY(),
-                pos.getZ() + 0.7D * (double) direction.getStepZ());
-        blow.shoot(direction.getStepX(), direction.getStepY(), direction.getStepZ(), 1.1F, 0.0F);
-        level.addFreshEntity(blow);
-        if (!level.isClientSide) {
-            if (state.getValue(CHARGED)) {
-                level.scheduleTick(pos, this, 4);
-            } else level.setBlock(pos, state.cycle(CHARGED), 2);
+    @Override
+    public void onProjectileHit(@NotNull Level level, @NotNull BlockState state, @NotNull BlockHitResult hitResult, @NotNull Projectile projectile) {
+        if (projectile.getType().is(AncientAetherTags.EntityTypes.ACTIVATES_WIND_BLOWER) && !state.getValue(CHARGED)) {
+            state.setValue(CHARGED, true);
         }
     }
 
