@@ -39,6 +39,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class AncientAetherItems {
     public static final DeferredRegister<Item> ITEMS =
            DeferredRegister.create(ForgeRegistries.ITEMS, AncientAether.MODID);
+
     public static final Component COMMON = Component.translatable("tooltip.ancient_aether.common").withStyle(Style.EMPTY.withItalic(true).withColor(ChatFormatting.GRAY));
     public static final Component RARE = Component.translatable("tooltip.ancient_aether.rare").withStyle(Style.EMPTY.withItalic(true).withColor(ChatFormatting.AQUA));
     public static final Component EPIC = Component.translatable("tooltip.ancient_aether.epic").withStyle(Style.EMPTY.withItalic(true).withColor(ChatFormatting.DARK_PURPLE));
