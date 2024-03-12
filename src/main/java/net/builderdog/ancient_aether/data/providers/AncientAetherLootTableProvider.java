@@ -1,6 +1,7 @@
 package net.builderdog.ancient_aether.data.providers;
 
 import net.builderdog.ancient_aether.data.generators.loot.AncientAetherBlockLoot;
+import net.builderdog.ancient_aether.data.generators.loot.AncientAetherChestLoot;
 import net.builderdog.ancient_aether.data.generators.loot.AncientAetherEntityLoot;
 import net.builderdog.ancient_aether.data.generators.loot.AncientAetherSelectorLoot;
 import net.minecraft.data.PackOutput;
@@ -15,6 +16,7 @@ public class AncientAetherLootTableProvider {
         return new LootTableProvider(output, Set.of(), List.of(
                 new LootTableProvider.SubProviderEntry(AncientAetherBlockLoot::new, LootContextParamSets.BLOCK),
                 new LootTableProvider.SubProviderEntry(AncientAetherEntityLoot::new, LootContextParamSets.ENTITY),
+                new LootTableProvider.SubProviderEntry(AncientAetherChestLoot::new, LootContextParamSets.CHEST),
                 new LootTableProvider.SubProviderEntry(AncientAetherSelectorLoot::new, LootContextParamSets.SELECTOR)
         ));
     }

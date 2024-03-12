@@ -18,7 +18,7 @@ import terrablender.api.Region;
 import java.util.function.Consumer;
 
 @Pseudo
-    @Mixin(value = DARegion.class, remap = false)
+@Mixin(value = DARegion.class, remap = false)
 public class DARegionMixin extends Region {
 
     public DARegionMixin(ResourceLocation name, int weight) {

@@ -6,37 +6,27 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "aether:ambrosium_shard",
+          "name": "aether:icestone",
           "weight": 20
         },
         {
           "type": "minecraft:item",
-          "name": "aether:enchanted_berry",
+          "name": "aether:poison_dart",
           "weight": 15
         },
         {
           "type": "minecraft:item",
-          "name": "aether:healing_stone",
+          "name": "aether:gingerbread_man",
           "weight": 10
         },
         {
           "type": "minecraft:item",
-          "name": "aether:golden_amber",
-          "weight": 7
+          "name": "aether:candy_cane",
+          "weight": 10
         },
         {
           "type": "minecraft:item",
-          "name": "aether:white_apple",
-          "weight": 7
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:zanite_gemstone",
-          "weight": 7
-        },
-        {
-          "type": "minecraft:item",
-          "name": "ancient_aether:grapes",
+          "name": "aether:ambrosium_shard",
           "weight": 7
         },
         {
@@ -46,59 +36,80 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:arrow",
+          "name": "aether:blue_aercloud",
           "weight": 7
         },
         {
           "type": "minecraft:item",
-          "name": "aether:icestone",
+          "name": "ancient_aether:violet_aercloud",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:feather",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:book",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:white_apple",
           "weight": 5
         },
         {
           "type": "minecraft:item",
-          "name": "aether:golden_aercloud",
+          "name": "aether:zanite_gemstone",
           "weight": 5
         },
         {
           "type": "minecraft:item",
-          "name": "aether:enchanted_dart",
+          "name": "minecraft:quartz",
           "weight": 5
         },
         {
           "type": "minecraft:item",
-          "name": "aether:ambrosium_block",
-          "weight": 2
+          "name": "aether:healing_stone",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
-          "name": "aether:golden_gummy_swet",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:saddle",
-          "weight": 2
+          "name": "aether:aerogel",
+          "weight": 3
         },
         {
           "type": "minecraft:loot_table",
-          "name": "ancient_aether:selectors/accessories/silver_dungeon",
+          "name": "ancient_aether:selectors/trims/mechanical",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:festive_gummy_swet",
           "weight": 2
         },
         {
+          "type": "minecraft:item",
+          "name": "aether:candy_cane_sword",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:poison_dart_shooter",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:skyroot_poison_bucket"
+        },
+        {
           "type": "minecraft:loot_table",
-          "name": "ancient_aether:selectors/trims/generic"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:enchanted_dart_shooter"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:name_tag"
+          "name": "ancient_aether:selectors/accessories/sentry_laboratory"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "ancient_aether:selectors/angelic_vase_loot"
+  "random_sequence": "ancient_aether:selectors/frozen_holystone_vase"
 }

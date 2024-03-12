@@ -7,16 +7,11 @@
         {
           "type": "minecraft:item",
           "name": "aether:ambrosium_shard",
-          "weight": 10
+          "weight": 15
         },
         {
           "type": "minecraft:item",
-          "name": "aether:enchanted_dart",
-          "weight": 10
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:aerogel",
+          "name": "aether:white_apple",
           "weight": 10
         },
         {
@@ -26,7 +21,12 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:arrow",
+          "name": "aether:icestone",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:golden_amber",
           "weight": 7
         },
         {
@@ -36,55 +36,31 @@
         },
         {
           "type": "minecraft:item",
-          "name": "aether:healing_stone",
-          "weight": 7
-        },
-        {
-          "type": "minecraft:item",
           "name": "aether:zanite_gemstone",
           "weight": 7
         },
         {
           "type": "minecraft:item",
-          "name": "aether:white_apple",
-          "weight": 7
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:icestone",
+          "name": "minecraft:string",
           "weight": 5
         },
         {
           "type": "minecraft:item",
-          "name": "aether:golden_amber",
-          "weight": 5
-        },
-        {
-          "type": "minecraft:item",
-          "name": "ancient_aether:festive_gummy_swet",
-          "weight": 3
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:ambrosium_block",
+          "name": "aether:skyroot_remedy_bucket",
           "weight": 2
         },
         {
           "type": "minecraft:loot_table",
-          "name": "ancient_aether:selectors/accessories/ancient_dungeon",
-          "weight": 2
+          "name": "ancient_aether:selectors/accessories/generic",
+          "weight": 3
         },
         {
           "type": "minecraft:loot_table",
           "name": "ancient_aether:selectors/trims/generic"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:enchanted_gravitite"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "ancient_aether:selectors/aerogetic_vase_loot"
+  "random_sequence": "ancient_aether:selectors/holystone_vase"
 }

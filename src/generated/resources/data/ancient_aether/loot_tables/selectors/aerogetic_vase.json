@@ -7,11 +7,16 @@
         {
           "type": "minecraft:item",
           "name": "aether:ambrosium_shard",
-          "weight": 15
+          "weight": 10
         },
         {
           "type": "minecraft:item",
           "name": "aether:enchanted_dart",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:aerogel",
           "weight": 10
         },
         {
@@ -22,21 +27,11 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:arrow",
-          "weight": 10
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:aerogel",
           "weight": 7
         },
         {
           "type": "minecraft:item",
-          "name": "aether:golden_amber",
-          "weight": 7
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:zanite_gemstone",
+          "name": "ancient_aether:grapes",
           "weight": 7
         },
         {
@@ -46,13 +41,13 @@
         },
         {
           "type": "minecraft:item",
-          "name": "ancient_aether:grapes",
-          "weight": 5
+          "name": "aether:zanite_gemstone",
+          "weight": 7
         },
         {
           "type": "minecraft:item",
           "name": "aether:white_apple",
-          "weight": 5
+          "weight": 7
         },
         {
           "type": "minecraft:item",
@@ -61,13 +56,13 @@
         },
         {
           "type": "minecraft:item",
-          "name": "aether:blue_gummy_swet",
-          "weight": 2
+          "name": "aether:golden_amber",
+          "weight": 5
         },
         {
           "type": "minecraft:item",
-          "name": "aether:golden_gummy_swet",
-          "weight": 2
+          "name": "ancient_aether:festive_gummy_swet",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
@@ -75,26 +70,13 @@
           "weight": 2
         },
         {
-          "type": "minecraft:item",
-          "name": "aether:skyroot_water_bucket",
-          "weight": 2
-        },
-        {
           "type": "minecraft:loot_table",
-          "name": "ancient_aether:selectors/accessories/gold_dungeon",
+          "name": "ancient_aether:selectors/accessories/ancient_dungeon",
           "weight": 2
         },
         {
           "type": "minecraft:loot_table",
           "name": "ancient_aether:selectors/trims/generic"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:enchanted_dart_shooter"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:saddle"
         },
         {
           "type": "minecraft:item",
@@ -104,5 +86,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "ancient_aether:selectors/hellfire_vase_loot"
+  "random_sequence": "ancient_aether:selectors/aerogetic_vase"
 }
