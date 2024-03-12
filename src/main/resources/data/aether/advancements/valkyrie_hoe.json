@@ -1,1 +1,29 @@
-{}
+{
+  "parent": "aether:valkyrie_loot",
+  "criteria": {
+    "valkyrie_hoe": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.aether.valkyrie_hoe.desc"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "item": "aether:aether_farmland"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.aether.valkyrie_hoe"
+    }
+  },
+  "requirements": [
+    [
+      "valkyrie_hoe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
