@@ -24,7 +24,7 @@ import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.PathPackResources;
 import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.DispenserBlock;
@@ -136,7 +136,7 @@ public class AncientAether {
             event.addRepositorySource(consumer -> consumer.accept(pack));
         }
 
-        if(ModList.get().isLoaded("lost_aether_content") && event.getPackType() == PackType.SERVER_DATA) {
+        if (ModList.get().isLoaded("lost_aether_content") && event.getPackType() == PackType.SERVER_DATA) {
             if (event.getPackType() == PackType.SERVER_DATA) {
                 var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/lost_content_compat");
                 var pack = Pack.readMetaAndCreate("builtin/lost_content_compat", Component.translatable("pack.ancient_aether.lost_content_compat.title"), true,
@@ -146,7 +146,7 @@ public class AncientAether {
             }
         }
 
-        if(ModList.get().isLoaded("deep_aether") && event.getPackType() == PackType.SERVER_DATA) {
+        if (ModList.get().isLoaded("deep_aether") && event.getPackType() == PackType.SERVER_DATA) {
             if (event.getPackType() == PackType.SERVER_DATA) {
                 var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/deep_aether_compat");
                 var pack = Pack.readMetaAndCreate("builtin/deep_aether_compat", Component.translatable("pack.ancient_aether.deep_aether_compat.title"), true,
@@ -162,7 +162,7 @@ public class AncientAether {
             }
         }
 
-        if(ModList.get().isLoaded("aether_redux") && event.getPackType() == PackType.SERVER_DATA) {
+        if (ModList.get().isLoaded("aether_redux") && event.getPackType() == PackType.SERVER_DATA) {
             if (event.getPackType() == PackType.SERVER_DATA) {
                 var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/aether_redux_compat");
                 var pack = Pack.readMetaAndCreate("builtin/aether_redux_compat", Component.translatable("pack.ancient_aether.aether_redux_compat.title"), true,
@@ -172,7 +172,7 @@ public class AncientAether {
             }
         }
 
-        if(ModList.get().isLoaded("aether_genesis") && event.getPackType() == PackType.SERVER_DATA) {
+        if (ModList.get().isLoaded("aether_genesis") && event.getPackType() == PackType.SERVER_DATA) {
             if (event.getPackType() == PackType.SERVER_DATA) {
                 var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/aether_genesis_compat");
                 var pack = Pack.readMetaAndCreate("builtin/aether_genesis_compat", Component.translatable("pack.ancient_aether.aether_genesis_compat.title"), true,
@@ -221,17 +221,9 @@ public class AncientAether {
     public static class AncientAetherFuels {
         @SubscribeEvent
         public static void furnaceFuelBurnTimeEvent(FurnaceFuelBurnTimeEvent event) {
-            ItemStack itemstack = event.getItemStack();
-            if (itemstack.getItem() == AncientAetherBlocks.HIGHSPROOT_PLANKS.get().asItem()) event.setBurnTime(300);
-            if (itemstack.getItem() == AncientAetherBlocks.SAKURA_PLANKS.get().asItem()) event.setBurnTime(300);
-            if (itemstack.getItem() == AncientAetherBlocks.HIGHSPROOT_LOG_WALL.get().asItem()) event.setBurnTime(300);
-            if (itemstack.getItem() == AncientAetherBlocks.HIGHSPROOT_WOOD_WALL.get().asItem()) event.setBurnTime(300);
-            if (itemstack.getItem() == AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG_WALL.get().asItem()) event.setBurnTime(300);
-            if (itemstack.getItem() == AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD_WALL.get().asItem()) event.setBurnTime(300);
-            if (itemstack.getItem() == AncientAetherBlocks.SAKURA_LOG_WALL.get().asItem()) event.setBurnTime(300);
-            if (itemstack.getItem() == AncientAetherBlocks.SAKURA_WOOD_WALL.get().asItem()) event.setBurnTime(300);
-            if (itemstack.getItem() == AncientAetherBlocks.STRIPPED_SAKURA_LOG_WALL.get().asItem()) event.setBurnTime(300);
-            if (itemstack.getItem() == AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL.get().asItem()) event.setBurnTime(300);
+            Item item = event.getItemStack().getItem();
+            if (item == AncientAetherBlocks.HIGHSPROOT_PLANKS.get().asItem() || item == AncientAetherBlocks.SAKURA_PLANKS.get().asItem())
+                event.setBurnTime(300);
         }
     }
 }
