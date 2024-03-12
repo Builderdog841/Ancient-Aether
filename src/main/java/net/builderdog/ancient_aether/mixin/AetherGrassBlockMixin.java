@@ -61,7 +61,8 @@ public class AetherGrassBlockMixin extends GrassBlock {
         if (!SpreadingSnowyDirtBlockAccessor.callCanBeGrass(state, level, pos)) {
             if (!level.isAreaLoaded(pos, 3)) return;
             level.setBlockAndUpdate(pos, AetherBlocks.AETHER_DIRT.get().defaultBlockState());
-        } else {
+        }
+        else {
             if (!level.isAreaLoaded(pos, 3)) return;
             if (level.getMaxLocalRawBrightness(pos.above()) >= 9) {
                 BlockState blockstate = defaultBlockState().setValue(AncientAetherBlockStateProperties.TYPE, state.getValue(AncientAetherBlockStateProperties.TYPE));
@@ -79,11 +80,14 @@ public class AetherGrassBlockMixin extends GrassBlock {
         Holder<Biome> biome = context.getLevel().getBiome(context.getClickedPos());
         if (biome.is(AncientAetherTags.Biomes.HAS_FROZEN_AETHER_GRASS)) {
             return defaultBlockState().setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.FROZEN);
-        } else if (biome.is(AncientAetherTags.Biomes.HAS_PALE_AETHER_GRASS)) {
+        }
+        else if (biome.is(AncientAetherTags.Biomes.HAS_PALE_AETHER_GRASS)) {
             return defaultBlockState().setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.PALE);
-        } else if (biome.is(AncientAetherTags.Biomes.HAS_ENCHANTED_AETHER_GRASS)) {
+        }
+        else if (biome.is(AncientAetherTags.Biomes.HAS_ENCHANTED_AETHER_GRASS)) {
             return defaultBlockState().setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.ENCHANTED);
-        } else return defaultBlockState().setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.NORMAL);
+        }
+        else return defaultBlockState().setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.NORMAL);
     }
 
     @Override
@@ -116,7 +120,8 @@ public class AetherGrassBlockMixin extends GrassBlock {
                         continue;
                     }
                     featureHolder = ((RandomPatchConfiguration) list.get(random.nextInt(list.size())).config()).feature();
-                } else {
+                }
+                else {
                     if (grassFeatureOptional.isEmpty()) {
                         continue;
                     }
