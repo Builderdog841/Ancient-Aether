@@ -19,8 +19,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Fireball;
 import net.minecraft.world.entity.projectile.ItemSupplier;
 import net.minecraft.world.entity.projectile.ProjectileUtil;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
@@ -68,7 +66,7 @@ public class WindBlow extends Fireball implements ItemSupplier {
                 f = 0.8F;
             }
             setDeltaMovement(vec3.add(xPower, yPower, zPower).scale(f));
-            level().addParticle(getTrailParticle(), d0, d1 + 0.5, d2, 0.0, 0.0, 0.0);
+            level().addParticle(getTrailParticle(), d0, d1, d2, 0.0, 0.0, 0.0);
             setPos(d0, d1, d2);
         } else discard();
     }
@@ -107,12 +105,7 @@ public class WindBlow extends Fireball implements ItemSupplier {
 
     @Override
     protected @NotNull ParticleOptions getTrailParticle() {
-        return AetherParticleTypes.ZEPHYR_SNOWFLAKE.get();
-    }
-
-    @Override
-    public @NotNull ItemStack getItem() {
-        return new ItemStack(Items.SNOWBALL);
+        return AetherParticleTypes.PASSIVE_WHIRLWIND.get();
     }
 
     @Override

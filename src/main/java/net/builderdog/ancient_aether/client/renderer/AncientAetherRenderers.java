@@ -22,7 +22,6 @@ import net.minecraft.client.renderer.blockentity.CampfireRenderer;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
-import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.client.renderer.entity.player.PlayerRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
@@ -47,7 +46,7 @@ public class AncientAetherRenderers {
         event.registerEntityRenderer(AncientAetherEntityTypes.MUTATED_AECHOR_PLANT.get(), MutatedAechorPlantRenderer::new);
         event.registerEntityRenderer(AncientAetherEntityTypes.AERONAUTIC_DART.get(), AeronauticDartRenderer::new);
         event.registerEntityRenderer(AncientAetherEntityTypes.MUTATED_AECHOR_NEEDLE.get(), MutatedAechorNeedleRenderer::new);
-        event.registerEntityRenderer(AncientAetherEntityTypes.WIND_BLOW.get(), (context) -> new ThrownItemRenderer<>(context, 2.0F, true));
+        event.registerEntityRenderer(AncientAetherEntityTypes.WIND_BLOW.get(), WindBlowRenderer::new);
     }
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
