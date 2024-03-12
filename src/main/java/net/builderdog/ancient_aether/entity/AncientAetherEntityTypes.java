@@ -59,10 +59,10 @@ public class AncientAetherEntityTypes {
     @SubscribeEvent
     public static void registerEntityAttributes(EntityAttributeCreationEvent event) {
         event.put(AncientAetherEntityTypes.FLUFFALO.get(), Fluffalo.createMobAttributes().build());
+        event.put(AncientAetherEntityTypes.FESTIVE_SWET.get(), Swet.createMobAttributes().build());
         event.put(AncientAetherEntityTypes.ROOTHYRN.get(), Roothyrn.createMobAttributes().build());
         event.put(AncientAetherEntityTypes.AERONAUTIC_LEAPER.get(), AeronauticLeaper.createMobAttributes().build());
         event.put(AncientAetherEntityTypes.MUTATED_AECHOR_PLANT.get(), MutatedAechorPlant.createMobAttributes().build());
-        event.put(AncientAetherEntityTypes.FESTIVE_SWET.get(), Swet.createMobAttributes().build());
     }
 
     @SubscribeEvent
