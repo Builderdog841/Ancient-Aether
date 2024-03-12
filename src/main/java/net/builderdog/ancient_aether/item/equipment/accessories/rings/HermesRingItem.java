@@ -43,8 +43,8 @@ public class HermesRingItem extends RingItem {
 
     public AttributeModifier getMovementSpeedModifier(SlotContext slotContext) {
         if (slotContext.entity() instanceof Player player) {
-            float foodLevel = player.getFoodData().getExhaustionLevel();
-            return new AttributeModifier(MOVEMENT_SPEED_UUID, "Movement Speed increase", foodLevel * 0.01, AttributeModifier.Operation.ADDITION);
+            float foodLevel = player.getFoodData().getFoodLevel();
+            return new AttributeModifier(MOVEMENT_SPEED_UUID, "Movement Speed increase", foodLevel * 0.005, AttributeModifier.Operation.ADDITION);
         }
         return null;
     }
