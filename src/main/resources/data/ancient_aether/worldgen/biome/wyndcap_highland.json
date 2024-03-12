@@ -1,20 +1,20 @@
 {
   "carvers": {},
-  "downfall": 0,
+  "downfall": 0.0,
   "creature_spawn_probability": 0.07,
   "effects": {
     "fog_color": 9671612,
     "foliage_color": -3808257,
     "grass_color": -3808257,
-    "sky_color": 12632319,
-    "water_color": 5202062,
-    "water_fog_color": 3621987,
     "music": {
       "max_delay": 24000,
       "min_delay": 12000,
       "replace_current_music": true,
       "sound": "aether:music.aether"
-    }
+    },
+    "sky_color": 12632319,
+    "water_color": 5202062,
+    "water_fog_color": 3621987
   },
   "features": [
     [],
