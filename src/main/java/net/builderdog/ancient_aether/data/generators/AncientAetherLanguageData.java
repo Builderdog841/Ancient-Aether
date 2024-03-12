@@ -70,8 +70,8 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.HIGHSPROOT_FENCE_GATE, "Highsproot Fence Gate");
         addBlock(AncientAetherBlocks.HIGHSPROOT_DOOR, "Highsproot Door");
         addBlock(AncientAetherBlocks.HIGHSPROOT_TRAPDOOR, "Highsproot Trapdoor");
-        addBlock(AncientAetherBlocks.HIGHSPROOT_PRESSURE_PLATE, "Highsproot Pressure Plate");
         addBlock(AncientAetherBlocks.HIGHSPROOT_BUTTON, "Highsproot Button");
+        addBlock(AncientAetherBlocks.HIGHSPROOT_PRESSURE_PLATE, "Highsproot Pressure Plate");
         addBlock(AncientAetherBlocks.HIGHSPROOT_SIGN, "Highsproot Sign");
         addBlock(AncientAetherBlocks.HIGHSPROOT_HANGING_SIGN, "Highsproot Hanging Sign");
         addBlock(AncientAetherBlocks.HIGHSPROOT_BOOKSHELF, "Highsproot Bookshelf");
@@ -83,8 +83,8 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.SAKURA_FENCE_GATE, "Sakura Fence Gate");
         addBlock(AncientAetherBlocks.SAKURA_DOOR, "Sakura Door");
         addBlock(AncientAetherBlocks.SAKURA_TRAPDOOR, "Sakura Trapdoor");
-        addBlock(AncientAetherBlocks.SAKURA_PRESSURE_PLATE, "Sakura Pressure Plate");
         addBlock(AncientAetherBlocks.SAKURA_BUTTON, "Sakura Button");
+        addBlock(AncientAetherBlocks.SAKURA_PRESSURE_PLATE, "Sakura Pressure Plate");
         addBlock(AncientAetherBlocks.SAKURA_SIGN, "Sakura Sign");
         addBlock(AncientAetherBlocks.SAKURA_HANGING_SIGN, "Sakura Hanging Sign");
         addBlock(AncientAetherBlocks.SAKURA_BOOKSHELF, "Sakura Bookshelf");
@@ -474,11 +474,11 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addTrapdoorLore(AncientAetherBlocks.SAKURA_TRAPDOOR, "Sakura Planks");
         addTrapdoorLore(AncientAetherBlocks.AEROGEL_GLASS_TRAPDOOR, "Aerogel Glass");
 
-        addPressurePlateLore(AncientAetherBlocks.HIGHSPROOT_PRESSURE_PLATE, "Highsproot");
-        addPressurePlateLore(AncientAetherBlocks.SAKURA_PRESSURE_PLATE, "Sakura");
-
         addButtonLore(AncientAetherBlocks.HIGHSPROOT_BUTTON, "Highsproot");
         addButtonLore(AncientAetherBlocks.SAKURA_BUTTON, "Sakura");
+
+        addPressurePlateLore(AncientAetherBlocks.HIGHSPROOT_PRESSURE_PLATE, "Highsproot");
+        addPressurePlateLore(AncientAetherBlocks.SAKURA_PRESSURE_PLATE, "Sakura");
 
         addSignLore(AncientAetherBlocks.HIGHSPROOT_SIGN, "Highsproot");
         addSignLore(AncientAetherBlocks.SAKURA_SIGN, "Sakura");

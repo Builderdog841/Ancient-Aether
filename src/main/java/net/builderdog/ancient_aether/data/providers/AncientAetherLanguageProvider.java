@@ -79,12 +79,12 @@ public abstract class AncientAetherLanguageProvider extends AetherLanguageProvid
         add("lore." + key.get().asItem().getDescriptionId(), "Crafted from " + name + ". A Trapdoor useful for covering entryways one block wide. Often used to add extra protection to staircases.");
     }
 
-    public void addPressurePlateLore(Supplier<? extends ItemLike> key, String name) {
-        add("lore." + key.get().asItem().getDescriptionId(), "Crafted from " + name + " Planks. A wooden pressure plate used to activate mechanisms and Redstone.");
-    }
-
     public void addButtonLore(Supplier<? extends ItemLike> key, String name) {
         add("lore." + key.get().asItem().getDescriptionId(), "Crafted from " + name + " Planks, a button used to activate mechanisms and Redstone.");
+    }
+
+    public void addPressurePlateLore(Supplier<? extends ItemLike> key, String name) {
+        add("lore." + key.get().asItem().getDescriptionId(), "Crafted from " + name + " Planks. A wooden pressure plate used to activate mechanisms and Redstone.");
     }
 
     public void addSignLore(Supplier<? extends ItemLike> key, String name) {
