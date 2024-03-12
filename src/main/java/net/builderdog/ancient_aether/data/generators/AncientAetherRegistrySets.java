@@ -42,10 +42,10 @@ public class AncientAetherRegistrySets extends DatapackBuiltinEntriesProvider {
     }
             .add(Registries.CONFIGURED_FEATURE, AncientAetherFeatureUtils::bootstrap)
             .add(Registries.PLACED_FEATURE, AncientAetherPlacementUtils::bootstrap)
-            .add(ForgeRegistries.Keys.BIOME_MODIFIERS, AncientAetherBiomeModifiers::bootstrap)
-            .add(Registries.NOISE, AncientAetherNoises::bootstrap)
+            .add(Registries.CONFIGURED_CARVER, AncientAetherConfiguredCarvers::bootstrap)
             .add(Registries.PROCESSOR_LIST, AncientAetherProcessorLists::bootstrap)
-            .add(Registries.CONFIGURED_CARVER, AncientAetherConfiguredCarvers::bootstrap);
+            .add(ForgeRegistries.Keys.BIOME_MODIFIERS, AncientAetherBiomeModifiers::bootstrap)
+            .add(Registries.NOISE, AncientAetherNoises::bootstrap);
 
     public AncientAetherRegistrySets(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(AncientAether.MODID));
