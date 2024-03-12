@@ -46,7 +46,7 @@ public class HermesPendantItem extends PendantItem {
     public AttributeModifier getMovementSpeedModifier(SlotContext slotContext) {
         if (slotContext.entity() instanceof Player player) {
             float foodLevel = player.getFoodData().getFoodLevel();
-            return new AttributeModifier(MOVEMENT_SPEED_UUID, "Movement Speed increase", foodLevel * 0.0075, AttributeModifier.Operation.ADDITION);
+            return new AttributeModifier(MOVEMENT_SPEED_UUID, "Movement Speed increase", foodLevel * 0.002, AttributeModifier.Operation.ADDITION);
         }
         return null;
     }
