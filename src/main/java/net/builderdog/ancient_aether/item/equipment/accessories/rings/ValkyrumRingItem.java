@@ -33,6 +33,7 @@ public class ValkyrumRingItem extends RingItem {
             }
         }
     }
+
     @Override
     public void onUnequip(SlotContext slotContext, ItemStack newStack, ItemStack stack) {
         LivingEntity livingEntity = slotContext.entity();
@@ -49,6 +50,7 @@ public class ValkyrumRingItem extends RingItem {
             }
         }
     }
+
     public AttributeModifier getReachModifier() {
         return new AttributeModifier(REACH_UUID, "Reach increase", 0.5, AttributeModifier.Operation.ADDITION);
     }

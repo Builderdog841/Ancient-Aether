@@ -19,6 +19,7 @@ public class AncientPendantItem extends PendantItem {
     public AncientPendantItem(Properties properties) {
         super(new ResourceLocation(AncientAether.MODID, "ancient_pendant"), AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_ANCIENT_PENDANT, properties);
     }
+
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {
         LivingEntity livingEntity = slotContext.entity();
@@ -29,6 +30,7 @@ public class AncientPendantItem extends PendantItem {
             }
         }
     }
+
     @Override
     public void onUnequip(SlotContext slotContext, ItemStack newStack, ItemStack stack) {
         LivingEntity livingEntity = slotContext.entity();
@@ -39,6 +41,7 @@ public class AncientPendantItem extends PendantItem {
             }
         }
     }
+
     public AttributeModifier getAttackSpeedModifier() {
         return new AttributeModifier(ATTACK_SPEED_UUID, "Attack Speed increase", 0.2, AttributeModifier.Operation.ADDITION);
     }

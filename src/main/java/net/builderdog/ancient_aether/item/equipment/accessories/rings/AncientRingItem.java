@@ -17,6 +17,7 @@ public class AncientRingItem extends RingItem {
     public AncientRingItem(Properties properties) {
         super(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_ANCIENT_RING, properties);
     }
+
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {
         LivingEntity livingEntity = slotContext.entity();
@@ -27,6 +28,7 @@ public class AncientRingItem extends RingItem {
             }
         }
     }
+
     @Override
     public void onUnequip(SlotContext slotContext, ItemStack newStack, ItemStack stack) {
         LivingEntity livingEntity = slotContext.entity();
@@ -37,6 +39,7 @@ public class AncientRingItem extends RingItem {
             }
         }
     }
+
     public AttributeModifier getAttackSpeedModifier() {
         return new AttributeModifier(ATTACK_SPEED_UUID, "Attack Speed increase", 0.1, AttributeModifier.Operation.ADDITION);
     }

@@ -19,6 +19,7 @@ public class ValkyrumPendantItem extends PendantItem {
     public ValkyrumPendantItem(Properties properties) {
         super(new ResourceLocation(AncientAether.MODID, "valkyrum_pendant"), AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_VALKYRUM_PENDANT, properties);
     }
+
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {
         LivingEntity livingEntity = slotContext.entity();
@@ -35,6 +36,7 @@ public class ValkyrumPendantItem extends PendantItem {
             }
         }
     }
+
     @Override
     public void onUnequip(SlotContext slotContext, ItemStack newStack, ItemStack stack) {
         LivingEntity livingEntity = slotContext.entity();
@@ -51,6 +53,7 @@ public class ValkyrumPendantItem extends PendantItem {
             }
         }
     }
+
     public AttributeModifier getReachModifier() {
         return new AttributeModifier(REACH_UUID, "Reach increase", 0.5, AttributeModifier.Operation.ADDITION);
     }

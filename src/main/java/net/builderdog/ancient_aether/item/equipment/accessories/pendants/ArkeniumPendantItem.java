@@ -19,6 +19,7 @@ public class ArkeniumPendantItem extends PendantItem {
     public ArkeniumPendantItem(Properties properties) {
         super(new ResourceLocation(AncientAether.MODID, "arkenium_pendant"), AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_ARKENIUM_PENDANT, properties);
     }
+
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {
         LivingEntity livingEntity = slotContext.entity();
@@ -29,6 +30,7 @@ public class ArkeniumPendantItem extends PendantItem {
             }
         }
     }
+
     @Override
     public void onUnequip(SlotContext slotContext, ItemStack newStack, ItemStack stack) {
         LivingEntity livingEntity = slotContext.entity();
@@ -39,6 +41,7 @@ public class ArkeniumPendantItem extends PendantItem {
             }
         }
     }
+
     public AttributeModifier getArmorToughnessModifier() {
         return new AttributeModifier(ARMOR_TOUGHNESS_UUID, "Armor Toughness increase", 2, AttributeModifier.Operation.ADDITION);
     }

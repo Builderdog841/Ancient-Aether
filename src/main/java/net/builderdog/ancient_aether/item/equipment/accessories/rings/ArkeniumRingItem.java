@@ -17,6 +17,7 @@ public class ArkeniumRingItem extends RingItem {
     public ArkeniumRingItem(Properties properties) {
         super(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_ARKENIUM_RING, properties);
     }
+
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {
         LivingEntity livingEntity = slotContext.entity();
@@ -27,6 +28,7 @@ public class ArkeniumRingItem extends RingItem {
             }
         }
     }
+
     @Override
     public void onUnequip(SlotContext slotContext, ItemStack newStack, ItemStack stack) {
         LivingEntity livingEntity = slotContext.entity();
@@ -37,6 +39,7 @@ public class ArkeniumRingItem extends RingItem {
             }
         }
     }
+
     public AttributeModifier getArmorToughnessModifier() {
         return new AttributeModifier(ARMOR_TOUGHNESS_UUID, "Armor Toughness increase", 1, AttributeModifier.Operation.ADDITION);
     }

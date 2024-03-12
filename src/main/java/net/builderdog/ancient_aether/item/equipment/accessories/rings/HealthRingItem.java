@@ -17,6 +17,7 @@ public class HealthRingItem extends RingItem {
     public HealthRingItem(Properties properties) {
         super(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_HEALTH_RING, properties);
     }
+
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {
         LivingEntity livingEntity = slotContext.entity();
@@ -27,6 +28,7 @@ public class HealthRingItem extends RingItem {
             }
         }
     }
+
     @Override
     public void onUnequip(SlotContext slotContext, ItemStack newStack, ItemStack stack) {
         LivingEntity livingEntity = slotContext.entity();
@@ -37,6 +39,7 @@ public class HealthRingItem extends RingItem {
             }
         }
     }
+
     public AttributeModifier getHealthModifier() {
         return new AttributeModifier(HEALTH_UUID, "Max Health increase", 1, AttributeModifier.Operation.ADDITION);
     }
