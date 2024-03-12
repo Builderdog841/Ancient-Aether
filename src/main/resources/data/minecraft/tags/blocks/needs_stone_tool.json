@@ -1,6 +1,8 @@
 {
   "values": [
-    "#ancient_aether:aether_lanterns",
+    "ancient_aether:ambrosium_lantern",
+    "ancient_aether:wynd_lantern",
+    "ancient_aether:sun_lantern",
     "ancient_aether:carved_stone_mosaic",
     "ancient_aether:angelic_stone_mosaic",
     "ancient_aether:hellfire_stone_mosaic",
@@ -11,7 +13,7 @@
     "ancient_aether:aerogetic_slab",
     "ancient_aether:aerogetic_wall",
     "ancient_aether:light_aerogetic_stone",
-    "ancient_aether:corrupted_light_aerogetic_stone",
+    "ancient_aether:corrupted_aerogetic_stone",
     "ancient_aether:atmosine_crystal"
   ]
 }
