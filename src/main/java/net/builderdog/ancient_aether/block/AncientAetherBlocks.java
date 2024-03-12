@@ -220,51 +220,53 @@ public class AncientAetherBlocks {
 
     public static void registerPots() {
         FlowerPotBlock pot = (FlowerPotBlock) Blocks.FLOWER_POT;
+        pot.addPlant(AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.getId(), AncientAetherBlocks.POTTED_ENCHANTED_SKYROOT_SAPLING);
+        pot.addPlant(AncientAetherBlocks.SKYROOT_PINE_SAPLING.getId(), AncientAetherBlocks.POTTED_SKYROOT_PINE_SAPLING);
+        pot.addPlant(AncientAetherBlocks.HIGHSPROOT_SAPLING.getId(), AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING);
+        pot.addPlant(AncientAetherBlocks.SAKURA_SAPLING.getId(), AncientAetherBlocks.POTTED_SAKURA_SAPLING);
         pot.addPlant(AncientAetherBlocks.HIGHLAND_VIOLA.getId(), AncientAetherBlocks.POTTED_HIGHLAND_VIOLA);
         pot.addPlant(AncientAetherBlocks.SKY_BLUES.getId(), AncientAetherBlocks.POTTED_SKY_BLUES);
         pot.addPlant(AncientAetherBlocks.WYND_THISTLE.getId(), AncientAetherBlocks.POTTED_WYND_THISTLE);
         pot.addPlant(AncientAetherBlocks.SAKURA_BLOSSOMS.getId(), AncientAetherBlocks.POTTED_SAKURA_BLOSSOMS);
-        pot.addPlant(AncientAetherBlocks.HIGHSPROOT_SAPLING.getId(), AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING);
-        pot.addPlant(AncientAetherBlocks.SAKURA_SAPLING.getId(), AncientAetherBlocks.POTTED_SAKURA_SAPLING);
-        pot.addPlant(AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.getId(), AncientAetherBlocks.POTTED_ENCHANTED_SKYROOT_SAPLING);
-        pot.addPlant(AncientAetherBlocks.SKYROOT_PINE_SAPLING.getId(), AncientAetherBlocks.POTTED_SKYROOT_PINE_SAPLING);
         pot.addPlant(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.getId(), AncientAetherBlocks.POTTED_CRYSTAL_SKYROOT_SAPLING);
     }
 
     public static void registerFlammability() {
         FireBlockAccessor fireBlockAccessor = (FireBlockAccessor) Blocks.FIRE;
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES.get(), 30, 60);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES.get(), 30, 60);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SKYROOT_PINE_LEAVES.get(), 30, 60);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_LEAVES.get(), 30, 60);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_LEAVES.get(), 30, 60);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES.get(), 30, 60);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_LOG.get(), 5, 5);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get(), 5, 5);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_WOOD.get(), 5, 5);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD.get(), 5, 5);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), 5, 20);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_FENCE_GATE.get(), 5, 20);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_FENCE.get(), 5, 20);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_STAIRS.get(), 5, 20);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_SLAB.get(), 5, 20);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_LOG.get(), 5, 5);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.STRIPPED_SAKURA_LOG.get(), 5, 5);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_WOOD.get(), 5, 5);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.STRIPPED_SAKURA_WOOD.get(), 5, 5);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_PLANKS.get(), 5, 20);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_FENCE_GATE.get(), 5, 20);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_FENCE.get(), 5, 20);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_STAIRS.get(), 5, 20);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_SLAB.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get(), 60, 100);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get(), 60, 100);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SKYROOT_PINE_SAPLING.get(), 60, 100);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), 60, 100);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SKY_GRASS.get(), 60, 100);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_SAPLING.get(), 60, 100);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHLAND_VIOLA.get(), 60, 100);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SKY_BLUES.get(), 60, 100);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.WYND_THISTLE.get(), 60, 100);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_BLOSSOMS.get(), 60, 100);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), 60, 100);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_SAPLING.get(), 60, 100);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get(), 60, 100);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SKYROOT_PINE_LEAVES.get(), 30, 60);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES.get(), 30, 60);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SKYROOT_PINE_SAPLING.get(), 60, 100);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get(), 60, 100);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.GRAPE_VINE.get(), 60, 100);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_LOG.get(), 5, 5);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get(), 5, 5);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_WOOD.get(), 5, 5);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD.get(), 5, 5);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_LOG.get(), 5, 5);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.STRIPPED_SAKURA_LOG.get(), 5, 5);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_WOOD.get(), 5, 5);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.STRIPPED_SAKURA_WOOD.get(), 5, 5);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_STAIRS.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_SLAB.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_FENCE_GATE.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_FENCE.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_PLANKS.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_STAIRS.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_SLAB.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_FENCE_GATE.get(), 5, 20);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_FENCE.get(), 5, 20);
     }
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
