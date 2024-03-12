@@ -196,21 +196,22 @@ public class AncientAether {
     }
 
     private void registerComposting() {
-        addCompost(0.3F, AncientAetherBlocks.SKYROOT_PINE_LEAVES.get().asItem());
         addCompost(0.3F, AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES.get().asItem());
-        addCompost(0.3F, AncientAetherBlocks.HIGHSPROOT_LEAVES.get().asItem());
         addCompost(0.3F, AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES.get().asItem());
+        addCompost(0.3F, AncientAetherBlocks.SKYROOT_PINE_LEAVES.get().asItem());
+        addCompost(0.3F, AncientAetherBlocks.HIGHSPROOT_LEAVES.get().asItem());
         addCompost(0.3F, AncientAetherBlocks.SAKURA_LEAVES.get().asItem());
-        addCompost(0.3F, AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
         addCompost(0.3F, AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get());
-        addCompost(0.3F, AncientAetherBlocks.SKYROOT_PINE_SAPLING.get());
-        addCompost(0.3F, AncientAetherBlocks.SAKURA_SAPLING.get());
         addCompost(0.3F, AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get());
-        addCompost(0.5F, AncientAetherItems.GRAPES.get());
-        addCompost(0.65F, AncientAetherBlocks.SKY_BLUES.get());
-        addCompost(0.65F, AncientAetherBlocks.SAKURA_BLOSSOMS.get());
-        addCompost(0.65F, AncientAetherBlocks.WYND_THISTLE.get());
+        addCompost(0.3F, AncientAetherBlocks.SKYROOT_PINE_SAPLING.get());
+        addCompost(0.3F, AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
+        addCompost(0.3F, AncientAetherBlocks.SAKURA_SAPLING.get());
+        addCompost(0.3F, AncientAetherBlocks.SKY_GRASS.get());
         addCompost(0.65F, AncientAetherBlocks.HIGHLAND_VIOLA.get());
+        addCompost(0.65F, AncientAetherBlocks.SKY_BLUES.get());
+        addCompost(0.65F, AncientAetherBlocks.WYND_THISTLE.get());
+        addCompost(0.65F, AncientAetherBlocks.SAKURA_BLOSSOMS.get());
+        addCompost(0.5F, AncientAetherItems.GRAPES.get());
     }
 
     private void addCompost(float chance, ItemLike item) {
