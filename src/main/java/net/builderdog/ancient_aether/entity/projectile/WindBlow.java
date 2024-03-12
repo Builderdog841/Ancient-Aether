@@ -6,7 +6,6 @@ import com.aetherteam.aether.mixin.mixins.common.accessor.PlayerAccessor;
 import com.aetherteam.aether.network.AetherPacketHandler;
 import com.aetherteam.aether.network.packet.clientbound.ZephyrSnowballHitPacket;
 import com.aetherteam.nitrogen.network.PacketRelay;
-import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
@@ -36,11 +35,6 @@ public class WindBlow extends Fireball implements ItemSupplier {
 
     public WindBlow(EntityType<? extends WindBlow> type, Level level) {
         super(type, level);
-        setNoGravity(true);
-    }
-
-    public WindBlow(Level level, LivingEntity shooter, double accelX, double accelY, double accelZ) {
-        super(AncientAetherEntityTypes.WIND_BLOW.get(), shooter, accelX, accelY, accelZ, level);
         setNoGravity(true);
     }
 
