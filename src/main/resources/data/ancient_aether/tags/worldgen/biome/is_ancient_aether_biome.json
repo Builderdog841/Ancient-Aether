@@ -4,7 +4,6 @@
     "#ancient_aether:is_skyroot",
     "#ancient_aether:is_sakura",
     "#ancient_aether:is_elevated",
-    "#ancient_aether:is_cave_biome",
-    "ancient_aether:skyroot_jungle"
+    "#ancient_aether:is_cave_biome"
   ]
 }

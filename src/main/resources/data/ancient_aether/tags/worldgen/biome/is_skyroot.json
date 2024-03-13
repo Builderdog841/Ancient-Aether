@@ -1,6 +1,7 @@
 {
   "values": [
     "#ancient_aether:is_skyroot_forest",
-    "#ancient_aether:is_barren_skyroot_biome"
+    "#ancient_aether:is_skyroot_plains",
+    "ancient_aether:holystone_caverns"
   ]
 }
