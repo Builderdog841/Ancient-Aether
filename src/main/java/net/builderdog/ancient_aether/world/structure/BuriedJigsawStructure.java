@@ -15,6 +15,7 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.RandomState;
 import net.minecraft.world.level.levelgen.WorldGenerationContext;
 import net.minecraft.world.level.levelgen.heightproviders.HeightProvider;
+import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraft.world.level.levelgen.structure.StructureType;
 import net.minecraft.world.level.levelgen.structure.pools.JigsawPlacement;
@@ -28,34 +29,27 @@ import java.util.Optional;
 
 public class BuriedJigsawStructure extends Structure {
 
+    public static final Codec<BuriedJigsawStructure> CODEC = RecordCodecBuilder.<BuriedJigsawStructure>mapCodec(builder ->
+            builder.group(BuriedJigsawStructure.settingsCodec(builder),
+            StructureTemplatePool.CODEC.fieldOf("start_pool").forGetter(structure -> structure.startPool),
+            ResourceLocation.CODEC.optionalFieldOf("start_jigsaw_name").forGetter(structure -> structure.startJigsawName),
+            Codec.intRange(0, 30).fieldOf("size").forGetter(structure -> structure.size),
+            Codec.intRange(-4096, 4096).fieldOf("above_bottom").forGetter(structure -> structure.aboveBottom),
+            Codec.intRange(-4096, 4096).fieldOf("below_top").forGetter(structure -> structure.belowTop),
+            HeightProvider.CODEC.fieldOf("start_height").forGetter(structure -> structure.startHeight),
+            Heightmap.Types.CODEC.optionalFieldOf("project_start_to_heightmap").forGetter(structure -> structure.projectStartToHeightmap)
+    ).apply(builder, BuriedJigsawStructure::new)).codec();
+
     private final Holder<StructureTemplatePool> startPool;
     private final Optional<ResourceLocation> startJigsawName;
     private final int size;
     private final HeightProvider startHeight;
     private final Optional<Heightmap.Types> projectStartToHeightmap;
     private final int maxDistanceFromCenter;
-    private final int minSpawnHeight;
+    private final int aboveBottom;
+    private final int belowTop;
 
-    public static final Codec<BuriedJigsawStructure> CODEC = RecordCodecBuilder.<BuriedJigsawStructure>mapCodec(instance ->
-            instance.group(BuriedJigsawStructure.settingsCodec(instance),
-                    StructureTemplatePool.CODEC.fieldOf("start_pool").forGetter(structure -> structure.startPool),
-                    ResourceLocation.CODEC.optionalFieldOf("start_jigsaw_name").forGetter(structure -> structure.startJigsawName),
-                    Codec.intRange(0, 30).fieldOf("size").forGetter(structure -> structure.size),
-                    HeightProvider.CODEC.fieldOf("start_height").forGetter(structure -> structure.startHeight),
-                    Heightmap.Types.CODEC.optionalFieldOf("project_start_to_heightmap").forGetter(structure -> structure.projectStartToHeightmap),
-                    Codec.intRange(1, 128).fieldOf("max_distance_from_center").forGetter(structure -> structure.maxDistanceFromCenter),
-                    Codec.intRange(-4096, 4096).fieldOf("min_spawn_height").forGetter(structure -> structure.minSpawnHeight)
-            ).apply(instance, BuriedJigsawStructure::new)).codec();
-
-    public BuriedJigsawStructure(
-            StructureSettings config,
-            Holder<StructureTemplatePool> startPool,
-            Optional<ResourceLocation> startJigsawName,
-            int size,
-            HeightProvider startHeight,
-            Optional<Heightmap.Types> projectStartToHeightmap,
-            int maxDistanceFromCenter,
-            int minSpawnHeight) {
+    public BuriedJigsawStructure(StructureSettings config, Holder<StructureTemplatePool> startPool, Optional<ResourceLocation> startJigsawName, int size, HeightProvider startHeight, Optional<Heightmap.Types> projectStartToHeightmap, int maxDistanceFromCenter, int aboveBottom, int belowTop) {
         super(config);
         this.startPool = startPool;
         this.startJigsawName = startJigsawName;
@@ -63,34 +57,34 @@ public class BuriedJigsawStructure extends Structure {
         this.startHeight = startHeight;
         this.projectStartToHeightmap = projectStartToHeightmap;
         this.maxDistanceFromCenter = maxDistanceFromCenter;
-        this.minSpawnHeight = minSpawnHeight;
+        this.aboveBottom = aboveBottom;
+        this.belowTop = belowTop;
     }
 
     @Override
     public @NotNull Optional<GenerationStub> findGenerationPoint(@NotNull GenerationContext context) {
+        ChunkPos chunkPos = context.chunkPos();
         ChunkGenerator chunkGenerator = context.chunkGenerator();
         LevelHeightAccessor heightAccessor = context.heightAccessor();
         RandomState randomState = context.randomState();
         StructureTemplateManager templateManager = context.structureTemplateManager();
 
-        if (!extraSpawningChecks(context)) {
-            return Optional.empty();
-        }
-        int startY = startHeight.sample(context.random(), new WorldGenerationContext(context.chunkGenerator(), context.heightAccessor()));
-
-        ChunkPos chunkPos = context.chunkPos();
-        BlockPos blockPos = new BlockPos(chunkPos.getMiddleBlockX(), startY, chunkPos.getMiddleBlockZ());
-
-        int height = findStartingHeight(chunkGenerator, heightAccessor, chunkPos, randomState, templateManager);
+        int height = findStartingHeight(chunkGenerator, heightAccessor, chunkPos, randomState, templateManager, aboveBottom, belowTop);
         if (height <= heightAccessor.getMinBuildHeight()) {
             MutableInt y = new MutableInt(height);
-            searchNearbyChunks(chunkPos, y, chunkGenerator, heightAccessor, randomState, templateManager);
+            searchNearbyChunks(chunkPos, y, chunkGenerator, heightAccessor, randomState, templateManager, aboveBottom, belowTop);
             height = y.getValue();
             if (height <= heightAccessor.getMinBuildHeight()) {
                 return Optional.empty();
             }
         }
 
+        int startY = startHeight.sample(context.random(), new WorldGenerationContext(context.chunkGenerator(), context.heightAccessor()));
+        BlockPos blockPos = new BlockPos(chunkPos.getMinBlockX(), height, chunkPos.getMinBlockZ());
+
+        if (!extraSpawningChecks(context)) {
+            return Optional.empty();
+        }
         return JigsawPlacement.addPieces(
                 context,
                 startPool,
@@ -99,16 +93,17 @@ public class BuriedJigsawStructure extends Structure {
                 blockPos,
                 false,
                 projectStartToHeightmap,
-                maxDistanceFromCenter);
+                maxDistanceFromCenter
+        );
     }
 
-    private void searchNearbyChunks(ChunkPos chunkPos, MutableInt height, ChunkGenerator generator, LevelHeightAccessor heightAccessor, RandomState randomState, StructureTemplateManager templateManager) {
+    private static void searchNearbyChunks(ChunkPos chunkPos, MutableInt height, ChunkGenerator generator, LevelHeightAccessor heightAccessor, RandomState randomState, StructureTemplateManager templateManager, int aboveBottom, int belowTop) {
         int y;
         for (int x = -1; x <= 1; x++) {
             for (int z = -1; z <= 1; z++) {
                 if (x != 0 || z != 0) {
                     ChunkPos offset = new ChunkPos(chunkPos.x + x, chunkPos.z + z);
-                    y = findStartingHeight(generator, heightAccessor, offset, randomState, templateManager);
+                    y = BuriedJigsawStructure.findStartingHeight(generator, heightAccessor, offset, randomState, templateManager, aboveBottom, belowTop);
                     if (y > heightAccessor.getMinBuildHeight()) {
                         height.setValue(y);
                         return;
@@ -118,7 +113,7 @@ public class BuriedJigsawStructure extends Structure {
         }
     }
 
-    private int findStartingHeight(ChunkGenerator generator, LevelHeightAccessor heightAccessor, ChunkPos chunkPos, RandomState random, StructureTemplateManager templateManager) {
+    private static int findStartingHeight(ChunkGenerator generator, LevelHeightAccessor heightAccessor, ChunkPos chunkPos, RandomState random, StructureTemplateManager templateManager, int aboveBottom, int belowTop) {
         int minX = chunkPos.getMinBlockX() - 1;
         int minZ = chunkPos.getMinBlockZ() - 1;
         int maxX = chunkPos.getMaxBlockX() + 1;
@@ -131,10 +126,10 @@ public class BuriedJigsawStructure extends Structure {
         };
         int roomHeight = checkRoomHeight(templateManager, new ResourceLocation(AncientAether.MODID, "sentry_laboratory/boss_room"));
         int height = heightAccessor.getMinBuildHeight();
-        int maxHeight = heightAccessor.getMaxBuildHeight();
+        int maxHeight = heightAccessor.getMaxBuildHeight() - belowTop;
         int thickness = roomHeight + 2;
         int currentThickness = 0;
-        for (int y = height; y <= maxHeight; y++) {
+        for (int y = height + aboveBottom; y <= maxHeight; y++) {
             if (checkEachCornerAtY(columns, y)) {
                 ++currentThickness;
             } else {
@@ -150,12 +145,12 @@ public class BuriedJigsawStructure extends Structure {
         return height;
     }
 
-    private int checkRoomHeight(StructureTemplateManager manager, ResourceLocation roomName) {
+    private static int checkRoomHeight(StructureTemplateManager manager, ResourceLocation roomName) {
         StructureTemplate template = manager.getOrCreate(roomName);
         return template.getSize().getY();
     }
 
-    private boolean checkEachCornerAtY(NoiseColumn[] columns, int y) {
+    private static boolean checkEachCornerAtY(NoiseColumn[] columns, int y) {
         for (NoiseColumn column : columns) {
             if (column.getBlock(y).isAir() || column.getBlock(y).is(AetherTags.Blocks.NON_BRONZE_DUNGEON_SPAWNABLE)) {
                 return false;
@@ -171,7 +166,12 @@ public class BuriedJigsawStructure extends Structure {
                 chunkpos.getMiddleBlockZ(),
                 Heightmap.Types.WORLD_SURFACE_WG,
                 context.heightAccessor(),
-                context.randomState()) > minSpawnHeight;
+                context.randomState()) > aboveBottom;
+    }
+
+    @Override
+    public @NotNull BoundingBox adjustBoundingBox(@NotNull BoundingBox box) {
+        return box;
     }
 
     @Override
