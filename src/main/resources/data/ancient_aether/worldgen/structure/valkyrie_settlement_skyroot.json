@@ -1,5 +1,5 @@
 {
-  "type": "ancient_aether:advanced_jigsaw_structure",
+  "type": "ancient_aether:jigsaw_skylands",
   "start_pool": "ancient_aether:valkyrie_settlement_skyroot/center",
   "size": 6,
   "adapt_noise": true,

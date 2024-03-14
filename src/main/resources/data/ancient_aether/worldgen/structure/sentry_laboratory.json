@@ -1,5 +1,5 @@
 {
-  "type": "ancient_aether:buried_jigsaw_structure",
+  "type": "ancient_aether:jigsaw_buried",
   "start_pool": "ancient_aether:sentry_laboratory/boss_room",
   "size": 10,
   "adapt_noise": true,

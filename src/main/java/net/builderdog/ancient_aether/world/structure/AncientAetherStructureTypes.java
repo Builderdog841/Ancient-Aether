@@ -1,6 +1,8 @@
 package net.builderdog.ancient_aether.world.structure;
 
 import net.builderdog.ancient_aether.AncientAether;
+import net.builderdog.ancient_aether.world.structure.jigsaw.BuriedJigsawStructure;
+import net.builderdog.ancient_aether.world.structure.jigsaw.SkylandsJigsawStructure;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.structure.StructureType;
 import net.minecraftforge.registries.DeferredRegister;
@@ -8,6 +10,6 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class AncientAetherStructureTypes {
     public static final DeferredRegister<StructureType<?>> STRUCTURE_TYPES = DeferredRegister.create(Registries.STRUCTURE_TYPE, AncientAether.MODID);
-    public static final RegistryObject<StructureType<AdvancedJigsawStructure>> ADVANCED_JIGSAW_STRUCTURE = STRUCTURE_TYPES.register("advanced_jigsaw_structure", () -> () -> AdvancedJigsawStructure.CODEC);
-    public static final RegistryObject<StructureType<BuriedJigsawStructure>> BURIED_JIGSAW_STRUCTURE = STRUCTURE_TYPES.register("buried_jigsaw_structure", () -> () -> BuriedJigsawStructure.CODEC);
+    public static final RegistryObject<StructureType<SkylandsJigsawStructure>> ADVANCED_JIGSAW_STRUCTURE = STRUCTURE_TYPES.register("jigsaw_skylands", () -> () -> SkylandsJigsawStructure.CODEC);
+    public static final RegistryObject<StructureType<BuriedJigsawStructure>> BURIED_JIGSAW_STRUCTURE = STRUCTURE_TYPES.register("jigsaw_buried", () -> () -> BuriedJigsawStructure.CODEC);
 }

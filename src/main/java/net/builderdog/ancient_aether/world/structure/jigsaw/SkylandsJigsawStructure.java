@@ -1,7 +1,8 @@
-package net.builderdog.ancient_aether.world.structure;
+package net.builderdog.ancient_aether.world.structure.jigsaw;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.builderdog.ancient_aether.world.structure.AncientAetherStructureTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
@@ -17,10 +18,10 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Optional;
 
-public class AdvancedJigsawStructure extends Structure {
+public class SkylandsJigsawStructure extends Structure {
 
-    public static final Codec<AdvancedJigsawStructure> CODEC = RecordCodecBuilder.<AdvancedJigsawStructure>mapCodec(instance ->
-            instance.group(AdvancedJigsawStructure.settingsCodec(instance),
+    public static final Codec<SkylandsJigsawStructure> CODEC = RecordCodecBuilder.<SkylandsJigsawStructure>mapCodec(instance ->
+            instance.group(SkylandsJigsawStructure.settingsCodec(instance),
                     StructureTemplatePool.CODEC.fieldOf("start_pool").forGetter(structure -> structure.startPool),
                     ResourceLocation.CODEC.optionalFieldOf("start_jigsaw_name").forGetter(structure -> structure.startJigsawName),
                     Codec.intRange(0, 30).fieldOf("size").forGetter(structure -> structure.size),
@@ -28,7 +29,7 @@ public class AdvancedJigsawStructure extends Structure {
                     Heightmap.Types.CODEC.optionalFieldOf("project_start_to_heightmap").forGetter(structure -> structure.projectStartToHeightmap),
                     Codec.intRange(1, 128).fieldOf("max_distance_from_center").forGetter(structure -> structure.maxDistanceFromCenter),
                     Codec.intRange(-4096, 4096).fieldOf("min_spawn_height").forGetter(structure -> structure.minSpawnHeight)
-            ).apply(instance, AdvancedJigsawStructure::new)).codec();
+            ).apply(instance, SkylandsJigsawStructure::new)).codec();
     private final Holder<StructureTemplatePool> startPool;
     private final Optional<ResourceLocation> startJigsawName;
     private final int size;
@@ -37,7 +38,7 @@ public class AdvancedJigsawStructure extends Structure {
     private final int maxDistanceFromCenter;
     private final int minSpawnHeight;
 
-    public AdvancedJigsawStructure(StructureSettings config,
+    public SkylandsJigsawStructure(StructureSettings config,
                                    Holder<StructureTemplatePool> startPool,
                                    Optional<ResourceLocation> startJigsawName,
                                    int size,

@@ -1,5 +1,5 @@
 {
-  "type": "ancient_aether:advanced_jigsaw_structure",
+  "type": "ancient_aether:jigsaw_skylands",
   "start_pool": "ancient_aether:bronze_dungeon/entrance",
   "size": 16,
   "adapt_noise": true,
