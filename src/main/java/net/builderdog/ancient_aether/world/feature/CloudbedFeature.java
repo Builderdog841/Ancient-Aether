@@ -36,8 +36,8 @@ public class CloudbedFeature extends Feature<CloudbedConfiguration> {
                 if (main >= 0) {
                     double d1 = Mth.clamp(main, 0, 0.5) * 2;
                     float delta = costrp((float) d1, 0, 1);
-                    float blocksUp = Mth.lerp(delta, 0F, 6F) + offs;
-                    float blocksDown = Mth.lerp(delta, 0F, 6F) - offs;
+                    float blocksUp = Mth.lerp(delta, 0F, context.config().blocksUp()) + offs;
+                    float blocksDown = Mth.lerp(delta, 0F, context.config().blocksDown()) - offs;
 
                     for (int i = Mth.floor(-blocksDown); i <= Mth.floor(blocksUp); i++) {
                         int y = Mth.clamp(context.config().baseHeight() + i, context.level().getMinBuildHeight(), context.level().getMaxBuildHeight());
