@@ -36,8 +36,8 @@ public class BuriedJigsawStructure extends Structure {
                     HeightProvider.CODEC.optionalFieldOf("start_height").forGetter(structure -> structure.startHeight),
                     Heightmap.Types.CODEC.optionalFieldOf("project_start_to_heightmap").forGetter(structure -> structure.projectStartToHeightmap),
                     Codec.intRange(1, 128).fieldOf("max_distance_from_center").forGetter(structure -> structure.maxDistanceFromCenter),
-                    Codec.INT.fieldOf("above_bottom").forGetter(structure -> structure.aboveBottom),
-                    Codec.INT.fieldOf("below_top").forGetter(structure -> structure.belowTop)
+                    Codec.intRange(-4096, 4096).fieldOf("above_bottom").forGetter(structure -> structure.aboveBottom),
+                    Codec.intRange(-4096, 4096).fieldOf("below_top").forGetter(structure -> structure.belowTop)
             ).apply(instance, BuriedJigsawStructure::new)).codec();
 
     private final Holder<StructureTemplatePool> startPool;
