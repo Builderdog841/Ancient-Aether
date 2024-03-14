@@ -1,30 +1,28 @@
 package net.builderdog.ancient_aether.world.feature;
 
 import com.mojang.serialization.Codec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.builderdog.ancient_aether.world.configuration.CloudbedConfiguration;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.levelgen.XoroshiroRandomSource;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
-import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
-import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.synth.PerlinSimplexNoise;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class CloudbedFeature extends Feature<CloudbedFeature.Config> {
+public class CloudbedFeature extends Feature<CloudbedConfiguration> {
     public static final PerlinSimplexNoise base_noise = new PerlinSimplexNoise(new XoroshiroRandomSource(42), List.of(0, 1, 2, 3, 4));
     public static final PerlinSimplexNoise y_offset = new PerlinSimplexNoise(new XoroshiroRandomSource(95), List.of(0, 1));
 
-    public CloudbedFeature(Codec<Config> codec) {
+    public CloudbedFeature(Codec<CloudbedConfiguration> codec) {
         super(codec);
     }
 
     @Override
-    public boolean place(@NotNull FeaturePlaceContext<Config> context) {
+    public boolean place(@NotNull FeaturePlaceContext<CloudbedConfiguration> context) {
         int chunkX = context.origin().getX() - (context.origin().getX() % 16);
         int chunkZ = context.origin().getZ() - (context.origin().getZ() % 16);
         for (int x = 0; x < 16; x++) {
@@ -55,14 +53,5 @@ public class CloudbedFeature extends Feature<CloudbedFeature.Config> {
     }
     public static float costrp(float progress, float start, float end) {
         return (((-Mth.cos((float) (Math.PI * progress)) + 1F) * 0.5F) * (end - start)) + start;
-    }
-
-    public record Config(BlockStateProvider block, int baseHeight, double scaleXZ) implements FeatureConfiguration {
-        public static final Codec<Config> CODEC = RecordCodecBuilder.create(
-                (builder) -> builder.group(
-                        BlockStateProvider.CODEC.fieldOf("block").forGetter(Config::block),
-                        Codec.INT.fieldOf("base_height").forGetter(Config::baseHeight),
-                        Codec.DOUBLE.fieldOf("xz_scale").forGetter(Config::scaleXZ)
-                ).apply(builder, Config::new));
     }
 }
