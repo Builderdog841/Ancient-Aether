@@ -6,16 +6,8 @@
   "max_distance_from_center": 80,
   "biomes": "#ancient_aether:has_structure/sentry_laboratory",
   "step": "surface_structures",
-  "min_spawn_height": 64,
-  "start_height": {
-    "absolute": 112,
-    "max_inclusive": {
-      "below_top": 156
-    },
-    "min_inclusive": {
-      "above_bottom": 64
-    }
-  },
+  "above_bottom": 64,
+  "below_top": 156,
   "use_expansion_hack": false,
   "spawn_overrides": {
     "creature": {
