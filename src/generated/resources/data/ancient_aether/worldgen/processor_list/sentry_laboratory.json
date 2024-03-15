@@ -34,9 +34,22 @@
         },
         {
           "input_predicate": {
+            "block": "aether:holystone",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 0.25
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "aether:icestone"
+          }
+        },
+        {
+          "input_predicate": {
             "block": "aether:carved_stone",
             "predicate_type": "minecraft:random_block_match",
-            "probability": 0.025
+            "probability": 0.05
           },
           "location_predicate": {
             "predicate_type": "minecraft:always_true"

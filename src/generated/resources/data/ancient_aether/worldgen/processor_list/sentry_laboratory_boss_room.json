@@ -7,7 +7,7 @@
           "input_predicate": {
             "block": "aether:locked_carved_stone",
             "predicate_type": "minecraft:random_block_match",
-            "probability": 0.025
+            "probability": 0.05
           },
           "location_predicate": {
             "predicate_type": "minecraft:always_true"
@@ -20,7 +20,7 @@
           "input_predicate": {
             "block": "aether:treasure_doorway_carved_stone",
             "predicate_type": "minecraft:random_block_match",
-            "probability": 0.025
+            "probability": 0.05
           },
           "location_predicate": {
             "predicate_type": "minecraft:always_true"

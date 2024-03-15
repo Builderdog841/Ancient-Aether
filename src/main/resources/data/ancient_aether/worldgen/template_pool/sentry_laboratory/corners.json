@@ -1,0 +1,24 @@
+{
+  "name": "ancient_aether:sentry_laboratory/corners",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:sentry_laboratory/corner",
+        "processors": "ancient_aether:sentry_laboratory",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:sentry_laboratory/crossing",
+        "processors": "ancient_aether:sentry_laboratory",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
