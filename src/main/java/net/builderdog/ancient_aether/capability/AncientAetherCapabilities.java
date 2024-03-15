@@ -18,7 +18,6 @@ import net.minecraftforge.fml.common.Mod;
 public class AncientAetherCapabilities {
     public static final Capability<AncientAetherPlayer> ANCIENT_AETHER_PLAYER_CAPABILITY = CapabilityManager.get(new CapabilityToken<>() {
     });
-
     public AncientAetherCapabilities() {
     }
 

@@ -29,7 +29,7 @@ public class AncientAetherPlayerCapability implements AncientAetherPlayer {
 
     @Override
     public void onUpdate() {
-        this.handleWingRotation();
+        handleWingRotation();
     }
 
     private void handleWingRotation() {

@@ -1,13 +1,13 @@
 package net.builderdog.ancient_aether.capability.player;
 
-import javax.annotation.Nonnull;
-
 import net.builderdog.ancient_aether.capability.AncientAetherCapabilities;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ICapabilitySerializable;
 import net.minecraftforge.common.util.LazyOptional;
+
+import javax.annotation.Nonnull;
 
 public class AncientAetherPlayerProvider implements ICapabilitySerializable<CompoundTag> {
     private final AncientAetherPlayer ancientAetherPlayer;
