@@ -11,8 +11,8 @@
         }
       }
     },
-    "blocks_down": 6.0,
-    "blocks_up": 6.0,
+    "threshold_down": 6.0,
+    "threshold_up": 6.0,
     "xz_scale": 1.0
   }
 }

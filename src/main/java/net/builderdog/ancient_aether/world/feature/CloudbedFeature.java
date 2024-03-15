@@ -14,8 +14,8 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 public class CloudbedFeature extends Feature<CloudbedConfiguration> {
-    public static final PerlinSimplexNoise base_noise = new PerlinSimplexNoise(new XoroshiroRandomSource(42), List.of(0, 1, 2, 3, 4));
-    public static final PerlinSimplexNoise y_offset = new PerlinSimplexNoise(new XoroshiroRandomSource(95), List.of(0, 1));
+    public static final PerlinSimplexNoise base_noise = new PerlinSimplexNoise(new XoroshiroRandomSource(32), List.of(0, 1, 2, 3, 4));
+    public static final PerlinSimplexNoise y_offset = new PerlinSimplexNoise(new XoroshiroRandomSource(96), List.of(0, 1));
 
     public CloudbedFeature(Codec<CloudbedConfiguration> codec) {
         super(codec);
@@ -36,10 +36,10 @@ public class CloudbedFeature extends Feature<CloudbedConfiguration> {
                 if (main >= 0) {
                     double d1 = Mth.clamp(main, 0, 0.5) * 2;
                     float delta = costrp((float) d1, 0, 1);
-                    float blocksUp = Mth.lerp(delta, 0F, context.config().blocksUp()) + offs;
-                    float blocksDown = Mth.lerp(delta, 0F, context.config().blocksDown()) - offs;
+                    float thresholdUp = Mth.lerp(delta, 0F, context.config().thresholdUp()) + offs;
+                    float thresholdDown = Mth.lerp(delta, 0F, context.config().thresholdDown()) - offs;
 
-                    for (int i = Mth.floor(-blocksDown); i <= Mth.floor(blocksUp); i++) {
+                    for (int i = Mth.floor(-thresholdDown); i <= Mth.floor(thresholdUp); i++) {
                         int y = Mth.clamp(context.config().baseHeight() + i, context.level().getMinBuildHeight(), context.level().getMaxBuildHeight());
                         BlockPos pos = new BlockPos(xCoord, y, zCoord);
                         if (context.level().isStateAtPosition(pos, BlockBehaviour.BlockStateBase::isAir)) {
