@@ -23,8 +23,8 @@ public class CloudbedFeature extends Feature<CloudbedConfiguration> {
     public boolean place(@NotNull FeaturePlaceContext<CloudbedConfiguration> context) {
         int chunkX = context.origin().getX() - (context.origin().getX() % 16);
         int chunkZ = context.origin().getZ() - (context.origin().getZ() % 16);
-        PerlinSimplexNoise base_noise = new PerlinSimplexNoise(new XoroshiroRandomSource(context.config().noiseFactor()), List.of(0, 1, 2, 3, 4));
-        PerlinSimplexNoise y_offset = new PerlinSimplexNoise(new XoroshiroRandomSource(context.config().yOffsetFactor()), List.of(0, 1));
+        PerlinSimplexNoise base_noise = new PerlinSimplexNoise(new XoroshiroRandomSource(context.config().noiseXZ()), List.of(0, 1, 2, 3, 4));
+        PerlinSimplexNoise y_offset = new PerlinSimplexNoise(new XoroshiroRandomSource(context.config().noiseY()), List.of(0, 1));
 
         for (int x = 0; x < 16; x++) {
             for (int z = 0; z < 16; z++) {
@@ -37,10 +37,10 @@ public class CloudbedFeature extends Feature<CloudbedConfiguration> {
                 if (main >= 0) {
                     double d1 = Mth.clamp(main, 0, 0.5) * 2;
                     float delta = costrp((float) d1, 0, 1);
-                    float thresholdUp = Mth.lerp(delta, 0F, context.config().thresholdUp()) + offs;
-                    float thresholdDown = Mth.lerp(delta, 0F, context.config().thresholdDown()) - offs;
+                    float thicknessUp = Mth.lerp(delta, 0F, context.config().thicknessUp()) + offs;
+                    float thicknessDown = Mth.lerp(delta, 0F, context.config().thicknessDown()) - offs;
 
-                    for (int i = Mth.floor(-thresholdDown); i <= Mth.floor(thresholdUp); i++) {
+                    for (int i = Mth.floor(-thicknessDown); i <= Mth.floor(thicknessUp); i++) {
                         int y = Mth.clamp(context.config().baseHeight() + i, context.level().getMinBuildHeight(), context.level().getMaxBuildHeight());
                         BlockPos pos = new BlockPos(xCoord, y, zCoord);
                         if (context.level().isStateAtPosition(pos, BlockBehaviour.BlockStateBase::isAir)) {
