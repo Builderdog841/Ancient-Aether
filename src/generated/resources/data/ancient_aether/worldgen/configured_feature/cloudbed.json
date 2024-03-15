@@ -11,8 +11,10 @@
         }
       }
     },
+    "noise_factor": 32,
     "threshold_down": 6.0,
     "threshold_up": 6.0,
-    "xz_scale": 1.0
+    "xz_scale": 1.0,
+    "y_offset_factor": 96
   }
 }

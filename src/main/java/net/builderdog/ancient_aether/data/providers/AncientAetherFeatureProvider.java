@@ -4,7 +4,7 @@ import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.data.resources.AetherFeatureStates;
 import com.aetherteam.aether.world.foliageplacer.CrystalFoliagePlacer;
 import net.builderdog.ancient_aether.data.resources.AncientAetherFeatureStates;
-import net.builderdog.ancient_aether.world.configuration.CoastConfiguration;
+import net.builderdog.ancient_aether.world.feature.configuration.CoastConfiguration;
 import net.builderdog.ancient_aether.world.foliageplacer.PineFoliagePlacer;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderSet;

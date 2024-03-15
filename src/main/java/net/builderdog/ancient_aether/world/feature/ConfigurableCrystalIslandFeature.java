@@ -2,7 +2,7 @@ package net.builderdog.ancient_aether.world.feature;
 
 import com.aetherteam.aether.data.resources.registries.AetherConfiguredFeatures;
 import com.mojang.serialization.Codec;
-import net.builderdog.ancient_aether.world.configuration.CrystalIslandConfiguration;
+import net.builderdog.ancient_aether.world.feature.configuration.CrystalIslandConfiguration;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.placement.PlacementUtils;

@@ -1,9 +1,9 @@
 package net.builderdog.ancient_aether.world.feature;
 
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.world.configuration.CloudbedConfiguration;
-import net.builderdog.ancient_aether.world.configuration.CoastConfiguration;
-import net.builderdog.ancient_aether.world.configuration.CrystalIslandConfiguration;
+import net.builderdog.ancient_aether.world.feature.configuration.CloudbedConfiguration;
+import net.builderdog.ancient_aether.world.feature.configuration.CoastConfiguration;
+import net.builderdog.ancient_aether.world.feature.configuration.CrystalIslandConfiguration;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;

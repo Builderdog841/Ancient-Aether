@@ -2,7 +2,7 @@ package net.builderdog.ancient_aether.world.feature;
 
 import com.aetherteam.aether.world.BlockPlacementUtil;
 import com.mojang.serialization.Codec;
-import net.builderdog.ancient_aether.world.configuration.CoastConfiguration;
+import net.builderdog.ancient_aether.world.feature.configuration.CoastConfiguration;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;

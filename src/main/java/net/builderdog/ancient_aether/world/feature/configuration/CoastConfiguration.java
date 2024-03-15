@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.world.configuration;
+package net.builderdog.ancient_aether.world.feature.configuration;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;

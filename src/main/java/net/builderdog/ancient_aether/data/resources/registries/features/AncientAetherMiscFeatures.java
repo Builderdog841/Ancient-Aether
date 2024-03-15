@@ -5,8 +5,8 @@ import com.aetherteam.aether.data.resources.builders.AetherConfiguredFeatureBuil
 import com.aetherteam.aether.world.feature.AetherFeatures;
 import net.builderdog.ancient_aether.data.providers.AncientAetherFeatureProvider;
 import net.builderdog.ancient_aether.data.resources.AncientAetherFeatureStates;
-import net.builderdog.ancient_aether.world.configuration.CloudbedConfiguration;
-import net.builderdog.ancient_aether.world.configuration.CrystalIslandConfiguration;
+import net.builderdog.ancient_aether.world.feature.configuration.CloudbedConfiguration;
+import net.builderdog.ancient_aether.world.feature.configuration.CrystalIslandConfiguration;
 import net.builderdog.ancient_aether.world.feature.AncientAetherFeatures;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
@@ -32,7 +32,7 @@ public class AncientAetherMiscFeatures extends AncientAetherFeatureProvider {
         AncientAetherFeatureUtils.register(context, SKYROOT_LEAF_VINE, Feature.BLOCK_COLUMN, createSkyrootLeafVine(12));
         AncientAetherFeatureUtils.register(context, SHORT_SKYROOT_LEAF_VINE, Feature.BLOCK_COLUMN, createSkyrootLeafVine(4));
         AncientAetherFeatureUtils.register(context, VIOLET_AERCLOUD, AetherFeatures.AERCLOUD.get(), AetherConfiguredFeatureBuilders.aercloud(8, AncientAetherFeatureStates.VIOLET_AERCLOUD));
-        AncientAetherFeatureUtils.register(context, CLOUDBED, AncientAetherFeatures.CLOUDBED.get(), new CloudbedConfiguration(BlockStateProvider.simple(AetherFeatureStates.COLD_AERCLOUD), 80, 1D, 6, 6));
+        AncientAetherFeatureUtils.register(context, CLOUDBED, AncientAetherFeatures.CLOUDBED.get(), new CloudbedConfiguration(BlockStateProvider.simple(AetherFeatureStates.COLD_AERCLOUD), 80, 1.0D, 32L, 96L, 6.0F, 6.0F));
         AncientAetherFeatureUtils.register(context, CRYSTAL_ISLAND_FROZEN, AncientAetherFeatures.CONFIGURABLE_CRYSTAL_ISLAND.get(), new CrystalIslandConfiguration(AncientAetherFeatureStates.FROZEN_AETHER_GRASS_BLOCK, AetherFeatureStates.HOLYSTONE));
         AncientAetherFeatureUtils.register(context, CRYSTAL_ISLAND_PALE, AncientAetherFeatures.CONFIGURABLE_CRYSTAL_ISLAND.get(), new CrystalIslandConfiguration(AncientAetherFeatureStates.PALE_AETHER_GRASS_BLOCK, AetherFeatureStates.HOLYSTONE));
     }

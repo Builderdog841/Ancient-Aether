@@ -1,7 +1,7 @@
 package net.builderdog.ancient_aether.world.feature;
 
 import com.mojang.serialization.Codec;
-import net.builderdog.ancient_aether.world.configuration.CloudbedConfiguration;
+import net.builderdog.ancient_aether.world.feature.configuration.CloudbedConfiguration;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -14,8 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 public class CloudbedFeature extends Feature<CloudbedConfiguration> {
-    public static final PerlinSimplexNoise base_noise = new PerlinSimplexNoise(new XoroshiroRandomSource(32), List.of(0, 1, 2, 3, 4));
-    public static final PerlinSimplexNoise y_offset = new PerlinSimplexNoise(new XoroshiroRandomSource(96), List.of(0, 1));
 
     public CloudbedFeature(Codec<CloudbedConfiguration> codec) {
         super(codec);
@@ -25,6 +23,9 @@ public class CloudbedFeature extends Feature<CloudbedConfiguration> {
     public boolean place(@NotNull FeaturePlaceContext<CloudbedConfiguration> context) {
         int chunkX = context.origin().getX() - (context.origin().getX() % 16);
         int chunkZ = context.origin().getZ() - (context.origin().getZ() % 16);
+        PerlinSimplexNoise base_noise = new PerlinSimplexNoise(new XoroshiroRandomSource(context.config().noiseFactor()), List.of(0, 1, 2, 3, 4));
+        PerlinSimplexNoise y_offset = new PerlinSimplexNoise(new XoroshiroRandomSource(context.config().yOffsetFactor()), List.of(0, 1));
+
         for (int x = 0; x < 16; x++) {
             for (int z = 0; z < 16; z++) {
                 double scale = context.config().scaleXZ() * 0.00375;
