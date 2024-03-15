@@ -97,19 +97,6 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.FLUFFALO_WOOL, "Fluffalo Wool");
         addBlock(AncientAetherBlocks.FLUFFALO_CARPET, "Fluffalo Carpet");
 
-        addBlock(AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC, "Holystone Brick Mosaic");
-        addBlock(AncientAetherBlocks.CARVED_STONE_MOSAIC, "Carved Stone Mosaic");
-        addBlock(AncientAetherBlocks.ANGELIC_STONE_MOSAIC, "Angelic Stone Mosaic");
-        addBlock(AncientAetherBlocks.HELLFIRE_STONE_MOSAIC, "Hellfire Stone Mosaic");
-        addBlock(AncientAetherBlocks.AEROGETIC_STONE_MOSAIC, "Aerogetic Stone Mosaic");
-        addBlock(AncientAetherBlocks.GALE_STONE_MOSAIC, "Gale Stone Mosaic");
-
-        addBlock(AncientAetherBlocks.LOCKED_CARVED_STONE_MOSAIC, "Locked Carved Stone Mosaic");
-        addBlock(AncientAetherBlocks.LOCKED_ANGELIC_STONE_MOSAIC, "Locked Angelic Stone Mosaic");
-        addBlock(AncientAetherBlocks.LOCKED_HELLFIRE_STONE_MOSAIC, "Locked Hellfire Stone Mosaic");
-        addBlock(AncientAetherBlocks.LOCKED_AEROGETIC_STONE_MOSAIC, "Locked Aerogetic Stone Mosaic");
-        addBlock(AncientAetherBlocks.LOCKED_GALE_STONE_MOSAIC, "Locked Gale Stone Mosaic");
-
         addBlock(AncientAetherBlocks.CARVED_TILES, "Carved Tiles");
         addBlock(AncientAetherBlocks.WYND_SENTRY_STONE, "Wynd Sentry Stone");
         addBlock(AncientAetherBlocks.CARVED_TILE_STAIRS, "Carved Tile Stairs");
@@ -123,11 +110,24 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.AEROGETIC_SLAB, "Aerogetic Slab");
         addBlock(AncientAetherBlocks.AEROGETIC_WALL, "Aerogetic Wall");
 
+        addBlock(AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC, "Holystone Brick Mosaic");
+        addBlock(AncientAetherBlocks.CARVED_STONE_MOSAIC, "Carved Stone Mosaic");
+        addBlock(AncientAetherBlocks.ANGELIC_STONE_MOSAIC, "Angelic Stone Mosaic");
+        addBlock(AncientAetherBlocks.HELLFIRE_STONE_MOSAIC, "Hellfire Stone Mosaic");
+        addBlock(AncientAetherBlocks.AEROGETIC_STONE_MOSAIC, "Aerogetic Stone Mosaic");
+        addBlock(AncientAetherBlocks.GALE_STONE_MOSAIC, "Gale Stone Mosaic");
+
         addBlock(AncientAetherBlocks.LOCKED_CARVED_TILES, "Locked Carved Tiles");
         addBlock(AncientAetherBlocks.LOCKED_WYND_SENTRY_STONE, "Locked Wynd Sentry Stone");
         addBlock(AncientAetherBlocks.LOCKED_AEROGETIC_STONE, "Locked Aerogetic Stone");
         addBlock(AncientAetherBlocks.LOCKED_LIGHT_AEROGETIC_STONE, "Locked Light Aerogetic Stone");
         addBlock(AncientAetherBlocks.LOCKED_CORRUPTED_AEROGETIC_STONE, "Locked Corrupted Aerogetic Stone");
+
+        addBlock(AncientAetherBlocks.LOCKED_CARVED_STONE_MOSAIC, "Locked Carved Stone Mosaic");
+        addBlock(AncientAetherBlocks.LOCKED_ANGELIC_STONE_MOSAIC, "Locked Angelic Stone Mosaic");
+        addBlock(AncientAetherBlocks.LOCKED_HELLFIRE_STONE_MOSAIC, "Locked Hellfire Stone Mosaic");
+        addBlock(AncientAetherBlocks.LOCKED_AEROGETIC_STONE_MOSAIC, "Locked Aerogetic Stone Mosaic");
+        addBlock(AncientAetherBlocks.LOCKED_GALE_STONE_MOSAIC, "Locked Gale Stone Mosaic");
 
         addBlock(AncientAetherBlocks.TRAPPED_CARVED_TILES, "Trapped Carved Tiles");
         addBlock(AncientAetherBlocks.TRAPPED_AEROGETIC_STONE, "Trapped Aerogetic Stone");

@@ -141,11 +141,24 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> AEROGETIC_SLAB = registerBlock("aerogetic_slab", () -> new SlabBlock(Block.Properties.copy(AEROGETIC_STONE.get())));
     public static final RegistryObject<Block> AEROGETIC_WALL = registerBlock("aerogetic_wall", () -> new WallBlock(Block.Properties.copy(AEROGETIC_STONE.get())));
 
+    public static final RegistryObject<RotatedPillarBlock> HOLYSTONE_BRICK_MOSAIC = registerBlock("holystone_brick_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.HOLYSTONE_BRICKS.get())));
+    public static final RegistryObject<RotatedPillarBlock> CARVED_STONE_MOSAIC = registerBlock("carved_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.CARVED_STONE.get())));
+    public static final RegistryObject<RotatedPillarBlock> ANGELIC_STONE_MOSAIC = registerBlock("angelic_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.ANGELIC_STONE.get())));
+    public static final RegistryObject<RotatedPillarBlock> HELLFIRE_STONE_MOSAIC = registerBlock("hellfire_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.HELLFIRE_STONE.get())));
+    public static final RegistryObject<RotatedPillarBlock> AEROGETIC_STONE_MOSAIC = registerBlock("aerogetic_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AEROGETIC_STONE.get())));
+    public static final RegistryObject<RotatedPillarBlock> GALE_STONE_MOSAIC = registerBlock("gale_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.CARVED_STONE.get())));
+
     public static final RegistryObject<Block> LOCKED_CARVED_TILES = registerBlock("locked_carved_tiles", () -> new Block(Block.Properties.copy(CARVED_TILES.get()).strength(-1.0F, 3600000.0F).noLootTable()));
     public static final RegistryObject<Block> LOCKED_WYND_SENTRY_STONE = registerBlock("locked_wynd_sentry_stone", () -> new Block(Block.Properties.copy(WYND_SENTRY_STONE.get()).strength(-1.0F, 3600000.0F).noLootTable()));
     public static final RegistryObject<Block> LOCKED_AEROGETIC_STONE = registerBlock("locked_aerogetic_stone", () -> new Block(Block.Properties.copy(AEROGETIC_STONE.get()).strength(-1.0F, 3600000.0F).noLootTable()));
     public static final RegistryObject<Block> LOCKED_LIGHT_AEROGETIC_STONE = registerBlock("locked_light_aerogetic_stone", () -> new Block(Block.Properties.copy(LOCKED_AEROGETIC_STONE.get()).lightLevel(s -> 11).noLootTable()));
     public static final RegistryObject<Block> LOCKED_CORRUPTED_AEROGETIC_STONE = registerBlock("locked_corrupted_aerogetic_stone", () -> new Block(Block.Properties.copy(LOCKED_LIGHT_AEROGETIC_STONE.get()).noLootTable()));
+
+    public static final RegistryObject<RotatedPillarBlock> LOCKED_CARVED_STONE_MOSAIC = registerBlock("locked_carved_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_CARVED_STONE.get()).noLootTable()));
+    public static final RegistryObject<RotatedPillarBlock> LOCKED_ANGELIC_STONE_MOSAIC = registerBlock("locked_angelic_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_ANGELIC_STONE.get()).noLootTable()));
+    public static final RegistryObject<RotatedPillarBlock> LOCKED_HELLFIRE_STONE_MOSAIC = registerBlock("locked_hellfire_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_HELLFIRE_STONE.get()).noLootTable()));
+    public static final RegistryObject<RotatedPillarBlock> LOCKED_AEROGETIC_STONE_MOSAIC = registerBlock("locked_aerogetic_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_AEROGETIC_STONE.get()).noLootTable()));
+    public static final RegistryObject<RotatedPillarBlock> LOCKED_GALE_STONE_MOSAIC = registerBlock("locked_gale_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_CARVED_STONE.get()).noLootTable()));
 
     public static final RegistryObject<Block> TRAPPED_CARVED_TILES = registerBlock("trapped_carved_tiles", () -> new TrappedBlock(AetherEntityTypes.SENTRY::get, () -> CARVED_TILES.get().defaultBlockState(), Block.Properties.copy(CARVED_TILES.get()).noLootTable()));
     public static final RegistryObject<Block> TRAPPED_AEROGETIC_STONE = registerBlock("trapped_aerogetic_stone", () -> new TrappedBlock(AncientAetherEntityTypes.AERONAUTIC_LEAPER::get, () -> AEROGETIC_STONE.get().defaultBlockState(), Block.Properties.copy(AEROGETIC_STONE.get()).noLootTable()));
@@ -161,19 +174,6 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> TREASURE_DOORWAY_AEROGETIC_STONE = registerBlock("treasure_doorway_aerogetic_stone", () -> new TreasureDoorwayBlock(BlockBehaviour.Properties.copy(LOCKED_AEROGETIC_STONE.get()).noLootTable()));
     public static final RegistryObject<Block> TREASURE_DOORWAY_LIGHT_AEROGETIC_STONE = registerBlock("treasure_doorway_light_aerogetic_stone", () -> new TreasureDoorwayBlock(BlockBehaviour.Properties.copy(LOCKED_LIGHT_AEROGETIC_STONE.get()).noLootTable()));
     public static final RegistryObject<Block> TREASURE_DOORWAY_CORRUPTED_AEROGETIC_STONE = registerBlock("treasure_doorway_corrupted_aerogetic_stone", () -> new TreasureDoorwayBlock(BlockBehaviour.Properties.copy(LOCKED_CORRUPTED_AEROGETIC_STONE.get()).noLootTable()));
-
-    public static final RegistryObject<RotatedPillarBlock> HOLYSTONE_BRICK_MOSAIC = registerBlock("holystone_brick_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.HOLYSTONE_BRICKS.get())));
-    public static final RegistryObject<RotatedPillarBlock> CARVED_STONE_MOSAIC = registerBlock("carved_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.CARVED_STONE.get())));
-    public static final RegistryObject<RotatedPillarBlock> ANGELIC_STONE_MOSAIC = registerBlock("angelic_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.ANGELIC_STONE.get())));
-    public static final RegistryObject<RotatedPillarBlock> HELLFIRE_STONE_MOSAIC = registerBlock("hellfire_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.HELLFIRE_STONE.get())));
-    public static final RegistryObject<RotatedPillarBlock> AEROGETIC_STONE_MOSAIC = registerBlock("aerogetic_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AEROGETIC_STONE.get())));
-    public static final RegistryObject<RotatedPillarBlock> GALE_STONE_MOSAIC = registerBlock("gale_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(AetherBlocks.CARVED_STONE.get())));
-
-    public static final RegistryObject<RotatedPillarBlock> LOCKED_CARVED_STONE_MOSAIC = registerBlock("locked_carved_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_CARVED_STONE.get()).noLootTable()));
-    public static final RegistryObject<RotatedPillarBlock> LOCKED_ANGELIC_STONE_MOSAIC = registerBlock("locked_angelic_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_ANGELIC_STONE.get()).noLootTable()));
-    public static final RegistryObject<RotatedPillarBlock> LOCKED_HELLFIRE_STONE_MOSAIC = registerBlock("locked_hellfire_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_HELLFIRE_STONE.get()).noLootTable()));
-    public static final RegistryObject<RotatedPillarBlock> LOCKED_AEROGETIC_STONE_MOSAIC = registerBlock("locked_aerogetic_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_AEROGETIC_STONE.get()).noLootTable()));
-    public static final RegistryObject<RotatedPillarBlock> LOCKED_GALE_STONE_MOSAIC = registerBlock("locked_gale_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_CARVED_STONE.get()).noLootTable()));
 
     public static final RegistryObject<Block> AMBROSIUM_LANTERN = registerBlock("ambrosium_lantern", () -> new LanternBlock(BlockBehaviour.Properties.copy(LANTERN).lightLevel(s -> 15)));
     public static final RegistryObject<Block> WYND_LANTERN = registerBlock("wynd_lantern", () -> new LanternBlock(BlockBehaviour.Properties.copy(LANTERN).lightLevel(s -> 7)));
