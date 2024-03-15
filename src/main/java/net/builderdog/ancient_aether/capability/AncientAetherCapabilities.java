@@ -14,10 +14,7 @@ import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(
-        modid = "aether",
-        bus = Mod.EventBusSubscriber.Bus.MOD
-)
+@Mod.EventBusSubscriber(modid = "aether", bus = Mod.EventBusSubscriber.Bus.MOD)
 public class AncientAetherCapabilities {
     public static final Capability<AncientAetherPlayer> ANCIENT_AETHER_PLAYER_CAPABILITY = CapabilityManager.get(new CapabilityToken<>() {
     });
@@ -30,9 +27,7 @@ public class AncientAetherCapabilities {
         event.register(AncientAetherPlayer.class);
     }
 
-    @Mod.EventBusSubscriber(
-            modid = "ancient_aether"
-    )
+    @Mod.EventBusSubscriber(modid = "ancient_aether")
     public static class Registration {
         public Registration() {
         }
@@ -43,7 +38,6 @@ public class AncientAetherCapabilities {
             if (var2 instanceof Player player) {
                 event.addCapability(new ResourceLocation("ancient_aether", "ancient_aether_player"), new AncientAetherPlayerProvider(new AncientAetherPlayerCapability(player)));
             }
-
         }
     }
 }
