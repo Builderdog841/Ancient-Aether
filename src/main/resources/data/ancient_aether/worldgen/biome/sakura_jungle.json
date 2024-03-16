@@ -6,15 +6,15 @@
     "fog_color": 9671612,
     "foliage_color": 11665355,
     "grass_color": 11665355,
+    "music": {
+      "max_delay": 2400,
+      "min_delay": 600,
+      "replace_current_music": false,
+      "sound": "aether:music.aether"
+    },
     "sky_color": 12632319,
     "water_color": 6396835,
-    "water_fog_color": 3824736,
-    "music": {
-      "max_delay": 24000,
-      "min_delay": 12000,
-      "replace_current_music": true,
-      "sound": "aether:music.aether"
-    }
+    "water_fog_color": 3824736
   },
   "features": [
     [],
