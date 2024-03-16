@@ -10,8 +10,8 @@ public record CloudbedConfiguration(BlockStateProvider block, int baseHeight, do
             BlockStateProvider.CODEC.fieldOf("block").forGetter(CloudbedConfiguration::block),
             Codec.INT.fieldOf("base_height").forGetter(CloudbedConfiguration::baseHeight),
             Codec.DOUBLE.fieldOf("scale_xz").forGetter(CloudbedConfiguration::scaleXZ),
-            Codec.LONG.fieldOf("noise_xz").forGetter(CloudbedConfiguration::noiseXZ),
-            Codec.LONG.fieldOf("noise_y").forGetter(CloudbedConfiguration::noiseY),
+            Codec.LONG.fieldOf("noise_factor_xz").forGetter(CloudbedConfiguration::noiseXZ),
+            Codec.LONG.fieldOf("noise_factor_y").forGetter(CloudbedConfiguration::noiseY),
             Codec.FLOAT.fieldOf("thickness_up").forGetter(CloudbedConfiguration::thicknessUp),
             Codec.FLOAT.fieldOf("thickness_down").forGetter(CloudbedConfiguration::thicknessDown)
     ).apply(instance, CloudbedConfiguration::new));

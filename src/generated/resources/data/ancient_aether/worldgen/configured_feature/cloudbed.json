@@ -11,8 +11,8 @@
         }
       }
     },
-    "noise_xz": 64,
-    "noise_y": 96,
+    "noise_factor_xz": 64,
+    "noise_factor_y": 96,
     "scale_xz": 1.0,
     "thickness_down": 6.0,
     "thickness_up": 6.0
