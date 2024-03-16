@@ -77,7 +77,7 @@ public class AncientAetherVegetationPlacements extends TrunkVineDecorator {
         );
 
         AncientAetherPlacementUtils.register(context, SKYROOT_MEADOW_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.SKYROOT_MEADOW_FLOWER_PATCH),
-                PlacementUtils.countExtra(14, 0.1F, 1),
+                PlacementUtils.countExtra(10, 0.1F, 1),
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome()
         );
