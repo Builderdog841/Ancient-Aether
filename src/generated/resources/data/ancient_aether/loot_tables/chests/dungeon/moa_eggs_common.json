@@ -6,15 +6,17 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ancient_aether:wynd_armor_trim_smithing_template"
+          "name": "aether:blue_moa_egg",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
-          "name": "ancient_aether:whale_armor_trim_smithing_template"
+          "name": "ancient_aether:turquoise_moa_egg",
+          "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "ancient_aether:ascended_armor_trim_smithing_template"
+          "name": "ancient_aether:sky_blue_moa_egg"
         }
       ],
       "rolls": {
@@ -24,5 +26,5 @@
       }
     }
   ],
-  "random_sequence": "ancient_aether:chests/armor_trims"
+  "random_sequence": "ancient_aether:chests/dungeon/moa_eggs_common"
 }

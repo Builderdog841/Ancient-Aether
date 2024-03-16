@@ -10,7 +10,6 @@ public class AncientAetherLoot {
     private static final Set<ResourceLocation> LOOT_TABLES = new HashSet<>();
 
     public static final ResourceLocation ENTITIES_FLUFFALO_SHEARED = register("entities/fluffalo_sheared");
-    public static final ResourceLocation CHESTS_ARMOR_TRIMS = register("chests/armor_trims");
     public static final ResourceLocation CHESTS_CAMP_GENERIC = register("chests/camp_generic");
     public static final ResourceLocation CHESTS_CAMP_SKYROOT = register("chests/camp_skyroot");
     public static final ResourceLocation CHESTS_CAMP_WYNDCAPS = register("chests/camp_wyndcaps");
@@ -18,6 +17,15 @@ public class AncientAetherLoot {
     public static final ResourceLocation CHESTS_SETTLEMENT_SKYROOT_SHOP = register("chests/settlement_skyroot_shop");
     public static final ResourceLocation CHESTS_SETTLEMENT_SKYROOT_LIBRARY = register("chests/settlement_skyroot_library");
     public static final ResourceLocation CHESTS_SETTLEMENT_SECRET = register("chests/settlement_secret");
+    public static final ResourceLocation CHESTS_DUNGEON_ARMOR_TRIMS = register("chests/dungeon/armor_trims");
+    public static final ResourceLocation CHESTS_DUNGEON_MOA_EGGS_COMMON = register("chests/dungeon/moa_eggs_common");
+    public static final ResourceLocation CHESTS_DUNGEON_MOA_EGGS_UNCOMMON = register("chests/dungeon/moa_eggs_uncommon");
+    public static final ResourceLocation CHESTS_DUNGEON_MOA_EGGS_RARE = register("chests/dungeon/moa_eggs_rare");
+    public static final ResourceLocation CHESTS_DUNGEON_SENTRY_LABORATORY = register("chests/dungeon/sentry_laboratory/sentry_laboratory");
+    public static final ResourceLocation CHESTS_DUNGEON_SENTRY_LABORATORY_LOOT = register("chests/dungeon/sentry_laboratory/sentry_laboratory_loot");
+    public static final ResourceLocation CHESTS_DUNGEON_SENTRY_LABORATORY_SUPPLIES = register("chests/dungeon/sentry_laboratory/sentry_laboratory_supplies");
+    public static final ResourceLocation CHESTS_DUNGEON_SENTRY_LABORATORY_MISCELLANEOUS = register("chests/dungeon/sentry_laboratory/sentry_laboratory_miscellaneous");
+    public static final ResourceLocation CHESTS_DUNGEON_SENTRY_LABORATORY_REWARD = register("chests/dungeon/sentry_laboratory/sentry_laboratory_reward");
     public static final ResourceLocation SELECTORS_ACCESSORIES_GENERIC = register("selectors/accessories/generic");
     public static final ResourceLocation SELECTORS_ACCESSORIES_BRONZE_DUNGEON = register("selectors/accessories/bronze_dungeon");
     public static final ResourceLocation SELECTORS_ACCESSORIES_SILVER_DUNGEON = register("selectors/accessories/silver_dungeon");

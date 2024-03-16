@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "aether:white_moa_egg",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:teal_moa_egg",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:lavender_moa_egg",
+          "weight": 2
+        }
+      ],
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 1.0,
+        "min": 1.0
+      }
+    }
+  ],
+  "random_sequence": "ancient_aether:chests/dungeon/moa_eggs_uncommon"
+}
