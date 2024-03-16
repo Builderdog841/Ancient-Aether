@@ -87,7 +87,7 @@ public class AncientAetherChestLoot implements LootTableSubProvider {
         );
 
         builder.accept(AncientAetherLoot.CHESTS_SETTLEMENT_SKYROOT_GENERIC, LootTable.lootTable()
-                .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(3.0F, 5.0F))
+                .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(6.0F, 12.0F))
                         .add(LootItem.lootTableItem(AetherItems.BLUE_BERRY.get()).setWeight(3).apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0F, 6.0F))))
                         .add(LootItem.lootTableItem(AncientAetherItems.GRAPES.get()).setWeight(3).apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0F, 6.0F))))
                         .add(LootItem.lootTableItem(Items.LEATHER).setWeight(3).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F))))
@@ -96,10 +96,10 @@ public class AncientAetherChestLoot implements LootTableSubProvider {
                         .add(LootItem.lootTableItem(AetherItems.ENCHANTED_BERRY.get()).setWeight(2).apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 4.0F))))
                         .add(LootItem.lootTableItem(AetherItems.AMBROSIUM_SHARD.get()).setWeight(2).apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 4.0F))))
                         .add(LootItem.lootTableItem(AetherItems.GOLDEN_AMBER.get()).setWeight(2).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 3.0F))))
-                        .add(LootItem.lootTableItem(AetherItems.SKYROOT_BUCKET.get()).setWeight(2).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 1.0F))))
-                        .add(LootItem.lootTableItem(AetherItems.SKYROOT_MILK_BUCKET.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 1.0F))))
+                        .add(LootItem.lootTableItem(AetherItems.SKYROOT_BUCKET.get()).setWeight(2))
+                        .add(LootItem.lootTableItem(AetherItems.SKYROOT_MILK_BUCKET.get()))
                         .add(LootItem.lootTableItem(AetherItems.ZANITE_GEMSTONE.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F))))
-                        .add(LootItem.lootTableItem(AetherItems.BLUE_MOA_EGG.get())).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 1.0F)))
+                        .add(LootItem.lootTableItem(AetherItems.BLUE_MOA_EGG.get()))
                 )
         );
 

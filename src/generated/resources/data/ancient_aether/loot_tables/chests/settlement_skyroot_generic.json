@@ -134,33 +134,11 @@
         },
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 1.0,
-                "min": 1.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
           "name": "aether:skyroot_bucket",
           "weight": 2
         },
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 1.0,
-                "min": 1.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
           "name": "aether:skyroot_milk_bucket"
         },
         {
@@ -183,21 +161,10 @@
           "name": "aether:blue_moa_egg"
         }
       ],
-      "functions": [
-        {
-          "add": false,
-          "count": {
-            "type": "minecraft:uniform",
-            "max": 1.0,
-            "min": 1.0
-          },
-          "function": "minecraft:set_count"
-        }
-      ],
       "rolls": {
         "type": "minecraft:uniform",
-        "max": 5.0,
-        "min": 3.0
+        "max": 12.0,
+        "min": 6.0
       }
     }
   ],

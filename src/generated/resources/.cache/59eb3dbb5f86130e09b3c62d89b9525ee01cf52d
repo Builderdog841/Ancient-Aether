@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-16T14:36:12.1622648	Loot Tables
+// 1.20.1	2024-03-16T15:21:47.8189131	Loot Tables
 095a70e341d19e7b3548ddc32402abe48a79992a data/ancient_aether/loot_tables/blocks/aerogel_glass.json
 9fe2ea21af5246ad9f95848f680099717062eb1c data/ancient_aether/loot_tables/blocks/aerogel_glass_door.json
 0f84d5b4591633acc6c8dcc82b7c14988b545a9f data/ancient_aether/loot_tables/blocks/aerogel_glass_pane.json
@@ -118,7 +118,7 @@ b460d0d625f6ad7ce0e873543d6d82e6954a0b8b data/ancient_aether/loot_tables/blocks/
 f7f1b515a8e001e9a46610eab1ac48d8cabfee02 data/ancient_aether/loot_tables/chests/camp_skyroot.json
 688694a8ce3b761dd11a525ffb8ba35098e7b83c data/ancient_aether/loot_tables/chests/camp_wyndcaps.json
 7c300abed470775e0b3e7206ae6c7ce6dc5a5c70 data/ancient_aether/loot_tables/chests/settlement_secret.json
-7a0c313e735958d993dccc0809c3f96e1f64eafe data/ancient_aether/loot_tables/chests/settlement_skyroot_generic.json
+cdefb27addf737022507d8043cd84b5729219502 data/ancient_aether/loot_tables/chests/settlement_skyroot_generic.json
 4192505592ff4a579ac031564e2b2cf2db293f6c data/ancient_aether/loot_tables/chests/settlement_skyroot_library.json
 2f32d803aae4241aeaadc29ba7eba9cc9f9d0873 data/ancient_aether/loot_tables/chests/settlement_skyroot_shop.json
 826e68aeecc1b294494e614d29f3a7e3d3d62f1e data/ancient_aether/loot_tables/entities/aeronautic_leaper.json
