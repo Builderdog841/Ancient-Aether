@@ -12,8 +12,12 @@
                 "type": "minecraft:mul",
                 "argument1": {
                     "type": "minecraft:mul",
-                    "argument1": -0.2,
-                    "argument2": "ancient_aether:islands/elevated/terrain_shaper"
+                    "argument1": {
+                        "type": "minecraft:mul",
+                        "argument1": -0.2,
+                        "argument2": "ancient_aether:islands/elevated/terrain_shaper"
+                    },
+                    "argument2": "ancient_aether:size_factor"
                 },
                 "argument2": "ancient_aether:islands/elevated/factor_erosion"
             },
@@ -35,8 +39,12 @@
                             "type": "minecraft:mul",
                             "argument1": {
                                 "type": "minecraft:mul",
-                                "argument1": -0.2,
-                                "argument2": "ancient_aether:islands/elevated/terrain_shaper"
+                                "argument1": {
+                                    "type": "minecraft:mul",
+                                    "argument1": -0.2,
+                                    "argument2": "ancient_aether:islands/elevated/terrain_shaper"
+                                },
+                                "argument2": "ancient_aether:size_factor"
                             },
                             "argument2": "ancient_aether:islands/elevated/factor_erosion"
                         },
