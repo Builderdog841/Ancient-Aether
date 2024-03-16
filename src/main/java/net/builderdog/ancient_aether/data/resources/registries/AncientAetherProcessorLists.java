@@ -121,7 +121,7 @@ public class AncientAetherProcessorLists {
                         new ProcessorRule(new TagMatchTest(AncientAetherTags.Blocks.SENTRY_LABORATORY_BLOCKS), new BlockMatchTest(Blocks.AIR), Blocks.AIR.defaultBlockState()),
                         new ProcessorRule(new TagMatchTest(AncientAetherTags.Blocks.SENTRY_LABORATORY_BLOCKS), new BlockMatchTest(AetherBlocks.COLD_AERCLOUD.get()), AetherBlocks.COLD_AERCLOUD.get().defaultBlockState()),
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.HOLYSTONE.get(), 0.25F), AlwaysTrueTest.INSTANCE, AetherFeatureStates.ICESTONE),
-                        new ProcessorRule(new RandomBlockMatchTest(AncientAetherBlocks.FROZEN_HOLYSTONE_VASE.get(), 0.25F), AlwaysTrueTest.INSTANCE, Blocks.AIR.defaultBlockState()),
+                        new ProcessorRule(new RandomBlockMatchTest(AncientAetherBlocks.ANCIENT_FROZEN_HOLYSTONE_VASE.get(), 0.25F), AlwaysTrueTest.INSTANCE, Blocks.AIR.defaultBlockState()),
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.CARVED_STONE.get(), 0.05F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.WYND_SENTRY_STONE.get().defaultBlockState()),
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.HOLYSTONE_BRICKS.get(), 0.05F), AlwaysTrueTest.INSTANCE, AetherFeatureStates.HOLYSTONE)
                 )),
