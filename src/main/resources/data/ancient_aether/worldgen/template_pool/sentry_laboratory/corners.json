@@ -3,7 +3,7 @@
   "fallback": "minecraft:empty",
   "elements": [
     {
-      "weight": 1,
+      "weight": 5,
       "element": {
         "location": "ancient_aether:sentry_laboratory/corner",
         "processors": "ancient_aether:sentry_laboratory",
@@ -12,9 +12,36 @@
       }
     },
     {
-      "weight": 1,
+      "weight": 5,
       "element": {
         "location": "ancient_aether:sentry_laboratory/crossing",
+        "processors": "ancient_aether:sentry_laboratory",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:sentry_laboratory/shaft_01",
+        "processors": "ancient_aether:sentry_laboratory",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:sentry_laboratory/shaft_02",
+        "processors": "ancient_aether:sentry_laboratory",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:sentry_laboratory/shaft_03",
         "processors": "ancient_aether:sentry_laboratory",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
