@@ -5,7 +5,7 @@
       "ancient_aether:aether_surface_cave"
     ]
   },
-  "creature_spawn_probability": 0.05,
+  "creature_spawn_probability": 0.075,
   "downfall": 0.0,
   "effects": {
     "fog_color": 9671612,
