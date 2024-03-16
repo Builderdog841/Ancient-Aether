@@ -23,5 +23,6 @@
         "min": 1.0
       }
     }
-  ]
+  ],
+  "random_sequence": "ancient_aether:chests/armor_trims"
 }
