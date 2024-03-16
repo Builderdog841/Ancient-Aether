@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-09T14:33:06.1050764	Item Models: ancient_aether
+// 1.20.1	2024-03-16T12:00:54.2927056	Item Models: ancient_aether
 532bdb7a4f7d2a6b96d474c01c8b9e7a0d1c10b4 assets/ancient_aether/models/item/aerogel_glass.json
 87e9f8f9f807a2aa763e3057d32bacf3ee32b60f assets/ancient_aether/models/item/aerogel_glass_door.json
 d1e6ed3e334d573f31a8ce9e09885c0f43832630 assets/ancient_aether/models/item/aerogel_glass_pane.json
@@ -33,6 +33,7 @@ ed179b3ef576a4cfe5ef1282c7007bdf56c9e7a4 assets/ancient_aether/models/item/angel
 e39f295afb13b5e4ab726c96bd2a1f49a2c81eaf assets/ancient_aether/models/item/ascended_armor_trim_smithing_template.json
 bdc05003ba104ce1c4f7b30f32433d8ef7ed3125 assets/ancient_aether/models/item/atmosine_crystal.json
 d34af8d58248509acc7c0f4418c7533e7067a85c assets/ancient_aether/models/item/boss_doorway_aerogetic_stone.json
+9b4b34ef692a3bbf7d97fb8c6793422469546017 assets/ancient_aether/models/item/boss_doorway_carved_stone.json
 c99e2a6a9a9013f6f3165dcabb4ab5d32ca18363 assets/ancient_aether/models/item/boss_doorway_corrupted_aerogetic_stone.json
 021791028ccc5ffdd1672466c2a8d0f6b9c4237f assets/ancient_aether/models/item/boss_doorway_light_aerogetic_stone.json
 5a42242cd110b43412677d9aaaa3a17cd9f4bb56 assets/ancient_aether/models/item/boss_doorway_wynd_sentry_stone.json

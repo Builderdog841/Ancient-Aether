@@ -120,7 +120,7 @@ public class ItemHooks {
         if (stack.is(AetherBlocks.BOSS_DOORWAY_HELLFIRE_STONE.get().asItem()) || stack.is(AetherBlocks.BOSS_DOORWAY_LIGHT_HELLFIRE_STONE.get().asItem())) {
             components.add(position, Component.translatable("entity.aether.sun_spirit").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
         }
-        if (stack.is(AncientAetherBlocks.BOSS_DOORWAY_WYND_SENTRY_STONE.get().asItem())) {
+        if (stack.is(AncientAetherBlocks.BOSS_DOORWAY_CARVED_STONE.get().asItem()) || stack.is(AncientAetherBlocks.BOSS_DOORWAY_WYND_SENTRY_STONE.get().asItem())) {
             components.add(position, Component.translatable("entity.ancient_aether.mutated_aechor_plant").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
         }
         if (stack.is(AncientAetherBlocks.BOSS_DOORWAY_AEROGETIC_STONE.get().asItem()) || stack.is(AncientAetherBlocks.BOSS_DOORWAY_LIGHT_AEROGETIC_STONE.get().asItem()) || stack.is(AncientAetherBlocks.BOSS_DOORWAY_CORRUPTED_AEROGETIC_STONE.get().asItem())) {

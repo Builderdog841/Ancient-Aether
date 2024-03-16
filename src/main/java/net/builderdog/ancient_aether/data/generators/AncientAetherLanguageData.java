@@ -134,6 +134,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.TRAPPED_LIGHT_AEROGETIC_STONE, "Trapped Light Aerogetic Stone");
         addBlock(AncientAetherBlocks.TRAPPED_CORRUPTED_AEROGETIC_STONE, "Trapped Corrupted Aerogetic Stone");
 
+        addBlock(AncientAetherBlocks.BOSS_DOORWAY_CARVED_STONE, "Boss Doorway Carved Stone");
         addBlock(AncientAetherBlocks.BOSS_DOORWAY_WYND_SENTRY_STONE, "Boss Doorway Wynd Sentry Stone");
         addBlock(AncientAetherBlocks.BOSS_DOORWAY_AEROGETIC_STONE, "Boss Doorway Aerogetic Stone");
         addBlock(AncientAetherBlocks.BOSS_DOORWAY_LIGHT_AEROGETIC_STONE, "Boss Doorway Light Aerogetic Stone");

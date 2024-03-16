@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.data.generators;
 
+import com.aetherteam.aether.block.AetherBlocks;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.data.providers.AncientAetherItemModelProvider;
@@ -187,6 +188,7 @@ public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
         AAItemTrappedDungeonBlock(AncientAetherBlocks.TRAPPED_LIGHT_AEROGETIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get());
         AAItemTrappedDungeonBlock(AncientAetherBlocks.TRAPPED_CORRUPTED_AEROGETIC_STONE.get(), AncientAetherBlocks.CORRUPTED_AEROGETIC_STONE.get());
 
+        itemBossDoorwayDungeonBlock(AncientAetherBlocks.BOSS_DOORWAY_CARVED_STONE.get(), AetherBlocks.CARVED_STONE.get());
         AAItemBossDoorwayDungeonBlock(AncientAetherBlocks.BOSS_DOORWAY_WYND_SENTRY_STONE.get(), AncientAetherBlocks.WYND_SENTRY_STONE.get());
         AAItemBossDoorwayDungeonBlock(AncientAetherBlocks.BOSS_DOORWAY_AEROGETIC_STONE.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
         AAItemBossDoorwayDungeonBlock(AncientAetherBlocks.BOSS_DOORWAY_LIGHT_AEROGETIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get());
