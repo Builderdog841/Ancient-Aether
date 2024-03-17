@@ -49,13 +49,13 @@ public class AncientAetherConfiguredCarvers {
 
     private static ConfiguredWorldCarver<?> createGrottoCave(HolderGetter<Block> blocks) {
         CaveCarverConfiguration config = new CaveCarverConfiguration(
-                0.3F,
+                0.2F,
                 UniformHeight.of(VerticalAnchor.absolute(70), VerticalAnchor.absolute(112)),
                 UniformFloat.of(0.1F, 0.3F),
                 VerticalAnchor.aboveBottom(96),
                 blocks.getOrThrow(AncientAetherTags.Blocks.AETHER_CARVER_REPLACEABLES),
-                UniformFloat.of(2.2F, 3.0F),
-                UniformFloat.of(1.4F, 2.2F),
+                UniformFloat.of(1.5F, 3.0F),
+                UniformFloat.of(2.0F, 2.8F),
                 UniformFloat.of(-0.4F, -0.2F));
         return new ConfiguredWorldCarver<>(AncientAetherCarvers.SKYLANDS_CAVE.get(), config);
     }
