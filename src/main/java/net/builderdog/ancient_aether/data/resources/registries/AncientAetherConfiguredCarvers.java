@@ -49,8 +49,8 @@ public class AncientAetherConfiguredCarvers {
 
     private static ConfiguredWorldCarver<?> createGrottoCave(HolderGetter<Block> blocks) {
         CaveCarverConfiguration config = new CaveCarverConfiguration(
-                0.2F,
-                UniformHeight.of(VerticalAnchor.absolute(70), VerticalAnchor.absolute(112)),
+                0.1F,
+                UniformHeight.of(VerticalAnchor.absolute(80), VerticalAnchor.absolute(112)),
                 UniformFloat.of(0.1F, 0.3F),
                 VerticalAnchor.aboveBottom(96),
                 blocks.getOrThrow(AncientAetherTags.Blocks.AETHER_CARVER_REPLACEABLES),
