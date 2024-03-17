@@ -50,7 +50,7 @@ public class AncientAetherBlocks {
 
     public static final RegistryObject<Block> AETHER_QUARTZ_ORE = registerBlock("aether_quartz_ore", () -> new AetherDoubleDropsOreBlock(Block.Properties.copy(NETHER_QUARTZ_ORE), UniformInt.of(2, 5)));
     public static final RegistryObject<Block> VALKYRUM_ORE = registerBlock("valkyrum_ore", () -> new ValkyrumBlock(Block.Properties.of().strength(4.0F, 4.0F).requiresCorrectToolForDrops().mapColor(MapColor.QUARTZ)));
-    public static final RegistryObject<Block> ATMOSINE_CRYSTAL = registerBlock("atmosine_crystal", () -> new AtmosineCrystalBlock(false, BlockBehaviour.Properties.of().strength(3.0F, 3.0F).mapColor(MapColor.NONE).requiresCorrectToolForDrops().sound(SoundType.GLASS).noOcclusion().lightLevel(s -> 10)));
+    public static final RegistryObject<Block> ATMOSINE_CRYSTAL = registerBlock("atmosine_crystal", () -> new AtmosineCrystalBlock(false, BlockBehaviour.Properties.of().strength(3.0F, 3.0F).mapColor(MapColor.NONE).requiresCorrectToolForDrops().sound(SoundType.GLASS).noOcclusion().lightLevel(s -> 5)));
 
     public static final RegistryObject<Block> CRYSTAL_SKYROOT_LEAVES = registerBlock("crystal_skyroot_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(CRYSTAL_LEAVES.get())));
     public static final RegistryObject<Block> ENCHANTED_SKYROOT_LEAVES = registerBlock("enchanted_skyroot_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(SKYROOT_LEAVES.get()).mapColor(MapColor.LAPIS).isValidSpawn(AncientAetherBlocks::ocelotOrParrot).isRedstoneConductor(AncientAetherBlocks::never).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
