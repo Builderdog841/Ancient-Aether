@@ -28,7 +28,7 @@ public class AncientAetherRegion extends Region {
         Climate.Parameter tempWyndcaps = Climate.Parameter.span(-1.5F, -0.5F);
         Climate.Parameter tempSkyroot = Climate.Parameter.span(-0.5F, 0.5F);
         Climate.Parameter tempSakura = Climate.Parameter.span(0.5F, 1.5F);
-        Climate.Parameter tempAtmosine = Climate.Parameter.span(-1.5F, 0.5F);
+        //Climate.Parameter tempAtmosine = Climate.Parameter.span(-1.5F, 0.5F);
 
         Climate.Parameter erosionDefault = Climate.Parameter.span(0F, 0.5F);
         Climate.Parameter erosionElevated = Climate.Parameter.span(0.5F, 1.5F);
@@ -124,6 +124,14 @@ public class AncientAetherRegion extends Region {
                 AncientAetherBiomes.ELEVATED_CLEARING);
 
         //Caves
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, fullRange, fullRange, erosionDefault, depthUnderground, fullRange, 0),
+                AncientAetherBiomes.HOLYSTONE_CAVERNS);
+        addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, fullRange, erosionElevated, Climate.Parameter.span(0.4F, 1.5F), fullRange, 0),
+                AncientAetherBiomes.ELEVATED_CAVERNS);
+        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, fullRange, fullRange, erosionDefault, depthUnderground, fullRange, 0),
+                AncientAetherBiomes.FROZEN_CAVERNS);
+
+        /*
         addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-1.5F, 0.15F), fullRange, erosionDefault, depthUnderground, fullRange, 0),
                 AncientAetherBiomes.HOLYSTONE_CAVERNS);
         addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(-1.5F, 0.075F), fullRange, erosionElevated, Climate.Parameter.span(0.4F, 1.5F), fullRange, 0),
@@ -134,5 +142,6 @@ public class AncientAetherRegion extends Region {
                 AncientAetherBiomes.ATMOSINE_GROTTO);
         addBiome(mapper, new Climate.ParameterPoint(tempAtmosine, Climate.Parameter.span(0.075F, 1.5F), fullRange, erosionElevated, Climate.Parameter.span(0.4F, 1.5F), fullRange, 0),
                 AncientAetherBiomes.ATMOSINE_GROTTO);
+         */
     }
 }
