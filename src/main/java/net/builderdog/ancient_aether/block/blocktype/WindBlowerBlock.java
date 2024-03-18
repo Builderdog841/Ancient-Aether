@@ -78,7 +78,7 @@ public class WindBlowerBlock extends Block implements Equipable {
         Direction direction = state.getValue(FACING);
         WindBlow wind = new WindBlow(AncientAetherEntityTypes.WIND_BLOW.get(), level);
         wind.setPos(pos.getX() + 0.5, pos.getY() + 0.25, pos.getZ() + 0.5);
-        wind.shoot(direction.getStepX(), direction.getStepY(), direction.getStepZ(), 1.1F, 0.0F);
+        wind.shoot(direction.getStepX(), direction.getStepY(), direction.getStepZ(), 1.0F, 0.0F);
         level.addFreshEntity(wind);
     }
 
