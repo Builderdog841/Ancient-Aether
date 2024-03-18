@@ -1,33 +1,33 @@
 {
   "variants": {
-    "charged=false,facing=east": {
+    "facing=east,puffed=false": {
       "model": "ancient_aether:block/wind_blower",
       "y": 90
     },
-    "charged=false,facing=north": {
+    "facing=east,puffed=true": {
+      "model": "ancient_aether:block/wind_blower_puffed",
+      "y": 90
+    },
+    "facing=north,puffed=false": {
       "model": "ancient_aether:block/wind_blower"
     },
-    "charged=false,facing=south": {
+    "facing=north,puffed=true": {
+      "model": "ancient_aether:block/wind_blower_puffed"
+    },
+    "facing=south,puffed=false": {
       "model": "ancient_aether:block/wind_blower",
       "y": 180
     },
-    "charged=false,facing=west": {
+    "facing=south,puffed=true": {
+      "model": "ancient_aether:block/wind_blower_puffed",
+      "y": 180
+    },
+    "facing=west,puffed=false": {
       "model": "ancient_aether:block/wind_blower",
       "y": 270
     },
-    "charged=true,facing=east": {
-      "model": "ancient_aether:block/wind_blower_charged",
-      "y": 90
-    },
-    "charged=true,facing=north": {
-      "model": "ancient_aether:block/wind_blower_charged"
-    },
-    "charged=true,facing=south": {
-      "model": "ancient_aether:block/wind_blower_charged",
-      "y": 180
-    },
-    "charged=true,facing=west": {
-      "model": "ancient_aether:block/wind_blower_charged",
+    "facing=west,puffed=true": {
+      "model": "ancient_aether:block/wind_blower_puffed",
       "y": 270
     }
   }

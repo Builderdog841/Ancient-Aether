@@ -101,6 +101,16 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
         });
     }
 
+    public BlockModelBuilder cubePuffed(String name, ResourceLocation down, ResourceLocation up, ResourceLocation north, ResourceLocation south, ResourceLocation east, ResourceLocation west) {
+        return models().withExistingParent(name, modLoc("cube_puffed"))
+                .texture("down", down)
+                .texture("up", up)
+                .texture("north", north)
+                .texture("south", south)
+                .texture("east", east)
+                .texture("west", west);
+    }
+
     public void windBlower(Block block) {
         String blockName = name(block);
         ResourceLocation down =  extend(texture(name(block)), "_bottom");
@@ -109,20 +119,20 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
         ResourceLocation south =  extend(texture(name(block)), "_back");
         ResourceLocation east =  extend(texture(name(block)), "_side_left");
         ResourceLocation west =  extend(texture(name(block)), "_side_right");
-        ResourceLocation down_charged =  extend(texture(name(block)), "_bottom_charged");
-        ResourceLocation up_charged =  extend(texture(name(block)), "_top_charged");
-        ResourceLocation north_charged =  extend(texture(name(block)), "_front_charged");
-        ResourceLocation south_charged =  extend(texture(name(block)), "_back_charged");
-        ResourceLocation east_charged =  extend(texture(name(block)), "_side_left_charged");
-        ResourceLocation west_charged =  extend(texture(name(block)), "_side_right_charged");
+        ResourceLocation down_puffed =  extend(texture(name(block)), "_bottom_puffed");
+        ResourceLocation up_puffed =  extend(texture(name(block)), "_top_puffed");
+        ResourceLocation north_puffed =  extend(texture(name(block)), "_front_puffed");
+        ResourceLocation south_puffed =  extend(texture(name(block)), "_back_puffed");
+        ResourceLocation east_puffed =  extend(texture(name(block)), "_side_left_puffed");
+        ResourceLocation west_puffed =  extend(texture(name(block)), "_side_right_puffed");
 
         ModelFile normal = models().cube(blockName, down, up, north, south, east, west).renderType("translucent")
                 .texture("particle", extend(texture(name(block)), "_front"));
-        ModelFile charged = models().cube(blockName + "_charged", down_charged, up_charged, north_charged, south_charged, east_charged, west_charged).renderType("translucent")
-                .texture("particle", extend(texture(name(block)), "_front_charged"));
+        ModelFile charged = cubePuffed(blockName + "_puffed", down_puffed, up_puffed, north_puffed, south_puffed, east_puffed, west_puffed).renderType("translucent")
+                .texture("particle", extend(texture(name(block)), "_front_puffed"));
         getVariantBuilder(block).forAllStatesExcept((state) -> {
             Direction direction = state.getValue(WindBlowerBlock.FACING);
-            if (state.getValue(WindBlowerBlock.CHARGED))
+            if (state.getValue(WindBlowerBlock.PUFFED))
                 switch (direction) {
                     case NORTH -> {
                         return ConfiguredModel.builder().modelFile(charged).build();

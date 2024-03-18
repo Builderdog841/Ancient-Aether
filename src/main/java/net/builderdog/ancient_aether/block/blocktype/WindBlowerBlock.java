@@ -23,16 +23,16 @@ import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("deprecation")
 public class WindBlowerBlock extends Block implements Equipable {
-    public static final BooleanProperty CHARGED = AncientAetherBlockStateProperties.CHARGED;
+    public static final BooleanProperty PUFFED = AncientAetherBlockStateProperties.PUFFED;
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
     public WindBlowerBlock(Properties properties) {
         super(properties);
-        registerDefaultState(stateDefinition.any().setValue(CHARGED, false).setValue(FACING, Direction.NORTH));
+        registerDefaultState(stateDefinition.any().setValue(PUFFED, false).setValue(FACING, Direction.NORTH));
     }
 
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return defaultBlockState().setValue(CHARGED, context.getLevel().hasNeighborSignal(context.getClickedPos())).setValue(FACING, context.getHorizontalDirection().getOpposite());
+        return defaultBlockState().setValue(PUFFED, context.getLevel().hasNeighborSignal(context.getClickedPos())).setValue(FACING, context.getHorizontalDirection().getOpposite());
     }
 
     public @NotNull RenderShape getRenderShape(@NotNull BlockState state) {
@@ -47,13 +47,13 @@ public class WindBlowerBlock extends Block implements Equipable {
         return state.rotate(mirror.getRotation(state.getValue(FACING)));
     }
 
-    public void neighborChanged(@NotNull BlockState state, Level level, @NotNull BlockPos pos, @NotNull Block block, @NotNull BlockPos neighborPos, boolean bool) {
-        boolean flag = state.getValue(CHARGED);
+    public void neighborChanged(BlockState state, Level level, @NotNull BlockPos pos, @NotNull Block block, @NotNull BlockPos neighborPos, boolean bool) {
+        boolean flag = state.getValue(PUFFED);
         if (!level.isClientSide) {
             if (flag != level.hasNeighborSignal(pos)) {
                 if (flag) {
                     level.scheduleTick(pos, this, 4);
-                } else level.setBlock(pos, state.cycle(CHARGED), 2);
+                } else level.setBlock(pos, state.cycle(PUFFED), 2);
             }
             if (!flag && level.hasNeighborSignal(pos)) {
                 shoot(state, level, pos);
@@ -62,26 +62,26 @@ public class WindBlowerBlock extends Block implements Equipable {
     }
 
     @Override
-    public void onProjectileHit(@NotNull Level level, @NotNull BlockState state, @NotNull BlockHitResult hitResult, @NotNull Projectile projectile) {
+    public void onProjectileHit(@NotNull Level level, @NotNull BlockState state, BlockHitResult hitResult, Projectile projectile) {
         BlockPos pos = hitResult.getBlockPos();
-        if (projectile.getType().is(AncientAetherTags.EntityTypes.ACTIVATES_WIND_BLOWER) && !state.getValue(CHARGED)) {
+        if (projectile.getType().is(AncientAetherTags.EntityTypes.ACTIVATES_WIND_BLOWER) && !state.getValue(PUFFED)) {
             shoot(state, level, pos);
         }
     }
 
     public void tick(BlockState state, @NotNull ServerLevel level, @NotNull BlockPos pos, @NotNull RandomSource random) {
-        if (state.getValue(CHARGED) && !level.hasNeighborSignal(pos)) {
-            level.setBlock(pos, state.cycle(CHARGED), 2);
+        if (state.getValue(PUFFED) && !level.hasNeighborSignal(pos)) {
+            level.setBlock(pos, state.cycle(PUFFED), 2);
         }
     }
 
-    public void shoot(@NotNull BlockState state, Level level, @NotNull BlockPos pos) {
+    public void shoot(BlockState state, Level level, BlockPos pos) {
         Direction direction = state.getValue(FACING);
         WindBlow wind = new WindBlow(AncientAetherEntityTypes.WIND_BLOW.get(), level);
         wind.setPos(pos.getX() + 0.5, pos.getY() + 0.25, pos.getZ() + 0.5);
         wind.shoot(direction.getStepX(), direction.getStepY(), direction.getStepZ(), 1.0F, 0.0F);
         level.addFreshEntity(wind);
-        level.setBlock(pos, state.cycle(CHARGED), 2);
+        level.setBlock(pos, state.cycle(PUFFED), 2);
         level.scheduleTick(pos, this, 4);
     }
 
@@ -90,6 +90,6 @@ public class WindBlowerBlock extends Block implements Equipable {
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, CHARGED);
+        builder.add(FACING, PUFFED);
     }
 }
