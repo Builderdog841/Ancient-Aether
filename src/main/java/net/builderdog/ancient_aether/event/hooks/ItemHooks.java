@@ -98,41 +98,43 @@ public class ItemHooks {
             }
         }
 
-        if (stack.is(AetherBlocks.TRAPPED_CARVED_STONE.get().asItem()) || stack.is(AetherBlocks.TRAPPED_SENTRY_STONE.get().asItem()) || stack.is(AncientAetherBlocks.TRAPPED_CARVED_TILES.get().asItem())) {
-            components.add(position, Component.translatable("entity.aether.sentry").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
-        }
-        if (stack.is(AetherBlocks.TRAPPED_ANGELIC_STONE.get().asItem()) || stack.is(AetherBlocks.TRAPPED_LIGHT_ANGELIC_STONE.get().asItem())) {
-            components.add(position, Component.translatable("entity.aether.valkyrie").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
-        }
-        if (stack.is(AetherBlocks.TRAPPED_HELLFIRE_STONE.get().asItem()) || stack.is(AetherBlocks.TRAPPED_LIGHT_HELLFIRE_STONE.get().asItem())) {
-            components.add(position, Component.translatable("entity.aether.fire_minion").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
-        }
-        if (stack.is(AncientAetherBlocks.TRAPPED_AEROGETIC_STONE.get().asItem()) || stack.is(AncientAetherBlocks.TRAPPED_LIGHT_AEROGETIC_STONE.get().asItem()) || stack.is(AncientAetherBlocks.TRAPPED_CORRUPTED_AEROGETIC_STONE.get().asItem())) {
-            components.add(position, Component.translatable("entity.ancient_aether.aeronautic_leaper").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
-        }
-
-        if (stack.is(AetherBlocks.BOSS_DOORWAY_CARVED_STONE.get().asItem()) || stack.is(AetherBlocks.BOSS_DOORWAY_SENTRY_STONE.get().asItem())) {
-            components.add(position, Component.translatable("entity.aether.slider").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
-        }
-        if (stack.is(AetherBlocks.BOSS_DOORWAY_ANGELIC_STONE.get().asItem()) || stack.is(AetherBlocks.BOSS_DOORWAY_LIGHT_ANGELIC_STONE.get().asItem())) {
-            components.add(position, Component.translatable("entity.aether.valkyrie_queen").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
-        }
-        if (stack.is(AetherBlocks.BOSS_DOORWAY_HELLFIRE_STONE.get().asItem()) || stack.is(AetherBlocks.BOSS_DOORWAY_LIGHT_HELLFIRE_STONE.get().asItem())) {
-            components.add(position, Component.translatable("entity.aether.sun_spirit").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
-        }
-        if (stack.is(AncientAetherBlocks.BOSS_DOORWAY_CARVED_STONE.get().asItem()) || stack.is(AncientAetherBlocks.BOSS_DOORWAY_WYND_SENTRY_STONE.get().asItem())) {
-            components.add(position, Component.translatable("entity.ancient_aether.mutated_aechor_plant").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
-        }
-        if (stack.is(AncientAetherBlocks.BOSS_DOORWAY_AEROGETIC_STONE.get().asItem()) || stack.is(AncientAetherBlocks.BOSS_DOORWAY_LIGHT_AEROGETIC_STONE.get().asItem()) || stack.is(AncientAetherBlocks.BOSS_DOORWAY_CORRUPTED_AEROGETIC_STONE.get().asItem())) {
-            components.add(position, Component.literal("").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
-        }
-
-        if (ModList.get().isLoaded("lost_aether_content")) {
-            if (stack.is(LCBlocks.trapped_gale_stone.asItem()) || stack.is(LCBlocks.trapped_light_gale_stone.asItem())) {
-                components.add(position, Component.translatable("entity.aether.whirlwind").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+        if (AncientAetherConfig.CLIENT.dungeon_block_tooltips.get()) {
+            if (stack.is(AetherBlocks.TRAPPED_CARVED_STONE.get().asItem()) || stack.is(AetherBlocks.TRAPPED_SENTRY_STONE.get().asItem()) || stack.is(AncientAetherBlocks.TRAPPED_CARVED_TILES.get().asItem())) {
+                components.add(position, Component.translatable("entity.aether.sentry").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
             }
-            if (stack.is(LCBlocks.boss_doorway_gale_stone.asItem()) || stack.is(LCBlocks.boss_doorway_light_gale_stone.asItem())) {
-                components.add(position, Component.translatable("entity.lost_aether_content.aerwhale_king").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+            if (stack.is(AetherBlocks.TRAPPED_ANGELIC_STONE.get().asItem()) || stack.is(AetherBlocks.TRAPPED_LIGHT_ANGELIC_STONE.get().asItem())) {
+                components.add(position, Component.translatable("entity.aether.valkyrie").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+            }
+            if (stack.is(AetherBlocks.TRAPPED_HELLFIRE_STONE.get().asItem()) || stack.is(AetherBlocks.TRAPPED_LIGHT_HELLFIRE_STONE.get().asItem())) {
+                components.add(position, Component.translatable("entity.aether.fire_minion").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+            }
+            if (stack.is(AncientAetherBlocks.TRAPPED_AEROGETIC_STONE.get().asItem()) || stack.is(AncientAetherBlocks.TRAPPED_LIGHT_AEROGETIC_STONE.get().asItem()) || stack.is(AncientAetherBlocks.TRAPPED_CORRUPTED_AEROGETIC_STONE.get().asItem())) {
+                components.add(position, Component.translatable("entity.ancient_aether.aeronautic_leaper").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+            }
+
+            if (stack.is(AetherBlocks.BOSS_DOORWAY_CARVED_STONE.get().asItem()) || stack.is(AetherBlocks.BOSS_DOORWAY_SENTRY_STONE.get().asItem())) {
+                components.add(position, Component.translatable("entity.aether.slider").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+            }
+            if (stack.is(AetherBlocks.BOSS_DOORWAY_ANGELIC_STONE.get().asItem()) || stack.is(AetherBlocks.BOSS_DOORWAY_LIGHT_ANGELIC_STONE.get().asItem())) {
+                components.add(position, Component.translatable("entity.aether.valkyrie_queen").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+            }
+            if (stack.is(AetherBlocks.BOSS_DOORWAY_HELLFIRE_STONE.get().asItem()) || stack.is(AetherBlocks.BOSS_DOORWAY_LIGHT_HELLFIRE_STONE.get().asItem())) {
+                components.add(position, Component.translatable("entity.aether.sun_spirit").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+            }
+            if (stack.is(AncientAetherBlocks.BOSS_DOORWAY_CARVED_STONE.get().asItem()) || stack.is(AncientAetherBlocks.BOSS_DOORWAY_WYND_SENTRY_STONE.get().asItem())) {
+                components.add(position, Component.translatable("entity.ancient_aether.mutated_aechor_plant").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+            }
+            if (stack.is(AncientAetherBlocks.BOSS_DOORWAY_AEROGETIC_STONE.get().asItem()) || stack.is(AncientAetherBlocks.BOSS_DOORWAY_LIGHT_AEROGETIC_STONE.get().asItem()) || stack.is(AncientAetherBlocks.BOSS_DOORWAY_CORRUPTED_AEROGETIC_STONE.get().asItem())) {
+                components.add(position, Component.literal("").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+            }
+
+            if (ModList.get().isLoaded("lost_aether_content")) {
+                if (stack.is(LCBlocks.trapped_gale_stone.asItem()) || stack.is(LCBlocks.trapped_light_gale_stone.asItem())) {
+                    components.add(position, Component.translatable("entity.aether.whirlwind").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+                }
+                if (stack.is(LCBlocks.boss_doorway_gale_stone.asItem()) || stack.is(LCBlocks.boss_doorway_light_gale_stone.asItem())) {
+                    components.add(position, Component.translatable("entity.lost_aether_content.aerwhale_king").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
+                }
             }
         }
     }

@@ -23,6 +23,7 @@ public class AncientAetherConfig {
     public static class Client {
         public final ConfigValue<Boolean> rarity_system;
         public final ConfigValue<Boolean> moa_egg_tooltips;
+        public final ConfigValue<Boolean> dungeon_block_tooltips;
 
         public Client(ForgeConfigSpec.Builder builder) {
             builder.push("Tooltips");
@@ -36,6 +37,11 @@ public class AncientAetherConfig {
                     .comment("Displays the Moas Mid-Air Jumps and Speed as a tooltip on the egg")
                     .translation("config.ancient_aether.client.tooltips.moa_egg_tooltips")
                     .define("Moa Egg Tooltips", true);
+
+            dungeon_block_tooltips = builder
+                    .comment("Displays what mob is summoned by Trapped Dungeon Blocks as well as what boss is required to unlock Boss Doorway Blocks on the items themselves")
+                    .translation("config.ancient_aether.client.tooltips.dungeon_block_tooltips")
+                    .define("Dungeon Block Tooltips", true);
 
             builder.pop();
         }
