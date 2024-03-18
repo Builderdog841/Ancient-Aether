@@ -55,16 +55,9 @@ public class WindBlowerBlock extends Block implements Equipable {
                     level.scheduleTick(pos, this, 4);
                 } else level.setBlock(pos, state.cycle(CHARGED), 2);
             }
-        }
-        if (flag && level.hasNeighborSignal(pos)) {
-            Direction direction = state.getValue(FACING);
-            WindBlow blow = new WindBlow(AncientAetherEntityTypes.WIND_BLOW.get(), level);
-            blow.setPos(
-                    pos.getX() + 0.7D * (double) direction.getStepX(),
-                    pos.getY() + 0.7D * (double) direction.getStepY(),
-                    pos.getZ() + 0.7D * (double) direction.getStepZ());
-            blow.shoot(direction.getStepX(), direction.getStepY(), direction.getStepZ(), 1.1F, 0.0F);
-            level.addFreshEntity(blow);
+            if (!flag && level.hasNeighborSignal(pos)) {
+                shoot(state, level, pos);
+            }
         }
     }
 
@@ -79,6 +72,14 @@ public class WindBlowerBlock extends Block implements Equipable {
         if (state.getValue(CHARGED) && !level.hasNeighborSignal(pos)) {
             level.setBlock(pos, state.cycle(CHARGED), 2);
         }
+    }
+
+    public void shoot(@NotNull BlockState state, Level level, @NotNull BlockPos pos) {
+        Direction direction = state.getValue(FACING);
+        WindBlow wind = new WindBlow(AncientAetherEntityTypes.WIND_BLOW.get(), level);
+        wind.setPos(pos.getX() + 0.5, pos.getY() + 0.25, pos.getZ() + 0.5);
+        wind.shoot(direction.getStepX(), direction.getStepY(), direction.getStepZ(), 1.1F, 0.0F);
+        level.addFreshEntity(wind);
     }
 
     public @NotNull EquipmentSlot getEquipmentSlot() {
