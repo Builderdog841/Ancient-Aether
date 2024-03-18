@@ -63,8 +63,10 @@ public class WindBlowerBlock extends Block implements Equipable {
 
     @Override
     public void onProjectileHit(@NotNull Level level, @NotNull BlockState state, @NotNull BlockHitResult hitResult, @NotNull Projectile projectile) {
+        BlockPos pos = hitResult.getBlockPos();
+
         if (projectile.getType().is(AncientAetherTags.EntityTypes.ACTIVATES_WIND_BLOWER) && !state.getValue(CHARGED)) {
-            state.setValue(CHARGED, true);
+            shoot(state, level, pos);
         }
     }
 
