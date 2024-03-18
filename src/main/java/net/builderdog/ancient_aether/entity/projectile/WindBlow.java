@@ -6,6 +6,7 @@ import com.aetherteam.aether.mixin.mixins.common.accessor.PlayerAccessor;
 import com.aetherteam.aether.network.AetherPacketHandler;
 import com.aetherteam.aether.network.packet.clientbound.ZephyrSnowballHitPacket;
 import com.aetherteam.nitrogen.network.PacketRelay;
+import net.builderdog.ancient_aether.AncientAetherConfig;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
@@ -41,7 +42,7 @@ public class WindBlow extends Fireball implements ItemSupplier {
         if (!onGround()) {
             ++ticksInAir;
         }
-        if (ticksInAir > 50) {
+        if (ticksInAir > AncientAetherConfig.COMMON.wind_blow_duration.get()) {
             if (!level().isClientSide()) {
                 discard();
             }

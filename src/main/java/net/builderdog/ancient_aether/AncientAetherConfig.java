@@ -6,15 +6,24 @@ import org.apache.commons.lang3.tuple.Pair;
 
 public class AncientAetherConfig {
     public static class Common {
+        public final ConfigValue<Integer> wind_blow_duration;
         public final ConfigValue<Integer> ancient_aether_region_weight;
 
         public Common(ForgeConfigSpec.Builder builder) {
+            builder.push("Gameplay");
+
+            wind_blow_duration = builder
+                    .comment("The duration of how long Wind Blows fired by Wind Blowers last in ticks")
+                    .translation("config.ancient_aether.common.gameplay.wind_blow_duration")
+                    .define("Wind Blow Duration", 50);
+
+            builder.pop();
             builder.push("Worldgen");
 
             ancient_aether_region_weight = builder
                     .comment("The weighting of Ancient Aether Regions in the Aether")
                     .translation("config.ancient_aether.common.worldgen.ancient_aether_region_weight")
-                    .define("Ancient Aether Region Weight", 30);
+                    .define("Ancient Aether Region Weight", 20);
 
             builder.pop();
         }
