@@ -126,10 +126,8 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
         ResourceLocation east_puffed =  extend(texture(name(block)), "_side_left_puffed");
         ResourceLocation west_puffed =  extend(texture(name(block)), "_side_right_puffed");
 
-        ModelFile normal = models().cube(blockName, down, up, north, south, east, west).renderType("translucent")
-                .texture("particle", extend(texture(name(block)), "_front"));
-        ModelFile charged = cubePuffed(blockName + "_puffed", down_puffed, up_puffed, north_puffed, south_puffed, east_puffed, west_puffed).renderType("translucent")
-                .texture("particle", extend(texture(name(block)), "_front_puffed"));
+        ModelFile normal = models().cube(blockName, down, up, north, south, east, west).renderType("translucent").texture("particle", down);
+        ModelFile charged = cubePuffed(blockName + "_puffed", down_puffed, up_puffed, north_puffed, south_puffed, east_puffed, west_puffed).renderType("translucent").texture("particle", down_puffed);
         getVariantBuilder(block).forAllStatesExcept((state) -> {
             Direction direction = state.getValue(WindBlowerBlock.FACING);
             if (state.getValue(WindBlowerBlock.PUFFED))
