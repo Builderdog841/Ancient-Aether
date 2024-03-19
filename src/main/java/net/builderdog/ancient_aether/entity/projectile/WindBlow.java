@@ -75,7 +75,7 @@ public class WindBlow extends Fireball implements ItemSupplier {
     @Override
     protected void onHit(@NotNull HitResult result) {
         super.onHit(result);
-        if (ticksInAir > 2) {
+        if (ticksInAir > 1) {
             if (!level().isClientSide()) {
                 discard();
             }
