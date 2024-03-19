@@ -1,12 +1,12 @@
 {
-  "parent": "ancient_aether:valkyrum",
+  "parent": "ancient_aether:arkenzus_pickaxe_loot",
   "criteria": {
-    "valkyrum_lance": {
+    "valkyrum": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ancient_aether:valkyrum_lance"
+              "ancient_aether:valkyrum"
             ]
           }
         ]
@@ -17,21 +17,22 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.ancient_aether.valkyrum_lance.desc"
+      "translate": "advancement.ancient_aether.valkyrum.desc"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "ancient_aether:valkyrum_lance"
+      "item": "ancient_aether:valkyrum"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.ancient_aether.valkyrum_lance"
+      "translate": "advancement.ancient_aether.valkyrum"
     }
   },
   "requirements": [
     [
-      "valkyrum_lance"
+      "valkyrum"
     ]
-  ]
+  ],
+  "sends_telemetry_event": true
 }

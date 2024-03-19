@@ -183,15 +183,6 @@
                 "biome": "ancient_aether:frozen_caverns"
               }
             }
-          },
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "location": {
-                "biome": "ancient_aether:atmosine_grotto"
-              }
-            }
           }
         ]
       },

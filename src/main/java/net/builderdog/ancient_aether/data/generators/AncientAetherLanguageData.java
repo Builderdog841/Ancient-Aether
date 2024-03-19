@@ -277,28 +277,28 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
 
         addAdvancement("aether_biomes", "Aerospace Traveller");
         addAdvancement("moa_eggs", "Rainbow Omelette");
-        addAdvancement("arkenzus_pickaxe", "The Pickaxe of Gods");
+        addAdvancement("arkenzus_pickaxe_loot", "The Pickaxe of Gods");
         addAdvancement("valkyrum", "What Clouds are made of");
         addAdvancement("valkyrum_lance", "Lancin' and Dancin'");
-        addAdvancement("vampire_blade", "Bloodlust");
+        addAdvancement("vampire_blade_loot", "Bloodlust");
         addAdvancement("find_sentry_laboratory", "A White Apple a day, keeps the Cockatrice away");
         addAdvancement("slider_prototype", "Out of Order");
         addAdvancement("laboratory_dungeon", "Peace, Love and Houseplants");
-        addAdvancement("shield_accessories", "Yin and Yang");
-        addAdvancement("unlock_ancient_dungeon", "Ancient Forces");
+        addAdvancement("shield_accessory_loot", "In perfect Balance");
+        addAdvancement("obelisk", "Ancient Forces");
         addAdvancement("ancient_dungeon", "Shut-Down");
 
         addAdvancementDesc("aether_biomes", "Find all Aether biomes" + mark);
         addAdvancementDesc("moa_eggs", "Collect all the different Moa Eggs" + mark);
-        addAdvancementDesc("arkenzus_pickaxe", "Obtain the Pickaxe of Arkenzus from defeating the Valkyrie Queen. It can be used to mine Valkyrum Ore" + mark);
+        addAdvancementDesc("arkenzus_pickaxe_loot", "Obtain the Pickaxe of Arkenzus from defeating the Valkyrie Queen. It can be used to mine Valkyrum Ore" + mark);
         addAdvancementDesc("valkyrum", "Enchant some Valkyrum Ore in an Altar" + mark);
         addAdvancementDesc("valkyrum_lance", "Craft yourself a Valkyrum Lance" + mark);
-        addAdvancementDesc("vampire_blade", "Obtain the Vampire Blade from defeating the Sun Spirit" + mark);
+        addAdvancementDesc("vampire_blade_loot", "Obtain the Vampire Blade from defeating the Sun Spirit" + mark);
         addAdvancementDesc("find_sentry_laboratory", "Find the Sentry Laboratory located in the Wyndcaps" + mark);
         addAdvancementDesc("slider_prototype", "Mine a Slider Prototype with a Gravitite Pickaxe" + mark);
         addAdvancementDesc("laboratory_dungeon", "Defeat the Mutated Aechor Plant" + mark);
-        addAdvancementDesc("shield_accessories", "Obtain the Shields of Inebriation and Remediation" + mark);
-        addAdvancementDesc("unlock_ancient_dungeon", "Enter the Ancient Dungeon by activating its Obelisk using an Ancient Rune" + mark);
+        addAdvancementDesc("shield_accessory_loot", "Obtain the Shields of Inebriation and Remediation" + mark);
+        addAdvancementDesc("obelisk", "Enter the Ancient Dungeon by activating its Obelisk using an Ancient Rune" + mark);
         addAdvancementDesc("ancient_dungeon", "Defeat the Ancient Guardian" + mark);
 
         addAdvancementDesc("sakura_moa", "Find all Aether biomes" + markModified);

@@ -8,6 +8,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
+@SuppressWarnings("unused")
 public class ObeliskTrigger extends SimpleCriterionTrigger<ObeliskTrigger.Instance> {
     private static final ResourceLocation ID = new ResourceLocation(AncientAether.MODID, "obelisk_trigger");
     public static final ObeliskTrigger INSTANCE = new ObeliskTrigger();
@@ -35,6 +36,10 @@ public class ObeliskTrigger extends SimpleCriterionTrigger<ObeliskTrigger.Instan
             this.item = item;
         }
 
+        public static ObeliskTrigger.Instance activate() {
+            return new ObeliskTrigger.Instance(ContextAwarePredicate.ANY, ItemPredicate.ANY);
+        }
+
         public boolean test(ItemStack stack) {
             return item.matches(stack);
         }
@@ -42,7 +47,7 @@ public class ObeliskTrigger extends SimpleCriterionTrigger<ObeliskTrigger.Instan
         @Override
         public @NotNull JsonObject serializeToJson(@NotNull SerializationContext context) {
             JsonObject jsonObject = super.serializeToJson(context);
-            jsonObject.add("item",item.serializeToJson());
+            jsonObject.add("item", item.serializeToJson());
             return jsonObject;
         }
     }

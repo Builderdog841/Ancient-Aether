@@ -1,12 +1,12 @@
 {
-  "parent": "aether:gold_dungeon",
+  "parent": "aether:silver_dungeon",
   "criteria": {
-    "vampire_blade_loot": {
+    "arkenzus_pickaxe_loot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "aether:vampire_blade"
+              "ancient_aether:arkenzus_pickaxe"
             ]
           }
         ]
@@ -17,21 +17,23 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.ancient_aether.vampire_blade.desc"
+      "translate": "advancement.ancient_aether.arkenzus_pickaxe_loot.desc"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "aether:vampire_blade"
+      "item": "ancient_aether:arkenzus_pickaxe",
+      "nbt": "{Damage:0}"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.ancient_aether.vampire_blade"
+      "translate": "advancement.ancient_aether.arkenzus_pickaxe_loot"
     }
   },
   "requirements": [
     [
-      "vampire_blade_loot"
+      "arkenzus_pickaxe_loot"
     ]
-  ]
+  ],
+  "sends_telemetry_event": true
 }

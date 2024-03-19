@@ -26,6 +26,7 @@ public class AncientAetherClient {
             AetherConfig.COMMON.add_ruined_portal_automatically.set(true);
             AetherConfig.COMMON.add_temporary_freezing_automatically.set(true);
             CumulusConfig.CLIENT.enable_menu_list_button.set(true);
+            CumulusConfig.CLIENT.active_menu.set("ancient_aether");
             AeroBlenderConfig.COMMON.vanillaAetherRegionWeight.set(0);
         });
     }
