@@ -371,6 +371,13 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
 
         addMenuTitle("ancient_aether", "Ancient Aether");
 
+        addCommonConfig("gameplay", "wind_blow_duration", "The duration of how long Wind Blows fired by Wind Blowers last in ticks");
+        addCommonConfig("worldgen", "ancient_aether_region_weight", "The weighting of Ancient Aether Regions in the Aether");
+
+        addClientConfig("tooltip", "rarity_system", "Gives Aether Dungeon Loot a certain rarity in form of a tooltip");
+        addClientConfig("tooltip", "moa_egg_tooltips", "Displays the Moas Mid-Air Jumps and Speed as a tooltip on the egg");
+        addClientConfig("tooltip", "dungeon_block_tooltips", "Displays what mob is summoned by Trapped Dungeon Blocks as well as what boss is required to unlock Boss Doorway Blocks on the items themselves");
+
         add("item.minecraft.quartz", "Quartz");
 
         addLore(AncientAetherBlocks.GRAVITY_GRAVEL, "Stepping on this block increases your jump height. It spawns on the coasts of Elevated Islands and doesn't fall unlike its Overworld counterpart.");

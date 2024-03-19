@@ -52,7 +52,6 @@ public class WindBlow extends Fireball implements ItemSupplier {
             if (hitResult.getType() != HitResult.Type.MISS && !ForgeEventFactory.onProjectileImpact(this, hitResult)) {
                 onHit(hitResult);
             }
-
             checkInsideBlocks();
             Vec3 vec3 = getDeltaMovement();
             double d0 = getX() + vec3.x();
@@ -73,8 +72,8 @@ public class WindBlow extends Fireball implements ItemSupplier {
     }
 
     @Override
-    protected void onHit(@NotNull HitResult result) {
-        super.onHit(result);
+    protected void onHit(@NotNull HitResult hitResult) {
+        super.onHit(hitResult);
         if (ticksInAir > 1) {
             if (!level().isClientSide()) {
                 discard();
@@ -83,8 +82,8 @@ public class WindBlow extends Fireball implements ItemSupplier {
     }
 
     @Override
-    protected void onHitEntity(EntityHitResult result) {
-        Entity entity = result.getEntity();
+    protected void onHitEntity(EntityHitResult hitResult) {
+        Entity entity = hitResult.getEntity();
         if (entity instanceof LivingEntity livingEntity && !EquipmentUtil.hasSentryBoots(livingEntity)) {
             if (livingEntity instanceof Player player && player.isBlocking()) {
                 PlayerAccessor playerAccessor = (PlayerAccessor) player;
