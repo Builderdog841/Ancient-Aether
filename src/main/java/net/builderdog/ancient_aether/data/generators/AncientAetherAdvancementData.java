@@ -133,8 +133,6 @@ public class AncientAetherAdvancementData extends ForgeAdvancementProvider {
                     .addCriterion("vampire_blade_loot", InventoryChangeTrigger.TriggerInstance.hasItems(AetherItems.VAMPIRE_BLADE.get()))
                     .save(consumer, new ResourceLocation(AncientAether.MODID, "vampire_blade_loot"), existingFileHelper);
 
-
-
             Advancement.Builder.advancement()
                     .parent(vampireBlade)
                     .display(AncientAetherItems.ANCIENT_RUNE.get(),
@@ -144,8 +142,6 @@ public class AncientAetherAdvancementData extends ForgeAdvancementProvider {
                             FrameType.TASK, true, true, false)
                     .addCriterion("obelisk", ObeliskTrigger.Instance.activate())
                     .save(consumer, new ResourceLocation(AncientAether.MODID, "obelisk"), existingFileHelper);
-
-
 
             /*
             [Unimplemented]
