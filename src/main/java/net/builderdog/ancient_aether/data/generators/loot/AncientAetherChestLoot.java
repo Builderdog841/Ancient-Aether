@@ -291,6 +291,7 @@ public class AncientAetherChestLoot implements LootTableSubProvider {
                         .add(LootItem.lootTableItem(AetherItems.GRAVITITE_HOE.get()).setWeight(2))
                         .add(LootItem.lootTableItem(AetherBlocks.ENCHANTED_GRAVITITE.get()).setWeight(2).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F))))
                         .add(LootItem.lootTableItem(AetherBlocks.PRESENT.get()).setWeight(2).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F))))
+                        .add(LootItem.lootTableItem(AncientAetherItems.ANCIENT_RUNE.get()).setWeight(2))
                         .add(LootTableReference.lootTableReference(AncientAetherLoot.CHESTS_DUNGEON_ARMOR_TRIMS))
                         .add(LootItem.lootTableItem(AetherItems.ZANITE_HELMET.get()))
                         .add(LootItem.lootTableItem(AetherItems.ZANITE_CHESTPLATE.get()))
