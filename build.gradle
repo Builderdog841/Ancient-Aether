@@ -5,6 +5,9 @@ plugins {
     id 'net.neoforged.gradle' version '[6.0.13, 6.2)'
     id 'io.github.0ffz.github-packages' version '[1,2)'
     id 'org.spongepowered.mixin' version '[0.7,0.8)'
+    id 'org.parchmentmc.librarian.forgegradle' version '1.2.0'
+    id 'org.moddingx.modgradle.mapping' version '4.0.4'
+    id 'org.moddingx.modgradle.sourcejar' version '4.0.4' apply false
 }
 
 version = '0.9.0'
@@ -15,7 +18,7 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 minecraft {
-    mappings channel: 'official', version: mc_version
+    mappings channel: 'sugarcane', version: project.mappings
 
     accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
@@ -132,7 +135,7 @@ dependencies {
     implementation(jarJar("io.github.llamalad7:mixinextras-forge:${project.mixinextras_version}")) {
         jarJar.ranged(it, "[0.3.5,)")
     }
-    
+
     compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:${project.curios_version}:api")
     compileOnly fg.deobf("local:aether_genesis:1.20.1-0.0.1-neoforge")
     compileOnly fg.deobf("curse.maven:deep-aether-852465:5076616")
