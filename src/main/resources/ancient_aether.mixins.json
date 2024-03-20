@@ -6,8 +6,8 @@
   "refmap": "ancient_aether.refmap.json",
   "mixins": [
     "AetherGrassBlockMixin",
+    "BlockMixin",
     "SliderMixin",
-    "accessor.RegistrySetBuilderAccessor",
     "compat.DARegionMixin",
     "compat.GenesisRegionMixin",
     "compat.ReduxRegionMixin"

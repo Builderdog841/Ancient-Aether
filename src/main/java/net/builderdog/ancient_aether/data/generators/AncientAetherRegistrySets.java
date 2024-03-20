@@ -7,25 +7,18 @@ import net.builderdog.ancient_aether.data.resources.registries.AncientAetherNois
 import net.builderdog.ancient_aether.data.resources.registries.AncientAetherProcessorLists;
 import net.builderdog.ancient_aether.data.resources.registries.features.AncientAetherFeatureUtils;
 import net.builderdog.ancient_aether.data.resources.registries.placement.AncientAetherPlacementUtils;
-import net.builderdog.ancient_aether.mixin.accessor.RegistrySetBuilderAccessor;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.Registry;
-import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceKey;
 import net.minecraftforge.common.data.DatapackBuiltinEntriesProvider;
 import net.minecraftforge.registries.ForgeRegistries;
-import org.jetbrains.annotations.NotNull;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
-import java.util.stream.Stream;
 
 public class AncientAetherRegistrySets extends DatapackBuiltinEntriesProvider {
+    
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
             .add(Registries.CONFIGURED_FEATURE, AncientAetherFeatureUtils::bootstrap)
             .add(Registries.PLACED_FEATURE, AncientAetherPlacementUtils::bootstrap)
