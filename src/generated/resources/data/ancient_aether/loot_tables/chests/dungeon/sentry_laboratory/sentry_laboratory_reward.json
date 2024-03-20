@@ -82,6 +82,11 @@
           "weight": 2
         },
         {
+          "type": "minecraft:item",
+          "name": "ancient_aether:ancient_rune",
+          "weight": 2
+        },
+        {
           "type": "minecraft:loot_table",
           "name": "ancient_aether:chests/dungeon/armor_trims"
         },

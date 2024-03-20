@@ -1,16 +1,11 @@
 package net.builderdog.ancient_aether.data.generators;
 
 import com.aetherteam.aether.Aether;
-import com.aetherteam.aether.item.AetherItems;
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.advancement.ObeliskTrigger;
-import net.builderdog.ancient_aether.block.AncientAetherBlocks;
-import net.builderdog.ancient_aether.data.resources.registries.AncientAetherStructures;
-import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.FrameType;
-import net.minecraft.advancements.critereon.*;
+import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.network.chat.Component;
@@ -32,6 +27,7 @@ public class AncientAetherAdvancementData extends ForgeAdvancementProvider {
 
         @Override
         public void generate(HolderLookup.@NotNull Provider provider, @NotNull Consumer<Advancement> consumer, @NotNull ExistingFileHelper existingFileHelper) {
+            /*
             Advancement.Builder.advancement()
                     .parent(new ResourceLocation(Aether.MODID, "obtain_egg"))
                     .display(AncientAetherItems.SAKURA_MOA_EGG.get(),
@@ -50,6 +46,7 @@ public class AncientAetherAdvancementData extends ForgeAdvancementProvider {
                     .addCriterion("burgundy_moa_egg", InventoryChangeTrigger.TriggerInstance.hasItems(AncientAetherItems.BURGUNDY_MOA_EGG.get()))
                     .addCriterion("black_moa_egg", InventoryChangeTrigger.TriggerInstance.hasItems(AetherItems.BLACK_MOA_EGG.get()))
                     .save(consumer, new ResourceLocation(AncientAether.MODID, "moa_eggs"), existingFileHelper);
+             */
 
             Advancement arkenzusPickaxeLoot = Advancement.Builder.advancement()
                     .parent(new ResourceLocation(Aether.MODID, "silver_dungeon"))
@@ -81,6 +78,7 @@ public class AncientAetherAdvancementData extends ForgeAdvancementProvider {
                     .addCriterion("valkyrum_lance", InventoryChangeTrigger.TriggerInstance.hasItems(AncientAetherItems.VALKYRUM_LANCE.get()))
                     .save(consumer, new ResourceLocation(AncientAether.MODID, "valkyrum_lance"), existingFileHelper);
 
+            /*
             Advancement findSentryLaboratory = Advancement.Builder.advancement()
                     .parent(new ResourceLocation(Aether.MODID, "bronze_dungeon"))
                     .display(AncientAetherItems.LABORATORY_DUNGEON_KEY.get(),
@@ -142,7 +140,7 @@ public class AncientAetherAdvancementData extends ForgeAdvancementProvider {
                             FrameType.TASK, true, true, false)
                     .addCriterion("obelisk", ObeliskTrigger.Instance.activate())
                     .save(consumer, new ResourceLocation(AncientAether.MODID, "obelisk"), existingFileHelper);
-
+             */
             /*
             [Unimplemented]
             Advancement ancientDungeon = Advancement.Builder.advancement()

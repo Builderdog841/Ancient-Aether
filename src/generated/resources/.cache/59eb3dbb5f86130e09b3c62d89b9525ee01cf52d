@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-16T22:57:11.2705607	Loot Tables
+// 1.20.1	2024-03-20T18:39:19.2746597	Loot Tables
 095a70e341d19e7b3548ddc32402abe48a79992a data/ancient_aether/loot_tables/blocks/aerogel_glass.json
 9fe2ea21af5246ad9f95848f680099717062eb1c data/ancient_aether/loot_tables/blocks/aerogel_glass_door.json
 0f84d5b4591633acc6c8dcc82b7c14988b545a9f data/ancient_aether/loot_tables/blocks/aerogel_glass_pane.json
@@ -123,7 +123,7 @@ a595312b35acfd12f99730e567befb407db3c784 data/ancient_aether/loot_tables/chests/
 cb61b6f3a8987790257211d4692787b8be76c208 data/ancient_aether/loot_tables/chests/dungeon/sentry_laboratory/sentry_laboratory.json
 7588c51ffd75a7b272ab418cb23d9d519dc62b79 data/ancient_aether/loot_tables/chests/dungeon/sentry_laboratory/sentry_laboratory_loot.json
 14db905fc08ff3c52ff84cfe313a49fe43ecf84f data/ancient_aether/loot_tables/chests/dungeon/sentry_laboratory/sentry_laboratory_miscellaneous.json
-52a4b98283c7421c251033844ee01d9172ab2c5c data/ancient_aether/loot_tables/chests/dungeon/sentry_laboratory/sentry_laboratory_reward.json
+4a2ef6820e3b833247ce79ac598d34d85b46d0c5 data/ancient_aether/loot_tables/chests/dungeon/sentry_laboratory/sentry_laboratory_reward.json
 2657557e0792afeef35af4dc2463b33a4b9bd2aa data/ancient_aether/loot_tables/chests/dungeon/sentry_laboratory/sentry_laboratory_supplies.json
 7c300abed470775e0b3e7206ae6c7ce6dc5a5c70 data/ancient_aether/loot_tables/chests/settlement_secret.json
 cdefb27addf737022507d8043cd84b5729219502 data/ancient_aether/loot_tables/chests/settlement_skyroot_generic.json
