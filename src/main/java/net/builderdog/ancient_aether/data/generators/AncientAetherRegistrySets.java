@@ -8,7 +8,9 @@ import net.builderdog.ancient_aether.data.resources.registries.AncientAetherProc
 import net.builderdog.ancient_aether.data.resources.registries.features.AncientAetherFeatureUtils;
 import net.builderdog.ancient_aether.data.resources.registries.placement.AncientAetherPlacementUtils;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.RegistrySetBuilder;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.DatapackBuiltinEntriesProvider;
@@ -18,7 +20,7 @@ import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 public class AncientAetherRegistrySets extends DatapackBuiltinEntriesProvider {
-    
+
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
             .add(Registries.CONFIGURED_FEATURE, AncientAetherFeatureUtils::bootstrap)
             .add(Registries.PLACED_FEATURE, AncientAetherPlacementUtils::bootstrap)
@@ -29,5 +31,8 @@ public class AncientAetherRegistrySets extends DatapackBuiltinEntriesProvider {
 
     public AncientAetherRegistrySets(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(AncientAether.MODID));
+    }
+    public static HolderLookup.Provider patchLookup(HolderLookup.Provider lookup) {
+        return BUILDER.buildPatch(RegistryAccess.fromRegistryOfRegistries(BuiltInRegistries.REGISTRY), lookup);
     }
 }
