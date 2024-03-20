@@ -32,7 +32,4 @@ public class AncientAetherRegistrySets extends DatapackBuiltinEntriesProvider {
     public AncientAetherRegistrySets(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(AncientAether.MODID));
     }
-    public static HolderLookup.Provider patchLookup(HolderLookup.Provider lookup) {
-        return BUILDER.buildPatch(RegistryAccess.fromRegistryOfRegistries(BuiltInRegistries.REGISTRY), lookup);
-    }
 }
