@@ -1,3 +1,4 @@
+import net.minecraftforge.gradle.userdev.tasks.JarJar
 
 plugins {
     id 'eclipse'
@@ -166,6 +167,14 @@ jar {
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
+
+    finalizedBy 'reobfJar'
+
+    archiveClassifier = 'no-embeds'
+}
+
+tasks.named('jarJar', JarJar).configure {
+    archiveClassifier = ''
 }
 
 mixin {
