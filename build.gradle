@@ -97,6 +97,7 @@ repositories {
     maven githubPackage.invoke("The-Aether-Team/Nitrogen")
     maven githubPackage.invoke("The-Aether-Team/Cumulus")
 
+    maven { url = "https://jitpack.io" }
     maven { url = "https://maven.theillusivec4.top/" }
     maven { url = 'https://maven.minecraftforge.net/' }
     maven {
@@ -127,6 +128,11 @@ dependencies {
     //implementation fg.deobf("curse.maven:aether-emissivity-916028:4765812")
     //implementation fg.deobf("curse.maven:panorama-440465:4633630")
 
+    compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:${project.mixinextras_version}"))
+    implementation(jarJar("io.github.llamalad7:mixinextras-forge:${project.mixinextras_version}")) {
+        jarJar.ranged(it, "[0.3.5,)")
+    }
+    
     compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:${project.curios_version}:api")
     compileOnly fg.deobf("local:aether_genesis:1.20.1-0.0.1-neoforge")
     compileOnly fg.deobf("curse.maven:deep-aether-852465:5076616")
