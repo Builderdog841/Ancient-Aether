@@ -79,7 +79,7 @@ public class AncientAetherChestLoot implements LootTableSubProvider {
         );
 
         builder.accept(AncientAetherLoot.CHESTS_SETTLEMENT_SKYROOT_GENERIC, LootTable.lootTable()
-                .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(6.0F, 12.0F))
+                .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(6.0F, 9.0F))
                         .add(LootItem.lootTableItem(AetherItems.BLUE_BERRY.get()).setWeight(3).apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0F, 6.0F))))
                         .add(LootItem.lootTableItem(AncientAetherItems.GRAPES.get()).setWeight(3).apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0F, 6.0F))))
                         .add(LootItem.lootTableItem(Items.LEATHER).setWeight(3).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F))))
@@ -177,6 +177,80 @@ public class AncientAetherChestLoot implements LootTableSubProvider {
                         .add(LootItem.lootTableItem(AncientAetherItems.BURGUNDY_MOA_EGG.get()).setWeight(2))
                         .add(LootItem.lootTableItem(AncientAetherItems.SAKURA_MOA_EGG.get()))
                         .add(LootItem.lootTableItem(AncientAetherItems.VIOLET_MOA_EGG.get()))
+                )
+        );
+
+        /*
+        builder.accept(AncientAetherLoot.CHESTS_DUNGEON_BRONZE_DUNGEON, LootTable.lootTable()
+                .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0F, 1.0F))
+                        .add(LootTableReference.lootTableReference(AncientAetherLoot.CHESTS_DUNGEON_BRONZE_DUNGEON_LOOT).setWeight(6))
+                        .add(LootTableReference.lootTableReference(AncientAetherLoot.CHESTS_DUNGEON_BRONZE_DUNGEON_SUPPLIES).setWeight(2))
+                        .add(LootTableReference.lootTableReference(AncientAetherLoot.CHESTS_DUNGEON_BRONZE_DUNGEON_MISCELLANEOUS).setWeight(2))
+                )
+        );
+
+        builder.accept(AncientAetherLoot.CHESTS_DUNGEON_BRONZE_DUNGEON_LOOT, LootTable.lootTable()
+                .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0F, 1.0F))
+                )
+        );
+
+        builder.accept(AncientAetherLoot.CHESTS_DUNGEON_BRONZE_DUNGEON_SUPPLIES, LootTable.lootTable()
+                .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0F, 1.0F))
+                )
+        );
+
+        builder.accept(AncientAetherLoot.CHESTS_DUNGEON_BRONZE_DUNGEON_MISCELLANEOUS, LootTable.lootTable()
+                .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0F, 1.0F))
+                )
+        );
+
+        builder.accept(AncientAetherLoot.CHESTS_DUNGEON_BRONZE_DUNGEON_LIBRARY, LootTable.lootTable()
+                .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0F, 1.0F))
+                )
+        );
+         */
+
+        builder.accept(AncientAetherLoot.CHESTS_DUNGEON_BRONZE_DUNGEON_REWARD, LootTable.lootTable()
+                .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(5.0F, 9.0F))
+                        .add(LootItem.lootTableItem(AetherItems.FLAMING_SWORD.get()).setWeight(5))
+                        .add(LootItem.lootTableItem(AetherItems.PHOENIX_BOW.get()).setWeight(5))
+                        .add(LootItem.lootTableItem(AetherItems.CLOUD_STAFF.get()).setWeight(5))
+                        .add(LootItem.lootTableItem(AetherItems.LIGHTNING_KNIFE.get()).setWeight(4).apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 5.0F))))
+                        .add(LootItem.lootTableItem(AetherItems.AGILITY_CAPE.get()).setWeight(3))
+                        .add(LootItem.lootTableItem(AetherItems.SWET_CAPE.get()).setWeight(3))
+                        .add(LootItem.lootTableItem(AncientAetherItems.MOSAIC_ARMOR_TRIM_SMITHING_TEMPLATE.get()).setWeight(3))
+                        .add(LootItem.lootTableItem(AncientAetherItems.HERMES_RING.get()).setWeight(3))
+                        .add(LootItem.lootTableItem(AncientAetherItems.HERMES_PENDANT.get()).setWeight(3))
+                        .add(LootItem.lootTableItem(AetherItems.MUSIC_DISC_AETHER_TUNE.get()).setWeight(2))
+                        .add(LootItem.lootTableItem(AncientAetherItems.MECHANICAL_ARMOR_TRIM_SMITHING_TEMPLATE.get()))
+                        .add(LootTableReference.lootTableReference(AncientAetherLoot.CHESTS_DUNGEON_MOA_EGGS_COMMON))
+                        .add(LootItem.lootTableItem(AetherItems.GRAVITITE_PICKAXE.get()))
+                )
+                .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0F, 1.0F))
+                        .add(LootItem.lootTableItem(AetherItems.SHIELD_OF_REPULSION.get()))
+                        .add(LootItem.lootTableItem(AetherItems.HAMMER_OF_KINGBDOGZ.get()))
+                        .add(LootItem.lootTableItem(AetherItems.SENTRY_BOOTS.get()))
+                )
+                .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0F, 3.0F))
+                        .add(LootItem.lootTableItem(AetherItems.NEPTUNE_HELMET.get()).setWeight(3))
+                        .add(LootItem.lootTableItem(AetherItems.NEPTUNE_BOOTS.get()).setWeight(3))
+                        .add(LootItem.lootTableItem(AetherItems.NEPTUNE_GLOVES.get()).setWeight(3))
+                        .add(LootItem.lootTableItem(AetherItems.NEPTUNE_CHESTPLATE.get()).setWeight(2))
+                        .add(LootItem.lootTableItem(AetherItems.NEPTUNE_LEGGINGS.get()).setWeight(2))
+                )
+                .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0F, 3.0F))
+                        .add(LootItem.lootTableItem(AetherItems.ZANITE_GEMSTONE.get()).setWeight(2).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F))))
+                        .add(LootItem.lootTableItem(AetherItems.ZANITE_HELMET.get()))
+                        .add(LootItem.lootTableItem(AetherItems.ZANITE_CHESTPLATE.get()))
+                        .add(LootItem.lootTableItem(AetherItems.ZANITE_LEGGINGS.get()))
+                        .add(LootItem.lootTableItem(AetherItems.ZANITE_BOOTS.get()))
+                        .add(LootItem.lootTableItem(AetherItems.ZANITE_GLOVES.get()))
+                )
+                .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(3.0F, 6.0F))
+                        .add(LootItem.lootTableItem(AetherItems.BLUE_GUMMY_SWET.get()).setWeight(5).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 3.0F))))
+                        .add(LootItem.lootTableItem(AetherBlocks.AEROGEL.get()).setWeight(3))
+                        .add(LootItem.lootTableItem(AetherItems.GOLDEN_DART.get()).setWeight(2).apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0F, 6.0F))))
+                        .add(LootItem.lootTableItem(Items.ARROW).setWeight(2).apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0F, 6.0F))))
                 )
         );
 
@@ -280,10 +354,8 @@ public class AncientAetherChestLoot implements LootTableSubProvider {
 
         builder.accept(AncientAetherLoot.CHESTS_DUNGEON_SENTRY_LABORATORY_REWARD, LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(6.0F, 9.0F))
-                        .add(LootItem.lootTableItem(AncientAetherItems.HERMES_RING.get()).setWeight(4))
+                        .add(LootItem.lootTableItem(AncientAetherItems.HERMES_RING.get()).setWeight(3))
                         .add(LootItem.lootTableItem(AncientAetherItems.HERMES_PENDANT.get()).setWeight(3))
-                        .add(LootItem.lootTableItem(AncientAetherItems.ARKENIUM_RING.get()).setWeight(3))
-                        .add(LootItem.lootTableItem(AncientAetherItems.ARKENIUM_PENDANT.get()).setWeight(2))
                         .add(LootItem.lootTableItem(AetherItems.CLOUD_STAFF.get()).setWeight(3))
                         .add(LootItem.lootTableItem(AetherItems.CANDY_CANE_SWORD.get()).setWeight(3))
                         .add(LootItem.lootTableItem(AncientAetherItems.MECHANICAL_ARMOR_TRIM_SMITHING_TEMPLATE.get()).setWeight(3))
@@ -292,6 +364,8 @@ public class AncientAetherChestLoot implements LootTableSubProvider {
                         .add(LootItem.lootTableItem(AetherBlocks.ENCHANTED_GRAVITITE.get()).setWeight(2).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F))))
                         .add(LootItem.lootTableItem(AetherBlocks.PRESENT.get()).setWeight(2).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F))))
                         .add(LootItem.lootTableItem(AncientAetherItems.ANCIENT_RUNE.get()).setWeight(2))
+                        .add(LootItem.lootTableItem(AncientAetherItems.ARKENIUM_RING.get()).setWeight(2))
+                        .add(LootItem.lootTableItem(AncientAetherItems.ARKENIUM_PENDANT.get()).setWeight(2))
                         .add(LootTableReference.lootTableReference(AncientAetherLoot.CHESTS_DUNGEON_ARMOR_TRIMS))
                         .add(LootItem.lootTableItem(AetherItems.ZANITE_HELMET.get()))
                         .add(LootItem.lootTableItem(AetherItems.ZANITE_CHESTPLATE.get()))

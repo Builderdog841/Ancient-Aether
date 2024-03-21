@@ -6,35 +6,38 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 4.0,
-                "min": 2.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
-          "name": "aether:ambrosium_shard",
-          "weight": 4
+          "name": "ancient_aether:hermes_ring",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 3.0,
-                "min": 1.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
-          "name": "aether:icestone",
+          "name": "ancient_aether:hermes_pendant",
           "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:cloud_staff",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:candy_cane_sword",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:mechanical_armor_trim_smithing_template",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "ancient_aether:chests/dungeon/moa_eggs_common",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:gravitite_hoe",
+          "weight": 2
         },
         {
           "type": "minecraft:item",
@@ -49,7 +52,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "aether:zanite_gemstone",
+          "name": "aether:enchanted_gravitite",
           "weight": 2
         },
         {
@@ -59,101 +62,28 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 6.0,
-                "min": 3.0
+                "max": 2.0,
+                "min": 1.0
               },
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:quartz"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:aerogel"
-        }
-      ],
-      "rolls": {
-        "type": "minecraft:uniform",
-        "max": 4.0,
-        "min": 2.0
-      }
-    },
-    {
-      "bonus_rolls": 0.0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "aether:zanite_hoe",
-          "weight": 10
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:zanite_sword",
-          "weight": 8
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:zanite_shovel",
-          "weight": 6
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:zanite_axe",
-          "weight": 6
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:zanite_pickaxe",
-          "weight": 5
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:zanite_gloves",
-          "weight": 5
-        },
-        {
-          "type": "minecraft:loot_table",
-          "name": "ancient_aether:chests/dungeon/moa_eggs_common",
-          "weight": 4
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:nature_staff",
-          "weight": 3
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:zanite_helmet",
-          "weight": 3
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:zanite_boots",
-          "weight": 3
-        },
-        {
-          "type": "minecraft:item",
-          "name": "ancient_aether:mechanical_armor_trim_smithing_template",
+          "name": "aether:present",
           "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "aether:zanite_chestplate",
+          "name": "ancient_aether:ancient_rune",
           "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "aether:zanite_leggings",
+          "name": "ancient_aether:arkenium_ring",
           "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "aether:ice_ring",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:ice_pendant",
+          "name": "ancient_aether:arkenium_pendant",
           "weight": 2
         },
         {
@@ -162,16 +92,62 @@
         },
         {
           "type": "minecraft:item",
-          "name": "aether:gravitite_hoe"
+          "name": "aether:zanite_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_boots"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_gloves"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:ice_ring"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:ice_pendant"
         },
         {
           "type": "minecraft:item",
           "name": "aether:poison_dart_shooter"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:music_disc_aether_tune"
         }
       ],
       "rolls": {
         "type": "minecraft:uniform",
-        "max": 2.0,
+        "max": 9.0,
+        "min": 6.0
+      }
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:shield_of_inebriation"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:shield_of_remediation"
+        }
+      ],
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 1.0,
         "min": 1.0
       }
     },
@@ -185,13 +161,13 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 6.0,
-                "min": 3.0
+                "max": 4.0,
+                "min": 2.0
               },
               "function": "minecraft:set_count"
             }
           ],
-          "name": "aether:ambrosium_torch",
+          "name": "ancient_aether:festive_gummy_swet",
           "weight": 4
         },
         {
@@ -201,14 +177,28 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 3.0,
-                "min": 2.0
+                "max": 6.0,
+                "min": 3.0
               },
               "function": "minecraft:set_count"
             }
           ],
-          "name": "aether:enchanted_berry",
-          "weight": 3
+          "name": "aether:enchanted_berry"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 6.0,
+                "min": 3.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "aether:gingerbread_man"
         },
         {
           "type": "minecraft:item",
@@ -223,8 +213,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "aether:poison_dart",
-          "weight": 2
+          "name": "aether:candy_cane"
         },
         {
           "type": "minecraft:item",
@@ -233,26 +222,36 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 2.0,
-                "min": 1.0
+                "max": 5.0,
+                "min": 2.0
               },
               "function": "minecraft:set_count"
             }
           ],
-          "name": "aether:healing_stone",
-          "weight": 2
+          "name": "aether:healing_stone"
         },
         {
           "type": "minecraft:item",
-          "name": "aether:skyroot_bucket"
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 4.0,
+                "min": 2.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "aether:white_apple"
         }
       ],
       "rolls": {
         "type": "minecraft:uniform",
         "max": 3.0,
-        "min": 1.0
+        "min": 2.0
       }
     }
   ],
-  "random_sequence": "ancient_aether:chests/dungeon/sentry_laboratory/sentry_laboratory_loot"
+  "random_sequence": "ancient_aether:chests/dungeon/laboratory/sentry_laboratory_reward"
 }

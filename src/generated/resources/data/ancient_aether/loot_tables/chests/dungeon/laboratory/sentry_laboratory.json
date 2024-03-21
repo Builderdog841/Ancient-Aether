@@ -6,17 +6,17 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "ancient_aether:chests/dungeon/sentry_laboratory/sentry_laboratory_loot",
+          "name": "ancient_aether:chests/dungeon/laboratory/sentry_laboratory_loot",
           "weight": 6
         },
         {
           "type": "minecraft:loot_table",
-          "name": "ancient_aether:chests/dungeon/sentry_laboratory/sentry_laboratory_supplies",
+          "name": "ancient_aether:chests/dungeon/laboratory/sentry_laboratory_supplies",
           "weight": 2
         },
         {
           "type": "minecraft:loot_table",
-          "name": "ancient_aether:chests/dungeon/sentry_laboratory/sentry_laboratory_miscellaneous",
+          "name": "ancient_aether:chests/dungeon/laboratory/sentry_laboratory_miscellaneous",
           "weight": 2
         }
       ],
@@ -27,5 +27,5 @@
       }
     }
   ],
-  "random_sequence": "ancient_aether:chests/dungeon/sentry_laboratory/sentry_laboratory"
+  "random_sequence": "ancient_aether:chests/dungeon/laboratory/sentry_laboratory"
 }
