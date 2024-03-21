@@ -8,17 +8,37 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.TallGrassBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.List;
 
 public class SkyGrassBlock extends TallGrassBlock {
     public static final IntegerProperty LENGTH = AncientAetherBlockStateProperties.LENGTH;
     public static final EnumProperty<AetherGrassType> TYPE = AncientAetherBlockStateProperties.TYPE;
+
+    public static final List<VoxelShape> SHAPES = List.of(
+            Block.box(2.0D, 0.0D, 2.0D, 14.0D, 4.0D, 14.0D),
+            Block.box(2.0D, 0.0D, 2.0D, 14.0D, 8.0D, 14.0D),
+            Block.box(2.0D, 0.0D, 2.0D, 14.0D, 11.0D, 14.0D),
+            Block.box(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D),
+            Block.box(2.0D, 0.0D, 2.0D, 14.0D, 15.0D, 14.0D)
+    );
+
+    @Override
+    @NotNull
+    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+        // If this has out of bounds errors try removing the '- 1'
+        return SHAPES.get(state.getValue(AncientAetherBlockStateProperties.LENGTH) - 1);
+    }
 
     public SkyGrassBlock(Properties properties) {
         super(properties);
