@@ -25,7 +25,7 @@ import java.util.function.Consumer;
 
 public class AncientAetherAdvancementData extends ForgeAdvancementProvider {
     public AncientAetherAdvancementData(PackOutput output, CompletableFuture<HolderLookup.Provider> registries, ExistingFileHelper helper) {
-        super(output, registries.thenApply(AncientAetherRegistrySets::patchLookup), helper, List.of(new AncientAetherAdvancements()));
+        super(output, registries, helper, List.of(new AncientAetherAdvancements()));
     }
 
     public static class AncientAetherAdvancements implements AdvancementGenerator {
