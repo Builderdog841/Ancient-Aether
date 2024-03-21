@@ -80,7 +80,7 @@ minecraft {
             property "mixin.env.remapRefMap", "true"
             property "mixin.env.refMapRemappingFile", "${projectDir}/build/createSrgToMcp/output.srg"
 
-            args '--mod', 'ancient_aether', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'ancient_aether', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/'), '--existing-mod', 'aether'
 
             environment 'target', 'fmluserdevdata'
 

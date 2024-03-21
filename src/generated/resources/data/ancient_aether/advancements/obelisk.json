@@ -1,0 +1,30 @@
+{
+  "parent": "ancient_aether:vampire_blade_loot",
+  "criteria": {
+    "obelisk": {
+      "conditions": {},
+      "trigger": "ancient_aether:obelisk_trigger"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.ancient_aether.obelisk.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "ancient_aether:ancient_rune"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.ancient_aether.obelisk"
+    }
+  },
+  "requirements": [
+    [
+      "obelisk"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
