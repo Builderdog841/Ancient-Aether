@@ -50,9 +50,9 @@ public class ReduxRegionMixin extends Region {
         //Wyndcaps
         addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, Climate.Parameter.span(-1.5F, -0.2F), fullRange, erosionDefault, Climate.Parameter.span(0.05F, 0.55F), fullRange, 0),
                 ReduxBiomes.FROSTED_FORESTS);
-        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, Climate.Parameter.span(-0.2F, 0.5F), fullRange, erosionDefault, Climate.Parameter.span(0.05F, 0.55F), fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, Climate.Parameter.span(-0.2F, 0.3F), fullRange, erosionDefault, Climate.Parameter.span(0.05F, 0.55F), fullRange, 0),
                 ReduxBiomes.GLACIAL_TUNDRA);
-        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, Climate.Parameter.span(0.5F, 1.5F), fullRange, erosionDefault, Climate.Parameter.span(0.05F, 0.55F), fullRange, 0),
+        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, Climate.Parameter.span(0.3F, 1.5F), fullRange, erosionDefault, Climate.Parameter.span(0.05F, 0.55F), fullRange, 0),
                 ReduxBiomes.CLOUDCAPS);
         addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, Climate.Parameter.span(-1.5F, -0.2F), fullRange, erosionDefault, Climate.Parameter.span(-0.15F, 0.05F), fullRange, 0),
                 ReduxBiomes.FROSTED_FORESTS);
