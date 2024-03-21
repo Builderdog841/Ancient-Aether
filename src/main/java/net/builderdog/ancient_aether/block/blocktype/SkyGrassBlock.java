@@ -35,8 +35,7 @@ public class SkyGrassBlock extends TallGrassBlock {
 
     @Override
     @NotNull
-    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        // If this has out of bounds errors try removing the '- 1'
+    public VoxelShape getShape(BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull CollisionContext context) {
         return SHAPES.get(state.getValue(AncientAetherBlockStateProperties.LENGTH) - 1);
     }
 

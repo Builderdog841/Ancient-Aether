@@ -132,6 +132,7 @@ public class AncientAetherRegion extends Region {
                 AncientAetherBiomes.FROZEN_CAVERNS);
 
         /*
+        [Unimplemented]
         addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-1.5F, 0.15F), fullRange, erosionDefault, depthUnderground, fullRange, 0),
                 AncientAetherBiomes.HOLYSTONE_CAVERNS);
         addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(-1.5F, 0.075F), fullRange, erosionElevated, Climate.Parameter.span(0.4F, 1.5F), fullRange, 0),

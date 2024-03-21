@@ -6,33 +6,24 @@ import com.aetherteam.aether.mixin.mixins.common.accessor.SpreadingSnowyDirtBloc
 import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.block.blockstate.AetherGrassType;
 import net.builderdog.ancient_aether.block.blockstate.AncientAetherBlockStateProperties;
-import net.builderdog.ancient_aether.data.resources.registries.placement.AncientAetherVegetationPlacements;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import java.util.List;
-import java.util.Optional;
-
+@SuppressWarnings("deprecation")
 @Mixin(value = AetherGrassBlock.class)
 public abstract class AetherGrassBlockMixin extends BlockMixin{
 
@@ -46,8 +37,6 @@ public abstract class AetherGrassBlockMixin extends BlockMixin{
         builder.add(AncientAetherBlockStateProperties.TYPE);
     }
 
-
-    @SuppressWarnings("deprecation")
     @Inject(method = "randomTick", at = @At(value = "HEAD"), cancellable = true)
     public void aa$tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random, CallbackInfo ci) {
         if (!SpreadingSnowyDirtBlockAccessor.callCanBeGrass(state, level, pos)) {
@@ -58,7 +47,7 @@ public abstract class AetherGrassBlockMixin extends BlockMixin{
             level.setBlockAndUpdate(pos, AetherBlocks.AETHER_DIRT.get().defaultBlockState());
         }
         else {
-            if (!level.isAreaLoaded(pos, 3)) ci.cancel();;
+            if (!level.isAreaLoaded(pos, 3)) ci.cancel();
             if (level.getMaxLocalRawBrightness(pos.above()) >= 9) {
                 BlockState blockstate = defaultBlockState().setValue(AncientAetherBlockStateProperties.TYPE, state.getValue(AncientAetherBlockStateProperties.TYPE));
                 for(int i = 0; i < 4; ++i) {
