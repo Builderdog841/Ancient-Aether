@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-17T16:07:02.6053383	Registries
+// 1.20.1	2024-03-20T22:18:20.3751597	Registries
 8e6af76a39d38a0e170afc6642ebcf1d2c876c9a data/ancient_aether/forge/biome_modifier/aerogel_blobs_biome_modifier.json
 c66669dd031745a1bae16fc47547c896a814e8e6 data/ancient_aether/forge/biome_modifier/aether_cave_biome_modifier.json
 be0b3cb10e1bb6717346cc0224b71d8b9cb17509 data/ancient_aether/forge/biome_modifier/aether_grass_patch_biome_modifier.json
@@ -91,7 +91,6 @@ dabbcb13353df9671de1511b22ee27195485c955 data/ancient_aether/worldgen/noise/fore
 e9951c1e43a8e47e424565851e1786e9dbe41a7a data/ancient_aether/worldgen/noise/temperature.json
 144e6875c7c48ab4b4a0717436536cc121dc62da data/ancient_aether/worldgen/noise/vegetation.json
 1cba2b2f5a213dbfe1af9a7082dc1a1f186a0195 data/ancient_aether/worldgen/placed_feature/aerogel_blobs.json
-ca219c18e63a41b93ddd90597147364735e848c3 data/ancient_aether/worldgen/placed_feature/aether_grass_bonemeal.json
 2c177a11f1fc130b50e236e8751dee2761ce9ad2 data/ancient_aether/worldgen/placed_feature/aether_grass_patch.json
 15123d7f2e9486e17a783d2615be187d29588419 data/ancient_aether/worldgen/placed_feature/aether_quartz_ore.json
 b83a157df0c217cd4f492d3e622569bfe56ff2b5 data/ancient_aether/worldgen/placed_feature/atmosine_cluster.json

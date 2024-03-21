@@ -1,0 +1,53 @@
+{
+  "parent": "ancient_aether:laboratory_dungeon",
+  "criteria": {
+    "shield_of_inebriation": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ancient_aether:shield_of_inebriation"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "shield_of_remediation": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ancient_aether:shield_of_remediation"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.ancient_aether.shield_accessory_loot"
+    },
+    "frame": "goal",
+    "hidden": true,
+    "icon": {
+      "item": "ancient_aether:shield_of_inebriation"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.ancient_aether.shield_accessory_loot"
+    }
+  },
+  "requirements": [
+    [
+      "shield_of_inebriation"
+    ],
+    [
+      "shield_of_remediation"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
