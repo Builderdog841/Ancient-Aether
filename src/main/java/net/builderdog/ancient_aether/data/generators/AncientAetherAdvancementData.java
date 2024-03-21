@@ -1,10 +1,12 @@
 package net.builderdog.ancient_aether.data.generators;
 
 import com.aetherteam.aether.Aether;
+import com.aetherteam.aether.data.resources.registries.AetherBiomes;
 import com.aetherteam.aether.item.AetherItems;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.advancement.ObeliskTrigger;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
+import net.builderdog.ancient_aether.data.resources.registries.AncientAetherBiomes;
 import net.builderdog.ancient_aether.data.resources.registries.AncientAetherStructures;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
@@ -33,8 +35,37 @@ public class AncientAetherAdvancementData extends ForgeAdvancementProvider {
         @Override
         public void generate(HolderLookup.@NotNull Provider provider, @NotNull Consumer<Advancement> consumer, @NotNull ExistingFileHelper existingFileHelper) {
             Advancement.Builder.advancement()
+                    .parent(new ResourceLocation(Aether.MODID, "black_moa"))
+                    .display(AetherItems.SENTRY_BOOTS.get(),
+                            Component.translatable("advancement.ancient_aether.aether_biomes"),
+                            Component.translatable("advancement.ancient_aether.aether_biomes.desc"),
+                            null,
+                            FrameType.GOAL, true, true, false)
+                    .addCriterion("skyroot_meadow", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AetherBiomes.SKYROOT_MEADOW)))
+                    .addCriterion("skyroot_grove", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AetherBiomes.SKYROOT_GROVE)))
+                    .addCriterion("skyroot_forest", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AetherBiomes.SKYROOT_FOREST)))
+                    .addCriterion("skyroot_woodland", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AetherBiomes.SKYROOT_WOODLAND)))
+                    .addCriterion("crystal_skyroot_grove", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AncientAetherBiomes.CRYSTAL_SKYROOT_GROVE)))
+                    .addCriterion("crystal_skyroot_forest", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AncientAetherBiomes.CRYSTAL_SKYROOT_FOREST)))
+                    .addCriterion("golden_skyroot_grove", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AncientAetherBiomes.GOLDEN_SKYROOT_GROVE)))
+                    .addCriterion("golden_skyroot_forest", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AncientAetherBiomes.GOLDEN_SKYROOT_FOREST)))
+                    .addCriterion("golden_thicket", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AncientAetherBiomes.GOLDEN_THICKET)))
+                    .addCriterion("wyndcap_taiga", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AncientAetherBiomes.WYNDCAP_TAIGA)))
+                    .addCriterion("festive_wyndcap_taiga", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AncientAetherBiomes.FESTIVE_WYNDCAP_TAIGA)))
+                    .addCriterion("wyndcap_highland", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AncientAetherBiomes.WYNDCAP_HIGHLAND)))
+                    .addCriterion("wyndcap_peaks", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AncientAetherBiomes.WYNDCAP_PEAKS)))
+                    .addCriterion("skyroot_jungle", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AncientAetherBiomes.WYNDCAP_HIGHLAND)))
+                    .addCriterion("sakura_jungle", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AncientAetherBiomes.WYNDCAP_PEAKS)))
+                    .addCriterion("elevated_clearing", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AncientAetherBiomes.ELEVATED_CLEARING)))
+                    .addCriterion("elevated_forest", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AncientAetherBiomes.ELEVATED_FOREST)))
+                    .addCriterion("holystone_caverns", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AncientAetherBiomes.HOLYSTONE_CAVERNS)))
+                    .addCriterion("frozen_caverns", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AncientAetherBiomes.FROZEN_CAVERNS)))
+                    .addCriterion("elevated_caverns", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AncientAetherBiomes.ELEVATED_CAVERNS)))
+                    .save(consumer, new ResourceLocation(AncientAether.MODID, "aether_biomes"), existingFileHelper);
+
+            Advancement.Builder.advancement()
                     .parent(new ResourceLocation(Aether.MODID, "obtain_egg"))
-                    .display(AncientAetherItems.SAKURA_MOA_EGG.get(),
+                    .display(AncientAetherItems.BURGUNDY_MOA_EGG.get(),
                             Component.translatable("advancement.ancient_aether.moa_eggs"),
                             Component.translatable("advancement.ancient_aether.moa_eggs.desc"),
                             null,

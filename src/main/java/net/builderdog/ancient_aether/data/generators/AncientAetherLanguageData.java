@@ -301,8 +301,8 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addAdvancementDesc("obelisk", "Enter the Ancient Dungeon by activating its Obelisk using an Ancient Rune" + mark);
         addAdvancementDesc("ancient_dungeon", "Defeat the Ancient Guardian" + mark);
 
-        addAdvancementDesc("sakura_moa", "Find all Aether biomes" + markModified);
-        addAdvancementDesc("valkyrum_armor", "Ride a Sakura Moa" + markModified);
+        addAdvancementDesc("sakura_moa", "Ride a Sakura Moa" + markModified);
+        addAdvancementDesc("valkyrum_armor", "Obtain a piece of Valkyrum Armor" + markModified);
 
         addTrim("atmosine", "Atmosine");
         addTrim("valkyrum", "Valkyrum");

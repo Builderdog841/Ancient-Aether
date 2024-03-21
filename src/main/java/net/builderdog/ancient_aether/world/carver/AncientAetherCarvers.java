@@ -11,5 +11,5 @@ public class AncientAetherCarvers {
 
     public static final DeferredRegister<WorldCarver<?>> CARVERS = DeferredRegister.create(Registries.CARVER, AncientAether.MODID);
 
-    public static RegistryObject<WorldCarver<CaveCarverConfiguration>> SKYLANDS_CAVE = CARVERS.register("skylands_cave", () -> new SkylandsCarver(CaveCarverConfiguration.CODEC));
+    public static RegistryObject<WorldCarver<CaveCarverConfiguration>> GROTTO_CAVE = CARVERS.register("grotto_cave", () -> new GrottoCarver(CaveCarverConfiguration.CODEC));
 }

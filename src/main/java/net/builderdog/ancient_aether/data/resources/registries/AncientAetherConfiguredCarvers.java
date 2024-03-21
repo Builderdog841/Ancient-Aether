@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.carver.CaveCarverConfiguration;
 import net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver;
+import net.minecraft.world.level.levelgen.carver.WorldCarver;
 import net.minecraft.world.level.levelgen.heightproviders.UniformHeight;
 
 public class AncientAetherConfiguredCarvers {
@@ -36,7 +37,7 @@ public class AncientAetherConfiguredCarvers {
                 UniformFloat.of(minVertical, maxVertical),
                 UniformFloat.of(-0.8F, -0.4F));
 
-        return new ConfiguredWorldCarver<>(AncientAetherCarvers.SKYLANDS_CAVE.get(), config);
+        return new ConfiguredWorldCarver<>(WorldCarver.CAVE, config);
     }
 
     private static ConfiguredWorldCarver<?> createAetherCave(HolderGetter<Block> blocks, int maxY) {
@@ -57,7 +58,7 @@ public class AncientAetherConfiguredCarvers {
                 UniformFloat.of(1.5F, 3.0F),
                 UniformFloat.of(2.0F, 2.8F),
                 UniformFloat.of(-0.4F, -0.2F));
-        return new ConfiguredWorldCarver<>(AncientAetherCarvers.SKYLANDS_CAVE.get(), config);
+        return new ConfiguredWorldCarver<>(AncientAetherCarvers.GROTTO_CAVE.get(), config);
     }
 
     public static void bootstrap(BootstapContext<ConfiguredWorldCarver<?>> context) {

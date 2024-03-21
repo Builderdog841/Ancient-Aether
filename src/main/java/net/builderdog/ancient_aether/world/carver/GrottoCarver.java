@@ -23,9 +23,9 @@ import javax.annotation.Nullable;
 import java.util.function.Function;
 
 @SuppressWarnings("deprecation")
-public class SkylandsCarver extends CaveWorldCarver {
+public class GrottoCarver extends CaveWorldCarver {
 
-    public SkylandsCarver(Codec<CaveCarverConfiguration> codec) {
+    public GrottoCarver(Codec<CaveCarverConfiguration> codec) {
         super(codec);
     }
 
@@ -50,9 +50,9 @@ public class SkylandsCarver extends CaveWorldCarver {
                 if (reachedSurface.isTrue()) {
                     checkedPos.setWithOffset(pos, Direction.DOWN);
                     if (chunk.getBlockState(checkedPos).is(Blocks.DIRT)) {
-                        context.topMaterial(biome, chunk, checkedPos, !carveState.getFluidState().isEmpty()).ifPresent((bool) -> {
-                            chunk.setBlockState(checkedPos, bool, false);
-                            if (!bool.getFluidState().isEmpty()) {
+                        context.topMaterial(biome, chunk, checkedPos, !carveState.getFluidState().isEmpty()).ifPresent((topMaterial) -> {
+                            chunk.setBlockState(checkedPos, topMaterial, false);
+                            if (!topMaterial.getFluidState().isEmpty()) {
                                 chunk.markPosForPostprocessing(checkedPos);
                             }
                         });
