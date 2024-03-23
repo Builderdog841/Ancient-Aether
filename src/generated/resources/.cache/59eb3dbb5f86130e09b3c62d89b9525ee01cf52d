@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-21T20:45:56.9114696	Loot Tables
+// 1.20.1	2024-03-23T21:28:34.1363285	Loot Tables
 095a70e341d19e7b3548ddc32402abe48a79992a data/ancient_aether/loot_tables/blocks/aerogel_glass.json
 9fe2ea21af5246ad9f95848f680099717062eb1c data/ancient_aether/loot_tables/blocks/aerogel_glass_door.json
 0f84d5b4591633acc6c8dcc82b7c14988b545a9f data/ancient_aether/loot_tables/blocks/aerogel_glass_pane.json
@@ -117,7 +117,7 @@ b460d0d625f6ad7ce0e873543d6d82e6954a0b8b data/ancient_aether/loot_tables/blocks/
 f7f1b515a8e001e9a46610eab1ac48d8cabfee02 data/ancient_aether/loot_tables/chests/camp_skyroot.json
 688694a8ce3b761dd11a525ffb8ba35098e7b83c data/ancient_aether/loot_tables/chests/camp_wyndcaps.json
 51a1fbf3997f8c72312f48c0268a1951a07449c7 data/ancient_aether/loot_tables/chests/dungeon/armor_trims.json
-0265a3d7410a148a32e5e7479e151aacd66e25b7 data/ancient_aether/loot_tables/chests/dungeon/bronze/bronze_dungeon_reward.json
+8145f78dc0397a37d6bde6cf1b7e5e20398a3e69 data/ancient_aether/loot_tables/chests/dungeon/bronze/bronze_dungeon_reward.json
 b7cc78643662ddca3ad39a64428a8be33530aff1 data/ancient_aether/loot_tables/chests/dungeon/laboratory/sentry_laboratory.json
 48c471eba57bd1cd73447fa873df9df879cd062b data/ancient_aether/loot_tables/chests/dungeon/laboratory/sentry_laboratory_loot.json
 f3b29caea0061cad030b903bdba9eea0d3b49061 data/ancient_aether/loot_tables/chests/dungeon/laboratory/sentry_laboratory_miscellaneous.json

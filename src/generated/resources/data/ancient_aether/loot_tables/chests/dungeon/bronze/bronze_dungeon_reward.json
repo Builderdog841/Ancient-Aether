@@ -26,13 +26,29 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 5.0,
-                "min": 2.0
+                "max": 6.0,
+                "min": 3.0
               },
               "function": "minecraft:set_count"
             }
           ],
           "name": "aether:lightning_knife",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 4.0,
+                "min": 2.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "aether:blue_gummy_swet",
           "weight": 4
         },
         {
@@ -64,14 +80,6 @@
           "type": "minecraft:item",
           "name": "aether:music_disc_aether_tune",
           "weight": 2
-        },
-        {
-          "type": "minecraft:item",
-          "name": "ancient_aether:mechanical_armor_trim_smithing_template"
-        },
-        {
-          "type": "minecraft:loot_table",
-          "name": "ancient_aether:chests/dungeon/moa_eggs_common"
         },
         {
           "type": "minecraft:item",
@@ -183,8 +191,8 @@
       ],
       "rolls": {
         "type": "minecraft:uniform",
-        "max": 3.0,
-        "min": 1.0
+        "max": 2.0,
+        "min": 0.0
       }
     },
     {
@@ -197,17 +205,12 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 3.0,
+                "max": 2.0,
                 "min": 1.0
               },
               "function": "minecraft:set_count"
             }
           ],
-          "name": "aether:blue_gummy_swet",
-          "weight": 5
-        },
-        {
-          "type": "minecraft:item",
           "name": "aether:aerogel",
           "weight": 3
         },
@@ -218,13 +221,13 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 6.0,
-                "min": 3.0
+                "max": 8.0,
+                "min": 4.0
               },
               "function": "minecraft:set_count"
             }
           ],
-          "name": "aether:golden_dart",
+          "name": "minecraft:arrow",
           "weight": 2
         },
         {
@@ -234,20 +237,19 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 6.0,
-                "min": 3.0
+                "max": 8.0,
+                "min": 4.0
               },
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:arrow",
-          "weight": 2
+          "name": "aether:golden_dart"
         }
       ],
       "rolls": {
         "type": "minecraft:uniform",
-        "max": 6.0,
-        "min": 3.0
+        "max": 1.0,
+        "min": 1.0
       }
     }
   ],
