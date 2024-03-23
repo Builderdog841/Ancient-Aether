@@ -134,10 +134,10 @@ public class AncientAetherVegetationPlacements extends TrunkVineDecorator {
                 AetherPlacedFeatureBuilders.treePlacement(RarityFilter.onAverageOnceEvery(3))
         );
         AncientAetherPlacementUtils.register(context, SKYROOT_JUNGLE_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_SKYROOT_JUNGLE),
-                AetherPlacedFeatureBuilders.treePlacement(PlacementUtils.countExtra(20, 0.1F, 1))
+                AetherPlacedFeatureBuilders.treePlacement(PlacementUtils.countExtra(24, 0.1F, 1))
         );
         AncientAetherPlacementUtils.register(context, SAKURA_JUNGLE_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_SAKURA),
-                AetherPlacedFeatureBuilders.treePlacement(PlacementUtils.countExtra(20, 0.1F, 1))
+                AetherPlacedFeatureBuilders.treePlacement(PlacementUtils.countExtra(24, 0.1F, 1))
         );
         AncientAetherPlacementUtils.register(context, ELEVATED_CLEARING_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_ELEVATED_ISLANDS),
                 AetherPlacedFeatureBuilders.treePlacement(RarityFilter.onAverageOnceEvery(3))

@@ -32,6 +32,7 @@ import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class AncientAetherRenderers {
+
     @SubscribeEvent
     public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(AncientAetherBlockEntityTypes.SIGN.get(), SignRenderer::new);
@@ -48,6 +49,7 @@ public class AncientAetherRenderers {
         event.registerEntityRenderer(AncientAetherEntityTypes.MUTATED_AECHOR_NEEDLE.get(), MutatedAechorNeedleRenderer::new);
         event.registerEntityRenderer(AncientAetherEntityTypes.WIND_BLOW.get(), WindBlowRenderer::new);
     }
+
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
         for (AncientAetherBoatEntity.Type type : AncientAetherBoatEntity.Type.values()) {
@@ -62,6 +64,7 @@ public class AncientAetherRenderers {
             event.registerLayerDefinition(AncientAetherModelLayers.VALKYRUM_WINGS, () -> ValkyrieWingsModel.createMainLayer(3.5F, 3.375F));
         }
     }
+
     @SubscribeEvent
     public static void addPlayerLayers(EntityRenderersEvent.AddLayers event) {
         EntityRenderDispatcher renderDispatcher = Minecraft.getInstance().getEntityRenderDispatcher();
