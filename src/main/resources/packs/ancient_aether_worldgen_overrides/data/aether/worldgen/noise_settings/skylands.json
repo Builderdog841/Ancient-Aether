@@ -66,7 +66,7 @@
       "shift_x": "minecraft:shift_x",
       "shift_y": 0.0,
       "shift_z": "minecraft:shift_z",
-      "xz_scale": 0.25,
+      "xz_scale": 0.5,
       "y_scale": 0.0
     },
     "temperature": "ancient_aether:temperature",
@@ -76,7 +76,7 @@
       "shift_x": "minecraft:shift_x",
       "shift_y": 0.0,
       "shift_z": "minecraft:shift_z",
-      "xz_scale": 0.25,
+      "xz_scale": 0.5,
       "y_scale": 0.0
     },
     "vein_gap": 0.0,
