@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_highland_cyclamen": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ancient_aether:highland_cyclamen"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ancient_aether:highland_cyclamen_to_red_dye"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_highland_cyclamen",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ancient_aether:highland_cyclamen_to_red_dye"
+    ]
+  },
+  "sends_telemetry_event": false
+}
