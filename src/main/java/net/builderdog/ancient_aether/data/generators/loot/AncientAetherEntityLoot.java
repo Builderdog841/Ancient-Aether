@@ -82,12 +82,6 @@ public class AncientAetherEntityLoot extends EntityLootSubProvider {
                                 .apply(LootingEnchantFunction.lootingMultiplier(UniformGenerator.between(0.0F, 1.0F)))
                         )
                 )
-                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
-                        .add(LootItem.lootTableItem(AncientAetherBlocks.SAKURA_BLOSSOMS.get())
-                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 1.0F)))
-                                .apply(LootingEnchantFunction.lootingMultiplier(UniformGenerator.between(0.0F, 1.0F)))
-                        )
-                )
         );
 
         add(AncientAetherEntityTypes.AERONAUTIC_LEAPER.get(), LootTable.lootTable()

@@ -15,9 +15,9 @@
     },
     "features": [
       {
-        "chance": 0.5,
+        "chance": 0.33,
         "feature": {
-          "feature": "ancient_aether:aether_flower_patch",
+          "feature": "ancient_aether:aether_flower_patch_blue",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",

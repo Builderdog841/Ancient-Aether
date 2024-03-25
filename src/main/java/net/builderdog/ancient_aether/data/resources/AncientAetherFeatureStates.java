@@ -39,11 +39,9 @@ public class AncientAetherFeatureStates {
     public static final BlockState MOSSY_HOLYSTONE = AetherBlocks.MOSSY_HOLYSTONE.get().defaultBlockState().setValue(DOUBLE_DROPS, true);
     public static final BlockState AETHER_QUARTZ_ORE = AncientAetherBlocks.AETHER_QUARTZ_ORE.get().defaultBlockState().setValue(DOUBLE_DROPS, true);
     public static final BlockState VALKYRUM_ORE = AncientAetherBlocks.VALKYRUM_ORE.get().defaultBlockState();
-    public static final BlockState HIGHLAND_VIOLA = AncientAetherBlocks.HIGHLAND_VIOLA.get().defaultBlockState();
+    public static final BlockState HIGHLAND_CYCLAMEN = AncientAetherBlocks.HIGHLAND_CYCLAMEN.get().defaultBlockState();
     public static final BlockState SKY_BLUES = AncientAetherBlocks.SKY_BLUES.get().defaultBlockState();
     public static final BlockState WYND_THISTLE = AncientAetherBlocks.WYND_THISTLE.get().defaultBlockState();
-    public static final BlockState SAKURA_BLOSSOMS = AncientAetherBlocks.SAKURA_BLOSSOMS.get().defaultBlockState();
-    public static final BlockState TRAPPED_SAKURA_BLOSSOMS = AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get().defaultBlockState();
     public static final BlockState FROZEN_AETHER_GRASS_BLOCK = AetherBlocks.AETHER_GRASS_BLOCK.get().defaultBlockState().setValue(DOUBLE_DROPS, true).setValue(TYPE, AetherGrassType.FROZEN);
     public static final BlockState PALE_AETHER_GRASS_BLOCK = AetherBlocks.AETHER_GRASS_BLOCK.get().defaultBlockState().setValue(DOUBLE_DROPS, true).setValue(TYPE, AetherGrassType.PALE);
     public static final BlockState GRAPE_VINE = AncientAetherBlocks.GRAPE_VINE.get().defaultBlockState();

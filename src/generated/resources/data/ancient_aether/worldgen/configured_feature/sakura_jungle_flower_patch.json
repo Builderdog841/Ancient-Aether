@@ -2,7 +2,7 @@
   "type": "minecraft:random_selector",
   "config": {
     "default": {
-      "feature": "ancient_aether:sakura_blossoms_patch",
+      "feature": "ancient_aether:highland_cyclamen_patch",
       "placement": [
         {
           "type": "minecraft:block_predicate_filter",
@@ -15,9 +15,9 @@
     },
     "features": [
       {
-        "chance": 0.25,
+        "chance": 0.33,
         "feature": {
-          "feature": "ancient_aether:aether_flower_patch",
+          "feature": "ancient_aether:aether_flower_patch_red",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",

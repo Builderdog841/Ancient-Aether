@@ -142,11 +142,9 @@ public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
         itemBlockFlat(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.SAKURA_SAPLING.get(), "");
-        itemBlockFlat(AncientAetherBlocks.SAKURA_BLOSSOMS.get(), "");
-        itemBlockFlat(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get(), "");
-        itemBlockFlat(AncientAetherBlocks.WYND_THISTLE.get(), "");
+        itemBlockFlat(AncientAetherBlocks.HIGHLAND_CYCLAMEN.get(), "");
         itemBlockFlat(AncientAetherBlocks.SKY_BLUES.get(), "");
-        itemBlockFlat(AncientAetherBlocks.HIGHLAND_VIOLA.get(), "");
+        itemBlockFlat(AncientAetherBlocks.WYND_THISTLE.get(), "");
 
         itemFence(AncientAetherBlocks.HIGHSPROOT_FENCE.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), "");
         itemFence(AncientAetherBlocks.SAKURA_FENCE.get(), AncientAetherBlocks.SAKURA_PLANKS.get(), "");

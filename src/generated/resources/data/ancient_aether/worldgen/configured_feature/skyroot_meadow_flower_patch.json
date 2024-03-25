@@ -24,35 +24,13 @@
             "slow_scale": 1.0,
             "states": [
               {
+                "Name": "ancient_aether:highland_cyclamen"
+              },
+              {
                 "Name": "aether:purple_flower"
               },
               {
                 "Name": "aether:white_flower"
-              },
-              {
-                "Name": "ancient_aether:highland_viola"
-              },
-              {
-                "Name": "aether:purple_flower"
-              },
-              {
-                "Name": "ancient_aether:sky_grass",
-                "Properties": {
-                  "type": "normal",
-                  "length": "2"
-                }
-              },
-              {
-                "Name": "aether:white_flower"
-              },
-              {
-                "Name": "ancient_aether:sky_blues"
-              },
-              {
-                "Name": "ancient_aether:highland_viola"
-              },
-              {
-                "Name": "aether:purple_flower"
               },
               {
                 "Name": "ancient_aether:sky_blues"

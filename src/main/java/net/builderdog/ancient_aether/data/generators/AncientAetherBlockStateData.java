@@ -81,11 +81,9 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         crossBlock(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING);
         crossBlock(AncientAetherBlocks.HIGHSPROOT_SAPLING);
         crossBlock(AncientAetherBlocks.SAKURA_SAPLING);
-        crossBlock(AncientAetherBlocks.WYND_THISTLE);
+        crossBlock(AncientAetherBlocks.HIGHLAND_CYCLAMEN);
         crossBlock(AncientAetherBlocks.SKY_BLUES);
-        crossBlock(AncientAetherBlocks.SAKURA_BLOSSOMS);
-        crossBlock(AncientAetherBlocks.HIGHLAND_VIOLA);
-        crossBlock(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS);
+        crossBlock(AncientAetherBlocks.WYND_THISTLE);
 
         stairs(AncientAetherBlocks.HIGHSPROOT_STAIRS.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), "");
         stairs(AncientAetherBlocks.SAKURA_STAIRS.get(), AncientAetherBlocks.SAKURA_PLANKS.get(), "");
@@ -152,9 +150,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         ancientVase(AncientAetherBlocks.ANCIENT_GALE_VASE.get(), AncientAetherBlocks.GALE_VASE.get());
 
         windBlower(AncientAetherBlocks.WIND_BLOWER.get());
-
         sliderPrototype(AncientAetherBlocks.SLIDER_PROTOTYPE.get());
-
         grapeVine(AncientAetherBlocks.GRAPE_VINE.get());
 
         obelisk(AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get());
@@ -190,13 +186,12 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
 
         pottedPlant(AncientAetherBlocks.POTTED_SKYROOT_PINE_SAPLING.get(), AncientAetherBlocks.SKYROOT_PINE_SAPLING.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_CRYSTAL_SKYROOT_SAPLING.get(), AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get(), "");
-        pottedPlant(AncientAetherBlocks.POTTED_SAKURA_SAPLING.get(), AncientAetherBlocks.SAKURA_SAPLING.get(), "");
-        pottedPlant(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING.get(), AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), "");
-        pottedPlant(AncientAetherBlocks.POTTED_WYND_THISTLE.get(), AncientAetherBlocks.WYND_THISTLE.get(), "");
-        pottedPlant(AncientAetherBlocks.POTTED_SAKURA_BLOSSOMS.get(), AncientAetherBlocks.SAKURA_BLOSSOMS.get(), "");
-        pottedPlant(AncientAetherBlocks.POTTED_HIGHLAND_VIOLA.get(), AncientAetherBlocks.HIGHLAND_VIOLA.get(), "");
-        pottedPlant(AncientAetherBlocks.POTTED_SKY_BLUES.get(), AncientAetherBlocks.SKY_BLUES.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_ENCHANTED_SKYROOT_SAPLING.get(), AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get(), "");
+        pottedPlant(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING.get(), AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), "");
+        pottedPlant(AncientAetherBlocks.POTTED_SAKURA_SAPLING.get(), AncientAetherBlocks.SAKURA_SAPLING.get(), "");
+        pottedPlant(AncientAetherBlocks.POTTED_SKY_BLUES.get(), AncientAetherBlocks.SKY_BLUES.get(), "");
+        pottedPlant(AncientAetherBlocks.POTTED_HIGHLAND_CYCLAMEN.get(), AncientAetherBlocks.HIGHLAND_CYCLAMEN.get(), "");
+        pottedPlant(AncientAetherBlocks.POTTED_WYND_THISTLE.get(), AncientAetherBlocks.WYND_THISTLE.get(), "");
 
         makeLogWalls();
     }

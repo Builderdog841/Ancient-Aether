@@ -25,7 +25,7 @@ public class AncientAetherBlockLoot extends AetherBlockLootSubProvider {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags());
     }
 
-    protected void dropOtherTwice(Block block, ItemLike itemLike) {
+    protected void dropCampfire(Block block, ItemLike itemLike) {
         add(block, createSilkTouchDispatchTable(block, applyExplosionDecay(itemLike, LootItem.lootTableItem(itemLike).apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F))))));
     }
 
@@ -112,8 +112,7 @@ public class AncientAetherBlockLoot extends AetherBlockLootSubProvider {
         dropSelf(AncientAetherBlocks.SLIDER_PROTOTYPE.get());
         dropSelf(AncientAetherBlocks.SKY_BLUES.get());
         dropSelf(AncientAetherBlocks.WYND_THISTLE.get());
-        dropSelf(AncientAetherBlocks.HIGHLAND_VIOLA.get());
-        dropSelf(AncientAetherBlocks.SAKURA_BLOSSOMS.get());
+        dropSelf(AncientAetherBlocks.HIGHLAND_CYCLAMEN.get());
         dropSelf(AncientAetherBlocks.HOLYSTONE_VASE.get());
         dropSelf(AncientAetherBlocks.MOSSY_HOLYSTONE_VASE.get());
         dropSelf(AncientAetherBlocks.FROZEN_HOLYSTONE_VASE.get());
@@ -129,12 +128,11 @@ public class AncientAetherBlockLoot extends AetherBlockLootSubProvider {
         dropSelfDouble(AncientAetherBlocks.GRAVITY_GRAVEL.get());
         dropSelfDouble(AncientAetherBlocks.VIOLET_AERCLOUD.get());
 
-        dropOther(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS.get(), AncientAetherBlocks.SAKURA_BLOSSOMS.get());
-        dropOtherTwice(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get(), AetherItems.AMBROSIUM_SHARD.get());
-
         dropDoubleWithFortune(AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), Items.QUARTZ);
         dropWhenSilkTouch(AncientAetherBlocks.WYND_ICE.get());
         dropWhenSilkTouch(AncientAetherBlocks.SKY_GRASS.get());
+
+        dropCampfire(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get(), AetherItems.AMBROSIUM_SHARD.get());
 
         dropPottedContents(AncientAetherBlocks.POTTED_SKYROOT_PINE_SAPLING.get());
         dropPottedContents(AncientAetherBlocks.POTTED_CRYSTAL_SKYROOT_SAPLING.get());
@@ -142,8 +140,7 @@ public class AncientAetherBlockLoot extends AetherBlockLootSubProvider {
         dropPottedContents(AncientAetherBlocks.POTTED_SAKURA_SAPLING.get());
         dropPottedContents(AncientAetherBlocks.POTTED_SKY_BLUES.get());
         dropPottedContents(AncientAetherBlocks.POTTED_WYND_THISTLE.get());
-        dropPottedContents(AncientAetherBlocks.POTTED_HIGHLAND_VIOLA.get());
-        dropPottedContents(AncientAetherBlocks.POTTED_SAKURA_BLOSSOMS.get());
+        dropPottedContents(AncientAetherBlocks.POTTED_HIGHLAND_CYCLAMEN.get());
         dropPottedContents(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING.get());
         dropPottedContents(AncientAetherBlocks.POTTED_ENCHANTED_SKYROOT_SAPLING.get());
 

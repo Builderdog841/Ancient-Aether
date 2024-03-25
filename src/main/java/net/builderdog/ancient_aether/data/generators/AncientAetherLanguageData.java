@@ -38,11 +38,9 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.SAKURA_SAPLING, "Sakura Sapling");
 
         addBlock(AncientAetherBlocks.SKY_GRASS, "Sky Grass");
-        addBlock(AncientAetherBlocks.HIGHLAND_VIOLA, "Highland Viola");
+        addBlock(AncientAetherBlocks.HIGHLAND_CYCLAMEN, "Highland Cyclamen");
         addBlock(AncientAetherBlocks.SKY_BLUES, "Sky Blues");
         addBlock(AncientAetherBlocks.WYND_THISTLE, "Wynd Thistle");
-        addBlock(AncientAetherBlocks.SAKURA_BLOSSOMS, "Sakura Blossoms");
-        addBlock(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS, "Trapped Sakura Blossoms");
         addBlock(AncientAetherBlocks.GRAPE_VINE, "Grape Vine");
 
         addBlock(AncientAetherBlocks.HIGHSPROOT_LOG, "Highsproot Log");
@@ -179,10 +177,9 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.POTTED_SKYROOT_PINE_SAPLING, "Potted Skyroot Pine Sapling");
         addBlock(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING, "Potted Highsproot Sapling");
         addBlock(AncientAetherBlocks.POTTED_SAKURA_SAPLING, "Potted Sakura Sapling");
-        addBlock(AncientAetherBlocks.POTTED_HIGHLAND_VIOLA, "Potted Highland Viola");
+        addBlock(AncientAetherBlocks.POTTED_HIGHLAND_CYCLAMEN, "Potted Highland Viola");
         addBlock(AncientAetherBlocks.POTTED_SKY_BLUES, "Potted Sky Blues");
         addBlock(AncientAetherBlocks.POTTED_WYND_THISTLE, "Potted Wynd Thistle");
-        addBlock(AncientAetherBlocks.POTTED_SAKURA_BLOSSOMS, "Potted Sakura Blossoms");
 
         addItem(AncientAetherItems.VALKYRUM, "Valkyrum");
         addItem(AncientAetherItems.GRAPES, "Grapes");
@@ -387,7 +384,6 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addLore(AncientAetherBlocks.ATMOSINE_CRYSTAL, "A shiny Crystal found in the Atmosine Grotto. It floats upwards similarly to Gravitite and has various different crafting uses. It is also a good fuel source for the Altar.");
         addLore(AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES, "These leaves generate with Crystal Skyroot Trees. They can drop Crystal Skyroot Saplings as well as White Apples when decaying.");
         addLore(AncientAetherBlocks.SKY_GRASS, "The main grass type of the Aether. It can come in different lengths and colors depending on its surroundings.");
-        addLore(AncientAetherBlocks.TRAPPED_SAKURA_BLOSSOMS, "It may look like Sakura Blossoms but if you get closer you notice, it's a decoy.");
         addLore(AncientAetherBlocks.VALKYRUM_BLOCK, "A block compacted from Valkyrum. They can power beacons and have a noble look to them.");
         addLore(AncientAetherBlocks.AEROGEL_GLASS, "A clearer version of Aerogel crafted from 8 pieces of Aerogel and one planks in the middle. It can be crafted into all kinds of variants. Unlike regular glass, it doesn't break when mined. Mining it also doesn't require a pickaxe.");
         addLore(AncientAetherBlocks.AEROGEL_GLASS_PANE, "A decoration block crafted from Aerogel Glass. Unlike regular glass panes, it doesn't break when mined. Mining it also doesn't require a pickaxe.");
@@ -430,10 +426,9 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addSaplingLore(AncientAetherBlocks.HIGHSPROOT_SAPLING, "Highsproot", "blue");
         addSaplingLore(AncientAetherBlocks.SAKURA_SAPLING, "Sakura", "pink");
 
-        addFlowerLore(AncientAetherBlocks.HIGHLAND_VIOLA, "Magenta", "small", "all around the Aether");
+        addFlowerLore(AncientAetherBlocks.HIGHLAND_CYCLAMEN, "Red", "small", "all around the Aether");
         addFlowerLore(AncientAetherBlocks.SKY_BLUES, "Cyan", "small", "all around the Aether");
         addFlowerLore(AncientAetherBlocks.WYND_THISTLE, "Light Blue", "spiky", "in the Wyndcaps");
-        addFlowerLore(AncientAetherBlocks.SAKURA_BLOSSOMS, "Pink", "soft", "in the Sakura Jungle");
 
         addWoodBlockLore(AncientAetherBlocks.HIGHSPROOT_LOG, "Highsproot", "The log of a tree found in the Wyndcaps Region");
         addWoodBlockLore(AncientAetherBlocks.HIGHSPROOT_WOOD, "Highsproot", "Highsproot Logs crafted to be smooth on all sides");
