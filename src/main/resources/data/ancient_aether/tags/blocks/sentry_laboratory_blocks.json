@@ -5,6 +5,7 @@
     "minecraft:air",
     "minecraft:chest",
     "minecraft:spawner",
+    "minecraft:target",
     "aether:incubator",
     "aether:holystone",
     "aether:holystone_bricks",
@@ -18,9 +19,12 @@
     "aether:skyroot_planks",
     "aether:skyroot_bookshelf",
     "aether:quicksoil_glass_pane",
+    "aether:blue_aercloud",
+    "ancient_aether:violet_aercloud",
     "ancient_aether:ancient_frozen_holystone_vase",
     "ancient_aether:holystone_brick_mosaic",
     "ancient_aether:slider_prototype",
-    "ancient_aether:wynd_lantern"
+    "ancient_aether:wynd_lantern",
+    "ancient_aether:wind_blower"
   ]
 }

@@ -10,6 +10,24 @@
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:sentry_laboratory/room_02",
+        "processors": "ancient_aether:sentry_laboratory",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:sentry_laboratory/room_03",
+        "processors": "ancient_aether:sentry_laboratory",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
     }
   ]
 }
