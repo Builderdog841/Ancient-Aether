@@ -125,7 +125,8 @@ public class AncientAetherProcessorLists {
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.CARVED_STONE.get(), 0.05F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.WYND_SENTRY_STONE.get().defaultBlockState()),
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.HOLYSTONE_BRICKS.get(), 0.05F), AlwaysTrueTest.INSTANCE, AetherFeatureStates.HOLYSTONE)
                 )),
-                new DoubleDropsProcessor()
+                new DoubleDropsProcessor(),
+                new SurfaceRuleProcessor()
         ));
         register(context, SENTRY_LABORATORY_BOSS_ROOM, ImmutableList.of(
                 new RuleProcessor(ImmutableList.of(

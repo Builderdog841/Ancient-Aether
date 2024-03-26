@@ -91,6 +91,9 @@
     },
     {
       "processor_type": "aether:double_drops"
+    },
+    {
+      "processor_type": "aether:surface_rule"
     }
   ]
 }
