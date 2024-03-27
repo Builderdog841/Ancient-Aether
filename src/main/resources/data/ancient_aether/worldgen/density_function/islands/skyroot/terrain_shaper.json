@@ -19,20 +19,11 @@
     "when_out_of_range": {
       "type": "mul",
       "argument1": {
-        "type": "clamp",
-        "input": {
-          "type": "mul",
-          "argument1": {
-            "type": "minecraft:y_clamped_gradient",
-            "from_value": 1,
-            "from_y": 112,
-            "to_value": 16,
-            "to_y": 256
-          },
-          "argument2": 1
-        },
-        "min": 1,
-        "max": 16
+        "type": "minecraft:y_clamped_gradient",
+        "from_value": 1,
+        "from_y": 112,
+        "to_value": 5,
+        "to_y": 256
       },
       "argument2": "ancient_aether:amplification_factor"
     }

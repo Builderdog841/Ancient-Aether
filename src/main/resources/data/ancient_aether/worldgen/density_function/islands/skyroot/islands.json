@@ -7,8 +7,12 @@
             "type": "minecraft:mul",
             "argument1": {
                 "type": "minecraft:mul",
-                "argument1": -0.26,
-                "argument2": "ancient_aether:islands/skyroot/terrain_shaper"
+                "argument1": {
+                    "type": "minecraft:mul",
+                    "argument1": -0.26,
+                    "argument2": "ancient_aether:islands/skyroot/terrain_shaper"
+                },
+                "argument2": "ancient_aether:size_factor"
             },
             "argument2": {
                 "type": "minecraft:mul",
@@ -34,8 +38,12 @@
                         "type": "minecraft:mul",
                         "argument1": {
                             "type": "minecraft:mul",
-                            "argument1": -0.26,
-                            "argument2": "ancient_aether:islands/skyroot/terrain_shaper"
+                            "argument1": {
+                                "type": "minecraft:mul",
+                                "argument1": -0.26,
+                                "argument2": "ancient_aether:islands/skyroot/terrain_shaper"
+                            },
+                            "argument2": "ancient_aether:size_factor"
                         },
                         "argument2": {
                             "type": "minecraft:mul",
