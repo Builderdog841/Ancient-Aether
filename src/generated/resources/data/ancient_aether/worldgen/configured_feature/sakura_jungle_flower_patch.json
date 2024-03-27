@@ -15,9 +15,24 @@
     },
     "features": [
       {
-        "chance": 0.33,
+        "chance": 0.375,
         "feature": {
-          "feature": "ancient_aether:aether_flower_patch_red",
+          "feature": "ancient_aether:aether_flower_patch",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:air"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chance": 0.125,
+        "feature": {
+          "feature": "ancient_aether:highland_cyclamen_patch",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",

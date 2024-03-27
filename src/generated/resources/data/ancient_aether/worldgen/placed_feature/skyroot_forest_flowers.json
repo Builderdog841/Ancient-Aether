@@ -1,9 +1,9 @@
 {
-  "feature": "ancient_aether:aether_flower_patch_red",
+  "feature": "ancient_aether:aether_flower_patch_mixed",
   "placement": [
     {
-      "type": "minecraft:rarity_filter",
-      "chance": 2
+      "type": "minecraft:count",
+      "count": 3
     },
     {
       "type": "aether:improved_layer_placement",

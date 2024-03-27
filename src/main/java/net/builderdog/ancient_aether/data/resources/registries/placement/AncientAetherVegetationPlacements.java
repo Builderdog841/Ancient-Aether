@@ -15,10 +15,7 @@ import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.treedecorators.TrunkVineDecorator;
-import net.minecraft.world.level.levelgen.placement.BiomeFilter;
-import net.minecraft.world.level.levelgen.placement.NoiseThresholdCountPlacement;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraft.world.level.levelgen.placement.RarityFilter;
+import net.minecraft.world.level.levelgen.placement.*;
 
 public class AncientAetherVegetationPlacements extends TrunkVineDecorator {
     public static final ResourceKey<PlacedFeature> AETHER_GRASS_PATCH = AncientAetherPlacementUtils.createKey("aether_grass_patch");
@@ -26,21 +23,20 @@ public class AncientAetherVegetationPlacements extends TrunkVineDecorator {
     public static final ResourceKey<PlacedFeature> SAKURA_JUNGLE_GRASS_PATCH = AncientAetherPlacementUtils.createKey("sakura_jungle_grass_patch");
     public static final ResourceKey<PlacedFeature> ELEVATED_ISLANDS_GRASS_PATCH = AncientAetherPlacementUtils.createKey("elevated_islands_grass_patch");
     public static final ResourceKey<PlacedFeature> BONUS_BERRY_BUSH_PATCH = AncientAetherPlacementUtils.createKey("bonus_berry_bush_patch");
-    public static final ResourceKey<PlacedFeature> CRYSTAL_SKYROOT_GROVE_TREES = AncientAetherPlacementUtils.createKey("crystal_skyroot_grove_trees");
     public static final ResourceKey<PlacedFeature> SKYROOT_MEADOW_FLOWERS = AncientAetherPlacementUtils.createKey("skyroot_meadow_flowers");
     public static final ResourceKey<PlacedFeature> SKYROOT_GROVE_FLOWERS = AncientAetherPlacementUtils.createKey("skyroot_grove_flowers");
     public static final ResourceKey<PlacedFeature> SKYROOT_FOREST_FLOWERS = AncientAetherPlacementUtils.createKey("skyroot_forest_flowers");
-    public static final ResourceKey<PlacedFeature> CRYSTAL_SKYROOT_GROVE_FLOWERS = AncientAetherPlacementUtils.createKey("crystal_skyroot_grove_flowers");
-    public static final ResourceKey<PlacedFeature> CRYSTAL_SKYROOT_FOREST_FLOWERS = AncientAetherPlacementUtils.createKey("crystal_skyroot_forest_flowers");
-    public static final ResourceKey<PlacedFeature> GOLDEN_SKYROOT_GROVE_FLOWERS = AncientAetherPlacementUtils.createKey("golden_skyroot_grove_flowers");
-    public static final ResourceKey<PlacedFeature> GOLDEN_SKYROOT_FOREST_FLOWERS = AncientAetherPlacementUtils.createKey("golden_skyroot_forest_flowers");
+    public static final ResourceKey<PlacedFeature> SKYROOT_WOODLAND_FLOWERS = AncientAetherPlacementUtils.createKey("skyroot_woodland_flowers");
+    public static final ResourceKey<PlacedFeature> SUN_FOREST_FLOWERS = AncientAetherPlacementUtils.createKey("sun_forest_flowers");
     public static final ResourceKey<PlacedFeature> WYNDCAPS_FLOWERS = AncientAetherPlacementUtils.createKey("wyndcaps_flowers");
     public static final ResourceKey<PlacedFeature> WYNDCAP_HIGHLAND_FLOWERS = AncientAetherPlacementUtils.createKey("wyndcap_highland_flowers");
     public static final ResourceKey<PlacedFeature> SAKURA_JUNGLE_FLOWERS = AncientAetherPlacementUtils.createKey("sakura_jungle_flowers");
-    public static final ResourceKey<PlacedFeature> CRYSTAL_SKYROOT_FOREST_TREES = AncientAetherPlacementUtils.createKey("crystal_skyroot_forest_trees");
-    public static final ResourceKey<PlacedFeature> GOLDEN_SKYROOT_GROVE_TREES = AncientAetherPlacementUtils.createKey("golden_skyroot_grove_trees");
-    public static final ResourceKey<PlacedFeature> GOLDEN_SKYROOT_FOREST_TREES = AncientAetherPlacementUtils.createKey("golden_skyroot_forest_trees");
-    public static final ResourceKey<PlacedFeature> GOLDEN_THICKET_TREES = AncientAetherPlacementUtils.createKey("golden_thicket_trees");
+    public static final ResourceKey<PlacedFeature> ELEVATED_ISLANDS_FLOWERS = AncientAetherPlacementUtils.createKey("elevated_islands_flowers");
+    public static final ResourceKey<PlacedFeature> SKYROOT_MEADOW_TREES = AncientAetherPlacementUtils.createKey("skyroot_meadow_trees");
+    public static final ResourceKey<PlacedFeature> SKYROOT_GROVE_TREES = AncientAetherPlacementUtils.createKey("skyroot_grove_trees");
+    public static final ResourceKey<PlacedFeature> SKYROOT_FOREST_TREES = AncientAetherPlacementUtils.createKey("skyroot_forest_trees");
+    public static final ResourceKey<PlacedFeature> SKYROOT_WOODLAND_TREES = AncientAetherPlacementUtils.createKey("skyroot_woodland_trees");
+    public static final ResourceKey<PlacedFeature> SUN_FOREST_TREES = AncientAetherPlacementUtils.createKey("sun_forest_trees");
     public static final ResourceKey<PlacedFeature> WYNDCAP_TAIGA_TREES = AncientAetherPlacementUtils.createKey("wyndcap_taiga_trees");
     public static final ResourceKey<PlacedFeature> FESTIVE_WYNDCAP_TAIGA_TREES = AncientAetherPlacementUtils.createKey("festive_wyndcap_taiga_trees");
     public static final ResourceKey<PlacedFeature> WYNDCAP_HIGHLAND_TREES = AncientAetherPlacementUtils.createKey("wyndcap_highland_trees");
@@ -77,75 +73,70 @@ public class AncientAetherVegetationPlacements extends TrunkVineDecorator {
                 new ConfigFilter(AetherConfig.SERVER.generate_tall_grass)
         );
 
-        AncientAetherPlacementUtils.register(context, SKYROOT_MEADOW_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.SKYROOT_MEADOW_FLOWER_PATCH),
-                PlacementUtils.countExtra(8, 0.1F, 1),
+        AncientAetherPlacementUtils.register(context, SKYROOT_MEADOW_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH),
+                CountPlacement.of(8),
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome()
         );
-        AncientAetherPlacementUtils.register(context, SKYROOT_GROVE_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH_RED),
-                RarityFilter.onAverageOnceEvery(1),
+        AncientAetherPlacementUtils.register(context, SKYROOT_GROVE_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH),
+                CountPlacement.of(6),
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome()
         );
-        AncientAetherPlacementUtils.register(context, SKYROOT_FOREST_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH_RED),
-                RarityFilter.onAverageOnceEvery(2),
+        AncientAetherPlacementUtils.register(context, SKYROOT_FOREST_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH_MIXED),
+                CountPlacement.of(3),
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome()
         );
-        AncientAetherPlacementUtils.register(context, CRYSTAL_SKYROOT_GROVE_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH_BLUE),
-                RarityFilter.onAverageOnceEvery(1),
+        AncientAetherPlacementUtils.register(context, SKYROOT_WOODLAND_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH_MIXED),
+                CountPlacement.of(2),
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome()
         );
-        AncientAetherPlacementUtils.register(context, CRYSTAL_SKYROOT_FOREST_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH_BLUE),
-                RarityFilter.onAverageOnceEvery(2),
-                ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
-                BiomeFilter.biome()
-        );
-        AncientAetherPlacementUtils.register(context, GOLDEN_SKYROOT_GROVE_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH),
-                RarityFilter.onAverageOnceEvery(1),
-                ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
-                BiomeFilter.biome()
-        );
-        AncientAetherPlacementUtils.register(context, GOLDEN_SKYROOT_FOREST_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH),
-                RarityFilter.onAverageOnceEvery(2),
+        AncientAetherPlacementUtils.register(context, SUN_FOREST_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH),
+                CountPlacement.of(3),
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome()
         );
         AncientAetherPlacementUtils.register(context, WYNDCAPS_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.WYNDCAPS_FLOWER_PATCH),
-                RarityFilter.onAverageOnceEvery(2),
+                CountPlacement.of(2),
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome()
         );
         AncientAetherPlacementUtils.register(context, WYNDCAP_HIGHLAND_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.WYNDCAPS_FLOWER_PATCH),
-                RarityFilter.onAverageOnceEvery(1),
+                CountPlacement.of(4),
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome()
         );
         AncientAetherPlacementUtils.register(context, SAKURA_JUNGLE_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.SAKURA_JUNGLE_FLOWER_PATCH),
-                RarityFilter.onAverageOnceEvery(2),
+                CountPlacement.of(3),
+                ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
+                BiomeFilter.biome()
+        );
+        AncientAetherPlacementUtils.register(context, ELEVATED_ISLANDS_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH),
+                CountPlacement.of(2),
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome()
         );
 
         AncientAetherPlacementUtils.register(context, BONUS_BERRY_BUSH_PATCH, configuredFeatures.getOrThrow(AetherConfiguredFeatures.BERRY_BUSH_PATCH_CONFIGURATION),
-                RarityFilter.onAverageOnceEvery(6),
+                RarityFilter.onAverageOnceEvery(3),
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome());
 
-        AncientAetherPlacementUtils.register(context, CRYSTAL_SKYROOT_GROVE_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_CRYSTAL_SKYROOT),
-                AetherPlacedFeatureBuilders.treePlacement(PlacementUtils.countExtra(2, 0.1F, 1))
+        AncientAetherPlacementUtils.register(context, SKYROOT_MEADOW_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_SKYROOT_MEADOW),
+                AetherPlacedFeatureBuilders.treePlacement(RarityFilter.onAverageOnceEvery(3))
         );
-        AncientAetherPlacementUtils.register(context, CRYSTAL_SKYROOT_FOREST_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_CRYSTAL_SKYROOT),
-                AetherPlacedFeatureBuilders.treePlacement(PlacementUtils.countExtra(16, 0.1F, 1))
+        AncientAetherPlacementUtils.register(context, SKYROOT_GROVE_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_SKYROOT_GROVE),
+                AetherPlacedFeatureBuilders.treePlacement(PlacementUtils.countExtra(5, 0.1F, 1))
         );
-        AncientAetherPlacementUtils.register(context, GOLDEN_SKYROOT_GROVE_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_GOLDEN_SKYROOT),
-                AetherPlacedFeatureBuilders.treePlacement(PlacementUtils.countExtra(2, 0.1F, 1))
+        AncientAetherPlacementUtils.register(context, SKYROOT_FOREST_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_SKYROOT_FOREST),
+                AetherPlacedFeatureBuilders.treePlacement(PlacementUtils.countExtra(20, 0.1F, 1))
         );
-        AncientAetherPlacementUtils.register(context, GOLDEN_SKYROOT_FOREST_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_GOLDEN_SKYROOT),
-                AetherPlacedFeatureBuilders.treePlacement(PlacementUtils.countExtra(16, 0.1F, 1))
+        AncientAetherPlacementUtils.register(context, SKYROOT_WOODLAND_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_SKYROOT_WOODLAND),
+                AetherPlacedFeatureBuilders.treePlacement(PlacementUtils.countExtra(24, 0.1F, 1))
         );
-        AncientAetherPlacementUtils.register(context, GOLDEN_THICKET_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_GOLDEN_THICKET),
+        AncientAetherPlacementUtils.register(context, SUN_FOREST_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_SUN_FOREST),
                 AetherPlacedFeatureBuilders.treePlacement(PlacementUtils.countExtra(20, 0.1F, 1))
         );
         AncientAetherPlacementUtils.register(context, WYNDCAP_TAIGA_TREES, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.TREES_WYNDCAPS),

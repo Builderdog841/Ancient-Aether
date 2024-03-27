@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#ancient_aether:has_skyroot_woodland_vegetation",
+  "features": "ancient_aether:skyroot_woodland_flowers",
+  "step": "vegetal_decoration"
+}

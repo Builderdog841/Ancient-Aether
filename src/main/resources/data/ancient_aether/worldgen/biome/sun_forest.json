@@ -30,6 +30,7 @@
       "aether:icestone_ore",
       "aether:ambrosium_ore",
       "aether:zanite_ore",
+      "aether:gravitite_ore_buried",
       "aether:gravitite_ore"
     ],
     [],
@@ -37,10 +38,9 @@
       "aether:water_spring"
     ],
     [
-      "ancient_aether:crystal_skyroot_forest_trees",
+      "ancient_aether:sun_forest_trees",
       "aether:holiday_tree",
-      "aether:grass_patch",
-      "ancient_aether:crystal_skyroot_forest_flowers",
+      "ancient_aether:sun_forest_flowers",
       "aether:berry_bush_patch"
     ],
     [

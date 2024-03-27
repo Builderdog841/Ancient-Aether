@@ -29,10 +29,10 @@
       "aether:aether_dirt_ore",
       "aether:icestone_ore",
       "aether:ambrosium_ore",
-      "ancient_aether:bonus_ambrosium_ore",
       "aether:zanite_ore",
       "aether:gravitite_ore_buried",
-      "aether:gravitite_ore"
+      "aether:gravitite_ore",
+      "ancient_aether:bonus_ambrosium_ore"
     ],
     [],
     [

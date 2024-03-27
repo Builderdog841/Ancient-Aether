@@ -7,11 +7,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.Biome;
 
 public class AncientAetherBiomes {
-    public static final ResourceKey<Biome> GOLDEN_SKYROOT_GROVE = createKey("golden_skyroot_grove");
-    public static final ResourceKey<Biome> CRYSTAL_SKYROOT_GROVE = createKey("crystal_skyroot_grove");
-    public static final ResourceKey<Biome> GOLDEN_SKYROOT_FOREST = createKey("golden_skyroot_forest");
-    public static final ResourceKey<Biome> CRYSTAL_SKYROOT_FOREST = createKey("crystal_skyroot_forest");
-    public static final ResourceKey<Biome> GOLDEN_THICKET = createKey("golden_thicket");
+    public static final ResourceKey<Biome> SUN_FOREST = createKey("sun_forest");
     public static final ResourceKey<Biome> WYNDCAP_TAIGA = createKey("wyndcap_taiga");
     public static final ResourceKey<Biome> FESTIVE_WYNDCAP_TAIGA = createKey("festive_wyndcap_taiga");
     public static final ResourceKey<Biome> WYNDCAP_HIGHLAND = createKey("wyndcap_highland");

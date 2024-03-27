@@ -43,7 +43,7 @@ public class AncientAetherFeatureProvider {
         public static TreeConfiguration.TreeConfigurationBuilder createSkyrootPineTree() {
             return new TreeConfiguration.TreeConfigurationBuilder(
                     BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LOG),
-                    new StraightTrunkPlacer(5, 5, 0), BlockStateProvider.simple(AncientAetherFeatureStates.SKYROOT_PINE_LEAVES),
+                    new StraightTrunkPlacer(7, 6, 0), BlockStateProvider.simple(AncientAetherFeatureStates.SKYROOT_PINE_LEAVES),
                     new PineFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
                     new TwoLayersFeatureSize(2, 0, 2))
                     .ignoreVines();

@@ -254,11 +254,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addEntityType(AncientAetherEntityTypes.AERONAUTIC_DART, "Aeronautic Dart");
         addEntityType(AncientAetherEntityTypes.MUTATED_AECHOR_NEEDLE, "Mutated Aechor Needle");
 
-        addBiome(AncientAetherBiomes.CRYSTAL_SKYROOT_GROVE, "Crystal Skyroot Grove");
-        addBiome(AncientAetherBiomes.CRYSTAL_SKYROOT_FOREST, "Crystal Skyroot Forest");
-        addBiome(AncientAetherBiomes.GOLDEN_SKYROOT_GROVE, "Golden Skyroot Grove");
-        addBiome(AncientAetherBiomes.GOLDEN_SKYROOT_FOREST, "Golden Skyroot Forest");
-        addBiome(AncientAetherBiomes.GOLDEN_THICKET, "Golden Thicket");
+        addBiome(AncientAetherBiomes.SUN_FOREST, "Sun Forest");
         addBiome(AncientAetherBiomes.WYNDCAP_TAIGA, "Wyndcaps Taiga");
         addBiome(AncientAetherBiomes.FESTIVE_WYNDCAP_TAIGA, "Festive Wyndcaps Taiga");
         addBiome(AncientAetherBiomes.WYNDCAP_HIGHLAND, "Wyndcaps Highland");

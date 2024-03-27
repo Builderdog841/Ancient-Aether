@@ -11,7 +11,6 @@ public class AncientAetherNoises {
     public static final ResourceKey<NormalNoise.NoiseParameters> AMPLIFICATION_FACTOR = createKey("amplification_factor");
     public static final ResourceKey<NormalNoise.NoiseParameters> AMPLIFIED = createKey("amplified");
     public static final ResourceKey<NormalNoise.NoiseParameters> EROSION = createKey("erosion");
-    public static final ResourceKey<NormalNoise.NoiseParameters> FOREST_DISTRIBUTION = createKey("forest_distribution");
     public static final ResourceKey<NormalNoise.NoiseParameters> JAGGED = createKey("jagged");
     public static final ResourceKey<NormalNoise.NoiseParameters> TEMPERATURE = createKey("temperature");
     public static final ResourceKey<NormalNoise.NoiseParameters> VEGETATION = createKey("vegetation");
@@ -24,7 +23,6 @@ public class AncientAetherNoises {
         register(context, AMPLIFICATION_FACTOR, -8, 2.0, 1.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
         register(context, AMPLIFIED, -7, 1.0, 2.0, 1.0, 0.0, 0.0, 0.0, 0.0);
         register(context, EROSION, -9, 1.5, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
-        register(context, FOREST_DISTRIBUTION, -9, 1.0, 1.5, 1.0, 0.0, 0.0, 0.0, 0.0);
         register(context, JAGGED, -16, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0);
         register(context, TEMPERATURE, -9, 1.5, 0.0, 1.0, 0.0, 0.0, 0.0);
         register(context, VEGETATION, -8, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0);

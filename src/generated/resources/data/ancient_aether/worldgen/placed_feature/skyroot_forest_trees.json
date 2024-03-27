@@ -1,5 +1,5 @@
 {
-  "feature": "ancient_aether:trees_golden_skyroot",
+  "feature": "ancient_aether:trees_skyroot_forest",
   "placement": [
     {
       "type": "minecraft:count",
@@ -7,11 +7,11 @@
         "type": "minecraft:weighted_list",
         "distribution": [
           {
-            "data": 2,
+            "data": 20,
             "weight": 9
           },
           {
-            "data": 3,
+            "data": 21,
             "weight": 1
           }
         ]

@@ -1,38 +1,6 @@
 {
   "parent": "aether:black_moa",
   "criteria": {
-    "crystal_skyroot_forest": {
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "location": {
-                "biome": "ancient_aether:crystal_skyroot_forest"
-              }
-            }
-          }
-        ]
-      },
-      "trigger": "minecraft:location"
-    },
-    "crystal_skyroot_grove": {
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "location": {
-                "biome": "ancient_aether:crystal_skyroot_grove"
-              }
-            }
-          }
-        ]
-      },
-      "trigger": "minecraft:location"
-    },
     "elevated_caverns": {
       "conditions": {
         "player": [
@@ -106,54 +74,6 @@
             "predicate": {
               "location": {
                 "biome": "ancient_aether:frozen_caverns"
-              }
-            }
-          }
-        ]
-      },
-      "trigger": "minecraft:location"
-    },
-    "golden_skyroot_forest": {
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "location": {
-                "biome": "ancient_aether:golden_skyroot_forest"
-              }
-            }
-          }
-        ]
-      },
-      "trigger": "minecraft:location"
-    },
-    "golden_skyroot_grove": {
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "location": {
-                "biome": "ancient_aether:golden_skyroot_grove"
-              }
-            }
-          }
-        ]
-      },
-      "trigger": "minecraft:location"
-    },
-    "golden_thicket": {
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "location": {
-                "biome": "ancient_aether:golden_thicket"
               }
             }
           }
@@ -273,6 +193,22 @@
       },
       "trigger": "minecraft:location"
     },
+    "sun_forest": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biome": "ancient_aether:sun_forest"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
     "wyndcap_highland": {
       "conditions": {
         "player": [
@@ -352,19 +288,7 @@
       "skyroot_woodland"
     ],
     [
-      "crystal_skyroot_grove"
-    ],
-    [
-      "crystal_skyroot_forest"
-    ],
-    [
-      "golden_skyroot_grove"
-    ],
-    [
-      "golden_skyroot_forest"
-    ],
-    [
-      "golden_thicket"
+      "sun_forest"
     ],
     [
       "wyndcap_taiga"

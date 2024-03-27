@@ -63,6 +63,10 @@ public class AncientAetherTags {
         public static final TagKey<Biome> HAS_GRAVITY_GRAVEL_COASTS = tag("has_gravity_gravel_coasts");
         public static final TagKey<Biome> HAS_WYND_ICE_COASTS = tag("has_wynd_ice_coasts");
         public static final TagKey<Biome> HAS_AETHER_GRASS_PATCHES = tag("has_aether_grass_patches");
+        public static final TagKey<Biome> HAS_SKYROOT_MEADOW_VEGETATION = tag("has_skyroot_meadow_vegetation");
+        public static final TagKey<Biome> HAS_SKYROOT_GROVE_VEGETATION = tag("has_skyroot_grove_vegetation");
+        public static final TagKey<Biome> HAS_SKYROOT_FOREST_VEGETATION = tag("has_skyroot_forest_vegetation");
+        public static final TagKey<Biome> HAS_SKYROOT_WOODLAND_VEGETATION = tag("has_skyroot_woodland_vegetation");
         public static final TagKey<Biome> HAS_VIOLET_AERCLOUD = tag("has_violet_aercloud");
         public static final TagKey<Biome> HAS_CLOUDBED = tag("has_cloudbed");
         public static final TagKey<Biome> HAS_WATER_LAKE_UNDERGROUND = tag("has_water_lake_underground");

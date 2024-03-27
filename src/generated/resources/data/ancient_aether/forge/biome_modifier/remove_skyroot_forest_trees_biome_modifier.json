@@ -1,0 +1,5 @@
+{
+  "type": "forge:remove_features",
+  "biomes": "#ancient_aether:has_skyroot_forest_vegetation",
+  "features": "aether:skyroot_forest_trees"
+}

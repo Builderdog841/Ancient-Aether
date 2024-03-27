@@ -32,6 +32,14 @@ public class AncientAetherBiomeModifiers {
     public static final ResourceKey<BiomeModifier> GRAVITY_GRAVEL_COAST_BIOME_MODIFIER = createKey("gravity_gravel_coast_biome_modifier");
     public static final ResourceKey<BiomeModifier> WYND_ICE_COAST_BIOME_MODIFIER = createKey("wynd_ice_coast_biome_modifier");
     public static final ResourceKey<BiomeModifier> AETHER_GRASS_PATCH_MODIFIER = createKey("aether_grass_patch_biome_modifier");
+    public static final ResourceKey<BiomeModifier> SKYROOT_MEADOW_FLOWERS_BIOME_MODIFIER = createKey("skyroot_meadow_flowers_biome_modifier");
+    public static final ResourceKey<BiomeModifier> SKYROOT_GROVE_FLOWERS_BIOME_MODIFIER = createKey("skyroot_grove_flowers_biome_modifier");
+    public static final ResourceKey<BiomeModifier> SKYROOT_FOREST_FLOWERS_BIOME_MODIFIER = createKey("skyroot_forest_flowers_biome_modifier");
+    public static final ResourceKey<BiomeModifier> SKYROOT_WOODLAND_FLOWERS_BIOME_MODIFIER = createKey("skyroot_woodland_flowers_biome_modifier");
+    public static final ResourceKey<BiomeModifier> SKYROOT_MEADOW_TREES_BIOME_MODIFIER = createKey("skyroot_meadow_trees_biome_modifier");
+    public static final ResourceKey<BiomeModifier> SKYROOT_GROVE_TREES_BIOME_MODIFIER = createKey("skyroot_grove_trees_biome_modifier");
+    public static final ResourceKey<BiomeModifier> SKYROOT_FOREST_TREES_BIOME_MODIFIER = createKey("skyroot_forest_trees_biome_modifier");
+    public static final ResourceKey<BiomeModifier> SKYROOT_WOODLAND_TREES_BIOME_MODIFIER = createKey("skyroot_woodland_trees_biome_modifier");
     public static final ResourceKey<BiomeModifier> BONUS_BERRY_BUSH_PATCH_MODIFIER = createKey("bonus_berry_bush_patch_biome_modifier");
     public static final ResourceKey<BiomeModifier> VIOLET_AERCLOUD_BIOME_MODIFIER = createKey("violet_aercloud_biome_modifier");
     public static final ResourceKey<BiomeModifier> CLOUDBED_BIOME_MODIFIER = createKey("cloudbed_biome_modifier");
@@ -44,6 +52,10 @@ public class AncientAetherBiomeModifiers {
     public static final ResourceKey<BiomeModifier> REMOVE_TALL_GRASS_PATCH_BIOME_MODIFIER = createKey("remove_tall_grass_patch_biome_modifier");
     public static final ResourceKey<BiomeModifier> REMOVE_WHITE_FLOWER_PATCH_BIOME_MODIFIER = createKey("remove_white_flower_patch_biome_modifier");
     public static final ResourceKey<BiomeModifier> REMOVE_PURPLE_FLOWER_PATCH_BIOME_MODIFIER = createKey("remove_purple_flower_patch_biome_modifier");
+    public static final ResourceKey<BiomeModifier> REMOVE_SKYROOT_MEADOW_TREES_BIOME_MODIFIER = createKey("remove_skyroot_meadow_trees_biome_modifier");
+    public static final ResourceKey<BiomeModifier> REMOVE_SKYROOT_GROVE_TREES_BIOME_MODIFIER = createKey("remove_skyroot_grove_trees_biome_modifier");
+    public static final ResourceKey<BiomeModifier> REMOVE_SKYROOT_FOREST_TREES_BIOME_MODIFIER = createKey("remove_skyroot_forest_trees_biome_modifier");
+    public static final ResourceKey<BiomeModifier> REMOVE_SKYROOT_WOODLAND_TREES_BIOME_MODIFIER = createKey("remove_skyroot_woodland_trees_biome_modifier");
     public static final ResourceKey<BiomeModifier> REMOVE_CRYSTAL_ISLAND_BIOME_MODIFIER = createKey("remove_crystal_island_biome_modifier");
     public static final ResourceKey<BiomeModifier> AETHER_CAVE_BIOME_MODIFIER = createKey("aether_cave_biome_modifier");
     public static final ResourceKey<BiomeModifier> AETHER_SURFACE_CAVE_BIOME_MODIFIER = createKey("aether_surface_cave_biome_modifier");
@@ -90,6 +102,46 @@ public class AncientAetherBiomeModifiers {
         context.register(AETHER_GRASS_PATCH_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biome.getOrThrow(AncientAetherTags.Biomes.HAS_AETHER_GRASS_PATCHES),
                 HolderSet.direct(placement.getOrThrow(AncientAetherVegetationPlacements.AETHER_GRASS_PATCH)),
+                GenerationStep.Decoration.VEGETAL_DECORATION
+        ));
+        context.register(SKYROOT_MEADOW_FLOWERS_BIOME_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_MEADOW_VEGETATION),
+                HolderSet.direct(placement.getOrThrow(AncientAetherVegetationPlacements.SKYROOT_MEADOW_FLOWERS)),
+                GenerationStep.Decoration.VEGETAL_DECORATION
+        ));
+        context.register(SKYROOT_GROVE_FLOWERS_BIOME_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_GROVE_VEGETATION),
+                HolderSet.direct(placement.getOrThrow(AncientAetherVegetationPlacements.SKYROOT_GROVE_FLOWERS)),
+                GenerationStep.Decoration.VEGETAL_DECORATION
+        ));
+        context.register(SKYROOT_FOREST_FLOWERS_BIOME_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_FOREST_VEGETATION),
+                HolderSet.direct(placement.getOrThrow(AncientAetherVegetationPlacements.SKYROOT_FOREST_FLOWERS)),
+                GenerationStep.Decoration.VEGETAL_DECORATION
+        ));
+        context.register(SKYROOT_WOODLAND_FLOWERS_BIOME_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_WOODLAND_VEGETATION),
+                HolderSet.direct(placement.getOrThrow(AncientAetherVegetationPlacements.SKYROOT_WOODLAND_FLOWERS)),
+                GenerationStep.Decoration.VEGETAL_DECORATION
+        ));
+        context.register(SKYROOT_MEADOW_TREES_BIOME_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_MEADOW_VEGETATION),
+                HolderSet.direct(placement.getOrThrow(AncientAetherVegetationPlacements.SKYROOT_MEADOW_TREES)),
+                GenerationStep.Decoration.VEGETAL_DECORATION
+        ));
+        context.register(SKYROOT_GROVE_TREES_BIOME_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_GROVE_VEGETATION),
+                HolderSet.direct(placement.getOrThrow(AncientAetherVegetationPlacements.SKYROOT_GROVE_TREES)),
+                GenerationStep.Decoration.VEGETAL_DECORATION
+        ));
+        context.register(SKYROOT_FOREST_TREES_BIOME_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_FOREST_VEGETATION),
+                HolderSet.direct(placement.getOrThrow(AncientAetherVegetationPlacements.SKYROOT_FOREST_TREES)),
+                GenerationStep.Decoration.VEGETAL_DECORATION
+        ));
+        context.register(SKYROOT_WOODLAND_TREES_BIOME_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_WOODLAND_VEGETATION),
+                HolderSet.direct(placement.getOrThrow(AncientAetherVegetationPlacements.SKYROOT_WOODLAND_TREES)),
                 GenerationStep.Decoration.VEGETAL_DECORATION
         ));
         context.register(BONUS_BERRY_BUSH_PATCH_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
@@ -151,6 +203,26 @@ public class AncientAetherBiomeModifiers {
         context.register(REMOVE_PURPLE_FLOWER_PATCH_BIOME_MODIFIER, new ForgeBiomeModifiers.RemoveFeaturesBiomeModifier(
                 biome.getOrThrow(AetherTags.Biomes.IS_AETHER),
                 HolderSet.direct(placement.getOrThrow(AetherPlacedFeatures.PURPLE_FLOWER_PATCH_PLACEMENT)),
+                Set.of(GenerationStep.Decoration.values())
+        ));
+        context.register(REMOVE_SKYROOT_MEADOW_TREES_BIOME_MODIFIER, new ForgeBiomeModifiers.RemoveFeaturesBiomeModifier(
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_MEADOW_VEGETATION),
+                HolderSet.direct(placement.getOrThrow(AetherPlacedFeatures.SKYROOT_MEADOW_TREES_PLACEMENT)),
+                Set.of(GenerationStep.Decoration.values())
+        ));
+        context.register(REMOVE_SKYROOT_GROVE_TREES_BIOME_MODIFIER, new ForgeBiomeModifiers.RemoveFeaturesBiomeModifier(
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_GROVE_VEGETATION),
+                HolderSet.direct(placement.getOrThrow(AetherPlacedFeatures.SKYROOT_GROVE_TREES_PLACEMENT)),
+                Set.of(GenerationStep.Decoration.values())
+        ));
+        context.register(REMOVE_SKYROOT_FOREST_TREES_BIOME_MODIFIER, new ForgeBiomeModifiers.RemoveFeaturesBiomeModifier(
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_FOREST_VEGETATION),
+                HolderSet.direct(placement.getOrThrow(AetherPlacedFeatures.SKYROOT_FOREST_TREES_PLACEMENT)),
+                Set.of(GenerationStep.Decoration.values())
+        ));
+        context.register(REMOVE_SKYROOT_WOODLAND_TREES_BIOME_MODIFIER, new ForgeBiomeModifiers.RemoveFeaturesBiomeModifier(
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_WOODLAND_VEGETATION),
+                HolderSet.direct(placement.getOrThrow(AetherPlacedFeatures.SKYROOT_WOODLAND_TREES_PLACEMENT)),
                 Set.of(GenerationStep.Decoration.values())
         ));
         context.register(REMOVE_CRYSTAL_ISLAND_BIOME_MODIFIER, new ForgeBiomeModifiers.RemoveFeaturesBiomeModifier(

@@ -20,7 +20,7 @@
     },
     "features": [
       {
-        "chance": 0.25,
+        "chance": 0.15,
         "feature": {
           "feature": "ancient_aether:skyroot_tree_variants",
           "placement": [
@@ -40,7 +40,7 @@
         }
       },
       {
-        "chance": 0.05,
+        "chance": 0.15,
         "feature": {
           "feature": "ancient_aether:crystal_skyroot_tree",
           "placement": [
@@ -70,26 +70,6 @@
                 "type": "minecraft:would_survive",
                 "state": {
                   "Name": "aether:skyroot_sapling",
-                  "Properties": {
-                    "stage": "0"
-                  }
-                }
-              }
-            }
-          ]
-        }
-      },
-      {
-        "chance": 0.001,
-        "feature": {
-          "feature": "aether:golden_oak_tree",
-          "placement": [
-            {
-              "type": "minecraft:block_predicate_filter",
-              "predicate": {
-                "type": "minecraft:would_survive",
-                "state": {
-                  "Name": "aether:golden_oak_sapling",
                   "Properties": {
                     "stage": "0"
                   }

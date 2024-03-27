@@ -2,9 +2,7 @@
   "values": [
     "aether:skyroot_forest",
     "aether:skyroot_woodland",
-    "ancient_aether:golden_skyroot_forest",
-    "ancient_aether:crystal_skyroot_forest",
-    "ancient_aether:golden_thicket",
+    "ancient_aether:sun_forest",
     "ancient_aether:skyroot_jungle",
     {
       "id": "deep_aether:golden_grove",

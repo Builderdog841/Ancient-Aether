@@ -1,21 +1,9 @@
 {
-  "feature": "ancient_aether:trees_skyroot",
+  "feature": "ancient_aether:trees_skyroot_meadow",
   "placement": [
     {
-      "type": "minecraft:count",
-      "count": {
-        "type": "minecraft:weighted_list",
-        "distribution": [
-          {
-            "data": 16,
-            "weight": 9
-          },
-          {
-            "data": 17,
-            "weight": 1
-          }
-        ]
-      }
+      "type": "minecraft:rarity_filter",
+      "chance": 3
     },
     {
       "type": "minecraft:surface_water_depth_filter",
