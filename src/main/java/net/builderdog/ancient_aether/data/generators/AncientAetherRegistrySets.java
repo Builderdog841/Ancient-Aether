@@ -29,10 +29,10 @@ public class AncientAetherRegistrySets extends DatapackBuiltinEntriesProvider {
 
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder() {
         public HolderLookup.@NotNull Provider buildPatch(@NotNull RegistryAccess registries, HolderLookup.@NotNull Provider lookup) {
-            BuildState state = this.createState(registries);
+            BuildState state = createState(registries);
             Map<ResourceKey<? extends Registry<?>>, RegistryContents<?>> map = new HashMap<>();
             state.collectReferencedRegistries().forEach((element) -> map.put(element.key(), element));
-            this.entries.stream().map((RegistryStub<?> stub) -> stub.collectChanges(state)).forEach((contents) -> map.put(contents.key(), contents));
+            entries.stream().map((RegistryStub<?> stub) -> stub.collectChanges(state)).forEach((contents) -> map.put(contents.key(), contents));
             Stream<HolderLookup.RegistryLookup<?>> stream = registries.registries().map((entry) -> entry.value().asLookup());
             HolderLookup.Provider provider = HolderLookup.Provider.create(Stream.concat(stream, map.values().stream().map(RegistryContents::buildAsLookup).peek(state::addOwner)));
             state.fillMissingHolders(lookup);

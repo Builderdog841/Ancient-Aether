@@ -127,10 +127,8 @@ public class AncientAetherVegetationFeatures {
                                 new InclusiveRange<>(1, 3),
                                 new NormalNoise.NoiseParameters(-10, 1.0D), 1.0F, 2345L,
                                 new NormalNoise.NoiseParameters(-3, 1.0D), 1.0F,
-                                List.of(AncientAetherFeatureStates.HIGHLAND_CYCLAMEN,
-                                        AetherFeatureStates.PURPLE_FLOWER,
+                                List.of(AetherFeatureStates.PURPLE_FLOWER,
                                         AetherFeatureStates.WHITE_FLOWER,
-                                        AncientAetherFeatureStates.SKY_BLUES,
                                         AncientAetherFeatureStates.SKY_GRASS_MEDIUM
                                         ))))));
 
