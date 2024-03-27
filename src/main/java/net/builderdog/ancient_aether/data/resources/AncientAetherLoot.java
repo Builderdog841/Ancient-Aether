@@ -23,8 +23,8 @@ public class AncientAetherLoot {
     public static final ResourceLocation CHESTS_DUNGEON_MOA_EGGS_RARE = register("chests/dungeon/moa_eggs_rare");
     public static final ResourceLocation CHESTS_DUNGEON_BRONZE_DUNGEON = register("chests/dungeon/bronze/bronze_dungeon");
     public static final ResourceLocation CHESTS_DUNGEON_BRONZE_DUNGEON_LOOT = register("chests/dungeon/bronze/bronze_dungeon_loot");
-    public static final ResourceLocation CHESTS_DUNGEON_BRONZE_DUNGEON_SUPPLIES = register("chests/dungeon/bronze/bronze_dungeon_supplies");
-    public static final ResourceLocation CHESTS_DUNGEON_BRONZE_DUNGEON_MISCELLANEOUS = register("chests/dungeon/bronze/bronze_dungeon_miscellaneous");
+    public static final ResourceLocation CHESTS_DUNGEON_BRONZE_DUNGEON_JUNK = register("chests/dungeon/bronze/bronze_dungeon_supplies");
+    public static final ResourceLocation CHESTS_DUNGEON_BRONZE_DUNGEON_SPECIAL = register("chests/dungeon/bronze/bronze_dungeon_miscellaneous");
     public static final ResourceLocation CHESTS_DUNGEON_BRONZE_DUNGEON_LIBRARY = register("chests/dungeon/bronze/bronze_dungeon_library");
     public static final ResourceLocation CHESTS_DUNGEON_BRONZE_DUNGEON_REWARD = register("chests/dungeon/bronze/bronze_dungeon_reward");
     public static final ResourceLocation CHESTS_DUNGEON_SENTRY_LABORATORY = register("chests/dungeon/laboratory/sentry_laboratory");

@@ -7,15 +7,16 @@
         {
           "type": "minecraft:loot_table",
           "name": "ancient_aether:chests/dungeon/bronze/bronze_dungeon_loot",
-          "weight": 8
+          "weight": 4
         },
         {
           "type": "minecraft:loot_table",
-          "name": "ancient_aether:chests/dungeon/bronze/bronze_dungeon_disc"
+          "name": "ancient_aether:chests/dungeon/bronze/bronze_dungeon_supplies",
+          "weight": 2
         },
         {
           "type": "minecraft:loot_table",
-          "name": "ancient_aether:chests/dungeon/bronze/bronze_dungeon_trash"
+          "name": "ancient_aether:chests/dungeon/bronze/bronze_dungeon_miscellaneous"
         }
       ],
       "rolls": {
