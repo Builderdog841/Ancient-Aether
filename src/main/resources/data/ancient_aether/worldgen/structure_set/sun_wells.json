@@ -1,13 +1,13 @@
 {
   "structures": [
     {
-      "structure": "ancient_aether:solar_ruin",
+      "structure": "ancient_aether:sun_well",
       "weight": 1
     }
   ],
   "placement": {
     "salt": 25623337,
-    "spacing": 16,
+    "spacing": 12,
     "separation": 8,
     "type": "minecraft:random_spread"
   },

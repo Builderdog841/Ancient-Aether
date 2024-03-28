@@ -1,10 +1,10 @@
 {
   "type": "ancient_aether:jigsaw_skylands",
-  "start_pool": "ancient_aether:solar_ruin/center",
+  "start_pool": "ancient_aether:sun_well/well",
   "size": 10,
   "adapt_noise": true,
   "max_distance_from_center": 80,
-  "biomes": "#ancient_aether:has_structure/solar_ruin",
+  "biomes": "#ancient_aether:has_structure/sun_well",
   "terrain_adaptation": "beard_thin",
   "step": "surface_structures",
   "min_spawn_height": 120,
