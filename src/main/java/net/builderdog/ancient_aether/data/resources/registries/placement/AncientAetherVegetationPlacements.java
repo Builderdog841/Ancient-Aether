@@ -75,52 +75,52 @@ public class AncientAetherVegetationPlacements extends TrunkVineDecorator {
         );
 
         AncientAetherPlacementUtils.register(context, SKYROOT_MEADOW_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH),
-                CountPlacement.of(8),
-                ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
-                BiomeFilter.biome()
-        );
-        AncientAetherPlacementUtils.register(context, SKYROOT_GROVE_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH),
                 CountPlacement.of(6),
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome()
         );
+        AncientAetherPlacementUtils.register(context, SKYROOT_GROVE_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH),
+                CountPlacement.of(5),
+                ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
+                BiomeFilter.biome()
+        );
         AncientAetherPlacementUtils.register(context, SKYROOT_FOREST_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH_MIXED),
-                CountPlacement.of(3),
+                CountPlacement.of(2),
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome()
         );
         AncientAetherPlacementUtils.register(context, SKYROOT_WOODLAND_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH_MIXED),
-                CountPlacement.of(2),
+                CountPlacement.of(1),
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome()
         );
         AncientAetherPlacementUtils.register(context, SUN_FOREST_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH),
-                CountPlacement.of(3),
+                CountPlacement.of(2),
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome()
         );
         AncientAetherPlacementUtils.register(context, WYNDCAPS_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.WYNDCAPS_FLOWER_PATCH),
-                CountPlacement.of(2),
+                CountPlacement.of(1),
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome()
         );
         AncientAetherPlacementUtils.register(context, WYNDCAP_HIGHLAND_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.WYNDCAPS_FLOWER_PATCH),
-                CountPlacement.of(4),
+                CountPlacement.of(3),
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome()
         );
         AncientAetherPlacementUtils.register(context, SKYROOT_JUNGLE_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.SKYROOT_JUNGLE_FLOWER_PATCH),
-                CountPlacement.of(3),
+                CountPlacement.of(2),
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome()
         );
         AncientAetherPlacementUtils.register(context, SAKURA_JUNGLE_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.SAKURA_JUNGLE_FLOWER_PATCH),
-                CountPlacement.of(3),
+                CountPlacement.of(2),
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome()
         );
         AncientAetherPlacementUtils.register(context, ELEVATED_ISLANDS_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH),
-                CountPlacement.of(2),
+                CountPlacement.of(1),
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome()
         );

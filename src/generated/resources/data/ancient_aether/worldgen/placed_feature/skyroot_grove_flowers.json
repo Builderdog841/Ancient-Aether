@@ -3,7 +3,7 @@
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 6
+      "count": 5
     },
     {
       "type": "aether:improved_layer_placement",
