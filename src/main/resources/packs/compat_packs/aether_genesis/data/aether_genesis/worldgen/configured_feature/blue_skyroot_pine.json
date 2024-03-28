@@ -17,7 +17,7 @@
     "foliage_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "ancient_Aether:blue_skyroot_pine_leaves",
+        "Name": "ancient_aether:blue_skyroot_pine_leaves",
         "Properties": {
           "distance": "7",
           "double_drops": "true",
