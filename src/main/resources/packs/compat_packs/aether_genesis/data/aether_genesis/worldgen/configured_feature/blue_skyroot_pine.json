@@ -9,7 +9,7 @@
       }
     },
     "foliage_placer": {
-      "type": "aether_genesis:aether_pine_foliage_placer",
+      "type": "ancient_aether:pine_foliage_placer",
       "offset": 1,
       "radius": 2,
       "trunk_height": 2
@@ -17,7 +17,7 @@
     "foliage_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "ancient_aether:skyroot_pine_leaves",
+        "Name": "aether_genesis:blue_skyroot_leaves",
         "Properties": {
           "distance": "7",
           "double_drops": "true",
@@ -36,8 +36,8 @@
     },
     "trunk_placer": {
       "type": "minecraft:straight_trunk_placer",
-      "base_height": 5,
-      "height_rand_a": 5,
+      "base_height": 7,
+      "height_rand_a": 6,
       "height_rand_b": 0
     },
     "trunk_provider": {
