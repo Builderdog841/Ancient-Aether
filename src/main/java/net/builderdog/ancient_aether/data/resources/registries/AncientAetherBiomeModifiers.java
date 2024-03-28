@@ -72,7 +72,7 @@ public class AncientAetherBiomeModifiers {
         context.register(AEROGEL_BLOBS_BIOME_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biome.getOrThrow(AncientAetherTags.Biomes.HAS_AEROGEL_BLOBS),
                 HolderSet.direct(placement.getOrThrow(AncientAetherOrePlacements.AEROGEL_BLOBS)),
-                GenerationStep.Decoration.UNDERGROUND_ORES
+                GenerationStep.Decoration.UNDERGROUND_DECORATION
         ));
         context.register(AETHER_QUARTZ_ORE_BIOME_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biome.getOrThrow(AncientAetherTags.Biomes.HAS_AETHER_QUARTZ_ORE),
