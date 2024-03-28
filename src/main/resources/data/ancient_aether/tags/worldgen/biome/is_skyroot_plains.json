@@ -1,30 +1,6 @@
 {
   "values": [
     "aether:skyroot_meadow",
-    "aether:skyroot_grove",
-    {
-      "id": "deep_aether:aerlavender_fields",
-      "required": false
-    },
-    {
-      "id": "deep_aether:golden_heights",
-      "required": false
-    },
-    {
-      "id": "aether_genesis:vibrant_meadow",
-      "required": false
-    },
-    {
-      "id": "aether_genesis:vibrant_grove",
-      "required": false
-    },
-    {
-      "id": "aether_redux:gilded_grasslands",
-      "required": false
-    },
-    {
-      "id": "aether_redux:skyfields",
-      "required": false
-    }
+    "aether:skyroot_grove"
   ]
 }

@@ -140,8 +140,8 @@ public class AncientAether {
 
         if (ModList.get().isLoaded("lost_aether_content") && event.getPackType() == PackType.SERVER_DATA) {
             if (event.getPackType() == PackType.SERVER_DATA) {
-                var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/lost_content_compat");
-                var pack = Pack.readMetaAndCreate("builtin/lost_content_compat", Component.translatable("pack.ancient_aether.lost_content_compat.title"), true,
+                var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/compat_packs/lost_content");
+                var pack = Pack.readMetaAndCreate("builtin/compat_packs/lost_content", Component.translatable("pack.ancient_aether.lost_content_compat.title"), true,
                         path -> new PathPackResources(path, resourcePath, true), PackType.SERVER_DATA, Pack.Position.TOP, PackSource.SERVER);
 
                 event.addRepositorySource(consumer -> consumer.accept(pack));
@@ -150,15 +150,15 @@ public class AncientAether {
 
         if (ModList.get().isLoaded("deep_aether") && event.getPackType() == PackType.SERVER_DATA) {
             if (event.getPackType() == PackType.SERVER_DATA) {
-                var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/deep_aether_compat");
-                var pack = Pack.readMetaAndCreate("builtin/deep_aether_compat", Component.translatable("pack.ancient_aether.deep_aether_compat.title"), true,
+                var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/compat_packs/deep_aether");
+                var pack = Pack.readMetaAndCreate("builtin/compat_packs/deep_aether", Component.translatable("pack.ancient_aether.deep_aether_compat.title"), true,
                         path -> new PathPackResources(path, resourcePath, true), PackType.SERVER_DATA, Pack.Position.TOP, PackSource.SERVER);
 
                 event.addRepositorySource(consumer -> consumer.accept(pack));
             }
             if (event.getPackType() == PackType.CLIENT_RESOURCES) {
-                var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/deep_aether_asset_compat");
-                var pack = Pack.readMetaAndCreate("builtin/deep_aether_asset_compat", Component.translatable("pack.ancient_aether.deep_aether_asset_compat.title"), true,
+                var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/compat_packs/deep_aether_assets");
+                var pack = Pack.readMetaAndCreate("builtin/compat_packs/deep_aether_assets", Component.translatable("pack.ancient_aether.deep_aether_asset_compat.title"), true,
                         path -> new PathPackResources(path, resourcePath, true), PackType.CLIENT_RESOURCES, Pack.Position.TOP, PackSource.BUILT_IN);
                 event.addRepositorySource(consumer -> consumer.accept(pack));
             }
@@ -166,8 +166,8 @@ public class AncientAether {
 
         if (ModList.get().isLoaded("aether_redux") && event.getPackType() == PackType.SERVER_DATA) {
             if (event.getPackType() == PackType.SERVER_DATA) {
-                var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/aether_redux_compat");
-                var pack = Pack.readMetaAndCreate("builtin/aether_redux_compat", Component.translatable("pack.ancient_aether.aether_redux_compat.title"), true,
+                var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/compat_packs/aether_redux");
+                var pack = Pack.readMetaAndCreate("builtin/compat_packs/aether_redux", Component.translatable("pack.ancient_aether.aether_redux_compat.title"), true,
                         path -> new PathPackResources(path, resourcePath, true), PackType.SERVER_DATA, Pack.Position.TOP, PackSource.SERVER);
 
                 event.addRepositorySource(consumer -> consumer.accept(pack));
@@ -176,8 +176,8 @@ public class AncientAether {
 
         if (ModList.get().isLoaded("aether_genesis") && event.getPackType() == PackType.SERVER_DATA) {
             if (event.getPackType() == PackType.SERVER_DATA) {
-                var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/aether_genesis_compat");
-                var pack = Pack.readMetaAndCreate("builtin/aether_genesis_compat", Component.translatable("pack.ancient_aether.aether_genesis_compat.title"), true,
+                var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/compat_packs/aether_genesis");
+                var pack = Pack.readMetaAndCreate("builtin/compat_packs/aether_genesis", Component.translatable("pack.ancient_aether.aether_genesis_compat.title"), true,
                         path -> new PathPackResources(path, resourcePath, true), PackType.SERVER_DATA, Pack.Position.TOP, PackSource.SERVER);
 
                 event.addRepositorySource(consumer -> consumer.accept(pack));

@@ -125,22 +125,22 @@ public class AncientAetherBiomeModifiers {
                 GenerationStep.Decoration.VEGETAL_DECORATION
         ));
         context.register(SKYROOT_MEADOW_TREES_BIOME_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_MEADOW_VEGETATION),
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_MEADOW_TREES),
                 HolderSet.direct(placement.getOrThrow(AncientAetherVegetationPlacements.SKYROOT_MEADOW_TREES)),
                 GenerationStep.Decoration.VEGETAL_DECORATION
         ));
         context.register(SKYROOT_GROVE_TREES_BIOME_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_GROVE_VEGETATION),
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_GROVE_TREES),
                 HolderSet.direct(placement.getOrThrow(AncientAetherVegetationPlacements.SKYROOT_GROVE_TREES)),
                 GenerationStep.Decoration.VEGETAL_DECORATION
         ));
         context.register(SKYROOT_FOREST_TREES_BIOME_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_FOREST_VEGETATION),
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_FOREST_TREES),
                 HolderSet.direct(placement.getOrThrow(AncientAetherVegetationPlacements.SKYROOT_FOREST_TREES)),
                 GenerationStep.Decoration.VEGETAL_DECORATION
         ));
         context.register(SKYROOT_WOODLAND_TREES_BIOME_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_WOODLAND_VEGETATION),
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_WOODLAND_TREES),
                 HolderSet.direct(placement.getOrThrow(AncientAetherVegetationPlacements.SKYROOT_WOODLAND_TREES)),
                 GenerationStep.Decoration.VEGETAL_DECORATION
         ));
@@ -206,22 +206,22 @@ public class AncientAetherBiomeModifiers {
                 Set.of(GenerationStep.Decoration.values())
         ));
         context.register(REMOVE_SKYROOT_MEADOW_TREES_BIOME_MODIFIER, new ForgeBiomeModifiers.RemoveFeaturesBiomeModifier(
-                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_MEADOW_VEGETATION),
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_MEADOW_TREES),
                 HolderSet.direct(placement.getOrThrow(AetherPlacedFeatures.SKYROOT_MEADOW_TREES_PLACEMENT)),
                 Set.of(GenerationStep.Decoration.values())
         ));
         context.register(REMOVE_SKYROOT_GROVE_TREES_BIOME_MODIFIER, new ForgeBiomeModifiers.RemoveFeaturesBiomeModifier(
-                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_GROVE_VEGETATION),
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_GROVE_TREES),
                 HolderSet.direct(placement.getOrThrow(AetherPlacedFeatures.SKYROOT_GROVE_TREES_PLACEMENT)),
                 Set.of(GenerationStep.Decoration.values())
         ));
         context.register(REMOVE_SKYROOT_FOREST_TREES_BIOME_MODIFIER, new ForgeBiomeModifiers.RemoveFeaturesBiomeModifier(
-                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_FOREST_VEGETATION),
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_FOREST_TREES),
                 HolderSet.direct(placement.getOrThrow(AetherPlacedFeatures.SKYROOT_FOREST_TREES_PLACEMENT)),
                 Set.of(GenerationStep.Decoration.values())
         ));
         context.register(REMOVE_SKYROOT_WOODLAND_TREES_BIOME_MODIFIER, new ForgeBiomeModifiers.RemoveFeaturesBiomeModifier(
-                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_WOODLAND_VEGETATION),
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_SKYROOT_WOODLAND_TREES),
                 HolderSet.direct(placement.getOrThrow(AetherPlacedFeatures.SKYROOT_WOODLAND_TREES_PLACEMENT)),
                 Set.of(GenerationStep.Decoration.values())
         ));

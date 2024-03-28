@@ -2,14 +2,6 @@
   "values": [
     "ancient_aether:wyndcap_highland",
     "ancient_aether:wyndcap_taiga",
-    "ancient_aether:festive_wyndcap_taiga",
-    {
-      "id": "aether_redux:frosted_tundra",
-      "required": false
-    },
-    {
-      "id": "aether_redux:glacial_taiga",
-      "required": false
-    }
+    "ancient_aether:festive_wyndcap_taiga"
   ]
 }
