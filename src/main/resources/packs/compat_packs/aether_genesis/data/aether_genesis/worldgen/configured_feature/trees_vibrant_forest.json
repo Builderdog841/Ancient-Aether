@@ -20,6 +20,26 @@
     },
     "features": [
       {
+        "chance": 0.25,
+        "feature": {
+          "feature": "aether_genesis:large_blue_skyroot_tree",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:would_survive",
+                "state": {
+                  "Name": "aether_genesis:blue_skyroot_sapling",
+                  "Properties": {
+                    "stage": "0"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
         "chance": 0.2,
         "feature": {
           "feature": "ancient_aether:skyroot_tree_variants",
@@ -49,7 +69,7 @@
               "predicate": {
                 "type": "minecraft:would_survive",
                 "state": {
-                  "Name": "ancient_aether:crystal_skyroot_sapling",
+                  "Name": "aether_genesis:blue_skyroot_sapling",
                   "Properties": {
                     "stage": "0"
                   }
