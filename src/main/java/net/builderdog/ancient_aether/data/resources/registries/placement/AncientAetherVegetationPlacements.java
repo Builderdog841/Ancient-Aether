@@ -30,6 +30,7 @@ public class AncientAetherVegetationPlacements extends TrunkVineDecorator {
     public static final ResourceKey<PlacedFeature> SUN_FOREST_FLOWERS = AncientAetherPlacementUtils.createKey("sun_forest_flowers");
     public static final ResourceKey<PlacedFeature> WYNDCAPS_FLOWERS = AncientAetherPlacementUtils.createKey("wyndcaps_flowers");
     public static final ResourceKey<PlacedFeature> WYNDCAP_HIGHLAND_FLOWERS = AncientAetherPlacementUtils.createKey("wyndcap_highland_flowers");
+    public static final ResourceKey<PlacedFeature> SKYROOT_JUNGLE_FLOWERS = AncientAetherPlacementUtils.createKey("skyroot_jungle_flowers");
     public static final ResourceKey<PlacedFeature> SAKURA_JUNGLE_FLOWERS = AncientAetherPlacementUtils.createKey("sakura_jungle_flowers");
     public static final ResourceKey<PlacedFeature> ELEVATED_ISLANDS_FLOWERS = AncientAetherPlacementUtils.createKey("elevated_islands_flowers");
     public static final ResourceKey<PlacedFeature> SKYROOT_MEADOW_TREES = AncientAetherPlacementUtils.createKey("skyroot_meadow_trees");
@@ -105,6 +106,11 @@ public class AncientAetherVegetationPlacements extends TrunkVineDecorator {
         );
         AncientAetherPlacementUtils.register(context, WYNDCAP_HIGHLAND_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.WYNDCAPS_FLOWER_PATCH),
                 CountPlacement.of(4),
+                ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
+                BiomeFilter.biome()
+        );
+        AncientAetherPlacementUtils.register(context, SKYROOT_JUNGLE_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.SKYROOT_JUNGLE_FLOWER_PATCH),
+                CountPlacement.of(3),
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome()
         );

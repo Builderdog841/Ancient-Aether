@@ -36,6 +36,7 @@ public class AncientAetherVegetationFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_FLOWER_PATCH = AncientAetherFeatureUtils.registerKey("aether_flower_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_FLOWER_PATCH_MIXED = AncientAetherFeatureUtils.registerKey("aether_flower_patch_mixed");
     public static final ResourceKey<ConfiguredFeature<?, ?>> WYNDCAPS_FLOWER_PATCH = AncientAetherFeatureUtils.registerKey("wyndcaps_flower_patch");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_JUNGLE_FLOWER_PATCH = AncientAetherFeatureUtils.registerKey("skyroot_jungle_flower_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_JUNGLE_FLOWER_PATCH = AncientAetherFeatureUtils.registerKey("sakura_jungle_flower_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_TREE_VARIANTS = AncientAetherFeatureUtils.registerKey("skyroot_tree_variants");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_PINE_TREE_VARIANTS = AncientAetherFeatureUtils.registerKey("skyroot_pine_tree_variants");
@@ -115,6 +116,10 @@ public class AncientAetherVegetationFeatures {
                 new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH), PlacementUtils.isEmpty()), 0.375F),
                 new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.SKY_BLUES_PATCH), PlacementUtils.isEmpty()), 0.125F)
         ), PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.WYND_THISTLE_PATCH), PlacementUtils.isEmpty())));
+
+        AncientAetherFeatureUtils.register(context, SKYROOT_JUNGLE_FLOWER_PATCH, Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(
+                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.HIGHLAND_CYCLAMEN_PATCH), PlacementUtils.isEmpty()), 0.3F)
+        ), PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH), PlacementUtils.isEmpty())));
 
         AncientAetherFeatureUtils.register(context, SAKURA_JUNGLE_FLOWER_PATCH, Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(
                 new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH), PlacementUtils.isEmpty()), 0.375F),
