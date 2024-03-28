@@ -16,18 +16,19 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
     }
     @Override
     protected void registerStatesAndModels() {
-        blockWithItem(AncientAetherBlocks.HIGHSPROOT_PLANKS);
-        blockWithItem(AncientAetherBlocks.SAKURA_PLANKS);
-        blockWithItem(AncientAetherBlocks.SKYROOT_PINE_LEAVES);
-        blockWithItem(AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES);
-        blockWithItem(AncientAetherBlocks.HIGHSPROOT_LEAVES);
-        blockWithItem(AncientAetherBlocks.SAKURA_LEAVES);
-        blockWithItem(AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES);
-        blockWithItem(AncientAetherBlocks.VALKYRUM_BLOCK);
-        blockWithItem(AncientAetherBlocks.VALKYRUM_ORE);
-        blockWithItem(AncientAetherBlocks.AETHER_QUARTZ_ORE);
         blockWithItem(AncientAetherBlocks.GRAVITY_GRAVEL);
         blockWithItem(AncientAetherBlocks.WYND_ICE);
+        blockWithItem(AncientAetherBlocks.AETHER_QUARTZ_ORE);
+        blockWithItem(AncientAetherBlocks.VALKYRUM_ORE);
+        blockWithItem(AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES);
+        blockWithItem(AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES);
+        blockWithItem(AncientAetherBlocks.SKYROOT_PINE_LEAVES);
+        blockWithItem(AncientAetherBlocks.BLUE_SKYROOT_PINE_LEAVES);
+        blockWithItem(AncientAetherBlocks.HIGHSPROOT_LEAVES);
+        blockWithItem(AncientAetherBlocks.SAKURA_LEAVES);
+        blockWithItem(AncientAetherBlocks.HIGHSPROOT_PLANKS);
+        blockWithItem(AncientAetherBlocks.SAKURA_PLANKS);
+        blockWithItem(AncientAetherBlocks.VALKYRUM_BLOCK);
         blockWithItem(AncientAetherBlocks.FLUFFALO_WOOL);
         blockWithItem(AncientAetherBlocks.CARVED_TILES);
         blockWithItem(AncientAetherBlocks.WYND_SENTRY_STONE);
@@ -78,6 +79,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         crossBlock(AncientAetherBlocks.ATMOSINE_CRYSTAL);
         crossBlock(AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING);
         crossBlock(AncientAetherBlocks.SKYROOT_PINE_SAPLING);
+        crossBlock(AncientAetherBlocks.BLUE_SKYROOT_PINE_SAPLING);
         crossBlock(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING);
         crossBlock(AncientAetherBlocks.HIGHSPROOT_SAPLING);
         crossBlock(AncientAetherBlocks.SAKURA_SAPLING);
@@ -184,9 +186,10 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         AAInvisibleBlock(AncientAetherBlocks.BOSS_DOORWAY_LIGHT_AEROGETIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get());
         AAInvisibleBlock(AncientAetherBlocks.BOSS_DOORWAY_CORRUPTED_AEROGETIC_STONE.get(), AncientAetherBlocks.CORRUPTED_AEROGETIC_STONE.get());
 
-        pottedPlant(AncientAetherBlocks.POTTED_SKYROOT_PINE_SAPLING.get(), AncientAetherBlocks.SKYROOT_PINE_SAPLING.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_CRYSTAL_SKYROOT_SAPLING.get(), AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_ENCHANTED_SKYROOT_SAPLING.get(), AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get(), "");
+        pottedPlant(AncientAetherBlocks.POTTED_SKYROOT_PINE_SAPLING.get(), AncientAetherBlocks.SKYROOT_PINE_SAPLING.get(), "");
+        pottedPlant(AncientAetherBlocks.POTTED_BLUE_SKYROOT_PINE_SAPLING.get(), AncientAetherBlocks.BLUE_SKYROOT_PINE_SAPLING.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING.get(), AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_SAKURA_SAPLING.get(), AncientAetherBlocks.SAKURA_SAPLING.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_SKY_BLUES.get(), AncientAetherBlocks.SKY_BLUES.get(), "");

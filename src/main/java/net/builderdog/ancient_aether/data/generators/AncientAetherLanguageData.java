@@ -28,12 +28,14 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES, "Crystal Skyroot Leaves");
         addBlock(AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES, "Enchanted Skyroot Leaves");
         addBlock(AncientAetherBlocks.SKYROOT_PINE_LEAVES, "Skyroot Pine Leaves");
+        addBlock(AncientAetherBlocks.BLUE_SKYROOT_PINE_LEAVES, "Blue Skyroot Pine Leaves");
         addBlock(AncientAetherBlocks.HIGHSPROOT_LEAVES, "Highsproot Leaves");
         addBlock(AncientAetherBlocks.SAKURA_LEAVES, "Sakura Leaves");
 
         addBlock(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING, "Crystal Skyroot Sapling");
         addBlock(AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING, "Enchanted Skyroot Sapling");
         addBlock(AncientAetherBlocks.SKYROOT_PINE_SAPLING, "Skyroot Pine Sapling");
+        addBlock(AncientAetherBlocks.BLUE_SKYROOT_PINE_SAPLING, "Blue Skyroot Pine Sapling");
         addBlock(AncientAetherBlocks.HIGHSPROOT_SAPLING, "Highsproot Sapling");
         addBlock(AncientAetherBlocks.SAKURA_SAPLING, "Sakura Sapling");
 

@@ -148,6 +148,8 @@ public class AncientAetherCreativeModeTabs {
             } else {
                 event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.HIGHSPROOT_LOG.get()), new ItemStack(AncientAetherBlocks.HIGHSPROOT_LOG_WALL.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
                 event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.SAKURA_LOG.get()), new ItemStack(AncientAetherBlocks.SAKURA_LOG_WALL.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
+                event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.SKYROOT_PINE_LEAVES.get()), new ItemStack(AncientAetherBlocks.BLUE_SKYROOT_PINE_LEAVES.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
+                event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.SKYROOT_PINE_SAPLING.get()), new ItemStack(AncientAetherBlocks.BLUE_SKYROOT_PINE_SAPLING.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
             }
         }
 
