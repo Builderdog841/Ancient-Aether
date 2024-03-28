@@ -5,6 +5,35 @@
       "rules": [
         {
           "input_predicate": {
+            "block": "ancient_aether:ancient_mossy_holystone_vase",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 0.5
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "minecraft:air"
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "minecraft:orange_wool",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 0.25
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "aether:holystone",
+            "Properties": {
+              "double_drops": "true"
+            }
+          }
+        },
+        {
+          "input_predicate": {
             "block": "aether:holystone",
             "predicate_type": "minecraft:random_block_match",
             "probability": 0.2
@@ -21,38 +50,9 @@
         },
         {
           "input_predicate": {
-            "block": "ancient_aether:ancient_mossy_holystone_vase",
-            "predicate_type": "minecraft:random_block_match",
-            "probability": 0.5
-          },
-          "location_predicate": {
-            "predicate_type": "minecraft:always_true"
-          },
-          "output_state": {
-            "Name": "minecraft:air"
-          }
-        },
-        {
-          "input_predicate": {
             "block": "aether:aether_grass_block",
             "predicate_type": "minecraft:random_block_match",
             "probability": 0.2
-          },
-          "location_predicate": {
-            "predicate_type": "minecraft:always_true"
-          },
-          "output_state": {
-            "Name": "aether:holystone",
-            "Properties": {
-              "double_drops": "true"
-            }
-          }
-        },
-        {
-          "input_predicate": {
-            "block": "minecraft:orange_wool",
-            "predicate_type": "minecraft:random_block_match",
-            "probability": 0.25
           },
           "location_predicate": {
             "predicate_type": "minecraft:always_true"

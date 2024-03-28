@@ -4,7 +4,13 @@
   ],
   "remove": [
     "ancient_aether:skyroot_jungle",
-    "deep_aether:golden_heights",
-    "deep_aether:golden_grove"
+    {
+      "id": "deep_aether:golden_heights",
+      "required": false
+    },
+    {
+      "id": "deep_aether:golden_grove",
+      "required": false
+    }
   ]
 }

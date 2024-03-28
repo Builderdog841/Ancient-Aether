@@ -5,22 +5,6 @@
       "rules": [
         {
           "input_predicate": {
-            "block": "aether:holystone_bricks",
-            "predicate_type": "minecraft:random_block_match",
-            "probability": 0.05
-          },
-          "location_predicate": {
-            "predicate_type": "minecraft:always_true"
-          },
-          "output_state": {
-            "Name": "aether:holystone",
-            "Properties": {
-              "double_drops": "true"
-            }
-          }
-        },
-        {
-          "input_predicate": {
             "block": "aether:holystone",
             "predicate_type": "minecraft:random_block_match",
             "probability": 0.4
@@ -59,6 +43,22 @@
           },
           "output_state": {
             "Name": "aether:holystone_bricks"
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "aether:holystone_bricks",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 0.05
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "aether:holystone",
+            "Properties": {
+              "double_drops": "true"
+            }
           }
         }
       ]

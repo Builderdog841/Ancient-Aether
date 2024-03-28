@@ -1,0 +1,33 @@
+{
+  "name": "ancient_aether:solar_ruin/center",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:solar_ruin/center_01",
+        "processors": "ancient_aether:solar_ruin",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:solar_ruin/center_02",
+        "processors": "ancient_aether:solar_ruin",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:solar_ruin/center_03",
+        "processors": "ancient_aether:solar_ruin",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
