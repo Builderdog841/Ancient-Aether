@@ -3,7 +3,6 @@ package net.builderdog.ancient_aether.entity.monster.boss;
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.effect.AetherEffects;
 import com.aetherteam.aether.entity.AetherBossMob;
-import com.aetherteam.aether.entity.ai.goal.MostDamageTargetGoal;
 import com.aetherteam.aether.event.AetherEventDispatch;
 import com.aetherteam.aether.network.AetherPacketHandler;
 import com.aetherteam.aether.network.packet.serverbound.BossInfoPacket;
@@ -51,6 +50,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.entity.IEntityAdditionalSpawnData;
 import net.minecraftforge.network.NetworkHooks;
+import org.apache.commons.lang3.tuple.Pair;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -63,7 +63,6 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     private float sinage;
     private float sinageAdd;
     private final ServerBossEvent bossFight;
-    private MostDamageTargetGoal mostDamageTargetGoal;
     @Nullable
     private BossRoomTracker<MutatedAechorPlant> laboratoryDungeon;
 
@@ -82,9 +81,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     protected void registerGoals() {
         goalSelector.addGoal(0,  new RangedAttackGoal(this, 1.0, 60, 10.0F));
         targetSelector.addGoal(1, new HurtByTargetGoal(this));
-        mostDamageTargetGoal = new MostDamageTargetGoal(this);
-        targetSelector.addGoal(1, mostDamageTargetGoal);
-        targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, false));
+        targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, livingEntity -> isBossFight()));
     }
 
     //---------------------[Attribute Methods]---------------------\\
@@ -164,7 +161,8 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     }
 
     @Override
-    public void checkDespawn() { }
+    public void checkDespawn() {
+    }
 
     @Override
     public @NotNull Packet<ClientGamePacketListener> getAddEntityPacket() {
@@ -184,15 +182,17 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     @Override
     public void tick() {
         super.tick();
-        if (isActive() || (getTarget() instanceof Player player && (!player.isCreative() || !player.isSpectator()))) {
+        if (!isActive() || (getTarget() instanceof Player player && (!player.isCreative() || !player.isSpectator()))) {
             if (!level().isClientSide()) {
                 if (getTarget() != null) {
                     setTargetingEntity(true);
-                } else if (getTarget() == null && getTargetingEntity()) {
+                }
+                else if (getTarget() == null && getTargetingEntity()) {
                     setTargetingEntity(false);
                 }
             }
         }
+        evaporate();
     }
 
     @Override
@@ -217,17 +217,11 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     public boolean hurt(@NotNull DamageSource source, float amount) {
         if (source.is(DamageTypeTags.BYPASSES_INVULNERABILITY)) {
             super.hurt(source, amount);
-            if (!level().isClientSide() && source.getEntity() instanceof LivingEntity living) {
-                mostDamageTargetGoal.addAggro(living, amount);
-            }
         } else if (source.getDirectEntity() instanceof LivingEntity attacker && level().getDifficulty() != Difficulty.PEACEFUL) {
             if (getDungeon() == null || getDungeon().isPlayerWithinRoomInterior(attacker)) {
                 if (super.hurt(source, amount) && getHealth() > 0) {
                     if (!isBossFight()) {
                         start();
-                    }
-                    if (!level().isClientSide() && source.getEntity() instanceof LivingEntity living) {
-                        mostDamageTargetGoal.addAggro(living, amount);
                     }
                     return true;
                 }
@@ -271,8 +265,8 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         }
     }
 
-    @Override
-    public boolean hasLineOfSight(@NotNull Entity entity) {
+   @Override
+   public boolean hasLineOfSight(@NotNull Entity entity) {
         return distanceTo(entity) <= 8.0 && super.hasLineOfSight(entity);
     }
 
@@ -284,6 +278,11 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     @Override
     public void evaporateEffects(MutatedAechorPlant entity, BlockPos pos) {
         AetherBossMob.super.evaporateEffects(entity, pos);
+    }
+
+    private void evaporate() {
+        Pair<BlockPos, BlockPos> minMax = getDefaultBounds(this);
+        AetherBossMob.super.evaporate(this, minMax.getLeft(), minMax.getRight(), (blockState) -> true);
     }
 
     @Override
