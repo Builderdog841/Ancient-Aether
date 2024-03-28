@@ -39,6 +39,7 @@ public class AncientAetherMissingMappings {
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MODID).stream().filter(mapping -> mapping.getKey().getPath().contains("hellfire_lantern")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.SUN_LANTERN.get()));
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MODID).stream().filter(mapping -> mapping.getKey().getPath().contains("gale_lantern")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.AMBROSIUM_LANTERN.get()));
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MODID).stream().filter(mapping -> mapping.getKey().getPath().contains("cracked_slider")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.SLIDER_PROTOTYPE.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MODID).stream().filter(mapping -> mapping.getKey().getPath().contains("highland_viola")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.HIGHLAND_CYCLAMEN.get()));
         event.getMappings(ForgeRegistries.Keys.ITEMS, AncientAether.MODID).stream().filter(mapping -> mapping.getKey().getPath().contains("arkzenus_pickaxe")).forEach(blockMapping -> blockMapping.remap(AncientAetherItems.ARKENZUS_PICKAXE.get()));
     }
 }
