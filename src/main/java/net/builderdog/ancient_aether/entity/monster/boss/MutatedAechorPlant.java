@@ -3,6 +3,7 @@ package net.builderdog.ancient_aether.entity.monster.boss;
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.effect.AetherEffects;
 import com.aetherteam.aether.entity.AetherBossMob;
+import com.aetherteam.aether.entity.ai.AetherBlockPathTypes;
 import com.aetherteam.aether.event.AetherEventDispatch;
 import com.aetherteam.aether.network.AetherPacketHandler;
 import com.aetherteam.aether.network.packet.serverbound.BossInfoPacket;
@@ -72,6 +73,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         bossFight = new ServerBossEvent(getBossName(), BossEvent.BossBarColor.RED, BossEvent.BossBarOverlay.PROGRESS);
         setBossFight(false);
         setPersistenceRequired();
+        setPathfindingMalus(AetherBlockPathTypes.BOSS_DOORWAY, -1.0F);
         if (level.isClientSide()) {
             sinage = getRandom().nextFloat() * 6.0F;
         }
@@ -338,6 +340,11 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     @Override
     public void setDungeon(@Nullable BossRoomTracker<MutatedAechorPlant> dungeon) {
         laboratoryDungeon = dungeon;
+    }
+
+    @Override
+    public void trackDungeon() {
+        AetherBossMob.super.trackDungeon();
     }
 
     @Override
