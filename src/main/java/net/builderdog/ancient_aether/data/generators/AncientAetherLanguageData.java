@@ -255,6 +255,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addEntityType(AncientAetherEntityTypes.WIND_BLOW, "Wind Blow");
         addEntityType(AncientAetherEntityTypes.AERONAUTIC_DART, "Aeronautic Dart");
         addEntityType(AncientAetherEntityTypes.MUTATED_AECHOR_NEEDLE, "Mutated Aechor Needle");
+        addEntityType(AncientAetherEntityTypes.POISON_BOMB, "Poison Bomb");
 
         addBiome(AncientAetherBiomes.SUN_FOREST, "Sun Forest");
         addBiome(AncientAetherBiomes.WYNDCAP_TAIGA, "Wyndcaps Taiga");
