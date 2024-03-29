@@ -131,7 +131,7 @@ public class MutatedAechorPlantModel extends EntityModel<MutatedAechorPlant> {
             sinage1 *= 0.45F;
             sinage1 -= 0.125F;
             sinage2 = 1.75F + Mth.sin(ageInTicks + 2.0F) * 1.5F;
-        } else if (aechorPlant.getTargetingEntity()) {
+        } else if (aechorPlant.isActive()) {
             sinage1 *= 0.25F;
             sinage2 = 1.75F + Mth.sin(ageInTicks + 2.0F) * 1.5F;
         } else {

@@ -3,7 +3,6 @@ package net.builderdog.ancient_aether.entity.monster.boss;
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.effect.AetherEffects;
 import com.aetherteam.aether.entity.AetherBossMob;
-import com.aetherteam.aether.entity.ai.AetherBlockPathTypes;
 import com.aetherteam.aether.event.AetherEventDispatch;
 import com.aetherteam.aether.network.AetherPacketHandler;
 import com.aetherteam.aether.network.packet.serverbound.BossInfoPacket;
@@ -51,7 +50,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.entity.IEntityAdditionalSpawnData;
 import net.minecraftforge.network.NetworkHooks;
-import org.apache.commons.lang3.tuple.Pair;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -59,7 +57,6 @@ import org.jetbrains.annotations.Nullable;
 public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<MutatedAechorPlant>, Enemy, IEntityAdditionalSpawnData, RangedAttackMob {
     private static final EntityDataAccessor<Boolean> DATA_ACTIVE_ID = SynchedEntityData.defineId(MutatedAechorPlant.class, EntityDataSerializers.BOOLEAN);
     private static final EntityDataAccessor<Integer> DATA_SIZE_ID = SynchedEntityData.defineId(MutatedAechorPlant.class, EntityDataSerializers.INT);
-    private static final EntityDataAccessor<Boolean> DATA_TARGETING_ENTITY_ID = SynchedEntityData.defineId(MutatedAechorPlant.class, EntityDataSerializers.BOOLEAN);
     private static final EntityDataAccessor<Component> DATA_BOSS_NAME_ID = SynchedEntityData.defineId(MutatedAechorPlant.class, EntityDataSerializers.COMPONENT);
     private float sinage;
     private float sinageAdd;
@@ -73,7 +70,6 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         bossFight = new ServerBossEvent(getBossName(), BossEvent.BossBarColor.RED, BossEvent.BossBarOverlay.PROGRESS);
         setBossFight(false);
         setPersistenceRequired();
-        setPathfindingMalus(AetherBlockPathTypes.BOSS_DOORWAY, -1.0F);
         if (level.isClientSide()) {
             sinage = getRandom().nextFloat() * 6.0F;
         }
@@ -83,7 +79,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     protected void registerGoals() {
         goalSelector.addGoal(0,  new RangedAttackGoal(this, 1.0, 60, 10.0F));
         targetSelector.addGoal(1, new HurtByTargetGoal(this));
-        targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, livingEntity -> isBossFight()));
+        targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, livingEntity -> isBossFight()));
     }
 
     //---------------------[Attribute Methods]---------------------\\
@@ -136,14 +132,6 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         getEntityData().set(DATA_SIZE_ID, size);
     }
 
-    public boolean getTargetingEntity() {
-        return getEntityData().get(DATA_TARGETING_ENTITY_ID);
-    }
-
-    public void setTargetingEntity(boolean targetingEntity) {
-        getEntityData().set(DATA_TARGETING_ENTITY_ID, targetingEntity);
-    }
-
     public float getSinage() {
         return sinage;
     }
@@ -173,28 +161,12 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
 
     //---------------------[General Methods]---------------------\\
 
-    @Nullable
-    @Override
-    public SpawnGroupData finalizeSpawn(@NotNull ServerLevelAccessor level, @NotNull DifficultyInstance difficulty, @NotNull MobSpawnType reason, @Nullable SpawnGroupData spawnData, @Nullable CompoundTag tag) {
-        setBossName(AncientAetherBossNameGenerator.generateMutatedAechorName(getRandom()));
-        setPos(Vec3.atBottomCenterOf(blockPosition()));
-        return spawnData;
-    }
-
     @Override
     public void tick() {
         super.tick();
         if (!isActive() || (getTarget() instanceof Player player && (!player.isCreative() || !player.isSpectator()))) {
-            if (!level().isClientSide()) {
-                if (getTarget() != null) {
-                    setTargetingEntity(true);
-                }
-                else if (getTarget() == null && getTargetingEntity()) {
-                    setTargetingEntity(false);
-                }
-            }
+            setTarget(null);
         }
-        evaporate();
     }
 
     @Override
@@ -204,7 +176,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
             sinage += sinageAdd;
             if (hurtTime > 0) {
                 sinageAdd = 0.45F;
-            } else if (getTargetingEntity()) {
+            } else if (isActive()) {
                 sinageAdd = 0.3F;
             } else {
                 sinageAdd = 0.15F;
@@ -267,6 +239,14 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         }
     }
 
+    @Nullable
+    @Override
+    public SpawnGroupData finalizeSpawn(@NotNull ServerLevelAccessor level, @NotNull DifficultyInstance difficulty, @NotNull MobSpawnType reason, @Nullable SpawnGroupData spawnData, @Nullable CompoundTag tag) {
+        setBossName(AncientAetherBossNameGenerator.generateMutatedAechorName(getRandom()));
+        setPos(Vec3.atBottomCenterOf(blockPosition()));
+        return spawnData;
+    }
+
    @Override
    public boolean hasLineOfSight(@NotNull Entity entity) {
         return distanceTo(entity) <= 8.0 && super.hasLineOfSight(entity);
@@ -280,18 +260,6 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     @Override
     public void evaporateEffects(MutatedAechorPlant entity, BlockPos pos) {
         AetherBossMob.super.evaporateEffects(entity, pos);
-    }
-
-    private void evaporate() {
-        Pair<BlockPos, BlockPos> minMax = getDefaultBounds(this);
-        AetherBossMob.super.evaporate(this, minMax.getLeft(), minMax.getRight(), (blockState) -> true);
-    }
-
-    @Override
-    public void customServerAiStep() {
-        super.customServerAiStep();
-        bossFight.setProgress(getHealth() / getMaxHealth());
-        trackDungeon();
     }
 
     //---------------------[Boss Methods]---------------------\\
@@ -308,6 +276,13 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     @Override
     public ResourceLocation getBossBarTexture() {
         return new ResourceLocation(AncientAether.MODID, "textures/gui/boss_bar_mutated_aechor_plant.png");
+    }
+
+    @Override
+    public void customServerAiStep() {
+        super.customServerAiStep();
+        bossFight.setProgress(getHealth() / getMaxHealth());
+        trackDungeon();
     }
 
     @Override
@@ -340,11 +315,6 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     @Override
     public void setDungeon(@Nullable BossRoomTracker<MutatedAechorPlant> dungeon) {
         laboratoryDungeon = dungeon;
-    }
-
-    @Override
-    public void trackDungeon() {
-        AetherBossMob.super.trackDungeon();
     }
 
     @Override
@@ -427,7 +397,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         if (state.is(AncientAetherBlocks.LOCKED_WYND_SENTRY_STONE.get())) {
             return AncientAetherBlocks.WYND_SENTRY_STONE.get().defaultBlockState();
         }
-        if (state.is(AetherBlocks.BOSS_DOORWAY_CARVED_STONE.get()) || state.is(AetherBlocks.TREASURE_DOORWAY_CARVED_STONE.get())) {
+        if (state.is(AncientAetherBlocks.BOSS_DOORWAY_CARVED_STONE.get()) || state.is(AetherBlocks.TREASURE_DOORWAY_CARVED_STONE.get())) {
             return Blocks.AIR.defaultBlockState();
         }
         if (state.is(AncientAetherBlocks.BOSS_DOORWAY_WYND_SENTRY_STONE.get()) || state.is(AncientAetherBlocks.TREASURE_DOORWAY_WYND_SENTRY_STONE.get())) {
@@ -443,6 +413,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         super.addAdditionalSaveData(tag);
         tag.putBoolean("Active", isActive());
         tag.putInt("Size", getSize());
+        addBossSaveData(tag);
     }
 
     @Override
@@ -454,6 +425,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         if (tag.contains("Size")) {
             setSize(tag.getInt("Size"));
         }
+        readBossSaveData(tag);
     }
 
     @Override
@@ -462,7 +434,6 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         getEntityData().define(DATA_ACTIVE_ID, false);
         getEntityData().define(DATA_BOSS_NAME_ID, Component.literal("Mutated Aechor Plant"));
         getEntityData().define(DATA_SIZE_ID, 0);
-        getEntityData().define(DATA_TARGETING_ENTITY_ID, false);
     }
 
     @Override
