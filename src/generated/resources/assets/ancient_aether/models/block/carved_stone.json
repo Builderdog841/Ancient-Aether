@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "ancient_aether:block/dungeon/carved_stone"
+    "all": "aether:block/dungeon/carved_stone"
   }
 }

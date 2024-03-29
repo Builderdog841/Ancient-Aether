@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-28T19:07:42.613908	Block States: ancient_aether
+// 1.20.1	2024-03-29T11:41:05.70322	Block States: ancient_aether
 8ae935cffc9f0f581198b72218d9d4d66d9fa2a2 assets/ancient_aether/blockstates/aerogel_glass.json
 2bc280f754b369aa71b9442df45ae49cbfb7a38b assets/ancient_aether/blockstates/aerogel_glass_door.json
 b027044256534d118672d13f7cd3563d3bd114ef assets/ancient_aether/blockstates/aerogel_glass_pane.json
@@ -195,7 +195,7 @@ bf21a9e8fbc5a3846fb05b4fa0859e0917b2202f assets/ancient_aether/models/block/boss
 bf21a9e8fbc5a3846fb05b4fa0859e0917b2202f assets/ancient_aether/models/block/boss_doorway_corrupted_aerogetic_stone.json
 bf21a9e8fbc5a3846fb05b4fa0859e0917b2202f assets/ancient_aether/models/block/boss_doorway_light_aerogetic_stone.json
 bf21a9e8fbc5a3846fb05b4fa0859e0917b2202f assets/ancient_aether/models/block/boss_doorway_wynd_sentry_stone.json
-943008553f775b7e9280209b468a35c3bc22a006 assets/ancient_aether/models/block/carved_stone.json
+019cdb40bdffeeba69265a85c472675ffa3249a8 assets/ancient_aether/models/block/carved_stone.json
 f64f76b7c1e771b68da8ba6e404ec95cd46b5bfe assets/ancient_aether/models/block/carved_stone_mosaic.json
 d2e8ce7bb4e8b9c4298a72bd281eb8836d716833 assets/ancient_aether/models/block/carved_stone_mosaic_horizontal.json
 c0fb37226470761b7a3c026eda5cab3abb11c858 assets/ancient_aether/models/block/carved_tiles.json

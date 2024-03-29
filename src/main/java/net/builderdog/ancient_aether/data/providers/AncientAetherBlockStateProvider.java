@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.data.providers;
 
+import com.aetherteam.aether.Aether;
 import com.aetherteam.aether.block.dungeon.DoorwayBlock;
 import com.aetherteam.aether.data.providers.AetherBlockStateProvider;
 import net.builderdog.ancient_aether.block.blocktype.*;
@@ -248,6 +249,12 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
             }
             return ConfiguredModel.builder().build();
         });
+    }
+
+    public void invisibleBlock(Block block, Block baseBlock) {
+        ModelFile visible = models().cubeAll(name(baseBlock), new ResourceLocation(Aether.MODID, "block/dungeon/" + name(baseBlock)));
+        ModelFile invisible = models().getBuilder(name(block));
+        getVariantBuilder(block).forAllStatesExcept((state) -> !(Boolean)state.getValue(DoorwayBlock.INVISIBLE) ? ConfiguredModel.builder().modelFile(visible).build() : ConfiguredModel.builder().modelFile(invisible).build());
     }
 
     public void AAInvisibleBlock(Block block, Block baseBlock) {

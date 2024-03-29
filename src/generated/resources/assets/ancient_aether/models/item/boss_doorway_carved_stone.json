@@ -167,7 +167,7 @@
     }
   ],
   "textures": {
-    "face": "ancient_aether:block/dungeon/carved_stone",
+    "face": "aether:block/dungeon/carved_stone",
     "overlay": "aether:block/dungeon/door"
   }
 }
