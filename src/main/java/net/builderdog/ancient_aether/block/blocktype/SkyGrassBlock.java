@@ -9,6 +9,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.TallGrassBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -44,14 +45,16 @@ public class SkyGrassBlock extends TallGrassBlock {
     }
 
     public void performBonemeal(@NotNull ServerLevel level, @NotNull RandomSource random, @NotNull BlockPos pos, BlockState state) {
-        if (state.getValue(LENGTH) < 5) {
-            int i = Math.min(5, state.getValue(LENGTH) + Mth.nextInt(level.random, 1, 3));
-            BlockState blockstate = state.setValue(LENGTH, i);
-            level.setBlock(pos, blockstate, 2);
-            if (i == 5) {
-                blockstate.randomTick(level, pos, level.random);
-            }
+        int i = Math.min(5, state.getValue(LENGTH) + Mth.nextInt(level.random, 1, 3));
+        BlockState blockstate = state.setValue(LENGTH, i);
+        level.setBlock(pos, blockstate, 2);
+        if (i == 5) {
+            blockstate.randomTick(level, pos, level.random);
         }
+    }
+
+    public boolean isValidBonemealTarget(@NotNull LevelReader level, @NotNull BlockPos pos, @NotNull BlockState state, boolean isClient) {
+        return state.getValue(LENGTH) < 5;
     }
 
     public BlockState getStateForPlacement(BlockPlaceContext context) {
