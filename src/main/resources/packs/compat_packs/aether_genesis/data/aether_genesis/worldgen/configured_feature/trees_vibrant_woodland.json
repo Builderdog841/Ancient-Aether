@@ -82,7 +82,7 @@
       {
         "chance": 0.05,
         "feature": {
-          "feature": "aether_genesis:large_green_skyroot_tree",
+          "feature": "ancient_aether:fancy_skyroot_tree_variants",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",
