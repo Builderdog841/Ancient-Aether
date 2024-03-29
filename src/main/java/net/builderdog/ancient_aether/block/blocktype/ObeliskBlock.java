@@ -57,7 +57,7 @@ public class ObeliskBlock extends Block {
                             if (checkedState.getBlock() == AncientAetherBlocks.TREASURE_DOORWAY_AEROGETIC_STONE.get()) {
                                 level.setBlockAndUpdate(checkedPos, Blocks.AIR.defaultBlockState());
                             }
-                            if (checkedState.getBlock() == AncientAetherBlocks.TREASURE_DOORWAY_LIGHT_AEROGETIC_STONE.get()) {
+                            if (checkedState.getBlock() == AncientAetherBlocks.TREASURE_DOORWAY_AERONAUTIC_STONE.get()) {
                                 level.setBlockAndUpdate(checkedPos, Blocks.AIR.defaultBlockState());
                             }
                             if (checkedState.getBlock() == Blocks.VINE) {

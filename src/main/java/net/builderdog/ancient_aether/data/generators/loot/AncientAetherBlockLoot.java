@@ -100,8 +100,8 @@ public class AncientAetherBlockLoot extends AetherBlockLootSubProvider {
         dropSelf(AncientAetherBlocks.AEROGETIC_STAIRS.get());
         dropSelf(AncientAetherBlocks.AEROGETIC_WALL.get());
         dropSelf(AncientAetherBlocks.AEROGETIC_STONE_MOSAIC.get());
-        dropSelf(AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get());
-        dropSelf(AncientAetherBlocks.CORRUPTED_AEROGETIC_STONE.get());
+        dropSelf(AncientAetherBlocks.AERONAUTIC_STONE.get());
+        dropSelf(AncientAetherBlocks.CORRUPTED_AERONAUTIC_STONE.get());
         dropSelf(AncientAetherBlocks.CARVED_STONE_MOSAIC.get());
         dropSelf(AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get());
         dropSelf(AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get());

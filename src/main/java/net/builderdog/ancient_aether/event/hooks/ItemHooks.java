@@ -108,7 +108,7 @@ public class ItemHooks {
             if (stack.is(AetherBlocks.TRAPPED_HELLFIRE_STONE.get().asItem()) || stack.is(AetherBlocks.TRAPPED_LIGHT_HELLFIRE_STONE.get().asItem())) {
                 components.add(position, Component.translatable("entity.aether.fire_minion").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
             }
-            if (stack.is(AncientAetherBlocks.TRAPPED_AEROGETIC_STONE.get().asItem()) || stack.is(AncientAetherBlocks.TRAPPED_LIGHT_AEROGETIC_STONE.get().asItem()) || stack.is(AncientAetherBlocks.TRAPPED_CORRUPTED_AEROGETIC_STONE.get().asItem())) {
+            if (stack.is(AncientAetherBlocks.TRAPPED_AEROGETIC_STONE.get().asItem()) || stack.is(AncientAetherBlocks.TRAPPED_AERONAUTIC_STONE.get().asItem()) || stack.is(AncientAetherBlocks.TRAPPED_CORRUPTED_AERONAUTIC_STONE.get().asItem())) {
                 components.add(position, Component.translatable("entity.ancient_aether.aeronautic_leaper").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
             }
 
@@ -124,7 +124,7 @@ public class ItemHooks {
             if (stack.is(AncientAetherBlocks.BOSS_DOORWAY_CARVED_STONE.get().asItem()) || stack.is(AncientAetherBlocks.BOSS_DOORWAY_WYND_SENTRY_STONE.get().asItem())) {
                 components.add(position, Component.translatable("entity.ancient_aether.mutated_aechor_plant").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
             }
-            if (stack.is(AncientAetherBlocks.BOSS_DOORWAY_AEROGETIC_STONE.get().asItem()) || stack.is(AncientAetherBlocks.BOSS_DOORWAY_LIGHT_AEROGETIC_STONE.get().asItem()) || stack.is(AncientAetherBlocks.BOSS_DOORWAY_CORRUPTED_AEROGETIC_STONE.get().asItem())) {
+            if (stack.is(AncientAetherBlocks.BOSS_DOORWAY_AEROGETIC_STONE.get().asItem()) || stack.is(AncientAetherBlocks.BOSS_DOORWAY_AERONAUTIC_STONE.get().asItem()) || stack.is(AncientAetherBlocks.BOSS_DOORWAY_CORRUPTED_AERONAUTIC_STONE.get().asItem())) {
                 components.add(position, Component.literal("").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
             }
 

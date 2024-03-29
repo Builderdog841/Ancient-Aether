@@ -173,8 +173,8 @@ public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
         AAItemLockedDungeonBlock(AncientAetherBlocks.LOCKED_CARVED_TILES.get(), AncientAetherBlocks.CARVED_TILES.get());
         AAItemLockedDungeonBlock(AncientAetherBlocks.LOCKED_WYND_SENTRY_STONE.get(), AncientAetherBlocks.WYND_SENTRY_STONE.get());
         AAItemLockedDungeonBlock(AncientAetherBlocks.LOCKED_AEROGETIC_STONE.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
-        AAItemLockedDungeonBlock(AncientAetherBlocks.LOCKED_LIGHT_AEROGETIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get());
-        AAItemLockedDungeonBlock(AncientAetherBlocks.LOCKED_CORRUPTED_AEROGETIC_STONE.get(), AncientAetherBlocks.CORRUPTED_AEROGETIC_STONE.get());
+        AAItemLockedDungeonBlock(AncientAetherBlocks.LOCKED_AERONAUTIC_STONE.get(), AncientAetherBlocks.AERONAUTIC_STONE.get());
+        AAItemLockedDungeonBlock(AncientAetherBlocks.LOCKED_CORRUPTED_AERONAUTIC_STONE.get(), AncientAetherBlocks.CORRUPTED_AERONAUTIC_STONE.get());
 
         itemLockedMosaicBlock(AncientAetherBlocks.LOCKED_CARVED_STONE_MOSAIC.get(), AncientAetherBlocks.CARVED_STONE_MOSAIC.get());
         itemLockedMosaicBlock(AncientAetherBlocks.LOCKED_ANGELIC_STONE_MOSAIC.get(), AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get());
@@ -184,18 +184,18 @@ public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
 
         AAItemTrappedDungeonBlock(AncientAetherBlocks.TRAPPED_CARVED_TILES.get(), AncientAetherBlocks.CARVED_TILES.get());
         AAItemTrappedDungeonBlock(AncientAetherBlocks.TRAPPED_AEROGETIC_STONE.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
-        AAItemTrappedDungeonBlock(AncientAetherBlocks.TRAPPED_LIGHT_AEROGETIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get());
-        AAItemTrappedDungeonBlock(AncientAetherBlocks.TRAPPED_CORRUPTED_AEROGETIC_STONE.get(), AncientAetherBlocks.CORRUPTED_AEROGETIC_STONE.get());
+        AAItemTrappedDungeonBlock(AncientAetherBlocks.TRAPPED_AERONAUTIC_STONE.get(), AncientAetherBlocks.AERONAUTIC_STONE.get());
+        AAItemTrappedDungeonBlock(AncientAetherBlocks.TRAPPED_CORRUPTED_AERONAUTIC_STONE.get(), AncientAetherBlocks.CORRUPTED_AERONAUTIC_STONE.get());
 
         itemBossDoorwayDungeonBlock(AncientAetherBlocks.BOSS_DOORWAY_CARVED_STONE.get(), AetherBlocks.CARVED_STONE.get());
         AAItemBossDoorwayDungeonBlock(AncientAetherBlocks.BOSS_DOORWAY_WYND_SENTRY_STONE.get(), AncientAetherBlocks.WYND_SENTRY_STONE.get());
         AAItemBossDoorwayDungeonBlock(AncientAetherBlocks.BOSS_DOORWAY_AEROGETIC_STONE.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
-        AAItemBossDoorwayDungeonBlock(AncientAetherBlocks.BOSS_DOORWAY_LIGHT_AEROGETIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get());
-        AAItemBossDoorwayDungeonBlock(AncientAetherBlocks.BOSS_DOORWAY_CORRUPTED_AEROGETIC_STONE.get(), AncientAetherBlocks.CORRUPTED_AEROGETIC_STONE.get());
+        AAItemBossDoorwayDungeonBlock(AncientAetherBlocks.BOSS_DOORWAY_AERONAUTIC_STONE.get(), AncientAetherBlocks.AERONAUTIC_STONE.get());
+        AAItemBossDoorwayDungeonBlock(AncientAetherBlocks.BOSS_DOORWAY_CORRUPTED_AERONAUTIC_STONE.get(), AncientAetherBlocks.CORRUPTED_AERONAUTIC_STONE.get());
 
         AAItemTreasureDoorwayDungeonBlock(AncientAetherBlocks.TREASURE_DOORWAY_WYND_SENTRY_STONE.get(), AncientAetherBlocks.WYND_SENTRY_STONE.get());
         AAItemTreasureDoorwayDungeonBlock(AncientAetherBlocks.TREASURE_DOORWAY_AEROGETIC_STONE.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
-        AAItemTreasureDoorwayDungeonBlock(AncientAetherBlocks.TREASURE_DOORWAY_LIGHT_AEROGETIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get());
-        AAItemTreasureDoorwayDungeonBlock(AncientAetherBlocks.TREASURE_DOORWAY_CORRUPTED_AEROGETIC_STONE.get(), AncientAetherBlocks.CORRUPTED_AEROGETIC_STONE.get());
+        AAItemTreasureDoorwayDungeonBlock(AncientAetherBlocks.TREASURE_DOORWAY_AERONAUTIC_STONE.get(), AncientAetherBlocks.AERONAUTIC_STONE.get());
+        AAItemTreasureDoorwayDungeonBlock(AncientAetherBlocks.TREASURE_DOORWAY_CORRUPTED_AERONAUTIC_STONE.get(), AncientAetherBlocks.CORRUPTED_AERONAUTIC_STONE.get());
     }
 }

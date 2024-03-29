@@ -33,8 +33,8 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         blockWithItem(AncientAetherBlocks.CARVED_TILES);
         blockWithItem(AncientAetherBlocks.WYND_SENTRY_STONE);
         blockWithItem(AncientAetherBlocks.AEROGETIC_STONE);
-        blockWithItem(AncientAetherBlocks.LIGHT_AEROGETIC_STONE);
-        blockWithItem(AncientAetherBlocks.CORRUPTED_AEROGETIC_STONE);
+        blockWithItem(AncientAetherBlocks.AERONAUTIC_STONE);
+        blockWithItem(AncientAetherBlocks.CORRUPTED_AERONAUTIC_STONE);
 
         logBlock(AncientAetherBlocks.HIGHSPROOT_LOG.get());
         logBlock(AncientAetherBlocks.SAKURA_LOG.get());
@@ -163,16 +163,16 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         AADungeonBlock(AncientAetherBlocks.LOCKED_CARVED_TILES.get(), AncientAetherBlocks.CARVED_TILES.get());
         AADungeonBlock(AncientAetherBlocks.LOCKED_WYND_SENTRY_STONE.get(), AncientAetherBlocks.WYND_SENTRY_STONE.get());
         AADungeonBlock(AncientAetherBlocks.LOCKED_AEROGETIC_STONE.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
-        AADungeonBlock(AncientAetherBlocks.LOCKED_LIGHT_AEROGETIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get());
-        AADungeonBlock(AncientAetherBlocks.LOCKED_CORRUPTED_AEROGETIC_STONE.get(), AncientAetherBlocks.CORRUPTED_AEROGETIC_STONE.get());
+        AADungeonBlock(AncientAetherBlocks.LOCKED_AERONAUTIC_STONE.get(), AncientAetherBlocks.AERONAUTIC_STONE.get());
+        AADungeonBlock(AncientAetherBlocks.LOCKED_CORRUPTED_AERONAUTIC_STONE.get(), AncientAetherBlocks.CORRUPTED_AERONAUTIC_STONE.get());
         AADungeonBlock(AncientAetherBlocks.TRAPPED_CARVED_TILES.get(), AncientAetherBlocks.CARVED_TILES.get());
         AADungeonBlock(AncientAetherBlocks.TRAPPED_AEROGETIC_STONE.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
-        AADungeonBlock(AncientAetherBlocks.TRAPPED_LIGHT_AEROGETIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get());
-        AADungeonBlock(AncientAetherBlocks.TRAPPED_CORRUPTED_AEROGETIC_STONE.get(), AncientAetherBlocks.CORRUPTED_AEROGETIC_STONE.get());
+        AADungeonBlock(AncientAetherBlocks.TRAPPED_AERONAUTIC_STONE.get(), AncientAetherBlocks.AERONAUTIC_STONE.get());
+        AADungeonBlock(AncientAetherBlocks.TRAPPED_CORRUPTED_AERONAUTIC_STONE.get(), AncientAetherBlocks.CORRUPTED_AERONAUTIC_STONE.get());
         AADungeonBlock(AncientAetherBlocks.TREASURE_DOORWAY_WYND_SENTRY_STONE.get(), AncientAetherBlocks.WYND_SENTRY_STONE.get());
         AADungeonBlock(AncientAetherBlocks.TREASURE_DOORWAY_AEROGETIC_STONE.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
-        AADungeonBlock(AncientAetherBlocks.TREASURE_DOORWAY_LIGHT_AEROGETIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get());
-        AADungeonBlock(AncientAetherBlocks.TREASURE_DOORWAY_CORRUPTED_AEROGETIC_STONE.get(), AncientAetherBlocks.CORRUPTED_AEROGETIC_STONE.get());
+        AADungeonBlock(AncientAetherBlocks.TREASURE_DOORWAY_AERONAUTIC_STONE.get(), AncientAetherBlocks.AERONAUTIC_STONE.get());
+        AADungeonBlock(AncientAetherBlocks.TREASURE_DOORWAY_CORRUPTED_AERONAUTIC_STONE.get(), AncientAetherBlocks.CORRUPTED_AERONAUTIC_STONE.get());
 
         lockedMosaicBlock(AncientAetherBlocks.LOCKED_CARVED_STONE_MOSAIC.get(), AncientAetherBlocks.CARVED_STONE_MOSAIC.get());
         lockedMosaicBlock(AncientAetherBlocks.LOCKED_ANGELIC_STONE_MOSAIC.get(), AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get());
@@ -183,8 +183,8 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         invisibleBlock(AncientAetherBlocks.BOSS_DOORWAY_CARVED_STONE.get(), AetherBlocks.CARVED_STONE.get());
         AAInvisibleBlock(AncientAetherBlocks.BOSS_DOORWAY_WYND_SENTRY_STONE.get(), AncientAetherBlocks.WYND_SENTRY_STONE.get());
         AAInvisibleBlock(AncientAetherBlocks.BOSS_DOORWAY_AEROGETIC_STONE.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
-        AAInvisibleBlock(AncientAetherBlocks.BOSS_DOORWAY_LIGHT_AEROGETIC_STONE.get(), AncientAetherBlocks.LIGHT_AEROGETIC_STONE.get());
-        AAInvisibleBlock(AncientAetherBlocks.BOSS_DOORWAY_CORRUPTED_AEROGETIC_STONE.get(), AncientAetherBlocks.CORRUPTED_AEROGETIC_STONE.get());
+        AAInvisibleBlock(AncientAetherBlocks.BOSS_DOORWAY_AERONAUTIC_STONE.get(), AncientAetherBlocks.AERONAUTIC_STONE.get());
+        AAInvisibleBlock(AncientAetherBlocks.BOSS_DOORWAY_CORRUPTED_AERONAUTIC_STONE.get(), AncientAetherBlocks.CORRUPTED_AERONAUTIC_STONE.get());
 
         pottedPlant(AncientAetherBlocks.POTTED_CRYSTAL_SKYROOT_SAPLING.get(), AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_ENCHANTED_SKYROOT_SAPLING.get(), AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get(), "");

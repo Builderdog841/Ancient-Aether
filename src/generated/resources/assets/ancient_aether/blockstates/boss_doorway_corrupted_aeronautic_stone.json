@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "invisible=false": {
+      "model": "ancient_aether:block/corrupted_aeronautic_stone"
+    },
+    "invisible=true": {
+      "model": "ancient_aether:block/boss_doorway_corrupted_aeronautic_stone"
+    }
+  }
+}

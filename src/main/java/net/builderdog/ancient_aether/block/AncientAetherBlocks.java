@@ -135,8 +135,8 @@ public class AncientAetherBlocks {
     public static final RegistryObject<WallBlock> CARVED_TILE_WALL = registerBlock("carved_tile_wall", () -> new WallBlock(Block.Properties.copy(CARVED_TILES.get())));
 
     public static final RegistryObject<Block> AEROGETIC_STONE = registerBlock("aerogetic_stone", () -> new Block(Block.Properties.copy(CARVED_STONE.get()).mapColor(MapColor.COLOR_CYAN)));
-    public static final RegistryObject<Block> LIGHT_AEROGETIC_STONE = registerBlock("light_aerogetic_stone", () -> new Block(Block.Properties.copy(AEROGETIC_STONE.get()).lightLevel(s -> 11)));
-    public static final RegistryObject<Block> CORRUPTED_AEROGETIC_STONE = registerBlock("corrupted_aerogetic_stone", () -> new Block(Block.Properties.copy(LIGHT_AEROGETIC_STONE.get())));
+    public static final RegistryObject<Block> AERONAUTIC_STONE = registerBlock("aeronautic_stone", () -> new Block(Block.Properties.copy(AEROGETIC_STONE.get()).lightLevel(s -> 11)));
+    public static final RegistryObject<Block> CORRUPTED_AERONAUTIC_STONE = registerBlock("corrupted_aeronautic_stone", () -> new Block(Block.Properties.copy(AERONAUTIC_STONE.get())));
     public static final RegistryObject<StairBlock> AEROGETIC_STAIRS = registerBlock("aerogetic_stairs", () -> new StairBlock(() -> AEROGETIC_STONE.get().defaultBlockState(), (Block.Properties.copy(AEROGETIC_STONE.get()))));
     public static final RegistryObject<SlabBlock> AEROGETIC_SLAB = registerBlock("aerogetic_slab", () -> new SlabBlock(Block.Properties.copy(AEROGETIC_STONE.get())));
     public static final RegistryObject<WallBlock> AEROGETIC_WALL = registerBlock("aerogetic_wall", () -> new WallBlock(Block.Properties.copy(AEROGETIC_STONE.get())));
@@ -151,8 +151,8 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> LOCKED_CARVED_TILES = registerBlock("locked_carved_tiles", () -> new Block(Block.Properties.copy(CARVED_TILES.get()).strength(-1.0F, 3600000.0F).noLootTable()));
     public static final RegistryObject<Block> LOCKED_WYND_SENTRY_STONE = registerBlock("locked_wynd_sentry_stone", () -> new Block(Block.Properties.copy(WYND_SENTRY_STONE.get()).strength(-1.0F, 3600000.0F).noLootTable()));
     public static final RegistryObject<Block> LOCKED_AEROGETIC_STONE = registerBlock("locked_aerogetic_stone", () -> new Block(Block.Properties.copy(AEROGETIC_STONE.get()).strength(-1.0F, 3600000.0F).noLootTable()));
-    public static final RegistryObject<Block> LOCKED_LIGHT_AEROGETIC_STONE = registerBlock("locked_light_aerogetic_stone", () -> new Block(Block.Properties.copy(LOCKED_AEROGETIC_STONE.get()).lightLevel(s -> 11).noLootTable()));
-    public static final RegistryObject<Block> LOCKED_CORRUPTED_AEROGETIC_STONE = registerBlock("locked_corrupted_aerogetic_stone", () -> new Block(Block.Properties.copy(LOCKED_LIGHT_AEROGETIC_STONE.get()).noLootTable()));
+    public static final RegistryObject<Block> LOCKED_AERONAUTIC_STONE = registerBlock("locked_aeronautic_stone", () -> new Block(Block.Properties.copy(LOCKED_AEROGETIC_STONE.get()).lightLevel(s -> 11).noLootTable()));
+    public static final RegistryObject<Block> LOCKED_CORRUPTED_AERONAUTIC_STONE = registerBlock("locked_corrupted_aeronautic_stone", () -> new Block(Block.Properties.copy(LOCKED_AERONAUTIC_STONE.get()).noLootTable()));
 
     public static final RegistryObject<RotatedPillarBlock> LOCKED_CARVED_STONE_MOSAIC = registerBlock("locked_carved_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_CARVED_STONE.get()).noLootTable()));
     public static final RegistryObject<RotatedPillarBlock> LOCKED_ANGELIC_STONE_MOSAIC = registerBlock("locked_angelic_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.copy(LOCKED_ANGELIC_STONE.get()).noLootTable()));
@@ -162,19 +162,19 @@ public class AncientAetherBlocks {
 
     public static final RegistryObject<Block> TRAPPED_CARVED_TILES = registerBlock("trapped_carved_tiles", () -> new TrappedBlock(AetherEntityTypes.SENTRY::get, () -> CARVED_TILES.get().defaultBlockState(), Block.Properties.copy(CARVED_TILES.get()).noLootTable()));
     public static final RegistryObject<Block> TRAPPED_AEROGETIC_STONE = registerBlock("trapped_aerogetic_stone", () -> new TrappedBlock(AncientAetherEntityTypes.AERONAUTIC_LEAPER::get, () -> AEROGETIC_STONE.get().defaultBlockState(), Block.Properties.copy(AEROGETIC_STONE.get()).noLootTable()));
-    public static final RegistryObject<Block> TRAPPED_LIGHT_AEROGETIC_STONE = registerBlock("trapped_light_aerogetic_stone", () -> new TrappedBlock(AncientAetherEntityTypes.AERONAUTIC_LEAPER::get, () -> LIGHT_AEROGETIC_STONE.get().defaultBlockState(), Block.Properties.copy(LIGHT_AEROGETIC_STONE.get()).noLootTable()));
-    public static final RegistryObject<Block> TRAPPED_CORRUPTED_AEROGETIC_STONE = registerBlock("trapped_corrupted_aerogetic_stone", () -> new TrappedBlock(AncientAetherEntityTypes.AERONAUTIC_LEAPER::get, () -> CORRUPTED_AEROGETIC_STONE.get().defaultBlockState(), Block.Properties.copy(CORRUPTED_AEROGETIC_STONE.get()).noLootTable()));
+    public static final RegistryObject<Block> TRAPPED_AERONAUTIC_STONE = registerBlock("trapped_aeronautic_stone", () -> new TrappedBlock(AncientAetherEntityTypes.AERONAUTIC_LEAPER::get, () -> AERONAUTIC_STONE.get().defaultBlockState(), Block.Properties.copy(AERONAUTIC_STONE.get()).noLootTable()));
+    public static final RegistryObject<Block> TRAPPED_CORRUPTED_AERONAUTIC_STONE = registerBlock("trapped_corrupted_aeronautic_stone", () -> new TrappedBlock(AncientAetherEntityTypes.AERONAUTIC_LEAPER::get, () -> CORRUPTED_AERONAUTIC_STONE.get().defaultBlockState(), Block.Properties.copy(CORRUPTED_AERONAUTIC_STONE.get()).noLootTable()));
 
     public static final RegistryObject<Block> BOSS_DOORWAY_CARVED_STONE = registerBlock("boss_doorway_carved_stone", () -> new DoorwayBlock(AncientAetherEntityTypes.MUTATED_AECHOR_PLANT::get, Block.Properties.copy(LOCKED_CARVED_STONE.get()).noLootTable()));
     public static final RegistryObject<Block> BOSS_DOORWAY_WYND_SENTRY_STONE = registerBlock("boss_doorway_wynd_sentry_stone", () -> new DoorwayBlock(AncientAetherEntityTypes.MUTATED_AECHOR_PLANT::get, Block.Properties.copy(LOCKED_WYND_SENTRY_STONE.get()).noLootTable()));
     public static final RegistryObject<Block> BOSS_DOORWAY_AEROGETIC_STONE = registerBlock("boss_doorway_aerogetic_stone", () -> new DoorwayBlock(AetherEntityTypes.SLIDER::get, BlockBehaviour.Properties.copy(LOCKED_AEROGETIC_STONE.get()).noLootTable()));
-    public static final RegistryObject<Block> BOSS_DOORWAY_LIGHT_AEROGETIC_STONE = registerBlock("boss_doorway_light_aerogetic_stone", () -> new DoorwayBlock(AetherEntityTypes.SLIDER::get, BlockBehaviour.Properties.copy(LOCKED_LIGHT_AEROGETIC_STONE.get()).noLootTable()));
-    public static final RegistryObject<Block> BOSS_DOORWAY_CORRUPTED_AEROGETIC_STONE = registerBlock("boss_doorway_corrupted_aerogetic_stone", () -> new DoorwayBlock(AetherEntityTypes.SLIDER::get, BlockBehaviour.Properties.copy(LOCKED_CORRUPTED_AEROGETIC_STONE.get()).noLootTable()));
+    public static final RegistryObject<Block> BOSS_DOORWAY_AERONAUTIC_STONE = registerBlock("boss_doorway_aeronautic_stone", () -> new DoorwayBlock(AetherEntityTypes.SLIDER::get, BlockBehaviour.Properties.copy(LOCKED_AERONAUTIC_STONE.get()).noLootTable()));
+    public static final RegistryObject<Block> BOSS_DOORWAY_CORRUPTED_AERONAUTIC_STONE = registerBlock("boss_doorway_corrupted_aeronautic_stone", () -> new DoorwayBlock(AetherEntityTypes.SLIDER::get, BlockBehaviour.Properties.copy(LOCKED_CORRUPTED_AERONAUTIC_STONE.get()).noLootTable()));
 
     public static final RegistryObject<Block> TREASURE_DOORWAY_WYND_SENTRY_STONE = registerBlock("treasure_doorway_wynd_sentry_stone", () -> new TreasureDoorwayBlock(Block.Properties.copy(LOCKED_WYND_SENTRY_STONE.get()).noLootTable()));
     public static final RegistryObject<Block> TREASURE_DOORWAY_AEROGETIC_STONE = registerBlock("treasure_doorway_aerogetic_stone", () -> new TreasureDoorwayBlock(BlockBehaviour.Properties.copy(LOCKED_AEROGETIC_STONE.get()).noLootTable()));
-    public static final RegistryObject<Block> TREASURE_DOORWAY_LIGHT_AEROGETIC_STONE = registerBlock("treasure_doorway_light_aerogetic_stone", () -> new TreasureDoorwayBlock(BlockBehaviour.Properties.copy(LOCKED_LIGHT_AEROGETIC_STONE.get()).noLootTable()));
-    public static final RegistryObject<Block> TREASURE_DOORWAY_CORRUPTED_AEROGETIC_STONE = registerBlock("treasure_doorway_corrupted_aerogetic_stone", () -> new TreasureDoorwayBlock(BlockBehaviour.Properties.copy(LOCKED_CORRUPTED_AEROGETIC_STONE.get()).noLootTable()));
+    public static final RegistryObject<Block> TREASURE_DOORWAY_AERONAUTIC_STONE = registerBlock("treasure_doorway_aeronautic_stone", () -> new TreasureDoorwayBlock(BlockBehaviour.Properties.copy(LOCKED_AERONAUTIC_STONE.get()).noLootTable()));
+    public static final RegistryObject<Block> TREASURE_DOORWAY_CORRUPTED_AERONAUTIC_STONE = registerBlock("treasure_doorway_corrupted_aeronautic_stone", () -> new TreasureDoorwayBlock(BlockBehaviour.Properties.copy(LOCKED_CORRUPTED_AERONAUTIC_STONE.get()).noLootTable()));
 
     public static final RegistryObject<LanternBlock> AMBROSIUM_LANTERN = registerBlock("ambrosium_lantern", () -> new LanternBlock(BlockBehaviour.Properties.copy(LANTERN).lightLevel(s -> 15)));
     public static final RegistryObject<LanternBlock> WYND_LANTERN = registerBlock("wynd_lantern", () -> new LanternBlock(BlockBehaviour.Properties.copy(LANTERN).lightLevel(s -> 7)));

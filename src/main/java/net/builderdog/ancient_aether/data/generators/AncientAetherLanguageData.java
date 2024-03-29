@@ -104,8 +104,8 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.CARVED_TILE_WALL, "Carved Tile Wall");
 
         addBlock(AncientAetherBlocks.AEROGETIC_STONE, "Aerogetic Stone");
-        addBlock(AncientAetherBlocks.LIGHT_AEROGETIC_STONE, "Light Aerogetic Stone");
-        addBlock(AncientAetherBlocks.CORRUPTED_AEROGETIC_STONE, "Corrupted Aerogetic Stone");
+        addBlock(AncientAetherBlocks.AERONAUTIC_STONE, "Aeronautic Stone");
+        addBlock(AncientAetherBlocks.CORRUPTED_AERONAUTIC_STONE, "Corrupted Aeronautic Stone");
         addBlock(AncientAetherBlocks.AEROGETIC_STAIRS, "Aerogetic Stairs");
         addBlock(AncientAetherBlocks.AEROGETIC_SLAB, "Aerogetic Slab");
         addBlock(AncientAetherBlocks.AEROGETIC_WALL, "Aerogetic Wall");
@@ -120,8 +120,8 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.LOCKED_CARVED_TILES, "Locked Carved Tiles");
         addBlock(AncientAetherBlocks.LOCKED_WYND_SENTRY_STONE, "Locked Wynd Sentry Stone");
         addBlock(AncientAetherBlocks.LOCKED_AEROGETIC_STONE, "Locked Aerogetic Stone");
-        addBlock(AncientAetherBlocks.LOCKED_LIGHT_AEROGETIC_STONE, "Locked Light Aerogetic Stone");
-        addBlock(AncientAetherBlocks.LOCKED_CORRUPTED_AEROGETIC_STONE, "Locked Corrupted Aerogetic Stone");
+        addBlock(AncientAetherBlocks.LOCKED_AERONAUTIC_STONE, "Locked Aeronautic Stone");
+        addBlock(AncientAetherBlocks.LOCKED_CORRUPTED_AERONAUTIC_STONE, "Locked Corrupted Aeronautic Stone");
 
         addBlock(AncientAetherBlocks.LOCKED_CARVED_STONE_MOSAIC, "Locked Carved Stone Mosaic");
         addBlock(AncientAetherBlocks.LOCKED_ANGELIC_STONE_MOSAIC, "Locked Angelic Stone Mosaic");
@@ -131,19 +131,19 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
 
         addBlock(AncientAetherBlocks.TRAPPED_CARVED_TILES, "Trapped Carved Tiles");
         addBlock(AncientAetherBlocks.TRAPPED_AEROGETIC_STONE, "Trapped Aerogetic Stone");
-        addBlock(AncientAetherBlocks.TRAPPED_LIGHT_AEROGETIC_STONE, "Trapped Light Aerogetic Stone");
-        addBlock(AncientAetherBlocks.TRAPPED_CORRUPTED_AEROGETIC_STONE, "Trapped Corrupted Aerogetic Stone");
+        addBlock(AncientAetherBlocks.TRAPPED_AERONAUTIC_STONE, "Trapped Aeronautic Stone");
+        addBlock(AncientAetherBlocks.TRAPPED_CORRUPTED_AERONAUTIC_STONE, "Trapped Corrupted Aeronautic Stone");
 
         addBlock(AncientAetherBlocks.BOSS_DOORWAY_CARVED_STONE, "Boss Doorway Carved Stone");
         addBlock(AncientAetherBlocks.BOSS_DOORWAY_WYND_SENTRY_STONE, "Boss Doorway Wynd Sentry Stone");
         addBlock(AncientAetherBlocks.BOSS_DOORWAY_AEROGETIC_STONE, "Boss Doorway Aerogetic Stone");
-        addBlock(AncientAetherBlocks.BOSS_DOORWAY_LIGHT_AEROGETIC_STONE, "Boss Doorway Light Aerogetic Stone");
-        addBlock(AncientAetherBlocks.BOSS_DOORWAY_CORRUPTED_AEROGETIC_STONE, "Boss Doorway Corrupted Aerogetic Stone");
+        addBlock(AncientAetherBlocks.BOSS_DOORWAY_AERONAUTIC_STONE, "Boss Doorway Aeronautic Stone");
+        addBlock(AncientAetherBlocks.BOSS_DOORWAY_CORRUPTED_AERONAUTIC_STONE, "Boss Doorway Corrupted Aeronautic Stone");
 
         addBlock(AncientAetherBlocks.TREASURE_DOORWAY_WYND_SENTRY_STONE, "Treasure Doorway Wynd Sentry Stone");
         addBlock(AncientAetherBlocks.TREASURE_DOORWAY_AEROGETIC_STONE, "Treasure Doorway Aerogetic Stone");
-        addBlock(AncientAetherBlocks.TREASURE_DOORWAY_LIGHT_AEROGETIC_STONE, "Treasure Doorway Light Aerogetic Stone");
-        addBlock(AncientAetherBlocks.TREASURE_DOORWAY_CORRUPTED_AEROGETIC_STONE, "Treasure Doorway Corrupted Aerogetic Stone");
+        addBlock(AncientAetherBlocks.TREASURE_DOORWAY_AERONAUTIC_STONE, "Treasure Doorway Aeronautic Stone");
+        addBlock(AncientAetherBlocks.TREASURE_DOORWAY_CORRUPTED_AERONAUTIC_STONE, "Treasure Doorway Corrupted Aeronautic Stone");
 
         addBlock(AncientAetherBlocks.AMBROSIUM_LANTERN, "Ambrosium Lantern");
         addBlock(AncientAetherBlocks.WYND_LANTERN, "Wynd Lantern");
@@ -390,8 +390,8 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addLore(AncientAetherBlocks.CARVED_TILES, "A variant of Carved Stone that can be used as a decoration block. It also generates in Bronze Dungeons, primarily as an accent block to regular Carved Stone.");
         addLore(AncientAetherBlocks.WYND_SENTRY_STONE, "A rare Sentry Stone variant exclusive to the Sentry Laboratory. It emits a dimmer light than regular Sentry Stone and can also be made in the Freezer.");
         addLore(AncientAetherBlocks.AEROGETIC_STONE, "The stone found in Ancient Dungeons. This stone has a dark metal color to it and can be mined as a decorative block.");
-        addLore(AncientAetherBlocks.LIGHT_AEROGETIC_STONE, "The light version of Aerogetic Stone. It is less common than Aerogetic Stone, but it looks really nice as a decorative block.");
-        addLore(AncientAetherBlocks.CORRUPTED_AEROGETIC_STONE, "A spooky variant of Light Aerogetic Stone.");
+        addLore(AncientAetherBlocks.AERONAUTIC_STONE, "The light version of Aerogetic Stone. It is less common than Aerogetic Stone, but it looks really nice as a decorative block.");
+        addLore(AncientAetherBlocks.CORRUPTED_AERONAUTIC_STONE, "A spooky variant of Aeronautic Stone.");
         addLore(AncientAetherBlocks.AMBROSIUM_LANTERN, "A decoration block that is crafted from Holystone, Skyroot Sticks and an Ambrosium Torch. This Lantern works in the Aether unlike its Overworld counterpart.");
         addLore(AncientAetherBlocks.WYND_LANTERN, "A rather dim lantern found in Sentry Laboratories. It can also be crafted using an Ambrosium Lantern and a piece of Wynd Sentry Stone.");
         addLore(AncientAetherBlocks.SUN_LANTERN, "A fancy lantern found in Gold Dungeons. It can also be crafted using an Ambrosium Lantern and a piece of Light Hellfire Stone.");
