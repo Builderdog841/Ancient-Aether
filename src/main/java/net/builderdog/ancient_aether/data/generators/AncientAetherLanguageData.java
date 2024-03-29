@@ -368,6 +368,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
 
         addCommonConfig("gameplay", "wind_blow_duration", "The duration of how long Wind Blows fired by Wind Blowers last in ticks");
         addCommonConfig("worldgen", "ancient_aether_region_weight", "The weighting of Ancient Aether Regions in the Aether");
+        addCommonConfig("experimental", "experimental_features", "Enables features of the mod that are work in progress");
 
         addClientConfig("tooltip", "rarity_system", "Gives Aether Dungeon Loot a certain rarity in form of a tooltip");
         addClientConfig("tooltip", "moa_egg_tooltips", "Displays the Moas Mid-Air Jumps and Speed as a tooltip on the egg");

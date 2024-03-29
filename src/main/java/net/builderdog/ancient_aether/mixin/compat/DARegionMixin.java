@@ -2,6 +2,7 @@ package net.builderdog.ancient_aether.mixin.compat;
 
 import com.aetherteam.aether.data.resources.registries.AetherBiomes;
 import com.mojang.datafixers.util.Pair;
+import net.builderdog.ancient_aether.AncientAetherConfig;
 import net.builderdog.ancient_aether.data.resources.registries.AncientAetherBiomes;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
@@ -72,19 +73,18 @@ public class DARegionMixin extends Region {
         addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(-0.2F, 0.2F), fullRange, erosionElevated, depthElevated, fullRange, 0), DABiomes.MYSTIC_AERGLOW_FOREST);
         addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(0.2F, 1.5F), fullRange, erosionElevated, depthElevated, fullRange, 0), DABiomes.AERGLOW_FOREST);
 
-        addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.5F, 0.5F), fullRange, fullRange, erosionDefault, depthUnderground, fullRange, 0), AncientAetherBiomes.HOLYSTONE_CAVERNS);
-        addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, fullRange, erosionElevated, Climate.Parameter.span(0.4F, 1.5F), fullRange, 0), AncientAetherBiomes.ELEVATED_CAVERNS);
-        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, fullRange, fullRange, erosionDefault, depthUnderground, fullRange, 0), AncientAetherBiomes.FROZEN_CAVERNS);
+        if (AncientAetherConfig.COMMON.experimental_features.get()) {
+            Climate.Parameter tempAtmosine = Climate.Parameter.span(-1.5F, 0.5F);
 
-        /*
-        [Unimplemented]
-        Climate.Parameter tempAtmosine = Climate.Parameter.span(-1.5F, 0.5F);
-
-        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, Climate.Parameter.span(-1.5F, 0.15F), fullRange, erosionDefault, depthUnderground, fullRange, 0), AncientAetherBiomes.HOLYSTONE_CAVERNS);
-        addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(-1.5F, 0.075F), fullRange, erosionElevated, Climate.Parameter.span(0.4F, 1.5F), fullRange, 0), AncientAetherBiomes.ELEVATED_CAVERNS);
-        addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, Climate.Parameter.span(-1.5F, 0.15F), fullRange, erosionDefault, depthUnderground, fullRange, 0), AncientAetherBiomes.FROZEN_CAVERNS);
-        addBiome(mapper, new Climate.ParameterPoint(tempAtmosine, Climate.Parameter.span(0.15F, 1.5F), fullRange, erosionDefault, depthUnderground, fullRange, 0), AncientAetherBiomes.ATMOSINE_GROTTO);
-        addBiome(mapper, new Climate.ParameterPoint(tempAtmosine, Climate.Parameter.span(0.075F, 1.5F), fullRange, erosionElevated, Climate.Parameter.span(0.4F, 1.5F), fullRange, 0), AncientAetherBiomes.ATMOSINE_GROTTO);
-         */
+            addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.5F, 0.5F), Climate.Parameter.span(-1.5F, 0.15F), fullRange, erosionDefault, depthUnderground, fullRange, 0), AncientAetherBiomes.HOLYSTONE_CAVERNS);
+            addBiome(mapper, new Climate.ParameterPoint(fullRange, Climate.Parameter.span(-1.5F, 0.075F), fullRange, erosionElevated, Climate.Parameter.span(0.4F, 1.5F), fullRange, 0), AncientAetherBiomes.ELEVATED_CAVERNS);
+            addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, Climate.Parameter.span(-1.5F, 0.15F), fullRange, erosionDefault, depthUnderground, fullRange, 0), AncientAetherBiomes.FROZEN_CAVERNS);
+            addBiome(mapper, new Climate.ParameterPoint(tempAtmosine, Climate.Parameter.span(0.15F, 1.5F), fullRange, erosionDefault, depthUnderground, fullRange, 0), AncientAetherBiomes.ATMOSINE_GROTTO);
+            addBiome(mapper, new Climate.ParameterPoint(tempAtmosine, Climate.Parameter.span(0.075F, 1.5F), fullRange, erosionElevated, Climate.Parameter.span(0.4F, 1.5F), fullRange, 0), AncientAetherBiomes.ATMOSINE_GROTTO);
+        } else {
+            addBiome(mapper, new Climate.ParameterPoint(Climate.Parameter.span(-0.5F, 0.5F), fullRange, fullRange, erosionDefault, depthUnderground, fullRange, 0), AncientAetherBiomes.HOLYSTONE_CAVERNS);
+            addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, fullRange, erosionElevated, Climate.Parameter.span(0.4F, 1.5F), fullRange, 0), AncientAetherBiomes.ELEVATED_CAVERNS);
+            addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, fullRange, fullRange, erosionDefault, depthUnderground, fullRange, 0), AncientAetherBiomes.FROZEN_CAVERNS);
+        }
     }
 }

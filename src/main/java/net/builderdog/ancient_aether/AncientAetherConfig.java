@@ -8,6 +8,7 @@ public class AncientAetherConfig {
     public static class Common {
         public final ConfigValue<Integer> wind_blow_duration;
         public final ConfigValue<Integer> ancient_aether_region_weight;
+        public final ConfigValue<Boolean> experimental_features;
 
         public Common(ForgeConfigSpec.Builder builder) {
             builder.push("Gameplay");
@@ -24,6 +25,14 @@ public class AncientAetherConfig {
                     .comment("The weighting of Ancient Aether Regions in the Aether")
                     .translation("config.ancient_aether.common.worldgen.ancient_aether_region_weight")
                     .define("Ancient Aether Region Weight", 20);
+
+            builder.pop();
+            builder.push("Experimental");
+
+            experimental_features = builder
+                    .comment("Enables features of the mod that are work in progress")
+                    .translation("config.ancient_aether.common.experimental.experimental_features")
+                    .define("Experimental Features", false);
 
             builder.pop();
         }
@@ -58,6 +67,7 @@ public class AncientAetherConfig {
 
     public static final ForgeConfigSpec COMMON_SPEC;
     public static final Common COMMON;
+
     public static final ForgeConfigSpec CLIENT_SPEC;
     public static final Client CLIENT;
 
