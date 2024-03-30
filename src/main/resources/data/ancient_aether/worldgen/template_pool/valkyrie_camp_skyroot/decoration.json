@@ -5,7 +5,7 @@
     {
       "weight": 2,
       "element": {
-        "location": "ancient_aether:valkyrie_camp_skyroot/no_decoration",
+        "location": "ancient_aether:valkyrie_camp/skyroot/decoration/no_decoration",
         "processors": "ancient_aether:valkyrie_camp_skyroot",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -14,7 +14,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "ancient_aether:valkyrie_camp_skyroot/small_skyroot_log_pile_decoration",
+        "location": "ancient_aether:valkyrie_camp/skyroot/decoration/small_skyroot_log_pile_decoration",
         "processors": "ancient_aether:valkyrie_camp_skyroot",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -23,7 +23,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "ancient_aether:valkyrie_camp_skyroot/large_skyroot_log_pile_decoration",
+        "location": "ancient_aether:valkyrie_camp/skyroot/decoration/large_skyroot_log_pile_decoration",
         "processors": "ancient_aether:valkyrie_camp_skyroot",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -32,7 +32,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "ancient_aether:valkyrie_camp_skyroot/well_decoration",
+        "location": "ancient_aether:valkyrie_camp/skyroot/decoration/well_decoration",
         "processors": "ancient_aether:valkyrie_camp_skyroot",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"

@@ -1,12 +1,12 @@
 {
-  "name": "ancient_aether:valkyrie_camp_skyroot/campfire",
+  "name": "ancient_aether:bronze_dungeon/lobbies",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
-        "location": "ancient_aether:valkyrie_camp/skyroot/campfire/campfire_3",
-        "processors": "ancient_aether:valkyrie_camp_skyroot",
+        "location": "ancient_aether:bronze_dungeon/boss/lobby_01",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -14,8 +14,8 @@
     {
       "weight": 1,
       "element": {
-        "location": "ancient_aether:valkyrie_camp/skyroot/campfire/campfire_2a",
-        "processors": "ancient_aether:valkyrie_camp_skyroot",
+        "location": "ancient_aether:bronze_dungeon/boss/lobby_02",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -23,8 +23,8 @@
     {
       "weight": 1,
       "element": {
-        "location": "ancient_aether:valkyrie_camp/skyroot/campfire/campfire_2b",
-        "processors": "ancient_aether:valkyrie_camp_skyroot",
+        "location": "ancient_aether:bronze_dungeon/boss/lobby_03",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }

@@ -5,7 +5,7 @@
     {
       "weight": 3,
       "element": {
-        "location": "ancient_aether:valkyrie_settlement_skyroot/farm",
+        "location": "ancient_aether:valkyrie_settlement/skyroot/decoration/farm",
         "processors": "ancient_aether:valkyrie_settlement_skyroot",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -14,7 +14,7 @@
     {
       "weight": 2,
       "element": {
-        "location": "ancient_aether:valkyrie_settlement_skyroot/well",
+        "location": "ancient_aether:valkyrie_settlement/skyroot/decoration/well",
         "processors": "ancient_aether:valkyrie_settlement_skyroot",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -23,7 +23,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "ancient_aether:valkyrie_settlement_skyroot/oven",
+        "location": "ancient_aether:valkyrie_settlement/skyroot/decoration/oven",
         "processors": "ancient_aether:valkyrie_settlement_skyroot",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"

@@ -5,7 +5,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "ancient_aether:sentry_laboratory/room_01",
+        "location": "ancient_aether:sentry_laboratory/rooms/room_01",
         "processors": "ancient_aether:sentry_laboratory",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -14,7 +14,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "ancient_aether:sentry_laboratory/room_02",
+        "location": "ancient_aether:sentry_laboratory/rooms/room_02",
         "processors": "ancient_aether:sentry_laboratory",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -23,7 +23,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "ancient_aether:sentry_laboratory/room_03",
+        "location": "ancient_aether:sentry_laboratory/rooms/room_03",
         "processors": "ancient_aether:sentry_laboratory",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -32,7 +32,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "ancient_aether:sentry_laboratory/room_04",
+        "location": "ancient_aether:sentry_laboratory/rooms/room_04",
         "processors": "ancient_aether:sentry_laboratory",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -41,7 +41,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "ancient_aether:sentry_laboratory/room_05",
+        "location": "ancient_aether:sentry_laboratory/rooms/room_05",
         "processors": "ancient_aether:sentry_laboratory",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"

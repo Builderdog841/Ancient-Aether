@@ -5,7 +5,7 @@
     {
       "element": {
         "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:valkyrie_settlement_skyroot/path_01",
+        "location": "ancient_aether:valkyrie_settlement/skyroot/paths/path_01",
         "processors": "ancient_aether:valkyrie_settlement_skyroot",
         "projection": "terrain_matching"
       },
@@ -14,7 +14,7 @@
     {
       "element": {
         "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:valkyrie_settlement_skyroot/path_02",
+        "location": "ancient_aether:valkyrie_settlement/skyroot/paths/path_02",
         "processors": "ancient_aether:valkyrie_settlement_skyroot",
         "projection": "terrain_matching"
       },
@@ -23,7 +23,7 @@
     {
       "element": {
         "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:valkyrie_settlement_skyroot/path_03",
+        "location": "ancient_aether:valkyrie_settlement/skyroot/paths/path_03",
         "processors": "ancient_aether:valkyrie_settlement_skyroot",
         "projection": "terrain_matching"
       },
@@ -32,7 +32,7 @@
     {
       "element": {
         "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:valkyrie_settlement_skyroot/path_04",
+        "location": "ancient_aether:valkyrie_settlement/skyroot/paths/path_04",
         "processors": "ancient_aether:valkyrie_settlement_skyroot",
         "projection": "terrain_matching"
       },
@@ -41,7 +41,7 @@
     {
       "element": {
         "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:valkyrie_settlement_skyroot/path_05",
+        "location": "ancient_aether:valkyrie_settlement/skyroot/paths/path_05",
         "processors": "ancient_aether:valkyrie_settlement_skyroot",
         "projection": "terrain_matching"
       },
@@ -50,7 +50,7 @@
     {
       "element": {
         "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:valkyrie_settlement_skyroot/path_06",
+        "location": "ancient_aether:valkyrie_settlement/skyroot/paths/path_06",
         "processors": "ancient_aether:valkyrie_settlement_skyroot",
         "projection": "terrain_matching"
       },
@@ -59,7 +59,7 @@
     {
       "element": {
         "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:valkyrie_settlement_skyroot/turn_left_01",
+        "location": "ancient_aether:valkyrie_settlement/skyroot/paths/turn_left_01",
         "processors": "ancient_aether:valkyrie_settlement_skyroot",
         "projection": "terrain_matching"
       },
@@ -68,7 +68,7 @@
     {
       "element": {
         "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:valkyrie_settlement_skyroot/turn_left_02",
+        "location": "ancient_aether:valkyrie_settlement/skyroot/paths/turn_left_02",
         "processors": "ancient_aether:valkyrie_settlement_skyroot",
         "projection": "terrain_matching"
       },
@@ -77,7 +77,7 @@
     {
       "element": {
         "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:valkyrie_settlement_skyroot/turn_right_01",
+        "location": "ancient_aether:valkyrie_settlement/skyroot/paths/turn_right_01",
         "processors": "ancient_aether:valkyrie_settlement_skyroot",
         "projection": "terrain_matching"
       },
@@ -86,7 +86,7 @@
     {
       "element": {
         "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:valkyrie_settlement_skyroot/turn_right_02",
+        "location": "ancient_aether:valkyrie_settlement/skyroot/paths/turn_right_02",
         "processors": "ancient_aether:valkyrie_settlement_skyroot",
         "projection": "terrain_matching"
       },
@@ -95,7 +95,7 @@
     {
       "element": {
         "element_type": "minecraft:legacy_single_pool_element",
-        "location": "ancient_aether:valkyrie_settlement_skyroot/crosswalk",
+        "location": "ancient_aether:valkyrie_settlement/skyroot/paths/crosswalk",
         "processors": "ancient_aether:valkyrie_settlement_skyroot",
         "projection": "terrain_matching"
       },

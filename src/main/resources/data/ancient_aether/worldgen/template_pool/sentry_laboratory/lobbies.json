@@ -5,7 +5,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "ancient_aether:sentry_laboratory/lobby_01",
+        "location": "ancient_aether:sentry_laboratory/boss/lobby_01",
         "processors": "ancient_aether:sentry_laboratory",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -14,7 +14,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "ancient_aether:sentry_laboratory/lobby_02",
+        "location": "ancient_aether:sentry_laboratory/boss/lobby_02",
         "processors": "ancient_aether:sentry_laboratory",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"

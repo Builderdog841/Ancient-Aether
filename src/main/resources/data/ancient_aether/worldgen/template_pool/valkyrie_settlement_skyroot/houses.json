@@ -5,7 +5,7 @@
     {
       "weight": 6,
       "element": {
-        "location": "ancient_aether:valkyrie_settlement_skyroot/small_house_01",
+        "location": "ancient_aether:valkyrie_settlement/skyroot/houses/small_house_01",
         "processors": "ancient_aether:valkyrie_settlement_skyroot",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -14,7 +14,7 @@
     {
       "weight": 6,
       "element": {
-        "location": "ancient_aether:valkyrie_settlement_skyroot/small_house_02",
+        "location": "ancient_aether:valkyrie_settlement/skyroot/houses/small_house_02",
         "processors": "ancient_aether:valkyrie_settlement_skyroot",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -23,7 +23,7 @@
     {
       "weight": 4,
       "element": {
-        "location": "ancient_aether:valkyrie_settlement_skyroot/medium_house_01",
+        "location": "ancient_aether:valkyrie_settlement/skyroot/houses/medium_house_01",
         "processors": "ancient_aether:valkyrie_settlement_skyroot",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -32,7 +32,7 @@
     {
       "weight": 4,
       "element": {
-        "location": "ancient_aether:valkyrie_settlement_skyroot/medium_house_02",
+        "location": "ancient_aether:valkyrie_settlement/skyroot/houses/medium_house_02",
         "processors": "ancient_aether:valkyrie_settlement_skyroot",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -41,7 +41,7 @@
     {
       "weight": 3,
       "element": {
-        "location": "ancient_aether:valkyrie_settlement_skyroot/big_house_01",
+        "location": "ancient_aether:valkyrie_settlement/skyroot/houses/big_house_01",
         "processors": "ancient_aether:valkyrie_settlement_skyroot",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -50,7 +50,7 @@
     {
       "weight": 3,
       "element": {
-        "location": "ancient_aether:valkyrie_settlement_skyroot/big_house_02",
+        "location": "ancient_aether:valkyrie_settlement/skyroot/houses/big_house_02",
         "processors": "ancient_aether:valkyrie_settlement_skyroot",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -59,7 +59,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "ancient_aether:valkyrie_settlement_skyroot/big_house_02_secret",
+        "location": "ancient_aether:valkyrie_settlement/skyroot/secret/big_house_02_secret",
         "processors": "ancient_aether:valkyrie_settlement_skyroot",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -68,7 +68,7 @@
     {
       "weight": 3,
       "element": {
-        "location": "ancient_aether:valkyrie_settlement_skyroot/library_house",
+        "location": "ancient_aether:valkyrie_settlement/skyroot/houses/library_house",
         "processors": "ancient_aether:valkyrie_settlement_skyroot",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -77,7 +77,7 @@
     {
       "weight": 2,
       "element": {
-        "location": "ancient_aether:valkyrie_settlement_skyroot/shop_house_blue",
+        "location": "ancient_aether:valkyrie_settlement/skyroot/houses/shop_house_blue",
         "processors": "ancient_aether:valkyrie_settlement_skyroot",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -86,7 +86,7 @@
     {
       "weight": 2,
       "element": {
-        "location": "ancient_aether:valkyrie_settlement_skyroot/shop_house_golden",
+        "location": "ancient_aether:valkyrie_settlement/skyroot/houses/shop_house_golden",
         "processors": "ancient_aether:valkyrie_settlement_skyroot",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -95,7 +95,7 @@
     {
       "weight": 2,
       "element": {
-        "location": "ancient_aether:valkyrie_settlement_skyroot/shop_house_violet",
+        "location": "ancient_aether:valkyrie_settlement/skyroot/houses/shop_house_violet",
         "processors": "ancient_aether:valkyrie_settlement_skyroot",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
