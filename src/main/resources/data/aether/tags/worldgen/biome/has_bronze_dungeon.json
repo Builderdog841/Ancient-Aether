@@ -1,8 +1,0 @@
-{
-  "replace": true,
-  "values": [
-    "#ancient_aether:is_skyroot",
-    "#ancient_aether:is_habitable_wyndcaps",
-    "ancient_aether:atmosine_grotto"
-  ]
-}
