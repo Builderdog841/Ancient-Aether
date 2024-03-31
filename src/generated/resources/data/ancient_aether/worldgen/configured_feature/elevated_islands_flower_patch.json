@@ -23,8 +23,8 @@
               {
                 "Name": "ancient_aether:sky_grass",
                 "Properties": {
-                  "type": "normal",
-                  "length": "3"
+                  "type": "pale",
+                  "length": "2"
                 }
               }
             ],

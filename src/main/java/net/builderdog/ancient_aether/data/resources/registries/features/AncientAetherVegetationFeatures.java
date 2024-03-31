@@ -137,7 +137,7 @@ public class AncientAetherVegetationFeatures {
                         PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new NoiseThresholdProvider(2345L,
                                 new NormalNoise.NoiseParameters(0, 1.0D), 0.005F, -0.8F, 0.33333334F,
                                 AetherBlocks.WHITE_FLOWER.get().defaultBlockState(),
-                                List.of(AncientAetherFeatureStates.SKY_GRASS_MEDIUM),
+                                List.of(AncientAetherFeatureStates.SKY_GRASS_SHORT_PALE),
                                 List.of(AetherBlocks.PURPLE_FLOWER.get().defaultBlockState(),
                                         AncientAetherFeatureStates.ELEVATIA
                                 ))))));
