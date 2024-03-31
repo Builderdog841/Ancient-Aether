@@ -53,6 +53,11 @@ public class Slammroot extends Monster {
                 .add(Attributes.MOVEMENT_SPEED, 0.3F);
     }
 
+    @Override
+    public boolean causeFallDamage(float fallDistance, float multiplier, @NotNull DamageSource source) {
+        return false;
+    }
+
     @Nullable
     @Override
     protected SoundEvent getHurtSound(@Nonnull DamageSource damageSource) {
