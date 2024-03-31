@@ -224,6 +224,7 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
         flowerToDye(consumer, Items.RED_DYE, AncientAetherBlocks.HIGHLAND_CYCLAMEN.get(), "red");
         flowerToDye(consumer, Items.CYAN_DYE, AncientAetherBlocks.SKY_BLUES.get(), "cyan");
         flowerToDye(consumer, Items.LIGHT_BLUE_DYE, AncientAetherBlocks.WYND_THISTLE.get(), "light_blue");
+        flowerToDye(consumer, Items.PURPLE_DYE, AncientAetherBlocks.ELEVATIA.get(), "purple");
 
         chiseled(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get(), AetherBlocks.HOLYSTONE_BRICK_SLAB.get());
         chiseled(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_STONE_MOSAIC.get(), AetherBlocks.CARVED_SLAB.get());

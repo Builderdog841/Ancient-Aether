@@ -47,6 +47,10 @@ public class AncientAetherBlockLoot extends AetherBlockLootSubProvider {
         dropSelf(AncientAetherBlocks.BLUE_SKYROOT_PINE_SAPLING.get());
         dropSelf(AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
         dropSelf(AncientAetherBlocks.SAKURA_SAPLING.get());
+        dropSelf(AncientAetherBlocks.HIGHLAND_CYCLAMEN.get());
+        dropSelf(AncientAetherBlocks.SKY_BLUES.get());
+        dropSelf(AncientAetherBlocks.WYND_THISTLE.get());
+        dropSelf(AncientAetherBlocks.ELEVATIA.get());
         dropSelf(AncientAetherBlocks.HIGHSPROOT_WOOD.get());
         dropSelf(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get());
         dropSelf(AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD.get());
@@ -112,9 +116,6 @@ public class AncientAetherBlockLoot extends AetherBlockLootSubProvider {
         dropSelf(AncientAetherBlocks.SUN_LANTERN.get());
         dropSelf(AncientAetherBlocks.WIND_BLOWER.get());
         dropSelf(AncientAetherBlocks.SLIDER_PROTOTYPE.get());
-        dropSelf(AncientAetherBlocks.SKY_BLUES.get());
-        dropSelf(AncientAetherBlocks.WYND_THISTLE.get());
-        dropSelf(AncientAetherBlocks.HIGHLAND_CYCLAMEN.get());
         dropSelf(AncientAetherBlocks.HOLYSTONE_VASE.get());
         dropSelf(AncientAetherBlocks.MOSSY_HOLYSTONE_VASE.get());
         dropSelf(AncientAetherBlocks.FROZEN_HOLYSTONE_VASE.get());
@@ -144,7 +145,7 @@ public class AncientAetherBlockLoot extends AetherBlockLootSubProvider {
         dropPottedContents(AncientAetherBlocks.POTTED_SKY_BLUES.get());
         dropPottedContents(AncientAetherBlocks.POTTED_WYND_THISTLE.get());
         dropPottedContents(AncientAetherBlocks.POTTED_HIGHLAND_CYCLAMEN.get());
-        dropPottedContents(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING.get());
+        dropPottedContents(AncientAetherBlocks.POTTED_ELEVATIA.get());
 
         add(AncientAetherBlocks.HIGHSPROOT_SLAB.get(), this::createSlabItemTable);
         add(AncientAetherBlocks.SAKURA_SLAB.get(), this::createSlabItemTable);

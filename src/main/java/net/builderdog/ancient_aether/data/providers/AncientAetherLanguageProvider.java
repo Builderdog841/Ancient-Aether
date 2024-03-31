@@ -39,8 +39,8 @@ public abstract class AncientAetherLanguageProvider extends AetherLanguageProvid
         add("lore." + key.get().asItem().getDescriptionId(), "These small " + color + " saplings will grow into huge " + name + " Trees. They can be grown faster with Bone Meal");
     }
 
-    public void addFlowerLore(Supplier<? extends ItemLike> key, String name, String type, String biomes) {
-        add("lore." + key.get().asItem().getDescriptionId(), "These " + type + " flowers can be found in large numbers " + biomes + ". They can be crafted into " + name + " Dye when placed in a Crafting Table.");
+    public void addFlowerLore(Supplier<? extends ItemLike> key, String name, String adjective, String biomes) {
+        add("lore." + key.get().asItem().getDescriptionId(), "These " + adjective + " flowers can be found in large numbers " + biomes + ". They can be crafted into " + name + " Dye when placed in a Crafting Table.");
     }
 
     public void addWoodBlockLore(Supplier<? extends ItemLike> key, String name, String description) {

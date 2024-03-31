@@ -119,7 +119,7 @@ public class AncientAetherVegetationPlacements extends TrunkVineDecorator {
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome()
         );
-        AncientAetherPlacementUtils.register(context, ELEVATED_ISLANDS_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH),
+        AncientAetherPlacementUtils.register(context, ELEVATED_ISLANDS_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.ELEVATED_ISLANDS_FLOWER_PATCH),
                 CountPlacement.of(1),
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome()

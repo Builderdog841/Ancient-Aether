@@ -43,6 +43,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.HIGHLAND_CYCLAMEN, "Highland Cyclamen");
         addBlock(AncientAetherBlocks.SKY_BLUES, "Sky Blues");
         addBlock(AncientAetherBlocks.WYND_THISTLE, "Wynd Thistle");
+        addBlock(AncientAetherBlocks.ELEVATIA, "Elevatia");
         addBlock(AncientAetherBlocks.GRAPE_VINE, "Grape Vine");
         addBlock(AncientAetherBlocks.SLAMMROOT_PLANT, "Slammroot Plant");
 
@@ -183,6 +184,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.POTTED_HIGHLAND_CYCLAMEN, "Potted Highland Viola");
         addBlock(AncientAetherBlocks.POTTED_SKY_BLUES, "Potted Sky Blues");
         addBlock(AncientAetherBlocks.POTTED_WYND_THISTLE, "Potted Wynd Thistle");
+        addBlock(AncientAetherBlocks.POTTED_ELEVATIA, "Potted Elevatia");
 
         addItem(AncientAetherItems.VALKYRUM, "Valkyrum");
 
@@ -432,6 +434,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addFlowerLore(AncientAetherBlocks.HIGHLAND_CYCLAMEN, "Red", "small", "all around the Aether");
         addFlowerLore(AncientAetherBlocks.SKY_BLUES, "Cyan", "small", "all around the Aether");
         addFlowerLore(AncientAetherBlocks.WYND_THISTLE, "Light Blue", "spiky", "in the Wyndcaps");
+        addFlowerLore(AncientAetherBlocks.ELEVATIA, "Purple", "mysterious", "in Elevated Islands");
 
         addWoodBlockLore(AncientAetherBlocks.HIGHSPROOT_LOG, "Highsproot", "The log of a tree found in the Wyndcaps Region");
         addWoodBlockLore(AncientAetherBlocks.HIGHSPROOT_WOOD, "Highsproot", "Highsproot Logs crafted to be smooth on all sides");

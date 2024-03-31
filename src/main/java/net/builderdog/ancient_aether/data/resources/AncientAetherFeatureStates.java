@@ -41,6 +41,7 @@ public class AncientAetherFeatureStates {
     public static final BlockState HIGHLAND_CYCLAMEN = AncientAetherBlocks.HIGHLAND_CYCLAMEN.get().defaultBlockState();
     public static final BlockState SKY_BLUES = AncientAetherBlocks.SKY_BLUES.get().defaultBlockState();
     public static final BlockState WYND_THISTLE = AncientAetherBlocks.WYND_THISTLE.get().defaultBlockState();
+    public static final BlockState ELEVATIA = AncientAetherBlocks.ELEVATIA.get().defaultBlockState();
     public static final BlockState GRAPE_VINE = AncientAetherBlocks.GRAPE_VINE.get().defaultBlockState();
     public static final BlockState HIGHSPROOT_LOG = AncientAetherBlocks.HIGHSPROOT_LOG.get().defaultBlockState().setValue(DOUBLE_DROPS, true);
     public static final BlockState SAKURA_LOG = AncientAetherBlocks.SAKURA_LOG.get().defaultBlockState().setValue(DOUBLE_DROPS, true);

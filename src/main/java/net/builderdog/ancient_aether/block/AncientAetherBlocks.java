@@ -10,6 +10,7 @@ import com.aetherteam.aether.block.natural.AetherDoubleDropsLeaves;
 import com.aetherteam.aether.block.natural.AetherDoubleDropsOreBlock;
 import com.aetherteam.aether.block.natural.AetherLogBlock;
 import com.aetherteam.aether.blockentity.AltarBlockEntity;
+import com.aetherteam.aether.effect.AetherEffects;
 import com.aetherteam.aether.entity.AetherEntityTypes;
 import com.aetherteam.aether.mixin.mixins.common.accessor.FireBlockAccessor;
 import net.builderdog.ancient_aether.AncientAether;
@@ -71,6 +72,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> HIGHLAND_CYCLAMEN = registerBlock("highland_cyclamen", () -> new FlowerBlock(MobEffects.REGENERATION, 4, Block.Properties.copy(WHITE_FLOWER.get())));
     public static final RegistryObject<Block> SKY_BLUES = registerBlock("sky_blues", () -> new FlowerBlock(MobEffects.POISON, 4, Block.Properties.copy(WHITE_FLOWER.get())));
     public static final RegistryObject<Block> WYND_THISTLE = registerBlock("wynd_thistle", () -> new FlowerBlock(MobEffects.SATURATION, 4, Block.Properties.copy(WHITE_FLOWER.get())));
+    public static final RegistryObject<Block> ELEVATIA = registerBlock("elevatia", () -> new FlowerBlock(AetherEffects.REMEDY, 4, Block.Properties.copy(WHITE_FLOWER.get())));
     public static final RegistryObject<GrapeVineBlock> GRAPE_VINE = BLOCKS.register("grape_vine", () -> new GrapeVineBlock(Block.Properties.copy(VINE).noLootTable()));
     public static final RegistryObject<Block> SLAMMROOT_PLANT = BLOCKS.register("slammroot_plant", () -> new SlammrootPlantBlock(Block.Properties.of().offsetType(BlockBehaviour.OffsetType.XYZ).dynamicShape().noOcclusion().noCollission().mapColor(MapColor.PLANT).sound(SoundType.HANGING_ROOTS).instabreak().pushReaction(PushReaction.DESTROY).noParticlesOnBreak().noLootTable()));
 
@@ -207,15 +209,16 @@ public class AncientAetherBlocks {
     public static final RegistryObject<AncientVaseBlock> ANCIENT_AEROGETIC_VASE = registerBlock("ancient_aerogetic_vase", () -> new AncientVaseBlock(AncientAetherLoot.SELECTORS_AEROGETIC_VASE, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
     public static final RegistryObject<AncientVaseBlock> ANCIENT_GALE_VASE = registerBlock("ancient_gale_vase", () -> new AncientVaseBlock(AncientAetherLoot.SELECTORS_GALE_VASE, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
 
+    public static final RegistryObject<FlowerPotBlock> POTTED_CRYSTAL_SKYROOT_SAPLING = BLOCKS.register("potted_crystal_skyroot_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, CRYSTAL_SKYROOT_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
+    public static final RegistryObject<FlowerPotBlock> POTTED_ENCHANTED_SKYROOT_SAPLING = BLOCKS.register("potted_enchanted_skyroot_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ENCHANTED_SKYROOT_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
+    public static final RegistryObject<FlowerPotBlock> POTTED_SKYROOT_PINE_SAPLING = BLOCKS.register("potted_skyroot_pine_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SKYROOT_PINE_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
+    public static final RegistryObject<FlowerPotBlock> POTTED_BLUE_SKYROOT_PINE_SAPLING = BLOCKS.register("potted_blue_skyroot_pine_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, BLUE_SKYROOT_PINE_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
+    public static final RegistryObject<FlowerPotBlock> POTTED_HIGHSPROOT_SAPLING = BLOCKS.register("potted_highsproot_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, HIGHSPROOT_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
+    public static final RegistryObject<FlowerPotBlock> POTTED_SAKURA_SAPLING = BLOCKS.register("potted_sakura_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SAKURA_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_HIGHLAND_CYCLAMEN = BLOCKS.register("potted_highland_cyclamen", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, HIGHLAND_CYCLAMEN, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_SKY_BLUES = BLOCKS.register("potted_sky_blues", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SKY_BLUES, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_WYND_THISTLE = BLOCKS.register("potted_wynd_thistle", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, WYND_THISTLE, Block.Properties.copy(Blocks.FLOWER_POT)));
-    public static final RegistryObject<FlowerPotBlock> POTTED_SKYROOT_PINE_SAPLING = BLOCKS.register("potted_skyroot_pine_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SKYROOT_PINE_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
-    public static final RegistryObject<FlowerPotBlock> POTTED_BLUE_SKYROOT_PINE_SAPLING = BLOCKS.register("potted_blue_skyroot_pine_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, BLUE_SKYROOT_PINE_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
-    public static final RegistryObject<FlowerPotBlock> POTTED_CRYSTAL_SKYROOT_SAPLING = BLOCKS.register("potted_crystal_skyroot_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, CRYSTAL_SKYROOT_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
-    public static final RegistryObject<FlowerPotBlock> POTTED_HIGHSPROOT_SAPLING = BLOCKS.register("potted_highsproot_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, HIGHSPROOT_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
-    public static final RegistryObject<FlowerPotBlock> POTTED_SAKURA_SAPLING = BLOCKS.register("potted_sakura_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SAKURA_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
-    public static final RegistryObject<FlowerPotBlock> POTTED_ENCHANTED_SKYROOT_SAPLING = BLOCKS.register("potted_enchanted_skyroot_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ENCHANTED_SKYROOT_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
+    public static final RegistryObject<FlowerPotBlock> POTTED_ELEVATIA = BLOCKS.register("potted_elevatia_thistle", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ELEVATIA, Block.Properties.copy(Blocks.FLOWER_POT)));
 
     public static void registerFuels() {
         AltarBlockEntity.addItemEnchantingTime(AncientAetherBlocks.ATMOSINE_CRYSTAL.get(), 500);
@@ -232,6 +235,7 @@ public class AncientAetherBlocks {
         pot.addPlant(AncientAetherBlocks.HIGHLAND_CYCLAMEN.getId(), AncientAetherBlocks.POTTED_HIGHLAND_CYCLAMEN);
         pot.addPlant(AncientAetherBlocks.SKY_BLUES.getId(), AncientAetherBlocks.POTTED_SKY_BLUES);
         pot.addPlant(AncientAetherBlocks.WYND_THISTLE.getId(), AncientAetherBlocks.POTTED_WYND_THISTLE);
+        pot.addPlant(AncientAetherBlocks.ELEVATIA.getId(), AncientAetherBlocks.POTTED_ELEVATIA);
     }
 
     public static void registerFlammability() {
@@ -250,6 +254,7 @@ public class AncientAetherBlocks {
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHLAND_CYCLAMEN.get(), 60, 100);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SKY_BLUES.get(), 60, 100);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.WYND_THISTLE.get(), 60, 100);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.ELEVATIA.get(), 60, 100);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.GRAPE_VINE.get(), 60, 100);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_LOG.get(), 5, 5);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get(), 5, 5);

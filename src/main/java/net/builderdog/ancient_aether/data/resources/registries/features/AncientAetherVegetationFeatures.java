@@ -39,6 +39,7 @@ public class AncientAetherVegetationFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> WYNDCAPS_FLOWER_PATCH = AncientAetherFeatureUtils.registerKey("wyndcaps_flower_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_JUNGLE_FLOWER_PATCH = AncientAetherFeatureUtils.registerKey("skyroot_jungle_flower_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_JUNGLE_FLOWER_PATCH = AncientAetherFeatureUtils.registerKey("sakura_jungle_flower_patch");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ELEVATED_ISLANDS_FLOWER_PATCH = AncientAetherFeatureUtils.registerKey("elevated_islands_flower_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_TREE_VARIANTS = AncientAetherFeatureUtils.registerKey("skyroot_tree_variants");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_PINE_TREE_VARIANTS = AncientAetherFeatureUtils.registerKey("skyroot_pine_tree_variants");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_SKYROOT_TREE_VARIANTS = AncientAetherFeatureUtils.registerKey("fancy_skyroot_tree_variants");
@@ -130,6 +131,16 @@ public class AncientAetherVegetationFeatures {
                 new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH), PlacementUtils.isEmpty()), 0.375F),
         new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.HIGHLAND_CYCLAMEN_PATCH), PlacementUtils.isEmpty()), 0.125F)
         ), PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.SLAMMROOT_PATCH), PlacementUtils.isEmpty())));
+
+        AncientAetherFeatureUtils.register(context, ELEVATED_ISLANDS_FLOWER_PATCH, Feature.FLOWER,
+                new RandomPatchConfiguration(64, 6, 2,
+                        PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new NoiseThresholdProvider(2345L,
+                                new NormalNoise.NoiseParameters(0, 1.0D), 0.005F, -0.8F, 0.33333334F,
+                                AetherBlocks.WHITE_FLOWER.get().defaultBlockState(),
+                                List.of(AncientAetherFeatureStates.SKY_GRASS_MEDIUM),
+                                List.of(AetherBlocks.PURPLE_FLOWER.get().defaultBlockState(),
+                                        AncientAetherFeatureStates.ELEVATIA
+                                ))))));
 
         AncientAetherFeatureUtils.register(context, SKYROOT_TREE_VARIANTS, Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(
                 new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherTreeFeatures.SKYROOT_TREE_VINED), PlacementUtils.filteredByBlockSurvival(AetherBlocks.SKYROOT_SAPLING.get())), 0.1F)
