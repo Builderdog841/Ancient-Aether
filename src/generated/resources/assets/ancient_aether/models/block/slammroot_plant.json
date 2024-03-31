@@ -1,0 +1,7 @@
+{
+  "parent": "ancient_aether:block/template_slammroot_plant",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "plant": "ancient_aether:block/slammroot_plant"
+  }
+}

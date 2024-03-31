@@ -35,8 +35,10 @@ public class SlammrootPlantBlock extends BushBlock {
 
     @Override
     public void entityInside(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull Entity entity) {
-        level.setBlockAndUpdate(pos, Blocks.AIR.defaultBlockState());
-        spawnSlammroot(level, pos);
+        if(entity instanceof Player) {
+            level.setBlockAndUpdate(pos, Blocks.AIR.defaultBlockState());
+            spawnSlammroot(level, pos);
+        }
     }
 
     public void spawnSlammroot(@NotNull Level level, @NotNull BlockPos pos) {
