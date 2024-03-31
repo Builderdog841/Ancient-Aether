@@ -20,7 +20,7 @@ public class PoisonBombModel<T extends PoisonBomb> extends EntityModel<T> {
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition partdefinition = meshdefinition.getRoot();
 
-        PartDefinition poison_bomb = partdefinition.addOrReplaceChild("poison_bomb", CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, -5.0F, -4.0F, 8.0F, 5.0F, 8.0F, new CubeDeformation(0.0F))
+        partdefinition.addOrReplaceChild("poison_bomb", CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, -5.0F, -4.0F, 8.0F, 5.0F, 8.0F, new CubeDeformation(0.0F))
                 .texOffs(0, 2).addBox(-2.0F, -7.0F, -2.0F, 4.0F, 2.0F, 0.0F, new CubeDeformation(0.0F))
                 .texOffs(0, 0).addBox(-2.0F, -7.0F, 2.0F, 4.0F, 2.0F, 0.0F, new CubeDeformation(0.0F))
                 .texOffs(0, 2).addBox(2.0F, -7.0F, -2.0F, 0.0F, 2.0F, 4.0F, new CubeDeformation(0.0F))

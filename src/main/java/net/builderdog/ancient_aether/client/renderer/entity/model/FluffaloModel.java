@@ -35,13 +35,13 @@ public class FluffaloModel<T extends Fluffalo> extends EntityModel<T> {
 
         PartDefinition fluffalo = partdefinition.addOrReplaceChild("fluffalo", CubeListBuilder.create(), PartPose.offset(6.0F, 14.0F, 10.0F));
 
-        PartDefinition head = fluffalo.addOrReplaceChild("head", CubeListBuilder.create().texOffs(46, 77).addBox(-5.0F, -5.0F, -4.0F, 10.0F, 10.0F, 10.0F, new CubeDeformation(0.0F))
+        fluffalo.addOrReplaceChild("head", CubeListBuilder.create().texOffs(46, 77).addBox(-5.0F, -5.0F, -4.0F, 10.0F, 10.0F, 10.0F, new CubeDeformation(0.0F))
                 .texOffs(63, 0).addBox(-10.0F, -10.0F, 1.0F, 20.0F, 10.0F, 0.0F, new CubeDeformation(0.0F))
                 .texOffs(76, 77).addBox(-5.0F, 0.0F, -9.0F, 10.0F, 5.0F, 5.0F, new CubeDeformation(0.0F))
                 .texOffs(8, 34).addBox(5.0F, -3.0F, -2.0F, 3.0F, 2.0F, 1.0F, new CubeDeformation(0.0F))
                 .texOffs(0, 34).addBox(-8.0F, -3.0F, -2.0F, 3.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-6.0F, -13.0F, -26.0F));
 
-        PartDefinition outer_body = fluffalo.addOrReplaceChild("outer_body", CubeListBuilder.create().texOffs(63, 53).addBox(-16.0F, -11.0F, -7.0F, 20.0F, 13.0F, 11.0F, new CubeDeformation(0.0F))
+        fluffalo.addOrReplaceChild("outer_body", CubeListBuilder.create().texOffs(63, 53).addBox(-16.0F, -11.0F, -7.0F, 20.0F, 13.0F, 11.0F, new CubeDeformation(0.0F))
                 .texOffs(0, 0).addBox(-17.0F, -13.0F, -25.0F, 22.0F, 15.0F, 19.0F, new CubeDeformation(0.0F))
                 .texOffs(63, 10).addBox(-16.0F, 2.0F, 4.0F, 20.0F, 7.0F, 0.0F, new CubeDeformation(0.0F))
                 .texOffs(57, 46).addBox(-17.0F, 2.0F, -6.0F, 22.0F, 4.0F, 0.0F, new CubeDeformation(0.0F))
@@ -51,16 +51,13 @@ public class FluffaloModel<T extends Fluffalo> extends EntityModel<T> {
                 .texOffs(20, 75).addBox(-16.0F, 2.0F, -6.0F, 0.0F, 4.0F, 10.0F, new CubeDeformation(0.0F))
                 .texOffs(0, 75).addBox(4.0F, 2.0F, -6.0F, 0.0F, 4.0F, 10.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
 
-        PartDefinition body = fluffalo.addOrReplaceChild("body", CubeListBuilder.create().texOffs(0, 64).addBox(-9.0F, -20.0F, 3.0F, 18.0F, 11.0F, 10.0F, new CubeDeformation(0.0F))
+        fluffalo.addOrReplaceChild("body", CubeListBuilder.create().texOffs(0, 64).addBox(-9.0F, -20.0F, 3.0F, 18.0F, 11.0F, 10.0F, new CubeDeformation(0.0F))
                 .texOffs(0, 34).addBox(-10.0F, -22.0F, -14.0F, 20.0F, 13.0F, 17.0F, new CubeDeformation(0.0F)), PartPose.offset(-6.0F, 10.0F, -10.0F));
 
-        PartDefinition right_hind_leg = fluffalo.addOrReplaceChild("right_hind_leg", CubeListBuilder.create().texOffs(0, 0).addBox(-2.0F, -4.0F, -2.0F, 4.0F, 14.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
-
-        PartDefinition left_hind_leg = fluffalo.addOrReplaceChild("left_hind_leg", CubeListBuilder.create().texOffs(0, 0).addBox(-14.0F, -4.0F, -2.0F, 4.0F, 14.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
-
-        PartDefinition right_front_leg = fluffalo.addOrReplaceChild("right_front_leg", CubeListBuilder.create().texOffs(0, 0).addBox(-2.0F, -4.0F, -2.0F, 4.0F, 14.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, -20.0F));
-
-        PartDefinition left_front_leg = fluffalo.addOrReplaceChild("left_front_leg", CubeListBuilder.create().texOffs(0, 0).addBox(-2.0F, -4.0F, -2.0F, 4.0F, 14.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(-12.0F, 0.0F, -20.0F));
+        fluffalo.addOrReplaceChild("right_hind_leg", CubeListBuilder.create().texOffs(0, 0).addBox(-2.0F, -4.0F, -2.0F, 4.0F, 14.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+        fluffalo.addOrReplaceChild("left_hind_leg", CubeListBuilder.create().texOffs(0, 0).addBox(-14.0F, -4.0F, -2.0F, 4.0F, 14.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+        fluffalo.addOrReplaceChild("right_front_leg", CubeListBuilder.create().texOffs(0, 0).addBox(-2.0F, -4.0F, -2.0F, 4.0F, 14.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, -20.0F));
+        fluffalo.addOrReplaceChild("left_front_leg", CubeListBuilder.create().texOffs(0, 0).addBox(-2.0F, -4.0F, -2.0F, 4.0F, 14.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(-12.0F, 0.0F, -20.0F));
 
         return LayerDefinition.create(meshdefinition, 128, 128);
     }
