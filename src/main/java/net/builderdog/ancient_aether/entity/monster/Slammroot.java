@@ -22,8 +22,8 @@ import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
 
-public class Roothyrn extends Monster {
-    public Roothyrn(EntityType<? extends Monster> entityType, Level level) {
+public class Slammroot extends Monster {
+    public Slammroot(EntityType<? extends Monster> entityType, Level level) {
         super(entityType, level);
     }
 
@@ -64,6 +64,7 @@ public class Roothyrn extends Monster {
     protected SoundEvent getDeathSound() {
         return AncientAetherSoundEvents.ENTITY_ROOTHYRN_DEATH.get();
     }
+
     @Override
     protected float getSoundVolume() {
         return 0.4F;

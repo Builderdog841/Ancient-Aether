@@ -76,10 +76,10 @@ public class AncientAetherEntityLoot extends EntityLootSubProvider {
                 )
         );
 
-        add(AncientAetherEntityTypes.ROOTHYRN.get(), LootTable.lootTable()
+        add(AncientAetherEntityTypes.SLAMMROOT.get(), LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
-                        .add(LootItem.lootTableItem(AetherItems.SKYROOT_STICK.get())
-                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 4.0F)))
+                        .add(LootItem.lootTableItem(AncientAetherItems.SLAMMROOT_FRUIT.get())
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 3.0F)))
                                 .apply(LootingEnchantFunction.lootingMultiplier(UniformGenerator.between(0.0F, 1.0F)))
                         )
                 )

@@ -184,7 +184,9 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.POTTED_WYND_THISTLE, "Potted Wynd Thistle");
 
         addItem(AncientAetherItems.VALKYRUM, "Valkyrum");
+
         addItem(AncientAetherItems.GRAPES, "Grapes");
+        addItem(AncientAetherItems.SLAMMROOT_FRUIT, "Slammroot Fruit");
         addItem(AncientAetherItems.FESTIVE_GUMMY_SWET, "Festive Gummy Swet");
 
         addItem(AncientAetherItems.VALKYRUM_SWORD, "Valkyrum Sword");
@@ -240,13 +242,13 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
 
         addItem(AncientAetherItems.FLUFFALO_SPAWN_EGG, "Fluffalo Spawn Egg");
         addItem(AncientAetherItems.FESTIVE_SWET_SPAWN_EGG, "Festive Swet Spawn Egg");
-        addItem(AncientAetherItems.ROOTHYRN_SPAWN_EGG, "Roothyrn Spawn Egg");
+        addItem(AncientAetherItems.SLAMMROOT_SPAWN_EGG, "Slammroot Spawn Egg");
         addItem(AncientAetherItems.AERONAUTIC_LEAPER_SPAWN_EGG, "Aeronautic Leaper Spawn Egg");
         addItem(AncientAetherItems.MUTATED_AECHOR_PLANT_SPAWN_EGG, "Mutated Aechor Plant Spawn Egg");
 
         addEntityType(AncientAetherEntityTypes.FLUFFALO, "Fluffalo");
         addEntityType(AncientAetherEntityTypes.FESTIVE_SWET, "Festive Swet");
-        addEntityType(AncientAetherEntityTypes.ROOTHYRN, "Roothyrn");
+        addEntityType(AncientAetherEntityTypes.SLAMMROOT, "Slammroot");
         addEntityType(AncientAetherEntityTypes.AERONAUTIC_LEAPER, "Aeronautic Leaper");
         addEntityType(AncientAetherEntityTypes.MUTATED_AECHOR_PLANT, "Mutated Aechor Plant");
 

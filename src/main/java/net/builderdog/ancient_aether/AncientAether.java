@@ -211,10 +211,11 @@ public class AncientAether {
         addCompost(0.3F, AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
         addCompost(0.3F, AncientAetherBlocks.SAKURA_SAPLING.get());
         addCompost(0.3F, AncientAetherBlocks.SKY_GRASS.get());
+        addCompost(0.5F, AncientAetherItems.GRAPES.get());
         addCompost(0.65F, AncientAetherBlocks.HIGHLAND_CYCLAMEN.get());
         addCompost(0.65F, AncientAetherBlocks.SKY_BLUES.get());
         addCompost(0.65F, AncientAetherBlocks.WYND_THISTLE.get());
-        addCompost(0.5F, AncientAetherItems.GRAPES.get());
+        addCompost(0.85F, AncientAetherItems.SLAMMROOT_FRUIT.get());
     }
 
     private void addCompost(float chance, ItemLike item) {

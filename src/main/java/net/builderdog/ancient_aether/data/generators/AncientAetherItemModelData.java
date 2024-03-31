@@ -17,6 +17,7 @@ public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
     protected void registerModels() {
         simpleItem(AncientAetherItems.VALKYRUM);
         simpleItem(AncientAetherItems.GRAPES);
+        simpleItem(AncientAetherItems.SLAMMROOT_FRUIT);
         simpleItem(AncientAetherItems.FESTIVE_GUMMY_SWET);
         simpleItem(AncientAetherItems.HIGHSPROOT_BOAT);
         simpleItem(AncientAetherItems.HIGHSPROOT_CHEST_BOAT);
@@ -69,10 +70,10 @@ public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
         item(AncientAetherBlocks.ATMOSINE_CRYSTAL.get().asItem(), "");
 
         eggItem(AncientAetherItems.FLUFFALO_SPAWN_EGG.get());
-        eggItem(AncientAetherItems.ROOTHYRN_SPAWN_EGG.get());
+        eggItem(AncientAetherItems.FESTIVE_SWET_SPAWN_EGG.get());
+        eggItem(AncientAetherItems.SLAMMROOT_SPAWN_EGG.get());
         eggItem(AncientAetherItems.AERONAUTIC_LEAPER_SPAWN_EGG.get());
         eggItem(AncientAetherItems.MUTATED_AECHOR_PLANT_SPAWN_EGG.get());
-        eggItem(AncientAetherItems.FESTIVE_SWET_SPAWN_EGG.get());
 
         untintedMoaEggItem(AncientAetherItems.TURQUOISE_MOA_EGG.get());
         untintedMoaEggItem(AncientAetherItems.TEAL_MOA_EGG.get());

@@ -7,7 +7,7 @@ public class AncientAetherModelLayers {
     public static final ModelLayerLocation FLUFFALO = register("fluffalo");
     public static final ModelLayerLocation FESTIVE_SWET = register("festive_swet");
     public static final ModelLayerLocation FESTIVE_SWET_OUTER = register("festive_swet","outer");
-    public static final ModelLayerLocation ROOTHYRN = register("roothyrn");
+    public static final ModelLayerLocation SLAMMROOT = register("slammroot");
     public static final ModelLayerLocation AERONAUTIC_LEAPER = register("aeronautic_leaper");
     public static final ModelLayerLocation MUTATED_AECHOR_PLANT = register("mutated_aechor_plant");
     public static final ModelLayerLocation POISON_BOMB = register("poison_bomb");

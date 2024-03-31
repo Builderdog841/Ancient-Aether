@@ -43,7 +43,7 @@ public class AncientAetherRenderers {
         event.registerEntityRenderer(AncientAetherEntityTypes.CHEST_BOAT.get(), context -> new AncientAetherBoatRenderer<>(context, true));
         event.registerEntityRenderer(AncientAetherEntityTypes.FLUFFALO.get(), FluffaloRenderer::new);
         event.registerEntityRenderer(AncientAetherEntityTypes.FESTIVE_SWET.get(), FestiveSwetRenderer::new);
-        event.registerEntityRenderer(AncientAetherEntityTypes.ROOTHYRN.get(), RoothyrnRenderer::new);
+        event.registerEntityRenderer(AncientAetherEntityTypes.SLAMMROOT.get(), SlammrootRenderer::new);
         event.registerEntityRenderer(AncientAetherEntityTypes.AERONAUTIC_LEAPER.get(), AeronauticLeaperRenderer::new);
         event.registerEntityRenderer(AncientAetherEntityTypes.MUTATED_AECHOR_PLANT.get(), MutatedAechorPlantRenderer::new);
         event.registerEntityRenderer(AncientAetherEntityTypes.WIND_BLOW.get(), WindBlowRenderer::new);
@@ -60,7 +60,7 @@ public class AncientAetherRenderers {
             event.registerLayerDefinition(AncientAetherModelLayers.FLUFFALO, FluffaloModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.FESTIVE_SWET, FestiveSwetModel::createInnerBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.FESTIVE_SWET_OUTER, FestiveSwetModel::createOuterBodyLayer);
-            event.registerLayerDefinition(AncientAetherModelLayers.ROOTHYRN, RoothyrnModel::createBodyLayer);
+            event.registerLayerDefinition(AncientAetherModelLayers.SLAMMROOT, SlammrootModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.AERONAUTIC_LEAPER, AeronauticLeaperModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.MUTATED_AECHOR_PLANT, MutatedAechorPlantModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.POISON_BOMB, PoisonBombModel::createBodyLayer);
@@ -82,11 +82,11 @@ public class AncientAetherRenderers {
     }
 
     public static void registerCuriosRenderers() {
-        CuriosRendererRegistry.register(AncientAetherItems.ANCIENT_PENDANT.get(), PendantRenderer::new);
-        CuriosRendererRegistry.register(AncientAetherItems.HEALTH_PENDANT.get(), PendantRenderer::new);
+        CuriosRendererRegistry.register(AncientAetherItems.VALKYRUM_GLOVES.get(), GlovesRenderer::new);
+        CuriosRendererRegistry.register(AncientAetherItems.VALKYRUM_PENDANT.get(), PendantRenderer::new);
         CuriosRendererRegistry.register(AncientAetherItems.HERMES_PENDANT.get(), PendantRenderer::new);
         CuriosRendererRegistry.register(AncientAetherItems.ARKENIUM_PENDANT.get(), PendantRenderer::new);
-        CuriosRendererRegistry.register(AncientAetherItems.VALKYRUM_PENDANT.get(), PendantRenderer::new);
-        CuriosRendererRegistry.register(AncientAetherItems.VALKYRUM_GLOVES.get(), GlovesRenderer::new);
+        CuriosRendererRegistry.register(AncientAetherItems.HEALTH_PENDANT.get(), PendantRenderer::new);
+        CuriosRendererRegistry.register(AncientAetherItems.ANCIENT_PENDANT.get(), PendantRenderer::new);
     }
 }

@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-29T12:55:32.1724839	Item Models: ancient_aether
+// 1.20.1	2024-03-31T12:41:50.4646597	Item Models: ancient_aether
 532bdb7a4f7d2a6b96d474c01c8b9e7a0d1c10b4 assets/ancient_aether/models/item/aerogel_glass.json
 87e9f8f9f807a2aa763e3057d32bacf3ee32b60f assets/ancient_aether/models/item/aerogel_glass_door.json
 d1e6ed3e334d573f31a8ce9e09885c0f43832630 assets/ancient_aether/models/item/aerogel_glass_pane.json
@@ -92,7 +92,6 @@ a571dce7fe46d5d816fbea0dc10fa85cb5ca2c39 assets/ancient_aether/models/item/locke
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/mutated_aechor_plant_spawn_egg.json
 b1eafdbefc14f48a0970fa9a63764b5ff46e93ed assets/ancient_aether/models/item/mysterious_armor_trim_smithing_template.json
 9771655c71206c2d022aac127af800f28a8ffb8f assets/ancient_aether/models/item/pink_cape.json
-63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/roothyrn_spawn_egg.json
 4a92d6f1142ab7e4e4c5907ade539d7914158bea assets/ancient_aether/models/item/royal_armor_trim_smithing_template.json
 f6ec6ffe46ca890025a12785250d13129a973a1a assets/ancient_aether/models/item/sakura_boat.json
 48b48509cb977fdd51219fbdd14f79e3b310a3dd assets/ancient_aether/models/item/sakura_bookshelf.json
@@ -118,6 +117,8 @@ c4c734261bf8749e898ba8bfa406a63dba5207b2 assets/ancient_aether/models/item/skyro
 2590d5cc1f45aacb63586ef37acbdb9fd6098d05 assets/ancient_aether/models/item/sky_blues.json
 290ca8c9799853d504d5cde3a25c8d21280f97e3 assets/ancient_aether/models/item/sky_blue_moa_egg.json
 1543a5a4eba1ce8cde57ae59bec61434713e55c2 assets/ancient_aether/models/item/sky_grass.json
+56dd8f5536a1606368bb1fd3cccdadcf15d45101 assets/ancient_aether/models/item/slammroot_fruit.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/slammroot_spawn_egg.json
 6c26a7864e134c9d651f994e559ab57c3d1e11f6 assets/ancient_aether/models/item/slider_prototype.json
 143677b1d90e9b8dc2a20a9041f8936404cb4248 assets/ancient_aether/models/item/solar_armor_trim_smithing_template.json
 91c8bd4c3e5f39b613322a1e535a01eb7f6d55fe assets/ancient_aether/models/item/strength_stone.json

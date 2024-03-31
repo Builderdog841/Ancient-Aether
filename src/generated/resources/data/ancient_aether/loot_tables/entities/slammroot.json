@@ -11,8 +11,8 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 4.0,
-                "min": 2.0
+                "max": 3.0,
+                "min": 1.0
               },
               "function": "minecraft:set_count"
             },
@@ -25,7 +25,7 @@
               "function": "minecraft:looting_enchant"
             }
           ],
-          "name": "aether:skyroot_stick"
+          "name": "ancient_aether:slammroot_fruit"
         }
       ],
       "rolls": 1.0
@@ -60,5 +60,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "ancient_aether:entities/roothyrn"
+  "random_sequence": "ancient_aether:entities/slammroot"
 }

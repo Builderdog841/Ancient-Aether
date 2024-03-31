@@ -6,7 +6,7 @@ import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.entity.miscellaneous.AncientAetherBoatEntity;
 import net.builderdog.ancient_aether.entity.miscellaneous.AncientAetherChestBoatEntity;
 import net.builderdog.ancient_aether.entity.monster.AeronauticLeaper;
-import net.builderdog.ancient_aether.entity.monster.Roothyrn;
+import net.builderdog.ancient_aether.entity.monster.Slammroot;
 import net.builderdog.ancient_aether.entity.monster.boss.MutatedAechorPlant;
 import net.builderdog.ancient_aether.entity.passive.Fluffalo;
 import net.builderdog.ancient_aether.entity.passive.WyndcapsAnimal;
@@ -38,8 +38,8 @@ public class AncientAetherEntityTypes {
 
     public static final RegistryObject<EntityType<Swet>> FESTIVE_SWET = ENTITY_TYPES.register("festive_swet",
             () -> EntityType.Builder.of(Swet::new, AetherMobCategory.AETHER_SURFACE_MONSTER).sized(0.9F, 0.95F).clientTrackingRange(10).build("festive_swet"));
-    public static final RegistryObject<EntityType<Roothyrn>> ROOTHYRN = ENTITY_TYPES.register("roothyrn",
-            () -> EntityType.Builder.of(Roothyrn::new, MobCategory.MONSTER).sized(0.7F, 0.7F).clientTrackingRange(16).build(new ResourceLocation(AncientAether.MODID, "roothyrn").toString()));
+    public static final RegistryObject<EntityType<Slammroot>> SLAMMROOT = ENTITY_TYPES.register("slammroot",
+            () -> EntityType.Builder.of(Slammroot::new, MobCategory.MONSTER).sized(0.7F, 0.7F).clientTrackingRange(16).build(new ResourceLocation(AncientAether.MODID, "slammroot").toString()));
     public static final RegistryObject<EntityType<AeronauticLeaper>> AERONAUTIC_LEAPER = ENTITY_TYPES.register("aeronautic_leaper",
             () -> EntityType.Builder.of(AeronauticLeaper::new, MobCategory.MONSTER).sized(2.0F, 2.0F).clientTrackingRange(10).build("aeronautic_leaper"));
 
@@ -63,7 +63,7 @@ public class AncientAetherEntityTypes {
     public static void registerEntityAttributes(EntityAttributeCreationEvent event) {
         event.put(AncientAetherEntityTypes.FLUFFALO.get(), Fluffalo.createMobAttributes().build());
         event.put(AncientAetherEntityTypes.FESTIVE_SWET.get(), Swet.createMobAttributes().build());
-        event.put(AncientAetherEntityTypes.ROOTHYRN.get(), Roothyrn.createMobAttributes().build());
+        event.put(AncientAetherEntityTypes.SLAMMROOT.get(), Slammroot.createMobAttributes().build());
         event.put(AncientAetherEntityTypes.AERONAUTIC_LEAPER.get(), AeronauticLeaper.createMobAttributes().build());
         event.put(AncientAetherEntityTypes.MUTATED_AECHOR_PLANT.get(), MutatedAechorPlant.createMobAttributes().build());
     }

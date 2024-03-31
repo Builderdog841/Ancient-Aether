@@ -2,7 +2,7 @@ package net.builderdog.ancient_aether.client.renderer.entity.model;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import net.builderdog.ancient_aether.entity.monster.Roothyrn;
+import net.builderdog.ancient_aether.entity.monster.Slammroot;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
@@ -12,12 +12,12 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nonnull;
 
-public class RoothyrnModel<T extends Roothyrn> extends EntityModel<T> {
+public class SlammrootModel<T extends Slammroot> extends EntityModel<T> {
     private final ModelPart body;
     private final ModelPart leftLeg;
     private final ModelPart rightLeg;
 
-    public RoothyrnModel(ModelPart root) {
+    public SlammrootModel(ModelPart root) {
         body = root.getChild("body");
         leftLeg = body.getChild("left_leg");
         rightLeg = body.getChild("right_leg");
@@ -37,7 +37,7 @@ public class RoothyrnModel<T extends Roothyrn> extends EntityModel<T> {
     }
 
     @Override
-    public void setupAnim(@Nonnull Roothyrn roothyrn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+    public void setupAnim(@Nonnull Slammroot slammroot, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         rightLeg.xRot = Mth.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
         leftLeg.xRot = Mth.cos(limbSwing * 0.6662F + (float) Math.PI) * 1.4F * limbSwingAmount;
     }
