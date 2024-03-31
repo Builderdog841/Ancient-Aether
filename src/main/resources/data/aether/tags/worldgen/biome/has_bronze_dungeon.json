@@ -1,0 +1,8 @@
+{
+  "replace": true,
+  "values": [
+    "#ancient_aether:is_aether_caves",
+    "#ancient_aether:is_sakura",
+    "ancient_aether:skyroot_jungle"
+  ]
+}
