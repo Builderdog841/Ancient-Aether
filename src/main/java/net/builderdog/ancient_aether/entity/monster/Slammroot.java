@@ -69,9 +69,4 @@ public class Slammroot extends Monster {
     protected SoundEvent getDeathSound() {
         return AncientAetherSoundEvents.ENTITY_SLAMMROOT_DEATH.get();
     }
-
-    @Override
-    protected float getSoundVolume() {
-        return 0.4F;
-    }
 }

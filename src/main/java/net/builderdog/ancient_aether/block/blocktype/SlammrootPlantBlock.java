@@ -43,7 +43,7 @@ public class SlammrootPlantBlock extends BushBlock {
 
     public void spawnSlammroot(@NotNull Level level, @NotNull BlockPos pos) {
         Slammroot slammroot = new Slammroot(AncientAetherEntityTypes.SLAMMROOT.get(), level);
-        slammroot.setPos(pos.getX(), pos.getY() + 0.25, pos.getZ());
+        slammroot.setPos(pos.getX() + 0.5, pos.getY() + 0.25, pos.getZ() + 0.5);
         level.addFreshEntity(slammroot);
     }
 
