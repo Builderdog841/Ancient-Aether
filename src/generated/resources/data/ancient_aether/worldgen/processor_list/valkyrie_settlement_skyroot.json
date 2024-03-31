@@ -5,20 +5,15 @@
       "rules": [
         {
           "input_predicate": {
-            "block": "aether:aether_dirt_path",
+            "block": "ancient_aether:grape_vine",
             "predicate_type": "minecraft:random_block_match",
-            "probability": 0.05
+            "probability": 0.5
           },
           "location_predicate": {
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "aether:aether_grass_block",
-            "Properties": {
-              "type": "normal",
-              "double_drops": "true",
-              "snowy": "false"
-            }
+            "Name": "minecraft:air"
           }
         },
         {
@@ -119,6 +114,24 @@
           },
           "output_state": {
             "Name": "aether:potted_berry_bush"
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "aether:aether_dirt_path",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 0.05
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "aether:aether_grass_block",
+            "Properties": {
+              "type": "normal",
+              "double_drops": "true",
+              "snowy": "false"
+            }
           }
         }
       ]

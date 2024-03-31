@@ -100,6 +100,15 @@
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "ancient_aether:valkyrie_settlement/skyroot/houses/house_wine_yard",
+        "processors": "ancient_aether:valkyrie_settlement_skyroot",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
     }
   ]
 }

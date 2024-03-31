@@ -78,14 +78,15 @@ public class AncientAetherProcessorLists {
         ));
         register(context, VALKYRIE_SETTLEMENT_SKYROOT, ImmutableList.of(
                 new RuleProcessor(ImmutableList.of(
-                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.AETHER_DIRT_PATH.get(), 0.05F), AlwaysTrueTest.INSTANCE, AetherFeatureStates.AETHER_GRASS_BLOCK),
+                        new ProcessorRule(new RandomBlockMatchTest(AncientAetherBlocks.GRAPE_VINE.get(), 0.5F), AlwaysTrueTest.INSTANCE, Blocks.AIR.defaultBlockState()),
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.HOLYSTONE.get(), 0.4F), AlwaysTrueTest.INSTANCE, AncientAetherFeatureStates.MOSSY_HOLYSTONE),
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.HOLYSTONE_BRICKS.get(), 0.1F), AlwaysTrueTest.INSTANCE, AetherFeatureStates.HOLYSTONE),
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.BERRY_BUSH_STEM.get(), 0.5F), AlwaysTrueTest.INSTANCE, AetherFeatureStates.BERRY_BUSH),
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.POTTED_WHITE_FLOWER.get(), 0.15F), AlwaysTrueTest.INSTANCE, AetherBlocks.POTTED_PURPLE_FLOWER.get().defaultBlockState()),
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.POTTED_WHITE_FLOWER.get(), 0.15F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.POTTED_HIGHLAND_CYCLAMEN.get().defaultBlockState()),
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.POTTED_WHITE_FLOWER.get(), 0.15F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.POTTED_SKY_BLUES.get().defaultBlockState()),
-                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.POTTED_WHITE_FLOWER.get(), 0.2F), AlwaysTrueTest.INSTANCE, AetherBlocks.POTTED_BERRY_BUSH.get().defaultBlockState())
+                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.POTTED_WHITE_FLOWER.get(), 0.2F), AlwaysTrueTest.INSTANCE, AetherBlocks.POTTED_BERRY_BUSH.get().defaultBlockState()),
+        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.AETHER_DIRT_PATH.get(), 0.05F), AlwaysTrueTest.INSTANCE, AetherFeatureStates.AETHER_GRASS_BLOCK)
                 )),
                 new DoubleDropsProcessor(),
                 new SurfaceRuleProcessor()
