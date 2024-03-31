@@ -210,9 +210,9 @@ public class AeronauticLeaper extends Slime {
 	public static class KeepOnJumpingGoal extends SlimeKeepOnJumpingGoal {
 		private final AeronauticLeaper leaper;
 
-		public KeepOnJumpingGoal(AeronauticLeaper leaperIn) {
-			super(leaperIn);
-			leaper = leaperIn;
+		public KeepOnJumpingGoal(AeronauticLeaper leaper) {
+			super(leaper);
+			this.leaper = leaper;
 		}
 
 		@Override

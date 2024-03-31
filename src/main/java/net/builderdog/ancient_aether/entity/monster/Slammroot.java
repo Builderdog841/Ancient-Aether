@@ -17,6 +17,7 @@ import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -47,10 +48,16 @@ public class Slammroot extends Monster {
     @Nonnull
     public static AttributeSupplier.Builder createMobAttributes() {
         return Animal.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 16D)
+                .add(Attributes.MAX_HEALTH, 12D)
                 .add(Attributes.ATTACK_DAMAGE, 2.0F)
                 .add(Attributes.ATTACK_SPEED, 1.2F)
                 .add(Attributes.MOVEMENT_SPEED, 0.3F);
+    }
+
+    protected void jumpFromGround() {
+        Vec3 vec3 = getDeltaMovement();
+        setDeltaMovement(vec3.x, 0.5F, vec3.z);
+        hasImpulse = true;
     }
 
     @Override
