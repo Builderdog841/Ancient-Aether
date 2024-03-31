@@ -18,6 +18,6 @@ public abstract class BlockMixin {
     protected abstract void registerDefaultState(BlockState state);
 
     @Inject(method = "getStateForPlacement", at = @At(value = "HEAD"))
-    protected void aa$getPlacedState(BlockPlaceContext context, CallbackInfoReturnable<BlockState> cir) {}
-
+    protected void aa$getPlacedState(BlockPlaceContext context, CallbackInfoReturnable<BlockState> cir) {
+    }
 }

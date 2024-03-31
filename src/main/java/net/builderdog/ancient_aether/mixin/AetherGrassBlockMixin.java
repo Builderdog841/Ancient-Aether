@@ -29,7 +29,7 @@ public abstract class AetherGrassBlockMixin extends BlockMixin{
 
     @Inject(method = "<init>", at = @At(value = "TAIL"))
     public void aa$constructor(BlockBehaviour.Properties properties, CallbackInfo ci) {
-        this.registerDefaultState(defaultBlockState().setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.NORMAL));
+        registerDefaultState(defaultBlockState().setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.NORMAL));
     }
 
     @Inject(method = "createBlockStateDefinition", at = @At(value = "TAIL"))
