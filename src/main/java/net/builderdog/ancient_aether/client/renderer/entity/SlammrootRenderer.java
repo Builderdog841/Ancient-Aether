@@ -13,7 +13,7 @@ public class SlammrootRenderer extends MobRenderer<Slammroot, SlammrootModel<Sla
     private static final ResourceLocation SLAMMROOT_TEXTURE = new ResourceLocation("ancient_aether", "textures/entity/mobs/slammroot/slammroot.png");
 
     public SlammrootRenderer(EntityRendererProvider.Context context) {
-        super(context, new SlammrootModel<>(context.bakeLayer(AncientAetherModelLayers.SLAMMROOT)), 0.7F);
+        super(context, new SlammrootModel<>(context.bakeLayer(AncientAetherModelLayers.SLAMMROOT)), 0.3F);
     }
 
     @Nonnull

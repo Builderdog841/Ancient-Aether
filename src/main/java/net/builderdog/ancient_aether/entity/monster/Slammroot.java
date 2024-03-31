@@ -30,7 +30,7 @@ public class Slammroot extends Monster {
     @Override
     protected void registerGoals() {
         super.registerGoals();
-        goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
+        goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2F, false) {
             @Override
             protected double getAttackReachSqr(@NotNull LivingEntity entity) {
                 return mob.getBbWidth() * mob.getBbWidth() + entity.getBbWidth();
@@ -48,21 +48,21 @@ public class Slammroot extends Monster {
     public static AttributeSupplier.Builder createMobAttributes() {
         return Animal.createMobAttributes()
                 .add(Attributes.MAX_HEALTH, 16D)
-                .add(Attributes.ATTACK_DAMAGE, 2.0f)
-                .add(Attributes.ATTACK_SPEED, 1.2f)
-                .add(Attributes.MOVEMENT_SPEED, 0.3f);
+                .add(Attributes.ATTACK_DAMAGE, 2.0F)
+                .add(Attributes.ATTACK_SPEED, 1.2F)
+                .add(Attributes.MOVEMENT_SPEED, 0.3F);
     }
 
     @Nullable
     @Override
     protected SoundEvent getHurtSound(@Nonnull DamageSource damageSource) {
-        return AncientAetherSoundEvents.ENTITY_ROOTHYRN_HURT.get();
+        return AncientAetherSoundEvents.ENTITY_SLAMMROOT_HURT.get();
     }
 
     @Nullable
     @Override
     protected SoundEvent getDeathSound() {
-        return AncientAetherSoundEvents.ENTITY_ROOTHYRN_DEATH.get();
+        return AncientAetherSoundEvents.ENTITY_SLAMMROOT_DEATH.get();
     }
 
     @Override

@@ -133,13 +133,13 @@ public class AncientAetherSoundData extends SoundDefinitionsProvider {
                         sound("ancient_aether:entity/fluffalo/fluffalo_hurt"))
                 .subtitle("subtitles.ancient_aether.entity.fluffalo.death")
         );
-        add(AncientAetherSoundEvents.ENTITY_ROOTHYRN_HURT, definition().with(
-                        sound("ancient_aether:entity/roothyrn/roothyrn_hurt"))
-                .subtitle("subtitles.ancient_aether.entity.roothyrn.hurt")
+        add(AncientAetherSoundEvents.ENTITY_SLAMMROOT_HURT, definition().with(
+                        sound("ancient_aether:entity/slammroot/slammroot_hurt"))
+                .subtitle("subtitles.ancient_aether.entity.slammroot.hurt")
         );
-        add(AncientAetherSoundEvents.ENTITY_ROOTHYRN_DEATH, definition().with(
-                        sound("ancient_aether:entity/roothyrn/roothyrn_hurt"))
-                .subtitle("subtitles.ancient_aether.entity.roothyrn.death")
+        add(AncientAetherSoundEvents.ENTITY_SLAMMROOT_DEATH, definition().with(
+                        sound("ancient_aether:entity/slammroot/slammroot_hurt"))
+                .subtitle("subtitles.ancient_aether.entity.slammroot.death")
         );
         add(AncientAetherSoundEvents.ENTITY_AERONAUTIC_LEAPER_DEATH, definition().with(
                         sound("mob/slime/big1"),

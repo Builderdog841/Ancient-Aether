@@ -85,17 +85,17 @@
     ],
     "subtitle": "subtitles.ancient_aether.entity.mutated_aechor_plant.shoot"
   },
-  "entity.roothyrn.death": {
+  "entity.slammroot.death": {
     "sounds": [
-      "ancient_aether:entity/roothyrn/roothyrn_hurt"
+      "ancient_aether:entity/slammroot/slammroot_hurt"
     ],
-    "subtitle": "subtitles.ancient_aether.entity.roothyrn.death"
+    "subtitle": "subtitles.ancient_aether.entity.slammroot.death"
   },
-  "entity.roothyrn.hurt": {
+  "entity.slammroot.hurt": {
     "sounds": [
-      "ancient_aether:entity/roothyrn/roothyrn_hurt"
+      "ancient_aether:entity/slammroot/slammroot_hurt"
     ],
-    "subtitle": "subtitles.ancient_aether.entity.roothyrn.hurt"
+    "subtitle": "subtitles.ancient_aether.entity.slammroot.hurt"
   },
   "item.accessory.equip_ancient_pendant": {
     "sounds": [

@@ -92,10 +92,12 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     }
 
     @Override
-    public void push(double x, double y, double z) { }
+    public void push(double x, double y, double z) {
+    }
 
     @Override
-    protected void jumpFromGround() { }
+    protected void jumpFromGround() {
+    }
 
     @Override
     public boolean canBeLeashed(@NotNull Player player) {

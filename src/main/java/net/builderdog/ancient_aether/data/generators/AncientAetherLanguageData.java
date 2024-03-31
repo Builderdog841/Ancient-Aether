@@ -338,8 +338,8 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addSubtitle("entity", "fluffalo.milk", "Fluffalo gets milked");
         addSubtitle("entity", "fluffalo.hurt", "Fluffalo hurts");
         addSubtitle("entity", "fluffalo.death", "Fluffalo dies");
-        addSubtitle("entity", "roothyrn.hurt", "Roothyrn hurts");
-        addSubtitle("entity", "roothyrn.death", "Roothyrn dies");
+        addSubtitle("entity", "slammroot.hurt", "Slammroot hurts");
+        addSubtitle("entity", "slammroot.death", "Slammroot dies");
         addSubtitle("entity", "aeronautic_leaper.jump", "Aeronautic Leaper leaps");
         addSubtitle("entity", "aeronautic_leaper.hurt", "Aeronautic Leaper hurts");
         addSubtitle("entity", "aeronautic_leaper.death", "Aeronautic Leaper dies");
