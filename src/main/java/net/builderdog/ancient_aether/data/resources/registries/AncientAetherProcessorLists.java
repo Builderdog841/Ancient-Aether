@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.data.resources.registries;
 
+import com.aetherteam.aether.AetherTags;
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.data.resources.AetherFeatureStates;
 import com.aetherteam.aether.world.processor.BossRoomProcessor;
@@ -28,9 +29,9 @@ public class AncientAetherProcessorLists {
     public static final ResourceKey<StructureProcessorList> BRONZE_DUNGEON_ENTRANCE = createKey("bronze_dungeon_entrance");
     public static final ResourceKey<StructureProcessorList> BRONZE_DUNGEON = createKey("bronze_dungeon");
     public static final ResourceKey<StructureProcessorList> BRONZE_DUNGEON_BOSS_ROOM = createKey("bronze_dungeon_boss_room");
-    public static final ResourceKey<StructureProcessorList> ANCIENT_DUNGEON = createKey("ancient_dungeon");
     public static final ResourceKey<StructureProcessorList> SENTRY_LABORATORY = createKey("sentry_laboratory");
     public static final ResourceKey<StructureProcessorList> SENTRY_LABORATORY_BOSS_ROOM = createKey("sentry_laboratory_boss_room");
+    public static final ResourceKey<StructureProcessorList> ANCIENT_DUNGEON = createKey("ancient_dungeon");
 
     public static void bootstrap(BootstapContext<StructureProcessorList> context) {
         register(context, HOLYSTONE_RUIN, ImmutableList.of(
@@ -93,6 +94,7 @@ public class AncientAetherProcessorLists {
         ));
         register(context, BRONZE_DUNGEON_ENTRANCE, ImmutableList.of(
                 new RuleProcessor(ImmutableList.of(
+                        new ProcessorRule(new BlockMatchTest(AetherBlocks.CARVED_STAIRS.get()), new TagMatchTest(AetherTags.Blocks.AETHER_ISLAND_BLOCKS), AetherBlocks.CARVED_STONE.get().defaultBlockState()),
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.CARVED_STONE.get(), 0.01F), AlwaysTrueTest.INSTANCE, AetherBlocks.SENTRY_STONE.get().defaultBlockState()),
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.HOLYSTONE.get(), 0.4F), AlwaysTrueTest.INSTANCE, AncientAetherFeatureStates.MOSSY_HOLYSTONE),
                         new ProcessorRule(new RandomBlockMatchTest(AncientAetherBlocks.ANCIENT_SENTRY_VASE.get(), 0.75F), AlwaysTrueTest.INSTANCE, Blocks.AIR.defaultBlockState())

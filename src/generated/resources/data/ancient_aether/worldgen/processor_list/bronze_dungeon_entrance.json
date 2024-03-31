@@ -5,6 +5,19 @@
       "rules": [
         {
           "input_predicate": {
+            "block": "aether:carved_stairs",
+            "predicate_type": "minecraft:block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "aether:aether_island_blocks"
+          },
+          "output_state": {
+            "Name": "aether:carved_stone"
+          }
+        },
+        {
+          "input_predicate": {
             "block": "aether:carved_stone",
             "predicate_type": "minecraft:random_block_match",
             "probability": 0.01
