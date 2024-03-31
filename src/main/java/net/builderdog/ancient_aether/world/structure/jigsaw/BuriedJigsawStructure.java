@@ -117,7 +117,7 @@ public class BuriedJigsawStructure extends Structure {
                 generator.getBaseColumn(maxX, minZ, heightAccessor, random),
                 generator.getBaseColumn(maxX, maxZ, heightAccessor, random)
         };
-        int roomHeight = checkRoomHeight(templateManager, new ResourceLocation(AncientAether.MODID, "sentry_laboratory/boss_room"));
+        int roomHeight = checkRoomHeight(templateManager, new ResourceLocation(AncientAether.MODID, "buried_jigsaw_spawn_radius"));
         int height = heightAccessor.getMinBuildHeight();
         int maxHeight = heightAccessor.getMaxBuildHeight() - belowTop;
         int thickness = roomHeight + 2;

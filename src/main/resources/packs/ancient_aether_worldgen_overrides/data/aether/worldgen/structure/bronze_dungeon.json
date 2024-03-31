@@ -1,6 +1,6 @@
 {
   "type": "ancient_aether:jigsaw_buried",
-  "start_pool": "ancient_aether:bronze_dungeon/boss_room",
+  "start_pool": "ancient_aether:bronze_dungeon/lobbies",
   "size": 16,
   "adapt_noise": true,
   "max_distance_from_center": 112,
