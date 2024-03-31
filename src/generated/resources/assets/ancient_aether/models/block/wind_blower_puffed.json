@@ -1,5 +1,5 @@
 {
-  "parent": "ancient_aether:block/cube_puffed",
+  "parent": "ancient_aether:block/template_puffed",
   "render_type": "minecraft:translucent",
   "textures": {
     "down": "ancient_aether:block/wind_blower_bottom_puffed",

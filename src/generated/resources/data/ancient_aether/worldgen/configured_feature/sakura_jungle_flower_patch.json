@@ -2,7 +2,7 @@
   "type": "minecraft:random_selector",
   "config": {
     "default": {
-      "feature": "ancient_aether:highland_cyclamen_patch",
+      "feature": "ancient_aether:slammroot_patch",
       "placement": [
         {
           "type": "minecraft:block_predicate_filter",

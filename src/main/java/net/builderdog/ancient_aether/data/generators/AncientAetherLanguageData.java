@@ -44,6 +44,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.SKY_BLUES, "Sky Blues");
         addBlock(AncientAetherBlocks.WYND_THISTLE, "Wynd Thistle");
         addBlock(AncientAetherBlocks.GRAPE_VINE, "Grape Vine");
+        addBlock(AncientAetherBlocks.SLAMMROOT_PLANT, "Slammroot Plant");
 
         addBlock(AncientAetherBlocks.HIGHSPROOT_LOG, "Highsproot Log");
         addBlock(AncientAetherBlocks.HIGHSPROOT_WOOD, "Highsproot Wood");

@@ -151,9 +151,10 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         ancientVase(AncientAetherBlocks.ANCIENT_AEROGETIC_VASE.get(), AncientAetherBlocks.AEROGETIC_VASE.get());
         ancientVase(AncientAetherBlocks.ANCIENT_GALE_VASE.get(), AncientAetherBlocks.GALE_VASE.get());
 
+        grapeVine(AncientAetherBlocks.GRAPE_VINE.get());
+        slammrootPlant(AncientAetherBlocks.SLAMMROOT_PLANT.get());
         windBlower(AncientAetherBlocks.WIND_BLOWER.get());
         sliderPrototype(AncientAetherBlocks.SLIDER_PROTOTYPE.get());
-        grapeVine(AncientAetherBlocks.GRAPE_VINE.get());
 
         obelisk(AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get());
         obelisk(AncientAetherBlocks.ANCIENT_OBELISK.get());

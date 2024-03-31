@@ -28,6 +28,7 @@ public class AncientAetherVegetationFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHLAND_CYCLAMEN_PATCH = AncientAetherFeatureUtils.registerKey("highland_cyclamen_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKY_BLUES_PATCH = AncientAetherFeatureUtils.registerKey("sky_blues_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> WYND_THISTLE_PATCH = AncientAetherFeatureUtils.registerKey("wynd_thistle_patch");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SLAMMROOT_PATCH = AncientAetherFeatureUtils.registerKey("slammroot_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SINGLE_PIECE_OF_SKY_GRASS = AncientAetherFeatureUtils.registerKey("single_piece_of_sky_grass");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_GRASS_PATCH = AncientAetherFeatureUtils.registerKey("aether_grass_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FROZEN_AETHER_GRASS_PATCH = AncientAetherFeatureUtils.registerKey("frozen_aether_grass_patch");
@@ -67,6 +68,10 @@ public class AncientAetherVegetationFeatures {
         AncientAetherFeatureUtils.register(context, WYND_THISTLE_PATCH, Feature.FLOWER,
                 NitrogenConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
                                 .add(AncientAetherFeatureStates.WYND_THISTLE, 3)),
+                        64));
+        AncientAetherFeatureUtils.register(context, SLAMMROOT_PATCH, Feature.FLOWER,
+                NitrogenConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
+                                .add(AncientAetherBlocks.SLAMMROOT_PLANT.get().defaultBlockState(), 3)),
                         64));
 
         AncientAetherFeatureUtils.register(context, SINGLE_PIECE_OF_SKY_GRASS, Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
@@ -124,7 +129,7 @@ public class AncientAetherVegetationFeatures {
         AncientAetherFeatureUtils.register(context, SAKURA_JUNGLE_FLOWER_PATCH, Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(
                 new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH), PlacementUtils.isEmpty()), 0.375F),
         new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.HIGHLAND_CYCLAMEN_PATCH), PlacementUtils.isEmpty()), 0.125F)
-        ), PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.HIGHLAND_CYCLAMEN_PATCH), PlacementUtils.isEmpty())));
+        ), PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.SLAMMROOT_PATCH), PlacementUtils.isEmpty())));
 
         AncientAetherFeatureUtils.register(context, SKYROOT_TREE_VARIANTS, Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(
                 new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherTreeFeatures.SKYROOT_TREE_VINED), PlacementUtils.filteredByBlockSurvival(AetherBlocks.SKYROOT_SAPLING.get())), 0.1F)

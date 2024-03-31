@@ -55,6 +55,24 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
         simpleBlock(block, models().singleTexture(name(block), mcLoc("block/carpet"), "wool", texture(name(baseBlock))));
     }
 
+    public void grapeVine(Block block) {
+        getVariantBuilder(block).forAllStatesExcept((state) -> {
+            int age = state.getValue(GrapeVineBlock.AGE);
+            ModelFile vine = models().withExistingParent(name(block) + "_stage" + age, modLoc("block/template_grape_vine"))
+                    .texture("vine", texture(name(block) + "_stage" + age)).renderType("cutout_mipped");
+
+            Direction direction = state.getValue(GrapeVineBlock.FACING);
+            return ConfiguredModel.builder().modelFile(vine).rotationY((int) (direction.toYRot() + 180) % 360).build();
+        });
+    }
+
+    public void slammrootPlant(Block block) {
+        ModelFile plant = models().withExistingParent(name(block), modLoc("block/template_slammroot_plant"))
+                .texture("plant", texture(name(block))).renderType("translucent");
+
+        getVariantBuilder(block).partialState().addModels(new ConfiguredModel(plant));
+    }
+
     public void vase(Block block) {
         ModelFile vase = models().withExistingParent(name(block), modLoc("block/template_vase"))
                 .texture("vase", texture(name(block))).renderType("cutout");
@@ -102,8 +120,8 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
         });
     }
 
-    public BlockModelBuilder cubePuffed(String name, ResourceLocation down, ResourceLocation up, ResourceLocation north, ResourceLocation south, ResourceLocation east, ResourceLocation west) {
-        return models().withExistingParent(name, modLoc("cube_puffed"))
+    public BlockModelBuilder puffedBlock(String name, ResourceLocation down, ResourceLocation up, ResourceLocation north, ResourceLocation south, ResourceLocation east, ResourceLocation west) {
+        return models().withExistingParent(name, modLoc("template_puffed"))
                 .texture("down", down)
                 .texture("up", up)
                 .texture("north", north)
@@ -128,7 +146,7 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
         ResourceLocation west_puffed =  extend(texture(name(block)), "_side_right_puffed");
 
         ModelFile normal = models().cube(blockName, down, up, north, south, east, west).renderType("translucent").texture("particle", down);
-        ModelFile charged = cubePuffed(blockName + "_puffed", down_puffed, up_puffed, north_puffed, south_puffed, east_puffed, west_puffed).renderType("translucent").texture("particle", down_puffed);
+        ModelFile charged = puffedBlock(blockName + "_puffed", down_puffed, up_puffed, north_puffed, south_puffed, east_puffed, west_puffed).renderType("translucent").texture("particle", down_puffed);
         getVariantBuilder(block).forAllStatesExcept((state) -> {
             Direction direction = state.getValue(WindBlowerBlock.FACING);
             if (state.getValue(WindBlowerBlock.PUFFED))
@@ -204,17 +222,6 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
                     }
                 }
             return ConfiguredModel.builder().build();
-        });
-    }
-
-    public void grapeVine(Block block) {
-        getVariantBuilder(block).forAllStatesExcept((state) -> {
-            int age = state.getValue(GrapeVineBlock.AGE);
-            ModelFile vine = models().withExistingParent(name(block) + "_stage" + age, modLoc("block/template_grape_vine"))
-                    .texture("vine", texture(name(block) + "_stage" + age)).renderType("cutout_mipped");
-
-            Direction direction = state.getValue(GrapeVineBlock.FACING);
-            return ConfiguredModel.builder().modelFile(vine).rotationY((int) (direction.toYRot() + 180) % 360).build();
         });
     }
 

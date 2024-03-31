@@ -30,6 +30,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -71,6 +72,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> SKY_BLUES = registerBlock("sky_blues", () -> new FlowerBlock(MobEffects.POISON, 4, Block.Properties.copy(WHITE_FLOWER.get())));
     public static final RegistryObject<Block> WYND_THISTLE = registerBlock("wynd_thistle", () -> new FlowerBlock(MobEffects.SATURATION, 4, Block.Properties.copy(WHITE_FLOWER.get())));
     public static final RegistryObject<GrapeVineBlock> GRAPE_VINE = BLOCKS.register("grape_vine", () -> new GrapeVineBlock(Block.Properties.copy(VINE).noLootTable()));
+    public static final RegistryObject<Block> SLAMMROOT_PLANT = BLOCKS.register("slammroot_plant", () -> new SlammrootPlantBlock(Block.Properties.of().offsetType(BlockBehaviour.OffsetType.XYZ).dynamicShape().noOcclusion().noCollission().mapColor(MapColor.PLANT).sound(SoundType.HANGING_ROOTS).instabreak().pushReaction(PushReaction.DESTROY).noParticlesOnBreak().noLootTable()));
 
     public static final RegistryObject<RotatedPillarBlock> HIGHSPROOT_LOG = registerBlock("highsproot_log", () -> new AetherLogBlock(BlockBehaviour.Properties.copy(SKYROOT_LOG.get())));
     public static final RegistryObject<RotatedPillarBlock> HIGHSPROOT_WOOD = registerBlock("highsproot_wood", () -> new AetherLogBlock(BlockBehaviour.Properties.copy(SKYROOT_WOOD.get())));
