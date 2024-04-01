@@ -72,6 +72,10 @@
       "charge": 0.4,
       "energy_budget": 0.2
     },
+    "ancient_aether:slammroot": {
+      "charge": 0.3,
+      "energy_budget": 0.1
+    },
     "aether:evil_whirlwind": {
       "charge": 0.4,
       "energy_budget": 0.1
@@ -104,6 +108,12 @@
         "maxCount": 3,
         "minCount": 1,
         "weight": 12
+      },
+      {
+        "type": "ancient_aether:slammroot",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 2
       }
     ],
     "aether_sky_monster": [
