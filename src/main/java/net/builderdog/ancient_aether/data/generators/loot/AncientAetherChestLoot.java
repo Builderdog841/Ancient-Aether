@@ -263,11 +263,11 @@ public class AncientAetherChestLoot implements LootTableSubProvider {
         );
 
         builder.accept(AncientAetherLoot.CHESTS_DUNGEON_BRONZE_DUNGEON_LIBRARY, LootTable.lootTable()
-                .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0F, 1.0F))
+                .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0F, 2.0F))
                         .add(LootItem.lootTableItem(AetherItems.GOLDEN_AMBER.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0F, 6.0F))))
                         .add(LootItem.lootTableItem(AetherItems.ZANITE_GEMSTONE.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F))))
                 )
-                .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0F, 2.0F))
+                .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(2.0F, 4.0F))
                         .add(LootItem.lootTableItem(Items.PAPER).apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0F, 6.0F))))
                         .add(LootItem.lootTableItem(Items.BOOK).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F))))
                         .add(LootItem.lootTableItem(AetherBlocks.SKYROOT_BOOKSHELF.get()))
@@ -281,7 +281,7 @@ public class AncientAetherChestLoot implements LootTableSubProvider {
                         .add(LootTableReference.lootTableReference(AncientAetherLoot.CHESTS_DUNGEON_ARMOR_TRIMS))
                 )
                 .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(0.0F, 2.0F))
-                        .add(LootItem.lootTableItem(AetherItems.BOOK_OF_LORE.get()).setWeight(7))
+                        .add(LootItem.lootTableItem(AetherItems.BOOK_OF_LORE.get()).setWeight(6))
                         .add(LootItem.lootTableItem(Items.MUSIC_DISC_CAT))
                         .add(LootItem.lootTableItem(Items.MUSIC_DISC_STRAD))
                 )

@@ -37,7 +37,7 @@
       ],
       "rolls": {
         "type": "minecraft:uniform",
-        "max": 1.0,
+        "max": 2.0,
         "min": 1.0
       }
     },
@@ -81,8 +81,8 @@
       ],
       "rolls": {
         "type": "minecraft:uniform",
-        "max": 2.0,
-        "min": 1.0
+        "max": 4.0,
+        "min": 2.0
       }
     },
     {
@@ -130,7 +130,7 @@
         {
           "type": "minecraft:item",
           "name": "aether:book_of_lore",
-          "weight": 7
+          "weight": 6
         },
         {
           "type": "minecraft:item",
