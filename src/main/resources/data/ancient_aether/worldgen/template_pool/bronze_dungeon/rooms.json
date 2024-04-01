@@ -1,0 +1,24 @@
+{
+  "name": "ancient_aether:bronze_dungeon/rooms",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 9,
+      "element": {
+        "location": "ancient_aether:bronze_dungeon/rooms/room_01",
+        "processors": "ancient_aether:bronze_dungeon",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:bronze_dungeon/rooms/surface_entrance",
+        "processors": "ancient_aether:bronze_dungeon_entrance",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
