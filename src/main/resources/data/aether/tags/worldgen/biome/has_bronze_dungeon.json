@@ -4,5 +4,8 @@
     "#ancient_aether:is_aether_caves",
     "#ancient_aether:is_sakura",
     "ancient_aether:skyroot_jungle"
+  ],
+  "remove": [
+    "ancient_aether:frozen_caverns"
   ]
 }
