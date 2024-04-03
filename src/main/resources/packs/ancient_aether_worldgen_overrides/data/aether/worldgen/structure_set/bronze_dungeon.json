@@ -7,7 +7,7 @@
     },
     "salt": 32146754,
     "separation": 8,
-    "spacing": 16,
+    "spacing": 24,
     "spread_type": "triangular"
   },
   "structures": [

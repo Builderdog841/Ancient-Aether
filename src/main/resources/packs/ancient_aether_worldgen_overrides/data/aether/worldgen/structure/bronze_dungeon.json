@@ -3,7 +3,7 @@
   "start_pool": "ancient_aether:bronze_dungeon/lobbies",
   "size": 16,
   "adapt_noise": true,
-  "max_distance_from_center": 112,
+  "max_distance_from_center": 96,
   "biomes": "#aether:has_bronze_dungeon",
   "step": "underground_structures",
   "above_bottom": 32,
