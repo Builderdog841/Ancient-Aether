@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_highland_cyclamen": {
+    "has_sunset_rose": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ancient_aether:highland_cyclamen"
+              "ancient_aether:sunset_rose"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ancient_aether:highland_cyclamen_to_red_dye"
+        "recipe": "ancient_aether:sunset_rose_to_red_dye"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_highland_cyclamen",
+      "has_sunset_rose",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "ancient_aether:highland_cyclamen_to_red_dye"
+      "ancient_aether:sunset_rose_to_red_dye"
     ]
   },
   "sends_telemetry_event": false

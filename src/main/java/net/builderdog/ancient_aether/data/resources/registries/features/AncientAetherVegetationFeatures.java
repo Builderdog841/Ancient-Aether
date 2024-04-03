@@ -25,7 +25,7 @@ import net.minecraft.world.level.levelgen.synth.NormalNoise;
 import java.util.List;
 
 public class AncientAetherVegetationFeatures {
-    public static final ResourceKey<ConfiguredFeature<?, ?>> HIGHLAND_CYCLAMEN_PATCH = AncientAetherFeatureUtils.registerKey("highland_cyclamen_patch");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SUNSET_ROSE_PATCH = AncientAetherFeatureUtils.registerKey("sunset_rose_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKY_BLUES_PATCH = AncientAetherFeatureUtils.registerKey("sky_blues_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> WYND_THISTLE_PATCH = AncientAetherFeatureUtils.registerKey("wynd_thistle_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SLAMMROOT_PATCH = AncientAetherFeatureUtils.registerKey("slammroot_patch");
@@ -58,9 +58,9 @@ public class AncientAetherVegetationFeatures {
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
-        AncientAetherFeatureUtils.register(context, HIGHLAND_CYCLAMEN_PATCH, Feature.FLOWER,
+        AncientAetherFeatureUtils.register(context, SUNSET_ROSE_PATCH, Feature.FLOWER,
                 NitrogenConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
-                                .add(AncientAetherFeatureStates.HIGHLAND_CYCLAMEN, 3)),
+                                .add(AncientAetherFeatureStates.SUNSET_ROSE, 3)),
                         64));
         AncientAetherFeatureUtils.register(context, SKY_BLUES_PATCH, Feature.FLOWER,
                 NitrogenConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
@@ -115,7 +115,7 @@ public class AncientAetherVegetationFeatures {
                                 AetherBlocks.WHITE_FLOWER.get().defaultBlockState(),
                                 List.of(AncientAetherFeatureStates.SKY_BLUES),
                                 List.of(AetherBlocks.PURPLE_FLOWER.get().defaultBlockState(),
-                                        AncientAetherFeatureStates.HIGHLAND_CYCLAMEN
+                                        AncientAetherFeatureStates.SUNSET_ROSE
                                 ))))));
 
         AncientAetherFeatureUtils.register(context, WYNDCAPS_FLOWER_PATCH, Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(
@@ -124,12 +124,12 @@ public class AncientAetherVegetationFeatures {
         ), PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.WYND_THISTLE_PATCH), PlacementUtils.isEmpty())));
 
         AncientAetherFeatureUtils.register(context, SKYROOT_JUNGLE_FLOWER_PATCH, Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(
-                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.HIGHLAND_CYCLAMEN_PATCH), PlacementUtils.isEmpty()), 0.3F)
+                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.SUNSET_ROSE_PATCH), PlacementUtils.isEmpty()), 0.3F)
         ), PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH), PlacementUtils.isEmpty())));
 
         AncientAetherFeatureUtils.register(context, SAKURA_JUNGLE_FLOWER_PATCH, Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(
                 new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH), PlacementUtils.isEmpty()), 0.375F),
-        new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.HIGHLAND_CYCLAMEN_PATCH), PlacementUtils.isEmpty()), 0.125F)
+        new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.SUNSET_ROSE_PATCH), PlacementUtils.isEmpty()), 0.125F)
         ), PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.SLAMMROOT_PATCH), PlacementUtils.isEmpty())));
 
         AncientAetherFeatureUtils.register(context, ELEVATED_ISLANDS_FLOWER_PATCH, Feature.FLOWER,

@@ -221,7 +221,7 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
         bookshelf(consumer, AncientAetherBlocks.HIGHSPROOT_BOOKSHELF.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get());
         bookshelf(consumer, AncientAetherBlocks.SAKURA_BOOKSHELF.get(), AncientAetherBlocks.SAKURA_PLANKS.get());
 
-        flowerToDye(consumer, Items.RED_DYE, AncientAetherBlocks.HIGHLAND_CYCLAMEN.get(), "red");
+        flowerToDye(consumer, Items.RED_DYE, AncientAetherBlocks.SUNSET_ROSE.get(), "red");
         flowerToDye(consumer, Items.CYAN_DYE, AncientAetherBlocks.SKY_BLUES.get(), "cyan");
         flowerToDye(consumer, Items.LIGHT_BLUE_DYE, AncientAetherBlocks.WYND_THISTLE.get(), "light_blue");
         flowerToDye(consumer, Items.PURPLE_DYE, AncientAetherBlocks.ELEVATIA.get(), "purple");

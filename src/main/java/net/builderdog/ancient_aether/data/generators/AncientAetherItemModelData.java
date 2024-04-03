@@ -144,7 +144,7 @@ public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
         itemBlockFlat(AncientAetherBlocks.BLUE_SKYROOT_PINE_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.SAKURA_SAPLING.get(), "");
-        itemBlockFlat(AncientAetherBlocks.HIGHLAND_CYCLAMEN.get(), "");
+        itemBlockFlat(AncientAetherBlocks.SUNSET_ROSE.get(), "");
         itemBlockFlat(AncientAetherBlocks.SKY_BLUES.get(), "");
         itemBlockFlat(AncientAetherBlocks.WYND_THISTLE.get(), "");
         itemBlockFlat(AncientAetherBlocks.ELEVATIA.get(), "");

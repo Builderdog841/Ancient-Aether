@@ -2,6 +2,6 @@
   "parent": "minecraft:block/flower_pot_cross",
   "render_type": "minecraft:cutout",
   "textures": {
-    "plant": "ancient_aether:block/highland_cyclamen"
+    "plant": "ancient_aether:block/sunset_rose"
   }
 }

@@ -38,7 +38,7 @@ public class AncientAetherFeatureStates {
     public static final BlockState SKY_GRASS_MEDIUM_FROZEN = AncientAetherBlocks.SKY_GRASS.get().defaultBlockState().setValue(LENGTH, 3).setValue(TYPE, AetherGrassType.FROZEN);
     public static final BlockState SKY_GRASS_VERY_SHORT_PALE = AncientAetherBlocks.SKY_GRASS.get().defaultBlockState().setValue(LENGTH, 1).setValue(TYPE, AetherGrassType.PALE);
     public static final BlockState SKY_GRASS_SHORT_PALE = AncientAetherBlocks.SKY_GRASS.get().defaultBlockState().setValue(LENGTH, 2).setValue(TYPE, AetherGrassType.PALE);
-    public static final BlockState HIGHLAND_CYCLAMEN = AncientAetherBlocks.HIGHLAND_CYCLAMEN.get().defaultBlockState();
+    public static final BlockState SUNSET_ROSE = AncientAetherBlocks.SUNSET_ROSE.get().defaultBlockState();
     public static final BlockState SKY_BLUES = AncientAetherBlocks.SKY_BLUES.get().defaultBlockState();
     public static final BlockState WYND_THISTLE = AncientAetherBlocks.WYND_THISTLE.get().defaultBlockState();
     public static final BlockState ELEVATIA = AncientAetherBlocks.ELEVATIA.get().defaultBlockState();

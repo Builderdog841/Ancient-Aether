@@ -214,7 +214,7 @@ public class AncientAether {
         addCompost(0.3F, AncientAetherBlocks.SAKURA_SAPLING.get());
         addCompost(0.3F, AncientAetherBlocks.SKY_GRASS.get());
         addCompost(0.5F, AncientAetherItems.GRAPES.get());
-        addCompost(0.65F, AncientAetherBlocks.HIGHLAND_CYCLAMEN.get());
+        addCompost(0.65F, AncientAetherBlocks.SUNSET_ROSE.get());
         addCompost(0.65F, AncientAetherBlocks.SKY_BLUES.get());
         addCompost(0.65F, AncientAetherBlocks.WYND_THISTLE.get());
         addCompost(0.65F, AncientAetherBlocks.ELEVATIA.get());

@@ -32,7 +32,7 @@
       {
         "chance": 0.125,
         "feature": {
-          "feature": "ancient_aether:highland_cyclamen_patch",
+          "feature": "ancient_aether:sunset_rose_patch",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",

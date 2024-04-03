@@ -83,7 +83,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         crossBlock(AncientAetherBlocks.BLUE_SKYROOT_PINE_SAPLING);
         crossBlock(AncientAetherBlocks.HIGHSPROOT_SAPLING);
         crossBlock(AncientAetherBlocks.SAKURA_SAPLING);
-        crossBlock(AncientAetherBlocks.HIGHLAND_CYCLAMEN);
+        crossBlock(AncientAetherBlocks.SUNSET_ROSE);
         crossBlock(AncientAetherBlocks.SKY_BLUES);
         crossBlock(AncientAetherBlocks.WYND_THISTLE);
         crossBlock(AncientAetherBlocks.ELEVATIA);
@@ -195,7 +195,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         pottedPlant(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING.get(), AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_SAKURA_SAPLING.get(), AncientAetherBlocks.SAKURA_SAPLING.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_SKY_BLUES.get(), AncientAetherBlocks.SKY_BLUES.get(), "");
-        pottedPlant(AncientAetherBlocks.POTTED_HIGHLAND_CYCLAMEN.get(), AncientAetherBlocks.HIGHLAND_CYCLAMEN.get(), "");
+        pottedPlant(AncientAetherBlocks.POTTED_SUNSET_ROSE.get(), AncientAetherBlocks.SUNSET_ROSE.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_WYND_THISTLE.get(), AncientAetherBlocks.WYND_THISTLE.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_ELEVATIA.get(), AncientAetherBlocks.ELEVATIA.get(), "");
 

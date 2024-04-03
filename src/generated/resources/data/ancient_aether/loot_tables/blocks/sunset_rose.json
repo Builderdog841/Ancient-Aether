@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ancient_aether:highland_cyclamen"
+          "name": "ancient_aether:sunset_rose"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "ancient_aether:blocks/highland_cyclamen"
+  "random_sequence": "ancient_aether:blocks/sunset_rose"
 }

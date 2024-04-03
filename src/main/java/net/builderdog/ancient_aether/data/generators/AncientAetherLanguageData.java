@@ -40,7 +40,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.SAKURA_SAPLING, "Sakura Sapling");
 
         addBlock(AncientAetherBlocks.SKY_GRASS, "Sky Grass");
-        addBlock(AncientAetherBlocks.HIGHLAND_CYCLAMEN, "Highland Cyclamen");
+        addBlock(AncientAetherBlocks.SUNSET_ROSE, "Sunset Rose");
         addBlock(AncientAetherBlocks.SKY_BLUES, "Sky Blues");
         addBlock(AncientAetherBlocks.WYND_THISTLE, "Wynd Thistle");
         addBlock(AncientAetherBlocks.ELEVATIA, "Elevatia");
@@ -181,7 +181,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.POTTED_SKYROOT_PINE_SAPLING, "Potted Skyroot Pine Sapling");
         addBlock(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING, "Potted Highsproot Sapling");
         addBlock(AncientAetherBlocks.POTTED_SAKURA_SAPLING, "Potted Sakura Sapling");
-        addBlock(AncientAetherBlocks.POTTED_HIGHLAND_CYCLAMEN, "Potted Highland Viola");
+        addBlock(AncientAetherBlocks.POTTED_SUNSET_ROSE, "Potted Highland Viola");
         addBlock(AncientAetherBlocks.POTTED_SKY_BLUES, "Potted Sky Blues");
         addBlock(AncientAetherBlocks.POTTED_WYND_THISTLE, "Potted Wynd Thistle");
         addBlock(AncientAetherBlocks.POTTED_ELEVATIA, "Potted Elevatia");
@@ -431,7 +431,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addSaplingLore(AncientAetherBlocks.HIGHSPROOT_SAPLING, "Highsproot", "blue");
         addSaplingLore(AncientAetherBlocks.SAKURA_SAPLING, "Sakura", "pink");
 
-        addFlowerLore(AncientAetherBlocks.HIGHLAND_CYCLAMEN, "Red", "small", "all around the Aether");
+        addFlowerLore(AncientAetherBlocks.SUNSET_ROSE, "Red", "small", "all around the Aether");
         addFlowerLore(AncientAetherBlocks.SKY_BLUES, "Cyan", "small", "all around the Aether");
         addFlowerLore(AncientAetherBlocks.WYND_THISTLE, "Light Blue", "spiky", "in the Wyndcaps");
         addFlowerLore(AncientAetherBlocks.ELEVATIA, "Purple", "mysterious", "in Elevated Islands");
