@@ -8,7 +8,7 @@
         "location": "ancient_aether:sentry_laboratory/rooms/room_01",
         "processors": "ancient_aether:sentry_laboratory",
         "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "element_type": "ancient_aether:underground_dungeon_room"
       }
     },
     {
@@ -17,7 +17,7 @@
         "location": "ancient_aether:sentry_laboratory/rooms/room_02",
         "processors": "ancient_aether:sentry_laboratory",
         "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "element_type": "ancient_aether:underground_dungeon_room"
       }
     },
     {
@@ -26,7 +26,7 @@
         "location": "ancient_aether:sentry_laboratory/rooms/room_03",
         "processors": "ancient_aether:sentry_laboratory",
         "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "element_type": "ancient_aether:underground_dungeon_room"
       }
     },
     {
@@ -35,7 +35,7 @@
         "location": "ancient_aether:sentry_laboratory/rooms/room_04",
         "processors": "ancient_aether:sentry_laboratory",
         "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "element_type": "ancient_aether:underground_dungeon_room"
       }
     },
     {
@@ -44,7 +44,7 @@
         "location": "ancient_aether:sentry_laboratory/rooms/room_05",
         "processors": "ancient_aether:sentry_laboratory",
         "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "element_type": "ancient_aether:underground_dungeon_room"
       }
     }
   ]
