@@ -8,7 +8,7 @@
         "location": "ancient_aether:bronze_dungeon/hallways/hallway_01",
         "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "element_type": "ancient_aether:underground_dungeon_room"
       }
     }
   ]
