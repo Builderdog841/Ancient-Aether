@@ -1,12 +1,12 @@
 {
-  "name": "ancient_aether:bronze_dungeon/rooms",
+  "name": "ancient_aether:bronze_dungeon/surface_entrances",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
-        "location": "ancient_aether:bronze_dungeon/rooms/room_01",
-        "processors": "ancient_aether:bronze_dungeon",
+        "location": "ancient_aether:bronze_dungeon/entrances/surface_entrance",
+        "processors": "ancient_aether:bronze_dungeon_entrance",
         "projection": "rigid",
         "element_type": "ancient_aether:underground_dungeon_room"
       }
