@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:item/generated",
+  "loader": "forge:item_layers",
+  "textures": {
+    "layer0": "ancient_aether:item/ancient_ring"
+  },
+  "forge_data": {
+    "layers": {
+      "0": {
+        "block_light": 15,
+        "sky_light": 15
+      }
+    }
+  }
+}
