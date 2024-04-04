@@ -8,7 +8,7 @@
         "location": "ancient_aether:sentry_laboratory/hallways/hallway_01",
         "processors": "ancient_aether:sentry_laboratory",
         "projection": "rigid",
-        "element_type": "ancient_aether:underground_dungeon_room"
+        "element_type": "minecraft:single_pool_element"
       }
     },
     {
@@ -17,7 +17,7 @@
         "location": "ancient_aether:sentry_laboratory/hallways/hallway_02",
         "processors": "ancient_aether:sentry_laboratory",
         "projection": "rigid",
-        "element_type": "ancient_aether:underground_dungeon_room"
+        "element_type": "minecraft:single_pool_element"
       }
     },
     {
@@ -26,7 +26,7 @@
         "location": "ancient_aether:sentry_laboratory/hallways/hallway_03",
         "processors": "ancient_aether:sentry_laboratory",
         "projection": "rigid",
-        "element_type": "ancient_aether:underground_dungeon_room"
+        "element_type": "minecraft:single_pool_element"
       }
     }
   ]
