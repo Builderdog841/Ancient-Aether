@@ -97,7 +97,7 @@ public class UndergroundDungeonRoom extends StructurePoolElement {
     public boolean place(@NotNull StructureTemplateManager structureTemplateManager, @NotNull WorldGenLevel level, @NotNull StructureManager structureManager, @NotNull ChunkGenerator generator, @NotNull BlockPos offset, @NotNull BlockPos pos, @NotNull Rotation rotation, @NotNull BoundingBox box, @NotNull RandomSource random, boolean keepJigsaws) {
         StructureTemplate structuretemplate = getTemplate(structureTemplateManager);
         StructurePlaceSettings structureplacesettings = getSettings(rotation, box, keepJigsaws);
-        if (!level.isEmptyBlock(pos)) {
+        if (!(level.getBlockState(pos) == Blocks.AIR.defaultBlockState())) {
             if (!structuretemplate.placeInWorld(level, offset, pos, structureplacesettings, random, 18)) {
                 return false;
             } else {

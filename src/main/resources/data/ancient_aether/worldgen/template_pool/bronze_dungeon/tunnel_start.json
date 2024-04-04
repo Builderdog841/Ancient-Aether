@@ -12,9 +12,9 @@
       }
     },
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
-        "location": "ancient_aether:bronze_dungeon/tunnels/tunnel_entrance_01",
+        "location": "ancient_aether:bronze_dungeon/tunnels/dead_end",
         "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -23,10 +23,19 @@
     {
       "weight": 1,
       "element": {
+        "location": "ancient_aether:bronze_dungeon/tunnels/tunnel_entrance_01",
+        "processors": "ancient_aether:bronze_dungeon",
+        "projection": "rigid",
+        "element_type": "ancient_aether:underground_dungeon_room"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
         "location": "ancient_aether:bronze_dungeon/tunnels/tunnel_entrance_02",
         "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "element_type": "ancient_aether:underground_dungeon_room"
       }
     }
   ]
