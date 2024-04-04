@@ -4,7 +4,7 @@
     "type": "minecraft:clamp",
     "input": {
       "type": "minecraft:add",
-      "argument1": 0.8,
+      "argument1": 0.7,
       "argument2": {
         "type": "minecraft:mul",
         "argument1": -1,
