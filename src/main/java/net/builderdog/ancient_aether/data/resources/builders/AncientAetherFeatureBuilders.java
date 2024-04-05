@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.data.providers;
+package net.builderdog.ancient_aether.data.resources.builders;
 
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.data.resources.AetherFeatureStates;
@@ -29,7 +29,7 @@ import java.util.List;
 import java.util.OptionalInt;
 
 @SuppressWarnings("deprecation")
-public class AncientAetherFeatureProvider {
+public class AncientAetherFeatureBuilders {
 
     public static TreeConfiguration.TreeConfigurationBuilder createStraightSkyrootBlobTree(BlockState leaves) {
         return new TreeConfiguration.TreeConfigurationBuilder(

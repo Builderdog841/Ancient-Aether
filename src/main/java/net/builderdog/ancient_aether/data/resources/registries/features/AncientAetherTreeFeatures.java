@@ -3,8 +3,8 @@ package net.builderdog.ancient_aether.data.resources.registries.features;
 import com.aetherteam.aether.data.resources.AetherFeatureStates;
 import com.aetherteam.aether.world.foliageplacer.HolidayFoliagePlacer;
 import com.google.common.collect.ImmutableList;
-import net.builderdog.ancient_aether.data.providers.AncientAetherFeatureProvider;
 import net.builderdog.ancient_aether.data.resources.AncientAetherFeatureStates;
+import net.builderdog.ancient_aether.data.resources.builders.AncientAetherFeatureBuilders;
 import net.builderdog.ancient_aether.world.treedecorator.GrapeVineDecorator;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
@@ -19,7 +19,7 @@ import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvi
 import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 
-public class AncientAetherTreeFeatures extends AncientAetherFeatureProvider {
+public class AncientAetherTreeFeatures extends AncientAetherFeatureBuilders {
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_TREE_VINED = AncientAetherFeatureUtils.registerKey("skyroot_tree_vined");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_PINE_TREE = AncientAetherFeatureUtils.registerKey("skyroot_pine_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_PINE_TREE_VINED = AncientAetherFeatureUtils.registerKey("skyroot_pine_tree_vined");

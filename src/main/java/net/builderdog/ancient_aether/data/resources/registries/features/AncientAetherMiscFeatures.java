@@ -4,8 +4,8 @@ import com.aetherteam.aether.data.resources.AetherFeatureStates;
 import com.aetherteam.aether.data.resources.builders.AetherConfiguredFeatureBuilders;
 import com.aetherteam.aether.world.feature.AetherFeatures;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
-import net.builderdog.ancient_aether.data.providers.AncientAetherFeatureProvider;
 import net.builderdog.ancient_aether.data.resources.AncientAetherFeatureStates;
+import net.builderdog.ancient_aether.data.resources.builders.AncientAetherFeatureBuilders;
 import net.builderdog.ancient_aether.world.feature.AncientAetherFeatures;
 import net.builderdog.ancient_aether.world.feature.configuration.CloudbedConfiguration;
 import net.builderdog.ancient_aether.world.feature.configuration.CrystalIslandConfiguration;
@@ -16,7 +16,7 @@ import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 
-public class AncientAetherMiscFeatures extends AncientAetherFeatureProvider {
+public class AncientAetherMiscFeatures extends AncientAetherFeatureBuilders {
     public static final ResourceKey<ConfiguredFeature<?, ?>> COAST_QUICKSOIL = AncientAetherFeatureUtils.registerKey("coast_quicksoil");
     public static final ResourceKey<ConfiguredFeature<?, ?>> COAST_GRAVITY_GRAVEL = AncientAetherFeatureUtils.registerKey("coast_gravity_gravel");
     public static final ResourceKey<ConfiguredFeature<?, ?>> COAST_WYND_ICE = AncientAetherFeatureUtils.registerKey("coast_wynd_ice");
