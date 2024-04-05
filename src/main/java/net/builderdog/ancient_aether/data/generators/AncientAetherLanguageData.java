@@ -199,7 +199,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addItem(AncientAetherItems.VALKYRUM_AXE, "Valkyrum Axe");
         addItem(AncientAetherItems.VALKYRUM_HOE, "Valkyrum Hoe");
 
-        addItem(AncientAetherItems.VALKYRUM_HELMET, "Valkyrum Hoe");
+        addItem(AncientAetherItems.VALKYRUM_HELMET, "Valkyrum Helmet");
         addItem(AncientAetherItems.VALKYRUM_CHESTPLATE, "Valkyrum Chestplate");
         addItem(AncientAetherItems.VALKYRUM_LEGGINGS, "Valkyrum Leggings");
         addItem(AncientAetherItems.VALKYRUM_BOOTS, "Valkyrum Boots");
