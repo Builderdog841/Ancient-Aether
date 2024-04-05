@@ -376,9 +376,11 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addCommonConfig("worldgen", "ancient_aether_region_weight", "The weighting of Ancient Aether Regions in the Aether");
         addCommonConfig("experimental", "experimental_features", "Enables features of the mod that are work in progress");
 
-        addClientConfig("tooltip", "rarity_system", "Gives Aether Dungeon Loot a certain rarity in form of a tooltip");
-        addClientConfig("tooltip", "moa_egg_tooltips", "Displays the Moas Mid-Air Jumps and Speed as a tooltip on the egg");
-        addClientConfig("tooltip", "dungeon_block_tooltips", "Displays what mob is summoned by Trapped Dungeon Blocks as well as what boss is required to unlock Boss Doorway Blocks on the items themselves");
+        addClientConfig("tooltips", "rarity_system", "Gives Aether Dungeon Loot a certain rarity in form of a tooltip");
+        addClientConfig("tooltips", "moa_egg_tooltips", "Displays the Moas Mid-Air Jumps and Speed as a tooltip on the egg");
+        addClientConfig("tooltips", "dungeon_block_tooltips", "Displays what mob is summoned by Trapped Dungeon Blocks as well as what boss is required to unlock Boss Doorway Blocks on the item");
+        addClientConfig("packs", "tweaks_pack", "Adds Ancient Aether Tweaks Resource Pack to the Pack Menu");
+        addClientConfig("packs", "programmer_art_pack", "Adds Ancient Aether Programmer Art Resource Pack to the Pack Menu");
 
         add("item.minecraft.quartz", "Quartz");
 
