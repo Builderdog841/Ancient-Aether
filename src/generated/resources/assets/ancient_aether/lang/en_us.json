@@ -186,8 +186,6 @@
   "block.ancient_aether.wynd_lantern": "Wynd Lantern",
   "block.ancient_aether.wynd_sentry_stone": "Wynd Sentry Stone",
   "block.ancient_aether.wynd_thistle": "Wynd Thistle",
-  "config.ancient_aether.client.packs.programmer_art_pack": "Adds Ancient Aether Programmer Art Resource Pack to the Pack Menu",
-  "config.ancient_aether.client.packs.tweaks_pack": "Adds Ancient Aether Tweaks Resource Pack to the Pack Menu",
   "config.ancient_aether.client.tooltips.dungeon_block_tooltips": "Displays what mob is summoned by Trapped Dungeon Blocks as well as what boss is required to unlock Boss Doorway Blocks on the item",
   "config.ancient_aether.client.tooltips.moa_egg_tooltips": "Displays the Moas Mid-Air Jumps and Speed as a tooltip on the egg",
   "config.ancient_aether.client.tooltips.rarity_system": "Gives Aether Dungeon Loot a certain rarity in form of a tooltip",

@@ -42,8 +42,6 @@ public class AncientAetherConfig {
         public final ConfigValue<Boolean> rarity_system;
         public final ConfigValue<Boolean> moa_egg_tooltips;
         public final ConfigValue<Boolean> dungeon_block_tooltips;
-        public final ConfigValue<Boolean> tweaks_pack;
-        public final ConfigValue<Boolean> programmer_art_pack;
 
         public Client(ForgeConfigSpec.Builder builder) {
             builder.push("Tooltips");
@@ -62,19 +60,6 @@ public class AncientAetherConfig {
                     .comment("Displays what mob is summoned by Trapped Dungeon Blocks as well as what boss is required to unlock Boss Doorway Blocks on the item")
                     .translation("config.ancient_aether.client.tooltips.dungeon_block_tooltips")
                     .define("Dungeon Block Tooltips", true);
-
-            builder.pop();
-            builder.push("Packs");
-
-            tweaks_pack = builder
-                    .comment("Adds Ancient Aether Tweaks Resource Pack to the Pack Menu")
-                    .translation("config.ancient_aether.client.packs.tweaks_pack")
-                    .define("Tweaks Resource Pack", true);
-
-            programmer_art_pack = builder
-                    .comment("Adds Ancient Aether Programmer Art Resource Pack to the Pack Menu")
-                    .translation("config.ancient_aether.client.packs.programmer_art_pack")
-                    .define("Programmer Resource Pack", true);
 
             builder.pop();
         }
