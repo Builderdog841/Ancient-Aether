@@ -6,7 +6,7 @@
   "max_distance_from_center": 128,
   "biomes": "#ancient_aether:has_structure/ancient_dungeon",
   "step": "surface_structures",
-  "min_spawn_height": 120,
+  "above_bottom": 120,
   "start_height": {
     "absolute": -7
   },

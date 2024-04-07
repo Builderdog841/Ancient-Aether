@@ -28,7 +28,7 @@ public class SkylandsJigsawStructure extends Structure {
                     HeightProvider.CODEC.fieldOf("start_height").forGetter(structure -> structure.startHeight),
                     Heightmap.Types.CODEC.optionalFieldOf("project_start_to_heightmap").forGetter(structure -> structure.projectStartToHeightmap),
                     Codec.intRange(1, 128).fieldOf("max_distance_from_center").forGetter(structure -> structure.maxDistanceFromCenter),
-                    Codec.intRange(-4096, 4096).fieldOf("min_spawn_height").forGetter(structure -> structure.minSpawnHeight)
+                    Codec.intRange(-4096, 4096).fieldOf("above_bottom").forGetter(structure -> structure.aboveBottom)
             ).apply(instance, SkylandsJigsawStructure::new)).codec();
     private final Holder<StructureTemplatePool> startPool;
     private final Optional<ResourceLocation> startJigsawName;
@@ -36,7 +36,7 @@ public class SkylandsJigsawStructure extends Structure {
     private final HeightProvider startHeight;
     private final Optional<Heightmap.Types> projectStartToHeightmap;
     private final int maxDistanceFromCenter;
-    private final int minSpawnHeight;
+    private final int aboveBottom;
 
     public SkylandsJigsawStructure(StructureSettings config,
                                    Holder<StructureTemplatePool> startPool,
@@ -45,7 +45,7 @@ public class SkylandsJigsawStructure extends Structure {
                                    HeightProvider startHeight,
                                    Optional<Heightmap.Types> projectStartToHeightmap,
                                    int maxDistanceFromCenter,
-                                   int minSpawnHeight)
+                                   int aboveBottom)
     {
         super(config);
         this.startPool = startPool;
@@ -54,7 +54,7 @@ public class SkylandsJigsawStructure extends Structure {
         this.startHeight = startHeight;
         this.projectStartToHeightmap = projectStartToHeightmap;
         this.maxDistanceFromCenter = maxDistanceFromCenter;
-        this.minSpawnHeight = minSpawnHeight;
+        this.aboveBottom = aboveBottom;
     }
     private boolean extraSpawningChecks(GenerationContext context) {
         ChunkPos chunkpos = context.chunkPos();
@@ -63,7 +63,7 @@ public class SkylandsJigsawStructure extends Structure {
                 chunkpos.getMiddleBlockZ(),
                 Heightmap.Types.WORLD_SURFACE_WG,
                 context.heightAccessor(),
-                context.randomState()) > minSpawnHeight;
+                context.randomState()) > aboveBottom;
     }
 
     @Override

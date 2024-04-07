@@ -7,7 +7,7 @@
   "biomes": "#ancient_aether:has_structure/mysterious_henge",
   "terrain_adaptation": "beard_thin",
   "step": "surface_structures",
-  "min_spawn_height": 130,
+  "above_bottom": 130,
   "start_height": {
     "absolute": 0
   },
