@@ -59,6 +59,7 @@ public class AncientAetherConfig {
         public final ConfigValue<Boolean> moa_egg_tooltips;
         public final ConfigValue<Boolean> dungeon_block_tooltips;
         public final ConfigValue<Boolean> custom_boss_bars;
+        public final ConfigValue<Boolean> the_aether_title;
         public final ConfigValue<Boolean> config_overrides;
 
         public Client(ForgeConfigSpec.Builder builder) {
@@ -86,6 +87,11 @@ public class AncientAetherConfig {
                     .comment("Gives Ancient Aether Bosses custom boss bar designs")
                     .translation("config.ancient_aether.client.gui.custom_boss_bars")
                     .define("Custom Boss Bars", true);
+
+            the_aether_title = builder
+                    .comment("Changes the title in the Ancient Aether Title Screen to: The Aether")
+                    .translation("config.ancient_aether.client.gui.the_aether_title")
+                    .define("The Aether Title", false);
 
             builder.pop();
             builder.push("Modpack");

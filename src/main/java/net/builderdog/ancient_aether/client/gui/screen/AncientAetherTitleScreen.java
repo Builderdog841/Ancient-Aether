@@ -9,6 +9,7 @@ import com.aetherteam.cumulus.mixin.mixins.client.accessor.SplashRendererAccesso
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
 import net.builderdog.ancient_aether.AncientAether;
+import net.builderdog.ancient_aether.AncientAetherConfig;
 import net.builderdog.ancient_aether.client.gui.component.AncientAetherMenuButton;
 import net.minecraft.Util;
 import net.minecraft.client.Minecraft;
@@ -33,6 +34,7 @@ import org.jetbrains.annotations.NotNull;
 public class AncientAetherTitleScreen extends TitleScreen implements TitleScreenBehavior {
     private static final ResourceLocation PANORAMA_OVERLAY = new ResourceLocation("textures/gui/title/background/panorama_overlay.png");
     private static final ResourceLocation ANCIENT_AETHER_LOGO = new ResourceLocation(AncientAether.MODID, "textures/gui/title/ancient_aether.png");
+    private static final ResourceLocation THE_AETHER_LOGO = new ResourceLocation(AncientAether.MODID, "textures/gui/title/the_aether.png");
     public static final Music MENU = new Music(AetherSoundEvents.MUSIC_MENU.getHolder().orElseThrow(), 20, 600, true);
     private final PanoramaRenderer panorama = new PanoramaRenderer(new CubeMap(new ResourceLocation(AncientAether.MODID, "textures/gui/title/panorama/panorama")));
     private AncientAetherModUpdateIndicator modUpdateNotification;
@@ -97,7 +99,12 @@ public class AncientAetherTitleScreen extends TitleScreen implements TitleScreen
         }
         float fadeAmount = TitleScreenBehavior.super.handleFading(guiGraphics, this, titleScreenAccessor, panorama, PANORAMA_OVERLAY, partialTicks);
         float scale = getScale(this, getMinecraft());
-        setupLogo(guiGraphics, fadeAmount, scale);
+
+        if (AncientAetherConfig.CLIENT.the_aether_title.get()) {
+            setupLogoConfig(guiGraphics, fadeAmount, scale);
+        }
+        else setupLogo(guiGraphics, fadeAmount, scale);
+
         int roundedFadeAmount = Mth.ceil(fadeAmount * 255.0F) << 24;
         if ((roundedFadeAmount & -67108864) != 0) {
             ForgeHooksClient.renderMainMenu(this, guiGraphics, font, width, height, roundedFadeAmount);
@@ -105,15 +112,15 @@ public class AncientAetherTitleScreen extends TitleScreen implements TitleScreen
                 SplashRendererAccessor splashRendererAccessor = (SplashRendererAccessor) titleScreenAccessor.aether$getSplash();
                 if (splashRendererAccessor.cumulus$getSplash() != null && !splashRendererAccessor.cumulus$getSplash().isEmpty()) {
                     PoseStack poseStack = guiGraphics.pose();
-                    float splashX = AncientAetherTitleScreen.this.alignedLeft ? 400.0F / scale : (float) AncientAetherTitleScreen.this.width / 2 + (175 / scale);
-                    float splashY = AncientAetherTitleScreen.this.alignedLeft ? 100.0F / scale : (int) (20 + (76 / scale));
+                    float splashX = alignedLeft ? 400.0F / scale : (float) width / 2 + (175 / scale);
+                    float splashY = alignedLeft ? 100.0F / scale : (int) (20 + (76 / scale));
                     poseStack.pushPose();
                     poseStack.translate(splashX, splashY, 0.0F);
                     poseStack.mulPose(Axis.ZP.rotationDegrees(-20.0F));
                     float textSize = 1.8F - Mth.abs(Mth.sin((float) (Util.getMillis() % 1000L) / 1000.0F * Mth.TWO_PI) * 0.1F);
-                    textSize = textSize * (200.0F / scale) / (AncientAetherTitleScreen.this.font.width(splashRendererAccessor.cumulus$getSplash()) + (64 / scale));
+                    textSize = textSize * (200.0F / scale) / (font.width(splashRendererAccessor.cumulus$getSplash()) + (64 / scale));
                     poseStack.scale(textSize, textSize, textSize);
-                    guiGraphics.drawCenteredString(AncientAetherTitleScreen.this.font, splashRendererAccessor.cumulus$getSplash(), 0, (int) (-16 / scale), 16043927 | roundedFadeAmount);
+                    guiGraphics.drawCenteredString(font, splashRendererAccessor.cumulus$getSplash(), 0, (int) (-16 / scale), 16043927 | roundedFadeAmount);
                     poseStack.popPose();
                 }
             }
@@ -164,6 +171,16 @@ public class AncientAetherTitleScreen extends TitleScreen implements TitleScreen
         int logoY = alignedLeft ? (int) (15 + (10 / scale)) : (int) (25 + (10 / scale));
         guiGraphics.setColor(1.0F, 1.0F, 1.0F, transparency);
         guiGraphics.blit(ANCIENT_AETHER_LOGO, logoX, logoY, 0, 0, width, height, width, height);
+        guiGraphics.setColor(1.0F, 1.0F, 1.0F, 1.0F);
+    }
+
+    private void setupLogoConfig(GuiGraphics guiGraphics, float transparency, float scale) {
+        int width = (int) (375 / scale);
+        int height = (int) (112.5 / scale);
+        int logoX = alignedLeft ? (int) (10 + (18 / scale)) : (int) ((width / 2 - 175 / scale));
+        int logoY = alignedLeft ? (int) (15 + (10 / scale)) : (int) (25 + (10 / scale));
+        guiGraphics.setColor(1.0F, 1.0F, 1.0F, transparency);
+        guiGraphics.blit(THE_AETHER_LOGO, logoX, logoY, 0, 0, width, height, width, height);
         guiGraphics.setColor(1.0F, 1.0F, 1.0F, 1.0F);
     }
 
