@@ -11,12 +11,12 @@
         },
         {
           "type": "minecraft:item",
-          "name": "aether:golden_parachute"
+          "name": "minecraft:music_disc_strad",
+          "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:music_disc_strad",
-          "weight": 2
+          "name": "aether:golden_parachute"
         },
         {
           "type": "minecraft:item",

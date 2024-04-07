@@ -6,6 +6,16 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "name": "aether:zanite_ring",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_pendant",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
           "name": "aether:white_cape",
           "weight": 4
         },
@@ -31,21 +41,8 @@
         },
         {
           "type": "minecraft:item",
-          "name": "aether:agility_cape"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:swet_cape"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:zanite_ring",
-          "weight": 8
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:zanite_pendant",
-          "weight": 8
+          "name": "minecraft:music_disc_cat",
+          "weight": 4
         },
         {
           "type": "minecraft:item",
@@ -54,12 +51,15 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:music_disc_cat",
-          "weight": 4
+          "name": "aether:music_disc_aether_tune"
         },
         {
           "type": "minecraft:item",
-          "name": "aether:music_disc_aether_tune"
+          "name": "aether:agility_cape"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:swet_cape"
         }
       ],
       "rolls": 1.0

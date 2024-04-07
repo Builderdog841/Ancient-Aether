@@ -6,6 +6,16 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "name": "aether:zanite_ring",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_pendant",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
           "name": "aether:iron_ring",
           "weight": 2
         },
@@ -23,16 +33,6 @@
           "type": "minecraft:item",
           "name": "aether:golden_pendant",
           "weight": 2
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:zanite_ring",
-          "weight": 4
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:zanite_pendant",
-          "weight": 4
         },
         {
           "type": "minecraft:item",

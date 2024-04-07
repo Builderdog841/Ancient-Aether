@@ -55,9 +55,9 @@
           "weight": 5
         },
         {
-          "type": "minecraft:item",
-          "name": "minecraft:string",
-          "weight": 5
+          "type": "minecraft:loot_table",
+          "name": "ancient_aether:selectors/accessories/bronze_dungeon",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
@@ -77,11 +77,6 @@
         {
           "type": "minecraft:item",
           "name": "aether:blue_gummy_swet",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:loot_table",
-          "name": "ancient_aether:selectors/accessories/bronze_dungeon",
           "weight": 2
         },
         {
