@@ -91,6 +91,7 @@ public class AncientAether {
             return true;
         }, () -> () -> false);
 
+        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, AncientAetherConfig.SERVER_SPEC);
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, AncientAetherConfig.COMMON_SPEC);
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, AncientAetherConfig.CLIENT_SPEC);
 
@@ -184,7 +185,9 @@ public class AncientAether {
 
     @SubscribeEvent
     public void serverSetup(ServerAboutToStartEvent event) {
-        AetherConfig.SERVER.disable_eternal_day.set(true);
+        if (AncientAetherConfig.SERVER.server_config_overrides.get()) {
+            AetherConfig.SERVER.disable_eternal_day.set(true);
+        }
     }
 
     private void registerDispenserBehaviors() {

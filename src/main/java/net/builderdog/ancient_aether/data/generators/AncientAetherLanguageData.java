@@ -385,6 +385,8 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
 
         addMenuTitle("ancient_aether", "Ancient Aether");
 
+        addServerConfig("modpack", "server_config_overrides", "Allows Ancient Aether to override Server Config default values, should not be disabled normally");
+
         addCommonConfig("gameplay", "wind_blow_duration", "The duration of how long Wind Blows fired by Wind Blowers last in ticks");
         addCommonConfig("worldgen", "ancient_aether_region_weight", "The weighting of Ancient Aether Regions in the Aether");
         addCommonConfig("experimental", "experimental_features", "Enables features of the mod that are work in progress");
@@ -392,6 +394,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addClientConfig("tooltips", "rarity_system", "Gives Aether Dungeon Loot a certain rarity in form of a tooltip");
         addClientConfig("tooltips", "moa_egg_tooltips", "Displays the Moas Mid-Air Jumps and Speed as a tooltip on the egg");
         addClientConfig("tooltips", "dungeon_block_tooltips", "Displays what mob is summoned by Trapped Dungeon Blocks as well as what boss is required to unlock Boss Doorway Blocks on the item");
+        addClientConfig("modpack", "config_overrides", "Allows Ancient Aether to override Config default values, should not be disabled normally");
 
         add("item.minecraft.quartz", "Quartz");
 

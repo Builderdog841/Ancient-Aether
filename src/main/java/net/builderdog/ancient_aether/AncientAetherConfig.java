@@ -5,6 +5,22 @@ import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
 import org.apache.commons.lang3.tuple.Pair;
 
 public class AncientAetherConfig {
+
+    public static class Server {
+        public final ConfigValue<Boolean> server_config_overrides;
+
+        public Server(ForgeConfigSpec.Builder builder) {
+            builder.push("Modpack");
+
+            server_config_overrides = builder
+                    .comment("Allows Ancient Aether to override Server Config default values, should not be disabled normally")
+                    .translation("config.ancient_aether.server.modpack.server_config_overrides")
+                    .define("Server Config Overrides", true);
+
+            builder.pop();
+        }
+    }
+
     public static class Common {
         public final ConfigValue<Integer> wind_blow_duration;
         public final ConfigValue<Integer> ancient_aether_region_weight;
@@ -42,6 +58,7 @@ public class AncientAetherConfig {
         public final ConfigValue<Boolean> rarity_system;
         public final ConfigValue<Boolean> moa_egg_tooltips;
         public final ConfigValue<Boolean> dungeon_block_tooltips;
+        public final ConfigValue<Boolean> config_overrides;
 
         public Client(ForgeConfigSpec.Builder builder) {
             builder.push("Tooltips");
@@ -62,8 +79,19 @@ public class AncientAetherConfig {
                     .define("Dungeon Block Tooltips", true);
 
             builder.pop();
+            builder.push("Modpack");
+
+            config_overrides = builder
+                    .comment("Allows Ancient Aether to override Config default values, should not be disabled normally")
+                    .translation("config.ancient_aether.client.modpack.config_overrides")
+                    .define("Config Overrides", true);
+
+            builder.pop();
         }
     }
+
+    public static final ForgeConfigSpec SERVER_SPEC;
+    public static final Server SERVER;
 
     public static final ForgeConfigSpec COMMON_SPEC;
     public static final Common COMMON;
@@ -72,6 +100,10 @@ public class AncientAetherConfig {
     public static final Client CLIENT;
 
     static {
+        final Pair<Server, ForgeConfigSpec> serverSpecPair = new ForgeConfigSpec.Builder().configure(Server::new);
+        SERVER_SPEC = serverSpecPair.getRight();
+        SERVER = serverSpecPair.getLeft();
+
         final Pair<Common, ForgeConfigSpec> commonSpecPair = new ForgeConfigSpec.Builder().configure(Common::new);
         COMMON_SPEC = commonSpecPair.getRight();
         COMMON = commonSpecPair.getLeft();
