@@ -21,6 +21,7 @@ import net.minecraft.world.entity.projectile.Fireball;
 import net.minecraft.world.entity.projectile.ItemSupplier;
 import net.minecraft.world.entity.projectile.ProjectileUtil;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
@@ -72,8 +73,8 @@ public class WindBlow extends Fireball implements ItemSupplier {
     }
 
     @Override
-    protected void onHit(@NotNull HitResult hitResult) {
-        super.onHit(hitResult);
+    protected void onHitBlock(@NotNull BlockHitResult hitResult) {
+        super.onHitBlock(hitResult);
         if (ticksInAir > 1) {
             if (!level().isClientSide()) {
                 discard();
@@ -97,6 +98,9 @@ public class WindBlow extends Fireball implements ItemSupplier {
                     }
                 }
             }
+        }
+        if (!level().isClientSide()) {
+            discard();
         }
     }
 
