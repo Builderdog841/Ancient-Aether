@@ -4,6 +4,8 @@ import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.data.providers.AncientAetherLanguageProvider;
 import net.builderdog.ancient_aether.data.resources.registries.AncientAetherBiomes;
+import net.builderdog.ancient_aether.data.resources.registries.AncientAetherStructures;
+import net.builderdog.ancient_aether.effect.AncientAetherEffects;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.data.PackOutput;
@@ -275,6 +277,17 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBiome(AncientAetherBiomes.FROZEN_CAVERNS, "Frozen Caverns");
         addBiome(AncientAetherBiomes.ELEVATED_CAVERNS, "Elevated Caverns");
         addBiome(AncientAetherBiomes.ATMOSINE_GROTTO, "Atmosine Grotto");
+
+        addStructure(AncientAetherStructures.HOLYSTONE_RUIN, "Holystone Ruin");
+        addStructure(AncientAetherStructures.MYSTERIOUS_HENGE, "Mysterious Henge");
+        addStructure(AncientAetherStructures.VALKYRIE_CAMP_SKYROOT, "Valkyrie Camp Skyroot");
+        addStructure(AncientAetherStructures.VALKYRIE_CAMP_WYNDCAPS, "Valkyrie Camp Wyndcaps");
+        addStructure(AncientAetherStructures.VALKYRIE_SETTLEMENT_SKYROOT, "Valkyrie Settlement Skyroot");
+        addStructure(AncientAetherStructures.SENTRY_LABORATORY, "Sentry Laboratory");
+        addStructure(AncientAetherStructures.ANCIENT_DUNGEON, "Ancient Dungeon");
+
+        addEffect(AncientAetherEffects.NATURE_BOOST, "Nature's Boost");
+        addEffectDesc(AncientAetherEffects.NATURE_BOOST, "Makes the player jump high in the air and fertilizes the Ground once they land");
 
         addAdvancement("aether_biomes", "Aerospace Traveller");
         addAdvancement("moa_eggs", "Rainbow Omelette");

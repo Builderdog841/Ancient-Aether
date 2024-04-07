@@ -16,7 +16,6 @@ public class AncientAetherStructures {
     public static final ResourceKey<Structure> VALKYRIE_CAMP_SKYROOT = createKey("valkyrie_camp_skyroot");
     public static final ResourceKey<Structure> VALKYRIE_CAMP_WYNDCAPS = createKey("valkyrie_camp_wyndcaps");
     public static final ResourceKey<Structure> VALKYRIE_SETTLEMENT_SKYROOT = createKey("valkyrie_settlement_skyroot");
-    public static final ResourceKey<Structure> BRONZE_DUNGEON_WYNDCAPS = createKey("bronze_dungeon_wyndcaps");
     public static final ResourceKey<Structure> SENTRY_LABORATORY = createKey("sentry_laboratory");
     public static final ResourceKey<Structure> ANCIENT_DUNGEON = createKey("ancient_dungeon");
 

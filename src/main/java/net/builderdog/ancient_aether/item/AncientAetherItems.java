@@ -9,6 +9,7 @@ import com.aetherteam.aether.item.miscellaneous.DungeonKeyItem;
 import com.aetherteam.aether.item.miscellaneous.MoaEggItem;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
+import net.builderdog.ancient_aether.effect.AncientAetherEffects;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.builderdog.ancient_aether.entity.AncientAetherMoaTypes;
 import net.builderdog.ancient_aether.entity.miscellaneous.AncientAetherBoatEntity;
@@ -28,6 +29,7 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
@@ -48,7 +50,7 @@ public class AncientAetherItems {
     public static final RegistryObject<Item> VALKYRUM = ITEMS.register("valkyrum", () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> GRAPES = ITEMS.register("grapes", () -> new ItemNameBlockItem(AncientAetherBlocks.GRAPE_VINE.get(), (new Item.Properties().food((new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build()))));
-    public static final RegistryObject<Item> SLAMMROOT_FRUIT = ITEMS.register("slammroot_fruit", () -> new Item(new Item.Properties().food((new FoodProperties.Builder()).alwaysEat().fast().build())));
+    public static final RegistryObject<Item> SLAMMROOT_FRUIT = ITEMS.register("slammroot_fruit", () -> new Item(new Item.Properties().food((new FoodProperties.Builder()).alwaysEat().effect(() -> new MobEffectInstance(AncientAetherEffects.NATURE_BOOST.get(), 200, 0), 1.0F).build())));
     public static final RegistryObject<Item> FESTIVE_GUMMY_SWET = ITEMS.register("festive_gummy_swet", GummySwetItem::new);
 
     public static final RegistryObject<SwordItem> VALKYRUM_SWORD = ITEMS.register("valkyrum_sword", ValkyrumSwordItem::new);
