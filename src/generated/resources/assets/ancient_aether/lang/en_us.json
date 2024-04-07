@@ -186,6 +186,7 @@
   "block.ancient_aether.wynd_lantern": "Wynd Lantern",
   "block.ancient_aether.wynd_sentry_stone": "Wynd Sentry Stone",
   "block.ancient_aether.wynd_thistle": "Wynd Thistle",
+  "config.ancient_aether.client.gui.custom_boss_bars": "Gives Ancient Aether Bosses custom boss bar designs",
   "config.ancient_aether.client.modpack.config_overrides": "Allows Ancient Aether to override Config default values, should not be disabled normally",
   "config.ancient_aether.client.tooltips.dungeon_block_tooltips": "Displays what mob is summoned by Trapped Dungeon Blocks as well as what boss is required to unlock Boss Doorway Blocks on the item",
   "config.ancient_aether.client.tooltips.moa_egg_tooltips": "Displays the Moas Mid-Air Jumps and Speed as a tooltip on the egg",

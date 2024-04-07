@@ -394,6 +394,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addClientConfig("tooltips", "rarity_system", "Gives Aether Dungeon Loot a certain rarity in form of a tooltip");
         addClientConfig("tooltips", "moa_egg_tooltips", "Displays the Moas Mid-Air Jumps and Speed as a tooltip on the egg");
         addClientConfig("tooltips", "dungeon_block_tooltips", "Displays what mob is summoned by Trapped Dungeon Blocks as well as what boss is required to unlock Boss Doorway Blocks on the item");
+        addClientConfig("gui", "custom_boss_bars", "Gives Ancient Aether Bosses custom boss bar designs");
         addClientConfig("modpack", "config_overrides", "Allows Ancient Aether to override Config default values, should not be disabled normally");
 
         add("item.minecraft.quartz", "Quartz");

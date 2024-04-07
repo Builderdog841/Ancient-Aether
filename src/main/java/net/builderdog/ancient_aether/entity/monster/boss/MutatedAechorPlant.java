@@ -9,6 +9,7 @@ import com.aetherteam.aether.network.packet.serverbound.BossInfoPacket;
 import com.aetherteam.nitrogen.entity.BossRoomTracker;
 import com.aetherteam.nitrogen.network.PacketRelay;
 import net.builderdog.ancient_aether.AncientAether;
+import net.builderdog.ancient_aether.AncientAetherConfig;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.entity.projectile.MutatedAechorNeedle;
@@ -277,7 +278,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     @Nullable
     @Override
     public ResourceLocation getBossBarTexture() {
-        return new ResourceLocation(AncientAether.MODID, "textures/gui/boss_bar_mutated_aechor_plant.png");
+        return AncientAetherConfig.CLIENT.custom_boss_bars.get() ? new ResourceLocation(AncientAether.MODID, "textures/gui/boss_bar_mutated_aechor_plant_custom.png") : new ResourceLocation(AncientAether.MODID, "textures/gui/boss_bar_mutated_aechor_plant.png");
     }
 
     @Override

@@ -58,6 +58,7 @@ public class AncientAetherConfig {
         public final ConfigValue<Boolean> rarity_system;
         public final ConfigValue<Boolean> moa_egg_tooltips;
         public final ConfigValue<Boolean> dungeon_block_tooltips;
+        public final ConfigValue<Boolean> custom_boss_bars;
         public final ConfigValue<Boolean> config_overrides;
 
         public Client(ForgeConfigSpec.Builder builder) {
@@ -77,6 +78,14 @@ public class AncientAetherConfig {
                     .comment("Displays what mob is summoned by Trapped Dungeon Blocks as well as what boss is required to unlock Boss Doorway Blocks on the item")
                     .translation("config.ancient_aether.client.tooltips.dungeon_block_tooltips")
                     .define("Dungeon Block Tooltips", true);
+
+            builder.pop();
+            builder.push("GUI");
+
+            custom_boss_bars = builder
+                    .comment("Gives Ancient Aether Bosses custom boss bar designs")
+                    .translation("config.ancient_aether.client.gui.custom_boss_bars")
+                    .define("Custom Boss Bars", true);
 
             builder.pop();
             builder.push("Modpack");
