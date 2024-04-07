@@ -67,19 +67,19 @@ public class UndergroundDungeonRoom extends StructurePoolElement {
 
     public List<StructureTemplate.StructureBlockInfo> getDataMarkers(StructureTemplateManager templateManager, BlockPos pos, Rotation rotation, boolean bool) {
         StructureTemplate structuretemplate = getTemplate(templateManager);
-        List<StructureTemplate.StructureBlockInfo> list = structuretemplate.filterBlocks(pos, (new StructurePlaceSettings()).setRotation(rotation), Blocks.STRUCTURE_BLOCK, bool);
-        List<StructureTemplate.StructureBlockInfo> list1 = Lists.newArrayList();
+        List<StructureTemplate.StructureBlockInfo> list1 = structuretemplate.filterBlocks(pos, (new StructurePlaceSettings()).setRotation(rotation), Blocks.STRUCTURE_BLOCK, bool);
+        List<StructureTemplate.StructureBlockInfo> list2 = Lists.newArrayList();
 
-        for(StructureTemplate.StructureBlockInfo structureblockinfo : list) {
+        for(StructureTemplate.StructureBlockInfo structureblockinfo : list1) {
             CompoundTag compoundtag = structureblockinfo.nbt();
             if (compoundtag != null) {
                 StructureMode structuremode = StructureMode.valueOf(compoundtag.getString("mode"));
                 if (structuremode == StructureMode.DATA) {
-                    list1.add(structureblockinfo);
+                    list2.add(structureblockinfo);
                 }
             }
         }
-        return list1;
+        return list2;
     }
 
     public @NotNull List<StructureTemplate.StructureBlockInfo> getShuffledJigsawBlocks(@NotNull StructureTemplateManager templateManager, @NotNull BlockPos pos, @NotNull Rotation rotation, @NotNull RandomSource random) {
@@ -97,34 +97,31 @@ public class UndergroundDungeonRoom extends StructurePoolElement {
     public boolean place(@NotNull StructureTemplateManager structureTemplateManager, @NotNull WorldGenLevel level, @NotNull StructureManager structureManager, @NotNull ChunkGenerator generator, @NotNull BlockPos offset, @NotNull BlockPos pos, @NotNull Rotation rotation, @NotNull BoundingBox box, @NotNull RandomSource random, boolean keepJigsaws) {
         StructureTemplate structuretemplate = getTemplate(structureTemplateManager);
         StructurePlaceSettings structureplacesettings = getSettings(rotation, box, keepJigsaws);
-        if (!(level.getBlockState(pos) == Blocks.AIR.defaultBlockState())) {
-            if (!structuretemplate.placeInWorld(level, offset, pos, structureplacesettings, random, 18)) {
-                return false;
-            } else {
-                for (StructureTemplate.StructureBlockInfo structureblockinfo : StructureTemplate.processBlockInfos(level, offset, pos, structureplacesettings, getDataMarkers(structureTemplateManager, offset, rotation, false))) {
-                    handleDataMarker(level, structureblockinfo, offset, rotation, random, box);
-                }
-                return true;
+        if (!structuretemplate.placeInWorld(level, offset, pos, structureplacesettings, random, 18) || level.isEmptyBlock(pos)) {
+            return false;
+        } else {
+            for (StructureTemplate.StructureBlockInfo structureblockinfo : StructureTemplate.processBlockInfos(level, offset, pos, structureplacesettings, getDataMarkers(structureTemplateManager, offset, rotation, false))) {
+                handleDataMarker(level, structureblockinfo, offset, rotation, random, box);
             }
+            return true;
         }
-        return true;
     }
 
     protected StructurePlaceSettings getSettings(Rotation rotation, BoundingBox boundingBox, boolean offset) {
-        StructurePlaceSettings structureplacesettings = new StructurePlaceSettings();
-        structureplacesettings.setBoundingBox(boundingBox);
-        structureplacesettings.setRotation(rotation);
-        structureplacesettings.setKnownShape(true);
-        structureplacesettings.setIgnoreEntities(false);
-        structureplacesettings.addProcessor(BlockIgnoreProcessor.STRUCTURE_BLOCK);
-        structureplacesettings.setFinalizeEntities(true);
+        StructurePlaceSettings structure = new StructurePlaceSettings();
+        structure.setBoundingBox(boundingBox);
+        structure.setRotation(rotation);
+        structure.setKnownShape(true);
+        structure.setIgnoreEntities(false);
+        structure.addProcessor(BlockIgnoreProcessor.STRUCTURE_BLOCK);
+        structure.setFinalizeEntities(true);
         if (!offset) {
-            structureplacesettings.addProcessor(JigsawReplacementProcessor.INSTANCE);
+            structure.addProcessor(JigsawReplacementProcessor.INSTANCE);
         }
 
-        processors.value().list().forEach(structureplacesettings::addProcessor);
-        getProjection().getProcessors().forEach(structureplacesettings::addProcessor);
-        return structureplacesettings;
+        processors.value().list().forEach(structure::addProcessor);
+        getProjection().getProcessors().forEach(structure::addProcessor);
+        return structure;
     }
 
     public @NotNull StructurePoolElementType<?> getType() {
@@ -132,6 +129,6 @@ public class UndergroundDungeonRoom extends StructurePoolElement {
     }
 
     public String toString() {
-        return "Single[" + this.template + "]";
+        return "Single[" + template + "]";
     }
 }
