@@ -1,6 +1,7 @@
 package net.builderdog.ancient_aether.effect;
 
 import net.builderdog.ancient_aether.AncientAether;
+import net.builderdog.ancient_aether.effect.mob.NatureBoostEffect;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;

@@ -1,6 +1,7 @@
 package net.builderdog.ancient_aether.entity.projectile;
 
 import com.aetherteam.aether.mixin.mixins.common.accessor.PlayerAccessor;
+import net.builderdog.ancient_aether.effect.AncientAetherPotions;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.protocol.Packet;
@@ -67,7 +68,8 @@ public class PoisonBomb extends Fireball {
             AreaEffectCloud areaEffectCloud = EntityType.AREA_EFFECT_CLOUD.create(level());
             if (areaEffectCloud != null) {
                 areaEffectCloud.setPos(getX(), getY(), getZ());
-                this.level().addFreshEntity(areaEffectCloud);
+                areaEffectCloud.setPotion(AncientAetherPotions.POISON_BOMB_INEBRIATION.get());
+                level().addFreshEntity(areaEffectCloud);
             }
             discard();
         }
