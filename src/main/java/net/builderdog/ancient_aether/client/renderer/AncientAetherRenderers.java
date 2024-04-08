@@ -83,6 +83,7 @@ public class AncientAetherRenderers {
 
     public static void registerCuriosRenderers() {
         CuriosRendererRegistry.register(AncientAetherItems.VALKYRUM_GLOVES.get(), GlovesRenderer::new);
+
         CuriosRendererRegistry.register(AncientAetherItems.VALKYRUM_PENDANT.get(), PendantRenderer::new);
         CuriosRendererRegistry.register(AncientAetherItems.HERMES_PENDANT.get(), PendantRenderer::new);
         CuriosRendererRegistry.register(AncientAetherItems.ARKENIUM_PENDANT.get(), PendantRenderer::new);
