@@ -2,8 +2,7 @@
   "values": [
     "aether:silver_dungeon",
     "aether:gold_dungeon",
-    "#ancient_aether:valkyrie_settlements",
     "#ancient_aether:ancient_ruins",
-    "ancient_aether:sun_well"
+    "#ancient_aether:valkyrie_settlements"
   ]
 }

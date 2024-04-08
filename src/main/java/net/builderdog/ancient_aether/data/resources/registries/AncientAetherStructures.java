@@ -13,6 +13,7 @@ import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
 public class AncientAetherStructures {
     public static final ResourceKey<Structure> HOLYSTONE_RUIN = createKey("holystone_ruin");
     public static final ResourceKey<Structure> MYSTERIOUS_HENGE = createKey("mysterious_henge");
+    public static final ResourceKey<Structure> SUN_WELL = createKey("sun_well");
     public static final ResourceKey<Structure> VALKYRIE_CAMP_SKYROOT = createKey("valkyrie_camp_skyroot");
     public static final ResourceKey<Structure> VALKYRIE_CAMP_WYNDCAPS = createKey("valkyrie_camp_wyndcaps");
     public static final ResourceKey<Structure> VALKYRIE_SETTLEMENT_SKYROOT = createKey("valkyrie_settlement_skyroot");

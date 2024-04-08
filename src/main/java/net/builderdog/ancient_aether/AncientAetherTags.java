@@ -7,6 +7,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.levelgen.structure.Structure;
 
 public class AncientAetherTags {
 
@@ -86,6 +87,16 @@ public class AncientAetherTags {
 
         private static TagKey<Biome> tag(String name) {
             return TagKey.create(Registries.BIOME, new ResourceLocation(AncientAether.MODID, name));
+        }
+    }
+
+    public static class Structures {
+        public static final TagKey<Structure> ANCIENT_RUINS = tag("ancient_ruins");
+        public static final TagKey<Structure> BRONZE_DUNGEONS_AVOID = tag("bronze_dungeons_avoid");
+        public static final TagKey<Structure> VALKYRIE_SETTLEMENTS = tag("valkyrie_settlements");
+
+        private static TagKey<Structure> tag(String name) {
+            return TagKey.create(Registries.STRUCTURE, new ResourceLocation(AncientAether.MODID, name));
         }
     }
 }
