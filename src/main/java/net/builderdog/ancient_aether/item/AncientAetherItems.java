@@ -9,6 +9,7 @@ import com.aetherteam.aether.item.miscellaneous.DungeonKeyItem;
 import com.aetherteam.aether.item.miscellaneous.MoaEggItem;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
+import net.builderdog.ancient_aether.data.resources.registries.AncientAetherTrimPatterns;
 import net.builderdog.ancient_aether.effect.AncientAetherEffects;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.builderdog.ancient_aether.entity.AncientAetherMoaTypes;

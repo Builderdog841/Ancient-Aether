@@ -2,10 +2,7 @@ package net.builderdog.ancient_aether.data.generators;
 
 import com.aetherteam.aether.Aether;
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.data.resources.registries.AncientAetherBiomeModifiers;
-import net.builderdog.ancient_aether.data.resources.registries.AncientAetherConfiguredCarvers;
-import net.builderdog.ancient_aether.data.resources.registries.AncientAetherNoises;
-import net.builderdog.ancient_aether.data.resources.registries.AncientAetherProcessorLists;
+import net.builderdog.ancient_aether.data.resources.registries.*;
 import net.builderdog.ancient_aether.data.resources.registries.features.AncientAetherFeatureUtils;
 import net.builderdog.ancient_aether.data.resources.registries.placement.AncientAetherPlacementUtils;
 import net.minecraft.core.HolderLookup;
@@ -45,7 +42,9 @@ public class AncientAetherRegistrySets extends DatapackBuiltinEntriesProvider {
             .add(Registries.CONFIGURED_CARVER, AncientAetherConfiguredCarvers::bootstrap)
             .add(Registries.PROCESSOR_LIST, AncientAetherProcessorLists::bootstrap)
             .add(ForgeRegistries.Keys.BIOME_MODIFIERS, AncientAetherBiomeModifiers::bootstrap)
-            .add(Registries.NOISE, AncientAetherNoises::bootstrap);
+            .add(Registries.NOISE, AncientAetherNoises::bootstrap)
+            .add(Registries.TRIM_MATERIAL, AncientAetherTrimMaterials::bootstrap)
+            .add(Registries.TRIM_PATTERN, AncientAetherTrimPatterns::bootstrap);
 
     public AncientAetherRegistrySets(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(AncientAether.MODID, Aether.MODID));
