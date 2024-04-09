@@ -41,11 +41,11 @@ public class AncientAetherTags {
         }
     }
 
-    public static class EntityTypes {
-        public static final TagKey<EntityType<?>> ACTIVATES_WIND_BLOWER = tag("activates_wind_blower");
+    public static class Entities {
+        public static final TagKey<EntityType<?>> ACTIVATES_WIND_BLOWER = tag();
 
-        private static TagKey<EntityType<?>> tag(String name) {
-            return TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation(AncientAether.MODID, name));
+        private static TagKey<EntityType<?>> tag() {
+            return TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation(AncientAether.MODID, "activates_wind_blower"));
         }
     }
 

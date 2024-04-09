@@ -22,7 +22,6 @@ public class AncientAetherStructureTagData extends StructureTagsProvider {
     @SuppressWarnings("unchecked")
     @Override
     public void addTags(HolderLookup.@NotNull Provider provider) {
-
         tag(AncientAetherTags.Structures.ANCIENT_RUINS).add(
                 AncientAetherStructures.HOLYSTONE_RUIN,
                 AncientAetherStructures.MYSTERIOUS_HENGE,
