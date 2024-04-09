@@ -23,8 +23,8 @@ public class ValkyrumPendantItem extends PendantItem {
     @Override
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext context, UUID uuid, ItemStack stack) {
         Multimap<Attribute, AttributeModifier> attributes = HashMultimap.create();
-        attributes.put(ForgeMod.BLOCK_REACH.get(), new AttributeModifier(uuid, "Valkyrie Ring Block Reach Boost", 1.0, AttributeModifier.Operation.ADDITION));
-        attributes.put(ForgeMod.ENTITY_REACH.get(), new AttributeModifier(uuid, "Valkyrie Ring Entity Reach Boost", 1.0, AttributeModifier.Operation.ADDITION));
+        attributes.put(ForgeMod.BLOCK_REACH.get(), new AttributeModifier(uuid, "Valkyrum Pendant Ability", 1.0, AttributeModifier.Operation.ADDITION));
+        attributes.put(ForgeMod.ENTITY_REACH.get(), new AttributeModifier(uuid, "Valkyrum Pendant Ability", 1.0, AttributeModifier.Operation.ADDITION));
         return attributes;
     }
 }
