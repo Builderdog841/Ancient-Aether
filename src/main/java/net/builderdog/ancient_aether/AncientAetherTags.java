@@ -12,29 +12,32 @@ import net.minecraft.world.level.levelgen.structure.Structure;
 public class AncientAetherTags {
 
     public static class Blocks {
+        public static final TagKey<Block> AEROGETIC_BLOCKS = tag("aerogetic_blocks");
+        public static final TagKey<Block> VASES = tag("vases");
         public static final TagKey<Block> WYNDCAPS_ANIMAL_SPAWNABLE_ON = tag("wyndcaps_animals_spawnable_on");
         public static final TagKey<Block> SLAMMROOT_SPAWNABLE_BLACKLIST = tag("slammroot_spawnable_blacklist");
-        public static final TagKey<Block> AETHER_CARVER_REPLACEABLES = tag("aether_carver_replaceables");
         public static final TagKey<Block> LEAF_VINE_CAN_SPAWN_ON = tag("leaf_vine_can_spawn_on");
-        public static final TagKey<Block> BRONZE_DUNGEON_BLOCKS = tag("bronze_dungeon_blocks");
-        public static final TagKey<Block> SENTRY_LABORATORY_BLOCKS = tag("sentry_laboratory_blocks");
+        public static final TagKey<Block> AETHER_CARVER_REPLACEABLES = tag("aether_carver_replaceables");
+        public static final TagKey<Block> REPLACEABLE_DUNGEON_BLOCKS = tag("replaceable_dungeon_blocks");
 
         private static TagKey<Block> tag(String name) {
             return TagKey.create(Registries.BLOCK, new ResourceLocation(AncientAether.MODID, name));
         }
     }
     public static class Items {
-        public static final TagKey<Item> VELOCITY_AERCLOUDS = tag("velocity_aerclouds");
         public static final TagKey<Item> CRAFTS_HIGHSPROOT_PLANKS = tag("crafts_highsproot_planks");
         public static final TagKey<Item> CRAFTS_SAKURA_PLANKS = tag("crafts_sakura_planks");
+        public static final TagKey<Item> VELOCITY_AERCLOUDS = tag("velocity_aerclouds");
+        public static final TagKey<Item> AEROGETIC_BLOCKS = tag("aerogetic_blocks");
+        public static final TagKey<Item> VASES = tag("vases");
+        public static final TagKey<Item> VALKYRUM_REPAIRING = tag("valkyrum_repairing");
+        public static final TagKey<Item> ANCIENT_REPAIRING = tag("ancient_repairing");
+        public static final TagKey<Item> ARKENZUS_REPAIRING = tag("arkenzus_repairing");
         public static final TagKey<Item> FLUFFALO_TEMPTATION_ITEMS = tag("fluffalo_temptation_items");
         public static final TagKey<Item> COMMON_LOOT = tag("common_loot");
         public static final TagKey<Item> RARE_LOOT = tag("rare_loot");
         public static final TagKey<Item> EPIC_LOOT = tag("epic_loot");
         public static final TagKey<Item> MYTHIC_LOOT = tag("mythic_loot");
-        public static final TagKey<Item> VALKYRUM_REPAIRING = tag("valkyrum_repairing");
-        public static final TagKey<Item> ANCIENT_REPAIRING = tag("ancient_repairing");
-        public static final TagKey<Item> ARKENZUS_REPAIRING = tag("arkenzus_repairing");
 
         private static TagKey<Item> tag(String name) {
             return TagKey.create(Registries.ITEM, new ResourceLocation(AncientAether.MODID, name));

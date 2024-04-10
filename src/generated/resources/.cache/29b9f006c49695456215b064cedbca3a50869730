@@ -1,0 +1,8 @@
+// 1.20.1	2024-04-10T20:55:04.7552968	Tags for minecraft:block mod id ancient_aether
+643ba4e6960ab3d3e00612b8fe4bff5bbb5ad3c5 data/ancient_aether/tags/blocks/aerogetic_blocks.json
+0596ba07751eaac32283badc48ad1f51e13ab0c3 data/ancient_aether/tags/blocks/aether_carver_replaceables.json
+19a3e2d8b1c4459b75efe57c362a98a3b93af505 data/ancient_aether/tags/blocks/leaf_vine_can_spawn_on.json
+eb5a5eb37869572870517fe86efbc8bd4b27a34f data/ancient_aether/tags/blocks/replaceable_dungeon_blocks.json
+96b8ea697d9c59a95ebcd2c38c76d6c6c8e59ae8 data/ancient_aether/tags/blocks/slammroot_spawnable_blacklist.json
+55e0c85a00b9802d7068a1ad446fcd04921d9dc5 data/ancient_aether/tags/blocks/vases.json
+bcaaaed9af0ca29ab410570d7717b9476e494b33 data/ancient_aether/tags/blocks/wyndcaps_animals_spawnable_on.json

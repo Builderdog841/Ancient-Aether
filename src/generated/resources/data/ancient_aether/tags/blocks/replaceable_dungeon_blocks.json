@@ -1,0 +1,11 @@
+{
+  "values": [
+    "minecraft:air",
+    "minecraft:water",
+    "#ancient_aether:vases",
+    "#minecraft:mineable/shovel",
+    "#minecraft:mineable/pickaxe",
+    "#minecraft:mineable/axe",
+    "#minecraft:mineable/hoe"
+  ]
+}

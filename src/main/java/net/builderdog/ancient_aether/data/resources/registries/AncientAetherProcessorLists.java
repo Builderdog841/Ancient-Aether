@@ -101,8 +101,8 @@ public class AncientAetherProcessorLists {
                 ))));
         register(context, BRONZE_DUNGEON, ImmutableList.of(
                 new RuleProcessor(ImmutableList.of(
-                        new ProcessorRule(new TagMatchTest(AncientAetherTags.Blocks.BRONZE_DUNGEON_BLOCKS), new BlockMatchTest(Blocks.AIR), Blocks.AIR.defaultBlockState()),
-                        new ProcessorRule(new TagMatchTest(AncientAetherTags.Blocks.BRONZE_DUNGEON_BLOCKS), new BlockMatchTest(AetherBlocks.COLD_AERCLOUD.get()), AetherBlocks.COLD_AERCLOUD.get().defaultBlockState()),
+                        new ProcessorRule(new TagMatchTest(AncientAetherTags.Blocks.REPLACEABLE_DUNGEON_BLOCKS), new BlockMatchTest(Blocks.AIR), Blocks.AIR.defaultBlockState()),
+                        new ProcessorRule(new TagMatchTest(AncientAetherTags.Blocks.REPLACEABLE_DUNGEON_BLOCKS), new BlockMatchTest(AetherBlocks.COLD_AERCLOUD.get()), AetherBlocks.COLD_AERCLOUD.get().defaultBlockState()),
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.CARVED_STONE.get(), 0.01F), AlwaysTrueTest.INSTANCE, AetherBlocks.SENTRY_STONE.get().defaultBlockState()),
                         new ProcessorRule(new RandomBlockMatchTest(AncientAetherBlocks.CARVED_TILES.get(), 0.03F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.TRAPPED_CARVED_TILES.get().defaultBlockState()),
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.HOLYSTONE.get(), 0.4F), AlwaysTrueTest.INSTANCE, AncientAetherFeatureStates.MOSSY_HOLYSTONE),
@@ -120,8 +120,8 @@ public class AncientAetherProcessorLists {
         ));
         register(context, SENTRY_LABORATORY, ImmutableList.of(
                 new RuleProcessor(ImmutableList.of(
-                        new ProcessorRule(new TagMatchTest(AncientAetherTags.Blocks.SENTRY_LABORATORY_BLOCKS), new BlockMatchTest(Blocks.AIR), Blocks.AIR.defaultBlockState()),
-                        new ProcessorRule(new TagMatchTest(AncientAetherTags.Blocks.SENTRY_LABORATORY_BLOCKS), new BlockMatchTest(AetherBlocks.COLD_AERCLOUD.get()), AetherBlocks.COLD_AERCLOUD.get().defaultBlockState()),
+                        new ProcessorRule(new TagMatchTest(AncientAetherTags.Blocks.REPLACEABLE_DUNGEON_BLOCKS), new BlockMatchTest(Blocks.AIR), Blocks.AIR.defaultBlockState()),
+                        new ProcessorRule(new TagMatchTest(AncientAetherTags.Blocks.REPLACEABLE_DUNGEON_BLOCKS), new BlockMatchTest(AetherBlocks.COLD_AERCLOUD.get()), AetherBlocks.COLD_AERCLOUD.get().defaultBlockState()),
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.HOLYSTONE.get(), 0.25F), AlwaysTrueTest.INSTANCE, AetherFeatureStates.ICESTONE),
                         new ProcessorRule(new RandomBlockMatchTest(AncientAetherBlocks.ANCIENT_FROZEN_HOLYSTONE_VASE.get(), 0.25F), AlwaysTrueTest.INSTANCE, Blocks.AIR.defaultBlockState()),
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.CARVED_STONE.get(), 0.05F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.WYND_SENTRY_STONE.get().defaultBlockState()),

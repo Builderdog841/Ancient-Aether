@@ -6,7 +6,7 @@
         {
           "input_predicate": {
             "predicate_type": "minecraft:tag_match",
-            "tag": "ancient_aether:sentry_laboratory_blocks"
+            "tag": "ancient_aether:replaceable_dungeon_blocks"
           },
           "location_predicate": {
             "block": "minecraft:air",
@@ -19,7 +19,7 @@
         {
           "input_predicate": {
             "predicate_type": "minecraft:tag_match",
-            "tag": "ancient_aether:sentry_laboratory_blocks"
+            "tag": "ancient_aether:replaceable_dungeon_blocks"
           },
           "location_predicate": {
             "block": "aether:cold_aercloud",
