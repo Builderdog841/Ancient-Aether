@@ -19,7 +19,7 @@ public class StrengthStoneItem extends AccessoryItem {
     @Override
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext context, UUID uuid, ItemStack stack) {
         Multimap<Attribute, AttributeModifier> attributes = HashMultimap.create();
-        attributes.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(uuid, "Strength Stone Ability", 0.15, AttributeModifier.Operation.MULTIPLY_TOTAL));
+        attributes.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(uuid, "Strength Stone Ability", 0.12, AttributeModifier.Operation.MULTIPLY_TOTAL));
         return attributes;
     }
 }
