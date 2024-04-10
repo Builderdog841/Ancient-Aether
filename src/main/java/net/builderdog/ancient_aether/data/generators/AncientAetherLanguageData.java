@@ -554,15 +554,15 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
 
         addRewardLore(AncientAetherItems.ARKENZUS_PICKAXE, "the Valkyrie Queen", "pickaxe is strong enough to mine Valkyrum Ore");
         addRewardLore(AncientAetherItems.AERONAUTIC_DART_SHOOTER, "the Ancient Dungeon Boss", "dart shooter launches mobs high up in the air similar to Gravitite Equipment. You can use any type of dart as ammunition");
-        addRewardLore(AncientAetherItems.HERMES_RING, "Dungeons", "ring grants you +0.015 Movement Speed");
-        addRewardLore(AncientAetherItems.HERMES_PENDANT, "Dungeons", "pendant grants you +0.02 Movement Speed");
+        addRewardLore(AncientAetherItems.HERMES_RING, "Dungeons", "ring increases your total Movement Speed by +3%");
+        addRewardLore(AncientAetherItems.HERMES_PENDANT, "Dungeons", "pendant increases your total Movement Speed by +5%");
         addRewardLore(AncientAetherItems.ARKENIUM_RING, "Dungeons", "ring grants you +1 Armor Toughness");
         addRewardLore(AncientAetherItems.ARKENIUM_PENDANT, "Dungeons", "pendant grants you +2 Armor Toughness");
-        addRewardLore(AncientAetherItems.HEALTH_RING, "the Valkyrie Queen", "ring grants you +1 Health Point");
-        addRewardLore(AncientAetherItems.HEALTH_PENDANT, "the Valkyrie Queen", "pendant grants you +2 Health Points");
+        addRewardLore(AncientAetherItems.HEALTH_RING, "the Valkyrie Queen", "ring grants you +1 Max Health");
+        addRewardLore(AncientAetherItems.HEALTH_PENDANT, "the Valkyrie Queen", "pendant grants you +2 Max Health");
         addRewardLore(AncientAetherItems.ANCIENT_RING, "the Ancient Dungeon Boss", "ring grants you +0.1 Attack Speed");
         addRewardLore(AncientAetherItems.ANCIENT_PENDANT, "the Ancient Dungeon Boss", "pendant grants you +0.2 Attack Speed");
-        addRewardLore(AncientAetherItems.STRENGTH_STONE, "the Valkyrie Queen", "accessory increases your total damage by 25%");
+        addRewardLore(AncientAetherItems.STRENGTH_STONE, "the Valkyrie Queen", "accessory increases your total Attack Damage by +15%");
         addRewardLore(AncientAetherItems.SHIELD_OF_INEBRIATION, "the Mutated Aechor Plant", "shield has a change to give attackers Inebriation");
         addRewardLore(AncientAetherItems.SHIELD_OF_REMEDIATION, "the Mutated Aechor Plant", "shield makes you immune to Inebriation");
 
