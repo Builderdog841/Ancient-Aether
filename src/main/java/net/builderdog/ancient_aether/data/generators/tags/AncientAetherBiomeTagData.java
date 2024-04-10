@@ -76,7 +76,7 @@ public class AncientAetherBiomeTagData extends BiomeTagsProvider {
         tag(AncientAetherTags.Biomes.HAS_GRAVITY_GRAVEL_COASTS).addTags(
                 AncientAetherTags.Biomes.IS_ELEVATED
         );
-        tag(AncientAetherTags.Biomes.HAS_GRAVITY_GRAVEL_COASTS).addTags(
+        tag(AncientAetherTags.Biomes.HAS_WYND_ICE_COASTS).addTags(
                 AncientAetherTags.Biomes.IS_WYNDCAPS
         );
         tag(AncientAetherTags.Biomes.HAS_CLOUDBED).addTags(
