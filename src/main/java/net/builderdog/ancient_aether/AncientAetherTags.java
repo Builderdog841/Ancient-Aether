@@ -53,18 +53,19 @@ public class AncientAetherTags {
         public static final TagKey<Biome> IS_SKYROOT_PLAINS = tag("is_skyroot_plains");
         public static final TagKey<Biome> IS_SKYROOT_FOREST = tag("is_skyroot_forest");
         public static final TagKey<Biome> IS_SKYROOT = tag("is_skyroot");
-        public static final TagKey<Biome> IS_HABITABLE_WYNDCAPS = tag("is_habitable_wyndcaps");
         public static final TagKey<Biome> IS_WYNDCAPS = tag("is_wyndcaps");
-        public static final TagKey<Biome> IS_SAKURA = tag("is_wyndcaps");
+        public static final TagKey<Biome> IS_SAKURA = tag("is_sakura");
         public static final TagKey<Biome> IS_ELEVATED = tag("is_elevated");
         public static final TagKey<Biome> IS_AETHER_CAVE = tag("is_aether_cave");
         public static final TagKey<Biome> IS_ANCIENT_AETHER_BIOME = tag("is_ancient_aether_biome");
         public static final TagKey<Biome> HAS_QUICKSOIL_COASTS = tag("has_quicksoil_coasts");
         public static final TagKey<Biome> HAS_GRAVITY_GRAVEL_COASTS = tag("has_gravity_gravel_coasts");
         public static final TagKey<Biome> HAS_WYND_ICE_COASTS = tag("has_wynd_ice_coasts");
+        public static final TagKey<Biome> HAS_CLOUDBED = tag("has_cloudbed");
         public static final TagKey<Biome> HAS_AETHER_QUARTZ_ORE = tag("has_aether_quartz_ore");
         public static final TagKey<Biome> HAS_VALKYRUM_ORE = tag("has_valkyrum_ore");
         public static final TagKey<Biome> HAS_AEROGEL_BLOBS = tag("has_aerogel_blobs");
+        public static final TagKey<Biome> HAS_WATER_LAKE_UNDERGROUND = tag("has_water_lake_underground");
         public static final TagKey<Biome> HAS_SKYROOT_MEADOW_TREES = tag("has_skyroot_meadow_trees");
         public static final TagKey<Biome> HAS_SKYROOT_GROVE_TREES = tag("has_skyroot_grove_trees");
         public static final TagKey<Biome> HAS_SKYROOT_FOREST_TREES = tag("has_skyroot_forest_trees");
@@ -74,12 +75,10 @@ public class AncientAetherTags {
         public static final TagKey<Biome> HAS_SKYROOT_GROVE_VEGETATION = tag("has_skyroot_grove_vegetation");
         public static final TagKey<Biome> HAS_SKYROOT_FOREST_VEGETATION = tag("has_skyroot_forest_vegetation");
         public static final TagKey<Biome> HAS_SKYROOT_WOODLAND_VEGETATION = tag("has_skyroot_woodland_vegetation");
-        public static final TagKey<Biome> HAS_VIOLET_AERCLOUD = tag("has_violet_aercloud");
-        public static final TagKey<Biome> HAS_WATER_LAKE_UNDERGROUND = tag("has_water_lake_underground");
+        public static final TagKey<Biome> HAS_VIOLET_AERCLOUDS = tag("has_violet_aerclouds");
         public static final TagKey<Biome> HAS_CRYSTAL_ISLANDS = tag("has_crystal_islands");
         public static final TagKey<Biome> HAS_WYNDCAPS_CRYSTAL_ISLANDS = tag("has_wyndcaps_crystal_islands");
         public static final TagKey<Biome> HAS_ELEVATED_CRYSTAL_ISLANDS = tag("has_elevated_crystal_islands");
-        public static final TagKey<Biome> HAS_CLOUDBED = tag("has_cloudbed");
         public static final TagKey<Biome> HAS_AETHER_CAVES = tag("has_aether_caves");
         public static final TagKey<Biome> HAS_FROZEN_AETHER_GRASS = tag("has_frozen_aether_grass");
         public static final TagKey<Biome> HAS_PALE_AETHER_GRASS = tag("has_pale_aether_grass");
@@ -90,7 +89,6 @@ public class AncientAetherTags {
         public static final TagKey<Biome> HAS_STRUCTURE_VALKYRIE_CAMP_SKYROOT = tag("has_structure/valkyrie_camp_skyroot");
         public static final TagKey<Biome> HAS_STRUCTURE_VALKYRIE_CAMP_WYNDCAPS = tag("has_structure/valkyrie_camp_wyndcaps");
         public static final TagKey<Biome> HAS_STRUCTURE_VALKYRIE_SETTLEMENT_SKYROOT = tag("has_structure/valkyrie_settlement_skyroot");
-        public static final TagKey<Biome> HAS_STRUCTURE_BRONZE_DUNGEON_WYNDCAPS = tag("has_structure/bronze_dungeon_wyndcaps");
         public static final TagKey<Biome> HAS_STRUCTURE_SENTRY_LABORATORY = tag("has_structure/sentry_laboratory");
         public static final TagKey<Biome> HAS_STRUCTURE_ANCIENT_DUNGEON = tag("has_structure/ancient_dungeon");
 

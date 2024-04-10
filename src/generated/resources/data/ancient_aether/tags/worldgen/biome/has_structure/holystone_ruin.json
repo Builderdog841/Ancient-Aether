@@ -1,0 +1,8 @@
+{
+  "remove": [
+    "ancient_aether:sun_forest"
+  ],
+  "values": [
+    "#ancient_aether:is_skyroot_forest"
+  ]
+}

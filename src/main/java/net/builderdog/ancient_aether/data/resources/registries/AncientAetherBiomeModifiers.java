@@ -150,7 +150,7 @@ public class AncientAetherBiomeModifiers {
                 GenerationStep.Decoration.VEGETAL_DECORATION
         ));
         context.register(VIOLET_AERCLOUD_BIOME_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biome.getOrThrow(AncientAetherTags.Biomes.HAS_VIOLET_AERCLOUD),
+                biome.getOrThrow(AncientAetherTags.Biomes.HAS_VIOLET_AERCLOUDS),
                 HolderSet.direct(placement.getOrThrow(AncientAetherMiscPlacements.VIOLET_AERCLOUD)),
                 GenerationStep.Decoration.TOP_LAYER_MODIFICATION
         ));

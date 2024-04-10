@@ -1,8 +1,8 @@
 {
-  "values": [
-    "#ancient_aether:is_skyroot"
-  ],
   "remove": [
     "ancient_aether:skyroot_jungle"
+  ],
+  "values": [
+    "#ancient_aether:is_skyroot"
   ]
 }
