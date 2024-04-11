@@ -68,7 +68,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> HIGHSPROOT_SAPLING = registerBlock("highsproot_sapling", () -> new SaplingBlock(new HighsprootTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get()).mapColor(MapColor.TERRACOTTA_BLUE)));
     public static final RegistryObject<Block> SAKURA_SAPLING = registerBlock("sakura_sapling", () -> new SaplingBlock(new SakuraTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get()).mapColor(MapColor.COLOR_PINK)));
 
-    public static final RegistryObject<Block> SKY_GRASS = registerBlock("sky_grass", () -> new SkyGrassBlock(Block.Properties.copy(GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
+    public static final RegistryObject<Block> SKY_GRASS = registerBlock("sky_grass", () -> new SkyGrassBlock(Block.Properties.copy(GRASS).offsetType(BlockBehaviour.OffsetType.XZ).hasPostProcess(AncientAetherBlocks::always)));
     public static final RegistryObject<Block> SUNSET_ROSE = registerBlock("sunset_rose", () -> new FlowerBlock(MobEffects.REGENERATION, 4, Block.Properties.copy(WHITE_FLOWER.get())));
     public static final RegistryObject<Block> SKY_BLUES = registerBlock("sky_blues", () -> new FlowerBlock(MobEffects.POISON, 4, Block.Properties.copy(WHITE_FLOWER.get())));
     public static final RegistryObject<Block> WYND_THISTLE = registerBlock("wynd_thistle", () -> new FlowerBlock(MobEffects.SATURATION, 4, Block.Properties.copy(WHITE_FLOWER.get())));
@@ -302,6 +302,9 @@ public class AncientAetherBlocks {
     }
     private static boolean never(BlockState test1, BlockGetter test2, BlockPos test3) {
         return false;
+    }
+    private static boolean always(BlockState test1, BlockGetter test2, BlockPos test3) {
+        return true;
     }
 
     private static boolean ocelotOrParrot(BlockState state, BlockGetter getter, BlockPos pos, EntityType<?> entity) {
