@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(SnowyDirtBlock.class)
 public abstract class SnowyDirtMixin extends BlockMixin {
-    @Inject(method = "getStateForPlacement", at = @At(value = "HEAD"))
+    @Inject(method = "getStateForPlacement", at = @At(value = "HEAD"), cancellable = true)
     protected void aa$getPlacedState(BlockPlaceContext context, CallbackInfoReturnable<BlockState> cir) {
     }
 }
