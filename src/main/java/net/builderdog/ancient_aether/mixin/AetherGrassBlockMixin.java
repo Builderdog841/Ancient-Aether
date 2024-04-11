@@ -25,7 +25,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @SuppressWarnings("deprecation")
 @Mixin(value = AetherGrassBlock.class)
-public abstract class AetherGrassBlockMixin extends BlockMixin{
+public abstract class AetherGrassBlockMixin extends SnowyDirtMixin {
 
     @Inject(method = "<init>", at = @At(value = "TAIL"))
     public void aa$constructor(BlockBehaviour.Properties properties, CallbackInfo ci) {
