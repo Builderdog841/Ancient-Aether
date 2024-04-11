@@ -41,6 +41,9 @@ public class AncientAetherEntityTagData extends EntityTypeTagsProvider {
                 AncientAetherEntityTypes.MUTATED_AECHOR_PLANT.get()
         );
 
+        tag(EntityTypeTags.FALL_DAMAGE_IMMUNE).add(
+                AncientAetherEntityTypes.SLAMMROOT.get()
+        );
         tag(EntityTypeTags.FREEZE_IMMUNE_ENTITY_TYPES).add(
                 AncientAetherEntityTypes.FLUFFALO.get()
         );

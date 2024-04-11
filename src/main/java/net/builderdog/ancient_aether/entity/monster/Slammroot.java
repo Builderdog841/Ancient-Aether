@@ -67,11 +67,6 @@ public class Slammroot extends Monster {
         hasImpulse = true;
     }
 
-    @Override
-    public boolean causeFallDamage(float fallDistance, float multiplier, @NotNull DamageSource source) {
-        return false;
-    }
-
     public static boolean checkSlammrootSpawnRules(EntityType<? extends Slammroot> slammroot, ServerLevelAccessor level, MobSpawnType reason, BlockPos pos, RandomSource random) {
         return Mob.checkMobSpawnRules(slammroot, level, reason, pos, random)
                 && isDarkEnoughToSpawn(level, pos, random)
