@@ -8,7 +8,6 @@
     "AetherGrassBlockMixin",
     "BlockMixin",
     "SliderMixin",
-    "SnowyDirtMixin",
     "compat.DARegionMixin",
     "compat.GenesisRegionMixin",
     "compat.ReduxRegionMixin"
