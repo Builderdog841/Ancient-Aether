@@ -73,7 +73,7 @@ public class AncientAetherVegetationFeatures {
         AncientAetherFeatureUtils.register(context, SLAMMROOT_PATCH, Feature.FLOWER,
                 NitrogenConfiguredFeatureBuilders.grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
                                 .add(AncientAetherBlocks.SLAMMROOT_PLANT.get().defaultBlockState(), 3)),
-                        64));
+                        32));
 
         AncientAetherFeatureUtils.register(context, SINGLE_PIECE_OF_SKY_GRASS, Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
                 .add(AncientAetherFeatureStates.SKY_GRASS_VERY_SHORT, 1)
@@ -128,9 +128,9 @@ public class AncientAetherVegetationFeatures {
         ), PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH), PlacementUtils.isEmpty())));
 
         AncientAetherFeatureUtils.register(context, SAKURA_JUNGLE_FLOWER_PATCH, Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(
-                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH), PlacementUtils.isEmpty()), 0.375F),
-        new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.SUNSET_ROSE_PATCH), PlacementUtils.isEmpty()), 0.125F)
-        ), PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.SLAMMROOT_PATCH), PlacementUtils.isEmpty())));
+                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.SUNSET_ROSE_PATCH), PlacementUtils.isEmpty()), 0.25F),
+        new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.SLAMMROOT_PATCH), PlacementUtils.isEmpty()), 0.25F)
+        ), PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH), PlacementUtils.isEmpty())));
 
         AncientAetherFeatureUtils.register(context, ELEVATED_ISLANDS_FLOWER_PATCH, Feature.FLOWER,
                 new RandomPatchConfiguration(64, 6, 2,
