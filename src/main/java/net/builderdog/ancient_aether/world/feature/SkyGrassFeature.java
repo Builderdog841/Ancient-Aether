@@ -11,8 +11,8 @@ import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
 
 public class SkyGrassFeature extends Feature<SimpleBlockConfiguration> {
-    public SkyGrassFeature(Codec<SimpleBlockConfiguration> p_66808_) {
-        super(p_66808_);
+    public SkyGrassFeature(Codec<SimpleBlockConfiguration> codec) {
+        super(codec);
     }
 
     public boolean place(FeaturePlaceContext<SimpleBlockConfiguration> context) {
@@ -28,12 +28,10 @@ public class SkyGrassFeature extends Feature<SimpleBlockConfiguration> {
                 if (!level.isEmptyBlock(origin.above())) {
                     return false;
                 }
-
                 DoublePlantBlock.placeAt(level, state, origin, 2);
             } else {
                 level.setBlock(origin, state, 2);
             }
-
             return true;
         } else {
             return false;
