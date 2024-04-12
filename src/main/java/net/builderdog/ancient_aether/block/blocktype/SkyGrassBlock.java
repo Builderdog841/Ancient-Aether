@@ -1,15 +1,21 @@
 package net.builderdog.ancient_aether.block.blocktype;
 
 import com.aetherteam.aether.block.AetherBlocks;
+import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.block.blockstate.AetherGrassType;
 import net.builderdog.ancient_aether.block.blockstate.AncientAetherBlockStateProperties;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.Holder;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.TallGrassBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -18,6 +24,7 @@ import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.zepalesque.redux.block.util.state.ReduxStates;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -53,19 +60,44 @@ public class SkyGrassBlock extends TallGrassBlock {
         }
     }
 
+    @Override
+    public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos) {
+        return state(level, currentPos, super.updateShape(state, facing, facingState, level, currentPos, facingPos));
+    }
+
+    public static BlockState state(LevelAccessor level, BlockPos pos, BlockState state) {
+        BlockState below = level.getBlockState(pos.below());
+        if (state.hasProperty(TYPE)) {
+            if (below.is(AetherBlocks.ENCHANTED_AETHER_GRASS_BLOCK.get())) {
+                return state.setValue(ReduxStates.ENCHANTED, true);
+            } else if (below.hasProperty(TYPE)) {
+                return state.setValue(TYPE, below.getValue(TYPE));
+            }
+            else return stateBase(level, pos, state);
+        }
+
+        return state;
+    }
+    public static BlockState stateBase(LevelAccessor level, BlockPos pos, BlockState state) {
+        Holder<Biome> biome = level.getBiome(pos);
+            if (biome.is(AncientAetherTags.Biomes.HAS_FROZEN_AETHER_GRASS)) {
+                return state.setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.FROZEN);
+            } else if (biome.is(AncientAetherTags.Biomes.HAS_PALE_AETHER_GRASS)) {
+                return state.setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.PALE);
+            } else if (biome.is(AncientAetherTags.Biomes.HAS_ENCHANTED_AETHER_GRASS)) {
+                return state.setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.ENCHANTED);
+            } else return state.setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.NORMAL);
+    }
+
     public boolean isValidBonemealTarget(@NotNull LevelReader level, @NotNull BlockPos pos, @NotNull BlockState state, boolean isClient) {
         return state.getValue(LENGTH) < 5;
     }
 
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        BlockState blockstate = context.getLevel().getBlockState(context.getClickedPos().below());
-        if (blockstate.getBlock() == AetherBlocks.AETHER_GRASS_BLOCK.get()) {
-            return defaultBlockState().setValue(TYPE, blockstate.getValue(TYPE));
-        } else if (blockstate.getBlock() == AetherBlocks.ENCHANTED_AETHER_GRASS_BLOCK.get()) {
-            return defaultBlockState().setValue(TYPE, AetherGrassType.ENCHANTED);
-        } else
-        return defaultBlockState();
+        return state(context.getLevel(), context.getClickedPos(), defaultBlockState());
     }
+
+
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockBlockStateBuilder) {
         blockBlockStateBuilder.add(LENGTH);

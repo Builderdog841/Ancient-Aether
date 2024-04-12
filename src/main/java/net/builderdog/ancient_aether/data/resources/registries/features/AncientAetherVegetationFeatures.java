@@ -5,6 +5,7 @@ import com.aetherteam.aether.data.resources.registries.AetherConfiguredFeatures;
 import com.aetherteam.nitrogen.data.resources.builders.NitrogenConfiguredFeatureBuilders;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.data.resources.AncientAetherFeatureStates;
+import net.builderdog.ancient_aether.world.feature.AncientAetherFeatures;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -75,7 +76,7 @@ public class AncientAetherVegetationFeatures {
                                 .add(AncientAetherBlocks.SLAMMROOT_PLANT.get().defaultBlockState(), 3)),
                         32));
 
-        AncientAetherFeatureUtils.register(context, SINGLE_PIECE_OF_SKY_GRASS, Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
+        AncientAetherFeatureUtils.register(context, SINGLE_PIECE_OF_SKY_GRASS, AncientAetherFeatures.SKY_GRASS.get(), new SimpleBlockConfiguration(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
                 .add(AncientAetherFeatureStates.SKY_GRASS_VERY_SHORT, 1)
                 .add(AncientAetherFeatureStates.SKY_GRASS_SHORT, 2)
                 .add(AncientAetherFeatureStates.SKY_GRASS_MEDIUM, 3))));
