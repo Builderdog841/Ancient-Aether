@@ -65,7 +65,7 @@ public class SkyGrassBlock extends TallGrassBlock {
         return state(level, currentPos, super.updateShape(state, facing, facingState, level, currentPos, facingPos));
     }
 
-    public BlockState state(LevelAccessor level, BlockPos pos, BlockState state) {
+    public static BlockState state(LevelAccessor level, BlockPos pos, BlockState state) {
         BlockState below = level.getBlockState(pos.below());
         if (state.hasProperty(TYPE)) {
             if (below.is(AetherBlocks.ENCHANTED_AETHER_GRASS_BLOCK.get())) {
@@ -78,7 +78,7 @@ public class SkyGrassBlock extends TallGrassBlock {
 
         return state;
     }
-    public BlockState stateBase(LevelAccessor level, BlockPos pos, BlockState state) {
+    public static BlockState stateBase(LevelAccessor level, BlockPos pos, BlockState state) {
         Holder<Biome> biome = level.getBiome(pos);
             if (biome.is(AncientAetherTags.Biomes.HAS_FROZEN_AETHER_GRASS)) {
                 return state.setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.FROZEN);
