@@ -95,5 +95,39 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
                 BlockTags.MINEABLE_WITH_AXE,
                 BlockTags.MINEABLE_WITH_HOE
         );
+
+        tag(AetherTags.Blocks.AETHER_PORTAL_BLACKLIST).add(
+                AncientAetherBlocks.VIOLET_AERCLOUD.get(),
+                AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get(),
+                AetherBlocks.AETHER_DIRT.get(),
+                AetherBlocks.ICESTONE.get(),
+                AetherBlocks.AEROGEL.get(),
+                AetherBlocks.SKYROOT_PLANKS.get(),
+                AetherBlocks.SKYROOT_STAIRS.get(),
+                AetherBlocks.SKYROOT_SLAB.get(),
+                AetherBlocks.SKYROOT_FENCE.get(),
+                AetherBlocks.SKYROOT_BOOKSHELF.get()
+        ).addTags(
+                AncientAetherTags.Blocks.AEROGETIC_BLOCKS,
+                AetherTags.Blocks.HOLYSTONE,
+                AetherTags.Blocks.SENTRY_BLOCKS,
+                AetherTags.Blocks.ANGELIC_BLOCKS,
+                AetherTags.Blocks.HELLFIRE_BLOCKS,
+                Tags.Blocks.ORES
+        );
+        tag(AetherTags.Blocks.AETHER_ISLAND_BLOCKS).add(
+                AncientAetherBlocks.GRAVITY_GRAVEL.get(),
+                AncientAetherBlocks.WYND_ICE.get()
+        );
+        tag(AetherTags.Blocks.AERCLOUDS).add(
+                AncientAetherBlocks.VIOLET_AERCLOUD.get()
+        );
+        tag(AetherTags.Blocks.DUNGEON_BLOCKS).add(
+                AncientAetherBlocks.CARVED_TILES.get(),
+                AncientAetherBlocks.WYND_SENTRY_STONE.get(),
+                AncientAetherBlocks.AEROGETIC_STONE.get(),
+                AncientAetherBlocks.AERONAUTIC_STONE.get(),
+                AncientAetherBlocks.CORRUPTED_AERONAUTIC_STONE.get()
+        );
     }
 }
