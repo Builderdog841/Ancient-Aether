@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-12T19:23:09.7938774	Tags for minecraft:block mod id ancient_aether
+// 1.20.1	2024-04-12T20:06:10.1089679	Tags for minecraft:block mod id ancient_aether
 f0714fea3e89b69a7a6a6c729a028562bc0bd412 data/aether/tags/blocks/aerclouds.json
 c2354d6e9e1ad7d82a74dc026cfd3d3925683c7c data/aether/tags/blocks/aether_island_blocks.json
 c30f52966d2c3e2f17ca390bbaa8f0ed8f50941f data/aether/tags/blocks/aether_portal_blacklist.json
@@ -21,3 +21,19 @@ eb5a5eb37869572870517fe86efbc8bd4b27a34f data/ancient_aether/tags/blocks/replace
 96b8ea697d9c59a95ebcd2c38c76d6c6c8e59ae8 data/ancient_aether/tags/blocks/slammroot_spawnable_blacklist.json
 55e0c85a00b9802d7068a1ad446fcd04921d9dc5 data/ancient_aether/tags/blocks/vases.json
 bcaaaed9af0ca29ab410570d7717b9476e494b33 data/ancient_aether/tags/blocks/wyndcaps_animals_spawnable_on.json
+1fcae52fd81743af58d3db327600776ff6f956d9 data/forge/tags/blocks/bookshelves.json
+5aeceabe8e6aaf110d970e1a2189762e5ebeb938 data/forge/tags/blocks/fences.json
+5aeceabe8e6aaf110d970e1a2189762e5ebeb938 data/forge/tags/blocks/fences/wooden.json
+db284a03b1ab6c6d5cef25fdf5349b6851a7f516 data/forge/tags/blocks/fence_gates.json
+db284a03b1ab6c6d5cef25fdf5349b6851a7f516 data/forge/tags/blocks/fence_gates/wooden.json
+9b907c54e7c1c49be61873997383fdd310e97b3c data/forge/tags/blocks/glass.json
+9b907c54e7c1c49be61873997383fdd310e97b3c data/forge/tags/blocks/glass/colorless.json
+7198e1f5ee81b117fac39fd1bb8febdb1ea91672 data/forge/tags/blocks/glass_panes.json
+7198e1f5ee81b117fac39fd1bb8febdb1ea91672 data/forge/tags/blocks/glass_panes/colorless.json
+90d07b81e26e07844cfff7b76febf1a2861b273f data/forge/tags/blocks/ores.json
+90d07b81e26e07844cfff7b76febf1a2861b273f data/forge/tags/blocks/ore_rates/singular.json
+bd87b848151f5ba65e717dd3f25eb88e0ba9fc12 data/forge/tags/blocks/storage_blocks.json
+a6d024b3e3b636c5adaa1abe204238f85bf8b540 data/minecraft/tags/blocks/mineable/axe.json
+d897ce256cffee30bad4e6d2a7d22c74981bb204 data/minecraft/tags/blocks/mineable/hoe.json
+3d94e19448ecb1d610727f9e85ed12530793be2d data/minecraft/tags/blocks/mineable/pickaxe.json
+51a9bef73da8240212ff1bc2e347dcbce52bbbd2 data/minecraft/tags/blocks/mineable/shovel.json
