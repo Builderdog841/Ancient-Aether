@@ -1,10 +1,10 @@
 {
   "values": [
+    "ancient_aether:valkyrum_ore",
+    "ancient_aether:valkyrum_block",
     "ancient_aether:highsproot_button",
     "ancient_aether:highsproot_pressure_plate",
     "ancient_aether:sakura_button",
-    "ancient_aether:sakura_pressure_plate",
-    "ancient_aether:valkyrum_block",
-    "ancient_aether:valkyrum_ore"
+    "ancient_aether:sakura_pressure_plate"
   ]
 }

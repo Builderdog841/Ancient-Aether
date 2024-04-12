@@ -1,9 +1,16 @@
 package net.builderdog.ancient_aether.event.hooks;
 
+import com.aetherteam.aether.AetherConfig;
+import com.aetherteam.aether.AetherTags;
+import com.aetherteam.aether.network.AetherPacketHandler;
+import com.aetherteam.aether.network.packet.clientbound.ToolDebuffPacket;
+import com.aetherteam.nitrogen.network.PacketRelay;
 import com.google.common.collect.ImmutableMap;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.item.equipment.armor.EquipmentUtil;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.ToolAction;
@@ -39,6 +46,25 @@ public class AbilityHooks {
                 }
             }
             return old;
+        }
+
+        public static boolean debuffTools;
+
+        public static float reduceToolEffectiveness(Player player, BlockState state, ItemStack stack, float speed) {
+            if (AetherConfig.SERVER.tools_debuff.get()) {
+                if (!player.level().isClientSide()) {
+                    debuffTools = true;
+                    PacketRelay.sendToNear(AetherPacketHandler.INSTANCE, new ToolDebuffPacket(true), player.getX(), player.getY(), player.getZ(), 10, player.level().dimension());
+                }
+            }
+            if (debuffTools) {
+                if ((state.getBlock().getDescriptionId().startsWith("block.ancient_aether.") && !state.is(AetherTags.Blocks.TREATED_AS_VANILLA_BLOCK))) {
+                    if (!stack.isEmpty() && stack.isCorrectToolForDrops(state) && !stack.getItem().getDescriptionId().startsWith("item.aether.") && !stack.is(AetherTags.Items.TREATED_AS_AETHER_ITEM)) {
+                        speed = 1.0F;
+                    }
+                }
+            }
+            return speed;
         }
     }
 }
