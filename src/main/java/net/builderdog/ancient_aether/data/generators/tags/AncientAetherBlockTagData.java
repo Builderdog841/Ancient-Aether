@@ -117,6 +117,7 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
                 AetherTags.Blocks.AETHER_ISLAND_BLOCKS
         );
         tag(AncientAetherTags.Blocks.REPLACEABLE_DUNGEON_BLOCKS).add(
+                AetherBlocks.PRESENT.get(),
                 Blocks.AIR,
                 Blocks.WATER
         ).addTags(
@@ -124,7 +125,8 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
                 BlockTags.MINEABLE_WITH_SHOVEL,
                 BlockTags.MINEABLE_WITH_PICKAXE,
                 BlockTags.MINEABLE_WITH_AXE,
-                BlockTags.MINEABLE_WITH_HOE
+                BlockTags.MINEABLE_WITH_HOE,
+                BlockTags.SWORD_EFFICIENT
         );
 
         tag(AetherTags.Blocks.AETHER_PORTAL_BLACKLIST).add(
