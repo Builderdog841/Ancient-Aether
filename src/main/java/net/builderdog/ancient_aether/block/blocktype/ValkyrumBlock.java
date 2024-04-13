@@ -7,12 +7,12 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
-@SuppressWarnings("deprecation")
 public class ValkyrumBlock extends Block {
     public ValkyrumBlock(Properties properties) {
         super(properties);
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public boolean canHarvestBlock(BlockState state, BlockGetter getter, BlockPos pos, Player player) {
         if (player.getInventory().getSelected().getItem() instanceof PickaxeItem tieredItem)

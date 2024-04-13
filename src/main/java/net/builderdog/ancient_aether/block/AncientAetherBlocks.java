@@ -69,10 +69,10 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> SAKURA_SAPLING = registerBlock("sakura_sapling", () -> new SaplingBlock(new SakuraTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get()).mapColor(MapColor.COLOR_PINK)));
 
     public static final RegistryObject<Block> SKY_GRASS = registerBlock("sky_grass", () -> new SkyGrassBlock(Block.Properties.copy(GRASS).offsetType(BlockBehaviour.OffsetType.XZ).hasPostProcess(AncientAetherBlocks::always)));
-    public static final RegistryObject<Block> SUNSET_ROSE = registerBlock("sunset_rose", () -> new FlowerBlock(MobEffects.REGENERATION, 4, Block.Properties.copy(WHITE_FLOWER.get())));
-    public static final RegistryObject<Block> SKY_BLUES = registerBlock("sky_blues", () -> new FlowerBlock(MobEffects.POISON, 4, Block.Properties.copy(WHITE_FLOWER.get())));
-    public static final RegistryObject<Block> WYND_THISTLE = registerBlock("wynd_thistle", () -> new FlowerBlock(MobEffects.SATURATION, 4, Block.Properties.copy(WHITE_FLOWER.get())));
-    public static final RegistryObject<Block> ELEVATIA = registerBlock("elevatia", () -> new FlowerBlock(AetherEffects.REMEDY, 4, Block.Properties.copy(WHITE_FLOWER.get())));
+    public static final RegistryObject<Block> SUNSET_ROSE = registerBlock("sunset_rose", () -> new FlowerBlock(MobEffects.REGENERATION, 8, Block.Properties.copy(WHITE_FLOWER.get())));
+    public static final RegistryObject<Block> SKY_BLUES = registerBlock("sky_blues", () -> new FlowerBlock(AetherEffects.REMEDY, 6, Block.Properties.copy(WHITE_FLOWER.get())));
+    public static final RegistryObject<Block> WYND_THISTLE = registerBlock("wynd_thistle", () -> new FlowerBlock(MobEffects.SLOW_FALLING, 7, Block.Properties.copy(WHITE_FLOWER.get())));
+    public static final RegistryObject<Block> ELEVATIA = registerBlock("elevatia", () -> new FlowerBlock(MobEffects.LEVITATION, 4, Block.Properties.copy(WHITE_FLOWER.get())));
     public static final RegistryObject<GrapeVineBlock> GRAPE_VINE = BLOCKS.register("grape_vine", () -> new GrapeVineBlock(Block.Properties.copy(VINE).noLootTable()));
     public static final RegistryObject<Block> SLAMMROOT_PLANT = BLOCKS.register("slammroot_plant", () -> new SlammrootPlantBlock(Block.Properties.of().offsetType(BlockBehaviour.OffsetType.XYZ).dynamicShape().noOcclusion().noCollission().mapColor(MapColor.PLANT).sound(SoundType.HANGING_ROOTS).instabreak().pushReaction(PushReaction.DESTROY).noParticlesOnBreak().noLootTable()));
 

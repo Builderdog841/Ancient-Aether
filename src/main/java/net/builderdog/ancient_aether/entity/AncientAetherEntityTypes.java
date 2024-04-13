@@ -12,7 +12,7 @@ import net.builderdog.ancient_aether.entity.passive.Fluffalo;
 import net.builderdog.ancient_aether.entity.passive.WyndcapsAnimal;
 import net.builderdog.ancient_aether.entity.projectile.AeronauticDart;
 import net.builderdog.ancient_aether.entity.projectile.MutatedAechorNeedle;
-import net.builderdog.ancient_aether.entity.projectile.PoisonBomb;
+import net.builderdog.ancient_aether.entity.projectile.SporeBomb;
 import net.builderdog.ancient_aether.entity.projectile.WindBlow;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -56,8 +56,8 @@ public class AncientAetherEntityTypes {
             () -> EntityType.Builder.<AeronauticDart>of(AeronauticDart::new, MobCategory.MISC).sized(0.5F, 0.5F).clientTrackingRange(4).updateInterval(20).build("aeronautic_dart"));
     public static final RegistryObject<EntityType<MutatedAechorNeedle>> MUTATED_AECHOR_NEEDLE = ENTITY_TYPES.register("mutated_aechor_needle",
             () -> EntityType.Builder.<MutatedAechorNeedle>of(MutatedAechorNeedle::new, MobCategory.MISC).sized(0.5F, 0.5F).clientTrackingRange(4).updateInterval(20).build("mutated_aechor_needle"));
-    public static final RegistryObject<EntityType<PoisonBomb>> POISON_BOMB = ENTITY_TYPES.register("poison_bomb",
-            () -> EntityType.Builder.<PoisonBomb>of(PoisonBomb::new, MobCategory.MISC).sized(0.5F, 0.5F).clientTrackingRange(4).updateInterval(20).build("poison_bomb"));
+    public static final RegistryObject<EntityType<SporeBomb>> SPORE_BOMB = ENTITY_TYPES.register("spore_bomb",
+            () -> EntityType.Builder.<SporeBomb>of(SporeBomb::new, MobCategory.MISC).sized(0.5F, 0.5F).clientTrackingRange(4).updateInterval(20).build("spore_bomb"));
 
     @SubscribeEvent
     public static void registerEntityAttributes(EntityAttributeCreationEvent event) {

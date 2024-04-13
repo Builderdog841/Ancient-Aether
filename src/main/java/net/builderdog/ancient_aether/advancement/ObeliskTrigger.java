@@ -8,7 +8,6 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
-@SuppressWarnings("unused")
 public class ObeliskTrigger extends SimpleCriterionTrigger<ObeliskTrigger.Instance> {
     private static final ResourceLocation ID = new ResourceLocation(AncientAether.MODID, "obelisk_trigger");
     public static final ObeliskTrigger INSTANCE = new ObeliskTrigger();

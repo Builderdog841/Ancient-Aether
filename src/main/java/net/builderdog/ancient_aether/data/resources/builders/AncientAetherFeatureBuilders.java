@@ -28,7 +28,6 @@ import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlac
 import java.util.List;
 import java.util.OptionalInt;
 
-@SuppressWarnings("deprecation")
 public class AncientAetherFeatureBuilders {
 
     public static TreeConfiguration.TreeConfigurationBuilder createStraightSkyrootBlobTree(BlockState leaves) {
@@ -92,6 +91,7 @@ public class AncientAetherFeatureBuilders {
                 true);
     }
 
+    @SuppressWarnings("deprecation")
     public static CoastConfiguration createCoast(BlockState coastState, int minHeight, int maxHeight) {
         return new CoastConfiguration(
                 BlockStateProvider.simple(coastState),

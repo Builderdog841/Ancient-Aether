@@ -49,7 +49,7 @@ public class AncientAetherRenderers {
         event.registerEntityRenderer(AncientAetherEntityTypes.WIND_BLOW.get(), WindBlowRenderer::new);
         event.registerEntityRenderer(AncientAetherEntityTypes.AERONAUTIC_DART.get(), AeronauticDartRenderer::new);
         event.registerEntityRenderer(AncientAetherEntityTypes.MUTATED_AECHOR_NEEDLE.get(), MutatedAechorNeedleRenderer::new);
-        event.registerEntityRenderer(AncientAetherEntityTypes.POISON_BOMB.get(), PoisonBombRenderer::new);
+        event.registerEntityRenderer(AncientAetherEntityTypes.SPORE_BOMB.get(), SporeBombRenderer::new);
     }
 
     @SubscribeEvent
@@ -63,7 +63,7 @@ public class AncientAetherRenderers {
             event.registerLayerDefinition(AncientAetherModelLayers.SLAMMROOT, SlammrootModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.AERONAUTIC_LEAPER, AeronauticLeaperModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.MUTATED_AECHOR_PLANT, MutatedAechorPlantModel::createBodyLayer);
-            event.registerLayerDefinition(AncientAetherModelLayers.POISON_BOMB, PoisonBombModel::createBodyLayer);
+            event.registerLayerDefinition(AncientAetherModelLayers.SPORE_BOMB, SporeBombModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.VALKYRUM_WINGS, () -> ValkyrieWingsModel.createMainLayer(3.5F, 3.375F));
         }
     }

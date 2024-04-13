@@ -11,15 +11,15 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.NotNull;
 
-public class PoisonBomb extends AbstractDart {
+public class SporeBomb extends AbstractDart {
 
-    public PoisonBomb(EntityType<? extends PoisonBomb> type, Level level) {
+    public SporeBomb(EntityType<? extends SporeBomb> type, Level level) {
         super(type, level, null);
         setNoGravity(false);
     }
 
-    public PoisonBomb(Level level, LivingEntity shooter) {
-        super(AncientAetherEntityTypes.POISON_BOMB.get(), level, shooter, null);
+    public SporeBomb(Level level, LivingEntity shooter) {
+        super(AncientAetherEntityTypes.SPORE_BOMB.get(), level, shooter, null);
         setNoGravity(false);
     }
 

@@ -13,7 +13,7 @@ import net.builderdog.ancient_aether.AncientAetherConfig;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.entity.projectile.MutatedAechorNeedle;
-import net.builderdog.ancient_aether.entity.projectile.PoisonBomb;
+import net.builderdog.ancient_aether.entity.projectile.SporeBomb;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
@@ -56,7 +56,6 @@ import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-@SuppressWarnings("deprecation")
 public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<MutatedAechorPlant>, Enemy, IEntityAdditionalSpawnData, RangedAttackMob {
     private static final EntityDataAccessor<Boolean> DATA_ACTIVE_ID = SynchedEntityData.defineId(MutatedAechorPlant.class, EntityDataSerializers.BOOLEAN);
     private static final EntityDataAccessor<Integer> DATA_SIZE_ID = SynchedEntityData.defineId(MutatedAechorPlant.class, EntityDataSerializers.INT);
@@ -247,7 +246,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     }
 
     public void poisonBombRangedAttack(@NotNull LivingEntity target) {
-        PoisonBomb poisonBomb = new PoisonBomb(level(), this);
+        SporeBomb poisonBomb = new SporeBomb(level(), this);
         double d0 = target.getX() - getX();
         double d1 = target.getY(0.75) - poisonBomb.getY();
         double d2 = target.getZ() - getZ();
@@ -256,6 +255,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         level().addFreshEntity(poisonBomb);
     }
 
+    @SuppressWarnings("deprecation")
     @Nullable
     @Override
     public SpawnGroupData finalizeSpawn(@NotNull ServerLevelAccessor level, @NotNull DifficultyInstance difficulty, @NotNull MobSpawnType reason, @Nullable SpawnGroupData spawnData, @Nullable CompoundTag tag) {

@@ -10,7 +10,7 @@ public class AncientAetherModelLayers {
     public static final ModelLayerLocation SLAMMROOT = register("slammroot");
     public static final ModelLayerLocation AERONAUTIC_LEAPER = register("aeronautic_leaper");
     public static final ModelLayerLocation MUTATED_AECHOR_PLANT = register("mutated_aechor_plant");
-    public static final ModelLayerLocation POISON_BOMB = register("poison_bomb");
+    public static final ModelLayerLocation SPORE_BOMB = register("spore_bomb");
     public static final ModelLayerLocation VALKYRUM_WINGS = register("valkyrum_wings");
 
     public AncientAetherModelLayers() {
