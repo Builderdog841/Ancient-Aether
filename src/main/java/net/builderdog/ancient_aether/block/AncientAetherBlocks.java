@@ -12,6 +12,7 @@ import com.aetherteam.aether.block.natural.AetherLogBlock;
 import com.aetherteam.aether.blockentity.AltarBlockEntity;
 import com.aetherteam.aether.effect.AetherEffects;
 import com.aetherteam.aether.entity.AetherEntityTypes;
+import com.aetherteam.aether.item.block.BurnableBlockItem;
 import com.aetherteam.aether.mixin.mixins.common.accessor.FireBlockAccessor;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.block.blocktype.*;
@@ -37,7 +38,6 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import teamrazor.deepaether.block.BurnableBlockItem;
 
 import java.util.Objects;
 import java.util.function.Function;
@@ -314,7 +314,7 @@ public class AncientAetherBlocks {
                 return new SignItem(new Item.Properties().stacksTo(16), SAKURA_HANGING_SIGN.get(), SAKURA_WALL_HANGING_SIGN.get());
             } else if (block == HIGHSPROOT_PLANKS.get()
                     || block == SAKURA_PLANKS.get()) {
-                return new BurnableBlockItem(300, block, new Item.Properties());
+                return new BurnableBlockItem(block, new Item.Properties());
             } else {
                 return new BlockItem(block, new Item.Properties());
             }
