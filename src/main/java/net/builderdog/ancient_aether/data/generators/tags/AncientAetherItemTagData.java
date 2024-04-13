@@ -384,8 +384,8 @@ public class AncientAetherItemTagData extends ItemTagsProvider {
                 AncientAetherItems.GRAPES.get()
         );
         tag(ItemTags.SIGNS).add(
-                AncientAetherItems.HIGHSPROOT_SIGN.get(),
-                AncientAetherItems.SAKURA_SIGN.get()
+                AncientAetherBlocks.HIGHSPROOT_SIGN.get().asItem(),
+                AncientAetherBlocks.SAKURA_SIGN.get().asItem()
         );
         tag(ItemTags.BEACON_PAYMENT_ITEMS).add(
                 AncientAetherItems.VALKYRUM.get()
@@ -399,8 +399,8 @@ public class AncientAetherItemTagData extends ItemTagsProvider {
                 AncientAetherItems.SAKURA_CHEST_BOAT.get()
         );
         tag(ItemTags.HANGING_SIGNS).add(
-                AncientAetherItems.HIGHSPROOT_HANGING_SIGN.get(),
-                AncientAetherItems.SAKURA_HANGING_SIGN.get()
+                AncientAetherBlocks.HIGHSPROOT_HANGING_SIGN.get().asItem(),
+                AncientAetherBlocks.SAKURA_HANGING_SIGN.get().asItem()
         );
         tag(ItemTags.TRIMMABLE_ARMOR).add(
                 AncientAetherItems.VALKYRUM_HELMET.get(),

@@ -27,13 +27,11 @@ import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.PathPackResources;
 import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.DispenserBlock;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.AddPackFindersEvent;
-import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent;
 import net.minecraftforge.event.server.ServerAboutToStartEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -219,15 +217,5 @@ public class AncientAether {
 
     private void addCompost(float chance, ItemLike item) {
         ComposterBlock.COMPOSTABLES.put(item.asItem(), chance);
-    }
-
-    @Mod.EventBusSubscriber
-    public static class AncientAetherFuels {
-        @SubscribeEvent
-        public static void furnaceFuelBurnTimeEvent(FurnaceFuelBurnTimeEvent event) {
-            Item item = event.getItemStack().getItem();
-            if (item == AncientAetherBlocks.HIGHSPROOT_PLANKS.get().asItem() || item == AncientAetherBlocks.SAKURA_PLANKS.get().asItem())
-                event.setBurnTime(300);
-        }
     }
 }
