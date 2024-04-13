@@ -40,6 +40,9 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 @SuppressWarnings("deprecation")
 public class Fluffalo extends WyndcapsAnimal implements Shearable, IForgeShearable {
@@ -49,11 +52,6 @@ public class Fluffalo extends WyndcapsAnimal implements Shearable, IForgeShearab
 
     public Fluffalo(EntityType<? extends AetherAnimal> entityType, Level level) {
         super(entityType, level);
-    }
-
-    @Override
-    public boolean isFood(ItemStack stack) {
-        return stack.is(AncientAetherTags.Items.FLUFFALO_TEMPTATION_ITEMS);
     }
 
     @Override
@@ -105,11 +103,7 @@ public class Fluffalo extends WyndcapsAnimal implements Shearable, IForgeShearab
     }
 
     public @NotNull ResourceLocation getDefaultLootTable() {
-        if (isSheared()) {
-            return AncientAetherLoot.ENTITIES_FLUFFALO_SHEARED;
-        } else {
-            return getType().getDefaultLootTable();
-        }
+        return isSheared() ? AncientAetherLoot.ENTITIES_FLUFFALO_SHEARED : getType().getDefaultLootTable();
     }
 
     protected void customServerAiStep() {
@@ -158,7 +152,7 @@ public class Fluffalo extends WyndcapsAnimal implements Shearable, IForgeShearab
     @Override
     public void handleEntityEvent(byte id) {
         if (id == 10) {
-            this.eatAnimationTick = 40;
+            eatAnimationTick = 40;
         } else {
             super.handleEntityEvent(id);
         }
@@ -193,24 +187,28 @@ public class Fluffalo extends WyndcapsAnimal implements Shearable, IForgeShearab
                 itementity.setDeltaMovement(itementity.getDeltaMovement().add(((random.nextFloat() - random.nextFloat()) * 0.1F), (random.nextFloat() * 0.05F), ((random.nextFloat() - random.nextFloat()) * 0.1F)));
             }
         }
-
     }
 
     @Nonnull
     @Override
-    public java.util.List<ItemStack> onSheared(@Nullable Player player, @Nonnull ItemStack item, Level world, BlockPos pos, int fortune) {
+    public List<ItemStack> onSheared(@Nullable Player player, @Nonnull ItemStack item, Level world, BlockPos pos, int fortune) {
         world.playSound(null, this, SoundEvents.SHEEP_SHEAR, player == null ? SoundSource.BLOCKS : SoundSource.PLAYERS, 1.0F, 1.0F);
         if (!world.isClientSide) {
             setSheared(true);
             int i = 1 + random.nextInt(3);
 
-            java.util.List<ItemStack> items = new java.util.ArrayList<>();
+            List<ItemStack> items = new ArrayList<>();
             for (int j = 0; j < i; ++j) {
                 items.add(new ItemStack(AncientAetherBlocks.FLUFFALO_WOOL.get()));
             }
             return items;
         }
-        return java.util.Collections.emptyList();
+        return Collections.emptyList();
+    }
+
+    @Override
+    public boolean isFood(ItemStack stack) {
+        return stack.is(AncientAetherTags.Items.FLUFFALO_TEMPTATION_ITEMS);
     }
 
     @Nullable
