@@ -6,7 +6,7 @@
       "item": "minecraft:book"
     },
     "G": {
-      "item": "aether:enchanted_gravitite"
+      "tag": "aether:processed/gravitite"
     },
     "O": {
       "item": "minecraft:obsidian"

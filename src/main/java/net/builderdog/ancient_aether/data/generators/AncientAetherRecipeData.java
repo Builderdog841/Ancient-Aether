@@ -79,7 +79,7 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Blocks.STONECUTTER)
                 .group("stonecutter")
-                .define('Z', AetherItems.ZANITE_GEMSTONE.get())
+                .define('Z', AetherTags.Items.GEMS_ZANITE)
                 .define('#', AetherBlocks.HOLYSTONE.get())
                 .pattern(" Z ")
                 .pattern("###")
@@ -88,17 +88,17 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Blocks.SMITHING_TABLE)
                 .group("smithing_table")
-                .define('Z', AetherItems.ZANITE_GEMSTONE.get())
+                .define('Z', AetherTags.Items.GEMS_ZANITE)
                 .define('P', AetherTags.Items.PLANKS_CRAFTING)
                 .pattern("ZZ")
                 .pattern("PP")
                 .pattern("PP")
-                .unlockedBy(getHasName(AetherItems.ZANITE_GEMSTONE.get()), has(AetherItems.ZANITE_GEMSTONE.get()))
+                .unlockedBy(getHasName(AetherItems.ZANITE_GEMSTONE.get()), has(AetherTags.Items.GEMS_ZANITE))
                 .save(consumer, name("skyroot_smithing_table_from_zanite"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Blocks.ANVIL)
                 .define('B', AetherBlocks.ZANITE_BLOCK.get())
-                .define('Z', AetherItems.ZANITE_GEMSTONE.get())
+                .define('Z', AetherTags.Items.GEMS_ZANITE)
                 .pattern("BBB")
                 .pattern(" Z ")
                 .pattern("ZZZ")
@@ -106,13 +106,13 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
                 .save(consumer, name("anvil_from_zanite"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.ENCHANTING_TABLE)
-                .define('G', AetherBlocks.ENCHANTED_GRAVITITE.get())
+                .define('G', AetherTags.Items.PROCESSED_GRAVITITE)
                 .define('O', Blocks.OBSIDIAN)
                 .define('B', Items.BOOK)
                 .pattern(" B ")
                 .pattern("GOG")
                 .pattern("OOO")
-                .unlockedBy(getHasName(AetherBlocks.ENCHANTED_GRAVITITE.get()), has(AetherBlocks.ENCHANTED_GRAVITITE.get()))
+                .unlockedBy(getHasName(AetherBlocks.ENCHANTED_GRAVITITE.get()), has(AetherTags.Items.PROCESSED_GRAVITITE))
                 .save(consumer, name("enchanting_table_from_gravitite"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.WIND_BLOWER.get())
@@ -121,7 +121,7 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
                 .pattern("WWW")
                 .pattern("WCW")
                 .pattern("WWW")
-                .unlockedBy("ancient_aether:windblower_ingredients", has(AncientAetherTags.Items.WINDBLOWER_INGREDIENTS))
+                .unlockedBy(getHasName(AetherBlocks.BLUE_AERCLOUD.get()), has(AncientAetherTags.Items.WINDBLOWER_INGREDIENTS))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Items.ARMOR_STAND)
@@ -134,7 +134,7 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
                 .save(consumer, name("armor_stand_from_holystone"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AncientAetherItems.ANCIENT_RUNE.get(),2)
-                .define('G', AetherBlocks.ENCHANTED_GRAVITITE.get())
+                .define('G', AetherTags.Items.PROCESSED_GRAVITITE)
                 .define('R', AncientAetherItems.ANCIENT_RUNE.get())
                 .define('A', AetherBlocks.AEROGEL.get())
                 .pattern("GRG")
@@ -153,10 +153,10 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Items.SHEARS)
-                .define('Z', AetherItems.ZANITE_GEMSTONE.get())
+                .define('Z', AetherTags.Items.GEMS_ZANITE)
                 .pattern(" Z")
                 .pattern("Z ")
-                .unlockedBy(getHasName(AetherItems.ZANITE_GEMSTONE.get()), has(AetherItems.ZANITE_GEMSTONE.get()))
+                .unlockedBy(getHasName(AetherItems.ZANITE_GEMSTONE.get()), has(AetherTags.Items.GEMS_ZANITE))
                 .save(consumer, name("shears_from_zanite"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.PAPER, 3)

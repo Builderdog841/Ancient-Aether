@@ -212,6 +212,10 @@ public class AncientAetherItemTagData extends ItemTagsProvider {
         tag(AetherTags.Items.AERBUNNY_TEMPTATION_ITEMS).add(
                 AncientAetherItems.GRAPES.get()
         );
+        tag(AetherTags.Items.SKYROOT_REPAIRING).add(
+                AncientAetherBlocks.HIGHSPROOT_PLANKS.get().asItem(),
+                AncientAetherBlocks.SAKURA_PLANKS.get().asItem()
+        );
         tag(AetherTags.Items.TOOLS_LANCES).add(
                 AncientAetherItems.VALKYRUM_LANCE.get()
         );

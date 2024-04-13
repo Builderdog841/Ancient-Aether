@@ -6,7 +6,7 @@
       "item": "aether:aerogel"
     },
     "G": {
-      "item": "aether:enchanted_gravitite"
+      "tag": "aether:processed/gravitite"
     },
     "R": {
       "item": "ancient_aether:ancient_rune"

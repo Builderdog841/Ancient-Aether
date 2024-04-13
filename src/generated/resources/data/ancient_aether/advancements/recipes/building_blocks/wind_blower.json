@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "ancient_aether:windblower_ingredients": {
+    "has_blue_aercloud": {
       "conditions": {
         "items": [
           {
@@ -20,7 +20,7 @@
   },
   "requirements": [
     [
-      "ancient_aether:windblower_ingredients",
+      "has_blue_aercloud",
       "has_the_recipe"
     ]
   ],

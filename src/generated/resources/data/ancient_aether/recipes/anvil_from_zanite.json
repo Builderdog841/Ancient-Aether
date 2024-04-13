@@ -6,7 +6,7 @@
       "item": "aether:zanite_block"
     },
     "Z": {
-      "item": "aether:zanite_gemstone"
+      "tag": "aether:gems/zanite"
     }
   },
   "pattern": [
