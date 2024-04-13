@@ -1,14 +1,14 @@
 {
   "values": [
-    "aether:lightning_knife",
     "aether:hammer_of_kingbdogz",
+    "aether:lightning_knife",
     "aether:blue_gummy_swet",
     "aether:golden_gummy_swet",
-    "aether:swet_cape",
     "aether:agility_cape",
+    "aether:swet_cape",
     "aether:cloud_staff",
+    "ancient_aether:festive_gummy_swet",
     "ancient_aether:hermes_ring",
-    "ancient_aether:hermes_pendant",
-    "ancient_aether:festive_gummy_swet"
+    "ancient_aether:hermes_pendant"
   ]
 }

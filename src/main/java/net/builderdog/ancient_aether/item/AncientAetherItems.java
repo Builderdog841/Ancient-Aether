@@ -67,8 +67,8 @@ public class AncientAetherItems {
     public static final RegistryObject<Item> VALKYRUM_BOOTS = ITEMS.register("valkyrum_boots", () -> new AncientAetherArmorItem(AncientAetherArmorTiers.VALKYRUM, ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> VALKYRUM_GLOVES = ITEMS.register("valkyrum_gloves", () -> new GlovesItem(AncientAetherArmorTiers.VALKYRUM, 1.0, "valkyrum_gloves", AetherSoundEvents.ITEM_ARMOR_EQUIP_VALKYRIE, new Item.Properties().stacksTo(1).durability(1561)));
 
-    public static final RegistryObject<SwordItem> ANCIENT_SWORD = ITEMS.register("ancient_sword", AncientSwordItem::new);
     public static final RegistryObject<PickaxeItem> ARKENZUS_PICKAXE = ITEMS.register("arkenzus_pickaxe", ArkenzusPickaxeItem::new);
+    public static final RegistryObject<SwordItem> ANCIENT_SWORD = ITEMS.register("ancient_sword", AncientSwordItem::new);
     public static final RegistryObject<Item> AERONAUTIC_DART_SHOOTER = ITEMS.register("aeronautic_dart_shooter", () -> new AeronauticDartShooterItem(AetherItems.GOLDEN_DART, (new Item.Properties().stacksTo(1))));
 
     public static final RegistryObject<Item> VALKYRUM_RING = ITEMS.register("valkyrum_ring", () -> new ValkyrumRingItem(new Item.Properties().stacksTo(1)));

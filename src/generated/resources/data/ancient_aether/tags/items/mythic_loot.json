@@ -1,11 +1,11 @@
 {
   "values": [
-    "aether:life_shard",
     "aether:obsidian_helmet",
     "aether:obsidian_chestplate",
     "aether:obsidian_leggings",
     "aether:obsidian_boots",
     "aether:obsidian_gloves",
+    "aether:life_shard",
     "ancient_aether:ancient_sword"
   ]
 }
