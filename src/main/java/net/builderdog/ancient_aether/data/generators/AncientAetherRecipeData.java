@@ -212,11 +212,11 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
         buttonBuilder(AncientAetherBlocks.HIGHSPROOT_BUTTON.get(), Ingredient.of(AncientAetherBlocks.HIGHSPROOT_PLANKS.get())).unlockedBy(getHasName(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()), has(AncientAetherBlocks.HIGHSPROOT_PLANKS.get())).group("wooden_button").save(consumer);
         buttonBuilder(AncientAetherBlocks.SAKURA_BUTTON.get(), Ingredient.of(AncientAetherBlocks.SAKURA_PLANKS.get())).unlockedBy(getHasName(AncientAetherBlocks.SAKURA_PLANKS.get()), has(AncientAetherBlocks.SAKURA_PLANKS.get())).group("wooden_button").save(consumer);
 
-        sign(consumer, AncientAetherItems.HIGHSPROOT_SIGN.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get());
-        sign(consumer, AncientAetherItems.SAKURA_SIGN.get(), AncientAetherBlocks.SAKURA_PLANKS.get());
+        sign(consumer, AncientAetherBlocks.HIGHSPROOT_SIGN.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get());
+        sign(consumer, AncientAetherBlocks.SAKURA_SIGN.get(), AncientAetherBlocks.SAKURA_PLANKS.get());
 
-        hangingSign(consumer, AncientAetherItems.HIGHSPROOT_HANGING_SIGN.get(), AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get());
-        hangingSign(consumer, AncientAetherItems.SAKURA_HANGING_SIGN.get(), AncientAetherBlocks.STRIPPED_SAKURA_LOG.get());
+        hangingSign(consumer, AncientAetherBlocks.HIGHSPROOT_HANGING_SIGN.get(), AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get());
+        hangingSign(consumer, AncientAetherBlocks.SAKURA_HANGING_SIGN.get(), AncientAetherBlocks.STRIPPED_SAKURA_LOG.get());
 
         bookshelf(consumer, AncientAetherBlocks.HIGHSPROOT_BOOKSHELF.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get());
         bookshelf(consumer, AncientAetherBlocks.SAKURA_BOOKSHELF.get(), AncientAetherBlocks.SAKURA_PLANKS.get());
