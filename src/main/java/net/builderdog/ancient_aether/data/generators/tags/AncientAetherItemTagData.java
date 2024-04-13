@@ -10,6 +10,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 
@@ -108,6 +109,62 @@ public class AncientAetherItemTagData extends ItemTagsProvider {
                 AetherItems.OBSIDIAN_GLOVES.get(),
                 AetherItems.LIFE_SHARD.get(),
                 AncientAetherItems.ANCIENT_SWORD.get()
+        );
+
+        tag(Tags.Items.BOOKSHELVES).add(
+                AncientAetherBlocks.HIGHSPROOT_BOOKSHELF.get().asItem(),
+                AncientAetherBlocks.SAKURA_BOOKSHELF.get().asItem()
+        );
+        tag(Tags.Items.FENCE_GATES).add(
+                AncientAetherBlocks.HIGHSPROOT_FENCE_GATE.get().asItem(),
+                AncientAetherBlocks.SAKURA_FENCE_GATE.get().asItem()
+        );
+        tag(Tags.Items.FENCE_GATES_WOODEN).add(
+                AncientAetherBlocks.HIGHSPROOT_FENCE_GATE.get().asItem(),
+                AncientAetherBlocks.SAKURA_FENCE_GATE.get().asItem()
+        );
+        tag(Tags.Items.FENCES).add(
+                AncientAetherBlocks.HIGHSPROOT_FENCE.get().asItem(),
+                AncientAetherBlocks.SAKURA_FENCE.get().asItem()
+        );
+        tag(Tags.Items.FENCES_WOODEN).add(
+                AncientAetherBlocks.HIGHSPROOT_FENCE.get().asItem(),
+                AncientAetherBlocks.SAKURA_FENCE.get().asItem()
+        );
+        tag(Tags.Items.GLASS).add(
+                AncientAetherBlocks.AEROGEL_GLASS.get().asItem()
+        );
+        tag(Tags.Items.GLASS_COLORLESS).add(
+                AncientAetherBlocks.AEROGEL_GLASS.get().asItem()
+        );
+        tag(Tags.Items.GLASS_PANES).add(
+                AncientAetherBlocks.AEROGEL_GLASS_PANE.get().asItem()
+        );
+        tag(Tags.Items.GLASS_PANES_COLORLESS).add(
+                AncientAetherBlocks.AEROGEL_GLASS_PANE.get().asItem()
+        );
+        tag(Tags.Items.ORE_RATES_SINGULAR).add(
+                AncientAetherBlocks.AETHER_QUARTZ_ORE.get().asItem(),
+                AncientAetherBlocks.VALKYRUM_ORE.get().asItem()
+        );
+        tag(Tags.Items.ORES).add(
+                AncientAetherBlocks.AETHER_QUARTZ_ORE.get().asItem(),
+                AncientAetherBlocks.VALKYRUM_ORE.get().asItem()
+        );
+        tag(Tags.Items.STORAGE_BLOCKS).add(
+                AncientAetherBlocks.VALKYRUM_BLOCK.get().asItem()
+        );
+        tag(Tags.Items.ARMORS_HELMETS).add(
+                AncientAetherItems.VALKYRUM_HELMET.get()
+        );
+        tag(Tags.Items.ARMORS_CHESTPLATES).add(
+                AncientAetherItems.VALKYRUM_CHESTPLATE.get()
+        );
+        tag(Tags.Items.ARMORS_LEGGINGS).add(
+                AncientAetherItems.VALKYRUM_LEGGINGS.get()
+        );
+        tag(Tags.Items.ARMORS_BOOTS).add(
+                AncientAetherItems.VALKYRUM_BOOTS.get()
         );
     }
 }

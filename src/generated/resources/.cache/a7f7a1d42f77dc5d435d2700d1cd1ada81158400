@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-13T13:36:47.0878297	Tags for minecraft:item mod id ancient_aether
+// 1.20.1	2024-04-13T13:49:22.2328204	Tags for minecraft:item mod id ancient_aether
 e084625644f35a4ba855787e1890503cbb135f22 data/ancient_aether/tags/items/aerogetic_blocks.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/ancient_aether/tags/items/ancient_repairing.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/ancient_aether/tags/items/arkenzus_repairing.json
@@ -13,3 +13,19 @@ d67f25dcae95241fe7e47e48d1198f548a531f17 data/ancient_aether/tags/items/sakura_l
 064bf36f6ba340d92023b21fb046f315c63d43ce data/ancient_aether/tags/items/valkyrum_repairing.json
 55e0c85a00b9802d7068a1ad446fcd04921d9dc5 data/ancient_aether/tags/items/vases.json
 29f44b1e6cf67131ca8a45c9a5c05a0b846a5b41 data/ancient_aether/tags/items/windblower_ingredients.json
+4429f5fdd082425f8a743a3e462523811e55fa84 data/forge/tags/items/armors/boots.json
+61578b71f59cb3df9b48aa895b38164908e53ca4 data/forge/tags/items/armors/chestplates.json
+23c23f68501b15a1d15eb164117925078b57a519 data/forge/tags/items/armors/helmets.json
+f31a1bde3d218672ae02892a4207fb688dab2faa data/forge/tags/items/armors/leggings.json
+1fcae52fd81743af58d3db327600776ff6f956d9 data/forge/tags/items/bookshelves.json
+5aeceabe8e6aaf110d970e1a2189762e5ebeb938 data/forge/tags/items/fences.json
+5aeceabe8e6aaf110d970e1a2189762e5ebeb938 data/forge/tags/items/fences/wooden.json
+db284a03b1ab6c6d5cef25fdf5349b6851a7f516 data/forge/tags/items/fence_gates.json
+db284a03b1ab6c6d5cef25fdf5349b6851a7f516 data/forge/tags/items/fence_gates/wooden.json
+9b907c54e7c1c49be61873997383fdd310e97b3c data/forge/tags/items/glass.json
+9b907c54e7c1c49be61873997383fdd310e97b3c data/forge/tags/items/glass/colorless.json
+7198e1f5ee81b117fac39fd1bb8febdb1ea91672 data/forge/tags/items/glass_panes.json
+7198e1f5ee81b117fac39fd1bb8febdb1ea91672 data/forge/tags/items/glass_panes/colorless.json
+90d07b81e26e07844cfff7b76febf1a2861b273f data/forge/tags/items/ores.json
+90d07b81e26e07844cfff7b76febf1a2861b273f data/forge/tags/items/ore_rates/singular.json
+bd87b848151f5ba65e717dd3f25eb88e0ba9fc12 data/forge/tags/items/storage_blocks.json
