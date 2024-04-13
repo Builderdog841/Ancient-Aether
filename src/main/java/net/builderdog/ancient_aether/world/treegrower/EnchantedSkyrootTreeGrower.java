@@ -11,10 +11,6 @@ public class EnchantedSkyrootTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource random, boolean largeHive) {
-        if (random.nextInt(10) == 0) {
-            return AncientAetherTreeFeatures.FANCY_ENCHANTED_SKYROOT_TREE;
-        } else {
-            return AncientAetherTreeFeatures.ENCHANTED_SKYROOT_TREE;
-        }
+        return random.nextInt(10) == 0 ? AncientAetherTreeFeatures.FANCY_ENCHANTED_SKYROOT_TREE : AncientAetherTreeFeatures.ENCHANTED_SKYROOT_TREE;
     }
 }

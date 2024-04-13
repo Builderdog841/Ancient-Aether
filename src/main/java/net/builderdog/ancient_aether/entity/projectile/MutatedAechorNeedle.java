@@ -12,12 +12,12 @@ import org.jetbrains.annotations.NotNull;
 public class MutatedAechorNeedle extends AbstractDart {
     public MutatedAechorNeedle(EntityType<? extends MutatedAechorNeedle> type, Level level) {
         super(type, level, null);
-        setBaseDamage(0.5);
+        setBaseDamage(6);
     }
 
     public MutatedAechorNeedle(Level level, LivingEntity shooter) {
         super(AncientAetherEntityTypes.MUTATED_AECHOR_NEEDLE.get(), level, shooter, null);
-        setBaseDamage(0.5);
+        setBaseDamage(6);
     }
 
     protected void doPostHurtEffects(@NotNull LivingEntity living) {

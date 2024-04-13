@@ -10,11 +10,7 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 public class LevelHooks {
     public static ResourceKey<ConfiguredFeature<?, ?>> modifyGrownSapling(RandomSource random, Holder<ConfiguredFeature<?, ?>> feature) {
         if (feature != null) {
-            if (random.nextInt(10) == 0) {
-                return AncientAetherTreeFeatures.FANCY_SKYROOT_TREE;
-            } else {
-                return AetherConfiguredFeatures.SKYROOT_TREE_CONFIGURATION;
-            }
+            return random.nextInt(10) == 0 ? AncientAetherTreeFeatures.FANCY_SKYROOT_TREE : AetherConfiguredFeatures.SKYROOT_TREE_CONFIGURATION;
         }
         return null;
     }

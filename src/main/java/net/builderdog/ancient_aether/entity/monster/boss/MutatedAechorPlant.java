@@ -13,6 +13,7 @@ import net.builderdog.ancient_aether.AncientAetherConfig;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.entity.projectile.MutatedAechorNeedle;
+import net.builderdog.ancient_aether.entity.projectile.PoisonBomb;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
@@ -30,6 +31,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.util.Mth;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.BossEvent;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.DifficultyInstance;
@@ -93,12 +95,10 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     }
 
     @Override
-    public void push(double x, double y, double z) {
-    }
+    public void push(double x, double y, double z) {}
 
     @Override
-    protected void jumpFromGround() {
-    }
+    protected void jumpFromGround() {}
 
     @Override
     public boolean canBeLeashed(@NotNull Player player) {
@@ -154,8 +154,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     }
 
     @Override
-    public void checkDespawn() {
-    }
+    public void checkDespawn() {}
 
     @Override
     public @NotNull Packet<ClientGamePacketListener> getAddEntityPacket() {
@@ -228,18 +227,33 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     @Override
     public void performRangedAttack(@NotNull LivingEntity target, float distanceFactor) {
         if (isActive()) {
-            MutatedAechorNeedle needle = new MutatedAechorNeedle(level(), this);
-            double x = target.getX() - getX();
-            double z = target.getZ() - getZ();
-            double sqrt = Math.sqrt(x * x + z * z + 0.1);
-            double y = 0.1 + sqrt * 0.5 + (getY() - target.getY()) * 0.25;
-            double distance = 1.5 / sqrt;
-            x *= distance;
-            z *= distance;
-            needle.shoot(x, y + 0.5F, z, 0.285F + (float) y * 0.08F, 1.0F);
+            if (RandomSource.create().nextInt(2) == 0) {
+                poisonBombRangedAttack(target);
+            } else {
+                needleRangedAttack(target);
+            }
             playSound(AncientAetherSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_SHOOT.get(), 2.0F, 1.0F / (getRandom().nextFloat() * 0.4F + 0.8F));
-            level().addFreshEntity(needle);
         }
+    }
+
+    public void needleRangedAttack(@NotNull LivingEntity target) {
+        MutatedAechorNeedle needle = new MutatedAechorNeedle(level(), this);
+        double d0 = target.getX() - getX();
+        double d1 = target.getY(0.75) - needle.getY();
+        double d2 = target.getZ() - getZ();
+        double d3 = Mth.sqrt((float) (Mth.square(d0) + Mth.square(d2)));
+        needle.shoot(d0, d1 + d3 * 0.2, d2, 1.0F, (float) (14 - level().getDifficulty().getId() * 4));
+        level().addFreshEntity(needle);
+    }
+
+    public void poisonBombRangedAttack(@NotNull LivingEntity target) {
+        PoisonBomb poisonBomb = new PoisonBomb(level(), this);
+        double d0 = target.getX() - getX();
+        double d1 = target.getY(0.75) - poisonBomb.getY();
+        double d2 = target.getZ() - getZ();
+        double d3 = Mth.sqrt((float) (Mth.square(d0) + Mth.square(d2)));
+        poisonBomb.shoot(d0, d1 + d3 * 0.2, d2, 1.0F, (float) (14 - level().getDifficulty().getId() * 4));
+        level().addFreshEntity(poisonBomb);
     }
 
     @Nullable
