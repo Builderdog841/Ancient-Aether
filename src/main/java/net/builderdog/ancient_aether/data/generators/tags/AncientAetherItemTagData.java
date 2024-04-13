@@ -10,6 +10,7 @@ import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -23,6 +24,7 @@ public class AncientAetherItemTagData extends ItemTagsProvider {
         super(output, registries, blockTags, AncientAether.MODID, helper);
     }
 
+    @SuppressWarnings("unchecked")
     @Override
     public void addTags(HolderLookup.@NotNull Provider provider) {
         copy(AncientAetherTags.Blocks.HIGHSPROOT_LOGS, AncientAetherTags.Items.HIGHSPROOT_LOGS);
@@ -181,6 +183,9 @@ public class AncientAetherItemTagData extends ItemTagsProvider {
                 AncientAetherBlocks.HIGHSPROOT_PLANKS.get().asItem(),
                 AncientAetherBlocks.SAKURA_PLANKS.get().asItem()
         );
+        tag(AetherTags.Items.GOLDEN_AMBER_HARVESTERS).add(
+                AncientAetherItems.VALKYRUM_AXE.get()
+        );
         tag(AetherTags.Items.DART_SHOOTERS).add(
                 AncientAetherItems.AERONAUTIC_DART_SHOOTER.get()
         );
@@ -301,6 +306,140 @@ public class AncientAetherItemTagData extends ItemTagsProvider {
         );
         tag(Tags.Items.ARMORS_BOOTS).add(
                 AncientAetherItems.VALKYRUM_BOOTS.get()
+        );
+
+        tag(ItemTags.WOOL).add(
+                AncientAetherBlocks.FLUFFALO_WOOL.get().asItem()
+        );
+        tag(ItemTags.WOODEN_BUTTONS).add(
+                AncientAetherBlocks.HIGHSPROOT_BUTTON.get().asItem(),
+                AncientAetherBlocks.SAKURA_BUTTON.get().asItem()
+        );
+        tag(ItemTags.WOOL_CARPETS).add(
+                AncientAetherBlocks.FLUFFALO_CARPET.get().asItem()
+        );
+        tag(ItemTags.WOODEN_DOORS).add(
+                AncientAetherBlocks.HIGHSPROOT_DOOR.get().asItem(),
+                AncientAetherBlocks.SAKURA_DOOR.get().asItem()
+        );
+        tag(ItemTags.WOODEN_STAIRS).add(
+                AncientAetherBlocks.HIGHSPROOT_STAIRS.get().asItem(),
+                AncientAetherBlocks.SAKURA_STAIRS.get().asItem()
+        );
+        tag(ItemTags.WOODEN_SLABS).add(
+                AncientAetherBlocks.HIGHSPROOT_SLAB.get().asItem(),
+                AncientAetherBlocks.SAKURA_SLAB.get().asItem()
+        );
+        tag(ItemTags.WOODEN_FENCES).add(
+                AncientAetherBlocks.HIGHSPROOT_FENCE.get().asItem(),
+                AncientAetherBlocks.SAKURA_FENCE.get().asItem()
+        );
+        tag(ItemTags.WOODEN_PRESSURE_PLATES).add(
+                AncientAetherBlocks.HIGHSPROOT_PRESSURE_PLATE.get().asItem(),
+                AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get().asItem()
+        );
+        tag(ItemTags.WOODEN_TRAPDOORS).add(
+                AncientAetherBlocks.HIGHSPROOT_TRAPDOOR.get().asItem(),
+                AncientAetherBlocks.SAKURA_TRAPDOOR.get().asItem()
+        );
+        tag(ItemTags.SAPLINGS).add(
+                AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get().asItem(),
+                AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get().asItem(),
+                AncientAetherBlocks.SKYROOT_PINE_SAPLING.get().asItem(),
+                AncientAetherBlocks.BLUE_SKYROOT_PINE_SAPLING.get().asItem(),
+                AncientAetherBlocks.HIGHSPROOT_SAPLING.get().asItem(),
+                AncientAetherBlocks.SAKURA_SAPLING.get().asItem()
+        );
+        tag(ItemTags.LOGS_THAT_BURN).addTags(
+                AncientAetherTags.Items.HIGHSPROOT_LOGS,
+                AncientAetherTags.Items.SAKURA_LOGS
+        );
+        tag(ItemTags.WALLS).add(
+                AncientAetherBlocks.HIGHSPROOT_LOG_WALL.get().asItem(),
+                AncientAetherBlocks.HIGHSPROOT_WOOD_WALL.get().asItem(),
+                AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG_WALL.get().asItem(),
+                AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD_WALL.get().asItem(),
+                AncientAetherBlocks.SAKURA_LOG_WALL.get().asItem(),
+                AncientAetherBlocks.SAKURA_WOOD_WALL.get().asItem(),
+                AncientAetherBlocks.STRIPPED_SAKURA_LOG_WALL.get().asItem(),
+                AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL.get().asItem(),
+                AncientAetherBlocks.CARVED_TILE_WALL.get().asItem(),
+                AncientAetherBlocks.AEROGETIC_WALL.get().asItem()
+        );
+        tag(ItemTags.LEAVES).add(
+                AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES.get().asItem(),
+                AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES.get().asItem(),
+                AncientAetherBlocks.SKYROOT_PINE_LEAVES.get().asItem(),
+                AncientAetherBlocks.BLUE_SKYROOT_PINE_LEAVES.get().asItem(),
+                AncientAetherBlocks.HIGHSPROOT_LEAVES.get().asItem(),
+                AncientAetherBlocks.SAKURA_LEAVES.get().asItem()
+        );
+        tag(ItemTags.SMALL_FLOWERS).add(
+                AncientAetherBlocks.SUNSET_ROSE.get().asItem(),
+                AncientAetherBlocks.SKY_BLUES.get().asItem(),
+                AncientAetherBlocks.WYND_THISTLE.get().asItem(),
+                AncientAetherBlocks.ELEVATIA.get().asItem()
+        );
+        tag(ItemTags.FOX_FOOD).add(
+                AncientAetherItems.GRAPES.get()
+        );
+        tag(ItemTags.SIGNS).add(
+                AncientAetherItems.HIGHSPROOT_SIGN.get(),
+                AncientAetherItems.SAKURA_SIGN.get()
+        );
+        tag(ItemTags.BEACON_PAYMENT_ITEMS).add(
+                AncientAetherItems.VALKYRUM.get()
+        );
+        tag(ItemTags.BOATS).add(
+                AncientAetherItems.HIGHSPROOT_BOAT.get(),
+                AncientAetherItems.SAKURA_BOAT.get()
+        );
+        tag(ItemTags.CHEST_BOATS).add(
+                AncientAetherItems.HIGHSPROOT_CHEST_BOAT.get(),
+                AncientAetherItems.SAKURA_CHEST_BOAT.get()
+        );
+        tag(ItemTags.HANGING_SIGNS).add(
+                AncientAetherItems.HIGHSPROOT_HANGING_SIGN.get(),
+                AncientAetherItems.SAKURA_HANGING_SIGN.get()
+        );
+        tag(ItemTags.TRIMMABLE_ARMOR).add(
+                AncientAetherItems.VALKYRUM_HELMET.get(),
+                AncientAetherItems.VALKYRUM_CHESTPLATE.get(),
+                AncientAetherItems.VALKYRUM_LEGGINGS.get(),
+                AncientAetherItems.VALKYRUM_BOOTS.get(),
+                AncientAetherItems.VALKYRUM_GLOVES.get()
+        );
+        tag(ItemTags.TRIM_MATERIALS).add(
+                AncientAetherItems.VALKYRUM.get(),
+                AncientAetherBlocks.ATMOSINE_CRYSTAL.get().asItem()
+        );
+        tag(ItemTags.TRIM_TEMPLATES).add(
+                AncientAetherItems.WYND_ARMOR_TRIM_SMITHING_TEMPLATE.get(),
+                AncientAetherItems.WHALE_ARMOR_TRIM_SMITHING_TEMPLATE.get(),
+                AncientAetherItems.ASCENDED_ARMOR_TRIM_SMITHING_TEMPLATE.get(),
+                AncientAetherItems.MYSTERIOUS_ARMOR_TRIM_SMITHING_TEMPLATE.get(),
+                AncientAetherItems.MECHANICAL_ARMOR_TRIM_SMITHING_TEMPLATE.get(),
+                AncientAetherItems.MOSAIC_ARMOR_TRIM_SMITHING_TEMPLATE.get(),
+                AncientAetherItems.ROYAL_ARMOR_TRIM_SMITHING_TEMPLATE.get(),
+                AncientAetherItems.SOLAR_ARMOR_TRIM_SMITHING_TEMPLATE.get(),
+                AncientAetherItems.ANCIENT_ARMOR_TRIM_SMITHING_TEMPLATE.get()
+        );
+        tag(ItemTags.SWORDS).add(
+                AncientAetherItems.VALKYRUM_SWORD.get(),
+                AncientAetherItems.ANCIENT_SWORD.get()
+        );
+        tag(ItemTags.AXES).add(
+                AncientAetherItems.VALKYRUM_AXE.get()
+        );
+        tag(ItemTags.HOES).add(
+                AncientAetherItems.VALKYRUM_HOE.get()
+        );
+        tag(ItemTags.PICKAXES).add(
+                AncientAetherItems.VALKYRUM_PICKAXE.get(),
+                AncientAetherItems.ARKENZUS_PICKAXE.get()
+        );
+        tag(ItemTags.SHOVELS).add(
+                AncientAetherItems.VALKYRUM_SHOVEL.get()
         );
     }
 }
