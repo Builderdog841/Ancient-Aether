@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.event.listeners;
+package net.builderdog.ancient_aether.event.listeners.ability;
 
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.event.hooks.AbilityHooks;

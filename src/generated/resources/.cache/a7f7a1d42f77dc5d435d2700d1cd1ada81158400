@@ -1,4 +1,33 @@
-// 1.20.1	2024-04-13T13:49:22.2328204	Tags for minecraft:item mod id ancient_aether
+// 1.20.1	2024-04-13T14:46:38.6132675	Tags for minecraft:item mod id ancient_aether
+a6dcafb905da729c07d1dabd0f4f98e1e75317cd data/aether/tags/items/accessories_capes.json
+cd168c9518529051447f91f38db8a192fce79575 data/aether/tags/items/accessories_gloves.json
+add87f05b14c634a1e8ebb0ea33f104c4c8fadcf data/aether/tags/items/accessories_miscellaneous.json
+d7629477e4217fcf38fee005d5ece1ac7b857c20 data/aether/tags/items/accessories_pendants.json
+e59fbc0b9a71b6942ca579360f293a5164309412 data/aether/tags/items/accessories_rings.json
+3951f6de2c4e0f20be405097c4fddb2de840d48a data/aether/tags/items/accessories_shields.json
+af89ca9b971b1a84ff96ce1c0fcceda39c1b6958 data/aether/tags/items/aerbunny_temptation_items.json
+f0714fea3e89b69a7a6a6c729a028562bc0bd412 data/aether/tags/items/aerclouds.json
+9d1638c7b22ae315b70b4a67c5d85847dba11e46 data/aether/tags/items/angelic_blocks.json
+f95244a71cf5ac816c4c32016a0294d575be6e50 data/aether/tags/items/boss_doorway_dungeon_blocks.json
+b221ec153f29e62c2cbf6a8c454ed35e266b870a data/aether/tags/items/bronze_dungeon_loot.json
+220a602241a8865d3b713085fa08983dc7e1058a data/aether/tags/items/dart_shooters.json
+36c3b9c779555d4f246a39ee4b35efec14927024 data/aether/tags/items/dungeon_blocks.json
+3b63d7e89dd638618c9c82f04a3c06eed119ebb8 data/aether/tags/items/dungeon_keys.json
+af89ca9b971b1a84ff96ce1c0fcceda39c1b6958 data/aether/tags/items/flying_cow_temptation_items.json
+b221ec153f29e62c2cbf6a8c454ed35e266b870a data/aether/tags/items/gold_dungeon_loot.json
+ae3049100e010970dbef2412ecb97bf585fa4481 data/aether/tags/items/hellfire_blocks.json
+631aec4addcd6459bf8adebdb2b0490856dfec83 data/aether/tags/items/locked_dungeon_blocks.json
+bc7db5d313efba99b9b92d81cd88bad0c6658605 data/aether/tags/items/moa_eggs.json
+af89ca9b971b1a84ff96ce1c0fcceda39c1b6958 data/aether/tags/items/phyg_temptation_items.json
+afbe8705b8f2b3028b39109c46685220c754d68b data/aether/tags/items/planks_crafting.json
+cd894db73f73ca794e8ba9ee4f3575ff34c587fd data/aether/tags/items/sentry_blocks.json
+af89ca9b971b1a84ff96ce1c0fcceda39c1b6958 data/aether/tags/items/sheepuff_temptation_items.json
+b221ec153f29e62c2cbf6a8c454ed35e266b870a data/aether/tags/items/silver_dungeon_loot.json
+afbe8705b8f2b3028b39109c46685220c754d68b data/aether/tags/items/skyroot_stick_crafting.json
+afbe8705b8f2b3028b39109c46685220c754d68b data/aether/tags/items/skyroot_tool_crafting.json
+36bb0628e59216318433fb3f03c41918d8815046 data/aether/tags/items/tools/lances.json
+95d1972eee6e901a575c51f97ee34119e9ccfdc9 data/aether/tags/items/trapped_dungeon_blocks.json
+3ca0ccaa46ec3376d5e096ae3e676c5a1c739a4a data/aether/tags/items/treasure_doorway_dungeon_blocks.json
 e084625644f35a4ba855787e1890503cbb135f22 data/ancient_aether/tags/items/aerogetic_blocks.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/ancient_aether/tags/items/ancient_repairing.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/ancient_aether/tags/items/arkenzus_repairing.json
