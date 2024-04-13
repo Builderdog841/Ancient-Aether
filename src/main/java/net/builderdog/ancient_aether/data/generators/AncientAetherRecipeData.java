@@ -117,11 +117,11 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.WIND_BLOWER.get())
                 .define('W', AetherBlocks.COLD_AERCLOUD.get())
-                .define('C', AncientAetherTags.Items.VELOCITY_AERCLOUDS)
+                .define('C', AncientAetherTags.Items.WINDBLOWER_INGREDIENTS)
                 .pattern("WWW")
                 .pattern("WCW")
                 .pattern("WWW")
-                .unlockedBy("ancient_aether:velocity_aerclouds", has(AncientAetherTags.Items.VELOCITY_AERCLOUDS))
+                .unlockedBy("ancient_aether:windblower_ingredients", has(AncientAetherTags.Items.WINDBLOWER_INGREDIENTS))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Items.ARMOR_STAND)
@@ -170,8 +170,8 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
         woodFromLogs(consumer, AncientAetherBlocks.SAKURA_WOOD.get(), AncientAetherBlocks.SAKURA_LOG.get());
         woodFromLogs(consumer, AncientAetherBlocks.STRIPPED_SAKURA_WOOD.get(), AncientAetherBlocks.STRIPPED_SAKURA_LOG.get());
 
-        planksFromLogs(consumer, AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), AncientAetherTags.Items.CRAFTS_HIGHSPROOT_PLANKS, 4);
-        planksFromLogs(consumer, AncientAetherBlocks.SAKURA_PLANKS.get(), AncientAetherTags.Items.CRAFTS_SAKURA_PLANKS, 4);
+        planksFromLogs(consumer, AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), AncientAetherTags.Items.HIGHSPROOT_LOGS, 4);
+        planksFromLogs(consumer, AncientAetherBlocks.SAKURA_PLANKS.get(), AncientAetherTags.Items.SAKURA_LOGS, 4);
 
         stairs(AncientAetherBlocks.HIGHSPROOT_STAIRS, AncientAetherBlocks.HIGHSPROOT_PLANKS).group("wooden_stairs").save(consumer);
         stairs(AncientAetherBlocks.SAKURA_STAIRS, AncientAetherBlocks.SAKURA_PLANKS).group("wooden_stairs").save(consumer);

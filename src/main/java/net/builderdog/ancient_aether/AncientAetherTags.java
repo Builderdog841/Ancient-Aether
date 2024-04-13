@@ -12,6 +12,9 @@ import net.minecraft.world.level.levelgen.structure.Structure;
 public class AncientAetherTags {
 
     public static class Blocks {
+        public static final TagKey<Block> HIGHSPROOT_LOGS = tag("highsproot_logs");
+        public static final TagKey<Block> SAKURA_LOGS = tag("sakura_logs");
+        public static final TagKey<Block> MOSAIC_BLOCKS = tag("mosaic_blocks");
         public static final TagKey<Block> AEROGETIC_BLOCKS = tag("aerogetic_blocks");
         public static final TagKey<Block> VASES = tag("vases");
         public static final TagKey<Block> WYNDCAPS_ANIMAL_SPAWNABLE_ON = tag("wyndcaps_animals_spawnable_on");
@@ -25,11 +28,12 @@ public class AncientAetherTags {
         }
     }
     public static class Items {
-        public static final TagKey<Item> CRAFTS_HIGHSPROOT_PLANKS = tag("crafts_highsproot_planks");
-        public static final TagKey<Item> CRAFTS_SAKURA_PLANKS = tag("crafts_sakura_planks");
-        public static final TagKey<Item> VELOCITY_AERCLOUDS = tag("velocity_aerclouds");
+        public static final TagKey<Item> HIGHSPROOT_LOGS = tag("highsproot_logs");
+        public static final TagKey<Item> SAKURA_LOGS = tag("sakura_logs");
+        public static final TagKey<Item> MOSAIC_BLOCKS = tag("mosaic_blocks");
         public static final TagKey<Item> AEROGETIC_BLOCKS = tag("aerogetic_blocks");
         public static final TagKey<Item> VASES = tag("vases");
+        public static final TagKey<Item> WINDBLOWER_INGREDIENTS = tag("windblower_ingredients");
         public static final TagKey<Item> VALKYRUM_REPAIRING = tag("valkyrum_repairing");
         public static final TagKey<Item> ANCIENT_REPAIRING = tag("ancient_repairing");
         public static final TagKey<Item> ARKENZUS_REPAIRING = tag("arkenzus_repairing");

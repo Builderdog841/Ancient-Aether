@@ -25,6 +25,39 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
     @SuppressWarnings("unchecked")
     @Override
     public void addTags(HolderLookup.@NotNull Provider provider) {
+        tag(AncientAetherTags.Blocks.HIGHSPROOT_LOGS).add(
+                AncientAetherBlocks.HIGHSPROOT_LOG.get(),
+                AncientAetherBlocks.HIGHSPROOT_WOOD.get(),
+                AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get(),
+                AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD.get(),
+                AncientAetherBlocks.HIGHSPROOT_LOG_WALL.get(),
+                AncientAetherBlocks.HIGHSPROOT_WOOD_WALL.get(),
+                AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG_WALL.get(),
+                AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD_WALL.get()
+        );
+        tag(AncientAetherTags.Blocks.SAKURA_LOGS).add(
+                AncientAetherBlocks.SAKURA_LOG.get(),
+                AncientAetherBlocks.SAKURA_WOOD.get(),
+                AncientAetherBlocks.STRIPPED_SAKURA_LOG.get(),
+                AncientAetherBlocks.STRIPPED_SAKURA_WOOD.get(),
+                AncientAetherBlocks.SAKURA_LOG_WALL.get(),
+                AncientAetherBlocks.SAKURA_WOOD_WALL.get(),
+                AncientAetherBlocks.STRIPPED_SAKURA_LOG_WALL.get(),
+                AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL.get()
+        );
+        tag(AncientAetherTags.Blocks.MOSAIC_BLOCKS).add(
+                AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get(),
+                AncientAetherBlocks.CARVED_STONE_MOSAIC.get(),
+                AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get(),
+                AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get(),
+                AncientAetherBlocks.AEROGETIC_STONE.get(),
+                AncientAetherBlocks.GALE_STONE_MOSAIC.get(),
+                AncientAetherBlocks.LOCKED_CARVED_STONE_MOSAIC.get(),
+                AncientAetherBlocks.LOCKED_ANGELIC_STONE_MOSAIC.get(),
+                AncientAetherBlocks.LOCKED_HELLFIRE_STONE_MOSAIC.get(),
+                AncientAetherBlocks.LOCKED_AEROGETIC_STONE.get(),
+                AncientAetherBlocks.LOCKED_GALE_STONE_MOSAIC.get()
+        );
         tag(AncientAetherTags.Blocks.AEROGETIC_BLOCKS).add(
                 AncientAetherBlocks.AEROGETIC_STONE.get(),
                 AncientAetherBlocks.AEROGETIC_STAIRS.get(),
@@ -183,89 +216,15 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
         );
         tag(AetherTags.Blocks.GRAVITITE_ABILITY_BLACKLIST).add(
                 AncientAetherBlocks.VALKYRUM_ORE.get(),
-                AncientAetherBlocks.VALKYRUM_BLOCK.get(),
                 AncientAetherBlocks.HIGHSPROOT_BUTTON.get(),
                 AncientAetherBlocks.HIGHSPROOT_PRESSURE_PLATE.get(),
                 AncientAetherBlocks.SAKURA_BUTTON.get(),
-                AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get()
+                AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get(),
+                AncientAetherBlocks.VALKYRUM_BLOCK.get()
         );
         tag(AetherTags.Blocks.COCKATRICE_SPAWNABLE_BLACKLIST).addTags(
                 AncientAetherTags.Blocks.AEROGETIC_BLOCKS
         );
-        /*
-        tag(AetherTags.Blocks.TREATED_AS_AETHER_BLOCK).add(
-                AncientAetherBlocks.GRAVITY_GRAVEL.get(),
-                AncientAetherBlocks.WYND_ICE.get(),
-                AncientAetherBlocks.AETHER_QUARTZ_ORE.get(),
-                AncientAetherBlocks.VALKYRUM_ORE.get(),
-                AncientAetherBlocks.ATMOSINE_CRYSTAL.get(),
-                AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES.get(),
-                AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES.get(),
-                AncientAetherBlocks.SKYROOT_PINE_LEAVES.get(),
-                AncientAetherBlocks.BLUE_SKYROOT_PINE_LEAVES.get(),
-                AncientAetherBlocks.HIGHSPROOT_LEAVES.get(),
-                AncientAetherBlocks.SAKURA_LEAVES.get(),
-                AncientAetherBlocks.GRAPE_VINE.get(),
-                AncientAetherBlocks.HIGHSPROOT_LOG.get(),
-                AncientAetherBlocks.HIGHSPROOT_WOOD.get(),
-                AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get(),
-                AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD.get(),
-                AncientAetherBlocks.SAKURA_LOG.get(),
-                AncientAetherBlocks.SAKURA_WOOD.get(),
-                AncientAetherBlocks.STRIPPED_SAKURA_LOG.get(),
-                AncientAetherBlocks.STRIPPED_SAKURA_WOOD.get(),
-                AncientAetherBlocks.HIGHSPROOT_LOG_WALL.get(),
-                AncientAetherBlocks.HIGHSPROOT_WOOD_WALL.get(),
-                AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG_WALL.get(),
-                AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD_WALL.get(),
-                AncientAetherBlocks.SAKURA_LOG_WALL.get(),
-                AncientAetherBlocks.SAKURA_WOOD_WALL.get(),
-                AncientAetherBlocks.STRIPPED_SAKURA_LOG_WALL.get(),
-                AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL.get(),
-                AncientAetherBlocks.HIGHSPROOT_PLANKS.get(),
-                AncientAetherBlocks.HIGHSPROOT_STAIRS.get(),
-                AncientAetherBlocks.HIGHSPROOT_SLAB.get(),
-                AncientAetherBlocks.HIGHSPROOT_FENCE.get(),
-                AncientAetherBlocks.HIGHSPROOT_FENCE_GATE.get(),
-                AncientAetherBlocks.HIGHSPROOT_DOOR.get(),
-                AncientAetherBlocks.HIGHSPROOT_TRAPDOOR.get(),
-                AncientAetherBlocks.HIGHSPROOT_BUTTON.get(),
-                AncientAetherBlocks.HIGHSPROOT_PRESSURE_PLATE.get(),
-                AncientAetherBlocks.HIGHSPROOT_SIGN.get(),
-                AncientAetherBlocks.HIGHSPROOT_WALL_SIGN.get(),
-                AncientAetherBlocks.HIGHSPROOT_HANGING_SIGN.get(),
-                AncientAetherBlocks.HIGHSPROOT_WALL_HANGING_SIGN.get(),
-                AncientAetherBlocks.HIGHSPROOT_BOOKSHELF.get(),
-                AncientAetherBlocks.SAKURA_PLANKS.get(),
-                AncientAetherBlocks.SAKURA_STAIRS.get(),
-                AncientAetherBlocks.SAKURA_SLAB.get(),
-                AncientAetherBlocks.SAKURA_FENCE.get(),
-                AncientAetherBlocks.SAKURA_FENCE_GATE.get(),
-                AncientAetherBlocks.SAKURA_DOOR.get(),
-                AncientAetherBlocks.SAKURA_TRAPDOOR.get(),
-                AncientAetherBlocks.SAKURA_BUTTON.get(),
-                AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get(),
-                AncientAetherBlocks.SAKURA_SIGN.get(),
-                AncientAetherBlocks.SAKURA_WALL_SIGN.get(),
-                AncientAetherBlocks.SAKURA_HANGING_SIGN.get(),
-                AncientAetherBlocks.SAKURA_WALL_HANGING_SIGN.get(),
-                AncientAetherBlocks.SAKURA_BOOKSHELF.get(),
-                AncientAetherBlocks.VALKYRUM_BLOCK.get(),
-                AncientAetherBlocks.AEROGEL_GLASS.get(),
-                AncientAetherBlocks.AEROGEL_GLASS_PANE.get(),
-                AncientAetherBlocks.AEROGEL_GLASS_DOOR.get(),
-                AncientAetherBlocks.AEROGEL_GLASS_TRAPDOOR.get(),
-                AncientAetherBlocks.FLUFFALO_WOOL.get(),
-                AncientAetherBlocks.FLUFFALO_CARPET.get(),
-                AncientAetherBlocks.CARVED_TILES.get(),
-                AncientAetherBlocks.CARVED_TILE_STAIRS.get(),
-                AncientAetherBlocks.CARVED_TILE_SLAB.get(),
-                AncientAetherBlocks.CARVED_TILES.get(),
-                AncientAetherBlocks.ANCIENT_OBELISK.get()
-        ).addTags(
-                AncientAetherTags.Blocks.AEROGETIC_BLOCKS
-        );
-         */
 
         tag(Tags.Blocks.BOOKSHELVES).add(
                 AncientAetherBlocks.HIGHSPROOT_BOOKSHELF.get(),
@@ -311,40 +270,106 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
                 AncientAetherBlocks.VALKYRUM_BLOCK.get()
         );
 
-        tag(BlockTags.MINEABLE_WITH_SHOVEL).add(
-                AncientAetherBlocks.GRAVITY_GRAVEL.get()
+        tag(BlockTags.WOOL).add(
+                AncientAetherBlocks.FLUFFALO_WOOL.get()
         );
-
-        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
-                AncientAetherBlocks.WYND_ICE.get(),
-                AncientAetherBlocks.AETHER_QUARTZ_ORE.get(),
-                AncientAetherBlocks.VALKYRUM_ORE.get(),
-                AncientAetherBlocks.ATMOSINE_CRYSTAL.get(),
-                AncientAetherBlocks.VALKYRUM_BLOCK.get(),
-                AncientAetherBlocks.CARVED_TILES.get(),
-                AncientAetherBlocks.CARVED_TILE_STAIRS.get(),
-                AncientAetherBlocks.CARVED_TILE_SLAB.get(),
+        tag(BlockTags.WOODEN_BUTTONS).add(
+                AncientAetherBlocks.HIGHSPROOT_BUTTON.get(),
+                AncientAetherBlocks.SAKURA_BUTTON.get()
+        );
+        tag(BlockTags.WOOL_CARPETS).add(
+                AncientAetherBlocks.FLUFFALO_CARPET.get()
+        );
+        tag(BlockTags.WOODEN_DOORS).add(
+                AncientAetherBlocks.HIGHSPROOT_DOOR.get(),
+                AncientAetherBlocks.SAKURA_DOOR.get()
+        );
+        tag(BlockTags.WOODEN_STAIRS).add(
+                AncientAetherBlocks.HIGHSPROOT_STAIRS.get(),
+                AncientAetherBlocks.SAKURA_STAIRS.get()
+        );
+        tag(BlockTags.WOODEN_SLABS).add(
+                AncientAetherBlocks.HIGHSPROOT_SLAB.get(),
+                AncientAetherBlocks.SAKURA_SLAB.get()
+        );
+        tag(BlockTags.WOODEN_FENCES).add(
+                AncientAetherBlocks.HIGHSPROOT_FENCE.get(),
+                AncientAetherBlocks.SAKURA_FENCE.get()
+        );
+        tag(BlockTags.WOODEN_PRESSURE_PLATES).add(
+                AncientAetherBlocks.HIGHSPROOT_PRESSURE_PLATE.get(),
+                AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get()
+        );
+        tag(BlockTags.WOODEN_TRAPDOORS).add(
+                AncientAetherBlocks.HIGHSPROOT_TRAPDOOR.get(),
+                AncientAetherBlocks.SAKURA_TRAPDOOR.get()
+        );
+        tag(BlockTags.SAPLINGS).add(
+                AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get(),
+                AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get(),
+                AncientAetherBlocks.SKYROOT_PINE_SAPLING.get(),
+                AncientAetherBlocks.BLUE_SKYROOT_PINE_SAPLING.get(),
+                AncientAetherBlocks.HIGHSPROOT_SAPLING.get(),
+                AncientAetherBlocks.SAKURA_SAPLING.get()
+        );
+        tag(BlockTags.LOGS_THAT_BURN).addTags(
+                AncientAetherTags.Blocks.HIGHSPROOT_LOGS,
+                AncientAetherTags.Blocks.SAKURA_LOGS
+        );
+        tag(BlockTags.WALLS).add(
+                AncientAetherBlocks.HIGHSPROOT_LOG_WALL.get(),
+                AncientAetherBlocks.HIGHSPROOT_WOOD_WALL.get(),
+                AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG_WALL.get(),
+                AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD_WALL.get(),
+                AncientAetherBlocks.SAKURA_LOG_WALL.get(),
+                AncientAetherBlocks.SAKURA_WOOD_WALL.get(),
+                AncientAetherBlocks.STRIPPED_SAKURA_LOG_WALL.get(),
+                AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL.get(),
                 AncientAetherBlocks.CARVED_TILE_WALL.get(),
-                AncientAetherBlocks.WYND_SENTRY_STONE.get(),
-                AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get(),
-                AncientAetherBlocks.CARVED_STONE_MOSAIC.get(),
-                AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get(),
-                AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get(),
-                AncientAetherBlocks.AEROGETIC_STONE_MOSAIC.get(),
-                AncientAetherBlocks.GALE_STONE_MOSAIC.get(),
-                AncientAetherBlocks.AEROGETIC_STONE.get(),
-                AncientAetherBlocks.AEROGETIC_STAIRS.get(),
-                AncientAetherBlocks.AEROGETIC_SLAB.get(),
-                AncientAetherBlocks.AEROGETIC_WALL.get(),
-                AncientAetherBlocks.AERONAUTIC_STONE.get(),
-                AncientAetherBlocks.CORRUPTED_AERONAUTIC_STONE.get(),
-                AncientAetherBlocks.AMBROSIUM_LANTERN.get(),
-                AncientAetherBlocks.WYND_LANTERN.get(),
-                AncientAetherBlocks.SUN_LANTERN.get(),
-                AncientAetherBlocks.SLIDER_PROTOTYPE.get(),
-                AncientAetherBlocks.ANCIENT_OBELISK.get()
+                AncientAetherBlocks.AEROGETIC_WALL.get()
         );
-
+        tag(BlockTags.LEAVES).add(
+                AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES.get(),
+                AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES.get(),
+                AncientAetherBlocks.SKYROOT_PINE_LEAVES.get(),
+                AncientAetherBlocks.BLUE_SKYROOT_PINE_LEAVES.get(),
+                AncientAetherBlocks.HIGHSPROOT_LEAVES.get(),
+                AncientAetherBlocks.SAKURA_LEAVES.get()
+        );
+        tag(BlockTags.SMALL_FLOWERS).add(
+                AncientAetherBlocks.SUNSET_ROSE.get(),
+                AncientAetherBlocks.SKY_BLUES.get(),
+                AncientAetherBlocks.WYND_THISTLE.get(),
+                AncientAetherBlocks.ELEVATIA.get()
+        );
+        tag(BlockTags.STANDING_SIGNS).add(
+                AncientAetherBlocks.HIGHSPROOT_SIGN.get(),
+                AncientAetherBlocks.SAKURA_SIGN.get()
+        );
+        tag(BlockTags.WALL_SIGNS).add(
+                AncientAetherBlocks.HIGHSPROOT_WALL_SIGN.get(),
+                AncientAetherBlocks.SAKURA_WALL_SIGN.get()
+        );
+        tag(BlockTags.CEILING_HANGING_SIGNS).add(
+                AncientAetherBlocks.HIGHSPROOT_HANGING_SIGN.get(),
+                AncientAetherBlocks.SAKURA_HANGING_SIGN.get()
+        );
+        tag(BlockTags.WALL_HANGING_SIGNS).add(
+                AncientAetherBlocks.HIGHSPROOT_WALL_HANGING_SIGN.get(),
+                AncientAetherBlocks.SAKURA_WALL_HANGING_SIGN.get()
+        );
+        tag(BlockTags.DRAGON_IMMUNE).add(
+                AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get()
+        );
+        tag(BlockTags.WITHER_IMMUNE).add(
+                AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get()
+        );
+        tag(BlockTags.BEACON_BASE_BLOCKS).add(
+                AncientAetherBlocks.VALKYRUM_BLOCK.get()
+        );
+        tag(BlockTags.CLIMBABLE).add(
+                AncientAetherBlocks.GRAPE_VINE.get()
+        );
         tag(BlockTags.MINEABLE_WITH_AXE).add(
                 AncientAetherBlocks.SKY_GRASS.get(),
                 AncientAetherBlocks.HIGHSPROOT_LOG.get(),
@@ -393,7 +418,6 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
                 AncientAetherBlocks.SAKURA_BOOKSHELF.get(),
                 AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get()
         );
-
         tag(BlockTags.MINEABLE_WITH_HOE).add(
                 AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES.get(),
                 AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES.get(),
@@ -403,6 +427,72 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
                 AncientAetherBlocks.SAKURA_LEAVES.get(),
                 AncientAetherBlocks.VIOLET_AERCLOUD.get(),
                 AncientAetherBlocks.WIND_BLOWER.get()
+        );
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
+                AncientAetherBlocks.WYND_ICE.get(),
+                AncientAetherBlocks.AETHER_QUARTZ_ORE.get(),
+                AncientAetherBlocks.VALKYRUM_ORE.get(),
+                AncientAetherBlocks.ATMOSINE_CRYSTAL.get(),
+                AncientAetherBlocks.VALKYRUM_BLOCK.get(),
+                AncientAetherBlocks.CARVED_TILES.get(),
+                AncientAetherBlocks.CARVED_TILE_STAIRS.get(),
+                AncientAetherBlocks.CARVED_TILE_SLAB.get(),
+                AncientAetherBlocks.CARVED_TILE_WALL.get(),
+                AncientAetherBlocks.WYND_SENTRY_STONE.get(),
+                AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get(),
+                AncientAetherBlocks.CARVED_STONE_MOSAIC.get(),
+                AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get(),
+                AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get(),
+                AncientAetherBlocks.AEROGETIC_STONE_MOSAIC.get(),
+                AncientAetherBlocks.GALE_STONE_MOSAIC.get(),
+                AncientAetherBlocks.AEROGETIC_STONE.get(),
+                AncientAetherBlocks.AEROGETIC_STAIRS.get(),
+                AncientAetherBlocks.AEROGETIC_SLAB.get(),
+                AncientAetherBlocks.AEROGETIC_WALL.get(),
+                AncientAetherBlocks.AERONAUTIC_STONE.get(),
+                AncientAetherBlocks.CORRUPTED_AERONAUTIC_STONE.get(),
+                AncientAetherBlocks.AMBROSIUM_LANTERN.get(),
+                AncientAetherBlocks.WYND_LANTERN.get(),
+                AncientAetherBlocks.SUN_LANTERN.get(),
+                AncientAetherBlocks.SLIDER_PROTOTYPE.get(),
+                AncientAetherBlocks.ANCIENT_OBELISK.get()
+        );
+        tag(BlockTags.MINEABLE_WITH_SHOVEL).add(
+                AncientAetherBlocks.GRAVITY_GRAVEL.get()
+        );
+        tag(BlockTags.SWORD_EFFICIENT).add(
+                AncientAetherBlocks.SKY_GRASS.get()
+        );
+        tag(BlockTags.NEEDS_DIAMOND_TOOL).add(
+                AncientAetherBlocks.SLIDER_PROTOTYPE.get(),
+                AncientAetherBlocks.ANCIENT_OBELISK.get()
+        );
+        tag(BlockTags.NEEDS_STONE_TOOL).add(
+                AncientAetherBlocks.CARVED_TILES.get(),
+                AncientAetherBlocks.CARVED_TILE_STAIRS.get(),
+                AncientAetherBlocks.CARVED_TILE_SLAB.get(),
+                AncientAetherBlocks.CARVED_TILE_WALL.get(),
+                AncientAetherBlocks.WYND_SENTRY_STONE.get(),
+                AncientAetherBlocks.CARVED_STONE_MOSAIC.get(),
+                AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get(),
+                AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get(),
+                AncientAetherBlocks.AEROGETIC_STONE_MOSAIC.get(),
+                AncientAetherBlocks.GALE_STONE_MOSAIC.get(),
+                AncientAetherBlocks.AEROGETIC_STONE.get(),
+                AncientAetherBlocks.AEROGETIC_STAIRS.get(),
+                AncientAetherBlocks.AEROGETIC_SLAB.get(),
+                AncientAetherBlocks.AEROGETIC_WALL.get(),
+                AncientAetherBlocks.AERONAUTIC_STONE.get(),
+                AncientAetherBlocks.CORRUPTED_AERONAUTIC_STONE.get()
+        );
+        tag(BlockTags.REPLACEABLE_BY_TREES).add(
+                AncientAetherBlocks.SKY_GRASS.get()
+        );
+        tag(BlockTags.REPLACEABLE).add(
+                AncientAetherBlocks.SKY_GRASS.get()
+        );
+        tag(BlockTags.ENCHANTMENT_POWER_TRANSMITTER).add(
+                AncientAetherBlocks.SKY_GRASS.get()
         );
     }
 }
