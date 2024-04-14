@@ -20,8 +20,11 @@ public class MutatedAechorNeedle extends AbstractDart {
         setBaseDamage(6);
     }
 
-    protected void doPostHurtEffects(@NotNull LivingEntity living) {
-        super.doPostHurtEffects(living);
-        living.addEffect(new MobEffectInstance(AetherEffects.INEBRIATION.get(), 250, 0, false, false, true));
+    protected void doPostHurtEffects(@NotNull LivingEntity entity) {
+        super.doPostHurtEffects(entity);
+        entity.addEffect(new MobEffectInstance(AetherEffects.INEBRIATION.get(), 250, 0, false, false, true));
+        if (entity.hasEffect(AetherEffects.REMEDY.get())) {
+            entity.removeEffect(AetherEffects.REMEDY.get());
+        }
     }
 }
