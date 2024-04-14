@@ -7,6 +7,7 @@ import net.builderdog.ancient_aether.block.dispenser.DispenseAncientAetherBoatBe
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.client.gui.AncientAetherMenus;
+import net.builderdog.ancient_aether.client.particle.AncientAetherParticleTypes;
 import net.builderdog.ancient_aether.data.AncientAetherData;
 import net.builderdog.ancient_aether.effect.AncientAetherEffects;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
@@ -74,6 +75,7 @@ public class AncientAether {
                 AncientAetherStructureTypes.STRUCTURE_TYPES,
                 AncientAetherStructurePoolElements.STRUCTURE_POOL_ELEMENT,
                 AncientAetherSoundEvents.SOUNDS,
+                AncientAetherParticleTypes.PARTICLES,
         };
 
         MinecraftForge.EVENT_BUS.register(this);

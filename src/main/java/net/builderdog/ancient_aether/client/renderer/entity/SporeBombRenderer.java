@@ -18,7 +18,7 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nonnull;
 
 public class SporeBombRenderer extends EntityRenderer<SporeBomb> {
-    private static final ResourceLocation SPORE_BOMB_TEXTURE = new ResourceLocation("ancient_aether", "textures/entity/projectile/poison_bomb.png");
+    private static final ResourceLocation SPORE_BOMB_TEXTURE = new ResourceLocation("ancient_aether", "textures/entity/projectile/spore_bomb.png");
     private final ModelPart sporeBomb;
 
     public SporeBombRenderer(EntityRendererProvider.Context context) {

@@ -2,6 +2,7 @@ package net.builderdog.ancient_aether.entity.projectile;
 
 import com.aetherteam.aether.effect.AetherEffects;
 import com.aetherteam.aether.entity.projectile.dart.AbstractDart;
+import net.builderdog.ancient_aether.client.particle.AncientAetherParticleTypes;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.AreaEffectCloud;
@@ -33,6 +34,7 @@ public class SporeBomb extends AbstractDart {
                 areaEffectCloud.setRadius(4.0F);
                 areaEffectCloud.setDuration(300);
                 areaEffectCloud.addEffect(new MobEffectInstance(AetherEffects.INEBRIATION.get(), 60, 1));
+                areaEffectCloud.setParticle(AncientAetherParticleTypes.TOXIC_SPORES.get());
                 level().addFreshEntity(areaEffectCloud);
             }
             discard();
