@@ -35,6 +35,7 @@ public class AncientAetherBiomeTagData extends BiomeTagsProvider {
                 AncientAetherBiomes.SKYROOT_JUNGLE
         );
         tag(AncientAetherTags.Biomes.IS_SKYROOT).add(
+                AncientAetherBiomes.SKY_LAKE,
                 AncientAetherBiomes.HOLYSTONE_CAVERNS
                 ).addTags(
                 AncientAetherTags.Biomes.IS_SKYROOT_PLAINS,

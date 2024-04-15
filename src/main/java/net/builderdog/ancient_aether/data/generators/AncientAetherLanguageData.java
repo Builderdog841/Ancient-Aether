@@ -181,9 +181,10 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.POTTED_CRYSTAL_SKYROOT_SAPLING, "Potted Crystal Skyroot Sapling");
         addBlock(AncientAetherBlocks.POTTED_ENCHANTED_SKYROOT_SAPLING, "Potted Enchanted Skyroot Sapling");
         addBlock(AncientAetherBlocks.POTTED_SKYROOT_PINE_SAPLING, "Potted Skyroot Pine Sapling");
+        addBlock(AncientAetherBlocks.POTTED_BLUE_SKYROOT_PINE_SAPLING, "Potted Blue Skyroot Pine Sapling");
         addBlock(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING, "Potted Highsproot Sapling");
         addBlock(AncientAetherBlocks.POTTED_SAKURA_SAPLING, "Potted Sakura Sapling");
-        addBlock(AncientAetherBlocks.POTTED_SUNSET_ROSE, "Potted Highland Viola");
+        addBlock(AncientAetherBlocks.POTTED_SUNSET_ROSE, "Potted Sunset Rose");
         addBlock(AncientAetherBlocks.POTTED_SKY_BLUES, "Potted Sky Blues");
         addBlock(AncientAetherBlocks.POTTED_WYND_THISTLE, "Potted Wynd Thistle");
         addBlock(AncientAetherBlocks.POTTED_ELEVATIA, "Potted Elevatia");

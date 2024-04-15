@@ -31,28 +31,7 @@
         "type": "minecraft:interpolated",
         "argument": {
           "type": "minecraft:blend_density",
-          "argument": {
-            "type": "minecraft:range_choice",
-            "input": "ancient_aether:erosion",
-            "min_inclusive": 0.5,
-            "max_exclusive": 1.5,
-            "when_in_range": "ancient_aether:islands/elevated/islands",
-            "when_out_of_range": {
-              "type": "minecraft:range_choice",
-              "input": "ancient_aether:temperature",
-              "min_inclusive": -1.5,
-              "max_exclusive": -0.5,
-              "when_in_range": "ancient_aether:islands/wyndcaps/islands",
-              "when_out_of_range": {
-                "type": "minecraft:range_choice",
-                "input": "ancient_aether:temperature",
-                "min_inclusive": 0.5,
-                "max_exclusive": 1.5,
-                "when_in_range": "ancient_aether:islands/sakura/lower_island_layer",
-                "when_out_of_range": "ancient_aether:islands/skyroot/islands"
-              }
-            }
-          }
+          "argument": "ancient_aether:islands/types"
         }
       }
     },
@@ -60,7 +39,7 @@
     "fluid_level_spread": 0.0,
     "initial_density_without_jaggedness": 0.0,
     "lava": 0.0,
-    "ridges": 0.0,
+    "ridges": "ancient_aether:ridges",
     "temperature": "ancient_aether:temperature",
     "vegetation": {
       "type": "minecraft:shifted_noise",
