@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ancient_aether:sakura_hanging_sign"
+          "name": "minecraft:air"
         }
       ],
       "rolls": 1.0

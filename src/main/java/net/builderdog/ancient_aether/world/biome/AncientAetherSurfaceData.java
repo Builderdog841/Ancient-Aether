@@ -3,6 +3,7 @@ package net.builderdog.ancient_aether.world.biome;
 import com.aetherteam.aether.data.resources.AetherFeatureStates;
 import net.builderdog.ancient_aether.data.resources.AncientAetherFeatureStates;
 import net.builderdog.ancient_aether.data.resources.registries.AncientAetherBiomes;
+import net.builderdog.ancient_aether.data.resources.registries.AncientAetherNoises;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.Noises;
 import net.minecraft.world.level.levelgen.SurfaceRules;
@@ -27,14 +28,16 @@ public class AncientAetherSurfaceData {
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.ELEVATED_FOREST, AncientAetherBiomes.ELEVATED_CLEARING),
                         SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(AncientAetherFeatureStates.PALE_AETHER_GRASS_BLOCK))
                 ),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.SKY_LAKE),
+                        SurfaceRules.ifTrue(SurfaceRules.noiseCondition(AncientAetherNoises.SKY_LAKES, 0.7D),
+                                SurfaceRules.ifTrue(SurfaceRules.verticalGradient("lake", VerticalAnchor.absolute(112), VerticalAnchor.absolute(112)), SurfaceRules.state(Blocks.WATER.defaultBlockState())))
+                ),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.SKY_LAKE),
+                        SurfaceRules.ifTrue(SurfaceRules.noiseCondition(AncientAetherNoises.SKY_LAKES, 0.7D),
+                                SurfaceRules.ifTrue(SurfaceRules.verticalGradient("above_lake", VerticalAnchor.absolute(256), VerticalAnchor.absolute(256)), SurfaceRules.state(Blocks.AIR.defaultBlockState())))
+                ),
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.HOLYSTONE_CAVERNS, AncientAetherBiomes.FROZEN_CAVERNS, AncientAetherBiomes.ELEVATED_CAVERNS, AncientAetherBiomes.ATMOSINE_GROTTO),
                         SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(AetherFeatureStates.HOLYSTONE))
-                ),
-                SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.SKY_LAKE),
-                        SurfaceRules.ifTrue(SurfaceRules.verticalGradient("i_hate_surface_rules", VerticalAnchor.absolute(112), VerticalAnchor.absolute(112)), SurfaceRules.state(Blocks.WATER.defaultBlockState()))
-                ),
-                SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.SKY_LAKE),
-                        SurfaceRules.ifTrue(SurfaceRules.verticalGradient("i_hate_surface_rules_the_sequel", VerticalAnchor.absolute(256), VerticalAnchor.absolute(256)), SurfaceRules.state(Blocks.AIR.defaultBlockState()))
                 ),
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.WYNDCAP_PEAKS, AncientAetherBiomes.HOLYSTONE_CAVERNS, AncientAetherBiomes.FROZEN_CAVERNS, AncientAetherBiomes.ELEVATED_CAVERNS, AncientAetherBiomes.ATMOSINE_GROTTO),
                         SurfaceRules.ifTrue(SurfaceRules.stoneDepthCheck(0, true, 0, CaveSurface.FLOOR), SurfaceRules.state(AetherFeatureStates.HOLYSTONE))
