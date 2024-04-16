@@ -1,85 +1,88 @@
 {
-    "type": "minecraft:add",
-    "argument1": {
+    "type": "minecraft:cache_once",
+    "argument": {
         "type": "minecraft:add",
-        "argument1": 0.01,
-        "argument2": {
+        "argument1": {
             "type": "minecraft:add",
-            "argument1": {
-                "type": "minecraft:mul",
-                "argument1": -0.15,
+            "argument1": 0.01,
+            "argument2": {
+                "type": "minecraft:add",
+                "argument1": {
+                    "type": "minecraft:mul",
+                    "argument1": -0.15,
+                    "argument2": {
+                        "type": "minecraft:mul",
+                        "argument1": {
+                            "type": "minecraft:mul",
+                            "argument1": "ancient_aether:islands/sakura/factor_temperature",
+                            "argument2": "ancient_aether:factor_erosion"
+                        },
+                        "argument2": {
+                            "type": "minecraft:add",
+                            "argument1": 0.75,
+                            "argument2": "ancient_aether:amplifier/noise"
+                        }
+                    }
+                },
                 "argument2": {
                     "type": "minecraft:mul",
                     "argument1": {
-                        "type": "minecraft:mul",
-                        "argument1": "ancient_aether:islands/sakura/factor_temperature",
-                        "argument2": "ancient_aether:factor_erosion"
+                        "type": "minecraft:y_clamped_gradient",
+                        "from_value": 0.0,
+                        "from_y": 4,
+                        "to_value": 1.0,
+                        "to_y": 64
                     },
                     "argument2": {
                         "type": "minecraft:add",
-                        "argument1": 0.75,
-                        "argument2": "ancient_aether:sloping_amplifier"
-                    }
-                }
-            },
-            "argument2": {
-                "type": "minecraft:mul",
-                "argument1": {
-                    "type": "minecraft:y_clamped_gradient",
-                    "from_value": 0.0,
-                    "from_y": 4,
-                    "to_value": 1.0,
-                    "to_y": 64
-                },
-                "argument2": {
-                    "type": "minecraft:add",
-                    "argument1": 0.2,
-                    "argument2": {
-                        "type": "minecraft:add",
-                        "argument1": {
-                            "type": "minecraft:mul",
-                            "argument1": -0.1,
+                        "argument1": 0.2,
+                        "argument2": {
+                            "type": "minecraft:add",
+                            "argument1": {
+                                "type": "minecraft:mul",
+                                "argument1": -0.1,
+                                "argument2": {
+                                    "type": "minecraft:mul",
+                                    "argument1": {
+                                        "type": "minecraft:mul",
+                                        "argument1": "ancient_aether:islands/sakura/factor_temperature",
+                                        "argument2": "ancient_aether:factor_erosion"
+                                    },
+                                    "argument2": {
+                                        "type": "minecraft:add",
+                                        "argument1": 0.75,
+                                        "argument2": "ancient_aether:amplifier/noise"
+                                    }
+                                }
+                            },
                             "argument2": {
                                 "type": "minecraft:mul",
                                 "argument1": {
-                                    "type": "minecraft:mul",
-                                    "argument1": "ancient_aether:islands/sakura/factor_temperature",
-                                    "argument2": "ancient_aether:factor_erosion"
+                                    "type": "minecraft:y_clamped_gradient",
+                                    "from_value": 1.0,
+                                    "from_y": 70,
+                                    "to_value": 0.0,
+                                    "to_y": 160
                                 },
                                 "argument2": {
-                                    "type": "minecraft:add",
-                                    "argument1": 0.75,
-                                    "argument2": "ancient_aether:sloping_amplifier"
-                                }
-                            }
-                        },
-                        "argument2": {
-                            "type": "minecraft:mul",
-                            "argument1": {
-                                "type": "minecraft:y_clamped_gradient",
-                                "from_value": 1.0,
-                                "from_y": 70,
-                                "to_value": 0.0,
-                                "to_y": 160
-                            },
-                            "argument2": {
-                                "type": "add",
-                                "argument1": {
-                                    "type": "minecraft:add",
-                                    "argument1": 0.2,
-                                    "argument2": {
+                                    "type": "add",
+                                    "argument1": {
                                         "type": "minecraft:add",
-                                        "argument1": -0.05,
-                                        "argument2": "ancient_aether:base_3d_noise"
-                                    }
-                                },
-                                "argument2": {
-                                    "type": "minecraft:quarter_negative",
-                                    "argument": {
-                                        "type": "minecraft:noise",
-                                        "noise": "ancient_aether:jagged",
-                                        "xz_scale": 300,
-                                        "y_scale": 200
+                                        "argument1": 0.2,
+                                        "argument2": {
+                                            "type": "minecraft:add",
+                                            "argument1": -0.05,
+                                            "argument2": "ancient_aether:base_3d_noise"
+                                        }
+                                    },
+                                    "argument2": {
+                                        "type": "minecraft:quarter_negative",
+                                        "argument": {
+                                            "type": "minecraft:noise",
+                                            "noise": "ancient_aether:jagged",
+                                            "xz_scale": 300,
+                                            "y_scale": 200
+                                        }
                                     }
                                 }
                             }
@@ -87,7 +90,7 @@
                     }
                 }
             }
-        }
-    },
-    "argument2": "ancient_aether:islands/sakura/upper_island_layer"
+        },
+        "argument2": "ancient_aether:islands/sakura/upper_island_layer"
+    }
 }

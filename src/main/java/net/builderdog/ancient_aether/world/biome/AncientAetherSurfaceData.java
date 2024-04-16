@@ -29,12 +29,9 @@ public class AncientAetherSurfaceData {
                         SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(AncientAetherFeatureStates.PALE_AETHER_GRASS_BLOCK))
                 ),
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.SKY_LAKE),
-                        SurfaceRules.ifTrue(SurfaceRules.noiseCondition(AncientAetherNoises.SKY_LAKES, 0.7D),
-                                SurfaceRules.ifTrue(SurfaceRules.verticalGradient("lake", VerticalAnchor.absolute(112), VerticalAnchor.absolute(112)), SurfaceRules.state(Blocks.WATER.defaultBlockState())))
-                ),
-                SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.SKY_LAKE),
-                        SurfaceRules.ifTrue(SurfaceRules.noiseCondition(AncientAetherNoises.SKY_LAKES, 0.7D),
-                                SurfaceRules.ifTrue(SurfaceRules.verticalGradient("above_lake", VerticalAnchor.absolute(256), VerticalAnchor.absolute(256)), SurfaceRules.state(Blocks.AIR.defaultBlockState())))
+                        SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR,
+                                SurfaceRules.ifTrue(SurfaceRules.noiseCondition(AncientAetherNoises.SKYLANDS_AQUIFIER, 1.5D),
+                                        SurfaceRules.ifTrue(SurfaceRules.verticalGradient("lake", VerticalAnchor.absolute(112), VerticalAnchor.absolute(112)), SurfaceRules.state(Blocks.WATER.defaultBlockState()))))
                 ),
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.HOLYSTONE_CAVERNS, AncientAetherBiomes.FROZEN_CAVERNS, AncientAetherBiomes.ELEVATED_CAVERNS, AncientAetherBiomes.ATMOSINE_GROTTO),
                         SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.state(AetherFeatureStates.HOLYSTONE))

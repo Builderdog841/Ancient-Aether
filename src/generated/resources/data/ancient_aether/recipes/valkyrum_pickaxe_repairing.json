@@ -1,8 +1,0 @@
-{
-  "type": "aether:repairing",
-  "group": "altar_pickaxe_repair",
-  "ingredient": {
-    "item": "ancient_aether:valkyrum_pickaxe"
-  },
-  "repairTime": 3000
-}

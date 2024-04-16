@@ -1,9 +1,0 @@
-{
-  "type": "aether:incubation",
-  "entity": "aether:moa",
-  "incubationtime": 1000,
-  "ingredient": {
-    "item": "ancient_aether:sky_blue_moa_egg"
-  },
-  "tag": "{Hungry:1b,IsBaby:1b,MoaType:\"ancient_aether:sky_blue\",PlayerGrown:1b}"
-}

@@ -1,83 +1,86 @@
 {
-    "type": "minecraft:add",
-    "argument1": 0.01,
-    "argument2": {
+    "type": "minecraft:cache_once",
+    "argument": {
         "type": "minecraft:add",
-        "argument1": {
-            "type": "minecraft:mul",
+        "argument1": 0.01,
+        "argument2": {
+            "type": "minecraft:add",
             "argument1": {
                 "type": "minecraft:mul",
                 "argument1": {
                     "type": "minecraft:mul",
-                    "argument1": -0.26,
-                    "argument2": "ancient_aether:islands/skyroot/terrain_shaper"
+                    "argument1": {
+                        "type": "minecraft:mul",
+                        "argument1": -0.26,
+                        "argument2": "ancient_aether:islands/skyroot/terrain_shaper"
+                    },
+                    "argument2": "ancient_aether:amplifier/factor_size"
                 },
-                "argument2": "ancient_aether:size_factor"
+                "argument2": {
+                    "type": "minecraft:mul",
+                    "argument1": "ancient_aether:islands/skyroot/factor_temperature",
+                    "argument2": "ancient_aether:factor_erosion"
+                }
             },
             "argument2": {
                 "type": "minecraft:mul",
-                "argument1": "ancient_aether:islands/skyroot/factor_temperature",
-                "argument2": "ancient_aether:factor_erosion"
-            }
-        },
-        "argument2": {
-            "type": "minecraft:mul",
-            "argument1": {
-                "type": "minecraft:y_clamped_gradient",
-                "from_value": 0.0,
-                "from_y": 0,
-                "to_value": 1.0,
-                "to_y": 112
-            },
-            "argument2": {
-                "type": "minecraft:add",
-                "argument1": 0.2,
+                "argument1": {
+                    "type": "minecraft:y_clamped_gradient",
+                    "from_value": 0.0,
+                    "from_y": 0,
+                    "to_value": 1.0,
+                    "to_y": 112
+                },
                 "argument2": {
                     "type": "minecraft:add",
-                    "argument1": {
-                        "type": "minecraft:mul",
+                    "argument1": 0.2,
+                    "argument2": {
+                        "type": "minecraft:add",
                         "argument1": {
                             "type": "minecraft:mul",
                             "argument1": {
                                 "type": "minecraft:mul",
-                                "argument1": -0.26,
-                                "argument2": "ancient_aether:islands/skyroot/terrain_shaper"
+                                "argument1": {
+                                    "type": "minecraft:mul",
+                                    "argument1": -0.26,
+                                    "argument2": "ancient_aether:islands/skyroot/terrain_shaper"
+                                },
+                                "argument2": "ancient_aether:amplifier/factor_size"
                             },
-                            "argument2": "ancient_aether:size_factor"
+                            "argument2": {
+                                "type": "minecraft:mul",
+                                "argument1": "ancient_aether:islands/skyroot/factor_temperature",
+                                "argument2": "ancient_aether:factor_erosion"
+                            }
                         },
                         "argument2": {
                             "type": "minecraft:mul",
-                            "argument1": "ancient_aether:islands/skyroot/factor_temperature",
-                            "argument2": "ancient_aether:factor_erosion"
-                        }
-                    },
-                    "argument2": {
-                        "type": "minecraft:mul",
-                        "argument1": {
-                            "type": "minecraft:y_clamped_gradient",
-                            "from_value": 1.0,
-                            "from_y": 112,
-                            "to_value": 0.0,
-                            "to_y": 180
-                        },
-                        "argument2": {
-                            "type": "add",
                             "argument1": {
-                                "type": "minecraft:add",
-                                "argument1": 0.2,
-                                "argument2": {
-                                    "type": "minecraft:add",
-                                    "argument1": -0.22,
-                                    "argument2": "ancient_aether:base_3d_noise"
-                                }
+                                "type": "minecraft:y_clamped_gradient",
+                                "from_value": 1.0,
+                                "from_y": 112,
+                                "to_value": 0.0,
+                                "to_y": 180
                             },
                             "argument2": {
-                                "type": "minecraft:quarter_negative",
-                                "argument": {
-                                    "type": "minecraft:noise",
-                                    "noise": "ancient_aether:jagged",
-                                    "xz_scale": 350,
-                                    "y_scale": 0
+                                "type": "add",
+                                "argument1": {
+                                    "type": "minecraft:add",
+                                    "argument1": 0.2,
+                                    "argument2": {
+                                        "type": "minecraft:add",
+                                        "argument1": -0.22,
+                                        "argument2": "ancient_aether:base_3d_noise"
+                                    }
+                                },
+                                "argument2": {
+                                    "type": "minecraft:quarter_negative",
+                                    "argument": {
+                                        "type": "minecraft:noise",
+                                        "noise": "ancient_aether:jagged",
+                                        "xz_scale": 350,
+                                        "y_scale": 0
+                                    }
                                 }
                             }
                         }

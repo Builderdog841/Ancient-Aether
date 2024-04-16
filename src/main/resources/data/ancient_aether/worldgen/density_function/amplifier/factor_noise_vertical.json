@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:add",
+  "argument1": {
+    "type": "minecraft:y_clamped_gradient",
+    "from_value": 0.5,
+    "from_y": 128,
+    "to_value": 2.5,
+    "to_y": 256
+  },
+  "argument2": "ancient_aether:amplifier/noise"
+}

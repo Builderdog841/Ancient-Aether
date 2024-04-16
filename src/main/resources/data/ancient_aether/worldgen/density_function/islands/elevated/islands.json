@@ -1,80 +1,83 @@
 {
-    "type": "minecraft:range_choice",
-    "input": "ancient_aether:depth",
-    "min_inclusive": -0.2,
-    "max_exclusive": 1.5,
-    "when_in_range": {
-        "type": "minecraft:add",
-        "argument1": 0.01,
-        "argument2": {
+    "type": "minecraft:cache_once",
+    "argument": {
+        "type": "minecraft:range_choice",
+        "input": "ancient_aether:depth",
+        "min_inclusive": -0.2,
+        "max_exclusive": 1.5,
+        "when_in_range": {
             "type": "minecraft:add",
-            "argument1": {
-                "type": "minecraft:mul",
+            "argument1": 0.01,
+            "argument2": {
+                "type": "minecraft:add",
                 "argument1": {
                     "type": "minecraft:mul",
                     "argument1": {
                         "type": "minecraft:mul",
-                        "argument1": -0.21,
-                        "argument2": "ancient_aether:islands/elevated/terrain_shaper"
-                    },
-                    "argument2": "ancient_aether:size_factor"
-                },
-                "argument2": "ancient_aether:islands/elevated/factor_erosion"
-            },
-            "argument2": {
-                "type": "minecraft:mul",
-                "argument1": {
-                    "type": "minecraft:y_clamped_gradient",
-                    "from_value": 0.0,
-                    "from_y": 16,
-                    "to_value": 1.0,
-                    "to_y": 128
-                },
-                "argument2": {
-                    "type": "minecraft:add",
-                    "argument1": 0.2,
-                    "argument2": {
-                        "type": "minecraft:add",
                         "argument1": {
                             "type": "minecraft:mul",
+                            "argument1": -0.21,
+                            "argument2": "ancient_aether:islands/elevated/terrain_shaper"
+                        },
+                        "argument2": "ancient_aether:amplifier/factor_size"
+                    },
+                    "argument2": "ancient_aether:islands/elevated/factor_erosion"
+                },
+                "argument2": {
+                    "type": "minecraft:mul",
+                    "argument1": {
+                        "type": "minecraft:y_clamped_gradient",
+                        "from_value": 0.0,
+                        "from_y": 16,
+                        "to_value": 1.0,
+                        "to_y": 128
+                    },
+                    "argument2": {
+                        "type": "minecraft:add",
+                        "argument1": 0.2,
+                        "argument2": {
+                            "type": "minecraft:add",
                             "argument1": {
                                 "type": "minecraft:mul",
                                 "argument1": {
                                     "type": "minecraft:mul",
-                                    "argument1": -0.21,
-                                    "argument2": "ancient_aether:islands/elevated/terrain_shaper"
+                                    "argument1": {
+                                        "type": "minecraft:mul",
+                                        "argument1": -0.21,
+                                        "argument2": "ancient_aether:islands/elevated/terrain_shaper"
+                                    },
+                                    "argument2": "ancient_aether:amplifier/factor_size"
                                 },
-                                "argument2": "ancient_aether:size_factor"
-                            },
-                            "argument2": "ancient_aether:islands/elevated/factor_erosion"
-                        },
-                        "argument2": {
-                            "type": "minecraft:mul",
-                            "argument1": {
-                                "type": "minecraft:y_clamped_gradient",
-                                "from_value": 1.0,
-                                "from_y": 122,
-                                "to_value": 0.0,
-                                "to_y": 196
+                                "argument2": "ancient_aether:islands/elevated/factor_erosion"
                             },
                             "argument2": {
-                                "type": "add",
+                                "type": "minecraft:mul",
                                 "argument1": {
-                                    "type": "minecraft:add",
-                                    "argument1": 0.2,
-                                    "argument2": {
-                                        "type": "minecraft:add",
-                                        "argument1": -0.2,
-                                        "argument2": "ancient_aether:base_3d_noise"
-                                    }
+                                    "type": "minecraft:y_clamped_gradient",
+                                    "from_value": 1.0,
+                                    "from_y": 122,
+                                    "to_value": 0.0,
+                                    "to_y": 196
                                 },
                                 "argument2": {
-                                    "type": "minecraft:quarter_negative",
-                                    "argument": {
-                                        "type": "minecraft:noise",
-                                        "noise": "ancient_aether:jagged",
-                                        "xz_scale": 350,
-                                        "y_scale": 0
+                                    "type": "add",
+                                    "argument1": {
+                                        "type": "minecraft:add",
+                                        "argument1": 0.2,
+                                        "argument2": {
+                                            "type": "minecraft:add",
+                                            "argument1": -0.2,
+                                            "argument2": "ancient_aether:base_3d_noise"
+                                        }
+                                    },
+                                    "argument2": {
+                                        "type": "minecraft:quarter_negative",
+                                        "argument": {
+                                            "type": "minecraft:noise",
+                                            "noise": "ancient_aether:jagged",
+                                            "xz_scale": 350,
+                                            "y_scale": 0
+                                        }
                                     }
                                 }
                             }
@@ -82,7 +85,7 @@
                     }
                 }
             }
-        }
-    },
-    "when_out_of_range": "ancient_aether:islands/elevated/upper_islands"
+        },
+        "when_out_of_range": "ancient_aether:islands/elevated/upper_islands"
+    }
 }
