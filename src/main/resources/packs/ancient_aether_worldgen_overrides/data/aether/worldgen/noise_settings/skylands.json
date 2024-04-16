@@ -39,7 +39,7 @@
     "fluid_level_spread": 0.0,
     "initial_density_without_jaggedness": 0.0,
     "lava": 0.0,
-    "ridges": "ancient_aether:aquifier/island_checker",
+    "ridges": "ancient_aether:aquifer/island_checker",
     "temperature": "ancient_aether:temperature",
     "vegetation": {
       "type": "minecraft:shifted_noise",

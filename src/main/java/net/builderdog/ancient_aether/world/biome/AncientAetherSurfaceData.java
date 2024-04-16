@@ -30,7 +30,7 @@ public class AncientAetherSurfaceData {
                 ),
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.SKY_LAKE),
                         SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR,
-                                SurfaceRules.ifTrue(SurfaceRules.noiseCondition(AncientAetherNoises.SKYLANDS_AQUIFIER, 1.5D),
+                                SurfaceRules.ifTrue(SurfaceRules.noiseCondition(AncientAetherNoises.SKYLANDS_AQUIFER, 1.5D),
                                         SurfaceRules.ifTrue(SurfaceRules.verticalGradient("lake", VerticalAnchor.absolute(112), VerticalAnchor.absolute(112)), SurfaceRules.state(Blocks.WATER.defaultBlockState()))))
                 ),
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.HOLYSTONE_CAVERNS, AncientAetherBiomes.FROZEN_CAVERNS, AncientAetherBiomes.ELEVATED_CAVERNS, AncientAetherBiomes.ATMOSINE_GROTTO),

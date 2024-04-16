@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-16T15:34:58.7745367	Registries
+// 1.20.1	2024-04-16T19:07:18.1761262	Registries
 d48a565c1fefb0fbb6c489c3edffe6748448a15c data/ancient_aether/forge/biome_modifier/aerogel_blobs_biome_modifier.json
 c66669dd031745a1bae16fc47547c896a814e8e6 data/ancient_aether/forge/biome_modifier/aether_cave_biome_modifier.json
 be0b3cb10e1bb6717346cc0224b71d8b9cb17509 data/ancient_aether/forge/biome_modifier/aether_grass_patch_biome_modifier.json
@@ -110,8 +110,8 @@ f62e1503ccaebdd26bcb6ce62143eb7986ce5dd3 data/ancient_aether/worldgen/configured
 14376ee1669fd1fe3bf3f7d15fc10b9fe9804b50 data/ancient_aether/worldgen/noise/amplifier_factor.json
 20ddbabfded8546f8d71cb1689cd15c42bc77244 data/ancient_aether/worldgen/noise/erosion.json
 22f4b5f6690126b078167740af0939ccec9ca7b5 data/ancient_aether/worldgen/noise/jagged.json
-89842a0b4305a225951ec7a9f8ada6cd6cffe76b data/ancient_aether/worldgen/noise/skylands_aquifier.json
-7b3794c0eb842d2d2976e32a0a41eabdb1cf69b3 data/ancient_aether/worldgen/noise/skylands_aquifier_factor.json
+89842a0b4305a225951ec7a9f8ada6cd6cffe76b data/ancient_aether/worldgen/noise/skylands_aquifer.json
+7b3794c0eb842d2d2976e32a0a41eabdb1cf69b3 data/ancient_aether/worldgen/noise/skylands_aquifer_factor.json
 e9951c1e43a8e47e424565851e1786e9dbe41a7a data/ancient_aether/worldgen/noise/temperature.json
 144e6875c7c48ab4b4a0717436536cc121dc62da data/ancient_aether/worldgen/noise/vegetation.json
 1cba2b2f5a213dbfe1af9a7082dc1a1f186a0195 data/ancient_aether/worldgen/placed_feature/aerogel_blobs.json

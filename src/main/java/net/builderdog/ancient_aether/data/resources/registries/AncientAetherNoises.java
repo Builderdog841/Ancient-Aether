@@ -14,8 +14,8 @@ public class AncientAetherNoises {
     public static final ResourceKey<NormalNoise.NoiseParameters> JAGGED = createKey("jagged");
     public static final ResourceKey<NormalNoise.NoiseParameters> AMPLIFIER = createKey("amplifier");
     public static final ResourceKey<NormalNoise.NoiseParameters> AMPLIFIER_FACTOR = createKey("amplifier_factor");
-    public static final ResourceKey<NormalNoise.NoiseParameters> SKYLANDS_AQUIFIER = createKey("skylands_aquifier");
-    public static final ResourceKey<NormalNoise.NoiseParameters> SKYLANDS_AQUIFIER_FACTOR = createKey("skylands_aquifier_factor");
+    public static final ResourceKey<NormalNoise.NoiseParameters> SKYLANDS_AQUIFER = createKey("skylands_aquifer");
+    public static final ResourceKey<NormalNoise.NoiseParameters> SKYLANDS_AQUIFER_FACTOR = createKey("skylands_aquifer_factor");
 
     private static ResourceKey<NormalNoise.NoiseParameters> createKey(String name) {
         return ResourceKey.create(Registries.NOISE, new ResourceLocation(AncientAether.MODID, name));
@@ -26,8 +26,8 @@ public class AncientAetherNoises {
         register(context, VEGETATION, -8, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0);
         register(context, EROSION, -9, 1.5, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
         register(context, JAGGED, -16, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0);
-        register(context, SKYLANDS_AQUIFIER, -7, 1.5, 0.0, 0.5, 0.0, 0.0);
-        register(context, SKYLANDS_AQUIFIER_FACTOR, -8, 1.5, 0.25, 0.0, 0.0);
+        register(context, SKYLANDS_AQUIFER, -7, 1.5, 0.0, 0.5, 0.0, 0.0);
+        register(context, SKYLANDS_AQUIFER_FACTOR, -8, 1.5, 0.25, 0.0, 0.0);
         register(context, AMPLIFIER, -7, 1.0, 2.0, 1.0, 0.0, 0.0, 0.0, 0.0);
         register(context, AMPLIFIER_FACTOR, -8, 2.0, 1.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
     }

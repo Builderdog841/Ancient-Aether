@@ -1,6 +1,6 @@
 {
   "type": "minecraft:weird_scaled_sampler",
   "rarity_value_mapper": "type_1",
-  "noise": "ancient_aether:amplified",
+  "noise": "ancient_aether:amplifier",
   "input": "ancient_aether:base_3d_noise"
 }

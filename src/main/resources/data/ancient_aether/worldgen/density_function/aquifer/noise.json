@@ -1,6 +1,6 @@
 {
   "type": "minecraft:shifted_noise",
-  "noise": "ancient_aether:aquification_factor",
+  "noise": "ancient_aether:skylands_aquifer_factor",
   "shift_x": "minecraft:shift_x",
   "shift_y": 0.0,
   "shift_z": "minecraft:shift_z",
