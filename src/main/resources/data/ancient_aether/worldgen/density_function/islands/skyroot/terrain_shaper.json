@@ -19,8 +19,18 @@
         "argument2": "ancient_aether:amplifier/factor_noise"
       },
       "when_out_of_range": {
-        "type": "mul",
-        "argument1": {
+        "type": "minecraft:range_choice",
+        "input": "ancient_aether:aquifer/noise",
+        "min_inclusive": 0.7,
+        "max_exclusive": 1.5,
+        "when_in_range": {
+          "type": "minecraft:y_clamped_gradient",
+          "from_value": 1,
+          "from_y": 112,
+          "to_value": 10,
+          "to_y": 116
+        },
+        "when_out_of_range": {
           "type": "mul",
           "argument1": {
             "type": "minecraft:y_clamped_gradient",
@@ -30,8 +40,7 @@
             "to_y": 256
           },
           "argument2": "ancient_aether:amplifier/factor_noise"
-        },
-        "argument2": 1
+        }
       }
     },
     "argument2": "ancient_aether:islands/skyroot/factor_temperature"

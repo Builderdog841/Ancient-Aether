@@ -14,7 +14,7 @@ import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.builderdog.ancient_aether.entity.AncientAetherMoaTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.builderdog.ancient_aether.world.biome.AncientAetherRegion;
-import net.builderdog.ancient_aether.world.biome.AncientAetherSurfaceData;
+import net.builderdog.ancient_aether.world.biome.AncientAetherSurfaceRules;
 import net.builderdog.ancient_aether.world.biomemodifier.AncientAetherBiomeModifierSerializers;
 import net.builderdog.ancient_aether.world.carver.AncientAetherCarvers;
 import net.builderdog.ancient_aether.world.feature.AncientAetherFeatures;
@@ -108,7 +108,7 @@ public class AncientAether {
             AncientAetherAdvancementTriggers.init();
 
             Regions.register(new AncientAetherRegion(new ResourceLocation(MODID, "ancient_aether"), AncientAetherConfig.COMMON.ancient_aether_region_weight.get()));
-            SurfaceRuleManager.addSurfaceRules(AetherRuleCategory.THE_AETHER, MODID, AncientAetherSurfaceData.makeRules());
+            SurfaceRuleManager.addSurfaceRules(AetherRuleCategory.THE_AETHER, MODID, AncientAetherSurfaceRules.makeRules());
         });
     }
 

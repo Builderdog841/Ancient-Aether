@@ -2,25 +2,32 @@
   "type": "minecraft:cache_once",
   "argument": {
     "type": "minecraft:range_choice",
-    "input": "ancient_aether:y",
-    "min_inclusive": 0,
-    "max_exclusive": 112,
-    "when_in_range": "ancient_aether:islands/final_density",
-    "when_out_of_range": {
-      "type": "minecraft:add",
-      "argument1": {
-        "type": "minecraft:clamp",
-        "input": {
-          "type": "minecraft:y_clamped_gradient",
-          "from_value": 0,
-          "from_y": 112,
-          "to_value": 0.1,
-          "to_y": 136
+    "input": "ancient_aether:aquifer/noise",
+    "min_inclusive": 0.7,
+    "max_exclusive": 1.5,
+    "when_in_range": {
+      "type": "minecraft:range_choice",
+      "input": "ancient_aether:y",
+      "min_inclusive": 0,
+      "max_exclusive": 112,
+      "when_in_range": "ancient_aether:islands/final_density",
+      "when_out_of_range": {
+        "type": "minecraft:add",
+        "argument1": {
+          "type": "minecraft:clamp",
+          "input": {
+            "type": "minecraft:y_clamped_gradient",
+            "from_value": 0,
+            "from_y": 112,
+            "to_value": 0.1,
+            "to_y": 136
+          },
+          "min": 0,
+          "max": 0.1
         },
-        "min": 0,
-        "max": 0.1
-      },
-      "argument2": "ancient_aether:islands/final_density"
-    }
+        "argument2": "ancient_aether:islands/final_density"
+      }
+    },
+    "when_out_of_range": -1
   }
 }
