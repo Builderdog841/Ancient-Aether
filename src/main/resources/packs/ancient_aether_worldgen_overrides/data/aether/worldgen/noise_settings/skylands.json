@@ -22,7 +22,12 @@
   },
   "noise_router": {
     "barrier": 0.0,
-    "continents": "ancient_aether:islands/skyroot/terrain_shaper",
+    "continents": {
+      "type": "minecraft:noise",
+      "noise": "ancient_aether:skylands_aquifer",
+      "xz_scale": 1,
+      "y_scale": 0
+    },
     "depth": "ancient_aether:depth",
     "erosion": "ancient_aether:erosion",
     "final_density": {
