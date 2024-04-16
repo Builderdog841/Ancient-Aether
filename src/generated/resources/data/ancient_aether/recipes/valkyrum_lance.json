@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "/": {
+      "tag": "forge:rods/wooden"
+    },
+    "V": {
+      "item": "ancient_aether:valkyrum"
+    }
+  },
+  "pattern": [
+    "V  ",
+    " V ",
+    "  /"
+  ],
+  "result": {
+    "item": "ancient_aether:valkyrum_lance"
+  },
+  "show_notification": true
+}

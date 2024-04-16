@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "aether:quicksoil"
+    },
+    "X": {
+      "item": "ancient_aether:atmosine_crystal"
+    }
+  },
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "item": "ancient_aether:gravity_gravel"
+  },
+  "show_notification": true
+}

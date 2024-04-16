@@ -1,0 +1,10 @@
+{
+  "type": "aether:enchanting",
+  "category": "enchanting_misc",
+  "cookingtime": 1000,
+  "experience": 1.5,
+  "ingredient": {
+    "item": "ancient_aether:valkyrum_ore"
+  },
+  "result": "ancient_aether:valkyrum"
+}

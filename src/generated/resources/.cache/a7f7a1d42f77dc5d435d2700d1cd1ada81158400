@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-16T15:34:58.7815351	Tags for minecraft:item mod id ancient_aether
+// 1.20.1	2024-04-16T18:54:53.9935219	Tags for minecraft:item mod id ancient_aether
 a6dcafb905da729c07d1dabd0f4f98e1e75317cd data/aether/tags/items/accessories_capes.json
 cd168c9518529051447f91f38db8a192fce79575 data/aether/tags/items/accessories_gloves.json
 add87f05b14c634a1e8ebb0ea33f104c4c8fadcf data/aether/tags/items/accessories_miscellaneous.json
@@ -65,14 +65,14 @@ bd87b848151f5ba65e717dd3f25eb88e0ba9fc12 data/forge/tags/items/storage_blocks.js
 ff6a775e25a08e6f3e3eda5b5ca98758146592bd data/minecraft/tags/items/boats.json
 d6d3c44c6de5f175920b507a0239470d70d395fe data/minecraft/tags/items/chest_boats.json
 af89ca9b971b1a84ff96ce1c0fcceda39c1b6958 data/minecraft/tags/items/fox_food.json
-119505af436fca5784bb5847cefd09b10cd6aa62 data/minecraft/tags/items/hanging_signs.json
+caebe6e6db3d95c4715e1f9ce91ddb56aa9fc8d7 data/minecraft/tags/items/hanging_signs.json
 31bf0b7cd8724b1e0d6a9afb2570c3b7335f8d28 data/minecraft/tags/items/hoes.json
 7802eb23ecd9eb28dab72a3ffc2b1bf4154c0e97 data/minecraft/tags/items/leaves.json
 ce63abfd7d30dfff9c3c99ad85c8cc2c2ce03c44 data/minecraft/tags/items/logs_that_burn.json
 0f0618ed181a7cec11954ef689deb6c2513ce843 data/minecraft/tags/items/pickaxes.json
 c0f117d7d91733da5d4c623918833d7de83c45eb data/minecraft/tags/items/saplings.json
 3cc548711cbb53b2f620cb715271f243560e5ac1 data/minecraft/tags/items/shovels.json
-119505af436fca5784bb5847cefd09b10cd6aa62 data/minecraft/tags/items/signs.json
+fad0a01f992bbbacbab5f9f965edae96ea42d68f data/minecraft/tags/items/signs.json
 7fb842c8c5251cfdc5c99ad2f9f472a1ec5de9ca data/minecraft/tags/items/small_flowers.json
 56160960e51c2f58969cc9c80c369245b5d9fca6 data/minecraft/tags/items/swords.json
 92ab282e68ad599781f6132379ef0c69e856bbe5 data/minecraft/tags/items/trimmable_armor.json

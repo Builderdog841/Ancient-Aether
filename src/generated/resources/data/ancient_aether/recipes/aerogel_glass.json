@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "aether:aerogel"
+    },
+    "X": {
+      "item": "aether:skyroot_planks"
+    }
+  },
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "item": "ancient_aether:aerogel_glass"
+  },
+  "show_notification": true
+}

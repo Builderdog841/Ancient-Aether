@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_atmosine_crystal": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ancient_aether:atmosine_crystal"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ancient_aether:gravity_gravel"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_atmosine_crystal",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ancient_aether:gravity_gravel"
+    ]
+  },
+  "sends_telemetry_event": false
+}

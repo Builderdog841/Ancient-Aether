@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ancient_aether:valkyrum_axe_repairing"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_valkyrum_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ancient_aether:valkyrum_axe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_valkyrum_axe",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ancient_aether:valkyrum_axe_repairing"
+    ]
+  },
+  "sends_telemetry_event": true
+}

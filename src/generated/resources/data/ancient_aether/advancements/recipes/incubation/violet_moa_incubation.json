@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ancient_aether:violet_moa_incubation"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_violet_moa_egg": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ancient_aether:violet_moa_egg"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_violet_moa_egg",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ancient_aether:violet_moa_incubation"
+    ]
+  },
+  "sends_telemetry_event": true
+}

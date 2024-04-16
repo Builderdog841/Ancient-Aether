@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "ancient_aether:ambrosium_lantern"
+    },
+    {
+      "item": "aether:light_hellfire_stone"
+    }
+  ],
+  "result": {
+    "item": "ancient_aether:sun_lantern"
+  }
+}
