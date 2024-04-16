@@ -21,7 +21,7 @@
       "when_out_of_range": {
         "type": "minecraft:range_choice",
         "input": "ancient_aether:aquifer/noise",
-        "min_inclusive": 0.7,
+        "min_inclusive": 0.5,
         "max_exclusive": 1.5,
         "when_in_range": {
           "type": "minecraft:y_clamped_gradient",
