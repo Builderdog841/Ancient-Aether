@@ -35,26 +35,28 @@ public class AncientAetherSurfaceRules {
                         SurfaceRules.ifTrue(SurfaceRules.stoneDepthCheck(0, true, 0, CaveSurface.FLOOR), SurfaceRules.state(AetherFeatureStates.HOLYSTONE))
                 ),
 
-
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.SKY_LAKE),
-                        SurfaceRules.ifTrue(SurfaceRules.noiseCondition(AncientAetherNoises.SKYLANDS_AQUIFER, -0.1D, 0.1D),
-                                SurfaceRules.ifTrue(SurfaceRules.verticalGradient("lake_layer_03", VerticalAnchor.absolute(105), VerticalAnchor.absolute(105)), SurfaceRules.state(Blocks.WATER.defaultBlockState())))
+                        SurfaceRules.ifTrue(SurfaceRules.verticalGradient("above_lake", VerticalAnchor.absolute(104), VerticalAnchor.absolute(104)), SurfaceRules.state(AetherFeatureStates.AETHER_DIRT))
                 ),
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.SKY_LAKE),
-                        SurfaceRules.ifTrue(SurfaceRules.noiseCondition(AncientAetherNoises.SKYLANDS_AQUIFER, -0.2D, 0.2D),
-                                SurfaceRules.ifTrue(SurfaceRules.verticalGradient("lake_layer_04", VerticalAnchor.absolute(106), VerticalAnchor.absolute(106)), SurfaceRules.state(Blocks.WATER.defaultBlockState())))
+                        SurfaceRules.ifTrue(SurfaceRules.not(SurfaceRules.noiseCondition(AncientAetherNoises.SKYLANDS_AQUIFER, -0.1D, 0.1D)),
+                                SurfaceRules.ifTrue(SurfaceRules.verticalGradient("above_lake", VerticalAnchor.absolute(105), VerticalAnchor.absolute(105)), SurfaceRules.state(AetherFeatureStates.AETHER_DIRT)))
                 ),
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.SKY_LAKE),
-                        SurfaceRules.ifTrue(SurfaceRules.noiseCondition(AncientAetherNoises.SKYLANDS_AQUIFER, -0.45D, 0.45D),
-                                SurfaceRules.ifTrue(SurfaceRules.verticalGradient("lake_layer_05", VerticalAnchor.absolute(107), VerticalAnchor.absolute(107)), SurfaceRules.state(Blocks.WATER.defaultBlockState())))
+                        SurfaceRules.ifTrue(SurfaceRules.not(SurfaceRules.noiseCondition(AncientAetherNoises.SKYLANDS_AQUIFER, -0.2D, 0.2D)),
+                                SurfaceRules.ifTrue(SurfaceRules.verticalGradient("above_lake", VerticalAnchor.absolute(106), VerticalAnchor.absolute(106)), SurfaceRules.state(AetherFeatureStates.AETHER_DIRT)))
                 ),
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.SKY_LAKE),
-                        SurfaceRules.ifTrue(SurfaceRules.noiseCondition(AncientAetherNoises.SKYLANDS_AQUIFER, -0.7D, 0.7D),
-                                SurfaceRules.ifTrue(SurfaceRules.verticalGradient("lake_layer_06", VerticalAnchor.absolute(108), VerticalAnchor.absolute(108)), SurfaceRules.state(Blocks.WATER.defaultBlockState())))
+                        SurfaceRules.ifTrue(SurfaceRules.not(SurfaceRules.noiseCondition(AncientAetherNoises.SKYLANDS_AQUIFER, -0.45D, 0.45D)),
+                                SurfaceRules.ifTrue(SurfaceRules.verticalGradient("above_lake", VerticalAnchor.absolute(107), VerticalAnchor.absolute(107)), SurfaceRules.state(AetherFeatureStates.AETHER_DIRT)))
+                ),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.SKY_LAKE),
+                        SurfaceRules.ifTrue(SurfaceRules.not(SurfaceRules.noiseCondition(AncientAetherNoises.SKYLANDS_AQUIFER, -0.7D, 0.7D)),
+                                SurfaceRules.ifTrue(SurfaceRules.verticalGradient("above_lake", VerticalAnchor.absolute(108), VerticalAnchor.absolute(108)), SurfaceRules.state(AetherFeatureStates.AETHER_DIRT)))
                 ),
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.SKY_LAKE),
                         SurfaceRules.ifTrue(SurfaceRules.noiseCondition(AncientAetherNoises.SKYLANDS_AQUIFER, -1.0D, 1.0D),
-                                SurfaceRules.ifTrue(SurfaceRules.verticalGradient("lake_top_layer", VerticalAnchor.absolute(109), VerticalAnchor.absolute(109)), SurfaceRules.state(Blocks.WATER.defaultBlockState())))
+                                SurfaceRules.ifTrue(SurfaceRules.verticalGradient("above_lake", VerticalAnchor.absolute(109), VerticalAnchor.absolute(109)), SurfaceRules.state(Blocks.WATER.defaultBlockState())))
                 ),
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.SKY_LAKE),
                         SurfaceRules.ifTrue(SurfaceRules.noiseCondition(AncientAetherNoises.SKYLANDS_AQUIFER, -1.0D, 1.0D),
