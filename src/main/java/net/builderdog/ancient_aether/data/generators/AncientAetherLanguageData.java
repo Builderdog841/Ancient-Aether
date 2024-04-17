@@ -274,6 +274,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBiome(AncientAetherBiomes.SAKURA_JUNGLE, "Sakura Jungle");
         addBiome(AncientAetherBiomes.ELEVATED_CLEARING, "Elevated Clearing");
         addBiome(AncientAetherBiomes.ELEVATED_FOREST, "Elevated Forest");
+        addBiome(AncientAetherBiomes.SKY_LAKE, "Sky Lake");
         addBiome(AncientAetherBiomes.HOLYSTONE_CAVERNS, "Holystone Caverns");
         addBiome(AncientAetherBiomes.FROZEN_CAVERNS, "Frozen Caverns");
         addBiome(AncientAetherBiomes.ELEVATED_CAVERNS, "Elevated Caverns");
