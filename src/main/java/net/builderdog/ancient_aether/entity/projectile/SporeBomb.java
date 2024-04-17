@@ -34,8 +34,8 @@ public class SporeBomb extends AbstractDart {
                 areaEffectCloud.setPos(getX(), getY(), getZ());
                 areaEffectCloud.setRadius(4.0F);
                 areaEffectCloud.setDuration(300);
-                areaEffectCloud.addEffect(new MobEffectInstance(AetherEffects.INEBRIATION.get(), 60, 1));
-                areaEffectCloud.addEffect(new MobEffectInstance(MobEffects.HARM, 1, 1));
+                areaEffectCloud.addEffect(new MobEffectInstance(AetherEffects.INEBRIATION.get(), 60, 0));
+                areaEffectCloud.addEffect(new MobEffectInstance(MobEffects.HARM, 1, 0));
                 areaEffectCloud.setParticle(AncientAetherParticleTypes.TOXIC_SPORES.get());
                 level().addFreshEntity(areaEffectCloud);
             }
