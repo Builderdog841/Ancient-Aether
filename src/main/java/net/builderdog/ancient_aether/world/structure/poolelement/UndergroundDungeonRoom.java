@@ -7,6 +7,7 @@ import com.mojang.serialization.DataResult;
 import com.mojang.serialization.DynamicOps;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
+import net.builderdog.ancient_aether.world.structure.AncientAetherStructurePoolElements;
 import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
@@ -125,7 +126,7 @@ public class UndergroundDungeonRoom extends StructurePoolElement {
     }
 
     public @NotNull StructurePoolElementType<?> getType() {
-        return StructurePoolElementType.SINGLE;
+        return AncientAetherStructurePoolElements.UNDERGROUND_DUNGEON_ROOM.get();
     }
 
     public String toString() {
