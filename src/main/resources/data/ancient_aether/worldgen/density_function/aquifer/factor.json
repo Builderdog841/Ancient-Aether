@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:cache_once",
+  "argument": {
+    "type": "minecraft:range_choice",
+    "input": "ancient_aether:aquifer/noise",
+    "min_inclusive": 0,
+    "max_exclusive": 0.45,
+    "when_in_range": 1,
+    "when_out_of_range": {
+      "type": "minecraft:clamp",
+      "input": {
+        "type": "minecraft:add",
+        "argument1": -8,
+        "argument2": {
+          "type": "minecraft:mul",
+          "argument1": 20,
+          "argument2": "ancient_aether:aquifer/noise"
+        }
+      },
+      "min": 1,
+      "max": 12.5
+    }
+  }
+}
