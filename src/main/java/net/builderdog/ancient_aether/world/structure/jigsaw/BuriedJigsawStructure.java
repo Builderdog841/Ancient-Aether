@@ -159,6 +159,6 @@ public class BuriedJigsawStructure extends Structure {
 
     @Override
     public @NotNull StructureType<?> type() {
-        return AncientAetherStructureTypes.BURIED_JIGSAW_STRUCTURE.get();
+        return AncientAetherStructureTypes.BURIED_JIGSAW.get();
     }
 }

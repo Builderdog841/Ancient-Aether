@@ -54,6 +54,7 @@ public class AncientAetherAdvancementData extends ForgeAdvancementProvider {
                     .addCriterion("sakura_jungle", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AncientAetherBiomes.WYNDCAP_PEAKS)))
                     .addCriterion("elevated_clearing", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AncientAetherBiomes.ELEVATED_CLEARING)))
                     .addCriterion("elevated_forest", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AncientAetherBiomes.ELEVATED_FOREST)))
+                    .addCriterion("sky_lake", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AncientAetherBiomes.SKY_LAKE)))
                     .addCriterion("holystone_caverns", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AncientAetherBiomes.HOLYSTONE_CAVERNS)))
                     .addCriterion("frozen_caverns", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AncientAetherBiomes.FROZEN_CAVERNS)))
                     .addCriterion("elevated_caverns", PlayerTrigger.TriggerInstance.located(LocationPredicate.inBiome(AncientAetherBiomes.ELEVATED_CAVERNS)))

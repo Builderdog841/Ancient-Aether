@@ -113,6 +113,22 @@
       },
       "trigger": "minecraft:location"
     },
+    "sky_lake": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biome": "ancient_aether:sky_lake"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
     "skyroot_forest": {
       "conditions": {
         "player": [
@@ -313,6 +329,9 @@
     ],
     [
       "elevated_forest"
+    ],
+    [
+      "sky_lake"
     ],
     [
       "holystone_caverns"

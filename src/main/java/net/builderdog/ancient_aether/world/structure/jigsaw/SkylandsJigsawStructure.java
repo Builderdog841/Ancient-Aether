@@ -89,6 +89,6 @@ public class SkylandsJigsawStructure extends Structure {
 
     @Override
     public @NotNull StructureType<?> type() {
-        return AncientAetherStructureTypes.ADVANCED_JIGSAW_STRUCTURE.get();
+        return AncientAetherStructureTypes.SKYLANDS_JIGSAW.get();
     }
 }

@@ -10,6 +10,6 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class AncientAetherStructureTypes {
     public static final DeferredRegister<StructureType<?>> STRUCTURE_TYPES = DeferredRegister.create(Registries.STRUCTURE_TYPE, AncientAether.MODID);
-    public static final RegistryObject<StructureType<SkylandsJigsawStructure>> ADVANCED_JIGSAW_STRUCTURE = STRUCTURE_TYPES.register("jigsaw_skylands", () -> () -> SkylandsJigsawStructure.CODEC);
-    public static final RegistryObject<StructureType<BuriedJigsawStructure>> BURIED_JIGSAW_STRUCTURE = STRUCTURE_TYPES.register("jigsaw_buried", () -> () -> BuriedJigsawStructure.CODEC);
+    public static final RegistryObject<StructureType<SkylandsJigsawStructure>> SKYLANDS_JIGSAW = STRUCTURE_TYPES.register("jigsaw_skylands", () -> () -> SkylandsJigsawStructure.CODEC);
+    public static final RegistryObject<StructureType<BuriedJigsawStructure>> BURIED_JIGSAW = STRUCTURE_TYPES.register("jigsaw_buried", () -> () -> BuriedJigsawStructure.CODEC);
 }
