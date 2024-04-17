@@ -67,7 +67,8 @@ public class AncientAetherRegion extends Region {
         addBiome(mapper, new Climate.ParameterPoint(tempSkyroot3, Climate.Parameter.span(-0.05F, 0.2F), fullRange, erosionSunForest, depthSurface, noRidges, 0), AncientAetherBiomes.SUN_FOREST);
         addBiome(mapper, new Climate.ParameterPoint(tempSkyroot3, Climate.Parameter.span(0.2F, 1.5F), fullRange, erosionDefault, depthSurface, noRidges, 0), AetherBiomes.SKYROOT_GROVE);
 
-        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, fullRange, fullRange, erosionDefault, depthSurface, ridges, 0), AncientAetherBiomes.SKY_LAKE);
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, fullRange, fullRange, erosionDefault, Climate.Parameter.span(-1.5F, 0.75F), ridges, 0), AncientAetherBiomes.SKY_LAKE);
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, fullRange, fullRange, erosionDefault, Climate.Parameter.span(0.75F, 1.5F), ridges, 0), AncientAetherBiomes.HOLYSTONE_CAVERNS);
 
         addBiome(mapper, new Climate.ParameterPoint(tempSakura, Climate.Parameter.span(-1.5F, 0.25F), fullRange, erosionDefault, fullRange, fullRange, 0), AncientAetherBiomes.SAKURA_JUNGLE);
         addBiome(mapper, new Climate.ParameterPoint(tempSakura, Climate.Parameter.span(0.25F, 1.5F), fullRange, erosionDefault, fullRange, fullRange, 0), AncientAetherBiomes.SKYROOT_JUNGLE);
@@ -85,7 +86,7 @@ public class AncientAetherRegion extends Region {
             addBiome(mapper, new Climate.ParameterPoint(tempAtmosine, Climate.Parameter.span(0.15F, 1.5F), fullRange, erosionDefault, depthUnderground, fullRange, 0), AncientAetherBiomes.ATMOSINE_GROTTO);
             addBiome(mapper, new Climate.ParameterPoint(tempAtmosine, Climate.Parameter.span(0.075F, 1.5F), fullRange, erosionElevated, Climate.Parameter.span(0.4F, 1.5F), fullRange, 0), AncientAetherBiomes.ATMOSINE_GROTTO);
         } else {
-            addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, fullRange, fullRange, erosionDefault, depthUnderground, fullRange, 0), AncientAetherBiomes.HOLYSTONE_CAVERNS);
+            addBiome(mapper, new Climate.ParameterPoint(tempSkyroot, fullRange, fullRange, erosionDefault, depthUnderground, noRidges, 0), AncientAetherBiomes.HOLYSTONE_CAVERNS);
             addBiome(mapper, new Climate.ParameterPoint(fullRange, fullRange, fullRange, erosionElevated, Climate.Parameter.span(0.4F, 1.5F), fullRange, 0), AncientAetherBiomes.ELEVATED_CAVERNS);
             addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, fullRange, fullRange, erosionDefault, depthUnderground, fullRange, 0), AncientAetherBiomes.FROZEN_CAVERNS);
         }
