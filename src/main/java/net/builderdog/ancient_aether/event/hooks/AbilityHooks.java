@@ -8,7 +8,7 @@ import com.aetherteam.aether.network.packet.clientbound.ToolDebuffPacket;
 import com.aetherteam.nitrogen.network.PacketRelay;
 import com.google.common.collect.ImmutableMap;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
-import net.builderdog.ancient_aether.item.equipment.armor.EquipmentUtil;
+import net.builderdog.ancient_aether.item.EquipmentUtil;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;

@@ -3,7 +3,7 @@ package net.builderdog.ancient_aether.capability.player;
 import com.aetherteam.aether.network.AetherPacketHandler;
 import com.aetherteam.aether.network.packet.AetherPlayerSyncPacket;
 import com.aetherteam.nitrogen.network.BasePacket;
-import net.builderdog.ancient_aether.item.equipment.armor.EquipmentUtil;
+import net.builderdog.ancient_aether.item.EquipmentUtil;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.network.simple.SimpleChannel;

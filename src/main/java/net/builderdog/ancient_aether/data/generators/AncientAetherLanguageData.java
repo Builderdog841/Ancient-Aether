@@ -565,7 +565,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addRewardLore(AncientAetherItems.ANCIENT_RING, "the Ancient Dungeon Boss", "ring grants you +0.1 Attack Speed");
         addRewardLore(AncientAetherItems.ANCIENT_PENDANT, "the Ancient Dungeon Boss", "pendant grants you +0.2 Attack Speed");
         addRewardLore(AncientAetherItems.STRENGTH_STONE, "the Valkyrie Queen", "accessory increases your total Attack Damage by +15%");
-        addRewardLore(AncientAetherItems.SHIELD_OF_INEBRIATION, "the Mutated Aechor Plant", "shield has a change to give attackers Inebriation");
+        addRewardLore(AncientAetherItems.SHIELD_OF_INEBRIATION, "the Mutated Aechor Plant", "shield has a 50% change to give attackers Inebriation");
         addRewardLore(AncientAetherItems.SHIELD_OF_REMEDIATION, "the Mutated Aechor Plant", "shield makes you immune to Inebriation");
 
         addTemplateLore("wynd", "vases and dungeon chests");
