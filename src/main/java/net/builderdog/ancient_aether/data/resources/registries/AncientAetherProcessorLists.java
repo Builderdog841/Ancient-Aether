@@ -26,6 +26,7 @@ public class AncientAetherProcessorLists {
     public static final ResourceKey<StructureProcessorList> VALKYRIE_CAMP_SKYROOT = createKey("valkyrie_camp_skyroot");
     public static final ResourceKey<StructureProcessorList> VALKYRIE_CAMP_WYNDCAPS = createKey("valkyrie_camp_wyndcaps");
     public static final ResourceKey<StructureProcessorList> VALKYRIE_SETTLEMENT_SKYROOT = createKey("valkyrie_settlement_skyroot");
+    public static final ResourceKey<StructureProcessorList> VALKYRIE_SETTLEMENT_SKYROOT_PATH = createKey("valkyrie_settlement_skyroot_path");
     public static final ResourceKey<StructureProcessorList> BRONZE_DUNGEON_ENTRANCE = createKey("bronze_dungeon_entrance");
     public static final ResourceKey<StructureProcessorList> BRONZE_DUNGEON = createKey("bronze_dungeon");
     public static final ResourceKey<StructureProcessorList> BRONZE_DUNGEON_BOSS_ROOM = createKey("bronze_dungeon_boss_room");
@@ -87,10 +88,17 @@ public class AncientAetherProcessorLists {
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.POTTED_WHITE_FLOWER.get(), 0.15F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.POTTED_SUNSET_ROSE.get().defaultBlockState()),
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.POTTED_WHITE_FLOWER.get(), 0.15F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.POTTED_SKY_BLUES.get().defaultBlockState()),
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.POTTED_WHITE_FLOWER.get(), 0.2F), AlwaysTrueTest.INSTANCE, AetherBlocks.POTTED_BERRY_BUSH.get().defaultBlockState()),
-        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.AETHER_DIRT_PATH.get(), 0.05F), AlwaysTrueTest.INSTANCE, AetherFeatureStates.AETHER_GRASS_BLOCK)
+                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.AETHER_DIRT_PATH.get(), 0.05F), AlwaysTrueTest.INSTANCE, AetherFeatureStates.AETHER_GRASS_BLOCK)
                 )),
                 new DoubleDropsProcessor(),
                 new SurfaceRuleProcessor()
+        ));
+        register(context, VALKYRIE_SETTLEMENT_SKYROOT_PATH, ImmutableList.of(
+                new RuleProcessor(ImmutableList.of(
+                        new ProcessorRule(new BlockMatchTest(AetherBlocks.AETHER_DIRT_PATH.get()), new BlockMatchTest(Blocks.WATER), AetherBlocks.SKYROOT_PLANKS.get().defaultBlockState()),
+                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.AETHER_DIRT_PATH.get(), 0.05F), AlwaysTrueTest.INSTANCE, AetherFeatureStates.AETHER_GRASS_BLOCK)
+                )),
+                new DoubleDropsProcessor()
         ));
         register(context, BRONZE_DUNGEON_ENTRANCE, ImmutableList.of(
                 new RuleProcessor(ImmutableList.of(

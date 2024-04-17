@@ -19,11 +19,11 @@
             "type": "minecraft:y_clamped_gradient",
             "from_value": 0,
             "from_y": 112,
-            "to_value": 0.2,
+            "to_value": 0.5,
             "to_y": 136
           },
           "min": 0,
-          "max": 0.2
+          "max": 0.5
         },
         "argument2": "ancient_aether:islands/final_density"
       }
