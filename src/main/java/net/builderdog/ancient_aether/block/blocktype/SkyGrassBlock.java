@@ -68,7 +68,7 @@ public class SkyGrassBlock extends TallGrassBlock {
         BlockState below = level.getBlockState(pos.below());
         if (state.hasProperty(TYPE)) {
             if (below.is(AetherBlocks.ENCHANTED_AETHER_GRASS_BLOCK.get())) {
-                return state.setValue(ReduxStates.ENCHANTED, true);
+                return state.setValue(TYPE, AetherGrassType.ENCHANTED);
             } else if (below.hasProperty(TYPE)) {
                 return state.setValue(TYPE, below.getValue(TYPE));
             }
