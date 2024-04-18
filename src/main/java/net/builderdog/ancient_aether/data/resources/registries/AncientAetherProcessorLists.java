@@ -11,11 +11,13 @@ import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.data.resources.AncientAetherFeatureStates;
+import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ChestBlock;
 import net.minecraft.world.level.levelgen.structure.templatesystem.*;
 
 import java.util.List;
@@ -115,7 +117,10 @@ public class AncientAetherProcessorLists {
                         new ProcessorRule(new RandomBlockMatchTest(AncientAetherBlocks.CARVED_TILES.get(), 0.03F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.TRAPPED_CARVED_TILES.get().defaultBlockState()),
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.HOLYSTONE.get(), 0.4F), AlwaysTrueTest.INSTANCE, AncientAetherFeatureStates.MOSSY_HOLYSTONE),
                         new ProcessorRule(new RandomBlockMatchTest(AncientAetherBlocks.ANCIENT_SENTRY_VASE.get(), 0.75F), AlwaysTrueTest.INSTANCE, Blocks.AIR.defaultBlockState()),
-                        new ProcessorRule(new RandomBlockMatchTest(Blocks.CHEST, 0.3F), AlwaysTrueTest.INSTANCE, AetherBlocks.CHEST_MIMIC.get().defaultBlockState())
+                        new ProcessorRule(new RandomBlockStateMatchTest(Blocks.CHEST.defaultBlockState().setValue(ChestBlock.FACING, Direction.NORTH), 0.3F), AlwaysTrueTest.INSTANCE, AetherBlocks.CHEST_MIMIC.get().defaultBlockState().setValue(ChestBlock.FACING, Direction.NORTH)),
+                        new ProcessorRule(new RandomBlockStateMatchTest(Blocks.CHEST.defaultBlockState().setValue(ChestBlock.FACING, Direction.EAST), 0.3F), AlwaysTrueTest.INSTANCE, AetherBlocks.CHEST_MIMIC.get().defaultBlockState().setValue(ChestBlock.FACING, Direction.EAST)),
+                        new ProcessorRule(new RandomBlockStateMatchTest(Blocks.CHEST.defaultBlockState().setValue(ChestBlock.FACING, Direction.SOUTH), 0.3F), AlwaysTrueTest.INSTANCE, AetherBlocks.CHEST_MIMIC.get().defaultBlockState().setValue(ChestBlock.FACING, Direction.SOUTH)),
+                        new ProcessorRule(new RandomBlockStateMatchTest(Blocks.CHEST.defaultBlockState().setValue(ChestBlock.FACING, Direction.WEST), 0.3F), AlwaysTrueTest.INSTANCE, AetherBlocks.CHEST_MIMIC.get().defaultBlockState().setValue(ChestBlock.FACING, Direction.WEST))
                 )),
                 new DoubleDropsProcessor()
         ));
@@ -133,7 +138,11 @@ public class AncientAetherProcessorLists {
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.HOLYSTONE.get(), 0.25F), AlwaysTrueTest.INSTANCE, AetherFeatureStates.ICESTONE),
                         new ProcessorRule(new RandomBlockMatchTest(AncientAetherBlocks.ANCIENT_FROZEN_HOLYSTONE_VASE.get(), 0.25F), AlwaysTrueTest.INSTANCE, Blocks.AIR.defaultBlockState()),
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.CARVED_STONE.get(), 0.05F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.WYND_SENTRY_STONE.get().defaultBlockState()),
-                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.HOLYSTONE_BRICKS.get(), 0.05F), AlwaysTrueTest.INSTANCE, AetherFeatureStates.HOLYSTONE)
+                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.HOLYSTONE_BRICKS.get(), 0.05F), AlwaysTrueTest.INSTANCE, AetherFeatureStates.HOLYSTONE),
+                        new ProcessorRule(new RandomBlockStateMatchTest(Blocks.CHEST.defaultBlockState().setValue(ChestBlock.FACING, Direction.NORTH), 0.15F), AlwaysTrueTest.INSTANCE, AetherBlocks.CHEST_MIMIC.get().defaultBlockState().setValue(ChestBlock.FACING, Direction.NORTH)),
+                        new ProcessorRule(new RandomBlockStateMatchTest(Blocks.CHEST.defaultBlockState().setValue(ChestBlock.FACING, Direction.EAST), 0.15F), AlwaysTrueTest.INSTANCE, AetherBlocks.CHEST_MIMIC.get().defaultBlockState().setValue(ChestBlock.FACING, Direction.EAST)),
+                        new ProcessorRule(new RandomBlockStateMatchTest(Blocks.CHEST.defaultBlockState().setValue(ChestBlock.FACING, Direction.SOUTH), 0.15F), AlwaysTrueTest.INSTANCE, AetherBlocks.CHEST_MIMIC.get().defaultBlockState().setValue(ChestBlock.FACING, Direction.SOUTH)),
+                        new ProcessorRule(new RandomBlockStateMatchTest(Blocks.CHEST.defaultBlockState().setValue(ChestBlock.FACING, Direction.WEST), 0.15F), AlwaysTrueTest.INSTANCE, AetherBlocks.CHEST_MIMIC.get().defaultBlockState().setValue(ChestBlock.FACING, Direction.WEST))
                 )),
                 new DoubleDropsProcessor(),
                 new SurfaceRuleProcessor()

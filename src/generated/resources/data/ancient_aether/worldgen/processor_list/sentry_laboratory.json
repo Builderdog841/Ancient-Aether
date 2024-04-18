@@ -86,6 +86,102 @@
               "double_drops": "true"
             }
           }
+        },
+        {
+          "input_predicate": {
+            "block_state": {
+              "Name": "minecraft:chest",
+              "Properties": {
+                "type": "single",
+                "facing": "north",
+                "waterlogged": "false"
+              }
+            },
+            "predicate_type": "minecraft:random_blockstate_match",
+            "probability": 0.15
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "aether:chest_mimic",
+            "Properties": {
+              "facing": "north",
+              "waterlogged": "false"
+            }
+          }
+        },
+        {
+          "input_predicate": {
+            "block_state": {
+              "Name": "minecraft:chest",
+              "Properties": {
+                "type": "single",
+                "facing": "east",
+                "waterlogged": "false"
+              }
+            },
+            "predicate_type": "minecraft:random_blockstate_match",
+            "probability": 0.15
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "aether:chest_mimic",
+            "Properties": {
+              "facing": "east",
+              "waterlogged": "false"
+            }
+          }
+        },
+        {
+          "input_predicate": {
+            "block_state": {
+              "Name": "minecraft:chest",
+              "Properties": {
+                "type": "single",
+                "facing": "south",
+                "waterlogged": "false"
+              }
+            },
+            "predicate_type": "minecraft:random_blockstate_match",
+            "probability": 0.15
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "aether:chest_mimic",
+            "Properties": {
+              "facing": "south",
+              "waterlogged": "false"
+            }
+          }
+        },
+        {
+          "input_predicate": {
+            "block_state": {
+              "Name": "minecraft:chest",
+              "Properties": {
+                "type": "single",
+                "facing": "west",
+                "waterlogged": "false"
+              }
+            },
+            "predicate_type": "minecraft:random_blockstate_match",
+            "probability": 0.15
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "aether:chest_mimic",
+            "Properties": {
+              "facing": "west",
+              "waterlogged": "false"
+            }
+          }
         }
       ]
     },
