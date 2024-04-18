@@ -146,7 +146,7 @@ dependencies {
     compileOnly fg.deobf("curse.maven:structure-gel-api-378802:4975615")
 
     runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:${project.curios_version}")
-    //runtimeOnly fg.deobf("local:aether_genesis:1.20.1-0.0.1-neoforge")
+    runtimeOnly fg.deobf("local:aether_genesis:1.20.1-0.0.1-neoforge")
     //runtimeOnly fg.deobf("curse.maven:deep-aether-852465:5076616")
     //runtimeOnly fg.deobf('software.bernie.geckolib:geckolib-forge-1.20.1:4.2.2')
     //runtimeOnly fg.deobf("curse.maven:aether-redux-867237:5201581")
