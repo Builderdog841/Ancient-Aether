@@ -57,14 +57,94 @@
         },
         {
           "input_predicate": {
-            "block": "minecraft:chest",
-            "predicate_type": "minecraft:block_match"
+            "block_state": {
+              "Name": "minecraft:chest",
+              "Properties": {
+                "type": "single",
+                "facing": "north",
+                "waterlogged": "false"
+              }
+            },
+            "predicate_type": "minecraft:blockstate_match"
           },
           "location_predicate": {
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "aether_genesis:skyroot_chest"
+            "Name": "aether_genesis:skyroot_chest",
+            "Properties": {
+              "facing": "north",
+              "waterlogged": "false"
+            }
+          }
+        },
+        {
+          "input_predicate": {
+            "block_state": {
+              "Name": "minecraft:chest",
+              "Properties": {
+                "type": "single",
+                "facing": "east",
+                "waterlogged": "false"
+              }
+            },
+            "predicate_type": "minecraft:blockstate_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "aether_genesis:skyroot_chest",
+            "Properties": {
+              "facing": "east",
+              "waterlogged": "false"
+            }
+          }
+        },
+        {
+          "input_predicate": {
+            "block_state": {
+              "Name": "minecraft:chest",
+              "Properties": {
+                "type": "single",
+                "facing": "south",
+                "waterlogged": "false"
+              }
+            },
+            "predicate_type": "minecraft:blockstate_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "aether_genesis:skyroot_chest",
+            "Properties": {
+              "facing": "south",
+              "waterlogged": "false"
+            }
+          }
+        },
+        {
+          "input_predicate": {
+            "block_state": {
+              "Name": "minecraft:chest",
+              "Properties": {
+                "type": "single",
+                "facing": "west",
+                "waterlogged": "false"
+              }
+            },
+            "predicate_type": "minecraft:blockstate_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "aether_genesis:skyroot_chest",
+            "Properties": {
+              "facing": "west",
+              "waterlogged": "false"
+            }
           }
         }
       ]
