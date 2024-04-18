@@ -25,7 +25,6 @@ public class AncientAetherClient {
 
             if (AncientAetherConfig.CLIENT.config_overrides.get()) {
                 AetherConfig.CLIENT.enable_aether_menu_button.set(false);
-                AetherConfig.CLIENT.disable_music_manager.set(false);
                 CumulusConfig.CLIENT.enable_menu_list_button.set(true);
                 CumulusConfig.CLIENT.active_menu.set("ancient_aether:ancient_aether");
                 AetherConfig.COMMON.add_ruined_portal_automatically.set(true);
