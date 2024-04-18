@@ -104,7 +104,7 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "aether:chest_mimic",
+            "Name": "aether_genesis:skyroot_chest_mimic",
             "Properties": {
               "facing": "north",
               "waterlogged": "false"
@@ -128,7 +128,7 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "aether:chest_mimic",
+            "Name": "aether_genesis:skyroot_chest_mimic",
             "Properties": {
               "facing": "east",
               "waterlogged": "false"
@@ -152,7 +152,7 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "aether:chest_mimic",
+            "Name": "aether_genesis:skyroot_chest_mimic",
             "Properties": {
               "facing": "south",
               "waterlogged": "false"
@@ -176,7 +176,7 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "aether:chest_mimic",
+            "Name": "aether_genesis:skyroot_chest_mimic",
             "Properties": {
               "facing": "west",
               "waterlogged": "false"
