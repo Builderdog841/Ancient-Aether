@@ -186,6 +186,16 @@ public class AncientAetherItemTagData extends ItemTagsProvider {
         tag(AetherTags.Items.GOLDEN_AMBER_HARVESTERS).add(
                 AncientAetherItems.VALKYRUM_AXE.get()
         );
+        tag(AetherTags.Items.TREATED_AS_AETHER_ITEM).add(
+                AncientAetherItems.VALKYRUM_SWORD.get(),
+                AncientAetherItems.VALKYRUM_LANCE.get(),
+                AncientAetherItems.ANCIENT_SWORD.get(),
+                AncientAetherItems.VALKYRUM_PICKAXE.get(),
+                AncientAetherItems.VALKYRUM_AXE.get(),
+                AncientAetherItems.VALKYRUM_SHOVEL.get(),
+                AncientAetherItems.VALKYRUM_HOE.get(),
+                AncientAetherItems.ARKENZUS_PICKAXE.get()
+        );
         tag(AetherTags.Items.DART_SHOOTERS).add(
                 AncientAetherItems.AERONAUTIC_DART_SHOOTER.get()
         );
