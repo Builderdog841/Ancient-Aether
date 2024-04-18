@@ -97,13 +97,13 @@ public class DungeonEntrance extends StructurePoolElement {
 
     @SuppressWarnings("deprecation")
     public boolean place(@NotNull StructureTemplateManager structureTemplateManager, @NotNull WorldGenLevel level, @NotNull StructureManager structureManager, @NotNull ChunkGenerator generator, @NotNull BlockPos offset, @NotNull BlockPos pos, @NotNull Rotation rotation, @NotNull BoundingBox box, @NotNull RandomSource random, boolean keepJigsaws) {
-        StructureTemplate structuretemplate = getTemplate(structureTemplateManager);
-        StructurePlaceSettings structureplacesettings = getSettings(rotation, box, keepJigsaws);
+        StructureTemplate template = getTemplate(structureTemplateManager);
+        StructurePlaceSettings settings = getSettings(rotation, box, keepJigsaws);
         if (!level.isEmptyBlock(box.getCenter())) {
-            if (!structuretemplate.placeInWorld(level, offset, pos, structureplacesettings, random, 18)) {
+            if (!template.placeInWorld(level, offset, pos, settings, random, 18)) {
                 return false;
             } else {
-                for (StructureTemplate.StructureBlockInfo structureblockinfo : StructureTemplate.processBlockInfos(level, offset, pos, structureplacesettings, getDataMarkers(structureTemplateManager, offset, rotation, false))) {
+                for (StructureTemplate.StructureBlockInfo structureblockinfo : StructureTemplate.processBlockInfos(level, offset, pos, settings, getDataMarkers(structureTemplateManager, offset, rotation, false))) {
                     handleDataMarker(level, structureblockinfo, offset, rotation, random, box);
                 }
                 return true;

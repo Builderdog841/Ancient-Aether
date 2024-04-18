@@ -187,7 +187,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<LanternBlock> AMBROSIUM_LANTERN = register("ambrosium_lantern", () -> new LanternBlock(BlockBehaviour.Properties.copy(LANTERN).lightLevel(s -> 15)));
     public static final RegistryObject<LanternBlock> WYND_LANTERN = register("wynd_lantern", () -> new LanternBlock(BlockBehaviour.Properties.copy(LANTERN).lightLevel(s -> 7)));
     public static final RegistryObject<LanternBlock> SUN_LANTERN = register("sun_lantern", () -> new LanternBlock(BlockBehaviour.Properties.copy(LANTERN).lightLevel(s -> 12)));
-    public static final RegistryObject<Block> AMBROSIUM_CAMPFIRE = register("ambrosium_campfire", () -> new AmbrosiumCampfireBlock(true, 1, Block.Properties.copy(Blocks.CAMPFIRE)));
+    public static final RegistryObject<Block> AMBROSIUM_CAMPFIRE = register("ambrosium_campfire", () -> new AmbrosiumCampfireBlock(false, 1, Block.Properties.copy(Blocks.CAMPFIRE)));
 
     public static final RegistryObject<Block> VIOLET_AERCLOUD = register("violet_aercloud", () -> new VioletAercloudBlock(BlockBehaviour.Properties.copy(COLD_AERCLOUD.get()).mapColor(MapColor.COLOR_PURPLE)));
     public static final RegistryObject<Block> WIND_BLOWER = register("wind_blower", () -> new WindBlowerBlock(BlockBehaviour.Properties.copy(COLD_AERCLOUD.get())));
