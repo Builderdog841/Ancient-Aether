@@ -32,9 +32,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
 
-public class UndergroundDungeonRoom extends StructurePoolElement {
-    private static final Codec<Either<ResourceLocation, StructureTemplate>> TEMPLATE_CODEC = Codec.of(UndergroundDungeonRoom::encodeTemplate, ResourceLocation.CODEC.map(Either::left));
-    public static final Codec<UndergroundDungeonRoom> CODEC = RecordCodecBuilder.create((instance) -> instance.group(templateCodec(), processorsCodec(), projectionCodec()).apply(instance, UndergroundDungeonRoom::new));
+public class DungeonEntrance extends StructurePoolElement {
+    private static final Codec<Either<ResourceLocation, StructureTemplate>> TEMPLATE_CODEC = Codec.of(DungeonEntrance::encodeTemplate, ResourceLocation.CODEC.map(Either::left));
+    public static final Codec<DungeonEntrance> CODEC = RecordCodecBuilder.create((instance) -> instance.group(templateCodec(), processorsCodec(), projectionCodec()).apply(instance, DungeonEntrance::new));
     protected final Either<ResourceLocation, StructureTemplate> template;
     protected final Holder<StructureProcessorList> processors;
 
@@ -43,15 +43,15 @@ public class UndergroundDungeonRoom extends StructurePoolElement {
         return optional.isEmpty() ? DataResult.error(() -> "Can not serialize a runtime pool element") : ResourceLocation.CODEC.encode(optional.get(), ops, values);
     }
 
-    protected static <E extends UndergroundDungeonRoom> RecordCodecBuilder<E, Holder<StructureProcessorList>> processorsCodec() {
+    protected static <E extends DungeonEntrance> RecordCodecBuilder<E, Holder<StructureProcessorList>> processorsCodec() {
         return StructureProcessorType.LIST_CODEC.fieldOf("processors").forGetter((processors) -> processors.processors);
     }
 
-    protected static <E extends UndergroundDungeonRoom> RecordCodecBuilder<E, Either<ResourceLocation, StructureTemplate>> templateCodec() {
+    protected static <E extends DungeonEntrance> RecordCodecBuilder<E, Either<ResourceLocation, StructureTemplate>> templateCodec() {
         return TEMPLATE_CODEC.fieldOf("location").forGetter((location) -> location.template);
     }
 
-    protected UndergroundDungeonRoom(Either<ResourceLocation, StructureTemplate> template, Holder<StructureProcessorList> processors, StructureTemplatePool.Projection projection) {
+    protected DungeonEntrance(Either<ResourceLocation, StructureTemplate> template, Holder<StructureProcessorList> processors, StructureTemplatePool.Projection projection) {
         super(projection);
         this.template = template;
         this.processors = processors;
@@ -95,17 +95,21 @@ public class UndergroundDungeonRoom extends StructurePoolElement {
         return structuretemplate.getBoundingBox((new StructurePlaceSettings()).setRotation(rotation), pos);
     }
 
+    @SuppressWarnings("deprecation")
     public boolean place(@NotNull StructureTemplateManager structureTemplateManager, @NotNull WorldGenLevel level, @NotNull StructureManager structureManager, @NotNull ChunkGenerator generator, @NotNull BlockPos offset, @NotNull BlockPos pos, @NotNull Rotation rotation, @NotNull BoundingBox box, @NotNull RandomSource random, boolean keepJigsaws) {
         StructureTemplate structuretemplate = getTemplate(structureTemplateManager);
         StructurePlaceSettings structureplacesettings = getSettings(rotation, box, keepJigsaws);
-        if (!structuretemplate.placeInWorld(level, offset, pos, structureplacesettings, random, 18) || level.isEmptyBlock(new BlockPos(pos.getX(), pos.getY() + 1, pos.getZ()))) {
-            return false;
-        } else {
-            for (StructureTemplate.StructureBlockInfo structureblockinfo : StructureTemplate.processBlockInfos(level, offset, pos, structureplacesettings, getDataMarkers(structureTemplateManager, offset, rotation, false))) {
-                handleDataMarker(level, structureblockinfo, offset, rotation, random, box);
+        if (!level.isEmptyBlock(box.getCenter())) {
+            if (!structuretemplate.placeInWorld(level, offset, pos, structureplacesettings, random, 18)) {
+                return false;
+            } else {
+                for (StructureTemplate.StructureBlockInfo structureblockinfo : StructureTemplate.processBlockInfos(level, offset, pos, structureplacesettings, getDataMarkers(structureTemplateManager, offset, rotation, false))) {
+                    handleDataMarker(level, structureblockinfo, offset, rotation, random, box);
+                }
+                return true;
             }
-            return true;
         }
+        return true;
     }
 
     protected StructurePlaceSettings getSettings(Rotation rotation, BoundingBox boundingBox, boolean offset) {
@@ -126,7 +130,7 @@ public class UndergroundDungeonRoom extends StructurePoolElement {
     }
 
     public @NotNull StructurePoolElementType<?> getType() {
-        return AncientAetherStructurePoolElements.UNDERGROUND_DUNGEON_ROOM.get();
+        return AncientAetherStructurePoolElements.DUNGEON_ENTRANCE.get();
     }
 
     public String toString() {

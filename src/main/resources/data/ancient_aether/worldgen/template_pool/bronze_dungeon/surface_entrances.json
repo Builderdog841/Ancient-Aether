@@ -8,7 +8,7 @@
         "location": "ancient_aether:bronze_dungeon/entrances/surface_entrance",
         "processors": "ancient_aether:bronze_dungeon_entrance",
         "projection": "rigid",
-        "element_type": "ancient_aether:underground_dungeon_room"
+        "element_type": "ancient_aether:dungeon_entrance"
       }
     }
   ]
