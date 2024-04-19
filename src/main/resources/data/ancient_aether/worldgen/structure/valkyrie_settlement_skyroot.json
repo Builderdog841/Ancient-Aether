@@ -7,7 +7,7 @@
   "biomes": "#ancient_aether:has_structure/valkyrie_settlement_skyroot",
   "terrain_adaptation": "beard_thin",
   "step": "surface_structures",
-  "above_bottom": 120,
+  "above_bottom": 112,
   "start_height": {
     "absolute": 0
   },
