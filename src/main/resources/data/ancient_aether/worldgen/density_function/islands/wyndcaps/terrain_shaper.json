@@ -16,7 +16,7 @@
           "to_value": 1,
           "to_y": 112
         },
-        "argument2": "ancient_aether:amplifier/factor_noise_vertical"
+        "argument2": "ancient_aether:amplifier/factor_vertical"
       },
       "when_out_of_range": {
         "type": "mul",
@@ -27,7 +27,7 @@
           "to_value": 0.5,
           "to_y": 256
         },
-        "argument2": "ancient_aether:amplifier/factor_noise_vertical"
+        "argument2": "ancient_aether:amplifier/factor_vertical"
       }
     },
     "argument2": "ancient_aether:islands/wyndcaps/factor_temperature"

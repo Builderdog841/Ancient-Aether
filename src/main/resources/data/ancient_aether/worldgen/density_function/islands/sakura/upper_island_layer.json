@@ -18,7 +18,7 @@
                     "argument2": {
                         "type": "minecraft:add",
                         "argument1": 0.75,
-                        "argument2": "ancient_aether:amplifier/noise_3d"
+                        "argument2": "ancient_aether:amplifier/sampled_3d_noise"
                     }
                 }
             },
@@ -49,7 +49,7 @@
                                 "argument2": {
                                     "type": "minecraft:add",
                                     "argument1": 0.75,
-                                    "argument2": "ancient_aether:amplifier/noise_3d"
+                                    "argument2": "ancient_aether:amplifier/sampled_3d_noise"
                                 }
                             }
                         },

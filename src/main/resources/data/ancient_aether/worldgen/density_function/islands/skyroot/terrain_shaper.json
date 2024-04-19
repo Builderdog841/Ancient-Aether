@@ -16,7 +16,7 @@
           "to_value": 1,
           "to_y": 112
         },
-        "argument2": "ancient_aether:amplifier/factor_noise"
+        "argument2": "ancient_aether:amplifier/factor"
       },
       "when_out_of_range": {
         "type": "mul",
@@ -29,7 +29,7 @@
             "to_value": 5,
             "to_y": 256
           },
-          "argument2": "ancient_aether:amplifier/factor_noise"
+          "argument2": "ancient_aether:amplifier/factor"
         },
         "argument2": "ancient_aether:aquifer/factor"
       }

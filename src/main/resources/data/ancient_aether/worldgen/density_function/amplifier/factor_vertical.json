@@ -7,5 +7,5 @@
     "to_value": 2.5,
     "to_y": 256
   },
-  "argument2": "ancient_aether:amplifier/noise_3d"
+  "argument2": "ancient_aether:amplifier/sampled_3d_noise"
 }

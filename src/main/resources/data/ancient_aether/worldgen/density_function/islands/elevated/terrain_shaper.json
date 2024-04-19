@@ -16,7 +16,7 @@
           "to_value": 1,
           "to_y": 128
         },
-        "argument2": "ancient_aether:amplifier/factor_noise"
+        "argument2": "ancient_aether:amplifier/factor"
       },
       "when_out_of_range": {
         "type": "mul",
@@ -27,7 +27,7 @@
           "to_value": 6,
           "to_y": 272
         },
-        "argument2": "ancient_aether:amplifier/factor_noise"
+        "argument2": "ancient_aether:amplifier/factor"
       }
     },
     "argument2": "ancient_aether:islands/elevated/factor_erosion"
