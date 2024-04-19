@@ -36,11 +36,12 @@ public class AncientAetherVegetationFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> WYND_THISTLE_PATCH = AncientAetherFeatureUtils.registerKey("wynd_thistle_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SLAMMROOT_PATCH = AncientAetherFeatureUtils.registerKey("slammroot_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_FLOWER_PATCH = AncientAetherFeatureUtils.registerKey("aether_flower_patch");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_FLOWER_PATCH_MIXED = AncientAetherFeatureUtils.registerKey("aether_flower_patch_mixed");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_FOREST_FLOWER_PATCH = AncientAetherFeatureUtils.registerKey("skyroot_forest_flower_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> WYNDCAPS_FLOWER_PATCH = AncientAetherFeatureUtils.registerKey("wyndcaps_flower_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_JUNGLE_FLOWER_PATCH = AncientAetherFeatureUtils.registerKey("skyroot_jungle_flower_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_JUNGLE_FLOWER_PATCH = AncientAetherFeatureUtils.registerKey("sakura_jungle_flower_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ELEVATED_ISLANDS_FLOWER_PATCH = AncientAetherFeatureUtils.registerKey("elevated_islands_flower_patch");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SKY_LAKE_FLOWER_PATCH = AncientAetherFeatureUtils.registerKey("sky_lake_flower_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_TREE_VARIANTS = AncientAetherFeatureUtils.registerKey("skyroot_tree_variants");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_PINE_TREE_VARIANTS = AncientAetherFeatureUtils.registerKey("skyroot_pine_tree_variants");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_SKYROOT_TREE_VARIANTS = AncientAetherFeatureUtils.registerKey("fancy_skyroot_tree_variants");
@@ -109,7 +110,7 @@ public class AncientAetherVegetationFeatures {
                 new WeightedPlacedFeature(PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AetherConfiguredFeatures.PURPLE_FLOWER_PATCH_CONFIGURATION), PlacementUtils.isEmpty()), 0.5F)
         ), PlacementUtils.inlinePlaced(configuredFeatures.getOrThrow(AetherConfiguredFeatures.WHITE_FLOWER_PATCH_CONFIGURATION), PlacementUtils.isEmpty())));
 
-        AncientAetherFeatureUtils.register(context, AETHER_FLOWER_PATCH_MIXED, Feature.FLOWER,
+        AncientAetherFeatureUtils.register(context, SKYROOT_FOREST_FLOWER_PATCH, Feature.FLOWER,
                 new RandomPatchConfiguration(64, 6, 2,
                         PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new NoiseThresholdProvider(2345L,
                                 new NormalNoise.NoiseParameters(0, 1.0D), 0.005F, -0.8F, 0.33333334F,
@@ -141,6 +142,16 @@ public class AncientAetherVegetationFeatures {
                                 List.of(AncientAetherFeatureStates.SKY_GRASS_SHORT_PALE),
                                 List.of(AetherBlocks.PURPLE_FLOWER.get().defaultBlockState(),
                                         AncientAetherFeatureStates.ELEVATIA
+                                ))))));
+
+        AncientAetherFeatureUtils.register(context, SKY_LAKE_FLOWER_PATCH, Feature.FLOWER,
+                new RandomPatchConfiguration(64, 6, 2,
+                        PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new NoiseThresholdProvider(2345L,
+                                new NormalNoise.NoiseParameters(0, 1.0D), 0.005F, -0.8F, 0.33333334F,
+                                AetherBlocks.WHITE_FLOWER.get().defaultBlockState(),
+                                List.of(AncientAetherFeatureStates.SUNSET_ROSE),
+                                List.of(AetherBlocks.PURPLE_FLOWER.get().defaultBlockState(),
+                                        AncientAetherFeatureStates.SKY_BLUES
                                 ))))));
 
         AncientAetherFeatureUtils.register(context, SKYROOT_TREE_VARIANTS, Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(

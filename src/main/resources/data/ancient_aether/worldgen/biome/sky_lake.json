@@ -35,7 +35,9 @@
     [
       "aether:water_spring"
     ],
-    [],
+    [
+      "ancient_aether:sky_lake_flowers"
+    ],
     [
       "aether:crystal_island",
       "aether:cold_aercloud",

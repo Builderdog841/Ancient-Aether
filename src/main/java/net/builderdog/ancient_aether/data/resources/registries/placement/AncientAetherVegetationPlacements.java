@@ -33,6 +33,7 @@ public class AncientAetherVegetationPlacements extends TrunkVineDecorator {
     public static final ResourceKey<PlacedFeature> SKYROOT_JUNGLE_FLOWERS = AncientAetherPlacementUtils.createKey("skyroot_jungle_flowers");
     public static final ResourceKey<PlacedFeature> SAKURA_JUNGLE_FLOWERS = AncientAetherPlacementUtils.createKey("sakura_jungle_flowers");
     public static final ResourceKey<PlacedFeature> ELEVATED_ISLANDS_FLOWERS = AncientAetherPlacementUtils.createKey("elevated_islands_flowers");
+    public static final ResourceKey<PlacedFeature> SKY_LAKE_FLOWERS = AncientAetherPlacementUtils.createKey("sky_lake_flowers");
     public static final ResourceKey<PlacedFeature> SKYROOT_MEADOW_TREES = AncientAetherPlacementUtils.createKey("skyroot_meadow_trees");
     public static final ResourceKey<PlacedFeature> SKYROOT_GROVE_TREES = AncientAetherPlacementUtils.createKey("skyroot_grove_trees");
     public static final ResourceKey<PlacedFeature> SKYROOT_FOREST_TREES = AncientAetherPlacementUtils.createKey("skyroot_forest_trees");
@@ -84,12 +85,12 @@ public class AncientAetherVegetationPlacements extends TrunkVineDecorator {
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome()
         );
-        AncientAetherPlacementUtils.register(context, SKYROOT_FOREST_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH_MIXED),
+        AncientAetherPlacementUtils.register(context, SKYROOT_FOREST_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.SKYROOT_FOREST_FLOWER_PATCH),
                 CountPlacement.of(2),
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome()
         );
-        AncientAetherPlacementUtils.register(context, SKYROOT_WOODLAND_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.AETHER_FLOWER_PATCH_MIXED),
+        AncientAetherPlacementUtils.register(context, SKYROOT_WOODLAND_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.SKYROOT_FOREST_FLOWER_PATCH),
                 CountPlacement.of(1),
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome()
@@ -121,6 +122,11 @@ public class AncientAetherVegetationPlacements extends TrunkVineDecorator {
         );
         AncientAetherPlacementUtils.register(context, ELEVATED_ISLANDS_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.ELEVATED_ISLANDS_FLOWER_PATCH),
                 CountPlacement.of(1),
+                ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
+                BiomeFilter.biome()
+        );
+        AncientAetherPlacementUtils.register(context, SKY_LAKE_FLOWERS, configuredFeatures.getOrThrow(AncientAetherVegetationFeatures.SKY_LAKE_FLOWER_PATCH),
+                CountPlacement.of(2),
                 ImprovedLayerPlacementModifier.of(Heightmap.Types.MOTION_BLOCKING, UniformInt.of(0, 1), 4),
                 BiomeFilter.biome()
         );

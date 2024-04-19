@@ -453,7 +453,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
 
         addFlowerLore(AncientAetherBlocks.SUNSET_ROSE, "Red", "small", "all around the Aether");
         addFlowerLore(AncientAetherBlocks.SKY_BLUES, "Cyan", "small", "all around the Aether");
-        addFlowerLore(AncientAetherBlocks.WYND_THISTLE, "Light Blue", "spiky", "in the Wyndcaps");
+        addFlowerLore(AncientAetherBlocks.WYND_THISTLE, "Light Blue", "spiky", "near Sky Lakes as well as in the Wyndcaps");
         addFlowerLore(AncientAetherBlocks.ELEVATIA, "Purple", "mysterious", "in Elevated Islands");
 
         addWoodBlockLore(AncientAetherBlocks.HIGHSPROOT_LOG, "Highsproot", "The log of a tree found in the Wyndcaps Region");
