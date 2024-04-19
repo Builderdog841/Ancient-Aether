@@ -4,14 +4,14 @@
     "type": "minecraft:clamp",
     "input": {
       "type": "minecraft:add",
-      "argument1": 0.45,
+      "argument1": 0.5,
       "argument2": {
         "type": "minecraft:mul",
         "argument1": -1,
         "argument2": "ancient_aether:amplifier/noise"
       }
     },
-    "min": 0.15,
+    "min": 0.175,
     "max": 0.4
   },
   "argument2": "ancient_aether:amplifier/sampled_3d_noise"
