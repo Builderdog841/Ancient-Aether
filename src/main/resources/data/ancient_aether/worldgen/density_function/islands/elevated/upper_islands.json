@@ -13,7 +13,7 @@
                     "argument2": {
                         "type": "minecraft:add",
                         "argument1": 0.5,
-                        "argument2": "ancient_aether:amplifier/noise"
+                        "argument2": "ancient_aether:amplifier/noise_3d"
                     }
                 },
                 "argument2": "ancient_aether:islands/elevated/factor_erosion"
@@ -40,7 +40,7 @@
                                 "argument2": {
                                     "type": "minecraft:add",
                                     "argument1": 0.5,
-                                    "argument2": "ancient_aether:amplifier/noise"
+                                    "argument2": "ancient_aether:amplifier/noise_3d"
                                 }
                             },
                             "argument2": "ancient_aether:islands/elevated/factor_erosion"
