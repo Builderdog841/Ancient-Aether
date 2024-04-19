@@ -30,6 +30,13 @@ public class AncientAetherClient {
                 AetherConfig.COMMON.add_ruined_portal_automatically.set(true);
                 AetherConfig.COMMON.add_temporary_freezing_automatically.set(true);
                 AeroBlenderConfig.COMMON.vanillaAetherRegionWeight.set(0);
+
+                AetherConfig.CLIENT.enable_aether_menu_button.save();
+                CumulusConfig.CLIENT.enable_menu_list_button.save();
+                CumulusConfig.CLIENT.active_menu.save();
+                AetherConfig.COMMON.add_ruined_portal_automatically.save();
+                AetherConfig.COMMON.add_temporary_freezing_automatically.save();
+                AeroBlenderConfig.COMMON.vanillaAetherRegionWeight.save();
             }
         });
     }
