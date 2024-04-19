@@ -25,7 +25,9 @@ public class EntityListener {
     @SubscribeEvent
     public static void onEntityHurt(LivingHurtEvent event) {
         LivingEntity player = event.getEntity();
-        LivingEntity attacker = (LivingEntity) event.getSource().getDirectEntity();
-        EntityHooks.shieldOfInebriationAbility(player, attacker);
+        Entity attackerEntity = event.getSource().getDirectEntity();
+        if (player instanceof Player && attackerEntity instanceof LivingEntity attacker) {
+            EntityHooks.shieldOfInebriationAbility(player, attacker);
+        }
     }
 }
