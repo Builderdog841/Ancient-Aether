@@ -30,6 +30,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Consumer;
 import java.util.function.Function;
 
 public class DungeonEntrance extends StructurePoolElement {
@@ -96,20 +97,19 @@ public class DungeonEntrance extends StructurePoolElement {
     }
 
     @SuppressWarnings("deprecation")
-    public boolean place(@NotNull StructureTemplateManager structureTemplateManager, @NotNull WorldGenLevel level, @NotNull StructureManager structureManager, @NotNull ChunkGenerator generator, @NotNull BlockPos offset, @NotNull BlockPos pos, @NotNull Rotation rotation, @NotNull BoundingBox box, @NotNull RandomSource random, boolean keepJigsaws) {
+    public boolean place(@NotNull StructureTemplateManager structureTemplateManager, @NotNull WorldGenLevel level, @NotNull StructureManager structureManager, @NotNull ChunkGenerator chunk, @NotNull BlockPos offset, @NotNull BlockPos pos, @NotNull Rotation rotation, @NotNull BoundingBox box, @NotNull RandomSource random, boolean keepJigsaws) {
         StructureTemplate template = getTemplate(structureTemplateManager);
         StructurePlaceSettings settings = getSettings(rotation, box, keepJigsaws);
-        if (!level.isEmptyBlock(box.getCenter())) {
-            if (!template.placeInWorld(level, offset, pos, settings, random, 18)) {
-                return false;
-            } else {
-                for (StructureTemplate.StructureBlockInfo structureblockinfo : StructureTemplate.processBlockInfos(level, offset, pos, settings, getDataMarkers(structureTemplateManager, offset, rotation, false))) {
-                    handleDataMarker(level, structureblockinfo, offset, rotation, random, box);
-                }
-                return true;
+        if (!template.placeInWorld(level, offset, pos, settings, random, 18)) {
+            return false;
+        } else if (!level.isEmptyBlock(getBoundingBox(structureTemplateManager, pos, rotation).getCenter())) {
+            return true;
+        } else {
+            for (StructureTemplate.StructureBlockInfo structureblockinfo : StructureTemplate.processBlockInfos(level, offset, pos, settings, getDataMarkers(structureTemplateManager, offset, rotation, false))) {
+                handleDataMarker(level, structureblockinfo, offset, rotation, random, box);
             }
+            return true;
         }
-        return true;
     }
 
     protected StructurePlaceSettings getSettings(Rotation rotation, BoundingBox boundingBox, boolean offset) {
