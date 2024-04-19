@@ -16,9 +16,6 @@ public class AncientAetherMissingMappings {
 
         //v0.8.0
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MODID).stream().filter(mapping -> mapping.getKey().getPath().contains("divine_gravel")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.GRAVITY_GRAVEL.get()));
-        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MODID).stream().filter(mapping -> mapping.getKey().getPath().contains("divine_skyroot_leaves")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES.get()));
-        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MODID).stream().filter(mapping -> mapping.getKey().getPath().contains("divine_skyroot_sapling")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get()));
-        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MODID).stream().filter(mapping -> mapping.getKey().getPath().contains("potted_divine_skyroot_sapling")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.POTTED_ENCHANTED_SKYROOT_SAPLING.get()));
 
         //v0.8.6
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MODID).stream().filter(mapping -> mapping.getKey().getPath().contains("wyndcaps_ice")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.WYND_ICE.get()));
@@ -40,6 +37,9 @@ public class AncientAetherMissingMappings {
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MODID).stream().filter(mapping -> mapping.getKey().getPath().contains("gale_lantern")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.AMBROSIUM_LANTERN.get()));
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MODID).stream().filter(mapping -> mapping.getKey().getPath().contains("cracked_slider")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.SLIDER_PROTOTYPE.get()));
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MODID).stream().filter(mapping -> mapping.getKey().getPath().contains("highland_viola")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.SUNSET_ROSE.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MODID).stream().filter(mapping -> mapping.getKey().getPath().contains("enchanted_skyroot_leaves")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.DIVINE_SKYROOT_LEAVES.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MODID).stream().filter(mapping -> mapping.getKey().getPath().contains("enchanted_skyroot_sapling")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.get()));
+        event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MODID).stream().filter(mapping -> mapping.getKey().getPath().contains("potted_enchanted_skyroot_sapling")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.POTTED_DIVINE_SKYROOT_SAPLING.get()));
         event.getMappings(ForgeRegistries.Keys.ITEMS, AncientAether.MODID).stream().filter(mapping -> mapping.getKey().getPath().contains("arkzenus_pickaxe")).forEach(blockMapping -> blockMapping.remap(AncientAetherItems.ARKENZUS_PICKAXE.get()));
     }
 }

@@ -2,14 +2,14 @@
   "type": "minecraft:random_selector",
   "config": {
     "default": {
-      "feature": "ancient_aether:enchanted_skyroot_tree",
+      "feature": "ancient_aether:divine_skyroot_tree",
       "placement": [
         {
           "type": "minecraft:block_predicate_filter",
           "predicate": {
             "type": "minecraft:would_survive",
             "state": {
-              "Name": "ancient_aether:enchanted_skyroot_sapling",
+              "Name": "ancient_aether:divine_skyroot_sapling",
               "Properties": {
                 "stage": "0"
               }
@@ -42,14 +42,14 @@
       {
         "chance": 0.1,
         "feature": {
-          "feature": "ancient_aether:fancy_enchanted_skyroot_tree",
+          "feature": "ancient_aether:fancy_divine_skyroot_tree",
           "placement": [
             {
               "type": "minecraft:block_predicate_filter",
               "predicate": {
                 "type": "minecraft:would_survive",
                 "state": {
-                  "Name": "ancient_aether:enchanted_skyroot_sapling",
+                  "Name": "ancient_aether:divine_skyroot_sapling",
                   "Properties": {
                     "stage": "0"
                   }

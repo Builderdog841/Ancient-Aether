@@ -30,21 +30,21 @@ public class AncientAetherTreeFeatures extends AncientAetherFeatureBuilders {
     public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_SAKURA_TREE = AncientAetherFeatureUtils.registerKey("tall_sakura_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_JUNGLE_TREE = AncientAetherFeatureUtils.registerKey("skyroot_jungle_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKYROOT_JUNGLE_TREE_VINED = AncientAetherFeatureUtils.registerKey("skyroot_jungle_tree_vined");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> ENCHANTED_SKYROOT_TREE = AncientAetherFeatureUtils.registerKey("enchanted_skyroot_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> DIVINE_SKYROOT_TREE = AncientAetherFeatureUtils.registerKey("divine_skyroot_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_SKYROOT_TREE = AncientAetherFeatureUtils.registerKey("fancy_skyroot_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_SKYROOT_TREE_VINED = AncientAetherFeatureUtils.registerKey("fancy_skyroot_tree_vined");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_ENCHANTED_SKYROOT_TREE = AncientAetherFeatureUtils.registerKey("fancy_enchanted_skyroot_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_DIVINE_SKYROOT_TREE = AncientAetherFeatureUtils.registerKey("fancy_divine_skyroot_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> WYNDCAPS_HOLIDAY_TREE = AncientAetherFeatureUtils.registerKey("wyndcaps_holiday_tree");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         AncientAetherFeatureUtils.register(context, SKYROOT_TREE_VINED, Feature.TREE, createStraightSkyrootBlobTree(AetherFeatureStates.SKYROOT_LEAVES).decorators(ImmutableList.of(new GrapeVineDecorator(AncientAetherFeatureStates.GRAPE_VINE))).build());
         AncientAetherFeatureUtils.register(context, CRYSTAL_SKYROOT_TREE, Feature.TREE, createStraightSkyrootBlobTree(AncientAetherFeatureStates.CRYSTAL_SKYROOT_LEAVES).build());
-        AncientAetherFeatureUtils.register(context, ENCHANTED_SKYROOT_TREE, Feature.TREE, createStraightSkyrootBlobTree(AncientAetherFeatureStates.ENCHANTED_SKYROOT_LEAVES).build());
+        AncientAetherFeatureUtils.register(context, DIVINE_SKYROOT_TREE, Feature.TREE, createStraightSkyrootBlobTree(AncientAetherFeatureStates.DIVINE_SKYROOT_LEAVES).build());
         AncientAetherFeatureUtils.register(context, SKYROOT_PINE_TREE, Feature.TREE, createSkyrootPineTree().build());
         AncientAetherFeatureUtils.register(context, SKYROOT_PINE_TREE_VINED, Feature.TREE, createSkyrootPineTree().decorators(ImmutableList.of(new GrapeVineDecorator(AncientAetherFeatureStates.GRAPE_VINE))).build());
         AncientAetherFeatureUtils.register(context, FANCY_SKYROOT_TREE, Feature.TREE, createFancySkyrootTree(AetherFeatureStates.SKYROOT_LEAVES).build());
         AncientAetherFeatureUtils.register(context, FANCY_SKYROOT_TREE_VINED, Feature.TREE, createFancySkyrootTree(AetherFeatureStates.SKYROOT_LEAVES).decorators(ImmutableList.of(new GrapeVineDecorator(AncientAetherFeatureStates.GRAPE_VINE))).build());
-        AncientAetherFeatureUtils.register(context, FANCY_ENCHANTED_SKYROOT_TREE, Feature.TREE, createFancySkyrootTree(AncientAetherFeatureStates.ENCHANTED_SKYROOT_LEAVES).build());
+        AncientAetherFeatureUtils.register(context, FANCY_DIVINE_SKYROOT_TREE, Feature.TREE, createFancySkyrootTree(AncientAetherFeatureStates.DIVINE_SKYROOT_LEAVES).build());
         AncientAetherFeatureUtils.register(context, HIGHSPROOT_TREE, Feature.TREE, createWyndcapsPineTree(6, 2, 8).build());
         AncientAetherFeatureUtils.register(context, TALL_HIGHSPROOT_TREE, Feature.TREE, createWyndcapsPineTree(8, 4, 16).build());
         AncientAetherFeatureUtils.register(context, SKYROOT_JUNGLE_TREE, Feature.TREE, createSakuraJungleTree(AetherFeatureStates.SKYROOT_LOG, AetherFeatureStates.SKYROOT_LEAVES, 7, 7).build());

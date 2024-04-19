@@ -354,7 +354,7 @@ public class AncientAetherItemTagData extends ItemTagsProvider {
         );
         tag(ItemTags.SAPLINGS).add(
                 AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get().asItem(),
-                AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get().asItem(),
+                AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.get().asItem(),
                 AncientAetherBlocks.SKYROOT_PINE_SAPLING.get().asItem(),
                 AncientAetherBlocks.BLUE_SKYROOT_PINE_SAPLING.get().asItem(),
                 AncientAetherBlocks.HIGHSPROOT_SAPLING.get().asItem(),
@@ -378,7 +378,7 @@ public class AncientAetherItemTagData extends ItemTagsProvider {
         );
         tag(ItemTags.LEAVES).add(
                 AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES.get().asItem(),
-                AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES.get().asItem(),
+                AncientAetherBlocks.DIVINE_SKYROOT_LEAVES.get().asItem(),
                 AncientAetherBlocks.SKYROOT_PINE_LEAVES.get().asItem(),
                 AncientAetherBlocks.BLUE_SKYROOT_PINE_LEAVES.get().asItem(),
                 AncientAetherBlocks.HIGHSPROOT_LEAVES.get().asItem(),

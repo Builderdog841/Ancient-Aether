@@ -21,7 +21,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         blockWithItem(AncientAetherBlocks.AETHER_QUARTZ_ORE);
         blockWithItem(AncientAetherBlocks.VALKYRUM_ORE);
         blockWithItem(AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES);
-        blockWithItem(AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES);
+        blockWithItem(AncientAetherBlocks.DIVINE_SKYROOT_LEAVES);
         blockWithItem(AncientAetherBlocks.SKYROOT_PINE_LEAVES);
         blockWithItem(AncientAetherBlocks.BLUE_SKYROOT_PINE_LEAVES);
         blockWithItem(AncientAetherBlocks.HIGHSPROOT_LEAVES);
@@ -78,7 +78,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
 
         crossBlock(AncientAetherBlocks.ATMOSINE_CRYSTAL);
         crossBlock(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING);
-        crossBlock(AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING);
+        crossBlock(AncientAetherBlocks.DIVINE_SKYROOT_SAPLING);
         crossBlock(AncientAetherBlocks.SKYROOT_PINE_SAPLING);
         crossBlock(AncientAetherBlocks.BLUE_SKYROOT_PINE_SAPLING);
         crossBlock(AncientAetherBlocks.HIGHSPROOT_SAPLING);
@@ -189,7 +189,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         AAInvisibleBlock(AncientAetherBlocks.BOSS_DOORWAY_CORRUPTED_AERONAUTIC_STONE.get(), AncientAetherBlocks.CORRUPTED_AERONAUTIC_STONE.get());
 
         pottedPlant(AncientAetherBlocks.POTTED_CRYSTAL_SKYROOT_SAPLING.get(), AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get(), "");
-        pottedPlant(AncientAetherBlocks.POTTED_ENCHANTED_SKYROOT_SAPLING.get(), AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get(), "");
+        pottedPlant(AncientAetherBlocks.POTTED_DIVINE_SKYROOT_SAPLING.get(), AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_SKYROOT_PINE_SAPLING.get(), AncientAetherBlocks.SKYROOT_PINE_SAPLING.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_BLUE_SKYROOT_PINE_SAPLING.get(), AncientAetherBlocks.BLUE_SKYROOT_PINE_SAPLING.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING.get(), AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), "");

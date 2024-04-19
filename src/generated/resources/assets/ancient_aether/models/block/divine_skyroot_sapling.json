@@ -2,6 +2,6 @@
   "parent": "minecraft:block/cross",
   "render_type": "minecraft:cutout",
   "textures": {
-    "cross": "ancient_aether:block/enchanted_skyroot_sapling"
+    "cross": "ancient_aether:block/divine_skyroot_sapling"
   }
 }

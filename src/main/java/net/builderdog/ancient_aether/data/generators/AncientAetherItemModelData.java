@@ -139,7 +139,7 @@ public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
         itemBlockCopy(AncientAetherBlocks.ANCIENT_GALE_VASE.get(), AncientAetherBlocks.GALE_VASE.get());
 
         itemBlockFlat(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get(), "");
-        itemBlockFlat(AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get(), "");
+        itemBlockFlat(AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.SKYROOT_PINE_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.BLUE_SKYROOT_PINE_SAPLING.get(), "");
         itemBlockFlat(AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), "");

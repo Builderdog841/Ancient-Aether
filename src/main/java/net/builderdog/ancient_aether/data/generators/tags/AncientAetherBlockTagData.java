@@ -308,7 +308,7 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
         );
         tag(BlockTags.SAPLINGS).add(
                 AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get(),
-                AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get(),
+                AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.get(),
                 AncientAetherBlocks.SKYROOT_PINE_SAPLING.get(),
                 AncientAetherBlocks.BLUE_SKYROOT_PINE_SAPLING.get(),
                 AncientAetherBlocks.HIGHSPROOT_SAPLING.get(),
@@ -332,7 +332,7 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
         );
         tag(BlockTags.LEAVES).add(
                 AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES.get(),
-                AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES.get(),
+                AncientAetherBlocks.DIVINE_SKYROOT_LEAVES.get(),
                 AncientAetherBlocks.SKYROOT_PINE_LEAVES.get(),
                 AncientAetherBlocks.BLUE_SKYROOT_PINE_LEAVES.get(),
                 AncientAetherBlocks.HIGHSPROOT_LEAVES.get(),
@@ -422,7 +422,7 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
         );
         tag(BlockTags.MINEABLE_WITH_HOE).add(
                 AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES.get(),
-                AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES.get(),
+                AncientAetherBlocks.DIVINE_SKYROOT_LEAVES.get(),
                 AncientAetherBlocks.SKYROOT_PINE_LEAVES.get(),
                 AncientAetherBlocks.BLUE_SKYROOT_PINE_LEAVES.get(),
                 AncientAetherBlocks.HIGHSPROOT_LEAVES.get(),

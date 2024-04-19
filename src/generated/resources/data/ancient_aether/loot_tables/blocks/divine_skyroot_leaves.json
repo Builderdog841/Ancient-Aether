@@ -40,7 +40,7 @@
                   ]
                 }
               ],
-              "name": "ancient_aether:enchanted_skyroot_leaves"
+              "name": "ancient_aether:divine_skyroot_leaves"
             },
             {
               "type": "minecraft:item",
@@ -59,7 +59,7 @@
                   "enchantment": "minecraft:fortune"
                 }
               ],
-              "name": "ancient_aether:enchanted_skyroot_sapling"
+              "name": "ancient_aether:divine_skyroot_sapling"
             }
           ]
         }
@@ -135,5 +135,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "ancient_aether:blocks/enchanted_skyroot_leaves"
+  "random_sequence": "ancient_aether:blocks/divine_skyroot_leaves"
 }

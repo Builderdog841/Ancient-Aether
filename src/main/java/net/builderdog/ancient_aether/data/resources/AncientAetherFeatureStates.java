@@ -24,7 +24,7 @@ public class AncientAetherFeatureStates {
     public static final BlockState VALKYRUM_ORE = AncientAetherBlocks.VALKYRUM_ORE.get().defaultBlockState();
     public static final BlockState AEROGEL = AetherBlocks.AEROGEL.get().defaultBlockState();
     public static final BlockState CRYSTAL_SKYROOT_LEAVES = AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES.get().defaultBlockState().setValue(DOUBLE_DROPS, true);
-    public static final BlockState ENCHANTED_SKYROOT_LEAVES = AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES.get().defaultBlockState().setValue(DOUBLE_DROPS, true);
+    public static final BlockState DIVINE_SKYROOT_LEAVES = AncientAetherBlocks.DIVINE_SKYROOT_LEAVES.get().defaultBlockState().setValue(DOUBLE_DROPS, true);
     public static final BlockState SKYROOT_PINE_LEAVES = AncientAetherBlocks.SKYROOT_PINE_LEAVES.get().defaultBlockState().setValue(DOUBLE_DROPS, true);
     public static final BlockState HIGHSPROOT_LEAVES = AncientAetherBlocks.HIGHSPROOT_LEAVES.get().defaultBlockState().setValue(DOUBLE_DROPS, true);
     public static final BlockState SAKURA_LEAVES = AncientAetherBlocks.SAKURA_LEAVES.get().defaultBlockState().setValue(DOUBLE_DROPS, true);

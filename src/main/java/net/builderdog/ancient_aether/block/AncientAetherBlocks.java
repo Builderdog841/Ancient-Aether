@@ -59,14 +59,14 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> ATMOSINE_CRYSTAL = register("atmosine_crystal", () -> new AtmosineCrystalBlock(BlockBehaviour.Properties.of().strength(3.0F, 3.0F).mapColor(MapColor.COLOR_PINK).requiresCorrectToolForDrops().sound(SoundType.GLASS).noOcclusion().lightLevel(s -> 5)));
 
     public static final RegistryObject<Block> CRYSTAL_SKYROOT_LEAVES = register("crystal_skyroot_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(CRYSTAL_LEAVES.get())));
-    public static final RegistryObject<Block> ENCHANTED_SKYROOT_LEAVES = register("enchanted_skyroot_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(SKYROOT_LEAVES.get()).mapColor(MapColor.LAPIS).isValidSpawn(AncientAetherBlocks::ocelotOrParrot).isRedstoneConductor(AncientAetherBlocks::never).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
+    public static final RegistryObject<Block> DIVINE_SKYROOT_LEAVES = register("divine_skyroot_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(SKYROOT_LEAVES.get()).mapColor(MapColor.LAPIS).isValidSpawn(AncientAetherBlocks::ocelotOrParrot).isRedstoneConductor(AncientAetherBlocks::never).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
     public static final RegistryObject<Block> SKYROOT_PINE_LEAVES = register("skyroot_pine_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(SKYROOT_LEAVES.get())));
     public static final RegistryObject<Block> BLUE_SKYROOT_PINE_LEAVES = register("blue_skyroot_pine_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(SKYROOT_PINE_LEAVES.get()).mapColor(MapColor.DIAMOND)));
     public static final RegistryObject<Block> HIGHSPROOT_LEAVES = register("highsproot_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(SKYROOT_LEAVES.get()).mapColor(MapColor.TERRACOTTA_BLUE).isValidSpawn(AncientAetherBlocks::ocelotOrParrot).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
     public static final RegistryObject<Block> SAKURA_LEAVES = register("sakura_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(SKYROOT_LEAVES.get()).sound(SoundType.CHERRY_LEAVES).mapColor(MapColor.COLOR_PINK).isValidSpawn(AncientAetherBlocks::ocelotOrParrot).isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
 
     public static final RegistryObject<Block> CRYSTAL_SKYROOT_SAPLING = register("crystal_skyroot_sapling", () -> new SaplingBlock(new CrystalSkyrootTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get()).mapColor(MapColor.DIAMOND)));
-    public static final RegistryObject<Block> ENCHANTED_SKYROOT_SAPLING = register("enchanted_skyroot_sapling", () -> new SaplingBlock(new EnchantedSkyrootTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get()).mapColor(MapColor.LAPIS)));
+    public static final RegistryObject<Block> DIVINE_SKYROOT_SAPLING = register("divine_skyroot_sapling", () -> new SaplingBlock(new DivineSkyrootTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get()).mapColor(MapColor.LAPIS)));
     public static final RegistryObject<Block> SKYROOT_PINE_SAPLING = register("skyroot_pine_sapling", () -> new SaplingBlock(new SkyrootPineTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get())));
     public static final RegistryObject<Block> BLUE_SKYROOT_PINE_SAPLING = register("blue_skyroot_pine_sapling", () -> new SaplingBlock(new BlueSkyrootPineTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_PINE_SAPLING.get()).mapColor(MapColor.DIAMOND)));
     public static final RegistryObject<Block> HIGHSPROOT_SAPLING = register("highsproot_sapling", () -> new SaplingBlock(new HighsprootTreeGrower(), BlockBehaviour.Properties.copy(SKYROOT_SAPLING.get()).mapColor(MapColor.TERRACOTTA_BLUE)));
@@ -214,7 +214,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<AncientVaseBlock> ANCIENT_GALE_VASE = register("ancient_gale_vase", () -> new AncientVaseBlock(AncientAetherLoot.SELECTORS_GALE_VASE, BlockBehaviour.Properties.copy(ANCIENT_HOLYSTONE_VASE.get()).noLootTable()));
 
     public static final RegistryObject<FlowerPotBlock> POTTED_CRYSTAL_SKYROOT_SAPLING = BLOCKS.register("potted_crystal_skyroot_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, CRYSTAL_SKYROOT_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
-    public static final RegistryObject<FlowerPotBlock> POTTED_ENCHANTED_SKYROOT_SAPLING = BLOCKS.register("potted_enchanted_skyroot_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ENCHANTED_SKYROOT_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
+    public static final RegistryObject<FlowerPotBlock> POTTED_DIVINE_SKYROOT_SAPLING = BLOCKS.register("potted_divine_skyroot_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, DIVINE_SKYROOT_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_SKYROOT_PINE_SAPLING = BLOCKS.register("potted_skyroot_pine_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SKYROOT_PINE_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_BLUE_SKYROOT_PINE_SAPLING = BLOCKS.register("potted_blue_skyroot_pine_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, BLUE_SKYROOT_PINE_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_HIGHSPROOT_SAPLING = BLOCKS.register("potted_highsproot_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, HIGHSPROOT_SAPLING, Block.Properties.copy(Blocks.FLOWER_POT)));
@@ -231,7 +231,7 @@ public class AncientAetherBlocks {
     public static void registerPots() {
         FlowerPotBlock pot = (FlowerPotBlock) Blocks.FLOWER_POT;
         pot.addPlant(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.getId(), AncientAetherBlocks.POTTED_CRYSTAL_SKYROOT_SAPLING);
-        pot.addPlant(AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.getId(), AncientAetherBlocks.POTTED_ENCHANTED_SKYROOT_SAPLING);
+        pot.addPlant(AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.getId(), AncientAetherBlocks.POTTED_DIVINE_SKYROOT_SAPLING);
         pot.addPlant(AncientAetherBlocks.SKYROOT_PINE_SAPLING.getId(), AncientAetherBlocks.POTTED_SKYROOT_PINE_SAPLING);
         pot.addPlant(AncientAetherBlocks.BLUE_SKYROOT_PINE_SAPLING.getId(), AncientAetherBlocks.POTTED_BLUE_SKYROOT_PINE_SAPLING);
         pot.addPlant(AncientAetherBlocks.HIGHSPROOT_SAPLING.getId(), AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING);
@@ -245,13 +245,13 @@ public class AncientAetherBlocks {
     public static void registerFlammability() {
         FireBlockAccessor fireBlockAccessor = (FireBlockAccessor) Blocks.FIRE;
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES.get(), 30, 60);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES.get(), 30, 60);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.DIVINE_SKYROOT_LEAVES.get(), 30, 60);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SKYROOT_PINE_LEAVES.get(), 30, 60);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.BLUE_SKYROOT_PINE_LEAVES.get(), 30, 60);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_LEAVES.get(), 30, 60);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_LEAVES.get(), 30, 60);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get(), 60, 100);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get(), 60, 100);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.get(), 60, 100);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SKYROOT_PINE_SAPLING.get(), 60, 100);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.BLUE_SKYROOT_PINE_SAPLING.get(), 60, 100);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), 60, 100);
