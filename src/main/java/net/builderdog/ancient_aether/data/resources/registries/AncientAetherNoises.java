@@ -29,7 +29,7 @@ public class AncientAetherNoises {
         register(context, SKYLANDS_AQUIFER, -6, 1.5, 0.5, 0.0, 0.0, 0.0);
         register(context, SKYLANDS_AQUIFER_FACTOR, -8, 1.25, 0.0, 0.25, 0.0);
         register(context, AMPLIFIER, -7, 1.0, 2.0, 1.0, 0.0, 0.0, 0.0, 0.0);
-        register(context, AMPLIFIER_FACTOR, -8, 0.8, 0.0, 0.25, 0.0, 0.0, 0.0, 0.0);
+        register(context, AMPLIFIER_FACTOR, -8, 0.8, 0.6, 0.25, 0.0, 0.0, 0.0, 0.0);
     }
 
     public static void register(BootstapContext<NormalNoise.NoiseParameters> context, ResourceKey<NormalNoise.NoiseParameters> key, int firstOctave, double firstAmplitude, double... amplitudes) {
