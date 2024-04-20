@@ -29,7 +29,7 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.ancient_aether.shield_accessory_loot"
+      "translate": "advancement.ancient_aether.shield_accessory_loot.desc"
     },
     "frame": "goal",
     "hidden": true,

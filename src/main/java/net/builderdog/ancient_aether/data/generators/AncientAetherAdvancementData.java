@@ -111,7 +111,7 @@ public class AncientAetherAdvancementData extends ForgeAdvancementProvider {
 
             Advancement findSentryLaboratory = Advancement.Builder.advancement()
                     .parent(new ResourceLocation(Aether.MODID, "bronze_dungeon"))
-                    .display(AncientAetherItems.LABORATORY_DUNGEON_KEY.get(),
+                    .display(AncientAetherBlocks.WYND_SENTRY_STONE.get(),
                             Component.translatable("advancement.ancient_aether.find_sentry_laboratory"),
                             Component.translatable("advancement.ancient_aether.find_sentry_laboratory.desc"),
                             null,
@@ -143,7 +143,7 @@ public class AncientAetherAdvancementData extends ForgeAdvancementProvider {
                     .parent(laboratoryDungeon)
                     .display(AncientAetherItems.SHIELD_OF_INEBRIATION.get(),
                             Component.translatable("advancement.ancient_aether.shield_accessory_loot"),
-                            Component.translatable("advancement.ancient_aether.shield_accessory_loot"),
+                            Component.translatable("advancement.ancient_aether.shield_accessory_loot.desc"),
                             null,
                             FrameType.GOAL, true, true, true)
                     .addCriterion("shield_of_inebriation", InventoryChangeTrigger.TriggerInstance.hasItems(AncientAetherItems.SHIELD_OF_INEBRIATION.get()))
