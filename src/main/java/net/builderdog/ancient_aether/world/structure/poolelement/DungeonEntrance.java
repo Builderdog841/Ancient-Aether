@@ -30,7 +30,6 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.function.Consumer;
 import java.util.function.Function;
 
 public class DungeonEntrance extends StructurePoolElement {
@@ -102,8 +101,6 @@ public class DungeonEntrance extends StructurePoolElement {
         StructurePlaceSettings settings = getSettings(rotation, box, keepJigsaws);
         if (!template.placeInWorld(level, offset, pos, settings, random, 18)) {
             return false;
-        } else if (!level.isEmptyBlock(getBoundingBox(structureTemplateManager, pos, rotation).getCenter())) {
-            return true;
         } else {
             for (StructureTemplate.StructureBlockInfo structureblockinfo : StructureTemplate.processBlockInfos(level, offset, pos, settings, getDataMarkers(structureTemplateManager, offset, rotation, false))) {
                 handleDataMarker(level, structureblockinfo, offset, rotation, random, box);

@@ -18,7 +18,7 @@ import net.builderdog.ancient_aether.item.equipment.AncientAetherArmorTiers;
 import net.builderdog.ancient_aether.item.equipment.accessories.miscellaneous.StrengthStoneItem;
 import net.builderdog.ancient_aether.item.equipment.accessories.pendants.*;
 import net.builderdog.ancient_aether.item.equipment.accessories.rings.*;
-import net.builderdog.ancient_aether.item.equipment.accessories.shields.ShieldOfInebriationItem;
+import net.builderdog.ancient_aether.item.equipment.accessories.shields.ShieldAccessoryItem;
 import net.builderdog.ancient_aether.item.equipment.accessories.shields.ShieldOfRemediationItem;
 import net.builderdog.ancient_aether.item.equipment.armor.AncientAetherArmorItem;
 import net.builderdog.ancient_aether.item.equipment.tools.arkenzus.ArkenzusPickaxeItem;
@@ -84,8 +84,8 @@ public class AncientAetherItems {
     public static final RegistryObject<Item> ANCIENT_PENDANT = ITEMS.register("ancient_pendant", () -> new AncientPendantItem(new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> PINK_CAPE = ITEMS.register("pink_cape", () -> new CapeItem("pink_cape", new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> SHIELD_OF_INEBRIATION = ITEMS.register("shield_of_inebriation", () -> new ShieldOfInebriationItem(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> SHIELD_OF_REMEDIATION = ITEMS.register("shield_of_remediation", () -> new ShieldOfRemediationItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SHIELD_OF_INEBRIATION = ITEMS.register("shield_of_inebriation", () -> new ShieldAccessoryItem(new Item.Properties().stacksTo(1), new ResourceLocation(AncientAether.MODID, "shield_of_inebriation")));
+    public static final RegistryObject<Item> SHIELD_OF_REMEDIATION = ITEMS.register("shield_of_remediation", () -> new ShieldOfRemediationItem(new Item.Properties().stacksTo(1), new ResourceLocation(AncientAether.MODID, "shield_of_remediation")));
     public static final RegistryObject<Item> STRENGTH_STONE = ITEMS.register("strength_stone", () -> new StrengthStoneItem(new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> WYND_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("wynd_armor_trim_smithing_template", () -> SmithingTemplateItem.createArmorTrimTemplate(AncientAetherTrimPatterns.WYND));

@@ -5,6 +5,7 @@ import com.aetherteam.aether.client.renderer.AetherModelLayers;
 import com.aetherteam.aether.mixin.mixins.client.accessor.PlayerModelAccessor;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
+import net.builderdog.ancient_aether.item.equipment.accessories.shields.ShieldAccessoryItem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.HumanoidModel;
@@ -27,16 +28,14 @@ import top.theillusivec4.curios.api.client.ICurioRenderer;
 
 import java.util.Optional;
 
-public abstract class AbstractShieldRenderer implements ICurioRenderer {
+public class ShieldRenderer implements ICurioRenderer {
     private final HumanoidModel<LivingEntity> shieldModel;
     private final PlayerModel<LivingEntity> shieldModelSlim;
     public final HumanoidModel<LivingEntity> shieldModelArm;
     public final PlayerModel<LivingEntity> dummyArm;
     public final PlayerModel<LivingEntity> dummyArmSlim;
-    public ResourceLocation getShieldTexture;
-    public ResourceLocation getShieldSlimTexture;
 
-    public AbstractShieldRenderer() {
+    public ShieldRenderer() {
         shieldModel = new HumanoidModel<>(Minecraft.getInstance().getEntityModels().bakeLayer(AetherModelLayers.SHIELD_OF_REPULSION));
         shieldModelSlim = new PlayerModel<>(Minecraft.getInstance().getEntityModels().bakeLayer(AetherModelLayers.SHIELD_OF_REPULSION_SLIM) , true);
         shieldModelArm = new HumanoidModel<>(Minecraft.getInstance().getEntityModels().bakeLayer(AetherModelLayers.SHIELD_OF_REPULSION_ARM));
@@ -47,16 +46,17 @@ public abstract class AbstractShieldRenderer implements ICurioRenderer {
     @Override
     public <T extends LivingEntity, M extends EntityModel<T>> void render(ItemStack stack, SlotContext slotContext, PoseStack poseStack, RenderLayerParent<T, M> renderLayerParent, MultiBufferSource buffer, int packedLight, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
         LivingEntity livingEntity = slotContext.entity();
+        ShieldAccessoryItem shield = (ShieldAccessoryItem) stack.getItem();
         ResourceLocation texture;
         HumanoidModel<LivingEntity> model;
 
         if (livingEntity instanceof Player && renderLayerParent.getModel() instanceof PlayerModel<?> playerModel) {
             PlayerModelAccessor playerModelAccessor = (PlayerModelAccessor) playerModel;
             model = playerModelAccessor.aether$getSlim() ? shieldModelSlim : shieldModel;
-            texture = playerModelAccessor.aether$getSlim() ? getShieldSlimTexture : getShieldTexture;
+            texture = playerModelAccessor.aether$getSlim() ? shield.getShieldSlimTexture() : shield.getShieldTexture();
         } else {
             model = shieldModel;
-            texture = getShieldTexture;
+            texture = shield.getShieldTexture();
         }
 
         ICurioRenderer.followHeadRotations(slotContext.entity(), model.head);
@@ -75,7 +75,8 @@ public abstract class AbstractShieldRenderer implements ICurioRenderer {
 
     private void setupShieldOnHand(ItemStack stack, HumanoidModel<LivingEntity> model, PoseStack poseStack, MultiBufferSource buffer, int packedLight, AbstractClientPlayer player, HumanoidArm arm, boolean isSlim) {
         setupModel(model, player);
-        VertexConsumer consumer = ItemRenderer.getArmorFoilBuffer(buffer, RenderType.entityTranslucent(getShieldTexture), false, stack.isEnchanted());
+        ShieldAccessoryItem shield = (ShieldAccessoryItem) stack.getItem();
+        VertexConsumer consumer = ItemRenderer.getArmorFoilBuffer(buffer, RenderType.entityTranslucent(shield.getShieldTexture()), false, stack.isEnchanted());
         if (isSlim) {
             poseStack.translate((arm != HumanoidArm.LEFT ? 1.0F : -1.0F) * 0.05F, 0.0F, 0.0F);
         }

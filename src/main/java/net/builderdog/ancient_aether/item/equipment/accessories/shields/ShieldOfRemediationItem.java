@@ -7,21 +7,12 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import top.theillusivec4.curios.api.SlotContext;
 
-public class ShieldOfRemediationItem extends AccessoryItem {
-    private static final ResourceLocation SHIELD_OF_REMEDIATION = new ResourceLocation("ancient_aether", "textures/models/accessory/shields/shield_of_remediation_accessory.png");
-    private static final ResourceLocation SHIELD_OF_REMEDIATION_SLIM = new ResourceLocation("ancient_aether", "textures/models/accessory/shields/shield_of_remediation_slim_accessory.png");
+public class ShieldOfRemediationItem extends ShieldAccessoryItem {
 
-    public ShieldOfRemediationItem(Properties properties) {
-        super(properties);
+    public ShieldOfRemediationItem(Properties properties, ResourceLocation shieldName) {
+        super(properties, shieldName);
     }
 
-    public ResourceLocation getShieldOfRemediationTexture() {
-        return SHIELD_OF_REMEDIATION;
-    }
-
-    public ResourceLocation getShieldOfRemediationSlimTexture() {
-        return SHIELD_OF_REMEDIATION_SLIM;
-    }
 
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {

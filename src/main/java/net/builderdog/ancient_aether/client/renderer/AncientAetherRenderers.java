@@ -7,6 +7,7 @@ import com.aetherteam.aether.client.renderer.entity.model.ValkyrieWingsModel;
 import com.aetherteam.aether.client.renderer.player.layer.DartLayer;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
+import net.builderdog.ancient_aether.client.renderer.accessory.ShieldRenderer;
 import net.builderdog.ancient_aether.client.renderer.entity.*;
 import net.builderdog.ancient_aether.client.renderer.entity.model.*;
 import net.builderdog.ancient_aether.client.renderer.player.layer.ValkyrumWingsLayer;
@@ -89,5 +90,8 @@ public class AncientAetherRenderers {
         CuriosRendererRegistry.register(AncientAetherItems.ARKENIUM_PENDANT.get(), PendantRenderer::new);
         CuriosRendererRegistry.register(AncientAetherItems.HEALTH_PENDANT.get(), PendantRenderer::new);
         CuriosRendererRegistry.register(AncientAetherItems.ANCIENT_PENDANT.get(), PendantRenderer::new);
+
+        CuriosRendererRegistry.register(AncientAetherItems.SHIELD_OF_INEBRIATION.get(), ShieldRenderer::new);
+        CuriosRendererRegistry.register(AncientAetherItems.SHIELD_OF_REMEDIATION.get(), ShieldRenderer::new);
     }
 }
