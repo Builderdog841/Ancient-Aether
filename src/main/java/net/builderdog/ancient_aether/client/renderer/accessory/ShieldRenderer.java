@@ -88,20 +88,18 @@ public class ShieldRenderer implements ICurioRenderer {
     }
 
     private void setupHand(PlayerModel<LivingEntity> model, PoseStack poseStack, MultiBufferSource buffer, int packedLight, AbstractClientPlayer player, HumanoidArm arm, boolean isSlim) {
-        this.setupModel(model, player);
+        setupModel(model, player);
 
         Optional<AetherPlayer> aetherPlayerOptional = AetherPlayer.get(player).resolve();
         if (aetherPlayerOptional.isPresent()) {
-            if (!aetherPlayerOptional.get().isMoving()) {
-                VertexConsumer consumer = buffer.getBuffer(RenderType.entityTranslucent(player.getSkinTextureLocation()));
-                if (isSlim) {
-                    poseStack.translate((arm != HumanoidArm.LEFT ? 1.0F : -1.0F) * -0.05F, 0.0F, 0.0F);
-                }
-                if (arm == HumanoidArm.RIGHT) {
-                    renderHand(model.rightArm, model.rightSleeve, poseStack, packedLight, consumer);
-                } else if (arm == HumanoidArm.LEFT) {
-                    renderHand(model.leftArm, model.leftSleeve, poseStack, packedLight, consumer);
-                }
+            VertexConsumer consumer = buffer.getBuffer(RenderType.entityTranslucent(player.getSkinTextureLocation()));
+            if (isSlim) {
+                poseStack.translate((arm != HumanoidArm.LEFT ? 1.0F : -1.0F) * -0.05F, 0.0F, 0.0F);
+            }
+            if (arm == HumanoidArm.RIGHT) {
+                renderHand(model.rightArm, model.rightSleeve, poseStack, packedLight, consumer);
+            } else if (arm == HumanoidArm.LEFT) {
+                renderHand(model.leftArm, model.leftSleeve, poseStack, packedLight, consumer);
             }
         }
     }
