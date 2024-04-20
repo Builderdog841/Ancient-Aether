@@ -90,23 +90,26 @@ public class DungeonEntrance extends StructurePoolElement {
         return objectarraylist;
     }
 
-    public @NotNull BoundingBox getBoundingBox(@NotNull StructureTemplateManager structureTemplateManager, @NotNull BlockPos pos, @NotNull Rotation rotation) {
-        StructureTemplate structuretemplate = getTemplate(structureTemplateManager);
+    public @NotNull BoundingBox getBoundingBox(@NotNull StructureTemplateManager templateManager, @NotNull BlockPos pos, @NotNull Rotation rotation) {
+        StructureTemplate structuretemplate = getTemplate(templateManager);
         return structuretemplate.getBoundingBox((new StructurePlaceSettings()).setRotation(rotation), pos);
     }
 
     @SuppressWarnings("deprecation")
-    public boolean place(@NotNull StructureTemplateManager structureTemplateManager, @NotNull WorldGenLevel level, @NotNull StructureManager structureManager, @NotNull ChunkGenerator chunk, @NotNull BlockPos offset, @NotNull BlockPos pos, @NotNull Rotation rotation, @NotNull BoundingBox box, @NotNull RandomSource random, boolean keepJigsaws) {
-        StructureTemplate template = getTemplate(structureTemplateManager);
+    public boolean place(@NotNull StructureTemplateManager templateManager, @NotNull WorldGenLevel level, @NotNull StructureManager structureManager, @NotNull ChunkGenerator chunk, @NotNull BlockPos offset, @NotNull BlockPos pos, @NotNull Rotation rotation, @NotNull BoundingBox box, @NotNull RandomSource random, boolean keepJigsaws) {
+        StructureTemplate template = getTemplate(templateManager);
         StructurePlaceSettings settings = getSettings(rotation, box, keepJigsaws);
-        if (!template.placeInWorld(level, offset, pos, settings, random, 18)) {
-            return false;
-        } else {
-            for (StructureTemplate.StructureBlockInfo structureblockinfo : StructureTemplate.processBlockInfos(level, offset, pos, settings, getDataMarkers(structureTemplateManager, offset, rotation, false))) {
-                handleDataMarker(level, structureblockinfo, offset, rotation, random, box);
+        if (!level.isEmptyBlock(new BlockPos(pos.getX(), pos.getY() + getBoundingBox(templateManager, pos, rotation).getYSpan() + 1, pos.getZ()))) {
+            if (!template.placeInWorld(level, offset, pos, settings, random, 18)) {
+                return false;
+            } else {
+                for (StructureTemplate.StructureBlockInfo structureblockinfo : StructureTemplate.processBlockInfos(level, offset, pos, settings, getDataMarkers(templateManager, offset, rotation, false))) {
+                    handleDataMarker(level, structureblockinfo, offset, rotation, random, box);
+                }
+                return true;
             }
-            return true;
         }
+        return true;
     }
 
     protected StructurePlaceSettings getSettings(Rotation rotation, BoundingBox boundingBox, boolean offset) {
