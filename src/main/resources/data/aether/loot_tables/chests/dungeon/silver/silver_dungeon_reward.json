@@ -45,19 +45,22 @@
         {
           "type": "minecraft:item",
           "name": "ancient_aether:divine_pickaxe",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:divine_shovel",
           "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "ancient_aether:divine_shovel"
+          "name": "ancient_aether:divine_axe",
+          "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "ancient_aether:divine_axe"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "ancient_aether:divine_hoe"
+          "name": "ancient_aether:divine_hoe",
+          "weight": 2
         },
         {
           "type": "minecraft:item",
