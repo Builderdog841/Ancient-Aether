@@ -213,7 +213,7 @@ public class AncientAether {
         addCompost(0.65F, AncientAetherBlocks.SUNSET_ROSE.get());
         addCompost(0.65F, AncientAetherBlocks.SKY_BLUES.get());
         addCompost(0.65F, AncientAetherBlocks.WYND_THISTLE.get());
-        addCompost(0.65F, AncientAetherBlocks.ELEVATIA.get());
+        addCompost(0.65F, AncientAetherBlocks.ELEVETIA.get());
         addCompost(0.85F, AncientAetherItems.SLAMMROOT_FRUIT.get());
     }
 

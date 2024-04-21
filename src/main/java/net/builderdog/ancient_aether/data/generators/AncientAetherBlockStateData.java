@@ -86,7 +86,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         crossBlock(AncientAetherBlocks.SUNSET_ROSE);
         crossBlock(AncientAetherBlocks.SKY_BLUES);
         crossBlock(AncientAetherBlocks.WYND_THISTLE);
-        crossBlock(AncientAetherBlocks.ELEVATIA);
+        crossBlock(AncientAetherBlocks.ELEVETIA);
 
         stairs(AncientAetherBlocks.HIGHSPROOT_STAIRS.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), "");
         stairs(AncientAetherBlocks.SAKURA_STAIRS.get(), AncientAetherBlocks.SAKURA_PLANKS.get(), "");
@@ -197,7 +197,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         pottedPlant(AncientAetherBlocks.POTTED_SKY_BLUES.get(), AncientAetherBlocks.SKY_BLUES.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_SUNSET_ROSE.get(), AncientAetherBlocks.SUNSET_ROSE.get(), "");
         pottedPlant(AncientAetherBlocks.POTTED_WYND_THISTLE.get(), AncientAetherBlocks.WYND_THISTLE.get(), "");
-        pottedPlant(AncientAetherBlocks.POTTED_ELEVATIA.get(), AncientAetherBlocks.ELEVATIA.get(), "");
+        pottedPlant(AncientAetherBlocks.POTTED_ELEVETIA.get(), AncientAetherBlocks.ELEVETIA.get(), "");
 
         makeLogWalls();
     }

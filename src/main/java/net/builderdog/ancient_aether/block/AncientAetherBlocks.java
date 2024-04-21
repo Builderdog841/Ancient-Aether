@@ -76,7 +76,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> SUNSET_ROSE = register("sunset_rose", () -> new FlowerBlock(MobEffects.REGENERATION, 8, Block.Properties.copy(WHITE_FLOWER.get())));
     public static final RegistryObject<Block> SKY_BLUES = register("sky_blues", () -> new FlowerBlock(AetherEffects.REMEDY, 6, Block.Properties.copy(WHITE_FLOWER.get())));
     public static final RegistryObject<Block> WYND_THISTLE = register("wynd_thistle", () -> new FlowerBlock(MobEffects.SLOW_FALLING, 7, Block.Properties.copy(WHITE_FLOWER.get())));
-    public static final RegistryObject<Block> ELEVATIA = register("elevatia", () -> new FlowerBlock(MobEffects.LEVITATION, 4, Block.Properties.copy(WHITE_FLOWER.get())));
+    public static final RegistryObject<Block> ELEVETIA = register("elevetia", () -> new FlowerBlock(MobEffects.LEVITATION, 4, Block.Properties.copy(WHITE_FLOWER.get())));
     public static final RegistryObject<GrapeVineBlock> GRAPE_VINE = BLOCKS.register("grape_vine", () -> new GrapeVineBlock(Block.Properties.copy(VINE).noLootTable()));
     public static final RegistryObject<Block> SLAMMROOT_PLANT = BLOCKS.register("slammroot_plant", () -> new SlammrootPlantBlock(Block.Properties.of().offsetType(BlockBehaviour.OffsetType.XYZ).dynamicShape().noOcclusion().noCollission().mapColor(MapColor.PLANT).sound(SoundType.HANGING_ROOTS).instabreak().pushReaction(PushReaction.DESTROY).noParticlesOnBreak().noLootTable()));
 
@@ -222,7 +222,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<FlowerPotBlock> POTTED_SUNSET_ROSE = BLOCKS.register("potted_highland_cyclamen", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SUNSET_ROSE, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_SKY_BLUES = BLOCKS.register("potted_sky_blues", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SKY_BLUES, Block.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistryObject<FlowerPotBlock> POTTED_WYND_THISTLE = BLOCKS.register("potted_wynd_thistle", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, WYND_THISTLE, Block.Properties.copy(Blocks.FLOWER_POT)));
-    public static final RegistryObject<FlowerPotBlock> POTTED_ELEVATIA = BLOCKS.register("potted_elevatia", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ELEVATIA, Block.Properties.copy(Blocks.FLOWER_POT)));
+    public static final RegistryObject<FlowerPotBlock> POTTED_ELEVETIA = BLOCKS.register("potted_elevetia", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ELEVETIA, Block.Properties.copy(Blocks.FLOWER_POT)));
 
     public static void registerFuels() {
         AltarBlockEntity.addItemEnchantingTime(AncientAetherBlocks.ATMOSINE_CRYSTAL.get(), 500);
@@ -239,7 +239,7 @@ public class AncientAetherBlocks {
         pot.addPlant(AncientAetherBlocks.SUNSET_ROSE.getId(), AncientAetherBlocks.POTTED_SUNSET_ROSE);
         pot.addPlant(AncientAetherBlocks.SKY_BLUES.getId(), AncientAetherBlocks.POTTED_SKY_BLUES);
         pot.addPlant(AncientAetherBlocks.WYND_THISTLE.getId(), AncientAetherBlocks.POTTED_WYND_THISTLE);
-        pot.addPlant(AncientAetherBlocks.ELEVATIA.getId(), AncientAetherBlocks.POTTED_ELEVATIA);
+        pot.addPlant(AncientAetherBlocks.ELEVETIA.getId(), AncientAetherBlocks.POTTED_ELEVETIA);
     }
 
     public static void registerFlammability() {
@@ -260,7 +260,7 @@ public class AncientAetherBlocks {
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SUNSET_ROSE.get(), 60, 100);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SKY_BLUES.get(), 60, 100);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.WYND_THISTLE.get(), 60, 100);
-        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.ELEVATIA.get(), 60, 100);
+        fireBlockAccessor.callSetFlammable(AncientAetherBlocks.ELEVETIA.get(), 60, 100);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.GRAPE_VINE.get(), 60, 100);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.HIGHSPROOT_LOG.get(), 5, 5);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get(), 5, 5);
@@ -288,6 +288,11 @@ public class AncientAetherBlocks {
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_SLAB.get(), 5, 20);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_FENCE_GATE.get(), 5, 20);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_FENCE.get(), 5, 20);
+    }
+
+    public static void registerWoodTypes() {
+        WoodType.register(AncientAetherBlockSets.HIGHSPROOT);
+        WoodType.register(AncientAetherBlockSets.SAKURA);
     }
 
     private static <T extends Block> RegistryObject<T> baseRegister(String name, Supplier<? extends T> block, Function<RegistryObject<T>, Supplier<? extends Item>> item) {
@@ -321,10 +326,6 @@ public class AncientAetherBlocks {
         };
     }
 
-    public static void registerWoodTypes() {
-        WoodType.register(AncientAetherBlockSets.HIGHSPROOT);
-        WoodType.register(AncientAetherBlockSets.SAKURA);
-    }
     private static boolean never(BlockState test1, BlockGetter test2, BlockPos test3) {
         return false;
     }

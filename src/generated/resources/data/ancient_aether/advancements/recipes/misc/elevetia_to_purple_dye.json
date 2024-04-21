@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_elevatia": {
+    "has_elevetia": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ancient_aether:elevatia"
+              "ancient_aether:elevetia"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ancient_aether:elevatia_to_purple_dye"
+        "recipe": "ancient_aether:elevetia_to_purple_dye"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_elevatia",
+      "has_elevetia",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "ancient_aether:elevatia_to_purple_dye"
+      "ancient_aether:elevetia_to_purple_dye"
     ]
   },
   "sends_telemetry_event": false

@@ -141,7 +141,7 @@ public class AncientAetherVegetationFeatures {
                                 AetherBlocks.WHITE_FLOWER.get().defaultBlockState(),
                                 List.of(AncientAetherFeatureStates.SKY_GRASS_SHORT_PALE),
                                 List.of(AetherBlocks.PURPLE_FLOWER.get().defaultBlockState(),
-                                        AncientAetherFeatureStates.ELEVATIA
+                                        AncientAetherFeatureStates.ELEVETIA
                                 ))))));
 
         AncientAetherFeatureUtils.register(context, SKY_LAKE_FLOWER_PATCH, Feature.FLOWER,

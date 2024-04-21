@@ -26,11 +26,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ancient_aether:elevatia"
+          "name": "ancient_aether:elevetia"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "ancient_aether:blocks/potted_elevatia"
+  "random_sequence": "ancient_aether:blocks/potted_elevetia"
 }

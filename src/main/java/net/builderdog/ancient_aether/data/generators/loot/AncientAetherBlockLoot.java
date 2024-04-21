@@ -50,7 +50,7 @@ public class AncientAetherBlockLoot extends AetherBlockLootSubProvider {
         dropSelf(AncientAetherBlocks.SUNSET_ROSE.get());
         dropSelf(AncientAetherBlocks.SKY_BLUES.get());
         dropSelf(AncientAetherBlocks.WYND_THISTLE.get());
-        dropSelf(AncientAetherBlocks.ELEVATIA.get());
+        dropSelf(AncientAetherBlocks.ELEVETIA.get());
         dropSelf(AncientAetherBlocks.HIGHSPROOT_WOOD.get());
         dropSelf(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get());
         dropSelf(AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD.get());
@@ -145,7 +145,7 @@ public class AncientAetherBlockLoot extends AetherBlockLootSubProvider {
         dropPottedContents(AncientAetherBlocks.POTTED_SKY_BLUES.get());
         dropPottedContents(AncientAetherBlocks.POTTED_WYND_THISTLE.get());
         dropPottedContents(AncientAetherBlocks.POTTED_SUNSET_ROSE.get());
-        dropPottedContents(AncientAetherBlocks.POTTED_ELEVATIA.get());
+        dropPottedContents(AncientAetherBlocks.POTTED_ELEVETIA.get());
 
         add(AncientAetherBlocks.HIGHSPROOT_SLAB.get(), this::createSlabItemTable);
         add(AncientAetherBlocks.SAKURA_SLAB.get(), this::createSlabItemTable);

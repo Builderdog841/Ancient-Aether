@@ -395,7 +395,7 @@ public class AncientAetherItemTagData extends ItemTagsProvider {
                 AncientAetherBlocks.SUNSET_ROSE.get().asItem(),
                 AncientAetherBlocks.SKY_BLUES.get().asItem(),
                 AncientAetherBlocks.WYND_THISTLE.get().asItem(),
-                AncientAetherBlocks.ELEVATIA.get().asItem()
+                AncientAetherBlocks.ELEVETIA.get().asItem()
         );
         tag(ItemTags.FOX_FOOD).add(
                 AncientAetherItems.GRAPES.get()

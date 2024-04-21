@@ -342,7 +342,18 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
                 AncientAetherBlocks.SUNSET_ROSE.get(),
                 AncientAetherBlocks.SKY_BLUES.get(),
                 AncientAetherBlocks.WYND_THISTLE.get(),
-                AncientAetherBlocks.ELEVATIA.get()
+                AncientAetherBlocks.ELEVETIA.get()
+        );
+        tag(BlockTags.FLOWER_POTS).add(
+                AncientAetherBlocks.POTTED_CRYSTAL_SKYROOT_SAPLING.get(),
+                AncientAetherBlocks.POTTED_DIVINE_SKYROOT_SAPLING.get(),
+                AncientAetherBlocks.POTTED_SKYROOT_PINE_SAPLING.get(),
+                AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING.get(),
+                AncientAetherBlocks.POTTED_SAKURA_SAPLING.get(),
+                AncientAetherBlocks.POTTED_SUNSET_ROSE.get(),
+                AncientAetherBlocks.POTTED_SKY_BLUES.get(),
+                AncientAetherBlocks.POTTED_WYND_THISTLE.get(),
+                AncientAetherBlocks.POTTED_ELEVETIA.get()
         );
         tag(BlockTags.STANDING_SIGNS).add(
                 AncientAetherBlocks.HIGHSPROOT_SIGN.get(),
