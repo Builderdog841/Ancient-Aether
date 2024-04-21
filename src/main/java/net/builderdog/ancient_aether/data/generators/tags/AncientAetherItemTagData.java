@@ -73,8 +73,8 @@ public class AncientAetherItemTagData extends ItemTagsProvider {
                 AetherItems.IRON_BUBBLE.get(),
                 AetherItems.SHIELD_OF_REPULSION.get(),
                 AncientAetherItems.AERONAUTIC_DART_SHOOTER.get(),
-                AncientAetherItems.ANCIENT_RING.get(),
-                AncientAetherItems.ARKENIUM_PENDANT.get(),
+                AncientAetherItems.WARRIOR_RING.get(),
+                AncientAetherItems.WARRIOR_PENDANT.get(),
                 AncientAetherItems.WYND_ARMOR_TRIM_SMITHING_TEMPLATE.get(),
                 AncientAetherItems.WHALE_ARMOR_TRIM_SMITHING_TEMPLATE.get(),
                 AncientAetherItems.ASCENDED_ARMOR_TRIM_SMITHING_TEMPLATE.get()
@@ -93,8 +93,8 @@ public class AncientAetherItemTagData extends ItemTagsProvider {
                 AncientAetherItems.DIVINE_PICKAXE.get(),
                 AncientAetherItems.DIVINE_AXE.get(),
                 AncientAetherItems.DIVINE_HOE.get(),
-                AncientAetherItems.HEALTH_RING.get(),
-                AncientAetherItems.HEALTH_PENDANT.get(),
+                AncientAetherItems.GROWTH_RING.get(),
+                AncientAetherItems.GROWTH_PENDANT.get(),
                 AncientAetherItems.ANCIENT_RING.get(),
                 AncientAetherItems.ANCIENT_PENDANT.get(),
                 AncientAetherItems.STRENGTH_STONE.get(),
@@ -244,15 +244,15 @@ public class AncientAetherItemTagData extends ItemTagsProvider {
         tag(AetherTags.Items.ACCESSORIES_RINGS).add(
                 AncientAetherItems.VALKYRUM_RING.get(),
                 AncientAetherItems.HERMES_RING.get(),
-                AncientAetherItems.ARKENIUM_RING.get(),
-                AncientAetherItems.HEALTH_RING.get(),
+                AncientAetherItems.WARRIOR_RING.get(),
+                AncientAetherItems.GROWTH_RING.get(),
                 AncientAetherItems.ANCIENT_RING.get()
         );
         tag(AetherTags.Items.ACCESSORIES_PENDANTS).add(
                 AncientAetherItems.VALKYRUM_PENDANT.get(),
                 AncientAetherItems.HERMES_PENDANT.get(),
-                AncientAetherItems.ARKENIUM_PENDANT.get(),
-                AncientAetherItems.HEALTH_PENDANT.get(),
+                AncientAetherItems.WARRIOR_PENDANT.get(),
+                AncientAetherItems.GROWTH_PENDANT.get(),
                 AncientAetherItems.ANCIENT_PENDANT.get()
         );
         tag(AetherTags.Items.ACCESSORIES_GLOVES).add(

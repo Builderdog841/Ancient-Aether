@@ -87,8 +87,8 @@ public class AncientAetherRenderers {
 
         CuriosRendererRegistry.register(AncientAetherItems.VALKYRUM_PENDANT.get(), PendantRenderer::new);
         CuriosRendererRegistry.register(AncientAetherItems.HERMES_PENDANT.get(), PendantRenderer::new);
-        CuriosRendererRegistry.register(AncientAetherItems.ARKENIUM_PENDANT.get(), PendantRenderer::new);
-        CuriosRendererRegistry.register(AncientAetherItems.HEALTH_PENDANT.get(), PendantRenderer::new);
+        CuriosRendererRegistry.register(AncientAetherItems.WARRIOR_PENDANT.get(), PendantRenderer::new);
+        CuriosRendererRegistry.register(AncientAetherItems.GROWTH_PENDANT.get(), PendantRenderer::new);
         CuriosRendererRegistry.register(AncientAetherItems.ANCIENT_PENDANT.get(), PendantRenderer::new);
 
         CuriosRendererRegistry.register(AncientAetherItems.SHIELD_OF_INEBRIATION.get(), ShieldRenderer::new);

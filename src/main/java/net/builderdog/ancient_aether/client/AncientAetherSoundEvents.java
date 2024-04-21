@@ -14,13 +14,13 @@ public class AncientAetherSoundEvents {
     public static final RegistryObject<SoundEvent> BLOCK_OBELISK_ACTIVATION = register("block.obelisk.activation");
     public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_VALKYRUM_RING = register("item.accessory.equip_valkyrum_ring");
     public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_HERMES_RING = register("item.accessory.equip_hermes_ring");
-    public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_HEALTH_RING = register("item.accessory.equip_health_ring");
-    public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_ARKENIUM_RING = register("item.accessory.equip_arkenium_ring");
+    public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_GROWTH_RING = register("item.accessory.equip_growth_ring");
+    public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_WARRIOR_RING = register("item.accessory.equip_warrior_ring");
     public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_ANCIENT_RING = register("item.accessory.equip_ancient_ring");
     public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_VALKYRUM_PENDANT = register("item.accessory.equip_valkyrum_pendant");
     public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_HERMES_PENDANT = register("item.accessory.equip_hermes_pendant");
-    public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_HEALTH_PENDANT = register("item.accessory.equip_health_pendant");
-    public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_ARKENIUM_PENDANT = register("item.accessory.equip_arkenium_pendant");
+    public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_WARRIOR_PENDANT = register("item.accessory.equip_warrior_pendant");
+    public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_GROWTH_PENDANT = register("item.accessory.equip_growth_pendant");
     public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_ANCIENT_PENDANT = register("item.accessory.equip_ancient_pendant");
     public static final RegistryObject<SoundEvent> ENTITY_FLUFFALO_AMBIENT = register("entity.fluffalo.ambient");
     public static final RegistryObject<SoundEvent> ENTITY_FLUFFALO_MILK = register("entity.fluffalo.milk");

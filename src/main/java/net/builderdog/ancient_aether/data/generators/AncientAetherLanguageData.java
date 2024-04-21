@@ -218,14 +218,14 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
 
         addItem(AncientAetherItems.VALKYRUM_RING, "Valkyrum Ring");
         addItem(AncientAetherItems.HERMES_RING, "Hermes Ring");
-        addItem(AncientAetherItems.ARKENIUM_RING, "Arkenium Ring");
-        addItem(AncientAetherItems.HEALTH_RING, "Health Ring");
+        addItem(AncientAetherItems.WARRIOR_RING, "Warrior Ring");
+        addItem(AncientAetherItems.GROWTH_RING, "Ring of Growth");
         addItem(AncientAetherItems.ANCIENT_RING, "Ancient Ring");
 
         addItem(AncientAetherItems.VALKYRUM_PENDANT, "Valkyrum Pendant");
         addItem(AncientAetherItems.HERMES_PENDANT, "Hermes Pendant");
-        addItem(AncientAetherItems.ARKENIUM_PENDANT, "Arkenium Pendant");
-        addItem(AncientAetherItems.HEALTH_PENDANT, "Health Pendant");
+        addItem(AncientAetherItems.WARRIOR_PENDANT, "Warrior Pendant");
+        addItem(AncientAetherItems.GROWTH_PENDANT, "Pendant of Growth");
         addItem(AncientAetherItems.ANCIENT_PENDANT, "Ancient Pendant");
 
         addItem(AncientAetherItems.PINK_CAPE, "Pink Cape");
@@ -347,13 +347,13 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
 
         addAccessorySubtitle("valkyrum_ring", "Valkyrum Ring");
         addAccessorySubtitle("hermes_ring", "Hermes Ring");
-        addAccessorySubtitle("arkenium_ring", "Arkenium Ring");
-        addAccessorySubtitle("health_ring", "Health Ring");
+        addAccessorySubtitle("warrior_ring", "Warrior Ring");
+        addAccessorySubtitle("growth_ring", "Ring of Growth");
         addAccessorySubtitle("ancient_ring", "Ancient Ring");
         addAccessorySubtitle("valkyrum_pendant", "Valkyrum Pendant");
         addAccessorySubtitle("hermes_pendant", "Hermes Pendant");
-        addAccessorySubtitle("arkenium_pendant", "Arkenium Pendant");
-        addAccessorySubtitle("health_pendant", "Health Pendant");
+        addAccessorySubtitle("warrior_pendant", "Warrior Pendant");
+        addAccessorySubtitle("growth_pendant", "Pendant of Growth");
         addAccessorySubtitle("ancient_pendant", "Ancient Pendant");
 
         addSubtitle("entity", "fluffalo.ambient", "Fluffalo moos");
@@ -565,10 +565,10 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addRewardLore(AncientAetherItems.AERONAUTIC_DART_SHOOTER, "the Ancient Dungeon Boss", "dart shooter launches mobs high up in the air similar to Gravitite Equipment. You can use any type of dart as ammunition");
         addRewardLore(AncientAetherItems.HERMES_RING, "Dungeons", "ring increases your total Movement Speed by +3%");
         addRewardLore(AncientAetherItems.HERMES_PENDANT, "Dungeons", "pendant increases your total Movement Speed by +5%");
-        addRewardLore(AncientAetherItems.ARKENIUM_RING, "Dungeons", "ring grants you +1 Armor Toughness");
-        addRewardLore(AncientAetherItems.ARKENIUM_PENDANT, "Dungeons", "pendant grants you +2 Armor Toughness");
-        addRewardLore(AncientAetherItems.HEALTH_RING, "the Valkyrie Queen", "ring grants you +1 Max Health");
-        addRewardLore(AncientAetherItems.HEALTH_PENDANT, "the Valkyrie Queen", "pendant grants you +2 Max Health");
+        addRewardLore(AncientAetherItems.WARRIOR_RING, "Dungeons", "ring grants you +1 Armor Toughness");
+        addRewardLore(AncientAetherItems.WARRIOR_PENDANT, "Dungeons", "pendant grants you +2 Armor Toughness");
+        addRewardLore(AncientAetherItems.GROWTH_RING, "the Valkyrie Queen", "ring grants you +1 Max Health");
+        addRewardLore(AncientAetherItems.GROWTH_PENDANT, "the Valkyrie Queen", "pendant grants you +2 Max Health");
         addRewardLore(AncientAetherItems.ANCIENT_RING, "the Ancient Dungeon Boss", "ring grants you +0.1 Attack Speed");
         addRewardLore(AncientAetherItems.ANCIENT_PENDANT, "the Ancient Dungeon Boss", "pendant grants you +0.2 Attack Speed");
         addRewardLore(AncientAetherItems.STRENGTH_STONE, "the Valkyrie Queen", "accessory increases your total Attack Damage by +15%");

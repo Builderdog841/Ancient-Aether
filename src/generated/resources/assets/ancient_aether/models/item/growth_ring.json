@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "ancient_aether:item/health_pendant"
+    "layer0": "ancient_aether:item/growth_ring"
   }
 }

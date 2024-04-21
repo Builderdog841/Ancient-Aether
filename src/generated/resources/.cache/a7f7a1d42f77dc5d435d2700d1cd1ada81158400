@@ -1,9 +1,9 @@
-// 1.20.1	2024-04-21T15:57:00.4988203	Tags for minecraft:item mod id ancient_aether
+// 1.20.1	2024-04-21T22:04:18.6358939	Tags for minecraft:item mod id ancient_aether
 a6dcafb905da729c07d1dabd0f4f98e1e75317cd data/aether/tags/items/accessories_capes.json
 cd168c9518529051447f91f38db8a192fce79575 data/aether/tags/items/accessories_gloves.json
 add87f05b14c634a1e8ebb0ea33f104c4c8fadcf data/aether/tags/items/accessories_miscellaneous.json
-d7629477e4217fcf38fee005d5ece1ac7b857c20 data/aether/tags/items/accessories_pendants.json
-e59fbc0b9a71b6942ca579360f293a5164309412 data/aether/tags/items/accessories_rings.json
+569da7a7e17ec03d6365adb9017f6e6ae3e6d695 data/aether/tags/items/accessories_pendants.json
+d9ab035fe1b718f7b51ec3eab559378021efae7b data/aether/tags/items/accessories_rings.json
 3951f6de2c4e0f20be405097c4fddb2de840d48a data/aether/tags/items/accessories_shields.json
 af89ca9b971b1a84ff96ce1c0fcceda39c1b6958 data/aether/tags/items/aerbunny_temptation_items.json
 f0714fea3e89b69a7a6a6c729a028562bc0bd412 data/aether/tags/items/aerclouds.json
@@ -35,12 +35,12 @@ e084625644f35a4ba855787e1890503cbb135f22 data/ancient_aether/tags/items/aerogeti
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/ancient_aether/tags/items/ancient_repairing.json
 5c16b5cb2c2db4bea780203a84a6fff7693cbe0a data/ancient_aether/tags/items/common_loot.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/ancient_aether/tags/items/divine_repairing.json
-8dce0867ef3b9c531b075a64d5e16b03c17226bd data/ancient_aether/tags/items/epic_loot.json
+122f470e6403a6ca641c7ab2378cdf5e57b5323f data/ancient_aether/tags/items/epic_loot.json
 98fe30abfaa006aec923e9227b46afd61ed8194e data/ancient_aether/tags/items/fluffalo_temptation_items.json
 18fe8c9c84f0cab0d34a0193e8f7697fc054b30e data/ancient_aether/tags/items/highsproot_logs.json
 2d77e40ec9c33912145bdcfec82cfef0d45a746e data/ancient_aether/tags/items/mosaic_blocks.json
 d539b16ff8bceaf558b98947a253d7c9a7a036c3 data/ancient_aether/tags/items/mythic_loot.json
-58b5cd26a4fb05e06ab1f7f05d84cb0a3b1b6573 data/ancient_aether/tags/items/rare_loot.json
+90f41d6607a825d54deb49cc25a2c2ccf822cc87 data/ancient_aether/tags/items/rare_loot.json
 d67f25dcae95241fe7e47e48d1198f548a531f17 data/ancient_aether/tags/items/sakura_logs.json
 064bf36f6ba340d92023b21fb046f315c63d43ce data/ancient_aether/tags/items/valkyrum_repairing.json
 55e0c85a00b9802d7068a1ad446fcd04921d9dc5 data/ancient_aether/tags/items/vases.json

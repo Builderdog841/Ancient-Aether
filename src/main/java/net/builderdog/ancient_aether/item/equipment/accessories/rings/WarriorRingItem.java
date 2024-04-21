@@ -12,16 +12,16 @@ import top.theillusivec4.curios.api.SlotContext;
 
 import java.util.UUID;
 
-public class HealthRingItem extends RingItem {
+public class WarriorRingItem extends RingItem {
 
-    public HealthRingItem(Properties properties) {
-        super(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_HEALTH_RING, properties);
+    public WarriorRingItem(Properties properties) {
+        super(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_WARRIOR_RING, properties);
     }
 
     @Override
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext context, UUID uuid, ItemStack stack) {
         Multimap<Attribute, AttributeModifier> attributes = HashMultimap.create();
-        attributes.put(Attributes.MAX_HEALTH, new AttributeModifier(uuid, "Health Ring Ability", 1.0, AttributeModifier.Operation.ADDITION));
+        attributes.put(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(uuid, "Warrior Ring Ability", 1.0, AttributeModifier.Operation.ADDITION));
         return attributes;
     }
 }

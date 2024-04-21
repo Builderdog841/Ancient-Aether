@@ -80,14 +80,14 @@ public class AncientAetherItems {
 
     public static final RegistryObject<Item> VALKYRUM_RING = ITEMS.register("valkyrum_ring", () -> new ValkyrumRingItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> HERMES_RING = ITEMS.register("hermes_ring", () -> new HermesRingItem(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> ARKENIUM_RING = ITEMS.register("arkenium_ring", () -> new ArkeniumRingItem(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> HEALTH_RING = ITEMS.register("health_ring", () -> new HealthRingItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> WARRIOR_RING = ITEMS.register("warrior_ring", () -> new WarriorRingItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> GROWTH_RING = ITEMS.register("growth_ring", () -> new GrowthRingItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> ANCIENT_RING = ITEMS.register("ancient_ring", () -> new AncientRingItem(new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> VALKYRUM_PENDANT = ITEMS.register("valkyrum_pendant", () -> new ValkyrumPendantItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> HERMES_PENDANT = ITEMS.register("hermes_pendant", () -> new HermesPendantItem(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> ARKENIUM_PENDANT = ITEMS.register("arkenium_pendant", () -> new ArkeniumPendantItem(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> HEALTH_PENDANT = ITEMS.register("health_pendant", () -> new HealthPendantItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> WARRIOR_PENDANT = ITEMS.register("warrior_pendant", () -> new WarriorPendantItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> GROWTH_PENDANT = ITEMS.register("growth_pendant", () -> new GrowthPendantItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> ANCIENT_PENDANT = ITEMS.register("ancient_pendant", () -> new AncientPendantItem(new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> PINK_CAPE = ITEMS.register("pink_cape", () -> new CapeItem("pink_cape", new Item.Properties().stacksTo(1)));

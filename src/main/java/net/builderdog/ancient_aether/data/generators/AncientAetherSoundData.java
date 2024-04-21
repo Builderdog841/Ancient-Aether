@@ -42,23 +42,23 @@ public class AncientAetherSoundData extends SoundDefinitionsProvider {
                         sound("item/armor/equip_chain6"))
                 .subtitle("subtitles.ancient_aether.item.accessory.equip_hermes_ring")
         );
-        add(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_ARKENIUM_RING, definition().with(
+        add(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_WARRIOR_RING, definition().with(
                         sound("item/armor/equip_chain1"),
                         sound("item/armor/equip_chain2"),
                         sound("item/armor/equip_chain3"),
                         sound("item/armor/equip_chain4"),
                         sound("item/armor/equip_chain5"),
                         sound("item/armor/equip_chain6"))
-                .subtitle("subtitles.ancient_aether.item.accessory.equip_arkenium_ring")
+                .subtitle("subtitles.ancient_aether.item.accessory.equip_warrior_ring")
         );
-        add(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_HEALTH_RING, definition().with(
+        add(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_GROWTH_RING, definition().with(
                         sound("item/armor/equip_chain1"),
                         sound("item/armor/equip_chain2"),
                         sound("item/armor/equip_chain3"),
                         sound("item/armor/equip_chain4"),
                         sound("item/armor/equip_chain5"),
                         sound("item/armor/equip_chain6"))
-                .subtitle("subtitles.ancient_aether.item.accessory.equip_health_ring")
+                .subtitle("subtitles.ancient_aether.item.accessory.equip_growth_ring")
         );
         add(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_ANCIENT_RING, definition().with(
                         sound("item/armor/equip_chain1"),
@@ -87,23 +87,23 @@ public class AncientAetherSoundData extends SoundDefinitionsProvider {
                         sound("item/armor/equip_chain6"))
                 .subtitle("subtitles.ancient_aether.item.accessory.equip_hermes_pendant")
         );
-        add(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_ARKENIUM_PENDANT, definition().with(
+        add(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_WARRIOR_PENDANT, definition().with(
                         sound("item/armor/equip_chain1"),
                         sound("item/armor/equip_chain2"),
                         sound("item/armor/equip_chain3"),
                         sound("item/armor/equip_chain4"),
                         sound("item/armor/equip_chain5"),
                         sound("item/armor/equip_chain6"))
-                .subtitle("subtitles.ancient_aether.item.accessory.equip_arkenium_pendant")
+                .subtitle("subtitles.ancient_aether.item.accessory.equip_warrior_pendant")
         );
-        add(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_HEALTH_PENDANT, definition().with(
+        add(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_GROWTH_PENDANT, definition().with(
                         sound("item/armor/equip_chain1"),
                         sound("item/armor/equip_chain2"),
                         sound("item/armor/equip_chain3"),
                         sound("item/armor/equip_chain4"),
                         sound("item/armor/equip_chain5"),
                         sound("item/armor/equip_chain6"))
-                .subtitle("subtitles.ancient_aether.item.accessory.equip_health_pendant")
+                .subtitle("subtitles.ancient_aether.item.accessory.equip_growth_pendant")
         );
         add(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_ANCIENT_PENDANT, definition().with(
                         sound("item/armor/equip_chain1"),

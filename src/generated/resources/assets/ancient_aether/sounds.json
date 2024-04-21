@@ -119,7 +119,7 @@
     ],
     "subtitle": "subtitles.ancient_aether.item.accessory.equip_ancient_ring"
   },
-  "item.accessory.equip_arkenium_pendant": {
+  "item.accessory.equip_growth_pendant": {
     "sounds": [
       "item/armor/equip_chain1",
       "item/armor/equip_chain2",
@@ -128,9 +128,9 @@
       "item/armor/equip_chain5",
       "item/armor/equip_chain6"
     ],
-    "subtitle": "subtitles.ancient_aether.item.accessory.equip_arkenium_pendant"
+    "subtitle": "subtitles.ancient_aether.item.accessory.equip_growth_pendant"
   },
-  "item.accessory.equip_arkenium_ring": {
+  "item.accessory.equip_growth_ring": {
     "sounds": [
       "item/armor/equip_chain1",
       "item/armor/equip_chain2",
@@ -139,29 +139,7 @@
       "item/armor/equip_chain5",
       "item/armor/equip_chain6"
     ],
-    "subtitle": "subtitles.ancient_aether.item.accessory.equip_arkenium_ring"
-  },
-  "item.accessory.equip_health_pendant": {
-    "sounds": [
-      "item/armor/equip_chain1",
-      "item/armor/equip_chain2",
-      "item/armor/equip_chain3",
-      "item/armor/equip_chain4",
-      "item/armor/equip_chain5",
-      "item/armor/equip_chain6"
-    ],
-    "subtitle": "subtitles.ancient_aether.item.accessory.equip_health_pendant"
-  },
-  "item.accessory.equip_health_ring": {
-    "sounds": [
-      "item/armor/equip_chain1",
-      "item/armor/equip_chain2",
-      "item/armor/equip_chain3",
-      "item/armor/equip_chain4",
-      "item/armor/equip_chain5",
-      "item/armor/equip_chain6"
-    ],
-    "subtitle": "subtitles.ancient_aether.item.accessory.equip_health_ring"
+    "subtitle": "subtitles.ancient_aether.item.accessory.equip_growth_ring"
   },
   "item.accessory.equip_hermes_pendant": {
     "sounds": [
@@ -206,5 +184,27 @@
       "item/armor/equip_chain6"
     ],
     "subtitle": "subtitles.ancient_aether.item.accessory.equip_valkyrum_ring"
+  },
+  "item.accessory.equip_warrior_pendant": {
+    "sounds": [
+      "item/armor/equip_chain1",
+      "item/armor/equip_chain2",
+      "item/armor/equip_chain3",
+      "item/armor/equip_chain4",
+      "item/armor/equip_chain5",
+      "item/armor/equip_chain6"
+    ],
+    "subtitle": "subtitles.ancient_aether.item.accessory.equip_warrior_pendant"
+  },
+  "item.accessory.equip_warrior_ring": {
+    "sounds": [
+      "item/armor/equip_chain1",
+      "item/armor/equip_chain2",
+      "item/armor/equip_chain3",
+      "item/armor/equip_chain4",
+      "item/armor/equip_chain5",
+      "item/armor/equip_chain6"
+    ],
+    "subtitle": "subtitles.ancient_aether.item.accessory.equip_warrior_ring"
   }
 }

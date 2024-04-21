@@ -78,12 +78,12 @@
         },
         {
           "type": "minecraft:item",
-          "name": "ancient_aether:arkenium_ring",
+          "name": "ancient_aether:warrior_ring",
           "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "ancient_aether:arkenium_pendant",
+          "name": "ancient_aether:warrior_pendant",
           "weight": 2
         },
         {

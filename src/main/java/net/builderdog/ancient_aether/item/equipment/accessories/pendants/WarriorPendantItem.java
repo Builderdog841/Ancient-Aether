@@ -14,16 +14,16 @@ import top.theillusivec4.curios.api.SlotContext;
 
 import java.util.UUID;
 
-public class ArkeniumPendantItem extends PendantItem {
+public class WarriorPendantItem extends PendantItem {
 
-    public ArkeniumPendantItem(Properties properties) {
-        super(new ResourceLocation(AncientAether.MODID, "arkenium_pendant"), AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_ARKENIUM_PENDANT, properties);
+    public WarriorPendantItem(Properties properties) {
+        super(new ResourceLocation(AncientAether.MODID, "warrior_pendant"), AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_WARRIOR_PENDANT, properties);
     }
 
     @Override
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext context, UUID uuid, ItemStack stack) {
         Multimap<Attribute, AttributeModifier> attributes = HashMultimap.create();
-        attributes.put(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(uuid, "Arkenium Pendant Ability", 2.0, AttributeModifier.Operation.ADDITION));
+        attributes.put(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(uuid, "Warrior Pendant Ability", 2.0, AttributeModifier.Operation.ADDITION));
         return attributes;
     }
 }

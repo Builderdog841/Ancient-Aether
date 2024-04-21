@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-21T21:12:03.2838941	Item Models: ancient_aether
+// 1.20.1	2024-04-21T22:04:18.6298919	Item Models: ancient_aether
 532bdb7a4f7d2a6b96d474c01c8b9e7a0d1c10b4 assets/ancient_aether/models/item/aerogel_glass.json
 87e9f8f9f807a2aa763e3057d32bacf3ee32b60f assets/ancient_aether/models/item/aerogel_glass_door.json
 d1e6ed3e334d573f31a8ce9e09885c0f43832630 assets/ancient_aether/models/item/aerogel_glass_pane.json
@@ -27,8 +27,6 @@ b0d7cb9315807de83a30f396ac7611611e086577 assets/ancient_aether/models/item/ancie
 3000009a605c81ff17f008b50dc9669413928008 assets/ancient_aether/models/item/ancient_sentry_vase.json
 7b758a31f7272894d72fc2ff7144b4d1d37b407a assets/ancient_aether/models/item/ancient_sword.json
 ed179b3ef576a4cfe5ef1282c7007bdf56c9e7a4 assets/ancient_aether/models/item/angelic_vase.json
-0a5433703811659f4e53f0449e46e526ff9983b0 assets/ancient_aether/models/item/arkenium_pendant.json
-65b849256685fb6479622cda358cd36b4513d85c assets/ancient_aether/models/item/arkenium_ring.json
 e39f295afb13b5e4ab726c96bd2a1f49a2c81eaf assets/ancient_aether/models/item/ascended_armor_trim_smithing_template.json
 bdc05003ba104ce1c4f7b30f32433d8ef7ed3125 assets/ancient_aether/models/item/atmosine_crystal.json
 b4bd6914947cefe57d0577f5c6cfae85f953fa45 assets/ancient_aether/models/item/blue_skyroot_pine_sapling.json
@@ -55,8 +53,8 @@ c07f677db47ad94c4781284f111fa87556aea4c9 assets/ancient_aether/models/item/festi
 8955230a8e802eb86a46730865c7d223995f9054 assets/ancient_aether/models/item/frozen_holystone_vase.json
 4eda6afa06455ae93a0d434def4486672b0ed331 assets/ancient_aether/models/item/gale_vase.json
 76dcbb064b6afcca77cbab1d82750b6e6c30765c assets/ancient_aether/models/item/grapes.json
-2726803d4e188921de701cb2dacc39c4f08b9acf assets/ancient_aether/models/item/health_pendant.json
-4f9236d35c4bf383f96a3026d37273520e4cbbf6 assets/ancient_aether/models/item/health_ring.json
+4c159c6828c13feb36b33318cf4323585606e980 assets/ancient_aether/models/item/growth_pendant.json
+e2d58016474debcb7431dd3c656f182e93c7bea5 assets/ancient_aether/models/item/growth_ring.json
 a19fd3410a3d3fa3edd421ddd80e5f9babfda7ff assets/ancient_aether/models/item/hellfire_vase.json
 44bbf91ea6b096e924ae894633545e868aec495e assets/ancient_aether/models/item/hermes_pendant.json
 e6b2cd5c6b6bd05e175521dbf0012be53e63fbe4 assets/ancient_aether/models/item/hermes_ring.json
@@ -208,6 +206,8 @@ ed3211ff982713dfc1af6d23cb2620acdabe8288 assets/ancient_aether/models/item/valky
 8212919302e2c565944d61e801f202fcf8d3598b assets/ancient_aether/models/item/valkyrum_sword.json
 f007777affa709dfd200d16a89d618a4a1e9c59b assets/ancient_aether/models/item/violet_aercloud.json
 3c7d67c019bc6c7c74ebc8935ca58f8004f6aa4b assets/ancient_aether/models/item/violet_moa_egg.json
+f61d3dc939acd87d44e6f1eb882c87a436512bf0 assets/ancient_aether/models/item/warrior_pendant.json
+ea958e44dc2895ef09c6e5f8749c893ef186acc1 assets/ancient_aether/models/item/warrior_ring.json
 e742e254a19956c03a5988f97623e53eb25be93e assets/ancient_aether/models/item/whale_armor_trim_smithing_template.json
 e54a7778b6d4adf66c901ef5ccef27c09e027b6c assets/ancient_aether/models/item/wind_blower.json
 7ed12c5e8e5598af95924cbeee8cb74ea0a14e5a assets/ancient_aether/models/item/wynd_armor_trim_smithing_template.json
