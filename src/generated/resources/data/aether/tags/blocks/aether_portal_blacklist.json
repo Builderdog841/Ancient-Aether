@@ -1,7 +1,7 @@
 {
   "values": [
     "ancient_aether:violet_aercloud",
-    "ancient_aether:unpowered_ancient_obelisk",
+    "ancient_aether:ancient_obelisk",
     "aether:aether_dirt",
     "aether:icestone",
     "aether:aerogel",
@@ -11,6 +11,7 @@
     "aether:skyroot_fence",
     "aether:skyroot_bookshelf",
     "#ancient_aether:aerogetic_blocks",
+    "#ancient_aether:vases",
     "#aether:holystone",
     "#aether:sentry_blocks",
     "#aether:angelic_blocks",

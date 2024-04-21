@@ -192,8 +192,8 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> VIOLET_AERCLOUD = register("violet_aercloud", () -> new VioletAercloudBlock(BlockBehaviour.Properties.copy(COLD_AERCLOUD.get()).mapColor(MapColor.COLOR_PURPLE)));
     public static final RegistryObject<Block> WIND_BLOWER = register("wind_blower", () -> new WindBlowerBlock(BlockBehaviour.Properties.copy(COLD_AERCLOUD.get())));
     public static final RegistryObject<Block> SLIDER_PROTOTYPE = register("slider_prototype", () -> new SliderPrototypeBlock(BlockBehaviour.Properties.copy(CARVED_STONE.get()).strength(5f).noOcclusion()));
-    public static final RegistryObject<Block> UNPOWERED_ANCIENT_OBELISK = register("unpowered_ancient_obelisk", () -> new ObeliskBlock(BlockBehaviour.Properties.copy(STONE).sound(SoundType.STONE).lightLevel(s -> 3).noLootTable().strength(-1.0F, 3600000.0F).noOcclusion()));
-    public static final RegistryObject<Block> ANCIENT_OBELISK = register("ancient_obelisk", () -> new Block(BlockBehaviour.Properties.copy(AEROGETIC_STONE.get()).strength(5f).lightLevel(s -> 12).noOcclusion()));
+    public static final RegistryObject<Block> ANCIENT_OBELISK = register("ancient_obelisk", () -> new ObeliskBlock(BlockBehaviour.Properties.copy(STONE).sound(SoundType.STONE).lightLevel(s -> 3).noLootTable().strength(-1.0F, 3600000.0F).noOcclusion()));
+    public static final RegistryObject<Block> POWERED_OBELISK = register("powered_obelisk", () -> new Block(BlockBehaviour.Properties.copy(AEROGETIC_STONE.get()).strength(5f).lightLevel(s -> 12).noOcclusion()));
 
     public static final RegistryObject<VaseBlock> HOLYSTONE_VASE = register("holystone_vase", () -> new VaseBlock(Block.Properties.of().mapColor(MapColor.COLOR_LIGHT_GRAY).instabreak().sound(SoundType.DECORATED_POT).noOcclusion().isSuffocating(AncientAetherBlocks::never).isViewBlocking(AncientAetherBlocks::never)));
     public static final RegistryObject<VaseBlock> MOSSY_HOLYSTONE_VASE = register("mossy_holystone_vase", () -> new VaseBlock(BlockBehaviour.Properties.copy(HOLYSTONE_VASE.get())));

@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ancient_aether:ancient_obelisk"
+          "name": "ancient_aether:powered_obelisk"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "ancient_aether:blocks/ancient_obelisk"
+  "random_sequence": "ancient_aether:blocks/powered_obelisk"
 }

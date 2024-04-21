@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-19T09:39:03.4315644	Loot Tables
+// 1.20.1	2024-04-21T21:12:03.2878956	Loot Tables
 095a70e341d19e7b3548ddc32402abe48a79992a data/ancient_aether/loot_tables/blocks/aerogel_glass.json
 9fe2ea21af5246ad9f95848f680099717062eb1c data/ancient_aether/loot_tables/blocks/aerogel_glass_door.json
 0f84d5b4591633acc6c8dcc82b7c14988b545a9f data/ancient_aether/loot_tables/blocks/aerogel_glass_pane.json
@@ -13,7 +13,6 @@ c71fb0a982801e67b71870bac7d8266405aa5fe9 data/ancient_aether/loot_tables/blocks/
 19550c94241d755ad6a92a5ba806a5e65d134086 data/ancient_aether/loot_tables/blocks/aether_quartz_ore.json
 2cdb5ed0cf04b7fecf2fb87003c197b67918082f data/ancient_aether/loot_tables/blocks/ambrosium_campfire.json
 9ff9ed85ffbbda70c6cceb7fbf34b98babcbe427 data/ancient_aether/loot_tables/blocks/ambrosium_lantern.json
-31e24a624d606ca0cfed9b28e6aa09536aecfd9a data/ancient_aether/loot_tables/blocks/ancient_obelisk.json
 50401c0d72532e1255e3c534f66b3b7b9e656a43 data/ancient_aether/loot_tables/blocks/angelic_stone_mosaic.json
 91126c83880d2251b1f209827e7f2fb17fdd7373 data/ancient_aether/loot_tables/blocks/angelic_vase.json
 0d3bd5919e0ca00320518a8fd38f5086eb1e53ba data/ancient_aether/loot_tables/blocks/atmosine_crystal.json
@@ -71,6 +70,7 @@ c1df9d745e4304686b6b379cd6f884c5771ea632 data/ancient_aether/loot_tables/blocks/
 ff8dc122753477159fc764d27b824ba275e4a39b data/ancient_aether/loot_tables/blocks/potted_skyroot_pine_sapling.json
 41efc688be8824fe3ebe3fc86fd70ff3da32b066 data/ancient_aether/loot_tables/blocks/potted_sky_blues.json
 f9eb2cb1ff6318e63578bfdee6440366a4e527f7 data/ancient_aether/loot_tables/blocks/potted_wynd_thistle.json
+baf5105a18296574bafc77f36ef65d8db21bc2c1 data/ancient_aether/loot_tables/blocks/powered_obelisk.json
 2abf30266b70155718640bfacabd7ba432b87f97 data/ancient_aether/loot_tables/blocks/sakura_bookshelf.json
 0a31bc2e8d2e02c1c095cb545e7f59c2e0944614 data/ancient_aether/loot_tables/blocks/sakura_button.json
 5ee308395bf3f53e9f1261db02b638de66c9947e data/ancient_aether/loot_tables/blocks/sakura_door.json

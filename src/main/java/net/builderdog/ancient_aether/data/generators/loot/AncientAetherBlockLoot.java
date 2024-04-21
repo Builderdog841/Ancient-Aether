@@ -110,7 +110,7 @@ public class AncientAetherBlockLoot extends AetherBlockLootSubProvider {
         dropSelf(AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get());
         dropSelf(AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get());
         dropSelf(AncientAetherBlocks.GALE_STONE_MOSAIC.get());
-        dropSelf(AncientAetherBlocks.ANCIENT_OBELISK.get());
+        dropSelf(AncientAetherBlocks.POWERED_OBELISK.get());
         dropSelf(AncientAetherBlocks.AMBROSIUM_LANTERN.get());
         dropSelf(AncientAetherBlocks.WYND_LANTERN.get());
         dropSelf(AncientAetherBlocks.SUN_LANTERN.get());

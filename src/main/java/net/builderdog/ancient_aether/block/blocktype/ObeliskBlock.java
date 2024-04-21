@@ -26,12 +26,12 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
-@SuppressWarnings("deprecation")
 public class ObeliskBlock extends Block {
     public ObeliskBlock(Properties properties) {
         super(properties);
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public @NotNull InteractionResult use(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
         super.use(state, level, pos, player, hand, hit);
@@ -66,19 +66,16 @@ public class ObeliskBlock extends Block {
                         }
                     }
                 }
-                if (state.getBlock() == AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get()) {
-                    level.setBlockAndUpdate(pos, AncientAetherBlocks.ANCIENT_OBELISK.get().defaultBlockState());
+                if (state.getBlock() == AncientAetherBlocks.ANCIENT_OBELISK.get()) {
+                    level.setBlockAndUpdate(pos, AncientAetherBlocks.POWERED_OBELISK.get().defaultBlockState());
                 }
+                level.playSound(null, (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, AncientAetherSoundEvents.BLOCK_OBELISK_ACTIVATION.get(), SoundSource.BLOCKS, 1.0F, 1.0F);
+                return InteractionResult.sidedSuccess(true);
             }
         }
         else {
             if (!level.isClientSide) {
                 player.displayClientMessage(Component.translatable("gui.ancient_aether.obelisk.requirement").withStyle(ChatFormatting.RED), true);
-            }
-            else {
-                level.playSound(player, pos, AncientAetherSoundEvents.BLOCK_OBELISK_ACTIVATION.get(), SoundSource.BLOCKS, 0.8f, 0.5f + (
-                        ((float) (Math.pow(level.random.nextDouble(), 2.5))) * 0.5f));
-                return InteractionResult.sidedSuccess(true);
             }
         }
         return InteractionResult.SUCCESS;

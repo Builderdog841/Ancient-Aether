@@ -131,7 +131,7 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
 
         tag(AetherTags.Blocks.AETHER_PORTAL_BLACKLIST).add(
                 AncientAetherBlocks.VIOLET_AERCLOUD.get(),
-                AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get(),
+                AncientAetherBlocks.ANCIENT_OBELISK.get(),
                 AetherBlocks.AETHER_DIRT.get(),
                 AetherBlocks.ICESTONE.get(),
                 AetherBlocks.AEROGEL.get(),
@@ -211,10 +211,10 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
                 AncientAetherBlocks.LOCKED_HELLFIRE_STONE_MOSAIC.get()
         );
         tag(AetherTags.Blocks.SLIDER_UNBREAKABLE).add(
-                AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get()
+                AncientAetherBlocks.ANCIENT_OBELISK.get()
         );
         tag(AetherTags.Blocks.VALKYRIE_QUEEN_UNBREAKABLE).add(
-                AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get()
+                AncientAetherBlocks.ANCIENT_OBELISK.get()
         );
         tag(AetherTags.Blocks.GRAVITITE_ABILITY_BLACKLIST).add(
                 AncientAetherBlocks.VALKYRUM_ORE.get(),
@@ -361,10 +361,10 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
                 AncientAetherBlocks.SAKURA_WALL_HANGING_SIGN.get()
         );
         tag(BlockTags.DRAGON_IMMUNE).add(
-                AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get()
+                AncientAetherBlocks.ANCIENT_OBELISK.get()
         );
         tag(BlockTags.WITHER_IMMUNE).add(
-                AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get()
+                AncientAetherBlocks.ANCIENT_OBELISK.get()
         );
         tag(BlockTags.BEACON_BASE_BLOCKS).add(
                 AncientAetherBlocks.VALKYRUM_BLOCK.get()
@@ -457,7 +457,7 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
                 AncientAetherBlocks.WYND_LANTERN.get(),
                 AncientAetherBlocks.SUN_LANTERN.get(),
                 AncientAetherBlocks.SLIDER_PROTOTYPE.get(),
-                AncientAetherBlocks.ANCIENT_OBELISK.get()
+                AncientAetherBlocks.POWERED_OBELISK.get()
         );
         tag(BlockTags.MINEABLE_WITH_SHOVEL).add(
                 AncientAetherBlocks.GRAVITY_GRAVEL.get()
@@ -467,7 +467,7 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
         );
         tag(BlockTags.NEEDS_DIAMOND_TOOL).add(
                 AncientAetherBlocks.SLIDER_PROTOTYPE.get(),
-                AncientAetherBlocks.ANCIENT_OBELISK.get()
+                AncientAetherBlocks.POWERED_OBELISK.get()
         );
         tag(BlockTags.NEEDS_STONE_TOOL).add(
                 AncientAetherBlocks.CARVED_TILES.get(),

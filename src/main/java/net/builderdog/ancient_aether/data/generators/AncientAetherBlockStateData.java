@@ -157,8 +157,8 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         windBlower(AncientAetherBlocks.WIND_BLOWER.get());
         sliderPrototype(AncientAetherBlocks.SLIDER_PROTOTYPE.get());
 
-        obelisk(AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get());
         obelisk(AncientAetherBlocks.ANCIENT_OBELISK.get());
+        obelisk(AncientAetherBlocks.POWERED_OBELISK.get());
 
         carpet(AncientAetherBlocks.FLUFFALO_CARPET.get(), AncientAetherBlocks.FLUFFALO_WOOL.get());
 

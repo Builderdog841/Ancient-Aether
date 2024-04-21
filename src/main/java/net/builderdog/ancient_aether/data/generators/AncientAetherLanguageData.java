@@ -158,7 +158,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.WIND_BLOWER, "Wind Blower");
         addBlock(AncientAetherBlocks.SLIDER_PROTOTYPE, "Slider Prototype");
         addBlock(AncientAetherBlocks.ANCIENT_OBELISK, "Ancient Obelisk");
-        addBlock(AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK, "Unpowered Ancient Obelisk");
+        addBlock(AncientAetherBlocks.POWERED_OBELISK, "Powered Obelisk");
 
         addBlock(AncientAetherBlocks.HOLYSTONE_VASE, "Holystone Vase");
         addBlock(AncientAetherBlocks.MOSSY_HOLYSTONE_VASE, "Mossy Holystone Vase");
@@ -430,8 +430,8 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addLore(AncientAetherBlocks.VIOLET_AERCLOUD, "A violet cloud found close to the ground. This Aercloud acts as an opposite to the Blue Aercloud since it pushes players and other entities downwards.");
         addLore(AncientAetherBlocks.WIND_BLOWER, "A way of transmitting Redstone Signals in the Aether. Activating one makes it release a Wind Blow that would activate another one if it gets hit, which causes a chain reaction. If a Windblower is active, it will emit a Redstone Signal. It can also be worn on your head if you want to look extra fancy.");
         addLore(AncientAetherBlocks.SLIDER_PROTOTYPE, "A failed experiment of the Ancient Valkyries that can only be mined with a Gravitite Pickaxes or higher. Activating it with Redstone might have spooky consequences.");
-        addLore(AncientAetherBlocks.ANCIENT_OBELISK, "A futuristic decoration block that can only be mined with a Gravitite Pickaxe or higher.");
-        addLore(AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK, "Found at the entrances of Ancient Dungeons and can be unlocked with Ancient Runes.");
+        addLore(AncientAetherBlocks.ANCIENT_OBELISK, "Found at the entrances of Ancient Dungeons and can be unlocked with Ancient Runes.");
+        addLore(AncientAetherBlocks.POWERED_OBELISK, "A futuristic decoration block that can only be mined with a Gravitite Pickaxe or higher.");
         addLore(AncientAetherBlocks.FROZEN_HOLYSTONE_VASE, "A piece of pottery crafted by freezing regular Holystone Vases.");
         addLore(AncientAetherBlocks.ANCIENT_MOSSY_HOLYSTONE_VASE, "An overgrown relic found in Mysterious Henges. Breaking it can yield you some shiny treasures.");
         addLore(AncientAetherBlocks.ANCIENT_FROZEN_HOLYSTONE_VASE, "A frosted relic found in Sentry Laboratories. Breaking it can yield you some shiny treasures.");

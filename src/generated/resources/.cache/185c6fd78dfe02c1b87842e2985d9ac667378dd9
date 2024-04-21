@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-21T15:57:00.4932327	Item Models: ancient_aether
+// 1.20.1	2024-04-21T21:12:03.2838941	Item Models: ancient_aether
 532bdb7a4f7d2a6b96d474c01c8b9e7a0d1c10b4 assets/ancient_aether/models/item/aerogel_glass.json
 87e9f8f9f807a2aa763e3057d32bacf3ee32b60f assets/ancient_aether/models/item/aerogel_glass_door.json
 d1e6ed3e334d573f31a8ce9e09885c0f43832630 assets/ancient_aether/models/item/aerogel_glass_pane.json
@@ -95,6 +95,7 @@ a571dce7fe46d5d816fbea0dc10fa85cb5ca2c39 assets/ancient_aether/models/item/locke
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/mutated_aechor_plant_spawn_egg.json
 b1eafdbefc14f48a0970fa9a63764b5ff46e93ed assets/ancient_aether/models/item/mysterious_armor_trim_smithing_template.json
 9771655c71206c2d022aac127af800f28a8ffb8f assets/ancient_aether/models/item/pink_cape.json
+0563c8d081fe4be3e66a13a77ffe0e2239f13959 assets/ancient_aether/models/item/powered_obelisk.json
 4a92d6f1142ab7e4e4c5907ade539d7914158bea assets/ancient_aether/models/item/royal_armor_trim_smithing_template.json
 f6ec6ffe46ca890025a12785250d13129a973a1a assets/ancient_aether/models/item/sakura_boat.json
 48b48509cb977fdd51219fbdd14f79e3b310a3dd assets/ancient_aether/models/item/sakura_bookshelf.json
@@ -141,7 +142,6 @@ ea419cd22fd4576a72d4568f13b7c11b8bb08df7 assets/ancient_aether/models/item/sun_l
 a8369b7ce7f0a1a5e5e440a3edc8f58cf0868273 assets/ancient_aether/models/item/treasure_doorway_corrupted_aeronautic_stone.json
 da06eb62cde9c91bec97207a2352e05af7a903ec assets/ancient_aether/models/item/treasure_doorway_wynd_sentry_stone.json
 afdc3cd85d53d3cb2c631b2b7c678c2d79b4bdcc assets/ancient_aether/models/item/turquoise_moa_egg.json
-ea8ec3d6a800f55b47dc029c7c5f379cdbd03292 assets/ancient_aether/models/item/unpowered_ancient_obelisk.json
 8236fd7a524a8f3a35ebaa7fa5709657cbeb5372 assets/ancient_aether/models/item/valkyrum.json
 d30935e10a2cab0a2eca56f8dacf7b58d71d31f5 assets/ancient_aether/models/item/valkyrum_axe.json
 edd607642a17d1ae0d3e3398e0b7eee388a03944 assets/ancient_aether/models/item/valkyrum_boots.json

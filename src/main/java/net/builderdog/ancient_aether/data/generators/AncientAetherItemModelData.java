@@ -130,7 +130,7 @@ public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
         itemBlock(AncientAetherBlocks.AEROGETIC_VASE.get());
         itemBlock(AncientAetherBlocks.GALE_VASE.get());
         itemBlock(AncientAetherBlocks.ANCIENT_OBELISK.get());
-        itemBlock(AncientAetherBlocks.UNPOWERED_ANCIENT_OBELISK.get());
+        itemBlock(AncientAetherBlocks.POWERED_OBELISK.get());
 
         itemBlockCopy(AncientAetherBlocks.ANCIENT_HOLYSTONE_VASE.get(), AncientAetherBlocks.HOLYSTONE_VASE.get());
         itemBlockCopy(AncientAetherBlocks.ANCIENT_MOSSY_HOLYSTONE_VASE.get(), AncientAetherBlocks.MOSSY_HOLYSTONE_VASE.get());
