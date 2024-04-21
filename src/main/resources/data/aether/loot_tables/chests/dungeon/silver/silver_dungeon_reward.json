@@ -44,8 +44,20 @@
         },
         {
           "type": "minecraft:item",
-          "name": "ancient_aether:arkenzus_pickaxe",
+          "name": "ancient_aether:divine_pickaxe",
           "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:divine_shovel"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:divine_axe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:divine_hoe"
         },
         {
           "type": "minecraft:item",

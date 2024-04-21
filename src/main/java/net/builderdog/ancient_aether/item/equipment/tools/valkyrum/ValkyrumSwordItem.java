@@ -2,6 +2,7 @@ package net.builderdog.ancient_aether.item.equipment.tools.valkyrum;
 
 import com.google.common.collect.Multimap;
 import net.builderdog.ancient_aether.item.equipment.AncientAetherItemTiers;
+import net.builderdog.ancient_aether.item.equipment.tools.abilities.ValkyrumSwordRange;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;

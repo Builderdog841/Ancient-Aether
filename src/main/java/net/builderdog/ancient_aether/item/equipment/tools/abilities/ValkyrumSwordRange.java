@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.item.equipment.tools.valkyrum;
+package net.builderdog.ancient_aether.item.equipment.tools.abilities;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;

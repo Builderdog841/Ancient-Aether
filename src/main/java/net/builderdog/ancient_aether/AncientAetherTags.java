@@ -35,7 +35,7 @@ public class AncientAetherTags {
         public static final TagKey<Item> VASES = tag("vases");
         public static final TagKey<Item> WINDBLOWER_INGREDIENTS = tag("windblower_ingredients");
         public static final TagKey<Item> VALKYRUM_REPAIRING = tag("valkyrum_repairing");
-        public static final TagKey<Item> ARKENZUS_REPAIRING = tag("arkenzus_repairing");
+        public static final TagKey<Item> DIVINE_REPAIRING = tag("divine_repairing");
         public static final TagKey<Item> ANCIENT_REPAIRING = tag("ancient_repairing");
         public static final TagKey<Item> FLUFFALO_TEMPTATION_ITEMS = tag("fluffalo_temptation_items");
         public static final TagKey<Item> COMMON_LOOT = tag("common_loot");

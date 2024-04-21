@@ -40,7 +40,7 @@ public class AncientAetherItemTagData extends ItemTagsProvider {
         tag(AncientAetherTags.Items.VALKYRUM_REPAIRING).add(
                 AncientAetherItems.VALKYRUM.get()
         );
-        tag(AncientAetherTags.Items.ARKENZUS_REPAIRING);
+        tag(AncientAetherTags.Items.DIVINE_REPAIRING);
         tag(AncientAetherTags.Items.ANCIENT_REPAIRING);
         tag(AncientAetherTags.Items.FLUFFALO_TEMPTATION_ITEMS).add(
                 AncientAetherBlocks.WYND_THISTLE.get().asItem()
@@ -89,7 +89,10 @@ public class AncientAetherItemTagData extends ItemTagsProvider {
                 AetherItems.PHOENIX_GLOVES.get(),
                 AetherItems.INVISIBILITY_CLOAK.get(),
                 AetherItems.REGENERATION_STONE.get(),
-                AncientAetherItems.ARKENZUS_PICKAXE.get(),
+                AncientAetherItems.DIVINE_SHOVEL.get(),
+                AncientAetherItems.DIVINE_PICKAXE.get(),
+                AncientAetherItems.DIVINE_AXE.get(),
+                AncientAetherItems.DIVINE_HOE.get(),
                 AncientAetherItems.HEALTH_RING.get(),
                 AncientAetherItems.HEALTH_PENDANT.get(),
                 AncientAetherItems.ANCIENT_RING.get(),
@@ -184,17 +187,21 @@ public class AncientAetherItemTagData extends ItemTagsProvider {
                 AncientAetherBlocks.SAKURA_PLANKS.get().asItem()
         );
         tag(AetherTags.Items.GOLDEN_AMBER_HARVESTERS).add(
-                AncientAetherItems.VALKYRUM_AXE.get()
+                AncientAetherItems.VALKYRUM_AXE.get(),
+                AncientAetherItems.DIVINE_AXE.get()
         );
         tag(AetherTags.Items.TREATED_AS_AETHER_ITEM).add(
                 AncientAetherItems.VALKYRUM_SWORD.get(),
                 AncientAetherItems.VALKYRUM_LANCE.get(),
                 AncientAetherItems.ANCIENT_SWORD.get(),
+                AncientAetherItems.VALKYRUM_SHOVEL.get(),
                 AncientAetherItems.VALKYRUM_PICKAXE.get(),
                 AncientAetherItems.VALKYRUM_AXE.get(),
-                AncientAetherItems.VALKYRUM_SHOVEL.get(),
                 AncientAetherItems.VALKYRUM_HOE.get(),
-                AncientAetherItems.ARKENZUS_PICKAXE.get()
+                AncientAetherItems.DIVINE_SHOVEL.get(),
+                AncientAetherItems.DIVINE_PICKAXE.get(),
+                AncientAetherItems.DIVINE_AXE.get(),
+                AncientAetherItems.DIVINE_HOE.get()
         );
         tag(AetherTags.Items.DART_SHOOTERS).add(
                 AncientAetherItems.AERONAUTIC_DART_SHOOTER.get()
@@ -439,17 +446,20 @@ public class AncientAetherItemTagData extends ItemTagsProvider {
                 AncientAetherItems.ANCIENT_SWORD.get()
         );
         tag(ItemTags.AXES).add(
-                AncientAetherItems.VALKYRUM_AXE.get()
+                AncientAetherItems.VALKYRUM_AXE.get(),
+                AncientAetherItems.DIVINE_AXE.get()
         );
         tag(ItemTags.HOES).add(
-                AncientAetherItems.VALKYRUM_HOE.get()
+                AncientAetherItems.VALKYRUM_HOE.get(),
+                AncientAetherItems.DIVINE_HOE.get()
         );
         tag(ItemTags.PICKAXES).add(
                 AncientAetherItems.VALKYRUM_PICKAXE.get(),
-                AncientAetherItems.ARKENZUS_PICKAXE.get()
+                AncientAetherItems.DIVINE_PICKAXE.get()
         );
         tag(ItemTags.SHOVELS).add(
-                AncientAetherItems.VALKYRUM_SHOVEL.get()
+                AncientAetherItems.VALKYRUM_SHOVEL.get(),
+                AncientAetherItems.DIVINE_SHOVEL.get()
         );
     }
 }

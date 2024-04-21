@@ -81,13 +81,13 @@ public class AncientAetherAdvancementData extends ForgeAdvancementProvider {
 
             Advancement arkenzusPickaxeLoot = Advancement.Builder.advancement()
                     .parent(new ResourceLocation(Aether.MODID, "silver_dungeon"))
-                    .display(AncientAetherItems.ARKENZUS_PICKAXE.get(),
-                            Component.translatable("advancement.ancient_aether.arkenzus_pickaxe_loot"),
-                            Component.translatable("advancement.ancient_aether.arkenzus_pickaxe_loot.desc"),
+                    .display(AncientAetherItems.DIVINE_PICKAXE.get(),
+                            Component.translatable("advancement.ancient_aether.divine_pickaxe_loot"),
+                            Component.translatable("advancement.ancient_aether.divine_pickaxe_loot.desc"),
                             null,
                             FrameType.TASK, true, true, false)
-                    .addCriterion("arkenzus_pickaxe_loot", InventoryChangeTrigger.TriggerInstance.hasItems(AncientAetherItems.ARKENZUS_PICKAXE.get()))
-                    .save(consumer, new ResourceLocation(AncientAether.MODID, "arkenzus_pickaxe_loot"), existingFileHelper);
+                    .addCriterion("divine_pickaxe_loot", InventoryChangeTrigger.TriggerInstance.hasItems(AncientAetherItems.DIVINE_PICKAXE.get()))
+                    .save(consumer, new ResourceLocation(AncientAether.MODID, "divine_pickaxe_loot"), existingFileHelper);
 
             Advancement valkyrum = Advancement.Builder.advancement()
                     .parent(arkenzusPickaxeLoot)

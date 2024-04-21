@@ -49,12 +49,15 @@ public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
         simpleItem(AncientAetherItems.ANCIENT_ARMOR_TRIM_SMITHING_TEMPLATE);
 
         handheldItem(AncientAetherItems.VALKYRUM_SWORD.get(), "");
+        handheldItem(AncientAetherItems.VALKYRUM_SHOVEL.get(), "");
         handheldItem(AncientAetherItems.VALKYRUM_PICKAXE.get(), "");
         handheldItem(AncientAetherItems.VALKYRUM_AXE.get(), "");
-        handheldItem(AncientAetherItems.VALKYRUM_SHOVEL.get(), "");
         handheldItem(AncientAetherItems.VALKYRUM_HOE.get(), "");
+        handheldItem(AncientAetherItems.DIVINE_SHOVEL.get(), "");
+        handheldItem(AncientAetherItems.DIVINE_PICKAXE.get(), "");
+        handheldItem(AncientAetherItems.DIVINE_AXE.get(), "");
+        handheldItem(AncientAetherItems.DIVINE_HOE.get(), "");
         handheldItem(AncientAetherItems.ANCIENT_SWORD.get(), "");
-        handheldItem(AncientAetherItems.ARKENZUS_PICKAXE.get(), "");
 
         item(AncientAetherBlocks.HIGHSPROOT_DOOR.get().asItem(), "");
         item(AncientAetherBlocks.SAKURA_DOOR.get().asItem(), "");

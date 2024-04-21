@@ -21,7 +21,10 @@ import net.builderdog.ancient_aether.item.equipment.accessories.rings.*;
 import net.builderdog.ancient_aether.item.equipment.accessories.shields.ShieldAccessoryItem;
 import net.builderdog.ancient_aether.item.equipment.accessories.shields.ShieldOfRemediationItem;
 import net.builderdog.ancient_aether.item.equipment.armor.AncientAetherArmorItem;
-import net.builderdog.ancient_aether.item.equipment.tools.arkenzus.ArkenzusPickaxeItem;
+import net.builderdog.ancient_aether.item.equipment.tools.divine.DivineAxeItem;
+import net.builderdog.ancient_aether.item.equipment.tools.divine.DivineHoeItem;
+import net.builderdog.ancient_aether.item.equipment.tools.divine.DivinePickaxeItem;
+import net.builderdog.ancient_aether.item.equipment.tools.divine.DivineShovelItem;
 import net.builderdog.ancient_aether.item.equipment.tools.valkyrum.*;
 import net.builderdog.ancient_aether.item.equipment.weapons.AeronauticDartShooterItem;
 import net.builderdog.ancient_aether.item.equipment.weapons.AncientSwordItem;
@@ -56,10 +59,15 @@ public class AncientAetherItems {
 
     public static final RegistryObject<SwordItem> VALKYRUM_SWORD = ITEMS.register("valkyrum_sword", ValkyrumSwordItem::new);
     public static final RegistryObject<SwordItem> VALKYRUM_LANCE = ITEMS.register("valkyrum_lance", ValkyrumLanceItem::new);
+    public static final RegistryObject<ShovelItem> VALKYRUM_SHOVEL = ITEMS.register("valkyrum_shovel", ValkyrumShovelItem::new);
     public static final RegistryObject<PickaxeItem> VALKYRUM_PICKAXE = ITEMS.register("valkyrum_pickaxe", ValkyrumPickaxeItem::new);
     public static final RegistryObject<AxeItem> VALKYRUM_AXE = ITEMS.register("valkyrum_axe", ValkyrumAxeItem::new);
-    public static final RegistryObject<ShovelItem> VALKYRUM_SHOVEL = ITEMS.register("valkyrum_shovel", ValkyrumShovelItem::new);
     public static final RegistryObject<HoeItem> VALKYRUM_HOE = ITEMS.register("valkyrum_hoe", ValkyrumHoeItem::new);
+
+    public static final RegistryObject<ShovelItem> DIVINE_SHOVEL = ITEMS.register("divine_shovel", DivineShovelItem::new);
+    public static final RegistryObject<PickaxeItem> DIVINE_PICKAXE = ITEMS.register("divine_pickaxe", DivinePickaxeItem::new);
+    public static final RegistryObject<AxeItem> DIVINE_AXE = ITEMS.register("divine_axe", DivineAxeItem::new);
+    public static final RegistryObject<HoeItem> DIVINE_HOE = ITEMS.register("divine_hoe", DivineHoeItem::new);
 
     public static final RegistryObject<Item> VALKYRUM_HELMET = ITEMS.register("valkyrum_helmet", () -> new AncientAetherArmorItem(AncientAetherArmorTiers.VALKYRUM, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> VALKYRUM_CHESTPLATE = ITEMS.register("valkyrum_chestplate", () -> new AncientAetherArmorItem(AncientAetherArmorTiers.VALKYRUM, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
@@ -67,7 +75,6 @@ public class AncientAetherItems {
     public static final RegistryObject<Item> VALKYRUM_BOOTS = ITEMS.register("valkyrum_boots", () -> new AncientAetherArmorItem(AncientAetherArmorTiers.VALKYRUM, ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> VALKYRUM_GLOVES = ITEMS.register("valkyrum_gloves", () -> new GlovesItem(AncientAetherArmorTiers.VALKYRUM, 1.0, "valkyrum_gloves", AetherSoundEvents.ITEM_ARMOR_EQUIP_VALKYRIE, new Item.Properties().stacksTo(1).durability(1561)));
 
-    public static final RegistryObject<PickaxeItem> ARKENZUS_PICKAXE = ITEMS.register("arkenzus_pickaxe", ArkenzusPickaxeItem::new);
     public static final RegistryObject<SwordItem> ANCIENT_SWORD = ITEMS.register("ancient_sword", AncientSwordItem::new);
     public static final RegistryObject<Item> AERONAUTIC_DART_SHOOTER = ITEMS.register("aeronautic_dart_shooter", () -> new AeronauticDartShooterItem(AetherItems.GOLDEN_DART, (new Item.Properties().stacksTo(1))));
 

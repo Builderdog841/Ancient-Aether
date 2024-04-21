@@ -202,6 +202,11 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addItem(AncientAetherItems.VALKYRUM_AXE, "Valkyrum Axe");
         addItem(AncientAetherItems.VALKYRUM_HOE, "Valkyrum Hoe");
 
+        addItem(AncientAetherItems.DIVINE_SHOVEL, "Divine Shovel");
+        addItem(AncientAetherItems.DIVINE_PICKAXE, "Divine Pickaxe");
+        addItem(AncientAetherItems.DIVINE_AXE, "Divine Axe");
+        addItem(AncientAetherItems.DIVINE_HOE, "Divine Hoe");
+
         addItem(AncientAetherItems.VALKYRUM_HELMET, "Valkyrum Helmet");
         addItem(AncientAetherItems.VALKYRUM_CHESTPLATE, "Valkyrum Chestplate");
         addItem(AncientAetherItems.VALKYRUM_LEGGINGS, "Valkyrum Leggings");
@@ -209,7 +214,6 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addItem(AncientAetherItems.VALKYRUM_GLOVES, "Valkyrum Gloves");
 
         addItem(AncientAetherItems.ANCIENT_SWORD, "Ancient Sword");
-        addItem(AncientAetherItems.ARKENZUS_PICKAXE, "Pickaxe of Arkenzus");
         addItem(AncientAetherItems.AERONAUTIC_DART_SHOOTER, "Aeronautic Dart Shooter");
 
         addItem(AncientAetherItems.VALKYRUM_RING, "Valkyrum Ring");
@@ -293,7 +297,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
 
         addAdvancement("aether_biomes", "Aerospace Traveller");
         addAdvancement("moa_eggs", "Rainbow Omelette");
-        addAdvancement("arkenzus_pickaxe_loot", "The Pickaxe of Gods");
+        addAdvancement("divine_pickaxe_loot", "The Pickaxe of Gods");
         addAdvancement("valkyrum", "What Clouds are made of");
         addAdvancement("valkyrum_lance", "Lancin' and Dancin'");
         addAdvancement("vampire_blade_loot", "Bloodlust");
@@ -306,7 +310,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
 
         addAdvancementDesc("aether_biomes", "Find all Aether biomes" + mark);
         addAdvancementDesc("moa_eggs", "Collect all the different Moa Eggs" + mark);
-        addAdvancementDesc("arkenzus_pickaxe_loot", "Obtain the Pickaxe of Arkenzus from defeating the Valkyrie Queen. It can be used to mine Valkyrum Ore" + mark);
+        addAdvancementDesc("divine_pickaxe_loot", "Obtain the Divine Pickaxe from defeating the Valkyrie Queen. It can be used to mine Valkyrum Ore" + mark);
         addAdvancementDesc("valkyrum", "Enchant some Valkyrum Ore in an Altar" + mark);
         addAdvancementDesc("valkyrum_lance", "Craft yourself a Valkyrum Lance" + mark);
         addAdvancementDesc("vampire_blade_loot", "Obtain the Vampire Blade from defeating the Sun Spirit" + mark);
@@ -554,7 +558,10 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addValkyrumItemLore(AncientAetherItems.VALKYRUM_RING, "accessory", "A noble accessory forged from Valkyrum. This ring grants you +0.5 Blocks of Reach.");
         addValkyrumItemLore(AncientAetherItems.VALKYRUM_PENDANT, "accessory", "A noble accessory forged from Valkyrum. This pendant grants you +1 Blocks of Reach.");
 
-        addRewardLore(AncientAetherItems.ARKENZUS_PICKAXE, "the Valkyrie Queen", "pickaxe is strong enough to mine Valkyrum Ore");
+        addRewardLore(AncientAetherItems.DIVINE_SHOVEL, "the Valkyrie Queen", "shovel auto-enchants every block that it mines. Quite handy for gathering Quicksoil Glass");
+        addRewardLore(AncientAetherItems.DIVINE_PICKAXE, "the Valkyrie Queen", "pickaxe is strong enough to mine Valkyrum Ore. It also auto-enchants every block that it mines");
+        addRewardLore(AncientAetherItems.DIVINE_AXE, "the Valkyrie Queen", "axe auto-enchants every block that it mines.");
+        addRewardLore(AncientAetherItems.DIVINE_HOE, "the Valkyrie Queen", "hoe auto-enchants every block that it mines. Quite handy for Blue Berry farming");
         addRewardLore(AncientAetherItems.AERONAUTIC_DART_SHOOTER, "the Ancient Dungeon Boss", "dart shooter launches mobs high up in the air similar to Gravitite Equipment. You can use any type of dart as ammunition");
         addRewardLore(AncientAetherItems.HERMES_RING, "Dungeons", "ring increases your total Movement Speed by +3%");
         addRewardLore(AncientAetherItems.HERMES_PENDANT, "Dungeons", "pendant increases your total Movement Speed by +5%");

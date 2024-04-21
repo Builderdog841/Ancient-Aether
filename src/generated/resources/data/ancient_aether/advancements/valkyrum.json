@@ -1,5 +1,5 @@
 {
-  "parent": "ancient_aether:arkenzus_pickaxe_loot",
+  "parent": "ancient_aether:divine_pickaxe_loot",
   "criteria": {
     "valkyrum": {
       "conditions": {

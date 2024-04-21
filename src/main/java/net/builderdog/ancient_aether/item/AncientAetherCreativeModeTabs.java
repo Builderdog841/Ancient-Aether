@@ -219,13 +219,16 @@ public class AncientAetherCreativeModeTabs {
             event.getEntries().putAfter(new ItemStack(AetherItems.GOLD_DUNGEON_KEY.get()), new ItemStack(AncientAetherItems.LABORATORY_DUNGEON_KEY.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherItems.LABORATORY_DUNGEON_KEY.get()), new ItemStack(AncientAetherItems.ANCIENT_DUNGEON_KEY.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AetherItems.ENCHANTED_DART_SHOOTER.get()), new ItemStack(AncientAetherItems.AERONAUTIC_DART_SHOOTER.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(new ItemStack(AetherItems.GRAVITITE_HOE.get()), new ItemStack(AncientAetherItems.VALKYRUM_SWORD.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AetherItems.GRAVITITE_HOE.get()), new ItemStack(AncientAetherItems.DIVINE_SHOVEL.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherItems.DIVINE_SHOVEL.get()), new ItemStack(AncientAetherItems.DIVINE_PICKAXE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherItems.DIVINE_PICKAXE.get()), new ItemStack(AncientAetherItems.DIVINE_AXE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherItems.DIVINE_AXE.get()), new ItemStack(AncientAetherItems.DIVINE_HOE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherItems.DIVINE_HOE.get()), new ItemStack(AncientAetherItems.VALKYRUM_SWORD.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherItems.VALKYRUM_SWORD.get()), new ItemStack(AncientAetherItems.VALKYRUM_LANCE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherItems.VALKYRUM_LANCE.get()), new ItemStack(AncientAetherItems.VALKYRUM_SHOVEL.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherItems.VALKYRUM_SHOVEL.get()), new ItemStack(AncientAetherItems.VALKYRUM_PICKAXE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherItems.VALKYRUM_PICKAXE.get()), new ItemStack(AncientAetherItems.VALKYRUM_AXE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherItems.VALKYRUM_AXE.get()), new ItemStack(AncientAetherItems.VALKYRUM_HOE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(new ItemStack(AncientAetherItems.VALKYRUM_HOE.get()), new ItemStack(AncientAetherItems.ARKENZUS_PICKAXE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().remove(new ItemStack(AetherItems.VALKYRIE_LANCE.get()));
             event.getEntries().remove(new ItemStack(AetherItems.VALKYRIE_PICKAXE.get()));
             event.getEntries().remove(new ItemStack(AetherItems.VALKYRIE_AXE.get()));

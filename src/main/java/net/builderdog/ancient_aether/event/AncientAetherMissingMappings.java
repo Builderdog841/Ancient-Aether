@@ -40,6 +40,6 @@ public class AncientAetherMissingMappings {
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MODID).stream().filter(mapping -> mapping.getKey().getPath().contains("enchanted_skyroot_leaves")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.DIVINE_SKYROOT_LEAVES.get()));
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MODID).stream().filter(mapping -> mapping.getKey().getPath().contains("enchanted_skyroot_sapling")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.get()));
         event.getMappings(ForgeRegistries.Keys.BLOCKS, AncientAether.MODID).stream().filter(mapping -> mapping.getKey().getPath().contains("potted_enchanted_skyroot_sapling")).forEach(blockMapping -> blockMapping.remap(AncientAetherBlocks.POTTED_DIVINE_SKYROOT_SAPLING.get()));
-        event.getMappings(ForgeRegistries.Keys.ITEMS, AncientAether.MODID).stream().filter(mapping -> mapping.getKey().getPath().contains("arkzenus_pickaxe")).forEach(blockMapping -> blockMapping.remap(AncientAetherItems.ARKENZUS_PICKAXE.get()));
+        event.getMappings(ForgeRegistries.Keys.ITEMS, AncientAether.MODID).stream().filter(mapping -> mapping.getKey().getPath().contains("arkzenus_pickaxe")).forEach(blockMapping -> blockMapping.remap(AncientAetherItems.DIVINE_PICKAXE.get()));
     }
 }
