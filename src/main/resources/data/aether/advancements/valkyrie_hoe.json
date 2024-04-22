@@ -1,5 +1,5 @@
 {
-  "parent": "aether:valkyrie_loot",
+  "parent": "aether:silver_dungeon",
   "criteria": {
     "divine_hoe": {
       "conditions": {
@@ -38,7 +38,7 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.aether.valkyrie_hoe.desc"
+      "translate": "advancement.ancient_aether.divine_hoe.desc"
     },
     "frame": "challenge",
     "hidden": true,

@@ -322,6 +322,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addAdvancementDesc("ancient_dungeon", "Defeat the Ancient Guardian" + mark);
 
         addAdvancementDesc("sakura_moa", "Ride a Sakura Moa" + markModified);
+        addAdvancementDesc("divine_hoe", "I defeated the Silver Dungeon and all I got was this stupid Hoe" + markModified);
         addAdvancementDesc("valkyrum_armor", "Obtain a piece of Valkyrum Armor" + markModified);
 
         addTrim("atmosine", "Atmosine");
