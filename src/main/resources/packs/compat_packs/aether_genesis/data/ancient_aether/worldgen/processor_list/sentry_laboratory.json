@@ -28,7 +28,7 @@
           "output_state": {
             "Name": "aether:cold_aercloud",
             "Properties": {
-              "double_drops": "false"
+              "double_drops": "true"
             }
           }
         },
