@@ -80,10 +80,6 @@
           "type": "minecraft:item",
           "name": "aether:music_disc_aether_tune",
           "weight": 2
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:gravitite_pickaxe"
         }
       ],
       "rolls": {

@@ -298,7 +298,6 @@ public class AncientAetherChestLoot implements LootTableSubProvider {
                         .add(LootItem.lootTableItem(AncientAetherItems.HERMES_RING.get()).setWeight(3))
                         .add(LootItem.lootTableItem(AncientAetherItems.HERMES_PENDANT.get()).setWeight(3))
                         .add(LootItem.lootTableItem(AetherItems.MUSIC_DISC_AETHER_TUNE.get()).setWeight(2))
-                        .add(LootItem.lootTableItem(AetherItems.GRAVITITE_PICKAXE.get()))
                 )
                 .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0F, 1.0F))
                         .add(LootItem.lootTableItem(AetherItems.SHIELD_OF_REPULSION.get()))
