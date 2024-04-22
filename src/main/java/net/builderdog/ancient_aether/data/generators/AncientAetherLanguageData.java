@@ -28,14 +28,14 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.ATMOSINE_CRYSTAL, "Atmosine Crystal");
 
         addBlock(AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES, "Crystal Skyroot Leaves");
-        addBlock(AncientAetherBlocks.DIVINE_SKYROOT_LEAVES, "Divine Skyroot Leaves");
+        addBlock(AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES, "Enchanted Skyroot Leaves");
         addBlock(AncientAetherBlocks.SKYROOT_PINE_LEAVES, "Skyroot Pine Leaves");
         addBlock(AncientAetherBlocks.BLUE_SKYROOT_PINE_LEAVES, "Blue Skyroot Pine Leaves");
         addBlock(AncientAetherBlocks.HIGHSPROOT_LEAVES, "Highsproot Leaves");
         addBlock(AncientAetherBlocks.SAKURA_LEAVES, "Sakura Leaves");
 
         addBlock(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING, "Crystal Skyroot Sapling");
-        addBlock(AncientAetherBlocks.DIVINE_SKYROOT_SAPLING, "Divine Skyroot Sapling");
+        addBlock(AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING, "Enchanted Skyroot Sapling");
         addBlock(AncientAetherBlocks.SKYROOT_PINE_SAPLING, "Skyroot Pine Sapling");
         addBlock(AncientAetherBlocks.BLUE_SKYROOT_PINE_SAPLING, "Blue Skyroot Pine Sapling");
         addBlock(AncientAetherBlocks.HIGHSPROOT_SAPLING, "Highsproot Sapling");
@@ -179,7 +179,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.ANCIENT_GALE_VASE, "Ancient Gale Vase");
 
         addBlock(AncientAetherBlocks.POTTED_CRYSTAL_SKYROOT_SAPLING, "Potted Crystal Skyroot Sapling");
-        addBlock(AncientAetherBlocks.POTTED_DIVINE_SKYROOT_SAPLING, "Potted Enchanted Skyroot Sapling");
+        addBlock(AncientAetherBlocks.POTTED_ENCHANTED_SKYROOT_SAPLING, "Potted Enchanted Skyroot Sapling");
         addBlock(AncientAetherBlocks.POTTED_SKYROOT_PINE_SAPLING, "Potted Skyroot Pine Sapling");
         addBlock(AncientAetherBlocks.POTTED_BLUE_SKYROOT_PINE_SAPLING, "Potted Blue Skyroot Pine Sapling");
         addBlock(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING, "Potted Highsproot Sapling");
@@ -444,13 +444,13 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addLore(AncientAetherItems.LABORATORY_DUNGEON_KEY, "Obtained from the Mutated Aechor Plant, the final boss of the Sentry Laboratory, this frozen key can be used to unlock the treasure this lab beholds.");
         addLore(AncientAetherItems.ANCIENT_DUNGEON_KEY, "A key shimmering in an ancient blue. It is dropped by the Ancient Dungeon's Final Boss and is used to unlock the Ancient Treasure Chest!");
 
-        addLeavesLore(AncientAetherBlocks.DIVINE_SKYROOT_LEAVES, "Divine Skyroot");
+        addLeavesLore(AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES, "Enchanted Skyroot");
         addLeavesLore(AncientAetherBlocks.SKYROOT_PINE_LEAVES, "Skyroot Pine");
         addLeavesLore(AncientAetherBlocks.HIGHSPROOT_LEAVES, "Highsproot");
         addLeavesLore(AncientAetherBlocks.SAKURA_LEAVES, "Sakura");
 
         addSaplingLore(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING, "Crystal Skyroot", "blue");
-        addSaplingLore(AncientAetherBlocks.DIVINE_SKYROOT_SAPLING, "Divine Skyroot", "indigo");
+        addSaplingLore(AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING, "Enchanted Skyroot", "indigo");
         addSaplingLore(AncientAetherBlocks.SKYROOT_PINE_SAPLING, "Skyroot Pine", "green");
         addSaplingLore(AncientAetherBlocks.HIGHSPROOT_SAPLING, "Highsproot", "blue");
         addSaplingLore(AncientAetherBlocks.SAKURA_SAPLING, "Sakura", "pink");

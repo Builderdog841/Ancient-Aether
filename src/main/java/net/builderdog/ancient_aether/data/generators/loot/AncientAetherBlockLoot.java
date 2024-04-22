@@ -42,7 +42,7 @@ public class AncientAetherBlockLoot extends AetherBlockLootSubProvider {
         dropSelf(AncientAetherBlocks.VALKYRUM_ORE.get());
         dropSelf(AncientAetherBlocks.ATMOSINE_CRYSTAL.get());
         dropSelf(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get());
-        dropSelf(AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.get());
+        dropSelf(AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get());
         dropSelf(AncientAetherBlocks.SKYROOT_PINE_SAPLING.get());
         dropSelf(AncientAetherBlocks.BLUE_SKYROOT_PINE_SAPLING.get());
         dropSelf(AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
@@ -137,7 +137,7 @@ public class AncientAetherBlockLoot extends AetherBlockLootSubProvider {
         dropCampfire(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get(), AetherItems.AMBROSIUM_SHARD.get());
 
         dropPottedContents(AncientAetherBlocks.POTTED_CRYSTAL_SKYROOT_SAPLING.get());
-        dropPottedContents(AncientAetherBlocks.POTTED_DIVINE_SKYROOT_SAPLING.get());
+        dropPottedContents(AncientAetherBlocks.POTTED_ENCHANTED_SKYROOT_SAPLING.get());
         dropPottedContents(AncientAetherBlocks.POTTED_SKYROOT_PINE_SAPLING.get());
         dropPottedContents(AncientAetherBlocks.POTTED_BLUE_SKYROOT_PINE_SAPLING.get());
         dropPottedContents(AncientAetherBlocks.POTTED_HIGHSPROOT_SAPLING.get());
@@ -155,7 +155,7 @@ public class AncientAetherBlockLoot extends AetherBlockLootSubProvider {
         add(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get(), createDoorTable(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get()));
 
         add(AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES.get(), (leaves) -> droppingCrystalSkyrootLeaves(leaves, AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
-        add(AncientAetherBlocks.DIVINE_SKYROOT_LEAVES.get(), (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
+        add(AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES.get(), (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
         add(AncientAetherBlocks.SKYROOT_PINE_LEAVES.get(), (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.SKYROOT_PINE_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
         add(AncientAetherBlocks.BLUE_SKYROOT_PINE_LEAVES.get(), (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.BLUE_SKYROOT_PINE_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));
         add(AncientAetherBlocks.HIGHSPROOT_LEAVES.get(), (leaves) -> droppingWithChancesAndSkyrootSticks(leaves, AncientAetherBlocks.HIGHSPROOT_SAPLING.get(), BlockLootAccessor.aether$getNormalLeavesSaplingChances()));

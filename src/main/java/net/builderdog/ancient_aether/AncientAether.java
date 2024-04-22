@@ -197,13 +197,13 @@ public class AncientAether {
 
     private void registerComposting() {
         addCompost(0.3F, AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES.get().asItem());
-        addCompost(0.3F, AncientAetherBlocks.DIVINE_SKYROOT_LEAVES.get().asItem());
+        addCompost(0.3F, AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES.get().asItem());
         addCompost(0.3F, AncientAetherBlocks.SKYROOT_PINE_LEAVES.get().asItem());
         addCompost(0.3F, AncientAetherBlocks.BLUE_SKYROOT_PINE_LEAVES.get().asItem());
         addCompost(0.3F, AncientAetherBlocks.HIGHSPROOT_LEAVES.get().asItem());
         addCompost(0.3F, AncientAetherBlocks.SAKURA_LEAVES.get().asItem());
         addCompost(0.3F, AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get());
-        addCompost(0.3F, AncientAetherBlocks.DIVINE_SKYROOT_SAPLING.get());
+        addCompost(0.3F, AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get());
         addCompost(0.3F, AncientAetherBlocks.SKYROOT_PINE_SAPLING.get());
         addCompost(0.3F, AncientAetherBlocks.BLUE_SKYROOT_PINE_SAPLING.get().asItem());
         addCompost(0.3F, AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
