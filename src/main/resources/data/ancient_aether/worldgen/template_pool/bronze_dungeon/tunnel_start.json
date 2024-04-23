@@ -26,7 +26,7 @@
         "location": "ancient_aether:bronze_dungeon/tunnels/tunnel_entrance_01",
         "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
-        "element_type": "ancient_aether:dungeon_entrance"
+        "element_type": "minecraft:single_pool_element"
       }
     },
     {
@@ -35,7 +35,7 @@
         "location": "ancient_aether:bronze_dungeon/tunnels/tunnel_entrance_02",
         "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
-        "element_type": "ancient_aether:dungeon_entrance"
+        "element_type": "minecraft:single_pool_element"
       }
     }
   ]

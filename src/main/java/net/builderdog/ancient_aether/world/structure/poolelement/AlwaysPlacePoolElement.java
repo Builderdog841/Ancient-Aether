@@ -32,26 +32,26 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
 
-public class DungeonEntrance extends StructurePoolElement {
-    private static final Codec<Either<ResourceLocation, StructureTemplate>> TEMPLATE_CODEC = Codec.of(DungeonEntrance::encodeTemplate, ResourceLocation.CODEC.map(Either::left));
-    public static final Codec<DungeonEntrance> CODEC = RecordCodecBuilder.create((instance) -> instance.group(templateCodec(), processorsCodec(), projectionCodec()).apply(instance, DungeonEntrance::new));
-    protected final Either<ResourceLocation, StructureTemplate> template;
-    protected final Holder<StructureProcessorList> processors;
+public class AlwaysPlacePoolElement extends StructurePoolElement {
+    private static final Codec<Either<ResourceLocation, StructureTemplate>> TEMPLATE_CODEC = Codec.of(AlwaysPlacePoolElement::encodeTemplate, ResourceLocation.CODEC.map(Either::left));
 
     private static <T> DataResult<T> encodeTemplate(Either<ResourceLocation, StructureTemplate> template, DynamicOps<T> ops, T values) {
         Optional<ResourceLocation> optional = template.left();
-        return optional.isEmpty() ? DataResult.error(() -> "Can not serialize a runtime pool element") : ResourceLocation.CODEC.encode(optional.get(), ops, values);
+        return optional.isEmpty() ? DataResult.error(() -> "<Ancient Aether> Can not serialize a runtime pool element") : ResourceLocation.CODEC.encode(optional.get(), ops, values);
     }
 
-    protected static <E extends DungeonEntrance> RecordCodecBuilder<E, Holder<StructureProcessorList>> processorsCodec() {
-        return StructureProcessorType.LIST_CODEC.fieldOf("processors").forGetter((processors) -> processors.processors);
-    }
+    public static final Codec<AlwaysPlacePoolElement> CODEC = RecordCodecBuilder.create((instance) ->
+            instance.group(
+                    TEMPLATE_CODEC.fieldOf("location").forGetter((location) -> location.template),
+                    StructureProcessorType.LIST_CODEC.fieldOf("processors").forGetter((processors) -> processors.processors),
+                    projectionCodec()
+            ).apply(instance, AlwaysPlacePoolElement::new));
 
-    protected static <E extends DungeonEntrance> RecordCodecBuilder<E, Either<ResourceLocation, StructureTemplate>> templateCodec() {
-        return TEMPLATE_CODEC.fieldOf("location").forGetter((location) -> location.template);
-    }
 
-    protected DungeonEntrance(Either<ResourceLocation, StructureTemplate> template, Holder<StructureProcessorList> processors, StructureTemplatePool.Projection projection) {
+    protected final Either<ResourceLocation, StructureTemplate> template;
+    protected final Holder<StructureProcessorList> processors;
+
+    protected AlwaysPlacePoolElement(Either<ResourceLocation, StructureTemplate> template, Holder<StructureProcessorList> processors, StructureTemplatePool.Projection projection) {
         super(projection);
         this.template = template;
         this.processors = processors;
@@ -97,16 +97,11 @@ public class DungeonEntrance extends StructurePoolElement {
 
     @SuppressWarnings("deprecation")
     public boolean place(@NotNull StructureTemplateManager templateManager, @NotNull WorldGenLevel level, @NotNull StructureManager structureManager, @NotNull ChunkGenerator chunk, @NotNull BlockPos offset, @NotNull BlockPos pos, @NotNull Rotation rotation, @NotNull BoundingBox box, @NotNull RandomSource random, boolean keepJigsaws) {
-        StructureTemplate template = getTemplate(templateManager);
-        StructurePlaceSettings settings = getSettings(rotation, box, keepJigsaws);
-        if (!level.isEmptyBlock(new BlockPos(pos.getX(), pos.getY() + getBoundingBox(templateManager, pos, rotation).getYSpan() + 1, pos.getZ()))) {
-            if (!template.placeInWorld(level, offset, pos, settings, random, 18)) {
-                return false;
-            } else {
-                for (StructureTemplate.StructureBlockInfo structureblockinfo : StructureTemplate.processBlockInfos(level, offset, pos, settings, getDataMarkers(templateManager, offset, rotation, false))) {
-                    handleDataMarker(level, structureblockinfo, offset, rotation, random, box);
-                }
-                return true;
+        StructureTemplate structuretemplate = getTemplate(templateManager);
+        StructurePlaceSettings structureplacesettings = getSettings(rotation, box, keepJigsaws);
+        if (structuretemplate.placeInWorld(level, offset, pos, structureplacesettings, random, 18)) {
+            for (StructureTemplate.StructureBlockInfo structuretemplate$structureblockinfo : StructureTemplate.processBlockInfos(level, offset, pos, structureplacesettings, getDataMarkers(templateManager, offset, rotation, false))) {
+                handleDataMarker(level, structuretemplate$structureblockinfo, offset, rotation, random, box);
             }
         }
         return true;
@@ -130,7 +125,7 @@ public class DungeonEntrance extends StructurePoolElement {
     }
 
     public @NotNull StructurePoolElementType<?> getType() {
-        return AncientAetherStructurePoolElements.DUNGEON_ENTRANCE.get();
+        return AncientAetherStructurePoolElements.ALWAYS_PLACE.get();
     }
 
     public String toString() {
