@@ -130,7 +130,7 @@ public class GrapeVineBlock extends Block implements BonemealableBlock {
             return InteractionResult.PASS;
         }
         if (i > 1) {
-            int j = 1 + level.random.nextInt(2);
+            int j = 1 + level.random.nextInt(1);
             popResource(level, pos, new ItemStack(AncientAetherItems.GRAPES.get(), j + (flag ? 1 : 0)));
             BlockState age = state.setValue(AGE, 1);
             level.setBlock(pos, age, 2);
