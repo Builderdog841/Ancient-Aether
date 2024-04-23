@@ -7,7 +7,7 @@
         {
           "type": "minecraft:loot_table",
           "name": "ancient_aether:chests/dungeon/laboratory/sentry_laboratory_loot",
-          "weight": 6
+          "weight": 4
         },
         {
           "type": "minecraft:loot_table",

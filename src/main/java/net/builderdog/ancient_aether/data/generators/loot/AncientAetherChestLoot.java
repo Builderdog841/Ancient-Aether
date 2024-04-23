@@ -180,7 +180,7 @@ public class AncientAetherChestLoot implements LootTableSubProvider {
 
         builder.accept(AncientAetherLoot.CHESTS_DUNGEON_BRONZE_DUNGEON, LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0F, 1.0F))
-                        .add(LootTableReference.lootTableReference(AncientAetherLoot.CHESTS_DUNGEON_BRONZE_DUNGEON_LOOT).setWeight(4))
+                        .add(LootTableReference.lootTableReference(AncientAetherLoot.CHESTS_DUNGEON_BRONZE_DUNGEON_LOOT).setWeight(3))
                         .add(LootTableReference.lootTableReference(AncientAetherLoot.CHESTS_DUNGEON_BRONZE_DUNGEON_JUNK).setWeight(2))
                         .add(LootTableReference.lootTableReference(AncientAetherLoot.CHESTS_DUNGEON_BRONZE_DUNGEON_SPECIAL).setWeight(1))
                 )
@@ -328,7 +328,7 @@ public class AncientAetherChestLoot implements LootTableSubProvider {
 
         builder.accept(AncientAetherLoot.CHESTS_DUNGEON_SENTRY_LABORATORY, LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0F, 1.0F))
-                        .add(LootTableReference.lootTableReference(AncientAetherLoot.CHESTS_DUNGEON_SENTRY_LABORATORY_LOOT).setWeight(6))
+                        .add(LootTableReference.lootTableReference(AncientAetherLoot.CHESTS_DUNGEON_SENTRY_LABORATORY_LOOT).setWeight(4))
                         .add(LootTableReference.lootTableReference(AncientAetherLoot.CHESTS_DUNGEON_SENTRY_LABORATORY_SUPPLIES).setWeight(2))
                         .add(LootTableReference.lootTableReference(AncientAetherLoot.CHESTS_DUNGEON_SENTRY_LABORATORY_MISCELLANEOUS).setWeight(2))
                 )

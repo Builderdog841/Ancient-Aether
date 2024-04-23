@@ -7,7 +7,7 @@
         {
           "type": "minecraft:loot_table",
           "name": "ancient_aether:chests/dungeon/bronze/bronze_dungeon_loot",
-          "weight": 4
+          "weight": 3
         },
         {
           "type": "minecraft:loot_table",
