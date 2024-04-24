@@ -3,6 +3,8 @@ package net.builderdog.ancient_aether.entity.monster.boss;
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.effect.AetherEffects;
 import com.aetherteam.aether.entity.AetherBossMob;
+import com.aetherteam.aether.entity.AetherEntityTypes;
+import com.aetherteam.aether.entity.monster.Cockatrice;
 import com.aetherteam.aether.event.AetherEventDispatch;
 import com.aetherteam.aether.network.AetherPacketHandler;
 import com.aetherteam.aether.network.packet.serverbound.BossInfoPacket;
@@ -82,9 +84,10 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     @Override
     protected void registerGoals() {
         goalSelector.addGoal(0,  new RangedAttackGoal(this, 1.0, 30, 16.0F));
-        goalSelector.addGoal(1,  new SpawnRemedyCrystalGoal(this));
-        targetSelector.addGoal(2, new HurtByTargetGoal(this));
-        targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, livingEntity -> isBossFight()));
+        goalSelector.addGoal(1,  new SummonCockatriceGoal(this));
+        goalSelector.addGoal(2,  new SpawnRemedyCrystalGoal(this));
+        targetSelector.addGoal(3, new HurtByTargetGoal(this));
+        targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, livingEntity -> isBossFight()));
     }
 
     //---------------------[Attribute Methods]---------------------\\
@@ -496,6 +499,35 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         return SoundSource.HOSTILE;
     }
 
+    public static class SummonCockatriceGoal extends Goal {
+        private final MutatedAechorPlant mutatedAechorPlant;
+        private int shootInterval;
+
+        public SummonCockatriceGoal(MutatedAechorPlant mutatedAechorPlant) {
+            this.mutatedAechorPlant = mutatedAechorPlant;
+            shootInterval = (int) (25 + mutatedAechorPlant.getHealth() / 2);
+        }
+
+        @Override
+        public boolean canUse() {
+            return mutatedAechorPlant.isBossFight() && --shootInterval <= 0;
+        }
+
+        @Override
+        public void start() {
+            if (mutatedAechorPlant.getHealth() < 250) {
+                Cockatrice cockatrice = new Cockatrice(AetherEntityTypes.COCKATRICE.get(), mutatedAechorPlant.level());
+                mutatedAechorPlant.level().addFreshEntity(cockatrice);
+                shootInterval = (int) (15 + mutatedAechorPlant.getHealth() / 2);
+            }
+        }
+
+        @Override
+        public boolean requiresUpdateEveryTick() {
+            return true;
+        }
+    }
+
     public static class SpawnRemedyCrystalGoal extends Goal {
         private final MutatedAechorPlant mutatedAechorPlant;
         private int shootInterval;
@@ -512,8 +544,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
 
         @Override
         public void start() {
-            RemedyCrystal crystal;
-            crystal = new RemedyCrystal(mutatedAechorPlant.level(), mutatedAechorPlant);
+            RemedyCrystal crystal = new RemedyCrystal(mutatedAechorPlant.level(), mutatedAechorPlant);
             mutatedAechorPlant.level().addFreshEntity(crystal);
             shootInterval = (int) (15 + mutatedAechorPlant.getHealth() / 2);
         }
