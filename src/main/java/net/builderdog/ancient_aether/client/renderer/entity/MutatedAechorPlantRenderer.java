@@ -34,14 +34,8 @@ public class MutatedAechorPlantRenderer extends MobRenderer<MutatedAechorPlant, 
     }
 
     private float size(MutatedAechorPlant mutatedAechorPlant) {
-        if (mutatedAechorPlant.getHealth() < 375 && mutatedAechorPlant.getHealth() > 249) {
-            return 6.25F;
-        }
-        else if (mutatedAechorPlant.getHealth() < 250 && mutatedAechorPlant.getHealth() > 124) {
-            return 8.75F;
-        }
-        else if (mutatedAechorPlant.getHealth() < 125) {
-            return 10.0F;
+        if (mutatedAechorPlant.getHealth() < 250) {
+            return 7.5F;
         }
         return 5.0F;
     }
