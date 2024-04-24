@@ -3,6 +3,7 @@ package net.builderdog.ancient_aether.client.renderer;
 import com.aetherteam.aether.capability.player.AetherPlayer;
 import com.aetherteam.aether.client.renderer.accessory.GlovesRenderer;
 import com.aetherteam.aether.client.renderer.accessory.PendantRenderer;
+import com.aetherteam.aether.client.renderer.entity.model.CrystalModel;
 import com.aetherteam.aether.client.renderer.entity.model.ValkyrieWingsModel;
 import com.aetherteam.aether.client.renderer.player.layer.DartLayer;
 import net.builderdog.ancient_aether.AncientAether;
@@ -36,10 +37,6 @@ public class AncientAetherRenderers {
 
     @SubscribeEvent
     public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        event.registerBlockEntityRenderer(AncientAetherBlockEntityTypes.SIGN.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(AncientAetherBlockEntityTypes.HANGING_SIGN.get(), HangingSignRenderer::new);
-        event.registerBlockEntityRenderer(AncientAetherBlockEntityTypes.CAMPFIRE.get(), CampfireRenderer::new);
-
         event.registerEntityRenderer(AncientAetherEntityTypes.BOAT.get(), context -> new AncientAetherBoatRenderer<>(context, false));
         event.registerEntityRenderer(AncientAetherEntityTypes.CHEST_BOAT.get(), context -> new AncientAetherBoatRenderer<>(context, true));
         event.registerEntityRenderer(AncientAetherEntityTypes.FLUFFALO.get(), FluffaloRenderer::new);
@@ -51,13 +48,16 @@ public class AncientAetherRenderers {
         event.registerEntityRenderer(AncientAetherEntityTypes.AERONAUTIC_DART.get(), AeronauticDartRenderer::new);
         event.registerEntityRenderer(AncientAetherEntityTypes.MUTATED_AECHOR_NEEDLE.get(), MutatedAechorNeedleRenderer::new);
         event.registerEntityRenderer(AncientAetherEntityTypes.SPORE_BOMB.get(), SporeBombRenderer::new);
+        event.registerEntityRenderer(AncientAetherEntityTypes.REMEDY_CRYSTAL.get(), RemedyCrystalRenderer::new);
+
+        event.registerBlockEntityRenderer(AncientAetherBlockEntityTypes.SIGN.get(), SignRenderer::new);
+        event.registerBlockEntityRenderer(AncientAetherBlockEntityTypes.HANGING_SIGN.get(), HangingSignRenderer::new);
+        event.registerBlockEntityRenderer(AncientAetherBlockEntityTypes.CAMPFIRE.get(), CampfireRenderer::new);
     }
 
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
         for (AncientAetherBoatEntity.Type type : AncientAetherBoatEntity.Type.values()) {
-            event.registerLayerDefinition(new ModelLayerLocation(new ResourceLocation(AncientAether.MODID, type.getModelLocation()), "main"), BoatModel::createBodyModel);
-            event.registerLayerDefinition(new ModelLayerLocation(new ResourceLocation(AncientAether.MODID, type.getChestModelLocation()), "main"), ChestBoatModel::createBodyModel);
             event.registerLayerDefinition(AncientAetherModelLayers.FLUFFALO, FluffaloModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.FESTIVE_SWET, FestiveSwetModel::createInnerBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.FESTIVE_SWET_OUTER, FestiveSwetModel::createOuterBodyLayer);
@@ -65,7 +65,11 @@ public class AncientAetherRenderers {
             event.registerLayerDefinition(AncientAetherModelLayers.AERONAUTIC_LEAPER, AeronauticLeaperModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.MUTATED_AECHOR_PLANT, MutatedAechorPlantModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.SPORE_BOMB, SporeBombModel::createBodyLayer);
+            event.registerLayerDefinition(AncientAetherModelLayers.REMEDY_CRYSTAL, CrystalModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.VALKYRUM_WINGS, () -> ValkyrieWingsModel.createMainLayer(3.5F, 3.375F));
+
+            event.registerLayerDefinition(new ModelLayerLocation(new ResourceLocation(AncientAether.MODID, type.getModelLocation()), "main"), BoatModel::createBodyModel);
+            event.registerLayerDefinition(new ModelLayerLocation(new ResourceLocation(AncientAether.MODID, type.getChestModelLocation()), "main"), ChestBoatModel::createBodyModel);
         }
     }
 

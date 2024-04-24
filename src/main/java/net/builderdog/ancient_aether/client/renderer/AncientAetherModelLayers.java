@@ -11,10 +11,10 @@ public class AncientAetherModelLayers {
     public static final ModelLayerLocation AERONAUTIC_LEAPER = register("aeronautic_leaper");
     public static final ModelLayerLocation MUTATED_AECHOR_PLANT = register("mutated_aechor_plant");
     public static final ModelLayerLocation SPORE_BOMB = register("spore_bomb");
+    public static final ModelLayerLocation REMEDY_CRYSTAL = register("remedy_crystal");
     public static final ModelLayerLocation VALKYRUM_WINGS = register("valkyrum_wings");
 
-    public AncientAetherModelLayers() {
-    }
+    public AncientAetherModelLayers() {}
 
     private static ModelLayerLocation register(String name) {
         return register(name, "main");
