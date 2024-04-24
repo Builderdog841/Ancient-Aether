@@ -13,6 +13,7 @@ import net.builderdog.ancient_aether.AncientAetherConfig;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.entity.projectile.MutatedAechorNeedle;
+import net.builderdog.ancient_aether.entity.projectile.RemedyCrystal;
 import net.builderdog.ancient_aether.entity.projectile.SporeBomb;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
@@ -40,6 +41,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.ai.goal.RangedAttackGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
@@ -79,9 +81,10 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
 
     @Override
     protected void registerGoals() {
-        goalSelector.addGoal(0,  new RangedAttackGoal(this, 1.0, 60, 10.0F));
-        targetSelector.addGoal(1, new HurtByTargetGoal(this));
-        targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, livingEntity -> isBossFight()));
+        goalSelector.addGoal(0,  new RangedAttackGoal(this, 1.0, 30, 16.0F));
+        goalSelector.addGoal(1,  new SpawnRemedyCrystalGoal(this));
+        targetSelector.addGoal(2, new HurtByTargetGoal(this));
+        targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, livingEntity -> isBossFight()));
     }
 
     //---------------------[Attribute Methods]---------------------\\
@@ -491,5 +494,33 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     @Override
     public @NotNull SoundSource getSoundSource() {
         return SoundSource.HOSTILE;
+    }
+
+    public static class SpawnRemedyCrystalGoal extends Goal {
+        private final MutatedAechorPlant mutatedAechorPlant;
+        private int shootInterval;
+
+        public SpawnRemedyCrystalGoal(MutatedAechorPlant mutatedAechorPlant) {
+            this.mutatedAechorPlant = mutatedAechorPlant;
+            shootInterval = (int) (40 + mutatedAechorPlant.getHealth() / 2);
+        }
+
+        @Override
+        public boolean canUse() {
+            return mutatedAechorPlant.isBossFight() && --shootInterval <= 0;
+        }
+
+        @Override
+        public void start() {
+            RemedyCrystal crystal;
+            crystal = new RemedyCrystal(mutatedAechorPlant.level(), mutatedAechorPlant);
+            mutatedAechorPlant.level().addFreshEntity(crystal);
+            shootInterval = (int) (15 + mutatedAechorPlant.getHealth() / 2);
+        }
+
+        @Override
+        public boolean requiresUpdateEveryTick() {
+            return true;
+        }
     }
 }
