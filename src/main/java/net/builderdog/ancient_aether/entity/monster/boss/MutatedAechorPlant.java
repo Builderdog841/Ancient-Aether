@@ -500,25 +500,26 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     }
 
     public static class SummonCockatriceGoal extends Goal {
-        private final MutatedAechorPlant mutatedAechorPlant;
+        private final MutatedAechorPlant aechor;
         private int shootInterval;
 
         public SummonCockatriceGoal(MutatedAechorPlant mutatedAechorPlant) {
-            this.mutatedAechorPlant = mutatedAechorPlant;
-            shootInterval = (int) (25 + mutatedAechorPlant.getHealth() / 2);
+            aechor = mutatedAechorPlant;
+            shootInterval = (int) (30 + mutatedAechorPlant.getHealth() / 2);
         }
 
         @Override
         public boolean canUse() {
-            return mutatedAechorPlant.isBossFight() && --shootInterval <= 0;
+            return aechor.isBossFight() && --shootInterval <= 0;
         }
 
         @Override
         public void start() {
-            if (mutatedAechorPlant.getHealth() < 250) {
-                Cockatrice cockatrice = new Cockatrice(AetherEntityTypes.COCKATRICE.get(), mutatedAechorPlant.level());
-                mutatedAechorPlant.level().addFreshEntity(cockatrice);
-                shootInterval = (int) (15 + mutatedAechorPlant.getHealth() / 2);
+            if (aechor.getHealth() < 250) {
+                Cockatrice cockatrice = new Cockatrice(AetherEntityTypes.COCKATRICE.get(), aechor.level());
+                cockatrice.setPos(aechor.getX(), aechor.getY() + 3, aechor.getZ());
+                aechor.level().addFreshEntity(cockatrice);
+                shootInterval = (int) (15 + aechor.getHealth() / 2);
             }
         }
 
@@ -529,24 +530,24 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     }
 
     public static class SpawnRemedyCrystalGoal extends Goal {
-        private final MutatedAechorPlant mutatedAechorPlant;
+        private final MutatedAechorPlant aechor;
         private int shootInterval;
 
         public SpawnRemedyCrystalGoal(MutatedAechorPlant mutatedAechorPlant) {
-            this.mutatedAechorPlant = mutatedAechorPlant;
+            aechor = mutatedAechorPlant;
             shootInterval = (int) (40 + mutatedAechorPlant.getHealth() / 2);
         }
 
         @Override
         public boolean canUse() {
-            return mutatedAechorPlant.isBossFight() && --shootInterval <= 0;
+            return aechor.isBossFight() && --shootInterval <= 0;
         }
 
         @Override
         public void start() {
-            RemedyCrystal crystal = new RemedyCrystal(mutatedAechorPlant.level(), mutatedAechorPlant);
-            mutatedAechorPlant.level().addFreshEntity(crystal);
-            shootInterval = (int) (15 + mutatedAechorPlant.getHealth() / 2);
+            RemedyCrystal crystal = new RemedyCrystal(aechor.level(), aechor);
+            aechor.level().addFreshEntity(crystal);
+            shootInterval = (int) (15 + aechor.getHealth() / 2);
         }
 
         @Override
