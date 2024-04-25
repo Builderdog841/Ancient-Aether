@@ -21,6 +21,7 @@ import java.util.List;
 
 public class AncientVaseBlock extends VaseBlock {
     private final ResourceLocation vaseLootTable;
+    private Vec3 position;
 
     public AncientVaseBlock(ResourceLocation vaseLootTable, Properties properties) {
         super(properties);
@@ -30,7 +31,7 @@ public class AncientVaseBlock extends VaseBlock {
     public void playerDestroy(@NotNull Level level, @NotNull Player player, @NotNull BlockPos pos, @NotNull BlockState state, @Nullable BlockEntity blockEntity, @NotNull ItemStack tool) {
         super.playerDestroy(level, player, pos, state, blockEntity, tool);
             if (level instanceof ServerLevel serverLevel) {
-                LootParams parameters = new LootParams.Builder(serverLevel).withParameter(LootContextParams.BLOCK_STATE, state).withParameter(LootContextParams.TOOL, player.getMainHandItem()).withParameter(LootContextParams.ORIGIN, position()).withParameter(LootContextParams.THIS_ENTITY, player).create(LootContextParamSets.BLOCK);
+                LootParams parameters = new LootParams.Builder(serverLevel).withParameter(LootContextParams.BLOCK_STATE, state).withParameter(LootContextParams.TOOL, player.getMainHandItem()).withParameter(LootContextParams.ORIGIN, position).withParameter(LootContextParams.THIS_ENTITY, player).create(LootContextParamSets.BLOCK);
                 LootTable lootTable = serverLevel.getServer().getLootData().getLootTable(vaseLootTable);
                 List<ItemStack> list = lootTable.getRandomItems(parameters);
                 for (ItemStack itemstack : list) {
@@ -39,26 +40,15 @@ public class AncientVaseBlock extends VaseBlock {
             }
     }
 
-    @Nullable
-    public ItemEntity spawnAtLocation(ItemStack itemStack, BlockPos pos, Level level) {
+    public void spawnAtLocation(ItemStack itemStack, BlockPos pos, Level level) {
         int x = pos.getX();
         int y = pos.getY();
         int z = pos.getZ();
-        if (itemStack.isEmpty()) {
-            return null;
-        } else if (level.isClientSide) {
-            return null;
-        } else {
+
+        if (!(itemStack.isEmpty() && level.isClientSide)) {
             ItemEntity itementity = new ItemEntity(level, x, y + 0.5, z, itemStack);
             itementity.setDefaultPickUpDelay();
             level.addFreshEntity(itementity);
-            return itementity;
         }
-    }
-
-    private Vec3 position;
-
-    public Vec3 position() {
-        return position;
     }
 }
