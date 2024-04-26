@@ -32,38 +32,45 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
 
-public class AlwaysPlacePoolElement extends StructurePoolElement {
-    private static final Codec<Either<ResourceLocation, StructureTemplate>> TEMPLATE_CODEC = Codec.of(AlwaysPlacePoolElement::encodeTemplate, ResourceLocation.CODEC.map(Either::left));
+public class BuriedPoolElement extends StructurePoolElement {
+    private static final Codec<Either<ResourceLocation, StructureTemplate>> TEMPLATE_CODEC = Codec.of(BuriedPoolElement::encodeTemplate, ResourceLocation.CODEC.map(Either::left));
 
     private static <T> DataResult<T> encodeTemplate(Either<ResourceLocation, StructureTemplate> template, DynamicOps<T> ops, T values) {
         Optional<ResourceLocation> optional = template.left();
         return optional.isEmpty() ? DataResult.error(() -> "<Ancient Aether> Can not serialize a runtime pool element") : ResourceLocation.CODEC.encode(optional.get(), ops, values);
     }
 
-    public static final Codec<AlwaysPlacePoolElement> CODEC = RecordCodecBuilder.create((instance) ->
+    public static final Codec<BuriedPoolElement> CODEC = RecordCodecBuilder.create((instance) ->
             instance.group(
-                    TEMPLATE_CODEC.fieldOf("location").forGetter((location) -> location.template),
+                    TEMPLATE_CODEC.fieldOf("template").forGetter((location) -> location.template),
+                    TEMPLATE_CODEC.fieldOf("fallback_template").forGetter((fallbackLocation) -> fallbackLocation.fallbackTemplate),
                     StructureProcessorType.LIST_CODEC.fieldOf("processors").forGetter((processors) -> processors.processors),
                     projectionCodec()
-            ).apply(instance, AlwaysPlacePoolElement::new));
+            ).apply(instance, BuriedPoolElement::new));
 
 
     protected final Either<ResourceLocation, StructureTemplate> template;
+    protected final Either<ResourceLocation, StructureTemplate> fallbackTemplate;
     protected final Holder<StructureProcessorList> processors;
 
-    protected AlwaysPlacePoolElement(Either<ResourceLocation, StructureTemplate> template, Holder<StructureProcessorList> processors, StructureTemplatePool.Projection projection) {
+    protected BuriedPoolElement(Either<ResourceLocation, StructureTemplate> template, Either<ResourceLocation, StructureTemplate> fallbackTemplate, Holder<StructureProcessorList> processors, StructureTemplatePool.Projection projection) {
         super(projection);
         this.template = template;
+        this.fallbackTemplate = fallbackTemplate;
         this.processors = processors;
     }
 
-    public @NotNull Vec3i getSize(@NotNull StructureTemplateManager structureTemplateManager, @NotNull Rotation rotation) {
-        StructureTemplate structuretemplate = getTemplate(structureTemplateManager);
+    public @NotNull Vec3i getSize(@NotNull StructureTemplateManager templateManager, @NotNull Rotation rotation) {
+        StructureTemplate structuretemplate = getTemplate(templateManager);
         return structuretemplate.getSize(rotation);
     }
 
-    private StructureTemplate getTemplate(StructureTemplateManager structureTemplateManager) {
-        return template.map(structureTemplateManager::getOrCreate, Function.identity());
+    private StructureTemplate getTemplate(StructureTemplateManager templateManager) {
+        return template.map(templateManager::getOrCreate, Function.identity());
+    }
+
+    private StructureTemplate getFallbackTemplate(StructureTemplateManager templateManager) {
+        return fallbackTemplate.map(templateManager::getOrCreate, Function.identity());
     }
 
     public List<StructureTemplate.StructureBlockInfo> getDataMarkers(StructureTemplateManager templateManager, BlockPos pos, Rotation rotation, boolean bool) {
@@ -84,23 +91,23 @@ public class AlwaysPlacePoolElement extends StructurePoolElement {
     }
 
     public @NotNull List<StructureTemplate.StructureBlockInfo> getShuffledJigsawBlocks(@NotNull StructureTemplateManager templateManager, @NotNull BlockPos pos, @NotNull Rotation rotation, @NotNull RandomSource random) {
-        StructureTemplate structuretemplate = getTemplate(templateManager);
-        ObjectArrayList<StructureTemplate.StructureBlockInfo> objectarraylist = structuretemplate.filterBlocks(pos, (new StructurePlaceSettings()).setRotation(rotation), Blocks.JIGSAW, true);
+        StructureTemplate template = getTemplate(templateManager);
+        ObjectArrayList<StructureTemplate.StructureBlockInfo> objectarraylist = template.filterBlocks(pos, (new StructurePlaceSettings()).setRotation(rotation), Blocks.JIGSAW, true);
         Util.shuffle(objectarraylist, random);
         return objectarraylist;
     }
 
     public @NotNull BoundingBox getBoundingBox(@NotNull StructureTemplateManager templateManager, @NotNull BlockPos pos, @NotNull Rotation rotation) {
-        StructureTemplate structuretemplate = getTemplate(templateManager);
-        return structuretemplate.getBoundingBox((new StructurePlaceSettings()).setRotation(rotation), pos);
+        StructureTemplate template = getTemplate(templateManager);
+        return template.getBoundingBox((new StructurePlaceSettings()).setRotation(rotation), pos);
     }
 
     @SuppressWarnings("deprecation")
     public boolean place(@NotNull StructureTemplateManager templateManager, @NotNull WorldGenLevel level, @NotNull StructureManager structureManager, @NotNull ChunkGenerator chunk, @NotNull BlockPos offset, @NotNull BlockPos pos, @NotNull Rotation rotation, @NotNull BoundingBox box, @NotNull RandomSource random, boolean keepJigsaws) {
-        StructureTemplate structuretemplate = getTemplate(templateManager);
-        StructurePlaceSettings structureplacesettings = getSettings(rotation, box, keepJigsaws);
-        if (structuretemplate.placeInWorld(level, offset, pos, structureplacesettings, random, 18)) {
-            for (StructureTemplate.StructureBlockInfo structuretemplate$structureblockinfo : StructureTemplate.processBlockInfos(level, offset, pos, structureplacesettings, getDataMarkers(templateManager, offset, rotation, false))) {
+        StructureTemplate template = getTemplate(templateManager);
+        StructurePlaceSettings placeSettings = getSettings(rotation, box, keepJigsaws);
+        if (template.placeInWorld(level, offset, pos, placeSettings, random, 18)) {
+            for (StructureTemplate.StructureBlockInfo structuretemplate$structureblockinfo : StructureTemplate.processBlockInfos(level, offset, pos, placeSettings, getDataMarkers(templateManager, offset, rotation, false))) {
                 handleDataMarker(level, structuretemplate$structureblockinfo, offset, rotation, random, box);
             }
         }
@@ -125,7 +132,7 @@ public class AlwaysPlacePoolElement extends StructurePoolElement {
     }
 
     public @NotNull StructurePoolElementType<?> getType() {
-        return AncientAetherStructurePoolElements.ALWAYS_PLACE.get();
+        return AncientAetherStructurePoolElements.BURIED.get();
     }
 
     public String toString() {

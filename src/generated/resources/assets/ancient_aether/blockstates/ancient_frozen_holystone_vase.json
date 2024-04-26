@@ -1,17 +1,32 @@
 {
   "variants": {
-    "facing=east": {
+    "facing=east,waterlogged=false": {
       "model": "ancient_aether:block/ancient_frozen_holystone_vase",
       "y": 90
     },
-    "facing=north": {
+    "facing=east,waterlogged=true": {
+      "model": "ancient_aether:block/ancient_frozen_holystone_vase",
+      "y": 90
+    },
+    "facing=north,waterlogged=false": {
       "model": "ancient_aether:block/ancient_frozen_holystone_vase"
     },
-    "facing=south": {
+    "facing=north,waterlogged=true": {
+      "model": "ancient_aether:block/ancient_frozen_holystone_vase"
+    },
+    "facing=south,waterlogged=false": {
       "model": "ancient_aether:block/ancient_frozen_holystone_vase",
       "y": 180
     },
-    "facing=west": {
+    "facing=south,waterlogged=true": {
+      "model": "ancient_aether:block/ancient_frozen_holystone_vase",
+      "y": 180
+    },
+    "facing=west,waterlogged=false": {
+      "model": "ancient_aether:block/ancient_frozen_holystone_vase",
+      "y": 270
+    },
+    "facing=west,waterlogged=true": {
       "model": "ancient_aether:block/ancient_frozen_holystone_vase",
       "y": 270
     }

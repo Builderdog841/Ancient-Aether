@@ -1,6 +1,5 @@
 package net.builderdog.ancient_aether.data.resources.registries.placement;
 
-import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.data.resources.builders.AetherPlacedFeatureBuilders;
 import com.aetherteam.aether.data.resources.registries.AetherConfiguredFeatures;
 import com.aetherteam.aether.world.placementmodifier.DungeonBlacklistFilter;
@@ -29,7 +28,6 @@ public class AncientAetherMiscPlacements {
     public static final ResourceKey<PlacedFeature> WYND_ICE_COAST = AncientAetherPlacementUtils.createKey("wynd_ice_coast");
     public static final ResourceKey<PlacedFeature> SKYROOT_LEAF_VINES = AncientAetherPlacementUtils.createKey("skyroot_leaf_vines");
     public static final ResourceKey<PlacedFeature> SHORT_SKYROOT_LEAF_VINES = AncientAetherPlacementUtils.createKey("short_skyroot_leaf_vines");
-    public static final ResourceKey<PlacedFeature> ATMOSINE_CLUSTER = AncientAetherPlacementUtils.createKey("atmosine_cluster");
     public static final ResourceKey<PlacedFeature> VIOLET_AERCLOUD = AncientAetherPlacementUtils.createKey("violet_aercloud");
     public static final ResourceKey<PlacedFeature> CLOUDBED = AncientAetherPlacementUtils.createKey("cloudbed");
     public static final ResourceKey<PlacedFeature> WATER_LAKE_UNDERGROUND = AncientAetherPlacementUtils.createKey("water_lake_underground");
@@ -71,14 +69,6 @@ public class AncientAetherMiscPlacements {
                 InSquarePlacement.spread(),
                 PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT,
                 EnvironmentScanPlacement.scanningFor(Direction.UP, BlockPredicate.allOf(BlockPredicate.hasSturdyFace(Direction.DOWN), BlockPredicate.matchesTag(AncientAetherTags.Blocks.LEAF_VINE_CAN_SPAWN_ON)), BlockPredicate.ONLY_IN_AIR_PREDICATE, 12),
-                RandomOffsetPlacement.vertical(ConstantInt.of(-1)), BiomeFilter.biome()
-        );
-
-        AncientAetherPlacementUtils.register(context, ATMOSINE_CLUSTER, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.ATMOSINE_CLUSTER),
-                CountPlacement.of(127),
-                InSquarePlacement.spread(),
-                PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT,
-                EnvironmentScanPlacement.scanningFor(Direction.UP, BlockPredicate.allOf(BlockPredicate.hasSturdyFace(Direction.DOWN), BlockPredicate.matchesBlocks(AetherBlocks.HOLYSTONE.get())), BlockPredicate.ONLY_IN_AIR_PREDICATE, 12),
                 RandomOffsetPlacement.vertical(ConstantInt.of(-1)), BiomeFilter.biome()
         );
 

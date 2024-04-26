@@ -8,7 +8,7 @@
         "location": "ancient_aether:bronze_dungeon/boss/boss_room",
         "processors": "ancient_aether:bronze_dungeon_boss_room",
         "projection": "rigid",
-        "element_type": "ancient_aether:always_place_pool_element"
+        "element_type": "minecraft:single_pool_element"
       }
     }
   ]

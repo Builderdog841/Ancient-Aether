@@ -20,6 +20,7 @@ public class SkyGrassFeature extends Feature<SimpleBlockConfiguration> {
         WorldGenLevel level = context.level();
         BlockPos origin = context.origin();
         BlockState state = simpleblockconfiguration.toPlace().getState(context.random(), origin);
+
         if (state.hasProperty(SkyGrassBlock.TYPE) && state.getBlock() instanceof SkyGrassBlock) {
             state = SkyGrassBlock.state(level, origin, state);
         }
