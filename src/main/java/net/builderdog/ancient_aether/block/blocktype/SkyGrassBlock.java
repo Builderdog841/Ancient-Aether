@@ -31,7 +31,6 @@ import java.util.List;
 public class SkyGrassBlock extends TallGrassBlock {
     public static final IntegerProperty LENGTH = AncientAetherBlockStateProperties.LENGTH;
     public static final EnumProperty<AetherGrassType> TYPE = AncientAetherBlockStateProperties.TYPE;
-
     public static final List<VoxelShape> SHAPES = List.of(
             Block.box(2.0D, 0.0D, 2.0D, 14.0D, 4.0D, 14.0D),
             Block.box(2.0D, 0.0D, 2.0D, 14.0D, 8.0D, 14.0D),
@@ -39,12 +38,6 @@ public class SkyGrassBlock extends TallGrassBlock {
             Block.box(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D),
             Block.box(2.0D, 0.0D, 2.0D, 14.0D, 15.0D, 14.0D)
     );
-
-    @Override
-    @NotNull
-    public VoxelShape getShape(BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull CollisionContext context) {
-        return SHAPES.get(state.getValue(AncientAetherBlockStateProperties.LENGTH) - 1);
-    }
 
     public SkyGrassBlock(Properties properties) {
         super(properties);
@@ -62,6 +55,12 @@ public class SkyGrassBlock extends TallGrassBlock {
     @Override
     public @NotNull BlockState updateShape(@NotNull BlockState state, @NotNull Direction facing, @NotNull BlockState facingState, @NotNull LevelAccessor level, @NotNull BlockPos currentPos, @NotNull BlockPos facingPos) {
         return state(level, currentPos, super.updateShape(state, facing, facingState, level, currentPos, facingPos));
+    }
+
+    @Override
+    @NotNull
+    public VoxelShape getShape(BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull CollisionContext context) {
+        return SHAPES.get(state.getValue(AncientAetherBlockStateProperties.LENGTH) - 1);
     }
 
     public static BlockState state(LevelAccessor level, BlockPos pos, BlockState state) {

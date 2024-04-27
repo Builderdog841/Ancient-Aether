@@ -59,7 +59,6 @@ public class AncientAether {
         modEventBus.addListener(AncientAetherData::dataSetup);
 
         DeferredRegister<?>[] registers = {
-
                 AncientAetherBlocks.BLOCKS,
                 AncientAetherItems.ITEMS,
                 AncientAetherBlockEntityTypes.BLOCK_ENTITY_TYPES,

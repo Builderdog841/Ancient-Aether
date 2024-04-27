@@ -34,7 +34,6 @@ public class DungeonEntranceFeature extends Feature<NoneFeatureConfiguration> {
         BlockPos pos = new BlockPos(x, y, z);
         BlockPos posOffset = new BlockPos(x - 5, y, z - 5);
         RandomSource random = context.random();
-        ChunkGenerator chunk = context.chunkGenerator();
 
         if (level instanceof ServerLevel serverLevel) {
             if (level.isEmptyBlock(pos)) {
@@ -45,6 +44,8 @@ public class DungeonEntranceFeature extends Feature<NoneFeatureConfiguration> {
             } else {
                 StructureTemplate template = serverLevel.getStructureManager().getOrCreate(new ResourceLocation("ancient_aether", "bronze_dungeon/entrance/staircase"));
                 ConfiguredFeature<?, ?> configuredfeature = Objects.requireNonNull(level.registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE).getHolder(AncientAetherMiscFeatures.BRONZE_DUNGEON_ENTRANCE).orElse(null)).value();
+                ChunkGenerator chunk = serverLevel.getChunkSource().getGenerator();
+
                 template.placeInWorld(serverLevel, posOffset, pos, new StructurePlaceSettings(), random, 3);
                 configuredfeature.place(level, chunk, random, new BlockPos(x, y + 8, z));
             }
