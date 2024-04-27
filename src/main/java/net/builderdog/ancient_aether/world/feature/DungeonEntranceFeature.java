@@ -41,7 +41,6 @@ public class DungeonEntranceFeature extends Feature<NoneFeatureConfiguration> {
                 if (!level.isEmptyBlock(new BlockPos(x, y - 12, z))) {
                     StructureTemplate template = serverLevel.getStructureManager().getOrCreate(new ResourceLocation("ancient_aether", "bronze_dungeon/entrance/entrance"));
                     template.placeInWorld(serverLevel, posOffset, pos, new StructurePlaceSettings(), random, 3);
-                    return false;
                 }
             } else {
                 StructureTemplate template = serverLevel.getStructureManager().getOrCreate(new ResourceLocation("ancient_aether", "bronze_dungeon/entrance/staircase"));

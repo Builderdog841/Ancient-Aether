@@ -19,7 +19,6 @@ import net.builderdog.ancient_aether.world.biomemodifier.AncientAetherBiomeModif
 import net.builderdog.ancient_aether.world.carver.AncientAetherCarvers;
 import net.builderdog.ancient_aether.world.feature.AncientAetherFeatures;
 import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherFoliagePlacers;
-import net.builderdog.ancient_aether.world.structure.AncientAetherStructurePoolElements;
 import net.builderdog.ancient_aether.world.structure.AncientAetherStructureTypes;
 import net.builderdog.ancient_aether.world.treedecorator.AncientAetherTreeDecoratorTypes;
 import net.minecraft.network.chat.Component;
@@ -73,7 +72,6 @@ public class AncientAether {
                 AncientAetherCarvers.CARVERS,
                 AncientAetherBiomeModifierSerializers.BIOME_MODIFIER_SERIALIZERS,
                 AncientAetherStructureTypes.STRUCTURE_TYPES,
-                AncientAetherStructurePoolElements.STRUCTURE_POOL_ELEMENT,
                 AncientAetherSoundEvents.SOUNDS,
                 AncientAetherParticleTypes.PARTICLES,
         };
