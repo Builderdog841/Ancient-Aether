@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-27T19:36:15.8609928	Registries
+// 1.20.1	2024-04-27T22:30:54.2499231	Registries
 d48a565c1fefb0fbb6c489c3edffe6748448a15c data/ancient_aether/forge/biome_modifier/aerogel_blobs_biome_modifier.json
 c66669dd031745a1bae16fc47547c896a814e8e6 data/ancient_aether/forge/biome_modifier/aether_cave_biome_modifier.json
 be0b3cb10e1bb6717346cc0224b71d8b9cb17509 data/ancient_aether/forge/biome_modifier/aether_grass_patch_biome_modifier.json
@@ -164,6 +164,7 @@ b76b704d1f03589ba6a5610788ea2cd52913da44 data/ancient_aether/worldgen/placed_fea
 f8598ea4ceb22efb0f8f78bd170e239b1fedd17d data/ancient_aether/worldgen/processor_list/ancient_dungeon.json
 8ecc70f6e36c59108f2ffa50a1f997d0f58a9334 data/ancient_aether/worldgen/processor_list/bronze_dungeon.json
 752738f912951567426329891f5b2ce90eec00bb data/ancient_aether/worldgen/processor_list/bronze_dungeon_boss_room.json
+c139a2c04721dfc0c00cf6f5dbfc6406618dd63a data/ancient_aether/worldgen/processor_list/bronze_dungeon_entrance.json
 00ffc28ea9d75a91783f07c9340b9116c89d1415 data/ancient_aether/worldgen/processor_list/holystone_ruin.json
 fd9d37ed94d09362d1af85611eb8934d4f201529 data/ancient_aether/worldgen/processor_list/mysterious_henge.json
 fd38bde11b6b92bfb631de5a5b23f2e367e88d7d data/ancient_aether/worldgen/processor_list/sentry_laboratory.json

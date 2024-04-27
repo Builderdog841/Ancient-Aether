@@ -10,6 +10,7 @@ import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.data.resources.AncientAetherFeatureStates;
+import net.builderdog.ancient_aether.world.processor.DungeonEntranceProcessor;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -29,6 +30,7 @@ public class AncientAetherProcessorLists {
     public static final ResourceKey<StructureProcessorList> VALKYRIE_SETTLEMENT_SKYROOT = createKey("valkyrie_settlement_skyroot");
     public static final ResourceKey<StructureProcessorList> VALKYRIE_SETTLEMENT_SKYROOT_PATH = createKey("valkyrie_settlement_skyroot_path");
     public static final ResourceKey<StructureProcessorList> BRONZE_DUNGEON = createKey("bronze_dungeon");
+    public static final ResourceKey<StructureProcessorList> BRONZE_DUNGEON_ENTRANCE = createKey("bronze_dungeon_entrance");
     public static final ResourceKey<StructureProcessorList> BRONZE_DUNGEON_BOSS_ROOM = createKey("bronze_dungeon_boss_room");
     public static final ResourceKey<StructureProcessorList> SENTRY_LABORATORY = createKey("sentry_laboratory");
     public static final ResourceKey<StructureProcessorList> SENTRY_LABORATORY_BOSS_ROOM = createKey("sentry_laboratory_boss_room");
@@ -114,6 +116,15 @@ public class AncientAetherProcessorLists {
                         new ProcessorRule(new RandomBlockStateMatchTest(Blocks.CHEST.defaultBlockState().setValue(ChestBlock.FACING, Direction.WEST), 0.3F), AlwaysTrueTest.INSTANCE, AetherBlocks.CHEST_MIMIC.get().defaultBlockState().setValue(ChestBlock.FACING, Direction.WEST))
                 )),
                 new DoubleDropsProcessor()
+        ));
+        register(context, BRONZE_DUNGEON_ENTRANCE, ImmutableList.of(
+                new RuleProcessor(ImmutableList.of(
+                        new ProcessorRule(new TagMatchTest(AncientAetherTags.Blocks.REPLACEABLE_DUNGEON_BLOCKS), new BlockMatchTest(Blocks.AIR), Blocks.AIR.defaultBlockState()),
+                        new ProcessorRule(new TagMatchTest(AncientAetherTags.Blocks.REPLACEABLE_DUNGEON_BLOCKS), new BlockMatchTest(AetherBlocks.COLD_AERCLOUD.get()), AetherFeatureStates.COLD_AERCLOUD),
+                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.CARVED_STONE.get(), 0.01F), AlwaysTrueTest.INSTANCE, AetherBlocks.SENTRY_STONE.get().defaultBlockState()),
+                        new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.HOLYSTONE.get(), 0.4F), AlwaysTrueTest.INSTANCE, AncientAetherFeatureStates.MOSSY_HOLYSTONE)
+                )),
+                new DungeonEntranceProcessor()
         ));
         register(context, BRONZE_DUNGEON_BOSS_ROOM, ImmutableList.of(
                 new RuleProcessor(ImmutableList.of(
