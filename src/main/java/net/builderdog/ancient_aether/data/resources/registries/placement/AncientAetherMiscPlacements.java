@@ -34,6 +34,7 @@ public class AncientAetherMiscPlacements {
     public static final ResourceKey<PlacedFeature> CRYSTAL_ISLAND = AncientAetherPlacementUtils.createKey("crystal_island");
     public static final ResourceKey<PlacedFeature> WYNDCAPS_CRYSTAL_ISLAND = AncientAetherPlacementUtils.createKey("wyndcaps_crystal_island");
     public static final ResourceKey<PlacedFeature> ELEVATED_CRYSTAL_ISLAND = AncientAetherPlacementUtils.createKey("elevated_crystal_island");
+    public static final ResourceKey<PlacedFeature> BRONZE_DUNGEON_ENTRANCE = AncientAetherPlacementUtils.createKey("bronze_dungeon_entrance");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -104,5 +105,7 @@ public class AncientAetherMiscPlacements {
                 new DungeonBlacklistFilter(),
                 BiomeFilter.biome()
         );
+
+        AncientAetherPlacementUtils.register(context, BRONZE_DUNGEON_ENTRANCE, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.BRONZE_DUNGEON_ENTRANCE), BiomeFilter.biome());
     }
 }

@@ -27,28 +27,27 @@ public class DungeonEntranceFeature extends Feature<NoneFeatureConfiguration> {
     @Override
     public boolean place(@NotNull FeaturePlaceContext<NoneFeatureConfiguration> context) {
         WorldGenLevel level = context.level();
-        int x = context.origin().getX() - 6;
+        int x = context.origin().getX();
         int y = context.origin().getY();
-        int z = context.origin().getZ() - 6;
+        int z = context.origin().getZ();
 
         BlockPos pos = new BlockPos(x, y, z);
-        BlockPos posAbove = new BlockPos(x, y + 8, z);
-        BlockPos posBelow = new BlockPos(x, y - 12, z);
+        BlockPos posOffset = new BlockPos(x - 5, y, z - 5);
         RandomSource random = context.random();
         ChunkGenerator chunk = context.chunkGenerator();
 
         if (level instanceof ServerLevel serverLevel) {
             if (level.isEmptyBlock(pos)) {
-                if (!level.isEmptyBlock(posBelow)) {
+                if (!level.isEmptyBlock(new BlockPos(x, y - 12, z))) {
                     StructureTemplate template = serverLevel.getStructureManager().getOrCreate(new ResourceLocation("ancient_aether", "bronze_dungeon/entrance/entrance"));
-                    template.placeInWorld(serverLevel, pos, pos, new StructurePlaceSettings(), random, 3);
+                    template.placeInWorld(serverLevel, posOffset, pos, new StructurePlaceSettings(), random, 3);
                     return false;
                 }
             } else {
                 StructureTemplate template = serverLevel.getStructureManager().getOrCreate(new ResourceLocation("ancient_aether", "bronze_dungeon/entrance/staircase"));
                 ConfiguredFeature<?, ?> configuredfeature = Objects.requireNonNull(level.registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE).getHolder(AncientAetherMiscFeatures.BRONZE_DUNGEON_ENTRANCE).orElse(null)).value();
-                template.placeInWorld(serverLevel, pos, pos, new StructurePlaceSettings(), random, 3);
-                configuredfeature.place(level, chunk, random, posAbove);
+                template.placeInWorld(serverLevel, posOffset, pos, new StructurePlaceSettings(), random, 3);
+                configuredfeature.place(level, chunk, random, new BlockPos(x, y + 8, z));
             }
         }
         return false;
