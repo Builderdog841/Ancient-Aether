@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-27T14:11:11.1970693	Registries
+// 1.20.1	2024-04-27T15:08:09.4420601	Registries
 d48a565c1fefb0fbb6c489c3edffe6748448a15c data/ancient_aether/forge/biome_modifier/aerogel_blobs_biome_modifier.json
 c66669dd031745a1bae16fc47547c896a814e8e6 data/ancient_aether/forge/biome_modifier/aether_cave_biome_modifier.json
 be0b3cb10e1bb6717346cc0224b71d8b9cb17509 data/ancient_aether/forge/biome_modifier/aether_grass_patch_biome_modifier.json
@@ -121,7 +121,7 @@ e9951c1e43a8e47e424565851e1786e9dbe41a7a data/ancient_aether/worldgen/noise/temp
 85140f4313b34c021ff1671f129748b64a7dadc0 data/ancient_aether/worldgen/placed_feature/bonus_ambrosium_ore.json
 d9b1a741df75be626e9014b4bb07d13e0ec6ffc9 data/ancient_aether/worldgen/placed_feature/bonus_berry_bush_patch.json
 38abc7f535d51a715905ee73f3cbed76644e5fc4 data/ancient_aether/worldgen/placed_feature/bonus_gravitite_ore.json
-3c14de0d4d45bc7444a57d15a36ba5a629f1efd2 data/ancient_aether/worldgen/placed_feature/bronze_dungeon_entrance.json
+8d75a689191aa294b9d3737d9f57469e3e08ec33 data/ancient_aether/worldgen/placed_feature/bronze_dungeon_entrance.json
 873d77d591bb60f761e7ed8fe3e722e778dd0eff data/ancient_aether/worldgen/placed_feature/cloudbed.json
 605bf607681671b11cbc0ebedcbe2c1343b4243c data/ancient_aether/worldgen/placed_feature/crystal_island.json
 eb0797a8b07e79ef6f0b394cc1f40c95567a5c5c data/ancient_aether/worldgen/placed_feature/elevated_clearing_trees.json

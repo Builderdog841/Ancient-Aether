@@ -106,6 +106,6 @@ public class AncientAetherMiscPlacements {
                 BiomeFilter.biome()
         );
 
-        AncientAetherPlacementUtils.register(context, BRONZE_DUNGEON_ENTRANCE, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.BRONZE_DUNGEON_ENTRANCE), BiomeFilter.biome());
+        AncientAetherPlacementUtils.register(context, BRONZE_DUNGEON_ENTRANCE, configuredFeatures.getOrThrow(AncientAetherMiscFeatures.BRONZE_DUNGEON_ENTRANCE));
     }
 }
