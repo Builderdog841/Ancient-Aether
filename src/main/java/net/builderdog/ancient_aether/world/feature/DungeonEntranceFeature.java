@@ -1,5 +1,7 @@
 package net.builderdog.ancient_aether.world.feature;
 
+import com.aetherteam.aether.block.AetherBlocks;
+import com.google.common.collect.ImmutableList;
 import com.mojang.serialization.Codec;
 import net.builderdog.ancient_aether.data.resources.registries.features.AncientAetherMiscFeatures;
 import net.minecraft.core.BlockPos;
@@ -13,8 +15,7 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
-import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
-import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
+import net.minecraft.world.level.levelgen.structure.templatesystem.*;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
@@ -39,17 +40,25 @@ public class DungeonEntranceFeature extends Feature<NoneFeatureConfiguration> {
             if (level.isEmptyBlock(pos)) {
                 if (!level.isEmptyBlock(new BlockPos(x, y - 12, z))) {
                     StructureTemplate template = serverLevel.getStructureManager().getOrCreate(new ResourceLocation("ancient_aether", "bronze_dungeon/entrance/entrance"));
-                    template.placeInWorld(serverLevel, posOffset, pos, new StructurePlaceSettings(), random, 3);
+                    template.placeInWorld(serverLevel, posOffset, pos, getSettings(), random, 18);
                 }
             } else {
                 StructureTemplate template = serverLevel.getStructureManager().getOrCreate(new ResourceLocation("ancient_aether", "bronze_dungeon/entrance/staircase"));
-                ConfiguredFeature<?, ?> configuredfeature = Objects.requireNonNull(level.registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE).getHolder(AncientAetherMiscFeatures.BRONZE_DUNGEON_ENTRANCE).orElse(null)).value();
+                ConfiguredFeature<?, ?> feature = Objects.requireNonNull(level.registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE).getHolder(AncientAetherMiscFeatures.BRONZE_DUNGEON_ENTRANCE).orElse(null)).value();
                 ChunkGenerator chunk = serverLevel.getChunkSource().getGenerator();
 
-                template.placeInWorld(serverLevel, posOffset, pos, new StructurePlaceSettings(), random, 3);
-                configuredfeature.place(level, chunk, random, new BlockPos(x, y + 8, z));
+                template.placeInWorld(serverLevel, posOffset, pos, getSettings(), random, 18);
+                feature.place(level, chunk, random, new BlockPos(x, y + 8, z));
             }
         }
         return false;
+    }
+
+    protected StructurePlaceSettings getSettings() {
+        StructurePlaceSettings placeSettings = new StructurePlaceSettings();
+        placeSettings.setKnownShape(true);
+        placeSettings.addProcessor(new RuleProcessor(ImmutableList.of(
+                new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.CARVED_STONE.get(), 0.01F), AlwaysTrueTest.INSTANCE, AetherBlocks.SENTRY_STONE.get().defaultBlockState()))));
+        return placeSettings;
     }
 }
