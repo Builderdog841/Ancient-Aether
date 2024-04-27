@@ -115,8 +115,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         return false;
     }
 
-    @Override
-    public boolean displayFireAnimation() {
+    public boolean isOnFire() {
         return false;
     }
 
