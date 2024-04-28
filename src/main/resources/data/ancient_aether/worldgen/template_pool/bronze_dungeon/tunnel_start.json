@@ -24,7 +24,7 @@
       "weight": 3,
       "element": {
         "location": "ancient_aether:bronze_dungeon/tunnels/entrance_start",
-        "processors": "ancient_aether:bronze_dungeon_entrance",
+        "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
