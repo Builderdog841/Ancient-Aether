@@ -216,6 +216,9 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
         tag(AetherTags.Blocks.VALKYRIE_QUEEN_UNBREAKABLE).add(
                 AncientAetherBlocks.ANCIENT_OBELISK.get()
         );
+        tag(AetherTags.Blocks.NON_BRONZE_DUNGEON_SPAWNABLE).add(
+                AetherBlocks.COLD_AERCLOUD.get()
+        );
         tag(AetherTags.Blocks.GRAVITITE_ABILITY_BLACKLIST).add(
                 AncientAetherBlocks.VALKYRUM_ORE.get(),
                 AncientAetherBlocks.HIGHSPROOT_BUTTON.get(),

@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.world.feature;
 
+import com.aetherteam.aether.AetherTags;
 import com.aetherteam.aether.block.AetherBlocks;
 import com.google.common.collect.ImmutableList;
 import com.mojang.serialization.Codec;
@@ -33,10 +34,11 @@ public class DungeonEntranceFeature extends Feature<NoneFeatureConfiguration> {
 
         BlockPos pos = new BlockPos(x, y, z);
         BlockPos posOffset = new BlockPos(x - 5, y, z - 5);
+        BlockPos posVoid = new BlockPos(x, y - 12, z);
         RandomSource random = context.random();
 
         if (level.isEmptyBlock(pos)) {
-            if (!level.isEmptyBlock(new BlockPos(x, y - 12, z))) {
+            if (!level.isEmptyBlock(posVoid) && !level.getBlockState(posVoid).is(AetherTags.Blocks.NON_BRONZE_DUNGEON_SPAWNABLE)) {
                 StructureTemplate template = level.getLevel().getStructureManager().getOrCreate(new ResourceLocation("ancient_aether", "bronze_dungeon/entrance/entrance"));
                 template.placeInWorld(level, posOffset, pos, getSettings(), random, 3);
             }

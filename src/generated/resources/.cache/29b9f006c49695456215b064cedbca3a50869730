@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-22T08:27:28.2070308	Tags for minecraft:block mod id ancient_aether
+// 1.20.1	2024-04-28T20:38:55.7549508	Tags for minecraft:block mod id ancient_aether
 f0714fea3e89b69a7a6a6c729a028562bc0bd412 data/aether/tags/blocks/aerclouds.json
 c2354d6e9e1ad7d82a74dc026cfd3d3925683c7c data/aether/tags/blocks/aether_island_blocks.json
 c4903e6639b04406c020546d7cf2b0d7043443a7 data/aether/tags/blocks/aether_portal_blacklist.json
@@ -9,6 +9,7 @@ f95244a71cf5ac816c4c32016a0294d575be6e50 data/aether/tags/blocks/boss_doorway_du
 0ac17a5e432d358a81ec1321d80240c6eeefdeb6 data/aether/tags/blocks/gravitite_ability_blacklist.json
 ae3049100e010970dbef2412ecb97bf585fa4481 data/aether/tags/blocks/hellfire_blocks.json
 631aec4addcd6459bf8adebdb2b0490856dfec83 data/aether/tags/blocks/locked_dungeon_blocks.json
+0f473112bc9ca011b0c14a18e48b53185a4d7f82 data/aether/tags/blocks/non_bronze_dungeon_spawnable.json
 cd894db73f73ca794e8ba9ee4f3575ff34c587fd data/aether/tags/blocks/sentry_blocks.json
 46112be4b3c309ebaf2995cb2d290508e8f64905 data/aether/tags/blocks/slider_unbreakable.json
 95d1972eee6e901a575c51f97ee34119e9ccfdc9 data/aether/tags/blocks/trapped_dungeon_blocks.json
