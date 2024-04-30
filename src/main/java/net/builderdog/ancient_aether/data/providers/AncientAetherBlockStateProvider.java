@@ -68,7 +68,7 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
 
     public void slammrootPlant(Block block) {
         ModelFile plant = models().withExistingParent(name(block), modLoc("block/template_slammroot_plant"))
-                .texture("plant", texture(name(block))).renderType("translucent");
+                .texture("plant", texture(name(block))).renderType("cutout_mipped");
 
         getVariantBuilder(block).partialState().addModels(new ConfiguredModel(plant));
     }

@@ -293,8 +293,11 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addStructure(AncientAetherStructures.SENTRY_LABORATORY, "Sentry Laboratory");
         addStructure(AncientAetherStructures.ANCIENT_DUNGEON, "Ancient Dungeon");
 
+        addEffect(AncientAetherEffects.DIVINE_PROTECTION, "Divine Protection");
         addEffect(AncientAetherEffects.NATURE_BOOST, "Nature's Boost");
-        addEffectDesc(AncientAetherEffects.NATURE_BOOST, "Makes the player jump high in the air and fertilizes the Ground once they land");
+
+        addEffectDesc(AncientAetherEffects.DIVINE_PROTECTION, "A protection buff granted by using Divine Tools");
+        addEffectDesc(AncientAetherEffects.NATURE_BOOST, "Makes the player jump high into the air and fertilizes the ground once they land");
 
         addAdvancement("aether_biomes", "Aerospace Traveller");
         addAdvancement("moa_eggs", "Rainbow Omelette");
