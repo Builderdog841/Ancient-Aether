@@ -3,7 +3,7 @@
   "fallback": "minecraft:empty",
   "elements": [
     {
-      "weight": 4,
+      "weight": 3,
       "element": {
         "location": "ancient_aether:bronze_dungeon/rooms/room_01",
         "processors": "ancient_aether:bronze_dungeon",
@@ -12,7 +12,7 @@
       }
     },
     {
-      "weight": 4,
+      "weight": 3,
       "element": {
         "location": "ancient_aether:bronze_dungeon/rooms/room_02",
         "processors": "ancient_aether:bronze_dungeon",
@@ -21,9 +21,18 @@
       }
     },
     {
-      "weight": 4,
+      "weight": 3,
       "element": {
         "location": "ancient_aether:bronze_dungeon/rooms/room_03",
+        "processors": "ancient_aether:bronze_dungeon",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "ancient_aether:bronze_dungeon/rooms/room_04",
         "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
