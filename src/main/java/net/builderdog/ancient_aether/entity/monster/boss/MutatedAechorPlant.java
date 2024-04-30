@@ -84,10 +84,9 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     @Override
     protected void registerGoals() {
         goalSelector.addGoal(0,  new RangedAttackGoal(this, 1.0, 30, 16.0F));
-        goalSelector.addGoal(1,  new SummonCockatriceGoal(this));
-        goalSelector.addGoal(2,  new SpawnRemedyCrystalGoal(this));
-        targetSelector.addGoal(3, new HurtByTargetGoal(this));
-        targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, livingEntity -> isBossFight()));
+        goalSelector.addGoal(1,  new SpawnEntityGoal(this));
+        targetSelector.addGoal(2, new HurtByTargetGoal(this));
+        targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, livingEntity -> isBossFight()));
     }
 
     //---------------------[Attribute Methods]---------------------\\
@@ -159,6 +158,10 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
 
     @Override
     public void checkDespawn() {}
+
+    public boolean isCritical() {
+        return getHealth() < 250;
+    }
 
     @Override
     public @NotNull Packet<ClientGamePacketListener> getAddEntityPacket() {
@@ -498,55 +501,46 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         return SoundSource.HOSTILE;
     }
 
-    public static class SummonCockatriceGoal extends Goal {
+    public static class SpawnEntityGoal extends Goal {
         private final MutatedAechorPlant aechor;
-        private int shootInterval;
+        private int spawnInterval;
 
-        public SummonCockatriceGoal(MutatedAechorPlant mutatedAechorPlant) {
+        public SpawnEntityGoal(MutatedAechorPlant mutatedAechorPlant) {
             aechor = mutatedAechorPlant;
-            shootInterval = (int) (30 + mutatedAechorPlant.getHealth() / 2);
+            spawnInterval = (int) (spawnDelay() + mutatedAechorPlant.getHealth() / 2);
+        }
+
+        public int spawnDelay() {
+            return aechor.isCritical() ? 20 : 40;
         }
 
         @Override
         public boolean canUse() {
-            return aechor.isBossFight() && --shootInterval <= 0;
+            return aechor.isBossFight() && --spawnInterval <= 0;
         }
 
         @Override
         public void start() {
-            if (aechor.getHealth() < 250) {
+            if (aechor.isCritical()) {
+                spawnEntityCritical();
+            } else {
+                spawnEntity();
+            }
+            spawnInterval = (int) (15 + aechor.getHealth() / 2);
+        }
+
+        public void spawnEntity() {
+            RemedyCrystal crystal = new RemedyCrystal(aechor.level(), aechor);
+            aechor.level().addFreshEntity(crystal);
+        }
+
+        public void spawnEntityCritical() {
+            if (RandomSource.create().nextInt(2) == 0) {
                 Cockatrice cockatrice = new Cockatrice(AetherEntityTypes.COCKATRICE.get(), aechor.level());
                 cockatrice.setPos(aechor.getX(), aechor.getY() + 3, aechor.getZ());
                 aechor.level().addFreshEntity(cockatrice);
-                shootInterval = (int) (15 + aechor.getHealth() / 2);
             }
-        }
-
-        @Override
-        public boolean requiresUpdateEveryTick() {
-            return true;
-        }
-    }
-
-    public static class SpawnRemedyCrystalGoal extends Goal {
-        private final MutatedAechorPlant aechor;
-        private int shootInterval;
-
-        public SpawnRemedyCrystalGoal(MutatedAechorPlant mutatedAechorPlant) {
-            aechor = mutatedAechorPlant;
-            shootInterval = (int) (40 + mutatedAechorPlant.getHealth() / 2);
-        }
-
-        @Override
-        public boolean canUse() {
-            return aechor.isBossFight() && --shootInterval <= 0;
-        }
-
-        @Override
-        public void start() {
-            RemedyCrystal crystal = new RemedyCrystal(aechor.level(), aechor);
-            aechor.level().addFreshEntity(crystal);
-            shootInterval = (int) (15 + aechor.getHealth() / 2);
+            else spawnEntity();
         }
 
         @Override

@@ -21,23 +21,20 @@ public class MutatedAechorPlantRenderer extends MobRenderer<MutatedAechorPlant, 
     }
 
     @Override
-    protected void scale(@NotNull MutatedAechorPlant mutatedAechorPlant, PoseStack poseStack, float partialTicks) {
-        float f2 = size(mutatedAechorPlant) + mutatedAechorPlant.getSize() / 6.0F;
+    protected void scale(@NotNull MutatedAechorPlant aechor, PoseStack poseStack, float partialTicks) {
+        float f2 = size(aechor) + aechor.getSize() / 6.0F;
         poseStack.scale(f2, f2, f2);
         poseStack.translate(0.0, 1.2, 0.0);
-        shadowRadius = f2 - size(mutatedAechorPlant);
+        shadowRadius = f2 - size(aechor);
     }
 
     @Override
-    protected float getBob(MutatedAechorPlant mutatedAechorPlant, float partialTicks) {
-        return Mth.lerp(partialTicks, mutatedAechorPlant.getSinage(), mutatedAechorPlant.getSinage() + mutatedAechorPlant.getSinageAdd());
+    protected float getBob(MutatedAechorPlant aechor, float partialTicks) {
+        return Mth.lerp(partialTicks, aechor.getSinage(), aechor.getSinage() + aechor.getSinageAdd());
     }
 
-    private float size(MutatedAechorPlant mutatedAechorPlant) {
-        if (mutatedAechorPlant.getHealth() < 250) {
-            return 7.5F;
-        }
-        return 5.0F;
+    private float size(MutatedAechorPlant aechor) {
+        return aechor.isCritical() ? 7.5F : 5.0F;
     }
 
     @Override
