@@ -562,10 +562,10 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addValkyrumItemLore(AncientAetherItems.VALKYRUM_RING, "accessory", "A noble accessory forged from Valkyrum. This ring grants you +0.5 Blocks of Reach.");
         addValkyrumItemLore(AncientAetherItems.VALKYRUM_PENDANT, "accessory", "A noble accessory forged from Valkyrum. This pendant grants you +1 Blocks of Reach.");
 
-        addRewardLore(AncientAetherItems.DIVINE_SHOVEL, "the Valkyrie Queen", "shovel auto-enchants every block that it mines. Quite handy for gathering Quicksoil Glass");
-        addRewardLore(AncientAetherItems.DIVINE_PICKAXE, "the Valkyrie Queen", "pickaxe is strong enough to mine Valkyrum Ore. It also auto-enchants every block that it mines");
-        addRewardLore(AncientAetherItems.DIVINE_AXE, "the Valkyrie Queen", "axe auto-enchants every block that it mines.");
-        addRewardLore(AncientAetherItems.DIVINE_HOE, "the Valkyrie Queen", "hoe auto-enchants every block that it mines. Quite handy for Blue Berry farming");
+        addRewardLore(AncientAetherItems.DIVINE_SHOVEL, "the Valkyrie Queen", "shovel grants you bonus protection when used. The duration of the buff increases the more blocks you mine.");
+        addRewardLore(AncientAetherItems.DIVINE_PICKAXE, "the Valkyrie Queen", "pickaxe is strong enough to mine Valkyrum Ore and grants you bonus protection when used. The duration of the buff increases the more blocks you mine.");
+        addRewardLore(AncientAetherItems.DIVINE_AXE, "the Valkyrie Queen", "axe grants you bonus protection when used. The duration of the buff increases the more blocks you mine.");
+        addRewardLore(AncientAetherItems.DIVINE_HOE, "the Valkyrie Queen", "hoe grants you bonus protection when used. The duration of the buff increases the more blocks you mine.");
         addRewardLore(AncientAetherItems.AERONAUTIC_DART_SHOOTER, "the Ancient Dungeon Boss", "dart shooter launches mobs high up in the air similar to Gravitite Equipment. You can use any type of dart as ammunition");
         addRewardLore(AncientAetherItems.HERMES_RING, "Dungeons", "ring increases your total Movement Speed by +3%");
         addRewardLore(AncientAetherItems.HERMES_PENDANT, "Dungeons", "pendant increases your total Movement Speed by +5%");
