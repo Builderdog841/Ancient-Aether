@@ -15,7 +15,7 @@ public interface DivineTool {
     default void grantDivineProtectionBuff(Player player, Level level, BlockPos pos, ItemStack stack, BlockState state) {
         if (!level.isClientSide() && state.getDestroySpeed(level, pos) > 0 && stack.isCorrectToolForDrops(state)) {
             if (player.hasEffect(AncientAetherEffects.DIVINE_PROTECTION.get())) {
-                if (Objects.requireNonNull(player.getEffect(AncientAetherEffects.DIVINE_PROTECTION.get())).getDuration() < 12000) {
+                if (Objects.requireNonNull(player.getEffect(AncientAetherEffects.DIVINE_PROTECTION.get())).getDuration() < 18000) {
                     player.addEffect(new MobEffectInstance(AncientAetherEffects.DIVINE_PROTECTION.get(), duration(player), 0, false, true, true));
                 }
             }
