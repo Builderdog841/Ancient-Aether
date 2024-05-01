@@ -2,8 +2,10 @@ package net.builderdog.ancient_aether.event.listeners.ability;
 
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.event.hooks.AbilityHooks;
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.ToolAction;
 import net.minecraftforge.event.entity.player.PlayerEvent;
@@ -21,6 +23,18 @@ public class ToolAbilityListener {
         BlockState newState = AbilityHooks.ToolHooks.setupToolActions(oldState, toolAction);
         if (newState != oldState && !event.isSimulated() && !event.isCanceled()) {
             event.setFinalState(newState);
+        }
+    }
+
+    @SubscribeEvent
+    public static void doDivineToolAbility(BlockEvent.BreakEvent event) {
+        Player player = event.getPlayer();
+        Level level = player.level();
+        BlockPos blockPos = event.getPos();
+        ItemStack itemStack = player.getMainHandItem();
+        BlockState blockState = event.getState();
+        if (!event.isCanceled()) {
+            AbilityHooks.ToolHooks.handleDivineToolAbility(player, level, blockPos, itemStack, blockState);
         }
     }
 
