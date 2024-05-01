@@ -20,7 +20,6 @@ public class AncientAetherBiomes {
     public static final ResourceKey<Biome> HOLYSTONE_CAVERNS = createKey("holystone_caverns");
     public static final ResourceKey<Biome> FROZEN_CAVERNS = createKey("frozen_caverns");
     public static final ResourceKey<Biome> ELEVATED_CAVERNS = createKey("elevated_caverns");
-    public static final ResourceKey<Biome> ATMOSINE_GROTTO = createKey("atmosine_grotto");
 
     private static ResourceKey<Biome> createKey(String name) {
         return ResourceKey.create(Registries.BIOME, new ResourceLocation(AncientAether.MODID, name));

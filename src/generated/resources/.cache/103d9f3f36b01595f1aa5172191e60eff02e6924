@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-28T13:02:53.6239229	Registries
+// 1.20.1	2024-05-01T12:41:56.6119377	Registries
 d48a565c1fefb0fbb6c489c3edffe6748448a15c data/ancient_aether/forge/biome_modifier/aerogel_blobs_biome_modifier.json
 c66669dd031745a1bae16fc47547c896a814e8e6 data/ancient_aether/forge/biome_modifier/aether_cave_biome_modifier.json
 be0b3cb10e1bb6717346cc0224b71d8b9cb17509 data/ancient_aether/forge/biome_modifier/aether_grass_patch_biome_modifier.json
@@ -47,7 +47,6 @@ ccb24031a4e4c852f822f10a3dd44c61d4ad0473 data/ancient_aether/trim_pattern/solar.
 f657b57200104e204255aa233e2f0f1db015494f data/ancient_aether/worldgen/configured_carver/aether_cave.json
 ffab2c5d5bcfc497c684356da0efd709d86b8fda data/ancient_aether/worldgen/configured_carver/aether_surface_cave.json
 93a181c213929a383e1ad977dc1e82e504cadb7f data/ancient_aether/worldgen/configured_carver/elevated_islands_cave.json
-c332eb990d5d7256f147ecc9f3061bfec073b685 data/ancient_aether/worldgen/configured_carver/grotto_cave.json
 2cf08e50ac74f6af67fe26f51cd18f7d83b169bc data/ancient_aether/worldgen/configured_feature/aerogel_blobs.json
 d3020741d9ec421c7f380b8b4dba4d8c0ec94fd5 data/ancient_aether/worldgen/configured_feature/aether_flower_patch.json
 85ddf2d35bced7b1479d475ec5d9b46c3e5f140b data/ancient_aether/worldgen/configured_feature/aether_grass_patch.json

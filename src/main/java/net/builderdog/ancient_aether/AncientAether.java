@@ -16,7 +16,6 @@ import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.builderdog.ancient_aether.world.biome.AncientAetherRegion;
 import net.builderdog.ancient_aether.world.biome.AncientAetherSurfaceRules;
 import net.builderdog.ancient_aether.world.biomemodifier.AncientAetherBiomeModifierSerializers;
-import net.builderdog.ancient_aether.world.carver.AncientAetherCarvers;
 import net.builderdog.ancient_aether.world.feature.AncientAetherFeatures;
 import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherFoliagePlacers;
 import net.builderdog.ancient_aether.world.structure.AncientAetherStructureTypes;
@@ -68,7 +67,6 @@ public class AncientAether {
                 AncientAetherFeatures.FEATURES,
                 AncientAetherFoliagePlacers.FOLIAGE_PLACERS,
                 AncientAetherTreeDecoratorTypes.TREE_DECORATORS,
-                AncientAetherCarvers.CARVERS,
                 AncientAetherBiomeModifierSerializers.BIOME_MODIFIER_SERIALIZERS,
                 AncientAetherStructureTypes.STRUCTURE_TYPES,
                 AncientAetherSoundEvents.SOUNDS,

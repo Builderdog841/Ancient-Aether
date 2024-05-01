@@ -283,7 +283,6 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBiome(AncientAetherBiomes.HOLYSTONE_CAVERNS, "Holystone Caverns");
         addBiome(AncientAetherBiomes.FROZEN_CAVERNS, "Frozen Caverns");
         addBiome(AncientAetherBiomes.ELEVATED_CAVERNS, "Elevated Caverns");
-        addBiome(AncientAetherBiomes.ATMOSINE_GROTTO, "Atmosine Grotto");
 
         addStructure(AncientAetherStructures.HOLYSTONE_RUIN, "Holystone Ruin");
         addStructure(AncientAetherStructures.MYSTERIOUS_HENGE, "Mysterious Henge");

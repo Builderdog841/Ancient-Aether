@@ -59,8 +59,7 @@ public class AncientAetherBiomeTagData extends BiomeTagsProvider {
         tag(AncientAetherTags.Biomes.IS_AETHER_CAVE).add(
                 AncientAetherBiomes.HOLYSTONE_CAVERNS,
                 AncientAetherBiomes.FROZEN_CAVERNS,
-                AncientAetherBiomes.ELEVATED_CAVERNS,
-                AncientAetherBiomes.ATMOSINE_GROTTO
+                AncientAetherBiomes.ELEVATED_CAVERNS
         );
         tag(AncientAetherTags.Biomes.IS_ANCIENT_AETHER_BIOME).addTags(
                 AncientAetherTags.Biomes.IS_SKYROOT,

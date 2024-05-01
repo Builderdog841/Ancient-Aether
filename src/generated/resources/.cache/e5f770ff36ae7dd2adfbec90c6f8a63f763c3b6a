@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-16T15:34:58.7515055	Tags for minecraft:worldgen/biome mod id ancient_aether
+// 1.20.1	2024-05-01T12:41:56.6096818	Tags for minecraft:worldgen/biome mod id ancient_aether
 fa2a3fca69a8d31c468fd14c449347a468f9114c data/aether/tags/worldgen/biome/has_bronze_dungeon.json
 a0652b79bc956361549e77f0c6c42c9f8ffaaf96 data/aether/tags/worldgen/biome/is_aether.json
 6425e7e0a57a451843094090fa1e31c9fbd4c5e0 data/ancient_aether/tags/worldgen/biome/has_aerogel_blobs.json
@@ -34,7 +34,7 @@ aa02532c8de6f0f17909b2d2f218749b6cbcdbf6 data/ancient_aether/tags/worldgen/biome
 6425e7e0a57a451843094090fa1e31c9fbd4c5e0 data/ancient_aether/tags/worldgen/biome/has_water_lake_underground.json
 96797db0784579872cdf6c2bdc680e26fd8bfd2a data/ancient_aether/tags/worldgen/biome/has_wyndcaps_crystal_islands.json
 96797db0784579872cdf6c2bdc680e26fd8bfd2a data/ancient_aether/tags/worldgen/biome/has_wynd_ice_coasts.json
-2da9fee3edf1f09d0bfea875b4e462c6fb8b30e9 data/ancient_aether/tags/worldgen/biome/is_aether_cave.json
+a69033d4204e9d0c7edf29d71a5157ade350a258 data/ancient_aether/tags/worldgen/biome/is_aether_cave.json
 7b2fc0d21cb953f0edd79f2b54e5dbbb246bf233 data/ancient_aether/tags/worldgen/biome/is_ancient_aether_biome.json
 80c873dae0b304903cb279d2189817f37dd85eb6 data/ancient_aether/tags/worldgen/biome/is_elevated.json
 bb63558fb7137c2c70a725b05be1f9f721284985 data/ancient_aether/tags/worldgen/biome/is_sakura.json
