@@ -48,8 +48,7 @@ import static net.minecraft.world.level.block.Blocks.*;
 
 @SuppressWarnings("deprecation")
 public class AncientAetherBlocks {
-    public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS, AncientAether.MODID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AncientAether.MODID);
 
     public static final RegistryObject<Block> GRAVITY_GRAVEL = register("gravity_gravel", () -> new AetherDoubleDropBlock(Block.Properties.of().mapColor(MapColor.TERRACOTTA_PURPLE).jumpFactor(1.5F).strength(0.25F).sound(SoundType.GRAVEL)));
     public static final RegistryObject<Block> WYND_ICE = register("wynd_ice", () -> new Block(Block.Properties.copy(PACKED_ICE)));

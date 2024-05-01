@@ -27,8 +27,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 @Mod.EventBusSubscriber(modid = AncientAether.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class AncientAetherEntityTypes {
-    public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
-            DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, AncientAether.MODID);
+    public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, AncientAether.MODID);
 
     public static final RegistryObject<EntityType<Fluffalo>> FLUFFALO = ENTITY_TYPES.register("fluffalo", () -> EntityType.Builder.of(Fluffalo::new, MobCategory.CREATURE).sized(1.5F, 1.75F).clientTrackingRange(10).build(new ResourceLocation(AncientAether.MODID, "fluffalo").toString()));
 

@@ -29,6 +29,7 @@ import net.builderdog.ancient_aether.item.equipment.tools.valkyrum.*;
 import net.builderdog.ancient_aether.item.equipment.weapons.AeronauticDartShooterItem;
 import net.builderdog.ancient_aether.item.equipment.weapons.AncientSwordItem;
 import net.builderdog.ancient_aether.item.miscellaneous.AncientAetherBoatItem;
+import net.builderdog.ancient_aether.item.miscellaneous.SlammrootFruitItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
@@ -43,8 +44,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class AncientAetherItems {
-    public static final DeferredRegister<Item> ITEMS =
-           DeferredRegister.create(ForgeRegistries.ITEMS, AncientAether.MODID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, AncientAether.MODID);
 
     public static final Component COMMON = Component.translatable("tooltip.ancient_aether.common").withStyle(Style.EMPTY.withItalic(true).withColor(ChatFormatting.GRAY));
     public static final Component RARE = Component.translatable("tooltip.ancient_aether.rare").withStyle(Style.EMPTY.withItalic(true).withColor(ChatFormatting.AQUA));
@@ -54,7 +54,7 @@ public class AncientAetherItems {
     public static final RegistryObject<Item> VALKYRUM = ITEMS.register("valkyrum", () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> GRAPES = ITEMS.register("grapes", () -> new ItemNameBlockItem(AncientAetherBlocks.GRAPE_VINE.get(), (new Item.Properties().food((new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build()))));
-    public static final RegistryObject<Item> SLAMMROOT_FRUIT = ITEMS.register("slammroot_fruit", () -> new Item(new Item.Properties().food((new FoodProperties.Builder()).alwaysEat().effect(() -> new MobEffectInstance(AncientAetherEffects.NATURE_BOOST.get(), 200, 0), 1.0F).build())));
+    public static final RegistryObject<Item> SLAMMROOT_FRUIT = ITEMS.register("slammroot_fruit", () -> new SlammrootFruitItem(new Item.Properties().food((new FoodProperties.Builder()).alwaysEat().effect(() -> new MobEffectInstance(AncientAetherEffects.NATURE_BOOST.get(), 200, 0), 1.0F).build())));
     public static final RegistryObject<Item> FESTIVE_GUMMY_SWET = ITEMS.register("festive_gummy_swet", GummySwetItem::new);
 
     public static final RegistryObject<SwordItem> VALKYRUM_SWORD = ITEMS.register("valkyrum_sword", ValkyrumSwordItem::new);
