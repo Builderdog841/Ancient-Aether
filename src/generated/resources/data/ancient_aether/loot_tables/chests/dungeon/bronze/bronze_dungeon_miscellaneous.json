@@ -62,6 +62,11 @@
       "bonus_rolls": 0.0,
       "entries": [
         {
+          "type": "minecraft:loot_table",
+          "name": "ancient_aether:chests/dungeon/armor_trims",
+          "weight": 2
+        },
+        {
           "type": "minecraft:item",
           "name": "aether:agility_cape"
         },
