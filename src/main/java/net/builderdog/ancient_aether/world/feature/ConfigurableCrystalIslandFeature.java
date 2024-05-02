@@ -42,8 +42,7 @@ public class ConfigurableCrystalIslandFeature extends Feature<CrystalIslandConfi
                 });
             }
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }

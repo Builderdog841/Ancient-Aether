@@ -1,65 +1,86 @@
 package net.builderdog.ancient_aether.entity.monster;
 
-import com.aetherteam.aether.entity.ai.goal.FallingRandomStrollGoal;
+import com.aetherteam.aether.block.AetherBlocks;
 import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.BlockParticleOption;
+import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.Difficulty;
+import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.control.MoveControl;
-import net.minecraft.world.entity.ai.goal.*;
+import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
-import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.monster.Slime;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LightLayer;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.dimension.DimensionType;
+import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.Vec3;
+import net.minecraftforge.common.ForgeMod;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
-import java.util.EnumSet;
 
-public class Slammroot extends Monster {
-    public Slammroot(EntityType<? extends Monster> entityType, Level level) {
-        super(entityType, level);
+public class Slammroot extends Slime {
+    public Slammroot(EntityType<? extends Slammroot> entity, Level level) {
+        super(entity, level);
     }
 
     @Override
     protected void registerGoals() {
         super.registerGoals();
 
-        targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
-        goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2F, false) {
-            @Override
-            protected double getAttackReachSqr(@NotNull LivingEntity entity) {
-                return mob.getBbWidth() * mob.getBbWidth() + entity.getBbWidth();
-            }
-        });
+        targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, (entity) -> Math.abs(entity.getY() - getY()) <= 5.0));
         goalSelector.addGoal(2, new FloatGoal(this));
-        goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2F, false));
-        goalSelector.addGoal(3, new JumpGoal(this));
-        goalSelector.addGoal(4, new FallingRandomStrollGoal(this, 1.0));
-        goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class, 6.0F));
-        goalSelector.addGoal(6, new RandomLookAroundGoal(this));
+        goalSelector.addGoal(3, new AttackGoal(this));
+        goalSelector.addGoal(4, new RandomDirectionGoal(this));
+        goalSelector.addGoal(5, new KeepOnJumpingGoal(this));
     }
 
     @Nonnull
     public static AttributeSupplier.Builder createMobAttributes() {
         return Animal.createMobAttributes()
                 .add(Attributes.MAX_HEALTH, 12D)
-                .add(Attributes.ATTACK_DAMAGE, 2.0F)
+                .add(Attributes.ATTACK_DAMAGE, 6.0F)
                 .add(Attributes.ATTACK_SPEED, 1.2F)
                 .add(Attributes.MOVEMENT_SPEED, 0.3F);
+    }
+
+    @Override
+    public void setSize(int size, boolean resetHealth) {}
+
+    @Override
+    public void remove(@Nonnull Entity.RemovalReason reason) {
+        setRemoved(reason);
+        if (reason == Entity.RemovalReason.KILLED) {
+            gameEvent(GameEvent.ENTITY_DIE);
+        }
+        invalidateCaps();
+    }
+
+    protected boolean isDealsDamage() {
+        return isEffectiveAi();
+    }
+
+    @Override
+    public @Nullable
+    SpawnGroupData finalizeSpawn(@Nonnull ServerLevelAccessor level, @Nonnull DifficultyInstance difficulty, @Nonnull MobSpawnType reason, @javax.annotation.Nullable SpawnGroupData spawnData, @javax.annotation.Nullable CompoundTag tag) {
+        setSize(1, true);
+        setLeftHanded(false);
+        return spawnData;
     }
 
     protected void jumpFromGround() {
@@ -68,8 +89,30 @@ public class Slammroot extends Monster {
         hasImpulse = true;
     }
 
-    protected int getJumpDelay() {
-        return random.nextInt(20) + 10;
+    public static boolean isDarkEnoughToSpawn(ServerLevelAccessor level, BlockPos pos, RandomSource random) {
+        if (level.getBrightness(LightLayer.SKY, pos) > random.nextInt(32)) {
+            return false;
+        } else {
+            DimensionType dimensiontype = level.dimensionType();
+            int i = dimensiontype.monsterSpawnBlockLightLimit();
+            if (i < 15 && level.getBrightness(LightLayer.BLOCK, pos) > i) {
+                return false;
+            } else {
+                int j = level.getLevel().isThundering() ? level.getMaxLocalRawBrightness(pos, 10) : level.getMaxLocalRawBrightness(pos);
+                return j <= dimensiontype.monsterSpawnLightTest().sample(random);
+            }
+        }
+    }
+
+    @Override
+    protected void dealDamage(@NotNull LivingEntity livingEntity) {
+        if (isAlive()) {
+            int i = getSize();
+            if (distanceToSqr(livingEntity) < 0.6D * (double)i * 0.6D * (double)i && hasLineOfSight(livingEntity) && livingEntity.hurt(this.damageSources().mobAttack(this), getAttackDamage())) {
+                doEnchantDamageEffects(this, livingEntity);
+            }
+        }
+
     }
 
     public static boolean checkSlammrootSpawnRules(EntityType<? extends Slammroot> slammroot, ServerLevelAccessor level, MobSpawnType reason, BlockPos pos, RandomSource random) {
@@ -92,68 +135,110 @@ public class Slammroot extends Monster {
         return AncientAetherSoundEvents.ENTITY_SLAMMROOT_DEATH.get();
     }
 
-    public static class JumpGoal extends Goal {
-        private final Slammroot slammroot;
+    @Override
+    protected @NotNull SoundEvent getSquishSound() {
+        return AncientAetherSoundEvents.ENTITY_SLAMMROOT_HURT.get();
+    }
 
-        public JumpGoal(Slammroot slammroot) {
-            this.slammroot = slammroot;
-            setFlags(EnumSet.of(Goal.Flag.JUMP, Goal.Flag.MOVE));
+    @Override
+    protected @NotNull SoundEvent getJumpSound() {
+        return AncientAetherSoundEvents.ENTITY_SLAMMROOT_HURT.get();
+    }
+
+    @Nonnull
+    @Override
+    public EntityDimensions getDimensions(@NotNull Pose pose) {
+        return super.getDimensions(pose).scale(2 * 0.879F);
+    }
+
+    @Override
+    protected @NotNull ParticleOptions getParticleType() {
+        return new BlockParticleOption(ParticleTypes.BLOCK, AetherBlocks.AETHER_DIRT.get().defaultBlockState());
+    }
+
+    @SuppressWarnings("unchecked")
+    @Nonnull
+    @Override
+    public EntityType<? extends AeronauticLeaper> getType() {
+        return (EntityType<? extends AeronauticLeaper>) super.getType();
+    }
+
+    @Override
+    protected boolean shouldDespawnInPeaceful() {
+        return true;
+    }
+
+    @Nonnull
+    @Override
+    protected ResourceLocation getDefaultLootTable() {
+        return getType().getDefaultLootTable();
+    }
+
+    public static class AttackGoal extends SlimeAttackGoal {
+
+        public AttackGoal(Slammroot slammroot) {
+            super(slammroot);
         }
 
+        @Override
         public boolean canUse() {
-            return !slammroot.isPassenger();
+            return super.canUse();
         }
 
-        public void tick() {
-            MoveControl movecontrol = slammroot.getMoveControl();
-            if (movecontrol instanceof SlammrootMoveControl slammrootMoveControl) {
-                slammrootMoveControl.setWantedMovement(1.0D);
-            }
+        @Override
+        public boolean canContinueToUse() {
+            return super.canContinueToUse();
         }
     }
 
-    static class SlammrootMoveControl extends MoveControl {
-        private float yRot;
-        private int jumpDelay;
-        private final Slammroot slammroot;
+    public static class FloatGoal extends SlimeFloatGoal {
 
-        public SlammrootMoveControl(Slammroot slammroot) {
+        public FloatGoal(Slammroot slammroot) {
             super(slammroot);
-            this.slammroot = slammroot;
-            yRot = 180.0F * slammroot.getYRot() / (float)Math.PI;
         }
 
-        public void setDirection(float yRot) {
-            this.yRot = yRot;
+        @Override
+        public boolean canUse() {
+            return super.canUse();
         }
 
-        public void setWantedMovement(double speed) {
-            speedModifier = speed;
-            operation = MoveControl.Operation.MOVE_TO;
+        @Override
+        public boolean canContinueToUse() {
+            return super.canContinueToUse();
+        }
+    }
+
+    public static class KeepOnJumpingGoal extends SlimeKeepOnJumpingGoal {
+
+        public KeepOnJumpingGoal(Slammroot slammroot) {
+            super(slammroot);
         }
 
-        public void tick() {
-            mob.setYRot(rotlerp(mob.getYRot(), yRot, 90.0F));
-            mob.yHeadRot = mob.getYRot();
-            mob.yBodyRot = mob.getYRot();
-            if (operation != MoveControl.Operation.MOVE_TO) {
-                mob.setZza(0.0F);
-            } else {
-                operation = MoveControl.Operation.WAIT;
-                if (mob.onGround()) {
-                    mob.setSpeed((float)(speedModifier * mob.getAttributeValue(Attributes.MOVEMENT_SPEED)));
-                    if (jumpDelay-- <= 0) {
-                        jumpDelay = slammroot.getJumpDelay();
-                        jumpDelay /= 3;
-                    } else {
-                        slammroot.xxa = 0.0F;
-                        slammroot.zza = 0.0F;
-                        mob.setSpeed(0.0F);
-                    }
-                } else {
-                    mob.setSpeed((float)(speedModifier * mob.getAttributeValue(Attributes.MOVEMENT_SPEED)));
-                }
-            }
+        @Override
+        public boolean canUse() {
+            return super.canUse();
+        }
+
+        @Override
+        public boolean canContinueToUse() {
+            return super.canContinueToUse();
+        }
+    }
+
+    public static class RandomDirectionGoal extends SlimeRandomDirectionGoal {
+
+        public RandomDirectionGoal(Slammroot slammroot) {
+            super(slammroot);
+        }
+
+        @Override
+        public boolean canUse() {
+            return super.canUse();
+        }
+
+        @Override
+        public boolean canContinueToUse() {
+            return super.canContinueToUse();
         }
     }
 }

@@ -34,8 +34,8 @@ public class AeronauticLeaper extends Slime {
 
 	public float timeSpotted = 0.0F;
 
-	public AeronauticLeaper(EntityType<? extends AeronauticLeaper> pEntityType, Level pLevel) {
-		super(pEntityType, pLevel);
+	public AeronauticLeaper(EntityType<? extends AeronauticLeaper> entity, Level level) {
+		super(entity, level);
 	}
 
 	@Override
@@ -140,7 +140,7 @@ public class AeronauticLeaper extends Slime {
 	@Nonnull
 	@Override
 	public EntityDimensions getDimensions(@NotNull Pose pose) {
-		return super.getDimensions(pose).scale(2*0.879F);
+		return super.getDimensions(pose).scale(2 * 0.879F);
 	}
 
 	@Nonnull
@@ -172,9 +172,9 @@ public class AeronauticLeaper extends Slime {
 	public static class AttackGoal extends SlimeAttackGoal {
 		private final AeronauticLeaper leaper;
 
-		public AttackGoal(AeronauticLeaper sentryIn) {
-			super(sentryIn);
-			leaper = sentryIn;
+		public AttackGoal(AeronauticLeaper leaper) {
+			super(leaper);
+			this.leaper = leaper;
 		}
 
 		@Override
@@ -191,9 +191,9 @@ public class AeronauticLeaper extends Slime {
 	public static class FloatGoal extends SlimeFloatGoal {
 		private final AeronauticLeaper leaper;
 
-		public FloatGoal(AeronauticLeaper sentryIn) {
-			super(sentryIn);
-			leaper = sentryIn;
+		public FloatGoal(AeronauticLeaper leaper) {
+			super(leaper);
+			this.leaper = leaper;
 		}
 
 		@Override
@@ -229,9 +229,9 @@ public class AeronauticLeaper extends Slime {
 	public static class RandomDirectionGoal extends SlimeRandomDirectionGoal {
 		private final AeronauticLeaper leaper;
 
-		public RandomDirectionGoal(AeronauticLeaper sentryIn) {
-			super(sentryIn);
-			leaper = sentryIn;
+		public RandomDirectionGoal(AeronauticLeaper leaper) {
+			super(leaper);
+			this.leaper = leaper;
 		}
 
 		@Override

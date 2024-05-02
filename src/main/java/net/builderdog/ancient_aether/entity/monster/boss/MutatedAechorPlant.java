@@ -89,7 +89,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, livingEntity -> isBossFight()));
     }
 
-    //---------------------[Attribute Methods]---------------------\\
+    //---------------------[Attributes]---------------------\\
 
     public static AttributeSupplier.@NotNull Builder createMobAttributes() {
         return Mob.createMobAttributes()
@@ -128,7 +128,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         return false;
     }
 
-    //---------------------[Parameter Methods]---------------------\\
+    //---------------------[Parameters]---------------------\\
 
     public int getSize() {
         return getEntityData().get(DATA_SIZE_ID);
@@ -168,7 +168,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         return NetworkHooks.getEntitySpawningPacket(this);
     }
 
-    //---------------------[General Methods]---------------------\\
+    //---------------------[General]---------------------\\
 
     @Override
     public void tick() {
@@ -287,7 +287,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         AetherBossMob.super.evaporateEffects(entity, pos);
     }
 
-    //---------------------[Boss Methods]---------------------\\
+    //---------------------[Boss]---------------------\\
 
     public boolean isActive() {
         return getEntityData().get(DATA_ACTIVE_ID);
@@ -431,7 +431,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         return null;
     }
 
-    //---------------------[Data Methods]---------------------\\
+    //---------------------[Data]---------------------\\
 
     @Override
     public void addAdditionalSaveData(@NotNull CompoundTag tag) {
@@ -484,7 +484,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         }
     }
 
-    //---------------------[Sound Methods]---------------------\\
+    //---------------------[Sounds]---------------------\\
 
     @Override
     protected SoundEvent getHurtSound(@NotNull DamageSource damageSource) {
@@ -500,6 +500,8 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     public @NotNull SoundSource getSoundSource() {
         return SoundSource.HOSTILE;
     }
+
+    //---------------------[AI]---------------------\\
 
     public static class SpawnEntityGoal extends Goal {
         private final MutatedAechorPlant aechor;

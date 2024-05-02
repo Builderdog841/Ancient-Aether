@@ -32,7 +32,7 @@ public class AncientAetherEntityTypes {
     public static final RegistryObject<EntityType<Fluffalo>> FLUFFALO = ENTITY_TYPES.register("fluffalo", () -> EntityType.Builder.of(Fluffalo::new, MobCategory.CREATURE).sized(1.5F, 1.75F).clientTrackingRange(10).build(new ResourceLocation(AncientAether.MODID, "fluffalo").toString()));
 
     public static final RegistryObject<EntityType<Swet>> FESTIVE_SWET = ENTITY_TYPES.register("festive_swet", () -> EntityType.Builder.of(Swet::new, AetherMobCategory.AETHER_SURFACE_MONSTER).sized(0.9F, 0.95F).clientTrackingRange(10).build("festive_swet"));
-    public static final RegistryObject<EntityType<Slammroot>> SLAMMROOT = ENTITY_TYPES.register("slammroot", () -> EntityType.Builder.of(Slammroot::new, MobCategory.MONSTER).sized(0.7F, 0.7F).clientTrackingRange(16).build(new ResourceLocation(AncientAether.MODID, "slammroot").toString()));
+    public static final RegistryObject<EntityType<Slammroot>> SLAMMROOT = ENTITY_TYPES.register("slammroot", () -> EntityType.Builder.of(Slammroot::new, MobCategory.MONSTER).sized(2.0F, 2.0F).clientTrackingRange(16).build(new ResourceLocation(AncientAether.MODID, "slammroot").toString()));
     public static final RegistryObject<EntityType<AeronauticLeaper>> AERONAUTIC_LEAPER = ENTITY_TYPES.register("aeronautic_leaper", () -> EntityType.Builder.of(AeronauticLeaper::new, MobCategory.MONSTER).sized(2.0F, 2.0F).clientTrackingRange(10).build("aeronautic_leaper"));
 
     public static final RegistryObject<EntityType<MutatedAechorPlant>> MUTATED_AECHOR_PLANT = ENTITY_TYPES.register("mutated_aechor_plant", () -> EntityType.Builder.of(MutatedAechorPlant::new, MobCategory.MONSTER).sized(3.0F, 2.0F).clientTrackingRange(64).build("mutated_aechor_plant"));
