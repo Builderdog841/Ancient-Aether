@@ -1,11 +1,8 @@
 {
     "type": "minecraft:cache_once",
     "argument": {
-        "type": "minecraft:range_choice",
-        "input": "ancient_aether:depth",
-        "min_inclusive": -0.2,
-        "max_exclusive": 1.5,
-        "when_in_range": {
+        "type": "minecraft:max",
+        "argument1": {
             "type": "minecraft:add",
             "argument1": 0.01,
             "argument2": {
@@ -14,7 +11,7 @@
                     "type": "minecraft:mul",
                     "argument1": {
                         "type": "minecraft:mul",
-                        "argument1": -0.23,
+                        "argument1": -0.24,
                         "argument2": "ancient_aether:islands/elevated/terrain_shaper"
                     },
                     "argument2": "ancient_aether:islands/elevated/factor_erosion"
@@ -37,7 +34,7 @@
                                 "type": "minecraft:mul",
                                 "argument1": {
                                     "type": "minecraft:mul",
-                                    "argument1": -0.23,
+                                    "argument1": -0.24,
                                     "argument2": "ancient_aether:islands/elevated/terrain_shaper"
                                 },
                                 "argument2": "ancient_aether:islands/elevated/factor_erosion"
@@ -78,6 +75,6 @@
                 }
             }
         },
-        "when_out_of_range": "ancient_aether:islands/elevated/upper_islands"
+        "argument2": "ancient_aether:islands/elevated/upper_islands"
     }
 }
