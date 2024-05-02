@@ -5,7 +5,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "ancient_aether:bronze_dungeon/hallways/hallway_01",
+        "location": "ancient_aether:bronze_dungeon/hallways/pillar_hallway",
         "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -14,7 +14,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "ancient_aether:bronze_dungeon/hallways/hallway_02",
+        "location": "ancient_aether:bronze_dungeon/hallways/bridge_hallway",
         "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -23,7 +23,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "ancient_aether:bronze_dungeon/hallways/hallway_03",
+        "location": "ancient_aether:bronze_dungeon/hallways/arena_hallway",
         "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
