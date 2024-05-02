@@ -14,10 +14,8 @@ import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.goal.FloatGoal;
-import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
-import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.control.MoveControl;
+import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.monster.Monster;
@@ -29,6 +27,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
+import java.util.EnumSet;
 
 public class Slammroot extends Monster {
     public Slammroot(EntityType<? extends Monster> entityType, Level level) {
@@ -38,15 +37,17 @@ public class Slammroot extends Monster {
     @Override
     protected void registerGoals() {
         super.registerGoals();
+
+        targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
         goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2F, false) {
             @Override
             protected double getAttackReachSqr(@NotNull LivingEntity entity) {
                 return mob.getBbWidth() * mob.getBbWidth() + entity.getBbWidth();
             }
         });
-        targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
         goalSelector.addGoal(2, new FloatGoal(this));
-        goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2D, false));
+        goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2F, false));
+        goalSelector.addGoal(3, new JumpGoal(this));
         goalSelector.addGoal(4, new FallingRandomStrollGoal(this, 1.0));
         goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class, 6.0F));
         goalSelector.addGoal(6, new RandomLookAroundGoal(this));
@@ -63,8 +64,12 @@ public class Slammroot extends Monster {
 
     protected void jumpFromGround() {
         Vec3 vec3 = getDeltaMovement();
-        setDeltaMovement(vec3.x, 0.5F, vec3.z);
+        setDeltaMovement(vec3.x, 0.75F, vec3.z);
         hasImpulse = true;
+    }
+
+    protected int getJumpDelay() {
+        return random.nextInt(20) + 10;
     }
 
     public static boolean checkSlammrootSpawnRules(EntityType<? extends Slammroot> slammroot, ServerLevelAccessor level, MobSpawnType reason, BlockPos pos, RandomSource random) {
@@ -85,5 +90,70 @@ public class Slammroot extends Monster {
     @Override
     protected SoundEvent getDeathSound() {
         return AncientAetherSoundEvents.ENTITY_SLAMMROOT_DEATH.get();
+    }
+
+    public static class JumpGoal extends Goal {
+        private final Slammroot slammroot;
+
+        public JumpGoal(Slammroot slammroot) {
+            this.slammroot = slammroot;
+            setFlags(EnumSet.of(Goal.Flag.JUMP, Goal.Flag.MOVE));
+        }
+
+        public boolean canUse() {
+            return !slammroot.isPassenger();
+        }
+
+        public void tick() {
+            MoveControl movecontrol = slammroot.getMoveControl();
+            if (movecontrol instanceof SlammrootMoveControl slammrootMoveControl) {
+                slammrootMoveControl.setWantedMovement(1.0D);
+            }
+        }
+    }
+
+    static class SlammrootMoveControl extends MoveControl {
+        private float yRot;
+        private int jumpDelay;
+        private final Slammroot slammroot;
+
+        public SlammrootMoveControl(Slammroot slammroot) {
+            super(slammroot);
+            this.slammroot = slammroot;
+            yRot = 180.0F * slammroot.getYRot() / (float)Math.PI;
+        }
+
+        public void setDirection(float yRot) {
+            this.yRot = yRot;
+        }
+
+        public void setWantedMovement(double speed) {
+            speedModifier = speed;
+            operation = MoveControl.Operation.MOVE_TO;
+        }
+
+        public void tick() {
+            mob.setYRot(rotlerp(mob.getYRot(), yRot, 90.0F));
+            mob.yHeadRot = mob.getYRot();
+            mob.yBodyRot = mob.getYRot();
+            if (operation != MoveControl.Operation.MOVE_TO) {
+                mob.setZza(0.0F);
+            } else {
+                operation = MoveControl.Operation.WAIT;
+                if (mob.onGround()) {
+                    mob.setSpeed((float)(speedModifier * mob.getAttributeValue(Attributes.MOVEMENT_SPEED)));
+                    if (jumpDelay-- <= 0) {
+                        jumpDelay = slammroot.getJumpDelay();
+                        jumpDelay /= 3;
+                    } else {
+                        slammroot.xxa = 0.0F;
+                        slammroot.zza = 0.0F;
+                        mob.setSpeed(0.0F);
+                    }
+                } else {
+                    mob.setSpeed((float)(speedModifier * mob.getAttributeValue(Attributes.MOVEMENT_SPEED)));
+                }
+            }
+        }
     }
 }

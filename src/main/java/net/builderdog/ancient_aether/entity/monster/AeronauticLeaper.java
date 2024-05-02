@@ -40,11 +40,11 @@ public class AeronauticLeaper extends Slime {
 
 	@Override
 	protected void registerGoals() {
+		targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, (entity) -> Math.abs(entity.getY() - getY()) <= 5.0));
 		goalSelector.addGoal(1, new AeronauticLeaper.FloatGoal(this));
 		goalSelector.addGoal(2, new AeronauticLeaper.AttackGoal(this));
 		goalSelector.addGoal(3, new AeronauticLeaper.RandomDirectionGoal(this));
 		goalSelector.addGoal(5, new AeronauticLeaper.KeepOnJumpingGoal(this));
-		targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, (entity) -> Math.abs(entity.getY() - this.getY()) <= 5.0));
 	}
 
 	@Nonnull
