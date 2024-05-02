@@ -12,7 +12,7 @@
   },
   "structures": [
     {
-      "structure": "aether:bronze_dungeon",
+      "structure": "ancient_aether:sentry_laboratory",
       "weight": 1
     }
   ]
