@@ -203,6 +203,9 @@
     },
     {
       "processor_type": "aether:double_drops"
+    },
+    {
+      "processor_type": "ancient_aether:remove_waterlogging"
     }
   ]
 }

@@ -1,8 +1,6 @@
 package net.builderdog.ancient_aether.world.structure;
 
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.world.structure.jigsaw.BuriedJigsawStructure;
-import net.builderdog.ancient_aether.world.structure.jigsaw.SkylandsJigsawStructure;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.structure.StructureType;
 import net.minecraftforge.registries.DeferredRegister;

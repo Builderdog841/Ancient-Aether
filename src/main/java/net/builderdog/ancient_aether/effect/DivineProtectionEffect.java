@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.effect.mob;
+package net.builderdog.ancient_aether.effect;
 
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;

@@ -10,6 +10,7 @@ import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.data.resources.AncientAetherFeatureStates;
+import net.builderdog.ancient_aether.world.processor.RemoveWaterloggingProcessor;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -114,7 +115,8 @@ public class AncientAetherProcessorLists {
                         new ProcessorRule(new RandomBlockStateMatchTest(Blocks.CHEST.defaultBlockState().setValue(ChestBlock.FACING, Direction.SOUTH), 0.3F), AlwaysTrueTest.INSTANCE, AetherBlocks.CHEST_MIMIC.get().defaultBlockState().setValue(ChestBlock.FACING, Direction.SOUTH)),
                         new ProcessorRule(new RandomBlockStateMatchTest(Blocks.CHEST.defaultBlockState().setValue(ChestBlock.FACING, Direction.WEST), 0.3F), AlwaysTrueTest.INSTANCE, AetherBlocks.CHEST_MIMIC.get().defaultBlockState().setValue(ChestBlock.FACING, Direction.WEST))
                 )),
-                new DoubleDropsProcessor()
+                new DoubleDropsProcessor(),
+                new RemoveWaterloggingProcessor()
         ));
         register(context, BRONZE_DUNGEON_BOSS_ROOM, ImmutableList.of(
                 new RuleProcessor(ImmutableList.of(
@@ -138,6 +140,7 @@ public class AncientAetherProcessorLists {
                         new ProcessorRule(new RandomBlockStateMatchTest(Blocks.CHEST.defaultBlockState().setValue(ChestBlock.FACING, Direction.WEST), 0.15F), AlwaysTrueTest.INSTANCE, AetherBlocks.CHEST_MIMIC.get().defaultBlockState().setValue(ChestBlock.FACING, Direction.WEST))
                 )),
                 new DoubleDropsProcessor(),
+                new RemoveWaterloggingProcessor(),
                 new SurfaceRuleProcessor()
         ));
         register(context, SENTRY_LABORATORY_BOSS_ROOM, ImmutableList.of(
@@ -152,7 +155,9 @@ public class AncientAetherProcessorLists {
                         new ProcessorRule(new RandomBlockMatchTest(AncientAetherBlocks.LOCKED_AEROGETIC_STONE.get(), 0.05F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.AERONAUTIC_STONE.get().defaultBlockState()),
                         new ProcessorRule(new RandomBlockMatchTest(AncientAetherBlocks.TREASURE_DOORWAY_AEROGETIC_STONE.get(), 0.05F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.TREASURE_DOORWAY_AEROGETIC_STONE.get().defaultBlockState()),
                         new ProcessorRule(new RandomBlockMatchTest(Blocks.VINE, 0.9F), AlwaysTrueTest.INSTANCE, Blocks.AIR.defaultBlockState())
-                ))));
+                )),
+                new RemoveWaterloggingProcessor()
+        ));
     }
 
     private static ResourceKey<StructureProcessorList> createKey(String name) {

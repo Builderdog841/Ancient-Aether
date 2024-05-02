@@ -5,6 +5,7 @@ import com.aetherteam.aether.block.AetherBlocks;
 import com.google.common.collect.ImmutableList;
 import com.mojang.serialization.Codec;
 import net.builderdog.ancient_aether.data.resources.registries.features.AncientAetherMiscFeatures;
+import net.builderdog.ancient_aether.world.processor.RemoveWaterloggingProcessor;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
@@ -55,8 +56,9 @@ public class DungeonEntranceFeature extends Feature<NoneFeatureConfiguration> {
     protected StructurePlaceSettings getSettings() {
         StructurePlaceSettings placeSettings = new StructurePlaceSettings();
         placeSettings.setKnownShape(true);
-        placeSettings.addProcessor(new RuleProcessor(ImmutableList.of(
-                new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.CARVED_STONE.get(), 0.01F), AlwaysTrueTest.INSTANCE, AetherBlocks.SENTRY_STONE.get().defaultBlockState()))));
+        placeSettings
+                .addProcessor(new RuleProcessor(ImmutableList.of(new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.CARVED_STONE.get(), 0.01F), AlwaysTrueTest.INSTANCE, AetherBlocks.SENTRY_STONE.get().defaultBlockState()))))
+                .addProcessor(new RemoveWaterloggingProcessor());
         return placeSettings;
     }
 }

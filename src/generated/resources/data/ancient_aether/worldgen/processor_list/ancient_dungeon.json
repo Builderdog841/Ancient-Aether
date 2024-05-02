@@ -46,6 +46,9 @@
           }
         }
       ]
+    },
+    {
+      "processor_type": "ancient_aether:remove_waterlogging"
     }
   ]
 }

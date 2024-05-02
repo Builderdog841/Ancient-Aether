@@ -1,8 +1,6 @@
 package net.builderdog.ancient_aether.effect;
 
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.effect.mob.DivineProtectionEffect;
-import net.builderdog.ancient_aether.effect.mob.NatureBoostEffect;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
