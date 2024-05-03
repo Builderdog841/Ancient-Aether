@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-22T08:27:28.1906736	Item Models: ancient_aether
+// 1.20.1	2024-05-03T19:41:31.4663985	Item Models: ancient_aether
 532bdb7a4f7d2a6b96d474c01c8b9e7a0d1c10b4 assets/ancient_aether/models/item/aerogel_glass.json
 87e9f8f9f807a2aa763e3057d32bacf3ee32b60f assets/ancient_aether/models/item/aerogel_glass_door.json
 d1e6ed3e334d573f31a8ce9e09885c0f43832630 assets/ancient_aether/models/item/aerogel_glass_pane.json
@@ -119,7 +119,7 @@ c4c734261bf8749e898ba8bfa406a63dba5207b2 assets/ancient_aether/models/item/skyro
 2590d5cc1f45aacb63586ef37acbdb9fd6098d05 assets/ancient_aether/models/item/sky_blues.json
 290ca8c9799853d504d5cde3a25c8d21280f97e3 assets/ancient_aether/models/item/sky_blue_moa_egg.json
 1543a5a4eba1ce8cde57ae59bec61434713e55c2 assets/ancient_aether/models/item/sky_grass.json
-56dd8f5536a1606368bb1fd3cccdadcf15d45101 assets/ancient_aether/models/item/slammroot_fruit.json
+7b3abb2f7bcf9d25ee374c2293fe9697402bed9f assets/ancient_aether/models/item/slammberry.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/ancient_aether/models/item/slammroot_spawn_egg.json
 6c26a7864e134c9d651f994e559ab57c3d1e11f6 assets/ancient_aether/models/item/slider_prototype.json
 143677b1d90e9b8dc2a20a9041f8936404cb4248 assets/ancient_aether/models/item/solar_armor_trim_smithing_template.json

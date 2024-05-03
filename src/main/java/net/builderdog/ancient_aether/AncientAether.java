@@ -211,7 +211,7 @@ public class AncientAether {
         addCompost(0.65F, AncientAetherBlocks.SKY_BLUES.get());
         addCompost(0.65F, AncientAetherBlocks.WYND_THISTLE.get());
         addCompost(0.65F, AncientAetherBlocks.ELEVETIA.get());
-        addCompost(0.85F, AncientAetherItems.SLAMMROOT_FRUIT.get());
+        addCompost(0.85F, AncientAetherItems.SLAMMBERRY.get());
     }
 
     private void addCompost(float chance, ItemLike item) {

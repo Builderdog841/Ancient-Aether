@@ -12,5 +12,5 @@ public class AncientAetherEffects {
     public static final DeferredRegister<MobEffect> EFFECTS = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, AncientAether.MODID);
 
     public static final RegistryObject<MobEffect> DIVINE_PROTECTION = EFFECTS.register("divine_protection", () -> new DivineProtectionEffect().addAttributeModifier(Attributes.ARMOR_TOUGHNESS, "CB33E1C-E2D6-4A0B-9562-55C25FE53A1E", 3, AttributeModifier.Operation.ADDITION));
-    public static final RegistryObject<MobEffect> NATURE_BOOST = EFFECTS.register("nature_boost", NatureBoostEffect::new);
+    public static final RegistryObject<MobEffect> NATURES_BOOST = EFFECTS.register("natures_boost", NaturesBoostEffect::new);
 }

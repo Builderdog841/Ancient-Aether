@@ -11,8 +11,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.BonemealableBlock;
 import org.jetbrains.annotations.NotNull;
 
-public class NatureBoostEffect extends MobEffect {
-    public NatureBoostEffect() {
+public class NaturesBoostEffect extends MobEffect {
+    public NaturesBoostEffect() {
         super(MobEffectCategory.BENEFICIAL, 0x8FA8A3);
     }
 

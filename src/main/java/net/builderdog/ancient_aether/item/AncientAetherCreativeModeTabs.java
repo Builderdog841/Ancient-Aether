@@ -272,7 +272,7 @@ public class AncientAetherCreativeModeTabs {
 
         if (tab == AetherCreativeTabs.AETHER_FOOD_AND_DRINKS.get()) {
             event.getEntries().putAfter(new ItemStack(AetherItems.ENCHANTED_BERRY.get()), new ItemStack(AncientAetherItems.GRAPES.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(new ItemStack(AncientAetherItems.GRAPES.get()), new ItemStack(AncientAetherItems.SLAMMROOT_FRUIT.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherItems.GRAPES.get()), new ItemStack(AncientAetherItems.SLAMMBERRY.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AetherItems.GOLDEN_GUMMY_SWET.get()), new ItemStack(AncientAetherItems.FESTIVE_GUMMY_SWET.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
 

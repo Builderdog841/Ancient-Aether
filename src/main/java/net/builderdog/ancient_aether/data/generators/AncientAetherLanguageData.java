@@ -192,7 +192,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addItem(AncientAetherItems.VALKYRUM, "Valkyrum");
 
         addItem(AncientAetherItems.GRAPES, "Grapes");
-        addItem(AncientAetherItems.SLAMMROOT_FRUIT, "Slammroot Fruit");
+        addItem(AncientAetherItems.SLAMMBERRY, "Slammberry");
         addItem(AncientAetherItems.FESTIVE_GUMMY_SWET, "Festive Gummy Swet");
 
         addItem(AncientAetherItems.VALKYRUM_SWORD, "Valkyrum Sword");
@@ -293,10 +293,10 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addStructure(AncientAetherStructures.ANCIENT_DUNGEON, "Ancient Dungeon");
 
         addEffect(AncientAetherEffects.DIVINE_PROTECTION, "Divine Protection");
-        addEffect(AncientAetherEffects.NATURE_BOOST, "Nature's Boost");
+        addEffect(AncientAetherEffects.NATURES_BOOST, "Nature's Boost");
 
         addEffectDesc(AncientAetherEffects.DIVINE_PROTECTION, "A protection buff granted by using Divine Tools");
-        addEffectDesc(AncientAetherEffects.NATURE_BOOST, "Makes the player jump high into the air and fertilizes the ground once they land");
+        addEffectDesc(AncientAetherEffects.NATURES_BOOST, "Makes the player jump high into the air and fertilizes the ground once they land");
 
         addAdvancement("aether_biomes", "Aerospace Traveller");
         addAdvancement("moa_eggs", "Rainbow Omelette");
@@ -441,7 +441,9 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addLore(AncientAetherBlocks.ANCIENT_FROZEN_HOLYSTONE_VASE, "A frosted relic found in Sentry Laboratories. Breaking it can yield you some shiny treasures.");
 
         addLore(AncientAetherItems.VALKYRUM, "A shiny metal that is used to forge the finest pieces of weaponry. It can also be used a noble trimming material.");
-        addLore(AncientAetherItems.GRAPES, "Often found growing on the logs of Skyroot Trees in Skyroot Forests. This delicious fruit can be turned into Valkyrie Wine.");
+        addLore(AncientAetherItems.GRAPES, "Often found growing on the logs of Skyroot Trees in Skyroot Forests. This delicious fruit serves a great early-game food source.");
+        addLore(AncientAetherItems.SLAMMBERRY, "This berry, obtained from defeating the mischievous Slammroots, launches you high up in the air and then proceeds to spread vegetation once you land again.");
+        addLore(AncientAetherItems.FESTIVE_GUMMY_SWET, "A sweet-smelling gummy, it can be found in random chests in Sentry Laboratories. It fully restores the player's hunger when eaten. Very useful for boss fights.");
         addLore(AncientAetherItems.ANCIENT_SWORD, "This Sword is a reward for defeating the Ancient Dungeon Boss. It's very powerful due to its high Attack Speed.");
         addLore(AncientAetherItems.PINK_CAPE, "An extravagant Cape, crafted from Pink Wool.");
         addLore(AncientAetherItems.ANCIENT_RUNE, "Obtained from Vases or Chests in Dungeons, this Rune is the key to the Ancient Dungeon. You can duplicate it using 7 Enchanted Gravitite and one piece of Aerogel.");

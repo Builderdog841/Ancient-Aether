@@ -17,7 +17,7 @@ public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
     protected void registerModels() {
         simpleItem(AncientAetherItems.VALKYRUM);
         simpleItem(AncientAetherItems.GRAPES);
-        simpleItem(AncientAetherItems.SLAMMROOT_FRUIT);
+        simpleItem(AncientAetherItems.SLAMMBERRY);
         simpleItem(AncientAetherItems.FESTIVE_GUMMY_SWET);
         simpleItem(AncientAetherItems.HIGHSPROOT_BOAT);
         simpleItem(AncientAetherItems.HIGHSPROOT_CHEST_BOAT);
