@@ -54,6 +54,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.entity.IEntityAdditionalSpawnData;
 import net.minecraftforge.network.NetworkHooks;
@@ -418,6 +419,9 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     public BlockState convertBlock(BlockState state) {
         if (state.is(AetherBlocks.LOCKED_CARVED_STONE.get())) {
             return AetherBlocks.CARVED_STONE.get().defaultBlockState();
+        }
+        if (state.is(AncientAetherBlocks.LOCKED_CARVED_STONE_MOSAIC.get())) {
+            return AncientAetherBlocks.CARVED_STONE_MOSAIC.get().defaultBlockState().setValue(BlockStateProperties.AXIS, state.getValue(BlockStateProperties.AXIS));
         }
         if (state.is(AncientAetherBlocks.LOCKED_WYND_SENTRY_STONE.get())) {
             return AncientAetherBlocks.WYND_SENTRY_STONE.get().defaultBlockState();
