@@ -23,6 +23,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.Vec3;
+import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.ForgeMod;
 import org.jetbrains.annotations.NotNull;
 
@@ -40,11 +41,11 @@ public class AeronauticLeaper extends Slime {
 
 	@Override
 	protected void registerGoals() {
-		targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, (entity) -> Math.abs(entity.getY() - getY()) <= 5.0));
 		goalSelector.addGoal(1, new AeronauticLeaper.FloatGoal(this));
 		goalSelector.addGoal(2, new AeronauticLeaper.AttackGoal(this));
 		goalSelector.addGoal(3, new AeronauticLeaper.RandomDirectionGoal(this));
 		goalSelector.addGoal(5, new AeronauticLeaper.KeepOnJumpingGoal(this));
+		targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, (entity) -> Math.abs(entity.getY() - this.getY()) <= 4.0));
 	}
 
 	@Nonnull
@@ -52,7 +53,7 @@ public class AeronauticLeaper extends Slime {
 		return Mob.createMobAttributes()
 				.add(Attributes.MAX_HEALTH, 10.0)
 				.add(Attributes.MOVEMENT_SPEED, 0.8)
-				.add(Attributes.ATTACK_DAMAGE, 8.0)
+				.add(Attributes.ATTACK_DAMAGE, 6.0)
 				.add(ForgeMod.ENTITY_GRAVITY.get(), 0.025);
 	}
 
@@ -125,6 +126,12 @@ public class AeronauticLeaper extends Slime {
 		return isEffectiveAi();
 	}
 
+	public void playerTouch(@NotNull Player entity) {
+		if (isDealsDamage()) {
+			dealDamage(entity);
+		}
+	}
+
 	@Nonnull
 	@Override
 	protected SoundEvent getSquishSound() {
@@ -166,6 +173,7 @@ public class AeronauticLeaper extends Slime {
 			Vec3 vec3 = getDeltaMovement();
 			setDeltaMovement(vec3.x, 0.25, vec3.z);
 			hasImpulse = true;
+			ForgeHooks.onLivingJump(this);
 		}
 	}
 

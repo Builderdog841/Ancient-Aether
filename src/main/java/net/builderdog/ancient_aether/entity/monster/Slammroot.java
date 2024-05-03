@@ -20,7 +20,6 @@ import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.monster.Slime;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
@@ -31,6 +30,7 @@ import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.Vec3;
+import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.event.ForgeEventFactory;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -46,19 +46,18 @@ public class Slammroot extends Slime {
     protected void registerGoals() {
         super.registerGoals();
 
-        targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, (entity) -> Math.abs(entity.getY() - getY()) <= 5.0));
-        goalSelector.addGoal(2, new FloatGoal(this));
-        goalSelector.addGoal(3, new AttackGoal(this));
-        goalSelector.addGoal(4, new RandomDirectionGoal(this));
-        goalSelector.addGoal(5, new KeepOnJumpingGoal(this));
+        goalSelector.addGoal(1, new SlimeFloatGoal(this));
+        goalSelector.addGoal(2, new SlimeAttackGoal(this));
+        goalSelector.addGoal(3, new SlimeRandomDirectionGoal(this));
+        goalSelector.addGoal(5, new SlimeKeepOnJumpingGoal(this));
+        targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, (entity) -> Math.abs(entity.getY() - this.getY()) <= 4.0));
     }
 
     @Nonnull
     public static AttributeSupplier.Builder createMobAttributes() {
-        return Animal.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 12D)
+        return Mob.createMobAttributes()
+                .add(Attributes.MAX_HEALTH, 12.0D)
                 .add(Attributes.ATTACK_DAMAGE, 6.0F)
-                .add(Attributes.ATTACK_SPEED, 1.2F)
                 .add(Attributes.MOVEMENT_SPEED, 0.3F);
     }
 
@@ -90,6 +89,7 @@ public class Slammroot extends Slime {
         Vec3 vec3 = getDeltaMovement();
         setDeltaMovement(vec3.x, 0.75F, vec3.z);
         hasImpulse = true;
+        ForgeHooks.onLivingJump(this);
     }
 
     public static boolean isDarkEnoughToSpawn(ServerLevelAccessor level, BlockPos pos, RandomSource random) {
@@ -107,12 +107,18 @@ public class Slammroot extends Slime {
         }
     }
 
+    public void playerTouch(@NotNull Player entity) {
+        if (isDealsDamage()) {
+            dealDamage(entity);
+        }
+    }
+
     @Override
-    protected void dealDamage(@NotNull LivingEntity livingEntity) {
+    protected void dealDamage(@NotNull LivingEntity entity) {
         if (isAlive()) {
             int i = getSize();
-            if (distanceToSqr(livingEntity) < 0.6D * (double)i * 0.6D * (double)i && hasLineOfSight(livingEntity) && livingEntity.hurt(this.damageSources().mobAttack(this), getAttackDamage())) {
-                doEnchantDamageEffects(this, livingEntity);
+            if (distanceToSqr(entity) < 1.2D * (double)i * 1.2D * (double)i && hasLineOfSight(entity) && entity.hurt(damageSources().mobAttack(this), getAttackDamage())) {
+                doEnchantDamageEffects(this, entity);
             }
         }
     }
@@ -200,73 +206,5 @@ public class Slammroot extends Slime {
     @Override
     protected ResourceLocation getDefaultLootTable() {
         return getType().getDefaultLootTable();
-    }
-
-    public static class AttackGoal extends SlimeAttackGoal {
-
-        public AttackGoal(Slammroot slammroot) {
-            super(slammroot);
-        }
-
-        @Override
-        public boolean canUse() {
-            return super.canUse();
-        }
-
-        @Override
-        public boolean canContinueToUse() {
-            return super.canContinueToUse();
-        }
-    }
-
-    public static class FloatGoal extends SlimeFloatGoal {
-
-        public FloatGoal(Slammroot slammroot) {
-            super(slammroot);
-        }
-
-        @Override
-        public boolean canUse() {
-            return super.canUse();
-        }
-
-        @Override
-        public boolean canContinueToUse() {
-            return super.canContinueToUse();
-        }
-    }
-
-    public static class KeepOnJumpingGoal extends SlimeKeepOnJumpingGoal {
-
-        public KeepOnJumpingGoal(Slammroot slammroot) {
-            super(slammroot);
-        }
-
-        @Override
-        public boolean canUse() {
-            return super.canUse();
-        }
-
-        @Override
-        public boolean canContinueToUse() {
-            return super.canContinueToUse();
-        }
-    }
-
-    public static class RandomDirectionGoal extends SlimeRandomDirectionGoal {
-
-        public RandomDirectionGoal(Slammroot slammroot) {
-            super(slammroot);
-        }
-
-        @Override
-        public boolean canUse() {
-            return super.canUse();
-        }
-
-        @Override
-        public boolean canContinueToUse() {
-            return super.canContinueToUse();
-        }
     }
 }
