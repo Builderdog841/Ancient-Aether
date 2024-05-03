@@ -4,6 +4,11 @@
     "ancient_aether:wynd_sentry_stone",
     "ancient_aether:aerogetic_stone",
     "ancient_aether:aeronautic_stone",
-    "ancient_aether:corrupted_aeronautic_stone"
+    "ancient_aether:corrupted_aeronautic_stone",
+    "ancient_aether:carved_stone_mosaic",
+    "ancient_aether:angelic_stone_mosaic",
+    "ancient_aether:hellfire_stone_mosaic",
+    "ancient_aether:aerogetic_stone",
+    "ancient_aether:gale_stone_mosaic"
   ]
 }

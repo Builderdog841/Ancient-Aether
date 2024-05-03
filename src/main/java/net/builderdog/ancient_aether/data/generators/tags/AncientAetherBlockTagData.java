@@ -186,7 +186,12 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
                 AncientAetherBlocks.WYND_SENTRY_STONE.get(),
                 AncientAetherBlocks.AEROGETIC_STONE.get(),
                 AncientAetherBlocks.AERONAUTIC_STONE.get(),
-                AncientAetherBlocks.CORRUPTED_AERONAUTIC_STONE.get()
+                AncientAetherBlocks.CORRUPTED_AERONAUTIC_STONE.get(),
+                AncientAetherBlocks.CARVED_STONE_MOSAIC.get(),
+                AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get(),
+                AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get(),
+                AncientAetherBlocks.AEROGETIC_STONE.get(),
+                AncientAetherBlocks.GALE_STONE_MOSAIC.get()
         );
         tag(AetherTags.Blocks.SENTRY_BLOCKS).add(
                 AncientAetherBlocks.CARVED_TILES.get(),

@@ -5,6 +5,77 @@
       "rules": [
         {
           "input_predicate": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "aether:dungeon_blocks"
+          },
+          "location_predicate": {
+            "block": "minecraft:air",
+            "predicate_type": "minecraft:block_match"
+          },
+          "output_state": {
+            "Name": "minecraft:air"
+          }
+        },
+        {
+          "input_predicate": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "aether:dungeon_blocks"
+          },
+          "location_predicate": {
+            "block": "minecraft:water",
+            "predicate_type": "minecraft:block_match"
+          },
+          "output_state": {
+            "Name": "minecraft:water",
+            "Properties": {
+              "level": "0"
+            }
+          }
+        },
+        {
+          "input_predicate": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "aether:dungeon_blocks"
+          },
+          "location_predicate": {
+            "block": "aether:cold_aercloud",
+            "predicate_type": "minecraft:block_match"
+          },
+          "output_state": {
+            "Name": "aether:cold_aercloud",
+            "Properties": {
+              "double_drops": "true"
+            }
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "aether:carved_stone",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 0.01
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "aether:sentry_stone"
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "ancient_aether:carved_tiles",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 0.03
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "ancient_aether:trapped_carved_tiles"
+          }
+        },
+        {
+          "input_predicate": {
             "block": "aether:locked_carved_stone",
             "predicate_type": "minecraft:random_block_match",
             "probability": 0.01
