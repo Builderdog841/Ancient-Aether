@@ -57,7 +57,7 @@ public class Slammroot extends Slime {
     public static AttributeSupplier.Builder createMobAttributes() {
         return Mob.createMobAttributes()
                 .add(Attributes.MAX_HEALTH, 12.0D)
-                .add(Attributes.ATTACK_DAMAGE, 6.0F)
+                .add(Attributes.ATTACK_DAMAGE, 5.0F)
                 .add(Attributes.MOVEMENT_SPEED, 0.3F);
     }
 
