@@ -122,10 +122,10 @@ public class AncientAetherItems {
     public static final RegistryObject<Item> VIOLET_MOA_EGG = ITEMS.register("violet_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.VIOLET, 0x6C5A7F, new Item.Properties()));
     public static final RegistryObject<Item> BURGUNDY_MOA_EGG = ITEMS.register("burgundy_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.BURGUNDY, 0x965C62, new Item.Properties()));
 
-    public static final RegistryObject<SpawnEggItem> FLUFFALO_SPAWN_EGG = ITEMS.register("fluffalo_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntityTypes.FLUFFALO, 0x697B9E, 0xC0CAF7, new Item.Properties()));
+    public static final RegistryObject<SpawnEggItem> FLUFFALO_SPAWN_EGG = ITEMS.register("fluffalo_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntityTypes.FLUFFALO, 0x697B9E, 0xACCBE5, new Item.Properties()));
     public static final RegistryObject<SpawnEggItem> FESTIVE_SWET_SPAWN_EGG = ITEMS.register("festive_swet_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntityTypes.FESTIVE_SWET, 0x29405B, 0xFF6363, new Item.Properties()));
     public static final RegistryObject<SpawnEggItem> SLAMMROOT_SPAWN_EGG = ITEMS.register("slammroot_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntityTypes.SLAMMROOT, 0x87856E, 0xCDEAB2, new Item.Properties()));
-    public static final RegistryObject<SpawnEggItem> AERONAUTIC_LEAPER_SPAWN_EGG = ITEMS.register("aeronautic_leaper_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntityTypes.AERONAUTIC_LEAPER, 0x41404A, 0xD67E91, new Item.Properties()));
+    public static final RegistryObject<SpawnEggItem> AERONAUTIC_LEAPER_SPAWN_EGG = ITEMS.register("aeronautic_leaper_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntityTypes.AERONAUTIC_LEAPER, 0x41404A, 0xB5B0E8, new Item.Properties()));
     public static final RegistryObject<SpawnEggItem> MUTATED_AECHOR_PLANT_SPAWN_EGG = ITEMS.register("mutated_aechor_plant_spawn_egg", () -> new ForgeSpawnEggItem(AncientAetherEntityTypes.MUTATED_AECHOR_PLANT, 0x675D82, 0xB9F7CD, new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
