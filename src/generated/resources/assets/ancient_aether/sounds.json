@@ -85,6 +85,14 @@
     ],
     "subtitle": "subtitles.ancient_aether.entity.mutated_aechor_plant.shoot"
   },
+  "entity.remedy_crystal.explode": {
+    "sounds": [
+      "random/glass1",
+      "random/glass2",
+      "random/glass3"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.remedy_crystal.explode"
+  },
   "entity.slammroot.death": {
     "sounds": [
       "ancient_aether:entity/slammroot/slammroot_hurt"

@@ -12,6 +12,7 @@ public class AncientAetherSoundEvents {
 
     public static final RegistryObject<SoundEvent> BLOCK_GRAPE_VINE_PICK_GRAPES = register("block.grape_vine.pick_grapes");
     public static final RegistryObject<SoundEvent> BLOCK_OBELISK_ACTIVATION = register("block.obelisk.activation");
+
     public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_VALKYRUM_RING = register("item.accessory.equip_valkyrum_ring");
     public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_HERMES_RING = register("item.accessory.equip_hermes_ring");
     public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_GROWTH_RING = register("item.accessory.equip_growth_ring");
@@ -22,6 +23,7 @@ public class AncientAetherSoundEvents {
     public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_WARRIOR_PENDANT = register("item.accessory.equip_warrior_pendant");
     public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_GROWTH_PENDANT = register("item.accessory.equip_growth_pendant");
     public static final RegistryObject<SoundEvent> ITEM_ACCESSORY_EQUIP_ANCIENT_PENDANT = register("item.accessory.equip_ancient_pendant");
+
     public static final RegistryObject<SoundEvent> ENTITY_FLUFFALO_AMBIENT = register("entity.fluffalo.ambient");
     public static final RegistryObject<SoundEvent> ENTITY_FLUFFALO_MILK = register("entity.fluffalo.milk");
     public static final RegistryObject<SoundEvent> ENTITY_FLUFFALO_HURT = register("entity.fluffalo.hurt");
@@ -34,6 +36,7 @@ public class AncientAetherSoundEvents {
     public static final RegistryObject<SoundEvent> ENTITY_MUTATED_AECHOR_PLANT_SHOOT = register("entity.mutated_aechor_plant.shoot");
     public static final RegistryObject<SoundEvent> ENTITY_MUTATED_AECHOR_PLANT_HURT = register("entity.mutated_aechor_plant.hurt");
     public static final RegistryObject<SoundEvent> ENTITY_MUTATED_AECHOR_PLANT_DEATH = register("entity.mutated_aechor_plant.death");
+    public static final RegistryObject<SoundEvent> ENTITY_REMEDY_CRYSTAL_EXPLODE = register("entity.remedy_crystal.explode");
 
     private static RegistryObject<SoundEvent> register(String name) {
         return SOUNDS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(AncientAether.MODID, name)));

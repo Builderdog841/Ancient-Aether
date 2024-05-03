@@ -372,6 +372,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addSubtitle("entity", "mutated_aechor_plant.shoot", "Mutated Aechor Plant shoots");
         addSubtitle("entity", "mutated_aechor_plant.hurt", "Mutated Aechor Plant hurts");
         addSubtitle("entity", "mutated_aechor_plant.death", "Mutated Aechor Plant dies");
+        addSubtitle("entity", "remedy_crystal.explode", "Remedy Crystal explodes");
 
         addMenu("laboratory_treasure_chest", "Laboratory Treasure Chest");
         addMenu("ancient_treasure_chest", "Ancient Treasure Chest");

@@ -1,8 +1,8 @@
 package net.builderdog.ancient_aether.entity.projectile;
 
-import com.aetherteam.aether.client.AetherSoundEvents;
 import com.aetherteam.aether.effect.AetherEffects;
 import com.aetherteam.aether.entity.projectile.crystal.AbstractCrystal;
+import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.nbt.CompoundTag;
@@ -68,7 +68,7 @@ public class RemedyCrystal extends AbstractCrystal {
     @Nullable
     @Override
     public SoundEvent getImpactExplosionSoundEvent() {
-        return AetherSoundEvents.ENTITY_ICE_CRYSTAL_EXPLODE.get();
+        return AncientAetherSoundEvents.ENTITY_REMEDY_CRYSTAL_EXPLODE.get();
     }
 
     @Override

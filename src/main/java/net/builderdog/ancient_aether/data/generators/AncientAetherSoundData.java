@@ -18,7 +18,6 @@ public class AncientAetherSoundData extends SoundDefinitionsProvider {
                         sound("item/sweet_berries/pick_from_bush2"))
                 .subtitle("subtitles.ancient_aether.block.grape_vine.pick_grapes")
         );
-
         add(AncientAetherSoundEvents.BLOCK_OBELISK_ACTIVATION, definition().with(
                         sound("ancient_aether:block/obelisk_activation"))
                 .subtitle("subtitles.ancient_aether.block.obelisk.activation")
@@ -175,6 +174,13 @@ public class AncientAetherSoundData extends SoundDefinitionsProvider {
         add(AncientAetherSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_DEATH, definition().with(
                         sound("damage/fallbig"))
                 .subtitle("subtitles.ancient_aether.entity.mutated_aechor_plant.death")
+        );
+        add(AncientAetherSoundEvents.ENTITY_REMEDY_CRYSTAL_EXPLODE,
+                definition().with(
+                        sound("minecraft:random/glass1"),
+                        sound("minecraft:random/glass2"),
+                        sound("minecraft:random/glass3")
+                ).subtitle("subtitles.ancient_aether.entity.remedy_crystal.explode")
         );
     }
 }
