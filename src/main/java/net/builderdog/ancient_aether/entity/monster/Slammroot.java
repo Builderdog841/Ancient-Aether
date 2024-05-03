@@ -9,7 +9,9 @@ import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.DifficultyInstance;
@@ -17,7 +19,6 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.monster.Slime;
@@ -25,10 +26,12 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LightLayer;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.common.ForgeMod;
+import net.minecraftforge.event.ForgeEventFactory;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -112,7 +115,32 @@ public class Slammroot extends Slime {
                 doEnchantDamageEffects(this, livingEntity);
             }
         }
+    }
 
+    public void aiStep() {
+        super.aiStep();
+        if (!level().isClientSide) {
+            if (!ForgeEventFactory.getMobGriefingEvent(level(), this)) {
+                return;
+            }
+
+            for(int i = 0; i < 4; ++i) {
+                int j = Mth.floor(getX() + (double) ((float) (i % 2 * 2 - 1) * 0.25F));
+                int k = Mth.floor(getY());
+                int l = Mth.floor(getZ() + (double) ((float) (i / 2 % 2 * 2 - 1) * 0.25F));
+                BlockPos pos = new BlockPos(j, k, l);
+                BlockPos posBelow = new BlockPos(j, k - 1, l);
+                Block block = level().getBlockState(posBelow).getBlock();
+
+                if (block instanceof BonemealableBlock) {
+                    if (level().isEmptyBlock(pos)) {
+                        if (level() instanceof ServerLevel serverLevel) {
+                            ((BonemealableBlock) block).performBonemeal(serverLevel, level().getRandom(), posBelow, level().getBlockState(posBelow));
+                        }
+                    }
+                }
+            }
+        }
     }
 
     public static boolean checkSlammrootSpawnRules(EntityType<? extends Slammroot> slammroot, ServerLevelAccessor level, MobSpawnType reason, BlockPos pos, RandomSource random) {

@@ -7,8 +7,6 @@ import net.builderdog.ancient_aether.entity.passive.Fluffalo;
 import net.builderdog.ancient_aether.item.EquipmentUtil;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
