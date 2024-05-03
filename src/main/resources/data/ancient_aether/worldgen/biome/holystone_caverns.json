@@ -37,12 +37,7 @@
       "aether:water_spring"
     ],
     [],
-    [
-      "aether:crystal_island",
-      "aether:cold_aercloud",
-      "aether:blue_aercloud",
-      "aether:golden_aercloud"
-    ]
+    []
   ],
   "has_precipitation": false,
   "spawn_costs": {
