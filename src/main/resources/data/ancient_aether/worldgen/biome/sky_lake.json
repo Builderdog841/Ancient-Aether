@@ -38,12 +38,7 @@
     [
       "ancient_aether:sky_lake_flowers"
     ],
-    [
-      "aether:crystal_island",
-      "aether:cold_aercloud",
-      "aether:blue_aercloud",
-      "aether:golden_aercloud"
-    ]
+    []
   ],
   "has_precipitation": false,
   "spawn_costs": {
