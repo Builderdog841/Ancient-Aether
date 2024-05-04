@@ -1,6 +1,5 @@
 package net.builderdog.ancient_aether.data.resources.registries;
 
-import com.aetherteam.aether.AetherTags;
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.data.resources.AetherFeatureStates;
 import com.aetherteam.aether.world.processor.BossRoomProcessor;
@@ -121,9 +120,9 @@ public class AncientAetherProcessorLists {
         ));
         register(context, BRONZE_DUNGEON_BOSS_ROOM, ImmutableList.of(
                 new RuleProcessor(ImmutableList.of(
-                        new ProcessorRule(new TagMatchTest(AetherTags.Blocks.DUNGEON_BLOCKS), new BlockMatchTest(Blocks.AIR), Blocks.AIR.defaultBlockState()),
-                        new ProcessorRule(new TagMatchTest(AetherTags.Blocks.DUNGEON_BLOCKS), new BlockMatchTest(Blocks.WATER), Blocks.WATER.defaultBlockState()),
-                        new ProcessorRule(new TagMatchTest(AetherTags.Blocks.DUNGEON_BLOCKS), new BlockMatchTest(AetherBlocks.COLD_AERCLOUD.get()), AetherFeatureStates.COLD_AERCLOUD),
+                        new ProcessorRule(new TagMatchTest(AncientAetherTags.Blocks.REPLACEABLE_BOSS_ROOM_BLOCKS), new BlockMatchTest(Blocks.AIR), Blocks.AIR.defaultBlockState()),
+                        new ProcessorRule(new TagMatchTest(AncientAetherTags.Blocks.REPLACEABLE_BOSS_ROOM_BLOCKS), new BlockMatchTest(Blocks.WATER), Blocks.WATER.defaultBlockState()),
+                        new ProcessorRule(new TagMatchTest(AncientAetherTags.Blocks.REPLACEABLE_BOSS_ROOM_BLOCKS), new BlockMatchTest(AetherBlocks.COLD_AERCLOUD.get()), AetherFeatureStates.COLD_AERCLOUD),
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.CARVED_STONE.get(), 0.01F), AlwaysTrueTest.INSTANCE, AetherBlocks.SENTRY_STONE.get().defaultBlockState()),
                         new ProcessorRule(new RandomBlockMatchTest(AncientAetherBlocks.CARVED_TILES.get(), 0.03F), AlwaysTrueTest.INSTANCE, AncientAetherBlocks.TRAPPED_CARVED_TILES.get().defaultBlockState()),
                         new ProcessorRule(new RandomBlockMatchTest(AetherBlocks.LOCKED_CARVED_STONE.get(), 0.01F), AlwaysTrueTest.INSTANCE, AetherBlocks.LOCKED_SENTRY_STONE.get().defaultBlockState()),

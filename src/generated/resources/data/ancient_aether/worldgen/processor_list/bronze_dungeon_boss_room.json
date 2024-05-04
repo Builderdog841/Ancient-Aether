@@ -6,7 +6,7 @@
         {
           "input_predicate": {
             "predicate_type": "minecraft:tag_match",
-            "tag": "aether:dungeon_blocks"
+            "tag": "ancient_aether:replaceable_boss_room_blocks"
           },
           "location_predicate": {
             "block": "minecraft:air",
@@ -19,7 +19,7 @@
         {
           "input_predicate": {
             "predicate_type": "minecraft:tag_match",
-            "tag": "aether:dungeon_blocks"
+            "tag": "ancient_aether:replaceable_boss_room_blocks"
           },
           "location_predicate": {
             "block": "minecraft:water",
@@ -35,7 +35,7 @@
         {
           "input_predicate": {
             "predicate_type": "minecraft:tag_match",
-            "tag": "aether:dungeon_blocks"
+            "tag": "ancient_aether:replaceable_boss_room_blocks"
           },
           "location_predicate": {
             "block": "aether:cold_aercloud",

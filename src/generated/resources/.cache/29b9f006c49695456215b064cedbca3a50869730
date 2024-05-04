@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-03T22:22:01.6294947	Tags for minecraft:block mod id ancient_aether
+// 1.20.1	2024-05-04T15:41:17.4805399	Tags for minecraft:block mod id ancient_aether
 f0714fea3e89b69a7a6a6c729a028562bc0bd412 data/aether/tags/blocks/aerclouds.json
 c2354d6e9e1ad7d82a74dc026cfd3d3925683c7c data/aether/tags/blocks/aether_island_blocks.json
 c4903e6639b04406c020546d7cf2b0d7043443a7 data/aether/tags/blocks/aether_portal_blacklist.json
@@ -20,6 +20,7 @@ e084625644f35a4ba855787e1890503cbb135f22 data/ancient_aether/tags/blocks/aeroget
 18fe8c9c84f0cab0d34a0193e8f7697fc054b30e data/ancient_aether/tags/blocks/highsproot_logs.json
 19a3e2d8b1c4459b75efe57c362a98a3b93af505 data/ancient_aether/tags/blocks/leaf_vine_can_spawn_on.json
 2d77e40ec9c33912145bdcfec82cfef0d45a746e data/ancient_aether/tags/blocks/mosaic_blocks.json
+75a2c3d2d0647f023c0a3dc736b927c5bf1530e1 data/ancient_aether/tags/blocks/replaceable_boss_room_blocks.json
 5bd6c08b99f970b990c6b8cd3d1ce72355fba147 data/ancient_aether/tags/blocks/replaceable_dungeon_blocks.json
 d67f25dcae95241fe7e47e48d1198f548a531f17 data/ancient_aether/tags/blocks/sakura_logs.json
 96b8ea697d9c59a95ebcd2c38c76d6c6c8e59ae8 data/ancient_aether/tags/blocks/slammroot_spawnable_blacklist.json

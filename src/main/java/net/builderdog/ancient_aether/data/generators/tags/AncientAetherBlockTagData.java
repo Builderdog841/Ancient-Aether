@@ -128,6 +128,11 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
                 BlockTags.MINEABLE_WITH_HOE,
                 BlockTags.SWORD_EFFICIENT
         );
+        tag(AncientAetherTags.Blocks.REPLACEABLE_BOSS_ROOM_BLOCKS).add(
+                AncientAetherBlocks.CARVED_TILE_STAIRS.get()
+        ).addTags(
+                AetherTags.Blocks.DUNGEON_BLOCKS
+        );
 
         tag(AetherTags.Blocks.AETHER_PORTAL_BLACKLIST).add(
                 AncientAetherBlocks.VIOLET_AERCLOUD.get(),
