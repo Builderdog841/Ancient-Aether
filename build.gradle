@@ -130,9 +130,9 @@ dependencies {
     implementation fg.deobf("com.aetherteam.cumulus:cumulus_menus:${project.cumulus_version}")
     implementation fg.deobf("curse.maven:worldedit-225608:4586218")
     //implementation fg.deobf("curse.maven:aether-emissivity-916028:4765812")
-    implementation fg.deobf("curse.maven:panorama-440465:4633630")
-    implementation fg.deobf("curse.maven:panoramica-426082:4019292")
-    implementation fg.deobf("curse.maven:konkrete-410295:5028413")
+    //implementation fg.deobf("curse.maven:panorama-440465:4633630")
+    //implementation fg.deobf("curse.maven:panoramica-426082:4019292")
+    //implementation fg.deobf("curse.maven:konkrete-410295:5028413")
 
     compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:${project.mixinextras_version}"))
     implementation(jarJar("io.github.llamalad7:mixinextras-forge:${project.mixinextras_version}")) {
