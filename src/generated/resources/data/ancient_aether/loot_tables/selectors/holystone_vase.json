@@ -7,7 +7,7 @@
         {
           "type": "minecraft:item",
           "name": "aether:ambrosium_shard",
-          "weight": 15
+          "weight": 12
         },
         {
           "type": "minecraft:item",
@@ -21,42 +21,32 @@
         },
         {
           "type": "minecraft:item",
-          "name": "aether:icestone",
-          "weight": 7
-        },
-        {
-          "type": "minecraft:item",
-          "name": "aether:golden_amber",
-          "weight": 7
-        },
-        {
-          "type": "minecraft:item",
-          "name": "ancient_aether:grapes",
-          "weight": 7
-        },
-        {
-          "type": "minecraft:item",
           "name": "aether:zanite_gemstone",
           "weight": 7
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:string",
+          "name": "aether:icestone",
           "weight": 5
         },
         {
           "type": "minecraft:item",
-          "name": "aether:skyroot_remedy_bucket",
-          "weight": 2
+          "name": "aether:golden_amber",
+          "weight": 5
         },
         {
           "type": "minecraft:loot_table",
-          "name": "ancient_aether:selectors/accessories/generic",
+          "name": "ancient_aether:selectors/trims/generic",
           "weight": 3
         },
         {
           "type": "minecraft:loot_table",
-          "name": "ancient_aether:selectors/trims/generic"
+          "name": "ancient_aether:selectors/accessories/generic",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:skyroot_remedy_bucket"
         }
       ],
       "rolls": 1.0

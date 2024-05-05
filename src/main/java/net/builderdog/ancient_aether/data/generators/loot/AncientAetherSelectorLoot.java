@@ -121,17 +121,15 @@ public class AncientAetherSelectorLoot implements LootTableSubProvider {
 
         builder.accept(AncientAetherLoot.SELECTORS_HOLYSTONE_VASE, LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
-                        .add(LootItem.lootTableItem(AetherItems.AMBROSIUM_SHARD.get()).setWeight(15))
+                        .add(LootItem.lootTableItem(AetherItems.AMBROSIUM_SHARD.get()).setWeight(12))
                         .add(LootItem.lootTableItem(AetherItems.WHITE_APPLE.get()).setWeight(10))
                         .add(LootItem.lootTableItem(AetherItems.ENCHANTED_BERRY.get()).setWeight(10))
-                        .add(LootItem.lootTableItem(AetherBlocks.ICESTONE.get()).setWeight(7))
-                        .add(LootItem.lootTableItem(AetherItems.GOLDEN_AMBER.get()).setWeight(7))
-                        .add(LootItem.lootTableItem(AncientAetherItems.GRAPES.get()).setWeight(7))
                         .add(LootItem.lootTableItem(AetherItems.ZANITE_GEMSTONE.get()).setWeight(7))
-                        .add(LootItem.lootTableItem(Items.STRING).setWeight(5))
-                        .add(LootItem.lootTableItem(AetherItems.SKYROOT_REMEDY_BUCKET.get()).setWeight(2))
-                        .add(LootTableReference.lootTableReference(AncientAetherLoot.SELECTORS_ACCESSORIES_GENERIC).setWeight(3))
-                        .add(LootTableReference.lootTableReference(AncientAetherLoot.SELECTORS_TRIMS_GENERIC))
+                        .add(LootItem.lootTableItem(AetherBlocks.ICESTONE.get()).setWeight(5))
+                        .add(LootItem.lootTableItem(AetherItems.GOLDEN_AMBER.get()).setWeight(5))
+                        .add(LootTableReference.lootTableReference(AncientAetherLoot.SELECTORS_TRIMS_GENERIC).setWeight(3))
+                        .add(LootTableReference.lootTableReference(AncientAetherLoot.SELECTORS_ACCESSORIES_GENERIC).setWeight(2))
+                        .add(LootItem.lootTableItem(AetherItems.SKYROOT_REMEDY_BUCKET.get()))
                 ));
 
         builder.accept(AncientAetherLoot.SELECTORS_MOSSY_HOLYSTONE_VASE, LootTable.lootTable()
