@@ -5,7 +5,7 @@
     {
       "weight": 3,
       "element": {
-        "location": "ancient_aether:bronze_dungeon/rooms/platform_sub_room",
+        "location": "ancient_aether:bronze_dungeon/rooms/platform_sub_room_01",
         "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -14,7 +14,7 @@
     {
       "weight": 3,
       "element": {
-        "location": "ancient_aether:bronze_dungeon/rooms/pillar_sub_room",
+        "location": "ancient_aether:bronze_dungeon/rooms/platform_sub_room_02",
         "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -23,14 +23,41 @@
     {
       "weight": 3,
       "element": {
-        "location": "ancient_aether:bronze_dungeon/rooms/fountain_staircase_sub_room",
+        "location": "ancient_aether:bronze_dungeon/rooms/pillar_sub_room_01",
         "processors": "ancient_aether:bronze_dungeon",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
     },
     {
-      "weight": 2,
+      "weight": 3,
+      "element": {
+        "location": "ancient_aether:bronze_dungeon/rooms/pillar_sub_room_02",
+        "processors": "ancient_aether:bronze_dungeon",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "ancient_aether:bronze_dungeon/rooms/fountain_staircase_sub_room_01",
+        "processors": "ancient_aether:bronze_dungeon",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "ancient_aether:bronze_dungeon/rooms/fountain_staircase_sub_room_02",
+        "processors": "ancient_aether:bronze_dungeon",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
       "element": {
         "location": "ancient_aether:bronze_dungeon/rooms/library_staircase",
         "processors": "ancient_aether:bronze_dungeon",
