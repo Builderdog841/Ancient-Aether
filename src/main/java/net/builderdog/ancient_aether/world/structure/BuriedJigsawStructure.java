@@ -119,7 +119,7 @@ public class BuriedJigsawStructure extends Structure {
         int roomHeight = checkRoomHeight(templateManager, new ResourceLocation(AncientAether.MODID, "buried_jigsaw_spawn_radius"));
         int height = heightAccessor.getMinBuildHeight();
         int maxHeight = heightAccessor.getMaxBuildHeight() - belowTop;
-        int thickness = roomHeight + 2;
+        int thickness = roomHeight + 16;
         int currentThickness = 0;
         for (int y = height + aboveBottom; y <= maxHeight; y++) {
             if (checkEachCornerAtY(columns, y)) {
