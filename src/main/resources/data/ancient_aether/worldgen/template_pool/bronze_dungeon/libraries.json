@@ -1,6 +1,6 @@
 {
   "name": "ancient_aether:bronze_dungeon/libraries",
-  "fallback": "ancient_aether:bronze_dungeon/room_fallback",
+  "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
