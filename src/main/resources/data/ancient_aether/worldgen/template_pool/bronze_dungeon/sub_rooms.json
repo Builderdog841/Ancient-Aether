@@ -1,6 +1,6 @@
 {
   "name": "ancient_aether:bronze_dungeon/rooms",
-  "fallback": "minecraft:empty",
+  "fallback": "ancient_aether:bronze_dungeon/room_fallback",
   "elements": [
     {
       "weight": 3,
