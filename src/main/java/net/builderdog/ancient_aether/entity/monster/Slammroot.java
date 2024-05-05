@@ -171,12 +171,12 @@ public class Slammroot extends Slime {
 
     @Override
     protected @NotNull SoundEvent getSquishSound() {
-        return AncientAetherSoundEvents.ENTITY_SLAMMROOT_HURT.get();
+        return AncientAetherSoundEvents.ENTITY_SLAMMROOT_JUMP.get();
     }
 
     @Override
     protected @NotNull SoundEvent getJumpSound() {
-        return AncientAetherSoundEvents.ENTITY_SLAMMROOT_HURT.get();
+        return AncientAetherSoundEvents.ENTITY_SLAMMROOT_JUMP.get();
     }
 
     @Nonnull

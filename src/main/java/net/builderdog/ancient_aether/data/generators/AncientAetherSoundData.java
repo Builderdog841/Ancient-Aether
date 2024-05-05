@@ -132,6 +132,10 @@ public class AncientAetherSoundData extends SoundDefinitionsProvider {
                         sound("ancient_aether:entity/fluffalo/fluffalo_hurt"))
                 .subtitle("subtitles.ancient_aether.entity.fluffalo.death")
         );
+        add(AncientAetherSoundEvents.ENTITY_SLAMMROOT_JUMP, definition().with(
+                        sound("ancient_aether:entity/slammroot/slammroot_hurt"))
+                .subtitle("subtitles.ancient_aether.entity.slammroot.jump")
+        );
         add(AncientAetherSoundEvents.ENTITY_SLAMMROOT_HURT, definition().with(
                         sound("ancient_aether:entity/slammroot/slammroot_hurt"))
                 .subtitle("subtitles.ancient_aether.entity.slammroot.hurt")

@@ -28,11 +28,12 @@ public class AncientAetherSoundEvents {
     public static final RegistryObject<SoundEvent> ENTITY_FLUFFALO_MILK = register("entity.fluffalo.milk");
     public static final RegistryObject<SoundEvent> ENTITY_FLUFFALO_HURT = register("entity.fluffalo.hurt");
     public static final RegistryObject<SoundEvent> ENTITY_FLUFFALO_DEATH = register("entity.fluffalo.death");
+    public static final RegistryObject<SoundEvent> ENTITY_SLAMMROOT_JUMP = register("entity.slammroot.jump");
     public static final RegistryObject<SoundEvent> ENTITY_SLAMMROOT_HURT = register("entity.slammroot.hurt");
     public static final RegistryObject<SoundEvent> ENTITY_SLAMMROOT_DEATH = register("entity.slammroot.death");
-    public static final RegistryObject<SoundEvent> ENTITY_AERONAUTIC_LEAPER_DEATH = register("entity.aeronautic_leaper.death");
-    public static final RegistryObject<SoundEvent> ENTITY_AERONAUTIC_LEAPER_HURT = register("entity.aeronautic_leaper.hurt");
     public static final RegistryObject<SoundEvent> ENTITY_AERONAUTIC_LEAPER_JUMP = register("entity.aeronautic_leaper.jump");
+    public static final RegistryObject<SoundEvent> ENTITY_AERONAUTIC_LEAPER_HURT = register("entity.aeronautic_leaper.hurt");
+    public static final RegistryObject<SoundEvent> ENTITY_AERONAUTIC_LEAPER_DEATH = register("entity.aeronautic_leaper.death");
     public static final RegistryObject<SoundEvent> ENTITY_MUTATED_AECHOR_PLANT_SHOOT = register("entity.mutated_aechor_plant.shoot");
     public static final RegistryObject<SoundEvent> ENTITY_MUTATED_AECHOR_PLANT_HURT = register("entity.mutated_aechor_plant.hurt");
     public static final RegistryObject<SoundEvent> ENTITY_MUTATED_AECHOR_PLANT_DEATH = register("entity.mutated_aechor_plant.death");

@@ -105,6 +105,12 @@
     ],
     "subtitle": "subtitles.ancient_aether.entity.slammroot.hurt"
   },
+  "entity.slammroot.jump": {
+    "sounds": [
+      "ancient_aether:entity/slammroot/slammroot_hurt"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.slammroot.jump"
+  },
   "item.accessory.equip_ancient_pendant": {
     "sounds": [
       "item/armor/equip_chain1",
