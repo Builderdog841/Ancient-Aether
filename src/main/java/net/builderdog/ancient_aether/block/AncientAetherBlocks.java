@@ -12,9 +12,11 @@ import com.aetherteam.aether.block.natural.AetherLogBlock;
 import com.aetherteam.aether.blockentity.AltarBlockEntity;
 import com.aetherteam.aether.effect.AetherEffects;
 import com.aetherteam.aether.entity.AetherEntityTypes;
+import com.aetherteam.aether.item.AetherItems;
 import com.aetherteam.aether.item.block.BurnableBlockItem;
 import com.aetherteam.aether.mixin.mixins.common.accessor.FireBlockAccessor;
 import net.builderdog.ancient_aether.AncientAether;
+import net.builderdog.ancient_aether.AncientAetherConfig;
 import net.builderdog.ancient_aether.block.blocktype.*;
 import net.builderdog.ancient_aether.data.resources.AncientAetherLoot;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
@@ -224,7 +226,11 @@ public class AncientAetherBlocks {
     public static final RegistryObject<FlowerPotBlock> POTTED_ELEVETIA = BLOCKS.register("potted_elevetia", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ELEVETIA, Block.Properties.copy(Blocks.FLOWER_POT)));
 
     public static void registerFuels() {
-        AltarBlockEntity.addItemEnchantingTime(AncientAetherBlocks.ATMOSINE_CRYSTAL.get(), 500);
+        AltarBlockEntity.addItemEnchantingTime(AetherItems.AMBROSIUM_SHARD.get(), 250);
+        AltarBlockEntity.addItemEnchantingTime(AetherBlocks.AMBROSIUM_BLOCK.get(), 2500);
+        if (AncientAetherConfig.COMMON.experimental_features.get()) {
+            AltarBlockEntity.addItemEnchantingTime(AncientAetherBlocks.ATMOSINE_CRYSTAL.get(), 500);
+        }
     }
 
     public static void registerPots() {
