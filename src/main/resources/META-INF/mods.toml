@@ -10,6 +10,7 @@ logoFile="ancient_aether.png"
 credits= "Contributors: TunefulTurnip, Zepalesque | Translators: unroman, taizazanek, YuJianghan"
 authors="Builderdog"
 description="An exploration Aether Add-On that aims to overhaul the original ideas with modern takes."
+
 [[dependencies.ancient_aether]]
 modId="forge"
 mandatory=true
@@ -20,7 +21,7 @@ side="BOTH"
 [[dependencies.ancient_aether]]
 modId="aether"
 mandatory=true
-versionRange="[0,)"
+versionRange="[1.4.2,)"
 ordering="AFTER"
 side="BOTH"
 
