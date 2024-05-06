@@ -11,7 +11,7 @@ plugins {
     id 'org.moddingx.modgradle.sourcejar' version '4.0.4' apply false
 }
 
-version = '0.9.0'
+version = '0.9.1'
 group = 'net.builderdog.ancient_aether'
 archivesBaseName = 'ancient_aether'
 
