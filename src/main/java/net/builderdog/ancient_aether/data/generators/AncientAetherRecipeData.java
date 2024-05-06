@@ -43,6 +43,15 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
                 .unlockedBy(getHasName(AetherBlocks.LIGHT_HELLFIRE_STONE.get()), has(AetherBlocks.LIGHT_HELLFIRE_STONE.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGEL_GLASS.get(), 8)
+                .define('#', AetherBlocks.AEROGEL.get())
+                .define('X', AetherBlocks.SKYROOT_PLANKS.get())
+                .pattern("###")
+                .pattern("#X#")
+                .pattern("###")
+                .unlockedBy(getHasName(AetherBlocks.AEROGEL.get()), has(AetherBlocks.AEROGEL.get()))
+                .save(consumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGEL_GLASS_PANE.get(),16)
                 .define('#', AncientAetherBlocks.AEROGEL_GLASS.get())
                 .pattern("###")
@@ -235,9 +244,6 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
         polished(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_TILES.get(), AetherBlocks.CARVED_STONE.get());
         carpet(consumer, AncientAetherBlocks.FLUFFALO_CARPET.get(), AncientAetherBlocks.FLUFFALO_WOOL.get());
         oreBlockStorageRecipesRecipesWithCustomUnpacking(consumer, RecipeCategory.MISC, AncientAetherItems.VALKYRUM.get(), RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.VALKYRUM_BLOCK.get(), "valkyrum_from_valkyrum_block", "valkyrum");
-
-        fullWithMiddle(consumer, AncientAetherBlocks.GRAVITY_GRAVEL.get(), AetherBlocks.QUICKSOIL.get(), AncientAetherBlocks.ATMOSINE_CRYSTAL.get(), AncientAetherBlocks.ATMOSINE_CRYSTAL.get());
-        fullWithMiddle(consumer, AncientAetherBlocks.AEROGEL_GLASS.get(), AetherBlocks.AEROGEL.get(), AetherBlocks.SKYROOT_PLANKS.get(), AetherBlocks.AEROGEL.get());
 
         makePickaxe(AncientAetherItems.VALKYRUM_PICKAXE, AncientAetherItems.VALKYRUM).save(consumer);
         makeAxe(AncientAetherItems.VALKYRUM_AXE, AncientAetherItems.VALKYRUM).save(consumer);

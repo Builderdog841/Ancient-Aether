@@ -59,17 +59,6 @@ public abstract class AncientAetherRecipeProvider extends AetherRecipeProvider {
                 .save(consumer, name(getItemName(flower) + "_to_" + color + "_dye"));
     }
 
-    protected static void fullWithMiddle(Consumer<FinishedRecipe> consumer, ItemLike result, ItemLike outer, ItemLike inner, ItemLike unlockedBy) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result, 8)
-                .define('#', outer)
-                .define('X', inner)
-                .pattern("###")
-                .pattern("#X#")
-                .pattern("###")
-                .unlockedBy(getHasName(unlockedBy), has(unlockedBy))
-                .save(consumer);
-    }
-
     protected static void copyAetherSmithingTemplate(Consumer<FinishedRecipe> consumer, ItemLike template, ItemLike block) {
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, template, 2)
                 .define('#', AncientAetherItems.VALKYRUM.get())
