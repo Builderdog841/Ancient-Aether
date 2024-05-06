@@ -25,18 +25,20 @@ public class AncientAetherClient {
 
             if (AncientAetherConfig.CLIENT.config_overrides.get()) {
                 AetherConfig.CLIENT.enable_aether_menu_button.set(false);
-                CumulusConfig.CLIENT.enable_menu_list_button.set(true);
-                CumulusConfig.CLIENT.active_menu.set("ancient_aether:ancient_aether");
-                AetherConfig.COMMON.add_ruined_portal_automatically.set(true);
-                AetherConfig.COMMON.add_temporary_freezing_automatically.set(true);
-                AeroBlenderConfig.COMMON.vanillaAetherRegionWeight.set(0);
-
                 AetherConfig.CLIENT.enable_aether_menu_button.save();
+                CumulusConfig.CLIENT.enable_menu_list_button.set(true);
                 CumulusConfig.CLIENT.enable_menu_list_button.save();
-                CumulusConfig.CLIENT.active_menu.save();
+                AetherConfig.COMMON.add_ruined_portal_automatically.set(true);
                 AetherConfig.COMMON.add_ruined_portal_automatically.save();
+                AetherConfig.COMMON.add_temporary_freezing_automatically.set(true);
                 AetherConfig.COMMON.add_temporary_freezing_automatically.save();
+                AeroBlenderConfig.COMMON.vanillaAetherRegionWeight.set(0);
                 AeroBlenderConfig.COMMON.vanillaAetherRegionWeight.save();
+
+                if (AncientAetherConfig.CLIENT.title_screen_override.get()) {
+                    CumulusConfig.CLIENT.active_menu.set("ancient_aether:ancient_aether");
+                    CumulusConfig.CLIENT.active_menu.save();
+                }
             }
         });
     }

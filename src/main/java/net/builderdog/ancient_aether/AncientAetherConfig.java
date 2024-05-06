@@ -59,6 +59,7 @@ public class AncientAetherConfig {
         public final ConfigValue<Boolean> moa_egg_tooltips;
         public final ConfigValue<Boolean> dungeon_block_tooltips;
         public final ConfigValue<Boolean> custom_boss_bars;
+        public final ConfigValue<Boolean> title_screen_override;
         public final ConfigValue<Boolean> the_aether_title;
         public final ConfigValue<Boolean> config_overrides;
 
@@ -87,6 +88,11 @@ public class AncientAetherConfig {
                     .comment("Gives Ancient Aether Bosses custom boss bar designs")
                     .translation("config.ancient_aether.client.gui.custom_boss_bars")
                     .define("Custom Boss Bars", true);
+
+            title_screen_override = builder
+                    .comment("Changes the Title Screen to the Ancient Aether Theme on start-up")
+                    .translation("config.ancient_aether.client.gui.title_screen_override")
+                    .define("Title Screen Override", true);
 
             the_aether_title = builder
                     .comment("Changes the title in the Ancient Aether Title Screen to: The Aether")
