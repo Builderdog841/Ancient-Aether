@@ -1,11 +1,11 @@
 package net.builderdog.ancient_aether.world.feature;
 
-import com.aetherteam.aether.data.resources.registries.AetherConfiguredFeatures;
 import com.mojang.serialization.Codec;
 import net.builderdog.ancient_aether.world.feature.configuration.CrystalIslandConfiguration;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
@@ -22,12 +22,12 @@ public class ConfigurableCrystalIslandFeature extends Feature<CrystalIslandConfi
     public boolean place(FeaturePlaceContext<CrystalIslandConfiguration> context) {
         CrystalIslandConfiguration config = context.config();
 
-        PlacedFeature feature = PlacementUtils.inlinePlaced(context.level().registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE).getHolderOrThrow(AetherConfiguredFeatures.CRYSTAL_TREE_CONFIGURATION)).get();
+        PlacedFeature feature = PlacementUtils.inlinePlaced(context.level().registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE).getHolderOrThrow(ResourceKey.create(Registries.CONFIGURED_FEATURE, config.feature()))).get();
         if (feature.place(context.level(), context.chunkGenerator(), context.random(), context.origin().above())) {
             for (int i = 0; i < 3; i++) {
                 BlockState state;
                 if (i == 0) {
-                    state = config.surfaceBlock();
+                    state = config.topBlock();
                 } else {
                     state = config.islandBlock();
                 }

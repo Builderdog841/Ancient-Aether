@@ -7,8 +7,8 @@
         "Name": "ancient_aether:wynd_ice"
       }
     },
-    "lower_radius": 4.464102,
-    "radius": 6.6282034,
+    "radius_bottom": 4.464102,
+    "radius_top": 6.6282034,
     "valid_blocks": "aether:aether_grass_block",
     "y_range": {
       "max_inclusive": 128,

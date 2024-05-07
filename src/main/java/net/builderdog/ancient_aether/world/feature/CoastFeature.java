@@ -27,8 +27,8 @@ public class CoastFeature extends Feature<CoastConfiguration> {
                     BlockPos placementPos = new BlockPos(x, y, z);
                     BlockPos voidPos = new BlockPos(x, y - 16, z);
                     if (level.getBlockState(placementPos).isAir() && level.getBlockState(voidPos).isAir() && level.getBlockState(placementPos.above()).is(config.validBlocks()) && level.getBlockState(placementPos.above(2)).isAir()) {
-                        BlockPlacementUtil.placeDisk(level, config.block(), placementPos, config.radius().sample(random), random);
-                        BlockPlacementUtil.placeDisk(level, config.block(), placementPos.below(), config.lowerRadius().sample(random), random);
+                        BlockPlacementUtil.placeDisk(level, config.block(), placementPos, config.radiusTop().sample(random), random);
+                        BlockPlacementUtil.placeDisk(level, config.block(), placementPos.below(), config.radiusBottom().sample(random), random);
                         break;
                     }
                 }
