@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-06T12:45:27.261433	Recipes
+// 1.20.1	2024-05-07T09:14:52.2763973	Recipes
 80fcf482f4a115d6058352efc822bde4344b7726 data/aether/advancements/recipes/building_blocks/holiday_leaves.json
 b5865c7f00b06818982b889af9a3ece8ec9d48b0 data/aether/recipes/holiday_leaves.json
 56e3e5de228181a076581addd3cb59475c11fcaf data/ancient_aether/advancements/recipes/building_blocks/aerogel_glass.json
@@ -266,6 +266,9 @@ d90b3098ac19ac3e3bfdd8a4da5cb44bb90914a9 data/ancient_aether/recipes/stripped_hi
 8dde8400ae560e07b022b40d771424ec2aee0b84 data/ancient_aether/recipes/stripped_sakura_wood.json
 c7fd688522f6138850d44c4a2193548c92809a56 data/ancient_aether/recipes/sunset_rose_to_red_dye.json
 d6bef934050aaa91b0cda8946a8642563d56bce9 data/ancient_aether/recipes/sun_lantern.json
+6e9bab469174ceed108fb403e5787c038fd58913 data/ancient_aether/recipes/swet_ball_enchanted_aether_grass.json
+98b75d9a085f5fcf1c36bdcc12dd061510101543 data/ancient_aether/recipes/swet_ball_frozen_aether_grass.json
+8385b241ec878cf75137c7e5e016272e39d9fb0c data/ancient_aether/recipes/swet_ball_pale_aether_grass.json
 dbeb9751fab4c9ba358f17b587dd0fc201b1958b data/ancient_aether/recipes/teal_moa_incubation.json
 ce1eea01e9c85564e52a913217af1ad872779e84 data/ancient_aether/recipes/turquoise_moa_incubation.json
 39e827a5d2e6c8018ea0742487ee4fd35e6727cd data/ancient_aether/recipes/valkyrum.json

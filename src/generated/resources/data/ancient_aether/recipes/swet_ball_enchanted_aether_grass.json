@@ -1,0 +1,13 @@
+{
+  "type": "aether:swet_ball_conversion",
+  "biome": "#ancient_aether:has_enchanted_aether_grass",
+  "ingredient": {
+    "block": "aether:aether_dirt"
+  },
+  "result": {
+    "block": "aether:aether_grass_block",
+    "properties": {
+      "type": "enchanted"
+    }
+  }
+}

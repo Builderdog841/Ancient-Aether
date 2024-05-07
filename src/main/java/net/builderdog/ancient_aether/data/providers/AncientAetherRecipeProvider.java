@@ -1,17 +1,26 @@
 package net.builderdog.ancient_aether.data.providers;
 
 import com.aetherteam.aether.data.providers.AetherRecipeProvider;
+import com.aetherteam.aether.recipe.AetherRecipeSerializers;
+import com.aetherteam.aether.recipe.builder.BiomeParameterRecipeBuilder;
+import com.aetherteam.nitrogen.recipe.BlockStateIngredient;
+import com.aetherteam.nitrogen.recipe.builder.BlockStateRecipeBuilder;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraftforge.common.Tags;
 
+import java.util.Map;
 import java.util.function.Consumer;
 
 public abstract class AncientAetherRecipeProvider extends AetherRecipeProvider {
@@ -77,5 +86,9 @@ public abstract class AncientAetherRecipeProvider extends AetherRecipeProvider {
                         Ingredient.of(ItemTags.TRIM_MATERIALS), RecipeCategory.MISC)
                 .unlocks("smithing_templates",
                         has(armorTrim)).save(consumer, new ResourceLocation(id, getItemName(armorTrim) + "_smithing_trim"));
+    }
+
+    protected BlockStateRecipeBuilder swetBallConversionWithProperties(Block result, Map<Property<?>, Comparable<?>> resultProperties, Block ingredient, TagKey<Biome> tagKey) {
+        return BiomeParameterRecipeBuilder.recipe(BlockStateIngredient.of(ingredient), result, resultProperties, tagKey, AetherRecipeSerializers.SWET_BALL_CONVERSION.get());
     }
 }

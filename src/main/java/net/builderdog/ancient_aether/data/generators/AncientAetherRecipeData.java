@@ -7,6 +7,8 @@ import com.aetherteam.aether.item.AetherItems;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
+import net.builderdog.ancient_aether.block.blockstate.AetherGrassType;
+import net.builderdog.ancient_aether.block.blockstate.AncientAetherBlockStateProperties;
 import net.builderdog.ancient_aether.data.providers.AncientAetherRecipeProvider;
 import net.builderdog.ancient_aether.entity.AncientAetherMoaTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
@@ -22,6 +24,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Map;
 import java.util.function.Consumer;
 
 public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
@@ -344,5 +347,9 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
         moaIncubationRecipe(AetherEntityTypes.MOA.get(), AncientAetherMoaTypes.SAKURA, AncientAetherItems.SAKURA_MOA_EGG.get()).save(consumer, name("sakura_moa_incubation"));
         moaIncubationRecipe(AetherEntityTypes.MOA.get(), AncientAetherMoaTypes.BURGUNDY, AncientAetherItems.BURGUNDY_MOA_EGG.get()).save(consumer, name("burgundy_moa_incubation"));
         moaIncubationRecipe(AetherEntityTypes.MOA.get(), AncientAetherMoaTypes.VIOLET, AncientAetherItems.VIOLET_MOA_EGG.get()).save(consumer, name("violet_moa_incubation"));
+
+        swetBallConversionWithProperties(AetherBlocks.AETHER_GRASS_BLOCK.get(), Map.of(AncientAetherBlockStateProperties.TYPE, AetherGrassType.FROZEN), AetherBlocks.AETHER_DIRT.get(), AncientAetherTags.Biomes.HAS_FROZEN_AETHER_GRASS).save(consumer, name("swet_ball_frozen_aether_grass"));
+        swetBallConversionWithProperties(AetherBlocks.AETHER_GRASS_BLOCK.get(), Map.of(AncientAetherBlockStateProperties.TYPE, AetherGrassType.PALE), AetherBlocks.AETHER_DIRT.get(), AncientAetherTags.Biomes.HAS_PALE_AETHER_GRASS).save(consumer, name("swet_ball_pale_aether_grass"));
+        swetBallConversionWithProperties(AetherBlocks.AETHER_GRASS_BLOCK.get(), Map.of(AncientAetherBlockStateProperties.TYPE, AetherGrassType.ENCHANTED), AetherBlocks.AETHER_DIRT.get(), AncientAetherTags.Biomes.HAS_ENCHANTED_AETHER_GRASS).save(consumer, name("swet_ball_enchanted_aether_grass"));
     }
 }
