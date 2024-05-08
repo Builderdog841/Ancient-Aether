@@ -39,7 +39,7 @@ public class AncientAetherOrePlacements {
                 NitrogenPlacedFeatureBuilders.commonOrePlacement(10,
                         HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(0), VerticalAnchor.aboveBottom(96))));
         AncientAetherPlacementUtils.register(context, BONUS_GRAVITITE_ORE, configuredFeatures.getOrThrow(AetherConfiguredFeatures.ORE_GRAVITITE_BURIED_CONFIGURATION),
-                NitrogenPlacedFeatureBuilders.commonOrePlacement(7,
+                NitrogenPlacedFeatureBuilders.commonOrePlacement(8,
                         HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(0), VerticalAnchor.aboveBottom(256))));
     }
 }
