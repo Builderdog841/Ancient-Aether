@@ -115,7 +115,7 @@ public class AncientAetherSoundData extends SoundDefinitionsProvider {
         );
 
         add(AncientAetherSoundEvents.ENTITY_FLUFFALO_AMBIENT, definition().with(
-                        sound("ancient_aether:entity/fluffalo/fluffalo_idle"))
+                        sound("ancient_aether:entity/fluffalo/idle"))
                 .subtitle("subtitles.ancient_aether.entity.fluffalo.ambient")
         );
         add(AncientAetherSoundEvents.ENTITY_FLUFFALO_MILK, definition().with(
@@ -125,23 +125,23 @@ public class AncientAetherSoundData extends SoundDefinitionsProvider {
                 .subtitle("subtitles.ancient_aether.entity.fluffalo.milk")
         );
         add(AncientAetherSoundEvents.ENTITY_FLUFFALO_HURT, definition().with(
-                        sound("ancient_aether:entity/fluffalo/fluffalo_hurt"))
+                        sound("ancient_aether:entity/fluffalo/hurt"))
                 .subtitle("subtitles.ancient_aether.entity.fluffalo.hurt")
         );
         add(AncientAetherSoundEvents.ENTITY_FLUFFALO_DEATH, definition().with(
-                        sound("ancient_aether:entity/fluffalo/fluffalo_hurt"))
+                        sound("ancient_aether:entity/fluffalo/hurt"))
                 .subtitle("subtitles.ancient_aether.entity.fluffalo.death")
         );
         add(AncientAetherSoundEvents.ENTITY_SLAMMROOT_JUMP, definition().with(
-                        sound("ancient_aether:entity/slammroot/slammroot_hurt"))
+                        sound("ancient_aether:entity/slammroot/hurt"))
                 .subtitle("subtitles.ancient_aether.entity.slammroot.jump")
         );
         add(AncientAetherSoundEvents.ENTITY_SLAMMROOT_HURT, definition().with(
-                        sound("ancient_aether:entity/slammroot/slammroot_hurt"))
+                        sound("ancient_aether:entity/slammroot/hurt"))
                 .subtitle("subtitles.ancient_aether.entity.slammroot.hurt")
         );
         add(AncientAetherSoundEvents.ENTITY_SLAMMROOT_DEATH, definition().with(
-                        sound("ancient_aether:entity/slammroot/slammroot_hurt"))
+                        sound("ancient_aether:entity/slammroot/hurt"))
                 .subtitle("subtitles.ancient_aether.entity.slammroot.death")
         );
         add(AncientAetherSoundEvents.ENTITY_AERONAUTIC_LEAPER_DEATH, definition().with(
@@ -169,25 +169,22 @@ public class AncientAetherSoundData extends SoundDefinitionsProvider {
                         sound("random/bow"))
                 .subtitle("subtitles.ancient_aether.entity.mutated_aechor_plant.shoot.needle")
         );
-        add(AncientAetherSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_SHOOT_SPORE_BOMB,
-                definition().with(sound("ancient_aether:entity/mutated_aechor_plant/shoot_spore_bomb"))
-                        .subtitle("subtitles.ancient_aether.entity.mutated_aechor_plant.shoot.spore_bomb")
+        add(AncientAetherSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_SHOOT_SPORE_BOMB, definition().with(
+                sound("ancient_aether:entity/mutated_aechor_plant/shoot_spore_bomb")
+                ).subtitle("subtitles.ancient_aether.entity.mutated_aechor_plant.shoot.spore_bomb")
         );
         add(AncientAetherSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_HURT, definition().with(
-                        sound("damage/hit1"),
-                        sound("damage/hit2"),
-                        sound("damage/hit3"))
-                .subtitle("subtitles.ancient_aether.entity.mutated_aechor_plant.hurt")
+                sound("ancient_aether:entity/mutated_aechor_plant/hurt")
+                ).subtitle("subtitles.ancient_aether.entity.mutated_aechor_plant.hurt")
         );
         add(AncientAetherSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_DEATH, definition().with(
-                        sound("damage/fallbig"))
-                .subtitle("subtitles.ancient_aether.entity.mutated_aechor_plant.death")
+                sound("ancient_aether:entity/mutated_aechor_plant/hurt")
+                ).subtitle("subtitles.ancient_aether.entity.mutated_aechor_plant.death")
         );
-        add(AncientAetherSoundEvents.ENTITY_REMEDY_CRYSTAL_EXPLODE,
-                definition().with(
-                        sound("minecraft:random/glass1"),
-                        sound("minecraft:random/glass2"),
-                        sound("minecraft:random/glass3")
+        add(AncientAetherSoundEvents.ENTITY_REMEDY_CRYSTAL_EXPLODE, definition().with(
+                        sound("random/glass1"),
+                        sound("random/glass2"),
+                        sound("random/glass3")
                 ).subtitle("subtitles.ancient_aether.entity.remedy_crystal.explode")
         );
     }

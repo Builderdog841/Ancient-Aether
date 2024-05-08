@@ -41,19 +41,19 @@
   },
   "entity.fluffalo.ambient": {
     "sounds": [
-      "ancient_aether:entity/fluffalo/fluffalo_idle"
+      "ancient_aether:entity/fluffalo/idle"
     ],
     "subtitle": "subtitles.ancient_aether.entity.fluffalo.ambient"
   },
   "entity.fluffalo.death": {
     "sounds": [
-      "ancient_aether:entity/fluffalo/fluffalo_hurt"
+      "ancient_aether:entity/fluffalo/hurt"
     ],
     "subtitle": "subtitles.ancient_aether.entity.fluffalo.death"
   },
   "entity.fluffalo.hurt": {
     "sounds": [
-      "ancient_aether:entity/fluffalo/fluffalo_hurt"
+      "ancient_aether:entity/fluffalo/hurt"
     ],
     "subtitle": "subtitles.ancient_aether.entity.fluffalo.hurt"
   },
@@ -67,15 +67,13 @@
   },
   "entity.mutated_aechor_plant.death": {
     "sounds": [
-      "damage/fallbig"
+      "ancient_aether:entity/mutated_aechor_plant/hurt"
     ],
     "subtitle": "subtitles.ancient_aether.entity.mutated_aechor_plant.death"
   },
   "entity.mutated_aechor_plant.hurt": {
     "sounds": [
-      "damage/hit1",
-      "damage/hit2",
-      "damage/hit3"
+      "ancient_aether:entity/mutated_aechor_plant/hurt"
     ],
     "subtitle": "subtitles.ancient_aether.entity.mutated_aechor_plant.hurt"
   },
@@ -101,19 +99,19 @@
   },
   "entity.slammroot.death": {
     "sounds": [
-      "ancient_aether:entity/slammroot/slammroot_hurt"
+      "ancient_aether:entity/slammroot/hurt"
     ],
     "subtitle": "subtitles.ancient_aether.entity.slammroot.death"
   },
   "entity.slammroot.hurt": {
     "sounds": [
-      "ancient_aether:entity/slammroot/slammroot_hurt"
+      "ancient_aether:entity/slammroot/hurt"
     ],
     "subtitle": "subtitles.ancient_aether.entity.slammroot.hurt"
   },
   "entity.slammroot.jump": {
     "sounds": [
-      "ancient_aether:entity/slammroot/slammroot_hurt"
+      "ancient_aether:entity/slammroot/hurt"
     ],
     "subtitle": "subtitles.ancient_aether.entity.slammroot.jump"
   },
