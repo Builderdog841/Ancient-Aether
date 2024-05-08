@@ -40,8 +40,8 @@ public class AncientAetherRegistrySets extends DatapackBuiltinEntriesProvider {
             .add(Registries.CONFIGURED_FEATURE, AncientAetherFeatureUtils::bootstrap)
             .add(Registries.PLACED_FEATURE, AncientAetherPlacementUtils::bootstrap)
             .add(Registries.CONFIGURED_CARVER, AncientAetherConfiguredCarvers::bootstrap)
-            .add(Registries.PROCESSOR_LIST, AncientAetherProcessorLists::bootstrap)
             .add(ForgeRegistries.Keys.BIOME_MODIFIERS, AncientAetherBiomeModifiers::bootstrap)
+            .add(Registries.PROCESSOR_LIST, AncientAetherProcessorLists::bootstrap)
             .add(Registries.NOISE, AncientAetherNoises::bootstrap)
             .add(Registries.TRIM_MATERIAL, AncientAetherTrimMaterials::bootstrap)
             .add(Registries.TRIM_PATTERN, AncientAetherTrimPatterns::bootstrap);
