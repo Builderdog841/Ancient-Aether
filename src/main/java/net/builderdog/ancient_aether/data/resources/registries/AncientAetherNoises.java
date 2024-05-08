@@ -12,6 +12,7 @@ public class AncientAetherNoises {
     public static final ResourceKey<NormalNoise.NoiseParameters> VEGETATION = createKey("vegetation");
     public static final ResourceKey<NormalNoise.NoiseParameters> EROSION = createKey("erosion");
     public static final ResourceKey<NormalNoise.NoiseParameters> JAGGED = createKey("jagged");
+    public static final ResourceKey<NormalNoise.NoiseParameters> NOISE_CAVES = createKey("noise_caves");
     public static final ResourceKey<NormalNoise.NoiseParameters> AMPLIFIER = createKey("amplifier");
     public static final ResourceKey<NormalNoise.NoiseParameters> AMPLIFIER_FACTOR = createKey("amplifier_factor");
     public static final ResourceKey<NormalNoise.NoiseParameters> SKYLANDS_AQUIFER = createKey("skylands_aquifer");
@@ -26,10 +27,11 @@ public class AncientAetherNoises {
         register(context, VEGETATION, -8, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0);
         register(context, EROSION, -9, 1.5, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
         register(context, JAGGED, -16, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0);
-        register(context, SKYLANDS_AQUIFER, -6, 1.5, 0.5, 0.0, 0.0, 0.0);
-        register(context, SKYLANDS_AQUIFER_FACTOR, -8, 1.25, 0.0, 0.25, 0.0);
+        register(context, NOISE_CAVES, -7, 1.0, 2.5, 1.5, 0.0, 0.5, 0.0, 0.0);
         register(context, AMPLIFIER, -7, 1.0, 2.0, 1.0, 0.0, 0.0, 0.0, 0.0);
         register(context, AMPLIFIER_FACTOR, -8, 0.8, 0.6, 0.25, 0.0, 0.0, 0.0, 0.0);
+        register(context, SKYLANDS_AQUIFER, -6, 1.5, 0.5, 0.0, 0.0, 0.0);
+        register(context, SKYLANDS_AQUIFER_FACTOR, -8, 1.25, 0.0, 0.25, 0.0);
     }
 
     public static void register(BootstapContext<NormalNoise.NoiseParameters> context, ResourceKey<NormalNoise.NoiseParameters> key, int firstOctave, double firstAmplitude, double... amplitudes) {

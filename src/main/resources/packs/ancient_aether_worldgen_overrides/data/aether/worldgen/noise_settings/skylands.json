@@ -22,7 +22,7 @@
   },
   "noise_router": {
     "barrier": 0.0,
-    "continents": 0.0,
+    "continents": "ancient_aether:caves/noise",
     "depth": "ancient_aether:depth",
     "erosion": "ancient_aether:erosion",
     "final_density": {
