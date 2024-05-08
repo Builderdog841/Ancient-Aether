@@ -33,7 +33,7 @@ public class AncientAetherOrePlacements {
                 NitrogenPlacedFeatureBuilders.commonOrePlacement(4,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(256))));
         AncientAetherPlacementUtils.register(context, VALKYRUM_ORE, configuredFeatures.getOrThrow(AncientAetherOreFeatures.VALKYRUM_ORE),
-                NitrogenPlacedFeatureBuilders.commonOrePlacement(15,
+                NitrogenPlacedFeatureBuilders.commonOrePlacement(9,
                         HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(0), VerticalAnchor.aboveBottom(64))));
         AncientAetherPlacementUtils.register(context, BONUS_AMBROSIUM_ORE, configuredFeatures.getOrThrow(AetherConfiguredFeatures.ORE_AMBROSIUM_CONFIGURATION),
                 NitrogenPlacedFeatureBuilders.commonOrePlacement(10,
