@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-04T15:41:17.4805399	Tags for minecraft:block mod id ancient_aether
+// 1.20.1	2024-05-08T18:29:57.0258485	Tags for minecraft:block mod id ancient_aether
 f0714fea3e89b69a7a6a6c729a028562bc0bd412 data/aether/tags/blocks/aerclouds.json
 c2354d6e9e1ad7d82a74dc026cfd3d3925683c7c data/aether/tags/blocks/aether_island_blocks.json
 c4903e6639b04406c020546d7cf2b0d7043443a7 data/aether/tags/blocks/aether_portal_blacklist.json
@@ -48,7 +48,7 @@ caebe6e6db3d95c4715e1f9ce91ddb56aa9fc8d7 data/minecraft/tags/blocks/ceiling_hang
 ce63abfd7d30dfff9c3c99ad85c8cc2c2ce03c44 data/minecraft/tags/blocks/logs_that_burn.json
 a6d024b3e3b636c5adaa1abe204238f85bf8b540 data/minecraft/tags/blocks/mineable/axe.json
 d897ce256cffee30bad4e6d2a7d22c74981bb204 data/minecraft/tags/blocks/mineable/hoe.json
-9433fa6bc44be4b9336e3721c76b75554908d991 data/minecraft/tags/blocks/mineable/pickaxe.json
+ba1f67b44904677041c6ec7ad752c505459435b1 data/minecraft/tags/blocks/mineable/pickaxe.json
 51a9bef73da8240212ff1bc2e347dcbce52bbbd2 data/minecraft/tags/blocks/mineable/shovel.json
 232e4265910093c96244c3cd561d4db11df99c3b data/minecraft/tags/blocks/needs_diamond_tool.json
 11c24963c0005c857d0a2653ae0aa2ac82614af2 data/minecraft/tags/blocks/needs_stone_tool.json

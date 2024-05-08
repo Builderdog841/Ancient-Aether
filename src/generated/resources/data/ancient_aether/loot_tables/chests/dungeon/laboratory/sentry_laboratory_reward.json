@@ -30,6 +30,22 @@
           "weight": 3
         },
         {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "aether:enchanted_gravitite",
+          "weight": 3
+        },
+        {
           "type": "minecraft:loot_table",
           "name": "ancient_aether:chests/dungeon/moa_eggs_common",
           "weight": 2
@@ -37,22 +53,6 @@
         {
           "type": "minecraft:item",
           "name": "aether:gravitite_hoe",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 2.0,
-                "min": 1.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
-          "name": "aether:enchanted_gravitite",
           "weight": 2
         },
         {
