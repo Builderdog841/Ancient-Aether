@@ -34,7 +34,8 @@ public class AncientAetherSoundEvents {
     public static final RegistryObject<SoundEvent> ENTITY_AERONAUTIC_LEAPER_JUMP = register("entity.aeronautic_leaper.jump");
     public static final RegistryObject<SoundEvent> ENTITY_AERONAUTIC_LEAPER_HURT = register("entity.aeronautic_leaper.hurt");
     public static final RegistryObject<SoundEvent> ENTITY_AERONAUTIC_LEAPER_DEATH = register("entity.aeronautic_leaper.death");
-    public static final RegistryObject<SoundEvent> ENTITY_MUTATED_AECHOR_PLANT_SHOOT = register("entity.mutated_aechor_plant.shoot");
+    public static final RegistryObject<SoundEvent> ENTITY_MUTATED_AECHOR_PLANT_SHOOT_NEEDLE = register("entity.mutated_aechor_plant.shoot.needle");
+    public static final RegistryObject<SoundEvent> ENTITY_MUTATED_AECHOR_PLANT_SHOOT_SPORE_BOMB = register("entity.mutated_aechor_plant.shoot.spore_bomb");
     public static final RegistryObject<SoundEvent> ENTITY_MUTATED_AECHOR_PLANT_HURT = register("entity.mutated_aechor_plant.hurt");
     public static final RegistryObject<SoundEvent> ENTITY_MUTATED_AECHOR_PLANT_DEATH = register("entity.mutated_aechor_plant.death");
     public static final RegistryObject<SoundEvent> ENTITY_REMEDY_CRYSTAL_EXPLODE = register("entity.remedy_crystal.explode");

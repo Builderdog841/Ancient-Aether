@@ -79,11 +79,17 @@
     ],
     "subtitle": "subtitles.ancient_aether.entity.mutated_aechor_plant.hurt"
   },
-  "entity.mutated_aechor_plant.shoot": {
+  "entity.mutated_aechor_plant.shoot.needle": {
     "sounds": [
       "random/bow"
     ],
-    "subtitle": "subtitles.ancient_aether.entity.mutated_aechor_plant.shoot"
+    "subtitle": "subtitles.ancient_aether.entity.mutated_aechor_plant.shoot.needle"
+  },
+  "entity.mutated_aechor_plant.shoot.spore_bomb": {
+    "sounds": [
+      "ancient_aether:entity/mutated_aechor_plant/shoot_spore_bomb"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.mutated_aechor_plant.shoot.spore_bomb"
   },
   "entity.remedy_crystal.explode": {
     "sounds": [

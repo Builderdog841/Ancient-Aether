@@ -370,7 +370,8 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addSubtitle("entity", "aeronautic_leaper.jump", "Aeronautic Leaper leaps");
         addSubtitle("entity", "aeronautic_leaper.hurt", "Aeronautic Leaper hurts");
         addSubtitle("entity", "aeronautic_leaper.death", "Aeronautic Leaper dies");
-        addSubtitle("entity", "mutated_aechor_plant.shoot", "Mutated Aechor Plant shoots");
+        addSubtitle("entity", "mutated_aechor_plant.shoot.needle", "Mutated Aechor Plant shoots Needle");
+        addSubtitle("entity", "mutated_aechor_plant.shoot.spore_bomb", "Mutated Aechor Plant shoots Spore Bomb");
         addSubtitle("entity", "mutated_aechor_plant.hurt", "Mutated Aechor Plant hurts");
         addSubtitle("entity", "mutated_aechor_plant.death", "Mutated Aechor Plant dies");
         addSubtitle("entity", "remedy_crystal.explode", "Remedy Crystal explodes");

@@ -50,6 +50,7 @@ import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.Blocks;
@@ -234,34 +235,25 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
 
     @Override
     public void performRangedAttack(@NotNull LivingEntity target, float distanceFactor) {
+        SporeBomb sporeBomb = new SporeBomb(level(), this);
+        MutatedAechorNeedle needle = new MutatedAechorNeedle(level(), this);
         if (isActive()) {
             if (RandomSource.create().nextInt(2) == 0) {
-                poisonBombRangedAttack(target);
+                shootProjectile(target, sporeBomb, AncientAetherSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_SHOOT_SPORE_BOMB.get());
             } else {
-                needleRangedAttack(target);
+                shootProjectile(target, needle, AncientAetherSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_SHOOT_NEEDLE.get());
             }
-            playSound(AncientAetherSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_SHOOT.get(), 2.0F, 1.0F / (getRandom().nextFloat() * 0.4F + 0.8F));
         }
     }
 
-    public void needleRangedAttack(@NotNull LivingEntity target) {
-        MutatedAechorNeedle needle = new MutatedAechorNeedle(level(), this);
+    private void shootProjectile(@NotNull LivingEntity target, Projectile projectile, SoundEvent sound) {
         double d0 = target.getX() - getX();
-        double d1 = target.getY(0.75) - needle.getY();
+        double d1 = target.getY(0.75) - projectile.getY();
         double d2 = target.getZ() - getZ();
         double d3 = Mth.sqrt((float) (Mth.square(d0) + Mth.square(d2)));
-        needle.shoot(d0, d1 + d3 * 0.2, d2, 1.0F, (float) (14 - level().getDifficulty().getId() * 4));
-        level().addFreshEntity(needle);
-    }
-
-    public void poisonBombRangedAttack(@NotNull LivingEntity target) {
-        SporeBomb poisonBomb = new SporeBomb(level(), this);
-        double d0 = target.getX() - getX();
-        double d1 = target.getY(0.75) - poisonBomb.getY();
-        double d2 = target.getZ() - getZ();
-        double d3 = Mth.sqrt((float) (Mth.square(d0) + Mth.square(d2)));
-        poisonBomb.shoot(d0, d1 + d3 * 0.2, d2, 1.0F, (float) (14 - level().getDifficulty().getId() * 4));
-        level().addFreshEntity(poisonBomb);
+        projectile.shoot(d0, d1 + d3 * 0.2, d2, 1.0F, (float) (14 - level().getDifficulty().getId() * 4));
+        playSound(sound, 2.0F, 1.0F / (getRandom().nextFloat() * 0.4F + 0.8F));
+        level().addFreshEntity(projectile);
     }
 
     @SuppressWarnings("deprecation")

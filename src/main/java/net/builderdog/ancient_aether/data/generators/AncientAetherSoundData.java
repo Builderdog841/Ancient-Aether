@@ -165,9 +165,13 @@ public class AncientAetherSoundData extends SoundDefinitionsProvider {
                         sound("mob/slime/big4"))
                 .subtitle("subtitles.ancient_aether.entity.aeronautic_leaper.jump")
         );
-        add(AncientAetherSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_SHOOT, definition().with(
+        add(AncientAetherSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_SHOOT_NEEDLE, definition().with(
                         sound("random/bow"))
-                .subtitle("subtitles.ancient_aether.entity.mutated_aechor_plant.shoot")
+                .subtitle("subtitles.ancient_aether.entity.mutated_aechor_plant.shoot.needle")
+        );
+        add(AncientAetherSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_SHOOT_SPORE_BOMB,
+                definition().with(sound("ancient_aether:entity/mutated_aechor_plant/shoot_spore_bomb"))
+                        .subtitle("subtitles.ancient_aether.entity.mutated_aechor_plant.shoot.spore_bomb")
         );
         add(AncientAetherSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_HURT, definition().with(
                         sound("damage/hit1"),
