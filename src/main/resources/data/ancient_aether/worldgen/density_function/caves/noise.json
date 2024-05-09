@@ -4,7 +4,7 @@
     "type": "minecraft:range_choice",
     "input": "ancient_aether:aquifer/noise",
     "min_inclusive": 0,
-    "max_exclusive": 0.4,
+    "max_exclusive": 0.45,
     "when_in_range": {
       "type": "minecraft:add",
       "argument1": {
