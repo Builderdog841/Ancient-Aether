@@ -28,7 +28,17 @@
           "argument2": "ancient_aether:aquifer/factor"
         }
       },
-      "argument2": "ancient_aether:amplifier/factor"
+      "argument2": {
+        "type": "minecraft:add",
+        "argument1": {
+          "type": "minecraft:y_clamped_gradient",
+          "from_value": 0.75,
+          "from_y": 0,
+          "to_value": 0,
+          "to_y": 80
+        },
+        "argument2": "ancient_aether:amplifier/factor"
+      }
     },
     "argument2": "ancient_aether:islands/skyroot/factor_temperature"
   }

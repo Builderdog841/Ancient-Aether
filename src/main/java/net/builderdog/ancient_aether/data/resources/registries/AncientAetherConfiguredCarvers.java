@@ -17,39 +17,29 @@ import net.minecraft.world.level.levelgen.heightproviders.UniformHeight;
 
 public class AncientAetherConfiguredCarvers {
     public static final ResourceKey<ConfiguredWorldCarver<?>> AETHER_CAVE = createKey("aether_cave");
-    public static final ResourceKey<ConfiguredWorldCarver<?>> AETHER_SURFACE_CAVE = createKey("aether_surface_cave");
-    public static final ResourceKey<ConfiguredWorldCarver<?>> ELEVATED_ISLANDS_CAVE = createKey("elevated_islands_cave");
+    public static final ResourceKey<ConfiguredWorldCarver<?>> ELEVATED_CAVE = createKey("elevated_cave");
 
     private static ResourceKey<ConfiguredWorldCarver<?>> createKey(String name) {
         return ResourceKey.create(Registries.CONFIGURED_CARVER, new ResourceLocation(AncientAether.MODID, name));
     }
 
-    private static ConfiguredWorldCarver<?> createBaseAetherCave(HolderGetter<Block> blocks, float probability, int maxY, float minYScale, float maxYScale, float minHorizontal, float maxHorizontal, float minVertical, float maxVertical) {
+    private static ConfiguredWorldCarver<?> createBaseAetherCave(HolderGetter<Block> blocks, int minHeight) {
         CaveCarverConfiguration config = new CaveCarverConfiguration(
-                probability,
-                UniformHeight.of(VerticalAnchor.absolute(0), VerticalAnchor.absolute(maxY)),
-                UniformFloat.of(minYScale, maxYScale),
+                0.15F,
+                UniformHeight.of(VerticalAnchor.absolute(minHeight), VerticalAnchor.absolute(256)),
+                UniformFloat.of(0.6F, 1.2F),
                 VerticalAnchor.aboveBottom(-64),
                 blocks.getOrThrow(AncientAetherTags.Blocks.AETHER_CARVER_REPLACEABLES),
-                UniformFloat.of(minHorizontal, maxHorizontal),
-                UniformFloat.of(minVertical, maxVertical),
-                UniformFloat.of(-0.8F, -0.4F));
-
+                UniformFloat.of(1.0F, 2.5F),
+                UniformFloat.of(0.75F, 1.5F),
+                UniformFloat.of(-0.6F, -0.2F)
+        );
         return new ConfiguredWorldCarver<>(WorldCarver.CAVE, config);
-    }
-
-    private static ConfiguredWorldCarver<?> createAetherCave(HolderGetter<Block> blocks, int maxY) {
-        return createBaseAetherCave(blocks, 0.1F, maxY, 0.1F, 0.6F, 1.75F, 3.5F, 1.0F, 1.5F);
-    }
-
-    private static ConfiguredWorldCarver<?> createAetherSurfaceCave(HolderGetter<Block> blocks) {
-        return createBaseAetherCave(blocks, 0.15F,256, 0.4F, 0.9F, 0.75F, 2.5F, 0.25F, 1.0F);
     }
 
     public static void bootstrap(BootstapContext<ConfiguredWorldCarver<?>> context) {
         HolderGetter<Block> blocks = context.lookup(Registries.BLOCK);
-        context.register(AETHER_CAVE, createAetherCave(blocks, 96));
-        context.register(AETHER_SURFACE_CAVE, createAetherSurfaceCave(blocks));
-        context.register(ELEVATED_ISLANDS_CAVE, createAetherCave(blocks, 106));
+        context.register(AETHER_CAVE, createBaseAetherCave(blocks, 72));
+        context.register(ELEVATED_CAVE, createBaseAetherCave(blocks, 88));
     }
 }

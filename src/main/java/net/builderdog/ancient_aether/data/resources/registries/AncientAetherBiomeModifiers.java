@@ -235,9 +235,5 @@ public class AncientAetherBiomeModifiers {
                 biome.getOrThrow(AncientAetherTags.Biomes.HAS_AETHER_CAVES),
                 carver.getOrThrow(AncientAetherConfiguredCarvers.AETHER_CAVE)
         ));
-        context.register(AETHER_SURFACE_CAVE_BIOME_MODIFIER, new CarverModifier(
-                biome.getOrThrow(AncientAetherTags.Biomes.HAS_AETHER_CAVES),
-                carver.getOrThrow(AncientAetherConfiguredCarvers.AETHER_SURFACE_CAVE)
-        ));
     }
 }
