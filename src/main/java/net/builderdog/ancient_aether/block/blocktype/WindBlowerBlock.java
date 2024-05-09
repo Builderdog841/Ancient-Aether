@@ -85,6 +85,14 @@ public class WindBlowerBlock extends Block implements Equipable {
         level.scheduleTick(pos, this, 4);
     }
 
+    public boolean hasAnalogOutputSignal(@NotNull BlockState state) {
+        return true;
+    }
+
+    public int getAnalogOutputSignal(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos) {
+        return state.getValue(PUFFED) ? 7 : 0;
+    }
+
     public @NotNull EquipmentSlot getEquipmentSlot() {
         return EquipmentSlot.HEAD;
     }

@@ -49,7 +49,8 @@ public class AtmosineCrystalBlock extends Block implements Floatable {
             level.setBlockAndUpdate(pos, Blocks.AIR.defaultBlockState());
             floating();
             floatingBlockEntity.setNatural(false);
-        } else level.scheduleTick(pos, this, getDelayAfterPlace());
+        }
+        else level.scheduleTick(pos, this, getDelayAfterPlace());
     }
 
     protected void floating() {

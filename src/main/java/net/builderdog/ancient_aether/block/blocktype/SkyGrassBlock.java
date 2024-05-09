@@ -23,7 +23,6 @@ import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.zepalesque.redux.block.util.state.ReduxStates;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -84,7 +83,8 @@ public class SkyGrassBlock extends TallGrassBlock {
                 return state.setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.PALE);
             } else if (biome.is(AncientAetherTags.Biomes.HAS_ENCHANTED_AETHER_GRASS)) {
                 return state.setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.ENCHANTED);
-            } else return state.setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.NORMAL);
+            }
+            else return state.setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.NORMAL);
     }
 
     public boolean isValidBonemealTarget(@NotNull LevelReader level, @NotNull BlockPos pos, @NotNull BlockState state, boolean isClient) {
