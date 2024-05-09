@@ -24,9 +24,9 @@ public class AncientAetherConfiguredCarvers {
         return ResourceKey.create(Registries.CONFIGURED_CARVER, new ResourceLocation(AncientAether.MODID, name));
     }
 
-    private static ConfiguredWorldCarver<?> createBaseAetherCave(HolderGetter<Block> blocks, int minHeight) {
+    private static ConfiguredWorldCarver<?> createBaseAetherCave(HolderGetter<Block> blocks, float probability, int minHeight) {
         CaveCarverConfiguration config = new CaveCarverConfiguration(
-                0.15F,
+                probability,
                 UniformHeight.of(VerticalAnchor.absolute(minHeight), VerticalAnchor.absolute(256)),
                 UniformFloat.of(0.6F, 1.2F),
                 VerticalAnchor.aboveBottom(-64),
@@ -40,8 +40,8 @@ public class AncientAetherConfiguredCarvers {
 
     public static void bootstrap(BootstapContext<ConfiguredWorldCarver<?>> context) {
         HolderGetter<Block> blocks = context.lookup(Registries.BLOCK);
-        context.register(AETHER_CAVE, createBaseAetherCave(blocks, 72));
-        context.register(AETHER_CAVE_ELEVATED, createBaseAetherCave(blocks, 88));
-        context.register(AETHER_CAVE_SAKURA, createBaseAetherCave(blocks, 0));
+        context.register(AETHER_CAVE, createBaseAetherCave(blocks, 0.15F, 72));
+        context.register(AETHER_CAVE_ELEVATED, createBaseAetherCave(blocks, 0.15F, 88));
+        context.register(AETHER_CAVE_SAKURA, createBaseAetherCave(blocks, 0.2F, 0));
     }
 }
