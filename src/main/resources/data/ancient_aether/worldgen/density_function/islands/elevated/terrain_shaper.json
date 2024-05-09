@@ -24,7 +24,17 @@
           "to_y": 272
         }
       },
-      "argument2": "ancient_aether:amplifier/factor"
+      "argument2": {
+        "type": "minecraft:add",
+        "argument1": {
+          "type": "minecraft:y_clamped_gradient",
+          "from_value": 0.75,
+          "from_y": 16,
+          "to_value": 0,
+          "to_y": 96
+        },
+        "argument2": "ancient_aether:amplifier/factor"
+      }
     },
     "argument2": "ancient_aether:islands/elevated/factor_erosion"
   }
