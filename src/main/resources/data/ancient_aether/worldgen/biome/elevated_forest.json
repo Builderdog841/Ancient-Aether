@@ -1,7 +1,7 @@
 {
   "carvers": {
     "air": [
-      "ancient_aether:elevated_cave"
+      "ancient_aether:aether_cave_elevated"
     ]
   },
   "creature_spawn_probability": 0.075,

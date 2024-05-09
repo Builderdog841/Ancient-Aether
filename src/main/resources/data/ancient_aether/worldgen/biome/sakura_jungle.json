@@ -1,5 +1,9 @@
 {
-  "carvers": {},
+  "carvers": {
+    "air": [
+      "ancient_aether:aether_cave_sakura"
+    ]
+  },
   "downfall": 0.0,
   "creature_spawn_probability": 0.05,
   "effects": {

@@ -1,4 +1,7 @@
 {
+  "remove": [
+    "ancient_aether:skyroot_jungle"
+  ],
   "values": [
     "#ancient_aether:is_skyroot",
     "#ancient_aether:is_wyndcaps"

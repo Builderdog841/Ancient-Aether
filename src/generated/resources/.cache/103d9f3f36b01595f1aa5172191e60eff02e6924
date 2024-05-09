@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-09T18:04:28.99594	Registries
+// 1.20.1	2024-05-09T20:44:41.7390179	Registries
 d48a565c1fefb0fbb6c489c3edffe6748448a15c data/ancient_aether/forge/biome_modifier/aerogel_blobs_biome_modifier.json
 c66669dd031745a1bae16fc47547c896a814e8e6 data/ancient_aether/forge/biome_modifier/aether_cave_biome_modifier.json
 be0b3cb10e1bb6717346cc0224b71d8b9cb17509 data/ancient_aether/forge/biome_modifier/aether_grass_patch_biome_modifier.json
@@ -44,7 +44,8 @@ ccb24031a4e4c852f822f10a3dd44c61d4ad0473 data/ancient_aether/trim_pattern/solar.
 89ee9b4da7cc8108c6ee0d413530766d9e5f70f0 data/ancient_aether/trim_pattern/whale.json
 922a229a61869f85dbf7caacf6b581ca8439afdb data/ancient_aether/trim_pattern/wynd.json
 d62858a0d2483c8e535de1039137b1635f9232b1 data/ancient_aether/worldgen/configured_carver/aether_cave.json
-d763223bc35ee5981f5cdde5b0594ef0dd8bda77 data/ancient_aether/worldgen/configured_carver/elevated_cave.json
+d763223bc35ee5981f5cdde5b0594ef0dd8bda77 data/ancient_aether/worldgen/configured_carver/aether_cave_elevated.json
+2c77dee3b0ae6155e406b622d9968699fa7a47b2 data/ancient_aether/worldgen/configured_carver/aether_cave_sakura.json
 2cf08e50ac74f6af67fe26f51cd18f7d83b169bc data/ancient_aether/worldgen/configured_feature/aerogel_blobs.json
 d3020741d9ec421c7f380b8b4dba4d8c0ec94fd5 data/ancient_aether/worldgen/configured_feature/aether_flower_patch.json
 85ddf2d35bced7b1479d475ec5d9b46c3e5f140b data/ancient_aether/worldgen/configured_feature/aether_grass_patch.json

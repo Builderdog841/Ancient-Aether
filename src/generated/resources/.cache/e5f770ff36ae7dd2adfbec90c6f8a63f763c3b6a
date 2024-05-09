@@ -1,8 +1,8 @@
-// 1.20.1	2024-05-09T17:05:57.844571	Tags for minecraft:worldgen/biome mod id ancient_aether
+// 1.20.1	2024-05-09T20:44:41.7360173	Tags for minecraft:worldgen/biome mod id ancient_aether
 fa2a3fca69a8d31c468fd14c449347a468f9114c data/aether/tags/worldgen/biome/has_bronze_dungeon.json
 a0652b79bc956361549e77f0c6c42c9f8ffaaf96 data/aether/tags/worldgen/biome/is_aether.json
 6425e7e0a57a451843094090fa1e31c9fbd4c5e0 data/ancient_aether/tags/worldgen/biome/has_aerogel_blobs.json
-0490a7f1a6e0f4b1a83f0105d74e82c0f1770c0d data/ancient_aether/tags/worldgen/biome/has_aether_caves.json
+173e8e06fc47ceb60a6dd16fdb7e393b7ad9135d data/ancient_aether/tags/worldgen/biome/has_aether_caves.json
 f2ebd7cb22b111b81602897c672017a56086d896 data/ancient_aether/tags/worldgen/biome/has_aether_grass_patches.json
 6425e7e0a57a451843094090fa1e31c9fbd4c5e0 data/ancient_aether/tags/worldgen/biome/has_aether_quartz_ore.json
 6425e7e0a57a451843094090fa1e31c9fbd4c5e0 data/ancient_aether/tags/worldgen/biome/has_cloudbed.json

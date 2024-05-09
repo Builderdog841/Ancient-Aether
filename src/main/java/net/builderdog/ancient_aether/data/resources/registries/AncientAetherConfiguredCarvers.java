@@ -17,7 +17,8 @@ import net.minecraft.world.level.levelgen.heightproviders.UniformHeight;
 
 public class AncientAetherConfiguredCarvers {
     public static final ResourceKey<ConfiguredWorldCarver<?>> AETHER_CAVE = createKey("aether_cave");
-    public static final ResourceKey<ConfiguredWorldCarver<?>> ELEVATED_CAVE = createKey("elevated_cave");
+    public static final ResourceKey<ConfiguredWorldCarver<?>> AETHER_CAVE_ELEVATED = createKey("aether_cave_elevated");
+    public static final ResourceKey<ConfiguredWorldCarver<?>> AETHER_CAVE_SAKURA = createKey("aether_cave_sakura");
 
     private static ResourceKey<ConfiguredWorldCarver<?>> createKey(String name) {
         return ResourceKey.create(Registries.CONFIGURED_CARVER, new ResourceLocation(AncientAether.MODID, name));
@@ -40,6 +41,7 @@ public class AncientAetherConfiguredCarvers {
     public static void bootstrap(BootstapContext<ConfiguredWorldCarver<?>> context) {
         HolderGetter<Block> blocks = context.lookup(Registries.BLOCK);
         context.register(AETHER_CAVE, createBaseAetherCave(blocks, 72));
-        context.register(ELEVATED_CAVE, createBaseAetherCave(blocks, 88));
+        context.register(AETHER_CAVE_ELEVATED, createBaseAetherCave(blocks, 88));
+        context.register(AETHER_CAVE_SAKURA, createBaseAetherCave(blocks, 0));
     }
 }

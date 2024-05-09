@@ -139,6 +139,8 @@ public class AncientAetherBiomeTagData extends BiomeTagsProvider {
         tag(AncientAetherTags.Biomes.HAS_AETHER_CAVES).addTags(
                 AncientAetherTags.Biomes.IS_SKYROOT,
                 AncientAetherTags.Biomes.IS_WYNDCAPS
+        ).remove(
+                AncientAetherBiomes.SKYROOT_JUNGLE
         );
         tag(AncientAetherTags.Biomes.HAS_FROZEN_AETHER_GRASS).addTags(
                 AncientAetherTags.Biomes.IS_WYNDCAPS,
