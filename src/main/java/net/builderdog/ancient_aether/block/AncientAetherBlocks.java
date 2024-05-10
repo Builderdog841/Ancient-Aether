@@ -57,7 +57,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> VALKYRIE_CLAY = register("valkyrie_clay", () -> new AetherDoubleDropBlock(Block.Properties.copy(CLAY).mapColor(MapColor.SNOW)));
 
     public static final RegistryObject<Block> AETHER_QUARTZ_ORE = register("aether_quartz_ore", () -> new AetherDoubleDropsOreBlock(Block.Properties.copy(NETHER_QUARTZ_ORE), UniformInt.of(2, 5)));
-    public static final RegistryObject<Block> VALKYRUM_ORE = register("valkyrum_ore", () -> new ValkyrumBlock(Block.Properties.of().strength(4.0F, 4.0F).requiresCorrectToolForDrops().mapColor(MapColor.QUARTZ)));
+    public static final RegistryObject<Block> VALKYRUM_ORE = register("valkyrum_ore", () -> new ValkyrumBlock(Block.Properties.of().strength(5.0F, 5.0F).requiresCorrectToolForDrops().mapColor(MapColor.QUARTZ)));
     public static final RegistryObject<Block> ATMOSINE_CRYSTAL = register("atmosine_crystal", () -> new AtmosineCrystalBlock(BlockBehaviour.Properties.of().strength(3.0F, 3.0F).mapColor(MapColor.COLOR_PINK).requiresCorrectToolForDrops().sound(SoundType.GLASS).noOcclusion().lightLevel(s -> 5)));
 
     public static final RegistryObject<Block> CRYSTAL_SKYROOT_LEAVES = register("crystal_skyroot_leaves", () -> new AetherDoubleDropsLeaves(BlockBehaviour.Properties.copy(CRYSTAL_LEAVES.get())));
