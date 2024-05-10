@@ -3,17 +3,17 @@
   "category": "misc",
   "group": "smithing_table",
   "key": {
-    "P": {
+    "#": {
       "tag": "aether:planks_crafting"
     },
-    "Z": {
+    "@": {
       "tag": "aether:gems/zanite"
     }
   },
   "pattern": [
-    "ZZ",
-    "PP",
-    "PP"
+    "@@",
+    "##",
+    "##"
   ],
   "result": {
     "item": "minecraft:smithing_table"

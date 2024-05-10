@@ -488,6 +488,7 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
                 AncientAetherBlocks.POWERED_OBELISK.get()
         );
         tag(BlockTags.MINEABLE_WITH_SHOVEL).add(
+                AncientAetherBlocks.VALKYRIE_CLAY.get(),
                 AncientAetherBlocks.GRAVITY_GRAVEL.get()
         );
         tag(BlockTags.SWORD_EFFICIENT).add(

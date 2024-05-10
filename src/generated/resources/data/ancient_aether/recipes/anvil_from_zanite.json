@@ -2,17 +2,17 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": {
+    "Z": {
       "item": "aether:zanite_block"
     },
-    "Z": {
+    "z": {
       "tag": "aether:gems/zanite"
     }
   },
   "pattern": [
-    "BBB",
-    " Z ",
-    "ZZZ"
+    "ZZZ",
+    " z ",
+    "zzz"
   ],
   "result": {
     "item": "minecraft:anvil"

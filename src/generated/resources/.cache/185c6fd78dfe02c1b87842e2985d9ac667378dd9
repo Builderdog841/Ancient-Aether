@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-03T19:41:31.4663985	Item Models: ancient_aether
+// 1.20.1	2024-05-10T13:06:59.92997	Item Models: ancient_aether
 532bdb7a4f7d2a6b96d474c01c8b9e7a0d1c10b4 assets/ancient_aether/models/item/aerogel_glass.json
 87e9f8f9f807a2aa763e3057d32bacf3ee32b60f assets/ancient_aether/models/item/aerogel_glass_door.json
 d1e6ed3e334d573f31a8ce9e09885c0f43832630 assets/ancient_aether/models/item/aerogel_glass_pane.json
@@ -140,6 +140,8 @@ ea419cd22fd4576a72d4568f13b7c11b8bb08df7 assets/ancient_aether/models/item/sun_l
 a8369b7ce7f0a1a5e5e440a3edc8f58cf0868273 assets/ancient_aether/models/item/treasure_doorway_corrupted_aeronautic_stone.json
 da06eb62cde9c91bec97207a2352e05af7a903ec assets/ancient_aether/models/item/treasure_doorway_wynd_sentry_stone.json
 afdc3cd85d53d3cb2c631b2b7c678c2d79b4bdcc assets/ancient_aether/models/item/turquoise_moa_egg.json
+ef22b7df845ae681c4d9b70b8bb7993b9d92d41c assets/ancient_aether/models/item/valkyrie_brick.json
+9fbcb8cda8a8a7739cf020aa51802597b374ce95 assets/ancient_aether/models/item/valkyrie_clay_ball.json
 8236fd7a524a8f3a35ebaa7fa5709657cbeb5372 assets/ancient_aether/models/item/valkyrum.json
 d30935e10a2cab0a2eca56f8dacf7b58d71d31f5 assets/ancient_aether/models/item/valkyrum_axe.json
 edd607642a17d1ae0d3e3398e0b7eee388a03944 assets/ancient_aether/models/item/valkyrum_boots.json

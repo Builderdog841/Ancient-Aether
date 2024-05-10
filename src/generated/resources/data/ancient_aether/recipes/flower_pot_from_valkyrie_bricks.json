@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "key": {
     "#": {
-      "tag": "aether:gems/zanite"
+      "item": "ancient_aether:valkyrie_brick"
     }
   },
   "pattern": [
-    " #",
-    "# "
+    "# #",
+    " # "
   ],
   "result": {
-    "item": "minecraft:shears"
+    "item": "minecraft:flower_pot"
   },
   "show_notification": true
 }

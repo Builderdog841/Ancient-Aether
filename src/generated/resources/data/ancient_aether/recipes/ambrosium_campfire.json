@@ -2,20 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "A": {
-      "item": "aether:ambrosium_shard"
-    },
-    "L": {
+    "#": {
       "tag": "minecraft:logs"
     },
-    "S": {
+    "/": {
       "tag": "forge:rods/wooden"
+    },
+    "A": {
+      "item": "aether:ambrosium_shard"
     }
   },
   "pattern": [
-    " S ",
-    "SAS",
-    "LLL"
+    " / ",
+    "/A/",
+    "###"
   ],
   "result": {
     "item": "ancient_aether:ambrosium_campfire"

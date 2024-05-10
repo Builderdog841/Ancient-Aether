@@ -2,17 +2,17 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "B": {
-      "item": "minecraft:book"
-    },
-    "P": {
+    "#": {
       "item": "ancient_aether:sakura_planks"
+    },
+    "X": {
+      "item": "minecraft:book"
     }
   },
   "pattern": [
-    "PPP",
-    "BBB",
-    "PPP"
+    "###",
+    "XXX",
+    "###"
   ],
   "result": {
     "item": "ancient_aether:sakura_bookshelf"

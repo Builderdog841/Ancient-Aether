@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "key": {
     "#": {
-      "tag": "aether:gems/zanite"
+      "item": "ancient_aether:valkyrie_clay_ball"
     }
   },
   "pattern": [
-    " #",
-    "# "
+    "##",
+    "##"
   ],
   "result": {
-    "item": "minecraft:shears"
+    "item": "ancient_aether:valkyrie_clay"
   },
   "show_notification": true
 }

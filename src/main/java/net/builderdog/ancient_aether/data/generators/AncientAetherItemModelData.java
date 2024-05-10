@@ -16,6 +16,8 @@ public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(AncientAetherItems.VALKYRUM);
+        simpleItem(AncientAetherItems.VALKYRIE_CLAY_BALL);
+        simpleItem(AncientAetherItems.VALKYRIE_BRICK);
         simpleItem(AncientAetherItems.GRAPES);
         simpleItem(AncientAetherItems.SLAMMBERRY);
         simpleItem(AncientAetherItems.FESTIVE_GUMMY_SWET);

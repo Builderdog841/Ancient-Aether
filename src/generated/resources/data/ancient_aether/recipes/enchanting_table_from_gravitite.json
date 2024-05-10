@@ -2,20 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "#": {
+      "item": "minecraft:obsidian"
+    },
     "B": {
       "item": "minecraft:book"
     },
     "G": {
       "tag": "aether:processed/gravitite"
-    },
-    "O": {
-      "item": "minecraft:obsidian"
     }
   },
   "pattern": [
     " B ",
-    "GOG",
-    "OOO"
+    "G#G",
+    "###"
   ],
   "result": {
     "item": "minecraft:enchanting_table"

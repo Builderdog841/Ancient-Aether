@@ -16,6 +16,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
     }
     @Override
     protected void registerStatesAndModels() {
+        blockWithItem(AncientAetherBlocks.VALKYRIE_CLAY);
         blockWithItem(AncientAetherBlocks.GRAVITY_GRAVEL);
         blockWithItem(AncientAetherBlocks.WYND_ICE);
         blockWithItem(AncientAetherBlocks.AETHER_QUARTZ_ORE);

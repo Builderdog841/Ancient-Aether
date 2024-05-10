@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-08T18:36:27.0938272	Loot Tables
+// 1.20.1	2024-05-10T13:06:59.9339707	Loot Tables
 095a70e341d19e7b3548ddc32402abe48a79992a data/ancient_aether/loot_tables/blocks/aerogel_glass.json
 9fe2ea21af5246ad9f95848f680099717062eb1c data/ancient_aether/loot_tables/blocks/aerogel_glass_door.json
 0f84d5b4591633acc6c8dcc82b7c14988b545a9f data/ancient_aether/loot_tables/blocks/aerogel_glass_pane.json
@@ -107,6 +107,7 @@ ba4645f668eafc10c81bb0022f2efec2f7f69a3f data/ancient_aether/loot_tables/blocks/
 b68ae7feac098e7b6dd08dfdd85fb414058acaf2 data/ancient_aether/loot_tables/blocks/stripped_sakura_wood_wall.json
 bc0e8ceace9c36f21b752a687ff31f98a1961702 data/ancient_aether/loot_tables/blocks/sunset_rose.json
 40db7c527c042b5ae019a398508a2c0985af906a data/ancient_aether/loot_tables/blocks/sun_lantern.json
+5033a7f35ddd306f340949a2bb6f615b1567fc64 data/ancient_aether/loot_tables/blocks/valkyrie_clay.json
 24caaaded957a84ecadf0335438394e6b53b4467 data/ancient_aether/loot_tables/blocks/valkyrum_block.json
 6fa82cf094e194847d603ce1bd20521a9dbd134c data/ancient_aether/loot_tables/blocks/valkyrum_ore.json
 1da4372a62d6d86b5c1eda91d7c7d2b724abd83b data/ancient_aether/loot_tables/blocks/violet_aercloud.json

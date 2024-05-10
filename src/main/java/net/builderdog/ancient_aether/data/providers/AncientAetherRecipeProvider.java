@@ -30,11 +30,11 @@ public abstract class AncientAetherRecipeProvider extends AetherRecipeProvider {
 
     protected static void bookshelf(Consumer<FinishedRecipe> consumer, ItemLike result, ItemLike planks) {
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result)
-                .define('P', planks)
-                .define('B', Items.BOOK)
-                .pattern("PPP")
-                .pattern("BBB")
-                .pattern("PPP")
+                .define('#', planks)
+                .define('X', Items.BOOK)
+                .pattern("###")
+                .pattern("XXX")
+                .pattern("###")
                 .unlockedBy(getHasName(Items.BOOK), has(Items.BOOK))
                 .save(consumer);
     }

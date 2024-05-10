@@ -20,6 +20,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         String mark = " \n§6- Ancient Aether -";
         String markModified = " \n§6- Modified by Ancient Aether -";
 
+        addBlock(AncientAetherBlocks.VALKYRIE_CLAY, "Valkyrie Clay");
         addBlock(AncientAetherBlocks.GRAVITY_GRAVEL, "Gravity Gravel");
         addBlock(AncientAetherBlocks.WYND_ICE, "Wynd Ice");
 
@@ -190,6 +191,8 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.POTTED_ELEVETIA, "Potted Elevatia");
 
         addItem(AncientAetherItems.VALKYRUM, "Valkyrum");
+        addItem(AncientAetherItems.VALKYRIE_CLAY_BALL, "Valkyrie Clay Ball");
+        addItem(AncientAetherItems.VALKYRIE_BRICK, "Valkyrie Brick");
 
         addItem(AncientAetherItems.GRAPES, "Grapes");
         addItem(AncientAetherItems.SLAMMBERRY, "Slammberry");

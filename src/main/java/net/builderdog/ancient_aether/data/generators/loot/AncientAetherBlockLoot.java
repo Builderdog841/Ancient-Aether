@@ -1,40 +1,22 @@
 package net.builderdog.ancient_aether.data.generators.loot;
 
-import com.aetherteam.aether.data.providers.AetherBlockLootSubProvider;
 import com.aetherteam.aether.item.AetherItems;
 import com.aetherteam.aether.mixin.mixins.common.accessor.BlockLootAccessor;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
+import net.builderdog.ancient_aether.data.providers.AncientAetherBlockLootSubProvider;
+import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.enchantment.Enchantments;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.storage.loot.LootPool;
-import net.minecraft.world.level.storage.loot.LootTable;
-import net.minecraft.world.level.storage.loot.entries.LootItem;
-import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
-import net.minecraft.world.level.storage.loot.predicates.BonusLevelTableCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Set;
 
-public class AncientAetherBlockLoot extends AetherBlockLootSubProvider {
+public class AncientAetherBlockLoot extends AncientAetherBlockLootSubProvider {
     public AncientAetherBlockLoot() {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags());
-    }
-
-    protected void dropCampfire(Block block, ItemLike itemLike) {
-        add(block, createSilkTouchDispatchTable(block, applyExplosionDecay(itemLike, LootItem.lootTableItem(itemLike).apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F))))));
-    }
-
-    public LootTable.Builder droppingCrystalSkyrootLeaves(Block block, Block sapling, float... chances) {
-        return droppingWithChancesAndSkyrootSticks(block, sapling, chances)
-                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(BlockLootAccessor.aether$hasShearsOrSilkTouch().invert())
-                        .add(applyExplosionCondition(block,
-                                LootItem.lootTableItem(AetherItems.WHITE_APPLE.get()))
-                                .when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, 0.0055F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F))));
     }
 
     @Override
@@ -134,6 +116,7 @@ public class AncientAetherBlockLoot extends AetherBlockLootSubProvider {
         dropWhenSilkTouch(AncientAetherBlocks.WYND_ICE.get());
         dropWhenSilkTouch(AncientAetherBlocks.SKY_GRASS.get());
 
+        dropClay(AncientAetherBlocks.VALKYRIE_CLAY.get(), AncientAetherItems.VALKYRIE_CLAY_BALL.get());
         dropCampfire(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get(), AetherItems.AMBROSIUM_SHARD.get());
 
         dropPottedContents(AncientAetherBlocks.POTTED_CRYSTAL_SKYROOT_SAPLING.get());

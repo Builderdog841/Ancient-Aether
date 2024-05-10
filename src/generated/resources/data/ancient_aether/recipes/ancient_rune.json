@@ -2,20 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "#": {
+      "tag": "aether:processed/gravitite"
+    },
     "A": {
       "item": "aether:aerogel"
-    },
-    "G": {
-      "tag": "aether:processed/gravitite"
     },
     "R": {
       "item": "ancient_aether:ancient_rune"
     }
   },
   "pattern": [
-    "GRG",
-    "GAG",
-    "GGG"
+    "#R#",
+    "#A#",
+    "###"
   ],
   "result": {
     "count": 2,

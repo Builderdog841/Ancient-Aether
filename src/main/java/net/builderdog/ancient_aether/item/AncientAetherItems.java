@@ -52,6 +52,8 @@ public class AncientAetherItems {
     public static final Component MYTHIC = Component.translatable("tooltip.ancient_aether.mythic").withStyle(Style.EMPTY.withItalic(true).withColor(ChatFormatting.GOLD));
 
     public static final RegistryObject<Item> VALKYRUM = ITEMS.register("valkyrum", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> VALKYRIE_CLAY_BALL = ITEMS.register("valkyrie_clay_ball", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> VALKYRIE_BRICK = ITEMS.register("valkyrie_brick", () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> GRAPES = ITEMS.register("grapes", () -> new ItemNameBlockItem(AncientAetherBlocks.GRAPE_VINE.get(), (new Item.Properties().food((new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build()))));
     public static final RegistryObject<Item> SLAMMBERRY = ITEMS.register("slammberry", () -> new SlammrootFruitItem(new Item.Properties().food((new FoodProperties.Builder()).alwaysEat().effect(() -> new MobEffectInstance(AncientAetherEffects.NATURES_BOOST.get(), 60, 0), 1.0F).build())));
