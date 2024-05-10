@@ -20,9 +20,9 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         String mark = " \n§6- Ancient Aether -";
         String markModified = " \n§6- Modified by Ancient Aether -";
 
-        addBlock(AncientAetherBlocks.VALKYRIE_CLAY, "Valkyrie Clay");
         addBlock(AncientAetherBlocks.GRAVITY_GRAVEL, "Gravity Gravel");
         addBlock(AncientAetherBlocks.WYND_ICE, "Wynd Ice");
+        addBlock(AncientAetherBlocks.VALKYRIE_CLAY, "Valkyrie Clay");
 
         addBlock(AncientAetherBlocks.AETHER_QUARTZ_ORE, "Aether Quartz Ore");
         addBlock(AncientAetherBlocks.VALKYRUM_ORE, "Valkyrum Ore");

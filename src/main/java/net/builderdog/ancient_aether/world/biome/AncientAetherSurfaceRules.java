@@ -41,6 +41,42 @@ public class AncientAetherSurfaceRules {
                 ),
 
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.SKY_LAKE),
+                        SurfaceRules.ifTrue(SurfaceRules.not(SurfaceRules.noiseCondition(AncientAetherNoises.SKYLANDS_AQUIFER, -0.35D, 0.35D)),
+                                SurfaceRules.ifTrue(SurfaceRules.not(SurfaceRules.noiseCondition(AncientAetherNoises.VALKYRIE_CLAY, -0.2D, 0.2D)),
+                                        SurfaceRules.ifTrue(SurfaceRules.verticalGradient("valkyrie_clay", VerticalAnchor.absolute(101), VerticalAnchor.absolute(101)), SurfaceRules.state(AncientAetherFeatureStates.VALKYRIE_CLAY))))
+                ),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.SKY_LAKE),
+                        SurfaceRules.ifTrue(SurfaceRules.not(SurfaceRules.noiseCondition(AncientAetherNoises.SKYLANDS_AQUIFER, -0.39D, 0.39D)),
+                                SurfaceRules.ifTrue(SurfaceRules.not(SurfaceRules.noiseCondition(AncientAetherNoises.VALKYRIE_CLAY, -0.2D, 0.2D)),
+                                        SurfaceRules.ifTrue(SurfaceRules.verticalGradient("valkyrie_clay", VerticalAnchor.absolute(102), VerticalAnchor.absolute(102)), SurfaceRules.state(AncientAetherFeatureStates.VALKYRIE_CLAY))))
+                ),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.SKY_LAKE),
+                        SurfaceRules.ifTrue(SurfaceRules.not(SurfaceRules.noiseCondition(AncientAetherNoises.SKYLANDS_AQUIFER, -0.43D, 0.43D)),
+                                SurfaceRules.ifTrue(SurfaceRules.not(SurfaceRules.noiseCondition(AncientAetherNoises.VALKYRIE_CLAY, -0.2D, 0.2D)),
+                                        SurfaceRules.ifTrue(SurfaceRules.verticalGradient("valkyrie_clay", VerticalAnchor.absolute(103), VerticalAnchor.absolute(103)), SurfaceRules.state(AncientAetherFeatureStates.VALKYRIE_CLAY))))
+                ),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.SKY_LAKE),
+                        SurfaceRules.ifTrue(SurfaceRules.not(SurfaceRules.noiseCondition(AncientAetherNoises.SKYLANDS_AQUIFER, -0.47D, 0.47D)),
+                                SurfaceRules.ifTrue(SurfaceRules.not(SurfaceRules.noiseCondition(AncientAetherNoises.VALKYRIE_CLAY, -0.2D, 0.2D)),
+                                        SurfaceRules.ifTrue(SurfaceRules.verticalGradient("valkyrie_clay", VerticalAnchor.absolute(104), VerticalAnchor.absolute(104)), SurfaceRules.state(AncientAetherFeatureStates.VALKYRIE_CLAY))))
+                ),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.SKY_LAKE),
+                        SurfaceRules.ifTrue(SurfaceRules.not(SurfaceRules.noiseCondition(AncientAetherNoises.SKYLANDS_AQUIFER, -0.5D, 0.5D)),
+                                SurfaceRules.ifTrue(SurfaceRules.not(SurfaceRules.noiseCondition(AncientAetherNoises.VALKYRIE_CLAY, -0.2D, 0.2D)),
+                                        SurfaceRules.ifTrue(SurfaceRules.verticalGradient("valkyrie_clay", VerticalAnchor.absolute(105), VerticalAnchor.absolute(105)), SurfaceRules.state(AncientAetherFeatureStates.VALKYRIE_CLAY))))
+                ),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.SKY_LAKE),
+                        SurfaceRules.ifTrue(SurfaceRules.not(SurfaceRules.noiseCondition(AncientAetherNoises.SKYLANDS_AQUIFER, -0.6D, 0.6D)),
+                                SurfaceRules.ifTrue(SurfaceRules.not(SurfaceRules.noiseCondition(AncientAetherNoises.VALKYRIE_CLAY, -0.2D, 0.2D)),
+                                        SurfaceRules.ifTrue(SurfaceRules.verticalGradient("valkyrie_clay", VerticalAnchor.absolute(106), VerticalAnchor.absolute(106)), SurfaceRules.state(AncientAetherFeatureStates.VALKYRIE_CLAY))))
+                ),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.SKY_LAKE),
+                        SurfaceRules.ifTrue(SurfaceRules.not(SurfaceRules.noiseCondition(AncientAetherNoises.SKYLANDS_AQUIFER, -0.75D, 0.75D)),
+                                SurfaceRules.ifTrue(SurfaceRules.not(SurfaceRules.noiseCondition(AncientAetherNoises.VALKYRIE_CLAY, -0.2D, 0.2D)),
+                                        SurfaceRules.ifTrue(SurfaceRules.verticalGradient("valkyrie_clay", VerticalAnchor.absolute(107), VerticalAnchor.absolute(107)), SurfaceRules.state(AncientAetherFeatureStates.VALKYRIE_CLAY))))
+                ),
+
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.SKY_LAKE),
                         SurfaceRules.ifTrue(SurfaceRules.verticalGradient("lake_bottom", VerticalAnchor.absolute(96), VerticalAnchor.absolute(96)), SurfaceRules.state(AetherFeatureStates.AETHER_DIRT))
                 ),
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(AncientAetherBiomes.SKY_LAKE),

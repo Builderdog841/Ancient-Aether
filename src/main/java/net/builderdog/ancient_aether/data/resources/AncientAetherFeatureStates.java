@@ -19,6 +19,7 @@ public class AncientAetherFeatureStates {
     public static final BlockState PALE_AETHER_GRASS_BLOCK = AetherBlocks.AETHER_GRASS_BLOCK.get().defaultBlockState().setValue(DOUBLE_DROPS, true).setValue(TYPE, AetherGrassType.PALE);
     public static final BlockState GRAVITY_GRAVEL = AncientAetherBlocks.GRAVITY_GRAVEL.get().defaultBlockState().setValue(DOUBLE_DROPS, true);
     public static final BlockState WYND_ICE = AncientAetherBlocks.WYND_ICE.get().defaultBlockState();
+    public static final BlockState VALKYRIE_CLAY = AncientAetherBlocks.VALKYRIE_CLAY.get().defaultBlockState().setValue(DOUBLE_DROPS, true);
     public static final BlockState MOSSY_HOLYSTONE = AetherBlocks.MOSSY_HOLYSTONE.get().defaultBlockState().setValue(DOUBLE_DROPS, true);
     public static final BlockState AETHER_QUARTZ_ORE = AncientAetherBlocks.AETHER_QUARTZ_ORE.get().defaultBlockState().setValue(DOUBLE_DROPS, true);
     public static final BlockState VALKYRUM_ORE = AncientAetherBlocks.VALKYRUM_ORE.get().defaultBlockState();

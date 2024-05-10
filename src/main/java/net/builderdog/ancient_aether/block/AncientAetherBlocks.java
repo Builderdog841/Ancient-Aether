@@ -52,9 +52,9 @@ import static net.minecraft.world.level.block.Blocks.*;
 public class AncientAetherBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AncientAether.MODID);
 
-    public static final RegistryObject<Block> VALKYRIE_CLAY = register("valkyrie_clay", () -> new AetherDoubleDropBlock(Block.Properties.copy(CLAY).mapColor(MapColor.SNOW)));
     public static final RegistryObject<Block> GRAVITY_GRAVEL = register("gravity_gravel", () -> new AetherDoubleDropBlock(Block.Properties.of().mapColor(MapColor.TERRACOTTA_PURPLE).jumpFactor(1.5F).strength(0.25F).sound(SoundType.GRAVEL)));
     public static final RegistryObject<Block> WYND_ICE = register("wynd_ice", () -> new Block(Block.Properties.copy(PACKED_ICE)));
+    public static final RegistryObject<Block> VALKYRIE_CLAY = register("valkyrie_clay", () -> new AetherDoubleDropBlock(Block.Properties.copy(CLAY).mapColor(MapColor.SNOW)));
 
     public static final RegistryObject<Block> AETHER_QUARTZ_ORE = register("aether_quartz_ore", () -> new AetherDoubleDropsOreBlock(Block.Properties.copy(NETHER_QUARTZ_ORE), UniformInt.of(2, 5)));
     public static final RegistryObject<Block> VALKYRUM_ORE = register("valkyrum_ore", () -> new ValkyrumBlock(Block.Properties.of().strength(4.0F, 4.0F).requiresCorrectToolForDrops().mapColor(MapColor.QUARTZ)));
