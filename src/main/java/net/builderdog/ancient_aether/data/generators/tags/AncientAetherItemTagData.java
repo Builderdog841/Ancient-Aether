@@ -301,6 +301,9 @@ public class AncientAetherItemTagData extends ItemTagsProvider {
         tag(Tags.Items.GLASS_PANES_COLORLESS).add(
                 AncientAetherBlocks.AEROGEL_GLASS_PANE.get().asItem()
         );
+        tag(Tags.Items.INGOTS_BRICK).add(
+                AncientAetherItems.VALKYRIE_BRICK.get()
+        );
         tag(Tags.Items.ORE_RATES_SINGULAR).add(
                 AncientAetherBlocks.AETHER_QUARTZ_ORE.get().asItem(),
                 AncientAetherBlocks.VALKYRUM_ORE.get().asItem()

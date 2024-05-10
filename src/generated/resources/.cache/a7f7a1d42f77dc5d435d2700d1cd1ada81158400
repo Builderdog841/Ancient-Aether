@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-22T08:27:28.2110288	Tags for minecraft:item mod id ancient_aether
+// 1.20.1	2024-05-10T13:28:51.2081523	Tags for minecraft:item mod id ancient_aether
 a6dcafb905da729c07d1dabd0f4f98e1e75317cd data/aether/tags/items/accessories_capes.json
 cd168c9518529051447f91f38db8a192fce79575 data/aether/tags/items/accessories_gloves.json
 add87f05b14c634a1e8ebb0ea33f104c4c8fadcf data/aether/tags/items/accessories_miscellaneous.json
@@ -58,6 +58,7 @@ db284a03b1ab6c6d5cef25fdf5349b6851a7f516 data/forge/tags/items/fence_gates/woode
 9b907c54e7c1c49be61873997383fdd310e97b3c data/forge/tags/items/glass/colorless.json
 7198e1f5ee81b117fac39fd1bb8febdb1ea91672 data/forge/tags/items/glass_panes.json
 7198e1f5ee81b117fac39fd1bb8febdb1ea91672 data/forge/tags/items/glass_panes/colorless.json
+e591bc1d8941b7abcadbf8da4ceb9512c5f2e3a6 data/forge/tags/items/ingots/brick.json
 90d07b81e26e07844cfff7b76febf1a2861b273f data/forge/tags/items/ores.json
 90d07b81e26e07844cfff7b76febf1a2861b273f data/forge/tags/items/ore_rates/singular.json
 bd87b848151f5ba65e717dd3f25eb88e0ba9fc12 data/forge/tags/items/storage_blocks.json
