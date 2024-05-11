@@ -69,6 +69,13 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
                 .unlockedBy(getHasName(AncientAetherBlocks.AEROGEL_GLASS.get()), has(AncientAetherBlocks.AEROGEL_GLASS.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AetherBlocks.PILLAR.get(),2)
+                .define('#', AncientAetherBlocks.VALKYRIE_BRICKS.get())
+                .pattern("#")
+                .pattern("#")
+                .unlockedBy(getHasName(AncientAetherBlocks.VALKYRIE_BRICKS.get()), has(AncientAetherBlocks.VALKYRIE_BRICKS.get()))
+                .save(consumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, AncientAetherBlocks.AMBROSIUM_LANTERN.get())
                 .define('#', AetherBlocks.HOLYSTONE.get())
                 .define('/', Tags.Items.RODS_WOODEN)
@@ -258,12 +265,17 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
         chiseled(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get(), AetherBlocks.ANGELIC_SLAB.get());
         chiseled(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get(), AetherBlocks.HELLFIRE_SLAB.get());
         chiseled(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGETIC_STONE_MOSAIC.get(), AncientAetherBlocks.AEROGETIC_SLAB.get());
+        chiseled(consumer, RecipeCategory.BUILDING_BLOCKS, AetherBlocks.PILLAR_TOP.get(), AncientAetherBlocks.VALKYRIE_BRICK_SLAB.get());
 
         twoByTwoPacker(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.VALKYRIE_CLAY.get(), AncientAetherItems.VALKYRIE_CLAY_BALL.get());
+        twoByTwoPacker(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.VALKYRIE_BRICKS.get(), AncientAetherItems.VALKYRIE_BRICK.get());
+
+        oreBlockStorageRecipesRecipesWithCustomUnpacking(consumer, RecipeCategory.MISC, AncientAetherItems.VALKYRUM.get(), RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.VALKYRUM_BLOCK.get(), "valkyrum_from_valkyrum_block", "valkyrum");
+
         polished(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_TILES.get(), AetherBlocks.CARVED_STONE.get());
         polished(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.ANGELIC_CORNER_BRICK.get(), AetherBlocks.ANGELIC_STONE.get());
+
         carpet(consumer, AncientAetherBlocks.FLUFFALO_CARPET.get(), AncientAetherBlocks.FLUFFALO_WOOL.get());
-        oreBlockStorageRecipesRecipesWithCustomUnpacking(consumer, RecipeCategory.MISC, AncientAetherItems.VALKYRUM.get(), RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.VALKYRUM_BLOCK.get(), "valkyrum_from_valkyrum_block", "valkyrum");
 
         makePickaxe(AncientAetherItems.VALKYRUM_PICKAXE, AncientAetherItems.VALKYRUM).save(consumer);
         makeAxe(AncientAetherItems.VALKYRUM_AXE, AncientAetherItems.VALKYRUM).save(consumer);

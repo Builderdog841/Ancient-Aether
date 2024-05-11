@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-11T11:55:55.8276753	Tags for minecraft:block mod id ancient_aether
+// 1.20.1	2024-05-11T17:44:41.9578595	Tags for minecraft:block mod id ancient_aether
 f0714fea3e89b69a7a6a6c729a028562bc0bd412 data/aether/tags/blocks/aerclouds.json
 c2354d6e9e1ad7d82a74dc026cfd3d3925683c7c data/aether/tags/blocks/aether_island_blocks.json
 c4903e6639b04406c020546d7cf2b0d7043443a7 data/aether/tags/blocks/aether_portal_blacklist.json
@@ -48,17 +48,19 @@ caebe6e6db3d95c4715e1f9ce91ddb56aa9fc8d7 data/minecraft/tags/blocks/ceiling_hang
 ce63abfd7d30dfff9c3c99ad85c8cc2c2ce03c44 data/minecraft/tags/blocks/logs_that_burn.json
 a6d024b3e3b636c5adaa1abe204238f85bf8b540 data/minecraft/tags/blocks/mineable/axe.json
 d897ce256cffee30bad4e6d2a7d22c74981bb204 data/minecraft/tags/blocks/mineable/hoe.json
-7a9027ce5c416bc7362962a6ca2aa0e51ccfe8e5 data/minecraft/tags/blocks/mineable/pickaxe.json
+b01cd119a71935de64cccbafce5b41cb9a78a1fe data/minecraft/tags/blocks/mineable/pickaxe.json
 701bf75a72049ac112c43aca7e220c85ce539b47 data/minecraft/tags/blocks/mineable/shovel.json
 232e4265910093c96244c3cd561d4db11df99c3b data/minecraft/tags/blocks/needs_diamond_tool.json
 11c24963c0005c857d0a2653ae0aa2ac82614af2 data/minecraft/tags/blocks/needs_stone_tool.json
 9a9a90f38634e2e7bec2990208cc2d71a05073b1 data/minecraft/tags/blocks/replaceable.json
 9a9a90f38634e2e7bec2990208cc2d71a05073b1 data/minecraft/tags/blocks/replaceable_by_trees.json
 c0f117d7d91733da5d4c623918833d7de83c45eb data/minecraft/tags/blocks/saplings.json
+5aabe301726b8c235739c0e061e2bc1f5a733bdf data/minecraft/tags/blocks/slabs.json
 8dec4525c199e460b30c1550cbaa9f68f84b401c data/minecraft/tags/blocks/small_flowers.json
+f514586ecee74e7c70d0a21077f944de0f06c82f data/minecraft/tags/blocks/stairs.json
 fad0a01f992bbbacbab5f9f965edae96ea42d68f data/minecraft/tags/blocks/standing_signs.json
 9a9a90f38634e2e7bec2990208cc2d71a05073b1 data/minecraft/tags/blocks/sword_efficient.json
-2eff197e5a84e4c814b14b952ca64a6dafd2de42 data/minecraft/tags/blocks/walls.json
+48eeec9cb664d29e7194344033a6fb1d77e09aee data/minecraft/tags/blocks/walls.json
 c0ad434799b8f573d06b7a803b8e2485f93e8d64 data/minecraft/tags/blocks/wall_hanging_signs.json
 83bc5cd25c7969d4a66ce25e4f6d45c7d8b9f7ae data/minecraft/tags/blocks/wall_signs.json
 46112be4b3c309ebaf2995cb2d290508e8f64905 data/minecraft/tags/blocks/wither_immune.json

@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-11T11:55:55.8299897	Tags for minecraft:item mod id ancient_aether
+// 1.20.1	2024-05-11T17:44:41.9598604	Tags for minecraft:item mod id ancient_aether
 a6dcafb905da729c07d1dabd0f4f98e1e75317cd data/aether/tags/items/accessories_capes.json
 cd168c9518529051447f91f38db8a192fce79575 data/aether/tags/items/accessories_gloves.json
 add87f05b14c634a1e8ebb0ea33f104c4c8fadcf data/aether/tags/items/accessories_miscellaneous.json
@@ -75,12 +75,14 @@ ce8a309ef3c9dde278c1bb5e11d2125ca78ba058 data/minecraft/tags/items/pickaxes.json
 c0f117d7d91733da5d4c623918833d7de83c45eb data/minecraft/tags/items/saplings.json
 7b221758a6680c0a657c5699629d27a3d784e0fe data/minecraft/tags/items/shovels.json
 fad0a01f992bbbacbab5f9f965edae96ea42d68f data/minecraft/tags/items/signs.json
+5aabe301726b8c235739c0e061e2bc1f5a733bdf data/minecraft/tags/items/slabs.json
 8dec4525c199e460b30c1550cbaa9f68f84b401c data/minecraft/tags/items/small_flowers.json
+f514586ecee74e7c70d0a21077f944de0f06c82f data/minecraft/tags/items/stairs.json
 56160960e51c2f58969cc9c80c369245b5d9fca6 data/minecraft/tags/items/swords.json
 92ab282e68ad599781f6132379ef0c69e856bbe5 data/minecraft/tags/items/trimmable_armor.json
 34d6e2134d2a1efa1c4d4d4c84df28c61ffd4d55 data/minecraft/tags/items/trim_materials.json
 383e44c58296bd17ab4247d7b6321bc062ac8ce6 data/minecraft/tags/items/trim_templates.json
-2eff197e5a84e4c814b14b952ca64a6dafd2de42 data/minecraft/tags/items/walls.json
+48eeec9cb664d29e7194344033a6fb1d77e09aee data/minecraft/tags/items/walls.json
 141d3e8dd6108de054c1344d1403b4b0d77ca762 data/minecraft/tags/items/wooden_buttons.json
 3563fa29de36454b994d7ac701cadfabff018e76 data/minecraft/tags/items/wooden_doors.json
 5aeceabe8e6aaf110d970e1a2189762e5ebeb938 data/minecraft/tags/items/wooden_fences.json

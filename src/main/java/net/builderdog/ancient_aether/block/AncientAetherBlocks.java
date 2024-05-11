@@ -101,7 +101,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<WallBlock> STRIPPED_SAKURA_WOOD_WALL = register("stripped_sakura_wood_wall", () -> new WallBlock(Block.Properties.copy(SKYROOT_FENCE.get())));
 
     public static final RegistryObject<Block> HIGHSPROOT_PLANKS = register("highsproot_planks", () -> new Block(BlockBehaviour.Properties.copy(SKYROOT_PLANKS.get())));
-    public static final RegistryObject<StairBlock> HIGHSPROOT_STAIRS = register("highsproot_stairs", () -> new StairBlock(() -> HIGHSPROOT_PLANKS.get().defaultBlockState(), (BlockBehaviour.Properties.copy(SKYROOT_STAIRS.get()))));
+    public static final RegistryObject<StairBlock> HIGHSPROOT_STAIRS = register("highsproot_stairs", () -> new StairBlock(() -> HIGHSPROOT_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(SKYROOT_STAIRS.get())));
     public static final RegistryObject<SlabBlock> HIGHSPROOT_SLAB = register("highsproot_slab", () -> new SlabBlock(Block.Properties.copy(SKYROOT_SLAB.get())));
     public static final RegistryObject<FenceBlock> HIGHSPROOT_FENCE = register("highsproot_fence", () -> new FenceBlock(Block.Properties.copy(SKYROOT_FENCE.get())));
     public static final RegistryObject<FenceGateBlock> HIGHSPROOT_FENCE_GATE = register("highsproot_fence_gate", () -> new FenceGateBlock(Block.Properties.copy(SKYROOT_FENCE_GATE.get()), AncientAetherBlockSets.HIGHSPROOT));
@@ -116,7 +116,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<Block> HIGHSPROOT_BOOKSHELF = register("highsproot_bookshelf", () -> new BookshelfBlock(Block.Properties.copy(SKYROOT_BOOKSHELF.get())));
 
     public static final RegistryObject<Block> SAKURA_PLANKS = register("sakura_planks", () -> new Block(BlockBehaviour.Properties.copy(SKYROOT_PLANKS.get())));
-    public static final RegistryObject<StairBlock> SAKURA_STAIRS = register("sakura_stairs", () -> new StairBlock(() -> SAKURA_PLANKS.get().defaultBlockState(), (BlockBehaviour.Properties.copy(SKYROOT_STAIRS.get()))));
+    public static final RegistryObject<StairBlock> SAKURA_STAIRS = register("sakura_stairs", () -> new StairBlock(() -> SAKURA_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(SKYROOT_STAIRS.get())));
     public static final RegistryObject<SlabBlock> SAKURA_SLAB = register("sakura_slab", () -> new SlabBlock(Block.Properties.copy(SKYROOT_SLAB.get())));
     public static final RegistryObject<FenceBlock> SAKURA_FENCE = register("sakura_fence", () -> new FenceBlock(Block.Properties.copy(SKYROOT_FENCE.get())));
     public static final RegistryObject<FenceGateBlock> SAKURA_FENCE_GATE = register("sakura_fence_gate", () -> new FenceGateBlock(Block.Properties.copy(SKYROOT_FENCE_GATE.get()), AncientAetherBlockSets.SAKURA));
@@ -140,15 +140,20 @@ public class AncientAetherBlocks {
 
     public static final RegistryObject<Block> CARVED_TILES = register("carved_tiles", () -> new Block(Block.Properties.copy(CARVED_STONE.get())));
     public static final RegistryObject<Block> WYND_SENTRY_STONE = register("wynd_sentry_stone", () -> new Block(Block.Properties.copy(SENTRY_STONE.get()).lightLevel(s -> 7)));
-    public static final RegistryObject<StairBlock> CARVED_TILE_STAIRS = register("carved_tile_stairs", () -> new StairBlock(() -> CARVED_TILES.get().defaultBlockState(), (Block.Properties.copy(CARVED_TILES.get()))));
+    public static final RegistryObject<StairBlock> CARVED_TILE_STAIRS = register("carved_tile_stairs", () -> new StairBlock(() -> CARVED_TILES.get().defaultBlockState(), Block.Properties.copy(CARVED_TILES.get())));
     public static final RegistryObject<SlabBlock> CARVED_TILE_SLAB = register("carved_tile_slab", () -> new SlabBlock(Block.Properties.copy(CARVED_TILES.get())));
     public static final RegistryObject<WallBlock> CARVED_TILE_WALL = register("carved_tile_wall", () -> new WallBlock(Block.Properties.copy(CARVED_TILES.get())));
+
     public static final RegistryObject<HorizontalDirectionalBlock> ANGELIC_CORNER_BRICK = register("angelic_corner_brick", () -> new HorizontalFacingBlock(Block.Properties.copy(ANGELIC_STONE.get())));
+    public static final RegistryObject<Block> VALKYRIE_BRICKS = register("valkyrie_bricks", () -> new Block(Block.Properties.copy(PILLAR.get())));
+    public static final RegistryObject<StairBlock> VALKYRIE_BRICK_STAIRS = register("valkyrie_brick_stairs", () -> new StairBlock(() -> VALKYRIE_BRICKS.get().defaultBlockState(), Block.Properties.copy(VALKYRIE_BRICKS.get())));
+    public static final RegistryObject<SlabBlock> VALKYRIE_BRICK_SLAB = register("valkyrie_brick_slab", () -> new SlabBlock(Block.Properties.copy(VALKYRIE_BRICKS.get())));
+    public static final RegistryObject<WallBlock> VALKYRIE_BRICK_WALL = register("valkyrie_brick_wall", () -> new WallBlock(Block.Properties.copy(VALKYRIE_BRICKS.get())));
 
     public static final RegistryObject<Block> AEROGETIC_STONE = register("aerogetic_stone", () -> new Block(Block.Properties.copy(CARVED_STONE.get()).mapColor(MapColor.COLOR_CYAN)));
     public static final RegistryObject<Block> AERONAUTIC_STONE = register("aeronautic_stone", () -> new Block(Block.Properties.copy(AEROGETIC_STONE.get()).lightLevel(s -> 11)));
     public static final RegistryObject<Block> CORRUPTED_AERONAUTIC_STONE = register("corrupted_aeronautic_stone", () -> new Block(Block.Properties.copy(AERONAUTIC_STONE.get())));
-    public static final RegistryObject<StairBlock> AEROGETIC_STAIRS = register("aerogetic_stairs", () -> new StairBlock(() -> AEROGETIC_STONE.get().defaultBlockState(), (Block.Properties.copy(AEROGETIC_STONE.get()))));
+    public static final RegistryObject<StairBlock> AEROGETIC_STAIRS = register("aerogetic_stairs", () -> new StairBlock(() -> AEROGETIC_STONE.get().defaultBlockState(), Block.Properties.copy(AEROGETIC_STONE.get())));
     public static final RegistryObject<SlabBlock> AEROGETIC_SLAB = register("aerogetic_slab", () -> new SlabBlock(Block.Properties.copy(AEROGETIC_STONE.get())));
     public static final RegistryObject<WallBlock> AEROGETIC_WALL = register("aerogetic_wall", () -> new WallBlock(Block.Properties.copy(AEROGETIC_STONE.get())));
 

@@ -107,7 +107,12 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.CARVED_TILE_STAIRS, "Carved Tile Stairs");
         addBlock(AncientAetherBlocks.CARVED_TILE_SLAB, "Carved Tile Slab");
         addBlock(AncientAetherBlocks.CARVED_TILE_WALL, "Carved Tile Wall");
+
         addBlock(AncientAetherBlocks.ANGELIC_CORNER_BRICK, "Angelic Corner Brick");
+        addBlock(AncientAetherBlocks.VALKYRIE_BRICKS, "Valkyrie Bricks");
+        addBlock(AncientAetherBlocks.VALKYRIE_BRICK_STAIRS, "Valkyrie Brick Stairs");
+        addBlock(AncientAetherBlocks.VALKYRIE_BRICK_SLAB, "Valkyrie Brick Slab");
+        addBlock(AncientAetherBlocks.VALKYRIE_BRICK_WALL, "Valkyrie Brick Wall");
 
         addBlock(AncientAetherBlocks.AEROGETIC_STONE, "Aerogetic Stone");
         addBlock(AncientAetherBlocks.AERONAUTIC_STONE, "Aeronautic Stone");
