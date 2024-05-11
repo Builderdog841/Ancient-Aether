@@ -112,6 +112,7 @@ public class AncientAether {
             SurfaceRuleManager.addSurfaceRules(AetherRuleCategory.THE_AETHER, MODID, AncientAetherSurfaceRules.makeRules());
 
             AetherItems.AETHER_LOOT.color = ChatFormatting.WHITE;
+            AetherItems.AETHER_LOOT.styleModifier = (style) -> style.withColor(ChatFormatting.WHITE);
         });
     }
 
