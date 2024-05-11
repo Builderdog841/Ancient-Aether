@@ -15,7 +15,7 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("deprecation")
-public class SliderPrototypeBlock extends Block {
+public class SliderPrototypeBlock extends HorizontalFacingBlock {
     public static final BooleanProperty CRITICAL = AncientAetherBlockStateProperties.CRITICAL;
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
@@ -29,14 +29,6 @@ public class SliderPrototypeBlock extends Block {
 
     public @NotNull RenderShape getRenderShape(@NotNull BlockState state) {
         return RenderShape.MODEL;
-    }
-
-    public @NotNull BlockState rotate(BlockState state, Rotation rotation) {
-        return state.setValue(FACING, rotation.rotate(state.getValue(FACING)));
-    }
-
-    public @NotNull BlockState mirror(BlockState blockState, Mirror mirror) {
-        return blockState.rotate(mirror.getRotation(blockState.getValue(FACING)));
     }
 
     public void neighborChanged(@NotNull BlockState state, Level level, @NotNull BlockPos pos, @NotNull Block block, @NotNull BlockPos neighborPos, boolean bool) {

@@ -55,6 +55,33 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
         simpleBlock(block, models().singleTexture(name(block), mcLoc("block/carpet"), "wool", texture(name(baseBlock))));
     }
 
+    public void cornerBrick(Block block) {
+        String blockName = name(block);
+        ResourceLocation top =  extend(texture(name(block)), "_top");
+        ResourceLocation left =  extend(texture(name(block)), "_right");
+        ResourceLocation right =  extend(texture(name(block)), "_left");
+
+        ModelFile normal = models().cube(blockName, top, top, left, left, right, right).texture("particle", top);
+        getVariantBuilder(block).forAllStatesExcept((state) -> {
+            Direction direction = state.getValue(WindBlowerBlock.FACING);
+            switch (direction) {
+                case NORTH -> {
+                    return ConfiguredModel.builder().modelFile(normal).build();
+                }
+                case SOUTH -> {
+                    return ConfiguredModel.builder().modelFile(normal).rotationY(180).build();
+                }
+                case WEST -> {
+                    return ConfiguredModel.builder().modelFile(normal).rotationY(270).build();
+                }
+                case EAST -> {
+                    return ConfiguredModel.builder().modelFile(normal).rotationY(90).build();
+                }
+            }
+            return ConfiguredModel.builder().build();
+        });
+    }
+
     public void grapeVine(Block block) {
         getVariantBuilder(block).forAllStatesExcept((state) -> {
             int age = state.getValue(GrapeVineBlock.AGE);
@@ -146,22 +173,22 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
         ResourceLocation west_puffed =  extend(texture(name(block)), "_side_right_puffed");
 
         ModelFile normal = models().cube(blockName, down, up, north, south, east, west).renderType("translucent").texture("particle", down);
-        ModelFile charged = puffedBlock(blockName + "_puffed", down_puffed, up_puffed, north_puffed, south_puffed, east_puffed, west_puffed).renderType("translucent").texture("particle", down_puffed);
+        ModelFile puffed = puffedBlock(blockName + "_puffed", down_puffed, up_puffed, north_puffed, south_puffed, east_puffed, west_puffed).renderType("translucent").texture("particle", down_puffed);
         getVariantBuilder(block).forAllStatesExcept((state) -> {
             Direction direction = state.getValue(WindBlowerBlock.FACING);
             if (state.getValue(WindBlowerBlock.PUFFED))
                 switch (direction) {
                     case NORTH -> {
-                        return ConfiguredModel.builder().modelFile(charged).build();
+                        return ConfiguredModel.builder().modelFile(puffed).build();
                     }
                     case SOUTH -> {
-                        return ConfiguredModel.builder().modelFile(charged).rotationY(180).build();
+                        return ConfiguredModel.builder().modelFile(puffed).rotationY(180).build();
                     }
                     case WEST -> {
-                        return ConfiguredModel.builder().modelFile(charged).rotationY(270).build();
+                        return ConfiguredModel.builder().modelFile(puffed).rotationY(270).build();
                     }
                     case EAST -> {
-                        return ConfiguredModel.builder().modelFile(charged).rotationY(90).build();
+                        return ConfiguredModel.builder().modelFile(puffed).rotationY(90).build();
                     }
                 }
             else

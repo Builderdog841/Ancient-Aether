@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-10T13:28:51.2081523	Tags for minecraft:item mod id ancient_aether
+// 1.20.1	2024-05-11T11:55:55.8299897	Tags for minecraft:item mod id ancient_aether
 a6dcafb905da729c07d1dabd0f4f98e1e75317cd data/aether/tags/items/accessories_capes.json
 cd168c9518529051447f91f38db8a192fce79575 data/aether/tags/items/accessories_gloves.json
 add87f05b14c634a1e8ebb0ea33f104c4c8fadcf data/aether/tags/items/accessories_miscellaneous.json
@@ -7,11 +7,11 @@ d9ab035fe1b718f7b51ec3eab559378021efae7b data/aether/tags/items/accessories_ring
 3951f6de2c4e0f20be405097c4fddb2de840d48a data/aether/tags/items/accessories_shields.json
 af89ca9b971b1a84ff96ce1c0fcceda39c1b6958 data/aether/tags/items/aerbunny_temptation_items.json
 f0714fea3e89b69a7a6a6c729a028562bc0bd412 data/aether/tags/items/aerclouds.json
-9d1638c7b22ae315b70b4a67c5d85847dba11e46 data/aether/tags/items/angelic_blocks.json
+1ec056cb7cce1aeb9fd15a4f10133683035de2fc data/aether/tags/items/angelic_blocks.json
 f95244a71cf5ac816c4c32016a0294d575be6e50 data/aether/tags/items/boss_doorway_dungeon_blocks.json
 b221ec153f29e62c2cbf6a8c454ed35e266b870a data/aether/tags/items/bronze_dungeon_loot.json
 220a602241a8865d3b713085fa08983dc7e1058a data/aether/tags/items/dart_shooters.json
-36c3b9c779555d4f246a39ee4b35efec14927024 data/aether/tags/items/dungeon_blocks.json
+aa9267843b0016726a188b0b19577565f75cce95 data/aether/tags/items/dungeon_blocks.json
 3b63d7e89dd638618c9c82f04a3c06eed119ebb8 data/aether/tags/items/dungeon_keys.json
 af89ca9b971b1a84ff96ce1c0fcceda39c1b6958 data/aether/tags/items/flying_cow_temptation_items.json
 1d61380269ec7b2f7611bd4966cf64d34faf832c data/aether/tags/items/golden_amber_harvesters.json

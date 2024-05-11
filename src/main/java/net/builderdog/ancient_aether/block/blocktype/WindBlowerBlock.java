@@ -22,7 +22,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("deprecation")
-public class WindBlowerBlock extends Block implements Equipable {
+public class WindBlowerBlock extends HorizontalFacingBlock implements Equipable {
     public static final BooleanProperty PUFFED = AncientAetherBlockStateProperties.PUFFED;
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
@@ -37,14 +37,6 @@ public class WindBlowerBlock extends Block implements Equipable {
 
     public @NotNull RenderShape getRenderShape(@NotNull BlockState state) {
         return RenderShape.MODEL;
-    }
-
-    public @NotNull BlockState rotate(BlockState state, Rotation rotation) {
-        return state.setValue(FACING, rotation.rotate(state.getValue(FACING)));
-    }
-
-    public @NotNull BlockState mirror(BlockState state, Mirror mirror) {
-        return state.rotate(mirror.getRotation(state.getValue(FACING)));
     }
 
     public void neighborChanged(BlockState state, Level level, @NotNull BlockPos pos, @NotNull Block block, @NotNull BlockPos neighborPos, boolean bool) {

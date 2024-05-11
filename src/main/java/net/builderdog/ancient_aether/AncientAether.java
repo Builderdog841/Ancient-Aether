@@ -24,6 +24,7 @@ import net.builderdog.ancient_aether.world.structure.AncientAetherStructureTypes
 import net.builderdog.ancient_aether.world.treedecorator.AncientAetherTreeDecoratorTypes;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.Style;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.PathPackResources;

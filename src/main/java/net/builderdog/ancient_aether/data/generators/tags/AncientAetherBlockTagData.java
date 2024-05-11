@@ -189,6 +189,7 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
         tag(AetherTags.Blocks.DUNGEON_BLOCKS).add(
                 AncientAetherBlocks.CARVED_TILES.get(),
                 AncientAetherBlocks.WYND_SENTRY_STONE.get(),
+                AncientAetherBlocks.ANGELIC_CORNER_BRICK.get(),
                 AncientAetherBlocks.AEROGETIC_STONE.get(),
                 AncientAetherBlocks.AERONAUTIC_STONE.get(),
                 AncientAetherBlocks.CORRUPTED_AERONAUTIC_STONE.get(),
@@ -213,6 +214,7 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
                 AncientAetherBlocks.TREASURE_DOORWAY_WYND_SENTRY_STONE.get()
         );
         tag(AetherTags.Blocks.ANGELIC_BLOCKS).add(
+                AncientAetherBlocks.ANGELIC_CORNER_BRICK.get(),
                 AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get(),
                 AncientAetherBlocks.LOCKED_ANGELIC_STONE_MOSAIC.get()
         );
@@ -465,10 +467,11 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
                 AncientAetherBlocks.AEROGEL_GLASS_DOOR.get(),
                 AncientAetherBlocks.AEROGEL_GLASS_TRAPDOOR.get(),
                 AncientAetherBlocks.CARVED_TILES.get(),
+                AncientAetherBlocks.WYND_SENTRY_STONE.get(),
                 AncientAetherBlocks.CARVED_TILE_STAIRS.get(),
                 AncientAetherBlocks.CARVED_TILE_SLAB.get(),
                 AncientAetherBlocks.CARVED_TILE_WALL.get(),
-                AncientAetherBlocks.WYND_SENTRY_STONE.get(),
+                AncientAetherBlocks.ANGELIC_CORNER_BRICK.get(),
                 AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get(),
                 AncientAetherBlocks.CARVED_STONE_MOSAIC.get(),
                 AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get(),

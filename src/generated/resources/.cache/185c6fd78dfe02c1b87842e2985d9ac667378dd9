@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-10T13:06:59.92997	Item Models: ancient_aether
+// 1.20.1	2024-05-11T11:55:55.8204304	Item Models: ancient_aether
 532bdb7a4f7d2a6b96d474c01c8b9e7a0d1c10b4 assets/ancient_aether/models/item/aerogel_glass.json
 87e9f8f9f807a2aa763e3057d32bacf3ee32b60f assets/ancient_aether/models/item/aerogel_glass_door.json
 d1e6ed3e334d573f31a8ce9e09885c0f43832630 assets/ancient_aether/models/item/aerogel_glass_pane.json
@@ -26,6 +26,7 @@ e33c85e0901587bf84b2a93e0f74636995731436 assets/ancient_aether/models/item/ancie
 b0d7cb9315807de83a30f396ac7611611e086577 assets/ancient_aether/models/item/ancient_rune.json
 3000009a605c81ff17f008b50dc9669413928008 assets/ancient_aether/models/item/ancient_sentry_vase.json
 7b758a31f7272894d72fc2ff7144b4d1d37b407a assets/ancient_aether/models/item/ancient_sword.json
+1367bc1c125cb08bd35c059cde7d3e284cfff2f2 assets/ancient_aether/models/item/angelic_corner_brick.json
 ed179b3ef576a4cfe5ef1282c7007bdf56c9e7a4 assets/ancient_aether/models/item/angelic_vase.json
 e39f295afb13b5e4ab726c96bd2a1f49a2c81eaf assets/ancient_aether/models/item/ascended_armor_trim_smithing_template.json
 bdc05003ba104ce1c4f7b30f32433d8ef7ed3125 assets/ancient_aether/models/item/atmosine_crystal.json

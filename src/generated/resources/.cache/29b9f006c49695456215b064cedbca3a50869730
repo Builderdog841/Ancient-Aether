@@ -1,11 +1,11 @@
-// 1.20.1	2024-05-10T19:58:29.9385326	Tags for minecraft:block mod id ancient_aether
+// 1.20.1	2024-05-11T11:55:55.8276753	Tags for minecraft:block mod id ancient_aether
 f0714fea3e89b69a7a6a6c729a028562bc0bd412 data/aether/tags/blocks/aerclouds.json
 c2354d6e9e1ad7d82a74dc026cfd3d3925683c7c data/aether/tags/blocks/aether_island_blocks.json
 c4903e6639b04406c020546d7cf2b0d7043443a7 data/aether/tags/blocks/aether_portal_blacklist.json
-9d1638c7b22ae315b70b4a67c5d85847dba11e46 data/aether/tags/blocks/angelic_blocks.json
+1ec056cb7cce1aeb9fd15a4f10133683035de2fc data/aether/tags/blocks/angelic_blocks.json
 f95244a71cf5ac816c4c32016a0294d575be6e50 data/aether/tags/blocks/boss_doorway_dungeon_blocks.json
 96b8ea697d9c59a95ebcd2c38c76d6c6c8e59ae8 data/aether/tags/blocks/cockatrice_spawnable_blacklist.json
-145518e2b65520e3abc96f7600a2dfd4c831975e data/aether/tags/blocks/dungeon_blocks.json
+493681b4538f54c4135c36e67f53e2dccbe4228d data/aether/tags/blocks/dungeon_blocks.json
 0ac17a5e432d358a81ec1321d80240c6eeefdeb6 data/aether/tags/blocks/gravitite_ability_blacklist.json
 ae3049100e010970dbef2412ecb97bf585fa4481 data/aether/tags/blocks/hellfire_blocks.json
 631aec4addcd6459bf8adebdb2b0490856dfec83 data/aether/tags/blocks/locked_dungeon_blocks.json
@@ -48,7 +48,7 @@ caebe6e6db3d95c4715e1f9ce91ddb56aa9fc8d7 data/minecraft/tags/blocks/ceiling_hang
 ce63abfd7d30dfff9c3c99ad85c8cc2c2ce03c44 data/minecraft/tags/blocks/logs_that_burn.json
 a6d024b3e3b636c5adaa1abe204238f85bf8b540 data/minecraft/tags/blocks/mineable/axe.json
 d897ce256cffee30bad4e6d2a7d22c74981bb204 data/minecraft/tags/blocks/mineable/hoe.json
-ba1f67b44904677041c6ec7ad752c505459435b1 data/minecraft/tags/blocks/mineable/pickaxe.json
+7a9027ce5c416bc7362962a6ca2aa0e51ccfe8e5 data/minecraft/tags/blocks/mineable/pickaxe.json
 701bf75a72049ac112c43aca7e220c85ce539b47 data/minecraft/tags/blocks/mineable/shovel.json
 232e4265910093c96244c3cd561d4db11df99c3b data/minecraft/tags/blocks/needs_diamond_tool.json
 11c24963c0005c857d0a2653ae0aa2ac82614af2 data/minecraft/tags/blocks/needs_stone_tool.json

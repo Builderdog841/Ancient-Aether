@@ -148,6 +148,7 @@ public class AncientAetherItemTagData extends ItemTagsProvider {
         tag(AetherTags.Items.DUNGEON_BLOCKS).add(
                 AncientAetherBlocks.CARVED_TILES.get().asItem(),
                 AncientAetherBlocks.WYND_SENTRY_STONE.get().asItem(),
+                AncientAetherBlocks.ANGELIC_CORNER_BRICK.get().asItem(),
                 AncientAetherBlocks.AEROGETIC_STONE.get().asItem(),
                 AncientAetherBlocks.AERONAUTIC_STONE.get().asItem(),
                 AncientAetherBlocks.CORRUPTED_AERONAUTIC_STONE.get().asItem()
@@ -167,6 +168,7 @@ public class AncientAetherItemTagData extends ItemTagsProvider {
                 AncientAetherBlocks.TREASURE_DOORWAY_WYND_SENTRY_STONE.get().asItem()
         );
         tag(AetherTags.Items.ANGELIC_BLOCKS).add(
+                AncientAetherBlocks.ANGELIC_CORNER_BRICK.get().asItem(),
                 AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get().asItem(),
                 AncientAetherBlocks.LOCKED_ANGELIC_STONE_MOSAIC.get().asItem()
         );

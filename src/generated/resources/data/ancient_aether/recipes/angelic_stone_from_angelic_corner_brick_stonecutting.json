@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "ancient_aether:angelic_corner_brick"
+  },
+  "result": "aether:angelic_stone"
+}

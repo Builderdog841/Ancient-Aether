@@ -143,6 +143,7 @@ public class AncientAetherBlocks {
     public static final RegistryObject<StairBlock> CARVED_TILE_STAIRS = register("carved_tile_stairs", () -> new StairBlock(() -> CARVED_TILES.get().defaultBlockState(), (Block.Properties.copy(CARVED_TILES.get()))));
     public static final RegistryObject<SlabBlock> CARVED_TILE_SLAB = register("carved_tile_slab", () -> new SlabBlock(Block.Properties.copy(CARVED_TILES.get())));
     public static final RegistryObject<WallBlock> CARVED_TILE_WALL = register("carved_tile_wall", () -> new WallBlock(Block.Properties.copy(CARVED_TILES.get())));
+    public static final RegistryObject<HorizontalDirectionalBlock> ANGELIC_CORNER_BRICK = register("angelic_corner_brick", () -> new HorizontalFacingBlock(Block.Properties.copy(ANGELIC_STONE.get())));
 
     public static final RegistryObject<Block> AEROGETIC_STONE = register("aerogetic_stone", () -> new Block(Block.Properties.copy(CARVED_STONE.get()).mapColor(MapColor.COLOR_CYAN)));
     public static final RegistryObject<Block> AERONAUTIC_STONE = register("aeronautic_stone", () -> new Block(Block.Properties.copy(AEROGETIC_STONE.get()).lightLevel(s -> 11)));

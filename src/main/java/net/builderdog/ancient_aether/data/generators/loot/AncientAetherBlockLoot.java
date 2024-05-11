@@ -78,10 +78,11 @@ public class AncientAetherBlockLoot extends AncientAetherBlockLootSubProvider {
         dropSelf(AncientAetherBlocks.FLUFFALO_WOOL.get());
         dropSelf(AncientAetherBlocks.FLUFFALO_CARPET.get());
         dropSelf(AncientAetherBlocks.CARVED_TILES.get());
+        dropSelf(AncientAetherBlocks.WYND_SENTRY_STONE.get());
         dropSelf(AncientAetherBlocks.CARVED_TILE_STAIRS.get());
         dropSelf(AncientAetherBlocks.CARVED_TILE_SLAB.get());
         dropSelf(AncientAetherBlocks.CARVED_TILE_WALL.get());
-        dropSelf(AncientAetherBlocks.WYND_SENTRY_STONE.get());
+        dropSelf(AncientAetherBlocks.ANGELIC_CORNER_BRICK.get());
         dropSelf(AncientAetherBlocks.AEROGETIC_STONE.get());
         dropSelf(AncientAetherBlocks.AEROGETIC_STAIRS.get());
         dropSelf(AncientAetherBlocks.AEROGETIC_WALL.get());
