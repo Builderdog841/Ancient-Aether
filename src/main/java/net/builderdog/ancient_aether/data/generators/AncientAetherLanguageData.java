@@ -449,7 +449,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addLore(AncientAetherBlocks.AERONAUTIC_STONE, "The light version of Aerogetic Stone. It is less common than Aerogetic Stone, but it looks really nice as a decorative block.");
         addLore(AncientAetherBlocks.CORRUPTED_AERONAUTIC_STONE, "A spooky variant of Aeronautic Stone.");
         addLore(AncientAetherBlocks.AMBROSIUM_LANTERN, "A decoration block that is crafted from Holystone, Skyroot Sticks and an Ambrosium Torch. This Lantern works in the Aether unlike its Overworld counterpart.");
-        addLore(AncientAetherBlocks.WYND_LANTERN, "A rather dim lantern found in Sentry Laboratories. It can also be crafted using an Ambrosium Lantern and a piece of Wynd Sentry Stone.");
+        addLore(AncientAetherBlocks.WYND_LANTERN, "A dim lantern found in Sentry Laboratories. It can also be crafted using an Ambrosium Lantern and a piece of Wynd Sentry Stone.");
         addLore(AncientAetherBlocks.SUN_LANTERN, "A fancy lantern found in Gold Dungeons. It can also be crafted using an Ambrosium Lantern and a piece of Light Hellfire Stone.");
         addLore(AncientAetherBlocks.AMBROSIUM_CAMPFIRE, "A campfire that works in the Aether. It's a good Furnace alternative if you don't have a lot of Ambrosium.");
         addLore(AncientAetherBlocks.VIOLET_AERCLOUD, "A violet cloud found close to the ground. This Aercloud acts as an opposite to the Blue Aercloud since it pushes players and other entities downwards.");

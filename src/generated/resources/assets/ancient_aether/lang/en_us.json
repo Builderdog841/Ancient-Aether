@@ -400,7 +400,7 @@
   "lore.block.ancient_aether.violet_aercloud": "A violet cloud found close to the ground. This Aercloud acts as an opposite to the Blue Aercloud since it pushes players and other entities downwards.",
   "lore.block.ancient_aether.wind_blower": "A way of transmitting Redstone Signals in the Aether. Activating one makes it release a Wind Blow that would activate another one if it gets hit, which causes a chain reaction. If a Windblower is active, it will emit a Redstone Signal. It can also be worn on your head if you want to look extra fancy.",
   "lore.block.ancient_aether.wynd_ice": "A block that behaves similar to Packed Ice and can be found on the coasts of Wyndcap Islands.",
-  "lore.block.ancient_aether.wynd_lantern": "A rather dim lantern found in Sentry Laboratories. It can also be crafted using an Ambrosium Lantern and a piece of Wynd Sentry Stone.",
+  "lore.block.ancient_aether.wynd_lantern": "A dim lantern found in Sentry Laboratories. It can also be crafted using an Ambrosium Lantern and a piece of Wynd Sentry Stone.",
   "lore.block.ancient_aether.wynd_sentry_stone": "A rare Sentry Stone variant exclusive to the Sentry Laboratory. It emits a dimmer light than regular Sentry Stone and can also be made in the Freezer.",
   "lore.block.ancient_aether.wynd_thistle": "These spiky flowers can be found in large numbers near Sky Lakes as well as in the Wyndcaps. They can be crafted into Light Blue Dye when placed in a Crafting Table.",
   "lore.item.ancient_aether.aeronautic_dart_shooter": "A reward from defeating the Ancient Dungeon Boss. This dart shooter launches mobs high up in the air similar to Gravitite Equipment. You can use any type of dart as ammunition.",
