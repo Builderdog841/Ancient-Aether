@@ -30,7 +30,7 @@ public class AncientAetherNoises {
         register(context, EROSION, -9, 1.5, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
         register(context, JAGGED, -16, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0);
         register(context, NOISE_CAVES, -6, 1.0, 2.0, 1.0, 0.0, 0.0, 0.0, 0.0);
-        register(context, NOISE_CAVE_FACTOR, -7, 0.4, 0.0, 0.0);
+        register(context, NOISE_CAVE_FACTOR, -7, 0.3, 0.0, 0.0);
         register(context, AMPLIFIER, -7, 1.0, 2.0, 1.0, 0.0, 0.0, 0.0, 0.0);
         register(context, AMPLIFIER_FACTOR, -8, 0.8, 0.6, 0.25, 0.0, 0.0, 0.0, 0.0);
         register(context, SKYLANDS_AQUIFER, -6, 1.5, 0.5, 0.0, 0.0, 0.0);
