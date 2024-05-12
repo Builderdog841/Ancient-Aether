@@ -150,14 +150,6 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
                 .unlockedBy(getHasName(AncientAetherItems.VALKYRIE_BRICK.get()), has(AncientAetherItems.VALKYRIE_BRICK.get()))
                 .save(consumer, name("flower_pot_from_valkyrie_bricks"));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, Blocks.DECORATED_POT)
-                .define('#', AncientAetherItems.VALKYRIE_BRICK.get())
-                .pattern(" # ")
-                .pattern("# #")
-                .pattern(" # ")
-                .unlockedBy(getHasName(AncientAetherItems.VALKYRIE_BRICK.get()), has(AncientAetherItems.VALKYRIE_BRICK.get()))
-                .save(consumer, name("decorated_pot_from_valkyrie_bricks"));
-
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Items.ARMOR_STAND)
                 .define('/', Tags.Items.RODS_WOODEN)
                 .define('_', AetherBlocks.HOLYSTONE_SLAB.get())
