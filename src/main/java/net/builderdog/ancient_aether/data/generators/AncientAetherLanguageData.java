@@ -427,11 +427,12 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
 
         add("item.minecraft.quartz", "Quartz");
 
-        addLore(AncientAetherBlocks.GRAVITY_GRAVEL, "Stepping on this block increases your jump height. It spawns on the coasts of Elevated Islands and doesn't fall unlike its Overworld counterpart.");
-        addLore(AncientAetherBlocks.WYND_ICE, "A block that behaves similar to Packed Ice that generates on the Coasts of Wyndcap Islands.");
+        addLore(AncientAetherBlocks.GRAVITY_GRAVEL, "Stepping on this block increases your jump height. It generates on the coasts of Elevated Islands and doesn't fall unlike its Overworld counterpart.");
+        addLore(AncientAetherBlocks.WYND_ICE, "A block that behaves similar to Packed Ice and can be found on the coasts of Wyndcap Islands.");
+        addLore(AncientAetherBlocks.VALKYRIE_CLAY, "The Aether's equivalent of clay. It can be found in shallow areas of Sky Lakes");
         addLore(AncientAetherBlocks.AETHER_QUARTZ_ORE, "A source of Quartz in the Aether.");
         addLore(AncientAetherBlocks.VALKYRUM_ORE, "A very rare ore that can only be mined with a Pickaxe of Arkzenus or higher. It can be enchanted into Valkyrum using an Altar.");
-        addLore(AncientAetherBlocks.ATMOSINE_CRYSTAL, "A shiny Crystal found in the Atmosine Grotto. It floats upwards similarly to Gravitite and has various different crafting uses. It is also a good fuel source for the Altar.");
+        addLore(AncientAetherBlocks.ATMOSINE_CRYSTAL, "A shiny crystal that floats upwards similarly to Gravitite and is good fuel supplier for the Altar.");
         addLore(AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES, "These leaves generate with Crystal Skyroot Trees. They can drop Crystal Skyroot Saplings as well as White Apples when decaying.");
         addLore(AncientAetherBlocks.SKY_GRASS, "The main grass type of the Aether. It can come in different lengths and colors depending on its surroundings.");
         addLore(AncientAetherBlocks.VALKYRUM_BLOCK, "A block compacted from Valkyrum. They can power beacons and have a noble look to them.");
@@ -441,7 +442,10 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addLore(AncientAetherBlocks.FLUFFALO_CARPET, "A cozy decoration block crafted from Fluffalo Wool.");
         addLore(AncientAetherBlocks.CARVED_TILES, "A variant of Carved Stone that can be used as a decoration block. It also generates in Bronze Dungeons, primarily as an accent block to regular Carved Stone.");
         addLore(AncientAetherBlocks.WYND_SENTRY_STONE, "A rare Sentry Stone variant exclusive to the Sentry Laboratory. It emits a dimmer light than regular Sentry Stone and can also be made in the Freezer.");
-        addLore(AncientAetherBlocks.AEROGETIC_STONE, "The stone found in Ancient Dungeons. This stone has a dark metal color to it and can be mined as a decorative block.");
+        addLore(AncientAetherBlocks.ANGELIC_CORNER_BRICK, "A variant of Angelic Stone. Due to its unique texture you can rotate it to create a quite interesting wall patterns for your builds.");
+        addLore(AncientAetherBlocks.VALKYRIE_BRICKS, "The result from smelting Valkyrie Clay after crafting it together. These pristine bricks make for a nice building material that can crafted into several variants.");
+        addLore(AncientAetherBlocks.VALKYRIE_TILES, "A variant of Valkyrie Bricks that works nicely as a shiny floor block.");
+        addLore(AncientAetherBlocks.AEROGETIC_STONE, "A stone found in Ancient Dungeons. This stone has a dark metal color to it and can be mined as a decorative block.");
         addLore(AncientAetherBlocks.AERONAUTIC_STONE, "The light version of Aerogetic Stone. It is less common than Aerogetic Stone, but it looks really nice as a decorative block.");
         addLore(AncientAetherBlocks.CORRUPTED_AERONAUTIC_STONE, "A spooky variant of Aeronautic Stone.");
         addLore(AncientAetherBlocks.AMBROSIUM_LANTERN, "A decoration block that is crafted from Holystone, Skyroot Sticks and an Ambrosium Torch. This Lantern works in the Aether unlike its Overworld counterpart.");
@@ -458,7 +462,9 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addLore(AncientAetherBlocks.ANCIENT_FROZEN_HOLYSTONE_VASE, "A frosted relic found in Sentry Laboratories. Breaking it can yield you some shiny treasures.");
 
         addLore(AncientAetherItems.VALKYRUM, "A shiny metal that is used to forge the finest pieces of weaponry. It can also be used a noble trimming material.");
-        addLore(AncientAetherItems.GRAPES, "Often found growing on the logs of Skyroot Trees in Skyroot Forests. This delicious fruit serves a great early-game food source.");
+        addLore(AncientAetherItems.VALKYRIE_CLAY_BALL, "Obtained from mining Valkyrie Clay, this item can either be smelted into a Valkyrie Brick or crafted back into a block.");
+        addLore(AncientAetherItems.VALKYRIE_BRICK, "A shiny white brick that can be crafted into various different decoration blocks like Valkyrie Bricks or Vases.");
+        addLore(AncientAetherItems.GRAPES, "Often found growing on the logs of Skyroot Trees in Skyroot Forests. This delicious fruit serves as a great early-game food source.");
         addLore(AncientAetherItems.SLAMMBERRY, "This berry, obtained from defeating the mischievous Slammroots, launches you high up in the air and then proceeds to spread vegetation once you land again.");
         addLore(AncientAetherItems.FESTIVE_GUMMY_SWET, "A sweet-smelling gummy, it can be found in random chests in Sentry Laboratories. It fully restores the player's hunger when eaten. Very useful for boss fights.");
         addLore(AncientAetherItems.ANCIENT_SWORD, "This Sword is a reward for defeating the Ancient Dungeon Boss. It's very powerful due to its high Attack Speed.");
@@ -498,11 +504,15 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addStairsLore(AncientAetherBlocks.HIGHSPROOT_STAIRS, "Highsproot Planks");
         addStairsLore(AncientAetherBlocks.SAKURA_STAIRS, "Sakura Planks");
         addStairsLore(AncientAetherBlocks.CARVED_TILE_STAIRS, "Carved Tiles");
+        addStairsLore(AncientAetherBlocks.VALKYRIE_BRICK_STAIRS, "Valkyrie Bricks");
+        addStairsLore(AncientAetherBlocks.VALKYRIE_TILE_STAIRS, "Valkyrie Tiles");
         addStairsLore(AncientAetherBlocks.AEROGETIC_STAIRS, "Aerogetic Stone");
 
         addSlabLore(AncientAetherBlocks.HIGHSPROOT_SLAB, "Highsproot Planks");
         addSlabLore(AncientAetherBlocks.SAKURA_SLAB, "Sakura Planks");
         addSlabLore(AncientAetherBlocks.CARVED_TILE_SLAB, "Carved Tiles");
+        addSlabLore(AncientAetherBlocks.VALKYRIE_BRICK_SLAB, "Valkyrie Bricks");
+        addSlabLore(AncientAetherBlocks.VALKYRIE_TILE_SLAB, "Valkyrie Tiles");
         addSlabLore(AncientAetherBlocks.AEROGETIC_SLAB, "Aerogetic Stone");
 
         addWallLore(AncientAetherBlocks.HIGHSPROOT_LOG_WALL, "Highsproot Logs");
@@ -514,6 +524,8 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addWallLore(AncientAetherBlocks.STRIPPED_SAKURA_LOG_WALL, "Stripped Sakura Logs");
         addWallLore(AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL, "Stripped Sakura Wood");
         addWallLore(AncientAetherBlocks.CARVED_TILE_WALL, "Carved Tiles");
+        addWallLore(AncientAetherBlocks.VALKYRIE_BRICK_WALL, "Valkyrie Bricks");
+        addWallLore(AncientAetherBlocks.VALKYRIE_TILE_WALL, "Valkyrie Tiles");
         addWallLore(AncientAetherBlocks.AEROGETIC_WALL, "Aerogetic Stone");
 
         addFenceLore(AncientAetherBlocks.HIGHSPROOT_FENCE, "Highsproot");

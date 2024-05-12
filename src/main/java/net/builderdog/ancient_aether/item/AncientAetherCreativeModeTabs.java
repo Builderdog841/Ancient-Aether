@@ -50,13 +50,13 @@ public class AncientAetherCreativeModeTabs {
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.SAKURA_TRAPDOOR.get()), new ItemStack(AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.SAKURA_PRESSURE_PLATE.get()), new ItemStack(AncientAetherBlocks.SAKURA_BUTTON.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AetherBlocks.HOLYSTONE_BRICKS.get()), new ItemStack(AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.FLUFFALO_WOOL.get()), new ItemStack(AncientAetherBlocks.FLUFFALO_WOOL.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.FLUFFALO_WOOL.get()), new ItemStack(AncientAetherBlocks.FLUFFALO_CARPET.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AetherBlocks.ENCHANTED_GRAVITITE.get()), new ItemStack(AncientAetherBlocks.VALKYRUM_BLOCK.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AetherBlocks.AEROGEL_WALL.get()), new ItemStack(AncientAetherBlocks.AEROGEL_GLASS.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.AEROGEL_GLASS.get()), new ItemStack(AncientAetherBlocks.AEROGEL_GLASS_PANE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.AEROGEL_GLASS_PANE.get()), new ItemStack(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get()), new ItemStack(AncientAetherBlocks.AEROGEL_GLASS_TRAPDOOR.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(new ItemStack(AetherBlocks.ENCHANTED_GRAVITITE.get()), new ItemStack(AncientAetherBlocks.VALKYRUM_BLOCK.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.FLUFFALO_WOOL.get()), new ItemStack(AncientAetherBlocks.FLUFFALO_WOOL.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.FLUFFALO_WOOL.get()), new ItemStack(AncientAetherBlocks.FLUFFALO_CARPET.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             if (ModList.get().isLoaded("aether_genesis")) {
                 event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.HIGHSPROOT_LOG.get()), new ItemStack(AncientAetherBlocks.HIGHSPROOT_LOG_WALL.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.HIGHSPROOT_WOOD.get()), new ItemStack(AncientAetherBlocks.HIGHSPROOT_WOOD_WALL.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
