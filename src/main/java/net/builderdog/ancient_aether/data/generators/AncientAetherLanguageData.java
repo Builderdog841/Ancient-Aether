@@ -404,7 +404,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
 
         addCompatibilityPackTitle("aether_genesis", "Aether Genesis");
         addCompatibilityPackTitle("aether_emissivity", "Aether Emissivity");
-        addCompatibilityPackTitle("lost_content", "Lost Content");
+        addCompatibilityPackTitle("lost_aether_content", "Lost Content");
         addCompatibilityPackTitle("aether_redux", "Aether Redux");
         addCompatibilityPackTitle("deep_aether", "Deep Aether");
         addCompatibilityPackTitle("deep_aether_assets", "Deep Aether Assets");
