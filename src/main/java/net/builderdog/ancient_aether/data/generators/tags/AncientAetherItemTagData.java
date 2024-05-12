@@ -29,6 +29,7 @@ public class AncientAetherItemTagData extends ItemTagsProvider {
     public void addTags(HolderLookup.@NotNull Provider provider) {
         copy(AncientAetherTags.Blocks.HIGHSPROOT_LOGS, AncientAetherTags.Items.HIGHSPROOT_LOGS);
         copy(AncientAetherTags.Blocks.SAKURA_LOGS, AncientAetherTags.Items.SAKURA_LOGS);
+        copy(AncientAetherTags.Blocks.VALKYRIE_BLOCKS, AncientAetherTags.Items.VALKYRIE_BLOCKS);
         copy(AncientAetherTags.Blocks.MOSAIC_BLOCKS, AncientAetherTags.Items.MOSAIC_BLOCKS);
         copy(AncientAetherTags.Blocks.AEROGETIC_BLOCKS, AncientAetherTags.Items.AEROGETIC_BLOCKS);
         copy(AncientAetherTags.Blocks.VASES, AncientAetherTags.Items.VASES);
@@ -171,6 +172,8 @@ public class AncientAetherItemTagData extends ItemTagsProvider {
                 AncientAetherBlocks.ANGELIC_CORNER_BRICK.get().asItem(),
                 AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get().asItem(),
                 AncientAetherBlocks.LOCKED_ANGELIC_STONE_MOSAIC.get().asItem()
+        ).addTags(
+                AncientAetherTags.Items.VALKYRIE_BLOCKS
         );
         tag(AetherTags.Items.HELLFIRE_BLOCKS).add(
                 AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get().asItem(),
@@ -379,11 +382,13 @@ public class AncientAetherItemTagData extends ItemTagsProvider {
         tag(ItemTags.STAIRS).add(
                 AncientAetherBlocks.CARVED_TILE_STAIRS.get().asItem(),
                 AncientAetherBlocks.VALKYRIE_BRICK_STAIRS.get().asItem(),
+                AncientAetherBlocks.VALKYRIE_TILE_STAIRS.get().asItem(),
                 AncientAetherBlocks.AEROGETIC_STAIRS.get().asItem()
         );
         tag(ItemTags.SLABS).add(
                 AncientAetherBlocks.CARVED_TILE_SLAB.get().asItem(),
                 AncientAetherBlocks.VALKYRIE_BRICK_SLAB.get().asItem(),
+                AncientAetherBlocks.VALKYRIE_TILE_SLAB.get().asItem(),
                 AncientAetherBlocks.AEROGETIC_SLAB.get().asItem()
         );
         tag(ItemTags.WALLS).add(
@@ -397,6 +402,7 @@ public class AncientAetherItemTagData extends ItemTagsProvider {
                 AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL.get().asItem(),
                 AncientAetherBlocks.CARVED_TILE_WALL.get().asItem(),
                 AncientAetherBlocks.VALKYRIE_BRICK_WALL.get().asItem(),
+                AncientAetherBlocks.VALKYRIE_TILE_WALL.get().asItem(),
                 AncientAetherBlocks.AEROGETIC_WALL.get().asItem()
         );
         tag(ItemTags.LEAVES).add(

@@ -210,6 +210,8 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
         stairs(AncientAetherBlocks.HIGHSPROOT_STAIRS, AncientAetherBlocks.HIGHSPROOT_PLANKS).group("wooden_stairs").save(consumer);
         stairs(AncientAetherBlocks.SAKURA_STAIRS, AncientAetherBlocks.SAKURA_PLANKS).group("wooden_stairs").save(consumer);
         stairs(AncientAetherBlocks.CARVED_TILE_STAIRS, AncientAetherBlocks.CARVED_TILES).save(consumer);
+        stairs(AncientAetherBlocks.VALKYRIE_BRICK_STAIRS, AncientAetherBlocks.VALKYRIE_BRICKS).save(consumer);
+        stairs(AncientAetherBlocks.VALKYRIE_TILE_STAIRS, AncientAetherBlocks.VALKYRIE_TILES).save(consumer);
         stairs(AncientAetherBlocks.AEROGETIC_STAIRS, AncientAetherBlocks.AEROGETIC_STONE).save(consumer);
 
         slabBuilder(RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.HIGHSPROOT_SLAB.get(), Ingredient.of(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()))
@@ -222,6 +224,8 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
                 .save(consumer);
 
         slab(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_TILE_SLAB.get(), AncientAetherBlocks.CARVED_TILES.get());
+        slab(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.VALKYRIE_BRICK_SLAB.get(), AncientAetherBlocks.VALKYRIE_BRICKS.get());
+        slab(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.VALKYRIE_TILE_SLAB.get(), AncientAetherBlocks.VALKYRIE_TILES.get());
         slab(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.AEROGETIC_SLAB.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
 
         fence(AncientAetherBlocks.HIGHSPROOT_FENCE, AncientAetherBlocks.HIGHSPROOT_PLANKS).save(consumer);
@@ -231,6 +235,8 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
         fenceGate(AncientAetherBlocks.SAKURA_FENCE_GATE, AncientAetherBlocks.SAKURA_PLANKS).save(consumer);
 
         wall(consumer, RecipeCategory.DECORATIONS, AncientAetherBlocks.CARVED_TILE_WALL.get(), AncientAetherBlocks.CARVED_TILES.get());
+        wall(consumer, RecipeCategory.DECORATIONS, AncientAetherBlocks.VALKYRIE_BRICK_WALL.get(), AncientAetherBlocks.VALKYRIE_BRICKS.get());
+        wall(consumer, RecipeCategory.DECORATIONS, AncientAetherBlocks.VALKYRIE_TILE_WALL.get(), AncientAetherBlocks.VALKYRIE_TILES.get());
         wall(consumer, RecipeCategory.DECORATIONS, AncientAetherBlocks.AEROGETIC_WALL.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
 
         doorBuilder(AncientAetherBlocks.HIGHSPROOT_DOOR.get(), Ingredient.of(AncientAetherBlocks.HIGHSPROOT_PLANKS.get())).unlockedBy(getHasName(AncientAetherBlocks.HIGHSPROOT_PLANKS.get()), has(AncientAetherBlocks.HIGHSPROOT_PLANKS.get())).group("wooden_door").save(consumer);
@@ -274,6 +280,7 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
 
         polished(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.CARVED_TILES.get(), AetherBlocks.CARVED_STONE.get());
         polished(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.ANGELIC_CORNER_BRICK.get(), AetherBlocks.ANGELIC_STONE.get());
+        polished(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.VALKYRIE_TILES.get(), AncientAetherBlocks.VALKYRIE_BRICKS.get());
 
         carpet(consumer, AncientAetherBlocks.FLUFFALO_CARPET.get(), AncientAetherBlocks.FLUFFALO_WOOL.get());
 

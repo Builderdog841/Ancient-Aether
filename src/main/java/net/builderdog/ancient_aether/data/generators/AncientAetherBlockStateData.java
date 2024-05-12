@@ -34,6 +34,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         blockWithItem(AncientAetherBlocks.CARVED_TILES);
         blockWithItem(AncientAetherBlocks.WYND_SENTRY_STONE);
         blockWithItem(AncientAetherBlocks.VALKYRIE_BRICKS);
+        blockWithItem(AncientAetherBlocks.VALKYRIE_TILES);
         blockWithItem(AncientAetherBlocks.AEROGETIC_STONE);
         blockWithItem(AncientAetherBlocks.AERONAUTIC_STONE);
         blockWithItem(AncientAetherBlocks.CORRUPTED_AERONAUTIC_STONE);
@@ -94,12 +95,14 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
         stairs(AncientAetherBlocks.SAKURA_STAIRS.get(), AncientAetherBlocks.SAKURA_PLANKS.get(), "");
         stairs(AncientAetherBlocks.CARVED_TILE_STAIRS.get(), AncientAetherBlocks.CARVED_TILES.get(), "");
         stairs(AncientAetherBlocks.VALKYRIE_BRICK_STAIRS.get(), AncientAetherBlocks.VALKYRIE_BRICKS.get(), "");
+        stairs(AncientAetherBlocks.VALKYRIE_TILE_STAIRS.get(), AncientAetherBlocks.VALKYRIE_TILES.get(), "");
         stairs(AncientAetherBlocks.AEROGETIC_STAIRS.get(), AncientAetherBlocks.AEROGETIC_STONE.get(), "");
 
         slab(AncientAetherBlocks.HIGHSPROOT_SLAB.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), "");
         slab(AncientAetherBlocks.SAKURA_SLAB.get(), AncientAetherBlocks.SAKURA_PLANKS.get(), "");
         slab(AncientAetherBlocks.CARVED_TILE_SLAB.get(), AncientAetherBlocks.CARVED_TILES.get(), "");
         slab(AncientAetherBlocks.VALKYRIE_BRICK_SLAB.get(), AncientAetherBlocks.VALKYRIE_BRICKS.get(), "");
+        slab(AncientAetherBlocks.VALKYRIE_TILE_SLAB.get(), AncientAetherBlocks.VALKYRIE_TILES.get(), "");
         slab(AncientAetherBlocks.AEROGETIC_SLAB.get(), AncientAetherBlocks.AEROGETIC_STONE.get(), "");
 
         fence(AncientAetherBlocks.HIGHSPROOT_FENCE.get(), AncientAetherBlocks.HIGHSPROOT_PLANKS.get(), "");
@@ -110,6 +113,7 @@ public class AncientAetherBlockStateData extends AncientAetherBlockStateProvider
 
         wallBlock(AncientAetherBlocks.CARVED_TILE_WALL.get(), AncientAetherBlocks.CARVED_TILES.get(), "");
         wallBlock(AncientAetherBlocks.VALKYRIE_BRICK_WALL.get(), AncientAetherBlocks.VALKYRIE_BRICKS.get(), "");
+        wallBlock(AncientAetherBlocks.VALKYRIE_TILE_WALL.get(), AncientAetherBlocks.VALKYRIE_TILES.get(), "");
         wallBlock(AncientAetherBlocks.AEROGETIC_WALL.get(), AncientAetherBlocks.AEROGETIC_STONE.get(), "");
 
         doorBlock(AncientAetherBlocks.HIGHSPROOT_DOOR.get(), texture(name(AncientAetherBlocks.HIGHSPROOT_DOOR.get()), "", "_bottom"), texture(name(AncientAetherBlocks.HIGHSPROOT_DOOR.get()), "", "_top"));

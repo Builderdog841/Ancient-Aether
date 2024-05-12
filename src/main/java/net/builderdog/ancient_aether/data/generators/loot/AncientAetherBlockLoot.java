@@ -87,6 +87,10 @@ public class AncientAetherBlockLoot extends AncientAetherBlockLootSubProvider {
         dropSelf(AncientAetherBlocks.VALKYRIE_BRICK_STAIRS.get());
         dropSelf(AncientAetherBlocks.VALKYRIE_BRICK_SLAB.get());
         dropSelf(AncientAetherBlocks.VALKYRIE_BRICK_WALL.get());
+        dropSelf(AncientAetherBlocks.VALKYRIE_TILES.get());
+        dropSelf(AncientAetherBlocks.VALKYRIE_TILE_STAIRS.get());
+        dropSelf(AncientAetherBlocks.VALKYRIE_TILE_SLAB.get());
+        dropSelf(AncientAetherBlocks.VALKYRIE_TILE_WALL.get());
         dropSelf(AncientAetherBlocks.AEROGETIC_STONE.get());
         dropSelf(AncientAetherBlocks.AEROGETIC_STAIRS.get());
         dropSelf(AncientAetherBlocks.AEROGETIC_WALL.get());

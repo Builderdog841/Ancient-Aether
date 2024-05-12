@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-11T17:59:04.5339807	Item Models: ancient_aether
+// 1.20.1	2024-05-12T12:27:04.0680772	Item Models: ancient_aether
 532bdb7a4f7d2a6b96d474c01c8b9e7a0d1c10b4 assets/ancient_aether/models/item/aerogel_glass.json
 87e9f8f9f807a2aa763e3057d32bacf3ee32b60f assets/ancient_aether/models/item/aerogel_glass_door.json
 d1e6ed3e334d573f31a8ce9e09885c0f43832630 assets/ancient_aether/models/item/aerogel_glass_pane.json
@@ -146,6 +146,9 @@ ef22b7df845ae681c4d9b70b8bb7993b9d92d41c assets/ancient_aether/models/item/valky
 330d5ca916e1820fbfc01f38e2889a1c55a68e08 assets/ancient_aether/models/item/valkyrie_brick_stairs.json
 f7e42549cf836bfaebe59cc1be3e5e44e80c6f09 assets/ancient_aether/models/item/valkyrie_brick_wall.json
 9fbcb8cda8a8a7739cf020aa51802597b374ce95 assets/ancient_aether/models/item/valkyrie_clay_ball.json
+195f01dcf80cac7df4c22bd5e4a368a6b91b0a5a assets/ancient_aether/models/item/valkyrie_tile_slab.json
+e9fbed63b5996f7050d4789f5cdb4586d7558d97 assets/ancient_aether/models/item/valkyrie_tile_stairs.json
+b3268e8c353f8cae64434b864ba41ecdce61cbef assets/ancient_aether/models/item/valkyrie_tile_wall.json
 8236fd7a524a8f3a35ebaa7fa5709657cbeb5372 assets/ancient_aether/models/item/valkyrum.json
 d30935e10a2cab0a2eca56f8dacf7b58d71d31f5 assets/ancient_aether/models/item/valkyrum_axe.json
 edd607642a17d1ae0d3e3398e0b7eee388a03944 assets/ancient_aether/models/item/valkyrum_boots.json

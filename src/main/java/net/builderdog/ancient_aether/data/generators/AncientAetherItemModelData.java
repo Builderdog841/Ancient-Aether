@@ -105,11 +105,13 @@ public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
         itemBlock(AncientAetherBlocks.SAKURA_STAIRS.get());
         itemBlock(AncientAetherBlocks.CARVED_TILE_STAIRS.get());
         itemBlock(AncientAetherBlocks.VALKYRIE_BRICK_STAIRS.get());
+        itemBlock(AncientAetherBlocks.VALKYRIE_TILE_STAIRS.get());
         itemBlock(AncientAetherBlocks.AEROGETIC_STAIRS.get());
         itemBlock(AncientAetherBlocks.HIGHSPROOT_SLAB.get());
         itemBlock(AncientAetherBlocks.SAKURA_SLAB.get());
         itemBlock(AncientAetherBlocks.CARVED_TILE_SLAB.get());
         itemBlock(AncientAetherBlocks.VALKYRIE_BRICK_SLAB.get());
+        itemBlock(AncientAetherBlocks.VALKYRIE_TILE_SLAB.get());
         itemBlock(AncientAetherBlocks.AEROGETIC_SLAB.get());
         itemBlock(AncientAetherBlocks.HIGHSPROOT_FENCE_GATE.get());
         itemBlock(AncientAetherBlocks.SAKURA_FENCE_GATE.get());
@@ -162,6 +164,7 @@ public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
 
         itemWallBlock(AncientAetherBlocks.CARVED_TILE_WALL.get(), AncientAetherBlocks.CARVED_TILES.get(), "");
         itemWallBlock(AncientAetherBlocks.VALKYRIE_BRICK_WALL.get(), AncientAetherBlocks.VALKYRIE_BRICKS.get(), "");
+        itemWallBlock(AncientAetherBlocks.VALKYRIE_TILE_WALL.get(), AncientAetherBlocks.VALKYRIE_TILES.get(), "");
         itemWallBlock(AncientAetherBlocks.AEROGETIC_WALL.get(), AncientAetherBlocks.AEROGETIC_STONE.get(), "");
 
         itemLogWallBlock(AncientAetherBlocks.HIGHSPROOT_LOG_WALL.get(), AncientAetherBlocks.HIGHSPROOT_LOG.get(), "", "ancient_aether");

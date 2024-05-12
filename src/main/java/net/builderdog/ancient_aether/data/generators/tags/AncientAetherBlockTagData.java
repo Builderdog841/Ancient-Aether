@@ -45,6 +45,18 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
                 AncientAetherBlocks.STRIPPED_SAKURA_LOG_WALL.get(),
                 AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL.get()
         );
+        tag(AncientAetherTags.Blocks.VALKYRIE_BLOCKS).add(
+                AncientAetherBlocks.VALKYRIE_BRICKS.get(),
+                AncientAetherBlocks.VALKYRIE_BRICK_STAIRS.get(),
+                AncientAetherBlocks.VALKYRIE_BRICK_SLAB.get(),
+                AncientAetherBlocks.VALKYRIE_BRICK_WALL.get(),
+                AncientAetherBlocks.VALKYRIE_TILES.get(),
+                AncientAetherBlocks.VALKYRIE_TILE_STAIRS.get(),
+                AncientAetherBlocks.VALKYRIE_TILE_SLAB.get(),
+                AncientAetherBlocks.VALKYRIE_TILE_WALL.get(),
+                AetherBlocks.PILLAR.get(),
+                AetherBlocks.PILLAR_TOP.get()
+        );
         tag(AncientAetherTags.Blocks.MOSAIC_BLOCKS).add(
                 AncientAetherBlocks.HOLYSTONE_BRICK_MOSAIC.get(),
                 AncientAetherBlocks.CARVED_STONE_MOSAIC.get(),
@@ -217,6 +229,8 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
                 AncientAetherBlocks.ANGELIC_CORNER_BRICK.get(),
                 AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get(),
                 AncientAetherBlocks.LOCKED_ANGELIC_STONE_MOSAIC.get()
+        ).addTags(
+                AncientAetherTags.Blocks.VALKYRIE_BLOCKS
         );
         tag(AetherTags.Blocks.HELLFIRE_BLOCKS).add(
                 AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get(),
@@ -336,11 +350,13 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
         tag(BlockTags.STAIRS).add(
                 AncientAetherBlocks.CARVED_TILE_STAIRS.get(),
                 AncientAetherBlocks.VALKYRIE_BRICK_STAIRS.get(),
+                AncientAetherBlocks.VALKYRIE_TILE_STAIRS.get(),
                 AncientAetherBlocks.AEROGETIC_STAIRS.get()
         );
         tag(BlockTags.SLABS).add(
                 AncientAetherBlocks.CARVED_TILE_SLAB.get(),
                 AncientAetherBlocks.VALKYRIE_BRICK_SLAB.get(),
+                AncientAetherBlocks.VALKYRIE_TILE_SLAB.get(),
                 AncientAetherBlocks.AEROGETIC_SLAB.get()
         );
         tag(BlockTags.WALLS).add(
@@ -354,6 +370,7 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
                 AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL.get(),
                 AncientAetherBlocks.CARVED_TILE_WALL.get(),
                 AncientAetherBlocks.VALKYRIE_BRICK_WALL.get(),
+                AncientAetherBlocks.VALKYRIE_TILE_WALL.get(),
                 AncientAetherBlocks.AEROGETIC_WALL.get()
         );
         tag(BlockTags.LEAVES).add(
@@ -487,6 +504,10 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
                 AncientAetherBlocks.VALKYRIE_BRICK_STAIRS.get(),
                 AncientAetherBlocks.VALKYRIE_BRICK_SLAB.get(),
                 AncientAetherBlocks.VALKYRIE_BRICK_WALL.get(),
+                AncientAetherBlocks.VALKYRIE_TILES.get(),
+                AncientAetherBlocks.VALKYRIE_TILE_STAIRS.get(),
+                AncientAetherBlocks.VALKYRIE_TILE_SLAB.get(),
+                AncientAetherBlocks.VALKYRIE_TILE_WALL.get(),
                 AncientAetherBlocks.AEROGETIC_STONE.get(),
                 AncientAetherBlocks.AERONAUTIC_STONE.get(),
                 AncientAetherBlocks.CORRUPTED_AERONAUTIC_STONE.get(),

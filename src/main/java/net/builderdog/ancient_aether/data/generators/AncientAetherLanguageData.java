@@ -113,6 +113,10 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.VALKYRIE_BRICK_STAIRS, "Valkyrie Brick Stairs");
         addBlock(AncientAetherBlocks.VALKYRIE_BRICK_SLAB, "Valkyrie Brick Slab");
         addBlock(AncientAetherBlocks.VALKYRIE_BRICK_WALL, "Valkyrie Brick Wall");
+        addBlock(AncientAetherBlocks.VALKYRIE_TILES, "Valkyrie Tiles");
+        addBlock(AncientAetherBlocks.VALKYRIE_TILE_STAIRS, "Valkyrie Tile Stairs");
+        addBlock(AncientAetherBlocks.VALKYRIE_TILE_SLAB, "Valkyrie Tile Slab");
+        addBlock(AncientAetherBlocks.VALKYRIE_TILE_WALL, "Valkyrie Tile Wall");
 
         addBlock(AncientAetherBlocks.AEROGETIC_STONE, "Aerogetic Stone");
         addBlock(AncientAetherBlocks.AERONAUTIC_STONE, "Aeronautic Stone");

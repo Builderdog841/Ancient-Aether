@@ -149,6 +149,10 @@ public class AncientAetherBlocks {
     public static final RegistryObject<StairBlock> VALKYRIE_BRICK_STAIRS = register("valkyrie_brick_stairs", () -> new StairBlock(() -> VALKYRIE_BRICKS.get().defaultBlockState(), Block.Properties.copy(VALKYRIE_BRICKS.get())));
     public static final RegistryObject<SlabBlock> VALKYRIE_BRICK_SLAB = register("valkyrie_brick_slab", () -> new SlabBlock(Block.Properties.copy(VALKYRIE_BRICKS.get())));
     public static final RegistryObject<WallBlock> VALKYRIE_BRICK_WALL = register("valkyrie_brick_wall", () -> new WallBlock(Block.Properties.copy(VALKYRIE_BRICKS.get())));
+    public static final RegistryObject<Block> VALKYRIE_TILES = register("valkyrie_tiles", () -> new Block(Block.Properties.copy(VALKYRIE_BRICKS.get())));
+    public static final RegistryObject<StairBlock> VALKYRIE_TILE_STAIRS = register("valkyrie_tile_stairs", () -> new StairBlock(() -> VALKYRIE_TILES.get().defaultBlockState(), Block.Properties.copy(VALKYRIE_BRICKS.get())));
+    public static final RegistryObject<SlabBlock> VALKYRIE_TILE_SLAB = register("valkyrie_tile_slab", () -> new SlabBlock(Block.Properties.copy(VALKYRIE_TILES.get())));
+    public static final RegistryObject<WallBlock> VALKYRIE_TILE_WALL = register("valkyrie_tile_wall", () -> new WallBlock(Block.Properties.copy(VALKYRIE_TILES.get())));
 
     public static final RegistryObject<Block> AEROGETIC_STONE = register("aerogetic_stone", () -> new Block(Block.Properties.copy(CARVED_STONE.get()).mapColor(MapColor.COLOR_CYAN)));
     public static final RegistryObject<Block> AERONAUTIC_STONE = register("aeronautic_stone", () -> new Block(Block.Properties.copy(AEROGETIC_STONE.get()).lightLevel(s -> 11)));

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "ancient_aether:block/valkyrie_tiles",
+    "side": "ancient_aether:block/valkyrie_tiles",
+    "top": "ancient_aether:block/valkyrie_tiles"
+  }
+}

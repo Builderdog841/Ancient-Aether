@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-11T17:44:41.9558591	Loot Tables
+// 1.20.1	2024-05-12T12:27:04.0715795	Loot Tables
 095a70e341d19e7b3548ddc32402abe48a79992a data/ancient_aether/loot_tables/blocks/aerogel_glass.json
 9fe2ea21af5246ad9f95848f680099717062eb1c data/ancient_aether/loot_tables/blocks/aerogel_glass_door.json
 0f84d5b4591633acc6c8dcc82b7c14988b545a9f data/ancient_aether/loot_tables/blocks/aerogel_glass_pane.json
@@ -113,6 +113,10 @@ bc0e8ceace9c36f21b752a687ff31f98a1961702 data/ancient_aether/loot_tables/blocks/
 4aea124712ba299f37122c28996fe59c1b9c8273 data/ancient_aether/loot_tables/blocks/valkyrie_brick_stairs.json
 d8005c8c73453cbc370a7df87e1a4a75ffe49aab data/ancient_aether/loot_tables/blocks/valkyrie_brick_wall.json
 5033a7f35ddd306f340949a2bb6f615b1567fc64 data/ancient_aether/loot_tables/blocks/valkyrie_clay.json
+23fb51e850b687ad93dd7f4f250323053eda0c9a data/ancient_aether/loot_tables/blocks/valkyrie_tiles.json
+acc6c95c54245e46664cac7b2a091503459e822c data/ancient_aether/loot_tables/blocks/valkyrie_tile_slab.json
+f384fc6e50a382fedb00181de5e70d3c3aba64d8 data/ancient_aether/loot_tables/blocks/valkyrie_tile_stairs.json
+586cdd9a984239d9b74e0e40609f646d36085f31 data/ancient_aether/loot_tables/blocks/valkyrie_tile_wall.json
 24caaaded957a84ecadf0335438394e6b53b4467 data/ancient_aether/loot_tables/blocks/valkyrum_block.json
 6fa82cf094e194847d603ce1bd20521a9dbd134c data/ancient_aether/loot_tables/blocks/valkyrum_ore.json
 1da4372a62d6d86b5c1eda91d7c7d2b724abd83b data/ancient_aether/loot_tables/blocks/violet_aercloud.json

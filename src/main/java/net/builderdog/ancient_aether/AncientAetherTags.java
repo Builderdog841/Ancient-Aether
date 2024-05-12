@@ -14,6 +14,7 @@ public class AncientAetherTags {
     public static class Blocks {
         public static final TagKey<Block> HIGHSPROOT_LOGS = tag("highsproot_logs");
         public static final TagKey<Block> SAKURA_LOGS = tag("sakura_logs");
+        public static final TagKey<Block> VALKYRIE_BLOCKS = tag("valkyrie_blocks");
         public static final TagKey<Block> MOSAIC_BLOCKS = tag("mosaic_blocks");
         public static final TagKey<Block> AEROGETIC_BLOCKS = tag("aerogetic_blocks");
         public static final TagKey<Block> VASES = tag("vases");
@@ -31,6 +32,7 @@ public class AncientAetherTags {
     public static class Items {
         public static final TagKey<Item> HIGHSPROOT_LOGS = tag("highsproot_logs");
         public static final TagKey<Item> SAKURA_LOGS = tag("sakura_logs");
+        public static final TagKey<Item> VALKYRIE_BLOCKS = tag("valkyrie_blocks");
         public static final TagKey<Item> MOSAIC_BLOCKS = tag("mosaic_blocks");
         public static final TagKey<Item> AEROGETIC_BLOCKS = tag("aerogetic_blocks");
         public static final TagKey<Item> VASES = tag("vases");

@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-11T17:44:41.9598604	Tags for minecraft:item mod id ancient_aether
+// 1.20.1	2024-05-12T12:27:04.0765829	Tags for minecraft:item mod id ancient_aether
 a6dcafb905da729c07d1dabd0f4f98e1e75317cd data/aether/tags/items/accessories_capes.json
 cd168c9518529051447f91f38db8a192fce79575 data/aether/tags/items/accessories_gloves.json
 add87f05b14c634a1e8ebb0ea33f104c4c8fadcf data/aether/tags/items/accessories_miscellaneous.json
@@ -7,7 +7,7 @@ d9ab035fe1b718f7b51ec3eab559378021efae7b data/aether/tags/items/accessories_ring
 3951f6de2c4e0f20be405097c4fddb2de840d48a data/aether/tags/items/accessories_shields.json
 af89ca9b971b1a84ff96ce1c0fcceda39c1b6958 data/aether/tags/items/aerbunny_temptation_items.json
 f0714fea3e89b69a7a6a6c729a028562bc0bd412 data/aether/tags/items/aerclouds.json
-1ec056cb7cce1aeb9fd15a4f10133683035de2fc data/aether/tags/items/angelic_blocks.json
+74237a512cb4a8f95a500fbfbb5a316ae8f8b0d7 data/aether/tags/items/angelic_blocks.json
 f95244a71cf5ac816c4c32016a0294d575be6e50 data/aether/tags/items/boss_doorway_dungeon_blocks.json
 b221ec153f29e62c2cbf6a8c454ed35e266b870a data/aether/tags/items/bronze_dungeon_loot.json
 220a602241a8865d3b713085fa08983dc7e1058a data/aether/tags/items/dart_shooters.json
@@ -42,6 +42,7 @@ e084625644f35a4ba855787e1890503cbb135f22 data/ancient_aether/tags/items/aerogeti
 d539b16ff8bceaf558b98947a253d7c9a7a036c3 data/ancient_aether/tags/items/mythic_loot.json
 90f41d6607a825d54deb49cc25a2c2ccf822cc87 data/ancient_aether/tags/items/rare_loot.json
 d67f25dcae95241fe7e47e48d1198f548a531f17 data/ancient_aether/tags/items/sakura_logs.json
+7e31c9da83fa55aa14e837db2debf7af0a86b69c data/ancient_aether/tags/items/valkyrie_blocks.json
 064bf36f6ba340d92023b21fb046f315c63d43ce data/ancient_aether/tags/items/valkyrum_repairing.json
 55e0c85a00b9802d7068a1ad446fcd04921d9dc5 data/ancient_aether/tags/items/vases.json
 29f44b1e6cf67131ca8a45c9a5c05a0b846a5b41 data/ancient_aether/tags/items/windblower_ingredients.json
@@ -75,14 +76,14 @@ ce8a309ef3c9dde278c1bb5e11d2125ca78ba058 data/minecraft/tags/items/pickaxes.json
 c0f117d7d91733da5d4c623918833d7de83c45eb data/minecraft/tags/items/saplings.json
 7b221758a6680c0a657c5699629d27a3d784e0fe data/minecraft/tags/items/shovels.json
 fad0a01f992bbbacbab5f9f965edae96ea42d68f data/minecraft/tags/items/signs.json
-5aabe301726b8c235739c0e061e2bc1f5a733bdf data/minecraft/tags/items/slabs.json
+57c79a63ec8cc3613818801afcb3377eabaa1f79 data/minecraft/tags/items/slabs.json
 8dec4525c199e460b30c1550cbaa9f68f84b401c data/minecraft/tags/items/small_flowers.json
-f514586ecee74e7c70d0a21077f944de0f06c82f data/minecraft/tags/items/stairs.json
+542a87c612efe5cc03efb78d1bf78aea30332865 data/minecraft/tags/items/stairs.json
 56160960e51c2f58969cc9c80c369245b5d9fca6 data/minecraft/tags/items/swords.json
 92ab282e68ad599781f6132379ef0c69e856bbe5 data/minecraft/tags/items/trimmable_armor.json
 34d6e2134d2a1efa1c4d4d4c84df28c61ffd4d55 data/minecraft/tags/items/trim_materials.json
 383e44c58296bd17ab4247d7b6321bc062ac8ce6 data/minecraft/tags/items/trim_templates.json
-48eeec9cb664d29e7194344033a6fb1d77e09aee data/minecraft/tags/items/walls.json
+6398fec60ecf42e7f9498665f3f59002f6fd681b data/minecraft/tags/items/walls.json
 141d3e8dd6108de054c1344d1403b4b0d77ca762 data/minecraft/tags/items/wooden_buttons.json
 3563fa29de36454b994d7ac701cadfabff018e76 data/minecraft/tags/items/wooden_doors.json
 5aeceabe8e6aaf110d970e1a2189762e5ebeb938 data/minecraft/tags/items/wooden_fences.json
