@@ -7,18 +7,25 @@
     "max_exclusive": 0.4,
     "when_in_range": 1,
     "when_out_of_range": {
-      "type": "minecraft:clamp",
-      "input": {
-        "type": "minecraft:add",
-        "argument1": -8,
-        "argument2": {
-          "type": "minecraft:mul",
-          "argument1": 22.5,
-          "argument2": "ancient_aether:aquifer/noise"
-        }
-      },
-      "min": 1,
-      "max": 15
+      "type": "minecraft:range_choice",
+      "input": "ancient_aether:aquifer/noise",
+      "min_inclusive": 0.525,
+      "max_exclusive": 1,
+      "when_in_range": 25,
+      "when_out_of_range": {
+        "type": "minecraft:clamp",
+        "input": {
+          "type": "minecraft:add",
+          "argument1": -8,
+          "argument2": {
+            "type": "minecraft:mul",
+            "argument1": 22.5,
+            "argument2": "ancient_aether:aquifer/noise"
+          }
+        },
+        "min": 1,
+        "max": 15
+      }
     }
   }
 }
