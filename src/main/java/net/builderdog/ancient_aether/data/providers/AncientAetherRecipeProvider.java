@@ -68,6 +68,18 @@ public abstract class AncientAetherRecipeProvider extends AetherRecipeProvider {
                 .save(consumer, name(getItemName(flower) + "_to_" + color + "_dye"));
     }
 
+    protected void vase(Consumer<FinishedRecipe> consumer, ItemLike result, ItemLike material) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, result)
+                .group("vase")
+                .define('#', AncientAetherItems.VALKYRIE_BRICK.get())
+                .define('@', material)
+                .pattern(" # ")
+                .pattern("#@#")
+                .pattern(" # ")
+                .unlockedBy(getHasName(material), has(material))
+                .save(consumer);
+    }
+
     protected static void copyAetherSmithingTemplate(Consumer<FinishedRecipe> consumer, ItemLike template, ItemLike block) {
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, template, 2)
                 .define('#', AncientAetherItems.VALKYRUM.get())

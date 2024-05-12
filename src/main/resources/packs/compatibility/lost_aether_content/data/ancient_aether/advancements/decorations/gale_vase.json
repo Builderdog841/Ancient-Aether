@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_holystone_bricks": {
+    "has_gale_stone": {
       "conditions": {
         "items": [
           {
             "items": [
-              "aether:holystone_bricks"
+              "lost_aether_content:gale_stone"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ancient_aether:holystone_vase_from_holystone_bricks_stonecutting"
+        "recipe": "ancient_aether:gale_vase"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_holystone_bricks",
+      "has_gale_stone",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "ancient_aether:holystone_vase_from_holystone_bricks_stonecutting"
+      "ancient_aether:gale_vase"
     ]
   },
   "sends_telemetry_event": false

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_hellfire_stone": {
+    "has_holystone_bricks": {
       "conditions": {
         "items": [
           {
             "items": [
-              "aether:hellfire_stone"
+              "aether:holystone_bricks"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ancient_aether:hellfire_vase_from_hellfire_stone_stonecutting"
+        "recipe": "ancient_aether:holystone_vase"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_hellfire_stone",
+      "has_holystone_bricks",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "ancient_aether:hellfire_vase_from_hellfire_stone_stonecutting"
+      "ancient_aether:holystone_vase"
     ]
   },
   "sends_telemetry_event": false

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_holystone": {
+    "has_carved_stone": {
       "conditions": {
         "items": [
           {
             "items": [
-              "aether:holystone"
+              "aether:carved_stone"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ancient_aether:holystone_vase_from_holystone_stonecutting"
+        "recipe": "ancient_aether:sentry_vase"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_holystone",
+      "has_carved_stone",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "ancient_aether:holystone_vase_from_holystone_stonecutting"
+      "ancient_aether:sentry_vase"
     ]
   },
   "sends_telemetry_event": false

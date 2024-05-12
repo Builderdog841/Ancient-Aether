@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_carved_stone": {
+    "has_hellfire_stone": {
       "conditions": {
         "items": [
           {
             "items": [
-              "aether:carved_stone"
+              "aether:hellfire_stone"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ancient_aether:sentry_vase_from_carved_stone_stonecutting"
+        "recipe": "ancient_aether:hellfire_vase"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_carved_stone",
+      "has_hellfire_stone",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "ancient_aether:sentry_vase_from_carved_stone_stonecutting"
+      "ancient_aether:hellfire_vase"
     ]
   },
   "sends_telemetry_event": false

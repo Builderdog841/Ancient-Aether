@@ -27,8 +27,8 @@ public abstract class AncientAetherLanguageProvider extends AetherLanguageProvid
         add("menu." + id + "." + key, name);
     }
 
-    public void addCompatPackTitle(String packName, String description) {
-        add("pack." + id + "." + packName + "_compat.title", description + " Compatibility");
+    public void addCompatibilityPackTitle(String packName, String description) {
+        add("pack." + id + ".compatibility." + packName + ".title", description + " Compatibility");
     }
 
     public void addLeavesLore(Supplier<? extends ItemLike> key, String name) {

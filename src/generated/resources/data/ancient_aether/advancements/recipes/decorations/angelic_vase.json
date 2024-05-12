@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ancient_aether:angelic_vase_from_angelic_stone_stonecutting"
+        "recipe": "ancient_aether:angelic_vase"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "ancient_aether:angelic_vase_from_angelic_stone_stonecutting"
+      "ancient_aether:angelic_vase"
     ]
   },
   "sends_telemetry_event": false

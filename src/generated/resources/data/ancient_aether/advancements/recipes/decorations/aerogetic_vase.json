@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ancient_aether:aerogetic_vase_from_aerogetic_stone_stonecutting"
+        "recipe": "ancient_aether:aerogetic_vase"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "ancient_aether:aerogetic_vase_from_aerogetic_stone_stonecutting"
+      "ancient_aether:aerogetic_vase"
     ]
   },
   "sends_telemetry_event": false

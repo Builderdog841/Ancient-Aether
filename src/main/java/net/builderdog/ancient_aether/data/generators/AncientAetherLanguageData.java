@@ -402,12 +402,12 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addPackTitle("programmer_art", "Ancient Aether Programmer Art");
         addPackTitle("worldgen_overrides", "Ancient Aether Worldgen Overrides");
 
-        addCompatPackTitle("aether_genesis", "Aether Genesis");
-        addCompatPackTitle("aether_emissivity", "Aether Emissivity");
-        addCompatPackTitle("lost_content", "Lost Content");
-        addCompatPackTitle("aether_redux", "Aether Redux");
-        addCompatPackTitle("deep_aether", "Deep Aether");
-        addCompatPackTitle("deep_aether_asset", "Deep Aether Asset");
+        addCompatibilityPackTitle("aether_genesis", "Aether Genesis");
+        addCompatibilityPackTitle("aether_emissivity", "Aether Emissivity");
+        addCompatibilityPackTitle("lost_content", "Lost Content");
+        addCompatibilityPackTitle("aether_redux", "Aether Redux");
+        addCompatibilityPackTitle("deep_aether", "Deep Aether");
+        addCompatibilityPackTitle("deep_aether_assets", "Deep Aether Assets");
 
         addMenuTitle("ancient_aether", "Ancient Aether");
 

@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ancient_aether:mossy_holystone_vase_from_mossy_holystone_stonecutting"
+        "recipe": "ancient_aether:mossy_holystone_vase"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "ancient_aether:mossy_holystone_vase_from_mossy_holystone_stonecutting"
+      "ancient_aether:mossy_holystone_vase"
     ]
   },
   "sends_telemetry_event": false
