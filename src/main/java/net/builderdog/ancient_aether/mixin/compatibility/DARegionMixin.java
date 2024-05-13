@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.mixin.compat;
+package net.builderdog.ancient_aether.mixin.compatibility;
 
 import com.aetherteam.aether.data.resources.registries.AetherBiomes;
 import com.mojang.datafixers.util.Pair;

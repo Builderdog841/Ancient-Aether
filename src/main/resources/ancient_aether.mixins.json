@@ -9,11 +9,9 @@
     "BlockMixin",
     "SliderMixin",
     "SnowyDirtMixin",
-    "compat.DARegionMixin",
-    "compat.GenesisRegionMixin",
-    "compat.ReduxRegionMixin"
-  ],
-  "client": [
+    "compatibility.DARegionMixin",
+    "compatibility.GenesisRegionMixin",
+    "compatibility.ReduxRegionMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -1,15 +1,12 @@
 package net.builderdog.ancient_aether.client;
 
 import com.aetherteam.aether.AetherConfig;
-import com.aetherteam.aether.item.AetherItems;
 import com.aetherteam.cumulus.CumulusConfig;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.AncientAetherConfig;
 import net.builderdog.ancient_aether.block.AncientAetherBlockSets;
 import net.builderdog.ancient_aether.client.renderer.AncientAetherRenderers;
-import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.Sheets;
-import net.minecraft.network.chat.Style;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -25,7 +22,6 @@ public class AncientAetherClient {
             AncientAetherRenderers.registerCuriosRenderers();
             Sheets.addWoodType(AncientAetherBlockSets.HIGHSPROOT);
             Sheets.addWoodType(AncientAetherBlockSets.SAKURA);
-            AetherItems.AETHER_LOOT.getStyleModifier().apply(Style.EMPTY.withColor(ChatFormatting.WHITE));
 
             if (AncientAetherConfig.CLIENT.config_overrides.get()) {
                 AetherConfig.CLIENT.enable_aether_menu_button.set(false);

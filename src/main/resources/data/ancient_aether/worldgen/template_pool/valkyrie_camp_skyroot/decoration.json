@@ -5,10 +5,7 @@
     {
       "weight": 2,
       "element": {
-        "location": "ancient_aether:valkyrie_camp/skyroot/decoration/no_decoration",
-        "processors": "ancient_aether:valkyrie_camp_skyroot",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "element_type": "minecraft:empty_pool_element"
       }
     },
     {

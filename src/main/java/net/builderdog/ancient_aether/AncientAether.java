@@ -1,7 +1,6 @@
 package net.builderdog.ancient_aether;
 
 import com.aetherteam.aether.AetherConfig;
-import com.aetherteam.aether.item.AetherItems;
 import net.builderdog.ancient_aether.advancement.AncientAetherAdvancementTriggers;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.block.dispenser.DispenseAncientAetherBoatBehaviour;
@@ -22,14 +21,12 @@ import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherFoliagePla
 import net.builderdog.ancient_aether.world.processor.AncientAetherStructureProcessors;
 import net.builderdog.ancient_aether.world.structure.AncientAetherStructureTypes;
 import net.builderdog.ancient_aether.world.treedecorator.AncientAetherTreeDecoratorTypes;
-import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.PathPackResources;
 import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.DispenserBlock;
@@ -109,8 +106,6 @@ public class AncientAether {
 
             Regions.register(new AncientAetherRegion(new ResourceLocation(MODID, "ancient_aether"), AncientAetherConfig.COMMON.ancient_aether_region_weight.get()));
             SurfaceRuleManager.addSurfaceRules(AetherRuleCategory.THE_AETHER, MODID, AncientAetherSurfaceRules.makeRules());
-
-            //AetherItems.AETHER_LOOT = Rarity.create("aether.loot", ChatFormatting.WHITE);
         });
     }
 
