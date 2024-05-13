@@ -147,7 +147,7 @@ public class AncientAether {
         }
 
         if (ModList.get().isLoaded("lost_aether_content") && event.getPackType() == PackType.SERVER_DATA) {
-            var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/compatibility/lost_content");
+            var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/compatibility/lost_aether_content");
             var pack = Pack.readMetaAndCreate("builtin/compatibility/lost_aether_content", Component.translatable("pack.ancient_aether.compatibility.lost_aether_content.title"), true,
                     path -> new PathPackResources(path, resourcePath, true), PackType.SERVER_DATA, Pack.Position.TOP, PackSource.SERVER);
 
