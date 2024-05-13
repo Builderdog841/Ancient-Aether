@@ -1,61 +1,31 @@
 {
   "type": "minecraft:cache_once",
   "argument": {
-    "type": "minecraft:range_choice",
-    "input": "ancient_aether:temperature",
-    "min_inclusive": -0.4,
-    "max_exclusive": 0.4,
-    "when_in_range": 1,
-    "when_out_of_range": {
-      "type": "minecraft:range_choice",
-      "input": "ancient_aether:temperature",
-      "min_inclusive": 0.4,
-      "max_exclusive": 1.5,
-      "when_in_range": {
-        "type": "minecraft:add",
-        "argument1": {
-          "type": "minecraft:mul",
-          "argument1": {
-            "type": "minecraft:add",
-            "argument1": {
-              "type": "minecraft:mul",
-              "argument1": -1,
-              "argument2": "ancient_aether:temperature"
-            },
-            "argument2": {
-              "type": "minecraft:mul",
-              "argument1": 2,
-              "argument2": "ancient_aether:temperature"
-            }
-          },
-          "argument2": 20
+    "type": "minecraft:spline",
+    "spline": {
+      "coordinate": "ancient_aether:temperature",
+      "points": [
+        {
+          "derivative": 0.0,
+          "location": -0.5,
+          "value": 5
         },
-        "argument2": -7
-      },
-      "when_out_of_range": {
-        "type": "minecraft:range_choice",
-        "input": "ancient_aether:temperature",
-        "min_inclusive": -1.5,
-        "max_exclusive": -0.4,
-        "when_in_range": {
-          "type": "minecraft:add",
-          "argument1": {
-            "type": "minecraft:mul",
-            "argument1": {
-              "type": "minecraft:add",
-              "argument1": "ancient_aether:temperature",
-              "argument2": {
-                "type": "minecraft:mul",
-                "argument1": -2,
-                "argument2": "ancient_aether:temperature"
-              }
-            },
-            "argument2": 20
-          },
-          "argument2": -7
+        {
+          "derivative": 0.0,
+          "location": -0.4,
+          "value": 1
         },
-        "when_out_of_range": 1
-      }
+        {
+          "derivative": 0.0,
+          "location": 0.4,
+          "value": 1
+        },
+        {
+          "derivative": 0.0,
+          "location": 0.5,
+          "value": 5
+        }
+      ]
     }
   }
 }

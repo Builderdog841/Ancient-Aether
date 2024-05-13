@@ -1,27 +1,21 @@
 {
   "type": "minecraft:cache_once",
   "argument": {
-    "type": "minecraft:range_choice",
-    "input": "ancient_aether:erosion",
-    "min_inclusive": 0.6,
-    "max_exclusive": 1.5,
-    "when_in_range": 1,
-    "when_out_of_range": {
-      "type": "minecraft:add",
-      "argument1": {
-        "type": "minecraft:mul",
-        "argument1": {
-          "type": "minecraft:add",
-          "argument1": "ancient_aether:erosion",
-          "argument2": {
-            "type": "minecraft:mul",
-            "argument1": -2,
-            "argument2": "ancient_aether:erosion"
-          }
+    "type": "minecraft:spline",
+    "spline": {
+      "coordinate": "ancient_aether:erosion",
+      "points": [
+        {
+          "derivative": 0.0,
+          "location": 0.5,
+          "value": 5
         },
-        "argument2": 20
-      },
-      "argument2": 13
+        {
+          "derivative": 0.0,
+          "location": 0.6,
+          "value": 1
+        }
+      ]
     }
   }
 }

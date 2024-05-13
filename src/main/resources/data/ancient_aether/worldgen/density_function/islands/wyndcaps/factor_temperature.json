@@ -1,31 +1,21 @@
 {
   "type": "minecraft:cache_once",
   "argument": {
-    "type": "minecraft:range_choice",
-    "input": "ancient_aether:temperature",
-    "min_inclusive": -1.5,
-    "max_exclusive": -0.6,
-    "when_in_range": 1,
-    "when_out_of_range": {
-      "type": "minecraft:add",
-      "argument1": {
-        "type": "minecraft:mul",
-        "argument1": {
-          "type": "minecraft:add",
-          "argument1": {
-            "type": "minecraft:mul",
-            "argument1": -1,
-            "argument2": "ancient_aether:temperature"
-          },
-          "argument2": {
-            "type": "minecraft:mul",
-            "argument1": 2,
-            "argument2": "ancient_aether:temperature"
-          }
+    "type": "minecraft:spline",
+    "spline": {
+      "coordinate": "ancient_aether:temperature",
+      "points": [
+        {
+          "derivative": 0.0,
+          "location": -0.6,
+          "value": 1
         },
-        "argument2": 20
-      },
-      "argument2": 13
+        {
+          "derivative": 0.0,
+          "location": -0.5,
+          "value": 5
+        }
+      ]
     }
   }
 }
