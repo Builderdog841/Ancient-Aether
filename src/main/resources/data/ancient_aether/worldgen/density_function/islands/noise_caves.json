@@ -8,24 +8,21 @@
     "when_in_range": {
       "type": "minecraft:add",
       "argument1": {
-        "type": "minecraft:range_choice",
-        "input": "ancient_aether:y",
-        "min_inclusive": 96,
-        "max_exclusive": 112,
-        "when_in_range": {
-          "type": "minecraft:y_clamped_gradient",
-          "from_value": 0,
-          "from_y": 96,
-          "to_value": 0.175,
-          "to_y": 112
-        },
-        "when_out_of_range": {
-          "type": "minecraft:range_choice",
-          "input": "ancient_aether:y",
-          "min_inclusive": 0,
-          "max_exclusive": 96,
-          "when_in_range": 0,
-          "when_out_of_range": 0.175
+        "type": "minecraft:spline",
+        "spline": {
+          "coordinate": "ancient_aether:y",
+          "points": [
+            {
+              "derivative": 0.0,
+              "location": 96.0,
+              "value": 0.0
+            },
+            {
+              "derivative": 0.0,
+              "location": 112.0,
+              "value": 0.175
+            }
+          ]
         }
       },
       "argument2": {
