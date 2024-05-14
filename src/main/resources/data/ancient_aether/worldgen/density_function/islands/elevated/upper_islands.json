@@ -16,7 +16,7 @@
                         "argument2": "ancient_aether:amplifier/sampled_3d_noise"
                     }
                 },
-                "argument2": "ancient_aether:islands/elevated/factor_erosion"
+                "argument2": "ancient_aether:factor_erosion"
             },
             "argument2": {
                 "type": "minecraft:mul",
@@ -43,7 +43,7 @@
                                     "argument2": "ancient_aether:amplifier/sampled_3d_noise"
                                 }
                             },
-                            "argument2": "ancient_aether:islands/elevated/factor_erosion"
+                            "argument2": "ancient_aether:factor_erosion"
                         },
                         "argument2": {
                             "type": "minecraft:mul",

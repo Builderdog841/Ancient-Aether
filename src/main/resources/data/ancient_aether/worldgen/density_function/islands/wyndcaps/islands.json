@@ -14,11 +14,7 @@
                         "argument1": -0.2,
                         "argument2": "ancient_aether:islands/wyndcaps/terrain_shaper"
                     },
-                    "argument2": {
-                        "type": "minecraft:mul",
-                        "argument1": "ancient_aether:islands/wyndcaps/factor_temperature",
-                        "argument2": "ancient_aether:factor_erosion"
-                    }
+                    "argument2": "ancient_aether:factor"
                 },
                 "argument2": {
                     "type": "minecraft:mul",
@@ -41,11 +37,7 @@
                                     "argument1": -0.2,
                                     "argument2": "ancient_aether:islands/wyndcaps/terrain_shaper"
                                 },
-                                "argument2": {
-                                    "type": "minecraft:mul",
-                                    "argument1": "ancient_aether:islands/wyndcaps/factor_temperature",
-                                    "argument2": "ancient_aether:factor_erosion"
-                                }
+                                "argument2": "ancient_aether:factor"
                             },
                             "argument2": {
                                 "type": "minecraft:mul",

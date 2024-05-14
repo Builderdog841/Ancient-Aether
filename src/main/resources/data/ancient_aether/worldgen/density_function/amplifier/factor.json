@@ -1,18 +1,18 @@
 {
-  "type": "minecraft:add",
-  "argument1": {
-    "type": "minecraft:clamp",
-    "input": {
-      "type": "minecraft:add",
-      "argument1": 0.55,
-      "argument2": {
-        "type": "minecraft:mul",
-        "argument1": -1,
-        "argument2": "ancient_aether:amplifier/noise"
+  "type": "minecraft:spline",
+  "spline": {
+    "coordinate": "ancient_aether:amplifier/noise",
+    "points": [
+      {
+        "derivative": 0.0,
+        "location": 0.0,
+        "value": 0.4
+      },
+      {
+        "derivative": 0.0,
+        "location": 0.35,
+        "value": 0.15
       }
-    },
-    "min": 0.15,
-    "max": 0.4
-  },
-  "argument2": "ancient_aether:amplifier/sampled_3d_noise"
+    ]
+  }
 }

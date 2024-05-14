@@ -12,11 +12,7 @@
                     "argument1": -0.15,
                     "argument2": {
                         "type": "minecraft:mul",
-                        "argument1": {
-                            "type": "minecraft:mul",
-                            "argument1": "ancient_aether:islands/sakura/factor_temperature",
-                            "argument2": "ancient_aether:factor_erosion"
-                        },
+                        "argument1": "ancient_aether:factor",
                         "argument2": {
                             "type": "minecraft:add",
                             "argument1": 0.75,
@@ -43,11 +39,7 @@
                                 "argument1": -0.1,
                                 "argument2": {
                                     "type": "minecraft:mul",
-                                    "argument1": {
-                                        "type": "minecraft:mul",
-                                        "argument1": "ancient_aether:islands/sakura/factor_temperature",
-                                        "argument2": "ancient_aether:factor_erosion"
-                                    },
+                                    "argument1": "ancient_aether:factor",
                                     "argument2": {
                                         "type": "minecraft:add",
                                         "argument1": 0.75,
