@@ -16,7 +16,7 @@
           "value": 0.15
         }
       ]
-    },
-    "argument2": "ancient_aether:amplifier/sampled_3d_noise"
-  }
+    }
+  },
+  "argument2": "ancient_aether:amplifier/sampled_3d_noise"
 }
