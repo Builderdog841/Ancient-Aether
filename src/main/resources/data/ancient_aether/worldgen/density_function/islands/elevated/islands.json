@@ -16,7 +16,7 @@
                             "argument1": -0.23,
                             "argument2": "ancient_aether:islands/elevated/terrain_shaper"
                         },
-                        "argument2": "ancient_aether:factor_erosion"
+                        "argument2": "ancient_aether:factor"
                     },
                     "argument2": {
                         "type": "minecraft:mul",
@@ -39,7 +39,7 @@
                                         "argument1": -0.23,
                                         "argument2": "ancient_aether:islands/elevated/terrain_shaper"
                                     },
-                                    "argument2": "ancient_aether:factor_erosion"
+                                    "argument2": "ancient_aether:factor"
                                 },
                                 "argument2": {
                                     "type": "minecraft:mul",
