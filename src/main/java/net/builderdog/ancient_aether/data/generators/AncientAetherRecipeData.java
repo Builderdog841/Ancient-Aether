@@ -347,6 +347,9 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.VALKYRIE_TILE_STAIRS.get(), AncientAetherBlocks.VALKYRIE_TILES.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.VALKYRIE_TILE_SLAB.get(), AncientAetherBlocks.VALKYRIE_TILES.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.VALKYRIE_TILE_WALL.get(), AncientAetherBlocks.VALKYRIE_TILES.get());
+        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.VALKYRIE_TILE_STAIRS.get(), AncientAetherBlocks.VALKYRIE_BRICKS.get());
+        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.VALKYRIE_TILE_SLAB.get(), AncientAetherBlocks.VALKYRIE_BRICKS.get());
+        stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.VALKYRIE_TILE_WALL.get(), AncientAetherBlocks.VALKYRIE_BRICKS.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.VALKYRIE_BRICKS.get(), AetherBlocks.PILLAR.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.VALKYRIE_BRICKS.get(), AetherBlocks.PILLAR_TOP.get());
         stonecuttingRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, AncientAetherBlocks.HELLFIRE_STONE_MOSAIC.get(), AetherBlocks.HELLFIRE_STONE.get());
