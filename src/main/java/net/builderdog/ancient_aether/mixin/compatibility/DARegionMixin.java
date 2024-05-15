@@ -59,9 +59,9 @@ public class DARegionMixin extends Region {
         addBiome(mapper, new Climate.ParameterPoint(tempSkyroot1, Climate.Parameter.span(0.1F, 1.5F), fullRange, erosionSkyrootForest, depthSurface, noRidges, 0), AetherBiomes.SKYROOT_FOREST);
         addBiome(mapper, new Climate.ParameterPoint(tempSkyroot1, Climate.Parameter.span(0.1F, 1.5F), fullRange, erosionSunForest, depthSurface, noRidges, 0), DABiomes.GOLDEN_GROVE);
 
-        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot2, Climate.Parameter.span(-1.5F, -0.1F), fullRange, erosionSkyrootForest, depthSurface, noRidges, 0), AetherBiomes.SKYROOT_FOREST);
-        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot2, Climate.Parameter.span(-1.5F, -0.1F), fullRange, erosionSunForest, depthSurface, noRidges, 0), DABiomes.GOLDEN_HEIGHTS);
-        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot2, Climate.Parameter.span(-0.1F, 0.25F), fullRange, erosionDefault, depthSurface, noRidges, 0), AetherBiomes.SKYROOT_GROVE);
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot2, Climate.Parameter.span(-1.5F, 0.0F), fullRange, erosionSkyrootForest, depthSurface, noRidges, 0), AetherBiomes.SKYROOT_FOREST);
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot2, Climate.Parameter.span(-1.5F, 0.0F), fullRange, erosionSunForest, depthSurface, noRidges, 0), DABiomes.GOLDEN_HEIGHTS);
+        addBiome(mapper, new Climate.ParameterPoint(tempSkyroot2, Climate.Parameter.span(0.0F, 0.25F), fullRange, erosionDefault, depthSurface, noRidges, 0), AetherBiomes.SKYROOT_GROVE);
         addBiome(mapper, new Climate.ParameterPoint(tempSkyroot2, Climate.Parameter.span(0.25F, 1.5F), fullRange, erosionDefault, depthSurface, noRidges, 0), DABiomes.AERLAVENDER_FIELDS);
 
         addBiome(mapper, new Climate.ParameterPoint(tempSkyroot3, Climate.Parameter.span(-1.5F, -0.25F), fullRange, erosionDefault, depthSurface, noRidges, 0), DABiomes.AERLAVENDER_FIELDS);
