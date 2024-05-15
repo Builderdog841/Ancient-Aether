@@ -1,98 +1,48 @@
-import net.minecraftforge.gradle.userdev.tasks.JarJar
+import net.neoforged.gradle.common.tasks.JarJar
 
 plugins {
     id 'eclipse'
     id 'maven-publish'
-    id 'net.neoforged.gradle' version '[6.0.13, 6.2)'
+    id 'net.neoforged.gradle.userdev' version '7.0.97'
     id 'io.github.0ffz.github-packages' version '[1,2)'
-    id 'org.spongepowered.mixin' version '[0.7,0.8)'
-    id 'org.parchmentmc.librarian.forgegradle' version '1.2.0'
-    id 'org.moddingx.modgradle.mapping' version '4.0.4'
-    id 'org.moddingx.modgradle.sourcejar' version '4.0.4' apply false
 }
 
 version = '0.10.0'
 group = 'net.builderdog.ancient_aether'
-archivesBaseName = 'ancient_aether'
+base {
+    archivesName = mod_id
+}
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
-println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
-minecraft {
-    mappings channel: 'sugarcane', version: project.mappings
+minecraft.accessTransformers.file rootProject.file('src/main/resources/META-INF/accesstransformer.cfg')
 
-    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+runs {
+    configureEach {
+        workingDirectory project.file('run')
+        systemProperty "${mod_id}.iside", 'true'
+        systemProperty  'forge.logging.console.level', 'info'
 
-    runs {
-        client {
-            workingDirectory project.file('run')
-            property 'forge.logging.markers', 'REGISTRIES'
-            property 'forge.logging.console.level', 'debug'
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-            property 'forge.enabledGameTestNamespaces', 'ancient_aether'
+        modSource project.sourceSets.main
+    }
 
-            mods {
-                examplemod {
-                    source sourceSets.main
-                }
-            }
-        }
+    client {
+        systemProperty 'forge.enabledGameTestNamespaces', mod_id
+    }
 
-        server {
-            workingDirectory project.file('run')
+    server {
+        systemProperty 'forge.enabledGameTestNamespaces', mod_id
+        programArgument '--nogui'
+    }
 
-            property 'forge.logging.markers', 'REGISTRIES'
-            property 'forge.logging.console.level', 'debug'
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-            property 'forge.enabledGameTestNamespaces', 'ancient_aether'
+    gameTestServer {
+        systemProperty 'neoforge.enabledGameTestNamespaces', mod_id
+    }
 
-            mods {
-                examplemod {
-                    source sourceSets.main
-                }
-            }
-        }
-        gameTestServer {
-            workingDirectory project.file('run')
-
-            property 'forge.logging.markers', 'REGISTRIES'
-            property 'forge.logging.console.level', 'debug'
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-            property 'forge.enabledGameTestNamespaces', 'ancient_aether'
-
-            mods {
-                examplemod {
-                    source sourceSets.main
-                }
-            }
-        }
-
-        data {
-            workingDirectory project.file('run')
-
-            property 'forge.logging.markers', 'REGISTRIES'
-
-            property 'forge.logging.console.level', 'debug'
-            property 'forge.logging.markers', 'REGISTRIES'
-            property "mixin.env.remapRefMap", "true"
-            property "mixin.env.refMapRemappingFile", "${projectDir}/build/createSrgToMcp/output.srg"
-
-            args '--mod', 'ancient_aether', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/'), '--existing-mod', 'aether'
-
-            environment 'target', 'fmluserdevdata'
-
-            mods {
-                examplemod {
-                    source sourceSets.main
-                }
-            }
-        }
+    data {
+        programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
     }
 }
-
 
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
@@ -101,7 +51,6 @@ repositories {
     maven githubPackage.invoke("The-Aether-Team/Nitrogen")
     maven githubPackage.invoke("The-Aether-Team/Cumulus")
 
-    maven { url = "https://jitpack.io" }
     maven { url = "https://maven.theillusivec4.top/" }
     maven { url = 'https://maven.minecraftforge.net/' }
     maven {
@@ -110,67 +59,40 @@ repositories {
             includeGroup "curse.maven"
         }
     }
-    maven {
-        name = 'GeckoLib'
-        url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
-    }
     flatDir {
         dir 'libs'
     }
+    mavenCentral()
 }
 
 dependencies {
-    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
-    minecraft "net.neoforged:forge:${project.mc_version}-${project.neoforge_version}"
-
-    implementation fg.deobf("com.aetherteam.aether:aether:${project.aether_version}")
-    implementation fg.deobf("curse.maven:aeroblender-879879:4789008")
-    implementation fg.deobf("com.github.glitchfiend:TerraBlender-forge:${project.terrablender_version}")
-    implementation fg.deobf("com.aetherteam.nitrogen:nitrogen_internals:${project.nitrogen_version}")
-    implementation fg.deobf("com.aetherteam.cumulus:cumulus_menus:${project.cumulus_version}")
-    implementation fg.deobf("curse.maven:worldedit-225608:4586218")
-    //implementation fg.deobf("curse.maven:aether-emissivity-916028:4765812")
-    //implementation fg.deobf("curse.maven:panorama-440465:4633630")
-    //implementation fg.deobf("curse.maven:panoramica-426082:4019292")
-    //implementation fg.deobf("curse.maven:konkrete-410295:5028413")
+    implementation "net.neoforged:neoforge:${neo_version}"
+    implementation "com.aetherteam.aether:aether:${project.aether_version}"
+    implementation "local:aeroblender:1.20.4-1.0.1-neoforge"
+    implementation "com.github.glitchfiend:TerraBlender-forge:${project.terrablender_version}"
+    implementation "com.aetherteam.nitrogen:nitrogen_internals:${project.nitrogen_version}"
+    implementation "com.aetherteam.cumulus:cumulus_menus:${project.cumulus_version}"
+    implementation "top.theillusivec4.curios:curios-neoforge:${project.curios_version}+${project.mc_version}"
+    compileOnly "top.theillusivec4.caelus:caelus-forge:${project.caelus_version}"
 
     compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:${project.mixinextras_version}"))
     implementation(jarJar("io.github.llamalad7:mixinextras-forge:${project.mixinextras_version}")) {
         jarJar.ranged(it, "[0.3.5,)")
     }
-
-    compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:${project.curios_version}:api")
-    compileOnly fg.deobf("local:aether_genesis:1.20.1-0.0.1-neoforge")
-    compileOnly fg.deobf("curse.maven:deep-aether-852465:5076616")
-    compileOnly fg.deobf('software.bernie.geckolib:geckolib-forge-1.20.1:4.2.2')
-    compileOnly fg.deobf("curse.maven:aether-redux-867237:5201581")
-    compileOnly fg.deobf("curse.maven:aether-lost-content-318602:4927038")
-    compileOnly fg.deobf("curse.maven:structure-gel-api-378802:4975615")
-
-    runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:${project.curios_version}")
-    //runtimeOnly fg.deobf("local:aether_genesis:1.20.1-0.0.1-neoforge")
-    //runtimeOnly fg.deobf("curse.maven:deep-aether-852465:5076616")
-    //runtimeOnly fg.deobf('software.bernie.geckolib:geckolib-forge-1.20.1:4.2.2')
-    //runtimeOnly fg.deobf("curse.maven:aether-redux-867237:5201581")
-    //runtimeOnly fg.deobf("curse.maven:aether-lost-content-318602:4927038")
-    //runtimeOnly fg.deobf("curse.maven:structure-gel-api-378802:4975615")
 }
 
-jar {
+tasks.named('jar', Jar).configure {
     manifest {
         attributes([
-                "Specification-Title"     : "ancient_aether",
-                "Specification-Vendor"    : "ancient_aethersareus",
+                "Specification-Title"     : project.mod_name,
+                "Specification-Vendor"    : "Ancient Aether",
                 "Specification-Version"   : "1",
-                "Implementation-Title"    : project.name,
+                "Implementation-Title"    : project.mod_name,
                 "Implementation-Version"  : project.jar.archiveVersion,
-                "Implementation-Vendor"   : "ancient_aethersareus",
+                "Implementation-Vendor"   : "Ancient Aether",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
-
-    finalizedBy 'reobfJar'
-
     archiveClassifier = 'no-embeds'
 }
 
@@ -178,26 +100,29 @@ tasks.named('jarJar', JarJar).configure {
     archiveClassifier = ''
 }
 
-mixin {
-    config "${project.mod_id}.mixins.json"
-    add sourceSets.main, "${project.mod_id}.refmap.json"
+compileJava {
+    options.incremental = false
 }
 
-jar.finalizedBy('reobfJar')
+tasks.register('sourceJar', Jar) {
+    dependsOn 'classes'
+    from sourceSets.main.allSource
+    archiveClassifier = 'sources'
+}
 
 publishing {
     publications {
-        mavenJava(MavenPublication) {
-            artifact jar
+        register('mavenJava', MavenPublication) {
+            from components.java
         }
     }
     repositories {
         maven {
-            url "file://${project.projectDir}/mcmodsrepo"
+            url "file://${project.projectDir}/repo"
         }
     }
 }
 
-tasks.withType(JavaCompile).configureEach {
-    options.encoding = 'UTF-8'
+build {
+    dependsOn 'jarJar'
 }
