@@ -57,6 +57,7 @@ public class AncientAetherCreativeModeTabs {
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.AEROGEL_GLASS_DOOR.get()), new ItemStack(AncientAetherBlocks.AEROGEL_GLASS_TRAPDOOR.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.FLUFFALO_WOOL.get()), new ItemStack(AncientAetherBlocks.FLUFFALO_WOOL.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.FLUFFALO_WOOL.get()), new ItemStack(AncientAetherBlocks.FLUFFALO_CARPET.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            /*
             if (ModList.get().isLoaded("aether_genesis")) {
                 event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.HIGHSPROOT_LOG.get()), new ItemStack(AncientAetherBlocks.HIGHSPROOT_LOG_WALL.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.HIGHSPROOT_WOOD.get()), new ItemStack(AncientAetherBlocks.HIGHSPROOT_WOOD_WALL.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -67,6 +68,8 @@ public class AncientAetherCreativeModeTabs {
                 event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.STRIPPED_SAKURA_LOG.get()), new ItemStack(AncientAetherBlocks.STRIPPED_SAKURA_LOG_WALL.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.STRIPPED_SAKURA_WOOD.get()), new ItemStack(AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             }
+
+             */
         }
 
         if (tab == AetherCreativeTabs.AETHER_DUNGEON_BLOCKS.get()) {
@@ -123,11 +126,14 @@ public class AncientAetherCreativeModeTabs {
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.ANCIENT_SENTRY_VASE.get()), new ItemStack(AncientAetherBlocks.ANCIENT_ANGELIC_VASE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.ANCIENT_ANGELIC_VASE.get()), new ItemStack(AncientAetherBlocks.ANCIENT_HELLFIRE_VASE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.ANCIENT_HELLFIRE_VASE.get()), new ItemStack(AncientAetherBlocks.ANCIENT_AEROGETIC_VASE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            /*
             if (ModList.get().isLoaded("lost_aether_content")) {
                 event.getEntries().putBefore(new ItemStack(AetherBlocks.TREASURE_CHEST.get()), new ItemStack(AncientAetherBlocks.GALE_STONE_MOSAIC.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.GALE_STONE_MOSAIC.get()), new ItemStack(AncientAetherBlocks.LOCKED_GALE_STONE_MOSAIC.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.ANCIENT_AEROGETIC_VASE.get()), new ItemStack(AncientAetherBlocks.ANCIENT_GALE_VASE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             }
+
+             */
         }
 
         if (tab == AetherCreativeTabs.AETHER_NATURAL_BLOCKS.get()) {
@@ -154,6 +160,7 @@ public class AncientAetherCreativeModeTabs {
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.SKY_BLUES.get()), new ItemStack(AncientAetherBlocks.WYND_THISTLE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.WYND_THISTLE.get()), new ItemStack(AncientAetherBlocks.ELEVETIA.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putBefore(new ItemStack(AetherBlocks.BERRY_BUSH_STEM.get()), new ItemStack(AncientAetherBlocks.SKY_GRASS.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            /*
             if (!ModList.get().isLoaded("aether_genesis")) {
                 event.getEntries().putAfter(new ItemStack(AetherBlocks.BLUE_AERCLOUD.get()), new ItemStack(AncientAetherBlocks.VIOLET_AERCLOUD.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             } else {
@@ -162,6 +169,8 @@ public class AncientAetherCreativeModeTabs {
                 event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.SKYROOT_PINE_LEAVES.get()), new ItemStack(AncientAetherBlocks.BLUE_SKYROOT_PINE_LEAVES.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
                 event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.SKYROOT_PINE_SAPLING.get()), new ItemStack(AncientAetherBlocks.BLUE_SKYROOT_PINE_SAPLING.get()), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
             }
+
+             */
             if (AncientAetherConfig.COMMON.experimental_features.get()) {
                 event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.VALKYRUM_ORE.get()), new ItemStack(AncientAetherBlocks.ATMOSINE_CRYSTAL.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             }
@@ -188,9 +197,12 @@ public class AncientAetherCreativeModeTabs {
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get()), new ItemStack(AncientAetherBlocks.ANCIENT_OBELISK.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.ANCIENT_OBELISK.get()), new ItemStack(AncientAetherBlocks.POWERED_OBELISK.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.POWERED_OBELISK.get()), new ItemStack(AncientAetherBlocks.SLIDER_PROTOTYPE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            /*
             if (ModList.get().isLoaded("lost_aether_content")) {
                 event.getEntries().putAfter(new ItemStack(AncientAetherBlocks.AEROGETIC_VASE.get()), new ItemStack(AncientAetherBlocks.GALE_VASE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             }
+
+             */
         }
 
         if (tab == AetherCreativeTabs.AETHER_REDSTONE_BLOCKS.get()) {
@@ -275,9 +287,12 @@ public class AncientAetherCreativeModeTabs {
             event.getEntries().remove(new ItemStack(AetherItems.VALKYRIE_LEGGINGS.get()));
             event.getEntries().remove(new ItemStack(AetherItems.VALKYRIE_BOOTS.get()));
             event.getEntries().remove(new ItemStack(AetherItems.VALKYRIE_GLOVES.get()));
+            /*
             if (!ModList.get().isLoaded("aether_genesis")) {
                 event.getEntries().putAfter(new ItemStack(AetherItems.RED_CAPE.get()), new ItemStack(AncientAetherItems.PINK_CAPE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             }
+
+             */
         }
 
         if (tab == AetherCreativeTabs.AETHER_FOOD_AND_DRINKS.get()) {

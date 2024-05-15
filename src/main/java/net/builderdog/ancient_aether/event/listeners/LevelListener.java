@@ -8,7 +8,6 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraftforge.event.level.SaplingGrowTreeEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = AncientAether.MODID)
@@ -17,11 +16,9 @@ public class LevelListener {
     public static void onPlayerTraveling(SaplingGrowTreeEvent event) {
         RandomSource random = event.getRandomSource();
         Holder<ConfiguredFeature<?, ?>> feature = event.getFeature();
-        if (!ModList.get().isLoaded("aether_genesis")) {
-            ResourceKey<ConfiguredFeature<?, ?>> newFeature = LevelHooks.modifyGrownSapling(random, feature);
-            if (newFeature != null) {
-                event.setFeature(newFeature);
-            }
+        ResourceKey<ConfiguredFeature<?, ?>> newFeature = LevelHooks.modifyGrownSapling(random, feature);
+        if (newFeature != null) {
+            event.setFeature(newFeature);
         }
     }
 }

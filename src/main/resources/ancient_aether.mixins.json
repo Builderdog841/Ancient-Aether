@@ -8,10 +8,7 @@
     "AetherGrassBlockMixin",
     "BlockMixin",
     "SliderMixin",
-    "SnowyDirtMixin",
-    "compatibility.DARegionMixin",
-    "compatibility.GenesisRegionMixin",
-    "compatibility.ReduxRegionMixin"
+    "SnowyDirtMixin"
   ],
   "injectors": {
     "defaultRequire": 1

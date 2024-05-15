@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.mixin.compatibility;
 
+/*
 import com.aetherteam.aether_genesis.data.resources.registries.GenesisBiomes;
 import com.aetherteam.aether_genesis.world.GenesisRegion;
 import com.mojang.datafixers.util.Pair;
@@ -85,3 +86,5 @@ public class GenesisRegionMixin extends Region {
         addBiome(mapper, new Climate.ParameterPoint(tempWyndcaps, fullRange, fullRange, erosionDefault, depthUnderground, fullRange, 0), AncientAetherBiomes.FROZEN_CAVERNS);
     }
 }
+
+ */

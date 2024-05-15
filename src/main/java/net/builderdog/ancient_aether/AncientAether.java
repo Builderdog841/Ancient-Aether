@@ -132,6 +132,8 @@ public class AncientAether {
             event.addRepositorySource(consumer -> consumer.accept(pack));
         }
 
+        /*
+        [Disabled]
         if (ModList.get().isLoaded("aether_emissivity") && event.getPackType() == PackType.CLIENT_RESOURCES) {
             var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/compatibility/aether_emissivity");
             var pack = Pack.readMetaAndCreate("builtin/compatibility/aether_emissivity", Component.translatable("pack.ancient_aether.compatibility.aether_emissivity.title"), true,
@@ -176,6 +178,7 @@ public class AncientAether {
                 event.addRepositorySource(consumer -> consumer.accept(pack));
             }
         }
+         */
     }
 
     @SubscribeEvent
