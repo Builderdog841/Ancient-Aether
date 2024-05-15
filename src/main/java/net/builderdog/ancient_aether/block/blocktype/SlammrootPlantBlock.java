@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.block.blocktype;
 
+import com.mojang.serialization.MapCodec;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.builderdog.ancient_aether.entity.monster.Slammroot;
 import net.minecraft.core.BlockPos;

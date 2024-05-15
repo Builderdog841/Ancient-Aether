@@ -9,8 +9,8 @@ import net.minecraft.world.level.block.state.properties.WoodType;
 import org.jetbrains.annotations.NotNull;
 
 public class AncientAetherWallSignBlock extends WallSignBlock {
-    public AncientAetherWallSignBlock(Properties properties, WoodType woodType) {
-        super(properties, woodType);
+    public AncientAetherWallSignBlock(WoodType woodType, Properties properties) {
+        super(woodType, properties);
     }
 
     @Override

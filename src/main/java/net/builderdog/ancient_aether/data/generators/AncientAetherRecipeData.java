@@ -10,22 +10,21 @@ import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.block.blockstate.AetherGrassType;
 import net.builderdog.ancient_aether.block.blockstate.AncientAetherBlockStateProperties;
 import net.builderdog.ancient_aether.data.providers.AncientAetherRecipeProvider;
-import net.builderdog.ancient_aether.entity.AncientAetherMoaTypes;
+import net.builderdog.ancient_aether.data.resources.registries.AncientAetherMoaTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.common.Tags;
+import net.neoforged.neoforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;
-import java.util.function.Consumer;
 
 public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
     public AncientAetherRecipeData(PackOutput output) {
@@ -33,7 +32,7 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
     }
 
     @Override
-    protected void buildRecipes(@NotNull Consumer<FinishedRecipe> consumer) {
+    protected void buildRecipes(@NotNull RecipeOutput consumer) {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, AncientAetherBlocks.WYND_LANTERN.get())
                 .requires(AncientAetherBlocks.AMBROSIUM_LANTERN.get())
                 .requires(AncientAetherBlocks.WYND_SENTRY_STONE.get())
@@ -320,7 +319,7 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
         woodenChestBoat(consumer, AncientAetherItems.HIGHSPROOT_CHEST_BOAT.get(), AncientAetherItems.HIGHSPROOT_BOAT.get());
         woodenChestBoat(consumer, AncientAetherItems.SAKURA_CHEST_BOAT.get(), AncientAetherItems.SAKURA_BOAT.get());
 
-        smeltingOreRecipe(AncientAetherItems.VALKYRIE_BRICK.get(), AncientAetherItems.VALKYRIE_CLAY_BALL.get(), 0.3F).save(consumer);
+        smeltingOreRecipe(AncientAetherItems.VALKYRIE_BRICK.get(), AncientAetherItems.VALKYRIE_CLAY_BALL.get(), 0.3F).save();
         smeltingOreRecipe(Items.QUARTZ, AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), 0.5F).save(consumer, name("quartz_from_smelting_aether_quartz_ore"));
         blastingOreRecipe(Items.QUARTZ, AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), 0.5F).save(consumer, name("quartz_from_blasting_aether_quartz_ore"));
 

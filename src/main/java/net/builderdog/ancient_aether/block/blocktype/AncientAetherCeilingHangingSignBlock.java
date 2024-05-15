@@ -9,8 +9,8 @@ import net.minecraft.world.level.block.state.properties.WoodType;
 import org.jetbrains.annotations.NotNull;
 
 public class AncientAetherCeilingHangingSignBlock extends CeilingHangingSignBlock {
-    public AncientAetherCeilingHangingSignBlock(Properties properties, WoodType woodType) {
-        super(properties, woodType);
+    public AncientAetherCeilingHangingSignBlock(WoodType woodType, Properties properties) {
+        super(woodType, properties);
     }
 
     public BlockEntity newBlockEntity(@NotNull BlockPos pos, @NotNull BlockState state) {

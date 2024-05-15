@@ -12,6 +12,7 @@ import net.builderdog.ancient_aether.data.AncientAetherData;
 import net.builderdog.ancient_aether.effect.AncientAetherEffects;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.builderdog.ancient_aether.entity.AncientAetherMoaTypes;
+import net.builderdog.ancient_aether.item.AncientAetherCreativeModeTabs;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.builderdog.ancient_aether.world.biome.AncientAetherRegion;
 import net.builderdog.ancient_aether.world.biome.AncientAetherSurfaceRules;
@@ -63,7 +64,6 @@ public class AncientAether {
                 AncientAetherItems.ITEMS,
                 AncientAetherBlockEntityTypes.BLOCK_ENTITY_TYPES,
                 AncientAetherEntityTypes.ENTITY_TYPES,
-                AncientAetherMoaTypes.MOA_TYPES,
                 AncientAetherEffects.EFFECTS,
                 AncientAetherFeatures.FEATURES,
                 AncientAetherFoliagePlacers.FOLIAGE_PLACERS,

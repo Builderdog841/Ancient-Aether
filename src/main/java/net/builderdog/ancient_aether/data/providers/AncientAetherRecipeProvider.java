@@ -18,17 +18,16 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.Property;
-import net.minecraftforge.common.Tags;
+import net.neoforged.neoforge.common.Tags;
 
 import java.util.Map;
-import java.util.function.Consumer;
 
 public abstract class AncientAetherRecipeProvider extends AetherRecipeProvider {
     public AncientAetherRecipeProvider(PackOutput output, String id) {
         super(output, id);
     }
 
-    protected static void bookshelf(Consumer<FinishedRecipe> consumer, ItemLike result, ItemLike planks) {
+    protected static void bookshelf(RecipeOutput consumer, ItemLike result, ItemLike planks) {
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result)
                 .define('#', planks)
                 .define('X', Items.BOOK)
@@ -39,7 +38,7 @@ public abstract class AncientAetherRecipeProvider extends AetherRecipeProvider {
                 .save(consumer);
     }
 
-    protected static void sign(Consumer<FinishedRecipe> consumer, ItemLike result, ItemLike planks) {
+    protected static void sign(RecipeOutput consumer, ItemLike result, ItemLike planks) {
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, result, 3)
                 .group("sign")
                 .define('#', planks)
@@ -51,7 +50,7 @@ public abstract class AncientAetherRecipeProvider extends AetherRecipeProvider {
                 .save(consumer);
     }
 
-    protected static void woodenChestBoat(Consumer<FinishedRecipe> consumer, ItemLike result, ItemLike boat) {
+    protected static void woodenChestBoat(RecipeOutput consumer, ItemLike result, ItemLike boat) {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.TRANSPORTATION, result)
                 .group("chest_boat")
                 .requires(Tags.Items.CHESTS_WOODEN)
@@ -60,7 +59,7 @@ public abstract class AncientAetherRecipeProvider extends AetherRecipeProvider {
                 .save(consumer);
     }
 
-    protected void flowerToDye(Consumer<FinishedRecipe> consumer, ItemLike result, ItemLike flower, String color) {
+    protected void flowerToDye(RecipeOutput consumer, ItemLike result, ItemLike flower, String color) {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, result)
                 .group(color + "_dye")
                 .requires(flower)
@@ -68,7 +67,7 @@ public abstract class AncientAetherRecipeProvider extends AetherRecipeProvider {
                 .save(consumer, name(getItemName(flower) + "_to_" + color + "_dye"));
     }
 
-    protected void vase(Consumer<FinishedRecipe> consumer, ItemLike result, ItemLike material) {
+    protected void vase(RecipeOutput consumer, ItemLike result, ItemLike material) {
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, result)
                 .group("vase")
                 .define('#', AncientAetherItems.VALKYRIE_BRICK.get())
@@ -80,7 +79,7 @@ public abstract class AncientAetherRecipeProvider extends AetherRecipeProvider {
                 .save(consumer);
     }
 
-    protected static void copyAetherSmithingTemplate(Consumer<FinishedRecipe> consumer, ItemLike template, ItemLike block) {
+    protected static void copyAetherSmithingTemplate(RecipeOutput consumer, ItemLike template, ItemLike block) {
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, template, 2)
                 .define('#', AncientAetherItems.VALKYRUM.get())
                 .define('C', block)
@@ -92,7 +91,7 @@ public abstract class AncientAetherRecipeProvider extends AetherRecipeProvider {
                 .save(consumer);
     }
 
-    protected void aetherSmithingTrimRecipe(Consumer<FinishedRecipe> consumer, Item armorTrim) {
+    protected void aetherSmithingTrimRecipe(RecipeOutput consumer, Item armorTrim) {
         SmithingTrimRecipeBuilder.smithingTrim(Ingredient.of(armorTrim),
                         Ingredient.of(ItemTags.TRIMMABLE_ARMOR),
                         Ingredient.of(ItemTags.TRIM_MATERIALS), RecipeCategory.MISC)
