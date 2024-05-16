@@ -9,7 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.common.ForgeMod;
+import net.neoforged.neoforge.common.NeoForgeMod;
 import top.theillusivec4.curios.api.SlotContext;
 
 import java.util.UUID;
@@ -23,8 +23,8 @@ public class ValkyrumPendantItem extends PendantItem {
     @Override
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext context, UUID uuid, ItemStack stack) {
         Multimap<Attribute, AttributeModifier> attributes = HashMultimap.create();
-        attributes.put(ForgeMod.BLOCK_REACH.get(), new AttributeModifier(uuid, "Valkyrum Pendant Ability", 1.0, AttributeModifier.Operation.ADDITION));
-        attributes.put(ForgeMod.ENTITY_REACH.get(), new AttributeModifier(uuid, "Valkyrum Pendant Ability", 1.0, AttributeModifier.Operation.ADDITION));
+        attributes.put(NeoForgeMod.BLOCK_REACH.value(), new AttributeModifier(uuid, "Valkyrum Pendant Ability", 1.0, AttributeModifier.Operation.ADDITION));
+        attributes.put(NeoForgeMod.ENTITY_REACH.value(), new AttributeModifier(uuid, "Valkyrum Pendant Ability", 1.0, AttributeModifier.Operation.ADDITION));
         return attributes;
     }
 }

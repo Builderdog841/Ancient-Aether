@@ -6,7 +6,7 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier.Operation;
-import net.minecraftforge.common.ForgeMod;
+import net.neoforged.neoforge.common.NeoForgeMod;
 
 import java.util.UUID;
 
@@ -18,8 +18,8 @@ public interface ValkyrumSwordRange {
         if (slot == EquipmentSlot.MAINHAND) {
             ImmutableMultimap.Builder<Attribute, AttributeModifier> attributeBuilder = ImmutableMultimap.builder();
             attributeBuilder.putAll(map);
-            attributeBuilder.put(ForgeMod.BLOCK_REACH.get(), new AttributeModifier(REACH_DISTANCE_MODIFIER_UUID, "Reach distance modifier", getModifier(), Operation.ADDITION));
-            attributeBuilder.put(ForgeMod.ENTITY_REACH.get(), new AttributeModifier(ATTACK_RANGE_MODIFIER_UUID, "Attack range modifier", getModifier(), Operation.ADDITION));
+            attributeBuilder.put(NeoForgeMod.BLOCK_REACH.value(), new AttributeModifier(REACH_DISTANCE_MODIFIER_UUID, "Reach distance modifier", getModifier(), Operation.ADDITION));
+            attributeBuilder.put(NeoForgeMod.ENTITY_REACH.value(), new AttributeModifier(ATTACK_RANGE_MODIFIER_UUID, "Attack range modifier", getModifier(), Operation.ADDITION));
             map = attributeBuilder.build();
         }
 

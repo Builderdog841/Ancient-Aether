@@ -58,7 +58,7 @@ public class Fluffalo extends WyndcapsAnimal implements Shearable, IForgeShearab
         super.registerGoals();
         goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
             @Override
-            protected double getAttackReachSqr(@NotNull LivingEntity entity) {
+            private double getAttackReachSqr(@NotNull LivingEntity entity) {
                 return mob.getBbWidth() * mob.getBbWidth() + entity.getBbWidth();
             }
         });
