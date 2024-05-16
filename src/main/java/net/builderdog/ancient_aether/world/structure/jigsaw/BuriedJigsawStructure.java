@@ -20,11 +20,14 @@ import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraft.world.level.levelgen.structure.StructureType;
 import net.minecraft.world.level.levelgen.structure.pools.JigsawPlacement;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
+import net.minecraft.world.level.levelgen.structure.pools.alias.PoolAliasBinding;
+import net.minecraft.world.level.levelgen.structure.pools.alias.PoolAliasLookup;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplateManager;
 import org.apache.commons.lang3.mutable.MutableInt;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.List;
 import java.util.Optional;
 
 public class BuriedJigsawStructure extends Structure {
@@ -37,7 +40,8 @@ public class BuriedJigsawStructure extends Structure {
                     Heightmap.Types.CODEC.optionalFieldOf("project_start_to_heightmap").forGetter(structure -> structure.projectStartToHeightmap),
                     Codec.intRange(1, 128).fieldOf("max_distance_from_center").forGetter(structure -> structure.maxDistanceFromCenter),
                     Codec.intRange(-4096, 4096).fieldOf("above_bottom").forGetter(structure -> structure.aboveBottom),
-                    Codec.intRange(-4096, 4096).fieldOf("below_top").forGetter(structure -> structure.belowTop)
+                    Codec.intRange(-4096, 4096).fieldOf("below_top").forGetter(structure -> structure.belowTop),
+                    Codec.list(PoolAliasBinding.CODEC).optionalFieldOf("pool_aliases", List.of()).forGetter(structure -> structure.poolAliases)
             ).apply(instance, BuriedJigsawStructure::new)).codec();
 
     private final Holder<StructureTemplatePool> startPool;
@@ -48,8 +52,19 @@ public class BuriedJigsawStructure extends Structure {
     private final int maxDistanceFromCenter;
     private final int aboveBottom;
     private final int belowTop;
+    private final List<PoolAliasBinding> poolAliases;
 
-    public BuriedJigsawStructure(StructureSettings settings, Holder<StructureTemplatePool> startPool, Optional<ResourceLocation> startJigsawName, int size, Optional<HeightProvider> startHeight, Optional<Heightmap.Types> projectStartToHeightmap, int maxDistanceFromCenter, int aboveBottom, int belowTop) {
+    public BuriedJigsawStructure(StructureSettings settings,
+                                 Holder<StructureTemplatePool> startPool,
+                                 Optional<ResourceLocation> startJigsawName,
+                                 int size,
+                                 Optional<HeightProvider> startHeight,
+                                 Optional<Heightmap.Types> projectStartToHeightmap,
+                                 int maxDistanceFromCenter,
+                                 int aboveBottom,
+                                 int belowTop,
+                                 List<PoolAliasBinding> poolAliases)
+    {
         super(settings);
         this.startPool = startPool;
         this.startJigsawName = startJigsawName;
@@ -59,6 +74,7 @@ public class BuriedJigsawStructure extends Structure {
         this.maxDistanceFromCenter = maxDistanceFromCenter;
         this.aboveBottom = aboveBottom;
         this.belowTop = belowTop;
+        this.poolAliases = poolAliases;
     }
 
     @Override
@@ -77,16 +93,18 @@ public class BuriedJigsawStructure extends Structure {
                 return Optional.empty();
             }
         }
-        BlockPos blockPos = new BlockPos(chunkPos.getMinBlockX(), height, chunkPos.getMinBlockZ());
+        BlockPos pos = new BlockPos(chunkPos.getMinBlockX(), height, chunkPos.getMinBlockZ());
         return JigsawPlacement.addPieces(
                 context,
                 startPool,
                 startJigsawName,
                 size,
-                blockPos,
+                pos,
                 false,
                 projectStartToHeightmap,
-                maxDistanceFromCenter);
+                maxDistanceFromCenter,
+                PoolAliasLookup.create(poolAliases, pos, context.seed())
+        );
     }
 
     private static ChunkPos searchNearbyChunks(ChunkPos chunkPos, MutableInt height, ChunkGenerator generator, LevelHeightAccessor heightAccessor, RandomState randomState, StructureTemplateManager templateManager, int aboveBottom, int belowTop) {

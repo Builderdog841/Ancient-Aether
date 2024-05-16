@@ -14,8 +14,11 @@ import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraft.world.level.levelgen.structure.StructureType;
 import net.minecraft.world.level.levelgen.structure.pools.JigsawPlacement;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
+import net.minecraft.world.level.levelgen.structure.pools.alias.PoolAliasBinding;
+import net.minecraft.world.level.levelgen.structure.pools.alias.PoolAliasLookup;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.List;
 import java.util.Optional;
 
 public class SkylandsJigsawStructure extends Structure {
@@ -28,7 +31,8 @@ public class SkylandsJigsawStructure extends Structure {
                     HeightProvider.CODEC.fieldOf("start_height").forGetter(structure -> structure.startHeight),
                     Heightmap.Types.CODEC.optionalFieldOf("project_start_to_heightmap").forGetter(structure -> structure.projectStartToHeightmap),
                     Codec.intRange(1, 128).fieldOf("max_distance_from_center").forGetter(structure -> structure.maxDistanceFromCenter),
-                    Codec.intRange(-4096, 4096).fieldOf("above_bottom").forGetter(structure -> structure.aboveBottom)
+                    Codec.intRange(-4096, 4096).fieldOf("above_bottom").forGetter(structure -> structure.aboveBottom),
+                    Codec.list(PoolAliasBinding.CODEC).optionalFieldOf("pool_aliases", List.of()).forGetter(structure -> structure.poolAliases)
             ).apply(instance, SkylandsJigsawStructure::new)).codec();
     private final Holder<StructureTemplatePool> startPool;
     private final Optional<ResourceLocation> startJigsawName;
@@ -37,6 +41,7 @@ public class SkylandsJigsawStructure extends Structure {
     private final Optional<Heightmap.Types> projectStartToHeightmap;
     private final int maxDistanceFromCenter;
     private final int aboveBottom;
+    private final List<PoolAliasBinding> poolAliases;
 
     public SkylandsJigsawStructure(StructureSettings config,
                                    Holder<StructureTemplatePool> startPool,
@@ -45,7 +50,8 @@ public class SkylandsJigsawStructure extends Structure {
                                    HeightProvider startHeight,
                                    Optional<Heightmap.Types> projectStartToHeightmap,
                                    int maxDistanceFromCenter,
-                                   int aboveBottom)
+                                   int aboveBottom,
+                                   List<PoolAliasBinding> poolAliases)
     {
         super(config);
         this.startPool = startPool;
@@ -55,6 +61,7 @@ public class SkylandsJigsawStructure extends Structure {
         this.projectStartToHeightmap = projectStartToHeightmap;
         this.maxDistanceFromCenter = maxDistanceFromCenter;
         this.aboveBottom = aboveBottom;
+        this.poolAliases = poolAliases;
     }
     private boolean extraSpawningChecks(GenerationContext context) {
         ChunkPos chunkpos = context.chunkPos();
@@ -72,19 +79,20 @@ public class SkylandsJigsawStructure extends Structure {
             return Optional.empty();
         }
         int startY = startHeight.sample(context.random(), new WorldGenerationContext(context.chunkGenerator(), context.heightAccessor()));
-
         ChunkPos chunkPos = context.chunkPos();
-        BlockPos blockPos = new BlockPos(chunkPos.getMiddleBlockX(), startY, chunkPos.getMiddleBlockZ());
+        BlockPos pos = new BlockPos(chunkPos.getMiddleBlockX(), startY, chunkPos.getMiddleBlockZ());
 
         return JigsawPlacement.addPieces(
                 context,
                 startPool,
                 startJigsawName,
                 size,
-                blockPos,
+                pos,
                 false,
                 projectStartToHeightmap,
-                maxDistanceFromCenter);
+                maxDistanceFromCenter,
+                PoolAliasLookup.create(poolAliases, pos, context.seed())
+        );
     }
 
     @Override
