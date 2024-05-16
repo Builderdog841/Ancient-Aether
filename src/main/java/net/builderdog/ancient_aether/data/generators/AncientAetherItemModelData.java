@@ -6,7 +6,7 @@ import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.data.providers.AncientAetherItemModelProvider;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.data.PackOutput;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
     public AncientAetherItemModelData(PackOutput output, ExistingFileHelper existingFileHelper) {

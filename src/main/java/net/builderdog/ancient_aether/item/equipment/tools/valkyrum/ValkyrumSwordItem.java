@@ -8,13 +8,14 @@ import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
+import org.jetbrains.annotations.NotNull;
 
 public class ValkyrumSwordItem extends SwordItem implements ValkyrumSwordRange {
     public ValkyrumSwordItem() {
         super(AncientAetherItemTiers.VALKYRUM, 3, -2.4F, (new Properties()));
     }
 
-    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlot slot, ItemStack stack) {
+    public @NotNull Multimap<Attribute, AttributeModifier> getAttributeModifiers(@NotNull EquipmentSlot slot, @NotNull ItemStack stack) {
         return extendReachModifier(super.getAttributeModifiers(slot, stack), slot);
     }
 }

@@ -5,14 +5,12 @@ import com.aetherteam.aether.api.registers.MoaType;
 import com.aetherteam.aether.data.resources.registries.AetherMoaTypes;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
-import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 
 public class AncientAetherMoaTypes {
-    public static final ResourceKey<Registry<MoaType>> MOA_TYPE_REGISTRY_KEY = ResourceKey.createRegistryKey(new ResourceLocation(AncientAether.MODID, "moa_type"));
 
     public static final ResourceKey<MoaType> TURQUOISE = createKey("turquoise");
     public static final ResourceKey<MoaType> TEAL = createKey("teal");

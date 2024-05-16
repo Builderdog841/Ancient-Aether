@@ -9,6 +9,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.PickaxeItem;
+import org.jetbrains.annotations.NotNull;
 
 public class ValkyrumPickaxeItem extends PickaxeItem implements ValkyrieTool {
     public ValkyrumPickaxeItem() {
@@ -16,7 +17,7 @@ public class ValkyrumPickaxeItem extends PickaxeItem implements ValkyrieTool {
     }
 
     @Override
-    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlot slot, ItemStack stack) {
+    public @NotNull Multimap<Attribute, AttributeModifier> getAttributeModifiers(@NotNull EquipmentSlot slot, @NotNull ItemStack stack) {
         return extendReachModifier(super.getAttributeModifiers(slot, stack), slot);
     }
 }

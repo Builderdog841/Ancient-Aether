@@ -23,7 +23,6 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@SuppressWarnings("deprecation")
 @Mixin(value = AetherGrassBlock.class)
 public abstract class AetherGrassBlockMixin extends SnowyDirtMixin {
 

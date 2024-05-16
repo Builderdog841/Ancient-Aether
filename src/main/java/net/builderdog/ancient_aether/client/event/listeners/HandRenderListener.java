@@ -1,22 +1,21 @@
 package net.builderdog.ancient_aether.client.event.listeners;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.client.event.hooks.HandRenderHooks;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.renderer.ItemInHandRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.world.InteractionHand;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.RenderHandEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.client.event.RenderHandEvent;
 
-@Mod.EventBusSubscriber(modid = AncientAether.MODID, value = Dist.CLIENT)
 public class HandRenderListener {
 
-    @SubscribeEvent
+    public static void listen(IEventBus bus) {
+        bus.addListener(HandRenderListener::onRenderHand);
+    }
+
     public static void onRenderHand(RenderHandEvent event) {
         ItemInHandRenderer itemInHandRenderer = Minecraft.getInstance().gameRenderer.itemInHandRenderer;
         AbstractClientPlayer abstractClientPlayer = Minecraft.getInstance().player;

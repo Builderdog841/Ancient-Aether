@@ -6,6 +6,7 @@ import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
+import org.jetbrains.annotations.NotNull;
 
 public class ValkyrumBlock extends Block {
     public ValkyrumBlock(Properties properties) {
@@ -14,7 +15,7 @@ public class ValkyrumBlock extends Block {
 
     @SuppressWarnings("deprecation")
     @Override
-    public boolean canHarvestBlock(BlockState state, BlockGetter getter, BlockPos pos, Player player) {
+    public boolean canHarvestBlock(@NotNull BlockState state, @NotNull BlockGetter getter, @NotNull BlockPos pos, Player player) {
         if (player.getInventory().getSelected().getItem() instanceof PickaxeItem tieredItem)
             return tieredItem.getTier().getLevel() >= 5;
         return false;

@@ -23,8 +23,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.common.ForgeHooks;
-import net.minecraftforge.common.ForgeMod;
+import net.neoforged.neoforge.common.NeoForgeMod;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nonnull;
@@ -54,7 +53,7 @@ public class AeronauticLeaper extends Slime {
 				.add(Attributes.MAX_HEALTH, 10.0)
 				.add(Attributes.MOVEMENT_SPEED, 0.8)
 				.add(Attributes.ATTACK_DAMAGE, 6.0)
-				.add(ForgeMod.ENTITY_GRAVITY.get(), 0.025);
+				.add(NeoForgeMod.ENTITY_GRAVITY.value(), 0.025);
 	}
 
 	@Override

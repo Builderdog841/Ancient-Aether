@@ -11,8 +11,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
-import net.minecraftforge.common.ToolAction;
-import net.minecraftforge.common.ToolActions;
+import net.neoforged.neoforge.common.ToolAction;
+import net.neoforged.neoforge.common.ToolActions;
 import org.jetbrains.annotations.NotNull;
 
 public class ValkyrumLanceItem extends SwordItem implements ValkyrieTool {
@@ -20,7 +20,7 @@ public class ValkyrumLanceItem extends SwordItem implements ValkyrieTool {
         super(AncientAetherItemTiers.VALKYRUM, 2, -2.7F, (new Item.Properties()));
     }
 
-    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlot slot, ItemStack stack) {
+    public @NotNull Multimap<Attribute, AttributeModifier> getAttributeModifiers(@NotNull EquipmentSlot slot, @NotNull ItemStack stack) {
         return extendReachModifier(super.getAttributeModifiers(slot, stack), slot);
     }
 

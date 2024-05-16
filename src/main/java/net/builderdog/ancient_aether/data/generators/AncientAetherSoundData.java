@@ -3,8 +3,8 @@ package net.builderdog.ancient_aether.data.generators;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.minecraft.data.PackOutput;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.common.data.SoundDefinitionsProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.common.data.SoundDefinitionsProvider;
 
 public class AncientAetherSoundData extends SoundDefinitionsProvider {
     public AncientAetherSoundData(PackOutput output, ExistingFileHelper helper) {

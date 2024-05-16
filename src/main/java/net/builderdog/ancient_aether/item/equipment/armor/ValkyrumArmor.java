@@ -1,6 +1,5 @@
 package net.builderdog.ancient_aether.item.equipment.armor;
 
-import com.aetherteam.aether.capability.player.AetherPlayer;
 import com.aetherteam.aether.mixin.mixins.common.accessor.ServerGamePacketListenerImplAccessor;
 import net.builderdog.ancient_aether.item.EquipmentUtil;
 import net.minecraft.server.level.ServerPlayer;
