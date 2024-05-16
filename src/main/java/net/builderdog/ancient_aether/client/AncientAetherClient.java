@@ -2,21 +2,27 @@ package net.builderdog.ancient_aether.client;
 
 import com.aetherteam.aether.AetherConfig;
 import com.aetherteam.cumulus.CumulusConfig;
-import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.AncientAetherConfig;
 import net.builderdog.ancient_aether.block.AncientAetherBlockSets;
+import net.builderdog.ancient_aether.client.event.listeners.HandRenderListener;
+import net.builderdog.ancient_aether.client.gui.AncientAetherMenus;
+import net.builderdog.ancient_aether.client.particle.AncientAetherParticleTypes;
 import net.builderdog.ancient_aether.client.renderer.AncientAetherRenderers;
 import net.minecraft.client.renderer.Sheets;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.common.NeoForge;
 import teamrazor.aeroblender.AeroBlenderConfig;
 
-@Mod.EventBusSubscriber(modid = AncientAether.MODID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class AncientAetherClient {
 
-    @SubscribeEvent
+    public static void clientInit(IEventBus bus) {
+        bus.addListener(AncientAetherClient::clientSetup);
+
+        AncientAetherMenus.MENUS.register(bus);
+        AncientAetherClient.eventSetup(bus);
+    }
+
     public static void clientSetup(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
             AncientAetherRenderers.registerCuriosRenderers();
@@ -41,5 +47,17 @@ public class AncientAetherClient {
                 }
             }
         });
+    }
+
+    public static void eventSetup(IEventBus neoBus) {
+        IEventBus bus = NeoForge.EVENT_BUS;
+
+        HandRenderListener.listen(bus);
+
+        neoBus.addListener(AncientAetherParticleTypes::registerParticleFactories);
+        neoBus.addListener(AncientAetherRenderers::registerEntityRenderers);
+        neoBus.addListener(AncientAetherRenderers::registerLayerDefinitions);
+        neoBus.addListener(AncientAetherRenderers::addEntityLayers);
+        neoBus.addListener(AncientAetherRenderers::bakeModels);
     }
 }

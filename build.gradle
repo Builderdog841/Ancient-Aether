@@ -7,7 +7,7 @@ plugins {
     id 'io.github.0ffz.github-packages' version '[1,2)'
 }
 
-version = '0.10.01'
+version = '0.10.0'
 group = 'net.builderdog.ancient_aether'
 base {
     archivesName = mod_id

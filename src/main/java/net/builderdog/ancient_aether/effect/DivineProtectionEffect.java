@@ -8,9 +8,4 @@ public class DivineProtectionEffect extends MobEffect {
     public DivineProtectionEffect() {
         super(MobEffectCategory.BENEFICIAL, 0x6A8282);
     }
-
-    @Override
-    public boolean isDurationEffectTick(int duration, int amplifier) {
-        return true;
-    }
 }

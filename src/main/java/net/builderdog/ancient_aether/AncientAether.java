@@ -5,8 +5,8 @@ import net.builderdog.ancient_aether.advancement.AncientAetherAdvancementTrigger
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.block.dispenser.DispenseAncientAetherBoatBehaviour;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
+import net.builderdog.ancient_aether.client.AncientAetherClient;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
-import net.builderdog.ancient_aether.client.gui.AncientAetherMenus;
 import net.builderdog.ancient_aether.client.particle.AncientAetherParticleTypes;
 import net.builderdog.ancient_aether.data.AncientAetherData;
 import net.builderdog.ancient_aether.effect.AncientAetherEffects;
@@ -28,16 +28,14 @@ import net.minecraft.server.packs.repository.PackSource;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.DispenserBlock;
+import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.DistExecutor;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.AddPackFindersEvent;
 import net.neoforged.neoforge.event.server.ServerAboutToStartEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -50,11 +48,9 @@ import terrablender.api.SurfaceRuleManager;
 public class AncientAether {
     public static final String MODID = "ancient_aether";
 
-    public AncientAether() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
-        modEventBus.addListener(this::commonSetup);
-        modEventBus.addListener(AncientAetherData::dataSetup);
+    public AncientAether(IEventBus bus, Dist dist) {
+        bus.addListener(AncientAetherData::dataSetup);
+        bus.addListener(this::commonSetup);
 
         DeferredRegister<?>[] registers = {
                 AncientAetherBlocks.BLOCKS,
@@ -71,22 +67,21 @@ public class AncientAether {
                 AncientAetherParticleTypes.PARTICLES,
         };
 
-        NeoForge.EVENT_BUS.register(this);
-
         for (DeferredRegister<?> register : registers) {
-            register.register(modEventBus);
+            register.register(bus);
         }
 
-        DistExecutor.unsafeRunForDist(() -> () -> {
-            AncientAetherMenus.MENUS.register(modEventBus);
-            return true;
-        }, () -> () -> false);
+        eventSetup(bus);
+
+        AncientAetherBlocks.registerWoodTypes();
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, AncientAetherConfig.SERVER_SPEC);
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, AncientAetherConfig.COMMON_SPEC);
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, AncientAetherConfig.CLIENT_SPEC);
 
-        AncientAetherBlocks.registerWoodTypes();
+        if (dist == Dist.CLIENT) {
+            AncientAetherClient.clientInit(bus);
+        }
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
