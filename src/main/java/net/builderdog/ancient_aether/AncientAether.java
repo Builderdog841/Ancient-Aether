@@ -11,17 +11,14 @@ import net.builderdog.ancient_aether.client.particle.AncientAetherParticleTypes;
 import net.builderdog.ancient_aether.data.AncientAetherData;
 import net.builderdog.ancient_aether.effect.AncientAetherEffects;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
-import net.builderdog.ancient_aether.entity.AncientAetherMoaTypes;
-import net.builderdog.ancient_aether.item.AncientAetherCreativeModeTabs;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.builderdog.ancient_aether.world.biome.AncientAetherRegion;
 import net.builderdog.ancient_aether.world.biome.AncientAetherSurfaceRules;
-import net.builderdog.ancient_aether.world.biomemodifier.AncientAetherBiomeModifierSerializers;
 import net.builderdog.ancient_aether.world.feature.AncientAetherFeatures;
-import net.builderdog.ancient_aether.world.foliageplacer.AncientAetherFoliagePlacers;
+import net.builderdog.ancient_aether.world.tree.AncientAetherFoliagePlacers;
 import net.builderdog.ancient_aether.world.processor.AncientAetherStructureProcessors;
 import net.builderdog.ancient_aether.world.structure.AncientAetherStructureTypes;
-import net.builderdog.ancient_aether.world.treedecorator.AncientAetherTreeDecoratorTypes;
+import net.builderdog.ancient_aether.world.tree.AncientAetherTreeDecorators;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
@@ -67,7 +64,7 @@ public class AncientAether {
                 AncientAetherEffects.EFFECTS,
                 AncientAetherFeatures.FEATURES,
                 AncientAetherFoliagePlacers.FOLIAGE_PLACERS,
-                AncientAetherTreeDecoratorTypes.TREE_DECORATORS,
+                AncientAetherTreeDecorators.TREE_DECORATORS,
                 AncientAetherStructureTypes.STRUCTURE_TYPES,
                 AncientAetherStructureProcessors.STRUCTURE_PROCESSOR_TYPES,
                 AncientAetherSoundEvents.SOUNDS,

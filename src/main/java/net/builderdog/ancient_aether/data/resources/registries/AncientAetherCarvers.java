@@ -15,7 +15,7 @@ import net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver;
 import net.minecraft.world.level.levelgen.carver.WorldCarver;
 import net.minecraft.world.level.levelgen.heightproviders.UniformHeight;
 
-public class AncientAetherConfiguredCarvers {
+public class AncientAetherCarvers {
     public static final ResourceKey<ConfiguredWorldCarver<?>> AETHER_CAVE = createKey("aether_cave");
     public static final ResourceKey<ConfiguredWorldCarver<?>> AETHER_CAVE_ELEVATED = createKey("aether_cave_elevated");
     public static final ResourceKey<ConfiguredWorldCarver<?>> AETHER_CAVE_SAKURA = createKey("aether_cave_sakura");

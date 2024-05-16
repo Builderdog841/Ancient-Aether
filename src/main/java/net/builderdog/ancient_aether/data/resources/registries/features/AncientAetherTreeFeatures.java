@@ -5,7 +5,7 @@ import com.aetherteam.aether.world.foliageplacer.HolidayFoliagePlacer;
 import com.google.common.collect.ImmutableList;
 import net.builderdog.ancient_aether.data.resources.AncientAetherFeatureStates;
 import net.builderdog.ancient_aether.data.resources.builders.AncientAetherFeatureBuilders;
-import net.builderdog.ancient_aether.world.treedecorator.GrapeVineDecorator;
+import net.builderdog.ancient_aether.world.tree.decorator.GrapeVineDecorator;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.random.SimpleWeightedRandomList;

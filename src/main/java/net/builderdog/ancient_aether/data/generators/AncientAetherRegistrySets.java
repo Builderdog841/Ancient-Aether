@@ -20,7 +20,7 @@ public class AncientAetherRegistrySets extends DatapackBuiltinEntriesProvider {
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
             .add(Registries.CONFIGURED_FEATURE, AncientAetherFeatureUtils::bootstrap)
             .add(Registries.PLACED_FEATURE, AncientAetherPlacementUtils::bootstrap)
-            .add(Registries.CONFIGURED_CARVER, AncientAetherConfiguredCarvers::bootstrap)
+            .add(Registries.CONFIGURED_CARVER, AncientAetherCarvers::bootstrap)
             .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, AncientAetherBiomeModifiers::bootstrap)
             .add(Registries.PROCESSOR_LIST, AncientAetherProcessorLists::bootstrap)
             .add(Registries.NOISE, AncientAetherNoises::bootstrap)

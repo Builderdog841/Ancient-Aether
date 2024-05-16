@@ -1,7 +1,8 @@
-package net.builderdog.ancient_aether.world.treedecorator;
+package net.builderdog.ancient_aether.world.tree.decorator;
 
 import com.mojang.serialization.Codec;
 import net.builderdog.ancient_aether.block.blocktype.GrapeVineBlock;
+import net.builderdog.ancient_aether.world.tree.AncientAetherTreeDecorators;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -18,10 +19,6 @@ public class GrapeVineDecorator extends TreeDecorator {
 
     public GrapeVineDecorator(BlockState state) {
         this.state = state;
-    }
-
-    protected @NotNull TreeDecoratorType<?> type() {
-        return AncientAetherTreeDecoratorTypes.GRAPE_VINE_DECORATOR.get();
     }
 
     public void placeGrapeVine(Context context, BlockPos pos, BlockState state) {
@@ -58,5 +55,9 @@ public class GrapeVineDecorator extends TreeDecorator {
                 }
             }
         });
+    }
+
+    protected @NotNull TreeDecoratorType<?> type() {
+        return AncientAetherTreeDecorators.GRAPE_VINE_DECORATOR.get();
     }
 }

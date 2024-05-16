@@ -17,7 +17,7 @@ import net.builderdog.ancient_aether.block.blocktype.*;
 import net.builderdog.ancient_aether.data.resources.AncientAetherLoot;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
-import net.builderdog.ancient_aether.world.treegrower.*;
+import net.builderdog.ancient_aether.world.tree.AncientAetherTreeGrowers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;

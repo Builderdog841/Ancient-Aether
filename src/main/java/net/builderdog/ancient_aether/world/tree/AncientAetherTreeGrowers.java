@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.world.treegrower;
+package net.builderdog.ancient_aether.world.tree;
 
 import net.builderdog.ancient_aether.data.resources.registries.features.AncientAetherTreeFeatures;
 import net.minecraft.core.registries.Registries;
