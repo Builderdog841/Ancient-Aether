@@ -43,7 +43,7 @@ public class ObeliskBlock extends Block {
                 && serverPlayer.getAdvancements().getOrStartProgress(Objects.requireNonNull(serverPlayer.server.getAdvancements().get(new ResourceLocation("aether:gold_dungeon")))).isDone()) {
             if (serverPlayer.getMainHandItem().getItem() == AncientAetherItems.ANCIENT_RUNE.get()) {
                 ItemStack stack = player.getMainHandItem();
-                AncientAetherTriggers.OBELISK_ACTIVATION.get().trigger();
+                AncientAetherTriggers.OBELISK_ACTIVATION.get().trigger(serverPlayer, serverPlayer.getMainHandItem());
                 if (!serverPlayer.getAbilities().instabuild) {
                     player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
                     stack.shrink(1);

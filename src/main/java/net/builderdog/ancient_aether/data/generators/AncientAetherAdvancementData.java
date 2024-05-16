@@ -4,7 +4,6 @@ import com.aetherteam.aether.Aether;
 import com.aetherteam.aether.data.resources.registries.AetherBiomes;
 import com.aetherteam.aether.item.AetherItems;
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.advancement.AncientAetherTriggers;
 import net.builderdog.ancient_aether.advancement.ObeliskTrigger;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.data.resources.registries.AncientAetherBiomes;
@@ -171,7 +170,7 @@ public class AncientAetherAdvancementData extends AdvancementProvider {
                             Component.translatable("advancement.ancient_aether.obelisk.desc"),
                             null,
                             AdvancementType.TASK, true, true, false)
-                    .addCriterion("obelisk", ObeliskTrigger.Instance)
+                    .addCriterion("obelisk", ObeliskTrigger.Instance.forItem(AncientAetherItems.ANCIENT_RUNE.get()))
                     .save(consumer, new ResourceLocation(AncientAether.MODID, "obelisk"), existingFileHelper);
 
             /*

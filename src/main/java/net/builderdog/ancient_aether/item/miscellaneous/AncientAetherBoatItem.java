@@ -1,7 +1,7 @@
 package net.builderdog.ancient_aether.item.miscellaneous;
 
-import net.builderdog.ancient_aether.entity.miscellaneous.AncientAetherBoatEntity;
-import net.builderdog.ancient_aether.entity.miscellaneous.AncientAetherChestBoatEntity;
+import net.builderdog.ancient_aether.entity.miscellaneous.AncientAetherBoat;
+import net.builderdog.ancient_aether.entity.miscellaneous.AncientAetherChestBoat;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -24,9 +24,9 @@ import java.util.function.Predicate;
 public class AncientAetherBoatItem extends BoatItem {
     private static final Predicate<Entity> ENTITY_PREDICATE = EntitySelector.NO_SPECTATORS.and(Entity::isPickable);
     private final boolean hasChest;
-    private final AncientAetherBoatEntity.Type woodType;
+    private final AncientAetherBoat.Type woodType;
 
-    public AncientAetherBoatItem(boolean hasChest, Properties properties, AncientAetherBoatEntity.Type  woodType) {
+    public AncientAetherBoatItem(boolean hasChest, Properties properties, AncientAetherBoat.Type  woodType) {
         super(hasChest, null, properties);
         this.hasChest = hasChest;
         this.woodType = woodType;
@@ -52,7 +52,7 @@ public class AncientAetherBoatItem extends BoatItem {
                 }
             }
             if (hitresult.getType() == HitResult.Type.BLOCK) {
-                AncientAetherBoatEntity boat = getBoat(pLevel, hitresult);
+                AncientAetherBoat boat = getBoat(pLevel, hitresult);
                 boat.setWoodType(woodType);
                 boat.setYRot(pPlayer.getYRot());
                 if (!pLevel.noCollision(boat, boat.getBoundingBox())) {
@@ -74,8 +74,8 @@ public class AncientAetherBoatItem extends BoatItem {
             }
         }
     }
-    private AncientAetherBoatEntity getBoat(Level level, HitResult hitResult) {
-        return hasChest ? new AncientAetherChestBoatEntity(level, hitResult.getLocation().x, hitResult.getLocation().y, hitResult.getLocation().z) : new AncientAetherBoatEntity(level, hitResult.getLocation().x, hitResult.getLocation().y, hitResult.getLocation().z);
+    private AncientAetherBoat getBoat(Level level, HitResult hitResult) {
+        return hasChest ? new AncientAetherChestBoat(level, hitResult.getLocation().x, hitResult.getLocation().y, hitResult.getLocation().z) : new AncientAetherBoat(level, hitResult.getLocation().x, hitResult.getLocation().y, hitResult.getLocation().z);
 
     }
 }

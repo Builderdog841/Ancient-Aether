@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.client.renderer.player.layer;
 
+import com.aetherteam.aether.attachment.AetherDataAttachments;
 import com.aetherteam.aether.client.renderer.entity.model.ValkyrieWingsModel;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -30,11 +31,10 @@ public class ValkyrumWingsLayer<T extends Player, M extends PlayerModel<T>> exte
     @Override
     public void render(@NotNull PoseStack poseStack, @NotNull MultiBufferSource buffer, int packedLight, @NotNull T entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
         if (EquipmentUtil.hasFullValkyrumSet(entity)) {
-            AncientAetherPlayer.get(entity).ifPresent((ancientAetherPlayer) -> {
-                setupWingRotation(entity, Mth.lerp(partialTicks, ancientAetherPlayer.getWingRotationO(), ancientAetherPlayer.getWingRotation()));
-                VertexConsumer consumer = buffer.getBuffer(RenderType.entityCutoutNoCull(WINGS_TEXTURE));
-                wings.renderToBuffer(poseStack, consumer, packedLight, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
-            });
+            var data = entity.getData(AetherDataAttachments.AETHER_PLAYER);
+            setupWingRotation(entity, Mth.lerp(partialTicks, data.getWingRotationO(), data.getWingRotation()));
+            VertexConsumer consumer = buffer.getBuffer(RenderType.entityCutoutNoCull(WINGS_TEXTURE));
+            wings.renderToBuffer(poseStack, consumer, packedLight, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
         }
     }
 

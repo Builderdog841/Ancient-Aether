@@ -32,7 +32,6 @@ import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.neoforge.registries.DeferredBlock;
-import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
@@ -312,7 +311,7 @@ public class AncientAetherBlocks {
         return toReturn;
     }
 
-    private static <T extends Block> DeferredItem<Item> registerBlockItem(String name, DeferredBlock<T> block) {
-        return AncientAetherItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
+        AncientAetherItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 }

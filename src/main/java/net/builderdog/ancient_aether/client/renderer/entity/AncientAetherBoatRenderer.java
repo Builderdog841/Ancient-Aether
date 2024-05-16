@@ -6,7 +6,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.datafixers.util.Pair;
 import com.mojang.math.Axis;
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.entity.miscellaneous.AncientAetherBoatEntity;
+import net.builderdog.ancient_aether.entity.miscellaneous.AncientAetherBoat;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.model.ListModel;
@@ -27,17 +27,17 @@ import org.joml.Quaternionf;
 import java.util.Map;
 import java.util.stream.Stream;
 
-public class AncientAetherBoatRenderer<T extends AncientAetherBoatEntity> extends EntityRenderer<T> {
-    private final Map<AncientAetherBoatEntity.Type, Pair<ResourceLocation, ListModel<Boat>>> boatResources;
+public class AncientAetherBoatRenderer<T extends AncientAetherBoat> extends EntityRenderer<T> {
+    private final Map<AncientAetherBoat.Type, Pair<ResourceLocation, ListModel<Boat>>> boatResources;
 
     public AncientAetherBoatRenderer(EntityRendererProvider.Context renderer, boolean hasChest) {
         super(renderer);
         shadowRadius = 0.8f;
-        boatResources = Stream.of(AncientAetherBoatEntity.Type.values()).collect(ImmutableMap.toImmutableMap(type -> type, type ->
+        boatResources = Stream.of(AncientAetherBoat.Type.values()).collect(ImmutableMap.toImmutableMap(type -> type, type ->
                 Pair.of(type.getTexture(hasChest), createBoatModel(renderer, type, hasChest))));
     }
 
-    private ListModel<Boat> createBoatModel(EntityRendererProvider.Context renderer, AncientAetherBoatEntity.Type type, boolean hasChest) {
+    private ListModel<Boat> createBoatModel(EntityRendererProvider.Context renderer, AncientAetherBoat.Type type, boolean hasChest) {
         ModelLayerLocation modelLayerLocation = hasChest ?
                 new ModelLayerLocation(new ResourceLocation(AncientAether.MODID, type.getChestModelLocation()), "main")
                 : new ModelLayerLocation(new ResourceLocation(AncientAether.MODID, type.getModelLocation()), "main");
@@ -80,7 +80,7 @@ public class AncientAetherBoatRenderer<T extends AncientAetherBoatEntity> extend
     }
 
     @Override
-    public @NotNull ResourceLocation getTextureLocation(AncientAetherBoatEntity boat) {
+    public @NotNull ResourceLocation getTextureLocation(AncientAetherBoat boat) {
         return boatResources.get(boat.getWoodType()).getFirst();
     }
 }

@@ -13,7 +13,7 @@ import net.builderdog.ancient_aether.data.resources.registries.AncientAetherMoaT
 import net.builderdog.ancient_aether.data.resources.registries.AncientAetherTrimPatterns;
 import net.builderdog.ancient_aether.effect.AncientAetherEffects;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
-import net.builderdog.ancient_aether.entity.miscellaneous.AncientAetherBoatEntity;
+import net.builderdog.ancient_aether.entity.miscellaneous.AncientAetherBoat;
 import net.builderdog.ancient_aether.item.equipment.AncientAetherArmorTiers;
 import net.builderdog.ancient_aether.item.equipment.accessories.miscellaneous.StrengthStoneItem;
 import net.builderdog.ancient_aether.item.equipment.accessories.pendants.*;
@@ -109,10 +109,10 @@ public class AncientAetherItems {
     public static final DeferredItem<Item> LABORATORY_DUNGEON_KEY = ITEMS.register("laboratory_dungeon_key", () -> new DungeonKeyItem(new ResourceLocation(AncientAether.MODID, "laboratory"), new Item.Properties().stacksTo(1).fireResistant()));
     public static final DeferredItem<Item> ANCIENT_DUNGEON_KEY = ITEMS.register("ancient_dungeon_key", () -> new DungeonKeyItem(new ResourceLocation(AncientAether.MODID, "ancient"), new Item.Properties().stacksTo(1).fireResistant()));
 
-    public static final DeferredItem<Item> HIGHSPROOT_BOAT = ITEMS.register("highsproot_boat", () -> new AncientAetherBoatItem(false, new Item.Properties().stacksTo(1), AncientAetherBoatEntity.Type.HIGHLANDS_PINE));
-    public static final DeferredItem<Item> HIGHSPROOT_CHEST_BOAT = ITEMS.register("highsproot_chest_boat", () -> new AncientAetherBoatItem(true, new Item.Properties().stacksTo(1),  AncientAetherBoatEntity.Type.HIGHLANDS_PINE));
-    public static final DeferredItem<Item> SAKURA_BOAT = ITEMS.register("sakura_boat", () -> new AncientAetherBoatItem(false, new Item.Properties().stacksTo(1), AncientAetherBoatEntity.Type.SAKURA));
-    public static final DeferredItem<Item> SAKURA_CHEST_BOAT = ITEMS.register("sakura_chest_boat", () -> new AncientAetherBoatItem(true, new Item.Properties().stacksTo(1), AncientAetherBoatEntity.Type.SAKURA));
+    public static final DeferredItem<Item> HIGHSPROOT_BOAT = ITEMS.register("highsproot_boat", () -> new AncientAetherBoatItem(false, new Item.Properties().stacksTo(1), AncientAetherBoat.Type.HIGHLANDS_PINE));
+    public static final DeferredItem<Item> HIGHSPROOT_CHEST_BOAT = ITEMS.register("highsproot_chest_boat", () -> new AncientAetherBoatItem(true, new Item.Properties().stacksTo(1),  AncientAetherBoat.Type.HIGHLANDS_PINE));
+    public static final DeferredItem<Item> SAKURA_BOAT = ITEMS.register("sakura_boat", () -> new AncientAetherBoatItem(false, new Item.Properties().stacksTo(1), AncientAetherBoat.Type.SAKURA));
+    public static final DeferredItem<Item> SAKURA_CHEST_BOAT = ITEMS.register("sakura_chest_boat", () -> new AncientAetherBoatItem(true, new Item.Properties().stacksTo(1), AncientAetherBoat.Type.SAKURA));
 
     public static final DeferredItem<Item> TURQUOISE_MOA_EGG = ITEMS.register("turquoise_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.TURQUOISE, 0xD2DDB3, new Item.Properties()));
     public static final DeferredItem<Item> TEAL_MOA_EGG = ITEMS.register("teal_moa_egg", () -> new MoaEggItem(AncientAetherMoaTypes.TEAL, 0x85A3A5, new Item.Properties()));

@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.client.event.hooks;
 
+import com.aetherteam.aether.attachment.AetherDataAttachments;
 import com.aetherteam.aether.item.EquipmentUtil;
 import com.aetherteam.aether.item.accessories.AccessoryItem;
 import com.aetherteam.aether.mixin.mixins.client.accessor.ItemInHandRendererAccessor;
@@ -9,6 +10,7 @@ import net.builderdog.ancient_aether.client.renderer.accessory.ShieldRenderer;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.renderer.ItemInHandRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.resources.PlayerSkin;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.HumanoidArm;
@@ -25,25 +27,23 @@ public class HandRenderHooks {
 
     public static void renderShieldHandOverlay(ItemInHandRenderer itemInHandRenderer, @Nullable AbstractClientPlayer player, InteractionHand hand, float pitch, float swingProgress, float equippedProgress, PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
         if (player != null) {
-            AetherPlayer.get(player).ifPresent((aetherPlayer) -> {
-                if (!aetherPlayer.isWearingInvisibilityCloak()) {
-                    EquipmentUtil.findFirstCurio(player, (item) -> item.getItem() instanceof AccessoryItem).ifPresent((slotResult) -> {
-                        String identifier = slotResult.slotContext().identifier();
-                        int id = slotResult.slotContext().index();
-                        ItemStack itemStack = slotResult.stack();
-                        CuriosApi.getCuriosInventory(player).flatMap(handler -> handler.getStacksHandler(identifier)).ifPresent(stacksHandler -> {
-                            if (stacksHandler.getRenders().get(id)) {
-                                CuriosRendererRegistry.getRenderer(itemStack.getItem()).ifPresent((renderer) -> {
-                                    if (renderer instanceof ShieldRenderer shieldRenderer) {
-                                        ItemStack heldItem = hand == InteractionHand.MAIN_HAND ? ((ItemInHandRendererAccessor) itemInHandRenderer).aether$getMainHandItem() : ((ItemInHandRendererAccessor) itemInHandRenderer).aether$getOffHandItem();
-                                        renderArmWithItem(itemInHandRenderer, shieldRenderer, itemStack, player, heldItem, hand, pitch, swingProgress, equippedProgress, poseStack, buffer, packedLight, HandRenderType.SHIELD);
-                                    }
-                                });
-                            }
-                        });
+            if (!player.getData(AetherDataAttachments.AETHER_PLAYER).isWearingInvisibilityCloak()) {
+                EquipmentUtil.findFirstCurio(player, (item) -> item.getItem() instanceof AccessoryItem).ifPresent((slotResult) -> {
+                    String identifier = slotResult.slotContext().identifier();
+                    int id = slotResult.slotContext().index();
+                    ItemStack itemStack = slotResult.stack();
+                    CuriosApi.getCuriosInventory(player).flatMap(handler -> handler.getStacksHandler(identifier)).ifPresent(stacksHandler -> {
+                        if (stacksHandler.getRenders().get(id)) {
+                            CuriosRendererRegistry.getRenderer(itemStack.getItem()).ifPresent((renderer) -> {
+                                if (renderer instanceof ShieldRenderer shieldRenderer) {
+                                    ItemStack heldItem = hand == InteractionHand.MAIN_HAND ? ((ItemInHandRendererAccessor) itemInHandRenderer).aether$getMainHandItem() : ((ItemInHandRendererAccessor) itemInHandRenderer).aether$getOffHandItem();
+                                    renderArmWithItem(itemInHandRenderer, shieldRenderer, itemStack, player, heldItem, hand, pitch, swingProgress, equippedProgress, poseStack, buffer, packedLight, HandRenderType.SHIELD);
+                                }
+                            });
+                        }
                     });
-                }
-            });
+                });
+            }
         }
     }
 
@@ -68,7 +68,7 @@ public class HandRenderHooks {
     }
 
     public static void renderPlayerArm(ICurioRenderer renderer, ItemStack glovesStack, AbstractClientPlayer player, PoseStack poseStack, MultiBufferSource buffer, int combinedLight, float swingProgress, float equippedProgress, HumanoidArm arm, HandRenderType handRenderType) {
-        boolean isSlim = player.getModelName().equals("slim");
+        boolean isSlim = player.getSkin().model() == PlayerSkin.Model.SLIM;
         boolean flag = arm != HumanoidArm.LEFT;
         float f = flag ? 1.0F : -1.0F;
         float f1 = Mth.sqrt(swingProgress);

@@ -2,6 +2,7 @@ package net.builderdog.ancient_aether;
 
 import com.aetherteam.aether.AetherConfig;
 import net.builderdog.ancient_aether.advancement.AncientAetherTriggers;
+import net.builderdog.ancient_aether.attachments.AncientAetherDataAttachments;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.block.dispenser.DispenseAncientAetherBoatBehavior;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
@@ -73,6 +74,7 @@ public class AncientAether {
                 AncientAetherTriggers.TRIGGERS,
                 AncientAetherSoundEvents.SOUNDS,
                 AncientAetherParticleTypes.PARTICLES,
+                AncientAetherDataAttachments.ATTACHMENTS
         };
 
         for (DeferredRegister<?> register : registers) {
