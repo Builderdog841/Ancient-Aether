@@ -4,7 +4,6 @@ import com.aetherteam.aether.client.renderer.entity.model.ValkyrieWingsModel;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.capability.player.AncientAetherPlayer;
 import net.builderdog.ancient_aether.client.renderer.AncientAetherModelLayers;
 import net.builderdog.ancient_aether.item.EquipmentUtil;
 import net.minecraft.client.model.PlayerModel;

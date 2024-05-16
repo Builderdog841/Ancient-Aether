@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.client.renderer;
 
+import com.aetherteam.aether.attachment.AetherPlayerAttachment;
 import com.aetherteam.aether.client.renderer.accessory.GlovesRenderer;
 import com.aetherteam.aether.client.renderer.accessory.PendantRenderer;
 import com.aetherteam.aether.client.renderer.entity.model.CrystalModel;
@@ -12,7 +13,7 @@ import net.builderdog.ancient_aether.client.renderer.entity.*;
 import net.builderdog.ancient_aether.client.renderer.entity.model.*;
 import net.builderdog.ancient_aether.client.renderer.player.layer.ValkyrumWingsLayer;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
-import net.builderdog.ancient_aether.entity.miscellaneous.AncientAetherBoatEntity;
+import net.builderdog.ancient_aether.entity.miscellaneous.AncientAetherBoat;
 import net.builderdog.ancient_aether.entity.projectile.AeronauticDart;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.client.Minecraft;
@@ -24,14 +25,14 @@ import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
 import net.minecraft.client.renderer.entity.player.PlayerRenderer;
+import net.minecraft.client.resources.PlayerSkin;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
 
 public class AncientAetherRenderers {
 
     public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        event.registerEntityRenderer(AncientAetherEntityTypes.BOAT.get(), context -> new AncientAetherBoatRenderer<>(context, false));
-        event.registerEntityRenderer(AncientAetherEntityTypes.CHEST_BOAT.get(), context -> new AncientAetherBoatRenderer<>(context, true));
         event.registerEntityRenderer(AncientAetherEntityTypes.FLUFFALO.get(), FluffaloRenderer::new);
         event.registerEntityRenderer(AncientAetherEntityTypes.FESTIVE_SWET.get(), FestiveSwetRenderer::new);
         event.registerEntityRenderer(AncientAetherEntityTypes.SLAMMROOT.get(), SlammrootRenderer::new);
@@ -49,7 +50,7 @@ public class AncientAetherRenderers {
     }
 
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
-        for (AncientAetherBoatEntity.Type type : AncientAetherBoatEntity.Type.values()) {
+        for (AncientAetherBoat.Type type : AncientAetherBoat.Type.values()) {
             event.registerLayerDefinition(AncientAetherModelLayers.FLUFFALO, FluffaloModel::createBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.FESTIVE_SWET, FestiveSwetModel::createInnerBodyLayer);
             event.registerLayerDefinition(AncientAetherModelLayers.FESTIVE_SWET_OUTER, FestiveSwetModel::createOuterBodyLayer);
@@ -64,14 +65,13 @@ public class AncientAetherRenderers {
             event.registerLayerDefinition(new ModelLayerLocation(new ResourceLocation(AncientAether.MODID, type.getChestModelLocation()), "main"), ChestBoatModel::createBodyModel);
         }
     }
-    
-    public static void addPlayerLayers(EntityRenderersEvent.AddLayers event) {
+
+    public static void addEntityLayers(EntityRenderersEvent.AddLayers event) {
         EntityRenderDispatcher renderDispatcher = Minecraft.getInstance().getEntityRenderDispatcher();
-        String[] types = new String[]{"default", "slim"};
-        for (String type : types) {
+        for (PlayerSkin.Model type : event.getSkins()) {
             PlayerRenderer playerRenderer = event.getSkin(type);
             if (playerRenderer != null) {
-                playerRenderer.addLayer(new DartLayer<>(renderDispatcher, playerRenderer, (entity) -> new AeronauticDart(AncientAetherEntityTypes.AERONAUTIC_DART.get(), entity.level()), AetherPlayer::getGoldenDartCount, 1.0F));
+                playerRenderer.addLayer(new DartLayer<>(renderDispatcher, playerRenderer, (entity) -> new AeronauticDart(AncientAetherEntityTypes.AERONAUTIC_DART.get(), entity.level()), AetherPlayerAttachment::getGoldenDartCount, 1.0F));
                 playerRenderer.addLayer(new ValkyrumWingsLayer<>(playerRenderer, Minecraft.getInstance().getEntityModels()));
             }
         }

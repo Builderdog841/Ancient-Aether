@@ -3,18 +3,19 @@ package net.builderdog.ancient_aether.client.gui.screen;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.client.gui.TitleScreenModUpdateIndicator;
-import net.minecraftforge.client.loading.ClientModLoader;
-import net.minecraftforge.common.ForgeI18n;
-import net.minecraftforge.fml.ModList;
-import net.minecraftforge.fml.VersionChecker;
-import net.minecraftforge.fml.loading.FMLConfig;
-import net.minecraftforge.versions.forge.ForgeVersion;
+import net.neoforged.fml.ModList;
+import net.neoforged.fml.VersionChecker;
+import net.neoforged.fml.loading.FMLConfig;
+import net.neoforged.neoforge.client.gui.TitleScreenModUpdateIndicator;
+import net.neoforged.neoforge.client.loading.ClientModLoader;
+import net.neoforged.neoforge.common.I18nExtension;
+import net.neoforged.neoforge.internal.versions.neoforge.NeoForgeVersion;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 
 public class AncientAetherModUpdateIndicator extends TitleScreenModUpdateIndicator {
-    private static final ResourceLocation VERSION_CHECK_ICONS = new ResourceLocation(ForgeVersion.MOD_ID, "textures/gui/version_check_icons.png");
+    private static final ResourceLocation VERSION_CHECK_ICONS = new ResourceLocation(NeoForgeVersion.MOD_ID, "textures/gui/version_check_icons.png");
     private final AncientAetherTitleScreen screen;
     @Nullable
     private VersionChecker.Status showNotification = null;
@@ -34,13 +35,13 @@ public class AncientAetherModUpdateIndicator extends TitleScreenModUpdateIndicat
     }
 
     @Override
-    public void render(GuiGraphics graphics, int mouseX, int mouseY, float partialTicks) {
+    public void render(@NotNull GuiGraphics graphics, int mouseX, int mouseY, float partialTicks) {
         if (showNotification != null && showNotification.shouldDraw() && !FMLConfig.getBoolConfigValue(FMLConfig.ConfigValue.VERSION_CHECK) && Minecraft.getInstance().screen != null) {
             width = Minecraft.getInstance().screen.width;
             height = Minecraft.getInstance().screen.height;
             font = Minecraft.getInstance().font;
             int modCount = ModList.get().size();
-            String modText = ForgeI18n.parseMessage("fml.menu.loadingmods", modCount);
+            String modText = I18nExtension.parseMessage("fml.menu.loadingmods", modCount);
 
             int x = width - font.width(modText) - 11;
             int y = height - font.lineHeight - 11;

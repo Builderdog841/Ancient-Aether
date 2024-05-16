@@ -26,8 +26,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.Music;
 import net.minecraft.util.Mth;
-import net.minecraftforge.client.ForgeHooksClient;
-import net.minecraftforge.internal.BrandingControl;
+import net.neoforged.neoforge.client.ClientHooks;
+import net.neoforged.neoforge.internal.BrandingControl;
 import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("unchecked")
@@ -35,7 +35,7 @@ public class AncientAetherTitleScreen extends TitleScreen implements TitleScreen
     private static final ResourceLocation PANORAMA_OVERLAY = new ResourceLocation("textures/gui/title/background/panorama_overlay.png");
     private static final ResourceLocation ANCIENT_AETHER_LOGO = new ResourceLocation(AncientAether.MODID, "textures/gui/title/ancient_aether.png");
     private static final ResourceLocation THE_AETHER_LOGO = new ResourceLocation(AncientAether.MODID, "textures/gui/title/the_aether.png");
-    public static final Music MENU = new Music(AetherSoundEvents.MUSIC_MENU.getHolder().orElseThrow(), 20, 600, true);
+    public static final Music MENU = new Music(AetherSoundEvents.MUSIC_MENU, 20, 600, true);
     private final PanoramaRenderer panorama = new PanoramaRenderer(new CubeMap(new ResourceLocation(AncientAether.MODID, "textures/gui/title/panorama/panorama")));
     private AncientAetherModUpdateIndicator modUpdateNotification;
     private boolean alignedLeft;
@@ -107,7 +107,7 @@ public class AncientAetherTitleScreen extends TitleScreen implements TitleScreen
 
         int roundedFadeAmount = Mth.ceil(fadeAmount * 255.0F) << 24;
         if ((roundedFadeAmount & -67108864) != 0) {
-            ForgeHooksClient.renderMainMenu(this, guiGraphics, font, width, height, roundedFadeAmount);
+            ClientHooks.renderMainMenu(this, guiGraphics, font, width, height, roundedFadeAmount);
             if (titleScreenAccessor.aether$getSplash() != null) {
                 SplashRendererAccessor splashRendererAccessor = (SplashRendererAccessor) titleScreenAccessor.aether$getSplash();
                 if (splashRendererAccessor.cumulus$getSplash() != null && !splashRendererAccessor.cumulus$getSplash().isEmpty()) {

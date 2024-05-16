@@ -1,6 +1,5 @@
 package net.builderdog.ancient_aether.client.renderer.accessory;
 
-import com.aetherteam.aether.capability.player.AetherPlayer;
 import com.aetherteam.aether.client.renderer.AetherModelLayers;
 import com.aetherteam.aether.mixin.mixins.client.accessor.PlayerModelAccessor;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -25,8 +24,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.client.ICurioRenderer;
-
-import java.util.Optional;
 
 public class ShieldRenderer implements ICurioRenderer {
     private final HumanoidModel<LivingEntity> shieldModel;

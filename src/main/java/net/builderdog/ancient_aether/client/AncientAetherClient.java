@@ -58,6 +58,5 @@ public class AncientAetherClient {
         neoBus.addListener(AncientAetherRenderers::registerEntityRenderers);
         neoBus.addListener(AncientAetherRenderers::registerLayerDefinitions);
         neoBus.addListener(AncientAetherRenderers::addEntityLayers);
-        neoBus.addListener(AncientAetherRenderers::bakeModels);
     }
 }
