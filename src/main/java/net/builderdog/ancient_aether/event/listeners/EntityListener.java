@@ -1,20 +1,21 @@
 package net.builderdog.ancient_aether.event.listeners;
 
-import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.event.hooks.EntityHooks;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraftforge.event.entity.living.LivingHurtEvent;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.event.entity.living.LivingHurtEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
-@Mod.EventBusSubscriber(modid = AncientAether.MODID)
 public class EntityListener {
 
-    @SubscribeEvent
+    public static void listen(IEventBus bus) {
+        bus.addListener(EntityListener::onInteractWithEntity);
+        bus.addListener(EntityListener::onEntityHurt);
+    }
+
     public static void onInteractWithEntity(PlayerInteractEvent.EntityInteractSpecific event) {
         Entity targetEntity = event.getTarget();
         Player player = event.getEntity();
@@ -22,7 +23,6 @@ public class EntityListener {
         EntityHooks.skyrootBucketMilking(targetEntity, player, interactionHand);
     }
 
-    @SubscribeEvent
     public static void onEntityHurt(LivingHurtEvent event) {
         LivingEntity player = event.getEntity();
         Entity attackerEntity = event.getSource().getDirectEntity();

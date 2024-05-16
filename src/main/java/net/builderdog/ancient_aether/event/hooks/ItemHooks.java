@@ -2,8 +2,6 @@ package net.builderdog.ancient_aether.event.hooks;
 
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.item.AetherItems;
-import com.legacy.lost_aether.registry.LCBlocks;
-import com.legacy.lost_aether.registry.LCItems;
 import net.builderdog.ancient_aether.AncientAetherConfig;
 import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
@@ -12,7 +10,6 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.fml.ModList;
 
 import java.util.List;
 
@@ -85,17 +82,6 @@ public class ItemHooks {
                 components.add(position, Component.literal("4 " + "Mid-Air Jumps").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
                 components.add(position + 1, Component.literal("Very Fast " + "Speed").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
             }
-
-            if (ModList.get().isLoaded("lost_aether_content")) {
-                if (stack.is(LCItems.orange_moa_egg)) {
-                    components.add(position, Component.literal("2 " + "Mid-Air Jumps").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
-                    components.add(position + 1, Component.literal("Hyper Fast " + "Speed").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
-                }
-                if (stack.is(LCItems.brown_moa_egg)) {
-                    components.add(position, Component.literal("3 " + "Mid-Air Jumps").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
-                    components.add(position + 1, Component.literal("Very Fast " + "Speed").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
-                }
-            }
         }
 
         if (AncientAetherConfig.CLIENT.dungeon_block_tooltips.get()) {
@@ -126,15 +112,6 @@ public class ItemHooks {
             }
             if (stack.is(AncientAetherBlocks.BOSS_DOORWAY_AEROGETIC_STONE.get().asItem()) || stack.is(AncientAetherBlocks.BOSS_DOORWAY_AERONAUTIC_STONE.get().asItem()) || stack.is(AncientAetherBlocks.BOSS_DOORWAY_CORRUPTED_AERONAUTIC_STONE.get().asItem())) {
                 components.add(position, Component.literal("").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
-            }
-
-            if (ModList.get().isLoaded("lost_aether_content")) {
-                if (stack.is(LCBlocks.trapped_gale_stone.asItem()) || stack.is(LCBlocks.trapped_light_gale_stone.asItem())) {
-                    components.add(position, Component.translatable("entity.aether.whirlwind").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
-                }
-                if (stack.is(LCBlocks.boss_doorway_gale_stone.asItem()) || stack.is(LCBlocks.boss_doorway_light_gale_stone.asItem())) {
-                    components.add(position, Component.translatable("entity.lost_aether_content.aerwhale_king").withStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
-                }
             }
         }
     }

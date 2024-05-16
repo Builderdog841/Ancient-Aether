@@ -5,7 +5,7 @@ import com.aetherteam.aether.block.AetherBlocks;
 import com.google.common.collect.ImmutableList;
 import com.mojang.serialization.Codec;
 import net.builderdog.ancient_aether.data.resources.registries.features.AncientAetherMiscFeatures;
-import net.builderdog.ancient_aether.world.processor.RemoveWaterloggingProcessor;
+import net.builderdog.ancient_aether.world.structure.processor.RemoveWaterloggingProcessor;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;

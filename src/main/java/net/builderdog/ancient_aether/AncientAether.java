@@ -11,13 +11,18 @@ import net.builderdog.ancient_aether.client.particle.AncientAetherParticleTypes;
 import net.builderdog.ancient_aether.data.AncientAetherData;
 import net.builderdog.ancient_aether.effect.AncientAetherEffects;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
+import net.builderdog.ancient_aether.event.listeners.*;
+import net.builderdog.ancient_aether.event.listeners.ability.ArmorAbilityListener;
+import net.builderdog.ancient_aether.event.listeners.ability.ToolAbilityListener;
+import net.builderdog.ancient_aether.event.listeners.ability.WeaponAbilityListener;
+import net.builderdog.ancient_aether.item.AncientAetherCreativeModeTabs;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.builderdog.ancient_aether.world.biome.AncientAetherRegion;
 import net.builderdog.ancient_aether.world.biome.AncientAetherSurfaceRules;
 import net.builderdog.ancient_aether.world.feature.AncientAetherFeatures;
-import net.builderdog.ancient_aether.world.tree.AncientAetherFoliagePlacers;
-import net.builderdog.ancient_aether.world.processor.AncientAetherStructureProcessors;
+import net.builderdog.ancient_aether.world.structure.AncientAetherStructureProcessors;
 import net.builderdog.ancient_aether.world.structure.AncientAetherStructureTypes;
+import net.builderdog.ancient_aether.world.tree.AncientAetherFoliagePlacers;
 import net.builderdog.ancient_aether.world.tree.AncientAetherTreeDecorators;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -30,12 +35,12 @@ import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.DispenserBlock;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.AddPackFindersEvent;
 import net.neoforged.neoforge.event.server.ServerAboutToStartEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -50,7 +55,9 @@ public class AncientAether {
 
     public AncientAether(IEventBus bus, Dist dist) {
         bus.addListener(AncientAetherData::dataSetup);
+        bus.addListener(this::serverSetup);
         bus.addListener(this::commonSetup);
+        bus.addListener(this::addPacks);
 
         DeferredRegister<?>[] registers = {
                 AncientAetherBlocks.BLOCKS,
@@ -99,35 +106,27 @@ public class AncientAether {
         });
     }
 
-    @SubscribeEvent
-    public static void addPacks(AddPackFindersEvent event) {
-        if (event.getPackType() == PackType.CLIENT_RESOURCES) {
-            var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/ancient_aether_texture_tweaks");
-            var pack = Pack.readMetaAndCreate("builtin/ancient_aether_texture_tweaks", Component.translatable("pack.ancient_aether.texture_tweaks.title"), true,
-                    path -> new PathPackResources(path, resourcePath, true), PackType.CLIENT_RESOURCES, Pack.Position.TOP, PackSource.BUILT_IN);
-            event.addRepositorySource(consumer -> consumer.accept(pack));
-        }
-
-        if (event.getPackType() == PackType.CLIENT_RESOURCES) {
-            var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/ancient_aether_programmer_art");
-            var pack = Pack.readMetaAndCreate("builtin/ancient_aether_programmer_art", Component.translatable("pack.ancient_aether.programmer_art.title"), false,
-                    path -> new PathPackResources(path, resourcePath, true), PackType.CLIENT_RESOURCES, Pack.Position.TOP, PackSource.BUILT_IN);
-            event.addRepositorySource(consumer -> consumer.accept(pack));
-        }
-
-        if (event.getPackType() == PackType.SERVER_DATA) {
-            var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/ancient_aether_worldgen_overrides");
-            var pack = Pack.readMetaAndCreate("builtin/ancient_aether_worldgen_overrides", Component.translatable("pack.ancient_aether.worldgen_overrides.title"), true,
-                    path -> new PathPackResources(path, resourcePath, true), PackType.SERVER_DATA, Pack.Position.TOP, PackSource.SERVER);
-            event.addRepositorySource(consumer -> consumer.accept(pack));
-        }
-    }
-
-    @SubscribeEvent
     public void serverSetup(ServerAboutToStartEvent event) {
         if (AncientAetherConfig.SERVER.server_config_overrides.get()) {
             AetherConfig.SERVER.disable_eternal_day.set(true);
         }
+    }
+
+    public void eventSetup(IEventBus neoBus) {
+        IEventBus bus = NeoForge.EVENT_BUS;
+
+        ArmorAbilityListener.listen(bus);
+        ToolAbilityListener.listen(bus);
+        WeaponAbilityListener.listen(bus);
+        CapabilityListener.listen(bus);
+        EntityListener.listen(bus);
+        ItemListener.listen(bus);
+        LevelListener.listen(bus);
+        MenuListener.listen(bus);
+
+        neoBus.addListener(AncientAetherCreativeModeTabs::buildCreativeModeTabs);
+        neoBus.addListener(AncientAetherEntityTypes::registerSpawnPlacements);
+        neoBus.addListener(AncientAetherEntityTypes::registerEntityAttributes);
     }
 
     private void registerDispenserBehaviors() {
@@ -135,6 +134,29 @@ public class AncientAether {
         DispenserBlock.registerBehavior(AncientAetherItems.HIGHSPROOT_CHEST_BOAT.get(), new DispenseAncientAetherBoatBehaviour(true));
         DispenserBlock.registerBehavior(AncientAetherItems.SAKURA_BOAT.get(), new DispenseAncientAetherBoatBehaviour());
         DispenserBlock.registerBehavior(AncientAetherItems.SAKURA_CHEST_BOAT.get(), new DispenseAncientAetherBoatBehaviour(true));
+    }
+
+    public void addPacks(AddPackFindersEvent event) {
+        if (event.getPackType() == PackType.CLIENT_RESOURCES) {
+            var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/ancient_aether_texture_tweaks");
+            var pack = Pack.readMetaAndCreate("builtin/ancient_aether_texture_tweaks", Component.translatable("pack.ancient_aether.texture_tweaks.title"), true,
+                    new PathPackResources.PathResourcesSupplier(resourcePath, true), PackType.CLIENT_RESOURCES, Pack.Position.TOP, PackSource.BUILT_IN);
+            event.addRepositorySource(consumer -> consumer.accept(pack));
+        }
+
+        if (event.getPackType() == PackType.CLIENT_RESOURCES) {
+            var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/ancient_aether_programmer_art");
+            var pack = Pack.readMetaAndCreate("builtin/ancient_aether_programmer_art", Component.translatable("pack.ancient_aether.programmer_art.title"), false,
+                    new PathPackResources.PathResourcesSupplier(resourcePath, true), PackType.CLIENT_RESOURCES, Pack.Position.TOP, PackSource.BUILT_IN);
+            event.addRepositorySource(consumer -> consumer.accept(pack));
+        }
+
+        if (event.getPackType() == PackType.SERVER_DATA) {
+            var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/ancient_aether_worldgen_overrides");
+            var pack = Pack.readMetaAndCreate("builtin/ancient_aether_worldgen_overrides", Component.translatable("pack.ancient_aether.worldgen_overrides.title"), true,
+                    new PathPackResources.PathResourcesSupplier(resourcePath, true), PackType.SERVER_DATA, Pack.Position.TOP, PackSource.SERVER);
+            event.addRepositorySource(consumer -> consumer.accept(pack));
+        }
     }
 
     private void registerComposting() {

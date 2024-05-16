@@ -1,7 +1,8 @@
-package net.builderdog.ancient_aether.world.structure;
+package net.builderdog.ancient_aether.world.structure.jigsaw;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.builderdog.ancient_aether.world.structure.AncientAetherStructureTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;

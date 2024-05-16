@@ -7,8 +7,6 @@ import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.client.gui.screen.AncientAetherTitleScreen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.BooleanSupplier;
 

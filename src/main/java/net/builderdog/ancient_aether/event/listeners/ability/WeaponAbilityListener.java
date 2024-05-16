@@ -1,18 +1,18 @@
 package net.builderdog.ancient_aether.event.listeners.ability;
 
-import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.event.hooks.AbilityHooks;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraftforge.event.entity.living.LivingDamageEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 
-@Mod.EventBusSubscriber(modid = AncientAether.MODID)
 public class WeaponAbilityListener {
 
-    @SubscribeEvent
+    public static void listen(IEventBus bus) {
+        bus.addListener(WeaponAbilityListener::onEntityDamage);
+    }
+
     public static void onEntityDamage(LivingDamageEvent event) {
         LivingEntity targetEntity = event.getEntity();
         DamageSource damageSource = event.getSource();
