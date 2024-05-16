@@ -3,15 +3,12 @@ package net.builderdog.ancient_aether.entity.projectile;
 import com.aetherteam.aether.client.particle.AetherParticleTypes;
 import com.aetherteam.aether.item.EquipmentUtil;
 import com.aetherteam.aether.mixin.mixins.common.accessor.PlayerAccessor;
-import com.aetherteam.aether.network.AetherPacketHandler;
 import com.aetherteam.aether.network.packet.clientbound.ZephyrSnowballHitPacket;
 import com.aetherteam.nitrogen.network.PacketRelay;
 import net.builderdog.ancient_aether.AncientAetherConfig;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.protocol.Packet;
-import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -25,8 +22,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.event.ForgeEventFactory;
-import net.minecraftforge.network.NetworkHooks;
+import net.neoforged.neoforge.event.EventHooks;
 import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("deprecation")
@@ -50,7 +46,7 @@ public class WindBlow extends Fireball implements ItemSupplier {
         }
         if (level().isClientSide() || (getOwner() == null || getOwner().isAlive()) && level().hasChunkAt(blockPosition())) {
             HitResult hitResult = ProjectileUtil.getHitResultOnMoveVector(this, this::canHitEntity);
-            if (hitResult.getType() != HitResult.Type.MISS && !ForgeEventFactory.onProjectileImpact(this, hitResult)) {
+            if (hitResult.getType() != HitResult.Type.MISS && !EventHooks.onProjectileImpact(this, hitResult)) {
                 onHit(hitResult);
             }
             checkInsideBlocks();
@@ -94,7 +90,7 @@ public class WindBlow extends Fireball implements ItemSupplier {
                 entity.setDeltaMovement(entity.getDeltaMovement().x() + (getDeltaMovement().x() * 1.5), entity.getDeltaMovement().y(), entity.getDeltaMovement().z() + (getDeltaMovement().z() * 1.5));
                 if (livingEntity instanceof ServerPlayer player) {
                     if (!level().isClientSide()) {
-                        PacketRelay.sendToPlayer(AetherPacketHandler.INSTANCE, new ZephyrSnowballHitPacket(livingEntity.getId(), getDeltaMovement().x(), getDeltaMovement().z()), player);
+                        PacketRelay.sendToPlayer(new ZephyrSnowballHitPacket(livingEntity.getId(), this.getDeltaMovement().x(), this.getDeltaMovement().z()), player);
                     }
                 }
             }
@@ -126,10 +122,5 @@ public class WindBlow extends Fireball implements ItemSupplier {
         if (tag.contains("TicksInAir")) {
             ticksInAir = tag.getInt("TicksInAir");
         }
-    }
-
-    @Override
-    public @NotNull Packet<ClientGamePacketListener> getAddEntityPacket() {
-        return NetworkHooks.getEntitySpawningPacket(this);
     }
 }

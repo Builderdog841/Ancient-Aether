@@ -23,6 +23,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.Vec3;
+import net.neoforged.neoforge.common.CommonHooks;
 import net.neoforged.neoforge.common.NeoForgeMod;
 import org.jetbrains.annotations.NotNull;
 
@@ -71,7 +72,6 @@ public class AeronauticLeaper extends Slime {
 		if (reason == Entity.RemovalReason.KILLED) {
 			gameEvent(GameEvent.ENTITY_DIE);
 		}
-		invalidateCaps();
 	}
 
 	public boolean isAwake() {
@@ -172,7 +172,7 @@ public class AeronauticLeaper extends Slime {
 			Vec3 vec3 = getDeltaMovement();
 			setDeltaMovement(vec3.x, 0.25, vec3.z);
 			hasImpulse = true;
-			ForgeHooks.onLivingJump(this);
+			CommonHooks.onLivingJump(this);
 		}
 	}
 

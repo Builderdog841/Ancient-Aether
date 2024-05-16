@@ -20,15 +20,15 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Supplier;
 
-public class AncientAetherBoatEntity extends Boat implements SkyrootBoatBehavior {
-    private static final EntityDataAccessor<Integer> WOOD_TYPE = SynchedEntityData.defineId(AncientAetherBoatEntity.class, EntityDataSerializers.INT);
+public class AncientAetherBoat extends Boat implements SkyrootBoatBehavior {
+    private static final EntityDataAccessor<Integer> WOOD_TYPE = SynchedEntityData.defineId(AncientAetherBoat.class, EntityDataSerializers.INT);
 
-    public AncientAetherBoatEntity(EntityType<? extends Boat> type, Level level) {
+    public AncientAetherBoat(EntityType<? extends Boat> type, Level level) {
         super(type, level);
         blocksBuilding = true;
     }
 
-    public AncientAetherBoatEntity(Level level, double x, double y, double z) {
+    public AncientAetherBoat(Level level, double x, double y, double z) {
         this(AncientAetherEntityTypes.BOAT.get(), level);
         setPos(x, y, z);
         xo = x;

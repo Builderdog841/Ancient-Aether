@@ -6,6 +6,7 @@ import com.aetherteam.aether.entity.AetherBossMob;
 import com.aetherteam.aether.entity.AetherEntityTypes;
 import com.aetherteam.aether.entity.monster.Cockatrice;
 import com.aetherteam.aether.event.AetherEventDispatch;
+import com.aetherteam.aether.network.packet.clientbound.BossInfoPacket;
 import com.aetherteam.nitrogen.entity.BossRoomTracker;
 import com.aetherteam.nitrogen.network.PacketRelay;
 import net.builderdog.ancient_aether.AncientAether;
@@ -19,8 +20,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.protocol.Packet;
-import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -55,10 +54,11 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.phys.Vec3;
+import net.neoforged.neoforge.entity.IEntityWithComplexSpawn;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<MutatedAechorPlant>, Enemy, IEntityAdditionalSpawnData, RangedAttackMob {
+public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<MutatedAechorPlant>, Enemy, IEntityWithComplexSpawn, RangedAttackMob {
     private static final EntityDataAccessor<Boolean> DATA_ACTIVE_ID = SynchedEntityData.defineId(MutatedAechorPlant.class, EntityDataSerializers.BOOLEAN);
     private static final EntityDataAccessor<Integer> DATA_SIZE_ID = SynchedEntityData.defineId(MutatedAechorPlant.class, EntityDataSerializers.INT);
     private static final EntityDataAccessor<Component> DATA_BOSS_NAME_ID = SynchedEntityData.defineId(MutatedAechorPlant.class, EntityDataSerializers.COMPONENT);
@@ -150,11 +150,6 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     }
 
     @Override
-    public double getMyRidingOffset() {
-        return getVehicle() != null && getVehicle().isCrouching() ? 0.1 : 0.275;
-    }
-
-    @Override
     public void checkDespawn() {}
 
     public boolean isCritical() {
@@ -162,8 +157,8 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     }
 
     @Override
-    public @NotNull Packet<ClientGamePacketListener> getAddEntityPacket() {
-        return NetworkHooks.getEntitySpawningPacket(this);
+    protected Entity.@NotNull MovementEmission getMovementEmission() {
+        return Entity.MovementEmission.EVENTS;
     }
 
     //---------------------[General]---------------------\\
@@ -292,6 +287,12 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         return AncientAetherConfig.CLIENT.custom_boss_bars.get() ? new ResourceLocation(AncientAether.MODID, "textures/gui/boss_bar_mutated_aechor_plant_custom.png") : new ResourceLocation(AncientAether.MODID, "textures/gui/boss_bar_mutated_aechor_plant.png");
     }
 
+    @Nullable
+    @Override
+    public ResourceLocation getBossBarBackgroundTexture() {
+        return AncientAetherConfig.CLIENT.custom_boss_bars.get() ? new ResourceLocation(AncientAether.MODID, "textures/gui/boss_bar_mutated_aechor_plant_background_custom.png") : new ResourceLocation(AncientAether.MODID, "textures/gui/boss_bar_mutated_aechor_plant_background.png");
+    }
+
     @Override
     public void customServerAiStep() {
         super.customServerAiStep();
@@ -366,7 +367,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     @Override
     public void startSeenByPlayer(@NotNull ServerPlayer player) {
         super.startSeenByPlayer(player);
-        PacketRelay.sendToPlayer(AetherPacketHandler.INSTANCE, new BossInfoPacket.Display(bossFight.getId(), getId()), player);
+        PacketRelay.sendToPlayer(new BossInfoPacket.Display(bossFight.getId(), getId()), player);
         if (getDungeon() == null || getDungeon().isPlayerTracked(player)) {
             bossFight.addPlayer(player);
             AetherEventDispatch.onBossFightPlayerAdd(this, getDungeon(), player);
@@ -376,7 +377,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     @Override
     public void stopSeenByPlayer(@NotNull ServerPlayer player) {
         super.stopSeenByPlayer(player);
-        PacketRelay.sendToPlayer(AetherPacketHandler.INSTANCE, new BossInfoPacket.Remove(bossFight.getId(), getId()), player);
+        PacketRelay.sendToPlayer(new BossInfoPacket.Remove(bossFight.getId(), getId()), player);
         bossFight.removePlayer(player);
         AetherEventDispatch.onBossFightPlayerRemove(this, getDungeon(), player);
     }

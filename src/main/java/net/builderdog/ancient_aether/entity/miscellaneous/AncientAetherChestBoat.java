@@ -26,18 +26,18 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 
-public class AncientAetherChestBoatEntity extends AncientAetherBoatEntity implements HasCustomInventoryScreen, ContainerEntity {
+public class AncientAetherChestBoat extends AncientAetherBoat implements HasCustomInventoryScreen, ContainerEntity {
     private static final int CONTAINER_SIZE = 27;
     private NonNullList<ItemStack> itemStacks = NonNullList.withSize(CONTAINER_SIZE, ItemStack.EMPTY);
     @Nullable
     private ResourceLocation lootTable;
     private long lootTableSeed;
 
-    public AncientAetherChestBoatEntity(EntityType<? extends Boat> entityType, Level level) {
+    public AncientAetherChestBoat(EntityType<? extends Boat> entityType, Level level) {
         super(entityType, level);
     }
 
-    public AncientAetherChestBoatEntity(Level level, double x, double y, double z) {
+    public AncientAetherChestBoat(Level level, double x, double y, double z) {
         this(AncientAetherEntityTypes.CHEST_BOAT.get(), level);
         setPos(x, y, z);
         xo = x;

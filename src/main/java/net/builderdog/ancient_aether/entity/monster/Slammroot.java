@@ -30,8 +30,8 @@ import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.common.ForgeHooks;
-import net.minecraftforge.event.ForgeEventFactory;
+import net.neoforged.neoforge.common.CommonHooks;
+import net.neoforged.neoforge.event.EventHooks;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -70,7 +70,6 @@ public class Slammroot extends Slime {
         if (reason == Entity.RemovalReason.KILLED) {
             gameEvent(GameEvent.ENTITY_DIE);
         }
-        invalidateCaps();
     }
 
     protected boolean isDealsDamage() {
@@ -89,7 +88,7 @@ public class Slammroot extends Slime {
         Vec3 vec3 = getDeltaMovement();
         setDeltaMovement(vec3.x, 0.75F, vec3.z);
         hasImpulse = true;
-        ForgeHooks.onLivingJump(this);
+        CommonHooks.onLivingJump(this);
     }
 
     public static boolean isDarkEnoughToSpawn(ServerLevelAccessor level, BlockPos pos, RandomSource random) {
@@ -126,7 +125,7 @@ public class Slammroot extends Slime {
     public void aiStep() {
         super.aiStep();
         if (!level().isClientSide) {
-            if (!ForgeEventFactory.getMobGriefingEvent(level(), this)) {
+            if (!EventHooks.getMobGriefingEvent(this.level(), this)) {
                 return;
             }
 

@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.block.blocktype;
 
+import com.mojang.serialization.MapCodec;
 import net.builderdog.ancient_aether.block.blockstate.AncientAetherBlockStateProperties;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
@@ -20,10 +21,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.BonemealableBlock;
-import net.minecraft.world.level.block.LadderBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -34,6 +32,7 @@ import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.neoforged.neoforge.common.CommonHooks;
 import net.neoforged.neoforge.common.ToolActions;
 import org.jetbrains.annotations.NotNull;
 
@@ -41,6 +40,7 @@ import javax.annotation.Nullable;
 
 @SuppressWarnings("deprecation")
 public class GrapeVineBlock extends Block implements BonemealableBlock {
+    public static final MapCodec<GrapeVineBlock> CODEC = simpleCodec(GrapeVineBlock::new);
     public static final BooleanProperty CROPPED = AncientAetherBlockStateProperties.CROPPED;
     public static final IntegerProperty AGE = BlockStateProperties.AGE_2;
     public static final DirectionProperty FACING = LadderBlock.FACING;
@@ -52,6 +52,11 @@ public class GrapeVineBlock extends Block implements BonemealableBlock {
     public GrapeVineBlock(Properties properties) {
         super(properties);
         registerDefaultState(stateDefinition.any().setValue(CROPPED, false).setValue(AGE, 0));
+    }
+
+    @Override
+    protected @NotNull MapCodec<? extends GrapeVineBlock> codec() {
+        return CODEC;
     }
 
     public @NotNull VoxelShape getShape(BlockState state, @NotNull BlockGetter getter, @NotNull BlockPos pos, @NotNull CollisionContext context) {
@@ -108,17 +113,17 @@ public class GrapeVineBlock extends Block implements BonemealableBlock {
         return state.getValue(AGE) < 2 && !state.getValue(CROPPED);
     }
 
-    public @NotNull ItemStack getCloneItemStack(@NotNull BlockGetter getter, @NotNull BlockPos pos, @NotNull BlockState state) {
+    public @NotNull ItemStack getCloneItemStack(@NotNull LevelReader level, @NotNull BlockPos pos, @NotNull BlockState state) {
         return new ItemStack(AncientAetherItems.GRAPES.get());
     }
 
     public void randomTick(BlockState state, @NotNull ServerLevel level, @NotNull BlockPos pos, @NotNull RandomSource random) {
         int i = state.getValue(AGE);
-        if (i < 2 && level.getRawBrightness(pos.above(), 0) >= 9 && Hooks.onCropsGrowPre(level, pos, state, random.nextInt(5) == 0)) {
+        if (i < 2 && level.getRawBrightness(pos.above(), 0) >= 9 && CommonHooks.onCropsGrowPre(level, pos, state, random.nextInt(5) == 0)) {
             BlockState blockstate = state.setValue(AGE, i + 1);
             level.setBlock(pos, blockstate, 2);
             level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(blockstate));
-            ForgeHooks.onCropsGrowPost(level, pos, state);
+            CommonHooks.onCropsGrowPost(level, pos, state);
         }
     }
 
@@ -151,7 +156,7 @@ public class GrapeVineBlock extends Block implements BonemealableBlock {
         return super.use(state, level, pos, player, hand, hitResult);
     }
 
-    public boolean isValidBonemealTarget(@NotNull LevelReader reader, @NotNull BlockPos pos, BlockState state, boolean p_57263_) {
+    public boolean isValidBonemealTarget(@NotNull LevelReader level, @NotNull BlockPos pos, BlockState state) {
         return state.getValue(AGE) < 2;
     }
 

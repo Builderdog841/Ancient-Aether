@@ -44,7 +44,7 @@ import java.util.Collections;
 import java.util.List;
 
 @SuppressWarnings("deprecation")
-public class Fluffalo extends WyndcapsAnimal implements Shearable, IForgeShearable {
+public class Fluffalo extends WyndcapsAnimal implements Shearable {
     private static final EntityDataAccessor<Boolean> SHEARED = SynchedEntityData.defineId(Fluffalo.class, EntityDataSerializers.BOOLEAN);
     private int eatAnimationTick;
     private EatAetherGrassGoal eatBlockGoal;
@@ -56,12 +56,7 @@ public class Fluffalo extends WyndcapsAnimal implements Shearable, IForgeShearab
     @Override
     protected void registerGoals() {
         super.registerGoals();
-        goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
-            @Override
-            private double getAttackReachSqr(@NotNull LivingEntity entity) {
-                return mob.getBbWidth() * mob.getBbWidth() + entity.getBbWidth();
-            }
-        });
+        goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false));
         eatBlockGoal = new EatAetherGrassGoal(this);
         goalSelector.addGoal(0, new FloatGoal(this));
         targetSelector.addGoal(1, new HurtByTargetGoal(this));
@@ -170,7 +165,7 @@ public class Fluffalo extends WyndcapsAnimal implements Shearable, IForgeShearab
     }
 
     @Override
-    public boolean isShearable(@Nonnull ItemStack item, Level world, BlockPos pos) {
+    public boolean isShearable(@Nonnull ItemStack item, @NotNull Level world, @NotNull BlockPos pos) {
         return readyForShearing();
     }
 
@@ -190,7 +185,7 @@ public class Fluffalo extends WyndcapsAnimal implements Shearable, IForgeShearab
 
     @Nonnull
     @Override
-    public List<ItemStack> onSheared(@Nullable Player player, @Nonnull ItemStack item, Level world, BlockPos pos, int fortune) {
+    public List<ItemStack> onSheared(@Nullable Player player, @Nonnull ItemStack item, Level world, @NotNull BlockPos pos, int fortune) {
         world.playSound(null, this, SoundEvents.SHEEP_SHEAR, player == null ? SoundSource.BLOCKS : SoundSource.PLAYERS, 1.0F, 1.0F);
         if (!world.isClientSide) {
             setSheared(true);

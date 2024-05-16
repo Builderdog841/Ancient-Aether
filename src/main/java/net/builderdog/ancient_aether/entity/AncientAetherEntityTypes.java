@@ -3,8 +3,8 @@ package net.builderdog.ancient_aether.entity;
 import com.aetherteam.aether.data.resources.AetherMobCategory;
 import com.aetherteam.aether.entity.monster.Swet;
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.entity.miscellaneous.AncientAetherBoatEntity;
-import net.builderdog.ancient_aether.entity.miscellaneous.AncientAetherChestBoatEntity;
+import net.builderdog.ancient_aether.entity.miscellaneous.AncientAetherBoat;
+import net.builderdog.ancient_aether.entity.miscellaneous.AncientAetherChestBoat;
 import net.builderdog.ancient_aether.entity.monster.AeronauticLeaper;
 import net.builderdog.ancient_aether.entity.monster.Slammroot;
 import net.builderdog.ancient_aether.entity.monster.boss.MutatedAechorPlant;
@@ -40,8 +40,8 @@ public class AncientAetherEntityTypes {
     public static final DeferredHolder<EntityType<?>, EntityType<SporeBomb>> SPORE_BOMB = ENTITY_TYPES.register("spore_bomb", () -> EntityType.Builder.<SporeBomb>of(SporeBomb::new, MobCategory.MISC).sized(0.5F, 0.5F).clientTrackingRange(4).updateInterval(20).build("spore_bomb"));
     public static final DeferredHolder<EntityType<?>, EntityType<RemedyCrystal>> REMEDY_CRYSTAL = ENTITY_TYPES.register("remedy_crystal", () -> EntityType.Builder.<RemedyCrystal>of(RemedyCrystal::new, MobCategory.MISC).sized(1.2F, 1.2F).clientTrackingRange(4).updateInterval(10).build("remedy_crystal"));
 
-    public static final DeferredHolder<EntityType<?>, EntityType<AncientAetherBoatEntity>> BOAT = ENTITY_TYPES.register("boat", () -> EntityType.Builder.<AncientAetherBoatEntity>of(AncientAetherBoatEntity::new, MobCategory.MISC).sized(1.375F, 0.5625F).clientTrackingRange(10).build("boat"));
-    public static final DeferredHolder<EntityType<?>, EntityType<AncientAetherChestBoatEntity>> CHEST_BOAT = ENTITY_TYPES.register("chest_boat", () -> EntityType.Builder.<AncientAetherChestBoatEntity>of(AncientAetherChestBoatEntity::new, MobCategory.MISC).sized(1.375F, 0.5625F).clientTrackingRange(10).build("chest_boat"));
+    public static final DeferredHolder<EntityType<?>, EntityType<AncientAetherBoat>> BOAT = ENTITY_TYPES.register("boat", () -> EntityType.Builder.<AncientAetherBoat>of(AncientAetherBoat::new, MobCategory.MISC).sized(1.375F, 0.5625F).clientTrackingRange(10).build("boat"));
+    public static final DeferredHolder<EntityType<?>, EntityType<AncientAetherChestBoat>> CHEST_BOAT = ENTITY_TYPES.register("chest_boat", () -> EntityType.Builder.<AncientAetherChestBoat>of(AncientAetherChestBoat::new, MobCategory.MISC).sized(1.375F, 0.5625F).clientTrackingRange(10).build("chest_boat"));
 
     public static void registerEntityAttributes(EntityAttributeCreationEvent event) {
         event.put(AncientAetherEntityTypes.FLUFFALO.get(), Fluffalo.createMobAttributes().build());

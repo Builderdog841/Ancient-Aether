@@ -3,7 +3,7 @@ package net.builderdog.ancient_aether;
 import com.aetherteam.aether.AetherConfig;
 import net.builderdog.ancient_aether.advancement.AncientAetherAdvancementTriggers;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
-import net.builderdog.ancient_aether.block.dispenser.DispenseAncientAetherBoatBehaviour;
+import net.builderdog.ancient_aether.block.dispenser.DispenseAncientAetherBoatBehavior;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
 import net.builderdog.ancient_aether.client.AncientAetherClient;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
@@ -130,10 +130,10 @@ public class AncientAether {
     }
 
     private void registerDispenserBehaviors() {
-        DispenserBlock.registerBehavior(AncientAetherItems.HIGHSPROOT_BOAT.get(), new DispenseAncientAetherBoatBehaviour());
-        DispenserBlock.registerBehavior(AncientAetherItems.HIGHSPROOT_CHEST_BOAT.get(), new DispenseAncientAetherBoatBehaviour(true));
-        DispenserBlock.registerBehavior(AncientAetherItems.SAKURA_BOAT.get(), new DispenseAncientAetherBoatBehaviour());
-        DispenserBlock.registerBehavior(AncientAetherItems.SAKURA_CHEST_BOAT.get(), new DispenseAncientAetherBoatBehaviour(true));
+        DispenserBlock.registerBehavior(AncientAetherItems.HIGHSPROOT_BOAT.get(), new DispenseAncientAetherBoatBehavior());
+        DispenserBlock.registerBehavior(AncientAetherItems.HIGHSPROOT_CHEST_BOAT.get(), new DispenseAncientAetherBoatBehavior(true));
+        DispenserBlock.registerBehavior(AncientAetherItems.SAKURA_BOAT.get(), new DispenseAncientAetherBoatBehavior());
+        DispenserBlock.registerBehavior(AncientAetherItems.SAKURA_CHEST_BOAT.get(), new DispenseAncientAetherBoatBehavior(true));
     }
 
     public void addPacks(AddPackFindersEvent event) {

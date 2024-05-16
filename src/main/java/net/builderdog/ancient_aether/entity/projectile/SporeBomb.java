@@ -9,6 +9,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.NotNull;
@@ -16,12 +17,12 @@ import org.jetbrains.annotations.NotNull;
 public class SporeBomb extends AbstractDart {
 
     public SporeBomb(EntityType<? extends SporeBomb> type, Level level) {
-        super(type, level, null);
+        super(type, level, ItemStack.EMPTY);
         setNoGravity(false);
     }
 
     public SporeBomb(Level level, LivingEntity shooter) {
-        super(AncientAetherEntityTypes.SPORE_BOMB.get(), level, shooter, null);
+        super(AncientAetherEntityTypes.SPORE_BOMB.get(), level, shooter, ItemStack.EMPTY);
         setNoGravity(false);
     }
 

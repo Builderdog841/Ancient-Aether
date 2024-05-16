@@ -32,7 +32,7 @@ public class HandRenderHooks {
                         String identifier = slotResult.slotContext().identifier();
                         int id = slotResult.slotContext().index();
                         ItemStack itemStack = slotResult.stack();
-                        CuriosApi.getCuriosInventory(player).ifPresent(handler -> handler.getStacksHandler(identifier).ifPresent(stacksHandler -> {
+                        CuriosApi.getCuriosInventory(player).flatMap(handler -> handler.getStacksHandler(identifier)).ifPresent(stacksHandler -> {
                             if (stacksHandler.getRenders().get(id)) {
                                 CuriosRendererRegistry.getRenderer(itemStack.getItem()).ifPresent((renderer) -> {
                                     if (renderer instanceof ShieldRenderer shieldRenderer) {
@@ -41,7 +41,7 @@ public class HandRenderHooks {
                                     }
                                 });
                             }
-                        }));
+                        });
                     });
                 }
             });
