@@ -23,10 +23,16 @@ import javax.annotation.Nullable;
 
 @SuppressWarnings("deprecation")
 public class SlammrootPlantBlock extends BushBlock {
+    public static final MapCodec<SlammrootPlantBlock> CODEC = simpleCodec(SlammrootPlantBlock::new);
     protected static final VoxelShape SHAPE = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 8.0D, 13.0D);
 
     public SlammrootPlantBlock(Properties properties) {
         super(properties);
+    }
+
+    @Override
+    protected @NotNull MapCodec<? extends SlammrootPlantBlock> codec() {
+        return CODEC;
     }
 
     public void playerDestroy(@NotNull Level level, @NotNull Player player, @NotNull BlockPos pos, @NotNull BlockState state, @Nullable BlockEntity blockEntity, @NotNull ItemStack tool) {

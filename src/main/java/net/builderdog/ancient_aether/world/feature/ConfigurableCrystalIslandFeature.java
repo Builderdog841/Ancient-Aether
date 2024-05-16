@@ -22,7 +22,7 @@ public class ConfigurableCrystalIslandFeature extends Feature<CrystalIslandConfi
     public boolean place(FeaturePlaceContext<CrystalIslandConfiguration> context) {
         CrystalIslandConfiguration config = context.config();
 
-        PlacedFeature feature = PlacementUtils.inlinePlaced(context.level().registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE).getHolderOrThrow(ResourceKey.create(Registries.CONFIGURED_FEATURE, config.feature()))).get();
+        PlacedFeature feature = PlacementUtils.inlinePlaced(context.level().registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE).getHolderOrThrow(ResourceKey.create(Registries.CONFIGURED_FEATURE, config.feature()))).value();
         if (feature.place(context.level(), context.chunkGenerator(), context.random(), context.origin().above())) {
             for (int i = 0; i < 3; i++) {
                 BlockState state;

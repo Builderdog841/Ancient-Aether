@@ -17,6 +17,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.renderer.entity.RenderLayerParent;
 import net.minecraft.client.renderer.texture.OverlayTexture;
+import net.minecraft.client.resources.PlayerSkin;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.entity.LivingEntity;
@@ -63,7 +64,7 @@ public class ShieldRenderer implements ICurioRenderer {
     }
 
     public void renderFirstPerson(ItemStack stack, PoseStack poseStack, MultiBufferSource buffer, int packedLight, AbstractClientPlayer player, HumanoidArm arm) {
-        boolean isSlim = player.getModelName().equals("slim");
+        boolean isSlim = player.getSkin().model() == PlayerSkin.Model.SLIM;
         if (!player.isInvisible()) {
             setupHand(isSlim ? dummyArmSlim : dummyArm, poseStack, buffer, packedLight, player, arm, isSlim);
         }
@@ -87,17 +88,14 @@ public class ShieldRenderer implements ICurioRenderer {
     private void setupHand(PlayerModel<LivingEntity> model, PoseStack poseStack, MultiBufferSource buffer, int packedLight, AbstractClientPlayer player, HumanoidArm arm, boolean isSlim) {
         setupModel(model, player);
 
-        Optional<AetherPlayer> aetherPlayerOptional = AetherPlayer.get(player).resolve();
-        if (aetherPlayerOptional.isPresent()) {
-            VertexConsumer consumer = buffer.getBuffer(RenderType.entityTranslucent(player.getSkinTextureLocation()));
-            if (isSlim) {
-                poseStack.translate((arm != HumanoidArm.LEFT ? 1.0F : -1.0F) * -0.05F, 0.0F, 0.0F);
-            }
-            if (arm == HumanoidArm.RIGHT) {
-                renderHand(model.rightArm, model.rightSleeve, poseStack, packedLight, consumer);
-            } else if (arm == HumanoidArm.LEFT) {
-                renderHand(model.leftArm, model.leftSleeve, poseStack, packedLight, consumer);
-            }
+        VertexConsumer consumer = buffer.getBuffer(RenderType.entityTranslucent(player.getSkin().texture()));
+        if (isSlim) {
+            poseStack.translate((arm != HumanoidArm.LEFT ? 1.0F : -1.0F) * -0.05F, 0.0F, 0.0F);
+        }
+        if (arm == HumanoidArm.RIGHT) {
+            renderHand(model.rightArm, model.rightSleeve, poseStack, packedLight, consumer);
+        } else if (arm == HumanoidArm.LEFT) {
+            renderHand(model.leftArm, model.leftSleeve, poseStack, packedLight, consumer);
         }
     }
 
