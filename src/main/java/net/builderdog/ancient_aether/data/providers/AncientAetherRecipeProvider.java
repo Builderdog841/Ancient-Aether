@@ -1,10 +1,9 @@
 package net.builderdog.ancient_aether.data.providers;
 
 import com.aetherteam.aether.data.providers.AetherRecipeProvider;
-import com.aetherteam.aether.recipe.AetherRecipeSerializers;
 import com.aetherteam.aether.recipe.builder.BiomeParameterRecipeBuilder;
+import com.aetherteam.aether.recipe.recipes.block.SwetBallRecipe;
 import com.aetherteam.nitrogen.recipe.BlockStateIngredient;
-import com.aetherteam.nitrogen.recipe.builder.BlockStateRecipeBuilder;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -101,7 +100,7 @@ public abstract class AncientAetherRecipeProvider extends AetherRecipeProvider {
                         has(armorTrim)).save(consumer, new ResourceLocation(id, getItemName(armorTrim) + "_smithing_trim"));
     }
 
-    protected BlockStateRecipeBuilder swetBallConversionWithProperties(Block result, Map<Property<?>, Comparable<?>> resultProperties, Block ingredient, TagKey<Biome> tagKey) {
-        return BiomeParameterRecipeBuilder.recipe(BlockStateIngredient.of(ingredient), result, resultProperties, tagKey, AetherRecipeSerializers.SWET_BALL_CONVERSION.get());
+    protected BiomeParameterRecipeBuilder swetBallConversionWithProperties(Block result, Map<Property<?>, Comparable<?>> resultProperties, Block ingredient, TagKey<Biome> tagKey) {
+        return BiomeParameterRecipeBuilder.recipe(BlockStateIngredient.of(ingredient), result, resultProperties, tagKey, SwetBallRecipe::new);
     }
 }
