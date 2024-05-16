@@ -6,6 +6,7 @@ import com.aetherteam.aether.recipe.builder.BiomeParameterRecipeBuilder;
 import com.aetherteam.nitrogen.recipe.BlockStateIngredient;
 import com.aetherteam.nitrogen.recipe.builder.BlockStateRecipeBuilder;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
@@ -21,10 +22,11 @@ import net.minecraft.world.level.block.state.properties.Property;
 import net.neoforged.neoforge.common.Tags;
 
 import java.util.Map;
+import java.util.concurrent.CompletableFuture;
 
 public abstract class AncientAetherRecipeProvider extends AetherRecipeProvider {
-    public AncientAetherRecipeProvider(PackOutput output, String id) {
-        super(output, id);
+    public AncientAetherRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, String id) {
+        super(output, lookupProvider, id);
     }
 
     protected static void bookshelf(RecipeOutput consumer, ItemLike result, ItemLike planks) {

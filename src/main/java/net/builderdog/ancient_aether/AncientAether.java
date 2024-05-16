@@ -1,7 +1,7 @@
 package net.builderdog.ancient_aether;
 
 import com.aetherteam.aether.AetherConfig;
-import net.builderdog.ancient_aether.advancement.AncientAetherAdvancementTriggers;
+import net.builderdog.ancient_aether.advancement.AncientAetherTriggers;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.block.dispenser.DispenseAncientAetherBoatBehavior;
 import net.builderdog.ancient_aether.blockentity.AncientAetherBlockEntityTypes;
@@ -70,6 +70,7 @@ public class AncientAether {
                 AncientAetherTreeDecorators.TREE_DECORATORS,
                 AncientAetherStructureTypes.STRUCTURE_TYPES,
                 AncientAetherStructureProcessors.STRUCTURE_PROCESSOR_TYPES,
+                AncientAetherTriggers.TRIGGERS,
                 AncientAetherSoundEvents.SOUNDS,
                 AncientAetherParticleTypes.PARTICLES,
         };
@@ -98,8 +99,6 @@ public class AncientAether {
 
             registerComposting();
             registerDispenserBehaviors();
-
-            AncientAetherAdvancementTriggers.init();
 
             Regions.register(new AncientAetherRegion(new ResourceLocation(MODID, "ancient_aether"), AncientAetherConfig.COMMON.ancient_aether_region_weight.get()));
             SurfaceRuleManager.addSurfaceRules(AetherRuleCategory.THE_AETHER, MODID, AncientAetherSurfaceRules.makeRules());

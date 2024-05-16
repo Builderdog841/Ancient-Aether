@@ -1,6 +1,5 @@
 package net.builderdog.ancient_aether.client.event.hooks;
 
-import com.aetherteam.aether.capability.player.AetherPlayer;
 import com.aetherteam.aether.item.EquipmentUtil;
 import com.aetherteam.aether.item.accessories.AccessoryItem;
 import com.aetherteam.aether.mixin.mixins.client.accessor.ItemInHandRendererAccessor;

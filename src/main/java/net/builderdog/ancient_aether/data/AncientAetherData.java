@@ -25,7 +25,7 @@ public class AncientAetherData {
         generator.addProvider(event.includeServer(), new AncientAetherAdvancementData(packOutput, lookupProvider, fileHelper));
         generator.addProvider(event.includeServer(), AncientAetherLootTableData.create(packOutput));
         generator.addProvider(event.includeServer(), new AncientAetherRegistrySets(packOutput, lookupProvider));
-        generator.addProvider(event.includeServer(), new AncientAetherRecipeData(packOutput));
+        generator.addProvider(event.includeServer(), new AncientAetherRecipeData(packOutput, lookupProvider));
 
         AncientAetherBlockTagData blockTags = new AncientAetherBlockTagData(packOutput, lookupProvider, fileHelper);
         generator.addProvider(event.includeServer(), blockTags);

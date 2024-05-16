@@ -12,6 +12,7 @@ import net.builderdog.ancient_aether.block.blockstate.AncientAetherBlockStatePro
 import net.builderdog.ancient_aether.data.providers.AncientAetherRecipeProvider;
 import net.builderdog.ancient_aether.data.resources.registries.AncientAetherMoaTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
@@ -25,10 +26,11 @@ import net.neoforged.neoforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;
+import java.util.concurrent.CompletableFuture;
 
 public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
-    public AncientAetherRecipeData(PackOutput output) {
-        super(output, AncientAether.MODID);
+    public AncientAetherRecipeData(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+        super(output, lookupProvider, AncientAether.MODID);
     }
 
     @Override
@@ -319,7 +321,7 @@ public class AncientAetherRecipeData extends AncientAetherRecipeProvider {
         woodenChestBoat(consumer, AncientAetherItems.HIGHSPROOT_CHEST_BOAT.get(), AncientAetherItems.HIGHSPROOT_BOAT.get());
         woodenChestBoat(consumer, AncientAetherItems.SAKURA_CHEST_BOAT.get(), AncientAetherItems.SAKURA_BOAT.get());
 
-        smeltingOreRecipe(AncientAetherItems.VALKYRIE_BRICK.get(), AncientAetherItems.VALKYRIE_CLAY_BALL.get(), 0.3F).save();
+        smeltingOreRecipe(AncientAetherItems.VALKYRIE_BRICK.get(), AncientAetherItems.VALKYRIE_CLAY_BALL.get(), 0.3F);
         smeltingOreRecipe(Items.QUARTZ, AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), 0.5F).save(consumer, name("quartz_from_smelting_aether_quartz_ore"));
         blastingOreRecipe(Items.QUARTZ, AncientAetherBlocks.AETHER_QUARTZ_ORE.get(), 0.5F).save(consumer, name("quartz_from_blasting_aether_quartz_ore"));
 

@@ -9,10 +9,11 @@ import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
-import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Set;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
 
 public class AncientAetherBlockLoot extends AncientAetherBlockLootSubProvider {
     public AncientAetherBlockLoot() {
@@ -158,7 +159,7 @@ public class AncientAetherBlockLoot extends AncientAetherBlockLootSubProvider {
     }
 
     @Override
-    protected @NotNull Iterable<Block> getKnownBlocks() {
-        return AncientAetherBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
+    public @NotNull Iterable<Block> getKnownBlocks() {
+        return AncientAetherBlocks.BLOCKS.getEntries().stream().map(Supplier::get).collect(Collectors.toList());
     }
 }

@@ -1,6 +1,6 @@
 package net.builderdog.ancient_aether.block.blocktype;
 
-import net.builderdog.ancient_aether.advancement.ObeliskTrigger;
+import net.builderdog.ancient_aether.advancement.AncientAetherTriggers;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
@@ -43,7 +43,7 @@ public class ObeliskBlock extends Block {
                 && serverPlayer.getAdvancements().getOrStartProgress(Objects.requireNonNull(serverPlayer.server.getAdvancements().get(new ResourceLocation("aether:gold_dungeon")))).isDone()) {
             if (serverPlayer.getMainHandItem().getItem() == AncientAetherItems.ANCIENT_RUNE.get()) {
                 ItemStack stack = player.getMainHandItem();
-                ObeliskTrigger.INSTANCE.trigger(serverPlayer, stack);
+                AncientAetherTriggers.OBELISK_ACTIVATION.get().trigger();
                 if (!serverPlayer.getAbilities().instabuild) {
                     player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
                     stack.shrink(1);

@@ -11,9 +11,9 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.armortrim.TrimPattern;
+import net.minecraft.world.item.armortrim.TrimPatterns;
 
-@SuppressWarnings("deprecation")
-public class AncientAetherTrimPatterns {
+public class AncientAetherTrimPatterns extends TrimPatterns {
     public static final ResourceKey<TrimPattern> WYND = createKey("wynd");
     public static final ResourceKey<TrimPattern> WHALE = createKey("whale");
     public static final ResourceKey<TrimPattern> ASCENDED = createKey("ascended");
@@ -40,8 +40,8 @@ public class AncientAetherTrimPatterns {
         register(context, AncientAetherItems.ANCIENT_ARMOR_TRIM_SMITHING_TEMPLATE.get(), ANCIENT);
     }
 
-    private static void register(BootstapContext<TrimPattern> context, Item templateItem, ResourceKey<TrimPattern> trimPatternKey) {
-        TrimPattern trimpattern = new TrimPattern(trimPatternKey.location(), BuiltInRegistries.ITEM.wrapAsHolder(templateItem), Component.translatable(Util.makeDescriptionId("trim_pattern", trimPatternKey.location())));
-        context.register(trimPatternKey, trimpattern);
+    private static void register(BootstapContext<TrimPattern> context, Item item, ResourceKey<TrimPattern> patternKey) {
+        TrimPattern trimpattern = new TrimPattern(patternKey.location(), BuiltInRegistries.ITEM.wrapAsHolder(item), Component.translatable(Util.makeDescriptionId("trim_pattern", patternKey.location())), false);
+        context.register(patternKey, trimpattern);
     }
 }

@@ -1,53 +1,26 @@
 package net.builderdog.ancient_aether.advancement;
 
-import com.google.gson.JsonObject;
-import net.builderdog.ancient_aether.AncientAether;
-import net.minecraft.advancements.critereon.*;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.item.ItemStack;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.advancements.critereon.ContextAwarePredicate;
+import net.minecraft.advancements.critereon.EntityPredicate;
+import net.minecraft.advancements.critereon.SimpleCriterionTrigger;
+import net.minecraft.util.ExtraCodecs;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Optional;
+
 public class ObeliskTrigger extends SimpleCriterionTrigger<ObeliskTrigger.Instance> {
-    private static final ResourceLocation ID = new ResourceLocation(AncientAether.MODID, "obelisk_trigger");
-    public static final ObeliskTrigger INSTANCE = new ObeliskTrigger();
-
     @Override
-    public @NotNull ResourceLocation getId() {
-        return ID;
+    public @NotNull Codec<Instance> codec() {
+        return Instance.CODEC;
     }
 
-    @Override
-    public ObeliskTrigger.@NotNull Instance createInstance(JsonObject json, @NotNull ContextAwarePredicate predicate, @NotNull DeserializationContext context) {
-        ItemPredicate itemPredicate = ItemPredicate.fromJson(json.get("item"));
-        return new ObeliskTrigger.Instance(predicate, itemPredicate);
-    }
+    public void trigger() {}
 
-    public void trigger(ServerPlayer player, ItemStack stack) {
-        trigger(player, (instance) -> instance.test(stack));
-    }
-
-    public static class Instance extends AbstractCriterionTriggerInstance {
-        private final ItemPredicate item;
-
-        public Instance(ContextAwarePredicate predicate, ItemPredicate item) {
-            super(ObeliskTrigger.ID, predicate);
-            this.item = item;
-        }
-
-        public static ObeliskTrigger.Instance activate() {
-            return new ObeliskTrigger.Instance(ContextAwarePredicate.ANY, ItemPredicate.ANY);
-        }
-
-        public boolean test(ItemStack stack) {
-            return item.matches(stack);
-        }
-
-        @Override
-        public @NotNull JsonObject serializeToJson(@NotNull SerializationContext context) {
-            JsonObject jsonObject = super.serializeToJson(context);
-            jsonObject.add("item", item.serializeToJson());
-            return jsonObject;
-        }
+    public record Instance(Optional<ContextAwarePredicate> player) implements SimpleInstance {
+        public static final Codec<ObeliskTrigger.Instance> CODEC = RecordCodecBuilder.create(instance -> instance.group(
+                        ExtraCodecs.strictOptionalField(EntityPredicate.ADVANCEMENT_CODEC, "player").forGetter(ObeliskTrigger.Instance::player))
+                .apply(instance, ObeliskTrigger.Instance::new));
     }
 }

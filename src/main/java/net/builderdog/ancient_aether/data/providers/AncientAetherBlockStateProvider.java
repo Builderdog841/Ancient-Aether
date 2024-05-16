@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.WallSide;
 import net.neoforged.neoforge.client.model.generators.*;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
 
 import java.util.Map;
 import java.util.Objects;
@@ -22,11 +23,11 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
         super(output, id, helper);
     }
 
-    public void blockWithItem(RegistryObject<Block> blockRegistryObject) {
+    public void blockWithItem(DeferredBlock<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
     }
 
-    public void crossBlock(RegistryObject<Block> blockRegistryObject) {
+    public void crossBlock(DeferredBlock<Block> blockRegistryObject) {
         simpleBlock(blockRegistryObject.get(),
                 models().cross(Objects.requireNonNull(BuiltInRegistries.BLOCK.getKey(blockRegistryObject.get())).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
@@ -294,28 +295,6 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
         ModelFile visible = models().cubeAll(name(baseBlock), texture(name(baseBlock)));
         ModelFile invisible = models().getBuilder(name(block));
         getVariantBuilder(block).forAllStatesExcept((state) -> !(Boolean)state.getValue(DoorwayBlock.INVISIBLE) ? ConfiguredModel.builder().modelFile(visible).build() : ConfiguredModel.builder().modelFile(invisible).build());
-    }
-
-    protected BlockModelBuilder makeWallPostModel(int width, int height, String name) {
-        return models().withExistingParent(name, mcLoc("block/block"))
-                .element().from(8 - width, 0.0F, 8 - width).to(8 + width, height, 8 + width)
-                .face(Direction.DOWN).texture("#top").cullface(Direction.DOWN).end()
-                .face(Direction.UP).texture("#top").cullface(Direction.UP).end()
-                .face(Direction.NORTH).texture("#side").end()
-                .face(Direction.SOUTH).texture("#side").end()
-                .face(Direction.WEST).texture("#side").end()
-                .face(Direction.EAST).texture("#side").end().end();
-    }
-
-    protected BlockModelBuilder makeWallSideModel(int length, int height, String name, ModelBuilder.FaceRotation faceRotation, int u1, int u2) {
-        return models().withExistingParent(name, mcLoc("block/block"))
-                .element().from(5.0F, 0.0F, 0.0F).to(11.0F, height, length)
-                .face(Direction.DOWN).texture("#top").rotation(faceRotation).uvs(u1, 5, u2, 11).cullface(Direction.DOWN).end()
-                .face(Direction.UP).texture("#top").rotation(faceRotation).uvs(u1, 5, u2, 11).end()
-                .face(Direction.NORTH).texture("#side").cullface(Direction.NORTH).end()
-                .face(Direction.SOUTH).texture("#side").end()
-                .face(Direction.WEST).texture("#side").end()
-                .face(Direction.EAST).texture("#side").end().end();
     }
 
     public void logWallBlock(WallBlock block, Block baseBlock, String location, String modid, boolean postUsesTop, ModelFile postBig, ModelFile postShort, ModelFile postTall, ModelFile side, ModelFile sideAlt, ModelFile sideTall, ModelFile sideTallAlt, ModelFile sideShort, ModelFile sideAltShort, ModelFile sideTallShort, ModelFile sideTallAltShort) {
