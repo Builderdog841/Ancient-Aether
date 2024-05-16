@@ -118,7 +118,7 @@ public class AncientAether {
         ArmorAbilityListener.listen(bus);
         ToolAbilityListener.listen(bus);
         WeaponAbilityListener.listen(bus);
-        CapabilityListener.listen(bus);
+        AttachmentListener.listen(bus);
         EntityListener.listen(bus);
         ItemListener.listen(bus);
         LevelListener.listen(bus);

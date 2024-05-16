@@ -2,6 +2,7 @@ package net.builderdog.ancient_aether.event.hooks;
 
 import com.aetherteam.aether.AetherConfig;
 import com.aetherteam.aether.AetherTags;
+import com.aetherteam.aether.attachment.AetherDataAttachments;
 import com.aetherteam.aether.network.packet.clientbound.ToolDebuffPacket;
 import com.aetherteam.nitrogen.network.PacketRelay;
 import com.google.common.collect.ImmutableMap;
@@ -70,7 +71,7 @@ public class AbilityHooks {
             if (AetherConfig.SERVER.tools_debuff.get()) {
                 if (!player.level().isClientSide()) {
                     debuffTools = true;
-                    PacketRelay.sendToNear(AetherPacketHandler.INSTANCE, new ToolDebuffPacket(true), player.getX(), player.getY(), player.getZ(), 10, player.level().dimension());
+                    PacketRelay.sendToNear(new ToolDebuffPacket(true), player.getX(), player.getY(), player.getZ(), 10, player.level().dimension());
                 }
             }
             if (debuffTools) {
@@ -101,7 +102,7 @@ public class AbilityHooks {
                 } else if (source instanceof Projectile) {
                     if ((target.getType().getDescriptionId().startsWith("entity.ancient_aether") && !target.getType().is(AetherTags.Entities.TREATED_AS_VANILLA_ENTITY))) {
                         if ((!source.getType().getDescriptionId().startsWith("entity.ancient_aether"))
-                                && (!(source instanceof AbstractArrow abstractArrow) || !PhoenixArrow.get(abstractArrow).isPresent() || PhoenixArrow.get(abstractArrow).resolve().isEmpty() || !PhoenixArrow.get(abstractArrow).resolve().get().isPhoenixArrow())) {
+                                && (!(source instanceof AbstractArrow abstractArrow) || !abstractArrow.hasData(AetherDataAttachments.PHOENIX_ARROW) || !abstractArrow.getData(AetherDataAttachments.PHOENIX_ARROW).isPhoenixArrow())) {
                             damage = (float) pow;
                         }
                     }
