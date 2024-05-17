@@ -1,0 +1,96 @@
+{
+  "name": "ancient_aether:sentry_laboratory/rooms",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:sentry_laboratory/rooms/incubation_room_01",
+        "processors": "ancient_aether:sentry_laboratory",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:sentry_laboratory/rooms/incubation_room_02",
+        "processors": "ancient_aether:sentry_laboratory",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:sentry_laboratory/rooms/testing_room_01",
+        "processors": "ancient_aether:sentry_laboratory",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:sentry_laboratory/rooms/testing_room_02",
+        "processors": "ancient_aether:sentry_laboratory",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:sentry_laboratory/rooms/windblower_room_01",
+        "processors": "ancient_aether:sentry_laboratory",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:sentry_laboratory/rooms/windblower_room_02",
+        "processors": "ancient_aether:sentry_laboratory",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:sentry_laboratory/rooms/aechor_room_01",
+        "processors": "ancient_aether:sentry_laboratory",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:sentry_laboratory/rooms/aechor_room_02",
+        "processors": "ancient_aether:sentry_laboratory",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:sentry_laboratory/rooms/cockatrice_room_01",
+        "processors": "ancient_aether:sentry_laboratory",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:sentry_laboratory/rooms/cockatrice_room_02",
+        "processors": "ancient_aether:sentry_laboratory",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

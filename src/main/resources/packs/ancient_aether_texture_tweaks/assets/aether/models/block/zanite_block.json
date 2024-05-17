@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "aether:block/construction/zanite_block_bottom",
+    "side": "aether:block/construction/zanite_block",
+    "top": "aether:block/construction/zanite_block_top"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:cache_once",
+  "argument": {
+    "type": "mul",
+    "argument1": {
+      "type": "minecraft:range_choice",
+      "input": "ancient_aether:y",
+      "min_inclusive": 0,
+      "max_exclusive": 112,
+      "when_in_range": {
+        "type": "minecraft:y_clamped_gradient",
+        "from_value": 2,
+        "from_y": 16,
+        "to_value": 1,
+        "to_y": 128
+      },
+      "when_out_of_range": {
+        "type": "minecraft:y_clamped_gradient",
+        "from_value": 1,
+        "from_y": 128,
+        "to_value": 6,
+        "to_y": 272
+      }
+    },
+    "argument2": {
+      "type": "minecraft:add",
+      "argument1": {
+        "type": "minecraft:y_clamped_gradient",
+        "from_value": 0.75,
+        "from_y": 16,
+        "to_value": 0,
+        "to_y": 96
+      },
+      "argument2": "ancient_aether:amplifier/factor"
+    }
+  }
+}

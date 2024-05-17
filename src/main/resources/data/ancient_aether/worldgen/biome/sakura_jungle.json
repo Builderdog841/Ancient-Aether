@@ -1,0 +1,204 @@
+{
+  "carvers": {
+    "air": [
+      "ancient_aether:aether_cave_sakura"
+    ]
+  },
+  "downfall": 0.0,
+  "creature_spawn_probability": 0.05,
+  "effects": {
+    "fog_color": 9671612,
+    "foliage_color": 11665355,
+    "grass_color": 11665355,
+    "music": {
+      "max_delay": 3600,
+      "min_delay": 1200,
+      "replace_current_music": false,
+      "sound": "aether:music.aether"
+    },
+    "sky_color": 12632319,
+    "water_color": 6396835,
+    "water_fog_color": 3824736
+  },
+  "features": [
+    [],
+    [
+      "aether:water_lake"
+    ],
+    [],
+    [],
+    [],
+    [],
+    [
+      "aether:aether_dirt_ore",
+      "aether:icestone_ore",
+      "aether:ambrosium_ore",
+      "aether:zanite_ore",
+      "aether:gravitite_ore_buried",
+      "aether:gravitite_ore",
+      "ancient_aether:bonus_ambrosium_ore"
+    ],
+    [],
+    [
+      "aether:water_spring"
+    ],
+    [
+      "ancient_aether:sakura_jungle_trees",
+      "aether:holiday_tree",
+      "ancient_aether:sakura_jungle_grass_patch",
+      "ancient_aether:sakura_jungle_flowers",
+      "ancient_aether:skyroot_leaf_vines",
+      "ancient_aether:short_skyroot_leaf_vines",
+      "aether:berry_bush_patch"
+    ],
+    [
+      "aether:crystal_island",
+      "aether:cold_aercloud",
+      "aether:blue_aercloud",
+      "aether:golden_aercloud"
+    ]
+  ],
+  "has_precipitation": false,
+  "spawn_costs": {
+    "aether:aechor_plant": {
+      "charge": 0.4,
+      "energy_budget": 0.11
+    },
+    "aether:aerwhale": {
+      "charge": 0.5,
+      "energy_budget": 0.11
+    },
+    "aether:blue_swet": {
+      "charge": 0.5,
+      "energy_budget": 0.1
+    },
+    "aether:cockatrice": {
+      "charge": 0.4,
+      "energy_budget": 0.2
+    },
+    "ancient_aether:slammroot": {
+      "charge": 0.3,
+      "energy_budget": 0.1
+    },
+    "aether:evil_whirlwind": {
+      "charge": 0.4,
+      "energy_budget": 0.1
+    },
+    "aether:golden_swet": {
+      "charge": 0.5,
+      "energy_budget": 0.1
+    },
+    "aether:whirlwind": {
+      "charge": 0.4,
+      "energy_budget": 0.1
+    },
+    "aether:zephyr": {
+      "charge": 0.6,
+      "energy_budget": 0.16
+    }
+  },
+  "spawners": {
+    "aether_aerwhale": [
+      {
+        "type": "aether:aerwhale",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 10
+      }
+    ],
+    "aether_darkness_monster": [
+      {
+        "type": "aether:cockatrice",
+        "maxCount": 3,
+        "minCount": 1,
+        "weight": 12
+      },
+      {
+        "type": "ancient_aether:slammroot",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 2
+      }
+    ],
+    "aether_sky_monster": [
+      {
+        "type": "aether:zephyr",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 20
+      }
+    ],
+    "aether_surface_monster": [
+      {
+        "type": "aether:aechor_plant",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 7
+      },
+      {
+        "type": "aether:blue_swet",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 6
+      },
+      {
+        "type": "aether:golden_swet",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 6
+      },
+      {
+        "type": "aether:whirlwind",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 3
+      },
+      {
+        "type": "aether:evil_whirlwind",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 1
+      }
+    ],
+    "ambient": [],
+    "axolotls": [],
+    "creature": [
+      {
+        "type": "aether:phyg",
+        "maxCount": 4,
+        "minCount": 3,
+        "weight": 10
+      },
+      {
+        "type": "aether:sheepuff",
+        "maxCount": 4,
+        "minCount": 3,
+        "weight": 12
+      },
+      {
+        "type": "aether:flying_cow",
+        "maxCount": 5,
+        "minCount": 2,
+        "weight": 12
+      },
+      {
+        "type": "aether:aerbunny",
+        "maxCount": 3,
+        "minCount": 3,
+        "weight": 11
+      },
+      {
+        "type": "aether:moa",
+        "maxCount": 3,
+        "minCount": 1,
+        "weight": 8
+      }
+    ],
+    "misc": [],
+    "monster": [],
+    "underground_water_creature": [],
+    "water_ambient": [],
+    "water_creature": []
+  },
+  "temperature": 0.8
+}

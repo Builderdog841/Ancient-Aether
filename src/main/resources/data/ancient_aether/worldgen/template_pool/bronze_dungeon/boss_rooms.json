@@ -1,0 +1,24 @@
+{
+  "name": "ancient_aether:bronze_dungeon/boss_rooms",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:bronze_dungeon/boss/boss_room_01",
+        "processors": "ancient_aether:bronze_dungeon_boss_room",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:bronze_dungeon/boss/boss_room_02",
+        "processors": "ancient_aether:bronze_dungeon_boss_room",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

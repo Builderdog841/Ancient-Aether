@@ -1,0 +1,60 @@
+{
+  "name": "ancient_aether:bronze_dungeon/tunnels",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 14,
+      "element": {
+        "location": "ancient_aether:bronze_dungeon/tunnels/tunnel",
+        "processors": "ancient_aether:bronze_dungeon",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "ancient_aether:bronze_dungeon/tunnels/tunnel_spawner",
+        "processors": "ancient_aether:bronze_dungeon",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "ancient_aether:bronze_dungeon/tunnels/tunnel_chests",
+        "processors": "ancient_aether:bronze_dungeon",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:bronze_dungeon/tunnels/tunnel_t_junction",
+        "processors": "ancient_aether:bronze_dungeon",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:bronze_dungeon/tunnels/tunnel_junction",
+        "processors": "ancient_aether:bronze_dungeon",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:bronze_dungeon/tunnels/tunnel_junction_double_decker",
+        "processors": "ancient_aether:bronze_dungeon",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

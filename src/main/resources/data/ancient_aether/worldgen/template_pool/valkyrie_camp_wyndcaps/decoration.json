@@ -1,0 +1,39 @@
+{
+  "name": "ancient_aether:valkyrie_camp_wyndcaps/decoration",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:empty_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:valkyrie_camp/wyndcaps/decoration/small_highsproot_log_pile_decoration",
+        "processors": "ancient_aether:valkyrie_camp_wyndcaps",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:valkyrie_camp/wyndcaps/decoration/large_highsproot_log_pile_decoration",
+        "processors": "ancient_aether:valkyrie_camp_wyndcaps",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:valkyrie_camp/wyndcaps/decoration/fluffalo_pen_decoration",
+        "processors": "ancient_aether:valkyrie_camp_wyndcaps",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "name": "ancient_aether:holystone_ruin/central_ruins",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:holystone_ruin/center/center_01",
+        "processors": "ancient_aether:holystone_ruin",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:holystone_ruin/center/center_02",
+        "processors": "ancient_aether:holystone_ruin",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:holystone_ruin/center/center_03",
+        "processors": "ancient_aether:holystone_ruin",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:holystone_ruin/center/center_04",
+        "processors": "ancient_aether:holystone_ruin",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:holystone_ruin/center/center_05",
+        "processors": "ancient_aether:holystone_ruin",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

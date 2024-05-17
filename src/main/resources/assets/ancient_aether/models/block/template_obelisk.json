@@ -1,0 +1,91 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [64, 64],
+	"render_type": "minecraft:cutout_mipped",
+	"textures": {
+		"particle": "ancient_aether:block/aerogetic_stone"
+	},
+	"elements": [
+		{
+			"from": [2, 0, 2],
+			"to": [14, 6, 14],
+			"faces": {
+				"north": {"uv": [2.5, 10.25, 5.5, 11.75], "texture": "#obelisk"},
+				"east": {"uv": [5.5, 10.25, 8.5, 11.75], "texture": "#obelisk"},
+				"south": {"uv": [8.5, 11, 11.5, 12.5], "texture": "#obelisk"},
+				"west": {"uv": [11.5, 5, 14.5, 6.5], "texture": "#obelisk"},
+				"up": {"uv": [11.5, 8, 8.5, 5], "texture": "#obelisk"},
+				"down": {"uv": [11.5, 8, 8.5, 11], "texture": "#obelisk"}
+			}
+		},
+		{
+			"from": [4, 6, 4],
+			"to": [12, 26, 12],
+			"faces": {
+				"north": {"uv": [2.5, 5.25, 4.5, 10.25], "texture": "#obelisk"},
+				"east": {"uv": [4.5, 5.25, 6.5, 10.25], "texture": "#obelisk"},
+				"south": {"uv": [6.5, 5.25, 8.5, 10.25], "texture": "#obelisk"},
+				"west": {"uv": [7.5, 0, 9.5, 5], "texture": "#obelisk"},
+				"up": {"uv": [2, 12.5, 0, 10.5], "texture": "#obelisk"},
+				"down": {"uv": [13.5, 6.5, 11.5, 8.5], "texture": "#obelisk"}
+			}
+		},
+		{
+			"from": [3, 6, 3],
+			"to": [13, 27, 13],
+			"faces": {
+				"north": {"uv": [0, 0, 2.5, 5.25], "texture": "#obelisk"},
+				"east": {"uv": [2.5, 0, 5, 5.25], "texture": "#obelisk"},
+				"south": {"uv": [5, 0, 7.5, 5.25], "texture": "#obelisk"},
+				"west": {"uv": [0, 5.25, 2.5, 10.5], "texture": "#obelisk"},
+				"up": {"uv": [12, 2.5, 9.5, 0], "texture": "#obelisk"},
+				"down": {"uv": [12, 2.5, 9.5, 5], "texture": "#obelisk"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 45, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 225, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"gui": {
+			"rotation": [30, 225, 0],
+			"translation": [0, -2, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"head": {
+			"rotation": [-90, 0, 0],
+			"translation": [0, -1, -7],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"fixed": {
+			"scale": [0.4, 0.4, 0.4]
+		}
+	},
+	"groups": [
+		{
+			"name": "group",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"children": [0, 1, 2]
+		}
+	]
+}

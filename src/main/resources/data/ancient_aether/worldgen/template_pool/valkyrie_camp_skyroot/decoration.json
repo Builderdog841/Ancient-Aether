@@ -1,0 +1,39 @@
+{
+  "name": "ancient_aether:valkyrie_camp_skyroot/decoration",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:empty_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:valkyrie_camp/skyroot/decoration/small_skyroot_log_pile_decoration",
+        "processors": "ancient_aether:valkyrie_camp_skyroot",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:valkyrie_camp/skyroot/decoration/large_skyroot_log_pile_decoration",
+        "processors": "ancient_aether:valkyrie_camp_skyroot",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:valkyrie_camp/skyroot/decoration/well_decoration",
+        "processors": "ancient_aether:valkyrie_camp_skyroot",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

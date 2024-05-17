@@ -1,0 +1,42 @@
+{
+  "name": "ancient_aether:valkyrie_camp_wyndcaps/tents",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:valkyrie_camp/wyndcaps/tents/tent_01",
+        "processors": "ancient_aether:valkyrie_camp_wyndcaps",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:valkyrie_camp/wyndcaps/tents/tent_02",
+        "processors": "ancient_aether:valkyrie_camp_wyndcaps",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:valkyrie_camp/wyndcaps/tents/tent_03",
+        "processors": "ancient_aether:valkyrie_camp_wyndcaps",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:valkyrie_camp/wyndcaps/tents/tent_04",
+        "processors": "ancient_aether:valkyrie_camp_wyndcaps",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

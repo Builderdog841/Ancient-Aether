@@ -1,0 +1,33 @@
+{
+  "name": "ancient_aether:valkyrie_camp_wyndcaps/campfire",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:valkyrie_camp/wyndcaps/campfire/campfire_3",
+        "processors": "ancient_aether:valkyrie_camp_wyndcaps",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:valkyrie_camp/wyndcaps/campfire/campfire_2a",
+        "processors": "ancient_aether:valkyrie_camp_wyndcaps",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:valkyrie_camp/wyndcaps/campfire/campfire_2b",
+        "processors": "ancient_aether:valkyrie_camp_wyndcaps",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

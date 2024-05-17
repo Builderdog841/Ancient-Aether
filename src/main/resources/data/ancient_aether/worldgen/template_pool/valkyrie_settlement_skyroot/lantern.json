@@ -1,0 +1,15 @@
+{
+  "name": "ancient_aether:valkyrie_settlement_skyroot/lantern",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:valkyrie_settlement/skyroot/decoration/lantern",
+        "processors": "ancient_aether:valkyrie_settlement_skyroot",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

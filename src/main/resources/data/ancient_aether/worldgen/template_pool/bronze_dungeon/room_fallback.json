@@ -1,0 +1,15 @@
+{
+  "name": "ancient_aether:bronze_dungeon/room_fallback",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "ancient_aether:bronze_dungeon/rooms/room_fallback",
+        "processors": "ancient_aether:bronze_dungeon",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
