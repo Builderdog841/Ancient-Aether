@@ -31,8 +31,6 @@ import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.PathPackResources;
 import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
-import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.DispenserBlock;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -50,7 +48,6 @@ import terrablender.api.Regions;
 import terrablender.api.SurfaceRuleManager;
 
 @Mod(AncientAether.MODID)
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class AncientAether {
     public static final String MODID = "ancient_aether";
 
@@ -98,8 +95,6 @@ public class AncientAether {
         event.enqueueWork(() -> {
             AncientAetherBlocks.registerPots();
             AncientAetherBlocks.registerFlammability();
-
-            registerComposting();
             registerDispenserBehaviors();
 
             Regions.register(new AncientAetherRegion(new ResourceLocation(MODID, "ancient_aether"), AncientAetherConfig.COMMON.ancient_aether_region_weight.get()));
@@ -158,31 +153,5 @@ public class AncientAether {
                     new PathPackResources.PathResourcesSupplier(resourcePath, true), PackType.SERVER_DATA, Pack.Position.TOP, PackSource.SERVER);
             event.addRepositorySource(consumer -> consumer.accept(pack));
         }
-    }
-
-    private void registerComposting() {
-        addCompost(0.3F, AncientAetherBlocks.CRYSTAL_SKYROOT_LEAVES.get().asItem());
-        addCompost(0.3F, AncientAetherBlocks.ENCHANTED_SKYROOT_LEAVES.get().asItem());
-        addCompost(0.3F, AncientAetherBlocks.SKYROOT_PINE_LEAVES.get().asItem());
-        addCompost(0.3F, AncientAetherBlocks.BLUE_SKYROOT_PINE_LEAVES.get().asItem());
-        addCompost(0.3F, AncientAetherBlocks.HIGHSPROOT_LEAVES.get().asItem());
-        addCompost(0.3F, AncientAetherBlocks.SAKURA_LEAVES.get().asItem());
-        addCompost(0.3F, AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.get());
-        addCompost(0.3F, AncientAetherBlocks.ENCHANTED_SKYROOT_SAPLING.get());
-        addCompost(0.3F, AncientAetherBlocks.SKYROOT_PINE_SAPLING.get());
-        addCompost(0.3F, AncientAetherBlocks.BLUE_SKYROOT_PINE_SAPLING.get().asItem());
-        addCompost(0.3F, AncientAetherBlocks.HIGHSPROOT_SAPLING.get());
-        addCompost(0.3F, AncientAetherBlocks.SAKURA_SAPLING.get());
-        addCompost(0.3F, AncientAetherBlocks.SKY_GRASS.get());
-        addCompost(0.5F, AncientAetherItems.GRAPES.get());
-        addCompost(0.65F, AncientAetherBlocks.SUNSET_ROSE.get());
-        addCompost(0.65F, AncientAetherBlocks.SKY_BLUES.get());
-        addCompost(0.65F, AncientAetherBlocks.WYND_THISTLE.get());
-        addCompost(0.65F, AncientAetherBlocks.ELEVETIA.get());
-        addCompost(0.85F, AncientAetherItems.SLAMMBERRY.get());
-    }
-
-    private void addCompost(float chance, ItemLike item) {
-        ComposterBlock.COMPOSTABLES.put(item.asItem(), chance);
     }
 }

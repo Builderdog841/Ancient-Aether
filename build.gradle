@@ -3,7 +3,7 @@ import net.neoforged.gradle.common.tasks.JarJar
 plugins {
     id 'eclipse'
     id 'maven-publish'
-    id 'net.neoforged.gradle.userdev' version '7.0.97'
+    id 'net.neoforged.gradle.userdev' version '7.0.108'
     id 'io.github.0ffz.github-packages' version '[1,2)'
 }
 
@@ -66,7 +66,7 @@ repositories {
 }
 
 dependencies {
-    implementation "net.neoforged:neoforge:${neo_version}"
+    implementation "net.neoforged:neoforge:${project.neoforge_version}"
     implementation "com.aetherteam.aether:aether:${project.aether_version}"
     implementation "local:aeroblender:1.20.4-1.0.1-neoforge"
     implementation "com.github.glitchfiend:TerraBlender-forge:${project.terrablender_version}"

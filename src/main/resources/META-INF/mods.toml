@@ -12,13 +12,6 @@ authors = "Builderdog"
 description = "An exploration Aether Add-On that aims to overhaul the original ideas with modern takes."
 
 [[dependencies.ancient_aether]]
-modId="minecraft"
-type = "required"
-versionRange="[1.20.4]"
-ordering="NONE"
-side="BOTH"
-
-[[dependencies.ancient_aether]]
 modId = "neoforge"
 type = "required"
 versionRange = "[20.4.167,)"
