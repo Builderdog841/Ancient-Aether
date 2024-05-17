@@ -78,12 +78,12 @@ dependencies {
     implementation "local:TerraBlender:neoforge-1.20.4-3.3.0.12"
     implementation "com.aetherteam.nitrogen:nitrogen_internals:${project.nitrogen_version}"
     implementation "com.aetherteam.cumulus:cumulus_menus:${project.cumulus_version}"
-    runtimeOnly("top.theillusivec4.curios:curios-neoforge:${project.curios_version}")
-    compileOnly("top.theillusivec4.curios:curios-neoforge:${project.curios_version}:api")
+    runtimeOnly "top.theillusivec4.curios:curios-neoforge:${project.curios_version}"
+    compileOnly "top.theillusivec4.curios:curios-neoforge:${project.curios_version}:api"
 
-    compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:${project.mixinextras_version}"))
-    implementation(jarJar("io.github.llamalad7:mixinextras-forge:${project.mixinextras_version}")) {
-        jarJar.ranged(it, "[0.3.5,)")
+    compileOnly(annotationProcessor "io.github.llamalad7:mixinextras-common:${project.mixinextras_version}")
+    implementation(jarJar"io.github.llamalad7:mixinextras-forge:${project.mixinextras_version}") {
+        jarJar.ranged it, "[0.3.5,)"
     }
 }
 
@@ -123,13 +123,6 @@ publishing {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
-}
-
-idea {
-    module {
-        downloadSources = true
-        downloadJavadoc = true
-    }
 }
 
 tasks.named('jarJar', JarJar).configure {

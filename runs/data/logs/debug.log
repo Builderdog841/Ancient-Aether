@@ -1,117 +1,113 @@
-[17Mai2024 14:40:26.356] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--mod, ancient_aether, --all, --output, C:\Users\PC\Documents\Ancient-Aether3\src\generated\resources, --existing, C:\Users\PC\Documents\Ancient-Aether3\src\main\resources, --launchTarget, forgedatauserdev, --assetIndex, asset-index, --assetsDir, C:\Users\PC\.gradle\caches\minecraft\assets\1.20.4, --gameDir, ., --fml.neoForgeVersion, 20.4.167, --fml.fmlVersion, 2.0.11, --fml.mcVersion, 1.20.4, --fml.neoFormVersion, 20231207.154220]
-[17Mai2024 14:40:26.364] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.9 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
-[17Mai2024 14:40:26.428] [main/DEBUG] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Found launch services [minecraft,forgeclient,forgedatauserdev,testharness,forgeserverdev,forgeserveruserdev,forgeclientdev,forgeclientuserdev,forgeserver,forgedatadev]
-[17Mai2024 14:40:26.462] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Found naming services : [srgtomcp]
-[17Mai2024 14:40:26.497] [main/DEBUG] [cpw.mods.modlauncher.LaunchPluginHandler/MODLAUNCHER]: Found launch plugins: [mixin,slf4jfixer,runtime_enum_extender,accesstransformer,runtimedistcleaner]
-[17Mai2024 14:40:26.522] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Discovering transformation services
-[17Mai2024 14:40:26.532] [main/DEBUG] [net.neoforged.fml.loading.FMLPaths/CORE]: Path GAMEDIR is C:\Users\PC\Documents\Ancient-Aether3\runs\data
-[17Mai2024 14:40:26.533] [main/DEBUG] [net.neoforged.fml.loading.FMLPaths/CORE]: Path MODSDIR is C:\Users\PC\Documents\Ancient-Aether3\runs\data\mods
-[17Mai2024 14:40:26.533] [main/DEBUG] [net.neoforged.fml.loading.FMLPaths/CORE]: Path CONFIGDIR is C:\Users\PC\Documents\Ancient-Aether3\runs\data\config
-[17Mai2024 14:40:26.534] [main/DEBUG] [net.neoforged.fml.loading.FMLPaths/CORE]: Path FMLCONFIG is C:\Users\PC\Documents\Ancient-Aether3\runs\data\config\fml.toml
-[17Mai2024 14:40:26.690] [main/WARN] [net.neoforged.fml.loading.FMLConfig/CORE]: Configuration file C:\Users\PC\Documents\Ancient-Aether3\runs\data\config\fml.toml is not correct. Correcting
-[17Mai2024 14:40:26.696] [main/INFO] [net.neoforged.fml.loading.FMLConfig/CORE]: Incorrect key [disableConfigWatcher] was corrected from null to false
-[17Mai2024 14:40:26.697] [main/INFO] [net.neoforged.fml.loading.FMLConfig/CORE]: Incorrect key [earlyWindowSkipGLVersions] was corrected from null to []
-[17Mai2024 14:40:26.699] [main/INFO] [net.neoforged.fml.loading.FMLConfig/CORE]: Incorrect key [earlyWindowSquir] was corrected from null to false
-[17Mai2024 14:40:26.745] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: Loaded FML config from C:\Users\PC\Documents\Ancient-Aether3\runs\data\config\fml.toml
-[17Mai2024 14:40:26.746] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig disableConfigWatcher is false
-[17Mai2024 14:40:26.747] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowControl is true
-[17Mai2024 14:40:26.747] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig maxThreads is 12
-[17Mai2024 14:40:26.748] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig versionCheck is true
-[17Mai2024 14:40:26.748] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig defaultConfigPath is defaultconfigs
-[17Mai2024 14:40:26.748] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig disableOptimizedDFU is true
-[17Mai2024 14:40:26.749] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowProvider is fmlearlywindow
-[17Mai2024 14:40:26.749] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowWidth is 854
-[17Mai2024 14:40:26.750] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowHeight is 480
-[17Mai2024 14:40:26.750] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowFBScale is 1
-[17Mai2024 14:40:26.751] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowMaximized is false
-[17Mai2024 14:40:26.751] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowSkipGLVersions is []
-[17Mai2024 14:40:26.752] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowSquir is false
-[17Mai2024 14:40:26.786] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Found additional transformation services from discovery services: 
-[17Mai2024 14:40:26.815] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[17Mai2024 14:40:26.864] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Found transformer services : [mixin,fml]
-[17Mai2024 14:40:26.865] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading
-[17Mai2024 14:40:26.868] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loading service mixin
-[17Mai2024 14:40:26.869] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loaded service mixin
-[17Mai2024 14:40:26.869] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loading service fml
-[17Mai2024 14:40:26.872] [main/DEBUG] [net.neoforged.fml.loading.LauncherVersion/CORE]: Found FMLLauncher version 2.0
-[17Mai2024 14:40:26.873] [main/DEBUG] [net.neoforged.fml.loading.FMLLoader/CORE]: FML 2.0 loading
-[17Mai2024 14:40:26.873] [main/DEBUG] [net.neoforged.fml.loading.FMLLoader/CORE]: FML found ModLauncher version : 10.0.9+10.0.9+main.dcd20f30
-[17Mai2024 14:40:26.876] [main/DEBUG] [net.neoforged.fml.loading.FMLLoader/CORE]: FML found AccessTransformer version : 10.0.1+139da711
-[17Mai2024 14:40:26.878] [main/DEBUG] [net.neoforged.fml.loading.FMLLoader/CORE]: FML found EventBus version : null
-[17Mai2024 14:40:26.880] [main/DEBUG] [net.neoforged.fml.loading.FMLLoader/CORE]: Found Runtime Dist Cleaner
-[17Mai2024 14:40:26.899] [main/DEBUG] [net.neoforged.fml.loading.FMLLoader/CORE]: FML found CoreMod version : 6.0.4+main.1ed25481
-[17Mai2024 14:40:26.904] [main/DEBUG] [net.neoforged.fml.loading.FMLLoader/CORE]: Found ForgeSPI package implementation version 2.0
-[17Mai2024 14:40:26.904] [main/DEBUG] [net.neoforged.fml.loading.FMLLoader/CORE]: Found ForgeSPI package specification 2
-[17Mai2024 14:40:26.906] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loaded service fml
-[17Mai2024 14:40:26.918] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Configuring option handling for services
-[17Mai2024 14:40:26.959] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services initializing
-[17Mai2024 14:40:26.962] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service mixin
-[17Mai2024 14:40:27.050] [main/DEBUG] [mixin/]: MixinService [ModLauncher] was successfully booted in cpw.mods.cl.ModuleClassLoader@3c419631
-[17Mai2024 14:40:27.088] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/PC/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23169!/ Service=ModLauncher Env=CLIENT
-[17Mai2024 14:40:27.100] [main/DEBUG] [mixin/]: Initialising Mixin Platform Manager
-[17Mai2024 14:40:27.101] [main/DEBUG] [mixin/]: Adding mixin platform agents for container ModLauncher Root Container(ModLauncher:4f56a0a2)
-[17Mai2024 14:40:27.102] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for ModLauncher Root Container(ModLauncher:4f56a0a2)
-[17Mai2024 14:40:27.104] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container ModLauncher Root Container(ModLauncher:4f56a0a2)
-[17Mai2024 14:40:27.106] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for ModLauncher Root Container(ModLauncher:4f56a0a2)
-[17Mai2024 14:40:27.107] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container ModLauncher Root Container(ModLauncher:4f56a0a2)
-[17Mai2024 14:40:27.117] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service mixin
-[17Mai2024 14:40:27.117] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service fml
-[17Mai2024 14:40:27.118] [main/DEBUG] [net.neoforged.fml.loading.FMLServiceProvider/CORE]: Setting up basic FML game directories
-[17Mai2024 14:40:27.119] [main/DEBUG] [net.neoforged.fml.loading.FMLPaths/CORE]: Path GAMEDIR is C:\Users\PC\Documents\Ancient-Aether3\runs\data
-[17Mai2024 14:40:27.119] [main/DEBUG] [net.neoforged.fml.loading.FMLPaths/CORE]: Path MODSDIR is C:\Users\PC\Documents\Ancient-Aether3\runs\data\mods
-[17Mai2024 14:40:27.120] [main/DEBUG] [net.neoforged.fml.loading.FMLPaths/CORE]: Path CONFIGDIR is C:\Users\PC\Documents\Ancient-Aether3\runs\data\config
-[17Mai2024 14:40:27.120] [main/DEBUG] [net.neoforged.fml.loading.FMLPaths/CORE]: Path FMLCONFIG is C:\Users\PC\Documents\Ancient-Aether3\runs\data\config\fml.toml
-[17Mai2024 14:40:27.120] [main/DEBUG] [net.neoforged.fml.loading.FMLServiceProvider/CORE]: Loading configuration
-[17Mai2024 14:40:27.128] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: Loaded FML config from C:\Users\PC\Documents\Ancient-Aether3\runs\data\config\fml.toml
-[17Mai2024 14:40:27.128] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig disableConfigWatcher is false
-[17Mai2024 14:40:27.129] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowControl is true
-[17Mai2024 14:40:27.129] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig maxThreads is 12
-[17Mai2024 14:40:27.129] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig versionCheck is true
-[17Mai2024 14:40:27.129] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig defaultConfigPath is defaultconfigs
-[17Mai2024 14:40:27.129] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig disableOptimizedDFU is true
-[17Mai2024 14:40:27.129] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowProvider is fmlearlywindow
-[17Mai2024 14:40:27.130] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowWidth is 854
-[17Mai2024 14:40:27.130] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowHeight is 480
-[17Mai2024 14:40:27.130] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowFBScale is 1
-[17Mai2024 14:40:27.130] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowMaximized is false
-[17Mai2024 14:40:27.131] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowSkipGLVersions is []
-[17Mai2024 14:40:27.131] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowSquir is false
-[17Mai2024 14:40:27.131] [main/DEBUG] [net.neoforged.fml.loading.FMLServiceProvider/CORE]: Preparing ModFile
-[17Mai2024 14:40:27.140] [main/DEBUG] [net.neoforged.fml.loading.FMLServiceProvider/CORE]: Preparing launch handler
-[17Mai2024 14:40:27.140] [main/DEBUG] [net.neoforged.fml.loading.FMLLoader/CORE]: Using forgedatauserdev as launch service
-[17Mai2024 14:40:27.167] [main/DEBUG] [net.neoforged.fml.loading.FMLLoader/CORE]: Received command line version data  : VersionInfo[neoForgeVersion=20.4.167, fmlVersion=2.0.11, mcVersion=1.20.4, neoFormVersion=20231207.154220]
-[17Mai2024 14:40:27.170] [main/DEBUG] [net.neoforged.fml.common.asm.RuntimeDistCleaner/DISTXFORM]: Configuring for Dist CLIENT
-[17Mai2024 14:40:27.173] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service fml
-[17Mai2024 14:40:27.173] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Current naming domain is 'mcp'
-[17Mai2024 14:40:27.177] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Identified name mapping providers {srg=srgtomcp:1234}
-[17Mai2024 14:40:27.177] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services begin scanning
-[17Mai2024 14:40:27.179] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service mixin
-[17Mai2024 14:40:27.180] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service mixin
-[17Mai2024 14:40:27.180] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service fml
-[17Mai2024 14:40:27.180] [main/DEBUG] [net.neoforged.fml.loading.FMLServiceProvider/CORE]: Initiating mod scan
-[17Mai2024 14:40:27.181] [main/DEBUG] [net.neoforged.fml.loading.FMLLoader/SCAN]: Scanning for Mod Locators
-[17Mai2024 14:40:27.219] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModListHandler/CORE]: Found mod coordinates from lists: []
-[17Mai2024 14:40:27.225] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/CORE]: Found Mod Locators : (mods folder:2.0),(maven libs:2.0),(exploded directory:2.0),(minecraft:2.0),(userdev classpath:2.0),(builtin game layer libraries:2.0)
-[17Mai2024 14:40:27.226] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/CORE]: Found Dependency Locators : (JarInJar:2.0)
-[17Mai2024 14:40:27.226] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Scanning for mods and other resources to load. We know 6 ways to find mods
-[17Mai2024 14:40:27.227] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Trying locator {mods folder locator at C:\Users\PC\Documents\Ancient-Aether3\runs\data\mods}
-[17Mai2024 14:40:27.227] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModsFolderLocator/SCAN]: Scanning mods dir C:\Users\PC\Documents\Ancient-Aether3\runs\data\mods for mods
-[17Mai2024 14:40:27.240] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Locator {mods folder locator at C:\Users\PC\Documents\Ancient-Aether3\runs\data\mods} found 0 candidates or errors
-[17Mai2024 14:40:27.248] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Locator {mods folder locator at C:\Users\PC\Documents\Ancient-Aether3\runs\data\mods} found 0 valid mod files
-[17Mai2024 14:40:27.256] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Trying locator {Maven Directory locator for mods []}
-[17Mai2024 14:40:27.256] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Locator {Maven Directory locator for mods []} found 0 candidates or errors
-[17Mai2024 14:40:27.256] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Locator {Maven Directory locator for mods []} found 0 valid mod files
-[17Mai2024 14:40:27.257] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Trying locator {ExplodedDir locator}
-[17Mai2024 14:40:27.265] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Locator {ExplodedDir locator} found 0 candidates or errors
-[17Mai2024 14:40:27.266] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Locator {ExplodedDir locator} found 0 valid mod files
-[17Mai2024 14:40:27.266] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Trying locator net.neoforged.fml.loading.moddiscovery.MinecraftLocator@29caf222
-[17Mai2024 14:40:27.272] [main/DEBUG] [net.neoforged.fml.loading.targets.CommonLaunchHandler/CORE]: Got mod coordinates Ancient-Aether3%%C:\Users\PC\Documents\Ancient-Aether3\build\resources\main;Ancient-Aether3%%C:\Users\PC\Documents\Ancient-Aether3\build\classes\java\main from env
-[17Mai2024 14:40:27.278] [main/DEBUG] [net.neoforged.fml.loading.targets.CommonLaunchHandler/CORE]: Found supplied mod coordinates [{Ancient-Aether3=[C:\Users\PC\Documents\Ancient-Aether3\build\resources\main, C:\Users\PC\Documents\Ancient-Aether3\build\classes\java\main]}]
-[17Mai2024 14:40:27.661] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file neoforge-20.4.167.jar with {minecraft} mods - versions {1.20.4}
-[17Mai2024 14:40:27.666] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type null: [C:\Users\PC\Documents\Ancient-Aether3\build\resources\main, C:\Users\PC\Documents\Ancient-Aether3\build\classes\java\main]
-[17Mai2024 14:40:27.667] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\PC\Documents\Ancient-Aether3\build\resources\main
-[17Mai2024 14:40:27.684] [main/ERROR] [net.neoforged.fml.loading.moddiscovery.ModInfo/]: Mod 'ancient_aether' uses deprecated 'mandatory' field in the dependency declaration for 'aether'. Use the 'type' field and 'required'/'optional' instead
-[17Mai2024 14:40:27.686] [main/ERROR] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Locator net.neoforged.fml.loading.moddiscovery.MinecraftLocator@29caf222 found an invalid mod file net.neoforged.fml.loading.moddiscovery.ModFileInfo@20765ed5
+[17Mai2024 19:34:25.768] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--mod, ancient_aether, --all, --output, C:\Users\Timon\Documents\Forge 1.19.4\src\generated\resources, --existing, C:\Users\Timon\Documents\Forge 1.19.4\src\main\resources, --launchTarget, forgedatauserdev, --assetIndex, asset-index, --assetsDir, C:\Users\Timon\.gradle\caches\minecraft\assets\1.20.4, --gameDir, ., --fml.neoForgeVersion, 20.4.167, --fml.fmlVersion, 2.0.11, --fml.mcVersion, 1.20.4, --fml.neoFormVersion, 20231207.154220]
+[17Mai2024 19:34:25.772] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.7 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[17Mai2024 19:34:25.788] [main/DEBUG] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Found launch services [minecraft,forgeclient,forgedatauserdev,testharness,forgeserverdev,forgeserveruserdev,forgeclientdev,forgeclientuserdev,forgeserver,forgedatadev]
+[17Mai2024 19:34:25.797] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Found naming services : [srgtomcp]
+[17Mai2024 19:34:25.805] [main/DEBUG] [cpw.mods.modlauncher.LaunchPluginHandler/MODLAUNCHER]: Found launch plugins: [mixin,slf4jfixer,runtime_enum_extender,accesstransformer,runtimedistcleaner]
+[17Mai2024 19:34:25.814] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Discovering transformation services
+[17Mai2024 19:34:25.818] [main/DEBUG] [net.neoforged.fml.loading.FMLPaths/CORE]: Path GAMEDIR is C:\Users\Timon\Documents\Forge 1.19.4\runs\data
+[17Mai2024 19:34:25.818] [main/DEBUG] [net.neoforged.fml.loading.FMLPaths/CORE]: Path MODSDIR is C:\Users\Timon\Documents\Forge 1.19.4\runs\data\mods
+[17Mai2024 19:34:25.819] [main/DEBUG] [net.neoforged.fml.loading.FMLPaths/CORE]: Path CONFIGDIR is C:\Users\Timon\Documents\Forge 1.19.4\runs\data\config
+[17Mai2024 19:34:25.819] [main/DEBUG] [net.neoforged.fml.loading.FMLPaths/CORE]: Path FMLCONFIG is C:\Users\Timon\Documents\Forge 1.19.4\runs\data\config\fml.toml
+[17Mai2024 19:34:25.848] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: Loaded FML config from C:\Users\Timon\Documents\Forge 1.19.4\runs\data\config\fml.toml
+[17Mai2024 19:34:25.848] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig disableConfigWatcher is false
+[17Mai2024 19:34:25.848] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowControl is true
+[17Mai2024 19:34:25.848] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig maxThreads is 12
+[17Mai2024 19:34:25.848] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig versionCheck is true
+[17Mai2024 19:34:25.849] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig defaultConfigPath is defaultconfigs
+[17Mai2024 19:34:25.849] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig disableOptimizedDFU is true
+[17Mai2024 19:34:25.849] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowProvider is fmlearlywindow
+[17Mai2024 19:34:25.849] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowWidth is 854
+[17Mai2024 19:34:25.849] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowHeight is 480
+[17Mai2024 19:34:25.849] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowFBScale is 1
+[17Mai2024 19:34:25.849] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowMaximized is false
+[17Mai2024 19:34:25.849] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowSkipGLVersions is []
+[17Mai2024 19:34:25.849] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowSquir is false
+[17Mai2024 19:34:25.854] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Found additional transformation services from discovery services: 
+[17Mai2024 19:34:25.858] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[17Mai2024 19:34:25.863] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Found transformer services : [mixin,fml]
+[17Mai2024 19:34:25.863] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading
+[17Mai2024 19:34:25.864] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loading service mixin
+[17Mai2024 19:34:25.864] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loaded service mixin
+[17Mai2024 19:34:25.864] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loading service fml
+[17Mai2024 19:34:25.865] [main/DEBUG] [net.neoforged.fml.loading.LauncherVersion/CORE]: Found FMLLauncher version 2.0
+[17Mai2024 19:34:25.865] [main/DEBUG] [net.neoforged.fml.loading.FMLLoader/CORE]: FML 2.0 loading
+[17Mai2024 19:34:25.865] [main/DEBUG] [net.neoforged.fml.loading.FMLLoader/CORE]: FML found ModLauncher version : 10.0.9+10.0.9+main.dcd20f30
+[17Mai2024 19:34:25.865] [main/DEBUG] [net.neoforged.fml.loading.FMLLoader/CORE]: FML found AccessTransformer version : 10.0.1+139da711
+[17Mai2024 19:34:25.866] [main/DEBUG] [net.neoforged.fml.loading.FMLLoader/CORE]: FML found EventBus version : null
+[17Mai2024 19:34:25.866] [main/DEBUG] [net.neoforged.fml.loading.FMLLoader/CORE]: Found Runtime Dist Cleaner
+[17Mai2024 19:34:25.867] [main/DEBUG] [net.neoforged.fml.loading.FMLLoader/CORE]: FML found CoreMod version : 6.0.4+main.1ed25481
+[17Mai2024 19:34:25.867] [main/DEBUG] [net.neoforged.fml.loading.FMLLoader/CORE]: Found ForgeSPI package implementation version 2.0
+[17Mai2024 19:34:25.867] [main/DEBUG] [net.neoforged.fml.loading.FMLLoader/CORE]: Found ForgeSPI package specification 2
+[17Mai2024 19:34:25.867] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loaded service fml
+[17Mai2024 19:34:25.867] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Configuring option handling for services
+[17Mai2024 19:34:25.871] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services initializing
+[17Mai2024 19:34:25.871] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service mixin
+[17Mai2024 19:34:25.880] [main/DEBUG] [mixin/]: MixinService [ModLauncher] was successfully booted in cpw.mods.cl.ModuleClassLoader@61230f6a
+[17Mai2024 19:34:25.891] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/Timon/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23187!/ Service=ModLauncher Env=CLIENT
+[17Mai2024 19:34:25.893] [main/DEBUG] [mixin/]: Initialising Mixin Platform Manager
+[17Mai2024 19:34:25.893] [main/DEBUG] [mixin/]: Adding mixin platform agents for container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[17Mai2024 19:34:25.894] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for ModLauncher Root Container(ModLauncher:4f56a0a2)
+[17Mai2024 19:34:25.894] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[17Mai2024 19:34:25.894] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for ModLauncher Root Container(ModLauncher:4f56a0a2)
+[17Mai2024 19:34:25.894] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[17Mai2024 19:34:25.896] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service mixin
+[17Mai2024 19:34:25.896] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service fml
+[17Mai2024 19:34:25.896] [main/DEBUG] [net.neoforged.fml.loading.FMLServiceProvider/CORE]: Setting up basic FML game directories
+[17Mai2024 19:34:25.896] [main/DEBUG] [net.neoforged.fml.loading.FMLPaths/CORE]: Path GAMEDIR is C:\Users\Timon\Documents\Forge 1.19.4\runs\data
+[17Mai2024 19:34:25.897] [main/DEBUG] [net.neoforged.fml.loading.FMLPaths/CORE]: Path MODSDIR is C:\Users\Timon\Documents\Forge 1.19.4\runs\data\mods
+[17Mai2024 19:34:25.897] [main/DEBUG] [net.neoforged.fml.loading.FMLPaths/CORE]: Path CONFIGDIR is C:\Users\Timon\Documents\Forge 1.19.4\runs\data\config
+[17Mai2024 19:34:25.897] [main/DEBUG] [net.neoforged.fml.loading.FMLPaths/CORE]: Path FMLCONFIG is C:\Users\Timon\Documents\Forge 1.19.4\runs\data\config\fml.toml
+[17Mai2024 19:34:25.897] [main/DEBUG] [net.neoforged.fml.loading.FMLServiceProvider/CORE]: Loading configuration
+[17Mai2024 19:34:25.900] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: Loaded FML config from C:\Users\Timon\Documents\Forge 1.19.4\runs\data\config\fml.toml
+[17Mai2024 19:34:25.900] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig disableConfigWatcher is false
+[17Mai2024 19:34:25.901] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowControl is true
+[17Mai2024 19:34:25.901] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig maxThreads is 12
+[17Mai2024 19:34:25.901] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig versionCheck is true
+[17Mai2024 19:34:25.901] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig defaultConfigPath is defaultconfigs
+[17Mai2024 19:34:25.901] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig disableOptimizedDFU is true
+[17Mai2024 19:34:25.901] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowProvider is fmlearlywindow
+[17Mai2024 19:34:25.901] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowWidth is 854
+[17Mai2024 19:34:25.901] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowHeight is 480
+[17Mai2024 19:34:25.901] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowFBScale is 1
+[17Mai2024 19:34:25.901] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowMaximized is false
+[17Mai2024 19:34:25.901] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowSkipGLVersions is []
+[17Mai2024 19:34:25.901] [main/TRACE] [net.neoforged.fml.loading.FMLConfig/CORE]: FMLConfig earlyWindowSquir is false
+[17Mai2024 19:34:25.901] [main/DEBUG] [net.neoforged.fml.loading.FMLServiceProvider/CORE]: Preparing ModFile
+[17Mai2024 19:34:25.903] [main/DEBUG] [net.neoforged.fml.loading.FMLServiceProvider/CORE]: Preparing launch handler
+[17Mai2024 19:34:25.903] [main/DEBUG] [net.neoforged.fml.loading.FMLLoader/CORE]: Using forgedatauserdev as launch service
+[17Mai2024 19:34:25.909] [main/DEBUG] [net.neoforged.fml.loading.FMLLoader/CORE]: Received command line version data  : VersionInfo[neoForgeVersion=20.4.167, fmlVersion=2.0.11, mcVersion=1.20.4, neoFormVersion=20231207.154220]
+[17Mai2024 19:34:25.910] [main/DEBUG] [net.neoforged.fml.common.asm.RuntimeDistCleaner/DISTXFORM]: Configuring for Dist CLIENT
+[17Mai2024 19:34:25.911] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service fml
+[17Mai2024 19:34:25.911] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Current naming domain is 'mcp'
+[17Mai2024 19:34:25.914] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Identified name mapping providers {srg=srgtomcp:1234}
+[17Mai2024 19:34:25.914] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services begin scanning
+[17Mai2024 19:34:25.914] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service mixin
+[17Mai2024 19:34:25.915] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service mixin
+[17Mai2024 19:34:25.915] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service fml
+[17Mai2024 19:34:25.915] [main/DEBUG] [net.neoforged.fml.loading.FMLServiceProvider/CORE]: Initiating mod scan
+[17Mai2024 19:34:25.915] [main/DEBUG] [net.neoforged.fml.loading.FMLLoader/SCAN]: Scanning for Mod Locators
+[17Mai2024 19:34:25.925] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModListHandler/CORE]: Found mod coordinates from lists: []
+[17Mai2024 19:34:25.927] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/CORE]: Found Mod Locators : (mods folder:2.0),(maven libs:2.0),(exploded directory:2.0),(minecraft:2.0),(userdev classpath:2.0),(builtin game layer libraries:2.0)
+[17Mai2024 19:34:25.928] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/CORE]: Found Dependency Locators : (JarInJar:2.0)
+[17Mai2024 19:34:25.928] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Scanning for mods and other resources to load. We know 6 ways to find mods
+[17Mai2024 19:34:25.928] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Trying locator {mods folder locator at C:\Users\Timon\Documents\Forge 1.19.4\runs\data\mods}
+[17Mai2024 19:34:25.928] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModsFolderLocator/SCAN]: Scanning mods dir C:\Users\Timon\Documents\Forge 1.19.4\runs\data\mods for mods
+[17Mai2024 19:34:25.930] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Locator {mods folder locator at C:\Users\Timon\Documents\Forge 1.19.4\runs\data\mods} found 0 candidates or errors
+[17Mai2024 19:34:25.931] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Locator {mods folder locator at C:\Users\Timon\Documents\Forge 1.19.4\runs\data\mods} found 0 valid mod files
+[17Mai2024 19:34:25.931] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Trying locator {Maven Directory locator for mods []}
+[17Mai2024 19:34:25.931] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Locator {Maven Directory locator for mods []} found 0 candidates or errors
+[17Mai2024 19:34:25.931] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Locator {Maven Directory locator for mods []} found 0 valid mod files
+[17Mai2024 19:34:25.931] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Trying locator {ExplodedDir locator}
+[17Mai2024 19:34:25.931] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Locator {ExplodedDir locator} found 0 candidates or errors
+[17Mai2024 19:34:25.932] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Locator {ExplodedDir locator} found 0 valid mod files
+[17Mai2024 19:34:25.932] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Trying locator net.neoforged.fml.loading.moddiscovery.MinecraftLocator@2d0566ba
+[17Mai2024 19:34:25.933] [main/DEBUG] [net.neoforged.fml.loading.targets.CommonLaunchHandler/CORE]: Got mod coordinates Forge 1.19.4%%C:\Users\Timon\Documents\Forge 1.19.4\build\resources\main;Forge 1.19.4%%C:\Users\Timon\Documents\Forge 1.19.4\build\classes\java\main from env
+[17Mai2024 19:34:25.934] [main/DEBUG] [net.neoforged.fml.loading.targets.CommonLaunchHandler/CORE]: Found supplied mod coordinates [{Forge 1.19.4=[C:\Users\Timon\Documents\Forge 1.19.4\build\resources\main, C:\Users\Timon\Documents\Forge 1.19.4\build\classes\java\main]}]
+[17Mai2024 19:34:26.046] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file neoforge-20.4.167.jar with {minecraft} mods - versions {1.20.4}
+[17Mai2024 19:34:26.048] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type null: [C:\Users\Timon\Documents\Forge 1.19.4\build\resources\main, C:\Users\Timon\Documents\Forge 1.19.4\build\classes\java\main]
+[17Mai2024 19:34:26.048] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Timon\Documents\Forge 1.19.4\build\resources\main
+[17Mai2024 19:34:26.054] [main/ERROR] [net.neoforged.fml.loading.moddiscovery.ModInfo/]: Mod 'ancient_aether' uses deprecated 'mandatory' field in the dependency declaration for 'aether'. Use the 'type' field and 'required'/'optional' instead
+[17Mai2024 19:34:26.054] [main/ERROR] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Locator net.neoforged.fml.loading.moddiscovery.MinecraftLocator@2d0566ba found an invalid mod file net.neoforged.fml.loading.moddiscovery.ModFileInfo@1162410a
 net.neoforged.fml.loading.moddiscovery.InvalidModFileException: Deprecated 'mandatory' field is used in dependency (main)
 	at net.neoforged.fml.loading.moddiscovery.ModInfo$ModVersion.lambda$new$2(ModInfo.java:228) ~[loader-2.0.11.jar:2.0]
 	at java.util.Optional.orElseGet(Optional.java:364) ~[?:?]
@@ -179,150 +175,150 @@ net.neoforged.fml.loading.moddiscovery.InvalidModFileException: Deprecated 'mand
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[17Mai2024 14:40:27.744] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Trying locator net.neoforged.fml.loading.moddiscovery.ClasspathLocator@50b1f030
-[17Mai2024 14:40:27.795] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type null: [C:\Users\PC\.gradle\caches\modules-2\files-2.1\com.aetherteam.aether\aether\1.20.4-1.4.1-neoforge\fda49d3eb9068a42e3706039e6e0ceb22cb34fa8\aether-1.20.4-1.4.1-neoforge.jar]
-[17Mai2024 14:40:27.795] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\PC\.gradle\caches\modules-2\files-2.1\com.aetherteam.aether\aether\1.20.4-1.4.1-neoforge\fda49d3eb9068a42e3706039e6e0ceb22cb34fa8\aether-1.20.4-1.4.1-neoforge.jar
-[17Mai2024 14:40:27.817] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file aether-1.20.4-1.4.1-neoforge.jar with {aether} mods - versions {1.20.4-1.4.1-neoforge}
-[17Mai2024 14:40:27.822] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type null: [C:\Users\PC\Documents\Ancient-Aether3\libs\aeroblender-1.20.4-1.0.1-neoforge.jar]
-[17Mai2024 14:40:27.822] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\PC\Documents\Ancient-Aether3\libs\aeroblender-1.20.4-1.0.1-neoforge.jar
-[17Mai2024 14:40:27.823] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file aeroblender-1.20.4-1.0.1-neoforge.jar with {aeroblender} mods - versions {1.0.1}
-[17Mai2024 14:40:27.827] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type null: [C:\Users\PC\Documents\Ancient-Aether3\libs\TerraBlender-neoforge-1.20.4-3.3.0.12.jar]
-[17Mai2024 14:40:27.827] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\PC\Documents\Ancient-Aether3\libs\TerraBlender-neoforge-1.20.4-3.3.0.12.jar
-[17Mai2024 14:40:27.829] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file TerraBlender-neoforge-1.20.4-3.3.0.12.jar with {terrablender} mods - versions {3.3.0.12}
-[17Mai2024 14:40:27.836] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type null: [C:\Users\PC\.gradle\caches\modules-2\files-2.1\com.aetherteam.nitrogen\nitrogen_internals\1.20.4-1.1.0-neoforge\b42c03429f3a8aa959731082954503a043b03451\nitrogen_internals-1.20.4-1.1.0-neoforge.jar]
-[17Mai2024 14:40:27.836] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\PC\.gradle\caches\modules-2\files-2.1\com.aetherteam.nitrogen\nitrogen_internals\1.20.4-1.1.0-neoforge\b42c03429f3a8aa959731082954503a043b03451\nitrogen_internals-1.20.4-1.1.0-neoforge.jar
-[17Mai2024 14:40:27.838] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file nitrogen_internals-1.20.4-1.1.0-neoforge.jar with {nitrogen_internals} mods - versions {1.20.4-1.1.0-neoforge}
-[17Mai2024 14:40:27.843] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type null: [C:\Users\PC\.gradle\caches\modules-2\files-2.1\com.aetherteam.cumulus\cumulus_menus\1.20.4-1.0.1-neoforge\67c91d7d1f210b4e2cac6cd9190171ae5e181685\cumulus_menus-1.20.4-1.0.1-neoforge.jar]
-[17Mai2024 14:40:27.844] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\PC\.gradle\caches\modules-2\files-2.1\com.aetherteam.cumulus\cumulus_menus\1.20.4-1.0.1-neoforge\67c91d7d1f210b4e2cac6cd9190171ae5e181685\cumulus_menus-1.20.4-1.0.1-neoforge.jar
-[17Mai2024 14:40:27.846] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file cumulus_menus-1.20.4-1.0.1-neoforge.jar with {cumulus_menus} mods - versions {1.20.4-1.0.1-neoforge}
-[17Mai2024 14:40:27.853] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type GAMELIBRARY: [C:\Users\PC\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-forge\0.3.5\f2663a1104ece46c821fa4f8b50a6c7738b68413\mixinextras-forge-0.3.5.jar]
-[17Mai2024 14:40:27.853] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\PC\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-forge\0.3.5\f2663a1104ece46c821fa4f8b50a6c7738b68413\mixinextras-forge-0.3.5.jar
-[17Mai2024 14:40:27.854] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file mixinextras-forge-0.3.5.jar with {mixinextras} mods - versions {0.3.5}
-[17Mai2024 14:40:27.859] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type null: [C:\Users\PC\.gradle\caches\modules-2\files-2.1\top.theillusivec4.curios\curios-neoforge\7.3.4+1.20.4\a87eaa9102ea78d57c5b98f32e1f1edd71c3767c\curios-neoforge-7.3.4+1.20.4.jar]
-[17Mai2024 14:40:27.859] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\PC\.gradle\caches\modules-2\files-2.1\top.theillusivec4.curios\curios-neoforge\7.3.4+1.20.4\a87eaa9102ea78d57c5b98f32e1f1edd71c3767c\curios-neoforge-7.3.4+1.20.4.jar
-[17Mai2024 14:40:27.861] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file curios-neoforge-7.3.4+1.20.4.jar with {curios} mods - versions {7.3.4+1.20.4}
-[17Mai2024 14:40:27.869] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type null: [C:\Users\PC\.gradle\caches\modules-2\files-2.1\com.aetherteam.aether\aether\1.20.4-1.4.1-neoforge\fda49d3eb9068a42e3706039e6e0ceb22cb34fa8\aether-1.20.4-1.4.1-neoforge.jar]
-[17Mai2024 14:40:27.869] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\PC\.gradle\caches\modules-2\files-2.1\com.aetherteam.aether\aether\1.20.4-1.4.1-neoforge\fda49d3eb9068a42e3706039e6e0ceb22cb34fa8\aether-1.20.4-1.4.1-neoforge.jar
-[17Mai2024 14:40:27.871] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file aether-1.20.4-1.4.1-neoforge.jar with {aether} mods - versions {1.20.4-1.4.1-neoforge}
-[17Mai2024 14:40:27.874] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type null: [C:\Users\PC\Documents\Ancient-Aether3\libs\aeroblender-1.20.4-1.0.1-neoforge.jar]
-[17Mai2024 14:40:27.874] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\PC\Documents\Ancient-Aether3\libs\aeroblender-1.20.4-1.0.1-neoforge.jar
-[17Mai2024 14:40:27.876] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file aeroblender-1.20.4-1.0.1-neoforge.jar with {aeroblender} mods - versions {1.0.1}
-[17Mai2024 14:40:27.881] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type null: [C:\Users\PC\Documents\Ancient-Aether3\libs\TerraBlender-neoforge-1.20.4-3.3.0.12.jar]
-[17Mai2024 14:40:27.881] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\PC\Documents\Ancient-Aether3\libs\TerraBlender-neoforge-1.20.4-3.3.0.12.jar
-[17Mai2024 14:40:27.882] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file TerraBlender-neoforge-1.20.4-3.3.0.12.jar with {terrablender} mods - versions {3.3.0.12}
-[17Mai2024 14:40:27.887] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type null: [C:\Users\PC\.gradle\caches\modules-2\files-2.1\com.aetherteam.nitrogen\nitrogen_internals\1.20.4-1.1.0-neoforge\b42c03429f3a8aa959731082954503a043b03451\nitrogen_internals-1.20.4-1.1.0-neoforge.jar]
-[17Mai2024 14:40:27.888] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\PC\.gradle\caches\modules-2\files-2.1\com.aetherteam.nitrogen\nitrogen_internals\1.20.4-1.1.0-neoforge\b42c03429f3a8aa959731082954503a043b03451\nitrogen_internals-1.20.4-1.1.0-neoforge.jar
-[17Mai2024 14:40:27.889] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file nitrogen_internals-1.20.4-1.1.0-neoforge.jar with {nitrogen_internals} mods - versions {1.20.4-1.1.0-neoforge}
-[17Mai2024 14:40:27.894] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type null: [C:\Users\PC\.gradle\caches\modules-2\files-2.1\com.aetherteam.cumulus\cumulus_menus\1.20.4-1.0.1-neoforge\67c91d7d1f210b4e2cac6cd9190171ae5e181685\cumulus_menus-1.20.4-1.0.1-neoforge.jar]
-[17Mai2024 14:40:27.894] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\PC\.gradle\caches\modules-2\files-2.1\com.aetherteam.cumulus\cumulus_menus\1.20.4-1.0.1-neoforge\67c91d7d1f210b4e2cac6cd9190171ae5e181685\cumulus_menus-1.20.4-1.0.1-neoforge.jar
-[17Mai2024 14:40:27.895] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file cumulus_menus-1.20.4-1.0.1-neoforge.jar with {cumulus_menus} mods - versions {1.20.4-1.0.1-neoforge}
-[17Mai2024 14:40:27.900] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type GAMELIBRARY: [C:\Users\PC\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-forge\0.3.5\f2663a1104ece46c821fa4f8b50a6c7738b68413\mixinextras-forge-0.3.5.jar]
-[17Mai2024 14:40:27.900] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\PC\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-forge\0.3.5\f2663a1104ece46c821fa4f8b50a6c7738b68413\mixinextras-forge-0.3.5.jar
-[17Mai2024 14:40:27.901] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file mixinextras-forge-0.3.5.jar with {mixinextras} mods - versions {0.3.5}
-[17Mai2024 14:40:27.906] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type null: [C:\Users\PC\.gradle\caches\modules-2\files-2.1\top.theillusivec4.curios\curios-neoforge\7.3.4+1.20.4\a87eaa9102ea78d57c5b98f32e1f1edd71c3767c\curios-neoforge-7.3.4+1.20.4.jar]
-[17Mai2024 14:40:27.906] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\PC\.gradle\caches\modules-2\files-2.1\top.theillusivec4.curios\curios-neoforge\7.3.4+1.20.4\a87eaa9102ea78d57c5b98f32e1f1edd71c3767c\curios-neoforge-7.3.4+1.20.4.jar
-[17Mai2024 14:40:27.907] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file curios-neoforge-7.3.4+1.20.4.jar with {curios} mods - versions {7.3.4+1.20.4}
-[17Mai2024 14:40:27.908] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Locator net.neoforged.fml.loading.moddiscovery.ClasspathLocator@50b1f030 found 14 candidates or errors
-[17Mai2024 14:40:27.908] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Locator net.neoforged.fml.loading.moddiscovery.ClasspathLocator@50b1f030 found 14 valid mod files
-[17Mai2024 14:40:27.908] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "aether-1.20.4-1.4.1-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@50b1f030
-[17Mai2024 14:40:27.908] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "aeroblender-1.20.4-1.0.1-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@50b1f030
-[17Mai2024 14:40:27.909] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "TerraBlender-neoforge-1.20.4-3.3.0.12.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@50b1f030
-[17Mai2024 14:40:27.909] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "nitrogen_internals-1.20.4-1.1.0-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@50b1f030
-[17Mai2024 14:40:27.909] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "cumulus_menus-1.20.4-1.0.1-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@50b1f030
-[17Mai2024 14:40:27.909] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "mixinextras-forge-0.3.5.jar" of type GAMELIBRARY with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@50b1f030
-[17Mai2024 14:40:27.910] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "curios-neoforge-7.3.4+1.20.4.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@50b1f030
-[17Mai2024 14:40:27.910] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "aether-1.20.4-1.4.1-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@50b1f030
-[17Mai2024 14:40:27.910] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "aeroblender-1.20.4-1.0.1-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@50b1f030
-[17Mai2024 14:40:27.910] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "TerraBlender-neoforge-1.20.4-3.3.0.12.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@50b1f030
-[17Mai2024 14:40:27.911] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "nitrogen_internals-1.20.4-1.1.0-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@50b1f030
-[17Mai2024 14:40:27.911] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "cumulus_menus-1.20.4-1.0.1-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@50b1f030
-[17Mai2024 14:40:27.912] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "mixinextras-forge-0.3.5.jar" of type GAMELIBRARY with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@50b1f030
-[17Mai2024 14:40:27.912] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "curios-neoforge-7.3.4+1.20.4.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@50b1f030
-[17Mai2024 14:40:27.912] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Trying locator net.neoforged.fml.loading.moddiscovery.BuiltinGameLibraryLocator@654b72c0
-[17Mai2024 14:40:27.912] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Locator net.neoforged.fml.loading.moddiscovery.BuiltinGameLibraryLocator@654b72c0 found 0 candidates or errors
-[17Mai2024 14:40:27.912] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Locator net.neoforged.fml.loading.moddiscovery.BuiltinGameLibraryLocator@654b72c0 found 0 valid mod files
-[17Mai2024 14:40:27.924] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Found 2 mods for first modid nitrogen_internals, selecting most recent based on version data
-[17Mai2024 14:40:27.926] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Selected file nitrogen_internals-1.20.4-1.1.0-neoforge.jar for modid nitrogen_internals with version 1.20.4-1.1.0-neoforge
-[17Mai2024 14:40:27.926] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Found 2 mods for first modid mixinextras, selecting most recent based on version data
-[17Mai2024 14:40:27.926] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Selected file mixinextras-forge-0.3.5.jar for modid mixinextras with version 0.3.5
-[17Mai2024 14:40:27.926] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Found 2 mods for first modid aeroblender, selecting most recent based on version data
-[17Mai2024 14:40:27.926] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Selected file aeroblender-1.20.4-1.0.1-neoforge.jar for modid aeroblender with version 1.0.1
-[17Mai2024 14:40:27.926] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Found 2 mods for first modid terrablender, selecting most recent based on version data
-[17Mai2024 14:40:27.926] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Selected file TerraBlender-neoforge-1.20.4-3.3.0.12.jar for modid terrablender with version 3.3.0.12
-[17Mai2024 14:40:27.927] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Found 2 mods for first modid curios, selecting most recent based on version data
-[17Mai2024 14:40:27.927] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Selected file curios-neoforge-7.3.4+1.20.4.jar for modid curios with version 7.3.4+1.20.4
-[17Mai2024 14:40:27.927] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Found 2 mods for first modid cumulus_menus, selecting most recent based on version data
-[17Mai2024 14:40:27.927] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Selected file cumulus_menus-1.20.4-1.0.1-neoforge.jar for modid cumulus_menus with version 1.20.4-1.0.1-neoforge
-[17Mai2024 14:40:27.927] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Found 2 mods for first modid aether, selecting most recent based on version data
-[17Mai2024 14:40:27.928] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Selected file aether-1.20.4-1.4.1-neoforge.jar for modid aether with version 1.20.4-1.4.1-neoforge
-[17Mai2024 14:40:27.932] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Successfully Loaded 7 mods. Attempting to load dependencies...
-[17Mai2024 14:40:27.933] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Trying locator net.neoforged.fml.loading.moddiscovery.JarInJarDependencyLocator@347bdeef
-[17Mai2024 14:40:27.943] [main/TRACE] [net.neoforged.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from nitrogen_internals-1.20.4-1.1.0-neoforge.jar, it does not contain dependency information.
-[17Mai2024 14:40:27.944] [main/TRACE] [net.neoforged.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from aeroblender-1.20.4-1.0.1-neoforge.jar, it does not contain dependency information.
-[17Mai2024 14:40:27.944] [main/TRACE] [net.neoforged.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from TerraBlender-neoforge-1.20.4-3.3.0.12.jar, it does not contain dependency information.
-[17Mai2024 14:40:27.944] [main/TRACE] [net.neoforged.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from curios-neoforge-7.3.4+1.20.4.jar, it does not contain dependency information.
-[17Mai2024 14:40:27.945] [main/TRACE] [net.neoforged.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from cumulus_menus-1.20.4-1.0.1-neoforge.jar, it does not contain dependency information.
-[17Mai2024 14:40:28.067] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type GAMELIBRARY: []
-[17Mai2024 14:40:28.068] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate 
-[17Mai2024 14:40:28.069] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file cumulus_menus-1.20.4-1.0.1-neoforge.jar with {cumulus_menus} mods - versions {1.20.4-1.0.1-neoforge}
-[17Mai2024 14:40:28.079] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type GAMELIBRARY: []
-[17Mai2024 14:40:28.080] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate 
-[17Mai2024 14:40:28.081] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file nitrogen_internals-1.20.4-1.1.0-neoforge.jar with {nitrogen_internals} mods - versions {1.20.4-1.1.0-neoforge}
-[17Mai2024 14:40:28.091] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type GAMELIBRARY: []
-[17Mai2024 14:40:28.091] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate 
-[17Mai2024 14:40:28.092] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file curios-neoforge-7.3.4+1.20.4.jar with {curios} mods - versions {7.3.4+1.20.4}
-[17Mai2024 14:40:28.100] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/MANIFEST.MF mod of type GAMELIBRARY: []
-[17Mai2024 14:40:28.104] [main/TRACE] [net.neoforged.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from cumulus_menus-1.20.4-1.0.1-neoforge.jar, it does not contain dependency information.
-[17Mai2024 14:40:28.105] [main/TRACE] [net.neoforged.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from nitrogen_internals-1.20.4-1.1.0-neoforge.jar, it does not contain dependency information.
-[17Mai2024 14:40:28.105] [main/TRACE] [net.neoforged.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from curios-neoforge-7.3.4+1.20.4.jar, it does not contain dependency information.
-[17Mai2024 14:40:28.105] [main/TRACE] [net.neoforged.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from MixinExtras-0.3.5.jar, it does not contain dependency information.
-[17Mai2024 14:40:28.167] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/MANIFEST.MF mod of type GAMELIBRARY: []
-[17Mai2024 14:40:28.170] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type GAMELIBRARY: []
-[17Mai2024 14:40:28.170] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate 
-[17Mai2024 14:40:28.171] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file cumulus_menus-1.20.4-1.0.1-neoforge.jar with {cumulus_menus} mods - versions {1.20.4-1.0.1-neoforge}
-[17Mai2024 14:40:28.177] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type GAMELIBRARY: []
-[17Mai2024 14:40:28.177] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate 
-[17Mai2024 14:40:28.179] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file curios-neoforge-7.3.4+1.20.4.jar with {curios} mods - versions {7.3.4+1.20.4}
-[17Mai2024 14:40:28.186] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type GAMELIBRARY: []
-[17Mai2024 14:40:28.186] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate 
-[17Mai2024 14:40:28.187] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file nitrogen_internals-1.20.4-1.1.0-neoforge.jar with {nitrogen_internals} mods - versions {1.20.4-1.1.0-neoforge}
-[17Mai2024 14:40:28.190] [main/WARN] [net.neoforged.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: nitrogen_internals. Using Mod File: C:\Users\PC\.gradle\caches\modules-2\files-2.1\com.aetherteam.nitrogen\nitrogen_internals\1.20.4-1.1.0-neoforge\b42c03429f3a8aa959731082954503a043b03451\nitrogen_internals-1.20.4-1.1.0-neoforge.jar
-[17Mai2024 14:40:28.191] [main/WARN] [net.neoforged.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: curios. Using Mod File: C:\Users\PC\.gradle\caches\modules-2\files-2.1\top.theillusivec4.curios\curios-neoforge\7.3.4+1.20.4\a87eaa9102ea78d57c5b98f32e1f1edd71c3767c\curios-neoforge-7.3.4+1.20.4.jar
-[17Mai2024 14:40:28.191] [main/WARN] [net.neoforged.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: cumulus_menus. Using Mod File: C:\Users\PC\.gradle\caches\modules-2\files-2.1\com.aetherteam.cumulus\cumulus_menus\1.20.4-1.0.1-neoforge\67c91d7d1f210b4e2cac6cd9190171ae5e181685\cumulus_menus-1.20.4-1.0.1-neoforge.jar
-[17Mai2024 14:40:28.191] [main/INFO] [net.neoforged.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
-[17Mai2024 14:40:28.192] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "MixinExtras-0.3.5.jar" of type GAMELIBRARY with provider net.neoforged.fml.loading.moddiscovery.JarInJarDependencyLocator@347bdeef
-[17Mai2024 14:40:28.194] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\PC\.gradle\caches\modules-2\files-2.1\com.aetherteam.nitrogen\nitrogen_internals\1.20.4-1.1.0-neoforge\b42c03429f3a8aa959731082954503a043b03451\nitrogen_internals-1.20.4-1.1.0-neoforge.jar
-[17Mai2024 14:40:28.195] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file nitrogen_internals-1.20.4-1.1.0-neoforge.jar with {nitrogen_internals} mods - versions {1.20.4-1.1.0-neoforge}
-[17Mai2024 14:40:28.200] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\PC\.gradle\caches\modules-2\files-2.1\com.aetherteam.nitrogen\nitrogen_internals\1.20.4-1.1.0-neoforge\b42c03429f3a8aa959731082954503a043b03451\nitrogen_internals-1.20.4-1.1.0-neoforge.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[1,)]]
-[17Mai2024 14:40:28.201] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Found mixin config nitrogen_internals.mixins.json
-[17Mai2024 14:40:28.202] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\PC\Documents\Ancient-Aether3\libs\aeroblender-1.20.4-1.0.1-neoforge.jar
-[17Mai2024 14:40:28.203] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file aeroblender-1.20.4-1.0.1-neoforge.jar with {aeroblender} mods - versions {1.0.1}
-[17Mai2024 14:40:28.203] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\PC\Documents\Ancient-Aether3\libs\aeroblender-1.20.4-1.0.1-neoforge.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[1,)]]
-[17Mai2024 14:40:28.204] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Found mixin config aeroblender.mixins.json
-[17Mai2024 14:40:28.204] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\PC\Documents\Ancient-Aether3\libs\TerraBlender-neoforge-1.20.4-3.3.0.12.jar
-[17Mai2024 14:40:28.204] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file TerraBlender-neoforge-1.20.4-3.3.0.12.jar with {terrablender} mods - versions {3.3.0.12}
-[17Mai2024 14:40:28.205] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\PC\Documents\Ancient-Aether3\libs\TerraBlender-neoforge-1.20.4-3.3.0.12.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[1,)]]
-[17Mai2024 14:40:28.205] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\PC\.gradle\caches\modules-2\files-2.1\com.aetherteam.cumulus\cumulus_menus\1.20.4-1.0.1-neoforge\67c91d7d1f210b4e2cac6cd9190171ae5e181685\cumulus_menus-1.20.4-1.0.1-neoforge.jar
-[17Mai2024 14:40:28.206] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file cumulus_menus-1.20.4-1.0.1-neoforge.jar with {cumulus_menus} mods - versions {1.20.4-1.0.1-neoforge}
-[17Mai2024 14:40:28.206] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\PC\.gradle\caches\modules-2\files-2.1\com.aetherteam.cumulus\cumulus_menus\1.20.4-1.0.1-neoforge\67c91d7d1f210b4e2cac6cd9190171ae5e181685\cumulus_menus-1.20.4-1.0.1-neoforge.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[1,)]]
-[17Mai2024 14:40:28.206] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Found mixin config cumulus_menus.mixins.json
-[17Mai2024 14:40:28.206] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\PC\.gradle\caches\modules-2\files-2.1\top.theillusivec4.curios\curios-neoforge\7.3.4+1.20.4\a87eaa9102ea78d57c5b98f32e1f1edd71c3767c\curios-neoforge-7.3.4+1.20.4.jar
-[17Mai2024 14:40:28.207] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file curios-neoforge-7.3.4+1.20.4.jar with {curios} mods - versions {7.3.4+1.20.4}
-[17Mai2024 14:40:28.207] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\PC\.gradle\caches\modules-2\files-2.1\top.theillusivec4.curios\curios-neoforge\7.3.4+1.20.4\a87eaa9102ea78d57c5b98f32e1f1edd71c3767c\curios-neoforge-7.3.4+1.20.4.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[1,)]]
-[17Mai2024 14:40:28.207] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Found mixin config curios.neoforge.mixins.json
-[17Mai2024 14:40:28.207] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Found mixin config curios.mixins.json
-[17Mai2024 14:40:28.207] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\PC\.gradle\caches\modules-2\files-2.1\com.aetherteam.aether\aether\1.20.4-1.4.1-neoforge\fda49d3eb9068a42e3706039e6e0ceb22cb34fa8\aether-1.20.4-1.4.1-neoforge.jar
-[17Mai2024 14:40:28.208] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file aether-1.20.4-1.4.1-neoforge.jar with {aether} mods - versions {1.20.4-1.4.1-neoforge}
-[17Mai2024 14:40:28.209] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\PC\.gradle\caches\modules-2\files-2.1\com.aetherteam.aether\aether\1.20.4-1.4.1-neoforge\fda49d3eb9068a42e3706039e6e0ceb22cb34fa8\aether-1.20.4-1.4.1-neoforge.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[1,)]]
-[17Mai2024 14:40:28.209] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Found mixin config aether.mixins.json
-[17Mai2024 14:40:28.209] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file  with languages []
-[17Mai2024 14:40:28.209] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\PC\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-forge\0.3.5\f2663a1104ece46c821fa4f8b50a6c7738b68413\mixinextras-forge-0.3.5.jar
-[17Mai2024 14:40:28.210] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file mixinextras-forge-0.3.5.jar with {mixinextras} mods - versions {0.3.5}
-[17Mai2024 14:40:28.210] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\PC\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-forge\0.3.5\f2663a1104ece46c821fa4f8b50a6c7738b68413\mixinextras-forge-0.3.5.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=*]]
-[17Mai2024 14:40:28.212] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModValidator/SCAN]: Found 8 mod files with 7 mods
-[17Mai2024 14:40:28.214] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service fml
-[17Mai2024 14:40:28.222] [main/DEBUG] [net.neoforged.fml.loading.LanguageLoadingProvider/CORE]: Found 3 language providers
-[17Mai2024 14:40:28.223] [main/DEBUG] [net.neoforged.fml.loading.LanguageLoadingProvider/CORE]: Found language provider javafml, version 2.0
-[17Mai2024 14:40:28.224] [main/DEBUG] [net.neoforged.fml.loading.LanguageLoadingProvider/CORE]: Found language provider lowcodefml, version 2.0
-[17Mai2024 14:40:28.224] [main/DEBUG] [net.neoforged.fml.loading.LanguageLoadingProvider/CORE]: Found language provider minecraft, version 2.0
-[17Mai2024 14:40:28.237] [main/DEBUG] [net.neoforged.fml.loading.ModSorter/]: Configured system mods: [minecraft]
+[17Mai2024 19:34:26.159] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Trying locator net.neoforged.fml.loading.moddiscovery.ClasspathLocator@1bf0f6f6
+[17Mai2024 19:34:26.251] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type null: [C:\Users\Timon\.gradle\caches\modules-2\files-2.1\com.aetherteam.aether\aether\1.20.4-1.4.1-neoforge\fda49d3eb9068a42e3706039e6e0ceb22cb34fa8\aether-1.20.4-1.4.1-neoforge.jar]
+[17Mai2024 19:34:26.251] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Timon\.gradle\caches\modules-2\files-2.1\com.aetherteam.aether\aether\1.20.4-1.4.1-neoforge\fda49d3eb9068a42e3706039e6e0ceb22cb34fa8\aether-1.20.4-1.4.1-neoforge.jar
+[17Mai2024 19:34:26.255] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file aether-1.20.4-1.4.1-neoforge.jar with {aether} mods - versions {1.20.4-1.4.1-neoforge}
+[17Mai2024 19:34:26.258] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type null: [C:\Users\Timon\Documents\Forge 1.19.4\libs\aeroblender-1.20.4-1.0.1-neoforge.jar]
+[17Mai2024 19:34:26.259] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Timon\Documents\Forge 1.19.4\libs\aeroblender-1.20.4-1.0.1-neoforge.jar
+[17Mai2024 19:34:26.259] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file aeroblender-1.20.4-1.0.1-neoforge.jar with {aeroblender} mods - versions {1.0.1}
+[17Mai2024 19:34:26.262] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type null: [C:\Users\Timon\Documents\Forge 1.19.4\libs\TerraBlender-neoforge-1.20.4-3.3.0.12.jar]
+[17Mai2024 19:34:26.262] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Timon\Documents\Forge 1.19.4\libs\TerraBlender-neoforge-1.20.4-3.3.0.12.jar
+[17Mai2024 19:34:26.263] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file TerraBlender-neoforge-1.20.4-3.3.0.12.jar with {terrablender} mods - versions {3.3.0.12}
+[17Mai2024 19:34:26.267] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type null: [C:\Users\Timon\.gradle\caches\modules-2\files-2.1\com.aetherteam.nitrogen\nitrogen_internals\1.20.4-1.1.0-neoforge\b42c03429f3a8aa959731082954503a043b03451\nitrogen_internals-1.20.4-1.1.0-neoforge.jar]
+[17Mai2024 19:34:26.267] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Timon\.gradle\caches\modules-2\files-2.1\com.aetherteam.nitrogen\nitrogen_internals\1.20.4-1.1.0-neoforge\b42c03429f3a8aa959731082954503a043b03451\nitrogen_internals-1.20.4-1.1.0-neoforge.jar
+[17Mai2024 19:34:26.268] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file nitrogen_internals-1.20.4-1.1.0-neoforge.jar with {nitrogen_internals} mods - versions {1.20.4-1.1.0-neoforge}
+[17Mai2024 19:34:26.270] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type null: [C:\Users\Timon\.gradle\caches\modules-2\files-2.1\com.aetherteam.cumulus\cumulus_menus\1.20.4-1.0.1-neoforge\67c91d7d1f210b4e2cac6cd9190171ae5e181685\cumulus_menus-1.20.4-1.0.1-neoforge.jar]
+[17Mai2024 19:34:26.270] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Timon\.gradle\caches\modules-2\files-2.1\com.aetherteam.cumulus\cumulus_menus\1.20.4-1.0.1-neoforge\67c91d7d1f210b4e2cac6cd9190171ae5e181685\cumulus_menus-1.20.4-1.0.1-neoforge.jar
+[17Mai2024 19:34:26.271] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file cumulus_menus-1.20.4-1.0.1-neoforge.jar with {cumulus_menus} mods - versions {1.20.4-1.0.1-neoforge}
+[17Mai2024 19:34:26.274] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type GAMELIBRARY: [C:\Users\Timon\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-forge\0.3.5\f2663a1104ece46c821fa4f8b50a6c7738b68413\mixinextras-forge-0.3.5.jar]
+[17Mai2024 19:34:26.274] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Timon\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-forge\0.3.5\f2663a1104ece46c821fa4f8b50a6c7738b68413\mixinextras-forge-0.3.5.jar
+[17Mai2024 19:34:26.275] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file mixinextras-forge-0.3.5.jar with {mixinextras} mods - versions {0.3.5}
+[17Mai2024 19:34:26.279] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type null: [C:\Users\Timon\.gradle\caches\modules-2\files-2.1\top.theillusivec4.curios\curios-neoforge\7.3.4+1.20.4\a87eaa9102ea78d57c5b98f32e1f1edd71c3767c\curios-neoforge-7.3.4+1.20.4.jar]
+[17Mai2024 19:34:26.279] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Timon\.gradle\caches\modules-2\files-2.1\top.theillusivec4.curios\curios-neoforge\7.3.4+1.20.4\a87eaa9102ea78d57c5b98f32e1f1edd71c3767c\curios-neoforge-7.3.4+1.20.4.jar
+[17Mai2024 19:34:26.280] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file curios-neoforge-7.3.4+1.20.4.jar with {curios} mods - versions {7.3.4+1.20.4}
+[17Mai2024 19:34:26.286] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type null: [C:\Users\Timon\.gradle\caches\modules-2\files-2.1\com.aetherteam.aether\aether\1.20.4-1.4.1-neoforge\fda49d3eb9068a42e3706039e6e0ceb22cb34fa8\aether-1.20.4-1.4.1-neoforge.jar]
+[17Mai2024 19:34:26.286] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Timon\.gradle\caches\modules-2\files-2.1\com.aetherteam.aether\aether\1.20.4-1.4.1-neoforge\fda49d3eb9068a42e3706039e6e0ceb22cb34fa8\aether-1.20.4-1.4.1-neoforge.jar
+[17Mai2024 19:34:26.287] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file aether-1.20.4-1.4.1-neoforge.jar with {aether} mods - versions {1.20.4-1.4.1-neoforge}
+[17Mai2024 19:34:26.289] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type null: [C:\Users\Timon\Documents\Forge 1.19.4\libs\aeroblender-1.20.4-1.0.1-neoforge.jar]
+[17Mai2024 19:34:26.289] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Timon\Documents\Forge 1.19.4\libs\aeroblender-1.20.4-1.0.1-neoforge.jar
+[17Mai2024 19:34:26.289] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file aeroblender-1.20.4-1.0.1-neoforge.jar with {aeroblender} mods - versions {1.0.1}
+[17Mai2024 19:34:26.291] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type null: [C:\Users\Timon\Documents\Forge 1.19.4\libs\TerraBlender-neoforge-1.20.4-3.3.0.12.jar]
+[17Mai2024 19:34:26.291] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Timon\Documents\Forge 1.19.4\libs\TerraBlender-neoforge-1.20.4-3.3.0.12.jar
+[17Mai2024 19:34:26.291] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file TerraBlender-neoforge-1.20.4-3.3.0.12.jar with {terrablender} mods - versions {3.3.0.12}
+[17Mai2024 19:34:26.295] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type null: [C:\Users\Timon\.gradle\caches\modules-2\files-2.1\com.aetherteam.nitrogen\nitrogen_internals\1.20.4-1.1.0-neoforge\b42c03429f3a8aa959731082954503a043b03451\nitrogen_internals-1.20.4-1.1.0-neoforge.jar]
+[17Mai2024 19:34:26.296] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Timon\.gradle\caches\modules-2\files-2.1\com.aetherteam.nitrogen\nitrogen_internals\1.20.4-1.1.0-neoforge\b42c03429f3a8aa959731082954503a043b03451\nitrogen_internals-1.20.4-1.1.0-neoforge.jar
+[17Mai2024 19:34:26.296] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file nitrogen_internals-1.20.4-1.1.0-neoforge.jar with {nitrogen_internals} mods - versions {1.20.4-1.1.0-neoforge}
+[17Mai2024 19:34:26.299] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type null: [C:\Users\Timon\.gradle\caches\modules-2\files-2.1\com.aetherteam.cumulus\cumulus_menus\1.20.4-1.0.1-neoforge\67c91d7d1f210b4e2cac6cd9190171ae5e181685\cumulus_menus-1.20.4-1.0.1-neoforge.jar]
+[17Mai2024 19:34:26.299] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Timon\.gradle\caches\modules-2\files-2.1\com.aetherteam.cumulus\cumulus_menus\1.20.4-1.0.1-neoforge\67c91d7d1f210b4e2cac6cd9190171ae5e181685\cumulus_menus-1.20.4-1.0.1-neoforge.jar
+[17Mai2024 19:34:26.299] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file cumulus_menus-1.20.4-1.0.1-neoforge.jar with {cumulus_menus} mods - versions {1.20.4-1.0.1-neoforge}
+[17Mai2024 19:34:26.302] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type GAMELIBRARY: [C:\Users\Timon\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-forge\0.3.5\f2663a1104ece46c821fa4f8b50a6c7738b68413\mixinextras-forge-0.3.5.jar]
+[17Mai2024 19:34:26.302] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Timon\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-forge\0.3.5\f2663a1104ece46c821fa4f8b50a6c7738b68413\mixinextras-forge-0.3.5.jar
+[17Mai2024 19:34:26.302] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file mixinextras-forge-0.3.5.jar with {mixinextras} mods - versions {0.3.5}
+[17Mai2024 19:34:26.305] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type null: [C:\Users\Timon\.gradle\caches\modules-2\files-2.1\top.theillusivec4.curios\curios-neoforge\7.3.4+1.20.4\a87eaa9102ea78d57c5b98f32e1f1edd71c3767c\curios-neoforge-7.3.4+1.20.4.jar]
+[17Mai2024 19:34:26.305] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Timon\.gradle\caches\modules-2\files-2.1\top.theillusivec4.curios\curios-neoforge\7.3.4+1.20.4\a87eaa9102ea78d57c5b98f32e1f1edd71c3767c\curios-neoforge-7.3.4+1.20.4.jar
+[17Mai2024 19:34:26.305] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file curios-neoforge-7.3.4+1.20.4.jar with {curios} mods - versions {7.3.4+1.20.4}
+[17Mai2024 19:34:26.306] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Locator net.neoforged.fml.loading.moddiscovery.ClasspathLocator@1bf0f6f6 found 14 candidates or errors
+[17Mai2024 19:34:26.306] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Locator net.neoforged.fml.loading.moddiscovery.ClasspathLocator@1bf0f6f6 found 14 valid mod files
+[17Mai2024 19:34:26.306] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "aether-1.20.4-1.4.1-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@1bf0f6f6
+[17Mai2024 19:34:26.306] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "aeroblender-1.20.4-1.0.1-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@1bf0f6f6
+[17Mai2024 19:34:26.306] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "TerraBlender-neoforge-1.20.4-3.3.0.12.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@1bf0f6f6
+[17Mai2024 19:34:26.306] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "nitrogen_internals-1.20.4-1.1.0-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@1bf0f6f6
+[17Mai2024 19:34:26.306] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "cumulus_menus-1.20.4-1.0.1-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@1bf0f6f6
+[17Mai2024 19:34:26.306] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "mixinextras-forge-0.3.5.jar" of type GAMELIBRARY with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@1bf0f6f6
+[17Mai2024 19:34:26.306] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "curios-neoforge-7.3.4+1.20.4.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@1bf0f6f6
+[17Mai2024 19:34:26.307] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "aether-1.20.4-1.4.1-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@1bf0f6f6
+[17Mai2024 19:34:26.307] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "aeroblender-1.20.4-1.0.1-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@1bf0f6f6
+[17Mai2024 19:34:26.307] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "TerraBlender-neoforge-1.20.4-3.3.0.12.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@1bf0f6f6
+[17Mai2024 19:34:26.307] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "nitrogen_internals-1.20.4-1.1.0-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@1bf0f6f6
+[17Mai2024 19:34:26.307] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "cumulus_menus-1.20.4-1.0.1-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@1bf0f6f6
+[17Mai2024 19:34:26.307] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "mixinextras-forge-0.3.5.jar" of type GAMELIBRARY with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@1bf0f6f6
+[17Mai2024 19:34:26.307] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "curios-neoforge-7.3.4+1.20.4.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@1bf0f6f6
+[17Mai2024 19:34:26.307] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Trying locator net.neoforged.fml.loading.moddiscovery.BuiltinGameLibraryLocator@6826c41e
+[17Mai2024 19:34:26.307] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Locator net.neoforged.fml.loading.moddiscovery.BuiltinGameLibraryLocator@6826c41e found 0 candidates or errors
+[17Mai2024 19:34:26.308] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Locator net.neoforged.fml.loading.moddiscovery.BuiltinGameLibraryLocator@6826c41e found 0 valid mod files
+[17Mai2024 19:34:26.313] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Found 2 mods for first modid nitrogen_internals, selecting most recent based on version data
+[17Mai2024 19:34:26.314] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Selected file nitrogen_internals-1.20.4-1.1.0-neoforge.jar for modid nitrogen_internals with version 1.20.4-1.1.0-neoforge
+[17Mai2024 19:34:26.314] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Found 2 mods for first modid mixinextras, selecting most recent based on version data
+[17Mai2024 19:34:26.314] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Selected file mixinextras-forge-0.3.5.jar for modid mixinextras with version 0.3.5
+[17Mai2024 19:34:26.314] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Found 2 mods for first modid aeroblender, selecting most recent based on version data
+[17Mai2024 19:34:26.314] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Selected file aeroblender-1.20.4-1.0.1-neoforge.jar for modid aeroblender with version 1.0.1
+[17Mai2024 19:34:26.314] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Found 2 mods for first modid terrablender, selecting most recent based on version data
+[17Mai2024 19:34:26.314] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Selected file TerraBlender-neoforge-1.20.4-3.3.0.12.jar for modid terrablender with version 3.3.0.12
+[17Mai2024 19:34:26.314] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Found 2 mods for first modid curios, selecting most recent based on version data
+[17Mai2024 19:34:26.314] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Selected file curios-neoforge-7.3.4+1.20.4.jar for modid curios with version 7.3.4+1.20.4
+[17Mai2024 19:34:26.314] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Found 2 mods for first modid cumulus_menus, selecting most recent based on version data
+[17Mai2024 19:34:26.314] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Selected file cumulus_menus-1.20.4-1.0.1-neoforge.jar for modid cumulus_menus with version 1.20.4-1.0.1-neoforge
+[17Mai2024 19:34:26.314] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Found 2 mods for first modid aether, selecting most recent based on version data
+[17Mai2024 19:34:26.315] [main/DEBUG] [net.neoforged.fml.loading.UniqueModListBuilder/]: Selected file aether-1.20.4-1.4.1-neoforge.jar for modid aether with version 1.20.4-1.4.1-neoforge
+[17Mai2024 19:34:26.317] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Successfully Loaded 7 mods. Attempting to load dependencies...
+[17Mai2024 19:34:26.317] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Trying locator net.neoforged.fml.loading.moddiscovery.JarInJarDependencyLocator@1654a892
+[17Mai2024 19:34:26.319] [main/TRACE] [net.neoforged.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from nitrogen_internals-1.20.4-1.1.0-neoforge.jar, it does not contain dependency information.
+[17Mai2024 19:34:26.319] [main/TRACE] [net.neoforged.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from aeroblender-1.20.4-1.0.1-neoforge.jar, it does not contain dependency information.
+[17Mai2024 19:34:26.319] [main/TRACE] [net.neoforged.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from TerraBlender-neoforge-1.20.4-3.3.0.12.jar, it does not contain dependency information.
+[17Mai2024 19:34:26.319] [main/TRACE] [net.neoforged.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from curios-neoforge-7.3.4+1.20.4.jar, it does not contain dependency information.
+[17Mai2024 19:34:26.319] [main/TRACE] [net.neoforged.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from cumulus_menus-1.20.4-1.0.1-neoforge.jar, it does not contain dependency information.
+[17Mai2024 19:34:26.353] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/MANIFEST.MF mod of type GAMELIBRARY: []
+[17Mai2024 19:34:26.356] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type GAMELIBRARY: []
+[17Mai2024 19:34:26.356] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate 
+[17Mai2024 19:34:26.356] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file cumulus_menus-1.20.4-1.0.1-neoforge.jar with {cumulus_menus} mods - versions {1.20.4-1.0.1-neoforge}
+[17Mai2024 19:34:26.359] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type GAMELIBRARY: []
+[17Mai2024 19:34:26.359] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate 
+[17Mai2024 19:34:26.360] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file nitrogen_internals-1.20.4-1.1.0-neoforge.jar with {nitrogen_internals} mods - versions {1.20.4-1.1.0-neoforge}
+[17Mai2024 19:34:26.364] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type GAMELIBRARY: []
+[17Mai2024 19:34:26.364] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate 
+[17Mai2024 19:34:26.365] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file curios-neoforge-7.3.4+1.20.4.jar with {curios} mods - versions {7.3.4+1.20.4}
+[17Mai2024 19:34:26.365] [main/TRACE] [net.neoforged.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from MixinExtras-0.3.5.jar, it does not contain dependency information.
+[17Mai2024 19:34:26.365] [main/TRACE] [net.neoforged.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from cumulus_menus-1.20.4-1.0.1-neoforge.jar, it does not contain dependency information.
+[17Mai2024 19:34:26.365] [main/TRACE] [net.neoforged.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from nitrogen_internals-1.20.4-1.1.0-neoforge.jar, it does not contain dependency information.
+[17Mai2024 19:34:26.365] [main/TRACE] [net.neoforged.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from curios-neoforge-7.3.4+1.20.4.jar, it does not contain dependency information.
+[17Mai2024 19:34:26.382] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/MANIFEST.MF mod of type GAMELIBRARY: []
+[17Mai2024 19:34:26.383] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type GAMELIBRARY: []
+[17Mai2024 19:34:26.383] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate 
+[17Mai2024 19:34:26.384] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file cumulus_menus-1.20.4-1.0.1-neoforge.jar with {cumulus_menus} mods - versions {1.20.4-1.0.1-neoforge}
+[17Mai2024 19:34:26.386] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type GAMELIBRARY: []
+[17Mai2024 19:34:26.386] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate 
+[17Mai2024 19:34:26.386] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file curios-neoforge-7.3.4+1.20.4.jar with {curios} mods - versions {7.3.4+1.20.4}
+[17Mai2024 19:34:26.389] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.AbstractModProvider/SCAN]: Found META-INF/mods.toml mod of type GAMELIBRARY: []
+[17Mai2024 19:34:26.389] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate 
+[17Mai2024 19:34:26.389] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file nitrogen_internals-1.20.4-1.1.0-neoforge.jar with {nitrogen_internals} mods - versions {1.20.4-1.1.0-neoforge}
+[17Mai2024 19:34:26.390] [main/WARN] [net.neoforged.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: nitrogen_internals. Using Mod File: C:\Users\Timon\.gradle\caches\modules-2\files-2.1\com.aetherteam.nitrogen\nitrogen_internals\1.20.4-1.1.0-neoforge\b42c03429f3a8aa959731082954503a043b03451\nitrogen_internals-1.20.4-1.1.0-neoforge.jar
+[17Mai2024 19:34:26.390] [main/WARN] [net.neoforged.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: curios. Using Mod File: C:\Users\Timon\.gradle\caches\modules-2\files-2.1\top.theillusivec4.curios\curios-neoforge\7.3.4+1.20.4\a87eaa9102ea78d57c5b98f32e1f1edd71c3767c\curios-neoforge-7.3.4+1.20.4.jar
+[17Mai2024 19:34:26.390] [main/WARN] [net.neoforged.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: cumulus_menus. Using Mod File: C:\Users\Timon\.gradle\caches\modules-2\files-2.1\com.aetherteam.cumulus\cumulus_menus\1.20.4-1.0.1-neoforge\67c91d7d1f210b4e2cac6cd9190171ae5e181685\cumulus_menus-1.20.4-1.0.1-neoforge.jar
+[17Mai2024 19:34:26.390] [main/INFO] [net.neoforged.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
+[17Mai2024 19:34:26.391] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "MixinExtras-0.3.5.jar" of type GAMELIBRARY with provider net.neoforged.fml.loading.moddiscovery.JarInJarDependencyLocator@1654a892
+[17Mai2024 19:34:26.391] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Timon\.gradle\caches\modules-2\files-2.1\com.aetherteam.nitrogen\nitrogen_internals\1.20.4-1.1.0-neoforge\b42c03429f3a8aa959731082954503a043b03451\nitrogen_internals-1.20.4-1.1.0-neoforge.jar
+[17Mai2024 19:34:26.393] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file nitrogen_internals-1.20.4-1.1.0-neoforge.jar with {nitrogen_internals} mods - versions {1.20.4-1.1.0-neoforge}
+[17Mai2024 19:34:26.395] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\Timon\.gradle\caches\modules-2\files-2.1\com.aetherteam.nitrogen\nitrogen_internals\1.20.4-1.1.0-neoforge\b42c03429f3a8aa959731082954503a043b03451\nitrogen_internals-1.20.4-1.1.0-neoforge.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[1,)]]
+[17Mai2024 19:34:26.395] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Found mixin config nitrogen_internals.mixins.json
+[17Mai2024 19:34:26.396] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Timon\Documents\Forge 1.19.4\libs\aeroblender-1.20.4-1.0.1-neoforge.jar
+[17Mai2024 19:34:26.396] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file aeroblender-1.20.4-1.0.1-neoforge.jar with {aeroblender} mods - versions {1.0.1}
+[17Mai2024 19:34:26.396] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\Timon\Documents\Forge 1.19.4\libs\aeroblender-1.20.4-1.0.1-neoforge.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[1,)]]
+[17Mai2024 19:34:26.396] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Found mixin config aeroblender.mixins.json
+[17Mai2024 19:34:26.396] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Timon\Documents\Forge 1.19.4\libs\TerraBlender-neoforge-1.20.4-3.3.0.12.jar
+[17Mai2024 19:34:26.397] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file TerraBlender-neoforge-1.20.4-3.3.0.12.jar with {terrablender} mods - versions {3.3.0.12}
+[17Mai2024 19:34:26.397] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\Timon\Documents\Forge 1.19.4\libs\TerraBlender-neoforge-1.20.4-3.3.0.12.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[1,)]]
+[17Mai2024 19:34:26.397] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Timon\.gradle\caches\modules-2\files-2.1\com.aetherteam.cumulus\cumulus_menus\1.20.4-1.0.1-neoforge\67c91d7d1f210b4e2cac6cd9190171ae5e181685\cumulus_menus-1.20.4-1.0.1-neoforge.jar
+[17Mai2024 19:34:26.397] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file cumulus_menus-1.20.4-1.0.1-neoforge.jar with {cumulus_menus} mods - versions {1.20.4-1.0.1-neoforge}
+[17Mai2024 19:34:26.397] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\Timon\.gradle\caches\modules-2\files-2.1\com.aetherteam.cumulus\cumulus_menus\1.20.4-1.0.1-neoforge\67c91d7d1f210b4e2cac6cd9190171ae5e181685\cumulus_menus-1.20.4-1.0.1-neoforge.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[1,)]]
+[17Mai2024 19:34:26.397] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Found mixin config cumulus_menus.mixins.json
+[17Mai2024 19:34:26.397] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Timon\.gradle\caches\modules-2\files-2.1\top.theillusivec4.curios\curios-neoforge\7.3.4+1.20.4\a87eaa9102ea78d57c5b98f32e1f1edd71c3767c\curios-neoforge-7.3.4+1.20.4.jar
+[17Mai2024 19:34:26.398] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file curios-neoforge-7.3.4+1.20.4.jar with {curios} mods - versions {7.3.4+1.20.4}
+[17Mai2024 19:34:26.398] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\Timon\.gradle\caches\modules-2\files-2.1\top.theillusivec4.curios\curios-neoforge\7.3.4+1.20.4\a87eaa9102ea78d57c5b98f32e1f1edd71c3767c\curios-neoforge-7.3.4+1.20.4.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[1,)]]
+[17Mai2024 19:34:26.398] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Found mixin config curios.neoforge.mixins.json
+[17Mai2024 19:34:26.398] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Found mixin config curios.mixins.json
+[17Mai2024 19:34:26.398] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Timon\.gradle\caches\modules-2\files-2.1\com.aetherteam.aether\aether\1.20.4-1.4.1-neoforge\fda49d3eb9068a42e3706039e6e0ceb22cb34fa8\aether-1.20.4-1.4.1-neoforge.jar
+[17Mai2024 19:34:26.398] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file aether-1.20.4-1.4.1-neoforge.jar with {aether} mods - versions {1.20.4-1.4.1-neoforge}
+[17Mai2024 19:34:26.399] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\Timon\.gradle\caches\modules-2\files-2.1\com.aetherteam.aether\aether\1.20.4-1.4.1-neoforge\fda49d3eb9068a42e3706039e6e0ceb22cb34fa8\aether-1.20.4-1.4.1-neoforge.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[1,)]]
+[17Mai2024 19:34:26.399] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Found mixin config aether.mixins.json
+[17Mai2024 19:34:26.399] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file  with languages []
+[17Mai2024 19:34:26.399] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\Timon\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-forge\0.3.5\f2663a1104ece46c821fa4f8b50a6c7738b68413\mixinextras-forge-0.3.5.jar
+[17Mai2024 19:34:26.399] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file mixinextras-forge-0.3.5.jar with {mixinextras} mods - versions {0.3.5}
+[17Mai2024 19:34:26.399] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\Timon\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-forge\0.3.5\f2663a1104ece46c821fa4f8b50a6c7738b68413\mixinextras-forge-0.3.5.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=*]]
+[17Mai2024 19:34:26.399] [main/DEBUG] [net.neoforged.fml.loading.moddiscovery.ModValidator/SCAN]: Found 8 mod files with 7 mods
+[17Mai2024 19:34:26.400] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service fml
+[17Mai2024 19:34:26.403] [main/DEBUG] [net.neoforged.fml.loading.LanguageLoadingProvider/CORE]: Found 3 language providers
+[17Mai2024 19:34:26.403] [main/DEBUG] [net.neoforged.fml.loading.LanguageLoadingProvider/CORE]: Found language provider javafml, version 2.0
+[17Mai2024 19:34:26.403] [main/DEBUG] [net.neoforged.fml.loading.LanguageLoadingProvider/CORE]: Found language provider lowcodefml, version 2.0
+[17Mai2024 19:34:26.404] [main/DEBUG] [net.neoforged.fml.loading.LanguageLoadingProvider/CORE]: Found language provider minecraft, version 2.0
+[17Mai2024 19:34:26.407] [main/DEBUG] [net.neoforged.fml.loading.ModSorter/]: Configured system mods: [minecraft]
