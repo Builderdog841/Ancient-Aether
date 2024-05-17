@@ -55,7 +55,7 @@ public class AncientAether {
         bus.addListener(AncientAetherData::dataSetup);
         bus.addListener(this::serverSetup);
         bus.addListener(this::commonSetup);
-        bus.addListener(this::addPacks);
+        bus.addListener(this::packSetup);
 
         DeferredRegister<?>[] registers = {
                 AncientAetherBlocks.BLOCKS,
@@ -132,7 +132,7 @@ public class AncientAether {
         DispenserBlock.registerBehavior(AncientAetherItems.SAKURA_CHEST_BOAT.get(), new DispenseAncientAetherBoatBehavior(true));
     }
 
-    public void addPacks(AddPackFindersEvent event) {
+    public void packSetup(AddPackFindersEvent event) {
         if (event.getPackType() == PackType.CLIENT_RESOURCES) {
             var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/ancient_aether_texture_tweaks");
             var pack = Pack.readMetaAndCreate("builtin/ancient_aether_texture_tweaks", Component.translatable("pack.ancient_aether.texture_tweaks.title"), true,
