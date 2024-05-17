@@ -26,13 +26,13 @@ public class ObeliskTrigger extends SimpleCriterionTrigger<ObeliskTrigger.Instan
     }
 
     public record Instance(Optional<ContextAwarePredicate> player, Optional<ItemPredicate> item) implements SimpleInstance {
-        public static final Codec<ObeliskTrigger.Instance> CODEC = RecordCodecBuilder.create(instance -> instance.group(
-                        ExtraCodecs.strictOptionalField(EntityPredicate.ADVANCEMENT_CODEC, "player").forGetter(ObeliskTrigger.Instance::player),
-                        ExtraCodecs.strictOptionalField(ItemPredicate.CODEC, "item").forGetter(ObeliskTrigger.Instance::item))
-                .apply(instance, ObeliskTrigger.Instance::new));
+        public static final Codec<Instance> CODEC = RecordCodecBuilder.create(instance -> instance.group(
+                        ExtraCodecs.strictOptionalField(EntityPredicate.ADVANCEMENT_CODEC, "player").forGetter(Instance::player),
+                        ExtraCodecs.strictOptionalField(ItemPredicate.CODEC, "item").forGetter(Instance::item))
+                .apply(instance, Instance::new));
 
         public static Criterion<Instance> forItem(ItemPredicate item) {
-            return AncientAetherTriggers.OBELISK_ACTIVATION.get().createCriterion(new ObeliskTrigger.Instance(Optional.empty(), Optional.of(item)));
+            return AncientAetherTriggers.OBELISK_ACTIVATION.get().createCriterion(new Instance(Optional.empty(), Optional.of(item)));
         }
 
         public static Criterion<Instance> forItem(ItemLike item) {

@@ -1,5 +1,0 @@
-{
-  "type": "forge:remove_features",
-  "biomes": "#aether:is_aether",
-  "features": "aether:white_flower_patch"
-}

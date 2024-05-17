@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "ancient_aether:block/holystone_brick_mosaic_top",
-    "side": "ancient_aether:block/holystone_brick_mosaic"
-  }
-}

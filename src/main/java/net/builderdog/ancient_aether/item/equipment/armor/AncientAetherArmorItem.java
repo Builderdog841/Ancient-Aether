@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nullable;
 
 public class AncientAetherArmorItem extends ArmorItem {
-    public AncientAetherArmorItem(ArmorMaterial material, ArmorItem.Type type, Properties properties) {
+    public AncientAetherArmorItem(ArmorMaterial material, Type type, Properties properties) {
         super(material, type, properties);
     }
 

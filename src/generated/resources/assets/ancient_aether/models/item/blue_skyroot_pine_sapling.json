@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "ancient_aether:block/blue_skyroot_pine_sapling"
-  }
-}

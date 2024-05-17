@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "ancient_aether:item/valkyrum_gloves",
-    "layer1": "aether:trims/items/gloves_trim_lapis"
-  }
-}

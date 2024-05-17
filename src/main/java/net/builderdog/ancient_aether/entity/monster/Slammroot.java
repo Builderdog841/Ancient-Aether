@@ -65,9 +65,9 @@ public class Slammroot extends Slime {
     public void setSize(int size, boolean resetHealth) {}
 
     @Override
-    public void remove(@Nonnull Entity.RemovalReason reason) {
+    public void remove(@Nonnull RemovalReason reason) {
         setRemoved(reason);
-        if (reason == Entity.RemovalReason.KILLED) {
+        if (reason == RemovalReason.KILLED) {
             gameEvent(GameEvent.ENTITY_DIE);
         }
     }

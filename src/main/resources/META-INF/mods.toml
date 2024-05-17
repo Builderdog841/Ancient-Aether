@@ -1,43 +1,10 @@
-modLoader = "javafml"
-loaderVersion = "[1,)"
-license = "Assets: All Rights Reserved; Code: LGPL-3.0"
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
 
 [[mods]]
-modId = "ancient_aether"
-version = "0.10.0"
-displayName = "Ancient Aether"
-logoFile = "ancient_aether.png"
-credits = "Contributors: TunefulTurnip, Zepalesque | Translators: unroman, taizazanek, YuJianghan"
-authors = "Builderdog"
-description = "An exploration Aether Add-On that aims to overhaul the original ideas with modern takes."
-
-[[dependencies.ancient_aether]]
-modId = "neoforge"
-type = "required"
-versionRange = "[20.4.167,)"
-ordering = "NONE"
-side = "BOTH"
-
-[[dependencies.ancient_aether]]
-modId = "aether"
-mandatory = true
-versionRange = "[1.4.2,)"
-ordering = "AFTER"
-side = "BOTH"
-
-[[dependencies.ancient_aether]]
-modId = "terrablender"
-mandatory = true
-versionRange = "[0,)"
-ordering = "AFTER"
-side = "BOTH"
-
-[[dependencies.ancient_aether]]
-modId = "aeroblender"
-mandatory = true
-versionRange = "[1.0.1,)"
-ordering = "AFTER"
-side = "BOTH"
-
-[[mixins]]
-config = " ancient_aether.mixins.json"
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+authors="${mod_authors}"
+description='''${mod_description}'''

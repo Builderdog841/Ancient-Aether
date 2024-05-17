@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#ancient_aether:has_gravity_gravel_coasts",
-  "features": "ancient_aether:gravity_gravel_coast",
-  "step": "raw_generation"
-}

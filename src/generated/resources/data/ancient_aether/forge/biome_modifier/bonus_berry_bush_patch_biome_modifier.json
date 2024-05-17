@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#ancient_aether:is_skyroot_forest",
-  "features": "ancient_aether:bonus_berry_bush_patch",
-  "step": "vegetal_decoration"
-}

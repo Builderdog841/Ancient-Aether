@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#ancient_aether:has_water_lake_underground",
-  "features": "ancient_aether:water_lake_underground",
-  "step": "lakes"
-}

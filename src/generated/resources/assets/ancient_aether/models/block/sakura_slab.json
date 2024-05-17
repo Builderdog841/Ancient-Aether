@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "ancient_aether:block/sakura_planks",
-    "side": "ancient_aether:block/sakura_planks",
-    "top": "ancient_aether:block/sakura_planks"
-  }
-}

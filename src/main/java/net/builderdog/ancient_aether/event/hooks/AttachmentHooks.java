@@ -1,6 +1,5 @@
 package net.builderdog.ancient_aether.event.hooks;
 
-import com.aetherteam.aether.attachment.AetherDataAttachments;
 import net.builderdog.ancient_aether.attachments.AncientAetherDataAttachments;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;

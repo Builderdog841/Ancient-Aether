@@ -1,6 +1,5 @@
 package net.builderdog.ancient_aether;
 
-import com.aetherteam.aether.AetherConfig;
 import net.builderdog.ancient_aether.advancement.AncientAetherTriggers;
 import net.builderdog.ancient_aether.attachments.AncientAetherDataAttachments;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;
@@ -41,7 +40,6 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.AddPackFindersEvent;
-import net.neoforged.neoforge.event.server.ServerAboutToStartEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import teamrazor.aeroblender.aether.AetherRuleCategory;
 import terrablender.api.Regions;
@@ -53,7 +51,6 @@ public class AncientAether {
 
     public AncientAether(IEventBus bus, Dist dist) {
         bus.addListener(AncientAetherData::dataSetup);
-        bus.addListener(this::serverSetup);
         bus.addListener(this::commonSetup);
         bus.addListener(this::packSetup);
 
@@ -102,11 +99,14 @@ public class AncientAether {
         });
     }
 
+    /*
     public void serverSetup(ServerAboutToStartEvent event) {
         if (AncientAetherConfig.SERVER.server_config_overrides.get()) {
             AetherConfig.SERVER.disable_eternal_day.set(true);
         }
     }
+
+     */
 
     public void eventSetup(IEventBus neoBus) {
         IEventBus bus = NeoForge.EVENT_BUS;

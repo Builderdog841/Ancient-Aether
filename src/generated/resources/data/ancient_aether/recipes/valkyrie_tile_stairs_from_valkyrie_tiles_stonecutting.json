@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "ancient_aether:valkyrie_tiles"
-  },
-  "result": "ancient_aether:valkyrie_tile_stairs"
-}

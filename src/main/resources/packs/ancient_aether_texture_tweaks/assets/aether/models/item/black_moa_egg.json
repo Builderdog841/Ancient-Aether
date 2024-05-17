@@ -1,6 +1,0 @@
-{
-  "parent": "ancient_aether:item/template_untinted_moa_egg",
-  "textures": {
-    "egg": "ancient_aether:item/black_moa_egg"
-  }
-}

@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#ancient_aether:has_wyndcaps_crystal_islands",
-  "features": "ancient_aether:wyndcaps_crystal_island",
-  "step": "top_layer_modification"
-}

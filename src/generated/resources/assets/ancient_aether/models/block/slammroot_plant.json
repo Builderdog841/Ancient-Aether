@@ -1,7 +1,0 @@
-{
-  "parent": "ancient_aether:block/template_slammroot_plant",
-  "render_type": "minecraft:cutout_mipped",
-  "textures": {
-    "plant": "ancient_aether:block/slammroot_plant"
-  }
-}

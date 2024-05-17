@@ -6,14 +6,13 @@ import net.builderdog.ancient_aether.item.equipment.AncientAetherItemTiers;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.PickaxeItem;
 import org.jetbrains.annotations.NotNull;
 
 public class ValkyrumPickaxeItem extends PickaxeItem implements ValkyrieTool {
     public ValkyrumPickaxeItem() {
-        super(AncientAetherItemTiers.VALKYRUM, 1, -3.1F, new Item.Properties());
+        super(AncientAetherItemTiers.VALKYRUM, 1, -3.1F, new Properties());
     }
 
     @Override

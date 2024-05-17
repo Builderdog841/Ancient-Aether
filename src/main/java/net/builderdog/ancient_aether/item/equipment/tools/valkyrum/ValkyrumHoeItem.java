@@ -7,13 +7,12 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.HoeItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
 public class ValkyrumHoeItem extends HoeItem implements ValkyrieTool {
     public ValkyrumHoeItem() {
-        super(AncientAetherItemTiers.VALKYRUM, -3, -0.3F, new Item.Properties());
+        super(AncientAetherItemTiers.VALKYRUM, -3, -0.3F, new Properties());
     }
 
     @Override

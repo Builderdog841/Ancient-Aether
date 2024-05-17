@@ -1,8 +1,0 @@
-{
-  "remove": [
-    "ancient_aether:wyndcap_peaks"
-  ],
-  "values": [
-    "#ancient_aether:is_wyndcaps"
-  ]
-}

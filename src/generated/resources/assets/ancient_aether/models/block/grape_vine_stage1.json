@@ -1,7 +1,0 @@
-{
-  "parent": "ancient_aether:block/template_grape_vine",
-  "render_type": "minecraft:cutout_mipped",
-  "textures": {
-    "vine": "ancient_aether:block/grape_vine_stage1"
-  }
-}

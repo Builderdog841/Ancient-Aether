@@ -157,8 +157,8 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     }
 
     @Override
-    protected Entity.@NotNull MovementEmission getMovementEmission() {
-        return Entity.MovementEmission.EVENTS;
+    protected @NotNull MovementEmission getMovementEmission() {
+        return MovementEmission.EVENTS;
     }
 
     //---------------------[General]---------------------\\

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "ancient_aether:block/valkyrie_bricks",
-    "side": "ancient_aether:block/valkyrie_bricks",
-    "top": "ancient_aether:block/valkyrie_bricks"
-  }
-}

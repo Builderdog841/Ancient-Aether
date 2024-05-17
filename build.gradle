@@ -1,14 +1,14 @@
-import net.neoforged.gradle.common.tasks.JarJar
-
 plugins {
+    id 'java-library'
     id 'eclipse'
     id 'maven-publish'
-    id 'net.neoforged.gradle.userdev' version '7.0.108'
     id 'io.github.0ffz.github-packages' version '[1,2)'
+    id 'net.neoforged.gradle.userdev' version '7.0.97'
 }
 
-version = '0.10.0'
-group = 'net.builderdog.ancient_aether'
+version = mod_version
+group = mod_group_id
+
 repositories {
     mavenLocal()
 }
@@ -59,6 +59,7 @@ repositories {
     maven githubPackage.invoke("The-Aether-Team/Cumulus")
 
     maven { url = "https://maven.theillusivec4.top/" }
+    maven { url = 'https://maven.minecraftforge.net/' }
     maven {
         url "https://cursemaven.com"
         content {
@@ -74,17 +75,12 @@ repositories {
 dependencies {
     implementation "net.neoforged:neoforge:${neo_version}"
     implementation "com.aetherteam.aether:aether:${project.aether_version}"
-    implementation "local:aeroblender:1.20.4-1.0.1-neoforge"
-    implementation "local:TerraBlender:neoforge-1.20.4-3.3.0.12"
     implementation "com.aetherteam.nitrogen:nitrogen_internals:${project.nitrogen_version}"
     implementation "com.aetherteam.cumulus:cumulus_menus:${project.cumulus_version}"
+    implementation "com.github.glitchfiend:TerraBlender-neoforge:${project.terrablender_version}"
+    implementation "local:aeroblender:1.20.4-1.0.1-neoforge"
     runtimeOnly "top.theillusivec4.curios:curios-neoforge:${project.curios_version}"
     compileOnly "top.theillusivec4.curios:curios-neoforge:${project.curios_version}:api"
-
-    compileOnly(annotationProcessor "io.github.llamalad7:mixinextras-common:${project.mixinextras_version}")
-    implementation(jarJar"io.github.llamalad7:mixinextras-forge:${project.mixinextras_version}") {
-        jarJar.ranged it, "[0.3.5,)"
-    }
 }
 
 tasks.withType(ProcessResources).configureEach {
@@ -123,12 +119,4 @@ publishing {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
-}
-
-tasks.named('jarJar', JarJar).configure {
-    archiveClassifier = ''
-}
-
-build {
-    dependsOn 'jarJar'
 }

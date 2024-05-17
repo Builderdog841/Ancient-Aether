@@ -1,9 +1,0 @@
-{
-  "asset_name": "valkyrum",
-  "description": {
-    "color": "#DBB67F",
-    "translate": "trim_material.ancient_aether.valkyrum"
-  },
-  "ingredient": "ancient_aether:valkyrum",
-  "item_model_index": 0.6
-}

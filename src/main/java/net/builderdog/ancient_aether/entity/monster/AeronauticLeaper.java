@@ -41,10 +41,10 @@ public class AeronauticLeaper extends Slime {
 
 	@Override
 	protected void registerGoals() {
-		goalSelector.addGoal(1, new AeronauticLeaper.FloatGoal(this));
-		goalSelector.addGoal(2, new AeronauticLeaper.AttackGoal(this));
-		goalSelector.addGoal(3, new AeronauticLeaper.RandomDirectionGoal(this));
-		goalSelector.addGoal(5, new AeronauticLeaper.KeepOnJumpingGoal(this));
+		goalSelector.addGoal(1, new FloatGoal(this));
+		goalSelector.addGoal(2, new AttackGoal(this));
+		goalSelector.addGoal(3, new RandomDirectionGoal(this));
+		goalSelector.addGoal(5, new KeepOnJumpingGoal(this));
 		targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, (entity) -> Math.abs(entity.getY() - this.getY()) <= 4.0));
 	}
 
@@ -67,9 +67,9 @@ public class AeronauticLeaper extends Slime {
 	public void setSize(int size, boolean resetHealth) {}
 
 	@Override
-	public void remove(@Nonnull Entity.RemovalReason reason) {
+	public void remove(@Nonnull RemovalReason reason) {
 		setRemoved(reason);
-		if (reason == Entity.RemovalReason.KILLED) {
+		if (reason == RemovalReason.KILLED) {
 			gameEvent(GameEvent.ENTITY_DIE);
 		}
 	}

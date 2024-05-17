@@ -1,8 +1,0 @@
-{
-  "parent": "ancient_aether:block/wooden_post_tall",
-  "textures": {
-    "particle": "ancient_aether:block/stripped_highsproot_log",
-    "side": "ancient_aether:block/stripped_highsproot_log",
-    "top": "ancient_aether:block/stripped_highsproot_log"
-  }
-}

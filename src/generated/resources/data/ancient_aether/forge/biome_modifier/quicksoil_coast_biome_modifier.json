@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#ancient_aether:has_quicksoil_coasts",
-  "features": "ancient_aether:quicksoil_coast",
-  "step": "raw_generation"
-}

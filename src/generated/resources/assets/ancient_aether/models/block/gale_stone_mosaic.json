@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "ancient_aether:block/gale_stone_mosaic_top",
-    "side": "ancient_aether:block/gale_stone_mosaic"
-  }
-}

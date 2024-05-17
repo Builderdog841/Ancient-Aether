@@ -6,7 +6,6 @@ import net.builderdog.ancient_aether.item.equipment.AncientAetherItemTiers;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.enchantment.Enchantment;
@@ -17,7 +16,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class ValkyrumLanceItem extends SwordItem implements ValkyrieTool {
     public ValkyrumLanceItem() {
-        super(AncientAetherItemTiers.VALKYRUM, 2, -2.7F, (new Item.Properties()));
+        super(AncientAetherItemTiers.VALKYRUM, 2, -2.7F, (new Properties()));
     }
 
     public @NotNull Multimap<Attribute, AttributeModifier> getAttributeModifiers(@NotNull EquipmentSlot slot, @NotNull ItemStack stack) {
