@@ -9,6 +9,10 @@ plugins {
 
 version = '0.10.0'
 group = 'net.builderdog.ancient_aether'
+repositories {
+    mavenLocal()
+}
+
 base {
     archivesName = mod_id
 }
@@ -19,24 +23,23 @@ minecraft.accessTransformers.file rootProject.file('src/main/resources/META-INF/
 
 runs {
     configureEach {
-        workingDirectory project.file('run')
-        systemProperty "${mod_id}.iside", 'true'
-        systemProperty  'forge.logging.console.level', 'info'
+        systemProperty 'forge.logging.markers', 'REGISTRIES'
+        systemProperty 'forge.logging.console.level', 'debug'
 
         modSource project.sourceSets.main
     }
 
     client {
-        systemProperty 'forge.enabledGameTestNamespaces', mod_id
+        systemProperty 'forge.enabledGameTestNamespaces', project.mod_id
     }
 
     server {
-        systemProperty 'forge.enabledGameTestNamespaces', mod_id
+        systemProperty 'forge.enabledGameTestNamespaces', project.mod_id
         programArgument '--nogui'
     }
 
     gameTestServer {
-        systemProperty 'neoforge.enabledGameTestNamespaces', mod_id
+        systemProperty 'forge.enabledGameTestNamespaces', project.mod_id
     }
 
     data {
@@ -44,8 +47,10 @@ runs {
     }
 }
 
-sourceSets.main.resources {
-    srcDir 'src/generated/resources'
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+configurations {
+    runtimeClasspath.extendsFrom localRuntime
 }
 
 repositories {
@@ -54,7 +59,6 @@ repositories {
     maven githubPackage.invoke("The-Aether-Team/Cumulus")
 
     maven { url = "https://maven.theillusivec4.top/" }
-    maven { url = 'https://maven.minecraftforge.net/' }
     maven {
         url "https://cursemaven.com"
         content {
@@ -68,10 +72,10 @@ repositories {
 }
 
 dependencies {
-    implementation "net.neoforged:neoforge:${project.neoforge_version}"
+    implementation "net.neoforged:neoforge:${neo_version}"
     implementation "com.aetherteam.aether:aether:${project.aether_version}"
     implementation "local:aeroblender:1.20.4-1.0.1-neoforge"
-    implementation "com.github.glitchfiend:TerraBlender-forge:${project.terrablender_version}"
+    implementation "local:TerraBlender:neoforge-1.20.4-3.3.0.12"
     implementation "com.aetherteam.nitrogen:nitrogen_internals:${project.nitrogen_version}"
     implementation "com.aetherteam.cumulus:cumulus_menus:${project.cumulus_version}"
     runtimeOnly("top.theillusivec4.curios:curios-neoforge:${project.curios_version}")
@@ -83,33 +87,25 @@ dependencies {
     }
 }
 
-tasks.named('jar', Jar).configure {
-    manifest {
-        attributes([
-                "Specification-Title"     : project.mod_name,
-                "Specification-Vendor"    : "Ancient Aether",
-                "Specification-Version"   : "1",
-                "Implementation-Title"    : project.mod_name,
-                "Implementation-Version"  : project.jar.archiveVersion,
-                "Implementation-Vendor"   : "Ancient Aether",
-                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
-        ])
+tasks.withType(ProcessResources).configureEach {
+    var replaceProperties = [
+            minecraft_version      : minecraft_version,
+            minecraft_version_range: minecraft_version_range,
+            neo_version            : neo_version,
+            neo_version_range      : neo_version_range,
+            loader_version_range   : loader_version_range,
+            mod_id                 : mod_id,
+            mod_name               : mod_name,
+            mod_license            : mod_license,
+            mod_version            : mod_version,
+            mod_authors            : mod_authors,
+            mod_description        : mod_description
+    ]
+    inputs.properties replaceProperties
+
+    filesMatching(['META-INF/mods.toml']) {
+        expand replaceProperties
     }
-    archiveClassifier = 'no-embeds'
-}
-
-tasks.named('jarJar', JarJar).configure {
-    archiveClassifier = ''
-}
-
-compileJava {
-    options.incremental = false
-}
-
-tasks.register('sourceJar', Jar) {
-    dependsOn 'classes'
-    from sourceSets.main.allSource
-    archiveClassifier = 'sources'
 }
 
 publishing {
@@ -123,6 +119,21 @@ publishing {
             url "file://${project.projectDir}/repo"
         }
     }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+idea {
+    module {
+        downloadSources = true
+        downloadJavadoc = true
+    }
+}
+
+tasks.named('jarJar', JarJar).configure {
+    archiveClassifier = ''
 }
 
 build {

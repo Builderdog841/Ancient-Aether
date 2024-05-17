@@ -3,7 +3,6 @@ pluginManagement {
         gradlePluginPortal()
         maven { url = 'https://maven.neoforged.net/releases/' }
         maven { url = 'https://repo.spongepowered.org/maven' }
-        maven { url = 'https://maven.parchmentmc.org' }
     }
 }
 
