@@ -13,24 +13,18 @@ import java.util.function.Supplier;
 public class AncientAetherPlayerAttachment implements INBTSynchable {
     private int aeronauticDartCount;
     private int removeAeronauticDartTime;
-
     private int wingRotationO;
     private int wingRotation;
-    private static final int FLIGHT_TIMER_MAX = 52;
-    private static final float FLIGHT_MODIFIER_MAX = 15.0F;
-    private int flightTimer;
-    private float flightModifier = 1.0F;
+
+    public Map<String, Triple<Type, Consumer<Object>, Supplier<Object>>> getSynchableFunctions() {
+        return this.synchableFunctions;
+    }
 
     private final Map<String, Triple<Type, Consumer<Object>, Supplier<Object>>> synchableFunctions = Map.ofEntries(
             Map.entry("setAeronauticCount", Triple.of(Type.INT, (object) -> setAeronauticDartCount((int) object), this::getAeronauticDartCount))
     );
 
     public AncientAetherPlayerAttachment() {
-    }
-
-    @Override
-    public Map<String, Triple<Type, Consumer<Object>, Supplier<Object>>> getSynchableFunctions() {
-        return null;
     }
 
     @Override
@@ -83,29 +77,5 @@ public class AncientAetherPlayerAttachment implements INBTSynchable {
 
     public int getWingRotation() {
         return wingRotation;
-    }
-
-    public int getFlightTimerMax() {
-        return FLIGHT_TIMER_MAX;
-    }
-
-    public float getFlightModifierMax() {
-        return FLIGHT_MODIFIER_MAX;
-    }
-
-    public void setFlightTimer(int timer) {
-        flightTimer = timer;
-    }
-
-    public int getFlightTimer() {
-        return flightTimer;
-    }
-
-    public void setFlightModifier(float modifier) {
-        flightModifier = modifier;
-    }
-
-    public float getFlightModifier() {
-        return flightModifier;
     }
 }

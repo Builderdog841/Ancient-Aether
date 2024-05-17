@@ -1,9 +1,0 @@
-// 1.20.1	2024-04-11T18:40:36.4772733	Tags for minecraft:entity_type mod id ancient_aether
-58c726bd53806a2724580cad68d3b01422e51566 data/aether/tags/entity_types/dungeon_entities.json
-81b9b5d6f1fa2a905ce8b076f99fef1e48003be7 data/aether/tags/entity_types/unhookable.json
-81b9b5d6f1fa2a905ce8b076f99fef1e48003be7 data/aether/tags/entity_types/unlaunchable.json
-580704aa9ae4cfb6a4fb7de1179b98bc55b384b8 data/ancient_aether/tags/entity_types/activates_wind_blower.json
-81b9b5d6f1fa2a905ce8b076f99fef1e48003be7 data/forge/tags/entity_types/bosses.json
-da26ed33f820360d00fbb4b16762fdf326378cd0 data/minecraft/tags/entity_types/fall_damage_immune.json
-45e7a46e8af3c770710f13e453f17364729f9792 data/minecraft/tags/entity_types/freeze_immune_entity_types.json
-45e7a46e8af3c770710f13e453f17364729f9792 data/minecraft/tags/entity_types/powder_snow_walkable_mobs.json

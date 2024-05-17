@@ -44,7 +44,9 @@ runs {
     }
 }
 
-sourceSets.main.resources { srcDir 'src/generated/resources' }
+sourceSets.main.resources {
+    srcDir 'src/generated/resources'
+}
 
 repositories {
     maven githubPackage.invoke("The-Aether-Team/The-Aether")
