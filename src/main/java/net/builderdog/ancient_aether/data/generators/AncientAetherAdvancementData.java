@@ -62,7 +62,6 @@ public class AncientAetherAdvancementData extends AdvancementProvider {
                     .addCriterion("elevated_caverns", PlayerTrigger.TriggerInstance.located(LocationPredicate.Builder.inBiome(AncientAetherBiomes.ELEVATED_CAVERNS)))
                     .save(consumer, new ResourceLocation(AncientAether.MODID, "aether_biomes"), existingFileHelper);
 
-            /*
             Advancement.Builder.advancement()
                     .parent(new ResourceLocation(Aether.MODID, "obtain_egg"))
                     .display(AncientAetherItems.BURGUNDY_MOA_EGG.get(),
@@ -82,8 +81,6 @@ public class AncientAetherAdvancementData extends AdvancementProvider {
                     .addCriterion("black_moa_egg", InventoryChangeTrigger.TriggerInstance.hasItems(AetherItems.BLACK_MOA_EGG.get()))
                     .save(consumer, new ResourceLocation(AncientAether.MODID, "moa_eggs"), existingFileHelper);
 
-
-             */
             AdvancementHolder arkenzusPickaxeLoot = Advancement.Builder.advancement()
                     .parent(new ResourceLocation(Aether.MODID, "silver_dungeon"))
                     .display(AncientAetherItems.DIVINE_PICKAXE.get(),
@@ -114,7 +111,6 @@ public class AncientAetherAdvancementData extends AdvancementProvider {
                     .addCriterion("valkyrum_lance", InventoryChangeTrigger.TriggerInstance.hasItems(AncientAetherItems.VALKYRUM_LANCE.get()))
                     .save(consumer, new ResourceLocation(AncientAether.MODID, "valkyrum_lance"), existingFileHelper);
 
-            /*
             AdvancementHolder findSentryLaboratory = Advancement.Builder.advancement()
                     .parent(new ResourceLocation(Aether.MODID, "bronze_dungeon"))
                     .display(AncientAetherBlocks.WYND_SENTRY_STONE.get(),

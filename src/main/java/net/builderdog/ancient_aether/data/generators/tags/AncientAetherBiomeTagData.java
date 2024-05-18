@@ -25,12 +25,12 @@ public class AncientAetherBiomeTagData extends BiomeTagsProvider {
     @Override
     public void addTags(HolderLookup.@NotNull Provider provider) {
         tag(AncientAetherTags.Biomes.IS_SKYROOT_PLAINS).add(
-                //AetherBiomes.SKYROOT_MEADOW,
-                //AetherBiomes.SKYROOT_GROVE
+                AetherBiomes.SKYROOT_MEADOW,
+                AetherBiomes.SKYROOT_GROVE
         );
         tag(AncientAetherTags.Biomes.IS_SKYROOT_FOREST).add(
-                //AetherBiomes.SKYROOT_FOREST,
-                //AetherBiomes.SKYROOT_WOODLAND,
+                AetherBiomes.SKYROOT_FOREST,
+                AetherBiomes.SKYROOT_WOODLAND,
                 AncientAetherBiomes.SUN_FOREST,
                 AncientAetherBiomes.SKYROOT_JUNGLE
         );
@@ -95,16 +95,16 @@ public class AncientAetherBiomeTagData extends BiomeTagsProvider {
                 AetherTags.Biomes.IS_AETHER
         );
         tag(AncientAetherTags.Biomes.HAS_SKYROOT_MEADOW_TREES).add(
-                //AetherBiomes.SKYROOT_MEADOW
+                AetherBiomes.SKYROOT_MEADOW
         );
         tag(AncientAetherTags.Biomes.HAS_SKYROOT_GROVE_TREES).add(
-                //AetherBiomes.SKYROOT_GROVE
+                AetherBiomes.SKYROOT_GROVE
         );
         tag(AncientAetherTags.Biomes.HAS_SKYROOT_FOREST_TREES).add(
-                //AetherBiomes.SKYROOT_FOREST
+                AetherBiomes.SKYROOT_FOREST
         );
         tag(AncientAetherTags.Biomes.HAS_SKYROOT_WOODLAND_TREES).add(
-                //AetherBiomes.SKYROOT_WOODLAND
+                AetherBiomes.SKYROOT_WOODLAND
         );
         tag(AncientAetherTags.Biomes.HAS_AETHER_GRASS_PATCHES).addTags(
                 AncientAetherTags.Biomes.IS_SKYROOT
@@ -112,16 +112,16 @@ public class AncientAetherBiomeTagData extends BiomeTagsProvider {
                 AncientAetherBiomes.SKYROOT_JUNGLE
         );
         tag(AncientAetherTags.Biomes.HAS_SKYROOT_MEADOW_VEGETATION).add(
-                //AetherBiomes.SKYROOT_MEADOW
+                AetherBiomes.SKYROOT_MEADOW
         );
         tag(AncientAetherTags.Biomes.HAS_SKYROOT_GROVE_VEGETATION).add(
-                //AetherBiomes.SKYROOT_GROVE
+                AetherBiomes.SKYROOT_GROVE
         );
         tag(AncientAetherTags.Biomes.HAS_SKYROOT_FOREST_VEGETATION).add(
-                //AetherBiomes.SKYROOT_FOREST
+                AetherBiomes.SKYROOT_FOREST
         );
         tag(AncientAetherTags.Biomes.HAS_SKYROOT_WOODLAND_VEGETATION).add(
-                //AetherBiomes.SKYROOT_WOODLAND
+                AetherBiomes.SKYROOT_WOODLAND
         );
         tag(AncientAetherTags.Biomes.HAS_VIOLET_AERCLOUDS).addTags(
                 AetherTags.Biomes.IS_AETHER

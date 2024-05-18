@@ -1,5 +1,7 @@
 {
   "values": [
+    "aether:silver_dungeon",
+    "aether:gold_dungeon",
     "#ancient_aether:ancient_ruins",
     "#ancient_aether:valkyrie_settlements"
   ]

@@ -1,0 +1,39 @@
+{
+  "parent": "aether:bronze_dungeon",
+  "criteria": {
+    "sentry_laboratory": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "ancient_aether:sentry_laboratory"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.ancient_aether.find_sentry_laboratory.desc"
+    },
+    "frame": "goal",
+    "icon": {
+      "item": "ancient_aether:wynd_sentry_stone"
+    },
+    "title": {
+      "translate": "advancement.ancient_aether.find_sentry_laboratory"
+    }
+  },
+  "requirements": [
+    [
+      "sentry_laboratory"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

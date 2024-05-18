@@ -1,0 +1,35 @@
+{
+  "parent": "aether:gold_dungeon",
+  "criteria": {
+    "vampire_blade_loot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "aether:vampire_blade"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.ancient_aether.vampire_blade_loot.desc"
+    },
+    "icon": {
+      "item": "aether:vampire_blade",
+      "nbt": "{Damage:0}"
+    },
+    "title": {
+      "translate": "advancement.ancient_aether.vampire_blade_loot"
+    }
+  },
+  "requirements": [
+    [
+      "vampire_blade_loot"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,37 @@
+{
+  "parent": "ancient_aether:find_sentry_laboratory",
+  "criteria": {
+    "kill_mutated_aechor_plant": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "ancient_aether:mutated_aechor_plant"
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:player_killed_entity"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.ancient_aether.laboratory_dungeon.desc"
+    },
+    "frame": "goal",
+    "icon": {
+      "item": "ancient_aether:laboratory_dungeon_key"
+    },
+    "title": {
+      "translate": "advancement.ancient_aether.laboratory_dungeon"
+    }
+  },
+  "requirements": [
+    [
+      "kill_mutated_aechor_plant"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

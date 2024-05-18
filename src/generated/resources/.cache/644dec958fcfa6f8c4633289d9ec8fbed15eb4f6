@@ -1,5 +1,5 @@
-// 1.20.4	2024-05-18T13:37:50.9957617	Tags for minecraft:worldgen/structure mod id ancient_aether
-20fcc358cc4ef595e78c73e8557540f6bc702122 data/aether/tags/worldgen/structure/dungeons.json
+// 1.20.4	2024-05-18T23:40:48.0224172	Tags for minecraft:worldgen/structure mod id ancient_aether
+7c76e6d56c14a62e8348500673f36a2f4174f71f data/aether/tags/worldgen/structure/dungeons.json
 2190d3169379af4548af893f253808251058c345 data/ancient_aether/tags/worldgen/structure/ancient_ruins.json
-f4f40a80a23469b4faeab498fe3afca391352c35 data/ancient_aether/tags/worldgen/structure/bronze_dungeons_avoid.json
+84a6a4b38af8811901a1899dd5b858e410d3af4c data/ancient_aether/tags/worldgen/structure/bronze_dungeons_avoid.json
 c29533fd3404740a306093cdd50a0aeb6afa596c data/ancient_aether/tags/worldgen/structure/valkyrie_settlements.json
