@@ -1,0 +1,94 @@
+{
+  "variants": {
+    "age=0,cropped=false,facing=east": {
+      "model": "ancient_aether:block/grape_vine_stage0",
+      "y": 90
+    },
+    "age=0,cropped=false,facing=north": {
+      "model": "ancient_aether:block/grape_vine_stage0"
+    },
+    "age=0,cropped=false,facing=south": {
+      "model": "ancient_aether:block/grape_vine_stage0",
+      "y": 180
+    },
+    "age=0,cropped=false,facing=west": {
+      "model": "ancient_aether:block/grape_vine_stage0",
+      "y": 270
+    },
+    "age=0,cropped=true,facing=east": {
+      "model": "ancient_aether:block/grape_vine_stage0",
+      "y": 90
+    },
+    "age=0,cropped=true,facing=north": {
+      "model": "ancient_aether:block/grape_vine_stage0"
+    },
+    "age=0,cropped=true,facing=south": {
+      "model": "ancient_aether:block/grape_vine_stage0",
+      "y": 180
+    },
+    "age=0,cropped=true,facing=west": {
+      "model": "ancient_aether:block/grape_vine_stage0",
+      "y": 270
+    },
+    "age=1,cropped=false,facing=east": {
+      "model": "ancient_aether:block/grape_vine_stage1",
+      "y": 90
+    },
+    "age=1,cropped=false,facing=north": {
+      "model": "ancient_aether:block/grape_vine_stage1"
+    },
+    "age=1,cropped=false,facing=south": {
+      "model": "ancient_aether:block/grape_vine_stage1",
+      "y": 180
+    },
+    "age=1,cropped=false,facing=west": {
+      "model": "ancient_aether:block/grape_vine_stage1",
+      "y": 270
+    },
+    "age=1,cropped=true,facing=east": {
+      "model": "ancient_aether:block/grape_vine_stage1",
+      "y": 90
+    },
+    "age=1,cropped=true,facing=north": {
+      "model": "ancient_aether:block/grape_vine_stage1"
+    },
+    "age=1,cropped=true,facing=south": {
+      "model": "ancient_aether:block/grape_vine_stage1",
+      "y": 180
+    },
+    "age=1,cropped=true,facing=west": {
+      "model": "ancient_aether:block/grape_vine_stage1",
+      "y": 270
+    },
+    "age=2,cropped=false,facing=east": {
+      "model": "ancient_aether:block/grape_vine_stage2",
+      "y": 90
+    },
+    "age=2,cropped=false,facing=north": {
+      "model": "ancient_aether:block/grape_vine_stage2"
+    },
+    "age=2,cropped=false,facing=south": {
+      "model": "ancient_aether:block/grape_vine_stage2",
+      "y": 180
+    },
+    "age=2,cropped=false,facing=west": {
+      "model": "ancient_aether:block/grape_vine_stage2",
+      "y": 270
+    },
+    "age=2,cropped=true,facing=east": {
+      "model": "ancient_aether:block/grape_vine_stage2",
+      "y": 90
+    },
+    "age=2,cropped=true,facing=north": {
+      "model": "ancient_aether:block/grape_vine_stage2"
+    },
+    "age=2,cropped=true,facing=south": {
+      "model": "ancient_aether:block/grape_vine_stage2",
+      "y": 180
+    },
+    "age=2,cropped=true,facing=west": {
+      "model": "ancient_aether:block/grape_vine_stage2",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "ancient_aether:block/angelic_corner_brick_top",
+    "east": "ancient_aether:block/angelic_corner_brick_left",
+    "north": "ancient_aether:block/angelic_corner_brick_right",
+    "particle": "ancient_aether:block/angelic_corner_brick_top",
+    "south": "ancient_aether:block/angelic_corner_brick_right",
+    "up": "ancient_aether:block/angelic_corner_brick_top",
+    "west": "ancient_aether:block/angelic_corner_brick_left"
+  }
+}

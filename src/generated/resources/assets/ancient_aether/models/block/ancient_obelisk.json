@@ -1,0 +1,7 @@
+{
+  "parent": "ancient_aether:block/template_obelisk",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "obelisk": "ancient_aether:block/ancient_obelisk"
+  }
+}

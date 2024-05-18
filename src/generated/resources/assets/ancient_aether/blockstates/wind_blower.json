@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,puffed=false": {
+      "model": "ancient_aether:block/wind_blower",
+      "y": 90
+    },
+    "facing=east,puffed=true": {
+      "model": "ancient_aether:block/wind_blower_puffed",
+      "y": 90
+    },
+    "facing=north,puffed=false": {
+      "model": "ancient_aether:block/wind_blower"
+    },
+    "facing=north,puffed=true": {
+      "model": "ancient_aether:block/wind_blower_puffed"
+    },
+    "facing=south,puffed=false": {
+      "model": "ancient_aether:block/wind_blower",
+      "y": 180
+    },
+    "facing=south,puffed=true": {
+      "model": "ancient_aether:block/wind_blower_puffed",
+      "y": 180
+    },
+    "facing=west,puffed=false": {
+      "model": "ancient_aether:block/wind_blower",
+      "y": 270
+    },
+    "facing=west,puffed=true": {
+      "model": "ancient_aether:block/wind_blower_puffed",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "block.grape_vine.pick_grapes": {
+    "sounds": [
+      "item/sweet_berries/pick_from_bush1",
+      "item/sweet_berries/pick_from_bush2"
+    ],
+    "subtitle": "subtitles.ancient_aether.block.grape_vine.pick_grapes"
+  },
+  "block.obelisk.activation": {
+    "sounds": [
+      "ancient_aether:block/obelisk_activation"
+    ],
+    "subtitle": "subtitles.ancient_aether.block.obelisk.activation"
+  },
+  "entity.aeronautic_leaper.death": {
+    "sounds": [
+      "mob/slime/big1",
+      "mob/slime/big2",
+      "mob/slime/big3",
+      "mob/slime/big4"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.aeronautic_leaper.death"
+  },
+  "entity.aeronautic_leaper.hurt": {
+    "sounds": [
+      "mob/slime/big1",
+      "mob/slime/big2",
+      "mob/slime/big3",
+      "mob/slime/big4"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.aeronautic_leaper.hurt"
+  },
+  "entity.aeronautic_leaper.jump": {
+    "sounds": [
+      "mob/slime/big1",
+      "mob/slime/big2",
+      "mob/slime/big3",
+      "mob/slime/big4"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.aeronautic_leaper.jump"
+  },
+  "entity.fluffalo.ambient": {
+    "sounds": [
+      "ancient_aether:entity/fluffalo/idle"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.fluffalo.ambient"
+  },
+  "entity.fluffalo.death": {
+    "sounds": [
+      "ancient_aether:entity/fluffalo/hurt"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.fluffalo.death"
+  },
+  "entity.fluffalo.hurt": {
+    "sounds": [
+      "ancient_aether:entity/fluffalo/hurt"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.fluffalo.hurt"
+  },
+  "entity.fluffalo.milk": {
+    "sounds": [
+      "entity/cow/milk1",
+      "entity/cow/milk2",
+      "entity/cow/milk3"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.fluffalo.milk"
+  },
+  "entity.mutated_aechor_plant.death": {
+    "sounds": [
+      "ancient_aether:entity/mutated_aechor_plant/hurt"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.mutated_aechor_plant.death"
+  },
+  "entity.mutated_aechor_plant.hurt": {
+    "sounds": [
+      "ancient_aether:entity/mutated_aechor_plant/hurt"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.mutated_aechor_plant.hurt"
+  },
+  "entity.mutated_aechor_plant.shoot.needle": {
+    "sounds": [
+      "random/bow"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.mutated_aechor_plant.shoot.needle"
+  },
+  "entity.mutated_aechor_plant.shoot.spore_bomb": {
+    "sounds": [
+      "ancient_aether:entity/mutated_aechor_plant/shoot_spore_bomb"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.mutated_aechor_plant.shoot.spore_bomb"
+  },
+  "entity.remedy_crystal.explode": {
+    "sounds": [
+      "random/glass1",
+      "random/glass2",
+      "random/glass3"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.remedy_crystal.explode"
+  },
+  "entity.slammroot.death": {
+    "sounds": [
+      "ancient_aether:entity/slammroot/hurt"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.slammroot.death"
+  },
+  "entity.slammroot.hurt": {
+    "sounds": [
+      "ancient_aether:entity/slammroot/hurt"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.slammroot.hurt"
+  },
+  "entity.slammroot.jump": {
+    "sounds": [
+      "ancient_aether:entity/slammroot/hurt"
+    ],
+    "subtitle": "subtitles.ancient_aether.entity.slammroot.jump"
+  },
+  "item.accessory.equip_ancient_pendant": {
+    "sounds": [
+      "item/armor/equip_chain1",
+      "item/armor/equip_chain2",
+      "item/armor/equip_chain3",
+      "item/armor/equip_chain4",
+      "item/armor/equip_chain5",
+      "item/armor/equip_chain6"
+    ],
+    "subtitle": "subtitles.ancient_aether.item.accessory.equip_ancient_pendant"
+  },
+  "item.accessory.equip_ancient_ring": {
+    "sounds": [
+      "item/armor/equip_chain1",
+      "item/armor/equip_chain2",
+      "item/armor/equip_chain3",
+      "item/armor/equip_chain4",
+      "item/armor/equip_chain5",
+      "item/armor/equip_chain6"
+    ],
+    "subtitle": "subtitles.ancient_aether.item.accessory.equip_ancient_ring"
+  },
+  "item.accessory.equip_growth_pendant": {
+    "sounds": [
+      "item/armor/equip_chain1",
+      "item/armor/equip_chain2",
+      "item/armor/equip_chain3",
+      "item/armor/equip_chain4",
+      "item/armor/equip_chain5",
+      "item/armor/equip_chain6"
+    ],
+    "subtitle": "subtitles.ancient_aether.item.accessory.equip_growth_pendant"
+  },
+  "item.accessory.equip_growth_ring": {
+    "sounds": [
+      "item/armor/equip_chain1",
+      "item/armor/equip_chain2",
+      "item/armor/equip_chain3",
+      "item/armor/equip_chain4",
+      "item/armor/equip_chain5",
+      "item/armor/equip_chain6"
+    ],
+    "subtitle": "subtitles.ancient_aether.item.accessory.equip_growth_ring"
+  },
+  "item.accessory.equip_hermes_pendant": {
+    "sounds": [
+      "item/armor/equip_chain1",
+      "item/armor/equip_chain2",
+      "item/armor/equip_chain3",
+      "item/armor/equip_chain4",
+      "item/armor/equip_chain5",
+      "item/armor/equip_chain6"
+    ],
+    "subtitle": "subtitles.ancient_aether.item.accessory.equip_hermes_pendant"
+  },
+  "item.accessory.equip_hermes_ring": {
+    "sounds": [
+      "item/armor/equip_chain1",
+      "item/armor/equip_chain2",
+      "item/armor/equip_chain3",
+      "item/armor/equip_chain4",
+      "item/armor/equip_chain5",
+      "item/armor/equip_chain6"
+    ],
+    "subtitle": "subtitles.ancient_aether.item.accessory.equip_hermes_ring"
+  },
+  "item.accessory.equip_valkyrum_pendant": {
+    "sounds": [
+      "item/armor/equip_chain1",
+      "item/armor/equip_chain2",
+      "item/armor/equip_chain3",
+      "item/armor/equip_chain4",
+      "item/armor/equip_chain5",
+      "item/armor/equip_chain6"
+    ],
+    "subtitle": "subtitles.ancient_aether.item.accessory.equip_valkyrum_pendant"
+  },
+  "item.accessory.equip_valkyrum_ring": {
+    "sounds": [
+      "item/armor/equip_chain1",
+      "item/armor/equip_chain2",
+      "item/armor/equip_chain3",
+      "item/armor/equip_chain4",
+      "item/armor/equip_chain5",
+      "item/armor/equip_chain6"
+    ],
+    "subtitle": "subtitles.ancient_aether.item.accessory.equip_valkyrum_ring"
+  },
+  "item.accessory.equip_warrior_pendant": {
+    "sounds": [
+      "item/armor/equip_chain1",
+      "item/armor/equip_chain2",
+      "item/armor/equip_chain3",
+      "item/armor/equip_chain4",
+      "item/armor/equip_chain5",
+      "item/armor/equip_chain6"
+    ],
+    "subtitle": "subtitles.ancient_aether.item.accessory.equip_warrior_pendant"
+  },
+  "item.accessory.equip_warrior_ring": {
+    "sounds": [
+      "item/armor/equip_chain1",
+      "item/armor/equip_chain2",
+      "item/armor/equip_chain3",
+      "item/armor/equip_chain4",
+      "item/armor/equip_chain5",
+      "item/armor/equip_chain6"
+    ],
+    "subtitle": "subtitles.ancient_aether.item.accessory.equip_warrior_ring"
+  }
+}

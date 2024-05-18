@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "ancient_aether:block/stripped_sakura_log"
+  }
+}

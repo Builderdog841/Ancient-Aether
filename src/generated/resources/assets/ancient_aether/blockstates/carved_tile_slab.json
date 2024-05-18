@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ancient_aether:block/carved_tile_slab"
+    },
+    "type=double": {
+      "model": "ancient_aether:block/carved_tiles"
+    },
+    "type=top": {
+      "model": "ancient_aether:block/carved_tile_slab_top"
+    }
+  }
+}
