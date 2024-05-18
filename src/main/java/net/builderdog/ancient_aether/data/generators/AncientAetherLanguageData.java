@@ -250,6 +250,16 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addItem(AncientAetherItems.LABORATORY_DUNGEON_KEY, "Laboratory Key");
         addItem(AncientAetherItems.ANCIENT_DUNGEON_KEY, "Ancient Key");
 
+        addItem(AncientAetherItems.WYND_ARMOR_TRIM_SMITHING_TEMPLATE, "Smithing Template");
+        addItem(AncientAetherItems.WHALE_ARMOR_TRIM_SMITHING_TEMPLATE, "Smithing Template");
+        addItem(AncientAetherItems.ASCENDED_ARMOR_TRIM_SMITHING_TEMPLATE, "Smithing Template");
+        addItem(AncientAetherItems.MYSTERIOUS_ARMOR_TRIM_SMITHING_TEMPLATE, "Smithing Template");
+        addItem(AncientAetherItems.MECHANICAL_ARMOR_TRIM_SMITHING_TEMPLATE, "Smithing Template");
+        addItem(AncientAetherItems.MOSAIC_ARMOR_TRIM_SMITHING_TEMPLATE, "Smithing Template");
+        addItem(AncientAetherItems.ROYAL_ARMOR_TRIM_SMITHING_TEMPLATE, "Smithing Template");
+        addItem(AncientAetherItems.SOLAR_ARMOR_TRIM_SMITHING_TEMPLATE, "Smithing Template");
+        addItem(AncientAetherItems.ANCIENT_ARMOR_TRIM_SMITHING_TEMPLATE, "Smithing Template");
+
         addItem(AncientAetherItems.HIGHSPROOT_BOAT, "Highsproot Boat");
         addItem(AncientAetherItems.HIGHSPROOT_CHEST_BOAT, "Highsproot Chest Boat");
         addItem(AncientAetherItems.SAKURA_BOAT, "Sakura Boat");
