@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:obsidian"
+    },
+    "B": {
+      "item": "minecraft:book"
+    },
+    "G": {
+      "tag": "aether:processed/gravitite"
+    }
+  },
+  "pattern": [
+    " B ",
+    "G#G",
+    "###"
+  ],
+  "result": {
+    "item": "minecraft:enchanting_table"
+  }
+}

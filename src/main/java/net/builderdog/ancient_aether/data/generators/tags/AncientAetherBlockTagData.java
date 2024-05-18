@@ -118,7 +118,7 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
         tag(AncientAetherTags.Blocks.LEAF_VINE_CAN_SPAWN_ON).add(
                 AetherBlocks.ICESTONE.get()
         ).addTags(
-                AetherTags.Blocks.HOLYSTONE,
+                //AetherTags.Blocks.HOLYSTONE,
                 AetherTags.Blocks.SENTRY_BLOCKS,
                 Tags.Blocks.ORES
         );
@@ -160,7 +160,7 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
         ).addTags(
                 AncientAetherTags.Blocks.AEROGETIC_BLOCKS,
                 AncientAetherTags.Blocks.VASES,
-                AetherTags.Blocks.HOLYSTONE,
+                //AetherTags.Blocks.HOLYSTONE,
                 AetherTags.Blocks.SENTRY_BLOCKS,
                 AetherTags.Blocks.ANGELIC_BLOCKS,
                 AetherTags.Blocks.HELLFIRE_BLOCKS,

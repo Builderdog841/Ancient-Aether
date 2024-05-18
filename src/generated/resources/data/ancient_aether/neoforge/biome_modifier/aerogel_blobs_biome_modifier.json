@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#ancient_aether:has_aerogel_blobs",
+  "features": "ancient_aether:aerogel_blobs",
+  "step": "underground_decoration"
+}

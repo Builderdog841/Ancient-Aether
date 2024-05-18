@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "aether:holystone"
+    },
+    "/": {
+      "tag": "forge:rods/wooden"
+    },
+    "T": {
+      "item": "aether:ambrosium_torch"
+    }
+  },
+  "pattern": [
+    "/#/",
+    "/T/",
+    "/#/"
+  ],
+  "result": {
+    "item": "ancient_aether:ambrosium_lantern"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_carvers",
+  "biomes": "#ancient_aether:has_aether_caves",
+  "carvers": "ancient_aether:aether_cave",
+  "step": "air"
+}

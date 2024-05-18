@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ancient_aether:valkyrum_leggings_repairing"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_valkyrum_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ancient_aether:valkyrum_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_valkyrum_leggings"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ancient_aether:valkyrum_leggings_repairing"
+    ]
+  }
+}

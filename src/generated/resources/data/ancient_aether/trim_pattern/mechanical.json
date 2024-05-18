@@ -1,0 +1,8 @@
+{
+  "asset_id": "ancient_aether:mechanical",
+  "decal": false,
+  "description": {
+    "translate": "trim_pattern.ancient_aether.mechanical"
+  },
+  "template_item": "ancient_aether:mechanical_armor_trim_smithing_template"
+}

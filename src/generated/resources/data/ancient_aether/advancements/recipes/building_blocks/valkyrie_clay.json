@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ancient_aether:valkyrie_clay"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_valkyrie_clay_ball": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ancient_aether:valkyrie_clay_ball"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_valkyrie_clay_ball"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ancient_aether:valkyrie_clay"
+    ]
+  }
+}

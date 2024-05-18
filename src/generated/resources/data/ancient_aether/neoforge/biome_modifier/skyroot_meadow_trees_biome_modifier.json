@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#ancient_aether:has_skyroot_meadow_trees",
+  "features": "ancient_aether:skyroot_meadow_trees",
+  "step": "vegetal_decoration"
+}

@@ -1,0 +1,61 @@
+{
+  "values": {
+    "ancient_aether:blue_skyroot_pine_leaves": {
+      "chance": 0.3
+    },
+    "ancient_aether:blue_skyroot_pine_sapling": {
+      "chance": 0.3
+    },
+    "ancient_aether:crystal_skyroot_leaves": {
+      "chance": 0.3
+    },
+    "ancient_aether:crystal_skyroot_sapling": {
+      "chance": 0.3
+    },
+    "ancient_aether:elevetia": {
+      "chance": 0.65
+    },
+    "ancient_aether:enchanted_skyroot_leaves": {
+      "chance": 0.3
+    },
+    "ancient_aether:enchanted_skyroot_sapling": {
+      "chance": 0.3
+    },
+    "ancient_aether:grapes": {
+      "chance": 0.5
+    },
+    "ancient_aether:highsproot_leaves": {
+      "chance": 0.3
+    },
+    "ancient_aether:highsproot_sapling": {
+      "chance": 0.3
+    },
+    "ancient_aether:sakura_leaves": {
+      "chance": 0.3
+    },
+    "ancient_aether:sakura_sapling": {
+      "chance": 0.3
+    },
+    "ancient_aether:sky_blues": {
+      "chance": 0.65
+    },
+    "ancient_aether:sky_grass": {
+      "chance": 0.3
+    },
+    "ancient_aether:skyroot_pine_leaves": {
+      "chance": 0.3
+    },
+    "ancient_aether:skyroot_pine_sapling": {
+      "chance": 0.3
+    },
+    "ancient_aether:slammberry": {
+      "chance": 0.85
+    },
+    "ancient_aether:sunset_rose": {
+      "chance": 0.65
+    },
+    "ancient_aether:wynd_thistle": {
+      "chance": 0.65
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "processors": [
+    {
+      "processor_type": "minecraft:rule",
+      "rules": [
+        {
+          "input_predicate": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "ancient_aether:replaceable_boss_room_blocks"
+          },
+          "location_predicate": {
+            "block": "minecraft:air",
+            "predicate_type": "minecraft:block_match"
+          },
+          "output_state": {
+            "Name": "minecraft:air"
+          }
+        },
+        {
+          "input_predicate": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "ancient_aether:replaceable_boss_room_blocks"
+          },
+          "location_predicate": {
+            "block": "minecraft:water",
+            "predicate_type": "minecraft:block_match"
+          },
+          "output_state": {
+            "Name": "minecraft:water",
+            "Properties": {
+              "level": "0"
+            }
+          }
+        },
+        {
+          "input_predicate": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "ancient_aether:replaceable_boss_room_blocks"
+          },
+          "location_predicate": {
+            "block": "aether:cold_aercloud",
+            "predicate_type": "minecraft:block_match"
+          },
+          "output_state": {
+            "Name": "aether:cold_aercloud",
+            "Properties": {
+              "double_drops": "true"
+            }
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "aether:carved_stone",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 0.01
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "aether:sentry_stone"
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "ancient_aether:carved_tiles",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 0.03
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "ancient_aether:trapped_carved_tiles"
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "aether:locked_carved_stone",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 0.01
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "aether:locked_sentry_stone"
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "aether:treasure_doorway_carved_stone",
+            "predicate_type": "minecraft:random_block_match",
+            "probability": 0.01
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "aether:treasure_doorway_sentry_stone",
+            "Properties": {
+              "facing": "north"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "processor_type": "aether:boss_room"
+    }
+  ]
+}

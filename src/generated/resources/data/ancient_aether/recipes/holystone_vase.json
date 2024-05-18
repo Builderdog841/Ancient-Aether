@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "vase",
+  "key": {
+    "#": {
+      "item": "ancient_aether:valkyrie_brick"
+    },
+    "@": {
+      "item": "aether:holystone_bricks"
+    }
+  },
+  "pattern": [
+    " # ",
+    "#@#",
+    " # "
+  ],
+  "result": {
+    "item": "ancient_aether:holystone_vase"
+  }
+}

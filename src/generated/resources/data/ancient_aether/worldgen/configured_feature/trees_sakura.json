@@ -1,0 +1,64 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": {
+      "feature": "ancient_aether:sakura_tree",
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:would_survive",
+            "state": {
+              "Name": "ancient_aether:sakura_sapling",
+              "Properties": {
+                "stage": "0"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "features": [
+      {
+        "chance": 0.3,
+        "feature": {
+          "feature": "ancient_aether:tall_sakura_tree",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:would_survive",
+                "state": {
+                  "Name": "ancient_aether:sakura_sapling",
+                  "Properties": {
+                    "stage": "0"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chance": 0.3,
+        "feature": {
+          "feature": "ancient_aether:trees_skyroot_jungle",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:would_survive",
+                "state": {
+                  "Name": "aether:skyroot_sapling",
+                  "Properties": {
+                    "stage": "0"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

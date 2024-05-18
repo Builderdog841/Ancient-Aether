@@ -1,0 +1,20 @@
+{
+  "type": "ancient_aether:configurable_crystal_island",
+  "config": {
+    "feature": "aether:crystal_tree",
+    "island_block": {
+      "Name": "aether:holystone",
+      "Properties": {
+        "double_drops": "true"
+      }
+    },
+    "top_block": {
+      "Name": "aether:aether_grass_block",
+      "Properties": {
+        "type": "frozen",
+        "double_drops": "true",
+        "snowy": "false"
+      }
+    }
+  }
+}

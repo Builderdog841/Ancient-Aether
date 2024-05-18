@@ -1,0 +1,104 @@
+{
+  "type": "minecraft:selector",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "aether:ambrosium_shard",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:enchanted_berry",
+          "weight": 15
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:healing_stone",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:golden_amber",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:white_apple",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_gemstone",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:grapes",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:aechor_petal",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:arrow",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:icestone",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:golden_aercloud",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:enchanted_dart",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:ambrosium_block",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:golden_gummy_swet",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:saddle",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "ancient_aether:selectors/accessories/silver_dungeon",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "ancient_aether:selectors/trims/generic"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:enchanted_dart_shooter"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:name_tag"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "ancient_aether:selectors/angelic_vase"
+}

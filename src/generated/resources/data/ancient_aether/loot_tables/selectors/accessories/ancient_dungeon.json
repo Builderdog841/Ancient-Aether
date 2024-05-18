@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:selector",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:aeronautic_dart_shooter",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:music_disc_strad",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:golden_parachute"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:music_disc_aether_tune"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "ancient_aether:selectors/accessories/ancient_dungeon"
+}

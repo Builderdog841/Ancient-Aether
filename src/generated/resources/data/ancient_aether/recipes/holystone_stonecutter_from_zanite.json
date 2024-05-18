@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "stonecutter",
+  "key": {
+    "#": {
+      "item": "aether:holystone"
+    },
+    "Z": {
+      "tag": "aether:gems/zanite"
+    }
+  },
+  "pattern": [
+    " Z ",
+    "###"
+  ],
+  "result": {
+    "item": "minecraft:stonecutter"
+  }
+}

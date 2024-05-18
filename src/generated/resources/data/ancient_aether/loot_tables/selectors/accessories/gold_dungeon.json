@@ -1,0 +1,64 @@
+{
+  "type": "minecraft:selector",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chainmail_helmet",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chainmail_chestplate",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chainmail_leggings",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chainmail_boots",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:chainmail_gloves",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:ice_ring",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:ice_pendant",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:golden_parachute",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:hermes_ring"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:hermes_pendant"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:music_disc_aether_tune"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "ancient_aether:selectors/accessories/gold_dungeon"
+}

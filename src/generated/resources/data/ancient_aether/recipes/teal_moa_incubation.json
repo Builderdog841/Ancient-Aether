@@ -1,0 +1,14 @@
+{
+  "type": "aether:incubation",
+  "entity": "aether:moa",
+  "incubationtime": 1000,
+  "ingredient": {
+    "item": "ancient_aether:teal_moa_egg"
+  },
+  "tag": {
+    "Hungry": 1,
+    "IsBaby": 1,
+    "MoaType": "ancient_aether:teal",
+    "PlayerGrown": 1
+  }
+}

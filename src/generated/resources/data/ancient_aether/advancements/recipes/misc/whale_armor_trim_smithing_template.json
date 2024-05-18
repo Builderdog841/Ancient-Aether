@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ancient_aether:whale_armor_trim_smithing_template"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_whale_armor_trim_smithing_template": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ancient_aether:whale_armor_trim_smithing_template"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_whale_armor_trim_smithing_template"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ancient_aether:whale_armor_trim_smithing_template"
+    ]
+  }
+}

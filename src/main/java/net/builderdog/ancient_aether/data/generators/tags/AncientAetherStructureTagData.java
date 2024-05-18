@@ -33,8 +33,8 @@ public class AncientAetherStructureTagData extends StructureTagsProvider {
                 AncientAetherStructures.VALKYRIE_SETTLEMENT_SKYROOT
         );
         tag(AncientAetherTags.Structures.BRONZE_DUNGEONS_AVOID).add(
-                AetherStructures.SILVER_DUNGEON,
-                AetherStructures.GOLD_DUNGEON
+                //AetherStructures.SILVER_DUNGEON,
+                //AetherStructures.GOLD_DUNGEON
         ).addTags(
                 AncientAetherTags.Structures.ANCIENT_RUINS,
                 AncientAetherTags.Structures.VALKYRIE_SETTLEMENTS
@@ -43,8 +43,9 @@ public class AncientAetherStructureTagData extends StructureTagsProvider {
         tag(AetherTags.Structures.DUNGEONS).addTags(
                 AncientAetherTags.Structures.VALKYRIE_SETTLEMENTS
         )
-        .remove(
-                AetherStructures.BRONZE_DUNGEON
-        );
+        //.remove(
+                //AetherStructures.BRONZE_DUNGEON
+        //)
+        ;
     }
 }

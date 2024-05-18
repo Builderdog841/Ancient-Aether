@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ancient_aether:valkyrum_from_valkyrum_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_valkyrum_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ancient_aether:valkyrum_block"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_valkyrum_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ancient_aether:valkyrum_from_valkyrum_block"
+    ]
+  }
+}

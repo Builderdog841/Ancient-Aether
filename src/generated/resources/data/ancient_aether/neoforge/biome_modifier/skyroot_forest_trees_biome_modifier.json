@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#ancient_aether:has_skyroot_forest_trees",
+  "features": "ancient_aether:skyroot_forest_trees",
+  "step": "vegetal_decoration"
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:selector",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:ancient_rune"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:mysterious_armor_trim_smithing_template",
+          "weight": 9
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "ancient_aether:selectors/trims/mysterious"
+}

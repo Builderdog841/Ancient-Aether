@@ -1,0 +1,5 @@
+{
+  "type": "neoforge:remove_features",
+  "biomes": "#ancient_aether:has_skyroot_meadow_trees",
+  "features": "aether:skyroot_meadow_trees"
+}

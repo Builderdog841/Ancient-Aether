@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ancient_aether:valkyrie_tile_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_valkyrie_tiles": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ancient_aether:valkyrie_tiles"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_valkyrie_tiles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ancient_aether:valkyrie_tile_slab"
+    ]
+  }
+}

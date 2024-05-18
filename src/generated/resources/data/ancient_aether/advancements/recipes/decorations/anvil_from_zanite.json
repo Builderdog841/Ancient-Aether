@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ancient_aether:anvil_from_zanite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_zanite_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "aether:zanite_block"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_zanite_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ancient_aether:anvil_from_zanite"
+    ]
+  }
+}

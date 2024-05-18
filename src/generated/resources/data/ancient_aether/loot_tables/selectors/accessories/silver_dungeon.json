@@ -1,0 +1,69 @@
+{
+  "type": "minecraft:selector",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_ring",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_pendant",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:golden_pendant",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:iron_ring",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:iron_pendant",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:golden_ring",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:golden_pendant",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:golden_parachute",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:music_disc_ascending_dawn",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:hermes_ring"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:hermes_pendant"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:music_disc_aether_tune"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "ancient_aether:selectors/accessories/silver_dungeon"
+}

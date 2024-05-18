@@ -1,0 +1,35 @@
+{
+  "parent": "aether:silver_dungeon",
+  "criteria": {
+    "divine_pickaxe_loot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ancient_aether:divine_pickaxe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.ancient_aether.divine_pickaxe_loot.desc"
+    },
+    "icon": {
+      "item": "ancient_aether:divine_pickaxe",
+      "nbt": "{Damage:0}"
+    },
+    "title": {
+      "translate": "advancement.ancient_aether.divine_pickaxe_loot"
+    }
+  },
+  "requirements": [
+    [
+      "divine_pickaxe_loot"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

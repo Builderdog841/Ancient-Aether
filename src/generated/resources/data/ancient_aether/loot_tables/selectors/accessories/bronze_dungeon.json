@@ -1,0 +1,69 @@
+{
+  "type": "minecraft:selector",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_ring",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_pendant",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:white_cape",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:yellow_cape",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:red_cape",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:blue_cape",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:pink_cape",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:music_disc_cat",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:cold_parachute",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:music_disc_aether_tune"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:agility_cape"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:swet_cape"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "ancient_aether:selectors/accessories/bronze_dungeon"
+}

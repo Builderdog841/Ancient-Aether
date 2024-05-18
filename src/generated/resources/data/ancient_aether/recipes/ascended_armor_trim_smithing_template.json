@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "ancient_aether:valkyrum"
+    },
+    "C": {
+      "item": "aether:holystone"
+    },
+    "S": {
+      "item": "ancient_aether:ascended_armor_trim_smithing_template"
+    }
+  },
+  "pattern": [
+    "#S#",
+    "#C#",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "item": "ancient_aether:ascended_armor_trim_smithing_template"
+  }
+}

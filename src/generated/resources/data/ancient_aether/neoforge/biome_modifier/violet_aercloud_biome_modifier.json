@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#ancient_aether:has_violet_aerclouds",
+  "features": "ancient_aether:violet_aercloud",
+  "step": "top_layer_modification"
+}

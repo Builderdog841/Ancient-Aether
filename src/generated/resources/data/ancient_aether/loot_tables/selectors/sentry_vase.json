@@ -1,0 +1,95 @@
+{
+  "type": "minecraft:selector",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "aether:ambrosium_shard",
+          "weight": 15
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:enchanted_berry",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:golden_dart",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:arrow",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:white_apple",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:icestone",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:golden_amber",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_gemstone",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:healing_stone",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:grapes",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "ancient_aether:selectors/accessories/bronze_dungeon",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:ambrosium_block",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:skyroot_remedy_bucket",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_pickaxe",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:blue_gummy_swet",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "ancient_aether:selectors/trims/generic"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:golden_dart_shooter"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "ancient_aether:selectors/sentry_vase"
+}

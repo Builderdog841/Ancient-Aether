@@ -1,0 +1,10 @@
+{
+  "type": "aether:freezing",
+  "category": "freezable_blocks",
+  "cookingtime": 50,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "ancient_aether:highsproot_leaves"
+  },
+  "result": "aether:holiday_leaves"
+}

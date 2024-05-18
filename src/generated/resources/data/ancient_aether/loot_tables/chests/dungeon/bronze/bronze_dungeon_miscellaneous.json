@@ -1,0 +1,143 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 5.0,
+                "min": 2.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "aether:ambrosium_shard",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 6.0,
+                "min": 3.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "aether:golden_amber",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 2.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "aether:zanite_gemstone"
+        }
+      ],
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 2.0,
+        "min": 1.0
+      }
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "ancient_aether:chests/dungeon/armor_trims",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:agility_cape"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:swet_cape"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:music_disc_cat"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:music_disc_strad"
+        }
+      ],
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 1.0,
+        "min": 1.0
+      }
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_pickaxe",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_sword",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_shovel",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_axe",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_hoe",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:golden_dart_shooter",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "ancient_aether:chests/dungeon/moa_eggs_common",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "ancient_aether:chests/dungeon/armor_trims"
+        }
+      ],
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 1.0,
+        "min": 1.0
+      }
+    }
+  ],
+  "random_sequence": "ancient_aether:chests/dungeon/bronze/bronze_dungeon_miscellaneous"
+}

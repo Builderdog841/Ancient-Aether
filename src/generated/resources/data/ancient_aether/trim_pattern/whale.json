@@ -1,0 +1,8 @@
+{
+  "asset_id": "ancient_aether:whale",
+  "decal": false,
+  "description": {
+    "translate": "trim_pattern.ancient_aether.whale"
+  },
+  "template_item": "ancient_aether:whale_armor_trim_smithing_template"
+}

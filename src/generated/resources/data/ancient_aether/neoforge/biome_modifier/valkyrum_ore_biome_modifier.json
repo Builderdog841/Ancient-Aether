@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#ancient_aether:has_valkyrum_ore",
+  "features": "ancient_aether:valkyrum_ore",
+  "step": "underground_ores"
+}

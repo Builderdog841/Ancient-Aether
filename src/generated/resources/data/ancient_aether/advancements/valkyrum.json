@@ -1,0 +1,34 @@
+{
+  "parent": "ancient_aether:divine_pickaxe_loot",
+  "criteria": {
+    "valkyrum": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ancient_aether:valkyrum"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.ancient_aether.valkyrum.desc"
+    },
+    "icon": {
+      "item": "ancient_aether:valkyrum"
+    },
+    "title": {
+      "translate": "advancement.ancient_aether.valkyrum"
+    }
+  },
+  "requirements": [
+    [
+      "valkyrum"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

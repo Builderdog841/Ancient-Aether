@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#ancient_aether:has_wynd_ice_coasts",
+  "features": "ancient_aether:wynd_ice_coast",
+  "step": "raw_generation"
+}

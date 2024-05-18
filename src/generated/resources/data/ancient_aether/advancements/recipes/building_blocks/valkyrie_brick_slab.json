@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ancient_aether:valkyrie_brick_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_valkyrie_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ancient_aether:valkyrie_bricks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_valkyrie_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ancient_aether:valkyrie_brick_slab"
+    ]
+  }
+}

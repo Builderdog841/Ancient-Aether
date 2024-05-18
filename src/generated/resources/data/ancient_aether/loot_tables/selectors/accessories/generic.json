@@ -1,0 +1,55 @@
+{
+  "type": "minecraft:selector",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_ring",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:zanite_pendant",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:iron_ring",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:iron_pendant",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:golden_ring",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:golden_pendant",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:cold_parachute",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:music_disc_cat"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:music_disc_strad"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "ancient_aether:selectors/accessories/generic"
+}

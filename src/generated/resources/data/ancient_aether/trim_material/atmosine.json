@@ -1,0 +1,9 @@
+{
+  "asset_name": "atmosine",
+  "description": {
+    "color": "#FFB096",
+    "translate": "trim_material.ancient_aether.atmosine"
+  },
+  "ingredient": "ancient_aether:atmosine_crystal",
+  "item_model_index": 1.0
+}

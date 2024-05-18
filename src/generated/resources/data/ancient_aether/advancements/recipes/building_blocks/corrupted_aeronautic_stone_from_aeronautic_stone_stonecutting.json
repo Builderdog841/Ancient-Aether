@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aeronautic_stone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ancient_aether:aeronautic_stone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ancient_aether:corrupted_aeronautic_stone_from_aeronautic_stone_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_aeronautic_stone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ancient_aether:corrupted_aeronautic_stone_from_aeronautic_stone_stonecutting"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#ancient_aether:has_elevated_crystal_islands",
+  "features": "ancient_aether:elevated_crystal_island",
+  "step": "top_layer_modification"
+}

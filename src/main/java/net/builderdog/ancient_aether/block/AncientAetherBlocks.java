@@ -69,7 +69,7 @@ public class AncientAetherBlocks {
     public static final DeferredBlock<Block> SKY_BLUES = register("sky_blues", () -> new FlowerBlock(AetherEffects.REMEDY, 6, Block.Properties.ofFullCopy(DANDELION)));
     public static final DeferredBlock<Block> WYND_THISTLE = register("wynd_thistle", () -> new FlowerBlock(MobEffects.SLOW_FALLING, 7, Block.Properties.ofFullCopy(DANDELION)));
     public static final DeferredBlock<Block> ELEVETIA = register("elevetia", () -> new FlowerBlock(MobEffects.LEVITATION, 4, Block.Properties.ofFullCopy(DANDELION)));
-    public static final DeferredBlock<GrapeVineBlock> GRAPE_VINE = BLOCKS.register("grape_vine", () -> new GrapeVineBlock(Block.Properties.ofFullCopy(VINE)));
+    public static final DeferredBlock<GrapeVineBlock> GRAPE_VINE = BLOCKS.register("grape_vine", () -> new GrapeVineBlock(Block.Properties.ofFullCopy(VINE).noLootTable()));
     public static final DeferredBlock<Block> SLAMMROOT_PLANT = BLOCKS.register("slammroot_plant", () -> new SlammrootPlantBlock(Block.Properties.of().offsetType(BlockBehaviour.OffsetType.XYZ).dynamicShape().noOcclusion().noCollission().mapColor(MapColor.PLANT).sound(SoundType.HANGING_ROOTS).instabreak().pushReaction(PushReaction.DESTROY).noTerrainParticles().noLootTable()));
 
     public static final DeferredBlock<RotatedPillarBlock> HIGHSPROOT_LOG = register("highsproot_log", () -> new AetherLogBlock(BlockBehaviour.Properties.ofFullCopy(OAK_LOG)));

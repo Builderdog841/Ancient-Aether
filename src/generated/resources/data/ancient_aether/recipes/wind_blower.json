@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "aether:cold_aercloud"
+    },
+    "@": {
+      "tag": "ancient_aether:windblower_ingredients"
+    }
+  },
+  "pattern": [
+    "###",
+    "#@#",
+    "###"
+  ],
+  "result": {
+    "item": "ancient_aether:wind_blower"
+  }
+}

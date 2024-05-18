@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "ancient_aether:valkyrum"
+    },
+    "/": {
+      "tag": "aether:skyroot_stick"
+    }
+  },
+  "pattern": [
+    "##",
+    "#/",
+    " /"
+  ],
+  "result": {
+    "item": "ancient_aether:valkyrum_axe"
+  }
+}

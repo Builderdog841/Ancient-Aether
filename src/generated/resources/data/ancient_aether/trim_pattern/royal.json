@@ -1,0 +1,8 @@
+{
+  "asset_id": "ancient_aether:royal",
+  "decal": false,
+  "description": {
+    "translate": "trim_pattern.ancient_aether.royal"
+  },
+  "template_item": "ancient_aether:royal_armor_trim_smithing_template"
+}
