@@ -1,0 +1,16 @@
+{
+  "values": [
+    "ancient_aether:carved_tiles",
+    "ancient_aether:carved_tile_stairs",
+    "ancient_aether:carved_tile_slab",
+    "ancient_aether:carved_tile_wall",
+    "ancient_aether:locked_carved_tiles",
+    "ancient_aether:trapped_carved_tiles",
+    "ancient_aether:carved_stone_mosaic",
+    "ancient_aether:locked_carved_stone_mosaic",
+    "ancient_aether:wynd_sentry_stone",
+    "ancient_aether:locked_wynd_sentry_stone",
+    "ancient_aether:boss_doorway_wynd_sentry_stone",
+    "ancient_aether:treasure_doorway_wynd_sentry_stone"
+  ]
+}

@@ -274,7 +274,6 @@ public class AncientAetherCreativeModeTabs {
         }
 
         if (tab == AetherCreativeTabs.AETHER_SPAWN_EGGS.get()) {
-            event.getEntries().putFirst(new ItemStack(AetherItems.WHITE_MOA_EGG.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AetherItems.WHITE_MOA_EGG.get()), new ItemStack(AncientAetherItems.TURQUOISE_MOA_EGG.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherItems.TURQUOISE_MOA_EGG.get()), new ItemStack(AncientAetherItems.TEAL_MOA_EGG.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(new ItemStack(AncientAetherItems.TEAL_MOA_EGG.get()), new ItemStack(AncientAetherItems.SKY_BLUE_MOA_EGG.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);

@@ -1,0 +1,20 @@
+{
+  "values": [
+    "ancient_aether:violet_aercloud",
+    "ancient_aether:ancient_obelisk",
+    "aether:aether_dirt",
+    "aether:icestone",
+    "aether:aerogel",
+    "aether:skyroot_planks",
+    "aether:skyroot_stairs",
+    "aether:skyroot_slab",
+    "aether:skyroot_fence",
+    "aether:skyroot_bookshelf",
+    "#ancient_aether:aerogetic_blocks",
+    "#ancient_aether:vases",
+    "#aether:sentry_blocks",
+    "#aether:angelic_blocks",
+    "#aether:hellfire_blocks",
+    "#forge:ores"
+  ]
+}
