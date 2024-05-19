@@ -13,6 +13,8 @@ public class AncientAetherModelLayers {
     public static final ModelLayerLocation SPORE_BOMB = register("spore_bomb");
     public static final ModelLayerLocation REMEDY_CRYSTAL = register("remedy_crystal");
     public static final ModelLayerLocation VALKYRUM_WINGS = register("valkyrum_wings");
+    public static final ModelLayerLocation BOAT = register("boat");
+    public static final ModelLayerLocation CHEST_BOAT = register("chest_boat");
 
     public AncientAetherModelLayers() {}
 

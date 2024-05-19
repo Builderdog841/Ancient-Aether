@@ -43,6 +43,8 @@ public class AncientAetherRenderers {
         event.registerEntityRenderer(AncientAetherEntityTypes.MUTATED_AECHOR_NEEDLE.get(), MutatedAechorNeedleRenderer::new);
         event.registerEntityRenderer(AncientAetherEntityTypes.SPORE_BOMB.get(), SporeBombRenderer::new);
         event.registerEntityRenderer(AncientAetherEntityTypes.REMEDY_CRYSTAL.get(), RemedyCrystalRenderer::new);
+        event.registerEntityRenderer(AncientAetherEntityTypes.BOAT.get(), context -> new AncientAetherBoatRenderer<>(context, false));
+        event.registerEntityRenderer(AncientAetherEntityTypes.CHEST_BOAT.get(), context -> new AncientAetherBoatRenderer<>(context, true));
 
         event.registerBlockEntityRenderer(AncientAetherBlockEntityTypes.SIGN.get(), SignRenderer::new);
         event.registerBlockEntityRenderer(AncientAetherBlockEntityTypes.HANGING_SIGN.get(), HangingSignRenderer::new);
