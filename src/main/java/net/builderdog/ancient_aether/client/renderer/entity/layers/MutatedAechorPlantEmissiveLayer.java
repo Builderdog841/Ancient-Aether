@@ -10,7 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
 
 public class MutatedAechorPlantEmissiveLayer extends EyesLayer<MutatedAechorPlant, MutatedAechorPlantModel> {
-    private static final RenderType MUTATED_AECHOR_PLANT_EMISSIVE = RenderType.eyes(new ResourceLocation(AncientAether.MODID, "textures/entity/mobs/mutated_aechor_plant/mutated_aechor_plant_emissive.png"));
+    private static final RenderType MUTATED_AECHOR_PLANT_EMISSIVE = RenderType.eyes(new ResourceLocation(AncientAether.MODID, "textures/entity/mob/mutated_aechor_plant/mutated_aechor_plant_emissive.png"));
 
     public MutatedAechorPlantEmissiveLayer(RenderLayerParent<MutatedAechorPlant, MutatedAechorPlantModel> entityRenderer) {
         super(entityRenderer);

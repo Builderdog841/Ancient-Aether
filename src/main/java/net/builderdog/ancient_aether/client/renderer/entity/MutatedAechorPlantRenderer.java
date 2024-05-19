@@ -13,7 +13,7 @@ import net.minecraft.util.Mth;
 import org.jetbrains.annotations.NotNull;
 
 public class MutatedAechorPlantRenderer extends MobRenderer<MutatedAechorPlant, MutatedAechorPlantModel> {
-    private static final ResourceLocation MUTATED_AECHOR_PLANT_TEXTURE = new ResourceLocation(AncientAether.MODID, "textures/entity/mobs/mutated_aechor_plant/mutated_aechor_plant.png");
+    private static final ResourceLocation MUTATED_AECHOR_PLANT_TEXTURE = new ResourceLocation(AncientAether.MODID, "textures/entity/mob/mutated_aechor_plant/mutated_aechor_plant.png");
 
     public MutatedAechorPlantRenderer(EntityRendererProvider.Context context) {
         super(context, new MutatedAechorPlantModel(context.bakeLayer(AncientAetherModelLayers.MUTATED_AECHOR_PLANT)), 0.3F);

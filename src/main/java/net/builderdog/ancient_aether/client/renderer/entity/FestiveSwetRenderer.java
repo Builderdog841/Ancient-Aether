@@ -13,7 +13,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class FestiveSwetRenderer extends MobRenderer<Swet, FestiveSwetModel<Swet>> {
 
-    private static final ResourceLocation FESTIVE_SWET_TEXTURE = new ResourceLocation("ancient_aether", "textures/entity/mobs/festive_swet/festive_swet.png");
+    private static final ResourceLocation FESTIVE_SWET_TEXTURE = new ResourceLocation("ancient_aether", "textures/entity/mob/festive_swet/festive_swet.png");
     public FestiveSwetRenderer(EntityRendererProvider.Context context) {
         super(context, new FestiveSwetModel<>(context.bakeLayer(AncientAetherModelLayers.FESTIVE_SWET)), 0.3F);
         addLayer(new FestiveSwetOuterLayer(this, new FestiveSwetModel<>(context.bakeLayer(AncientAetherModelLayers.FESTIVE_SWET_OUTER))));

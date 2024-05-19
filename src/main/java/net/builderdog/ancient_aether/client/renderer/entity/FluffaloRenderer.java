@@ -13,8 +13,8 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nonnull;
 
 public class FluffaloRenderer extends MobRenderer<Fluffalo, FluffaloModel<Fluffalo>> {
-    private static final ResourceLocation FLUFFALO_TEXTURE = new ResourceLocation("ancient_aether", "textures/entity/mobs/fluffalo/fluffalo.png");
-    private static final ResourceLocation FLUFFALO_SHEARED_TEXTURE = new ResourceLocation("ancient_aether", "textures/entity/mobs/fluffalo/fluffalo_sheared.png");
+    private static final ResourceLocation FLUFFALO_TEXTURE = new ResourceLocation("ancient_aether", "textures/entity/mob/fluffalo/fluffalo.png");
+    private static final ResourceLocation FLUFFALO_SHEARED_TEXTURE = new ResourceLocation("ancient_aether", "textures/entity/mob/fluffalo/fluffalo_sheared.png");
 
     public FluffaloRenderer(EntityRendererProvider.Context context) {
         super(context, new FluffaloModel<>(context.bakeLayer(AncientAetherModelLayers.FLUFFALO)), 0.7F);

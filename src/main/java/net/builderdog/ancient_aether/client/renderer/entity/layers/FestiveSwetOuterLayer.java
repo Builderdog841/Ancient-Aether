@@ -17,7 +17,7 @@ public class FestiveSwetOuterLayer extends RenderLayer<Swet, FestiveSwetModel<Sw
 
     public FestiveSwetOuterLayer(RenderLayerParent<Swet, FestiveSwetModel<Swet>> entityRenderer, FestiveSwetModel<Swet> outerModel) {
         super(entityRenderer);
-        this.outer = outerModel;
+        outer = outerModel;
     }
 
     public void render(@NotNull PoseStack poseStack, @NotNull MultiBufferSource buffer, int packedLight, @NotNull Swet swet, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {

@@ -11,7 +11,7 @@ import net.minecraft.resources.ResourceLocation;
 import javax.annotation.Nonnull;
 
 public class AeronauticLeaperRenderer extends MobRenderer<AeronauticLeaper, AeronauticLeaperModel<AeronauticLeaper>> {
-	private static final ResourceLocation AERONAUTIC_LEAPER_TEXTURE = new ResourceLocation("ancient_aether", "textures/entity/mobs/aeronautic_leaper/aeronautic_leaper.png");
+	private static final ResourceLocation AERONAUTIC_LEAPER_TEXTURE = new ResourceLocation("ancient_aether", "textures/entity/mob/aeronautic_leaper/aeronautic_leaper.png");
 
 	public AeronauticLeaperRenderer(EntityRendererProvider.Context context) {
 		super(context, new AeronauticLeaperModel<>(context.bakeLayer(AncientAetherModelLayers.AERONAUTIC_LEAPER)), 0.7F);
