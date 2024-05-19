@@ -2,7 +2,7 @@ package net.builderdog.ancient_aether.item.equipment.tools.valkyrum;
 
 import com.aetherteam.aether.item.tools.abilities.ValkyrieTool;
 import com.google.common.collect.Multimap;
-import net.builderdog.ancient_aether.item.equipment.AncientAetherItemTiers;
+import net.builderdog.ancient_aether.item.equipment.AncientItemTiers;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -12,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class ValkyrumHoeItem extends HoeItem implements ValkyrieTool {
     public ValkyrumHoeItem() {
-        super(AncientAetherItemTiers.VALKYRUM, -3, -0.3F, new Properties());
+        super(AncientItemTiers.VALKYRUM, -3, -0.3F, new Properties());
     }
 
     @Override

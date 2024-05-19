@@ -3,11 +3,11 @@ package net.builderdog.ancient_aether.entity.passive;
 import com.aetherteam.aether.entity.ai.goal.EatAetherGrassGoal;
 import com.aetherteam.aether.entity.ai.goal.FallingRandomStrollGoal;
 import com.aetherteam.aether.entity.passive.AetherAnimal;
-import net.builderdog.ancient_aether.AncientAetherTags;
-import net.builderdog.ancient_aether.block.AncientAetherBlocks;
-import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
-import net.builderdog.ancient_aether.data.resources.AncientAetherLoot;
-import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
+import net.builderdog.ancient_aether.AncientTags;
+import net.builderdog.ancient_aether.block.AncientBlocks;
+import net.builderdog.ancient_aether.client.AncientSoundEvents;
+import net.builderdog.ancient_aether.data.resources.AncientLoot;
+import net.builderdog.ancient_aether.entity.AncientEntityTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -61,7 +61,7 @@ public class Fluffalo extends WyndcapsAnimal implements Shearable {
         goalSelector.addGoal(0, new FloatGoal(this));
         targetSelector.addGoal(1, new HurtByTargetGoal(this));
         goalSelector.addGoal(2, new BreedGoal(this, 1.0));
-        goalSelector.addGoal(3, new TemptGoal(this, 1.25, Ingredient.of(AncientAetherTags.Items.FLUFFALO_TEMPTATION_ITEMS), false));
+        goalSelector.addGoal(3, new TemptGoal(this, 1.25, Ingredient.of(AncientTags.Items.FLUFFALO_TEMPTATION_ITEMS), false));
         goalSelector.addGoal(4, new FollowParentGoal(this, 1.25));
         goalSelector.addGoal(5, eatBlockGoal);
         goalSelector.addGoal(6, new FallingRandomStrollGoal(this, 1.0));
@@ -87,7 +87,7 @@ public class Fluffalo extends WyndcapsAnimal implements Shearable {
     public @NotNull InteractionResult mobInteract(Player playerEntity, @Nonnull InteractionHand hand) {
         ItemStack itemStack = playerEntity.getItemInHand(hand);
         if (itemStack.is(Items.BUCKET) && !isBaby()) {
-            playerEntity.playSound(AncientAetherSoundEvents.ENTITY_FLUFFALO_MILK.get(), 1.0F, 1.0F);
+            playerEntity.playSound(AncientSoundEvents.ENTITY_FLUFFALO_MILK.get(), 1.0F, 1.0F);
             ItemStack itemStack1 = ItemUtils.createFilledResult(itemStack, playerEntity, Items.MILK_BUCKET.getDefaultInstance());
             playerEntity.setItemInHand(hand, itemStack1);
             return InteractionResult.sidedSuccess(level().isClientSide);
@@ -97,7 +97,7 @@ public class Fluffalo extends WyndcapsAnimal implements Shearable {
     }
 
     public @NotNull ResourceLocation getDefaultLootTable() {
-        return isSheared() ? AncientAetherLoot.ENTITIES_FLUFFALO_SHEARED : getType().getDefaultLootTable();
+        return isSheared() ? AncientLoot.ENTITIES_FLUFFALO_SHEARED : getType().getDefaultLootTable();
     }
 
     protected void customServerAiStep() {
@@ -176,7 +176,7 @@ public class Fluffalo extends WyndcapsAnimal implements Shearable {
         int i = 1 + random.nextInt(3);
 
         for (int j = 0; j < i; ++j) {
-            ItemEntity itementity = spawnAtLocation(AncientAetherBlocks.FLUFFALO_WOOL.get(), 1);
+            ItemEntity itementity = spawnAtLocation(AncientBlocks.FLUFFALO_WOOL.get(), 1);
             if (itementity != null) {
                 itementity.setDeltaMovement(itementity.getDeltaMovement().add(((random.nextFloat() - random.nextFloat()) * 0.1F), (random.nextFloat() * 0.05F), ((random.nextFloat() - random.nextFloat()) * 0.1F)));
             }
@@ -193,7 +193,7 @@ public class Fluffalo extends WyndcapsAnimal implements Shearable {
 
             List<ItemStack> items = new ArrayList<>();
             for (int j = 0; j < i; ++j) {
-                items.add(new ItemStack(AncientAetherBlocks.FLUFFALO_WOOL.get()));
+                items.add(new ItemStack(AncientBlocks.FLUFFALO_WOOL.get()));
             }
             return items;
         }
@@ -202,13 +202,13 @@ public class Fluffalo extends WyndcapsAnimal implements Shearable {
 
     @Override
     public boolean isFood(ItemStack stack) {
-        return stack.is(AncientAetherTags.Items.FLUFFALO_TEMPTATION_ITEMS);
+        return stack.is(AncientTags.Items.FLUFFALO_TEMPTATION_ITEMS);
     }
 
     @Nullable
     @Override
     public AgeableMob getBreedOffspring(@NotNull ServerLevel level, @NotNull AgeableMob ageableMob) {
-        return AncientAetherEntityTypes.FLUFFALO.get().create(level);
+        return AncientEntityTypes.FLUFFALO.get().create(level);
     }
 
     public void addAdditionalSaveData(@NotNull CompoundTag tag) {
@@ -224,19 +224,19 @@ public class Fluffalo extends WyndcapsAnimal implements Shearable {
     @Nullable
     @Override
     protected SoundEvent getAmbientSound() {
-        return AncientAetherSoundEvents.ENTITY_FLUFFALO_AMBIENT.get();
+        return AncientSoundEvents.ENTITY_FLUFFALO_AMBIENT.get();
     }
 
     @Nullable
     @Override
     protected SoundEvent getHurtSound(@Nonnull DamageSource damage) {
-        return AncientAetherSoundEvents.ENTITY_FLUFFALO_HURT.get();
+        return AncientSoundEvents.ENTITY_FLUFFALO_HURT.get();
     }
 
     @Nullable
     @Override
     protected SoundEvent getDeathSound() {
-        return AncientAetherSoundEvents.ENTITY_FLUFFALO_DEATH.get();
+        return AncientSoundEvents.ENTITY_FLUFFALO_DEATH.get();
     }
 
     @Override

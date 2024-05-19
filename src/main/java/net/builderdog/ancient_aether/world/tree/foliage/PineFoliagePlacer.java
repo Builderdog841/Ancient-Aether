@@ -2,7 +2,6 @@ package net.builderdog.ancient_aether.world.tree.foliage;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.builderdog.ancient_aether.world.tree.AncientAetherFoliagePlacers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.valueproviders.IntProvider;
@@ -22,11 +21,6 @@ public class PineFoliagePlacer extends FoliagePlacer {
     public PineFoliagePlacer(IntProvider radius, IntProvider offset, IntProvider height) {
         super(radius, offset);
         trunkHeight = height;
-    }
-
-    @Override
-    protected @NotNull FoliagePlacerType<?> type() {
-        return AncientAetherFoliagePlacers.PINE_FOLIAGE_PLACER.get();
     }
 
     @Override
@@ -58,5 +52,10 @@ public class PineFoliagePlacer extends FoliagePlacer {
     @Override
     protected boolean shouldSkipLocation(@NotNull RandomSource random, int localX, int localY, int localZ, int range, boolean large) {
         return localX + localX + localZ + localZ > range + 2;
+    }
+
+    @Override
+    protected @NotNull FoliagePlacerType<?> type() {
+        return AncientFoliagePlacers.PINE_FOLIAGE_PLACER.get();
     }
 }

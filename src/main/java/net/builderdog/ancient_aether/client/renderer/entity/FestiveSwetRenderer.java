@@ -2,7 +2,7 @@ package net.builderdog.ancient_aether.client.renderer.entity;
 
 import com.aetherteam.aether.entity.monster.Swet;
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.builderdog.ancient_aether.client.renderer.AncientAetherModelLayers;
+import net.builderdog.ancient_aether.client.renderer.AncientModelLayers;
 import net.builderdog.ancient_aether.client.renderer.entity.layers.FestiveSwetOuterLayer;
 import net.builderdog.ancient_aether.client.renderer.entity.model.FestiveSwetModel;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -15,8 +15,8 @@ public class FestiveSwetRenderer extends MobRenderer<Swet, FestiveSwetModel<Swet
 
     private static final ResourceLocation FESTIVE_SWET_TEXTURE = new ResourceLocation("ancient_aether", "textures/entity/mob/festive_swet/festive_swet.png");
     public FestiveSwetRenderer(EntityRendererProvider.Context context) {
-        super(context, new FestiveSwetModel<>(context.bakeLayer(AncientAetherModelLayers.FESTIVE_SWET)), 0.3F);
-        addLayer(new FestiveSwetOuterLayer(this, new FestiveSwetModel<>(context.bakeLayer(AncientAetherModelLayers.FESTIVE_SWET_OUTER))));
+        super(context, new FestiveSwetModel<>(context.bakeLayer(AncientModelLayers.FESTIVE_SWET)), 0.3F);
+        addLayer(new FestiveSwetOuterLayer(this, new FestiveSwetModel<>(context.bakeLayer(AncientModelLayers.FESTIVE_SWET_OUTER))));
     }
 
     @Override

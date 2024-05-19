@@ -1,9 +1,9 @@
 package net.builderdog.ancient_aether.block.blocktype;
 
 import com.mojang.serialization.MapCodec;
-import net.builderdog.ancient_aether.block.blockstate.AncientAetherBlockStateProperties;
-import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
-import net.builderdog.ancient_aether.item.AncientAetherItems;
+import net.builderdog.ancient_aether.block.blockstate.AncientBlockStateProperties;
+import net.builderdog.ancient_aether.client.AncientSoundEvents;
+import net.builderdog.ancient_aether.item.AncientItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -44,7 +44,7 @@ import javax.annotation.Nullable;
 @SuppressWarnings("deprecation")
 public class GrapeVineBlock extends Block implements BonemealableBlock {
     public static final MapCodec<GrapeVineBlock> CODEC = simpleCodec(GrapeVineBlock::new);
-    public static final BooleanProperty CROPPED = AncientAetherBlockStateProperties.CROPPED;
+    public static final BooleanProperty CROPPED = AncientBlockStateProperties.CROPPED;
     public static final IntegerProperty AGE = BlockStateProperties.AGE_2;
     public static final DirectionProperty FACING = LadderBlock.FACING;
     protected static final VoxelShape EAST_AABB = Block.box(0.0D, 0.0D, 0.0D, 3.0D, 16.0D, 16.0D);
@@ -117,7 +117,7 @@ public class GrapeVineBlock extends Block implements BonemealableBlock {
     }
 
     public @NotNull ItemStack getCloneItemStack(@NotNull LevelReader level, @NotNull BlockPos pos, @NotNull BlockState state) {
-        return new ItemStack(AncientAetherItems.GRAPES.get());
+        return new ItemStack(AncientItems.GRAPES.get());
     }
 
     public void randomTick(BlockState state, @NotNull ServerLevel level, @NotNull BlockPos pos, @NotNull RandomSource random) {
@@ -138,11 +138,11 @@ public class GrapeVineBlock extends Block implements BonemealableBlock {
         }
         if (i > 1) {
             int j = 1 + level.random.nextInt(1);
-            popResource(level, pos, new ItemStack(AncientAetherItems.GRAPES.get(), j + (flag ? 1 : 0)));
+            popResource(level, pos, new ItemStack(AncientItems.GRAPES.get(), j + (flag ? 1 : 0)));
             BlockState age = state.setValue(AGE, 1);
             level.setBlock(pos, age, 2);
             level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, age));
-            level.playSound(null, pos, AncientAetherSoundEvents.BLOCK_GRAPE_VINE_PICK_GRAPES.get(), SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
+            level.playSound(null, pos, AncientSoundEvents.BLOCK_GRAPE_VINE_PICK_GRAPES.get(), SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
             return InteractionResult.sidedSuccess(level.isClientSide);
         }
         if (player.getItemInHand(hand).canPerformAction(ToolActions.SHEARS_CARVE)) {

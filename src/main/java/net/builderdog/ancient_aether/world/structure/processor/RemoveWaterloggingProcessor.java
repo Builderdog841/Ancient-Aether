@@ -1,7 +1,6 @@
 package net.builderdog.ancient_aether.world.structure.processor;
 
 import com.mojang.serialization.Codec;
-import net.builderdog.ancient_aether.world.structure.AncientAetherStructureProcessors;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -29,6 +28,6 @@ public class RemoveWaterloggingProcessor extends StructureProcessor {
 
     @Override
     protected @NotNull StructureProcessorType<?> getType() {
-        return AncientAetherStructureProcessors.REMOVE_WATERLOGGING.get();
+        return AncientStructureProcessors.REMOVE_WATERLOGGING.get();
     }
 }

@@ -1,7 +1,7 @@
 package net.builderdog.ancient_aether.entity.passive;
 
 import com.aetherteam.aether.entity.passive.AetherAnimal;
-import net.builderdog.ancient_aether.AncientAetherTags;
+import net.builderdog.ancient_aether.AncientTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.EntityType;
@@ -17,6 +17,6 @@ public abstract class WyndcapsAnimal extends AetherAnimal {
     }
 
     public static boolean checkWyndcapsAnimalSpawnRules(EntityType<? extends WyndcapsAnimal> animal, LevelAccessor level, MobSpawnType spawnReason, BlockPos pos, RandomSource random) {
-        return level.getBlockState(pos.below()).is(AncientAetherTags.Blocks.WYNDCAPS_ANIMAL_SPAWNABLE_ON) && level.getRawBrightness(pos, 0) > 8;
+        return level.getBlockState(pos.below()).is(AncientTags.Blocks.WYNDCAPS_ANIMAL_SPAWNABLE_ON) && level.getRawBrightness(pos, 0) > 8;
     }
 }

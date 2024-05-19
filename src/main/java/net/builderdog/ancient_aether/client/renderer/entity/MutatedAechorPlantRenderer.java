@@ -2,7 +2,7 @@ package net.builderdog.ancient_aether.client.renderer.entity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.client.renderer.AncientAetherModelLayers;
+import net.builderdog.ancient_aether.client.renderer.AncientModelLayers;
 import net.builderdog.ancient_aether.client.renderer.entity.layers.MutatedAechorPlantEmissiveLayer;
 import net.builderdog.ancient_aether.client.renderer.entity.model.MutatedAechorPlantModel;
 import net.builderdog.ancient_aether.entity.monster.boss.MutatedAechorPlant;
@@ -16,7 +16,7 @@ public class MutatedAechorPlantRenderer extends MobRenderer<MutatedAechorPlant, 
     private static final ResourceLocation MUTATED_AECHOR_PLANT_TEXTURE = new ResourceLocation(AncientAether.MODID, "textures/entity/mob/mutated_aechor_plant/mutated_aechor_plant.png");
 
     public MutatedAechorPlantRenderer(EntityRendererProvider.Context context) {
-        super(context, new MutatedAechorPlantModel(context.bakeLayer(AncientAetherModelLayers.MUTATED_AECHOR_PLANT)), 0.3F);
+        super(context, new MutatedAechorPlantModel(context.bakeLayer(AncientModelLayers.MUTATED_AECHOR_PLANT)), 0.3F);
         addLayer(new MutatedAechorPlantEmissiveLayer(this));
     }
 

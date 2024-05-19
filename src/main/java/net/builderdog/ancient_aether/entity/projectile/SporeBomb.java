@@ -2,8 +2,8 @@ package net.builderdog.ancient_aether.entity.projectile;
 
 import com.aetherteam.aether.effect.AetherEffects;
 import com.aetherteam.aether.entity.projectile.dart.AbstractDart;
-import net.builderdog.ancient_aether.client.particle.AncientAetherParticleTypes;
-import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
+import net.builderdog.ancient_aether.client.particle.AncientParticleTypes;
+import net.builderdog.ancient_aether.entity.AncientEntityTypes;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.AreaEffectCloud;
@@ -22,7 +22,7 @@ public class SporeBomb extends AbstractDart {
     }
 
     public SporeBomb(Level level, LivingEntity shooter) {
-        super(AncientAetherEntityTypes.SPORE_BOMB.get(), level, shooter, ItemStack.EMPTY);
+        super(AncientEntityTypes.SPORE_BOMB.get(), level, shooter, ItemStack.EMPTY);
         setNoGravity(false);
     }
 
@@ -37,7 +37,7 @@ public class SporeBomb extends AbstractDart {
                 areaEffectCloud.setDuration(300);
                 areaEffectCloud.addEffect(new MobEffectInstance(AetherEffects.INEBRIATION.get(), 60, 0));
                 areaEffectCloud.addEffect(new MobEffectInstance(MobEffects.HARM, 1, 0));
-                areaEffectCloud.setParticle(AncientAetherParticleTypes.TOXIC_SPORES.get());
+                areaEffectCloud.setParticle(AncientParticleTypes.TOXIC_SPORES.get());
                 level().addFreshEntity(areaEffectCloud);
             }
             discard();

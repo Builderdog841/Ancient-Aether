@@ -1,9 +1,9 @@
 package net.builderdog.ancient_aether.block.blocktype;
 
-import net.builderdog.ancient_aether.advancement.AncientAetherTriggers;
-import net.builderdog.ancient_aether.block.AncientAetherBlocks;
-import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
-import net.builderdog.ancient_aether.item.AncientAetherItems;
+import net.builderdog.ancient_aether.advancement.AncientAdvancementTriggers;
+import net.builderdog.ancient_aether.block.AncientBlocks;
+import net.builderdog.ancient_aether.client.AncientSoundEvents;
+import net.builderdog.ancient_aether.item.AncientItems;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -41,9 +41,9 @@ public class ObeliskBlock extends Block {
 
         if (player instanceof ServerPlayer serverPlayer && serverPlayer.level() instanceof ServerLevel
                 && serverPlayer.getAdvancements().getOrStartProgress(Objects.requireNonNull(serverPlayer.server.getAdvancements().get(new ResourceLocation("aether:gold_dungeon")))).isDone()) {
-            if (serverPlayer.getMainHandItem().getItem() == AncientAetherItems.ANCIENT_RUNE.get()) {
+            if (serverPlayer.getMainHandItem().getItem() == AncientItems.ANCIENT_RUNE.get()) {
                 ItemStack stack = player.getMainHandItem();
-                AncientAetherTriggers.OBELISK_ACTIVATION.get().trigger(serverPlayer, serverPlayer.getMainHandItem());
+                AncientAdvancementTriggers.OBELISK_ACTIVATION.get().trigger(serverPlayer, serverPlayer.getMainHandItem());
                 if (!serverPlayer.getAbilities().instabuild) {
                     player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
                     stack.shrink(1);
@@ -54,10 +54,10 @@ public class ObeliskBlock extends Block {
                             BlockPos checkedPos = new BlockPos(x1, y1, z1);
                             BlockState checkedState = level.getBlockState(checkedPos);
 
-                            if (checkedState.getBlock() == AncientAetherBlocks.TREASURE_DOORWAY_AEROGETIC_STONE.get()) {
+                            if (checkedState.getBlock() == AncientBlocks.TREASURE_DOORWAY_AEROGETIC_STONE.get()) {
                                 level.setBlockAndUpdate(checkedPos, Blocks.AIR.defaultBlockState());
                             }
-                            if (checkedState.getBlock() == AncientAetherBlocks.TREASURE_DOORWAY_AERONAUTIC_STONE.get()) {
+                            if (checkedState.getBlock() == AncientBlocks.TREASURE_DOORWAY_AERONAUTIC_STONE.get()) {
                                 level.setBlockAndUpdate(checkedPos, Blocks.AIR.defaultBlockState());
                             }
                             if (checkedState.getBlock() == Blocks.VINE) {
@@ -66,10 +66,10 @@ public class ObeliskBlock extends Block {
                         }
                     }
                 }
-                if (state.getBlock() == AncientAetherBlocks.ANCIENT_OBELISK.get()) {
-                    level.setBlockAndUpdate(pos, AncientAetherBlocks.POWERED_OBELISK.get().defaultBlockState());
+                if (state.getBlock() == AncientBlocks.ANCIENT_OBELISK.get()) {
+                    level.setBlockAndUpdate(pos, AncientBlocks.POWERED_OBELISK.get().defaultBlockState());
                 }
-                level.playSound(null, (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, AncientAetherSoundEvents.BLOCK_OBELISK_ACTIVATION.get(), SoundSource.BLOCKS, 1.0F, 1.0F);
+                level.playSound(null, (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, AncientSoundEvents.BLOCK_OBELISK_ACTIVATION.get(), SoundSource.BLOCKS, 1.0F, 1.0F);
                 return InteractionResult.sidedSuccess(true);
             }
         }

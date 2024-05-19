@@ -2,7 +2,7 @@ package net.builderdog.ancient_aether.entity.projectile;
 
 import com.aetherteam.aether.effect.AetherEffects;
 import com.aetherteam.aether.entity.projectile.dart.AbstractDart;
-import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
+import net.builderdog.ancient_aether.entity.AncientEntityTypes;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -17,7 +17,7 @@ public class MutatedAechorNeedle extends AbstractDart {
     }
 
     public MutatedAechorNeedle(Level level, LivingEntity shooter) {
-        super(AncientAetherEntityTypes.MUTATED_AECHOR_NEEDLE.get(), level, shooter, ItemStack.EMPTY);
+        super(AncientEntityTypes.MUTATED_AECHOR_NEEDLE.get(), level, shooter, ItemStack.EMPTY);
         setBaseDamage(6);
     }
 

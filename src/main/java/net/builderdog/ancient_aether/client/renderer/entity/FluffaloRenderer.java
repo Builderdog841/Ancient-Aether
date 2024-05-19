@@ -1,7 +1,7 @@
 package net.builderdog.ancient_aether.client.renderer.entity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.builderdog.ancient_aether.client.renderer.AncientAetherModelLayers;
+import net.builderdog.ancient_aether.client.renderer.AncientModelLayers;
 import net.builderdog.ancient_aether.client.renderer.entity.model.FluffaloModel;
 import net.builderdog.ancient_aether.entity.passive.Fluffalo;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -17,7 +17,7 @@ public class FluffaloRenderer extends MobRenderer<Fluffalo, FluffaloModel<Fluffa
     private static final ResourceLocation FLUFFALO_SHEARED_TEXTURE = new ResourceLocation("ancient_aether", "textures/entity/mob/fluffalo/fluffalo_sheared.png");
 
     public FluffaloRenderer(EntityRendererProvider.Context context) {
-        super(context, new FluffaloModel<>(context.bakeLayer(AncientAetherModelLayers.FLUFFALO)), 0.7F);
+        super(context, new FluffaloModel<>(context.bakeLayer(AncientModelLayers.FLUFFALO)), 0.7F);
     }
 
     @Nonnull

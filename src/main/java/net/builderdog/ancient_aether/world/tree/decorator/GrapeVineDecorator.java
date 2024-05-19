@@ -2,7 +2,6 @@ package net.builderdog.ancient_aether.world.tree.decorator;
 
 import com.mojang.serialization.Codec;
 import net.builderdog.ancient_aether.block.blocktype.GrapeVineBlock;
-import net.builderdog.ancient_aether.world.tree.AncientAetherTreeDecorators;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -58,6 +57,6 @@ public class GrapeVineDecorator extends TreeDecorator {
     }
 
     protected @NotNull TreeDecoratorType<?> type() {
-        return AncientAetherTreeDecorators.GRAPE_VINE_DECORATOR.get();
+        return AncientTreeDecorators.GRAPE_VINE_DECORATOR.get();
     }
 }

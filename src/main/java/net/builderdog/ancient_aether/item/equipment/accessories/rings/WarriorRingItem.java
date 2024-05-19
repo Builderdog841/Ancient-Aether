@@ -3,7 +3,7 @@ package net.builderdog.ancient_aether.item.equipment.accessories.rings;
 import com.aetherteam.aether.item.accessories.ring.RingItem;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
-import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
+import net.builderdog.ancient_aether.client.AncientSoundEvents;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -15,7 +15,7 @@ import java.util.UUID;
 public class WarriorRingItem extends RingItem {
 
     public WarriorRingItem(Properties properties) {
-        super(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_WARRIOR_RING, properties);
+        super(AncientSoundEvents.ITEM_ACCESSORY_EQUIP_WARRIOR_RING, properties);
     }
 
     @Override

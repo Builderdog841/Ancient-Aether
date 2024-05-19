@@ -32,7 +32,7 @@ public class ObeliskTrigger extends SimpleCriterionTrigger<ObeliskTrigger.Instan
                 .apply(instance, Instance::new));
 
         public static Criterion<Instance> forItem(ItemPredicate item) {
-            return AncientAetherTriggers.OBELISK_ACTIVATION.get().createCriterion(new Instance(Optional.empty(), Optional.of(item)));
+            return AncientAdvancementTriggers.OBELISK_ACTIVATION.get().createCriterion(new Instance(Optional.empty(), Optional.of(item)));
         }
 
         public static Criterion<Instance> forItem(ItemLike item) {

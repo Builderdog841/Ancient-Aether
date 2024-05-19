@@ -2,7 +2,7 @@ package net.builderdog.ancient_aether.item.equipment.tools.valkyrum;
 
 import com.aetherteam.aether.item.tools.abilities.ValkyrieTool;
 import com.google.common.collect.Multimap;
-import net.builderdog.ancient_aether.item.equipment.AncientAetherItemTiers;
+import net.builderdog.ancient_aether.item.equipment.AncientItemTiers;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -16,7 +16,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class ValkyrumLanceItem extends SwordItem implements ValkyrieTool {
     public ValkyrumLanceItem() {
-        super(AncientAetherItemTiers.VALKYRUM, 2, -2.7F, (new Properties()));
+        super(AncientItemTiers.VALKYRUM, 2, -2.7F, (new Properties()));
     }
 
     public @NotNull Multimap<Attribute, AttributeModifier> getAttributeModifiers(@NotNull EquipmentSlot slot, @NotNull ItemStack stack) {

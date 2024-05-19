@@ -4,7 +4,7 @@ import com.aetherteam.aether.AetherTags;
 import com.aetherteam.aether.block.AetherBlocks;
 import com.google.common.collect.ImmutableList;
 import com.mojang.serialization.Codec;
-import net.builderdog.ancient_aether.data.resources.registries.features.AncientAetherMiscFeatures;
+import net.builderdog.ancient_aether.data.resources.registries.features.AncientMiscFeatures;
 import net.builderdog.ancient_aether.world.structure.processor.RemoveWaterloggingProcessor;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
@@ -45,7 +45,7 @@ public class DungeonEntranceFeature extends Feature<NoneFeatureConfiguration> {
             }
         } else {
             StructureTemplate template = level.getLevel().getStructureManager().getOrCreate(new ResourceLocation("ancient_aether", "bronze_dungeon/entrance/staircase"));
-            ConfiguredFeature<?, ?> feature = Objects.requireNonNull(level.registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE).getHolder(AncientAetherMiscFeatures.BRONZE_DUNGEON_ENTRANCE).orElse(null)).value();
+            ConfiguredFeature<?, ?> feature = Objects.requireNonNull(level.registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE).getHolder(AncientMiscFeatures.BRONZE_DUNGEON_ENTRANCE).orElse(null)).value();
             ChunkGenerator chunk = level.getLevel().getChunkSource().getGenerator();
             template.placeInWorld(level, posOffset, pos, getSettings(), random, 3);
             feature.place(level, chunk, random, new BlockPos(x, y + 8, z));

@@ -2,7 +2,7 @@ package net.builderdog.ancient_aether.item.equipment.tools.valkyrum;
 
 import com.aetherteam.aether.item.tools.abilities.ValkyrieTool;
 import com.google.common.collect.Multimap;
-import net.builderdog.ancient_aether.item.equipment.AncientAetherItemTiers;
+import net.builderdog.ancient_aether.item.equipment.AncientItemTiers;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -12,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class ValkyrumPickaxeItem extends PickaxeItem implements ValkyrieTool {
     public ValkyrumPickaxeItem() {
-        super(AncientAetherItemTiers.VALKYRUM, 1, -3.1F, new Properties());
+        super(AncientItemTiers.VALKYRUM, 1, -3.1F, new Properties());
     }
 
     @Override

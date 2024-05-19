@@ -6,8 +6,8 @@ import com.aetherteam.aether.attachment.AetherDataAttachments;
 import com.aetherteam.aether.network.packet.clientbound.ToolDebuffPacket;
 import com.aetherteam.nitrogen.network.PacketRelay;
 import com.google.common.collect.ImmutableMap;
-import net.builderdog.ancient_aether.block.AncientAetherBlocks;
-import net.builderdog.ancient_aether.item.EquipmentUtil;
+import net.builderdog.ancient_aether.block.AncientBlocks;
+import net.builderdog.ancient_aether.item.AncientEquipmentUtil;
 import net.builderdog.ancient_aether.item.equipment.tools.abilities.DivineTool;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
@@ -33,20 +33,20 @@ public class AbilityHooks {
 
     public static class ArmorHooks {
         public static boolean fallCancellation(LivingEntity entity) {
-            return EquipmentUtil.hasFullValkyrumSet(entity);
+            return AncientEquipmentUtil.hasFullValkyrumSet(entity);
         }
     }
 
     public static class ToolHooks {
         public static final Map<Block, Block> STRIPPABLES = (new ImmutableMap.Builder<Block, Block>())
-                .put(AncientAetherBlocks.HIGHSPROOT_LOG.get(), AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG.get())
-                .put(AncientAetherBlocks.SAKURA_LOG.get(), AncientAetherBlocks.STRIPPED_SAKURA_LOG.get())
-                .put(AncientAetherBlocks.HIGHSPROOT_WOOD.get(), AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD.get())
-                .put(AncientAetherBlocks.SAKURA_WOOD.get(), AncientAetherBlocks.STRIPPED_SAKURA_WOOD.get())
-                .put(AncientAetherBlocks.HIGHSPROOT_LOG_WALL.get(), AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG_WALL.get())
-                .put(AncientAetherBlocks.SAKURA_LOG_WALL.get(), AncientAetherBlocks.STRIPPED_SAKURA_LOG_WALL.get())
-                .put(AncientAetherBlocks.HIGHSPROOT_WOOD_WALL.get(), AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD_WALL.get())
-                .put(AncientAetherBlocks.SAKURA_WOOD_WALL.get(), AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL.get())
+                .put(AncientBlocks.HIGHSPROOT_LOG.get(), AncientBlocks.STRIPPED_HIGHSPROOT_LOG.get())
+                .put(AncientBlocks.SAKURA_LOG.get(), AncientBlocks.STRIPPED_SAKURA_LOG.get())
+                .put(AncientBlocks.HIGHSPROOT_WOOD.get(), AncientBlocks.STRIPPED_HIGHSPROOT_WOOD.get())
+                .put(AncientBlocks.SAKURA_WOOD.get(), AncientBlocks.STRIPPED_SAKURA_WOOD.get())
+                .put(AncientBlocks.HIGHSPROOT_LOG_WALL.get(), AncientBlocks.STRIPPED_HIGHSPROOT_LOG_WALL.get())
+                .put(AncientBlocks.SAKURA_LOG_WALL.get(), AncientBlocks.STRIPPED_SAKURA_LOG_WALL.get())
+                .put(AncientBlocks.HIGHSPROOT_WOOD_WALL.get(), AncientBlocks.STRIPPED_HIGHSPROOT_WOOD_WALL.get())
+                .put(AncientBlocks.SAKURA_WOOD_WALL.get(), AncientBlocks.STRIPPED_SAKURA_WOOD_WALL.get())
                 .build();
 
         public static BlockState setupToolActions(BlockState old, ToolAction action) {

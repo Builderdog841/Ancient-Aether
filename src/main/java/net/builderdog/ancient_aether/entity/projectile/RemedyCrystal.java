@@ -2,8 +2,8 @@ package net.builderdog.ancient_aether.entity.projectile;
 
 import com.aetherteam.aether.effect.AetherEffects;
 import com.aetherteam.aether.entity.projectile.crystal.AbstractCrystal;
-import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
-import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
+import net.builderdog.ancient_aether.client.AncientSoundEvents;
+import net.builderdog.ancient_aether.entity.AncientEntityTypes;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.sounds.SoundEvent;
@@ -28,7 +28,7 @@ public class RemedyCrystal extends AbstractCrystal {
     }
 
     public RemedyCrystal(Level level, Entity shooter) {
-        this(AncientAetherEntityTypes.REMEDY_CRYSTAL.get(), level);
+        this(AncientEntityTypes.REMEDY_CRYSTAL.get(), level);
         setOwner(shooter);
         setPos(shooter.getX(), shooter.getY(), shooter.getZ());
         float rotation = random.nextFloat() * 360;
@@ -68,7 +68,7 @@ public class RemedyCrystal extends AbstractCrystal {
     @Nullable
     @Override
     public SoundEvent getImpactExplosionSoundEvent() {
-        return AncientAetherSoundEvents.ENTITY_REMEDY_CRYSTAL_EXPLODE.get();
+        return AncientSoundEvents.ENTITY_REMEDY_CRYSTAL_EXPLODE.get();
     }
 
     @Override

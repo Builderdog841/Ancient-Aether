@@ -2,7 +2,7 @@ package net.builderdog.ancient_aether.item.equipment.armor;
 
 import com.aetherteam.aether.attachment.AetherDataAttachments;
 import com.aetherteam.aether.mixin.mixins.common.accessor.ServerGamePacketListenerImplAccessor;
-import net.builderdog.ancient_aether.item.EquipmentUtil;
+import net.builderdog.ancient_aether.item.AncientEquipmentUtil;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -11,7 +11,7 @@ import net.minecraft.world.phys.Vec3;
 public interface ValkyrumArmor {
 
     static void handleFlight(LivingEntity entity) {
-        if (EquipmentUtil.hasFullValkyrumSet(entity)) {
+        if (AncientEquipmentUtil.hasFullValkyrumSet(entity)) {
             if (entity instanceof Player player && !player.getAbilities().flying) {
                 var data = player.getData(AetherDataAttachments.AETHER_PLAYER);
                 Vec3 deltaMovement = player.getDeltaMovement();
