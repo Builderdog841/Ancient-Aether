@@ -99,15 +99,6 @@ public class AncientAether {
         });
     }
 
-    /*
-    public void serverSetup(ServerAboutToStartEvent event) {
-        if (AncientAetherConfig.SERVER.server_config_overrides.get()) {
-            AetherConfig.SERVER.disable_eternal_day.set(true);
-        }
-    }
-
-     */
-
     public void eventSetup(IEventBus neoBus) {
         IEventBus bus = NeoForge.EVENT_BUS;
 
@@ -119,6 +110,7 @@ public class AncientAether {
         ItemListener.listen(bus);
         LevelListener.listen(bus);
         MenuListener.listen(bus);
+        ServerListener.listen(bus);
 
         neoBus.addListener(AncientAetherCreativeModeTabs::buildCreativeModeTabs);
         neoBus.addListener(AncientAetherEntityTypes::registerSpawnPlacements);
