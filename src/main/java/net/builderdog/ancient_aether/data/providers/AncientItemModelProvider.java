@@ -118,5 +118,4 @@ public abstract class AncientItemModelProvider extends AetherItemModelProvider {
                 .texture("end", modLoc("block/" + blockName(baseBlock) + "_top"))
                 .texture("side", modLoc("block/" + blockName(baseBlock)));
     }
-
 }
