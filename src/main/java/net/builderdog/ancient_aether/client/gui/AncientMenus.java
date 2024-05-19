@@ -21,8 +21,8 @@ public class AncientMenus {
 
     private static final ResourceLocation ANCIENT_AETHER_REGULAR_BACKGROUND = new ResourceLocation(AncientAether.MODID, "textures/gui/title/options_background.png");
     private static final ResourceLocation ANCIENT_AETHER_DARK_BACKGROUND = new ResourceLocation(AncientAether.MODID, "textures/gui/title/dark_options_background.png");
-    private static final ResourceLocation ANCIENT_AETHER_HEADER_SEPARATOR = new ResourceLocation(AncientAether.MODID, "textures/sprites/gui/title/header_separator.png");
-    private static final ResourceLocation ANCIENT_AETHER_FOOTER_SEPARATOR = new ResourceLocation(AncientAether.MODID, "textures/sprites/gui/title/footer_separator.png");
+    private static final ResourceLocation ANCIENT_AETHER_HEADER_SEPARATOR = new ResourceLocation(AncientAether.MODID, "textures/gui/title/header_separator.png");
+    private static final ResourceLocation ANCIENT_AETHER_FOOTER_SEPARATOR = new ResourceLocation(AncientAether.MODID, "textures/gui/title/footer_separator.png");
     private static final WidgetSprites  ANCIENT_AETHER_TAB_BUTTON = new WidgetSprites(
             new ResourceLocation(AncientAether.MODID, "title/tab_selected"),
             new ResourceLocation(AncientAether.MODID, "title/tab"),
