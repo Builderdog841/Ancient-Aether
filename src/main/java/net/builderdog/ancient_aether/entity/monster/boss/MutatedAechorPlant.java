@@ -284,13 +284,13 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     @Nullable
     @Override
     public ResourceLocation getBossBarTexture() {
-        return AncientConfig.CLIENT.custom_boss_bars.get() ? new ResourceLocation(AncientAether.MODID, "textures/gui/boss_bar_mutated_aechor_plant_custom.png") : new ResourceLocation(AncientAether.MODID, "textures/gui/boss_bar_mutated_aechor_plant.png");
+        return AncientConfig.CLIENT.custom_boss_bars.get() ? new ResourceLocation(AncientAether.MODID, "textures/gui/sprites/boss_bar/mutated_aechor_plant_custom.png") : new ResourceLocation(AncientAether.MODID, "textures/gui/sprites/boss_bar/mutated_aechor_plant.png");
     }
 
     @Nullable
     @Override
     public ResourceLocation getBossBarBackgroundTexture() {
-        return AncientConfig.CLIENT.custom_boss_bars.get() ? new ResourceLocation(AncientAether.MODID, "textures/gui/boss_bar_mutated_aechor_plant_background_custom.png") : new ResourceLocation(AncientAether.MODID, "textures/gui/boss_bar_mutated_aechor_plant_background.png");
+        return AncientConfig.CLIENT.custom_boss_bars.get() ? new ResourceLocation(AncientAether.MODID, "textures/gui/sprites/boss_bar/mutated_aechor_plant_background_custom.png") : new ResourceLocation(AncientAether.MODID, "textures/gui/sprites/boss_bar/mutated_aechor_plant_background.png");
     }
 
     @Override
