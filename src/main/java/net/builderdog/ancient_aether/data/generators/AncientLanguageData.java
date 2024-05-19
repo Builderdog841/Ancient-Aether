@@ -409,15 +409,10 @@ public class AncientLanguageData extends AncientLanguageProvider {
         addGeneric("ancient_treasure_chest_locked", "This Treasure Chest must be unlocked with an Ancient Key");
 
         addPackTitle("texture_tweaks", "Ancient Aether Texture Tweaks");
-        addPackTitle("programmer_art", "Ancient Aether Programmer Art");
-        addPackTitle("worldgen_overrides", "Ancient Aether Worldgen Overrides");
-
-        addCompatibilityPackTitle("aether_genesis", "Aether Genesis");
-        addCompatibilityPackTitle("aether_emissivity", "Aether Emissivity");
-        addCompatibilityPackTitle("lost_aether_content", "Lost Content");
-        addCompatibilityPackTitle("aether_redux", "Aether Redux");
-        addCompatibilityPackTitle("deep_aether", "Deep Aether");
-        addCompatibilityPackTitle("deep_aether_assets", "Deep Aether Assets");
+        addPackTitle("new_worldgen", "Ancient Aether New Worldgen");
+        addPackTitle("experimental", "Ancient Aether Experimental Features");
+        addPackTitle("compatibility_resources", "Ancient Aether Compatibility Resources");
+        addPackTitle("compatibility_data", "Ancient Aether Compatibility Data");
 
         addMenuTitle("ancient_aether", "Ancient Aether");
 

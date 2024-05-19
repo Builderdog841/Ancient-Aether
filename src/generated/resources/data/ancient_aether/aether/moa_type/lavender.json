@@ -1,7 +1,7 @@
 {
   "egg": "ancient_aether:lavender_moa_egg",
   "max_jumps": 3,
-  "moa_texture": "ancient_aether:textures/entity/mobs/moa/lavender_moa.png",
+  "moa_texture": "ancient_aether:textures/entity/mob/moa/lavender_moa.png",
   "saddle_texture": "aether:textures/entity/mobs/moa/moa_saddle.png",
   "spawn_chance": 20,
   "speed": 0.2

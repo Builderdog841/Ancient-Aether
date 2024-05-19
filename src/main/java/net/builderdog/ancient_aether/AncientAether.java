@@ -127,15 +127,15 @@ public class AncientAether {
 
     public void packSetup(AddPackFindersEvent event) {
         if (event.getPackType() == PackType.CLIENT_RESOURCES) {
-            var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/ancient_aether_texture_tweaks");
-            var pack = Pack.readMetaAndCreate("builtin/ancient_aether_texture_tweaks", Component.translatable("pack.ancient_aether.texture_tweaks.title"), true,
+            var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/texture_tweaks");
+            var pack = Pack.readMetaAndCreate("builtin/texture_tweaks", Component.translatable("pack.ancient_aether.texture_tweaks.title"), true,
                     new PathPackResources.PathResourcesSupplier(resourcePath, true), PackType.CLIENT_RESOURCES, Pack.Position.TOP, PackSource.BUILT_IN);
             event.addRepositorySource(consumer -> consumer.accept(pack));
         }
 
         if (event.getPackType() == PackType.SERVER_DATA) {
-            var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/ancient_aether_worldgen_overrides");
-            var pack = Pack.readMetaAndCreate("builtin/ancient_aether_worldgen_overrides", Component.translatable("pack.ancient_aether.worldgen_overrides.title"), true,
+            var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("packs/new_worldgen");
+            var pack = Pack.readMetaAndCreate("builtin/new_worldgen", Component.translatable("pack.ancient_aether.new_worldgen.title"), true,
                     new PathPackResources.PathResourcesSupplier(resourcePath, true), PackType.SERVER_DATA, Pack.Position.TOP, PackSource.SERVER);
             event.addRepositorySource(consumer -> consumer.accept(pack));
         }

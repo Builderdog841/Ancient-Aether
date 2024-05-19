@@ -1,11 +1,11 @@
-// 1.20.4	2024-05-18T13:37:51.0087652	Registries
-4fb9a392cf2dda8315dbf1c7e8828982347689dd data/ancient_aether/aether/moa_type/burgundy.json
-a4bc5a9c7e7d9f2b02f95bb33ee528c65f814198 data/ancient_aether/aether/moa_type/lavender.json
-3da5420b93426f5812f8c7189bb818f6f93370e1 data/ancient_aether/aether/moa_type/sakura.json
-48098b843dd575fa35f4c5c4132c80a83eb96946 data/ancient_aether/aether/moa_type/sky_blue.json
-6b995433d928a010e51b5d42cc51b444783319c4 data/ancient_aether/aether/moa_type/teal.json
-c9aeb49b726a09378e7044f5b0095463cb13a997 data/ancient_aether/aether/moa_type/turquoise.json
-50590fd8ea0085114a57fc3db47ffdce333378ba data/ancient_aether/aether/moa_type/violet.json
+// 1.20.4	2024-05-19T20:16:59.7295017	Registries
+b78469a73034027fe4093a9f38f8ddf25245cbf8 data/ancient_aether/aether/moa_type/burgundy.json
+192dc5b429ccc1fd65fe571348b15cd968ad4828 data/ancient_aether/aether/moa_type/lavender.json
+c70aa583fc8d45c16266b14c717fe53b58e90cce data/ancient_aether/aether/moa_type/sakura.json
+4c7fa5eb0960d993ef1c01cc371ce67dac9783c6 data/ancient_aether/aether/moa_type/sky_blue.json
+45fe1b16fc574331753b5958dac8ad5f831489e4 data/ancient_aether/aether/moa_type/teal.json
+339cdfd8e636aaa0e0cb7faf7d332d14b2b20afa data/ancient_aether/aether/moa_type/turquoise.json
+bb03f8210db8b7c791d4f3b9f1b67c39147f2b18 data/ancient_aether/aether/moa_type/violet.json
 85c338e8273bc137000ce37988f34c93c8fd712f data/ancient_aether/neoforge/biome_modifier/aerogel_blobs_biome_modifier.json
 cfc0e9d28cb27ff904942169530792890683c7e4 data/ancient_aether/neoforge/biome_modifier/aether_cave_biome_modifier.json
 07ca76e5da269e4741eed05b8db8ba5b8250ebd5 data/ancient_aether/neoforge/biome_modifier/aether_grass_patch_biome_modifier.json

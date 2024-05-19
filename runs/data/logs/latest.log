@@ -1,70 +1,70 @@
-[19Mai2024 12:46:53.431] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--mod, ancient_aether, --all, --output, C:\Users\Timon\Documents\Forge 1.19.4\src\generated\resources, --existing, C:\Users\Timon\Documents\Forge 1.19.4\src\main\resources, --existing-mod, aether, --launchTarget, forgedatauserdev, --assetIndex, asset-index, --assetsDir, C:\Users\Timon\.gradle\caches\minecraft\assets\1.20.4, --gameDir, ., --fml.neoForgeVersion, 20.4.200, --fml.fmlVersion, 2.0.17, --fml.mcVersion, 1.20.4, --fml.neoFormVersion, 20231207.154220]
-[19Mai2024 12:46:53.446] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.7 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
-[19Mai2024 12:46:53.550] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[19Mai2024 12:46:53.579] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/Timon/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.13.0+mixin.0.8.5/3002d4fe6ba27679a51fc979e14eb051b754655a/sponge-mixin-0.13.0+mixin.0.8.5.jar%23184!/ Service=ModLauncher Env=CLIENT
-[19Mai2024 12:46:53.733] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "neoforge-20.4.200.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.MinecraftLocator@436390f4
-[19Mai2024 12:46:53.733] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "main" of type MOD with provider net.neoforged.fml.loading.moddiscovery.MinecraftLocator@436390f4
-[19Mai2024 12:46:53.733] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "" of type MOD with provider net.neoforged.fml.loading.moddiscovery.MinecraftLocator@436390f4
-[19Mai2024 12:46:53.791] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "aether-1.20.4-1.4.1-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@55a8dc49
-[19Mai2024 12:46:53.792] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "nitrogen_internals-1.20.4-1.1.0-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@55a8dc49
-[19Mai2024 12:46:53.792] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "cumulus_menus-1.20.4-1.0.1-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@55a8dc49
-[19Mai2024 12:46:53.792] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "TerraBlender-neoforge-1.20.4-3.3.0.12.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@55a8dc49
-[19Mai2024 12:46:53.792] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "aeroblender-1.20.4-1.0.1-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@55a8dc49
-[19Mai2024 12:46:53.792] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "curios-neoforge-7.3.4+1.20.4.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@55a8dc49
-[19Mai2024 12:46:53.792] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "aether-1.20.4-1.4.1-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@55a8dc49
-[19Mai2024 12:46:53.792] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "nitrogen_internals-1.20.4-1.1.0-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@55a8dc49
-[19Mai2024 12:46:53.792] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "cumulus_menus-1.20.4-1.0.1-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@55a8dc49
-[19Mai2024 12:46:53.792] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "TerraBlender-neoforge-1.20.4-3.3.0.12.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@55a8dc49
-[19Mai2024 12:46:53.793] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "aeroblender-1.20.4-1.0.1-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@55a8dc49
-[19Mai2024 12:46:53.793] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "curios-neoforge-7.3.4+1.20.4.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@55a8dc49
-[19Mai2024 12:46:53.881] [main/WARN] [net.neoforged.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: nitrogen_internals. Using Mod File: C:\Users\Timon\.gradle\caches\modules-2\files-2.1\com.aetherteam.nitrogen\nitrogen_internals\1.20.4-1.1.0-neoforge\b42c03429f3a8aa959731082954503a043b03451\nitrogen_internals-1.20.4-1.1.0-neoforge.jar
-[19Mai2024 12:46:53.881] [main/WARN] [net.neoforged.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: curios. Using Mod File: C:\Users\Timon\.gradle\caches\modules-2\files-2.1\top.theillusivec4.curios\curios-neoforge\7.3.4+1.20.4\a87eaa9102ea78d57c5b98f32e1f1edd71c3767c\curios-neoforge-7.3.4+1.20.4.jar
-[19Mai2024 12:46:53.882] [main/WARN] [net.neoforged.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: cumulus_menus. Using Mod File: C:\Users\Timon\.gradle\caches\modules-2\files-2.1\com.aetherteam.cumulus\cumulus_menus\1.20.4-1.0.1-neoforge\67c91d7d1f210b4e2cac6cd9190171ae5e181685\cumulus_menus-1.20.4-1.0.1-neoforge.jar
-[19Mai2024 12:46:53.882] [main/INFO] [net.neoforged.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
-[19Mai2024 12:46:53.882] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "mixinextras-neoforge-0.3.5.jar" of type GAMELIBRARY with provider net.neoforged.fml.loading.moddiscovery.JarInJarDependencyLocator@27f3b6d6
-[19Mai2024 12:46:54.609] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[19Mai2024 12:46:54.623] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\Timon\.gradle\caches\minecraft\assets\1.20.4, --mod, ancient_aether, --all, --output, C:\Users\Timon\Documents\Forge 1.19.4\src\generated\resources, --existing, C:\Users\Timon\Documents\Forge 1.19.4\src\main\resources, --existing-mod, aether, --assetIndex, asset-index]
-[19Mai2024 12:46:54.661] [main/WARN] [mixin/]: Reference map 'nitrogen_internals.refmap.json' for nitrogen_internals.mixins.json could not be read. If this is a development environment you can ignore this message
-[19Mai2024 12:46:54.662] [main/WARN] [mixin/]: Reference map 'curios.refmap.json' for curios.neoforge.mixins.json could not be read. If this is a development environment you can ignore this message
-[19Mai2024 12:46:54.664] [main/WARN] [mixin/]: Reference map 'curios.refmap.json' for curios.mixins.json could not be read. If this is a development environment you can ignore this message
-[19Mai2024 12:46:54.665] [main/WARN] [mixin/]: Reference map 'cumulus_menus.refmap.json' for cumulus_menus.mixins.json could not be read. If this is a development environment you can ignore this message
-[19Mai2024 12:46:54.669] [main/WARN] [mixin/]: Reference map 'aether.refmap.json' for aether.mixins.json could not be read. If this is a development environment you can ignore this message
-[19Mai2024 12:46:54.669] [main/WARN] [mixin/]: Reference map 'aeroblender.refmap.json' for aeroblender.mixins.json could not be read. If this is a development environment you can ignore this message
-[19Mai2024 12:46:54.670] [main/WARN] [mixin/]: Reference map 'ancient_aether.refmap.json' for ancient_aether.mixins.json could not be read. If this is a development environment you can ignore this message
-[19Mai2024 12:46:54.671] [main/WARN] [mixin/]: Reference map 'terrablender.refmap.json' for terrablender_neoforge.mixins.json could not be read. If this is a development environment you can ignore this message
-[19Mai2024 12:46:54.672] [main/WARN] [mixin/]: Reference map 'terrablender.refmap.json' for terrablender.mixins.json could not be read. If this is a development environment you can ignore this message
-[19Mai2024 12:46:55.232] [main/INFO] [net.neoforged.neoforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [ancient_aether]
-[19Mai2024 12:46:55.236] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.3.5).
-[19Mai2024 12:46:59.010] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 20.4.200, for MC 1.20.4 with MCP 20231207.154220
-[19Mai2024 12:47:00.094] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Timon/Documents/Forge%201.19.4/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/20.4.200/neoforge-20.4.200.jar%23193!/assets/.mcassetsroot' uses unexpected schema
-[19Mai2024 12:47:00.094] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Timon/Documents/Forge%201.19.4/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/20.4.200/neoforge-20.4.200.jar%23193!/data/.mcassetsroot' uses unexpected schema
-[19Mai2024 12:47:00.474] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: ancient_aether
-[19Mai2024 12:47:00.626] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: ancient_aether finished after 151 ms
-[19Mai2024 12:47:00.626] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: ancient_aether
-[19Mai2024 12:47:00.700] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: ancient_aether finished after 73 ms
-[19Mai2024 12:47:00.701] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: en_us for mod: ancient_aether
-[19Mai2024 12:47:00.707] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: en_us for mod: ancient_aether finished after 6 ms
-[19Mai2024 12:47:00.708] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Sound Definitions
-[19Mai2024 12:47:00.718] [main/INFO] [net.minecraft.data.DataGenerator/]: Sound Definitions finished after 10 ms
-[19Mai2024 12:47:00.719] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Advancements
-[19Mai2024 12:47:00.776] [main/INFO] [net.minecraft.data.DataGenerator/]: Advancements finished after 56 ms
-[19Mai2024 12:47:00.776] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Data Maps
-[19Mai2024 12:47:00.785] [main/INFO] [net.minecraft.data.DataGenerator/]: Data Maps finished after 8 ms
-[19Mai2024 12:47:00.785] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[19Mai2024 12:47:00.839] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 53 ms
-[19Mai2024 12:47:00.839] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
-[19Mai2024 12:47:00.854] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 14 ms
-[19Mai2024 12:47:00.854] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[19Mai2024 12:47:00.897] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 43 ms
-[19Mai2024 12:47:00.897] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id ancient_aether
-[19Mai2024 12:47:00.904] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id ancient_aether finished after 6 ms
-[19Mai2024 12:47:00.904] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id ancient_aether
-[19Mai2024 12:47:00.907] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id ancient_aether finished after 3 ms
-[19Mai2024 12:47:00.907] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:entity_type mod id ancient_aether
-[19Mai2024 12:47:00.909] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:entity_type mod id ancient_aether finished after 1 ms
-[19Mai2024 12:47:00.909] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:worldgen/biome mod id ancient_aether
-[19Mai2024 12:47:00.913] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:worldgen/biome mod id ancient_aether finished after 3 ms
-[19Mai2024 12:47:00.913] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:worldgen/structure mod id ancient_aether
-[19Mai2024 12:47:00.914] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:worldgen/structure mod id ancient_aether finished after 1 ms
-[19Mai2024 12:47:00.914] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 440 ms
-[19Mai2024 12:47:01.004] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 1677, old count: 1677, new count: 1678, removed stale: 0, written: 0
+[19Mai2024 20:16:52.762] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--mod, ancient_aether, --all, --output, C:\Users\Timon\Documents\Forge 1.19.4\src\generated\resources, --existing, C:\Users\Timon\Documents\Forge 1.19.4\src\main\resources, --existing-mod, aether, --launchTarget, forgedatauserdev, --assetIndex, asset-index, --assetsDir, C:\Users\Timon\.gradle\caches\minecraft\assets\1.20.4, --gameDir, ., --fml.neoForgeVersion, 20.4.200, --fml.fmlVersion, 2.0.17, --fml.mcVersion, 1.20.4, --fml.neoFormVersion, 20231207.154220]
+[19Mai2024 20:16:52.764] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.7 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[19Mai2024 20:16:52.846] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[19Mai2024 20:16:52.880] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/Timon/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.13.0+mixin.0.8.5/3002d4fe6ba27679a51fc979e14eb051b754655a/sponge-mixin-0.13.0+mixin.0.8.5.jar%23184!/ Service=ModLauncher Env=CLIENT
+[19Mai2024 20:16:53.038] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "neoforge-20.4.200.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.MinecraftLocator@1af7f54a
+[19Mai2024 20:16:53.039] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "main" of type MOD with provider net.neoforged.fml.loading.moddiscovery.MinecraftLocator@1af7f54a
+[19Mai2024 20:16:53.039] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "" of type MOD with provider net.neoforged.fml.loading.moddiscovery.MinecraftLocator@1af7f54a
+[19Mai2024 20:16:53.104] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "aether-1.20.4-1.4.1-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@63034ed1
+[19Mai2024 20:16:53.104] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "nitrogen_internals-1.20.4-1.1.0-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@63034ed1
+[19Mai2024 20:16:53.104] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "cumulus_menus-1.20.4-1.0.1-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@63034ed1
+[19Mai2024 20:16:53.104] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "TerraBlender-neoforge-1.20.4-3.3.0.12.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@63034ed1
+[19Mai2024 20:16:53.105] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "aeroblender-1.20.4-1.0.1-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@63034ed1
+[19Mai2024 20:16:53.105] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "curios-neoforge-7.3.4+1.20.4.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@63034ed1
+[19Mai2024 20:16:53.105] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "aether-1.20.4-1.4.1-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@63034ed1
+[19Mai2024 20:16:53.105] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "nitrogen_internals-1.20.4-1.1.0-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@63034ed1
+[19Mai2024 20:16:53.105] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "cumulus_menus-1.20.4-1.0.1-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@63034ed1
+[19Mai2024 20:16:53.105] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "TerraBlender-neoforge-1.20.4-3.3.0.12.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@63034ed1
+[19Mai2024 20:16:53.105] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "aeroblender-1.20.4-1.0.1-neoforge.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@63034ed1
+[19Mai2024 20:16:53.105] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "curios-neoforge-7.3.4+1.20.4.jar" of type MOD with provider net.neoforged.fml.loading.moddiscovery.ClasspathLocator@63034ed1
+[19Mai2024 20:16:53.198] [main/WARN] [net.neoforged.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: nitrogen_internals. Using Mod File: C:\Users\Timon\.gradle\caches\modules-2\files-2.1\com.aetherteam.nitrogen\nitrogen_internals\1.20.4-1.1.0-neoforge\b42c03429f3a8aa959731082954503a043b03451\nitrogen_internals-1.20.4-1.1.0-neoforge.jar
+[19Mai2024 20:16:53.198] [main/WARN] [net.neoforged.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: curios. Using Mod File: C:\Users\Timon\.gradle\caches\modules-2\files-2.1\top.theillusivec4.curios\curios-neoforge\7.3.4+1.20.4\a87eaa9102ea78d57c5b98f32e1f1edd71c3767c\curios-neoforge-7.3.4+1.20.4.jar
+[19Mai2024 20:16:53.198] [main/WARN] [net.neoforged.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: cumulus_menus. Using Mod File: C:\Users\Timon\.gradle\caches\modules-2\files-2.1\com.aetherteam.cumulus\cumulus_menus\1.20.4-1.0.1-neoforge\67c91d7d1f210b4e2cac6cd9190171ae5e181685\cumulus_menus-1.20.4-1.0.1-neoforge.jar
+[19Mai2024 20:16:53.198] [main/INFO] [net.neoforged.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
+[19Mai2024 20:16:53.199] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "mixinextras-neoforge-0.3.5.jar" of type GAMELIBRARY with provider net.neoforged.fml.loading.moddiscovery.JarInJarDependencyLocator@1929425f
+[19Mai2024 20:16:53.889] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[19Mai2024 20:16:53.903] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\Timon\.gradle\caches\minecraft\assets\1.20.4, --mod, ancient_aether, --all, --output, C:\Users\Timon\Documents\Forge 1.19.4\src\generated\resources, --existing, C:\Users\Timon\Documents\Forge 1.19.4\src\main\resources, --existing-mod, aether, --assetIndex, asset-index]
+[19Mai2024 20:16:53.942] [main/WARN] [mixin/]: Reference map 'nitrogen_internals.refmap.json' for nitrogen_internals.mixins.json could not be read. If this is a development environment you can ignore this message
+[19Mai2024 20:16:53.943] [main/WARN] [mixin/]: Reference map 'curios.refmap.json' for curios.neoforge.mixins.json could not be read. If this is a development environment you can ignore this message
+[19Mai2024 20:16:53.944] [main/WARN] [mixin/]: Reference map 'curios.refmap.json' for curios.mixins.json could not be read. If this is a development environment you can ignore this message
+[19Mai2024 20:16:53.944] [main/WARN] [mixin/]: Reference map 'cumulus_menus.refmap.json' for cumulus_menus.mixins.json could not be read. If this is a development environment you can ignore this message
+[19Mai2024 20:16:53.948] [main/WARN] [mixin/]: Reference map 'aether.refmap.json' for aether.mixins.json could not be read. If this is a development environment you can ignore this message
+[19Mai2024 20:16:53.949] [main/WARN] [mixin/]: Reference map 'aeroblender.refmap.json' for aeroblender.mixins.json could not be read. If this is a development environment you can ignore this message
+[19Mai2024 20:16:53.951] [main/WARN] [mixin/]: Reference map 'ancient_aether.refmap.json' for ancient_aether.mixins.json could not be read. If this is a development environment you can ignore this message
+[19Mai2024 20:16:53.952] [main/WARN] [mixin/]: Reference map 'terrablender.refmap.json' for terrablender_neoforge.mixins.json could not be read. If this is a development environment you can ignore this message
+[19Mai2024 20:16:53.953] [main/WARN] [mixin/]: Reference map 'terrablender.refmap.json' for terrablender.mixins.json could not be read. If this is a development environment you can ignore this message
+[19Mai2024 20:16:54.378] [main/INFO] [net.neoforged.neoforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [ancient_aether]
+[19Mai2024 20:16:54.381] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.3.5).
+[19Mai2024 20:16:57.949] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 20.4.200, for MC 1.20.4 with MCP 20231207.154220
+[19Mai2024 20:16:58.945] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Timon/Documents/Forge%201.19.4/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/20.4.200/neoforge-20.4.200.jar%23193!/assets/.mcassetsroot' uses unexpected schema
+[19Mai2024 20:16:58.945] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Timon/Documents/Forge%201.19.4/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/20.4.200/neoforge-20.4.200.jar%23193!/data/.mcassetsroot' uses unexpected schema
+[19Mai2024 20:16:59.310] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: ancient_aether
+[19Mai2024 20:16:59.455] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: ancient_aether finished after 145 ms
+[19Mai2024 20:16:59.456] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: ancient_aether
+[19Mai2024 20:16:59.530] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: ancient_aether finished after 73 ms
+[19Mai2024 20:16:59.530] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: en_us for mod: ancient_aether
+[19Mai2024 20:16:59.540] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: en_us for mod: ancient_aether finished after 10 ms
+[19Mai2024 20:16:59.540] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Sound Definitions
+[19Mai2024 20:16:59.552] [main/INFO] [net.minecraft.data.DataGenerator/]: Sound Definitions finished after 11 ms
+[19Mai2024 20:16:59.552] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Advancements
+[19Mai2024 20:16:59.598] [main/INFO] [net.minecraft.data.DataGenerator/]: Advancements finished after 46 ms
+[19Mai2024 20:16:59.599] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Data Maps
+[19Mai2024 20:16:59.607] [main/INFO] [net.minecraft.data.DataGenerator/]: Data Maps finished after 8 ms
+[19Mai2024 20:16:59.607] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[19Mai2024 20:16:59.647] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 39 ms
+[19Mai2024 20:16:59.647] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[19Mai2024 20:16:59.664] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 16 ms
+[19Mai2024 20:16:59.665] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[19Mai2024 20:16:59.708] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 43 ms
+[19Mai2024 20:16:59.708] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id ancient_aether
+[19Mai2024 20:16:59.715] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id ancient_aether finished after 7 ms
+[19Mai2024 20:16:59.716] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id ancient_aether
+[19Mai2024 20:16:59.719] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id ancient_aether finished after 3 ms
+[19Mai2024 20:16:59.720] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:entity_type mod id ancient_aether
+[19Mai2024 20:16:59.721] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:entity_type mod id ancient_aether finished after 1 ms
+[19Mai2024 20:16:59.721] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:worldgen/biome mod id ancient_aether
+[19Mai2024 20:16:59.724] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:worldgen/biome mod id ancient_aether finished after 3 ms
+[19Mai2024 20:16:59.724] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:worldgen/structure mod id ancient_aether
+[19Mai2024 20:16:59.726] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:worldgen/structure mod id ancient_aether finished after 1 ms
+[19Mai2024 20:16:59.726] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 415 ms
+[19Mai2024 20:16:59.819] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 1677, old count: 1677, new count: 1678, removed stale: 0, written: 8
