@@ -10,7 +10,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.AncientConfig;
-import net.builderdog.ancient_aether.client.gui.component.AncientMenuButton;
+import net.builderdog.ancient_aether.client.gui.component.AncientAetherMenuButton;
 import net.minecraft.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
@@ -31,7 +31,7 @@ import net.neoforged.neoforge.internal.BrandingControl;
 import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("unchecked")
-public class AncientTitleScreen extends TitleScreen implements TitleScreenBehavior {
+public class AncientAetherTitleScreen extends TitleScreen implements TitleScreenBehavior {
     private static final ResourceLocation PANORAMA_OVERLAY = new ResourceLocation("textures/gui/title/background/panorama_overlay.png");
     private static final ResourceLocation ANCIENT_AETHER_LOGO = new ResourceLocation(AncientAether.MODID, "textures/gui/title/ancient_aether.png");
     private static final ResourceLocation THE_AETHER_LOGO = new ResourceLocation(AncientAether.MODID, "textures/gui/title/the_aether.png");
@@ -41,11 +41,11 @@ public class AncientTitleScreen extends TitleScreen implements TitleScreenBehavi
     private boolean alignedLeft;
     private int rows;
 
-    public AncientTitleScreen() {
+    public AncientAetherTitleScreen() {
         ((TitleScreenAccessor) this).aether$setFading(true);
     }
 
-    public AncientTitleScreen(boolean alignedLeft) {
+    public AncientAetherTitleScreen(boolean alignedLeft) {
         this();
         this.alignedLeft = alignedLeft;
     }
@@ -67,7 +67,7 @@ public class AncientTitleScreen extends TitleScreen implements TitleScreenBehavi
                 if (TitleScreenBehavior.isImageButton(buttonText)) {
                     abstractWidget.visible = false;
                 }
-                if (abstractWidget instanceof AncientMenuButton ancientAetherButton) {
+                if (abstractWidget instanceof AncientAetherMenuButton ancientAetherButton) {
                     if (isAlignedLeft()) {
                         buttonRows++;
                     } else {
@@ -140,7 +140,7 @@ public class AncientTitleScreen extends TitleScreen implements TitleScreenBehavi
         int xOffset = TitleScreenBehavior.super.handleButtonVisibility(this, fadeAmount);
         for (Renderable renderable : renderables) {
             renderable.render(guiGraphics, mouseX, mouseY, partialTicks);
-            if (renderable instanceof AncientMenuButton ancientAetherButton) {
+            if (renderable instanceof AncientAetherMenuButton ancientAetherButton) {
                 if (ancientAetherButton.isMouseOver(mouseX, mouseY)) {
                     if (ancientAetherButton.hoverOffset < 15) {
                         ancientAetherButton.hoverOffset += 4;
@@ -184,17 +184,17 @@ public class AncientTitleScreen extends TitleScreen implements TitleScreenBehavi
         guiGraphics.setColor(1.0F, 1.0F, 1.0F, 1.0F);
     }
 
-    public static float getScale(AncientTitleScreen screen, Minecraft minecraft) {
+    public static float getScale(AncientAetherTitleScreen screen, Minecraft minecraft) {
         int guiScale = minecraft.getWindow().calculateScale(minecraft.options.guiScale().get(), minecraft.isEnforceUnicode());
         return calculateScale(screen, guiScale, guiScale - 1);
     }
 
-    public static float calculateScale(AncientTitleScreen screen, float guiScale, float lowerScale) {
+    public static float calculateScale(AncientAetherTitleScreen screen, float guiScale, float lowerScale) {
         float scale = 1.0F;
         if (guiScale > 1) {
             scale = guiScale / lowerScale;
         }
-        int range = AncientMenuButton.totalHeightRange(screen.rows, scale);
+        int range = AncientAetherMenuButton.totalHeightRange(screen.rows, scale);
         if (range > screen.height && scale != 1.0F) {
             return calculateScale(screen, guiScale, lowerScale - 1);
         } else {
@@ -206,7 +206,7 @@ public class AncientTitleScreen extends TitleScreen implements TitleScreenBehavi
     protected <T extends GuiEventListener & Renderable & NarratableEntry> @NotNull T addRenderableWidget(@NotNull T renderable) {
         if (renderable instanceof Button button) {
             if (TitleScreenBehavior.isMainButton(button.getMessage())) {
-                AncientMenuButton ancientAetherButton = new AncientMenuButton(this, button);
+                AncientAetherMenuButton ancientAetherButton = new AncientAetherMenuButton(this, button);
                 return (T) super.addRenderableWidget(ancientAetherButton);
             }
         }

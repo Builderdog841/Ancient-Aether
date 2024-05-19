@@ -16,12 +16,12 @@ import javax.annotation.Nullable;
 
 public class AncientModUpdateIndicator extends TitleScreenModUpdateIndicator {
     private static final ResourceLocation VERSION_CHECK_ICONS = new ResourceLocation(NeoForgeVersion.MOD_ID, "textures/gui/version_check_icons.png");
-    private final AncientTitleScreen screen;
+    private final AncientAetherTitleScreen screen;
     @Nullable
     private VersionChecker.Status showNotification = null;
     private boolean hasCheckedForUpdates = false;
 
-    public AncientModUpdateIndicator(AncientTitleScreen screen) {
+    public AncientModUpdateIndicator(AncientAetherTitleScreen screen) {
         super(null);
         this.screen = screen;
     }

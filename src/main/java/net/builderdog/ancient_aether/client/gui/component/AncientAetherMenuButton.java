@@ -4,7 +4,7 @@ import com.aetherteam.aether.mixin.mixins.client.accessor.ButtonAccessor;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.client.gui.screen.AncientTitleScreen;
+import net.builderdog.ancient_aether.client.gui.screen.AncientAetherTitleScreen;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
@@ -12,15 +12,15 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 
-public class AncientMenuButton extends Button {
-    private static final ResourceLocation AETHER_WIDGETS = new ResourceLocation(AncientAether.MODID, "textures/gui/title/buttons.png");
+public class AncientAetherMenuButton extends Button {
+    private static final ResourceLocation AETHER_WIDGETS = new ResourceLocation(AncientAether.MODID, "textures/gui/sprites/title/buttons.png");
     private static final int BUTTON_WIDTH = 400;
     private static final int BUTTON_HEIGHT = 40;
     private static final int BUTTON_SEPARATION = 50;
     private static final int INITIAL_X_OFFSET = 16;
     private static final int INITIAL_Y_OFFSET = 100;
     private static final int TEXTURE_SIZE = 512;
-    private final AncientTitleScreen screen;
+    private final AncientAetherTitleScreen screen;
     public final int originalX;
     public final int originalY;
     public final int originalWidth;
@@ -29,7 +29,7 @@ public class AncientMenuButton extends Button {
     public int buttonCountOffset;
     public boolean serverButton;
 
-    public AncientMenuButton(AncientTitleScreen screen, Builder builder) {
+    public AncientAetherMenuButton(AncientAetherTitleScreen screen, Builder builder) {
         super(builder);
         this.screen = screen;
         originalX = getX();
@@ -39,7 +39,7 @@ public class AncientMenuButton extends Button {
         hoverOffset = 0;
     }
 
-    public AncientMenuButton(AncientTitleScreen screen, Button oldButton) {
+    public AncientAetherMenuButton(AncientAetherTitleScreen screen, Button oldButton) {
         this(screen, new Builder(oldButton.getMessage(), (button) -> oldButton.onPress()).bounds( oldButton.getX(), oldButton.getY(), oldButton.getWidth(), oldButton.getHeight()).createNarration((button) -> ((ButtonAccessor) oldButton).callCreateNarrationMessage()));
         oldButton.visible = false;
         oldButton.active = false;
@@ -52,7 +52,7 @@ public class AncientMenuButton extends Button {
         Font font = minecraft.font;
         int i = getTextureY();
 
-        float scale = AncientTitleScreen.getScale(screen, minecraft);
+        float scale = AncientAetherTitleScreen.getScale(screen, minecraft);
         if (screen.isAlignedLeft()) {
             setX(INITIAL_X_OFFSET);
             setY((int) ((INITIAL_Y_OFFSET / scale) + buttonCountOffset * (BUTTON_SEPARATION / scale)));
@@ -79,9 +79,9 @@ public class AncientMenuButton extends Button {
         poseStack.popPose();
     }
 
-    public static float getTextScale(AncientTitleScreen screen, Minecraft minecraft) {
+    public static float getTextScale(AncientAetherTitleScreen screen, Minecraft minecraft) {
         int guiScale = minecraft.getWindow().calculateScale(minecraft.options.guiScale().get(), minecraft.isEnforceUnicode());
-        float elementScale = AncientTitleScreen.getScale(screen, minecraft);
+        float elementScale = AncientAetherTitleScreen.getScale(screen, minecraft);
         float elementPixelWidth = (int) (guiScale / elementScale);
         float textPixelWidth = elementPixelWidth + 2.0F;
         if (elementPixelWidth <= 1) {
