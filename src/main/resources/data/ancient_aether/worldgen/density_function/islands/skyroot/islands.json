@@ -1,17 +1,17 @@
 {
     "type": "minecraft:cache_once",
     "argument": {
-        "type": "minecraft:min",
+        "type": "minecraft:max",
         "argument1": {
             "type": "minecraft:add",
-            "argument1": 0.01,
+            "argument1": 0.15,
             "argument2": {
                 "type": "minecraft:add",
                 "argument1": {
                     "type": "minecraft:mul",
                     "argument1": {
                         "type": "minecraft:mul",
-                        "argument1": -0.27,
+                        "argument1": -0.17,
                         "argument2": "ancient_aether:islands/skyroot/terrain_shaper"
                     },
                     "argument2": "ancient_aether:factor"
@@ -21,20 +21,20 @@
                     "argument1": {
                         "type": "minecraft:y_clamped_gradient",
                         "from_value": 0.0,
-                        "from_y": -512,
+                        "from_y": 0,
                         "to_value": 1.0,
                         "to_y": 112
                     },
                     "argument2": {
                         "type": "minecraft:add",
-                        "argument1": 0.2,
+                        "argument1": 0.15,
                         "argument2": {
                             "type": "minecraft:add",
                             "argument1": {
                                 "type": "minecraft:mul",
                                 "argument1": {
                                     "type": "minecraft:mul",
-                                    "argument1": -0.27,
+                                    "argument1": -0.17,
                                     "argument2": "ancient_aether:islands/skyroot/terrain_shaper"
                                 },
                                 "argument2": "ancient_aether:factor"
@@ -49,24 +49,12 @@
                                     "to_y": 180
                                 },
                                 "argument2": {
-                                    "type": "add",
-                                    "argument1": {
-                                        "type": "minecraft:add",
-                                        "argument1": 0.2,
-                                        "argument2": {
-                                            "type": "minecraft:add",
-                                            "argument1": -0.22,
-                                            "argument2": "ancient_aether:base_3d_noise"
-                                        }
-                                    },
+                                    "type": "minecraft:add",
+                                    "argument1": 0.2,
                                     "argument2": {
-                                        "type": "minecraft:quarter_negative",
-                                        "argument": {
-                                            "type": "minecraft:noise",
-                                            "noise": "ancient_aether:jagged",
-                                            "xz_scale": 350,
-                                            "y_scale": 0
-                                        }
+                                        "type": "minecraft:add",
+                                        "argument1": -0.13,
+                                        "argument2": "ancient_aether:base_3d_noise"
                                     }
                                 }
                             }
@@ -75,6 +63,6 @@
                 }
             }
         },
-        "argument2": "ancient_aether:islands/noise_caves"
+        "argument2": "ancient_aether:islands/skyroot/upper_layer"
     }
 }

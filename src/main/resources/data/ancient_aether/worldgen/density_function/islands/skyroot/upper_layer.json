@@ -1,0 +1,71 @@
+{
+    "type": "minecraft:cache_once",
+    "argument": {
+        "type": "minecraft:add",
+        "argument1": 0.15,
+        "argument2": {
+            "type": "minecraft:add",
+            "argument1": {
+                "type": "minecraft:mul",
+                "argument1": {
+                    "type": "minecraft:mul",
+                    "argument1": -0.21,
+                    "argument2": "ancient_aether:islands/skyroot/terrain_shaper_upper"
+                },
+                "argument2": "ancient_aether:factor"
+            },
+            "argument2": {
+                "type": "minecraft:mul",
+                "argument1": {
+                    "type": "minecraft:y_clamped_gradient",
+                    "from_value": 0.0,
+                    "from_y": 48,
+                    "to_value": 1.0,
+                    "to_y": 150
+                },
+                "argument2": {
+                    "type": "minecraft:add",
+                    "argument1": 0.15,
+                    "argument2": {
+                        "type": "minecraft:add",
+                        "argument1": {
+                            "type": "minecraft:mul",
+                            "argument1": {
+                                "type": "minecraft:mul",
+                                "argument1": -0.21,
+                                "argument2": "ancient_aether:islands/skyroot/terrain_shaper_upper"
+                            },
+                            "argument2": "ancient_aether:factor"
+                        },
+                        "argument2": {
+                            "type": "minecraft:mul",
+                            "argument1": {
+                                "type": "minecraft:y_clamped_gradient",
+                                "from_value": 1.0,
+                                "from_y": 150,
+                                "to_value": 0.0,
+                                "to_y": 228
+                            },
+                            "argument2": {
+                                "type": "minecraft:add",
+                                "argument1": 0.2,
+                                "argument2": {
+                                    "type": "minecraft:add",
+                                    "argument1": -0.13,
+                                    "argument2": {
+                                        "type": "minecraft:old_blended_noise",
+                                        "smear_scale_multiplier": 1.0,
+                                        "xz_factor": 50.0,
+                                        "xz_scale": 0.15,
+                                        "y_factor": 112.0,
+                                        "y_scale": 0.03
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
