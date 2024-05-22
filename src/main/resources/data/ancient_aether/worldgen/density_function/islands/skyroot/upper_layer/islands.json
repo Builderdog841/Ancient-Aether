@@ -10,18 +10,18 @@
                 "argument1": {
                     "type": "minecraft:mul",
                     "argument1": -0.21,
-                    "argument2": "ancient_aether:islands/skyroot/terrain_shaper_upper"
+                    "argument2": "ancient_aether:islands/skyroot/upper_layer/terrain_shaper"
                 },
-                "argument2": "ancient_aether:factor"
+                "argument2": "ancient_aether:islands/skyroot/upper_layer/factor"
             },
             "argument2": {
                 "type": "minecraft:mul",
                 "argument1": {
                     "type": "minecraft:y_clamped_gradient",
                     "from_value": 0.0,
-                    "from_y": 48,
+                    "from_y": 96,
                     "to_value": 1.0,
-                    "to_y": 150
+                    "to_y": 148
                 },
                 "argument2": {
                     "type": "minecraft:add",
@@ -33,18 +33,18 @@
                             "argument1": {
                                 "type": "minecraft:mul",
                                 "argument1": -0.21,
-                                "argument2": "ancient_aether:islands/skyroot/terrain_shaper_upper"
+                                "argument2": "ancient_aether:islands/skyroot/upper_layer/terrain_shaper"
                             },
-                            "argument2": "ancient_aether:factor"
+                            "argument2": "ancient_aether:islands/skyroot/upper_layer/factor"
                         },
                         "argument2": {
                             "type": "minecraft:mul",
                             "argument1": {
                                 "type": "minecraft:y_clamped_gradient",
                                 "from_value": 1.0,
-                                "from_y": 150,
+                                "from_y": 148,
                                 "to_value": 0.0,
-                                "to_y": 228
+                                "to_y": 190
                             },
                             "argument2": {
                                 "type": "minecraft:add",
