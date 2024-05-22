@@ -2,7 +2,7 @@ package net.builderdog.ancient_aether.entity.projectile;
 
 import com.aetherteam.aether.AetherTags;
 import com.aetherteam.aether.entity.projectile.dart.GoldenDart;
-import net.builderdog.ancient_aether.entity.AncientEntityTypes;
+import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.minecraft.network.protocol.game.ClientboundSetEntityMotionPacket;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
@@ -12,7 +12,7 @@ import net.minecraft.world.phys.EntityHitResult;
 
 public class AeronauticDart extends GoldenDart {
     public AeronauticDart(Level level) {
-        super(AncientEntityTypes.AERONAUTIC_DART.get(), level);
+        super(AncientAetherEntityTypes.AERONAUTIC_DART.get(), level);
         setBaseDamage(4.0);
     }
 

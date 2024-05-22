@@ -1,8 +1,8 @@
 package net.builderdog.ancient_aether.entity.monster;
 
 import com.aetherteam.aether.block.AetherBlocks;
-import net.builderdog.ancient_aether.AncientTags;
-import net.builderdog.ancient_aether.client.AncientSoundEvents;
+import net.builderdog.ancient_aether.AncientAetherTags;
+import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleOptions;
@@ -151,7 +151,7 @@ public class Slammroot extends Slime {
     public static boolean checkSlammrootSpawnRules(EntityType<? extends Slammroot> slammroot, ServerLevelAccessor level, MobSpawnType reason, BlockPos pos, RandomSource random) {
         return Mob.checkMobSpawnRules(slammroot, level, reason, pos, random)
                 && isDarkEnoughToSpawn(level, pos, random)
-                && !level.getBlockState(pos.below()).is(AncientTags.Blocks.SLAMMROOT_SPAWNABLE_BLACKLIST)
+                && !level.getBlockState(pos.below()).is(AncientAetherTags.Blocks.SLAMMROOT_SPAWNABLE_BLACKLIST)
                 && level.getDifficulty() != Difficulty.PEACEFUL
                 && (reason != MobSpawnType.NATURAL || random.nextInt(3) == 0);
     }
@@ -159,23 +159,23 @@ public class Slammroot extends Slime {
     @Nullable
     @Override
     protected SoundEvent getHurtSound(@Nonnull DamageSource damageSource) {
-        return AncientSoundEvents.ENTITY_SLAMMROOT_HURT.get();
+        return AncientAetherSoundEvents.ENTITY_SLAMMROOT_HURT.get();
     }
 
     @Nullable
     @Override
     protected SoundEvent getDeathSound() {
-        return AncientSoundEvents.ENTITY_SLAMMROOT_DEATH.get();
+        return AncientAetherSoundEvents.ENTITY_SLAMMROOT_DEATH.get();
     }
 
     @Override
     protected @NotNull SoundEvent getSquishSound() {
-        return AncientSoundEvents.ENTITY_SLAMMROOT_JUMP.get();
+        return AncientAetherSoundEvents.ENTITY_SLAMMROOT_JUMP.get();
     }
 
     @Override
     protected @NotNull SoundEvent getJumpSound() {
-        return AncientSoundEvents.ENTITY_SLAMMROOT_JUMP.get();
+        return AncientAetherSoundEvents.ENTITY_SLAMMROOT_JUMP.get();
     }
 
     @Nonnull

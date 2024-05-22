@@ -4,7 +4,7 @@ import com.aetherteam.aether.item.accessories.pendant.PendantItem;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.client.AncientSoundEvents;
+import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -17,7 +17,7 @@ import java.util.UUID;
 public class ValkyrumPendantItem extends PendantItem {
 
     public ValkyrumPendantItem(Properties properties) {
-        super(new ResourceLocation(AncientAether.MODID, "valkyrum_pendant"), AncientSoundEvents.ITEM_ACCESSORY_EQUIP_VALKYRUM_PENDANT, properties);
+        super(new ResourceLocation(AncientAether.MODID, "valkyrum_pendant"), AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_VALKYRUM_PENDANT, properties);
     }
 
     @Override

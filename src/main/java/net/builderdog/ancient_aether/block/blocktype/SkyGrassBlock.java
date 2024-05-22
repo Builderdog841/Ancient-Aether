@@ -1,9 +1,9 @@
 package net.builderdog.ancient_aether.block.blocktype;
 
 import com.aetherteam.aether.block.AetherBlocks;
-import net.builderdog.ancient_aether.AncientTags;
+import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.block.blockstate.AetherGrassType;
-import net.builderdog.ancient_aether.block.blockstate.AncientBlockStateProperties;
+import net.builderdog.ancient_aether.block.blockstate.AncientAetherBlockStateProperties;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
@@ -28,8 +28,8 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 public class SkyGrassBlock extends TallGrassBlock {
-    public static final IntegerProperty LENGTH = AncientBlockStateProperties.LENGTH;
-    public static final EnumProperty<AetherGrassType> TYPE = AncientBlockStateProperties.TYPE;
+    public static final IntegerProperty LENGTH = AncientAetherBlockStateProperties.LENGTH;
+    public static final EnumProperty<AetherGrassType> TYPE = AncientAetherBlockStateProperties.TYPE;
     public static final List<VoxelShape> SHAPES = List.of(
             Block.box(2.0D, 0.0D, 2.0D, 14.0D, 4.0D, 14.0D),
             Block.box(2.0D, 0.0D, 2.0D, 14.0D, 8.0D, 14.0D),
@@ -59,7 +59,7 @@ public class SkyGrassBlock extends TallGrassBlock {
     @Override
     @NotNull
     public VoxelShape getShape(BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull CollisionContext context) {
-        return SHAPES.get(state.getValue(AncientBlockStateProperties.LENGTH) - 1);
+        return SHAPES.get(state.getValue(AncientAetherBlockStateProperties.LENGTH) - 1);
     }
 
     public static BlockState state(LevelAccessor level, BlockPos pos, BlockState state) {
@@ -77,14 +77,14 @@ public class SkyGrassBlock extends TallGrassBlock {
     }
     public static BlockState stateBase(LevelAccessor level, BlockPos pos, BlockState state) {
         Holder<Biome> biome = level.getBiome(pos);
-            if (biome.is(AncientTags.Biomes.HAS_FROZEN_AETHER_GRASS)) {
-                return state.setValue(AncientBlockStateProperties.TYPE, AetherGrassType.FROZEN);
-            } else if (biome.is(AncientTags.Biomes.HAS_PALE_AETHER_GRASS)) {
-                return state.setValue(AncientBlockStateProperties.TYPE, AetherGrassType.PALE);
-            } else if (biome.is(AncientTags.Biomes.HAS_ENCHANTED_AETHER_GRASS)) {
-                return state.setValue(AncientBlockStateProperties.TYPE, AetherGrassType.ENCHANTED);
+            if (biome.is(AncientAetherTags.Biomes.HAS_FROZEN_AETHER_GRASS)) {
+                return state.setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.FROZEN);
+            } else if (biome.is(AncientAetherTags.Biomes.HAS_PALE_AETHER_GRASS)) {
+                return state.setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.PALE);
+            } else if (biome.is(AncientAetherTags.Biomes.HAS_ENCHANTED_AETHER_GRASS)) {
+                return state.setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.ENCHANTED);
             }
-            else return state.setValue(AncientBlockStateProperties.TYPE, AetherGrassType.NORMAL);
+            else return state.setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.NORMAL);
     }
 
     public boolean isValidBonemealTarget(@NotNull LevelReader level, @NotNull BlockPos pos, @NotNull BlockState state, boolean isClient) {

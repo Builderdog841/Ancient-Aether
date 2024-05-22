@@ -1,7 +1,7 @@
 package net.builderdog.ancient_aether.block.blocktype;
 
 import com.mojang.serialization.MapCodec;
-import net.builderdog.ancient_aether.entity.AncientEntityTypes;
+import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.builderdog.ancient_aether.entity.monster.Slammroot;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
@@ -49,7 +49,7 @@ public class SlammrootPlantBlock extends BushBlock {
     }
 
     public void spawnSlammroot(@NotNull Level level, @NotNull BlockPos pos) {
-        Slammroot slammroot = new Slammroot(AncientEntityTypes.SLAMMROOT.get(), level);
+        Slammroot slammroot = new Slammroot(AncientAetherEntityTypes.SLAMMROOT.get(), level);
         slammroot.setPos(pos.getX() + 0.5, pos.getY() + 0.25, pos.getZ() + 0.5);
         level.addFreshEntity(slammroot);
     }

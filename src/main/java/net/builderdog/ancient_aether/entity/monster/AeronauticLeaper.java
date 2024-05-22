@@ -1,7 +1,7 @@
 package net.builderdog.ancient_aether.entity.monster;
 
 import com.aetherteam.aether.block.AetherBlocks;
-import net.builderdog.ancient_aether.client.AncientSoundEvents;
+import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
@@ -113,12 +113,12 @@ public class AeronauticLeaper extends Slime {
 
 	@Override
 	protected SoundEvent getHurtSound(@Nonnull DamageSource damageSource) {
-		return AncientSoundEvents.ENTITY_AERONAUTIC_LEAPER_HURT.get();
+		return AncientAetherSoundEvents.ENTITY_AERONAUTIC_LEAPER_HURT.get();
 	}
 
 	@Override
 	protected SoundEvent getDeathSound() {
-		return AncientSoundEvents.ENTITY_AERONAUTIC_LEAPER_DEATH.get();
+		return AncientAetherSoundEvents.ENTITY_AERONAUTIC_LEAPER_DEATH.get();
 	}
 
 	protected boolean isDealsDamage() {
@@ -134,13 +134,13 @@ public class AeronauticLeaper extends Slime {
 	@Nonnull
 	@Override
 	protected SoundEvent getSquishSound() {
-		return AncientSoundEvents.ENTITY_AERONAUTIC_LEAPER_JUMP.get();
+		return AncientAetherSoundEvents.ENTITY_AERONAUTIC_LEAPER_JUMP.get();
 	}
 
 	@Nonnull
 	@Override
 	protected SoundEvent getJumpSound() {
-		return AncientSoundEvents.ENTITY_AERONAUTIC_LEAPER_JUMP.get();
+		return AncientAetherSoundEvents.ENTITY_AERONAUTIC_LEAPER_JUMP.get();
 	}
 
 	@Nonnull

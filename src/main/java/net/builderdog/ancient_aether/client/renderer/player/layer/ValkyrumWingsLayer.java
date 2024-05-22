@@ -5,8 +5,8 @@ import com.aetherteam.aether.client.renderer.entity.model.ValkyrieWingsModel;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.client.renderer.AncientModelLayers;
-import net.builderdog.ancient_aether.item.AncientEquipmentUtil;
+import net.builderdog.ancient_aether.client.renderer.AncientAetherModelLayers;
+import net.builderdog.ancient_aether.item.EquipmentUtil;
 import net.minecraft.client.model.PlayerModel;
 import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -25,12 +25,12 @@ public class ValkyrumWingsLayer<T extends Player, M extends PlayerModel<T>> exte
 
     public ValkyrumWingsLayer(RenderLayerParent<T, M> entityRenderer, EntityModelSet modelSet) {
         super(entityRenderer);
-        wings = new ValkyrieWingsModel<>(modelSet.bakeLayer(AncientModelLayers.VALKYRUM_WINGS));
+        wings = new ValkyrieWingsModel<>(modelSet.bakeLayer(AncientAetherModelLayers.VALKYRUM_WINGS));
     }
 
     @Override
     public void render(@NotNull PoseStack poseStack, @NotNull MultiBufferSource buffer, int packedLight, @NotNull T entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
-        if (AncientEquipmentUtil.hasFullValkyrumSet(entity)) {
+        if (EquipmentUtil.hasFullValkyrumSet(entity)) {
             var data = entity.getData(AetherDataAttachments.AETHER_PLAYER);
             setupWingRotation(entity, Mth.lerp(partialTicks, data.getWingRotationO(), data.getWingRotation()));
             VertexConsumer consumer = buffer.getBuffer(RenderType.entityCutoutNoCull(WINGS_TEXTURE));

@@ -1,7 +1,7 @@
 package net.builderdog.ancient_aether.event.hooks;
 
 import com.aetherteam.aether.data.resources.registries.AetherConfiguredFeatures;
-import net.builderdog.ancient_aether.data.resources.registries.features.AncientTreeFeatures;
+import net.builderdog.ancient_aether.data.resources.registries.features.AncientAetherTreeFeatures;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.RandomSource;
@@ -12,7 +12,7 @@ public class LevelHooks {
         if (feature != null) {
             if (feature.is(AetherConfiguredFeatures.SKYROOT_TREE_CONFIGURATION)) {
                 if (random.nextInt(10) == 0) {
-                    return AncientTreeFeatures.FANCY_SKYROOT_TREE;
+                    return AncientAetherTreeFeatures.FANCY_SKYROOT_TREE;
                 }
             }
         }

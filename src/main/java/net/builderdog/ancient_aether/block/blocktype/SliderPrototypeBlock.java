@@ -1,6 +1,6 @@
 package net.builderdog.ancient_aether.block.blocktype;
 
-import net.builderdog.ancient_aether.block.blockstate.AncientBlockStateProperties;
+import net.builderdog.ancient_aether.block.blockstate.AncientAetherBlockStateProperties;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -18,7 +18,7 @@ import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("deprecation")
 public class SliderPrototypeBlock extends HorizontalFacingBlock {
-    public static final BooleanProperty CRITICAL = AncientBlockStateProperties.CRITICAL;
+    public static final BooleanProperty CRITICAL = AncientAetherBlockStateProperties.CRITICAL;
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
     public SliderPrototypeBlock(Properties properties) {

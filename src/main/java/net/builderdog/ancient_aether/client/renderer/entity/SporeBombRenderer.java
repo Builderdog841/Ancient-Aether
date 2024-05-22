@@ -3,7 +3,7 @@ package net.builderdog.ancient_aether.client.renderer.entity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
-import net.builderdog.ancient_aether.client.renderer.AncientModelLayers;
+import net.builderdog.ancient_aether.client.renderer.AncientAetherModelLayers;
 import net.builderdog.ancient_aether.entity.projectile.SporeBomb;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -23,7 +23,7 @@ public class SporeBombRenderer extends EntityRenderer<SporeBomb> {
 
     public SporeBombRenderer(EntityRendererProvider.Context context) {
         super(context);
-        sporeBomb = context.bakeLayer(AncientModelLayers.SPORE_BOMB);
+        sporeBomb = context.bakeLayer(AncientAetherModelLayers.SPORE_BOMB);
     }
 
     @Override

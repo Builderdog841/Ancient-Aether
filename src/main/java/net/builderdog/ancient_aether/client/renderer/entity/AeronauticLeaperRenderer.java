@@ -1,7 +1,7 @@
 package net.builderdog.ancient_aether.client.renderer.entity;
 
 
-import net.builderdog.ancient_aether.client.renderer.AncientModelLayers;
+import net.builderdog.ancient_aether.client.renderer.AncientAetherModelLayers;
 import net.builderdog.ancient_aether.client.renderer.entity.model.AeronauticLeaperModel;
 import net.builderdog.ancient_aether.entity.monster.AeronauticLeaper;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -14,7 +14,7 @@ public class AeronauticLeaperRenderer extends MobRenderer<AeronauticLeaper, Aero
 	private static final ResourceLocation AERONAUTIC_LEAPER_TEXTURE = new ResourceLocation("ancient_aether", "textures/entity/mob/aeronautic_leaper/aeronautic_leaper.png");
 
 	public AeronauticLeaperRenderer(EntityRendererProvider.Context context) {
-		super(context, new AeronauticLeaperModel<>(context.bakeLayer(AncientModelLayers.AERONAUTIC_LEAPER)), 0.7F);
+		super(context, new AeronauticLeaperModel<>(context.bakeLayer(AncientAetherModelLayers.AERONAUTIC_LEAPER)), 0.7F);
 	}
 
 	@Nonnull

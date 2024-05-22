@@ -10,9 +10,9 @@ import com.aetherteam.aether.network.packet.clientbound.BossInfoPacket;
 import com.aetherteam.nitrogen.entity.BossRoomTracker;
 import com.aetherteam.nitrogen.network.PacketRelay;
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.AncientConfig;
-import net.builderdog.ancient_aether.block.AncientBlocks;
-import net.builderdog.ancient_aether.client.AncientSoundEvents;
+import net.builderdog.ancient_aether.AncientAetherConfig;
+import net.builderdog.ancient_aether.block.AncientAetherBlocks;
+import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.builderdog.ancient_aether.entity.projectile.MutatedAechorNeedle;
 import net.builderdog.ancient_aether.entity.projectile.RemedyCrystal;
 import net.builderdog.ancient_aether.entity.projectile.SporeBomb;
@@ -230,9 +230,9 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         MutatedAechorNeedle needle = new MutatedAechorNeedle(level(), this);
         if (isActive()) {
             if (RandomSource.create().nextInt(2) == 0) {
-                shootProjectile(target, sporeBomb, AncientSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_SHOOT_SPORE_BOMB.get());
+                shootProjectile(target, sporeBomb, AncientAetherSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_SHOOT_SPORE_BOMB.get());
             } else {
-                shootProjectile(target, needle, AncientSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_SHOOT_NEEDLE.get());
+                shootProjectile(target, needle, AncientAetherSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_SHOOT_NEEDLE.get());
             }
         }
     }
@@ -251,7 +251,7 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     @Nullable
     @Override
     public SpawnGroupData finalizeSpawn(@NotNull ServerLevelAccessor level, @NotNull DifficultyInstance difficulty, @NotNull MobSpawnType reason, @Nullable SpawnGroupData spawnData, @Nullable CompoundTag tag) {
-        setBossName(AncientBossNameGenerator.generateMutatedAechorName(getRandom()));
+        setBossName(AncientAetherBossNameGenerator.generateMutatedAechorName(getRandom()));
         setPos(Vec3.atBottomCenterOf(blockPosition()));
         return spawnData;
     }
@@ -284,13 +284,13 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
     @Nullable
     @Override
     public ResourceLocation getBossBarTexture() {
-        return AncientConfig.CLIENT.custom_boss_bars.get() ? new ResourceLocation(AncientAether.MODID, "textures/gui/sprites/boss_bar/mutated_aechor_plant_custom.png") : new ResourceLocation(AncientAether.MODID, "textures/gui/sprites/boss_bar/mutated_aechor_plant.png");
+        return AncientAetherConfig.CLIENT.custom_boss_bars.get() ? new ResourceLocation(AncientAether.MODID, "textures/gui/boss_bar_mutated_aechor_plant_custom.png") : new ResourceLocation(AncientAether.MODID, "textures/gui/boss_bar_mutated_aechor_plant.png");
     }
 
     @Nullable
     @Override
     public ResourceLocation getBossBarBackgroundTexture() {
-        return AncientConfig.CLIENT.custom_boss_bars.get() ? new ResourceLocation(AncientAether.MODID, "textures/gui/sprites/boss_bar/mutated_aechor_plant_background_custom.png") : new ResourceLocation(AncientAether.MODID, "textures/gui/sprites/boss_bar/mutated_aechor_plant_background.png");
+        return AncientAetherConfig.CLIENT.custom_boss_bars.get() ? new ResourceLocation(AncientAether.MODID, "textures/gui/boss_bar_mutated_aechor_plant_background_custom.png") : new ResourceLocation(AncientAether.MODID, "textures/gui/boss_bar_mutated_aechor_plant_background.png");
     }
 
     @Override
@@ -409,16 +409,16 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
         if (state.is(AetherBlocks.LOCKED_CARVED_STONE.get())) {
             return AetherBlocks.CARVED_STONE.get().defaultBlockState();
         }
-        if (state.is(AncientBlocks.LOCKED_CARVED_STONE_MOSAIC.get())) {
-            return AncientBlocks.CARVED_STONE_MOSAIC.get().defaultBlockState().setValue(BlockStateProperties.AXIS, state.getValue(BlockStateProperties.AXIS));
+        if (state.is(AncientAetherBlocks.LOCKED_CARVED_STONE_MOSAIC.get())) {
+            return AncientAetherBlocks.CARVED_STONE_MOSAIC.get().defaultBlockState().setValue(BlockStateProperties.AXIS, state.getValue(BlockStateProperties.AXIS));
         }
-        if (state.is(AncientBlocks.LOCKED_WYND_SENTRY_STONE.get())) {
-            return AncientBlocks.WYND_SENTRY_STONE.get().defaultBlockState();
+        if (state.is(AncientAetherBlocks.LOCKED_WYND_SENTRY_STONE.get())) {
+            return AncientAetherBlocks.WYND_SENTRY_STONE.get().defaultBlockState();
         }
-        if (state.is(AncientBlocks.BOSS_DOORWAY_CARVED_STONE.get()) || state.is(AetherBlocks.TREASURE_DOORWAY_CARVED_STONE.get())) {
+        if (state.is(AncientAetherBlocks.BOSS_DOORWAY_CARVED_STONE.get()) || state.is(AetherBlocks.TREASURE_DOORWAY_CARVED_STONE.get())) {
             return Blocks.AIR.defaultBlockState();
         }
-        if (state.is(AncientBlocks.BOSS_DOORWAY_WYND_SENTRY_STONE.get()) || state.is(AncientBlocks.TREASURE_DOORWAY_WYND_SENTRY_STONE.get())) {
+        if (state.is(AncientAetherBlocks.BOSS_DOORWAY_WYND_SENTRY_STONE.get()) || state.is(AncientAetherBlocks.TREASURE_DOORWAY_WYND_SENTRY_STONE.get())) {
             return Blocks.AIR.defaultBlockState();
         }
         return null;
@@ -481,12 +481,12 @@ public class MutatedAechorPlant extends PathfinderMob implements AetherBossMob<M
 
     @Override
     protected SoundEvent getHurtSound(@NotNull DamageSource damageSource) {
-        return AncientSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_HURT.get();
+        return AncientAetherSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_HURT.get();
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return AncientSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_DEATH.get();
+        return AncientAetherSoundEvents.ENTITY_MUTATED_AECHOR_PLANT_DEATH.get();
     }
 
     @Override

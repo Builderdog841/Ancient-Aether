@@ -1,8 +1,8 @@
 package net.builderdog.ancient_aether.block.blocktype;
 
-import net.builderdog.ancient_aether.AncientTags;
-import net.builderdog.ancient_aether.block.blockstate.AncientBlockStateProperties;
-import net.builderdog.ancient_aether.entity.AncientEntityTypes;
+import net.builderdog.ancient_aether.AncientAetherTags;
+import net.builderdog.ancient_aether.block.blockstate.AncientAetherBlockStateProperties;
+import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.builderdog.ancient_aether.entity.projectile.WindBlow;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -25,7 +25,7 @@ import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("deprecation")
 public class WindBlowerBlock extends HorizontalFacingBlock implements Equipable {
-    public static final BooleanProperty PUFFED = AncientBlockStateProperties.PUFFED;
+    public static final BooleanProperty PUFFED = AncientAetherBlockStateProperties.PUFFED;
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
     public WindBlowerBlock(Properties properties) {
@@ -58,7 +58,7 @@ public class WindBlowerBlock extends HorizontalFacingBlock implements Equipable 
     @Override
     public void onProjectileHit(@NotNull Level level, @NotNull BlockState state, BlockHitResult hitResult, Projectile projectile) {
         BlockPos pos = hitResult.getBlockPos();
-        if (projectile.getType().is(AncientTags.Entities.ACTIVATES_WIND_BLOWER) && !state.getValue(PUFFED)) {
+        if (projectile.getType().is(AncientAetherTags.Entities.ACTIVATES_WIND_BLOWER) && !state.getValue(PUFFED)) {
             shoot(state, level, pos);
         }
     }
@@ -71,7 +71,7 @@ public class WindBlowerBlock extends HorizontalFacingBlock implements Equipable 
 
     public void shoot(BlockState state, Level level, BlockPos pos) {
         Direction direction = state.getValue(FACING);
-        WindBlow wind = new WindBlow(AncientEntityTypes.WIND_BLOW.get(), level);
+        WindBlow wind = new WindBlow(AncientAetherEntityTypes.WIND_BLOW.get(), level);
         wind.setPos(pos.getX() + 0.5, pos.getY() + 0.25, pos.getZ() + 0.5);
         wind.shoot(direction.getStepX(), direction.getStepY(), direction.getStepZ(), 1.0F, 0.0F);
         level.addFreshEntity(wind);

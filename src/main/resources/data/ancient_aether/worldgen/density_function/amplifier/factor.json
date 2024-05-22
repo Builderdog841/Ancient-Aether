@@ -1,53 +1,22 @@
 {
-    "type": "minecraft:add",
-    "argument1": {
-      "type": "minecraft:spline",
-      "spline": {
-        "coordinate": "ancient_aether:amplifier/noise",
-        "points": [
-          {
-            "derivative": 0.0,
-            "location": 0.0,
-            "value": 0.75
-          },
-          {
-            "derivative": 0.0,
-            "location": 0.2,
-            "value": 0.6
-          },
-          {
-            "derivative": 0.0,
-            "location": 0.5,
-            "value": 0.35
-          }
-        ]
-      }
-    },
-    "argument2": {
-      "type": "minecraft:mul",
-      "argument1": {
-        "type": "minecraft:spline",
-        "spline": {
-          "coordinate": "ancient_aether:amplifier/noise",
-          "points": [
-            {
-              "derivative": 0.0,
-              "location": 0.0,
-              "value": 2.5
-            },
-            {
-              "derivative": 0.1,
-              "location": 0.2,
-              "value": 2.5
-            },
-            {
-              "derivative": 0.15,
-              "location": 0.5,
-              "value": 1
-            }
-          ]
+  "type": "minecraft:add",
+  "argument1": {
+    "type": "minecraft:spline",
+    "spline": {
+      "coordinate": "ancient_aether:amplifier/noise",
+      "points": [
+        {
+          "derivative": 0.0,
+          "location": 0.0,
+          "value": 0.4
+        },
+        {
+          "derivative": 0.0,
+          "location": 0.35,
+          "value": 0.15
         }
-      },
-      "argument2": "ancient_aether:amplifier/sampled_3d_noise"
+      ]
     }
-  }
+  },
+  "argument2": "ancient_aether:amplifier/sampled_3d_noise"
+}

@@ -3,7 +3,7 @@ package net.builderdog.ancient_aether.item.equipment.accessories.rings;
 import com.aetherteam.aether.item.accessories.ring.RingItem;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
-import net.builderdog.ancient_aether.client.AncientSoundEvents;
+import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.ItemStack;
@@ -15,7 +15,7 @@ import java.util.UUID;
 public class ValkyrumRingItem extends RingItem {
 
     public ValkyrumRingItem(Properties properties) {
-        super(AncientSoundEvents.ITEM_ACCESSORY_EQUIP_VALKYRUM_RING, properties);
+        super(AncientAetherSoundEvents.ITEM_ACCESSORY_EQUIP_VALKYRUM_RING, properties);
     }
     @Override
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext context, UUID uuid, ItemStack stack) {

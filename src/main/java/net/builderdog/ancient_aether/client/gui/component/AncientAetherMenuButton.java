@@ -13,7 +13,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 
 public class AncientAetherMenuButton extends Button {
-    private static final ResourceLocation AETHER_WIDGETS = new ResourceLocation(AncientAether.MODID, "textures/gui/sprites/title/buttons.png");
+    private static final ResourceLocation AETHER_WIDGETS = new ResourceLocation(AncientAether.MODID, "textures/gui/title/buttons.png");
     private static final int BUTTON_WIDTH = 400;
     private static final int BUTTON_HEIGHT = 40;
     private static final int BUTTON_SEPARATION = 50;
