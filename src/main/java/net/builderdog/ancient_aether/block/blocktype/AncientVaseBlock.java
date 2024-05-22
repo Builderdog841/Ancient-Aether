@@ -38,16 +38,15 @@ public class AncientVaseBlock extends VaseBlock {
             LootTable lootTable = serverLevel.getServer().getLootData().getLootTable(vaseLootTable);
             List<ItemStack> list = lootTable.getRandomItems(parameters);
             for (ItemStack itemstack : list) {
-                spawnAtLocation(itemstack, pos, level);
+                spawnLoot(itemstack, pos, level);
             }
         }
     }
 
-    public void spawnAtLocation(ItemStack itemStack, BlockPos pos, Level level) {
+    public void spawnLoot(ItemStack itemStack, BlockPos pos, Level level) {
         int x = pos.getX();
         int y = pos.getY();
         int z = pos.getZ();
-
         if (!(itemStack.isEmpty() && level.isClientSide)) {
             ItemEntity itementity = new ItemEntity(level, x, y + 0.5, z, itemStack);
             itementity.setDefaultPickUpDelay();

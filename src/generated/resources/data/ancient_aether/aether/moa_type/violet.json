@@ -1,7 +1,7 @@
 {
   "egg": "ancient_aether:violet_moa_egg",
   "max_jumps": 4,
-  "moa_texture": "ancient_aether:textures/entity/mob/moa/violet_moa.png",
+  "moa_texture": "ancient_aether:textures/entity/mobs/moa/violet_moa.png",
   "saddle_texture": "aether:textures/entity/mobs/moa/moa_saddle.png",
   "spawn_chance": 10,
   "speed": 0.2
