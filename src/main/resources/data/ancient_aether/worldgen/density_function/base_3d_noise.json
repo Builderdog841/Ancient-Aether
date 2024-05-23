@@ -2,7 +2,7 @@
   "type": "minecraft:old_blended_noise",
   "smear_scale_multiplier": 1.0,
   "xz_factor": 50.0,
-  "xz_scale": 0.1,
+  "xz_scale": 0.2,
   "y_factor": 112.0,
-  "y_scale": 0.02
+  "y_scale": 0.05
 }
