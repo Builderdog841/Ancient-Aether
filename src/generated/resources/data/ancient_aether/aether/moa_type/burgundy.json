@@ -1,7 +1,7 @@
 {
   "egg": "ancient_aether:burgundy_moa_egg",
   "max_jumps": 10,
-  "moa_texture": "ancient_aether:textures/entity/mobs/moa/burgundy_moa.png",
+  "moa_texture": "ancient_aether:textures/entity/mob/moa/burgundy_moa.png",
   "saddle_texture": "aether:textures/entity/mobs/moa/moa_saddle.png",
   "spawn_chance": 30,
   "speed": 0.155

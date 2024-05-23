@@ -4,14 +4,14 @@
         "type": "minecraft:min",
         "argument1": {
             "type": "minecraft:add",
-            "argument1": 0.01,
+            "argument1": -0.05,
             "argument2": {
                 "type": "minecraft:add",
                 "argument1": {
                     "type": "minecraft:mul",
                     "argument1": {
                         "type": "minecraft:mul",
-                        "argument1": -0.27,
+                        "argument1": -0.1,
                         "argument2": "ancient_aether:islands/skyroot/terrain_shaper"
                     },
                     "argument2": "ancient_aether:factor"
@@ -27,14 +27,14 @@
                     },
                     "argument2": {
                         "type": "minecraft:add",
-                        "argument1": 0.2,
+                        "argument1": 0.1,
                         "argument2": {
                             "type": "minecraft:add",
                             "argument1": {
                                 "type": "minecraft:mul",
                                 "argument1": {
                                     "type": "minecraft:mul",
-                                    "argument1": -0.27,
+                                    "argument1": -0.2,
                                     "argument2": "ancient_aether:islands/skyroot/terrain_shaper"
                                 },
                                 "argument2": "ancient_aether:factor"
@@ -49,24 +49,12 @@
                                     "to_y": 180
                                 },
                                 "argument2": {
-                                    "type": "add",
-                                    "argument1": {
-                                        "type": "minecraft:add",
-                                        "argument1": 0.2,
-                                        "argument2": {
-                                            "type": "minecraft:add",
-                                            "argument1": -0.22,
-                                            "argument2": "ancient_aether:base_3d_noise"
-                                        }
-                                    },
+                                    "type": "minecraft:add",
+                                    "argument1": 0.2,
                                     "argument2": {
-                                        "type": "minecraft:quarter_negative",
-                                        "argument": {
-                                            "type": "minecraft:noise",
-                                            "noise": "ancient_aether:jagged",
-                                            "xz_scale": 350,
-                                            "y_scale": 0
-                                        }
+                                        "type": "minecraft:add",
+                                        "argument1": -0.13,
+                                        "argument2": "ancient_aether:base_3d_noise"
                                     }
                                 }
                             }
