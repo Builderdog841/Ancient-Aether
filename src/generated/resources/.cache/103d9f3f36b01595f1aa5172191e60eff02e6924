@@ -1,4 +1,4 @@
-// 1.20.4	2024-05-23T20:33:35.598686	Registries
+// 1.20.4	2024-05-24T18:35:24.6633616	Registries
 b78469a73034027fe4093a9f38f8ddf25245cbf8 data/ancient_aether/aether/moa_type/burgundy.json
 192dc5b429ccc1fd65fe571348b15cd968ad4828 data/ancient_aether/aether/moa_type/lavender.json
 c70aa583fc8d45c16266b14c717fe53b58e90cce data/ancient_aether/aether/moa_type/sakura.json
@@ -115,7 +115,7 @@ f62e1503ccaebdd26bcb6ce62143eb7986ce5dd3 data/ancient_aether/worldgen/configured
 02494c1f1168e7d1007d6bc2c0c68808cc4b6fcf data/ancient_aether/worldgen/noise/amplifier.json
 0d54d9dd0a80d33fb877aba0aced71c402994add data/ancient_aether/worldgen/noise/amplifier_factor.json
 20ddbabfded8546f8d71cb1689cd15c42bc77244 data/ancient_aether/worldgen/noise/erosion.json
-03978329313b9c606618157db6ec26d31e05548c data/ancient_aether/worldgen/noise/height_factor.json
+d9c43a9323229cd5a926517c73ff1824d602071b data/ancient_aether/worldgen/noise/height_factor.json
 22f4b5f6690126b078167740af0939ccec9ca7b5 data/ancient_aether/worldgen/noise/jagged.json
 6218074acb208edb079f875e1df0fce6c66599d0 data/ancient_aether/worldgen/noise/noise_caves.json
 3e9a8abf6af4e034b6c608e860a7c2e3c2bcc1f5 data/ancient_aether/worldgen/noise/noise_cave_factor.json

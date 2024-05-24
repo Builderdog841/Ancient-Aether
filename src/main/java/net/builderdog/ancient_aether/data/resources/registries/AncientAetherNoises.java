@@ -36,7 +36,7 @@ public class AncientAetherNoises {
         register(context, AMPLIFIER_FACTOR, -8, 0.8, 0.6, 0.25, 0.0, 0.0, 0.0, 0.0);
         register(context, SKYLANDS_AQUIFER, -6, 1.5, 0.5, 0.0, 0.0, 0.0);
         register(context, SKYLANDS_AQUIFER_FACTOR, -8, 1.25, 0.0, 0.25, 0.0);
-        register(context, HEIGHT_FACTOR, -8, 1.0, 0.25, 0.0, 0.0);
+        register(context, HEIGHT_FACTOR, -8, 1.0, 0.25, 0.0, 0.0, 0.0);
         register(context, VALKYRIE_CLAY, -4, 1.0, 0.25, 0.0, 0.0);
     }
 
