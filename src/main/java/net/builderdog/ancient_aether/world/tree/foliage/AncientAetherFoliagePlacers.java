@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.world.tree;
+package net.builderdog.ancient_aether.world.tree.foliage;
 
 import net.builderdog.ancient_aether.AncientAether;
 import net.builderdog.ancient_aether.world.tree.foliage.PineFoliagePlacer;

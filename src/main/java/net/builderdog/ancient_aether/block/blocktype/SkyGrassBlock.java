@@ -95,8 +95,6 @@ public class SkyGrassBlock extends TallGrassBlock {
         return state(context.getLevel(), context.getClickedPos(), defaultBlockState());
     }
 
-
-
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockBlockStateBuilder) {
         blockBlockStateBuilder.add(LENGTH);
         blockBlockStateBuilder.add(TYPE);

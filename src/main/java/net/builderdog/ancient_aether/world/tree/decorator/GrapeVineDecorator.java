@@ -2,7 +2,6 @@ package net.builderdog.ancient_aether.world.tree.decorator;
 
 import com.mojang.serialization.Codec;
 import net.builderdog.ancient_aether.block.blocktype.GrapeVineBlock;
-import net.builderdog.ancient_aether.world.tree.AncientAetherTreeDecorators;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;

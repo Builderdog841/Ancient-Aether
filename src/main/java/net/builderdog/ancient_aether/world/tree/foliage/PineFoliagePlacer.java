@@ -2,7 +2,6 @@ package net.builderdog.ancient_aether.world.tree.foliage;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.builderdog.ancient_aether.world.tree.AncientAetherFoliagePlacers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.valueproviders.IntProvider;

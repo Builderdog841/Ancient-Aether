@@ -1,7 +1,6 @@
-package net.builderdog.ancient_aether.world.tree;
+package net.builderdog.ancient_aether.world.tree.decorator;
 
 import net.builderdog.ancient_aether.AncientAether;
-import net.builderdog.ancient_aether.world.tree.decorator.GrapeVineDecorator;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType;
 import net.neoforged.neoforge.registries.DeferredHolder;
