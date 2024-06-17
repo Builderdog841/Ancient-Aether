@@ -1,4 +1,4 @@
-// 1.20.4	2024-06-17T18:33:16.0544734	Item Models: ancient_aether
+// 1.20.4	2024-06-17T18:41:38.1471923	Item Models: ancient_aether
 532bdb7a4f7d2a6b96d474c01c8b9e7a0d1c10b4 assets/ancient_aether/models/item/aerogel_glass.json
 87e9f8f9f807a2aa763e3057d32bacf3ee32b60f assets/ancient_aether/models/item/aerogel_glass_door.json
 d1e6ed3e334d573f31a8ce9e09885c0f43832630 assets/ancient_aether/models/item/aerogel_glass_pane.json
@@ -78,7 +78,7 @@ f5db49e83578d5a9ad97bdb124582f7b3b6c0a32 assets/ancient_aether/models/item/highs
 ab7a7f8555a2283da6195e0427d78c76ce86d0b0 assets/ancient_aether/models/item/holystone_vase.json
 5c5a1ea39bc319a2e05d4eaed8dcf1235281a159 assets/ancient_aether/models/item/laboratory_dungeon_key.json
 f88125b914d4e237d5cbab057efaa76590566466 assets/ancient_aether/models/item/lavender_moa_egg.json
-a0a33aa100e0c93521328bde4566af268028078f assets/ancient_aether/models/item/locked_aerogel.json
+a9573871fb238ad6e28beebff2d5e9ee49804bbc assets/ancient_aether/models/item/locked_aerogel.json
 cb7cdfa112eee7d50c96f25a901e87422b2ff0ee assets/ancient_aether/models/item/locked_aerogetic_stone.json
 b203d77e3846d08474e502498e646f8ecbdc6cbf assets/ancient_aether/models/item/locked_aerogetic_stone_mosaic.json
 824e6ec246163d6821dd11b3e37bd0afa7e22b5f assets/ancient_aether/models/item/locked_aeronautic_stone.json

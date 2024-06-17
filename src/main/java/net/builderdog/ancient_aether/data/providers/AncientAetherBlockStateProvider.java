@@ -268,7 +268,7 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
     }
 
     public void lockedAerogelBlock(Block block, Block baseBlock) {
-        ConfiguredModel dungeonBlock = new ConfiguredModel(this.models().cubeAll(this.name(baseBlock), this.texture(this.name(baseBlock), "construction/")));
+        ConfiguredModel dungeonBlock = new ConfiguredModel(this.models().cubeAll(this.name(baseBlock), this.texture(Aether.MODID, this.name(baseBlock), "construction/")));
         this.getVariantBuilder(block).partialState().setModels(dungeonBlock);
     }
 

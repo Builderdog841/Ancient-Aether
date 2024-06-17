@@ -167,7 +167,7 @@
     }
   ],
   "textures": {
-    "face": "aether:block/dungeon/aerogel",
+    "face": "aether:block/construction/aerogel",
     "overlay": "aether:block/dungeon/lock"
   }
 }
