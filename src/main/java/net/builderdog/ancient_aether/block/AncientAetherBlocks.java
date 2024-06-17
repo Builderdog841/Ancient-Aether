@@ -1,5 +1,7 @@
 package net.builderdog.ancient_aether.block;
 
+import com.aetherteam.aether.block.AetherBlocks;
+import com.aetherteam.aether.block.construction.AerogelBlock;
 import com.aetherteam.aether.block.construction.BookshelfBlock;
 import com.aetherteam.aether.block.dungeon.DoorwayBlock;
 import com.aetherteam.aether.block.dungeon.TrappedBlock;
@@ -157,6 +159,7 @@ public class AncientAetherBlocks extends AncientAetherBlockBuilders {
     public static final DeferredBlock<Block> LOCKED_AEROGETIC_STONE = register("locked_aerogetic_stone", () -> new Block(Block.Properties.ofFullCopy(AEROGETIC_STONE.get()).strength(-1.0F, 3600000.0F).noLootTable()));
     public static final DeferredBlock<Block> LOCKED_AERONAUTIC_STONE = register("locked_aeronautic_stone", () -> new Block(Block.Properties.ofFullCopy(LOCKED_AEROGETIC_STONE.get()).lightLevel(s -> 11).noLootTable()));
     public static final DeferredBlock<Block> LOCKED_CORRUPTED_AERONAUTIC_STONE = register("locked_corrupted_aeronautic_stone", () -> new Block(Block.Properties.ofFullCopy(LOCKED_AERONAUTIC_STONE.get()).noLootTable()));
+    public static final DeferredBlock<Block> LOCKED_AEROGEL = register("locked_aerogel", () -> new AerogelBlock(Block.Properties.of().strength(-1.0F, 3600000.0F).mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.IRON_XYLOPHONE).sound(SoundType.METAL).noOcclusion().isViewBlocking(AncientAetherBlocks::never).noLootTable()));
 
     public static final DeferredBlock<RotatedPillarBlock> LOCKED_CARVED_STONE_MOSAIC = register("locked_carved_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.ofFullCopy(CARVED_STONE_MOSAIC.get()).strength(-1.0F, 3600000.0F).noLootTable()));
     public static final DeferredBlock<RotatedPillarBlock> LOCKED_ANGELIC_STONE_MOSAIC = register("locked_angelic_stone_mosaic", () -> new RotatedPillarBlock(Block.Properties.ofFullCopy(ANGELIC_STONE_MOSAIC.get()).strength(-1.0F, 3600000.0F).noLootTable()));

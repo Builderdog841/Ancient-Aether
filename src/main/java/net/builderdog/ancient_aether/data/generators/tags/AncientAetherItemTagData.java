@@ -126,7 +126,8 @@ public class AncientAetherItemTagData extends ItemTagsProvider {
                 AncientAetherBlocks.LOCKED_WYND_SENTRY_STONE.get().asItem(),
                 AncientAetherBlocks.LOCKED_AEROGETIC_STONE.get().asItem(),
                 AncientAetherBlocks.LOCKED_AERONAUTIC_STONE.get().asItem(),
-                AncientAetherBlocks.LOCKED_CORRUPTED_AERONAUTIC_STONE.get().asItem()
+                AncientAetherBlocks.LOCKED_CORRUPTED_AERONAUTIC_STONE.get().asItem(),
+                AncientAetherBlocks.LOCKED_AEROGEL.get().asItem()
         );
         tag(AetherTags.Items.TRAPPED_DUNGEON_BLOCKS).add(
                 AncientAetherBlocks.TRAPPED_CARVED_TILES.get().asItem(),

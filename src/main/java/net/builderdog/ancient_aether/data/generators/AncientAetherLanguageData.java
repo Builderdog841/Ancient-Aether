@@ -137,6 +137,7 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.LOCKED_AEROGETIC_STONE, "Locked Aerogetic Stone");
         addBlock(AncientAetherBlocks.LOCKED_AERONAUTIC_STONE, "Locked Aeronautic Stone");
         addBlock(AncientAetherBlocks.LOCKED_CORRUPTED_AERONAUTIC_STONE, "Locked Corrupted Aeronautic Stone");
+        addBlock(AncientAetherBlocks.LOCKED_AEROGEL, "Locked Aerogel");
 
         addBlock(AncientAetherBlocks.LOCKED_CARVED_STONE_MOSAIC, "Locked Carved Stone Mosaic");
         addBlock(AncientAetherBlocks.LOCKED_ANGELIC_STONE_MOSAIC, "Locked Angelic Stone Mosaic");

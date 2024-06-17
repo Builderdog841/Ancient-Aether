@@ -160,7 +160,7 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
         ).addTags(
                 AncientAetherTags.Blocks.AEROGETIC_BLOCKS,
                 AncientAetherTags.Blocks.VASES,
-                //AetherTags.Blocks.HOLYSTONE,
+                AetherTags.Blocks.HOLYSTONE,
                 AetherTags.Blocks.SENTRY_BLOCKS,
                 AetherTags.Blocks.ANGELIC_BLOCKS,
                 AetherTags.Blocks.HELLFIRE_BLOCKS,
@@ -178,7 +178,8 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
                 AncientAetherBlocks.LOCKED_WYND_SENTRY_STONE.get(),
                 AncientAetherBlocks.LOCKED_AEROGETIC_STONE.get(),
                 AncientAetherBlocks.LOCKED_AERONAUTIC_STONE.get(),
-                AncientAetherBlocks.LOCKED_CORRUPTED_AERONAUTIC_STONE.get()
+                AncientAetherBlocks.LOCKED_CORRUPTED_AERONAUTIC_STONE.get(),
+                AncientAetherBlocks.LOCKED_AEROGEL.get()
         );
         tag(AetherTags.Blocks.TRAPPED_DUNGEON_BLOCKS).add(
                 AncientAetherBlocks.TRAPPED_CARVED_TILES.get(),

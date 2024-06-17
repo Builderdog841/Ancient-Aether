@@ -267,6 +267,11 @@ public abstract class AncientAetherBlockStateProvider extends AetherBlockStatePr
         getVariantBuilder(block).partialState().setModels(dungeonBlock);
     }
 
+    public void lockedAerogelBlock(Block block, Block baseBlock) {
+        ConfiguredModel dungeonBlock = new ConfiguredModel(this.models().cubeAll(this.name(baseBlock), this.texture(this.name(baseBlock), "construction/")));
+        this.getVariantBuilder(block).partialState().setModels(dungeonBlock);
+    }
+
     public void lockedMosaicBlock(RotatedPillarBlock block, RotatedPillarBlock baseBlock) {
         ModelFile mosaicBlock = models().getExistingFile(modLoc("block/" + name(baseBlock)));
         ModelFile mosaicBlockHorizontal = models().getExistingFile(modLoc("block/" + name(baseBlock) + "_horizontal"));

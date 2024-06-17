@@ -102,6 +102,7 @@ public class AncientAetherCreativeModeTabs {
             putAfter(event, AncientAetherBlocks.LOCKED_CORRUPTED_AERONAUTIC_STONE.get(), AncientAetherBlocks.TRAPPED_CORRUPTED_AERONAUTIC_STONE.get());
             putAfter(event, AncientAetherBlocks.TRAPPED_CORRUPTED_AERONAUTIC_STONE.get(), AncientAetherBlocks.BOSS_DOORWAY_CORRUPTED_AERONAUTIC_STONE.get());
             putAfter(event, AncientAetherBlocks.BOSS_DOORWAY_CORRUPTED_AERONAUTIC_STONE.get(), AncientAetherBlocks.TREASURE_DOORWAY_CORRUPTED_AERONAUTIC_STONE.get());
+            putAfter(event, AncientAetherBlocks.TREASURE_DOORWAY_CORRUPTED_AERONAUTIC_STONE.get(), AncientAetherBlocks.LOCKED_AEROGEL.get());
             putAfter(event, AetherBlocks.CHEST_MIMIC.get(), AncientAetherBlocks.ANCIENT_HOLYSTONE_VASE.get());
             putAfter(event, AncientAetherBlocks.ANCIENT_HOLYSTONE_VASE.get(), AncientAetherBlocks.ANCIENT_MOSSY_HOLYSTONE_VASE.get());
             putAfter(event, AncientAetherBlocks.ANCIENT_MOSSY_HOLYSTONE_VASE.get(), AncientAetherBlocks.ANCIENT_FROZEN_HOLYSTONE_VASE.get());

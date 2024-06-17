@@ -189,6 +189,7 @@ public class AncientAetherItemModelData extends AncientAetherItemModelProvider {
         AAItemLockedDungeonBlock(AncientAetherBlocks.LOCKED_AEROGETIC_STONE.get(), AncientAetherBlocks.AEROGETIC_STONE.get());
         AAItemLockedDungeonBlock(AncientAetherBlocks.LOCKED_AERONAUTIC_STONE.get(), AncientAetherBlocks.AERONAUTIC_STONE.get());
         AAItemLockedDungeonBlock(AncientAetherBlocks.LOCKED_CORRUPTED_AERONAUTIC_STONE.get(), AncientAetherBlocks.CORRUPTED_AERONAUTIC_STONE.get());
+        itemLockedAerogelBlock(AncientAetherBlocks.LOCKED_AEROGEL.get(), AetherBlocks.AEROGEL.get());
 
         itemLockedMosaicBlock(AncientAetherBlocks.LOCKED_CARVED_STONE_MOSAIC.get(), AncientAetherBlocks.CARVED_STONE_MOSAIC.get());
         itemLockedMosaicBlock(AncientAetherBlocks.LOCKED_ANGELIC_STONE_MOSAIC.get(), AncientAetherBlocks.ANGELIC_STONE_MOSAIC.get());
