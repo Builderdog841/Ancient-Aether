@@ -11,21 +11,16 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerType;
 import org.jetbrains.annotations.NotNull;
 
-public class PineFoliagePlacer extends FoliagePlacer {
+public class AetherPineFoliagePlacer extends FoliagePlacer {
 
-    public static final Codec<PineFoliagePlacer> CODEC = RecordCodecBuilder.create((codec) -> foliagePlacerParts(codec)
+    public static final Codec<AetherPineFoliagePlacer> CODEC = RecordCodecBuilder.create((codec) -> foliagePlacerParts(codec)
             .and(IntProvider.codec(0, 24).fieldOf("trunk_height").forGetter((placer) -> placer.trunkHeight))
-            .apply(codec, PineFoliagePlacer::new));
+            .apply(codec, AetherPineFoliagePlacer::new));
     private final IntProvider trunkHeight;
 
-    public PineFoliagePlacer(IntProvider radius, IntProvider offset, IntProvider height) {
+    public AetherPineFoliagePlacer(IntProvider radius, IntProvider offset, IntProvider height) {
         super(radius, offset);
         trunkHeight = height;
-    }
-
-    @Override
-    protected @NotNull FoliagePlacerType<?> type() {
-        return AncientAetherFoliagePlacers.PINE_FOLIAGE_PLACER.get();
     }
 
     @Override
@@ -57,5 +52,10 @@ public class PineFoliagePlacer extends FoliagePlacer {
     @Override
     protected boolean shouldSkipLocation(@NotNull RandomSource random, int localX, int localY, int localZ, int range, boolean large) {
         return localX + localX + localZ + localZ > range + 2;
+    }
+
+    @Override
+    protected @NotNull FoliagePlacerType<?> type() {
+        return AncientAetherFoliagePlacers.AETHER_PINE_FOLIAGE_PLACER.get();
     }
 }

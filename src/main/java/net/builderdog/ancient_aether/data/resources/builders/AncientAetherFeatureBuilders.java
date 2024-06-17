@@ -2,10 +2,10 @@ package net.builderdog.ancient_aether.data.resources.builders;
 
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.data.resources.AetherFeatureStates;
-import com.aetherteam.aether.world.foliageplacer.CrystalFoliagePlacer;
 import net.builderdog.ancient_aether.data.resources.AncientAetherFeatureStates;
 import net.builderdog.ancient_aether.world.feature.configuration.CoastConfiguration;
-import net.builderdog.ancient_aether.world.tree.foliage.PineFoliagePlacer;
+import net.builderdog.ancient_aether.world.tree.foliage.AetherPineFoliagePlacer;
+import net.builderdog.ancient_aether.world.tree.foliage.HighsprootFoliagePlacer;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderSet;
 import net.minecraft.util.random.SimpleWeightedRandomList;
@@ -43,7 +43,7 @@ public class AncientAetherFeatureBuilders {
             return new TreeConfiguration.TreeConfigurationBuilder(
                     BlockStateProvider.simple(AetherFeatureStates.SKYROOT_LOG),
                     new StraightTrunkPlacer(7, 6, 0), BlockStateProvider.simple(AncientAetherFeatureStates.SKYROOT_PINE_LEAVES),
-                    new PineFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
+                    new AetherPineFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), ConstantInt.of(2)),
                     new TwoLayersFeatureSize(2, 0, 2))
                     .ignoreVines();
     }
@@ -58,12 +58,12 @@ public class AncientAetherFeatureBuilders {
                 .ignoreVines();
     }
 
-    public static TreeConfiguration.TreeConfigurationBuilder createWyndcapsPineTree(int baseHeight, int heightRandA, int trunkHeight) {
+    public static TreeConfiguration.TreeConfigurationBuilder createWyndcapsPineTree(int baseHeight, int heightRandA) {
         return new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(AncientAetherFeatureStates.HIGHSPROOT_LOG),
                 new StraightTrunkPlacer(baseHeight, heightRandA, 1),
                 BlockStateProvider.simple(AncientAetherFeatureStates.HIGHSPROOT_LEAVES),
-                new CrystalFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0), ConstantInt.of(trunkHeight)),
+                new HighsprootFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0)),
                 new TwoLayersFeatureSize(2, 0, 2))
                 .ignoreVines();
     }

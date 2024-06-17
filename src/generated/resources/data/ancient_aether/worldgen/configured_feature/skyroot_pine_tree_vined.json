@@ -21,7 +21,7 @@
       }
     },
     "foliage_placer": {
-      "type": "ancient_aether:pine_foliage_placer",
+      "type": "ancient_aether:aether_pine_foliage_placer",
       "offset": 1,
       "radius": 2,
       "trunk_height": 2
