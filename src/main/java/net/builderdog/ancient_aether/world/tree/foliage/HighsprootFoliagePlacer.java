@@ -38,8 +38,8 @@ public class HighsprootFoliagePlacer extends FoliagePlacer {
             placeLeavesRow(level, foliageSetter, random, config, new BlockPos(x, y - 3, z), 6, i, doubleTrunk);
             placeLeavesRow(level, foliageSetter, random, config, new BlockPos(x, y - 1, z), 4, i, doubleTrunk);
             placeLeavesRow(level, foliageSetter, random, config, pos, 2, i, doubleTrunk);
-            placeLeavesRow(level, foliageSetter, random, config, new BlockPos(x, y + 1, z), 2, i, doubleTrunk);
-            placeLeavesRow(level, foliageSetter, random, config, new BlockPos(x, y + 3, z), 1, i, doubleTrunk);
+            placeLeavesRow(level, foliageSetter, random, config, new BlockPos(x, y + 1, z), 1, i, doubleTrunk);
+            placeLeavesRow(level, foliageSetter, random, config, new BlockPos(x, y + 2, z), 0, i, doubleTrunk);
 
             if (random.nextBoolean()) {
                 placeLeavesRow(level, foliageSetter, random, config, new BlockPos(x + random.nextIntBetweenInclusive(-1, 1), y - random.nextIntBetweenInclusive(13, 14), z + random.nextIntBetweenInclusive(-1, 1)), 3, i, doubleTrunk);
