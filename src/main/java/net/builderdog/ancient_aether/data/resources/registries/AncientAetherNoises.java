@@ -18,7 +18,6 @@ public class AncientAetherNoises {
     public static final ResourceKey<NormalNoise.NoiseParameters> AMPLIFIER_FACTOR = createKey("amplifier_factor");
     public static final ResourceKey<NormalNoise.NoiseParameters> SKYLANDS_AQUIFER = createKey("skylands_aquifer");
     public static final ResourceKey<NormalNoise.NoiseParameters> SKYLANDS_AQUIFER_FACTOR = createKey("skylands_aquifer_factor");
-    public static final ResourceKey<NormalNoise.NoiseParameters> HEIGHT_FACTOR = createKey("height_factor");
     public static final ResourceKey<NormalNoise.NoiseParameters> VALKYRIE_CLAY = createKey("valkyrie_clay");
 
     private static ResourceKey<NormalNoise.NoiseParameters> createKey(String name) {
@@ -36,7 +35,6 @@ public class AncientAetherNoises {
         register(context, AMPLIFIER_FACTOR, -8, 0.8, 0.6, 0.25, 0.0, 0.0, 0.0, 0.0);
         register(context, SKYLANDS_AQUIFER, -6, 1.5, 0.5, 0.0, 0.0, 0.0);
         register(context, SKYLANDS_AQUIFER_FACTOR, -8, 1.25, 0.0, 0.25, 0.0);
-        register(context, HEIGHT_FACTOR, -8, 1.0, 0.25, 0.0, 0.0, 0.0);
         register(context, VALKYRIE_CLAY, -4, 1.0, 0.25, 0.0, 0.0);
     }
 

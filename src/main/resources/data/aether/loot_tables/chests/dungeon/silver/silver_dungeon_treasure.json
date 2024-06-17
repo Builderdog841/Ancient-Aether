@@ -19,6 +19,10 @@
           "name": "aether:invisibility_cloak"
         },
         {
+          "type": "minecraft:loot_table",
+          "name": "aether:chests/dungeon/silver/silver_dungeon_cape_config"
+        },
+        {
           "type": "minecraft:item",
           "name": "aether:regeneration_stone"
         },
