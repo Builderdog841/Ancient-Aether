@@ -32,6 +32,8 @@ public class AncientAetherLoot {
     public static final ResourceLocation CHESTS_DUNGEON_SENTRY_LABORATORY_SUPPLIES = register("chests/dungeon/laboratory/sentry_laboratory_supplies");
     public static final ResourceLocation CHESTS_DUNGEON_SENTRY_LABORATORY_MISCELLANEOUS = register("chests/dungeon/laboratory/sentry_laboratory_miscellaneous");
     public static final ResourceLocation CHESTS_DUNGEON_SENTRY_LABORATORY_REWARD = register("chests/dungeon/laboratory/sentry_laboratory_reward");
+    public static final ResourceLocation CHESTS_DUNGEON_ANCIENT_DUNGEON = register("chests/dungeon/ancient/ancient_dungeon");
+    public static final ResourceLocation CHESTS_DUNGEON_ANCIENT_DUNGEON_REWARD = register("chests/dungeon/ancient/ancient_dungeon_reward");
     public static final ResourceLocation SELECTORS_ACCESSORIES_GENERIC = register("selectors/accessories/generic");
     public static final ResourceLocation SELECTORS_ACCESSORIES_BRONZE_DUNGEON = register("selectors/accessories/bronze_dungeon");
     public static final ResourceLocation SELECTORS_ACCESSORIES_SILVER_DUNGEON = register("selectors/accessories/silver_dungeon");

@@ -1,0 +1,171 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 8.0,
+                "min": 4.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "aether:enchanted_berry",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 2.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "aether:healing_stone"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 5.0,
+                "min": 2.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "ancient_aether:festive_gummy_swet"
+        }
+      ],
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 3.0,
+        "min": 1.0
+      }
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:ancient_sword",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:aeronautic_dart_shooter",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:ancient_ring",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:ancient_pendant",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:growth_ring",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:growth_pendant",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:growth_ring",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ancient_aether:ancient_armor_trim_smithing_template",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "ancient_aether:chests/dungeon/moa_eggs_rare",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:life_shard",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:gravitite_sword",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:gravitite_axe",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:gravitite_pickaxe",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:gravitite_shovel",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:gravitite_gloves",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:gravitite_hoe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:gravitite_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:gravitite_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:gravitite_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:gravitite_boots"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "aether:music_disc_aether_tune"
+        }
+      ],
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 6.0,
+        "min": 3.0
+      }
+    }
+  ],
+  "random_sequence": "ancient_aether:chests/dungeon/ancient/ancient_dungeon_reward"
+}
