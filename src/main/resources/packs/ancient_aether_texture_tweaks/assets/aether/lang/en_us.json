@@ -69,5 +69,8 @@
   "item.lost_aether_content.phoenix_cape": "§fPhoenix Cape",
   "item.lost_aether_content.sentry_shield": "§fSentry Shield",
   "item.lost_aether_content.power_gloves": "§fPower Gloves",
-  "item.lost_aether_content.swetty_mask": "§fSwetty Mask"
+  "item.lost_aether_content.swetty_mask": "§fSwetty Mask",
+
+  "gui.aether.sun_spirit.line5.1": "I am a sun spirit, embodiment of the Aether's daylight. As",
+  "gui.aether.sun_spirit.line5.2": "long as I am alive, the sun will rule this world."
 }
