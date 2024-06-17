@@ -5,7 +5,6 @@ import com.aetherteam.aether.block.dungeon.DoorwayBlock;
 import com.aetherteam.aether.block.dungeon.TrappedBlock;
 import com.aetherteam.aether.block.dungeon.TreasureDoorwayBlock;
 import com.aetherteam.aether.block.natural.AetherDoubleDropBlock;
-import com.aetherteam.aether.block.natural.AetherDoubleDropsLeaves;
 import com.aetherteam.aether.block.natural.AetherDoubleDropsOreBlock;
 import com.aetherteam.aether.block.natural.AetherLogBlock;
 import com.aetherteam.aether.effect.AetherEffects;
@@ -17,18 +16,13 @@ import net.builderdog.ancient_aether.data.resources.AncientAetherLoot;
 import net.builderdog.ancient_aether.entity.AncientAetherEntityTypes;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.builderdog.ancient_aether.world.tree.AncientAetherTreeGrowers;
-import net.minecraft.core.BlockPos;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
-import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -39,7 +33,7 @@ import java.util.function.Supplier;
 import static net.minecraft.world.level.block.Blocks.*;
 
 @SuppressWarnings("deprecation")
-public class AncientAetherBlocks {
+public class AncientAetherBlocks extends AncientAetherBlockBuilders {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(AncientAether.MODID);
 
     public static final DeferredBlock<Block> GRAVITY_GRAVEL = register("gravity_gravel", () -> new AetherDoubleDropBlock(Block.Properties.of().mapColor(MapColor.TERRACOTTA_PURPLE).jumpFactor(1.5F).strength(0.25F).sound(SoundType.GRAVEL)));
@@ -226,53 +220,6 @@ public class AncientAetherBlocks {
     public static final DeferredBlock<FlowerPotBlock> POTTED_WYND_THISTLE = BLOCKS.register("potted_wynd_thistle", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, WYND_THISTLE, Block.Properties.ofFullCopy(Blocks.FLOWER_POT)));
     public static final DeferredBlock<FlowerPotBlock> POTTED_ELEVETIA = BLOCKS.register("potted_elevetia", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ELEVETIA, Block.Properties.ofFullCopy(Blocks.FLOWER_POT)));
 
-    private static Block leaves(MapColor mapColor, SoundType sound) {
-        return new AetherDoubleDropsLeaves(
-                BlockBehaviour.Properties.of()
-                        .mapColor(mapColor)
-                        .strength(0.2F)
-                        .randomTicks()
-                        .sound(sound)
-                        .noOcclusion()
-                        .isValidSpawn(AncientAetherBlocks::ocelotOrParrot)
-                        .isSuffocating(AncientAetherBlocks::never)
-                        .isViewBlocking(AncientAetherBlocks::never)
-                        .ignitedByLava()
-                        .pushReaction(PushReaction.DESTROY)
-                        .isRedstoneConductor(AncientAetherBlocks::never)
-        );
-    }
-
-    private static WallBlock logWall() {
-        return new WallBlock(
-                BlockBehaviour.Properties.of()
-                        .mapColor(MapColor.WOOD)
-                        .instrument(NoteBlockInstrument.BASS)
-                        .ignitedByLava().strength(2.0F)
-                        .sound(SoundType.WOOD)
-        );
-    }
-
-    private static Block dungeonBlock(MapColor mapColor) {
-        return new Block(
-                BlockBehaviour.Properties.of()
-                        .mapColor(mapColor)
-                        .instrument(NoteBlockInstrument.BASEDRUM)
-                        .strength(0.5F, 6.0F)
-                        .requiresCorrectToolForDrops()
-        );
-    }
-
-    private static RotatedPillarBlock dungeonMosaic(MapColor mapColor) {
-        return new RotatedPillarBlock(
-                BlockBehaviour.Properties.of()
-                        .mapColor(mapColor)
-                        .instrument(NoteBlockInstrument.BASEDRUM)
-                        .strength(0.5F, 6.0F)
-                        .requiresCorrectToolForDrops()
-        );
-    }
-
     public static void registerPots() {
         FlowerPotBlock pot = (FlowerPotBlock) Blocks.FLOWER_POT;
         pot.addPlant(AncientAetherBlocks.CRYSTAL_SKYROOT_SAPLING.getId(), AncientAetherBlocks.POTTED_CRYSTAL_SKYROOT_SAPLING);
@@ -333,17 +280,6 @@ public class AncientAetherBlocks {
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_SLAB.get(), 5, 20);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_FENCE_GATE.get(), 5, 20);
         fireBlockAccessor.callSetFlammable(AncientAetherBlocks.SAKURA_FENCE.get(), 5, 20);
-    }
-
-    private static boolean never(BlockState test1, BlockGetter test2, BlockPos test3) {
-        return false;
-    }
-    private static boolean always(BlockState test1, BlockGetter test2, BlockPos test3) {
-        return true;
-    }
-
-    private static boolean ocelotOrParrot(BlockState state, BlockGetter getter, BlockPos pos, EntityType<?> entity) {
-        return entity == EntityType.OCELOT || entity == EntityType.PARROT;
     }
 
     private static <T extends Block> DeferredBlock<T> register(String name, Supplier<T> block) {
