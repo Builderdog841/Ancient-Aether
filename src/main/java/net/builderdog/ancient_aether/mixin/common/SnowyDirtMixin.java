@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.mixin;
+package net.builderdog.ancient_aether.mixin.common;
 
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.SnowyDirtBlock;

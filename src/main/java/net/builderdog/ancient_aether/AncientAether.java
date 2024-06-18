@@ -20,6 +20,7 @@ import net.builderdog.ancient_aether.item.AncientAetherCreativeModeTabs;
 import net.builderdog.ancient_aether.item.AncientAetherItems;
 import net.builderdog.ancient_aether.world.biome.AncientAetherRegion;
 import net.builderdog.ancient_aether.world.biome.AncientAetherSurfaceRules;
+import net.builderdog.ancient_aether.world.density.AncientAetherDensityFunctionTypes;
 import net.builderdog.ancient_aether.world.feature.AncientAetherFeatures;
 import net.builderdog.ancient_aether.world.structure.AncientAetherStructureProcessors;
 import net.builderdog.ancient_aether.world.structure.AncientAetherStructureTypes;
@@ -66,6 +67,7 @@ public class AncientAether {
                 AncientAetherTreeDecorators.TREE_DECORATORS,
                 AncientAetherStructureTypes.STRUCTURE_TYPES,
                 AncientAetherStructureProcessors.STRUCTURE_PROCESSOR_TYPES,
+                AncientAetherDensityFunctionTypes.DENSITY_FUNCTION_TYPES,
                 AncientAetherTriggers.TRIGGERS,
                 AncientAetherSoundEvents.SOUNDS,
                 AncientAetherParticleTypes.PARTICLES,

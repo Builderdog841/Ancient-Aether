@@ -1,4 +1,4 @@
-package net.builderdog.ancient_aether.mixin;
+package net.builderdog.ancient_aether.mixin.common;
 
 import com.aetherteam.aether.entity.monster.dungeon.boss.Slider;
 import net.builderdog.ancient_aether.block.AncientAetherBlocks;

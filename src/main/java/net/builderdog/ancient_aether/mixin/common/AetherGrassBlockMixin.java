@@ -1,17 +1,13 @@
-package net.builderdog.ancient_aether.mixin;
+package net.builderdog.ancient_aether.mixin.common;
 
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.block.natural.AetherGrassBlock;
 import com.aetherteam.aether.mixin.mixins.common.accessor.SpreadingSnowyDirtBlockAccessor;
-import net.builderdog.ancient_aether.AncientAetherTags;
 import net.builderdog.ancient_aether.block.blockstate.AetherGrassType;
 import net.builderdog.ancient_aether.block.blockstate.AncientAetherBlockStateProperties;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Holder;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -21,7 +17,6 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(value = AetherGrassBlock.class)
 public abstract class AetherGrassBlockMixin extends SnowyDirtMixin {
