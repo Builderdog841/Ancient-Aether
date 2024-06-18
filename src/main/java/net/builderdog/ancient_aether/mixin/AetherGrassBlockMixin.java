@@ -60,6 +60,8 @@ public abstract class AetherGrassBlockMixin extends SnowyDirtMixin {
         ci.cancel();
     }
 
+    //TODO: Reimplement this
+    /*
     @Override
     protected void aa$getPlacedState(BlockPlaceContext context, CallbackInfoReturnable<BlockState> cir) {
         Holder<Biome> biome = context.getLevel().getBiome(context.getClickedPos());
@@ -74,4 +76,5 @@ public abstract class AetherGrassBlockMixin extends SnowyDirtMixin {
         }
         else cir.setReturnValue(defaultBlockState().setValue(AncientAetherBlockStateProperties.TYPE, AetherGrassType.NORMAL));
     }
+     */
 }
