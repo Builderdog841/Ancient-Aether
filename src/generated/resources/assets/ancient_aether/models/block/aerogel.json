@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "ancient_aether:block/aerogelaetherconstruction/"
+    "all": "ancient_aether:block/construction/aetheraerogel"
   }
 }
