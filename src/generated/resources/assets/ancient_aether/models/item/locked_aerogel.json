@@ -166,6 +166,7 @@
       ]
     }
   ],
+  "render_type": "minecraft:translucent",
   "textures": {
     "face": "aether:block/construction/aerogel",
     "overlay": "aether:block/dungeon/lock"
