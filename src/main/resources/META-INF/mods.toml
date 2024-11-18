@@ -4,7 +4,7 @@ license = "Assets: All Rights Reserved; Code: LGPL-3.0"
 
 [[mods]]
 modId="ancient_aether"
-version="0.9.5"
+version="0.9.8"
 displayName="Ancient Aether"
 logoFile="ancient_aether.png"
 credits= "Contributors: TunefulTurnip, Zepalesque | Translators: unroman, taizazanek, YuJianghan"
