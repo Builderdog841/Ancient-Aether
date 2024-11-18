@@ -2,8 +2,14 @@
   "type": "aether:gold_dungeon",
   "belowTerrain": 20,
   "biomes": "#aether:has_gold_dungeon",
+  "islandFoliage": "aether:gold_dungeon_island_foliage",
   "minY": 96,
   "rangeY": 96,
+  "processor_settings": {
+    "boss_room_processors": "aether:gold_boss_room",
+    "island_processors": "aether:gold_island",
+    "tunnel_processors": "aether:gold_tunnel"
+  },
   "spawn_overrides": {
     "aether_aerwhale": {
       "bounding_box": "full",
@@ -55,5 +61,14 @@
     }
   },
   "step": "surface_structures",
+  "stubFoliage": {
+    "feature": "aether:golden_oak_tree",
+    "placement": [
+      {
+        "type": "minecraft:rarity_filter",
+        "chance": 64
+      }
+    ]
+  },
   "stubcount": 8
 }
