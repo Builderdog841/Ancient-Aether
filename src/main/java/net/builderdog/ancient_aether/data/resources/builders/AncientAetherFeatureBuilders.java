@@ -5,6 +5,7 @@ import com.aetherteam.aether.data.resources.AetherFeatureStates;
 import com.aetherteam.aether.world.foliageplacer.CrystalFoliagePlacer;
 import net.builderdog.ancient_aether.data.resources.AncientAetherFeatureStates;
 import net.builderdog.ancient_aether.world.feature.configuration.CoastConfiguration;
+import net.builderdog.ancient_aether.world.foliageplacer.HighsprootFoliagePlacer;
 import net.builderdog.ancient_aether.world.foliageplacer.PineFoliagePlacer;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderSet;
@@ -63,7 +64,7 @@ public class AncientAetherFeatureBuilders {
                 BlockStateProvider.simple(AncientAetherFeatureStates.HIGHSPROOT_LOG),
                 new StraightTrunkPlacer(baseHeight, heightRandA, 1),
                 BlockStateProvider.simple(AncientAetherFeatureStates.HIGHSPROOT_LEAVES),
-                new CrystalFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0), ConstantInt.of(trunkHeight)),
+                new HighsprootFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0), ConstantInt.of(trunkHeight)),
                 new TwoLayersFeatureSize(2, 0, 2))
                 .ignoreVines();
     }
