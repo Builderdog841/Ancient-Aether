@@ -1,4 +1,4 @@
-// 1.20.4	2024-06-17T18:33:16.0589775	Tags for minecraft:block mod id ancient_aether
+// 1.20.4	2025-01-27T15:26:05.7969194	Tags for minecraft:block mod id ancient_aether
 f0714fea3e89b69a7a6a6c729a028562bc0bd412 data/aether/tags/blocks/aerclouds.json
 c2354d6e9e1ad7d82a74dc026cfd3d3925683c7c data/aether/tags/blocks/aether_island_blocks.json
 c4903e6639b04406c020546d7cf2b0d7043443a7 data/aether/tags/blocks/aether_portal_blacklist.json
@@ -40,6 +40,7 @@ db284a03b1ab6c6d5cef25fdf5349b6851a7f516 data/forge/tags/blocks/fence_gates/wood
 90d07b81e26e07844cfff7b76febf1a2861b273f data/forge/tags/blocks/ore_rates/singular.json
 bd87b848151f5ba65e717dd3f25eb88e0ba9fc12 data/forge/tags/blocks/storage_blocks.json
 bd87b848151f5ba65e717dd3f25eb88e0ba9fc12 data/minecraft/tags/blocks/beacon_base_blocks.json
+030f441b28ab2ba2ef3bc83435b765210b31fd49 data/minecraft/tags/blocks/campfires.json
 caebe6e6db3d95c4715e1f9ce91ddb56aa9fc8d7 data/minecraft/tags/blocks/ceiling_hanging_signs.json
 7c35812c648b1a270ac4d21880807c07fe5155c8 data/minecraft/tags/blocks/climbable.json
 46112be4b3c309ebaf2995cb2d290508e8f64905 data/minecraft/tags/blocks/dragon_immune.json
