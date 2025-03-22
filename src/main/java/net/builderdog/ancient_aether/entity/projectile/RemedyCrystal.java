@@ -1,5 +1,6 @@
 package net.builderdog.ancient_aether.entity.projectile;
 
+import com.aetherteam.aether.client.particle.AetherParticleTypes;
 import com.aetherteam.aether.effect.AetherEffects;
 import com.aetherteam.aether.entity.projectile.crystal.AbstractCrystal;
 import net.builderdog.ancient_aether.client.AncientAetherSoundEvents;
@@ -62,7 +63,7 @@ public class RemedyCrystal extends AbstractCrystal {
 
     @Override
     protected ParticleOptions getExplosionParticle() {
-        return null;
+        return AetherParticleTypes.FROZEN.get();
     }
 
     @Nullable
