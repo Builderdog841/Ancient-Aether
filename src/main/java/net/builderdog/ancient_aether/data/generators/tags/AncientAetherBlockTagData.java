@@ -427,6 +427,9 @@ public class AncientAetherBlockTagData extends BlockTagsProvider {
         tag(BlockTags.CLIMBABLE).add(
                 AncientAetherBlocks.GRAPE_VINE.get()
         );
+        tag(BlockTags.CAMPFIRES).add(
+          AncientAetherBlocks.AMBROSIUM_CAMPFIRE.get()
+        );
         tag(BlockTags.MINEABLE_WITH_AXE).add(
                 AncientAetherBlocks.SKY_GRASS.get(),
                 AncientAetherBlocks.HIGHSPROOT_LOG.get(),
