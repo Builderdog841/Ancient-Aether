@@ -53,20 +53,20 @@ public class AncientAetherLanguageData extends AncientAetherLanguageProvider {
         addBlock(AncientAetherBlocks.HIGHSPROOT_LOG, "Highsproot Log");
         addBlock(AncientAetherBlocks.HIGHSPROOT_WOOD, "Highsproot Wood");
         addBlock(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG, "Stripped Highsproot Log");
-        addBlock(AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD, "Stripped Highsproot Log");
+        addBlock(AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD, "Stripped Highsproot Wood");
         addBlock(AncientAetherBlocks.SAKURA_LOG, "Sakura Log");
         addBlock(AncientAetherBlocks.SAKURA_WOOD, "Sakura Wood");
         addBlock(AncientAetherBlocks.STRIPPED_SAKURA_LOG, "Stripped Sakura Log");
-        addBlock(AncientAetherBlocks.STRIPPED_SAKURA_WOOD, "Stripped Sakura Log");
+        addBlock(AncientAetherBlocks.STRIPPED_SAKURA_WOOD, "Stripped Sakura Wood");
 
         addBlock(AncientAetherBlocks.HIGHSPROOT_LOG_WALL, "Highsproot Log Wall");
         addBlock(AncientAetherBlocks.HIGHSPROOT_WOOD_WALL, "Highsproot Wood Wall");
         addBlock(AncientAetherBlocks.STRIPPED_HIGHSPROOT_LOG_WALL, "Stripped Highsproot Log Wall");
-        addBlock(AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD_WALL, "Stripped Highsproot Log Wall");
+        addBlock(AncientAetherBlocks.STRIPPED_HIGHSPROOT_WOOD_WALL, "Stripped Highsproot Wood Wall");
         addBlock(AncientAetherBlocks.SAKURA_LOG_WALL, "Sakura Log Wall");
         addBlock(AncientAetherBlocks.SAKURA_WOOD_WALL, "Sakura Wood Wall");
         addBlock(AncientAetherBlocks.STRIPPED_SAKURA_LOG_WALL, "Stripped Sakura Log Wall");
-        addBlock(AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL, "Stripped Sakura Log Wall");
+        addBlock(AncientAetherBlocks.STRIPPED_SAKURA_WOOD_WALL, "Stripped Sakura Wood Wall");
 
         addBlock(AncientAetherBlocks.HIGHSPROOT_PLANKS, "Highsproot Planks");
         addBlock(AncientAetherBlocks.HIGHSPROOT_STAIRS, "Highsproot Stairs");
